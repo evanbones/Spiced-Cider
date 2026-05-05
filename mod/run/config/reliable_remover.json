@@ -15,12 +15,12 @@
   "enableEmiRemoval": true,
   "showEmiToast": true,
   "showEmiChatMessages": true,
-  "reloadAfterRemoval": false,
+  "reloadAfterRemoval": true,
   "blacklistedItems": [
     "minecraft:music_disc_lava_chicken",
-    "minecraft:painting",
     "modulation:cast_post",
     "modulation:chain_staff",
-    "modulation:zipline_staff"
+    "modulation:zipline_staff",
+    "reliable_requiem:memento_mori"
   ]
 }
