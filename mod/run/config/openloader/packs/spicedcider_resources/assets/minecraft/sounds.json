@@ -48,35 +48,6 @@
     "sounds": [
     ]
   },
-  "ambient.cave": {
-    "replace": true,
-    "sounds": [
-      "ambient/cave/cave1",
-      "ambient/cave/cave2",
-      "ambient/cave/cave3",
-      "ambient/cave/cave4",
-      "ambient/cave/cave5",
-      "ambient/cave/cave6",
-      "ambient/cave/cave7",
-      "ambient/cave/cave8",
-      "ambient/cave/cave9",
-      "ambient/cave/cave10",
-      "ambient/cave/cave11",
-      "ambient/cave/cave12",
-      "ambient/cave/cave13",
-      "ambient/cave/cave14",
-      "ambient/cave/cave15",
-      "ambient/cave/cave16",
-      "ambient/cave/cave17",
-      "ambient/cave/cave18",
-      "ambient/cave/cave19",
-      "ambient/cave/cave20",
-      "ambient/cave/cave21",
-      "ambient/cave/cave22",
-      "ambient/cave/cave23"
-    ],
-    "subtitle": "subtitles.ambient.cave"
-  },
   "music.creative": {
     "replace": true,
     "sounds": [
@@ -118,15 +89,6 @@
       }
     ]
   },
-  "music.credits": {
-    "replace": true,
-    "sounds": [
-      {
-        "name": "music/game/end/alpha",
-        "stream": true
-      }
-    ]
-  },
   "music.game": {
     "replace": true,
     "sounds": [
@@ -159,10 +121,6 @@
         "stream": true
       },
       {
-        "name": "music/game/key_door",
-        "stream": true
-      },
-      {
         "name": "music/game/oxygene_equinoxe",
         "stream": true
       },
@@ -180,10 +138,6 @@
       },
       {
         "name": "music/game/key_door",
-        "stream": true
-      },
-      {
-        "name": "music/game/clark_chris",
         "stream": true
       }
     ]
@@ -483,11 +437,125 @@
       }
     ]
   },
-  "music.overworld.deep_dark": {
+  "music.overworld.badlands": {
     "replace": true,
     "sounds": [
       {
-        "name": "music/game/ancestry",
+        "name": "music/game/danny",
+        "stream": true
+      },
+      {
+        "name": "music/game/dry_hands",
+        "stream": true
+      },
+      {
+        "name": "music/game/haggstrom",
+        "stream": true
+      },
+      {
+        "name": "music/game/key",
+        "stream": true
+      },
+      {
+        "name": "music/game/living_mice",
+        "stream": true
+      },
+      {
+        "name": "music/game/mice_on_venus",
+        "stream": true
+      },
+      {
+        "name": "music/game/oxygene",
+        "stream": true
+      },
+      {
+        "name": "music/game/subwoofer_lullaby",
+        "stream": true
+      },
+      {
+        "name": "music/game/wet_hands",
+        "stream": true
+      }
+    ]
+  },
+  "music.overworld.flower_forest": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "music/game/danny",
+        "stream": true
+      },
+      {
+        "name": "music/game/haggstrom",
+        "stream": true
+      },
+      {
+        "name": "music/game/key",
+        "stream": true
+      },
+      {
+        "name": "music/game/living_mice",
+        "stream": true
+      },
+      {
+        "name": "music/game/oxygene",
+        "stream": true
+      },
+      {
+        "name": "music/game/subwoofer_lullaby",
+        "stream": true
+      }
+    ]
+  },
+  "music.overworld.forest": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "music/game/clark",
+        "stream": true
+      },
+      {
+        "name": "music/game/danny",
+        "stream": true
+      },
+      {
+        "name": "music/game/dry_hands",
+        "stream": true
+      },
+      {
+        "name": "music/game/haggstrom",
+        "stream": true
+      },
+      {
+        "name": "music/game/key",
+        "stream": true
+      },
+      {
+        "name": "music/game/living_mice",
+        "stream": true
+      },
+      {
+        "name": "music/game/mice_on_venus",
+        "stream": true
+      },
+      {
+        "name": "music/game/minecraft",
+        "stream": true
+      },
+      {
+        "name": "music/game/oxygene",
+        "stream": true
+      },
+      {
+        "name": "music/game/subwoofer_lullaby",
+        "stream": true
+      },
+      {
+        "name": "music/game/sweden",
+        "stream": true
+      },
+      {
+        "name": "music/game/wet_hands",
         "stream": true
       }
     ]
@@ -570,6 +638,93 @@
         "name": "music/game/water/shuniji",
         "stream": true,
         "volume": 0.4
+      }
+    ]
+  },
+  "music.overworld.cherry_grove": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "music/game/clark",
+        "stream": true
+      },
+      {
+        "name": "music/game/minecraft",
+        "stream": true
+      },
+      {
+        "name": "music/game/sweden",
+        "stream": true
+      }
+    ]
+  },
+  "music.overworld.bamboo_jungle": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "music/game/danny",
+        "stream": true
+      },
+      {
+        "name": "music/game/dry_hands",
+        "stream": true
+      },
+      {
+        "name": "music/game/haggstrom",
+        "stream": true
+      },
+      {
+        "name": "music/game/key",
+        "stream": true
+      },
+      {
+        "name": "music/game/living_mice",
+        "stream": true
+      },
+      {
+        "name": "music/game/mice_on_venus",
+        "stream": true
+      },
+      {
+        "name": "music/game/oxygene",
+        "stream": true
+      },
+      {
+        "name": "music/game/subwoofer_lullaby",
+        "stream": true
+      },
+      {
+        "name": "music/game/wet_hands",
+        "stream": true
+      }
+    ]
+  },
+  "music.overworld.desert": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "music/game/danny",
+        "stream": true
+      },
+      {
+        "name": "music/game/haggstrom",
+        "stream": true
+      },
+      {
+        "name": "music/game/key",
+        "stream": true
+      },
+      {
+        "name": "music/game/living_mice",
+        "stream": true
+      },
+      {
+        "name": "music/game/oxygene",
+        "stream": true
+      },
+      {
+        "name": "music/game/subwoofer_lullaby",
+        "stream": true
       }
     ]
   },
@@ -712,6 +867,47 @@
       },
       {
         "name": "music/game/creative/biome_fest",
+        "stream": true
+      }
+    ]
+  },
+  "music.overworld.jungle": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "music/game/danny",
+        "stream": true
+      },
+      {
+        "name": "music/game/dry_hands",
+        "stream": true
+      },
+      {
+        "name": "music/game/haggstrom",
+        "stream": true
+      },
+      {
+        "name": "music/game/key",
+        "stream": true
+      },
+      {
+        "name": "music/game/living_mice",
+        "stream": true
+      },
+      {
+        "name": "music/game/mice_on_venus",
+        "stream": true
+      },
+      {
+        "name": "music/game/oxygene",
+        "stream": true
+      },
+      {
+        "name": "music/game/subwoofer_lullaby",
+        "stream": true
+      },
+      {
+        "name": "music/game/wet_hands",
         "stream": true
       }
     ]
@@ -1105,6 +1301,46 @@
         "name": "music/game/dalarna",
         "stream": true,
         "weight": 3
+      }
+    ]
+  },
+  "music.overworld.sparse_jungle": {
+    "sounds": [
+      {
+        "name": "music/game/danny",
+        "stream": true
+      },
+      {
+        "name": "music/game/dry_hands",
+        "stream": true
+      },
+      {
+        "name": "music/game/haggstrom",
+        "stream": true
+      },
+      {
+        "name": "music/game/key",
+        "stream": true
+      },
+      {
+        "name": "music/game/living_mice",
+        "stream": true
+      },
+      {
+        "name": "music/game/mice_on_venus",
+        "stream": true
+      },
+      {
+        "name": "music/game/oxygene",
+        "stream": true
+      },
+      {
+        "name": "music/game/subwoofer_lullaby",
+        "stream": true
+      },
+      {
+        "name": "music/game/wet_hands",
+        "stream": true
       }
     ]
   },

@@ -16,7 +16,7 @@ public class RandomNameGenerator implements ResourceManagerReloadListener {
     private String[] compositions = new String[]{"The # @ of &"};
 
     private static String[] readFileLines(String filename, ResourceManager resourceManager) throws IOException {
-        ResourceLocation loc = ResourceLocation.fromNamespaceAndPath(SpicedCider.MODID, "naming_unconvention/" + filename);
+        ResourceLocation loc = ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "naming_unconvention/" + filename);
         return resourceManager.getResourceOrThrow(loc).openAsReader().lines().toArray(String[]::new);
     }
 

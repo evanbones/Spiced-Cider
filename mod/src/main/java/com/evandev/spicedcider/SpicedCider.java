@@ -5,12 +5,17 @@ import com.evandev.spicedcider.config.LoggerNamePatternSelector;
 import com.evandev.spicedcider.config.Reconfigurator;
 import com.evandev.spicedcider.mixin.minecraft.accessor.MapColorAccessor;
 import com.evandev.spicedcider.namingunconvention.RandomNameGenerator;
+import com.evandev.spicedcider.registry.*;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.material.MapColor;
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.neoforged.neoforge.client.event.RegisterClientReloadListenersEvent;
+import net.neoforged.neoforge.capabilities.Capabilities;
+import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
+import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.core.config.plugins.util.PluginRegistry;
@@ -18,9 +23,9 @@ import org.apache.logging.log4j.core.config.plugins.util.PluginRegistry;
 import java.io.IOException;
 import java.net.URI;
 
-@Mod(SpicedCider.MODID)
+@Mod(SpicedCider.MOD_ID)
 public class SpicedCider {
-    public static final String MODID = "spicedcider";
+    public static final String MOD_ID = "spicedcider";
     public static final Logger LOGGER = LogManager.getLogger("Spiced Cider");
     public static final RandomNameGenerator RANDOM_NAME_GENERATOR = new RandomNameGenerator();
 
@@ -36,7 +41,14 @@ public class SpicedCider {
         CLASSLOADER = SpicedCider.class.getClassLoader();
 
         modEventBus.addListener(this::setup);
-        modEventBus.addListener(this::registerClientReloadListeners);
+        modEventBus.addListener(this::buildContents);
+
+        ModBlocks.BLOCKS.register(modEventBus);
+        ModItems.ITEMS.register(modEventBus);
+        ModBlockEntities.BLOCK_ENTITIES.register(modEventBus);
+        ModRecipeTypes.RECIPE_TYPES.register(modEventBus);
+        ModRecipeSerializers.RECIPE_SERIALIZERS.register(modEventBus);
+        ModSounds.SOUNDS.register(modEventBus);
 
         LOGGER.info("Starting Log4j reconfiguration.");
         loadPlugin();
@@ -48,7 +60,6 @@ public class SpicedCider {
             LOGGER.error("Failed to reconfigure Log4j:", e);
             return;
         }
-
         LOGGER.info("Finished Log4j reconfiguration.");
     }
 
@@ -59,8 +70,13 @@ public class SpicedCider {
         PluginRegistry.getInstance().loadFromBundle(BUNDLE_ID, CLASSLOADER);
     }
 
-    private void registerClientReloadListeners(RegisterClientReloadListenersEvent event) {
-        event.registerReloadListener(RANDOM_NAME_GENERATOR);
+    @SubscribeEvent
+    public static void registerCapabilities(RegisterCapabilitiesEvent event) {
+        event.registerBlockEntity(
+                Capabilities.ItemHandler.BLOCK,
+                ModBlockEntities.WORKSTONE.get(),
+                (be, context) -> be.getInventory()
+        );
     }
 
     private void setup(final FMLCommonSetupEvent event) {
@@ -129,5 +145,19 @@ public class SpicedCider {
 
             LOGGER.info("Successfully injected nicer map colors!");
         });
+    }
+
+    @SubscribeEvent
+    public void buildContents(BuildCreativeModeTabContentsEvent event) {
+        if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
+            event.accept(ModItems.FLINT_HAMMER);
+            event.accept(ModItems.IRON_HAMMER);
+            event.accept(ModItems.GOLDEN_HAMMER);
+            event.accept(ModItems.DIAMOND_HAMMER);
+            event.accept(ModItems.NETHERITE_HAMMER);
+        }
+        if (event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
+            event.accept(ModItems.WORKSTONE_ITEM);
+        }
     }
 }

@@ -24,8 +24,8 @@ public class ModernWorldCreationGameTabMixin {
 
     @Unique
     private static final WidgetSprites REROLL_SPRITES = new WidgetSprites(
-            ResourceLocation.fromNamespaceAndPath(SpicedCider.MODID, "naming_unconvention/reroll"),
-            ResourceLocation.fromNamespaceAndPath(SpicedCider.MODID, "naming_unconvention/reroll_highlighted")
+            ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "naming_unconvention/reroll"),
+            ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "naming_unconvention/reroll_highlighted")
     );
 
     @Shadow

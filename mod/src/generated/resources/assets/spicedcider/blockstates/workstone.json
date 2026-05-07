@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "facing=east,waterlogged=false": {
+      "model": "spicedcider:block/workstone",
+      "y": 90
+    },
+    "facing=east,waterlogged=true": {
+      "model": "spicedcider:block/workstone",
+      "y": 90
+    },
+    "facing=north,waterlogged=false": {
+      "model": "spicedcider:block/workstone"
+    },
+    "facing=north,waterlogged=true": {
+      "model": "spicedcider:block/workstone"
+    },
+    "facing=south,waterlogged=false": {
+      "model": "spicedcider:block/workstone",
+      "y": 180
+    },
+    "facing=south,waterlogged=true": {
+      "model": "spicedcider:block/workstone",
+      "y": 180
+    },
+    "facing=west,waterlogged=false": {
+      "model": "spicedcider:block/workstone",
+      "y": 270
+    },
+    "facing=west,waterlogged=true": {
+      "model": "spicedcider:block/workstone",
+      "y": 270
+    }
+  }
+}

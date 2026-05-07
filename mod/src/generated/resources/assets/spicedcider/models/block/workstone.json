@@ -1,0 +1,44 @@
+{
+  "parent": "minecraft:block/block",
+  "elements": [
+    {
+      "faces": {
+        "down": {
+          "texture": "#bottom"
+        },
+        "east": {
+          "texture": "#side"
+        },
+        "north": {
+          "texture": "#front"
+        },
+        "south": {
+          "texture": "#front"
+        },
+        "up": {
+          "texture": "#top"
+        },
+        "west": {
+          "texture": "#side"
+        }
+      },
+      "from": [
+        3,
+        0,
+        3
+      ],
+      "to": [
+        13,
+        12,
+        13
+      ]
+    }
+  ],
+  "textures": {
+    "bottom": "spicedcider:block/workstone_bottom",
+    "front": "spicedcider:block/workstone_front",
+    "particle": "spicedcider:block/workstone_top",
+    "side": "spicedcider:block/workstone_side",
+    "top": "spicedcider:block/workstone_top"
+  }
+}
