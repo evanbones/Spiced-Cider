@@ -15,9 +15,7 @@ import net.minecraft.world.level.ChunkPos;
 import net.minecraft.world.phys.AABB;
 import org.joml.Matrix4f;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Random;
+import java.util.*;
 
 public class SpicedCiderCloudRenderer {
 
@@ -27,8 +25,23 @@ public class SpicedCiderCloudRenderer {
 
     private static final Map<Long, CloudChunk> chunks = new HashMap<>();
     private static final ResourceLocation CLOUD_TEXTURE = ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "textures/environment/cloud.png");
+    private static final List<ChunkPos> CHUNK_OFFSETS = new ArrayList<>();
     private static int lastCenterCX = Integer.MAX_VALUE;
     private static int lastCenterCZ = Integer.MAX_VALUE;
+
+    static {
+        for (int dx = -RADIUS_CHUNKS; dx <= RADIUS_CHUNKS; dx++) {
+            for (int dz = -RADIUS_CHUNKS; dz <= RADIUS_CHUNKS; dz++) {
+                CHUNK_OFFSETS.add(new ChunkPos(dx, dz));
+            }
+        }
+
+        CHUNK_OFFSETS.sort((p1, p2) -> {
+            int dist1 = p1.x * p1.x + p1.z * p1.z;
+            int dist2 = p2.x * p2.x + p2.z * p2.z;
+            return Integer.compare(dist2, dist1);
+        });
+    }
 
     public static void render(ClientLevel level, int ticks, float partialTick, PoseStack poseStack, double camX, double camY, double camZ, Matrix4f modelViewMatrix, Matrix4f projectionMatrix) {
         Minecraft mc = Minecraft.getInstance();
@@ -60,11 +73,10 @@ public class SpicedCiderCloudRenderer {
         RenderSystem.enableBlend();
         RenderSystem.defaultBlendFunc();
         RenderSystem.enableDepthTest();
-        RenderSystem.depthMask(false);
+        RenderSystem.depthMask(true);
 
         RenderSystem.setShader(GameRenderer::getRendertypeCloudsShader);
         RenderSystem.setShaderTexture(0, CLOUD_TEXTURE);
-
         RenderSystem.setShaderColor(1.0f, 1.0f, 1.0f, 0.9f);
 
         poseStack.pushPose();
@@ -73,38 +85,36 @@ public class SpicedCiderCloudRenderer {
         float cloudHeight = 192.0F;
         int updatesThisFrame = 0;
 
-        for (int dx = -RADIUS_CHUNKS; dx <= RADIUS_CHUNKS; dx++) {
-            for (int dz = -RADIUS_CHUNKS; dz <= RADIUS_CHUNKS; dz++) {
-                int cx = centerCX + dx;
-                int cz = centerCZ + dz;
-                long key = ChunkPos.asLong(cx, cz);
+        for (ChunkPos offset : CHUNK_OFFSETS) {
+            int cx = centerCX + offset.x;
+            int cz = centerCZ + offset.z;
+            long key = ChunkPos.asLong(cx, cz);
 
-                double chunkMinX = cx * 16;
-                double chunkMinZ = cz * 16 + timeOffset;
+            double chunkMinX = cx * 16;
+            double chunkMinZ = cz * 16 + timeOffset;
 
-                AABB chunkBox = new AABB(chunkMinX, cloudHeight, chunkMinZ, chunkMinX + 16, cloudHeight + 32, chunkMinZ + 16);
+            AABB chunkBox = new AABB(chunkMinX, cloudHeight, chunkMinZ, chunkMinX + 16, cloudHeight + 32, chunkMinZ + 16);
 
-                if (!frustum.isVisible(chunkBox)) {
-                    continue;
-                }
+            if (!frustum.isVisible(chunkBox)) {
+                continue;
+            }
 
-                CloudChunk chunk = chunks.computeIfAbsent(key, k -> new CloudChunk(cx, cz));
+            CloudChunk chunk = chunks.computeIfAbsent(key, k -> new CloudChunk(cx, cz));
 
-                if (chunk.needsUpdate && updatesThisFrame < 2) {
-                    chunk.rebuild(level);
-                    updatesThisFrame++;
-                }
+            if (chunk.needsUpdate && updatesThisFrame < 2) {
+                chunk.rebuild(level);
+                updatesThisFrame++;
+            }
 
-                if (!chunk.isEmpty && chunk.buffer != null) {
-                    poseStack.pushPose();
-                    double shiftX = chunkMinX - camX;
-                    double shiftZ = chunkMinZ - camZ;
-                    poseStack.translate(shiftX, cloudHeight - camY, shiftZ);
+            if (!chunk.isEmpty && chunk.buffer != null) {
+                poseStack.pushPose();
+                double shiftX = chunkMinX - camX;
+                double shiftZ = chunkMinZ - camZ;
+                poseStack.translate(shiftX, cloudHeight - camY, shiftZ);
 
-                    chunk.buffer.bind();
-                    chunk.buffer.drawWithShader(poseStack.last().pose(), projectionMatrix, GameRenderer.getRendertypeCloudsShader());
-                    poseStack.popPose();
-                }
+                chunk.buffer.bind();
+                chunk.buffer.drawWithShader(poseStack.last().pose(), projectionMatrix, GameRenderer.getRendertypeCloudsShader());
+                poseStack.popPose();
             }
         }
 
