@@ -1,0 +1,28 @@
+package com.evandev.spicedcider.mixin.structures;
+
+import com.evandev.spicedcider.config.SpicedCiderConfig;
+import net.minecraft.core.Holder;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.level.storage.loot.functions.ExplorationMapFunction;
+import org.spongepowered.asm.mixin.Final;
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Mutable;
+import org.spongepowered.asm.mixin.Shadow;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+
+import java.util.List;
+
+@Mixin({ExplorationMapFunction.class})
+public class ExplorationMapFunctionMixin {
+    @Shadow
+    @Final
+    @Mutable
+    private int searchRadius;
+
+    @Inject(method = {"<init>"}, at = {@At("RETURN")})
+    private void initSearchRange(List p_298451_, TagKey p_210653_, Holder p_336106_, byte p_210655_, int p_210656_, boolean p_210657_, CallbackInfo ci) {
+        this.searchRadius = Math.min(this.searchRadius, SpicedCiderConfig.COMMON.mapSearchRadius.get());
+    }
+}

@@ -1,10 +1,11 @@
 package com.evandev.spicedcider;
 
-import com.evandev.spicedcider.integration.cloth_config.SpicedCiderConfigScreen;
+import com.evandev.spicedcider.command.SpicedCiderStructureCommand;
 import com.evandev.spicedcider.config.ConfigFileHandler;
 import com.evandev.spicedcider.config.LoggerNamePatternSelector;
 import com.evandev.spicedcider.config.Reconfigurator;
 import com.evandev.spicedcider.config.SpicedCiderConfig;
+import com.evandev.spicedcider.integration.cloth_config.SpicedCiderConfigScreen;
 import com.evandev.spicedcider.mixin.minecraft.accessor.MapColorAccessor;
 import com.evandev.spicedcider.namingunconvention.RandomNameGenerator;
 import com.evandev.spicedcider.registry.*;
@@ -21,7 +22,9 @@ import net.neoforged.fml.loading.FMLPaths;
 import net.neoforged.neoforge.capabilities.Capabilities;
 import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
 import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
+import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
+import net.neoforged.neoforge.event.RegisterCommandsEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.core.config.plugins.util.PluginRegistry;
@@ -57,6 +60,7 @@ public class SpicedCider {
         modEventBus.addListener(this::buildContents);
         modContainer.registerConfig(ModConfig.Type.COMMON, SpicedCiderConfig.COMMON_SPEC);
         modContainer.registerExtensionPoint(IConfigScreenFactory.class, (mc, screen) -> SpicedCiderConfigScreen.create(screen));
+        NeoForge.EVENT_BUS.addListener(this::registerCommands);
 
         ModBlocks.BLOCKS.register(modEventBus);
         ModItems.ITEMS.register(modEventBus);
@@ -173,5 +177,9 @@ public class SpicedCider {
         if (event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
             event.accept(ModItems.WORKSTONE_ITEM);
         }
+    }
+
+    private void registerCommands(RegisterCommandsEvent event) {
+        SpicedCiderStructureCommand.register(event.getDispatcher(), event.getBuildContext());
     }
 }

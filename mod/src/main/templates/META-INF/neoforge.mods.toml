@@ -2,6 +2,7 @@ modLoader = "javafml"
 loaderVersion = "${loader_version_range}"
 license = "${mod_license}"
 issueTrackerURL = "https://github.com/evanbones/Sugar-and-Spice/issues"
+accessTransformer="META-INF/accesstransformer.cfg"
 
 [[mods]]
 modId = "${mod_id}"
