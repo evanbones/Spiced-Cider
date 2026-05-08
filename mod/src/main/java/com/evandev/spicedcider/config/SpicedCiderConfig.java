@@ -62,8 +62,6 @@ public class SpicedCiderConfig {
                     .define("logDuplicatedSalt", true);
 
             builder.pop();
-
-            builder.pop();
         }
     }
 }
