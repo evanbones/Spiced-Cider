@@ -7,18 +7,26 @@ import net.minecraft.client.Minecraft;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.neoforge.event.entity.living.LivingDeathEvent;
+import net.neoforged.neoforge.client.event.ClientTickEvent;
 
 @EventBusSubscriber(modid = SpicedCider.MOD_ID, bus = EventBusSubscriber.Bus.GAME, value = Dist.CLIENT)
 public class ClientGameEvents {
 
-    @SubscribeEvent
-    public static void onLocalPlayerDeath(LivingDeathEvent event) {
-        Minecraft mc = Minecraft.getInstance();
+    private static boolean wasDead = false;
 
-        if (event.getEntity() == mc.player) {
-            DeathSoundInstance deathSound = new DeathSoundInstance(ModSounds.PLAYER_DEATH.get(), 200);
-            mc.getSoundManager().play(deathSound);
+    @SubscribeEvent
+    public static void onClientTick(ClientTickEvent.Post event) {
+        Minecraft mc = Minecraft.getInstance();
+        if (mc.player != null) {
+            boolean isDead = mc.player.isDeadOrDying();
+
+            if (isDead && !wasDead) {
+                DeathSoundInstance deathSound = new DeathSoundInstance(ModSounds.PLAYER_DEATH.get(), 200);
+                mc.getSoundManager().play(deathSound);
+            }
+            wasDead = isDead;
+        } else {
+            wasDead = false;
         }
     }
 }

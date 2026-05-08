@@ -12,10 +12,11 @@ public class DeathSoundInstance extends AbstractTickableSoundInstance {
     public DeathSoundInstance(SoundEvent sound, int durationInTicks) {
         super(sound, SoundSource.RECORDS, SoundInstance.createUnseededRandom());
         this.looping = false;
-
         this.relative = true;
         this.delay = 0;
         this.volume = 1.0f;
+        this.pitch = 1.0f;
+        this.attenuation = Attenuation.NONE;
 
         this.maxTicks = durationInTicks;
     }
