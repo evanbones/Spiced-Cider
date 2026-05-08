@@ -4,9 +4,13 @@ import com.evandev.spicedcider.api.WeatherAPI;
 import com.mojang.blaze3d.vertex.*;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.util.Mth;
+import net.minecraft.util.RandomSource;
+import net.minecraft.world.level.levelgen.synth.SimplexNoise;
 import org.joml.Matrix4f;
 
 class CloudChunk {
+    private static final SimplexNoise LIGHT_NOISE = new SimplexNoise(RandomSource.create(0L));
+
     int cx, cz;
     VertexBuffer buffer;
     boolean needsUpdate = true;
@@ -61,13 +65,23 @@ class CloudChunk {
 
         for (int index = 0; index < 8192; index++) {
             if (data[index] == SpicedCiderCloudRenderer.EMPTY_CLOUD) continue;
+
+            int x = (index & 15) | posX;
             int y = (index >> 4) & 31;
+            int z = (index >> 9) | posZ;
+
             byte light = 15;
             for (byte i = 1; i < 15; i++) {
                 if (y + i > 31) break;
                 int index2 = index + (i << 4);
                 if (data[index2] != SpicedCiderCloudRenderer.EMPTY_CLOUD) light--;
             }
+
+            if (light > 0) {
+                double noiseVal = (LIGHT_NOISE.getValue(x * 0.3, y * 0.3, z * 0.3) + 1.0) / 2.0;
+                light = (byte) Math.max(0, light - noiseVal);
+            }
+
             data[index] |= light;
         }
 

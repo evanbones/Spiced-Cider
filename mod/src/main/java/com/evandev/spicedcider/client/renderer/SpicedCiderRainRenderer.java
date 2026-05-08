@@ -35,6 +35,7 @@ public class SpicedCiderRainRenderer {
     public static void render(ClientLevel level, int ticks, float partialTick, PoseStack poseStack, double camX, double camY, double camZ) {
         Minecraft mc = Minecraft.getInstance();
         int radius = mc.options.graphicsMode().get().getId() > 0 ? 10 : 5;
+        int skipRadius = (radius / 2) - 1;
 
         int ix = Mth.floor(camX);
         int iy = Mth.floor(camY);
@@ -58,7 +59,10 @@ public class SpicedCiderRainRenderer {
         RenderSystem.setShaderTexture(0, RAIN_LOCATION);
         BufferBuilder rainBuilder = tesselator.begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX_COLOR);
         float rainVOffset = (timeDelta * 0.05f) % 1.0f;
-        buildWeather(level, rainBuilder, matrix, ix, iy, iz, radius, rainTop, camX, camY, camZ, rainVOffset, false);
+
+        buildWeather(level, rainBuilder, matrix, ix, iy, iz, radius, skipRadius, 4, rainTop, camX, camY, camZ, rainVOffset, false);
+        buildWeather(level, rainBuilder, matrix, ix, iy, iz, radius, 0, 1, rainTop, camX, camY, camZ, rainVOffset, false);
+
         MeshData rainData = rainBuilder.build();
         if (rainData != null) BufferUploader.drawWithShader(rainData);
 
@@ -72,7 +76,10 @@ public class SpicedCiderRainRenderer {
         RenderSystem.setShaderTexture(0, SNOW_LOCATION);
         BufferBuilder snowBuilder = tesselator.begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX_COLOR);
         float snowVOffset = (timeDelta * 0.002f) % 1.0f;
-        buildWeather(level, snowBuilder, matrix, ix, iy, iz, radius, rainTop, camX, camY, camZ, snowVOffset, true);
+
+        buildWeather(level, snowBuilder, matrix, ix, iy, iz, radius, skipRadius, 4, rainTop, camX, camY, camZ, snowVOffset, true);
+        buildWeather(level, snowBuilder, matrix, ix, iy, iz, radius, 0, 1, rainTop, camX, camY, camZ, snowVOffset, true);
+
         MeshData snowData = snowBuilder.build();
         if (snowData != null) BufferUploader.drawWithShader(snowData);
 
@@ -81,13 +88,16 @@ public class SpicedCiderRainRenderer {
         RenderSystem.enableCull();
     }
 
-    private static void buildWeather(ClientLevel level, VertexConsumer builder, Matrix4f matrix, int ix, int iy, int iz, int radius, int rainTop, double camX, double camY, double camZ, float vOffset, boolean drawingSnow) {
+    private static void buildWeather(ClientLevel level, VertexConsumer builder, Matrix4f matrix, int ix, int iy, int iz, int radius, int skipRadius, int step, int rainTop, double camX, double camY, double camZ, float vOffset, boolean drawingSnow) {
         BlockPos.MutableBlockPos pos = new BlockPos.MutableBlockPos();
 
         for (int dx = -radius; dx <= radius; dx++) {
+            int wx = step > 1 ? (ix & -step) + (dx * step) : ix + dx;
+
             for (int dz = -radius; dz <= radius; dz++) {
-                int wx = ix + dx;
-                int wz = iz + dz;
+                if (skipRadius > 0 && Math.abs(dx) < skipRadius && Math.abs(dz) < skipRadius) continue;
+
+                int wz = step > 1 ? (iz & -step) + (dz * step) : iz + dz;
 
                 int terrain = WeatherAPI.getRainHeight(level, wx, wz);
                 if (terrain - iy > 40) continue;
@@ -95,7 +105,6 @@ public class SpicedCiderRainRenderer {
                 pos.set(wx, terrain, wz);
 
                 if (!level.getBiome(pos).value().hasPrecipitation()) continue;
-
                 if (!WeatherAPI.isRaining(level, wx, terrain, wz)) continue;
 
                 boolean isSnowy = level.getBiome(pos).value().coldEnoughToSnow(pos);

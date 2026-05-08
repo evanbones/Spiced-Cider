@@ -49,7 +49,7 @@ public class SpicedCiderCloudRenderer {
         if (mc.level == null) return;
 
         double cloudSpeed = SpicedCiderConfig.COMMON.cloudsSpeed.get();
-        double timeOffset = ((double) ticks + partialTick) * cloudSpeed * 32.0D;
+        double timeOffset = ((double) level.getGameTime() + partialTick) * cloudSpeed * 32.0D;
 
         int centerCX = Mth.floor(camX / 32.0);
         int centerCZ = Mth.floor((camZ - timeOffset) / 32.0);

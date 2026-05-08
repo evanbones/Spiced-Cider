@@ -3,6 +3,7 @@ package com.evandev.spicedcider.client.renderer;
 import com.evandev.spicedcider.SpicedCider;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
+import net.minecraft.client.renderer.LightTexture;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.EntityRenderer;
@@ -58,20 +59,20 @@ public class SpicedCiderLightningRenderer extends EntityRenderer<LightningBolt> 
         for (int i = 0; i < sectionCount; i++) {
             float nextY = currentY + secDelta;
 
-            vertexConsumer.addVertex(matrix, x1 + dx1, currentY, z1 + dz1).setColor(255, 255, 255, 255).setUv(0F, 0F).setOverlay(packedLight).setLight(packedLight).setNormal(0, 1, 0);
-            vertexConsumer.addVertex(matrix, x1 + dx2, nextY, z1 + dz2).setColor(255, 255, 255, 255).setUv(0F, 1F).setOverlay(packedLight).setLight(packedLight).setNormal(0, 1, 0);
-            vertexConsumer.addVertex(matrix, x2 + dx2, nextY, z2 + dz2).setColor(255, 255, 255, 255).setUv(1F, 1F).setOverlay(packedLight).setLight(packedLight).setNormal(0, 1, 0);
-            vertexConsumer.addVertex(matrix, x2 + dx1, currentY, z2 + dz1).setColor(255, 255, 255, 255).setUv(1F, 0F).setOverlay(packedLight).setLight(packedLight).setNormal(0, 1, 0);
+            vertexConsumer.addVertex(matrix, x1 + dx1, currentY, z1 + dz1).setColor(255, 255, 255, 255).setUv(0F, 0F).setOverlay(packedLight).setLight(LightTexture.FULL_BRIGHT).setNormal(0, 1, 0);
+            vertexConsumer.addVertex(matrix, x1 + dx2, nextY, z1 + dz2).setColor(255, 255, 255, 255).setUv(0F, 1F).setOverlay(packedLight).setLight(LightTexture.FULL_BRIGHT).setNormal(0, 1, 0);
+            vertexConsumer.addVertex(matrix, x2 + dx2, nextY, z2 + dz2).setColor(255, 255, 255, 255).setUv(1F, 1F).setOverlay(packedLight).setLight(LightTexture.FULL_BRIGHT).setNormal(0, 1, 0);
+            vertexConsumer.addVertex(matrix, x2 + dx1, currentY, z2 + dz1).setColor(255, 255, 255, 255).setUv(1F, 0F).setOverlay(packedLight).setLight(LightTexture.FULL_BRIGHT).setNormal(0, 1, 0);
 
             if (i > 0 && RANDOM.nextInt(3) == 0) {
                 float dist = RANDOM.nextFloat() * 15;
                 float dx3 = dx * dist;
                 float dz3 = dz * dist;
 
-                vertexConsumer.addVertex(matrix, x1_2 + dx3, currentY, z1_2 + dz3).setColor(255, 255, 255, 255).setUv(0F, 0F).setOverlay(packedLight).setLight(packedLight).setNormal(0, 1, 0);
-                vertexConsumer.addVertex(matrix, x1_2 + dx2, nextY, z1_2 + dz2).setColor(255, 255, 255, 255).setUv(0F, 1F).setOverlay(packedLight).setLight(packedLight).setNormal(0, 1, 0);
-                vertexConsumer.addVertex(matrix, x2_2 + dx2, nextY, z2_2 + dz2).setColor(255, 255, 255, 255).setUv(1F, 1F).setOverlay(packedLight).setLight(packedLight).setNormal(0, 1, 0);
-                vertexConsumer.addVertex(matrix, x2_2 + dx3, currentY, z2_2 + dz3).setColor(255, 255, 255, 255).setUv(1F, 0F).setOverlay(packedLight).setLight(packedLight).setNormal(0, 1, 0);
+                vertexConsumer.addVertex(matrix, x1_2 + dx3, currentY, z1_2 + dz3).setColor(255, 255, 255, 255).setUv(0F, 0F).setOverlay(packedLight).setLight(LightTexture.FULL_BRIGHT).setNormal(0, 1, 0);
+                vertexConsumer.addVertex(matrix, x1_2 + dx2, nextY, z1_2 + dz2).setColor(255, 255, 255, 255).setUv(0F, 1F).setOverlay(packedLight).setLight(LightTexture.FULL_BRIGHT).setNormal(0, 1, 0);
+                vertexConsumer.addVertex(matrix, x2_2 + dx2, nextY, z2_2 + dz2).setColor(255, 255, 255, 255).setUv(1F, 1F).setOverlay(packedLight).setLight(LightTexture.FULL_BRIGHT).setNormal(0, 1, 0);
+                vertexConsumer.addVertex(matrix, x2_2 + dx3, currentY, z2_2 + dz3).setColor(255, 255, 255, 255).setUv(1F, 0F).setOverlay(packedLight).setLight(LightTexture.FULL_BRIGHT).setNormal(0, 1, 0);
             }
 
             dx1 = dx2;
