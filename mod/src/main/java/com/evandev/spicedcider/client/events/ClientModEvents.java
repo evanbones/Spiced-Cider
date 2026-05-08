@@ -1,4 +1,4 @@
-package com.evandev.spicedcider.client;
+package com.evandev.spicedcider.client.events;
 
 import com.evandev.spicedcider.SpicedCider;
 import com.evandev.spicedcider.client.renderer.WorkstoneRenderer;
@@ -9,7 +9,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.event.RegisterClientReloadListenersEvent;
 
-public class SpicedCiderClient {
+public class ClientModEvents {
 
     @EventBusSubscriber(modid = SpicedCider.MOD_ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static class ModEvents {

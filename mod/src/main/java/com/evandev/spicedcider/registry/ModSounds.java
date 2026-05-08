@@ -15,4 +15,7 @@ public class ModSounds {
 
     public static final DeferredHolder<SoundEvent, SoundEvent> HAMMER2 = SOUNDS.register("block.workstone.hammer2",
             () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "block.workstone.hammer2")));
+
+    public static final DeferredHolder<SoundEvent, SoundEvent> PLAYER_DEATH = SOUNDS.register("music.death.death1",
+            () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "music.death.death1")));
 }

@@ -29,8 +29,14 @@ public class RandomSpreadStructurePlacementMixin {
 
     @Inject(method = {"<init>(Lnet/minecraft/core/Vec3i;Lnet/minecraft/world/level/levelgen/structure/placement/StructurePlacement$FrequencyReductionMethod;FILjava/util/Optional;IILnet/minecraft/world/level/levelgen/structure/placement/RandomSpreadType;)V"}, at = {@At("RETURN")})
     private void adjustSpacingSeperation(Vec3i p_227000_, StructurePlacement.FrequencyReductionMethod p_227001_, float p_227002_, int p_227003_, Optional p_227004_, int p_227005_, int p_227006_, RandomSpreadType p_227007_, CallbackInfo ci) {
-        this.spacing = Mth.clamp((int) Math.round(this.spacing * SpicedCiderConfig.COMMON.spacingSeparationModifier.get()), 1, 4095);
-        this.separation = Mth.clamp((int) Math.round(this.separation * SpicedCiderConfig.COMMON.spacingSeparationModifier.get()), 0, 4095);
+        if (!SpicedCiderConfig.COMMON_SPEC.isLoaded()) {
+            return;
+        }
+
+        double modifier = SpicedCiderConfig.COMMON.spacingSeparationModifier.get();
+        this.spacing = Mth.clamp((int) Math.round(this.spacing * modifier), 1, 4095);
+        this.separation = Mth.clamp((int) Math.round(this.separation * modifier), 0, 4095);
+
         if (this.spacing <= this.separation) {
             this.spacing = this.separation + 1;
         }

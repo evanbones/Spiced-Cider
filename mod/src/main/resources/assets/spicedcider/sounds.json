@@ -12,5 +12,15 @@
     "sounds": [
       "spicedcider:block/workstone/hammer2"
     ]
+  },
+  "music.death.death1": {
+    "category": "music",
+    "subtitle": "subtitles.spicedcider.music.death.death1",
+    "sounds": [
+      {
+        "name": "spicedcider:music/death/death1",
+        "stream": true
+      }
+    ]
   }
 }

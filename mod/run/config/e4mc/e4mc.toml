@@ -25,6 +25,6 @@
 		# The URL to get the list of Iroh relays to use
 		# default: https://natives.e4mc.link/relaymap.json
 		dialtoneRelayMap = "https://natives.e4mc.link/relaymap.json"
-	# Whether to hide direct IP addresses from the relay
-	# default: true
-	dialtoneSanitizeTicket = true
+		# Whether to hide direct IP addresses from the relay
+		# default: true
+		dialtoneSanitizeTicket = true

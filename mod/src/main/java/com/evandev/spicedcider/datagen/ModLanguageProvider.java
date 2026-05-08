@@ -28,5 +28,6 @@ public class ModLanguageProvider extends LanguageProvider {
         add("emi.category.spicedcider.workstone", "Workstone");
         add("title.spicedcider.config", "Spiced Cider Config");
         add("category.spicedcider.general", "General");
+        add("subtitles.spicedcider.music.death.death1", "Player died");
     }
 }
