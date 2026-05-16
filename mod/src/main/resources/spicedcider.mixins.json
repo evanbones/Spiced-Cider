@@ -5,7 +5,6 @@
   "plugin": "com.evandev.spicedcider.mixin.SpicedCiderMixinPlugin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "minecraft.accessor.MapColorAccessor",
     "perf.RecipeBookMixin",
     "perf.ReloadableServerResourcesMixin",
     "perf.ServerPlayerMixin",
