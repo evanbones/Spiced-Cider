@@ -12,7 +12,7 @@
 	},
 	serverOptions: {
 		disable_hunger: true,
-		hunger_effect: "DISABLED",
+		hunger_effect: "VANILLA",
 		gradual_health_regeneration: true,
 		gradual_health_regeneration_speed: 1.0,
 		regeneration_at_full_health: "CONTINUED",
@@ -58,7 +58,7 @@
 			"minecraft:suspicious_stew": 1
 		},
 		farmers_delight_food_stack_sizes: null,
-		sprinting: "DISABLED",
+		sprinting: "VANILLA",
 		sprinting_health_limit: 6,
 		instant_eating: false,
 		show_food_item_tooltips: true,
