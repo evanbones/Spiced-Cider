@@ -29,7 +29,6 @@
       "file/Modern Fast Item Frames 1.1.zip",
       "file/Item Sprites.zip",
       "file/JavaUI.zip",
-      "file/AL's Boss Rush 2.0.zip",
       "file/Seedy_Saplings_NML.zip",
       "file/Brush+Juice-5.2.0.zip",
       "file/Seedy Saplings.zip",
@@ -38,7 +37,6 @@
       "file/Farcr's Re-Create 1.6.zip",
       "file/Snowy Rework V1.1.zip",
       "file/You-Take-the-Moon-and-You-Take-the-Sun.zip",
-      "file/Compact Spawn Eggs 0.3.zip",
       "file/Detail-Brush-1.8-1.20.2+.zip",
       "file/Quark VRO.zip",
       "file/Farcr's Re-Crafted V2.28.1.zip",
@@ -61,12 +59,16 @@
       "file/Farcrs Better Dirt - Modded Compat.zip",
       "file/Better Mob Models [V1.2].zip",
       "file/Supplementaries Touch-Ups v0.2.zip",
-      "file/Fluff Clouds.zip"
+      "file/Fluff Clouds.zip",
+      "file/AL's Boss Rush 1.1.zip"
     ],
     "2": [
-      "vanilla"
-    ],
-    "3": [
+      "fabric",
+      "mod_resources",
+      "mod/fabric_api,forgified_fabric_api",
+      "mod/fabric_api,",
+      "forgified_fabric_api",
+      "moonlight:merged_pack",
       "spicedcider_mod-descriptions-v11.1.zip",
       "mod/wilderflowers:resourcepacks/wildflowers",
       "mod/bigwater:resourcepacks/rekindled",
@@ -74,7 +76,6 @@
       "spicedcider_Modern Fast Item Frames 1.1_jit",
       "spicedcider_Item Sprites_jit",
       "spicedcider_JavaUI_jit",
-      "spicedcider_AL's Boss Rush 2.0_jit",
       "spicedcider_Seedy_Saplings_NML_jit",
       "spicedcider_Brush+Juice-5.2.0_jit",
       "spicedcider_Seedy Saplings_jit",
@@ -83,7 +84,6 @@
       "spicedcider_Farcr's Re-Create 1.6_jit",
       "spicedcider_Snowy Rework V1.1_jit",
       "spicedcider_You-Take-the-Moon-and-You-Take-the-Sun_jit",
-      "spicedcider_Compact Spawn Eggs 0.3_jit",
       "spicedcider_Detail-Brush-1.8-1.20.2+_jit",
       "spicedcider_Quark VRO_jit",
       "spicedcider_Farcr's Re-Crafted V2.28.1_jit",
@@ -107,12 +107,10 @@
       "spicedcider_Better Mob Models [V1.2]_jit",
       "spicedcider_Supplementaries Touch-Ups v0.2_jit",
       "spicedcider_Fluff Clouds_jit",
-      "fabric",
-      "mod_resources",
-      "mod/fabric_api,forgified_fabric_api",
-      "mod/fabric_api,",
-      "forgified_fabric_api",
-      "moonlight:merged_pack"
+      "spicedcider_AL's Boss Rush 1.1_jit"
+    ],
+    "3": [
+      "vanilla"
     ],
     "$$0": {
       "hidden": true,
@@ -125,13 +123,13 @@
       "required": false
     },
     "$$2": {
-      "hidden": false,
+      "hidden": true,
       "required": true,
       "fixed_position": true,
       "default_position": "BOTTOM"
     },
     "$$3": {
-      "hidden": true,
+      "hidden": false,
       "required": true,
       "fixed_position": true,
       "default_position": "BOTTOM"

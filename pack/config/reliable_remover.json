@@ -1,7 +1,7 @@
 {
-  "showAttackMessage": true,
-  "showHandSwingMessage": true,
-  "showRemovalMessage": true,
+  "showAttackMessage": false,
+  "showHandSwingMessage": false,
+  "showRemovalMessage": false,
   "removeItemsFromCreativeTabs": true,
   "removeItemsFromEmi": true,
   "removeItemsFromInventories": true,
@@ -15,7 +15,7 @@
   "enableEmiRemoval": true,
   "showEmiToast": true,
   "showEmiChatMessages": true,
-  "reloadAfterRemoval": true,
+  "reloadAfterRemoval": false,
   "blacklistedItems": [
     "minecraft:music_disc_lava_chicken",
     "modulation:cast_post",
@@ -24,6 +24,19 @@
     "minecraft:music_disc_tears",
     "minecraft:elytra",
     "minecraft:phantom_membrane",
-    "moonlight:spawn_box"
+    "moonlight:spawn_box",
+    "minecraft:chainmail_boots",
+    "minecraft:chainmail_leggings",
+    "minecraft:chainmail_chestplate",
+    "minecraft:chainmail_helmet",
+    "minecraft:wooden_hoe",
+    "minecraft:wooden_axe",
+    "minecraft:wooden_pickaxe",
+    "minecraft:wooden_shovel",
+    "minecraft:emerald",
+    "minecraft:deepslate_emerald_ore",
+    "minecraft:emerald_ore",
+    "minecraft:emerald_block",
+    "minecraft:enchanted_book"
   ]
 }

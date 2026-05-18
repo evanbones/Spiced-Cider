@@ -3,59 +3,7 @@
 <a href='https://neoforged.net/'><img alt="neoforge" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/supported/neoforge_vector.svg"></a>
 
 Spiced Cider is a 1.21.1 NeoForge modpack currently in development. This repo incorporates both the Spiced Cider modpack
-and its core mod into a single unified workspace.
-
-## Setting Up the Workspace (Prism Launcher)
-
-To seamlessly bridge the coremod and the modpack, we use Prism Launcher as our primary mod manager. We do this by
-creating a **symlink** that points Prism's instance folder directly to the Gradle run environment.
-
-1. Create a new 1.21.1 NeoForge instance in Prism Launcher named.
-2. Right-click the instance and select **Folder** to open the instance directory.
-3. **Delete** the default `.minecraft` folder inside the instance directory.
-4. Create a symlink that replaces the `.minecraft` folder and points to the `mod/run` directory in this repository.
-
-**Windows (Command Prompt):**
-
-```cmd
-mklink /J "C:\Path\To\Prism\instances\Spiced Cider\minecraft" "C:\Path\To\Repo\Spiced-Cider\mod\run"
-```
-
-Now, when you download or update mods via Prism, they are saved directly into `mod/run/mods`. Your configurations are
-saved directly to `mod/run/config`.
-
-## Running the Game
-
-You can launch the game using Prism Launcher for casual testing, or run the following Gradle command to automatically
-compile your coremod changes and launch the game:
-
-```sh
-./gradlew mod:runClient 
-```
-
-Gradle shares the `mod/run` folder with Prism, meaning all your downloaded mods and configs will be perfectly synced.
-
-## Building and Releasing the Modpack
-
-When you are ready to build a release `.mrpack` file:
-
-1. Open Prism Launcher, right-click the instance, and click **Export Instance**.
-2. Select Modrinth `.mrpack` format and export the zip file anywhere.
-3. Open the exported zip and copy **only** the `modrinth.index.json` file into the root of this repository.
-4. Run the following command:
-
-```sh
-./gradlew mrpack 
-```
-
-This task reads your `modrinth.index.json`, grabs your live configs from `mod/run/config`, compiles the
-coremod, and packages it all into a ready-to-publish `.mrpack` in `build/libs`.
-
-Publish to Modrinth using:
-
-```sh
-./gradlew publishMods
-```
+and its core mod into a single repo.
 
 ## Modifying the Coremod
 
@@ -78,9 +26,6 @@ authors.** The source code of the Spiced Cider mod for Minecraft 1.21.1 is avail
 
 Spiced Cider contains code from [Better Log4j Config](https://modrinth.com/mod/better-log4j-config), used under
 its [Apache License 2.0](https://github.com/BigWingBeat/better_log4j_config/blob/fabric/LICENSE).
-
-Map colors are from [Remapped](https://github.com/Apollounknowndev/remapped), used under
-its [MIT license](https://github.com/Apollounknowndev/remapped/blob/main/LICENSE).
 
 Randomized world names are from [Naming Unconvention](https://github.com/QinomeD/Naming-Unconvention/), used under
 its [LGPLv3 license](https://github.com/QinomeD/Naming-Unconvention/blob/master/LICENSE).

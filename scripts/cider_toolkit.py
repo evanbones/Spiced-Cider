@@ -17,7 +17,7 @@ PRISM_RP_DIR = Path(r"C:\Users\evan\AppData\Roaming\PrismLauncher\instances\Spic
 CIDER_PACKS_DIR = REPO_ROOT / "ciderpacks"
 MANIFEST_FILE = REPO_ROOT / "pack" / "config" / "spicedcider" / "spicedcider_manifest.json"
 OVERRIDES_FILE = REPO_ROOT / "pack" / "config" / "resourcepackoverrides.json"
-CACHE_DIR = REPO_ROOT / "mod" / "run" / ".spicedcider_cache"
+CACHE_DIR = Path(r"C:\Users\evan\AppData\Roaming\PrismLauncher\instances\Spiced Cider Dev\minecraft\.spicedcider_cache")
 
 
 def get_file_hash(filepath):
@@ -109,17 +109,17 @@ def update_overrides(valid_names):
 
     data["pack_overrides"]["1"] = new_list_1
 
-    list_3 = data.get("pack_overrides", {}).get("3", [])
-    new_list_3 = [x for x in list_3 if
+    list_2 = data.get("pack_overrides", {}).get("2", [])
+    new_list_2 = [x for x in list_2 if
                   not (x.startswith("spicedcider_") and x.endswith("_jit")) or x in valid_jit_entries]
 
     for entry in valid_jit_entries:
-        if entry not in all_assigned_packs and entry not in new_list_3:
-            new_list_3.append(entry)
+        if entry not in all_assigned_packs and entry not in new_list_2:
+            new_list_2.append(entry)
             all_assigned_packs.add(entry)
-            print(f"    Added to 3: {entry}")
+            print(f"    Added to 2: {entry}")
 
-    data["pack_overrides"]["3"] = new_list_3
+    data["pack_overrides"]["2"] = new_list_2
 
     with open(OVERRIDES_FILE, 'w', encoding='utf-8') as f:
         json.dump(data, f, indent=2)
