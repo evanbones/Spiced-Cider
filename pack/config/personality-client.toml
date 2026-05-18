@@ -12,6 +12,10 @@
 	#If Ghasts should have a squish animation when shooting fireballs
 	"Ghast attack animation" = true
 
+	[tweaks.sheep]
+		#If Sheep should show their fur color beneath their coat, like in Bedrock edition
+		"Sheep fur overlay" = false
+
 	[tweaks.armor]
 		#If the armor model should be deflated using the inner and outer armor deformations
 		"Deflate armor model" = true
@@ -29,7 +33,3 @@
 		"Large baby villager heads" = true
 		#If Villagers should close their eyes when sleeping
 		"Villager close eyes" = true
-
-	[tweaks.sheep]
-		#If Sheep should show their fur color beneath their coat, like in Bedrock edition
-		"Sheep fur overlay" = true
