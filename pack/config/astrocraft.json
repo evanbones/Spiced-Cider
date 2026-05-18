@@ -33,7 +33,7 @@
   "enablePlanets": true,
   "enableAsteroids": true,
   "observerPlanet": "Earth",
-  "bigPlanets": false,
+  "bigPlanets": true,
   "planets": [
     {
       "name": "Mercury",
@@ -718,7 +718,7 @@
       ]
     }
   ],
-  "magnitudeLimit": 7,
+  "magnitudeLimit": 5,
   "enableRealStars": true,
   "enableVanillaStars": false,
   "daytimeStars": false,
@@ -726,7 +726,7 @@
     "starOpacity": 80,
     "starSaturation": 80,
     "baseRadius": 0.3,
-    "minimumRadius": 0.12,
+    "minimumRadius": 0.1,
     "brightnessPower": 3.0
   },
   "enableDeepsky": true,
