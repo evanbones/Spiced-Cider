@@ -5,6 +5,10 @@ file = "PW-GUI.exe"
 hash = "cb701ee140fc7222da13c8884a74d9c5a0f2d6b9860fa2a0eb78000a496f3642"
 
 [[files]]
+file = "config/CoroUtil/General.toml"
+hash = "6d46bdc090d4bb9bdfb660be4ca94075dc08e09d5fed84108eba92a422a23c49"
+
+[[files]]
 file = "config/MouseTweaks.cfg"
 hash = "4069ce1a439d8c37453c1b1e9f2037e0942674c7e48723a39b37eab245792ad4"
 
@@ -18,7 +22,7 @@ hash = "08af36971d8987bee93ae860f2b3f7d35f26f5061b24ee5c6b6db06ec4661357"
 
 [[files]]
 file = "config/advancement_enhancement_layout.json"
-hash = "a498de4c1ea1c5dac355e1de2e312bb40566e05fbebec5bd887c3d09182362f4"
+hash = "7e66315ee63cce0fcd56de408af3effe5261397f045833ad5981dbb36ff5aea8"
 
 [[files]]
 file = "config/advancementplaques.toml"
@@ -35,6 +39,10 @@ hash = "b3575dd01154bb9c146abd84facbdac202fb81b501f2ae24da4b9d347ccdd484"
 [[files]]
 file = "config/alltheleaks.json"
 hash = "2437057bda7e53d91e7a8c400da308a8d848fbdcc80ed845a9c8dbdabd071482"
+
+[[files]]
+file = "config/almanac-common.toml"
+hash = "43303ea5835f439a1fc1e7eb771834cfce26450a2381ad192621e4ed5532ff29"
 
 [[files]]
 file = "config/amendments-client.toml"
@@ -57,6 +65,14 @@ file = "config/badoptimizations.txt"
 hash = "8fd80533859c0e37526a58fc4f20c040fb569e3bf80f203eede793ae7e12840f"
 
 [[files]]
+file = "config/bestylewither-common.toml"
+hash = "961904517ec6d2839a0048e4edc802cc563dd58c295e3269b58638226eb168d4"
+
+[[files]]
+file = "config/bestylewither-pre.json"
+hash = "7da5d34927922c48a9cf0281f36e9796ef3a88a873e9a82500666d862f2806c3"
+
+[[files]]
 file = "config/better_log4j_config.xml"
 hash = "761d6a6c702ac7afe8aad81b186837d861bede636a0527857b482284c7c21a67"
 
@@ -69,8 +85,20 @@ file = "config/betterclouds-v1.json"
 hash = "54f5a6f7f902ceedd1245d4f896d86dec02a0165379d2b0e39d861b916721761"
 
 [[files]]
+file = "config/betterdays-client.toml"
+hash = "730b13a15e01a03825fc40477758799ed8801c783d9cf829867c43c1b08f7ad9"
+
+[[files]]
+file = "config/betterdays-common.toml"
+hash = "4e5e10bdbc1899a0eb3a528a371719a7d468fa897c194b07f4fad4c8d3929153"
+
+[[files]]
 file = "config/betterf3.toml"
 hash = "43cbf61e86d4ebdd7ab68b2d6d8023ddc62528d5eb7c3d508acb4a5a954cf9c5"
+
+[[files]]
+file = "config/betterthirdperson-common.toml"
+hash = "55406dc103678dc459c50fbb85bcdc7b9e7421576b4ee56e57344dd6c79cf140"
 
 [[files]]
 file = "config/bigwater-client.toml"
@@ -130,11 +158,23 @@ hash = "fa77382569bcc6a93a4b38f7f63a4de7de17acefada9cd774b3b3442dc8bae34"
 
 [[files]]
 file = "config/cloud-layers.json"
-hash = "450833fd1fed82bba3e968e58ced9e54fd937b8bb6f9eef268fe300434849a95"
+hash = "7bb11851ca7d7d832aa09749b6180109cf8b6a029f653f65558193ec4f44c750"
 
 [[files]]
 file = "config/colorwheel-client.toml"
 hash = "a7d87ab03d61fecad6d297bcad9976c9e48765ca67f90b3c388419c2a70b452e"
+
+[[files]]
+file = "config/combatnouveau-client.toml"
+hash = "114b804ec5c69287fd97cfa83133b86ec8256b78013de71e6869b45b9f8e46e2"
+
+[[files]]
+file = "config/combatnouveau-common.toml"
+hash = "be037e33a19e3339f0eed31c624b8e6b0c6047be9ce9a29fd2fcd7f7cf165f8f"
+
+[[files]]
+file = "config/combatnouveau-server.toml"
+hash = "a5d23819ac1360ca19a3e3200f8e4b10910aadac222bcd7f9b888b65da03c996"
 
 [[files]]
 file = "config/configured-client.properties"
@@ -174,7 +214,7 @@ hash = "943e1c3672b8a03f27519b357091133205119c7b3db2fcc4c25b597cabf8926d"
 
 [[files]]
 file = "config/crash_assistant/modlist.json"
-hash = "937309da29dfafbe2b20c616569e6a0ceb91674213bc42fcaa92154d982ea64e"
+hash = "4eb8f3ef07aa18b212a333c3f2c8e99e5bad46fa23e0142d8eca87a32153caf1"
 
 [[files]]
 file = "config/crash_assistant/scripts/log_analysis/example.jexl"
@@ -282,7 +322,7 @@ hash = "2fede1a2083a3b775691cd6f6cbc4252436b8b331f7d78704d2ee6c3e7ca9a16"
 
 [[files]]
 file = "config/fabric/indigo-renderer.properties"
-hash = "c99051cb09c8394fec6b582dc87cfb1b8b5d74a79fc0b24edfbd80edb15ab566"
+hash = "fea6d46798f47b2e8dc3beff70ddedb989d42fa605eaacea2d1c18098eb4509b"
 
 [[files]]
 file = "config/fallingleaves-client.toml"
@@ -362,7 +402,7 @@ hash = "60c78c0b4c972d81b27ec25b75062fd39d7a36dcb5083cebdfd642312073acf0"
 
 [[files]]
 file = "config/fancymenu/assets/title.png"
-hash = "06c450b08285dcb55bb0c51e705aec5f3ade46a6aa73a6f2dc1d42c1c0a62b6a"
+hash = "e6c2348fd2f7f600ae1a9fa0b364c41307f5bee6ebe92fa7ddd5a0adced09b2c"
 
 [[files]]
 file = "config/fancymenu/assets/title_splashes.txt"
@@ -529,6 +569,18 @@ file = "config/hoofprint.toml"
 hash = "1db56c8f8638cb5b63ed4ccac30b1e8506b40ba89b44642d9d838f94af5bc011"
 
 [[files]]
+file = "config/horseman-client.toml"
+hash = "7f0ed7c16f3403958ceb089b233a8add81581c65fe033b26d8d012bb176d374e"
+
+[[files]]
+file = "config/horseman-common.toml"
+hash = "416edc95699d475b533e25ccd80d0a3e7587a0e30c7b8ca2b6ba1111afe83b8d"
+
+[[files]]
+file = "config/horseman-server.toml"
+hash = "89c0d81538d309ccb526d97f7472f11d04eabbf9bcd89d90d82ff45fdeaa578b"
+
+[[files]]
 file = "config/immediatelyfast.json"
 hash = "030d7c2c4b33a367d6e0ac009e0c47523c61d38ccb9fb68ea920f773645d6f19"
 
@@ -689,6 +741,10 @@ file = "config/leahs-immersive-thunder.toml"
 hash = "a120d448e40dbd9f63f660539b0cefb7ab3519a49a89c88e6be615fdaa363d36"
 
 [[files]]
+file = "config/letmedespawn.json"
+hash = "6af411644e22ede34383135509cb96b2a636d8ed45494b28976514a95537105e"
+
+[[files]]
 file = "config/lithium.properties"
 hash = "6cf6f83720071fd1657c8e79b357caf68d40f410ae123e5f922483eb1d1d25be"
 
@@ -793,16 +849,28 @@ file = "config/nethermap.toml"
 hash = "b07e929a45bed93594b8134b856c3b791f8ba678a8c698fb52a54df17ea488b9"
 
 [[files]]
-file = "config/nomansland-client.toml"
+file = "config/nomansland-client-1.toml.bak"
 hash = "03f5f372a988cbf1d5d06fd2addc2cb41baf85fe3864fb06edc711eb2c99c210"
 
 [[files]]
-file = "config/nomansland-common.toml"
+file = "config/nomansland-client.toml"
+hash = "9197465180e4dc89584b5774fc31046c7add39dd0ad93891cda506d0646d42be"
+
+[[files]]
+file = "config/nomansland-common-1.toml.bak"
 hash = "8b4853e583cd42e40efc29f1b908890704a052a4bc965de76d9f8a2cf2ac9ede"
 
 [[files]]
-file = "config/nomansland-startup.toml"
+file = "config/nomansland-common.toml"
+hash = "b4a6d4cb68f7219802823cf3f0d0642d14624b11815d7c49a19c9671f5012666"
+
+[[files]]
+file = "config/nomansland-startup-1.toml.bak"
 hash = "4f9cc6ff573131acf9e92638b8686d2cfcaafbececd4289d4b5b431a4e9cc697"
+
+[[files]]
+file = "config/nomansland-startup.toml"
+hash = "1e5cd63b697990dd98b084c67c5b438d1578348760965a90fcc2095d059ff499"
 
 [[files]]
 file = "config/nostalgic_tweaks/backup/nostalgic_tweaks-client-startup_backup.json"
@@ -846,7 +914,7 @@ hash = "05022be17b8d67f7f6e766884518e40b20efc01dbfd531ad10ec009af6724342"
 
 [[files]]
 file = "config/packetfixer.properties"
-hash = "264bfe56a84653de971ab2d97b91eb44d240be3fa0e4d3b4e988577468f11f45"
+hash = "855bd3d0cdbf2dcb81998799fa0097b54a5301f9b485f09bbe024915823eaa3a"
 
 [[files]]
 file = "config/particle_core_config.toml"
@@ -962,7 +1030,15 @@ hash = "1c970fc0cc8a3989889a43fdc6c40c89cabf81ffac2405f92c6abf489a410674"
 
 [[files]]
 file = "config/resourcepackoverrides.json"
-hash = "74c184dacc07f9b0129aae7e6dc0e2dcc5dcb90d8d4a74e52b63aa4d60e62c48"
+hash = "07cc48d7b92d855c30a7965cf0ae4f9da3fdcde87b840289a473d865a7a4ac8e"
+
+[[files]]
+file = "config/sage_brush-client.toml"
+hash = "7b090e8744ff0e3eeea9d2bf1e108aef24beed481f580dccc30518df1c196d82"
+
+[[files]]
+file = "config/sage_brush-common.toml"
+hash = "de881976ab08f520f31b466a1f2bb28a7b21de89af261826ccde12c0bef9dd04"
 
 [[files]]
 file = "config/scholar-client.toml"
@@ -1054,7 +1130,7 @@ hash = "e26b00784bb6239988759ed1a64551b9f301dc33c5a855d91e976ee4bf40ac8a"
 
 [[files]]
 file = "config/sound_physics_remastered/sound_rates.properties"
-hash = "3d94d337291ec430d818026223b7ffdb1a707437e1c009ea4faf1194a8c49659"
+hash = "50bd3414a4b9b4e2623076995dc1d0e18d43217da4704de5ff421c1462e95d23"
 
 [[files]]
 file = "config/sound_physics_remastered/soundphysics.properties"
@@ -1078,7 +1154,7 @@ hash = "71c6f65022cb095402596003a4896d66de91b15294c5e8ef9118ce10b3503829"
 
 [[files]]
 file = "config/spicedcider/spicedcider_manifest.json"
-hash = "57442e16da79ab395b19f2467adf88244e01d2f553361a000cf3770702777168"
+hash = "a0b3ddfe4edbaf8c66283e7fd036b5167463bb1bb8e0aa29871ea3a4b83f71bf"
 
 [[files]]
 file = "config/structure_layout_optimizer.jsonc"
@@ -1161,8 +1237,32 @@ file = "config/voicechat/voicechat-server.properties"
 hash = "22e86b77faa71556fc89be8b538cacb9d82cdcd110338ab75c10398777369d5d"
 
 [[files]]
+file = "config/wakes-client.toml"
+hash = "3ab0f121e74ed9c09c47867c335752f0e801f550e3e24591f30724daf35e0015"
+
+[[files]]
+file = "config/watut-client.toml"
+hash = "cc750724e261c94be36d2cea4a5e4f9466192e9ff7cf01546cb1efcea918282b"
+
+[[files]]
+file = "config/watut-common.toml"
+hash = "93d4055b22552b80ae5f96d396b335910993ab7010b562a34291adade59df4f6"
+
+[[files]]
+file = "config/watut-item-arm-adjustments.json"
+hash = "543e09f71cda1d97d238ac4150e43e50868cf781027c88d68fc714f261d88982"
+
+[[files]]
+file = "config/watut-server.toml"
+hash = "77c32650cc543180e5d03cf079956b631da769ef0c845cc75f34d95718be91f3"
+
+[[files]]
 file = "config/waveycapes.json"
 hash = "8ba8caf036bac59033157842f7812cf3eca3434a02d2e7e59648214fe42c48fc"
+
+[[files]]
+file = "config/whitenoise-client.toml"
+hash = "00c6e34f0adbb41db954d296fd7c55dc3412463a38038dc836626433dd7f6d92"
 
 [[files]]
 file = "config/wilderflowers.toml"
@@ -1209,6 +1309,11 @@ metafile = true
 [[files]]
 file = "mods/alltheleaks-1.1.9+1.21.1-neoforge.jar"
 hash = "94c8e671c99ad3b098678cc1947594f7723e294c7692a4d0f9126a4d85a756e6"
+
+[[files]]
+file = "mods/almanac.pw.toml"
+hash = "19d6b20763edf0247e395db37d6e7e5b012ca063f5820c81a6330baff2218c4e"
+metafile = true
 
 [[files]]
 file = "mods/alternate-current.pw.toml"
@@ -1379,6 +1484,11 @@ file = "mods/convenientnametags-1.1.0.jar"
 hash = "94306068335ae6fe7f56c200c1918950c15d3420fed34b4ae6bba8e39f1b2c11"
 
 [[files]]
+file = "mods/coroutil.pw.toml"
+hash = "d901f874a1e09747b8d0d072c38c426eceead1f29c8ba36680f8f0082996b152"
+metafile = true
+
+[[files]]
 file = "mods/crash-assistant.pw.toml"
 hash = "ebc4237417524e557b8dfc39dd8dbe884c9b99ecae0ceaa234426c61fa9449e8"
 metafile = true
@@ -1515,7 +1625,7 @@ metafile = true
 
 [[files]]
 file = "mods/field-guide.pw.toml"
-hash = "f79155f6a68796963a7d971debd271ffca952e82809dacce34671187a6b8ea3f"
+hash = "c99b2d8ae13217be9639ba9bf9312628c84707c4047ca859c8fc17c7254d6540"
 metafile = true
 
 [[files]]
@@ -1580,7 +1690,7 @@ metafile = true
 
 [[files]]
 file = "mods/immersive-minimaps.pw.toml"
-hash = "3c3ac25a5642807f180b8fe4e4ba4771719541e743f274180838a56ead629fb0"
+hash = "1c1e343ab2cdab9f05346c9848ab894f4d5d1e98d652bec2509a58acef4ea422"
 metafile = true
 
 [[files]]
@@ -1648,8 +1758,18 @@ hash = "3f1fe26d26eaf43c0d7916ee8f8cdf7714a478fc6e09883e931a1f354a6532f0"
 metafile = true
 
 [[files]]
+file = "mods/lmd.pw.toml"
+hash = "edc75ace846ae34c1cb4cf4a44106e1fb035b1eee0432765a716098c9a4b5823"
+metafile = true
+
+[[files]]
 file = "mods/lmft.pw.toml"
 hash = "35725a7bee95c5f0df1eeccd3ed406036c35fae26a7d7864fae1127a85957fdb"
+metafile = true
+
+[[files]]
+file = "mods/mannequins.pw.toml"
+hash = "0c53ddaaa2d828c91ea4f5fe920bf3935b48b4ee2507f9145225775a64a88669"
 metafile = true
 
 [[files]]
@@ -1838,7 +1958,7 @@ metafile = true
 
 [[files]]
 file = "mods/reliable-recipes.pw.toml"
-hash = "10dc8e50bd18c8363757d36e85d227a056dbb7b4c80a44e899c10aa05386bec5"
+hash = "cd062a5fba9458805787d6da805e0f4dbcb10dc31edf3133955af43a310576d3"
 metafile = true
 
 [[files]]
@@ -1867,8 +1987,18 @@ hash = "27721caca5a03b743bf25888e1d984142948069dace31453f103f94f7f24d2ce"
 metafile = true
 
 [[files]]
+file = "mods/respawning-animals.pw.toml"
+hash = "68294507359c310e2d25b4bccf160c173264c2301439be978242994c9fcb6cdc"
+metafile = true
+
+[[files]]
 file = "mods/rosen.pw.toml"
 hash = "68d38944717e40cd6f9cbe6ad13091cedbf7b4254495604f2f47e20206a1a8fb"
+metafile = true
+
+[[files]]
+file = "mods/sage-brush.pw.toml"
+hash = "4f822ac27bc1c018725cf54a6de9737cd769ba8fcb04ad8272d55be5fa780530"
 metafile = true
 
 [[files]]
@@ -2012,12 +2142,22 @@ metafile = true
 
 [[files]]
 file = "mods/vanillabackport.pw.toml"
-hash = "4ce70d3eae1b10ea72230958051c6157376150232792c94f08c09fc7644b16aa"
+hash = "ef6ec054264f943b1391d230317264f146057b9e3b07e99f4c383c324831b190"
+metafile = true
+
+[[files]]
+file = "mods/wakes-reforged.pw.toml"
+hash = "2ec4bb5d0430f8a186a29b9a222e696891eb1c8d68f44ac1050e58173907da9f"
 metafile = true
 
 [[files]]
 file = "mods/wavey-capes.pw.toml"
 hash = "f84ae2e01bc4c7c5531ca9ab045be132ff32df0a572b408efc14f89ef636be01"
+metafile = true
+
+[[files]]
+file = "mods/what-are-they-up-to.pw.toml"
+hash = "9ce52d07c0c3d146a2a44f8bc187138ce7a5558a4e3ab540c86234702b6de274"
 metafile = true
 
 [[files]]
@@ -2127,11 +2267,6 @@ metafile = true
 [[files]]
 file = "resourcepacks/farcrs-re-create.pw.toml"
 hash = "280a2d859056df72a687ca4bb722290612620b088d6d676a15fa5a58a63aa6cf"
-metafile = true
-
-[[files]]
-file = "resourcepacks/fluff-clouds.pw.toml"
-hash = "2eec2a4c133dc95345cfdd06bda113b1e21769ce4e5df1e238753b4ed349d3fc"
 metafile = true
 
 [[files]]
@@ -2627,6 +2762,10 @@ hash = "7264e7e31c35986ed5ea4528bb66431f6f83e0818e80b7b2added6185aac09b3"
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/etched/textures/item/star_label_top.png"
 hash = "8243e8f511ae875f3340b7165771b8e681022c6763ae50c0efcc802d5093a798"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/idk where to put this yet/bronze_ingot.png"
+hash = "993e175d243de0b68cd5edbeb2e9b79ab44f95943e387424c7090c76462a7fce"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/minecraft-cursor/atlases/cursors.json"
@@ -3214,7 +3353,7 @@ hash = "2bb297847f5c9f2b44efcb0262f4e36edb2f35d053719809cdd78b5e2e5879d7"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/block/bricks.png"
-hash = "e11c77a498af8cd844eb90b81fb776631ababa7bb5be642abd28a474724d513f"
+hash = "7ab4f3aedb3be5961b9e3e3b6355e0b537fa52907154263e48d1aa13bd8797a1"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/block/detector_rail.png"
@@ -3597,6 +3736,10 @@ file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/salmo
 hash = "808f0b3f83e645f54d6b484afaf06d143b457ed69176a039ce2b25c89af1c9b3"
 
 [[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/shears.png"
+hash = "2f3029434b0cc4ba07082f731affa4b5406c4e75139a1e643a57eef55824af4a"
+
+[[files]]
 file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/sheep_spawn_egg.png"
 hash = "b092e7df58740f22b831552c7cb2557e635b4a2880a8f9daf66fd82e68f55703"
 
@@ -3935,6 +4078,26 @@ hash = "0e24d3805cc3992a1426ab2b234737237378ae6ccb1ff31aaa0843067ea2fca7"
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/screenshot_viewer/textures/gui/sprites/widget/icons/screenshot_viewer.png"
 hash = "4767f952ca15d652b414c3ecbb5166a065b3492932276849e67fa3aa00f463b3"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/textures/item/diamond_hammer.png"
+hash = "02b15962aec31605e9ec660354164b7c0970911852dc4f8756050d629748f194"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/textures/item/flint_hammer.png"
+hash = "782247e76948d8c5dd78335b8f9c2d3ee9116ba0619c0a130d45bbe9a95e789a"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/textures/item/golden_hammer.png"
+hash = "2b7d7af871be6f3e3694233eeacce5bd16225fe21ed9bf6c3e8315b8a81bf970"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/textures/item/iron_hammer.png"
+hash = "0efccc49c8f9782dd09eef86aeba7a2bae6554dd14ae25475a94c3d8189d0bec"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/textures/item/netherite_hammer.png"
+hash = "2512951dda558f078a906914b5c5a02fcaadda069ac636eb022fcbe4655dcfbf"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/icon.png"
