@@ -210,7 +210,7 @@ hash = "943e1c3672b8a03f27519b357091133205119c7b3db2fcc4c25b597cabf8926d"
 
 [[files]]
 file = "config/crash_assistant/modlist.json"
-hash = "15fb724d2679688a4ab58d62d06e8aa65413c145d1df5a072118ba94186f9375"
+hash = "817da8c39ad67732175470e2099d464e14625e745b8740ca450361bc41ce5277"
 
 [[files]]
 file = "config/crash_assistant/scripts/log_analysis/example.jexl"
@@ -269,6 +269,10 @@ file = "config/emixx/stack_groups/c_tools_knife.json"
 hash = "07ee44b09af5c28b2b86af314d3616c373094ec0e75d569a5d9a9a373854cea2"
 
 [[files]]
+file = "config/emixx/stack_groups/critterarmory_wolf_armor.json"
+hash = "0a72f98c196f8884c42496b65a467b998246b2b506892158e799a3f258919780"
+
+[[files]]
 file = "config/emixx/stack_groups/wilderflowers_flower_garlands.json"
 hash = "81a2164a23c2840f0e628333baed072af42eba146434f917f4d32addfeda9f7f"
 
@@ -318,7 +322,7 @@ hash = "2fede1a2083a3b775691cd6f6cbc4252436b8b331f7d78704d2ee6c3e7ca9a16"
 
 [[files]]
 file = "config/fabric/indigo-renderer.properties"
-hash = "e7a291f02d285bba001547cd83582ba857c1f77acd1d89dd1085d648e53748f9"
+hash = "624285b7edbe3d1003f569ea6377ca73fae83e7df4850a3c2c14fa66e37d838c"
 
 [[files]]
 file = "config/fallingleaves-client.toml"
@@ -566,7 +570,7 @@ hash = "1db56c8f8638cb5b63ed4ccac30b1e8506b40ba89b44642d9d838f94af5bc011"
 
 [[files]]
 file = "config/horseman-client.toml"
-hash = "7f0ed7c16f3403958ceb089b233a8add81581c65fe033b26d8d012bb176d374e"
+hash = "4b9e5117b76d1c02fccde1719c4d602012ed71e201ba2dad9637ac99405fd6ca"
 
 [[files]]
 file = "config/horseman-common.toml"
@@ -846,27 +850,39 @@ hash = "b07e929a45bed93594b8134b856c3b791f8ba678a8c698fb52a54df17ea488b9"
 
 [[files]]
 file = "config/nomansland-client-1.toml.bak"
+hash = "9197465180e4dc89584b5774fc31046c7add39dd0ad93891cda506d0646d42be"
+
+[[files]]
+file = "config/nomansland-client-2.toml.bak"
 hash = "03f5f372a988cbf1d5d06fd2addc2cb41baf85fe3864fb06edc711eb2c99c210"
 
 [[files]]
 file = "config/nomansland-client.toml"
-hash = "9197465180e4dc89584b5774fc31046c7add39dd0ad93891cda506d0646d42be"
+hash = "03f5f372a988cbf1d5d06fd2addc2cb41baf85fe3864fb06edc711eb2c99c210"
 
 [[files]]
 file = "config/nomansland-common-1.toml.bak"
+hash = "b4a6d4cb68f7219802823cf3f0d0642d14624b11815d7c49a19c9671f5012666"
+
+[[files]]
+file = "config/nomansland-common-2.toml.bak"
 hash = "8b4853e583cd42e40efc29f1b908890704a052a4bc965de76d9f8a2cf2ac9ede"
 
 [[files]]
 file = "config/nomansland-common.toml"
-hash = "b4a6d4cb68f7219802823cf3f0d0642d14624b11815d7c49a19c9671f5012666"
+hash = "8b4853e583cd42e40efc29f1b908890704a052a4bc965de76d9f8a2cf2ac9ede"
 
 [[files]]
 file = "config/nomansland-startup-1.toml.bak"
+hash = "1e5cd63b697990dd98b084c67c5b438d1578348760965a90fcc2095d059ff499"
+
+[[files]]
+file = "config/nomansland-startup-2.toml.bak"
 hash = "4f9cc6ff573131acf9e92638b8686d2cfcaafbececd4289d4b5b431a4e9cc697"
 
 [[files]]
 file = "config/nomansland-startup.toml"
-hash = "1e5cd63b697990dd98b084c67c5b438d1578348760965a90fcc2095d059ff499"
+hash = "4f9cc6ff573131acf9e92638b8686d2cfcaafbececd4289d4b5b431a4e9cc697"
 
 [[files]]
 file = "config/nostalgic_tweaks/backup/nostalgic_tweaks-client-startup_backup.json"
@@ -914,7 +930,7 @@ hash = "05022be17b8d67f7f6e766884518e40b20efc01dbfd531ad10ec009af6724342"
 
 [[files]]
 file = "config/packetfixer.properties"
-hash = "7a867796a7f3ec2a104f9d0d00f87759f88ec64a8d65771ee5b4bf0b92abadcc"
+hash = "7033a3ea710f9b24e4d72d870c5431ced3930b9c68d853f362977e7000602056"
 
 [[files]]
 file = "config/particle_core_config.toml"
@@ -994,7 +1010,7 @@ hash = "590ea074ec1c84ced8a0c60dedd7111edd69801f7441fe78654c2f6fdfb655b7"
 
 [[files]]
 file = "config/reliable_remover.json"
-hash = "d2e83769240a2c4508d87ccf161a9cac83ce4f7de13c843b82e61d432ed709f2"
+hash = "5f265db5dd75f91d0da6f090693a59f5aaecf6f36fdbf5805126254ab819832c"
 
 [[files]]
 file = "config/reliable_remover/remove_paintings.json"
@@ -1344,11 +1360,6 @@ hash = "7057d5d342a6fffba43bf3452f0f47f919f9e363c868f72787a8e3d770fdbfde"
 metafile = true
 
 [[files]]
-file = "mods/better-nether-map.pw.toml"
-hash = "168009c9e42bde0e33bd898c188f747ad6acb7a90e7d32e4e9f6e7f46fb6ef5f"
-metafile = true
-
-[[files]]
 file = "mods/better-third-person.pw.toml"
 hash = "e1f1588b18947699ddc9b4f7c5b5406c5559155b8cb52dcd0f203c07c31cd0b8"
 metafile = true
@@ -1474,11 +1485,6 @@ metafile = true
 [[files]]
 file = "mods/crash-assistant.pw.toml"
 hash = "ebc4237417524e557b8dfc39dd8dbe884c9b99ecae0ceaa234426c61fa9449e8"
-metafile = true
-
-[[files]]
-file = "mods/critter-armory.pw.toml"
-hash = "0f02591ad1838705bfc48b0b8019379907a964789219cc7e4b3e8bed3d133184"
 metafile = true
 
 [[files]]
@@ -2057,7 +2063,7 @@ metafile = true
 
 [[files]]
 file = "mods/spicedcider-1.0.0.jar"
-hash = "501bd6093a25fabc878ad2540a8358f8844a9673f12839e878c79350b4eefc5f"
+hash = "b56c9e232f961c4fde557945f4a568bafd2e126553b93426aeaa357d9f0f69f7"
 
 [[files]]
 file = "mods/stony-cliffs-are-cool.pw.toml"
@@ -2077,11 +2083,6 @@ metafile = true
 [[files]]
 file = "mods/subtle-skybox.pw.toml"
 hash = "ed372669a465c3c7e0881c27960c75040c50e66e9ccdfc6fbf6dabc8c4ef57ad"
-metafile = true
-
-[[files]]
-file = "mods/superb-steeds.pw.toml"
-hash = "3484c19ab6590fcef8db523fd37a877567498581ad0dd88a5274b73ba41672c3"
 metafile = true
 
 [[files]]

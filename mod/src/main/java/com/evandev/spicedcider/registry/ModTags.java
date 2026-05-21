@@ -13,5 +13,9 @@ public class ModTags {
         private static TagKey<Item> tag(String name) {
             return ItemTags.create(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, name));
         }
+
+        private static TagKey<Item> tag(String namespace, String name) {
+            return ItemTags.create(ResourceLocation.fromNamespaceAndPath(namespace, name));
+        }
     }
 }

@@ -1,5 +1,5 @@
 #Adjusts gui to render hunger bar, xp bar and xp level. Makes horse jump bar render only when jumping. Default: true
-improved_mount_gui = true
+improved_mount_gui = false
 #Fixes small delay when moving camera horizontally while mounted - MC-259512. Default: true
 fix_mounted_camera_lag = true
 #Prevents horse jump meter from filling up when mount is in the water. Default: true
@@ -21,7 +21,7 @@ copper_horn_details_tooltip = true
 
 [switch_inventory]
 	#Adds button and hotkey to switch between player and horse inventory. Default: true
-	enabled = true
+	enabled = false
 	#X position of the button in player's inventory.
 	# Default: 176
 	# Range: > -2147483648

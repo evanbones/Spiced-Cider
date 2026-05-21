@@ -52,6 +52,7 @@
         </RollingRandomAccessFile>
     </Appenders>
     <Loggers>
+        <Logger name="cpw.mods.modlauncher.ClassTransformer" level="WARN"/>
         <Logger level="${sys:fabric.log.level:-info}" name="net.minecraft"/>
         <Root level="all">
             <!-- Uncomment the following line to enable `debug.log`. Disabled by default, as it is extremely verbose! -->

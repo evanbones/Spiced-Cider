@@ -5,6 +5,7 @@
   "plugin": "com.evandev.spicedcider.mixin.SpicedCiderMixinPlugin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "minecraft.WolfPetArmorMixin",
     "perf.RecipeBookMixin",
     "perf.ReloadableServerResourcesMixin",
     "perf.ServerPlayerMixin",
@@ -27,6 +28,7 @@
     "structures.StructureTimingMixin"
   ],
   "client": [
+    "minecraft.WolfArmorLayerMixin",
     "namingunconvention.ModernWorldCreationGameTabMixin",
     "namingunconvention.WorldCreationUiStateMixin",
     "perf.ClientRecipeBookMixin",
