@@ -16,6 +16,12 @@ apply_requirements_to_hoofprint = true
 # When present, Immersive Overlays can be used to gain a large amount of mod compatibility with third-party backpacks and accessory mods, and its requirements will be used rather than the configs set in Immersive Minimaps.
 # default: true
 immersive_overlays_bridge = true
+# When you right-click on a block with an item in the list of map items, place a landmark.
+# default: true
+items_place_landmarks = true
+# When you right-click in the air with an item in the list of map items, open the world map.
+# default: true
+items_open_world_map = true
 
 # Options to change the visuals of the map to be more or less vanilla-style.
 [requirements]
@@ -32,7 +38,7 @@ immersive_overlays_bridge = true
 	# default: true
 	search_containers_for_containers = true
 	# When the following items are in the inventory, show the minimap.
-	items = ["minecraft:map", "minecraft:filled_map"]
+	items = ["minecraft:filled_map"]
 
 # Options to change the visuals of the map to be more or less vanilla-style.
 [style]
