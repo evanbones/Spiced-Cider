@@ -26,7 +26,9 @@
       "mod/fabric_api,",
       "forgified_fabric_api",
       "moonlight:merged_pack",
-      "spicedcider_global_jit",
+      "spicedcider_global_jit"
+    ],
+    "3": [
       "file/spicedcider_resources"
     ],
     "2": [
@@ -91,6 +93,12 @@
       "required": true,
       "fixed_position": true,
       "default_position": "BOTTOM"
+    },
+    "$$3": {
+      "hidden": true,
+      "required": true,
+      "fixed_position": true,
+      "default_position": "TOP"
     },
     "$$2": {
       "hidden": true,
