@@ -210,7 +210,7 @@ hash = "943e1c3672b8a03f27519b357091133205119c7b3db2fcc4c25b597cabf8926d"
 
 [[files]]
 file = "config/crash_assistant/modlist.json"
-hash = "cc5f5102e7116ff81be5916e795706c6cad99c4eef541476ecc2dfab9b71bef1"
+hash = "15fb724d2679688a4ab58d62d06e8aa65413c145d1df5a072118ba94186f9375"
 
 [[files]]
 file = "config/crash_assistant/scripts/log_analysis/example.jexl"
@@ -318,7 +318,7 @@ hash = "2fede1a2083a3b775691cd6f6cbc4252436b8b331f7d78704d2ee6c3e7ca9a16"
 
 [[files]]
 file = "config/fabric/indigo-renderer.properties"
-hash = "b5035e27c2079197376236bd2c59ffe03f2a14190c585f1b4fe51f96d6d96539"
+hash = "e7a291f02d285bba001547cd83582ba857c1f77acd1d89dd1085d648e53748f9"
 
 [[files]]
 file = "config/fallingleaves-client.toml"
@@ -586,7 +586,7 @@ hash = "873f4391487d89d3a316333d6166fa46497cc9aac147a824ddb1498e9239c641"
 
 [[files]]
 file = "config/immersiveoverlays.json"
-hash = "5fbe87e37782086ec3e5836400ca691afc58584508f4980caf01d3cae1ec6406"
+hash = "117db9f9a9977d8f5b5b49df26640d3add7f7ea554bbabfece1a7a3f0f4ef5be"
 
 [[files]]
 file = "config/incontrol-server.toml"
@@ -770,7 +770,7 @@ hash = "98dd8e433bac38c2f8f96d7cfdaa7ae1133e2cc78555e6e6d695d9604c3563e5"
 
 [[files]]
 file = "config/minecraft-cursor.json"
-hash = "7a1e083b16e9271d75c063c558a15c1a27b5a0cc4ded1685c64b0f161bddba99"
+hash = "4a32d0baf0f9ca7f08a808ce686d7f7250a57bb28999dc6d184bea216af69a0e"
 
 [[files]]
 file = "config/misctweaks/client_config.toml"
@@ -885,6 +885,10 @@ file = "config/openloader/options.json"
 hash = "aecd2d223c33257182654d3e8d5286c414508706fa0f0f33b868d4c1c9b7b786"
 
 [[files]]
+file = "config/openloader/packs/spicedcider_data/data/minecraft/recipe/shears.json"
+hash = "77d466836551a40d721d033a38bb8cbe0f3bb5b2a398505c9dc8fdec2eaaf9f3"
+
+[[files]]
 file = "config/openloader/packs/spicedcider_data/data/reliable_gliders/recipe/glider.json"
 hash = "0daf066cb42fcc56f009d69442aee8f7b665732b1dd3e0a24a9e080899859f49"
 
@@ -910,7 +914,7 @@ hash = "05022be17b8d67f7f6e766884518e40b20efc01dbfd531ad10ec009af6724342"
 
 [[files]]
 file = "config/packetfixer.properties"
-hash = "241ff613f7f0caf612c4eced5b6fb0b539c34b1dbe8fa119158e7be8879609bb"
+hash = "7a867796a7f3ec2a104f9d0d00f87759f88ec64a8d65771ee5b4bf0b92abadcc"
 
 [[files]]
 file = "config/particle_core_config.toml"
@@ -985,16 +989,12 @@ file = "config/reliable_recipes.json"
 hash = "51eb041341bd5c3cfa9828b20e167a4bdfe50e24593b6df8755f999d2f2c9004"
 
 [[files]]
-file = "config/reliable_recipes/recipe_example.json.disabled"
-hash = "b950145c8e443b36bab070f8b7d821ebff8ee8f61eb74669bd8d7ff67d7f8cf0"
-
-[[files]]
 file = "config/reliable_recount.json"
 hash = "590ea074ec1c84ced8a0c60dedd7111edd69801f7441fe78654c2f6fdfb655b7"
 
 [[files]]
 file = "config/reliable_remover.json"
-hash = "f97043866c2165542365a58973d1d12e1b4ab2f9524886357dc6aca32af8ab85"
+hash = "d2e83769240a2c4508d87ccf161a9cac83ce4f7de13c843b82e61d432ed709f2"
 
 [[files]]
 file = "config/reliable_remover/remove_paintings.json"
@@ -1003,14 +1003,6 @@ hash = "effe312243642c68d108b42591a02765eef17ee4beacb1bcb907c63635b64c9e"
 [[files]]
 file = "config/reliable_replacer.json"
 hash = "edc895152a7d7023fbfde32e4e6f3cc6f224a15228a3c37e649bdbac6130e9dc"
-
-[[files]]
-file = "config/reliable_replacer/example_rules.json.disabled"
-hash = "a2e5cbc82a366653def86423e294fb20cf79e5c556d8740f76507c070fd5a464"
-
-[[files]]
-file = "config/reliable_replacer/swapper.json"
-hash = "1fc50b04048335eac50b5d62ae536fe4cd9bbeef9b908a0298ec15a69938e10f"
 
 [[files]]
 file = "config/reliable_requiem.json"
@@ -1026,7 +1018,7 @@ hash = "1c970fc0cc8a3989889a43fdc6c40c89cabf81ffac2405f92c6abf489a410674"
 
 [[files]]
 file = "config/resourcepackoverrides.json"
-hash = "7f967b9e1fd7af9db9128bad41dd9add205d5a7a32936c7f7c9f60f8d745e337"
+hash = "235327d337f2f2bca21e22b694aa57241251e4ed1ec5febd2d34b53a1c3c91f8"
 
 [[files]]
 file = "config/sage_brush-client.toml"
@@ -1150,7 +1142,7 @@ hash = "71c6f65022cb095402596003a4896d66de91b15294c5e8ef9118ce10b3503829"
 
 [[files]]
 file = "config/spicedcider/spicedcider_manifest.json"
-hash = "06bb91d11817bb6aded418106b981c513a3bfce917bff8864bf8813b18093183"
+hash = "be68e62093937a3f4a55d25c58b047b8be629f300f86653f88530bbb94d1f6e9"
 
 [[files]]
 file = "config/structure_layout_optimizer.jsonc"
@@ -1198,7 +1190,7 @@ hash = "7d12e5d1538b0b4bb0ce0c3e0a66e59c08aa477dc75f6689af86c5d06b333e85"
 
 [[files]]
 file = "config/vanillabackport-client.toml"
-hash = "2eabc2a7b4aa61e8b611c4928e521269906b12221138882357331292492093b1"
+hash = "04bcc10f932135bd14192a202db19d48489ea004c2f20f690f631d907a7f4a9b"
 
 [[files]]
 file = "config/vanillabackport-common.toml"
@@ -1829,8 +1821,9 @@ hash = "6bc414cc0f2d4c078fe83f384d786343f701f371d657c5279b5b0df1595804bd"
 metafile = true
 
 [[files]]
-file = "mods/nomansland-1.5.0-RC1.jar"
-hash = "6e744eacb88cc1996e06f260e35c5d074053cf1b4202ad10d294174d4e604d6e"
+file = "mods/no-mans-land.pw.toml"
+hash = "2d51fa52a16d97c242e860e649cd4c5ed8ab00190c428974793425745c0d92c7"
+metafile = true
 
 [[files]]
 file = "mods/nostalgic-tweaks.pw.toml"
@@ -2196,8 +2189,8 @@ file = "options.txt"
 hash = "72289afe0c240890f38ad93fcb052ae0da9e7fc3a05c5e15e57160eebcec5276"
 
 [[files]]
-file = "resourcepacks/als-boss-rush.pw.toml"
-hash = "c789f89ece8d4dfc5706d78e7907e07e037b195a7ada4436c2c520267a480189"
+file = "resourcepacks/3d-items-mintynoura.pw.toml"
+hash = "949a5169fd8ac9a7782e973dd4dcb0c2d305332dc0b96df8da91bec801c0a872"
 metafile = true
 
 [[files]]
@@ -2273,11 +2266,6 @@ metafile = true
 [[files]]
 file = "resourcepacks/glowy-nether-portals.pw.toml"
 hash = "a8e0c5bba66c99ddd1c19f477a9e7068af835074298667c7634ae7ea7f48edaa"
-metafile = true
-
-[[files]]
-file = "resourcepacks/item-sprites.pw.toml"
-hash = "dfd2ab1c552f91c481d310562f27dfb4a0caad2861e9f447e3aa7a3fd13eda8e"
 metafile = true
 
 [[files]]
@@ -3491,364 +3479,12 @@ file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/gui/title/
 hash = "3d33fc49db9632d5fab7e479bcee02673952234453e7ae2a9d077689ce4d03c2"
 
 [[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/allay_spawn_egg.png"
-hash = "d0ccac531c1db240d7ce8e436470f78345dbf4f653f8bddf826c22973ecbfd9c"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/armadillo_spawn_egg.png"
-hash = "a7c876048ea67653b4684c6d0eb3985594d395e03d9a27f8db4f61664d13ddfd"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/axolotl_spawn_egg.png"
-hash = "175b513fffd8c1b01c7383c6f492c3c6775d7f61b6382283924ac829730230f5"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/bat_spawn_egg.png"
-hash = "0ff7eb7847ffc23636eb4fc04e78c9ef40ecd3c7b2145c7deffc960850676e11"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/bee_spawn_egg.png"
-hash = "b1581f99ffc4c127ecf92ab5e3099eec9d68b010e8c1ef2c32e61c5b82d052d4"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/blaze_spawn_egg.png"
-hash = "d5862d79547df2dc753346f20ff0e08e38778d706fa27fb9ec7fb56478ebe236"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/bogged_spawn_egg.png"
-hash = "224dd1e967dd199282bea71f14967762a4bb88195dc070b3325d66bcbafa7e3a"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/breeze_spawn_egg.png"
-hash = "cacd1d04a9f1138cffea7c0afa921115201d9679a328863f684a0f17ec241502"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/camel_husk_spawn_egg.png"
-hash = "30488bfbcca3e7ca62a2ceb4e120f2efb7c0f68ff0eca330f974f4cee37b19dd"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/camel_spawn_egg.png"
-hash = "24d7c6c86976be7715bde2da19e243364bdb73d5e7dc862b22a6fc0e35d844b7"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/cat_spawn_egg.png"
-hash = "2ba9b5888b0087c0cb32cd6ea4999022a55ac8429e813e5f2e420ebbed2198b4"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/cave_spider_spawn_egg.png"
-hash = "95f0190e4bf25217c19bbe056463f7ddc413a2d150aaccb0df57faa7eb1b6f64"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/chicken_spawn_egg.png"
-hash = "97c478f0cc229dbdead7975785a54a20d532321c5789364c03c3b64a21fdc047"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/cod_spawn_egg.png"
-hash = "29a94226feabdad20e65369b2290e9fc2016c3b9897b2f0ebecce918a3ea959f"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/copper_golem_spawn_egg.png"
-hash = "0150851257129ac7ce9071568bed2df943a34ee40ae3b7e6a8b31f9118a4cdfc"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/cow_spawn_egg.png"
-hash = "2932736c6054a231f8d9b920c19f966c1f48afeb689bdca1bbfb3a064330d031"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/creaking_spawn_egg.png"
-hash = "9f2b7db159ae7d5343211b6d1b2b645e8ea604aa7b40f2c0cd86e068db9ae471"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/creeper_spawn_egg.png"
-hash = "a62b034de331a7133dad87e13cfc89a20b6ef58183b382f88850f2c432666104"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/dolphin_spawn_egg.png"
-hash = "edaf42fdbb5acac04b590d43b9069258fd3ec5fb855b2e5f7cfe85f019d986aa"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/donkey_spawn_egg.png"
-hash = "5d90f65efbc5be1b2764347dbf969ea73e68e0b7fc3e03e30a8caa6dc392c41d"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/drowned_spawn_egg.png"
-hash = "b6f453abdf6a3bd28936e9759e151e263a509d8a11f07473d4fa20914804c47e"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/elder_guardian_spawn_egg.png"
-hash = "4ee94861e51f238a993debc7f2dd923928f701f79638bfa73d15841289dc8097"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/ender_dragon_spawn_egg.png"
-hash = "cecc827fc814c36dfbfe487b15813b34ac22a58b888f1b8d8ba62bd9a128d163"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/enderman_spawn_egg.png"
-hash = "c26bf142eea42469140c6e8314094a508a604bd0ddb93a6f43695b20dc2bde83"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/endermite_spawn_egg.png"
-hash = "94d1a49d87c2a1c955633390633c3c539a02931e84a111f18d2f4fcf1c7ba153"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/evoker_spawn_egg.png"
-hash = "2b68a9526987708ca4e7b9e3b216e1b37bb0d883e45b9034a76faeb34467875a"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/fox_spawn_egg.png"
-hash = "48d2929623398b7ffce53489a9fb8a5a874d50022309f21c797ee6f1dbfdd1e3"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/frog_spawn_egg.png"
-hash = "3cec76cd48e6285d3c12de129e29fed43914d1aaf3258bc1aa33de1d55266aa1"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/ghast_spawn_egg.png"
-hash = "0aba5c5c0eb3288307037a4deca88b47a8c4490a68ce2d9f79f6c92fa170605b"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/glow_squid_spawn_egg.png"
-hash = "28c332abb58eefede2b39bdfb10c6c43352e7f2a981d686f8a218b521a278117"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/goat_spawn_egg.png"
-hash = "7c190cc281f0bfd1ed409e5dd02a8dd57b4d47c2ccc4aa394df9da594d96c1fb"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/guardian_spawn_egg.png"
-hash = "4461d4cb13038cf6c4eb04e6c264706e5d501a2c817548816dfdb5ca493a7613"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/happy_ghast_spawn_egg.png"
-hash = "699ac2c21042c78ff684857542837f17cee1bc29d2cab3ee3ac26e8ef9d1ab0e"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/hoglin_spawn_egg.png"
-hash = "80239b67cc5d333f2fb693bb2fc93f2d867d66e92d426fcb7a90243f42f9a937"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/horse_spawn_egg.png"
-hash = "fd0211838f253dc2c34afd135b0e3aeb23d73242c22bdd8c678d311325e1215a"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/husk_spawn_egg.png"
-hash = "13dcf311174e6da877ee92ce3da5667303e2f04c60b5ea61ed1c775ef4c68c7a"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/iron_golem_spawn_egg.png"
-hash = "10e6c2454b0391cdfb28f3a719d09295565929da4708a24137606bacb93fd61b"
-
-[[files]]
 file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/iron_sword.png"
 hash = "dff18ad986d3be0efb92b12e033530913bfe2cc26aabe7eb558c5375f7d15d97"
 
 [[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/llama_spawn_egg.png"
-hash = "a4d3be950c52f41820e17a6e3cee997148bc5ee083eb9e63be84ffcf0b13db87"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/magma_cube_spawn_egg.png"
-hash = "127ff340b2c06f0ec20c438b5c4f447bd9b0c49b7e250a125159ce24eaf96ce9"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/mooshroom_spawn_egg.png"
-hash = "4f29abd08e94e13460ef14f6d21eafbd25866e6f30781c3719588de02919945e"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/mule_spawn_egg.png"
-hash = "ee29a28c59dce39afd6b4ac79c3dff305c7618580c8d1185f378cb1dfe29b1d4"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/nautilus_spawn_egg.png"
-hash = "db4438254593797bad8882e7591fcf45c2c7ad5dd1b80aed0ff503d43ce45a78"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/ocelot_spawn_egg.png"
-hash = "89b52eb8feec7bbe1244115ef3db70f85cc01ca751b8013a6974555ee94e27d0"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/panda_spawn_egg.png"
-hash = "89120163e05c24ef6d4af8f621b96b65a8e9fd92868df0b48e32eb3759d1fb71"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/parched_spawn_egg.png"
-hash = "81c042f2d4c1a499cd1a98cd849a4d6d720e5f03e87ddb10771fad30cf8a9a16"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/parrot_spawn_egg.png"
-hash = "7d4c9e57d9a8d801937a0539652c8ee2544e70ac8f4d2bf7c4b345cd8749ebd7"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/phantom_spawn_egg.png"
-hash = "59f0adf404cb30095431a06e2ee48d736a0bb5dff616e813af8e4b3e12046ede"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/pig_spawn_egg.png"
-hash = "d6dfd0e7a5d31455d28b74934c0412498b32bc12e46ab3533b40ef6f3f7eb0c4"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/piglin_brute_spawn_egg.png"
-hash = "820853576067c66abeaf79c7d6cf4a53263005f0116c550e5680ba8c83004a02"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/piglin_spawn_egg.png"
-hash = "b7a87265d29c6085220e30dc5fdc1a23c93acea3844724e4b4682789b65e2222"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/pillager_spawn_egg.png"
-hash = "550abe41a5c4d0d3d90cd346f91b10e9977836dc3956a51010150bacbae4be8c"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/polar_bear_spawn_egg.png"
-hash = "fdde14839f6e51a1be872e2bb4c0cb0a46c50100b8408c392000c5a01b1f91d2"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/pufferfish_spawn_egg.png"
-hash = "3d2ecb04a6471e238339920002ff2f68272511285410b96bc31df755687e8ffd"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/rabbit_spawn_egg.png"
-hash = "497f068d34ce25c3ae31500726053f4c3f459156798501d8aa4e636175651603"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/ravager_spawn_egg.png"
-hash = "80cdb624304cb02cdca6da233b629155c692e55fb57ee6a925d2e6390ee356c7"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/salmon_spawn_egg.png"
-hash = "808f0b3f83e645f54d6b484afaf06d143b457ed69176a039ce2b25c89af1c9b3"
-
-[[files]]
 file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/shears.png"
 hash = "2f3029434b0cc4ba07082f731affa4b5406c4e75139a1e643a57eef55824af4a"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/sheep_spawn_egg.png"
-hash = "b092e7df58740f22b831552c7cb2557e635b4a2880a8f9daf66fd82e68f55703"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/shulker_spawn_egg.png"
-hash = "e154235d3e29a23b61ff763f454ed93c078e901a05439cd2a1f0ad1b48c85c56"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/silverfish_spawn_egg.png"
-hash = "a86e7965931498a38d748af9dd868b0fc39c76ccaad4411f55c2741f69665dee"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/skeleton_horse_spawn_egg.png"
-hash = "df4fe9340458cdc1db241c80247c5f393cfb1b6468179a7d8da6fd1f28b7a85a"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/skeleton_spawn_egg.png"
-hash = "640210c4b308e33c2b5e146b381b0aedcbf829a22058e811138611d598c8b650"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/slime_spawn_egg.png"
-hash = "e7c8d2fc8a1f6c6e247fb50aeaeb733ba40265d0b266f738d4e6b1e8c27ec041"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/sniffer_spawn_egg.png"
-hash = "d3f5939b8b75bf12dd0d5af3c2a45e4d78d76336201ef9febbb381f6c3265853"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/snow_golem_spawn_egg.png"
-hash = "6ed76ac79f3dac251b154089dfea055b78b0e2c16b5ecc4ea9699bee453625e3"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/spider_spawn_egg.png"
-hash = "f5d98d92ac9b5c7ad6ac7e2b38c75fba02a9b8984a0b5a5ab1e29422da53d2a4"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/squid_spawn_egg.png"
-hash = "c3816820a021768a6d9e2b0395ee6eb164b79b946f2a8640d4ae9d4a3b13618f"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/stray_spawn_egg.png"
-hash = "2f6e27afa36022f8589bc960e1d02d238fcb3becbfd1981ef9ce6033c7fd0ed1"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/strider_spawn_egg.png"
-hash = "70a1341ef430f4445854b134a995e6b91faa55af597d0390727a447e9c352501"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/sulfur_cube_spawn_egg.png"
-hash = "9b64f0db3e606487fcdc384438eb0d99a56f89c87a0e691da8ec33e271c09a93"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/tadpole_spawn_egg.png"
-hash = "557a75a1d8f24c3033b45d337918c105bb8c70bc89f7c4bc58b97d99d94a7f8c"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/trader_llama_spawn_egg.png"
-hash = "e1f119a1892143acaf128bda206a21684de3e3d2634731bd1beac6706ae4f550"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/tropical_fish_spawn_egg.png"
-hash = "c0093fe3958eb7ee063b66d0b3cdc609fc2569d98743e63cb2710ad5af3c0fc8"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/turtle_spawn_egg.png"
-hash = "575a4599dbc615cb8ad5001d343cbf3bfe9c1cf49efb19df10e591059cfd8916"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/vex_spawn_egg.png"
-hash = "811472304ac3fd3c44fb4e0071f1c6a0829103666428416c88e448231bcad64c"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/villager_spawn_egg.png"
-hash = "db7104d0962ad252592157948a26fd3ee57cecd4e25b3561ca3aab46a75fbf06"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/vindicator_spawn_egg.png"
-hash = "2c8b48e0b740eb44239dcfd34215a0bc1e72bc0d39300812eda5c3ab1e7aee35"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/wandering_trader_spawn_egg.png"
-hash = "115588225f1df18cf66bdefd48158756e937db82491cf69d51cb0b7b40af9d1e"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/warden_spawn_egg.png"
-hash = "1c8baf06c6f7788e094e7bac155e810c6ea9a4cde639bb3de113a4e8c8110a33"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/witch_spawn_egg.png"
-hash = "b246e9d2ab3b600e557177e06cb3b19101b5de2a7e639e9656918e1fd28ab23f"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/wither_skeleton_spawn_egg.png"
-hash = "8f88101e15b23dfff5cd5652506b63f3f2dbb4d30295cfb837249ff1441a0b35"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/wither_spawn_egg.png"
-hash = "76c6d2227c330a3adf264964f645875190c2e5e29563b9579567d1899ff6e3de"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/wolf_spawn_egg.png"
-hash = "1f2e97fd8014af73755d4c00cbc5b0cfd8e333db27e8e7e4c9985f99c7b3db8d"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/zoglin_spawn_egg.png"
-hash = "887f7a03d82fb710b8ef3c2439772d3fcde1e4a06e08709bfc3019c83f1fa2e0"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/zombie_horse_spawn_egg.png"
-hash = "b926ebd441867d353843639bc464d898cdbdcfc42aa10f15dbd32a1e7738b759"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/zombie_nautilus_spawn_egg.png"
-hash = "55fdd88e1f5e79afd529f701373a6f84ea4c9f85f4a9dc5ac4cf193db6615acc"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/zombie_spawn_egg.png"
-hash = "f428d431984a0d2da83b7a60dbab3b8e3baa4117efb9026f92774c58fc509bd4"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/zombie_villager_spawn_egg.png"
-hash = "dbf59721a8daa101f89951228d00b12c0dbbd80c105c6ae743d93d1db6d0172c"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/zombified_piglin_spawn_egg.png"
-hash = "8de8dd449b1dd44b33ebee58fe21838f04d309c599c5b29176b1a0845459beb1"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/modernworldcreation/textures/gamemodes/background_creative.png"
