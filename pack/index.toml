@@ -210,7 +210,7 @@ hash = "943e1c3672b8a03f27519b357091133205119c7b3db2fcc4c25b597cabf8926d"
 
 [[files]]
 file = "config/crash_assistant/modlist.json"
-hash = "36badc186e95495b8e61249dd82212226974844c6f08950804e531271de66f6e"
+hash = "1fbbf9185228c583f98062e4e4bcbe58b3b1ab8fb455f6a9e4807c50e857c628"
 
 [[files]]
 file = "config/crash_assistant/scripts/log_analysis/example.jexl"
@@ -233,6 +233,14 @@ file = "config/cutthrough-client.toml"
 hash = "0f1e7df65dc4fcff84594a708ebed689598dd05dec4cfca38e9f807ca817c5c0"
 
 [[files]]
+file = "config/darkness-biomes.json"
+hash = "176c5a38e25059d79b0fca5875c796c98c8d2c29f376386a0e82bf68b93c6ca6"
+
+[[files]]
+file = "config/darkness-client.toml"
+hash = "f7ab2b424b77733f74500eb6e5ee4d894eade0c36fcca20f50dcb6ae6001fe50"
+
+[[files]]
 file = "config/drippyloadingscreen/options.txt"
 hash = "973b8bd10e67ef929ce581b3f2bf40e139d475a1d56d02cc3e04ac1d868eece9"
 
@@ -243,6 +251,18 @@ hash = "8ce6c8343e81eec012d5d3d7e4527909f7e66f265ddf72d36b6fe5b83213ae18"
 [[files]]
 file = "config/e4mc/e4mc.toml"
 hash = "3967d3b931472a818bdb8430414c324f40f2441132fafc029fef95f89507cc8e"
+
+[[files]]
+file = "config/emi-accelerator/emi-accelerator.txt"
+hash = "59ab931402eb2a306d9c812ff531e63c25ccae614a3fd6ed8e1c9b71b277f18f"
+
+[[files]]
+file = "config/emi-accelerator/reload-timings.json"
+hash = "0eeabc86981a94b6d3ec5783a9f5b4286bdd77f728df61c20c8fcca8b881d6c8"
+
+[[files]]
+file = "config/emi-accelerator/stack-cache.json"
+hash = "72bdcc9333d078a1749bcf24745cd79c2e042b548431b057d6702d18b02271ac"
 
 [[files]]
 file = "config/emi.css"
@@ -318,7 +338,7 @@ hash = "2fede1a2083a3b775691cd6f6cbc4252436b8b331f7d78704d2ee6c3e7ca9a16"
 
 [[files]]
 file = "config/fabric/indigo-renderer.properties"
-hash = "5da38bf9c70a53c7eac7593dae11402fcd996cfcea6e019c56fbd0a5396ca9bf"
+hash = "538c121739cc230f35146946bfe3edae7a76e7a9c065a89103ab171cbdde45e9"
 
 [[files]]
 file = "config/fallingleaves-client.toml"
@@ -374,7 +394,7 @@ hash = "4c1567b452bcf3b6a8c46912f55ea9a9faff0625112404f0004c549b6a208ab4"
 
 [[files]]
 file = "config/fancymenu/assets/loading.png"
-hash = "8f7342ac9770e0868deb5a9681c4064527a60e9f278902ee09ac819366763b36"
+hash = "3e1fb4180f748a0a76986c1114b8c10542a8128e112429a7c4fa30d6b7f8dde0"
 
 [[files]]
 file = "config/fancymenu/assets/loading_splashes.txt"
@@ -794,7 +814,7 @@ hash = "72ca2bcea2a9946a3a54842f14eff6f7b47d8fc96ef497c1b56406643b153fd7"
 
 [[files]]
 file = "config/modernfix-mixins.properties"
-hash = "c0c3a491ee81646a02d89c43eb58e6df9c59aecbb9e6fd0494c2fd729251989f"
+hash = "906a4d0679054d394018ee95d20935f46b711a860541d8fed25910f6a163887f"
 
 [[files]]
 file = "config/modernworldcreation/config.txt"
@@ -930,7 +950,7 @@ hash = "05022be17b8d67f7f6e766884518e40b20efc01dbfd531ad10ec009af6724342"
 
 [[files]]
 file = "config/packetfixer.properties"
-hash = "6f5fec3f0674838b977ca354dc6de92bd74bc6fa1c2a9bb41968236022a42614"
+hash = "f9a34fcdf27d7a9039cd1b02900451345d75c7ccbb1822ce8c16b07b37f73ba5"
 
 [[files]]
 file = "config/particle_core_config.toml"
@@ -1034,7 +1054,7 @@ hash = "1c970fc0cc8a3989889a43fdc6c40c89cabf81ffac2405f92c6abf489a410674"
 
 [[files]]
 file = "config/resourcepackoverrides.json"
-hash = "235327d337f2f2bca21e22b694aa57241251e4ed1ec5febd2d34b53a1c3c91f8"
+hash = "cb88482d9a66e58addc4ae1388caf6ceb065e956d6c2aca5fc95f948be24207d"
 
 [[files]]
 file = "config/sage_brush-client.toml"
@@ -1134,7 +1154,7 @@ hash = "e26b00784bb6239988759ed1a64551b9f301dc33c5a855d91e976ee4bf40ac8a"
 
 [[files]]
 file = "config/sound_physics_remastered/sound_rates.properties"
-hash = "50bd3414a4b9b4e2623076995dc1d0e18d43217da4704de5ff421c1462e95d23"
+hash = "3345d503eae8f00abd96fdd04357b8a5cc55c7f0a9bc88bbf8bce9b12aacf47f"
 
 [[files]]
 file = "config/sound_physics_remastered/soundphysics.properties"
@@ -1161,6 +1181,14 @@ file = "config/spicedcider/spicedcider_manifest.json"
 hash = "be68e62093937a3f4a55d25c58b047b8be629f300f86653f88530bbb94d1f6e9"
 
 [[files]]
+file = "config/stormiespiders/non-climbable-blocks.json"
+hash = "a2dc02a71020a0056bed420d58cdc2e0baa01c33fccfd1f2bd96c1880bd14abc"
+
+[[files]]
+file = "config/stormiespiders/stormiespiders.json"
+hash = "c8c24b97720a02ec698726cac1147910dce5b685ce1b36c5050d442cdca4a4e7"
+
+[[files]]
 file = "config/structure_layout_optimizer.jsonc"
 hash = "5a9058652bc0b88b8810e0b94eba0e1a90cbff2472845c53a7e67442682a1579"
 
@@ -1174,7 +1202,7 @@ hash = "3d74a10c1cc93109dedd1bf71bc7a9fd3562b04a1ae93d6f58c5160695729061"
 
 [[files]]
 file = "config/stylisheffects-client.toml"
-hash = "1e02077599b5ea195d74cd07e3f1cd731f15536318bc2a96824a7ec03097e33f"
+hash = "220386486b0d066f2fa344c6d2b63f41a28629176a2f8fdf4f33e2668a6b127a"
 
 [[files]]
 file = "config/surveyor.toml"
@@ -1363,6 +1391,11 @@ hash = "7057d5d342a6fffba43bf3452f0f47f919f9e363c868f72787a8e3d770fdbfde"
 metafile = true
 
 [[files]]
+file = "mods/better-nether-map.pw.toml"
+hash = "823d504f7256c8223cd30f2617753a8e5b6dc67dd223897fd16273421ef57960"
+metafile = true
+
+[[files]]
 file = "mods/better-third-person.pw.toml"
 hash = "e1f1588b18947699ddc9b4f7c5b5406c5559155b8cb52dcd0f203c07c31cd0b8"
 metafile = true
@@ -1405,6 +1438,11 @@ metafile = true
 [[files]]
 file = "mods/bygone-fortress.pw.toml"
 hash = "67d2a8b3eb06e3a1eddd5786f40ac3ad6a95a6f575f881cbb00dde44535536fc"
+metafile = true
+
+[[files]]
+file = "mods/c2me-neoforge.pw.toml"
+hash = "17cf45aaab6d4964d4d851cfcbe4b5e6db539a2329216392bec4aea1c90b83a7"
 metafile = true
 
 [[files]]
@@ -1533,6 +1571,11 @@ metafile = true
 [[files]]
 file = "mods/emi.pw.toml"
 hash = "67bb77eae0b644960be3b1074178ceb5d54facbb42f326981b9d94625238a54a"
+metafile = true
+
+[[files]]
+file = "mods/emiaccelerator.pw.toml"
+hash = "ff6dcb8b300338467eeff5114469d6fc7219c37834836e3a16b28e430ffca0ef"
 metafile = true
 
 [[files]]
@@ -2069,13 +2112,13 @@ hash = "43a6c7daa5bc03db44b9c514c3f92ae6e398802d2fb8a9e9bd5b63168b4e4807"
 metafile = true
 
 [[files]]
-file = "mods/structure-layout-optimizer.pw.toml"
-hash = "20d767f7f803fd43e7b539046878bf97a27458595a1beff0b28002aca1b671de"
+file = "mods/stormies-spiders.pw.toml"
+hash = "1d7ed103bf6c4995bc1eff18fc1aac0114cfbc0f58a0810d3984d57eecb644d6"
 metafile = true
 
 [[files]]
-file = "mods/stylish-effects.pw.toml"
-hash = "3aca3ff7c21d644f10a5511fd37c39628b4300e41200710e2a670cc28e1c29f3"
+file = "mods/structure-layout-optimizer.pw.toml"
+hash = "20d767f7f803fd43e7b539046878bf97a27458595a1beff0b28002aca1b671de"
 metafile = true
 
 [[files]]
@@ -2114,6 +2157,11 @@ hash = "35e7968e8d26abb4c719b2840445962b58260eaa350259393ea05d750012a1ba"
 metafile = true
 
 [[files]]
+file = "mods/true-darkness-biomes.pw.toml"
+hash = "45a47531d9a4ce40092aaf22284ef4aa04e3049561c9b82bdf6fbbb790bcc0e9"
+metafile = true
+
+[[files]]
 file = "mods/underground-rivers.pw.toml"
 hash = "36ef0035f6f9c67b2ac8cf1ce03cb860d0fcafb52fda4273aff19a5d19376459"
 metafile = true
@@ -2141,6 +2189,11 @@ metafile = true
 [[files]]
 file = "mods/wavey-capes.pw.toml"
 hash = "f84ae2e01bc4c7c5531ca9ab045be132ff32df0a572b408efc14f89ef636be01"
+metafile = true
+
+[[files]]
+file = "mods/webs.pw.toml"
+hash = "3be771b2b45cf9f220d9fa83547c57da2706383a3dabf6e8376c369c6a2385a5"
 metafile = true
 
 [[files]]
@@ -2772,7 +2825,7 @@ hash = "ce2533eaf7bdd8c775748bfeb35ef3421205efb6c98f1bd8304b68236434eb9c"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/minecraft/lang/en_us.json"
-hash = "90506b256c13341712c66f40ff2334ffe650f98163584148195cfcbcaf9b3451"
+hash = "b0875d59a6021c5b8cd9606263e1ddfca37cd87b016d9de63e42227289083304"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/minecraft/sounds.json"
