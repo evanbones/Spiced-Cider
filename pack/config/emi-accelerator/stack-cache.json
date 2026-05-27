@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "mod_hash": "6b45fbd86b8da2178d610f09cb318c79b3ae409db399519d6c6536f862133165",
+  "mod_hash": "c4de57f0004adcd906b9f6fab7a9595e30a5a707d75cbf1e0e2677bcf7f7987f",
   "stacks": [
     {
       "type": "item",
@@ -976,6 +976,22 @@
     },
     {
       "type": "item",
+      "id": "nomansland:crude_trapdoor"
+    },
+    {
+      "type": "item",
+      "id": "nomansland:crude_door"
+    },
+    {
+      "type": "item",
+      "id": "nomansland:wooden_platform_stairs"
+    },
+    {
+      "type": "item",
+      "id": "nomansland:wooden_platform"
+    },
+    {
+      "type": "item",
       "id": "minecraft:stone"
     },
     {
@@ -1380,6 +1396,54 @@
     },
     {
       "type": "item",
+      "id": "nomansland:siltstone"
+    },
+    {
+      "type": "item",
+      "id": "nomansland:siltstone_stairs"
+    },
+    {
+      "type": "item",
+      "id": "nomansland:siltstone_slab"
+    },
+    {
+      "type": "item",
+      "id": "nomansland:siltstone_wall"
+    },
+    {
+      "type": "item",
+      "id": "nomansland:polished_siltstone"
+    },
+    {
+      "type": "item",
+      "id": "nomansland:polished_siltstone_stairs"
+    },
+    {
+      "type": "item",
+      "id": "nomansland:polished_siltstone_slab"
+    },
+    {
+      "type": "item",
+      "id": "nomansland:siltstone_bricks"
+    },
+    {
+      "type": "item",
+      "id": "nomansland:siltstone_brick_stairs"
+    },
+    {
+      "type": "item",
+      "id": "nomansland:siltstone_brick_slab"
+    },
+    {
+      "type": "item",
+      "id": "nomansland:siltstone_brick_wall"
+    },
+    {
+      "type": "item",
+      "id": "nomansland:chiseled_siltstone"
+    },
+    {
+      "type": "item",
       "id": "minecraft:bricks"
     },
     {
@@ -1501,6 +1565,18 @@
     {
       "type": "item",
       "id": "minecraft:chiseled_resin_bricks"
+    },
+    {
+      "type": "item",
+      "id": "nomansland:thatch"
+    },
+    {
+      "type": "item",
+      "id": "nomansland:thatch_stairs"
+    },
+    {
+      "type": "item",
+      "id": "nomansland:thatch_slab"
     },
     {
       "type": "item",
@@ -4104,6 +4180,10 @@
     },
     {
       "type": "item",
+      "id": "nomansland:rose_vines"
+    },
+    {
+      "type": "item",
       "id": "minecraft:peony"
     },
     {
@@ -4477,6 +4557,14 @@
     {
       "type": "item",
       "id": "minecraft:bedrock"
+    },
+    {
+      "type": "item",
+      "id": "nomansland:ancestral_effigy"
+    },
+    {
+      "type": "item",
+      "id": "nomansland:ancestral_carving"
     },
     {
       "type": "item",
@@ -5656,6 +5744,10 @@
     },
     {
       "type": "item",
+      "id": "nomansland:straw_bed"
+    },
+    {
+      "type": "item",
       "id": "minecraft:white_banner",
       "data": {
         "id": "minecraft:white_banner",
@@ -6226,6 +6318,10 @@
     },
     {
       "type": "item",
+      "id": "nomansland:ancient_bronze_mask"
+    },
+    {
+      "type": "item",
       "id": "nomansland:living_urn"
     },
     {
@@ -6437,6 +6533,282 @@
     {
       "type": "item",
       "id": "minecraft:bamboo_raft"
+    },
+    {
+      "type": "item",
+      "id": "nomansland:bandage"
+    },
+    {
+      "type": "item",
+      "id": "nomansland:antidote_bandage"
+    },
+    {
+      "type": "item",
+      "id": "nomansland:medicinal_bandage"
+    },
+    {
+      "type": "item",
+      "id": "nomansland:warding_bandage"
+    },
+    {
+      "type": "item",
+      "id": "nomansland:bandage",
+      "data": {
+        "id": "nomansland:bandage",
+        "count": 1,
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:night_vision"
+          }
+        }
+      }
+    },
+    {
+      "type": "item",
+      "id": "nomansland:bandage",
+      "data": {
+        "id": "nomansland:bandage",
+        "count": 1,
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:invisibility"
+          }
+        }
+      }
+    },
+    {
+      "type": "item",
+      "id": "nomansland:bandage",
+      "data": {
+        "id": "nomansland:bandage",
+        "count": 1,
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:leaping"
+          }
+        }
+      }
+    },
+    {
+      "type": "item",
+      "id": "nomansland:bandage",
+      "data": {
+        "id": "nomansland:bandage",
+        "count": 1,
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:fire_resistance"
+          }
+        }
+      }
+    },
+    {
+      "type": "item",
+      "id": "nomansland:bandage",
+      "data": {
+        "id": "nomansland:bandage",
+        "count": 1,
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:swiftness"
+          }
+        }
+      }
+    },
+    {
+      "type": "item",
+      "id": "nomansland:bandage",
+      "data": {
+        "id": "nomansland:bandage",
+        "count": 1,
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:slowness"
+          }
+        }
+      }
+    },
+    {
+      "type": "item",
+      "id": "nomansland:bandage",
+      "data": {
+        "id": "nomansland:bandage",
+        "count": 1,
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:turtle_master"
+          }
+        }
+      }
+    },
+    {
+      "type": "item",
+      "id": "nomansland:bandage",
+      "data": {
+        "id": "nomansland:bandage",
+        "count": 1,
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:water_breathing"
+          }
+        }
+      }
+    },
+    {
+      "type": "item",
+      "id": "nomansland:bandage",
+      "data": {
+        "id": "nomansland:bandage",
+        "count": 1,
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:healing"
+          }
+        }
+      }
+    },
+    {
+      "type": "item",
+      "id": "nomansland:bandage",
+      "data": {
+        "id": "nomansland:bandage",
+        "count": 1,
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:harming"
+          }
+        }
+      }
+    },
+    {
+      "type": "item",
+      "id": "nomansland:bandage",
+      "data": {
+        "id": "nomansland:bandage",
+        "count": 1,
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:poison"
+          }
+        }
+      }
+    },
+    {
+      "type": "item",
+      "id": "nomansland:bandage",
+      "data": {
+        "id": "nomansland:bandage",
+        "count": 1,
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:regeneration"
+          }
+        }
+      }
+    },
+    {
+      "type": "item",
+      "id": "nomansland:bandage",
+      "data": {
+        "id": "nomansland:bandage",
+        "count": 1,
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:strength"
+          }
+        }
+      }
+    },
+    {
+      "type": "item",
+      "id": "nomansland:bandage",
+      "data": {
+        "id": "nomansland:bandage",
+        "count": 1,
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:weakness"
+          }
+        }
+      }
+    },
+    {
+      "type": "item",
+      "id": "nomansland:bandage",
+      "data": {
+        "id": "nomansland:bandage",
+        "count": 1,
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:luck"
+          }
+        }
+      }
+    },
+    {
+      "type": "item",
+      "id": "nomansland:bandage",
+      "data": {
+        "id": "nomansland:bandage",
+        "count": 1,
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:slow_falling"
+          }
+        }
+      }
+    },
+    {
+      "type": "item",
+      "id": "nomansland:bandage",
+      "data": {
+        "id": "nomansland:bandage",
+        "count": 1,
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:wind_charged"
+          }
+        }
+      }
+    },
+    {
+      "type": "item",
+      "id": "nomansland:bandage",
+      "data": {
+        "id": "nomansland:bandage",
+        "count": 1,
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:weaving"
+          }
+        }
+      }
+    },
+    {
+      "type": "item",
+      "id": "nomansland:bandage",
+      "data": {
+        "id": "nomansland:bandage",
+        "count": 1,
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:oozing"
+          }
+        }
+      }
+    },
+    {
+      "type": "item",
+      "id": "nomansland:bandage",
+      "data": {
+        "id": "nomansland:bandage",
+        "count": 1,
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:infested"
+          }
+        }
+      }
     },
     {
       "type": "item",
@@ -6652,6 +7024,10 @@
     },
     {
       "type": "item",
+      "id": "nomansland:music_disc_guidance"
+    },
+    {
+      "type": "item",
       "id": "minecraft:music_disc_pigstep"
     },
     {
@@ -6840,15 +7216,11 @@
     },
     {
       "type": "item",
+      "id": "chalk:yellow_chalk"
+    },
+    {
+      "type": "item",
       "id": "chalk:green_chalk"
-    },
-    {
-      "type": "item",
-      "id": "chalk:orange_chalk"
-    },
-    {
-      "type": "item",
-      "id": "chalk:brown_chalk"
     },
     {
       "type": "item",
@@ -6856,15 +7228,23 @@
     },
     {
       "type": "item",
-      "id": "chalk:light_gray_chalk"
+      "id": "chalk:orange_chalk"
     },
     {
       "type": "item",
-      "id": "chalk:gray_chalk"
+      "id": "chalk:white_chalk"
     },
     {
       "type": "item",
       "id": "chalk:magenta_chalk"
+    },
+    {
+      "type": "item",
+      "id": "chalk:brown_chalk"
+    },
+    {
+      "type": "item",
+      "id": "chalk:light_gray_chalk"
     },
     {
       "type": "item",
@@ -6880,15 +7260,11 @@
     },
     {
       "type": "item",
-      "id": "chalk:blue_chalk"
-    },
-    {
-      "type": "item",
-      "id": "chalk:white_chalk"
-    },
-    {
-      "type": "item",
       "id": "chalk:purple_chalk"
+    },
+    {
+      "type": "item",
+      "id": "chalk:gray_chalk"
     },
     {
       "type": "item",
@@ -6896,7 +7272,7 @@
     },
     {
       "type": "item",
-      "id": "chalk:yellow_chalk"
+      "id": "chalk:blue_chalk"
     },
     {
       "type": "item",
@@ -10575,6 +10951,10 @@
     },
     {
       "type": "item",
+      "id": "nomansland:awkward_residue"
+    },
+    {
+      "type": "item",
       "id": "minecraft:glowstone_dust"
     },
     {
@@ -10955,6 +11335,10 @@
     },
     {
       "type": "item",
+      "id": "nomansland:buddy_spawn_egg"
+    },
+    {
+      "type": "item",
       "id": "minecraft:breeze_spawn_egg"
     },
     {
@@ -10996,10 +11380,6 @@
     {
       "type": "item",
       "id": "nomansland:deer_spawn_egg"
-    },
-    {
-      "type": "item",
-      "id": "nomansland:moose_spawn_egg"
     },
     {
       "type": "item",
@@ -11256,6 +11636,98 @@
     {
       "type": "item",
       "id": "minecraft:copper_golem_spawn_egg"
+    },
+    {
+      "type": "item",
+      "id": "redomesticate:collar_tag"
+    },
+    {
+      "type": "item",
+      "id": "redomesticate:feather_on_a_stick"
+    },
+    {
+      "type": "item",
+      "id": "redomesticate:rotten_apple"
+    },
+    {
+      "type": "item",
+      "id": "redomesticate:sinister_carrot"
+    },
+    {
+      "type": "item",
+      "id": "redomesticate:deed_of_ownership"
+    },
+    {
+      "type": "item",
+      "id": "redomesticate:wayward_lantern"
+    },
+    {
+      "type": "item",
+      "id": "redomesticate:drum"
+    },
+    {
+      "type": "item",
+      "id": "redomesticate:pet_bed_white"
+    },
+    {
+      "type": "item",
+      "id": "redomesticate:pet_bed_light_gray"
+    },
+    {
+      "type": "item",
+      "id": "redomesticate:pet_bed_gray"
+    },
+    {
+      "type": "item",
+      "id": "redomesticate:pet_bed_black"
+    },
+    {
+      "type": "item",
+      "id": "redomesticate:pet_bed_brown"
+    },
+    {
+      "type": "item",
+      "id": "redomesticate:pet_bed_red"
+    },
+    {
+      "type": "item",
+      "id": "redomesticate:pet_bed_orange"
+    },
+    {
+      "type": "item",
+      "id": "redomesticate:pet_bed_yellow"
+    },
+    {
+      "type": "item",
+      "id": "redomesticate:pet_bed_lime"
+    },
+    {
+      "type": "item",
+      "id": "redomesticate:pet_bed_green"
+    },
+    {
+      "type": "item",
+      "id": "redomesticate:pet_bed_cyan"
+    },
+    {
+      "type": "item",
+      "id": "redomesticate:pet_bed_light_blue"
+    },
+    {
+      "type": "item",
+      "id": "redomesticate:pet_bed_blue"
+    },
+    {
+      "type": "item",
+      "id": "redomesticate:pet_bed_purple"
+    },
+    {
+      "type": "item",
+      "id": "redomesticate:pet_bed_magenta"
+    },
+    {
+      "type": "item",
+      "id": "redomesticate:pet_bed_pink"
     },
     {
       "type": "item",
@@ -12059,10 +12531,6 @@
     },
     {
       "type": "item",
-      "id": "nomansland:ancient_bronze_mask"
-    },
-    {
-      "type": "item",
       "id": "nomansland:seared_venison"
     },
     {
@@ -12103,7 +12571,333 @@
     },
     {
       "type": "item",
-      "id": "nomansland:rose_vines"
+      "id": "nomansland:ancient_pot",
+      "data": {
+        "id": "nomansland:ancient_pot",
+        "count": 1,
+        "components": {
+          "nomansland:pot_variant": "nomansland:alchemist_pot_small_1"
+        }
+      }
+    },
+    {
+      "type": "item",
+      "id": "nomansland:ancient_pot",
+      "data": {
+        "id": "nomansland:ancient_pot",
+        "count": 1,
+        "components": {
+          "nomansland:pot_variant": "nomansland:alchemist_pot_small_1_face_happy"
+        }
+      }
+    },
+    {
+      "type": "item",
+      "id": "nomansland:ancient_pot",
+      "data": {
+        "id": "nomansland:ancient_pot",
+        "count": 1,
+        "components": {
+          "nomansland:pot_variant": "nomansland:alchemist_pot_small_1_face_stern"
+        }
+      }
+    },
+    {
+      "type": "item",
+      "id": "nomansland:ancient_pot",
+      "data": {
+        "id": "nomansland:ancient_pot",
+        "count": 1,
+        "components": {
+          "nomansland:pot_variant": "nomansland:alchemist_pot_small_1_wiggle"
+        }
+      }
+    },
+    {
+      "type": "item",
+      "id": "nomansland:ancient_pot",
+      "data": {
+        "id": "nomansland:ancient_pot",
+        "count": 1,
+        "components": {
+          "nomansland:pot_variant": "nomansland:alchemist_pot_small_1_wiggle_gold"
+        }
+      }
+    },
+    {
+      "type": "item",
+      "id": "nomansland:ancient_pot",
+      "data": {
+        "id": "nomansland:ancient_pot",
+        "count": 1,
+        "components": {
+          "nomansland:pot_variant": "nomansland:alchemist_pot_small_1_wiggle_green"
+        }
+      }
+    },
+    {
+      "type": "item",
+      "id": "nomansland:ancient_pot",
+      "data": {
+        "id": "nomansland:ancient_pot",
+        "count": 1,
+        "components": {
+          "nomansland:pot_variant": "nomansland:alchemist_pot_small_1_wiggle_white"
+        }
+      }
+    },
+    {
+      "type": "item",
+      "id": "nomansland:ancient_pot",
+      "data": {
+        "id": "nomansland:ancient_pot",
+        "count": 1,
+        "components": {
+          "nomansland:pot_variant": "nomansland:alchemist_pot_small_1alt"
+        }
+      }
+    },
+    {
+      "type": "item",
+      "id": "nomansland:ancient_pot",
+      "data": {
+        "id": "nomansland:ancient_pot",
+        "count": 1,
+        "components": {
+          "nomansland:pot_variant": "nomansland:alchemist_pot_small_2"
+        }
+      }
+    },
+    {
+      "type": "item",
+      "id": "nomansland:ancient_pot",
+      "data": {
+        "id": "nomansland:ancient_pot",
+        "count": 1,
+        "components": {
+          "nomansland:pot_variant": "nomansland:alchemist_pot_small_2_face_happy"
+        }
+      }
+    },
+    {
+      "type": "item",
+      "id": "nomansland:ancient_pot",
+      "data": {
+        "id": "nomansland:ancient_pot",
+        "count": 1,
+        "components": {
+          "nomansland:pot_variant": "nomansland:alchemist_pot_small_2_face_stern"
+        }
+      }
+    },
+    {
+      "type": "item",
+      "id": "nomansland:ancient_pot",
+      "data": {
+        "id": "nomansland:ancient_pot",
+        "count": 1,
+        "components": {
+          "nomansland:pot_variant": "nomansland:alchemist_pot_small_3"
+        }
+      }
+    },
+    {
+      "type": "item",
+      "id": "nomansland:ancient_pot",
+      "data": {
+        "id": "nomansland:ancient_pot",
+        "count": 1,
+        "components": {
+          "nomansland:pot_variant": "nomansland:alchemist_pot_small_4"
+        }
+      }
+    },
+    {
+      "type": "item",
+      "id": "nomansland:ancient_pot",
+      "data": {
+        "id": "nomansland:ancient_pot",
+        "count": 1,
+        "components": {
+          "nomansland:pot_variant": "nomansland:alchemist_pot_small_5"
+        }
+      }
+    },
+    {
+      "type": "item",
+      "id": "nomansland:ancient_pot",
+      "data": {
+        "id": "nomansland:ancient_pot",
+        "count": 1,
+        "components": {
+          "nomansland:pot_variant": "nomansland:alchemist_pot_small_6"
+        }
+      }
+    },
+    {
+      "type": "item",
+      "id": "nomansland:ancient_pot",
+      "data": {
+        "id": "nomansland:ancient_pot",
+        "count": 1,
+        "components": {
+          "nomansland:pot_variant": "nomansland:ancient_pot_small_1"
+        }
+      }
+    },
+    {
+      "type": "item",
+      "id": "nomansland:ancient_pot",
+      "data": {
+        "id": "nomansland:ancient_pot",
+        "count": 1,
+        "components": {
+          "nomansland:pot_variant": "nomansland:ancient_pot_small_1alt"
+        }
+      }
+    },
+    {
+      "type": "item",
+      "id": "nomansland:ancient_pot",
+      "data": {
+        "id": "nomansland:ancient_pot",
+        "count": 1,
+        "components": {
+          "nomansland:pot_variant": "nomansland:ancient_pot_small_2"
+        }
+      }
+    },
+    {
+      "type": "item",
+      "id": "nomansland:ancient_pot",
+      "data": {
+        "id": "nomansland:ancient_pot",
+        "count": 1,
+        "components": {
+          "nomansland:pot_variant": "nomansland:ancient_pot_small_3"
+        }
+      }
+    },
+    {
+      "type": "item",
+      "id": "nomansland:ancient_pot",
+      "data": {
+        "id": "nomansland:ancient_pot",
+        "count": 1,
+        "components": {
+          "nomansland:pot_variant": "nomansland:ancient_pot_small_4"
+        }
+      }
+    },
+    {
+      "type": "item",
+      "id": "nomansland:ancient_pot",
+      "data": {
+        "id": "nomansland:ancient_pot",
+        "count": 1,
+        "components": {
+          "nomansland:pot_variant": "nomansland:ancient_pot_small_5"
+        }
+      }
+    },
+    {
+      "type": "item",
+      "id": "nomansland:ancient_pot",
+      "data": {
+        "id": "nomansland:ancient_pot",
+        "count": 1,
+        "components": {
+          "nomansland:pot_variant": "nomansland:ancient_pot_small_6"
+        }
+      }
+    },
+    {
+      "type": "item",
+      "id": "nomansland:large_ancient_pot",
+      "data": {
+        "id": "nomansland:large_ancient_pot",
+        "count": 1,
+        "components": {
+          "nomansland:pot_variant": "nomansland:alchemist_pot_large_1"
+        }
+      }
+    },
+    {
+      "type": "item",
+      "id": "nomansland:large_ancient_pot",
+      "data": {
+        "id": "nomansland:large_ancient_pot",
+        "count": 1,
+        "components": {
+          "nomansland:pot_variant": "nomansland:alchemist_pot_large_1_face_happy"
+        }
+      }
+    },
+    {
+      "type": "item",
+      "id": "nomansland:large_ancient_pot",
+      "data": {
+        "id": "nomansland:large_ancient_pot",
+        "count": 1,
+        "components": {
+          "nomansland:pot_variant": "nomansland:alchemist_pot_large_1_face_stern"
+        }
+      }
+    },
+    {
+      "type": "item",
+      "id": "nomansland:large_ancient_pot",
+      "data": {
+        "id": "nomansland:large_ancient_pot",
+        "count": 1,
+        "components": {
+          "nomansland:pot_variant": "nomansland:alchemist_pot_large_1_wiggle"
+        }
+      }
+    },
+    {
+      "type": "item",
+      "id": "nomansland:large_ancient_pot",
+      "data": {
+        "id": "nomansland:large_ancient_pot",
+        "count": 1,
+        "components": {
+          "nomansland:pot_variant": "nomansland:alchemist_pot_large_1_wiggle_gold"
+        }
+      }
+    },
+    {
+      "type": "item",
+      "id": "nomansland:large_ancient_pot",
+      "data": {
+        "id": "nomansland:large_ancient_pot",
+        "count": 1,
+        "components": {
+          "nomansland:pot_variant": "nomansland:alchemist_pot_large_1_wiggle_green"
+        }
+      }
+    },
+    {
+      "type": "item",
+      "id": "nomansland:large_ancient_pot",
+      "data": {
+        "id": "nomansland:large_ancient_pot",
+        "count": 1,
+        "components": {
+          "nomansland:pot_variant": "nomansland:alchemist_pot_large_1_wiggle_white"
+        }
+      }
+    },
+    {
+      "type": "item",
+      "id": "nomansland:large_ancient_pot",
+      "data": {
+        "id": "nomansland:large_ancient_pot",
+        "count": 1,
+        "components": {
+          "nomansland:pot_variant": "nomansland:ancient_pot_large_1"
+        }
+      }
     },
     {
       "type": "item",
