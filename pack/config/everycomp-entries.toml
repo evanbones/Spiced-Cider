@@ -1,0 +1,107 @@
+#Disables certain types. Note that all these configs, like in any other mod, only hide stuff from tabs and disable their recipes
+[types]
+
+		[types.cake.bountifulfares]
+			coconut_cake = true
+			cocoa_cake = true
+			sponge_cake = true
+
+		[types.cake.nomansland]
+			fruit_cake = true
+
+		[types.wood_type.abundant_atmosphere]
+			red_bamboo = true
+			ashroot = true
+			gourdrot = true
+
+		[types.wood_type.caverns_and_chasms]
+			azalea = true
+
+		[types.wood_type.quark]
+			azalea = true
+			ancient = true
+			blossom = true
+
+		[types.wood_type.bountifulfares]
+			hoary = true
+			walnut = true
+
+		[types.wood_type.nomansland]
+			pine = true
+			maple = true
+			walnut = true
+			willow = true
+
+		[types.leaves_type.quark]
+			ancient = true
+			blue_blossom = true
+			lavender_blossom = true
+			orange_blossom = true
+			yellow_blossom = true
+			red_blossom = true
+
+		[types.leaves_type.abundant_atmosphere]
+			ashroot = true
+			gourdrot = true
+
+		[types.leaves_type.bountifulfares]
+			apple = true
+			flowering_apple = true
+			orange = true
+			flowering_orange = true
+			lemon = true
+			flowering_lemon = true
+			plum = true
+			flowering_plum = true
+			hoary = true
+			walnut = true
+			golden_apple = true
+			flowering_golden_apple = true
+
+		[types.leaves_type.nomansland]
+			yellow_birch = true
+			autumnal_oak = true
+			pale_cherry = true
+			frosted = true
+			pine = true
+			maple = true
+			red_maple = true
+			walnut = true
+			willow = true
+			apple_fruit = true
+			pear_fruit = true
+
+#Disables specific entries
+[entries]
+
+		[entries.wood_type.nomansland]
+			bookshelf = true
+			trimmed_planks = true
+
+		[entries.wood_type.quark]
+			vertical_planks = false
+			post = true
+			trapped_chest = true
+			bookshelf = true
+			chest = true
+			stripped_post = true
+			ladder = true
+			hollow_log = true
+			vertical_slab = false
+
+		[entries.wood_type.shutterup]
+			shutter = true
+
+		[entries.wood_type.farmersdelight]
+			cabinet = true
+
+		[entries.wood_type.copperagebackport]
+			shelf = true
+
+		[entries.wood_type.bountifulfares]
+			trellis = true
+			pickets = true
+
+		[entries.leaves_type.quark]
+			hedge = true
+			leaf_carpet = true

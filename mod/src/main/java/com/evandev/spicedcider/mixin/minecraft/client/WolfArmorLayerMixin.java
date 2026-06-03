@@ -1,4 +1,4 @@
-package com.evandev.spicedcider.mixin.minecraft;
+package com.evandev.spicedcider.mixin.minecraft.client;
 
 import com.evandev.spicedcider.SpicedCider;
 import com.mojang.blaze3d.vertex.PoseStack;

@@ -5,7 +5,11 @@
   "plugin": "com.evandev.spicedcider.mixin.SpicedCiderMixinPlugin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "minecraft.EndCrystalItemMixin",
+    "minecraft.EndCrystalMixin",
+    "minecraft.SpiderEntityMixin",
     "minecraft.WolfPetArmorMixin",
+    "minecraft.accessor.GoalSelectorAccessor",
     "perf.RecipeBookMixin",
     "perf.ReloadableServerResourcesMixin",
     "perf.ServerPlayerMixin",
@@ -28,7 +32,9 @@
     "structures.StructureTimingMixin"
   ],
   "client": [
-    "minecraft.WolfArmorLayerMixin",
+    "minecraft.client.EndCrystalRendererMixin",
+    "minecraft.client.SpiderModelMixin",
+    "minecraft.client.WolfArmorLayerMixin",
     "namingunconvention.ModernWorldCreationGameTabMixin",
     "namingunconvention.WorldCreationUiStateMixin",
     "perf.ClientRecipeBookMixin",
