@@ -29,7 +29,5 @@ public class ModLanguageProvider extends LanguageProvider {
         add("title.spicedcider.config", "Spiced Cider Config");
         add("category.spicedcider.general", "General");
         add("subtitles.spicedcider.music.death.death1", "Player died");
-        add("painting.spicedcider.bobbomb_battlefield.title", "Bob-omb Battlefield");
-        add("painting.spicedcider.bobomb_battlefield.author", "Nintendo");
     }
 }
