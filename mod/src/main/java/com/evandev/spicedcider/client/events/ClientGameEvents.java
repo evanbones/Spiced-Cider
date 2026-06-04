@@ -2,18 +2,19 @@ package com.evandev.spicedcider.client.events;
 
 import com.evandev.spicedcider.SpicedCider;
 import com.evandev.spicedcider.client.music.DeathSoundInstance;
+import com.evandev.spicedcider.client.screens.AssetSelectionScreen;
 import com.evandev.spicedcider.registry.ModSounds;
 import dev.emi.emi.api.EmiApi;
 import dev.emi.emi.api.stack.EmiIngredient;
 import dev.emi.emi.api.stack.EmiStack;
 import dev.emi.emi.api.stack.EmiStackInteraction;
-import net.minecraft.Util;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.BakedQuad;
 import net.minecraft.client.renderer.entity.EntityRenderer;
 import net.minecraft.client.resources.language.I18n;
 import net.minecraft.client.resources.model.BakedModel;
 import net.minecraft.core.Direction;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.Entity;
@@ -26,17 +27,12 @@ import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.loading.FMLLoader;
-import net.neoforged.fml.loading.FMLPaths;
 import net.neoforged.neoforge.client.event.ClientTickEvent;
 import net.neoforged.neoforge.client.event.ScreenEvent;
 import net.neoforged.neoforge.client.model.data.ModelData;
-import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.lwjgl.glfw.GLFW;
 
-import java.io.InputStream;
-import java.nio.file.Files;
-import java.nio.file.Path;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -53,20 +49,29 @@ public class ClientGameEvents {
 
         while (OPEN_TEXTURE_FOLDER.consumeClick()) {
             HitResult hit = mc.hitResult;
-            if (hit != null && mc.level != null) {
+            if (hit != null && mc.level != null && mc.screen == null) {
+                Set<ResourceLocation> assetsToCopy = new HashSet<>();
+
                 if (hit.getType() == HitResult.Type.BLOCK && hit instanceof BlockHitResult blockHit) {
                     BlockState state = mc.level.getBlockState(blockHit.getBlockPos());
                     BakedModel model = mc.getBlockRenderer().getBlockModel(state);
 
-                    Set<ResourceLocation> textures = getSpritesFromModel(model, state);
-                    copyAndOpenTextures(textures);
+                    assetsToCopy.addAll(getSpritesFromModel(model, state));
+                    ResourceLocation blockId = BuiltInRegistries.BLOCK.getKey(state.getBlock());
+                    assetsToCopy.add(ResourceLocation.fromNamespaceAndPath(blockId.getNamespace(), "blockstates/" + blockId.getPath() + ".json"));
+                    assetsToCopy.add(ResourceLocation.fromNamespaceAndPath(blockId.getNamespace(), "models/block/" + blockId.getPath() + ".json"));
+
+                    mc.setScreen(new AssetSelectionScreen(assetsToCopy));
 
                 } else if (hit.getType() == HitResult.Type.ENTITY && hit instanceof EntityHitResult entityHit) {
                     Entity entity = entityHit.getEntity();
                     @SuppressWarnings("unchecked")
                     EntityRenderer<Entity> renderer = (EntityRenderer<Entity>) mc.getEntityRenderDispatcher().getRenderer(entity);
+
                     ResourceLocation mainTexture = renderer.getTextureLocation(entity);
-                    copyAndOpenTextures(Set.of(mainTexture));
+                    assetsToCopy.add(normalizeTextureLocation(mainTexture));
+
+                    mc.setScreen(new AssetSelectionScreen(assetsToCopy));
                 }
             }
         }
@@ -98,8 +103,12 @@ public class ClientGameEvents {
                         Minecraft mc = Minecraft.getInstance();
                         BakedModel model = mc.getItemRenderer().getModel(stack, mc.level, mc.player, 0);
 
-                        Set<ResourceLocation> textures = getSpritesFromModel(model, null);
-                        copyAndOpenTextures(textures);
+                        Set<ResourceLocation> assetsToCopy = new HashSet<>(getSpritesFromModel(model, null));
+
+                        ResourceLocation itemId = BuiltInRegistries.ITEM.getKey(stack.getItem());
+                        assetsToCopy.add(ResourceLocation.fromNamespaceAndPath(itemId.getNamespace(), "models/item/" + itemId.getPath() + ".json"));
+
+                        mc.execute(() -> mc.setScreen(new AssetSelectionScreen(assetsToCopy)));
                         return;
                     }
                 }
@@ -132,88 +141,32 @@ public class ClientGameEvents {
      */
     private static Set<ResourceLocation> getSpritesFromModel(BakedModel model, @Nullable BlockState state) {
         Set<ResourceLocation> sprites = new HashSet<>();
-        sprites.add(model.getParticleIcon().contents().name());
+        sprites.add(normalizeTextureLocation(ResourceLocation.parse(model.getParticleIcon().contents().name().toString())));
 
         RandomSource random = RandomSource.create();
 
         for (Direction dir : Direction.values()) {
             for (BakedQuad quad : model.getQuads(state, dir, random, ModelData.EMPTY, null)) {
-                sprites.add(quad.getSprite().contents().name());
+                sprites.add(normalizeTextureLocation(ResourceLocation.parse(quad.getSprite().contents().name().toString())));
             }
         }
 
         for (BakedQuad quad : model.getQuads(state, null, random, ModelData.EMPTY, null)) {
-            sprites.add(quad.getSprite().contents().name());
+            sprites.add(normalizeTextureLocation(ResourceLocation.parse(quad.getSprite().contents().name().toString())));
         }
 
         return sprites;
     }
 
     /**
-     * Processes a set of texture ResourceLocations, saving them and opening the explorer window.
+     * Converts a raw texture namespace (e.g. "minecraft:block/stone") into a concrete
+     * file asset path (e.g. "minecraft:textures/block/stone.png") so the Resource Manager finds it.
      */
-    private static void copyAndOpenTextures(Set<ResourceLocation> spriteLocs) {
-        if (spriteLocs.isEmpty()) return;
-
-        Path directoryToOpen = null;
-
-        for (ResourceLocation rawLoc : spriteLocs) {
-            ResourceLocation fileResource;
-            if (rawLoc.getPath().endsWith(".png")) {
-                fileResource = rawLoc;
-            } else {
-                fileResource = ResourceLocation.fromNamespaceAndPath(
-                        rawLoc.getNamespace(), "textures/" + rawLoc.getPath() + ".png"
-                );
-            }
-
-            Path targetFile = getTargetFile(fileResource);
-            Path targetDir = targetFile.getParent();
-
-            if (directoryToOpen == null) {
-                directoryToOpen = targetDir;
-            }
-
-            try {
-                Files.createDirectories(targetDir);
-
-                var resourceManager = Minecraft.getInstance().getResourceManager();
-                var resource = resourceManager.getResource(fileResource);
-
-                if (resource.isPresent()) {
-                    if (!Files.exists(targetFile)) {
-                        try (InputStream in = resource.get().open()) {
-                            Files.copy(in, targetFile);
-                            SpicedCider.LOGGER.info("Successfully extracted texture to {}", targetFile);
-                        }
-                    }
-                } else {
-                    SpicedCider.LOGGER.warn("Could not find the texture resource for {}", fileResource);
-                }
-            } catch (Exception e) {
-                SpicedCider.LOGGER.error("Failed to extract texture directory for: {}", targetFile, e);
-            }
+    private static ResourceLocation normalizeTextureLocation(ResourceLocation rawLoc) {
+        if (rawLoc.getPath().endsWith(".png")) {
+            return rawLoc;
+        } else {
+            return ResourceLocation.fromNamespaceAndPath(rawLoc.getNamespace(), "textures/" + rawLoc.getPath() + ".png");
         }
-
-        if (directoryToOpen != null) {
-            Util.getPlatform().openUri(directoryToOpen.toUri());
-        }
-    }
-
-    private static @NotNull Path getTargetFile(ResourceLocation fileResource) {
-        String namespace = fileResource.getNamespace();
-        String subPath = fileResource.getPath();
-        if (subPath.startsWith("textures/")) {
-            subPath = subPath.substring(9); // remove "textures/"
-        }
-
-        Path basePath = FMLPaths.GAMEDIR.get()
-                .resolve("resourcepacks")
-                .resolve("spicedcider_resources")
-                .resolve("assets")
-                .resolve(namespace)
-                .resolve("textures");
-
-        return basePath.resolve(subPath);
     }
 }
