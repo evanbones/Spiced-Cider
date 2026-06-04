@@ -250,7 +250,7 @@ hash = "943e1c3672b8a03f27519b357091133205119c7b3db2fcc4c25b597cabf8926d"
 
 [[files]]
 file = "config/crash_assistant/modlist.json"
-hash = "e9e031fbfbfff089b52033b1b288bb1900b3d0ea89941fbf2038d80c9a1b4ca4"
+hash = "f069783b3fbd2b4dbef1281535e751ea61ca12522f9b9fe9417b05a5ee7c8a48"
 
 [[files]]
 file = "config/crash_assistant/scripts/log_analysis/example.jexl"
@@ -322,7 +322,7 @@ hash = "0eeabc86981a94b6d3ec5783a9f5b4286bdd77f728df61c20c8fcca8b881d6c8"
 
 [[files]]
 file = "config/emi-accelerator/stack-cache.json"
-hash = "8810d247f0a4b366965cd9b62e45a039bf0357a623152943023440b08291f984"
+hash = "e8cc1621a396badb7b8a6427d0b04f1b93129cad310314ce3f807b736843325c"
 
 [[files]]
 file = "config/emi.css"
@@ -425,8 +425,12 @@ file = "config/everycomp-common.toml"
 hash = "7f9600976b415a1f3196fbc51d0aebd62731168f6786fa6555e058e47b2c30a4"
 
 [[files]]
-file = "config/everycomp-entries.toml"
+file = "config/everycomp-entries-1.toml.bak"
 hash = "21447902ffbccfebd4552e0c94bf248879043fdf1f764983096d6eb422845fd8"
+
+[[files]]
+file = "config/everycomp-entries.toml"
+hash = "700c2ad7f1bbbc12f54ee789e35bb7dc0167d32a57c859a289c8931b04f9e5fe"
 
 [[files]]
 file = "config/everycomp-hazardous.toml"
@@ -462,7 +466,7 @@ hash = "09d330b29443d9579ecc014f2be2fcb31075bfe1e9f9ac4e750f271128650fe6"
 
 [[files]]
 file = "config/fabric/indigo-renderer.properties"
-hash = "b622173f14637027b837931267d7e7cd1a47b66fee744b2bfb5464a0b18a688f"
+hash = "c9a9a72abe5dad8d61c091f28429fd75c6efeb967c1eed68df084972e7ad557f"
 
 [[files]]
 file = "config/fallingleaves-client.toml"
@@ -789,6 +793,10 @@ file = "config/incontrol/spawner.json"
 hash = "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
 
 [[files]]
+file = "config/infernalexp.json"
+hash = "6c7b18bcfce74dd24b9308eed2fb97b9183710c421e6af24b469a10fff5d3e35"
+
+[[files]]
 file = "config/inline/client-config.toml"
 hash = "270478924d8bc8bfb4aa2e6a2036682fc4b3e66caafd46da821ca812d84afa88"
 
@@ -1102,7 +1110,7 @@ hash = "05022be17b8d67f7f6e766884518e40b20efc01dbfd531ad10ec009af6724342"
 
 [[files]]
 file = "config/packetfixer.properties"
-hash = "e15c3fed9472af69d6345ab947b0711ba06f579b4e0fc99f36036b509d6dbf29"
+hash = "0f565e54aacbe54026717f030c206b3cae4874b6de69ae896d51fb953a8760bc"
 
 [[files]]
 file = "config/particle_core_config.toml"
@@ -1150,7 +1158,7 @@ hash = "8cf6192eda81b3a27737440cfdedc05c40a8c1b552583114c1aa6fb2673ca907"
 
 [[files]]
 file = "config/quark-common.toml"
-hash = "d1a767253d5cd5ba2870c5f58bd4397b7a75e08fa15d536d82169ce7b6ef9c66"
+hash = "2a25611cc286a59068270387aec1aec171bf5725422f3961352ab1b927144a9a"
 
 [[files]]
 file = "config/quick-pack.json"
@@ -1162,7 +1170,7 @@ hash = "7441ea5870235854f37ff16384b4407cf5411065bb3dcf6bbf6f5f981c7f005f"
 
 [[files]]
 file = "config/recreative/remove_tabs.json"
-hash = "d0040bd407cfae9deeb0b73fd64547923fa58eae384afc3f7e568f097edc8091"
+hash = "354ec2312dca824863625aca59af838da861364fc0243974809e4cb49f71ccb7"
 
 [[files]]
 file = "config/recreative/tab_icons.json"
@@ -1170,7 +1178,7 @@ hash = "e32b0bfc824b6ea5f02afcc493648e2bd0844962d995c892bf0b659645563e2b"
 
 [[files]]
 file = "config/recreative_settings.json"
-hash = "d4ae399d4ff3bde984486eb1ae48daabc8011c7eb4c79c69dd678ee52b69a953"
+hash = "c74c516a193e42450bc2947c46df59d72910af8a108f38cc0fb28b44b9a98f93"
 
 [[files]]
 file = "config/redomesticate.json"
@@ -1202,7 +1210,7 @@ hash = "590ea074ec1c84ced8a0c60dedd7111edd69801f7441fe78654c2f6fdfb655b7"
 
 [[files]]
 file = "config/reliable_remover.json"
-hash = "94476f1d8057420495b8f52d833587ec053d97bfb01a0fef34afc2e95e750b81"
+hash = "fec62836768789b1518f03bfee4c81861d4f81485ee076b597b2c93345e9557f"
 
 [[files]]
 file = "config/reliable_remover/remove_paintings.json"
@@ -1326,7 +1334,7 @@ hash = "e26b00784bb6239988759ed1a64551b9f301dc33c5a855d91e976ee4bf40ac8a"
 
 [[files]]
 file = "config/sound_physics_remastered/sound_rates.properties"
-hash = "66bda1f34b04d8cb4765427d58e14929ef16a3639ee3934c079a0a47bef5108b"
+hash = "cd639a90126ff4ea0249657a442f47dad75d85a8a5aa2110a60aae9b4447c089"
 
 [[files]]
 file = "config/sound_physics_remastered/soundphysics.properties"
@@ -1656,7 +1664,7 @@ metafile = true
 
 [[files]]
 file = "mods/chalk-mod.pw.toml"
-hash = "92705ff84059ac0735eb0dac4eac6a6f7e03049d2eead27c0a127a7320410668"
+hash = "c871176819bb20c57d603c7e8664a3ff8a43d3c9e9ae5dd53c9c775e9d0e1d88"
 metafile = true
 
 [[files]]
@@ -1785,11 +1793,6 @@ hash = "67bb77eae0b644960be3b1074178ceb5d54facbb42f326981b9d94625238a54a"
 metafile = true
 
 [[files]]
-file = "mods/emiaccelerator.pw.toml"
-hash = "ff6dcb8b300338467eeff5114469d6fc7219c37834836e3a16b28e430ffca0ef"
-metafile = true
-
-[[files]]
 file = "mods/ender-christmas+.pw.toml"
 hash = "98e7d19017cc3cf088c71ecb6d87d61ab807f3c4b44116443b7e6246e80e7c5f"
 metafile = true
@@ -1851,7 +1854,7 @@ metafile = true
 
 [[files]]
 file = "mods/fabric-language-kotlin.pw.toml"
-hash = "337d97b990f76c91584b12600651ae7bd47a0824e45070b3d9330b0922149fc0"
+hash = "9d37d326d9557fdd25c97d72ac1bbd1e74c524aa5dca437a91d0de645dff6545"
 metafile = true
 
 [[files]]
@@ -1881,7 +1884,7 @@ metafile = true
 
 [[files]]
 file = "mods/field-guide.pw.toml"
-hash = "951cd04e44d1dd54ebdb5245eb648d2bb0e9479ab23a65f77969a57c045040a1"
+hash = "ad2bd704fac3a4d986fb9f99ec28c0a4372de74082884260474d7f6f35fccc28"
 metafile = true
 
 [[files]]
@@ -1925,6 +1928,11 @@ hash = "b98c428b3eaca3332047b113673235526418fcc1d2b55e660dc4308d73b85ae5"
 metafile = true
 
 [[files]]
+file = "mods/geckolib.pw.toml"
+hash = "0521ed2becdf2b460511c92e80e2702a4b6e540c85c99fb571844e1c7c505724"
+metafile = true
+
+[[files]]
 file = "mods/highlight.pw.toml"
 hash = "554fc5e8aba13353c9b9d4ff066ec6aaf1bd559550633ef4ace120541cada94b"
 metafile = true
@@ -1956,12 +1964,17 @@ metafile = true
 
 [[files]]
 file = "mods/immersive-overlays.pw.toml"
-hash = "f88ff6068814e82772d0a2fbb55df7fb8c4958036831a5e06e8af740f1f981a5"
+hash = "4ce9a1521d439d393f79988859c97157a8ba4b5fcb38f4043adde2da48761560"
 metafile = true
 
 [[files]]
 file = "mods/in-control.pw.toml"
 hash = "8e90c889394fe3e69d75a8aa8466b74af5ff8a26b755abf90b668dcc225b23d5"
+metafile = true
+
+[[files]]
+file = "mods/infernal-expansion-redux.pw.toml"
+hash = "924665e113c09c9738c8c7fccbfcabea336a14e6c3510436b7cccaa338a6e59e"
 metafile = true
 
 [[files]]
@@ -2240,12 +2253,12 @@ metafile = true
 
 [[files]]
 file = "mods/reliable-remover.pw.toml"
-hash = "b787d4e4d0712ceceaee7cb3c3608f70ecc58b896cd3432e9bb34d505176c299"
+hash = "b0cd8366e924b041c7c93921efa9a250848b2770a6df43e79bead0170af63b64"
 metafile = true
 
 [[files]]
 file = "mods/reliable-replacer.pw.toml"
-hash = "c0fc617ef8c1ad73cf508fa3f9cce63035e78af14f658b79a6c1eb126284ef01"
+hash = "c3a25fb6030de90ba84df3683c728112b118fda3413b07af3decd057c9701e89"
 metafile = true
 
 [[files]]
@@ -2345,7 +2358,7 @@ metafile = true
 
 [[files]]
 file = "mods/spicedcider-1.0.0.jar"
-hash = "d7b3694314d7cbb3489d011986a4654bebe0e3a3b9c33d6017b25abd2b82a221"
+hash = "827e03f194e7b961abc75d67b9ea8e7fd92de012da45782267afd35edc3a6d7e"
 
 [[files]]
 file = "mods/stony-cliffs-are-cool.pw.toml"
@@ -2424,7 +2437,7 @@ metafile = true
 
 [[files]]
 file = "mods/vanillabackport.pw.toml"
-hash = "ead260447160fa1cfbb697a7fbecc3eccb8a30da176e01cc7c93cc22f26a2857"
+hash = "de1c3ce98add2a76db8756ff390ea05dbed4b60f9c4d6cd81eaf01c25aed9f5e"
 metafile = true
 
 [[files]]
