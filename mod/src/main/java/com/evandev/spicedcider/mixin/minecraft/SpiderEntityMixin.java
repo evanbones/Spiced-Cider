@@ -3,10 +3,8 @@ package com.evandev.spicedcider.mixin.minecraft;
 import com.evandev.spicedcider.goals.RangedWebAttackGoal;
 import com.evandev.spicedcider.interfaces.ITrapsTarget;
 import com.evandev.spicedcider.interfaces.IWebShooter;
+import com.evandev.spicedcider.registry.ModAttachments;
 import com.evandev.spicedcider.registry.ModSounds;
-import net.minecraft.network.syncher.EntityDataAccessor;
-import net.minecraft.network.syncher.EntityDataSerializers;
-import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.goal.LeapAtTargetGoal;
@@ -25,9 +23,6 @@ import java.util.List;
 
 @Mixin(Spider.class)
 public abstract class SpiderEntityMixin extends Monster implements IWebShooter {
-
-    @Unique
-    private static final EntityDataAccessor<Boolean> cider$WEBSHOOTING = SynchedEntityData.defineId(Spider.class, EntityDataSerializers.BOOLEAN);
 
     @Unique
     public int cider$targetTrappedCounter = 0;
@@ -62,11 +57,6 @@ public abstract class SpiderEntityMixin extends Monster implements IWebShooter {
                 .ifPresent(pg -> this.cider$leapAtTargetGoal = (LeapAtTargetGoal) pg.getGoal());
 
         this.cider$rangedWebAttackGoal = new RangedWebAttackGoal<>(this, 1.0D, 60, 20.0F);
-    }
-
-    @Inject(at = @At("RETURN"), method = "defineSynchedData")
-    private void registerData(SynchedEntityData.Builder builder, CallbackInfo callbackInfo) {
-        builder.define(cider$WEBSHOOTING, false);
     }
 
     @Override
@@ -140,13 +130,30 @@ public abstract class SpiderEntityMixin extends Monster implements IWebShooter {
 
     @Override
     public boolean cider$isWebShooting() {
-        return this.entityData.get(cider$WEBSHOOTING);
+        return this.getData(ModAttachments.WEB_SHOOTING);
     }
 
     @Override
     public void cider$setWebShooting(boolean webShooting) {
-        this.playSound(ModSounds.SPIDER_PREPARE_SHOOT.get(), this.getSoundVolume(), this.getVoicePitch());
-        this.entityData.set(cider$WEBSHOOTING, webShooting);
+        this.setData(ModAttachments.WEB_SHOOTING, webShooting);
+
+        if (!this.level().isClientSide) {
+            if (webShooting) {
+                this.playSound(ModSounds.SPIDER_PREPARE_SHOOT.get(), this.getSoundVolume(), this.getVoicePitch());
+            }
+
+            this.level().broadcastEntityEvent(this, webShooting ? (byte) 60 : (byte) 61);
+        }
     }
 
+    @Override
+    public void handleEntityEvent(byte eventId) {
+        if (eventId == 60) {
+            this.setData(ModAttachments.WEB_SHOOTING, true);
+        } else if (eventId == 61) {
+            this.setData(ModAttachments.WEB_SHOOTING, false);
+        } else {
+            super.handleEntityEvent(eventId);
+        }
+    }
 }

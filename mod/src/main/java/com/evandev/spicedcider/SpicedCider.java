@@ -54,6 +54,7 @@ public class SpicedCider {
         ModEntityTypes.ENTITY_TYPES.register(modEventBus);
         ModEntityTypes.ITEMS.register(modEventBus);
         ModBlocks.BLOCKS.register(modEventBus);
+        ModAttachments.ATTACHMENT_TYPES.register(modEventBus);
         ModItems.ITEMS.register(modEventBus);
         ModBlockEntities.BLOCK_ENTITIES.register(modEventBus);
         ModRecipeTypes.RECIPE_TYPES.register(modEventBus);
