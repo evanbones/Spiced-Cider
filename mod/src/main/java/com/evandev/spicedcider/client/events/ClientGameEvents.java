@@ -9,10 +9,13 @@ import dev.emi.emi.api.stack.EmiStack;
 import dev.emi.emi.api.stack.EmiStackInteraction;
 import net.minecraft.Util;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.block.model.BakedQuad;
 import net.minecraft.client.renderer.entity.EntityRenderer;
-import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.client.resources.language.I18n;
+import net.minecraft.client.resources.model.BakedModel;
+import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.state.BlockState;
@@ -26,12 +29,16 @@ import net.neoforged.fml.loading.FMLLoader;
 import net.neoforged.fml.loading.FMLPaths;
 import net.neoforged.neoforge.client.event.ClientTickEvent;
 import net.neoforged.neoforge.client.event.ScreenEvent;
+import net.neoforged.neoforge.client.model.data.ModelData;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import org.lwjgl.glfw.GLFW;
 
 import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.HashSet;
+import java.util.Set;
 
 import static com.evandev.spicedcider.client.events.ClientModEvents.ModEvents.OPEN_TEXTURE_FOLDER;
 
@@ -49,20 +56,17 @@ public class ClientGameEvents {
             if (hit != null && mc.level != null) {
                 if (hit.getType() == HitResult.Type.BLOCK && hit instanceof BlockHitResult blockHit) {
                     BlockState state = mc.level.getBlockState(blockHit.getBlockPos());
-                    TextureAtlasSprite sprite = mc.getBlockRenderer().getBlockModel(state).getParticleIcon();
-                    ResourceLocation spriteLoc = sprite.contents().name();
+                    BakedModel model = mc.getBlockRenderer().getBlockModel(state);
 
-                    ResourceLocation fileResource = ResourceLocation.fromNamespaceAndPath(
-                            spriteLoc.getNamespace(), "textures/" + spriteLoc.getPath() + ".png"
-                    );
-                    copyAndOpenTexture(fileResource);
+                    Set<ResourceLocation> textures = getSpritesFromModel(model, state);
+                    copyAndOpenTextures(textures);
 
                 } else if (hit.getType() == HitResult.Type.ENTITY && hit instanceof EntityHitResult entityHit) {
                     Entity entity = entityHit.getEntity();
                     @SuppressWarnings("unchecked")
                     EntityRenderer<Entity> renderer = (EntityRenderer<Entity>) mc.getEntityRenderDispatcher().getRenderer(entity);
-                    ResourceLocation fileResource = renderer.getTextureLocation(entity);
-                    copyAndOpenTexture(fileResource);
+                    ResourceLocation mainTexture = renderer.getTextureLocation(entity);
+                    copyAndOpenTextures(Set.of(mainTexture));
                 }
             }
         }
@@ -91,14 +95,11 @@ public class ClientGameEvents {
                 if (!ingredient.isEmpty() && !ingredient.getEmiStacks().isEmpty()) {
                     ItemStack stack = ingredient.getEmiStacks().getFirst().getItemStack();
                     if (stack != null && !stack.isEmpty()) {
-                        TextureAtlasSprite sprite = Minecraft.getInstance().getItemRenderer()
-                                .getModel(stack, null, null, 0).getParticleIcon();
-                        ResourceLocation spriteLoc = sprite.contents().name();
+                        Minecraft mc = Minecraft.getInstance();
+                        BakedModel model = mc.getItemRenderer().getModel(stack, mc.level, mc.player, 0);
 
-                        ResourceLocation fileResource = ResourceLocation.fromNamespaceAndPath(
-                                spriteLoc.getNamespace(), "textures/" + spriteLoc.getPath() + ".png"
-                        );
-                        copyAndOpenTexture(fileResource);
+                        Set<ResourceLocation> textures = getSpritesFromModel(model, null);
+                        copyAndOpenTextures(textures);
                         return;
                     }
                 }
@@ -126,30 +127,76 @@ public class ClientGameEvents {
         }
     }
 
-    private static void copyAndOpenTexture(ResourceLocation fileResource) {
-        Path targetFile = getTargetFile(fileResource);
-        Path targetDir = targetFile.getParent();
+    /**
+     * Iterates through all quads of a BakedModel to extract every distinct texture sprite used.
+     */
+    private static Set<ResourceLocation> getSpritesFromModel(BakedModel model, @Nullable BlockState state) {
+        Set<ResourceLocation> sprites = new HashSet<>();
+        sprites.add(model.getParticleIcon().contents().name());
 
-        try {
-            Files.createDirectories(targetDir);
+        RandomSource random = RandomSource.create();
 
-            var resourceManager = Minecraft.getInstance().getResourceManager();
-            var resource = resourceManager.getResource(fileResource);
+        for (Direction dir : Direction.values()) {
+            for (BakedQuad quad : model.getQuads(state, dir, random, ModelData.EMPTY, null)) {
+                sprites.add(quad.getSprite().contents().name());
+            }
+        }
 
-            if (resource.isPresent()) {
-                if (!Files.exists(targetFile)) {
-                    try (InputStream in = resource.get().open()) {
-                        Files.copy(in, targetFile);
-                        SpicedCider.LOGGER.info("Successfully extracted texture to {}", targetFile);
-                    }
-                }
+        for (BakedQuad quad : model.getQuads(state, null, random, ModelData.EMPTY, null)) {
+            sprites.add(quad.getSprite().contents().name());
+        }
+
+        return sprites;
+    }
+
+    /**
+     * Processes a set of texture ResourceLocations, saving them and opening the explorer window.
+     */
+    private static void copyAndOpenTextures(Set<ResourceLocation> spriteLocs) {
+        if (spriteLocs.isEmpty()) return;
+
+        Path directoryToOpen = null;
+
+        for (ResourceLocation rawLoc : spriteLocs) {
+            ResourceLocation fileResource;
+            if (rawLoc.getPath().endsWith(".png")) {
+                fileResource = rawLoc;
             } else {
-                SpicedCider.LOGGER.warn("Could not find the texture resource for {}", fileResource);
+                fileResource = ResourceLocation.fromNamespaceAndPath(
+                        rawLoc.getNamespace(), "textures/" + rawLoc.getPath() + ".png"
+                );
             }
 
-            Util.getPlatform().openUri(targetDir.toUri());
-        } catch (Exception e) {
-            SpicedCider.LOGGER.error("Failed to extract or open texture directory for: {}", targetFile, e);
+            Path targetFile = getTargetFile(fileResource);
+            Path targetDir = targetFile.getParent();
+
+            if (directoryToOpen == null) {
+                directoryToOpen = targetDir;
+            }
+
+            try {
+                Files.createDirectories(targetDir);
+
+                var resourceManager = Minecraft.getInstance().getResourceManager();
+                var resource = resourceManager.getResource(fileResource);
+
+                if (resource.isPresent()) {
+                    if (!Files.exists(targetFile)) {
+                        try (InputStream in = resource.get().open()) {
+                            Files.copy(in, targetFile);
+                            SpicedCider.LOGGER.info("Successfully extracted texture to {}", targetFile);
+                        }
+                    }
+                } else {
+                    SpicedCider.LOGGER.warn("Could not find the texture resource for {}", fileResource);
+                }
+            } catch (Exception e) {
+                SpicedCider.LOGGER.error("Failed to extract texture directory for: {}", targetFile, e);
+            }
+        }
+
+        if (directoryToOpen != null) {
+            Util.getPlatform().openUri(directoryToOpen.toUri());
         }
     }
 
@@ -157,7 +204,7 @@ public class ClientGameEvents {
         String namespace = fileResource.getNamespace();
         String subPath = fileResource.getPath();
         if (subPath.startsWith("textures/")) {
-            subPath = subPath.substring(9);
+            subPath = subPath.substring(9); // remove "textures/"
         }
 
         Path basePath = FMLPaths.GAMEDIR.get()

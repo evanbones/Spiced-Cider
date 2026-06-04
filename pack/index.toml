@@ -65,6 +65,10 @@ file = "config/amendments-common.toml"
 hash = "c9712d9a1f7dbf2786d1b0d5f351b456e4c76528b4e9987c90cd21f48bfff78f"
 
 [[files]]
+file = "config/arts_and_crafts-common.toml"
+hash = "2af68e12100e2dba177afcac23cec23e3ec26a39dad0f7bb486107dcc0ebfda4"
+
+[[files]]
 file = "config/astrocraft.json"
 hash = "1175cf90306660bd75d7e07d6eaf24b7132e61198d33e009fccf3931fbe0191d"
 
@@ -250,7 +254,7 @@ hash = "943e1c3672b8a03f27519b357091133205119c7b3db2fcc4c25b597cabf8926d"
 
 [[files]]
 file = "config/crash_assistant/modlist.json"
-hash = "f069783b3fbd2b4dbef1281535e751ea61ca12522f9b9fe9417b05a5ee7c8a48"
+hash = "59daed6ca4d64589674297ea4163404161f6351e48cf698d98b7070d964a8467"
 
 [[files]]
 file = "config/crash_assistant/scripts/log_analysis/example.jexl"
@@ -386,7 +390,7 @@ hash = "51315508be804f0272ad7bf6a42aff864c1735ce1e50655433842d9098f773dd"
 
 [[files]]
 file = "config/enhancedtooltips.json5"
-hash = "2e42bbec71cf300fe1e6127b2a11686b08676a889474caa42c7bf9c00378c58c"
+hash = "abc59c372d7a6374ae8deb95f3102ffd33009896f72eb7a047d2cf791e4b85a8"
 
 [[files]]
 file = "config/entity_model_features.json"
@@ -426,11 +430,15 @@ hash = "7f9600976b415a1f3196fbc51d0aebd62731168f6786fa6555e058e47b2c30a4"
 
 [[files]]
 file = "config/everycomp-entries-1.toml.bak"
+hash = "700c2ad7f1bbbc12f54ee789e35bb7dc0167d32a57c859a289c8931b04f9e5fe"
+
+[[files]]
+file = "config/everycomp-entries-2.toml.bak"
 hash = "21447902ffbccfebd4552e0c94bf248879043fdf1f764983096d6eb422845fd8"
 
 [[files]]
 file = "config/everycomp-entries.toml"
-hash = "700c2ad7f1bbbc12f54ee789e35bb7dc0167d32a57c859a289c8931b04f9e5fe"
+hash = "025918fc8a95e5a35dd596b7823706824b6e4aaba11bd0ea85ff9a9863800c42"
 
 [[files]]
 file = "config/everycomp-hazardous.toml"
@@ -466,7 +474,7 @@ hash = "09d330b29443d9579ecc014f2be2fcb31075bfe1e9f9ac4e750f271128650fe6"
 
 [[files]]
 file = "config/fabric/indigo-renderer.properties"
-hash = "c9a9a72abe5dad8d61c091f28429fd75c6efeb967c1eed68df084972e7ad557f"
+hash = "4b8298bae11b2767b968e6f7d55875514eac879464152b3c01e2d3798843bd7d"
 
 [[files]]
 file = "config/fallingleaves-client.toml"
@@ -1110,7 +1118,7 @@ hash = "05022be17b8d67f7f6e766884518e40b20efc01dbfd531ad10ec009af6724342"
 
 [[files]]
 file = "config/packetfixer.properties"
-hash = "0f565e54aacbe54026717f030c206b3cae4874b6de69ae896d51fb953a8760bc"
+hash = "9a4e4241744239a06ce01da6b9789acf5012d1d24c400162413d7081914d97c8"
 
 [[files]]
 file = "config/particle_core_config.toml"
@@ -1170,7 +1178,7 @@ hash = "7441ea5870235854f37ff16384b4407cf5411065bb3dcf6bbf6f5f981c7f005f"
 
 [[files]]
 file = "config/recreative/remove_tabs.json"
-hash = "354ec2312dca824863625aca59af838da861364fc0243974809e4cb49f71ccb7"
+hash = "575317f9c6abca5b523f0490002c0ec6976ad04da3edf7287d0c883b61bf5b16"
 
 [[files]]
 file = "config/recreative/tab_icons.json"
@@ -1334,7 +1342,7 @@ hash = "e26b00784bb6239988759ed1a64551b9f301dc33c5a855d91e976ee4bf40ac8a"
 
 [[files]]
 file = "config/sound_physics_remastered/sound_rates.properties"
-hash = "cd639a90126ff4ea0249657a442f47dad75d85a8a5aa2110a60aae9b4447c089"
+hash = "edf620d854f4263c76629aae39af54e34504ce89dee8127951cd8a5304795240"
 
 [[files]]
 file = "config/sound_physics_remastered/soundphysics.properties"
@@ -1358,7 +1366,7 @@ hash = "71c6f65022cb095402596003a4896d66de91b15294c5e8ef9118ce10b3503829"
 
 [[files]]
 file = "config/spicedcider/spicedcider_manifest.json"
-hash = "be68e62093937a3f4a55d25c58b047b8be629f300f86653f88530bbb94d1f6e9"
+hash = "54c5d0caca7bcb77534e06f80b39f2a13be9a36ce469e0cf64a13c084e391313"
 
 [[files]]
 file = "config/stormiespiders/non-climbable-blocks.json"
@@ -1544,7 +1552,7 @@ metafile = true
 
 [[files]]
 file = "mods/almanac.pw.toml"
-hash = "2ac186452593104500b1dc2d37c391106cf6c5b24353285e297ccdc4b71a2c17"
+hash = "5305d3857b73f9f6b31b835c6e415575d9133543011c607c94fa5b75d63cfada"
 metafile = true
 
 [[files]]
@@ -1560,6 +1568,11 @@ metafile = true
 [[files]]
 file = "mods/architectury-api.pw.toml"
 hash = "ea336d25c3e21ef168aec20e1ea470c96949ad29632646ee8e8ab0d74b4bbfc9"
+metafile = true
+
+[[files]]
+file = "mods/artsandcrafts.pw.toml"
+hash = "6d3310120df2ae7d791aafee16c7ebc6c05b71b6e88b56ebcf7f0acc392b5843"
 metafile = true
 
 [[files]]
@@ -1589,7 +1602,7 @@ metafile = true
 
 [[files]]
 file = "mods/better-nether-map.pw.toml"
-hash = "823d504f7256c8223cd30f2617753a8e5b6dc67dd223897fd16273421ef57960"
+hash = "168009c9e42bde0e33bd898c188f747ad6acb7a90e7d32e4e9f6e7f46fb6ef5f"
 metafile = true
 
 [[files]]
@@ -1660,11 +1673,6 @@ metafile = true
 [[files]]
 file = "mods/caverns-and-chasms.pw.toml"
 hash = "fb793a844767d4d3d9bfc931e42427dcb87b38777018d7527bbb6b4d11d4b0ce"
-metafile = true
-
-[[files]]
-file = "mods/chalk-mod.pw.toml"
-hash = "c871176819bb20c57d603c7e8664a3ff8a43d3c9e9ae5dd53c9c775e9d0e1d88"
 metafile = true
 
 [[files]]
@@ -1988,6 +1996,11 @@ hash = "b6e0a61fea06f8d6d8e1672cf07b682625c4b74efd548d5093cd9c1fed167eec"
 metafile = true
 
 [[files]]
+file = "mods/jinxedlib.pw.toml"
+hash = "3e554dc66addcfd71cb63622490742566a640ff0ed45366814aa901945bb4ebc"
+metafile = true
+
+[[files]]
 file = "mods/just-enough-effect-descriptions-jeed.pw.toml"
 hash = "0b6a884fe3969a05a24aec1569d1ffcb2ec8fb8b268f749416a9c0677e3cac46"
 metafile = true
@@ -2023,12 +2036,12 @@ metafile = true
 
 [[files]]
 file = "mods/lithostitched.pw.toml"
-hash = "eec0715d020c6079c430338684d4cd752aa55231cb7887174b361481834e3ac4"
+hash = "03db1002af8f411a1b594817232859247e352f16f1c7907d29893b3472dce440"
 metafile = true
 
 [[files]]
 file = "mods/lmd.pw.toml"
-hash = "4656b6a7e50d6590335c3d009994485da8619449a3c78d61bf53965c1ef57ddb"
+hash = "b5c03e3f53adb710125506557b3ed367f0ed021707fc043a968f0a620b354fa1"
 metafile = true
 
 [[files]]
@@ -2258,7 +2271,7 @@ metafile = true
 
 [[files]]
 file = "mods/reliable-replacer.pw.toml"
-hash = "c3a25fb6030de90ba84df3683c728112b118fda3413b07af3decd057c9701e89"
+hash = "3064745ed6ea132a28d17906450f43ed57eda96b56b2ce1524b7a1ded852e1ea"
 metafile = true
 
 [[files]]
@@ -2278,7 +2291,7 @@ metafile = true
 
 [[files]]
 file = "mods/respawning-animals.pw.toml"
-hash = "85470220cf570286623a33b75056cbfa3c0ca7df9ad136df399dcd5f6b3d9700"
+hash = "5cf67fc11b96275843a7ed17e496e50e6d33c2270bf776e15e06c88176fba274"
 metafile = true
 
 [[files]]
@@ -2358,7 +2371,7 @@ metafile = true
 
 [[files]]
 file = "mods/spicedcider-1.0.0.jar"
-hash = "827e03f194e7b961abc75d67b9ea8e7fd92de012da45782267afd35edc3a6d7e"
+hash = "f3e23e60c34ced921c49bffa964286b853ddc7a221ae77aac25b76016c169fcc"
 
 [[files]]
 file = "mods/stony-cliffs-are-cool.pw.toml"
@@ -2393,6 +2406,11 @@ metafile = true
 [[files]]
 file = "mods/text-customiser.pw.toml"
 hash = "10019c9e1c33085aad01ed15d2ba2ca0581a5b8e38eb510ea4835e7abecff5f0"
+metafile = true
+
+[[files]]
+file = "mods/the-block-box.pw.toml"
+hash = "34e8d5d17a485e43e5a89bccad58c267dd62755bf43901c33bccf15ae4ea8723"
 metafile = true
 
 [[files]]
@@ -2607,6 +2625,11 @@ metafile = true
 [[files]]
 file = "resourcepacks/modern-fast-item-frames.pw.toml"
 hash = "9bc6cab296827ae49436ee07dc950cda0170bf69687ad93d98eff486778a137e"
+metafile = true
+
+[[files]]
+file = "resourcepacks/nibble-bits.pw.toml"
+hash = "783eeb01d9b076be538ec6b9147bcffbd84dcf186208a8acbc4786efa43564c4"
 metafile = true
 
 [[files]]
@@ -3719,6 +3742,11 @@ metafile = true
 [[files]]
 file = "resourcepacks/text-recoloured.pw.toml"
 hash = "05e6b1aaa67c4e83dd0e06c9b945cca64854ee50ef16e63a34438b2d6e33f4a6"
+metafile = true
+
+[[files]]
+file = "resourcepacks/vertical-fences.pw.toml"
+hash = "299f1675627e1fa8e4a0865375ae3411bb2b148352d272cf54d5b4d1f0ce7cfe"
 metafile = true
 
 [[files]]
