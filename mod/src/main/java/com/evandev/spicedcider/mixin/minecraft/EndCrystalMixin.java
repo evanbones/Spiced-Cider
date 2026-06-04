@@ -19,24 +19,24 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public abstract class EndCrystalMixin implements IEndCrystalHealer {
 
     @Unique
-    private LivingEntity spicedcider$healingTarget = null;
+    private LivingEntity cider$healingTarget = null;
 
     @Shadow
     @Nullable
     public abstract BlockPos getBeamTarget();
 
     @Override
-    public LivingEntity spicedcider$getHealingTarget() {
-        return this.spicedcider$healingTarget;
+    public LivingEntity cider$getHealingTarget() {
+        return this.cider$healingTarget;
     }
 
     @Inject(method = "tick", at = @At("TAIL"))
-    private void spicedcider$healNearbyEntities(CallbackInfo ci) {
+    private void cider$healNearbyEntities(CallbackInfo ci) {
         EndCrystal crystal = (EndCrystal) (Object) this;
         Level level = crystal.level();
 
         if (this.getBeamTarget() != null) {
-            this.spicedcider$healingTarget = null;
+            this.cider$healingTarget = null;
             return;
         }
 
@@ -56,7 +56,7 @@ public abstract class EndCrystalMixin implements IEndCrystalHealer {
             }
         }
 
-        this.spicedcider$healingTarget = closest;
+        this.cider$healingTarget = closest;
 
         if (closest != null && !level.isClientSide()) {
             if (crystal.tickCount % 10 == 0) {

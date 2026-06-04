@@ -1,6 +1,5 @@
 package com.evandev.spicedcider.entities.projectiles;
 
-import com.evandev.spicedcider.SpicedCider;
 import com.evandev.spicedcider.interfaces.ITrapsTarget;
 import com.evandev.spicedcider.registry.ModBlocks;
 import com.evandev.spicedcider.registry.ModEntityTypes;
@@ -23,16 +22,11 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
-import net.neoforged.neoforge.event.EventHooks;
 import org.jetbrains.annotations.NotNull;
 import software.bernie.geckolib.animatable.GeoAnimatable;
 import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.animation.*;
 import software.bernie.geckolib.util.GeckoLibUtil;
-
-import java.lang.reflect.Field;
 
 public class CobwebProjectileEntity extends Projectile implements GeoAnimatable {
 
@@ -40,34 +34,26 @@ public class CobwebProjectileEntity extends Projectile implements GeoAnimatable 
 
     public boolean delayedSpawnParticles;
 
-    public CobwebProjectileEntity(EntityType<? extends CobwebProjectileEntity> p_i50162_1_, Level p_i50162_2_) {
-        super(p_i50162_1_, p_i50162_2_);
+    public CobwebProjectileEntity(EntityType<? extends CobwebProjectileEntity> entityType, Level level) {
+        super(entityType, level);
     }
 
-    public CobwebProjectileEntity(Level p_i47273_1_, LivingEntity p_i47273_2_) {
-        this(ModEntityTypes.COBWEB_PROJECTILE.get(), p_i47273_1_);
-        super.setOwner(p_i47273_2_);
-        this.setPos(p_i47273_2_.getX() - (double) (p_i47273_2_.getBbWidth() + 1.0F) * 0.5D * (double) Mth.sin(p_i47273_2_.yBodyRot * ((float) Math.PI / 180F)), p_i47273_2_.getEyeY() - (double) 0.1F, p_i47273_2_.getZ() + (double) (p_i47273_2_.getBbWidth() + 1.0F) * 0.5D * (double) Mth.cos(p_i47273_2_.yBodyRot * ((float) Math.PI / 180F)));
-    }
+    public CobwebProjectileEntity(Level level, LivingEntity owner) {
+        this(ModEntityTypes.COBWEB_PROJECTILE.get(), level);
+        super.setOwner(owner);
 
-    @OnlyIn(Dist.CLIENT)
-    public CobwebProjectileEntity(Level p_i47274_1_, double p_i47274_2_, double p_i47274_4_, double p_i47274_6_, double p_i47274_8_, double p_i47274_10_, double p_i47274_12_) {
-        this(ModEntityTypes.COBWEB_PROJECTILE.get(), p_i47274_1_);
-        this.setPos(p_i47274_2_, p_i47274_4_, p_i47274_6_);
+        double x = owner.getX() - (double) (owner.getBbWidth() + 1.0F) * 0.5D * (double) Mth.sin(owner.yBodyRot * ((float) Math.PI / 180F));
+        double y = owner.getEyeY() - 0.1D;
+        double z = owner.getZ() + (double) (owner.getBbWidth() + 1.0F) * 0.5D * (double) Mth.cos(owner.yBodyRot * ((float) Math.PI / 180F));
 
-        for (int i = 0; i < 7; ++i) {
-            double d0 = 0.4D + 0.1D * (double) i;
-            p_i47274_1_.addParticle(ParticleTypes.SPIT, p_i47274_2_, p_i47274_4_, p_i47274_6_, p_i47274_8_ * d0, p_i47274_10_, p_i47274_12_ * d0);
-        }
-
-        this.setDeltaMovement(p_i47274_8_, p_i47274_10_, p_i47274_12_);
+        this.setPos(x, y, z);
     }
 
     @Override
     protected void defineSynchedData(SynchedEntityData.@NotNull Builder builder) {
-
     }
 
+    @Override
     public void tick() {
         super.tick();
 
@@ -76,29 +62,32 @@ public class CobwebProjectileEntity extends Projectile implements GeoAnimatable 
             this.createSpawnParticles();
         }
 
-        Vec3 vector3d = this.getDeltaMovement();
-        HitResult raytraceresult = ProjectileUtil.getHitResultOnMoveVector(this, this::canHitEntity);
-        if (raytraceresult.getType() != HitResult.Type.MISS && !EventHooks.onProjectileImpact(this, raytraceresult)) {
-            this.onHit(raytraceresult);
+        Vec3 movement = this.getDeltaMovement();
+        HitResult hitResult = ProjectileUtil.getHitResultOnMoveVector(this, this::canHitEntity);
+
+        if (hitResult.getType() != HitResult.Type.MISS && !net.neoforged.neoforge.event.EventHooks.onProjectileImpact(this, hitResult)) {
+            this.onHit(hitResult);
         }
 
-        double d0 = this.getX() + vector3d.x;
-        double d1 = this.getY() + vector3d.y;
-        double d2 = this.getZ() + vector3d.z;
+        double newX = this.getX() + movement.x;
+        double newY = this.getY() + movement.y;
+        double newZ = this.getZ() + movement.z;
         this.updateRotation();
-        float f = 0.99F;
-        float f1 = 0.06F;
+
+        float drag = 0.99F;
+        float gravity = 0.06F;
+
         if (this.level().getBlockStates(this.getBoundingBox()).noneMatch(BlockBehaviour.BlockStateBase::isAir)) {
             this.remove(RemovalReason.DISCARDED);
         } else if (this.isInWaterOrBubble()) {
             this.remove(RemovalReason.DISCARDED);
         } else {
-            this.setDeltaMovement(vector3d.scale(f));
+            this.setDeltaMovement(movement.scale(drag));
             if (!this.isNoGravity()) {
-                this.setDeltaMovement(this.getDeltaMovement().add(0.0D, -f1, 0.0D));
+                this.setDeltaMovement(this.getDeltaMovement().add(0.0D, -gravity, 0.0D));
             }
 
-            this.setPos(d0, d1, d2);
+            this.setPos(newX, newY, newZ);
         }
     }
 
@@ -146,21 +135,21 @@ public class CobwebProjectileEntity extends Projectile implements GeoAnimatable 
     }
 
     @Override
-    public void handleEntityEvent(byte p_70103_1_) {
-        if (p_70103_1_ == 1) {
+    public void handleEntityEvent(byte eventId) {
+        if (eventId == 1) {
             for (int i = 0; i < 5; i++) {
                 this.level().addParticle(ParticleTypes.POOF, this.getX(), this.getY(), this.getZ(), 0.0D, 0.0D, 0.0D);
             }
         } else {
-            super.handleEntityEvent(p_70103_1_);
+            super.handleEntityEvent(eventId);
         }
     }
 
-    protected void onHitBlock(@NotNull BlockHitResult p_230299_1_) {
-        super.onHitBlock(p_230299_1_);
+    @Override
+    protected void onHitBlock(@NotNull BlockHitResult blockHitResult) {
+        super.onHitBlock(blockHitResult);
         if (!this.level().isClientSide) {
             this.spawnTrap(this.getX(), this.getY(), this.getZ());
-
             this.remove(RemovalReason.DISCARDED);
         }
     }
@@ -183,19 +172,10 @@ public class CobwebProjectileEntity extends Projectile implements GeoAnimatable 
             if (target != null) {
                 double distSqr = target.distanceToSqr(x, y, z);
                 if (distSqr < 4.0) {
-                    trapsTarget.setTargetTrapped(true, true);
-                    this.setTrappedCounter(owner, 100);
+                    trapsTarget.cider$setTargetTrapped(true, true);
+                    trapsTarget.cider$setTargetTrappedCounter(100);
                 }
             }
-        }
-    }
-
-    private void setTrappedCounter(Entity entity, int value) {
-        try {
-            Field field = entity.getClass().getField("targetTrappedCounter");
-            field.setInt(entity, value);
-        } catch (NoSuchFieldException | IllegalAccessException e) {
-            SpicedCider.LOGGER.error("Failed to set targetTrappedCounter", e);
         }
     }
 

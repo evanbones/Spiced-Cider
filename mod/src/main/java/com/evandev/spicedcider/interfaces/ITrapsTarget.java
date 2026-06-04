@@ -1,8 +1,9 @@
 package com.evandev.spicedcider.interfaces;
 
 public interface ITrapsTarget {
+    void cider$setTargetTrapped(boolean trapped, boolean notifyOthers);
 
-    void setTargetTrapped(boolean trapped, boolean notifyOthers);
+    boolean cider$isTargetTrapped();
 
-    boolean isTargetTrapped();
+    void cider$setTargetTrappedCounter(int value);
 }

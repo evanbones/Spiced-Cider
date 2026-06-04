@@ -17,9 +17,9 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class EndCrystalRendererMixin {
 
     @Inject(method = "render*", at = @At("TAIL"))
-    private void spicedcider$renderSmoothBeam(EndCrystal crystal, float entityYaw, float partialTicks, PoseStack poseStack, MultiBufferSource bufferSource, int packedLight, CallbackInfo ci) {
+    private void cider$renderSmoothBeam(EndCrystal crystal, float entityYaw, float partialTicks, PoseStack poseStack, MultiBufferSource bufferSource, int packedLight, CallbackInfo ci) {
         if (crystal instanceof IEndCrystalHealer healer) {
-            LivingEntity target = healer.spicedcider$getHealingTarget();
+            LivingEntity target = healer.cider$getHealingTarget();
 
             if (target != null) {
                 float crystalX = (float) Mth.lerp(partialTicks, crystal.xo, crystal.getX());

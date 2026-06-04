@@ -9,7 +9,6 @@
     "minecraft.EndCrystalMixin",
     "minecraft.SpiderEntityMixin",
     "minecraft.WolfPetArmorMixin",
-    "minecraft.accessor.GoalSelectorAccessor",
     "perf.RecipeBookMixin",
     "perf.ReloadableServerResourcesMixin",
     "perf.ServerPlayerMixin",
@@ -45,5 +44,8 @@
   ],
   "injectors": {
     "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
   }
 }

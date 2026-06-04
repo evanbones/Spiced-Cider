@@ -20,7 +20,7 @@ import java.util.Optional;
 @Mixin({JigsawPlacement.class})
 public class JigsawPlacementMixin {
     @Inject(method = {"addPieces(Lnet/minecraft/world/level/levelgen/structure/Structure$GenerationContext;Lnet/minecraft/core/Holder;Ljava/util/Optional;ILnet/minecraft/core/BlockPos;ZLjava/util/Optional;ILnet/minecraft/world/level/levelgen/structure/pools/alias/PoolAliasLookup;Lnet/minecraft/world/level/levelgen/structure/pools/DimensionPadding;Lnet/minecraft/world/level/levelgen/structure/templatesystem/LiquidSettings;)Ljava/util/Optional;"}, at = {@At("HEAD")}, cancellable = true)
-    private static void essentials$addPieces(Structure.GenerationContext p_227239_, Holder<StructureTemplatePool> holder, Optional<ResourceLocation> p_227241_, int p_227242_, BlockPos p_227243_, boolean p_227244_, Optional<Heightmap.Types> p_227245_, int p_227246_, PoolAliasLookup p_307522_, DimensionPadding p_348489_, LiquidSettings p_352161_, CallbackInfoReturnable<Optional<Structure.GenerationStub>> cir) {
+    private static void cider$addPieces(Structure.GenerationContext p_227239_, Holder<StructureTemplatePool> holder, Optional<ResourceLocation> p_227241_, int p_227242_, BlockPos p_227243_, boolean p_227244_, Optional<Heightmap.Types> p_227245_, int p_227246_, PoolAliasLookup p_307522_, DimensionPadding p_348489_, LiquidSettings p_352161_, CallbackInfoReturnable<Optional<Structure.GenerationStub>> cir) {
         if (!holder.isBound())
             cir.setReturnValue(Optional.empty());
     }

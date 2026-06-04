@@ -19,11 +19,14 @@ import java.util.OptionalLong;
 @Mixin(WorldCreationUiState.class)
 public abstract class WorldCreationUiStateMixin {
 
-    @Shadow private String name;
-    @Shadow public abstract void setName(String name);
+    @Shadow
+    private String name;
+
+    @Shadow
+    public abstract void setName(String name);
 
     @Inject(method = "<init>", at = @At("TAIL"))
-    private void spicedcider$applyRandomName(Path savesFolder, WorldCreationContext settings, Optional<ResourceKey<WorldPreset>> preset, OptionalLong seed, CallbackInfo ci) {
+    private void cider$applyRandomName(Path savesFolder, WorldCreationContext settings, Optional<ResourceKey<WorldPreset>> preset, OptionalLong seed, CallbackInfo ci) {
         String defaultName = Component.translatable("selectWorld.newWorld").getString();
         if (this.name == null || this.name.equals(defaultName) || this.name.trim().isEmpty()) {
             this.setName(SpicedCider.RANDOM_NAME_GENERATOR.generateRandomName());

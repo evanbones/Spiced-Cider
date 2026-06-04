@@ -8,6 +8,7 @@ import net.minecraft.world.entity.Mob;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
+import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
@@ -18,35 +19,36 @@ public class SpiderModelMixin {
     @Shadow
     @Final
     private ModelPart root;
-    private float originalBodyRotateAngleX;
-    private float originalBodyRotationPointY;
-    private float originalBodyRotationPointZ;
+    @Unique
+    private float cider$originalBodyRotateAngleX;
+    @Unique
+    private float cider$originalBodyRotationPointY;
+    @Unique
+    private float cider$originalBodyRotationPointZ;
 
     @Inject(at = @At("RETURN"), method = "<init>")
     private void init(CallbackInfo callbackInfo) {
-        this.originalBodyRotateAngleX = getBody1().xRot;
-        this.originalBodyRotationPointY = getBody1().y;
-        this.originalBodyRotationPointZ = getBody1().z;
+        this.cider$originalBodyRotateAngleX = cider$getBody1().xRot;
+        this.cider$originalBodyRotationPointY = cider$getBody1().y;
+        this.cider$originalBodyRotationPointZ = cider$getBody1().z;
     }
 
-    private ModelPart getBody1() {
+    @Unique
+    private ModelPart cider$getBody1() {
         return root.getChild("body1");
     }
 
-
-    @Inject(at = @At("RETURN"), method = "setupAnim", cancellable = true)
+    @Inject(at = @At("RETURN"), method = "setupAnim")
     private void setRotationAngles(Entity entityIn, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch, CallbackInfo callbackInfo) {
-        if (entityIn instanceof Mob && entityIn instanceof IWebShooter) {
-            IWebShooter webShooter = (IWebShooter) entityIn;
-
-            if (webShooter.isWebShooting()) {
-                getBody1().xRot = ((float) Math.PI / 6F);
-                getBody1().y = originalBodyRotationPointY - 5;
-                getBody1().z = originalBodyRotationPointZ - 2;
+        if (entityIn instanceof Mob && entityIn instanceof IWebShooter webShooter) {
+            if (webShooter.cider$isWebShooting()) {
+                cider$getBody1().xRot = ((float) Math.PI / 6F);
+                cider$getBody1().y = cider$originalBodyRotationPointY - 5;
+                cider$getBody1().z = cider$originalBodyRotationPointZ - 2;
             } else {
-                getBody1().xRot = this.originalBodyRotateAngleX;
-                getBody1().y = originalBodyRotationPointY;
-                getBody1().z = originalBodyRotationPointZ;
+                cider$getBody1().xRot = this.cider$originalBodyRotateAngleX;
+                cider$getBody1().y = cider$originalBodyRotationPointY;
+                cider$getBody1().z = cider$originalBodyRotationPointZ;
             }
         }
     }

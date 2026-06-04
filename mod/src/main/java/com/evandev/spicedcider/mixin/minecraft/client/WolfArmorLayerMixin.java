@@ -29,7 +29,7 @@ public class WolfArmorLayerMixin {
     private WolfModel<Wolf> model;
 
     @Inject(method = "render*", at = @At("HEAD"), cancellable = true)
-    private void spicedcider$renderHorseArmorAsWolfArmor(PoseStack poseStack, MultiBufferSource bufferSource, int packedLight, Wolf wolf, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch, CallbackInfo ci) {
+    private void cider$renderHorseArmorAsWolfArmor(PoseStack poseStack, MultiBufferSource bufferSource, int packedLight, Wolf wolf, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch, CallbackInfo ci) {
         ItemStack stack = wolf.getBodyArmorItem();
 
         if (stack.getItem() instanceof AnimalArmorItem armorItem && armorItem.getBodyType() == AnimalArmorItem.BodyType.EQUESTRIAN) {

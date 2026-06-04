@@ -38,7 +38,7 @@ public class ModernWorldCreationGameTabMixin {
                     target = "Lnet/minecraft/client/gui/layouts/CommonLayouts;labeledElement(Lnet/minecraft/client/gui/Font;Lnet/minecraft/client/gui/layouts/LayoutElement;Lnet/minecraft/network/chat/Component;)Lnet/minecraft/client/gui/layouts/Layout;"
             )
     )
-    private Layout spicedcider$wrapNameEditBox(Font font, LayoutElement element, Component label) {
+    private Layout cider$wrapNameEditBox(Font font, LayoutElement element, Component label) {
         Layout originalLayout = CommonLayouts.labeledElement(font, element, label);
 
         if (element == this.nameEdit) {

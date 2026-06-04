@@ -16,7 +16,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 public class WolfPetArmorMixin {
 
     @Inject(method = "mobInteract", at = @At("HEAD"), cancellable = true)
-    private void spicedcider$equipAnyPetArmor(Player player, InteractionHand hand, CallbackInfoReturnable<InteractionResult> cir) {
+    private void cider$equipAnyPetArmor(Player player, InteractionHand hand, CallbackInfoReturnable<InteractionResult> cir) {
         Wolf wolf = (Wolf) (Object) this;
         ItemStack stack = player.getItemInHand(hand);
 
@@ -30,7 +30,7 @@ public class WolfPetArmorMixin {
     }
 
     @Inject(method = "hasArmor", at = @At("HEAD"), cancellable = true)
-    private void spicedcider$hasArmor(CallbackInfoReturnable<Boolean> cir) {
+    private void cider$hasArmor(CallbackInfoReturnable<Boolean> cir) {
         Wolf wolf = (Wolf) (Object) this;
         if (wolf.getBodyArmorItem().getItem() instanceof AnimalArmorItem) {
             cir.setReturnValue(true);
@@ -38,7 +38,7 @@ public class WolfPetArmorMixin {
     }
 
     @Inject(method = "canArmorAbsorb", at = @At("HEAD"), cancellable = true)
-    private void spicedcider$canArmorAbsorb(DamageSource damageSource, CallbackInfoReturnable<Boolean> cir) {
+    private void cider$canArmorAbsorb(DamageSource damageSource, CallbackInfoReturnable<Boolean> cir) {
         Wolf wolf = (Wolf) (Object) this;
         if (wolf.getBodyArmorItem().getItem() instanceof AnimalArmorItem) {
             cir.setReturnValue(true);

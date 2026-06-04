@@ -28,7 +28,7 @@ public interface IWebShooter extends ITrapsTarget {
         projectile.delayedSpawnParticles = true;
     }
 
-    boolean isWebShooting();
+    boolean cider$isWebShooting();
 
-    void setWebShooting(boolean webShooting);
+    void cider$setWebShooting(boolean webShooting);
 }
