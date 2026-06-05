@@ -2,23 +2,31 @@ package com.evandev.spicedcider.client.events;
 
 import com.evandev.spicedcider.SpicedCider;
 import com.evandev.spicedcider.client.music.DeathSoundInstance;
+import com.evandev.spicedcider.client.renderer.TextureCatcher;
 import com.evandev.spicedcider.client.screens.AssetSelectionScreen;
 import com.evandev.spicedcider.registry.ModSounds;
+import com.mojang.blaze3d.vertex.PoseStack;
 import dev.emi.emi.api.EmiApi;
 import dev.emi.emi.api.stack.EmiIngredient;
 import dev.emi.emi.api.stack.EmiStack;
 import dev.emi.emi.api.stack.EmiStackInteraction;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.LightTexture;
+import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.block.model.BakedQuad;
+import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
 import net.minecraft.client.renderer.entity.EntityRenderer;
+import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.client.resources.language.I18n;
 import net.minecraft.client.resources.model.BakedModel;
+import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.EntityHitResult;
@@ -53,10 +61,36 @@ public class ClientGameEvents {
                 Set<ResourceLocation> assetsToCopy = new HashSet<>();
 
                 if (hit.getType() == HitResult.Type.BLOCK && hit instanceof BlockHitResult blockHit) {
-                    BlockState state = mc.level.getBlockState(blockHit.getBlockPos());
-                    BakedModel model = mc.getBlockRenderer().getBlockModel(state);
+                    BlockPos pos = blockHit.getBlockPos();
+                    BlockState state = mc.level.getBlockState(pos);
 
+                    BakedModel model = mc.getBlockRenderer().getBlockModel(state);
                     assetsToCopy.addAll(getSpritesFromModel(model, state));
+
+                    BlockEntity blockEntity = mc.level.getBlockEntity(pos);
+                    if (blockEntity != null) {
+                        BlockEntityRenderer<BlockEntity> renderer = mc.getBlockEntityRenderDispatcher().getRenderer(blockEntity);
+                        if (renderer != null) {
+                            TextureCatcher.start();
+
+                            try {
+                                PoseStack poseStack = new PoseStack();
+                                MultiBufferSource.BufferSource bufferSource = mc.renderBuffers().bufferSource();
+
+                                renderer.render(blockEntity, mc.getTimer().getGameTimeDeltaTicks(), poseStack, bufferSource, LightTexture.FULL_BRIGHT, OverlayTexture.NO_OVERLAY);
+                                bufferSource.endBatch();
+                            } catch (Exception e) {
+                                SpicedCider.LOGGER.error("Failed to capture BER textures for block: {}", state.getBlock(), e);
+                            }
+
+                            Set<ResourceLocation> captured = TextureCatcher.stop();
+
+                            for (ResourceLocation loc : captured) {
+                                assetsToCopy.add(normalizeTextureLocation(loc));
+                            }
+                        }
+                    }
+
                     ResourceLocation blockId = BuiltInRegistries.BLOCK.getKey(state.getBlock());
                     assetsToCopy.add(ResourceLocation.fromNamespaceAndPath(blockId.getNamespace(), "blockstates/" + blockId.getPath() + ".json"));
                     assetsToCopy.add(ResourceLocation.fromNamespaceAndPath(blockId.getNamespace(), "models/block/" + blockId.getPath() + ".json"));
