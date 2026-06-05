@@ -1,6 +1,6 @@
 {
   "config_version": "2.0.25",
-  "config_datetime": "2026-06-02_16-55-42",
+  "config_datetime": "2026-06-04_20-15-53",
   "general": {
     "disable_all_structures": false,
     "prevent_structure_overlap": false,
@@ -9,6 +9,57 @@
   },
   "structure_namespaces": [],
   "structures": [],
-  "structure_sets": [],
+  "structure_sets": [
+    {
+      "spacing": 32,
+      "separation": 8,
+      "name": "minecraft:pillager_outposts",
+      "is_disabled": true,
+      "salt": 165745296,
+      "frequency": 0.2,
+      "override_global_spacing_and_separation_modifier": false,
+      "structure_weights": {
+        "minecraft:pillager_outpost": 1
+      }
+    },
+    {
+      "name": "minecraft:strongholds",
+      "is_disabled": true,
+      "salt": 0,
+      "frequency": 1.0,
+      "override_global_spacing_and_separation_modifier": false,
+      "structure_weights": {
+        "minecraft:stronghold": 1
+      }
+    },
+    {
+      "spacing": 34,
+      "separation": 8,
+      "name": "minecraft:villages",
+      "is_disabled": true,
+      "salt": 10387312,
+      "frequency": 1.0,
+      "override_global_spacing_and_separation_modifier": false,
+      "structure_weights": {
+        "minecraft:village_snowy": 1,
+        "minecraft:village_plains": 1,
+        "minecraft:village_taiga": 1,
+        "minecraft:village_savanna": 1,
+        "minecraft:village_desert": 1
+      }
+    },
+    {
+      "spacing": 80,
+      "separation": 20,
+      "name": "minecraft:woodland_mansions",
+      "is_disabled": true,
+      "salt": 10387319,
+      "frequency": 1.0,
+      "override_global_spacing_and_separation_modifier": false,
+      "structure_weights": {
+        "minecraft:mansion": 1
+      }
+    }
+  ],
   "structure_template_pools": []
 }

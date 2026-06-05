@@ -1,0 +1,17 @@
+[
+  {
+    "action": "replace_input",
+    "target": "bountifulfares:walnut",
+    "replacement": ["nomansland:walnuts"]
+  },
+  {
+    "action": "replace_input",
+    "target": "bountifulfares:walnut_planks",
+    "replacement": ["nomansland:walnut_planks"]
+  },
+  {
+    "action": "replace_output",
+    "target": "bountifulfares:walnut_planks",
+    "replacement": "nomansland:walnut_planks"
+  }
+]

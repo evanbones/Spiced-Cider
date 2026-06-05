@@ -1,19 +1,19 @@
 # Use Cloth Config mod for the descriptions.
 ---
 contributorCosmetic: ''
-cosmeticScreenKeybind: true
+cosmeticScreenKeybind: false
 globalTooltip: false
 noMicrosoftTelemetry: true
 qol:
   suppressExperimentalSettingsWarning: false
   titleScreenNoFade: false
-  hideDataComponentsTooltip: false
+  hideDataComponentsTooltip: true
   loadingOverlayNoFade: false
 debug:
   showTranslatedTagsByDefault: false
-  printDataComponentsWhenCopy: true
-  tagsTooltip: true
+  printDataComponentsWhenCopy: false
+  tagsTooltip: false
   debugTooltipMsg: false
   tagsTooltipAppendKeybindHint: false
-  F3CopyInInventory: true
+  F3CopyInInventory: false
   tagsPerPage: 6

@@ -258,7 +258,7 @@ hash = "943e1c3672b8a03f27519b357091133205119c7b3db2fcc4c25b597cabf8926d"
 
 [[files]]
 file = "config/crash_assistant/modlist.json"
-hash = "55bf392d7a163aff19b0f879269418adfaf2f0c25b03a1b631ddd4295f528a4e"
+hash = "955220fceeb2115d4e97bab3f0afe424c6810e73b50b01baf5307d03f113e4c0"
 
 [[files]]
 file = "config/crash_assistant/scripts/log_analysis/example.jexl"
@@ -274,7 +274,7 @@ hash = "df2b1f5715e64f372752968e18f2d43c7afc5888ea480e0751da9bacbccbc022"
 
 [[files]]
 file = "config/create-common.toml"
-hash = "2e77b1d93b40ce3f381ad7eb2a9e6d7148de917518be5c2616939a4369c4b140"
+hash = "3291675385ad25c0f4d6a9bf9c1a7815bb9660017bc68fa793fe2295da7d589b"
 
 [[files]]
 file = "config/create-server.toml"
@@ -365,8 +365,12 @@ file = "config/emixx/stack_groups/bountifulfares_pickets.json"
 hash = "bbfb179d5b4c675578f7666859e2ac8acd7f77d58e52ad3275cb109946ed5c7d"
 
 [[files]]
+file = "config/emixx/stack_groups/bountifulfares_trellis.json"
+hash = "1e893112ddc0a374de7c5780693c1bbbc0467b0a16102c204cd78cc10c34c27f"
+
+[[files]]
 file = "config/emixx/stack_groups/c_fence_gates.json"
-hash = "71e7a106eb31bb595853d455fc800ed1ff91024d881a95896e9f61c17a6269f2"
+hash = "655483bbbe659151dc52a55a4e349ef99bac3adcddadb5f9ba90780a1a296822"
 
 [[files]]
 file = "config/emixx/stack_groups/c_gems.json"
@@ -494,7 +498,7 @@ hash = "09d330b29443d9579ecc014f2be2fcb31075bfe1e9f9ac4e750f271128650fe6"
 
 [[files]]
 file = "config/fabric/indigo-renderer.properties"
-hash = "5f857679fbb1e846f4116a629ec547bab718849ed26c275d6d9ec1489ae3b693"
+hash = "751c903eee4a17bf8efa34319f19cf70cb3430a16088788f878b0291ca90f754"
 
 [[files]]
 file = "config/fallingleaves-client.toml"
@@ -578,7 +582,7 @@ hash = "e6c2348fd2f7f600ae1a9fa0b364c41307f5bee6ebe92fa7ddd5a0adced09b2c"
 
 [[files]]
 file = "config/fancymenu/assets/title_splashes.txt"
-hash = "4cae42ac0a89c65278297ce1d3149e7ee1bef4c2fea6cca0810eeb38b8e01d8b"
+hash = "1262f3daf8b4e51a5b440b790ef115ba7951dd6fdd2fa97365c4b40712e26241"
 
 [[files]]
 file = "config/fancymenu/audio_element_controller_metas.json"
@@ -731,6 +735,10 @@ hash = "26ac5810c9b5dc5c1968827357f0a58c58ac2b6f7b082630960228e16585062f"
 [[files]]
 file = "config/fzzy_config/search.toml"
 hash = "103317c4c1c5ae1421946c921428cbfbd9b2a17ee37115d9778d0b22e3b64e19"
+
+[[files]]
+file = "config/galena_hats.json"
+hash = "c427871edf0f085393425997b7ffcd0c2e54278376dc9f7390619a21bc3264d7"
 
 [[files]]
 file = "config/gallery-client.toml"
@@ -886,7 +894,7 @@ hash = "80f13c2608d62c6906c2689dfc6cfb7d353ee88cd4eac11f4fac1c29e7d09539"
 
 [[files]]
 file = "config/kiwi-client.yaml"
-hash = "6578bc417fc04cc6e57b330bf139a6d48ab5fc9de95638ae283f14975178ac3d"
+hash = "a0c3e6eb8167eff3d2d0031b5f6ac7fd4700ccb2489f0f3882645b8896e709f3"
 
 [[files]]
 file = "config/kiwi-common.yaml"
@@ -1037,6 +1045,14 @@ file = "config/nethermap.toml"
 hash = "b07e929a45bed93594b8134b856c3b791f8ba678a8c698fb52a54df17ea488b9"
 
 [[files]]
+file = "config/nirvana-client.toml"
+hash = "e5ed6855e903a70ac06243b009635682da9c1ce90d689b65d1376525c638d058"
+
+[[files]]
+file = "config/nirvana-common.toml"
+hash = "824df23443c051ca073045379cd59f7ae136437f7e3f8c457ac7a86d9ae1a230"
+
+[[files]]
 file = "config/nomansland-client-1.toml.bak"
 hash = "03f5f372a988cbf1d5d06fd2addc2cb41baf85fe3864fb06edc711eb2c99c210"
 
@@ -1105,12 +1121,92 @@ file = "config/openloader/options.json"
 hash = "aecd2d223c33257182654d3e8d5286c414508706fa0f0f33b868d4c1c9b7b786"
 
 [[files]]
+file = "config/openloader/packs/spicedcider_data/data/bountifulfares/loot_table/blocks/fallen_walnuts.json"
+hash = "efb66438c137751737a8736e8152afaa61f91561ee6551f0e5f847ca9c7849e0"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/bountifulfares/loot_table/blocks/walnut_leaves.json"
+hash = "9d84c6f4b0d80707e9a40b8d3e4894b0caa94c785000470fd4ef1f5c0317d248"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/bountifulfares/tags/item/trellis.json"
+hash = "6cf1af63f054c729ae506b3bde8afe63d6b07ff277952d558e0fadd09c619406"
+
+[[files]]
 file = "config/openloader/packs/spicedcider_data/data/minecraft/loot_table/entities/glow_squid.json"
 hash = "5ae47de8bce9d08f3701769475b4518bfc2d30e1e661540ff5cb3c80966e4d2e"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/minecraft/recipe/shears.json"
 hash = "77d466836551a40d721d033a38bb8cbe0f3bb5b2a398505c9dc8fdec2eaaf9f3"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/minecraft/tags/item/buttons.json"
+hash = "732b4ccedfc7dc5b3d77e0d0769290c6583be195054110324ceed43ac9c19e3a"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/minecraft/tags/item/fence_gates.json"
+hash = "4a9ee8f6192e1e7bd7dfb042f22f540059a21a7c5dabbe9efed2442d4165ee59"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/minecraft/tags/item/fences.json"
+hash = "9550befa71d04c38fafb0cda83490a9775ce0a1d0f08749e5d5ef67fb9148b96"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/minecraft/tags/item/planks.json"
+hash = "8ea376e5193d16c7b55a7cab70e73f2f3ea3c405486a344244ec1d4237a93fde"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/minecraft/tags/item/pressure_plates.json"
+hash = "493c5571ab6e191ccc0fa0ed55882a8c565e39f43b718930af8274f33385f91e"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/nomansland/recipe/wood/walnut/cutting/walnut_log.json"
+hash = "022a2376362713b637b05e5fbd926a8c9da416f306d5f8208ef696e05b1234df"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/nomansland/recipe/wood/walnut/cutting/walnut_wood.json"
+hash = "084db9346c743c4ea4c83e99f4c26214dda8da8d2f47aeb9bb215f07305e64b9"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/nomansland/worldgen/configured_feature/autumnal_oak_pear_05.json"
+hash = "2521cd418fa3346926f7df0d1fd5356d9465b3ff61a3f05d986b3d5f0580e6b2"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/nomansland/worldgen/configured_feature/fancy_oak_apple_005.json"
+hash = "fe31e6a802d97ba4ecc1fb1df18f3a9954c03862edc6e58485f5c893675953bb"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/nomansland/worldgen/configured_feature/fancy_oak_apple_01.json"
+hash = "fe31e6a802d97ba4ecc1fb1df18f3a9954c03862edc6e58485f5c893675953bb"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/nomansland/worldgen/configured_feature/fancy_oak_apple_05.json"
+hash = "fe31e6a802d97ba4ecc1fb1df18f3a9954c03862edc6e58485f5c893675953bb"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/nomansland/worldgen/configured_feature/large_autumnal_oak_pear_05.json"
+hash = "896bf49e19c8f363ffe9edb2cf8547537d29d1c222cf66dc9dc6c8a21e93e5cf"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/nomansland/worldgen/configured_feature/oak_apple_005.json"
+hash = "e2aabe62e1225b186415970528c6db45ae706ce98d9d9ce3798dd2b480a31afb"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/nomansland/worldgen/configured_feature/oak_apple_01.json"
+hash = "e2aabe62e1225b186415970528c6db45ae706ce98d9d9ce3798dd2b480a31afb"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/nomansland/worldgen/configured_feature/oak_apple_05.json"
+hash = "e2aabe62e1225b186415970528c6db45ae706ce98d9d9ce3798dd2b480a31afb"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/nomansland/worldgen/configured_feature/small_walnut.json"
+hash = "3235bc9db1114b0e6332a020cc1815a32d0d04ae43b0b539e7a64abcfbfa273d"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/nomansland/worldgen/configured_feature/walnut.json"
+hash = "ce176811ec3de56d55e91877ee1469a48338a662236222218178b42df253356a"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/reliable_gliders/recipe/glider.json"
@@ -1138,7 +1234,7 @@ hash = "05022be17b8d67f7f6e766884518e40b20efc01dbfd531ad10ec009af6724342"
 
 [[files]]
 file = "config/packetfixer.properties"
-hash = "36bff0a6192c3dc6cfb8fadf3356dee4ab8a31b41fc96993875df069941ceff8"
+hash = "14aedf5215106a388cfa24087c825b86f4b17b720e4853b8f2dbbf03c6ed8522"
 
 [[files]]
 file = "config/particle_core_config.toml"
@@ -1241,12 +1337,16 @@ file = "config/reliable_recipes.json"
 hash = "51eb041341bd5c3cfa9828b20e167a4bdfe50e24593b6df8755f999d2f2c9004"
 
 [[files]]
+file = "config/reliable_recipes/replace_input.json"
+hash = "98e7c8abe5ade9e0b55e531890842ab4722ed1d367d7f5a1621528fc16cafcbe"
+
+[[files]]
 file = "config/reliable_recount.json"
 hash = "590ea074ec1c84ced8a0c60dedd7111edd69801f7441fe78654c2f6fdfb655b7"
 
 [[files]]
 file = "config/reliable_remover.json"
-hash = "fec62836768789b1518f03bfee4c81861d4f81485ee076b597b2c93345e9557f"
+hash = "6dd5ddd202f8c09dc6c3f4b3b550ec8b67a4ef91c0a0cad20bdf22780d1c8408"
 
 [[files]]
 file = "config/reliable_remover/remove_paintings.json"
@@ -1255,6 +1355,10 @@ hash = "effe312243642c68d108b42591a02765eef17ee4beacb1bcb907c63635b64c9e"
 [[files]]
 file = "config/reliable_replacer.json"
 hash = "edc895152a7d7023fbfde32e4e6f3cc6f224a15228a3c37e649bdbac6130e9dc"
+
+[[files]]
+file = "config/reliable_replacer/swapper.json"
+hash = "b34af49c5a683cfec39168e3cbc117bcfd6955430e85b44e534e4fa2c404cba1"
 
 [[files]]
 file = "config/reliable_requiem.json"
@@ -1370,7 +1474,7 @@ hash = "e26b00784bb6239988759ed1a64551b9f301dc33c5a855d91e976ee4bf40ac8a"
 
 [[files]]
 file = "config/sound_physics_remastered/sound_rates.properties"
-hash = "0171bab8545c5840848f9d05f16846c713897ca4b11e94aca5120b5ae42ab87a"
+hash = "1657267f3db966c27121e2b6253cb4b019e3878c525c46af4a01b81d65e2bada"
 
 [[files]]
 file = "config/sound_physics_remastered/soundphysics.properties"
@@ -1410,6 +1514,10 @@ hash = "5a9058652bc0b88b8810e0b94eba0e1a90cbff2472845c53a7e67442682a1579"
 
 [[files]]
 file = "config/structurify.json"
+hash = "5e89bc00a2cf534573fc4b1337c7170acea7568824d55174f245b51ed31538a1"
+
+[[files]]
+file = "config/structurify/structurify_backup_2026-06-04_20-15-53.json"
 hash = "8ce0745434eae8fc8256c1e3d9a2c629b2e61fd2c0d9cd03b322fed49559db46"
 
 [[files]]
@@ -1685,6 +1793,11 @@ metafile = true
 [[files]]
 file = "mods/brick-and-mortar.pw.toml"
 hash = "602ea85209ea07dabd885db90bd6709d96c61fbed4b902bdcd09403bd7891393"
+metafile = true
+
+[[files]]
+file = "mods/brushstrokes.pw.toml"
+hash = "f1af50691e935c15d83ef12c0f1d30960f04eacbea5fc0faca66f92506c14e9a"
 metafile = true
 
 [[files]]
@@ -2318,7 +2431,7 @@ metafile = true
 
 [[files]]
 file = "mods/reliable-replacer.pw.toml"
-hash = "277aa1553681632c46c6dc3689d8eacc6f6ea378462f11129a8c7da019c88a6f"
+hash = "0e94c7219cf36079d3974a8659b98ae301d9be104a62613c9c1b4b451d9859e8"
 metafile = true
 
 [[files]]
@@ -2418,7 +2531,7 @@ metafile = true
 
 [[files]]
 file = "mods/spicedcider-1.0.0.jar"
-hash = "7d835f81ebbb9658216b449250f2f0b71d1ec9695df644cbfa24f9b2f9ce6ac5"
+hash = "67d15fb48b844b1ded47e146d19650fe9e284ef53189b2f80f28349cdb23fa35"
 
 [[files]]
 file = "mods/stony-cliffs-are-cool.pw.toml"
@@ -2525,6 +2638,11 @@ hash = "746b5a692997b6b51651e364fb11c546c2aed181e6fcf98ab4c8f709e04509f3"
 metafile = true
 
 [[files]]
+file = "mods/whole-cloth.pw.toml"
+hash = "090572750313cb926e673339ab078d2c13b0f5958e36634e40e52f55e408f638"
+metafile = true
+
+[[files]]
 file = "mods/wilder-flowers.pw.toml"
 hash = "9c46d5266eabe8055bb43ae211e671cb680dfd672ed062f64a0147e1d80a0845"
 metafile = true
@@ -2574,11 +2692,6 @@ file = "options.txt"
 hash = "72289afe0c240890f38ad93fcb052ae0da9e7fc3a05c5e15e57160eebcec5276"
 
 [[files]]
-file = "resourcepacks/3d-items-mintynoura.pw.toml"
-hash = "949a5169fd8ac9a7782e973dd4dcb0c2d305332dc0b96df8da91bec801c0a872"
-metafile = true
-
-[[files]]
 file = "resourcepacks/authentic-shadows.pw.toml"
 hash = "74b39d3c7f012e9332a20ac78fa6c357b227caccd6322049fb451ff2bef08c3a"
 metafile = true
@@ -2601,11 +2714,6 @@ metafile = true
 [[files]]
 file = "resourcepacks/brush-and-juice.pw.toml"
 hash = "00d5a9f9214d69104b0007b9c733c69111114446acbf5ad4b853be07c8bab495"
-metafile = true
-
-[[files]]
-file = "resourcepacks/crude-glass.pw.toml"
-hash = "b82decb61a5165a2403e3ce926a43c78fb95ac65ceb223cedca93ad424b946a2"
 metafile = true
 
 [[files]]
@@ -2716,6 +2824,42 @@ metafile = true
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/advancementplaques/sounds/ui/toast/task_complete.ogg"
 hash = "45ae0eca329fc7a63af2c7485046edafff45e63f724c69ea944bb35f9250fdcb"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/bountifulfares/textures/block/fallen_walnuts_0.png"
+hash = "4515f00b85f620056068a2e77e98689427d9371d06653c49134ad558a3347242"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/bountifulfares/textures/block/fallen_walnuts_1.png"
+hash = "4006d36a3c1df9c5bfa82cbcaf18a85c20006ea0c41da7f17df93e4571e96875"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/bountifulfares/textures/block/fallen_walnuts_2.png"
+hash = "79e3c3ab364edb298bb58a4567e66247389de88a1bfad8450e48234a82f61a53"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/bountifulfares/textures/block/fallen_walnuts_3.png"
+hash = "4587265926134cbbb040a65d9d266fede24d0933edbeef4ca365279f6579d04f"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/bountifulfares/textures/block/stripped_walnut_log.png"
+hash = "28e83af1dccba4957e298de8fcd7ee73d86c51b87340786cfbb7d5c79d58828d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/bountifulfares/textures/block/stripped_walnut_log_top.png"
+hash = "5fea7ee75422df3bc390de4fc4d1fa78f68fef722c1311922aaff5d7033def81"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/bountifulfares/textures/block/walnut_leaves.png"
+hash = "7294e3d2084a75edca8e895499fcba466e0441846261898c7033a9725e2f043a"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/bountifulfares/textures/block/walnut_log.png"
+hash = "77dcc4d63ce9f866105086dfecb2aadd6d6b08a125f4b09d19ee9fd4e7130015"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/bountifulfares/textures/block/walnut_log_top.png"
+hash = "45f60dbaff41dcdbedece71c1b128d53fec9195f334cfe6b9bc2c268fc973f40"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/chalk/models/item/black_chalk.json"
