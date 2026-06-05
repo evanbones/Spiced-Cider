@@ -5,7 +5,7 @@ import com.evandev.spicedcider.config.ConfigFileHandler;
 import com.evandev.spicedcider.config.LoggerNamePatternSelector;
 import com.evandev.spicedcider.config.Reconfigurator;
 import com.evandev.spicedcider.config.SpicedCiderConfig;
-import com.evandev.spicedcider.integration.cloth_config.SpicedCiderConfigScreen;
+import com.evandev.spicedcider.integration.yacl.SpicedCiderConfigScreen;
 import com.evandev.spicedcider.namingunconvention.RandomNameGenerator;
 import com.evandev.spicedcider.registry.*;
 import net.minecraft.world.entity.EntityType;
@@ -49,7 +49,10 @@ public class SpicedCider {
         CLASSLOADER = SpicedCider.class.getClassLoader();
 
         modContainer.registerConfig(ModConfig.Type.COMMON, SpicedCiderConfig.COMMON_SPEC);
+        modContainer.registerConfig(ModConfig.Type.CLIENT, SpicedCiderConfig.CLIENT_SPEC);
+
         modContainer.registerExtensionPoint(IConfigScreenFactory.class, (mc, screen) -> SpicedCiderConfigScreen.create(screen));
+
         NeoForge.EVENT_BUS.addListener(this::registerCommands);
         ModEntityTypes.ENTITY_TYPES.register(modEventBus);
         ModEntityTypes.ITEMS.register(modEventBus);

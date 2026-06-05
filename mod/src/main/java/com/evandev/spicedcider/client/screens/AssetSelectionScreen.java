@@ -1,6 +1,7 @@
 package com.evandev.spicedcider.client.screens;
 
 import com.evandev.spicedcider.SpicedCider;
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import net.minecraft.Util;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
@@ -33,11 +34,15 @@ public class AssetSelectionScreen extends Screen {
         String namespace = fileResource.getNamespace();
         String subPath = fileResource.getPath();
 
-        Path basePath = FMLPaths.GAMEDIR.get()
-                .resolve("resourcepacks")
-                .resolve("spicedcider_resources")
-                .resolve("assets")
-                .resolve(namespace);
+        String configuredPathStr = SpicedCiderConfig.CLIENT.exportDirectory.get();
+        Path configuredPath = Path.of(configuredPathStr);
+
+        Path basePath;
+        if (configuredPath.isAbsolute()) {
+            basePath = configuredPath.resolve(namespace);
+        } else {
+            basePath = FMLPaths.GAMEDIR.get().resolve(configuredPath).resolve(namespace);
+        }
 
         return basePath.resolve(subPath);
     }

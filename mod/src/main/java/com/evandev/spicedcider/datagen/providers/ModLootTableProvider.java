@@ -1,4 +1,4 @@
-package com.evandev.spicedcider.datagen;
+package com.evandev.spicedcider.datagen.providers;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;

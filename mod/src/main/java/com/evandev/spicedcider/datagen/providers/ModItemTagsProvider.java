@@ -1,4 +1,4 @@
-package com.evandev.spicedcider.datagen;
+package com.evandev.spicedcider.datagen.providers;
 
 import com.evandev.spicedcider.SpicedCider;
 import com.evandev.spicedcider.registry.ModItems;

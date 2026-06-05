@@ -1,6 +1,7 @@
 package com.evandev.spicedcider.datagen;
 
 import com.evandev.spicedcider.SpicedCider;
+import com.evandev.spicedcider.datagen.providers.*;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
