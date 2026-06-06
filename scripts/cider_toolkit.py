@@ -1,13 +1,17 @@
+import os
 import hashlib
 import json
-import os
 import re
 import shutil
-import tkinter as tk
 import zipfile
+import tkinter as tk
+from tkinter import ttk, messagebox
 from pathlib import Path
-from tkinter import messagebox
+from PIL import Image, ImageTk
 
+# ==========================================
+# Paths & Constants
+# ==========================================
 REPO_ROOT = Path(__file__).resolve().parent.parent if Path(__file__).resolve().parent.name == "scripts" else Path(
     r"C:\Users\evan\Documents\GitHub\Spiced-Cider")
 
@@ -19,17 +23,206 @@ MANIFEST_FILE = REPO_ROOT / "pack" / "config" / "spicedcider" / "spicedcider_man
 CACHE_DIR = Path(r"C:\Users\evan\AppData\Roaming\PrismLauncher\instances\Spiced Cider Dev\minecraft\.spicedcider_cache")
 
 
+class ConflictResolverApp:
+    def __init__(self, parent):
+        self.window = tk.Toplevel(parent)
+        self.window.title("Spiced Cider - Conflict Resolver")
+        self.window.geometry("1000x600")
+
+        self.conflicts = {}  # Format: { "assets/minecraft/textures/...png": [Path1, Path2] }
+        self.current_preview_widgets = []
+
+        self.setup_ui()
+        self.scan_for_conflicts()
+
+    def setup_ui(self):
+        left_frame = ttk.Frame(self.window, padding=10)
+        left_frame.pack(side=tk.LEFT, fill=tk.Y)
+
+        ttk.Label(left_frame, text="Detected Conflicts:", font=("Arial", 12, "bold")).pack(anchor=tk.W)
+
+        list_frame = ttk.Frame(left_frame)
+        list_frame.pack(fill=tk.BOTH, expand=True, pady=5)
+
+        scrollbar = ttk.Scrollbar(list_frame)
+        scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
+
+        self.conflict_listbox = tk.Listbox(list_frame, width=50, yscrollcommand=scrollbar.set, selectmode=tk.EXTENDED)
+        self.conflict_listbox.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+        scrollbar.config(command=self.conflict_listbox.yview)
+
+        self.conflict_listbox.bind('<<ListboxSelect>>', self.on_select_conflict)
+
+        ttk.Button(left_frame, text="Rescan Packs", command=self.scan_for_conflicts).pack(fill=tk.X, pady=5)
+
+        self.right_frame = ttk.Frame(self.window, padding=10)
+        self.right_frame.pack(side=tk.RIGHT, fill=tk.BOTH, expand=True)
+
+        self.preview_title = ttk.Label(self.right_frame, text="Select a conflict to preview",
+                                       font=("Arial", 14, "bold"))
+        self.preview_title.pack(pady=(0, 10))
+
+        self.previews_container = ttk.Frame(self.right_frame)
+        self.previews_container.pack(fill=tk.BOTH, expand=True)
+
+    def scan_for_conflicts(self):
+        self.conflict_listbox.delete(0, tk.END)
+        self.conflicts.clear()
+
+        if not CIDER_PACKS_DIR.exists():
+            messagebox.showerror("Error", f"Directory not found:\n{CIDER_PACKS_DIR}", parent=self.window)
+            return
+
+        all_files = {}
+
+        for pack_dir in CIDER_PACKS_DIR.iterdir():
+            if not pack_dir.is_dir(): continue
+
+            for root, _, files in os.walk(pack_dir):
+                for file in files:
+                    full_path = Path(root) / file
+                    rel_path = full_path.relative_to(pack_dir).as_posix()
+
+                    if rel_path not in all_files:
+                        all_files[rel_path] = []
+                    all_files[rel_path].append(full_path)
+
+        for rel_path, paths in all_files.items():
+            if len(paths) > 1:
+                self.conflicts[rel_path] = paths
+                self.conflict_listbox.insert(tk.END, rel_path)
+
+        self.preview_title.config(text=f"Found {len(self.conflicts)} conflicts.")
+        self.clear_previews()
+
+    def clear_previews(self):
+        for widget in self.current_preview_widgets:
+            widget.destroy()
+        self.current_preview_widgets.clear()
+
+    def on_select_conflict(self, event):
+        selections = self.conflict_listbox.curselection()
+        if not selections: return
+
+        self.clear_previews()
+
+        if len(selections) == 1:
+            rel_path = self.conflict_listbox.get(selections[0])
+            conflicting_files = self.conflicts[rel_path]
+
+            self.preview_title.config(text=rel_path)
+
+            for file_path in conflicting_files:
+                pack_name = file_path.relative_to(CIDER_PACKS_DIR).parts[0]
+
+                col_frame = ttk.Frame(self.previews_container, relief=tk.GROOVE, borderwidth=2, padding=5)
+                col_frame.pack(side=tk.LEFT, fill=tk.BOTH, expand=True, padx=5)
+                self.current_preview_widgets.append(col_frame)
+
+                ttk.Label(col_frame, text=pack_name, font=("Arial", 11, "bold")).pack(pady=5)
+
+                if file_path.suffix.lower() == '.png':
+                    self.render_image(col_frame, file_path)
+                elif file_path.suffix.lower() in ['.jem', '.json', '.txt', '.mcmeta']:
+                    self.render_text_snippet(col_frame, file_path)
+                else:
+                    ttk.Label(col_frame, text="No preview available").pack(pady=20)
+
+                delete_btn = ttk.Button(
+                    col_frame,
+                    text=f"Delete from {pack_name}",
+                    command=lambda p=file_path: self.delete_file(p)
+                )
+                delete_btn.pack(side=tk.BOTTOM, pady=10)
+
+        else:
+            self.preview_title.config(text=f"{len(selections)} conflicts selected")
+            
+            involved_packs = set()
+            for idx in selections:
+                rel_path = self.conflict_listbox.get(idx)
+                for file_path in self.conflicts[rel_path]:
+                    pack_name = file_path.relative_to(CIDER_PACKS_DIR).parts[0]
+                    involved_packs.add(pack_name)
+
+            col_frame = ttk.Frame(self.previews_container, relief=tk.GROOVE, borderwidth=2, padding=10)
+            col_frame.pack(fill=tk.BOTH, expand=True, padx=50, pady=20)
+            self.current_preview_widgets.append(col_frame)
+
+            ttk.Label(col_frame, text="Bulk Resolution Actions", font=("Arial", 14, "bold")).pack(pady=10)
+            ttk.Label(col_frame, text="Delete the selected files from the following packs:").pack(pady=5)
+
+            for pack_name in sorted(involved_packs):
+                btn = ttk.Button(
+                    col_frame,
+                    text=f"Delete Selected from {pack_name}",
+                    command=lambda p=pack_name, s=selections: self.bulk_delete(p, s)
+                )
+                btn.pack(pady=5, fill=tk.X, padx=100)
+
+    def render_image(self, parent, path):
+        try:
+            img = Image.open(path)
+            img.thumbnail((250, 250), Image.Resampling.NEAREST)
+            if img.width < 50:
+                img = img.resize((img.width * 5, img.height * 5), Image.Resampling.NEAREST)
+
+            photo = ImageTk.PhotoImage(img)
+            lbl = tk.Label(parent, image=photo)
+            lbl.image = photo
+            lbl.pack(pady=10)
+
+            original_size = Image.open(path).size
+            ttk.Label(parent, text=f"Resolution: {original_size[0]}x{original_size[1]}").pack()
+        except Exception as e:
+            ttk.Label(parent, text=f"Error loading image:\n{e}").pack()
+
+    def render_text_snippet(self, parent, path):
+        try:
+            with open(path, 'r', encoding='utf-8') as f:
+                content = f.read(500)
+
+            text_widget = tk.Text(parent, width=30, height=15, wrap=tk.WORD, font=("Consolas", 9))
+            text_widget.insert(tk.END, content + ("..." if len(content) == 500 else ""))
+            text_widget.config(state=tk.DISABLED)
+            text_widget.pack(pady=10, fill=tk.BOTH, expand=True)
+        except Exception as e:
+            ttk.Label(parent, text=f"Error reading file:\n{e}").pack()
+
+    def delete_file(self, path):
+        if messagebox.askyesno("Confirm Delete", f"Are you sure you want to delete:\n{path.name}\nfrom this pack?", parent=self.window):
+            try:
+                os.remove(path)
+                messagebox.showinfo("Success", "File deleted.", parent=self.window)
+                self.scan_for_conflicts()
+            except Exception as e:
+                messagebox.showerror("Error", f"Failed to delete file:\n{e}", parent=self.window)
+
+    def bulk_delete(self, target_pack, selections):
+        if messagebox.askyesno("Confirm Bulk Delete", f"Are you sure you want to delete ALL {len(selections)} selected files from '{target_pack}'?\n\n(Files that don't exist in this pack will be ignored).", parent=self.window):
+            deleted_count = 0
+            for idx in selections:
+                rel_path = self.conflict_listbox.get(idx)
+                for file_path in self.conflicts[rel_path]:
+                    if file_path.relative_to(CIDER_PACKS_DIR).parts[0] == target_pack:
+                        try:
+                            os.remove(file_path)
+                            deleted_count += 1
+                        except Exception as e:
+                            print(f"Failed to delete {file_path}: {e}")
+            
+            messagebox.showinfo("Bulk Delete Complete", f"Successfully deleted {deleted_count} files from {target_pack}.", parent=self.window)
+            self.scan_for_conflicts()
+
+
 def get_file_hash(filepath):
-    """Calculates the SHA-256 hash of a file."""
     hasher = hashlib.sha256()
     with open(filepath, 'rb') as f:
         while chunk := f.read(8192):
             hasher.update(chunk)
     return hasher.hexdigest()
 
-
 def get_valid_pack_names():
-    """Reads Packwiz directory to find all valid pack names (stripping .zip)"""
     valid_names = set()
     if PACKWIZ_RP_DIR.exists():
         for f in PACKWIZ_RP_DIR.iterdir():
@@ -46,7 +239,6 @@ def get_valid_pack_names():
                         else:
                             valid_names.add(filename)
     return valid_names
-
 
 def extract_packs():
     try:
@@ -77,11 +269,9 @@ def extract_packs():
     except Exception as e:
         messagebox.showerror("Error", f"An error occurred during extraction:\n{e}")
 
-
 def build_manifest():
     try:
         print("Building manifest...")
-
         if CACHE_DIR.exists():
             print("  Clearing old Java JIT cache...")
             shutil.rmtree(CACHE_DIR)
@@ -128,9 +318,7 @@ def build_manifest():
     except Exception as e:
         messagebox.showerror("Error", f"An error occurred while building the manifest:\n{e}")
 
-
 def restore_from_manifest():
-    """Wipes ciderpacks and reconstructs it exactly as defined in the Git-tracked manifest."""
     if not MANIFEST_FILE.exists():
         messagebox.showerror("Error", "Manifest file not found. Nothing to restore.")
         return
@@ -176,12 +364,15 @@ def restore_from_manifest():
         messagebox.showerror("Error", f"An error occurred during restore:\n{e}")
 
 
+def open_conflict_resolver(root):
+    ConflictResolverApp(root)
+
 def run_gui():
     root = tk.Tk()
     root.title("Cider Toolkit")
 
     window_width = 300
-    window_height = 200
+    window_height = 250
     root.geometry(f"{window_width}x{window_height}")
     root.eval('tk::PlaceWindow . center')
 
@@ -197,8 +388,10 @@ def run_gui():
     btn_build = tk.Button(root, text="Build Manifest", command=build_manifest, width=20, pady=5)
     btn_build.pack(pady=5)
 
-    root.mainloop()
+    btn_resolve = tk.Button(root, text="Open Conflict Resolver", command=lambda: open_conflict_resolver(root), width=20, pady=5)
+    btn_resolve.pack(pady=5)
 
+    root.mainloop()
 
 if __name__ == "__main__":
     run_gui()

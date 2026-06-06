@@ -153,7 +153,7 @@
 		/* Shows the durability of an item in its tooltip.
 		   VALUE/PERCENTAGE/OFF (default: VALUE)
 		*/
-		"durabilityTooltip": "OFF",
+		"durabilityTooltip": "VALUE",
 		/* Shows the durability of an item, represented by a bar, in its tooltip.
 		   (default: false)
 		*/
@@ -163,7 +163,7 @@
 		/* Toggles the improved held items tooltips feature.
 		   ON/MINIMAL/OFF (default: ON)
 		*/
-		"mode": "ON",
+		"mode": "MINIMAL",
 		/* Shows a neat background behind the held item tooltip text.
 		   (default: true)
 		*/
