@@ -1,9 +1,7 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "equipment",
   "key": {
     "#": {
-      "item": "minecraft:copper_ingot"
+      "tag": "c:ingots/copper"
     }
   },
   "pattern": [
@@ -11,7 +9,9 @@
     "# "
   ],
   "result": {
-    "count": 1,
-    "id": "minecraft:shears"
-  }
+    "id": "minecraft:shears",
+    "count": 1
+  },
+  "category": "equipment",
+  "type": "minecraft:crafting_shaped"
 }

@@ -249,6 +249,7 @@ dependencies {
     implementation "maven.modrinth:yacl:3.8.2+1.21.1-neoforge"
     implementation "maven.modrinth:quark:4.1-480"
     implementation "maven.modrinth:zeta:1.1-40"
+    implementation "maven.modrinth:item-descriptions:2.7.2+1.21.1-neoforge"
     compileOnly "maven.modrinth:nostalgic-tweaks:POrRfSqe"
     compileOnly(annotationProcessor("com.github.bawnorton.mixinsquared:mixinsquared-common:0.3.7-beta.2"))
     jarJar(implementation("com.github.bawnorton.mixinsquared:mixinsquared-neoforge")) {
