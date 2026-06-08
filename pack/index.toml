@@ -333,18 +333,6 @@ file = "config/easyanvils-server.toml"
 hash = "259b428c8a59612afdd0a0cfd12b4788b2a79b2ebfdd25d32cd85d1504179faf"
 
 [[files]]
-file = "config/emi-accelerator/emi-accelerator.txt"
-hash = "59ab931402eb2a306d9c812ff531e63c25ccae614a3fd6ed8e1c9b71b277f18f"
-
-[[files]]
-file = "config/emi-accelerator/reload-timings.json"
-hash = "0eeabc86981a94b6d3ec5783a9f5b4286bdd77f728df61c20c8fcca8b881d6c8"
-
-[[files]]
-file = "config/emi-accelerator/stack-cache.json"
-hash = "e8cc1621a396badb7b8a6427d0b04f1b93129cad310314ce3f807b736843325c"
-
-[[files]]
 file = "config/emi.css"
 hash = "6e40c411e1e2ea5ad740e2f19409066d1638c78e95a102deef3ea8a1c65e6aa7"
 
@@ -1686,7 +1674,7 @@ hash = "71c6f65022cb095402596003a4896d66de91b15294c5e8ef9118ce10b3503829"
 
 [[files]]
 file = "config/spicedcider/spicedcider_manifest.json"
-hash = "77c283aa2b7e2c4224467042f838b5b68c0367ffa87ed63b66fe52321f0e990b"
+hash = "9787d877f3bd69c2da4baf1d438a463d7866b88148049362e7d450b249f2b36f"
 
 [[files]]
 file = "config/structure_layout_optimizer.jsonc"
@@ -2092,6 +2080,11 @@ metafile = true
 [[files]]
 file = "mods/cyanide.pw.toml"
 hash = "08ab5ee502b94653263fdfea09b0c58958e9e6adffc45cb35f496cc5a0a6fb8d"
+metafile = true
+
+[[files]]
+file = "mods/defaulted.pw.toml"
+hash = "059bee6a2b44324240323679935c3b40aba6511f328eba14bcd163d55b70568d"
 metafile = true
 
 [[files]]
@@ -4438,7 +4431,7 @@ hash = "4767f952ca15d652b414c3ecbb5166a065b3492932276849e67fa3aa00f463b3"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/spicedcider/lang/en_us.json"
-hash = "527cc51a186ad6172b8c48e1b2956a69551d915a3fe81152bc5e39cc2bb8498e"
+hash = "01424aff88338212999a4804ef6c8ea0fab75076add5a090c43ac9e852035f34"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/spicedcider/textures/gui/creative_tabs/building_icon.png"
