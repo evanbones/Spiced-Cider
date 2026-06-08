@@ -2,7 +2,7 @@
 	wind_vane = true
 	clock_block = true
 	redstone_illuminator = true
-	crank = true
+	crank = false
 	cog_block = true
 	gold_door = true
 	gold_trapdoor = true
@@ -340,7 +340,7 @@
 		door-like_gates = false
 
 	[building.gold_bars]
-		enabled = true
+		enabled = false
 
 	[building.item_shelf]
 		enabled = true
@@ -413,7 +413,7 @@
 
 		[building.way_sign.road_signs]
 			#Entirely disables them from spawning
-			enabled = true
+			enabled = false
 			#With this option road signs will display the distance to the structure that they are pointing to
 			show_distance_text = true
 			#Maximum distance in chunks that road signs will search for structures

@@ -18,6 +18,7 @@ import dev.emi.emi.api.stack.EmiStackInteraction;
 import dev.emi.emi.api.widget.Widget;
 import net.minecraft.Util;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.renderer.LightTexture;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.block.model.BakedQuad;
@@ -46,12 +47,10 @@ import net.minecraft.world.phys.HitResult;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.fml.loading.FMLLoader;
 import net.neoforged.neoforge.client.event.ClientTickEvent;
 import net.neoforged.neoforge.client.event.ScreenEvent;
 import net.neoforged.neoforge.client.model.data.ModelData;
 import org.jetbrains.annotations.Nullable;
-import org.lwjgl.glfw.GLFW;
 
 import java.lang.reflect.Field;
 import java.nio.file.Files;
@@ -60,6 +59,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import static com.evandev.spicedcider.client.events.ClientModEvents.ModEvents.EXPORT_LANG;
 import static com.evandev.spicedcider.client.events.ClientModEvents.ModEvents.OPEN_TEXTURE_FOLDER;
 
 @EventBusSubscriber(modid = SpicedCider.MOD_ID, bus = EventBusSubscriber.Bus.GAME, value = Dist.CLIENT)
@@ -76,53 +76,60 @@ public class ClientGameEvents {
             HitResult hit = mc.hitResult;
             if (hit != null && mc.level != null && mc.screen == null) {
                 Set<ResourceLocation> assetsToCopy = new HashSet<>();
+                boolean isShiftDown = Screen.hasShiftDown();
 
                 if (hit.getType() == HitResult.Type.BLOCK && hit instanceof BlockHitResult blockHit) {
                     BlockPos pos = blockHit.getBlockPos();
                     BlockState state = mc.level.getBlockState(pos);
 
-                    BakedModel model = mc.getBlockRenderer().getBlockModel(state);
-                    assetsToCopy.addAll(getSpritesFromModel(model, state));
+                    if (isShiftDown) {
+                        //Models and blockstates
+                        ResourceLocation blockId = BuiltInRegistries.BLOCK.getKey(state.getBlock());
+                        assetsToCopy.add(ResourceLocation.fromNamespaceAndPath(blockId.getNamespace(), "blockstates/" + blockId.getPath() + ".json"));
+                        assetsToCopy.add(ResourceLocation.fromNamespaceAndPath(blockId.getNamespace(), "models/block/" + blockId.getPath() + ".json"));
+                    } else {
+                        // Textures
+                        BakedModel model = mc.getBlockRenderer().getBlockModel(state);
+                        assetsToCopy.addAll(getSpritesFromModel(model, state));
 
-                    BlockEntity blockEntity = mc.level.getBlockEntity(pos);
-                    if (blockEntity != null) {
-                        BlockEntityRenderer<BlockEntity> renderer = mc.getBlockEntityRenderDispatcher().getRenderer(blockEntity);
-                        if (renderer != null) {
-                            TextureCatcher.start();
+                        BlockEntity blockEntity = mc.level.getBlockEntity(pos);
+                        if (blockEntity != null) {
+                            BlockEntityRenderer<BlockEntity> renderer = mc.getBlockEntityRenderDispatcher().getRenderer(blockEntity);
+                            if (renderer != null) {
+                                TextureCatcher.start();
 
-                            try {
-                                PoseStack poseStack = new PoseStack();
-                                MultiBufferSource.BufferSource bufferSource = mc.renderBuffers().bufferSource();
+                                try {
+                                    PoseStack poseStack = new PoseStack();
+                                    MultiBufferSource.BufferSource bufferSource = mc.renderBuffers().bufferSource();
 
-                                renderer.render(blockEntity, mc.getTimer().getGameTimeDeltaTicks(), poseStack, bufferSource, LightTexture.FULL_BRIGHT, OverlayTexture.NO_OVERLAY);
-                                bufferSource.endBatch();
-                            } catch (Exception e) {
-                                SpicedCider.LOGGER.error("Failed to capture BER textures for block: {}", state.getBlock(), e);
-                            }
+                                    renderer.render(blockEntity, mc.getTimer().getGameTimeDeltaTicks(), poseStack, bufferSource, LightTexture.FULL_BRIGHT, OverlayTexture.NO_OVERLAY);
+                                    bufferSource.endBatch();
+                                } catch (Exception e) {
+                                    SpicedCider.LOGGER.error("Failed to capture BER textures for block: {}", state.getBlock(), e);
+                                }
 
-                            Set<ResourceLocation> captured = TextureCatcher.stop();
+                                Set<ResourceLocation> captured = TextureCatcher.stop();
 
-                            for (ResourceLocation loc : captured) {
-                                assetsToCopy.add(normalizeTextureLocation(loc));
+                                for (ResourceLocation loc : captured) {
+                                    assetsToCopy.add(normalizeTextureLocation(loc));
+                                }
                             }
                         }
                     }
 
-                    ResourceLocation blockId = BuiltInRegistries.BLOCK.getKey(state.getBlock());
-                    assetsToCopy.add(ResourceLocation.fromNamespaceAndPath(blockId.getNamespace(), "blockstates/" + blockId.getPath() + ".json"));
-                    assetsToCopy.add(ResourceLocation.fromNamespaceAndPath(blockId.getNamespace(), "models/block/" + blockId.getPath() + ".json"));
-
                     mc.setScreen(new AssetSelectionScreen(assetsToCopy));
 
                 } else if (hit.getType() == HitResult.Type.ENTITY && hit instanceof EntityHitResult entityHit) {
-                    Entity entity = entityHit.getEntity();
-                    @SuppressWarnings("unchecked")
-                    EntityRenderer<Entity> renderer = (EntityRenderer<Entity>) mc.getEntityRenderDispatcher().getRenderer(entity);
+                    if (!isShiftDown) {
+                        Entity entity = entityHit.getEntity();
+                        @SuppressWarnings("unchecked")
+                        EntityRenderer<Entity> renderer = (EntityRenderer<Entity>) mc.getEntityRenderDispatcher().getRenderer(entity);
 
-                    ResourceLocation mainTexture = renderer.getTextureLocation(entity);
-                    assetsToCopy.add(normalizeTextureLocation(mainTexture));
+                        ResourceLocation mainTexture = renderer.getTextureLocation(entity);
+                        assetsToCopy.add(normalizeTextureLocation(mainTexture));
 
-                    mc.setScreen(new AssetSelectionScreen(assetsToCopy));
+                        mc.setScreen(new AssetSelectionScreen(assetsToCopy));
+                    }
                 }
             }
         }
@@ -209,21 +216,27 @@ public class ClientGameEvents {
                 if (!ingredient.isEmpty() && !ingredient.getEmiStacks().isEmpty()) {
                     ItemStack stack = ingredient.getEmiStacks().getFirst().getItemStack();
                     if (stack != null && !stack.isEmpty()) {
-                        BakedModel model = mc.getItemRenderer().getModel(stack, mc.level, mc.player, 0);
+                        Set<ResourceLocation> assetsToCopy = new HashSet<>();
 
-                        Set<ResourceLocation> assetsToCopy = new HashSet<>(getSpritesFromModel(model, null));
-
-                        ResourceLocation itemId = BuiltInRegistries.ITEM.getKey(stack.getItem());
-                        assetsToCopy.add(ResourceLocation.fromNamespaceAndPath(itemId.getNamespace(), "models/item/" + itemId.getPath() + ".json"));
+                        if (Screen.hasShiftDown()) {
+                            // Item model
+                            ResourceLocation itemId = BuiltInRegistries.ITEM.getKey(stack.getItem());
+                            assetsToCopy.add(ResourceLocation.fromNamespaceAndPath(itemId.getNamespace(), "models/item/" + itemId.getPath() + ".json"));
+                        } else {
+                            // Texture sprites
+                            BakedModel model = mc.getItemRenderer().getModel(stack, mc.level, mc.player, 0);
+                            assetsToCopy.addAll(getSpritesFromModel(model, null));
+                        }
 
                         mc.execute(() -> mc.setScreen(new AssetSelectionScreen(assetsToCopy)));
                         event.setCanceled(true);
+                        return;
                     }
                 }
             }
         }
 
-        if (!FMLLoader.isProduction() && keyCode == GLFW.GLFW_KEY_C) {
+        if (keyCode == EXPORT_LANG.getKey().getValue()) {
             EmiStackInteraction interaction = EmiApi.getHoveredStack(true);
 
             if (interaction != null && !interaction.isEmpty()) {
@@ -239,6 +252,7 @@ public class ClientGameEvents {
 
                         mc.keyboardHandler.setClipboard(clipboardData);
                         event.setCanceled(true);
+                        return;
                     }
                 }
             }

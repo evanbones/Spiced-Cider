@@ -28,6 +28,12 @@ public class ClientModEvents {
                 "key.categories.spicedcider"
         );
 
+        public static final KeyMapping EXPORT_LANG = new KeyMapping(
+                "key.spicedcider.export_lang",
+                GLFW.GLFW_KEY_C,
+                "key.categories.spicedcider"
+        );
+
         @SubscribeEvent
         public static void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
             event.registerBlockEntityRenderer(ModBlockEntities.WORKSTONE.get(), WorkstoneRenderer::new);
@@ -49,6 +55,7 @@ public class ClientModEvents {
         @SubscribeEvent
         public static void registerKeyMappings(RegisterKeyMappingsEvent event) {
             event.register(OPEN_TEXTURE_FOLDER);
+            event.register(EXPORT_LANG);
         }
     }
 }
