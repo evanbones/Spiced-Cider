@@ -1,0 +1,19 @@
+{
+  "priority": 1000,
+  "add": {
+    "minecraft:pale_oak_planks": [
+      "everycomp:nml/minecraft/trimmed_pale_oak_planks"
+    ],
+    "/(?<namespace>minecraft|nomansland):(?<wood>(?!pale_oak).+)_planks/": [
+      "nomansland:trimmed_${wood}_planks"
+    ],
+    "/(?<namespace>(?!minecraft|nomansland)[^:]+):(?<wood>.+)_planks/": [
+      "everycomp:nml/${namespace}/trimmed_${wood}_planks"
+    ]
+  },
+  "remove": {
+    "/.*/": [
+      "/quark:.*_vertical_slab/"
+    ]
+  }
+}
