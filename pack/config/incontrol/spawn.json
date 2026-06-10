@@ -1,1 +1,61 @@
-[]
+[
+  {
+    "mob": "minecraft:pillager",
+    "when": "onjoin",
+    "result": "deny"
+  },
+  {
+    "mob": "minecraft:vindicator",
+    "when": "onjoin",
+    "result": "deny"
+  },
+  {
+    "mob": "minecraft:ravager",
+    "when": "onjoin",
+    "result": "deny"
+  },
+  {
+    "mob": "minecraft:villager",
+    "when": "onjoin",
+    "result": "deny"
+  },
+  {
+    "mob": "minecraft:wandering_trader",
+    "when": "onjoin",
+    "result": "deny"
+  },
+  {
+    "mob": "minecraft:trader_llama",
+    "when": "onjoin",
+    "result": "deny"
+  },
+  {
+    "mob": "minecraft:experience_orb",
+    "when": "onjoin",
+    "result": "deny"
+  },
+  {
+    "mob": "minecraft:experience_bottle",
+    "when": "onjoin",
+    "result": "deny"
+  },
+  {
+    "mob": "minecraft:drowned",
+    "when": "onjoin",
+    "random": 0.01,
+    "armorboots": [
+      "create:copper_diving_boots"
+    ],
+    "result": "allow"
+  },
+  {
+    "mob": "caverns_and_chasms:grazer",
+    "when": "onjoin",
+    "result": "deny"
+  },
+  {
+    "mob": "caverns_and_chasms:saddled_grazer",
+    "when": "onjoin",
+    "result": "deny"
+  }
+]

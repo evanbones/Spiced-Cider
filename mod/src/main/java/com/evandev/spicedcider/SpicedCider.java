@@ -1,5 +1,6 @@
 package com.evandev.spicedcider;
 
+import com.evandev.spicedcider.command.SpicedCiderQueryCommand;
 import com.evandev.spicedcider.command.SpicedCiderStructureCommand;
 import com.evandev.spicedcider.config.ConfigFileHandler;
 import com.evandev.spicedcider.config.LoggerNamePatternSelector;
@@ -94,8 +95,8 @@ public class SpicedCider {
 
     @SubscribeEvent
     public static void modifyVanillaAttributes(EntityAttributeModificationEvent event) {
-        event.add(EntityType.SKELETON, Attributes.MAX_HEALTH, 16.0D);
-        event.add(EntityType.STRAY, Attributes.MAX_HEALTH, 16.0D);
+        event.add(EntityType.SKELETON, Attributes.MAX_HEALTH, 12.0D);
+        event.add(EntityType.STRAY, Attributes.MAX_HEALTH, 12.0D);
     }
 
     @SubscribeEvent
@@ -114,5 +115,6 @@ public class SpicedCider {
 
     private void registerCommands(RegisterCommandsEvent event) {
         SpicedCiderStructureCommand.register(event.getDispatcher(), event.getBuildContext());
+        SpicedCiderQueryCommand.register(event.getDispatcher(), event.getBuildContext());
     }
 }
