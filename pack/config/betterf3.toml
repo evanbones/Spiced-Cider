@@ -34,12 +34,6 @@ general = {disable_mod = false, auto_start = false, space_modules = false, shado
 	enabled = true
 	lines = {chunk_sections = true, chunk_culling = true, pending_chunks = true, pending_uploads = true, available_buffers = true, client_chunk_cache = true, loaded_chunks = true, loaded_chunks_server = true, forceloaded_chunks = true, spawn_chunks = true, chunk_file = true}
 [[modules_left]]
-	name = "location"
-	name_color = 43520
-	value_color = 5636095
-	enabled = true
-	lines = {dimension = true, facing = true, rotation = true, light = true, light_server = true, highest_block = true, highest_block_server = true, biome = true, local_difficulty = true, day_ticks = true, days_played = true, slime_chunk = true}
-[[modules_left]]
 	name = "entity"
 	name_color = 16733525
 	value_color = 16777045
