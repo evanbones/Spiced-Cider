@@ -250,7 +250,7 @@ hash = "943e1c3672b8a03f27519b357091133205119c7b3db2fcc4c25b597cabf8926d"
 
 [[files]]
 file = "config/crash_assistant/modlist.json"
-hash = "17b583bb038bc2ba6f4bee9ba5c72d834ddd34d2d2241ffd07773bef8d7dfd1b"
+hash = "922899b904030174e4e7e3b247dbdb59afefadf9f980b0007404f29ec2199458"
 
 [[files]]
 file = "config/crash_assistant/scripts/log_analysis/example.jexl"
@@ -509,6 +509,14 @@ file = "config/entityculling.json"
 hash = "ceb5b3624c3269bef037b2914da8ab0d1c368abdd466156292a5d82db8803b0e"
 
 [[files]]
+file = "config/environmental-client.toml"
+hash = "ff24a8c74af00522d8cbb48d8eeb79d4819588fdd16838e1d7f74a544490ccbb"
+
+[[files]]
+file = "config/environmental-common.toml"
+hash = "580a0991eefe4940150324d7160b287c9bc19afceca3b5ab6b5f3179996ce83c"
+
+[[files]]
 file = "config/etched-client.toml"
 hash = "7fad6fe5cea17e1ac4e2276796d3a32c2a8c36d8efbe45d01a21e45cd05b8aa8"
 
@@ -534,19 +542,23 @@ hash = "7f9600976b415a1f3196fbc51d0aebd62731168f6786fa6555e058e47b2c30a4"
 
 [[files]]
 file = "config/everycomp-entries-1.toml.bak"
-hash = "025918fc8a95e5a35dd596b7823706824b6e4aaba11bd0ea85ff9a9863800c42"
+hash = "97209db000f6d19d6a8c6dfb06baac135ac5bc6e0c651c5f35ace11ae239f10f"
 
 [[files]]
 file = "config/everycomp-entries-2.toml.bak"
-hash = "700c2ad7f1bbbc12f54ee789e35bb7dc0167d32a57c859a289c8931b04f9e5fe"
+hash = "025918fc8a95e5a35dd596b7823706824b6e4aaba11bd0ea85ff9a9863800c42"
 
 [[files]]
 file = "config/everycomp-entries-3.toml.bak"
+hash = "700c2ad7f1bbbc12f54ee789e35bb7dc0167d32a57c859a289c8931b04f9e5fe"
+
+[[files]]
+file = "config/everycomp-entries-4.toml.bak"
 hash = "21447902ffbccfebd4552e0c94bf248879043fdf1f764983096d6eb422845fd8"
 
 [[files]]
 file = "config/everycomp-entries.toml"
-hash = "97209db000f6d19d6a8c6dfb06baac135ac5bc6e0c651c5f35ace11ae239f10f"
+hash = "c5432a1d6eae923838e98af1f2a66ad13b7d34866f4cd438810a56a1f7e5e6e3"
 
 [[files]]
 file = "config/everycomp-hazardous.toml"
@@ -582,7 +594,7 @@ hash = "09d330b29443d9579ecc014f2be2fcb31075bfe1e9f9ac4e750f271128650fe6"
 
 [[files]]
 file = "config/fabric/indigo-renderer.properties"
-hash = "942e01af26e73a7acca55c05ada3f6128f8824a013096067060722d12ba82ae2"
+hash = "b26e57790cd3c5ce53e4fa19050b11a786ef44299328780226ec07de256bf41a"
 
 [[files]]
 file = "config/fallingleaves-client.toml"
@@ -710,7 +722,7 @@ hash = "9708126724b8ca1566dbce39dcfee4e9e601d292bd2939672b0c161f07ad245b"
 
 [[files]]
 file = "config/fancymenu/customization/title_screen_layout.txt"
-hash = "c06c4a2ce6f50228932baeea4f70b3376a6ae4bf40439619fab63e034c2a4b78"
+hash = "949a0460b1506a5aac63abfa31cf24e73f921cccb9c4bba98490c076057f93bb"
 
 [[files]]
 file = "config/fancymenu/layout_editor/widgets/element_layer_control.lewidget"
@@ -938,7 +950,7 @@ hash = "12e683fc5b7ac530122061d2e01d6b86e5e7f5ea8a0423f64e2a5edc6aab943b"
 
 [[files]]
 file = "config/item_descriptions.toml"
-hash = "fe218808dd0a6d2d4871838213cd2eb5cf94ddc8c7a4da662b1bbc17c2bac938"
+hash = "e4793f56c4a47bf5f3d7db4f13bb55fe0a61a129d0c235dc26e45f69c8a97ead"
 
 [[files]]
 file = "config/iteminteractions-client.toml"
@@ -1378,7 +1390,7 @@ hash = "05022be17b8d67f7f6e766884518e40b20efc01dbfd531ad10ec009af6724342"
 
 [[files]]
 file = "config/packetfixer.properties"
-hash = "ccb52fafd39157156c35f848a5a06fc06eee05821ee6a8bf5dff0657d6acbd9c"
+hash = "dc3e15f0a09559464d257d798dd2a894308eeaa2ba7f356b721da96fd6e23eea"
 
 [[files]]
 file = "config/particle_core_config.toml"
@@ -1494,7 +1506,7 @@ hash = "590ea074ec1c84ced8a0c60dedd7111edd69801f7441fe78654c2f6fdfb655b7"
 
 [[files]]
 file = "config/reliable_remover.json"
-hash = "5b3693dda9387ae42ee147128bf18a6010d2e4ef3c2401907519d816d9611aa3"
+hash = "0db73534ebc7488ad4c7c64172c3e2c434dd2f3bbac0dadf206ce90241476c63"
 
 [[files]]
 file = "config/reliable_remover/remove_paintings.json"
@@ -1546,6 +1558,14 @@ hash = "72a1f489ae45e7903278581c368ac66f2ee71f7710fbc229afd8d6416c29f79f"
 
 [[files]]
 file = "config/screenshot_viewer-client-2.toml.bak"
+hash = "72a1f489ae45e7903278581c368ac66f2ee71f7710fbc229afd8d6416c29f79f"
+
+[[files]]
+file = "config/screenshot_viewer-client-3.toml.bak"
+hash = "72a1f489ae45e7903278581c368ac66f2ee71f7710fbc229afd8d6416c29f79f"
+
+[[files]]
+file = "config/screenshot_viewer-client-4.toml.bak"
 hash = "72a1f489ae45e7903278581c368ac66f2ee71f7710fbc229afd8d6416c29f79f"
 
 [[files]]
@@ -1646,11 +1666,15 @@ hash = "5a9058652bc0b88b8810e0b94eba0e1a90cbff2472845c53a7e67442682a1579"
 
 [[files]]
 file = "config/structurify.json"
-hash = "5e89bc00a2cf534573fc4b1337c7170acea7568824d55174f245b51ed31538a1"
+hash = "2c2151bcfe9a8d250600e48ea94e9d004467494c68265bbc39762cbca426d571"
 
 [[files]]
 file = "config/structurify/structurify_backup_2026-06-04_20-15-53.json"
 hash = "8ce0745434eae8fc8256c1e3d9a2c629b2e61fd2c0d9cd03b322fed49559db46"
+
+[[files]]
+file = "config/structurify/structurify_backup_2026-06-09_23-33-16.json"
+hash = "5e89bc00a2cf534573fc4b1337c7170acea7568824d55174f245b51ed31538a1"
 
 [[files]]
 file = "config/stylisheffects-client.toml"
@@ -1658,7 +1682,7 @@ hash = "220386486b0d066f2fa344c6d2b63f41a28629176a2f8fdf4f33e2668a6b127a"
 
 [[files]]
 file = "config/supplementaries-client.toml"
-hash = "f04c5120324917c6a29fc362769aa84ae1c6a7645e8fc1db11dccab0056efa8e"
+hash = "7ad6b2451abf46d64ad034e35f516cdb5ca5eb9551b836746398e91149a04197"
 
 [[files]]
 file = "config/supplementaries-common.toml"
@@ -1710,7 +1734,7 @@ hash = "04bcc10f932135bd14192a202db19d48489ea004c2f20f690f631d907a7f4a9b"
 
 [[files]]
 file = "config/vanillabackport-common.toml"
-hash = "a6aa0df27fb1b70fb4141abdde82386c219e85a3480b5854de15d68af0188750"
+hash = "4a4aa7f88513461e4994370856cffef928a8874d76746ce2f0e1215f61f4574e"
 
 [[files]]
 file = "config/vanillin-client.toml"
@@ -2074,7 +2098,7 @@ metafile = true
 
 [[files]]
 file = "mods/e4mc.pw.toml"
-hash = "044f4e68ee8829f974513d252a5b49082468b2cd9cc2c63ec5844ba9e420b09d"
+hash = "b937a400500620773a44f670ba690ddac9ad71e9f3fed82658eae1670358118f"
 metafile = true
 
 [[files]]
@@ -2189,7 +2213,7 @@ metafile = true
 
 [[files]]
 file = "mods/field-guide.pw.toml"
-hash = "3e3834906a492d5d8eadd8830e9546bb2643b212f76a029db15aa3ba659d50ca"
+hash = "d09e171bacfb4abe8d80c5b4d29c56a88645442699788811aa99ceaf966559fe"
 metafile = true
 
 [[files]]
@@ -2289,7 +2313,7 @@ metafile = true
 
 [[files]]
 file = "mods/item-descriptions.pw.toml"
-hash = "96c5246d24014adb6a19ca92f26ddf4f96e388db35b88e63206598aad98745b9"
+hash = "e5347f876614ddeaff10c2e7417f946ac5ef56c56acf7838d166d1cd5a8d9d1c"
 metafile = true
 
 [[files]]
@@ -2438,7 +2462,7 @@ metafile = true
 
 [[files]]
 file = "mods/no-mans-land.pw.toml"
-hash = "9db3684522a5a84ffd6df4e1a985aeebaa3dbcda054f05f7bad87656d5cdbc75"
+hash = "6989b0a9872cbf052225b7af97bb6e4576b4ed983d8c583ee127c5eb7f73e6da"
 metafile = true
 
 [[files]]
@@ -2573,7 +2597,7 @@ metafile = true
 
 [[files]]
 file = "mods/reliable-remover.pw.toml"
-hash = "b0cd8366e924b041c7c93921efa9a250848b2770a6df43e79bead0170af63b64"
+hash = "7011d810ccc739d5413cf5c6f9d3c3beb43f9a14dcf42a873f1c3b22723d31d5"
 metafile = true
 
 [[files]]
@@ -2756,7 +2780,7 @@ metafile = true
 
 [[files]]
 file = "mods/vanillabackport.pw.toml"
-hash = "692eaba1dfc193086bf08a50d0dae5128d0d0f2516ffa1298d7e7c06af93aa34"
+hash = "0ed7d23f7f9bb186c0ff097fe015bf0988a456999f2cf6658705a6b4a17350e4"
 metafile = true
 
 [[files]]

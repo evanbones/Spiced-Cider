@@ -252,7 +252,6 @@ public class ClientGameEvents {
 
                         mc.keyboardHandler.setClipboard(clipboardData);
                         event.setCanceled(true);
-                        return;
                     }
                 }
             }
