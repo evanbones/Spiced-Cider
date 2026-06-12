@@ -1645,12 +1645,12 @@
 [experimental]
 	"Adjustable Chat" = false
 	"Climate Control Remover" = false
-	"Game Nerfs" = false
+	"Game Nerfs" = true
 	"Narrator Readout" = false
 	"Overlay Shader" = false
 	"Spawner Replacer" = false
 	#Big Stone Clusters for Granite, Diorite, and Andesite, like Quark pre-1.18
-	"Vanilla Stone Clusters" = false
+	"Vanilla Stone Clusters" = true
 	#Allows placing variant blocks automatically via a selector menu triggered from a keybind
 	"Variant Selector" = false
 	"Villager Rerolling Rework" = false
@@ -1688,7 +1688,7 @@
 		#If you want Mending II, disable the sanity check on Ancient Tomes and add minecraft:mending to the tomes.
 		"No Nerf for Mending II" = false
 		#Makes Iron Golems not drop Iron Ingots
-		"Disable Iron Farms" = true
+		"Disable Iron Farms" = false
 		#Makes Boats not glide on ice
 		"Disable Ice Roads" = true
 		#Makes Sheep not drop Wool when killed

@@ -1,5 +1,10 @@
 [
   {
+    "mob": "minecraft:phantom",
+    "when": "onjoin",
+    "result": "deny"
+  },
+  {
     "mob": "minecraft:pillager",
     "when": "onjoin",
     "result": "deny"
