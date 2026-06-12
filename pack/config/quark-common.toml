@@ -434,7 +434,7 @@
 		"Hud On Top" = false
 
 	[tools.pickarang]
-		"Enable Flamerang" = true
+		"Enable Flamerang" = false
 		#Set this to true to use the recipe without the Heart of Diamond, even if the Heart of Diamond is enabled.
 		"Never Use Heart Of Diamond" = false
 
@@ -1343,7 +1343,7 @@
 	Forgotten = true
 	Foxhound = true
 	Shiba = true
-	Stonelings = true
+	Stonelings = false
 	Toretoise = false
 	Wraith = true
 
@@ -1443,7 +1443,7 @@
 
 	[mobs.stonelings]
 		"Max Y Level" = 0
-		"Enable Diamond Heart" = true
+		"Enable Diamond Heart" = false
 		#When enabled, stonelings are much more aggressive in checking for players
 		"Cautious Stonelings" = false
 		"Tamable Stonelings" = true

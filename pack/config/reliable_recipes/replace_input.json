@@ -13,5 +13,10 @@
     "action": "replace_output",
     "target": "bountifulfares:walnut_planks",
     "replacement": "nomansland:walnut_planks"
+  },
+  {
+    "action": "replace_input",
+    "target": "create:andesite_alloy",
+    "replacement": ["alloyed:bronze_ingot"]
   }
 ]

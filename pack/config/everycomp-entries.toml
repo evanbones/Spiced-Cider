@@ -57,7 +57,7 @@
 			river = true
 
 		[types.wood_type.autumnity]
-			maple = true
+			maple = false
 
 		[types.wood_type.atmospheric]
 			rosewood = true
@@ -67,12 +67,6 @@
 			laurel = true
 			kousa = true
 			grimwood = true
-
-		[types.wood_type.ecologics]
-			flowering_azalea = true
-			azalea = true
-			coconut = true
-			walnut = true
 
 		[types.wood_type.newworld]
 			fir = true
@@ -154,10 +148,6 @@
 			currant = true
 			grimwood = true
 
-		[types.leaves_type.ecologics]
-			coconut = true
-			walnut = true
-
 		[types.leaves_type.newworld]
 			fir = true
 
@@ -209,7 +199,7 @@
 			boards = true
 			chest = true
 			beehive = true
-			bookshelf = true
+			bookshelf = false
 			chiseled_bookshelf = true
 			ladder = true
 

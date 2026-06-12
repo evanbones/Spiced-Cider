@@ -5,6 +5,7 @@
   "plugin": "com.evandev.spicedcider.mixin.SpicedCiderMixinPlugin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "cookscollection.CooksCollectionModBlocksMixin",
     "minecraft.BedMixin",
     "minecraft.EndCrystalItemMixin",
     "minecraft.EndCrystalMixin",

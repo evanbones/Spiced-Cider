@@ -1,0 +1,15 @@
+{
+  "type": "mixed_litter:simple_texture",
+  "group": "nomansland:donkey",
+  "conditions": {
+    "unobtainable": true,
+    "entity_predicate": {
+      "location": {
+        "biomes": "#nomansland:entity/spawns_zebra_donkeys"
+      }
+    }
+  },
+  "arguments": {
+    "texture": "nomansland:mob_variants/donkey/zebra"
+  }
+}

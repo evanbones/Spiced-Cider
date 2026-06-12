@@ -27,6 +27,9 @@ public class SpicedCiderMixinPlugin implements IMixinConfigPlugin {
         if (mixinClassName.contains("vanillin.VanillinItemColorsMixin")) {
             return FMLLoader.getLoadingModList().getModFileById("vanillin") != null;
         }
+        if (mixinClassName.contains("cookscollection.CooksCollectionModBlocksMixin")) {
+            return FMLLoader.getLoadingModList().getModFileById("cookscollection") != null;
+        }
         return true;
     }
 
