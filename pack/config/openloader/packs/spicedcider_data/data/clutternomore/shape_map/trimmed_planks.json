@@ -8,7 +8,8 @@
       "nomansland:trimmed_${wood}_planks"
     ],
     "/(?<namespace>(?!minecraft|nomansland)[^:]+):(?<wood>.+)_planks/": [
-      "everycomp:nml/${namespace}/trimmed_${wood}_planks"
+      "everycomp:nml/${namespace}/trimmed_${wood}_planks",
+      "${namespace}:trimmed_${wood}_planks"
     ]
   }
 }

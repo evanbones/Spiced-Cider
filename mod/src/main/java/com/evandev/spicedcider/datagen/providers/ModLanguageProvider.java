@@ -22,6 +22,8 @@ public class ModLanguageProvider extends LanguageProvider {
         addItem(ModItems.DIAMOND_HAMMER, "Diamond Hammer");
         addItem(ModItems.NETHERITE_HAMMER, "Netherite Hammer");
 
+        add("spicedcider.respawn_blocked", "The Respawn Anchor is unresponsive in this dimension");
+
         add("key.category.naming_unconvention.naming_unconvention", "Naming Unconvention");
         add("key.naming_unconvention.reroll", "Reroll World Name");
         add("subtitles.spicedcider.block.workstone.hammer", "Workstone hammered");

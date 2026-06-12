@@ -5,8 +5,10 @@
   "plugin": "com.evandev.spicedcider.mixin.SpicedCiderMixinPlugin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "minecraft.BedMixin",
     "minecraft.EndCrystalItemMixin",
     "minecraft.EndCrystalMixin",
+    "minecraft.RespawnAnchorMixin",
     "minecraft.SpiderEntityMixin",
     "minecraft.WolfPetArmorMixin",
     "perf.RecipeBookMixin",

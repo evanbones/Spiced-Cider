@@ -1,0 +1,10 @@
+{
+  "priority": 1000,
+  "add": {
+    "/(?<namespace>[^:]+):(?<wood>.+)_planks/": [
+      "woodworks:${wood}_boards",
+      "everycomp:abnww/${namespace}/${wood}_boards",
+      "${namespace}:${wood}_boards"
+    ]
+  }
+}
