@@ -161,6 +161,10 @@
 		[types.leaves_type.newworld]
 			fir = true
 
+		[types.leaves_type.cookscollection]
+			lemon = true
+			fruiting_lemon = true
+
 #Disables specific entries
 [entries]
 
@@ -170,11 +174,11 @@
 
 		[entries.wood_type.quark]
 			vertical_planks = false
-			post = true
+			post = false
 			trapped_chest = false
 			bookshelf = false
 			chest = false
-			stripped_post = true
+			stripped_post = false
 			ladder = false
 			hollow_log = true
 			vertical_slab = false
@@ -208,6 +212,14 @@
 			bookshelf = true
 			chiseled_bookshelf = true
 			ladder = true
+
+		[entries.wood_type.valhelsia_structures]
+			bundled_stripped_posts = true
+			stripped_post = true
+			cut_post = true
+			bundled_posts = true
+			post = true
+			cut_stripped_post = true
 
 		[entries.leaves_type.quark]
 			hedge = true

@@ -1,0 +1,31 @@
+{
+  "priority": 1000,
+  "add": {
+    "/(?<namespace>(?!everycomp)[^:]+):(?<wood>.+)_palisade/": [
+      "valhelsia_structures:${wood}_post",
+      "valhelsia_structures:cut_${wood}_post",
+      "${namespace}:${wood}_post",
+      "${namespace}:cut_${wood}_post",
+      "everycomp:vs/${namespace}/${wood}_post",
+      "everycomp:vs/${namespace}/cut_${wood}_post"
+    ],
+    "/everycomp:[^/]+/(?<namespace>[^/]+)/(?<wood>.+)_palisade/": [
+      "valhelsia_structures:${wood}_post",
+      "valhelsia_structures:cut_${wood}_post",
+      "${namespace}:${wood}_post",
+      "${namespace}:cut_${wood}_post",
+      "everycomp:vs/${namespace}/${wood}_post",
+      "everycomp:vs/${namespace}/cut_${wood}_post"
+    ],
+    "/(?<namespace>[^:]+):(?<wood>.+)_log/": [
+      "valhelsia_structures:bundled_${wood}_posts",
+      "${namespace}:bundled_${wood}_posts",
+      "everycomp:vs/${namespace}/bundled_${wood}_posts"
+    ],
+    "/(?<namespace>[^:]+):(?<wood>.+)_stem/": [
+      "valhelsia_structures:bundled_${wood}_posts",
+      "${namespace}:bundled_${wood}_posts",
+      "everycomp:vs/${namespace}/bundled_${wood}_posts"
+    ]
+  }
+}

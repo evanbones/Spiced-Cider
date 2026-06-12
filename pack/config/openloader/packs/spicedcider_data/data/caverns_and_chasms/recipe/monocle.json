@@ -1,0 +1,21 @@
+{
+  "key": {
+    "#": {
+      "tag": "c:ingots/copper"
+    },
+    "X": {
+      "item": "minecraft:glass"
+    }
+  },
+  "pattern": [
+    " # ",
+    "#X#",
+    " # "
+  ],
+  "result": {
+    "id": "caverns_and_chasms:monocle",
+    "count": 1
+  },
+  "category": "equipment",
+  "type": "minecraft:crafting_shaped"
+}

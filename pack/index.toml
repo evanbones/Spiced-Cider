@@ -37,6 +37,14 @@ file = "config/alltheleaks.json"
 hash = "2437057bda7e53d91e7a8c400da308a8d848fbdcc80ed845a9c8dbdabd071482"
 
 [[files]]
+file = "config/allurement-client.toml"
+hash = "b1aef6e7f71eda8d7543682b3a26292393439b2913313af2b53752bf68b906e0"
+
+[[files]]
+file = "config/allurement-common.toml"
+hash = "1db06a7269e309d8dca59bfaa7046a9ef556ff2c68dfd311aea7ec8f62bcd2b9"
+
+[[files]]
 file = "config/almanac-common.toml"
 hash = "43303ea5835f439a1fc1e7eb771834cfce26450a2381ad192621e4ed5532ff29"
 
@@ -53,6 +61,10 @@ file = "config/amendments-common.toml"
 hash = "c9712d9a1f7dbf2786d1b0d5f351b456e4c76528b4e9987c90cd21f48bfff78f"
 
 [[files]]
+file = "config/apeeling-common.toml"
+hash = "6789b3c75a7623c6eca4d0dab92fe937e3deab771f548de51763bcf141c990cc"
+
+[[files]]
 file = "config/arts_and_crafts-common.toml"
 hash = "2af68e12100e2dba177afcac23cec23e3ec26a39dad0f7bb486107dcc0ebfda4"
 
@@ -61,12 +73,24 @@ file = "config/astrocraft.json"
 hash = "1175cf90306660bd75d7e07d6eaf24b7132e61198d33e009fccf3931fbe0191d"
 
 [[files]]
+file = "config/atmospheric-common.toml"
+hash = "4476d7d27acb2906a3566ff25f0c7c0df0bcf734aea41c9a84f584ac1ea85592"
+
+[[files]]
 file = "config/auditory.json"
 hash = "a928489de800a69e647c5903be813d38d3bb8ead3b1fd417ad74405071f08bd0"
 
 [[files]]
+file = "config/autumnity-common.toml"
+hash = "d21b4d16c22796a252498fc486a2c5ee6d37d02c4e94e5fb6aba0c8988df769f"
+
+[[files]]
 file = "config/badoptimizations.txt"
 hash = "8fd80533859c0e37526a58fc4f20c040fb569e3bf80f203eede793ae7e12840f"
+
+[[files]]
+file = "config/berry_good-common.toml"
+hash = "1cf664a1682cc74a87ff985588c9e4bf8967d3a0983a43bbbe4d25a3f21a864e"
 
 [[files]]
 file = "config/bestylewither-common.toml"
@@ -137,6 +161,10 @@ file = "config/brick_and_mortar.json"
 hash = "6ba25b17d218c13aecd7773fb0dd9f01783997854cc7123891e526e82490662e"
 
 [[files]]
+file = "config/buzzier_bees-common.toml"
+hash = "4bae7b08380558f4e00f45f9862e6cbfee07a199b5fc2123c112e965fbb65274"
+
+[[files]]
 file = "config/c2me.toml"
 hash = "c257c04122db558aabd33dc05733b81e35055033526467624172e2314abfd5fc"
 
@@ -179,6 +207,10 @@ hash = "de5bb1061dcd48c3378f6849658940a465c3e094e5d6c342c5f73ea984da2a8b"
 [[files]]
 file = "config/chunksfadein.properties"
 hash = "65990752c40713f2824ab5bb2e0afe400f78356f6994d9effa6c7e21425f0431"
+
+[[files]]
+file = "config/clayworks-common.toml"
+hash = "ef65725eaf5e00e3a74ace814ac6ad53f541fc05af04ba9af63a21c67b2802f1"
 
 [[files]]
 file = "config/clickthrough.json"
@@ -233,6 +265,10 @@ file = "config/convenientnametags.toml"
 hash = "7ea331b237c40523d03fc3539a312cb9e8a622ed0565a483cbf4e41c9448428c"
 
 [[files]]
+file = "config/cookscollection-common.toml"
+hash = "4502bef407cdfb04f45ac1da3516bdc52014420e80fbc44b195ff061332cd953"
+
+[[files]]
 file = "config/copperagebackport.json"
 hash = "410faae183c6b92b8b2abb0b61928b35705f01fea5c1c2ba395a2458e11f8325"
 
@@ -250,7 +286,7 @@ hash = "943e1c3672b8a03f27519b357091133205119c7b3db2fcc4c25b597cabf8926d"
 
 [[files]]
 file = "config/crash_assistant/modlist.json"
-hash = "922899b904030174e4e7e3b247dbdb59afefadf9f980b0007404f29ec2199458"
+hash = "2ddcdc460693a4e1d64188d9232bcd413f678ad095a20abcd1d6a9cafdd08783"
 
 [[files]]
 file = "config/crash_assistant/scripts/log_analysis/example.jexl"
@@ -325,8 +361,12 @@ file = "config/easyanvils-server.toml"
 hash = "259b428c8a59612afdd0a0cfd12b4788b2a79b2ebfdd25d32cd85d1504179faf"
 
 [[files]]
+file = "config/ecologics-common.toml"
+hash = "7a196d3e3e6435eca30e8f76b03f16a5cc938cabfa20155612824fc5690d4c0a"
+
+[[files]]
 file = "config/emi.css"
-hash = "6e40c411e1e2ea5ad740e2f19409066d1638c78e95a102deef3ea8a1c65e6aa7"
+hash = "6beb65e6818a2a55c0b7819d84556057fb1b888ed81e961dd5bf18a9f2b780f7"
 
 [[files]]
 file = "config/emixx/emixx-client-1.toml.bak"
@@ -361,8 +401,16 @@ file = "config/emixx/stack_groups/blockbox_wooden_seats.json"
 hash = "29e69baad9fb08166151f9176182be8c488997b364b4b9b1e635a91a425ab579"
 
 [[files]]
+file = "config/emixx/stack_groups/blueprint_wooden_beehives.json"
+hash = "76ce983e9f510d46c4d8900847b91e8615a4cef2a95e588b3856fca1bcc8f768"
+
+[[files]]
 file = "config/emixx/stack_groups/blueprint_wooden_bookshelves.json"
-hash = "b59d89feb91f14ddc6f19654069f273a1ed2229dbd1b2f23754336088c0b1ff5"
+hash = "f94a7ea6636e543c03fdd8ef07ba571fbce60625560392f1a65b89139026e424"
+
+[[files]]
+file = "config/emixx/stack_groups/blueprint_wooden_chiseled_bookshelves.json"
+hash = "40eca1d0dc68f140fe20506b3ed1ab3791dde07f55a801641ef62628ba0e81fa"
 
 [[files]]
 file = "config/emixx/stack_groups/bountifulfares_pickets.json"
@@ -411,6 +459,10 @@ hash = "07ee44b09af5c28b2b86af314d3616c373094ec0e75d569a5d9a9a373854cea2"
 [[files]]
 file = "config/emixx/stack_groups/caverns_and_chasms_sparklers.json"
 hash = "8bbb4ebb2fd48c5d77ab1e2708f76a1c14f61d2a8dce0f1b3db50ca27fb7bfd2"
+
+[[files]]
+file = "config/emixx/stack_groups/create_postboxes.json"
+hash = "517366942aba17ba9d16bf0d2687fa97a1b380e5b3016ea7584f4549a785126d"
 
 [[files]]
 file = "config/emixx/stack_groups/create_seats.json"
@@ -481,6 +533,10 @@ file = "config/emixx/stack_groups/supplementaries_way_signs.json"
 hash = "7e63130ae863e249ede069393868db57d14ff40814e97935c8bb152f518d2df1"
 
 [[files]]
+file = "config/emixx/stack_groups/valhelsia_structures_sleeping_bags.json"
+hash = "42fc7263f00b5b4044851a061c93193e3771fb6084bd6480ccc49146d6f15633"
+
+[[files]]
 file = "config/emixx/stack_groups/wholecloth_cloth_blocks.json"
 hash = "6c4d76b38e623d52940d166903142ce426edd953e87a7bf0c699bbd3e08fdad9"
 
@@ -491,6 +547,14 @@ hash = "429f149d3b2d38ebf9f352a01e0f819cab59b36013cd9d82d3809bb94c42a839"
 [[files]]
 file = "config/emixx/stack_groups/wilderflowers_flower_garlands.json"
 hash = "81a2164a23c2840f0e628333baed072af42eba146434f917f4d32addfeda9f7f"
+
+[[files]]
+file = "config/emixx/stack_groups/woodworks_leaf_piles.json"
+hash = "339423b0175bd5546c603ffdd4e74cc13e6ea38781e0672a3b5ded66ba01cb70"
+
+[[files]]
+file = "config/emixx/stack_groups/woodworks_wooden_boards.json"
+hash = "41bbd473f125d585ae0e8f58166bb0556cc866ccd9db93d7250ee91c12c89b1a"
 
 [[files]]
 file = "config/ender_christmas_plus.json"
@@ -546,23 +610,27 @@ hash = "7f9600976b415a1f3196fbc51d0aebd62731168f6786fa6555e058e47b2c30a4"
 
 [[files]]
 file = "config/everycomp-entries-1.toml.bak"
-hash = "97209db000f6d19d6a8c6dfb06baac135ac5bc6e0c651c5f35ace11ae239f10f"
+hash = "3843578f3e317ad16cb63a6f084b66875aff422d14af0024a14ab9e97fafc459"
 
 [[files]]
 file = "config/everycomp-entries-2.toml.bak"
-hash = "025918fc8a95e5a35dd596b7823706824b6e4aaba11bd0ea85ff9a9863800c42"
+hash = "c62152b20b386b70863e3e3bc4b36304a7aaa7d281b62c47aa4db61085710a1a"
 
 [[files]]
 file = "config/everycomp-entries-3.toml.bak"
-hash = "700c2ad7f1bbbc12f54ee789e35bb7dc0167d32a57c859a289c8931b04f9e5fe"
+hash = "739975e6d8d93be6dba14bc842f68985ca054bb88a0f375695c36c5ee1cec655"
 
 [[files]]
 file = "config/everycomp-entries-4.toml.bak"
-hash = "21447902ffbccfebd4552e0c94bf248879043fdf1f764983096d6eb422845fd8"
+hash = "c5432a1d6eae923838e98af1f2a66ad13b7d34866f4cd438810a56a1f7e5e6e3"
+
+[[files]]
+file = "config/everycomp-entries-5.toml.bak"
+hash = "97209db000f6d19d6a8c6dfb06baac135ac5bc6e0c651c5f35ace11ae239f10f"
 
 [[files]]
 file = "config/everycomp-entries.toml"
-hash = "c5432a1d6eae923838e98af1f2a66ad13b7d34866f4cd438810a56a1f7e5e6e3"
+hash = "4fce75cf4de13d12e9a21afc0a1c8cb6bf2a69835730a374a29f6d466e276170"
 
 [[files]]
 file = "config/everycomp-hazardous.toml"
@@ -598,7 +666,7 @@ hash = "09d330b29443d9579ecc014f2be2fcb31075bfe1e9f9ac4e750f271128650fe6"
 
 [[files]]
 file = "config/fabric/indigo-renderer.properties"
-hash = "04681dd8623b3823f3881d6c6b45768c803938ffb0bdff46e226c1efaa1ecddf"
+hash = "60bce2037ecbdf83fe08c944a260727924532c11b39eeb9e6c31ded7e758208e"
 
 [[files]]
 file = "config/fallingleaves-client.toml"
@@ -726,7 +794,7 @@ hash = "9708126724b8ca1566dbce39dcfee4e9e601d292bd2939672b0c161f07ad245b"
 
 [[files]]
 file = "config/fancymenu/customization/title_screen_layout.txt"
-hash = "949a0460b1506a5aac63abfa31cf24e73f921cccb9c4bba98490c076057f93bb"
+hash = "9351fff79c91e9c9a717eeab183063f3a08390eae42bf0bd616f806895e972de"
 
 [[files]]
 file = "config/fancymenu/layout_editor/widgets/element_layer_control.lewidget"
@@ -922,7 +990,7 @@ hash = "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
 
 [[files]]
 file = "config/incontrol/spawn.json"
-hash = "54b7ddde05b8be68e696b0ad3edfa5ef6ecbd991d3b898c95a3a2119e2833e3d"
+hash = "f7442b2d21c61ece28b53614c3645550257adf765d550ae33debf01a7bdfabc1"
 
 [[files]]
 file = "config/incontrol/spawner.json"
@@ -1049,6 +1117,10 @@ file = "config/lmft.json"
 hash = "2db3ac5121e652fc89122055e032f034f433fe4764acb2e93af9c88848267178"
 
 [[files]]
+file = "config/lodestone-client.toml"
+hash = "c088a5e2ac97282375f0c346ced0647f0b76d09e62f0e37342b52dcba17f43c3"
+
+[[files]]
 file = "config/map_atlases-client.toml"
 hash = "b30ba53d2bbc356d56087389cada0894967b932683b1b7c7278c3a56f6fef0c0"
 
@@ -1063,6 +1135,10 @@ hash = "cda8cdeef67a8a31110af53d0c764ac9d328e12503f885198d9bb9ba9ea295d0"
 [[files]]
 file = "config/melancholic_hunger.json5"
 hash = "98dd8e433bac38c2f8f96d7cfdaa7ae1133e2cc78555e6e6d695d9604c3563e5"
+
+[[files]]
+file = "config/milky_way-client.toml"
+hash = "8b2c52b055dabc4cf6247dfed187c5895cabdec0a9d7a9bc962001a948818aec"
 
 [[files]]
 file = "config/minecraft-cursor.json"
@@ -1123,6 +1199,10 @@ hash = "db63bd41fae1b92828f13b34b93215549ca167ccf44a4c09d050fe559fa203a5"
 [[files]]
 file = "config/music_tweaks.json"
 hash = "73f226eca2b790c0fbef3a34a7af1e9351bfcfc91e3467b2d5c713484e613308"
+
+[[files]]
+file = "config/neapolitan-common.toml"
+hash = "0c753d0f3720eadd82a0ba727257e9e598c6deb4ac8adfba05f7701f7e19f0a6"
 
 [[files]]
 file = "config/neo_language_reload.json"
@@ -1193,12 +1273,88 @@ file = "config/openloader/packs/spicedcider_data/data/bountifulfares/tags/item/t
 hash = "6cf1af63f054c729ae506b3bde8afe63d6b07ff277952d558e0fadd09c619406"
 
 [[files]]
+file = "config/openloader/packs/spicedcider_data/data/caverns_and_chasms/recipe/monocle.json"
+hash = "7c38df7933b0af097fefee22b9bd11e720e3379b936e871ab67a92deb04b8c01"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/caverns_and_chasms/recipe/unicorn_horn.json"
+hash = "87ea10c1af180122a5d98b990c3d77d04c9a1d23c4dca6f56b062d2c87741c6f"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/clutternomore/shape_map/boards.json"
+hash = "940f7a28f64bc8ffb1dcbc05e97f6181cac630a41680a62411b8ec841a89a7ae"
+
+[[files]]
 file = "config/openloader/packs/spicedcider_data/data/clutternomore/shape_map/remove_quark_vertical_slabs.json"
 hash = "cd53f804264a419946baf60e3d25546306dd60aca6ed12d924c612140a28c49b"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/clutternomore/shape_map/trimmed_planks.json"
-hash = "8d10a2597cfc891eed55eac6c00f25b4abfe8d5af2f70ddb38a2619bd789c39a"
+hash = "c14e7c3fd0992fd2a1cea6ab5230972888121cebd39115b107e2a544c14bfef8"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/easyshulkerboxes/item_contents_provider/bundle_black.json"
+hash = "8ae9eeadbc933847e4cdaf4d464bfcfdf404e0de96082563a1e45bf71b63a956"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/easyshulkerboxes/item_contents_provider/bundle_blue.json"
+hash = "897a6eec93d28e6db2b9a8a8af63b394afec94c239882caae77c5d0729aa23d0"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/easyshulkerboxes/item_contents_provider/bundle_brown.json"
+hash = "00e86efafdfca2393dc0175abce5b4ffa8a09518ec8dff2a7213f80121951e3c"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/easyshulkerboxes/item_contents_provider/bundle_cyan.json"
+hash = "a666e0ce2aefe11e85bf97c951fcb741c48c4a7460b812d48231581f5b059c8e"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/easyshulkerboxes/item_contents_provider/bundle_gray.json"
+hash = "24f73f77947d3378b2e51ee29c896141b42e1ef824efc1a9a8648a51a8722469"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/easyshulkerboxes/item_contents_provider/bundle_green.json"
+hash = "c9db1c7bfdade755614c0f03fb9902346a3e4f5c6737f946f9a86bd40a9c7e3c"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/easyshulkerboxes/item_contents_provider/bundle_light_blue.json"
+hash = "f3162dc6c28401600c8d463d5416d34f8c0b5d887f161efe8268a82677a08b51"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/easyshulkerboxes/item_contents_provider/bundle_light_gray.json"
+hash = "3bcceec544793883136beeccb14699a1c6ea47cc80719d302b14262c3f26d7cc"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/easyshulkerboxes/item_contents_provider/bundle_lime.json"
+hash = "09612d995ca8a4bcb37b17e626a73c61539bd5e9769781a94f2ba1e81c952d1e"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/easyshulkerboxes/item_contents_provider/bundle_magenta.json"
+hash = "b0865cdcaa1b7ff8cb61b309af5dbcf54671f22e73169755dbe108c6b2437501"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/easyshulkerboxes/item_contents_provider/bundle_orange.json"
+hash = "e927c66e1ac09ebef0c44f371955b1b0c520c9df9ee4f9f2d55f1a55a93fc5d7"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/easyshulkerboxes/item_contents_provider/bundle_pink.json"
+hash = "044b0e6530f6bf0168f180d1dd9a81bb7632cd52e5a1819d82b709b082dd099a"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/easyshulkerboxes/item_contents_provider/bundle_purple.json"
+hash = "ea3782272e274d72a198e38cdcb67117be192c7182f65e83a6c7bdba7a9b159f"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/easyshulkerboxes/item_contents_provider/bundle_red.json"
+hash = "8fde4d0e00a727fb0871852eaf948fb1dea8500a1262ffdb6a1c035a43833a5f"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/easyshulkerboxes/item_contents_provider/bundle_white.json"
+hash = "ba071ff5029e7859bd914ebe67f7db26852f11f7c0718104a9f1d4a2395446c2"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/easyshulkerboxes/item_contents_provider/bundle_yellow.json"
+hash = "c5bc6b1ba7d56d4cc4c31d8443d7a5fb50710bbbc6b199e381d7d2866f3ad643"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/easyshulkerboxes/item_contents_provider/sack.json"
@@ -1281,6 +1437,38 @@ file = "config/openloader/packs/spicedcider_data/data/minecraft/recipe/shears.js
 hash = "f0948fa60982ec7b8cabd3d659f10b980bc265db2ae9ed2886f49716dfd9d174"
 
 [[files]]
+file = "config/openloader/packs/spicedcider_data/data/minecraft/recipe/spyglass.json"
+hash = "0adc7c1ada79b1a0dfea41f615e4ef0efa4513d310dab965d3c400299a2c9e61"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/minecraft/tags/block/allows_leaf_litter.json"
+hash = "82220795d27ddc2e71c95576f1c25abcedf4bcceb1ea15c60b7d211476860d9f"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/minecraft/tags/block/happy_ghast_avoids.json"
+hash = "4f0d17e04a4f2e36c759180b375136c7326d473ba6b5a139773d924b2ce836ce"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/minecraft/tags/block/spawn_falling_leaves.json"
+hash = "bc8281078c7890dc11c48d6b3feef3eca828775397819b9c005a5511e6f8f87f"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/minecraft/tags/block/spawn_falling_needles.json"
+hash = "4efd62761794520417a2deecaefa56fd7bbee92b10422429bc882aa11af48423"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/minecraft/tags/block/triggers_ambient_desert_dry_vegetation_block_sounds.json"
+hash = "53cd732ab6c0f4fe0e769b77f970dda47527373ee663da00d8fd78fe61c962fc"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/minecraft/tags/block/triggers_ambient_desert_sand_block_sounds.json"
+hash = "53cd732ab6c0f4fe0e769b77f970dda47527373ee663da00d8fd78fe61c962fc"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/minecraft/tags/block/triggers_ambient_dried_ghast_block_sounds.json"
+hash = "9800397ddaee477c25fc12890c340589b507840fe6d59b01d0ec8b28011a5e2f"
+
+[[files]]
 file = "config/openloader/packs/spicedcider_data/data/minecraft/tags/item/buttons.json"
 hash = "732b4ccedfc7dc5b3d77e0d0769290c6583be195054110324ceed43ac9c19e3a"
 
@@ -1299,6 +1487,98 @@ hash = "8ea376e5193d16c7b55a7cab70e73f2f3ea3c405486a344244ec1d4237a93fde"
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/minecraft/tags/item/pressure_plates.json"
 hash = "493c5571ab6e191ccc0fa0ed55882a8c565e39f43b718930af8274f33385f91e"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/minecraft/tags/item/sulfur_cube_archetype/explosive.json"
+hash = "6eaa83a901af78cd41379394dc678433529b8441752668e65fe4398c2aaf45b1"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/minecraft/tags/item/sulfur_cube_archetype/fast_flat.json"
+hash = "e2f726c90e61eb05ea6fcdeedecf8232c48d2387a2448aa31f14dc71bed099e3"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/minecraft/tags/item/sulfur_cube_archetype/fast_sliding.json"
+hash = "f531caadc0691790193c728752b0eb5e88f2fcdbdfd95ae1eb060ef9701b34c6"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/minecraft/tags/item/sulfur_cube_archetype/regular.json"
+hash = "9ebb1137c417dbf1160d9beb642fe40ce081cd90df136895fc0f6d6820411ed5"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/minecraft/tags/item/sulfur_cube_archetype/slow_bouncy.json"
+hash = "807792c5ea0f9ed9eba8344426b0764513fa40e5142cf68949c848994a45dd5c"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/minecraft/tags/worldgen/biome/has_wolf/ashen.json"
+hash = "41de046fd05af71082214fa107be67188910f39463edf8f8a2b893f073d50a77"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/minecraft/tags/worldgen/biome/has_wolf/rusty.json"
+hash = "5876eebd68e3a70c21938ac441855d67c8dbac16f261861760cf952084e25f4b"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/minecraft/tags/worldgen/biome/has_wolf/woods.json"
+hash = "a0aaa24019b75faf18654d49a69e7312d4bdecdefb12a7d27c91b82368641d8e"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/minecraft/tags/worldgen/biome/spawns_armadillos_frequently.json"
+hash = "26dc5726bd2039c57edbce5f09d5fe5fd4e8cd23b1b5d46e41fc74461999e501"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/minecraft/tags/worldgen/biome/spawns_bushes.json"
+hash = "ddea4cddd87139c06eb252b443de62f0fd835cd0f7705971c0c38ebadcdfc784"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/minecraft/tags/worldgen/biome/spawns_camels.json"
+hash = "07bf28263efc6fb48b9768daa4ffe60444a6bbc60e71fd7675be5f793fcb0699"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/minecraft/tags/worldgen/biome/spawns_cold_variant_farm_animals.json"
+hash = "4c76fb63a28f81361c1242ff8e77b1a450b4eda96ee0f804649c4fcf9de4150c"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/minecraft/tags/worldgen/biome/spawns_dry_grass.json"
+hash = "a3b1aea70dc60d28b1f42a7648173d24c3f2ba327808dde6a5dcf820cf17434e"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/minecraft/tags/worldgen/biome/spawns_fallen_birch_trees.json"
+hash = "964de61c8385f2c0533e20fbbc1c25428ef67315b5ad7da7473624ea79312413"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/minecraft/tags/worldgen/biome/spawns_fallen_jungle_trees.json"
+hash = "c5f5fc84422fdee6831f066099972b81b66cd2f0e9d078a178103d9fabe2cd20"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/minecraft/tags/worldgen/biome/spawns_fallen_oak_trees.json"
+hash = "e58787ad94cd5831e33eec5b21af8939e69b60903b2980f543d448521d1cb5f8"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/minecraft/tags/worldgen/biome/spawns_fallen_spruce_trees.json"
+hash = "de692e2c2b757abba307ca7a42aabf653682e9dc63a9d62ce9359ffd08f8a87c"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/minecraft/tags/worldgen/biome/spawns_firefly_bushes_swamp.json"
+hash = "c529ef06144b496ed42496b5c94a90794386bf5e0493102509047b6515d2745a"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/minecraft/tags/worldgen/biome/spawns_leaf_litter.json"
+hash = "62927c5671e165cc37060cbfa8e73bd39cf9013954621e211f12ee0c832f1541"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/minecraft/tags/worldgen/biome/spawns_leaf_litter_patches.json"
+hash = "89c74ff90080bfd8d5096c56da3362b770a85c07bac8b779f884aeb3f2a3fd79"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/minecraft/tags/worldgen/biome/spawns_noise_based_wildflowers.json"
+hash = "748d270c4be1e60322ae3f627af9c417bcd6cbfc3329da13dd1f22c4dd54c011"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/minecraft/tags/worldgen/biome/spawns_warm_variant_farm_animals.json"
+hash = "6e871261ff1657770db33257a58b3a3a47cdb30b6c617a0062b5d9b79e987300"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/minecraft/tags/worldgen/biome/spawns_wildflowers.json"
+hash = "62bb9cb6e88178bad05e6f0b5bb1123a5911089d4f95ea75194de00b60c4e7e7"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/nomansland/recipe/wood/walnut/cutting/walnut_log.json"
@@ -1361,12 +1641,20 @@ file = "config/openloader/packs/spicedcider_data/data/reliable_requiem/tags/item
 hash = "d25d24b05fc4515c16ddd95fcf9023774c1e59ee8878b1dbfb14fd1dc4271fd8"
 
 [[files]]
-file = "config/openloader/packs/spicedcider_data/data/spicedcider/defaulted/default_component_patches/monocle_rarity.json"
-hash = "e42d41cd6ff628eff99fd78e45f311c88f2f2c52751c9f55bcdac3a1e8e6992e"
+file = "config/openloader/packs/spicedcider_data/data/snowrealmagic/tags/block/containables.json"
+hash = "cb7d7fb71787bd8640b258de5b4469dc4f7317683fd83be3e7b5895b2da54b17"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/defaulted/default_component_patches/caverns_and_chasms_rarity.json"
+hash = "17df456abe9cf83fb67eb2ad79568dcdfcaa61b8076524c99358c5374625cea8"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/neoforge/biome_modifier/remove_firefly_bushes.json"
 hash = "04a28bfc39b7b9321e7cec10aad3ba9b82c024b07db4a085363d689608f6c1de"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/neoforge/biome_modifier/remove_walnut_trees.json"
+hash = "c93c4dae19dc3eb6c9666e479617b730c8f93bf57ff9164b507a814ecd81b841"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/supplementaries/recipe/awnings/awning.json"
@@ -1394,7 +1682,7 @@ hash = "05022be17b8d67f7f6e766884518e40b20efc01dbfd531ad10ec009af6724342"
 
 [[files]]
 file = "config/packetfixer.properties"
-hash = "0bb9df955372470351f49efd57fcf0ff5d5c3c027505acd19a38980d6e08e693"
+hash = "419a851437d0e3462aebe699c2e4c1c269aca349375cb29a6518a0467fea9313"
 
 [[files]]
 file = "config/particle_core_config.toml"
@@ -1446,7 +1734,7 @@ hash = "8cf6192eda81b3a27737440cfdedc05c40a8c1b552583114c1aa6fb2673ca907"
 
 [[files]]
 file = "config/quark-common.toml"
-hash = "107a920bdb4b137256bf39d764aa8f1fa95de72d3407d0cae3a5f149fbc4daf9"
+hash = "f4734a7e570117c2ff467148e9908fde11db52d83eeb226ba65694705c8d6bad"
 
 [[files]]
 file = "config/quick-pack.json"
@@ -1498,7 +1786,7 @@ hash = "51eb041341bd5c3cfa9828b20e167a4bdfe50e24593b6df8755f999d2f2c9004"
 
 [[files]]
 file = "config/reliable_recipes/generated_removals.json"
-hash = "3826ce2ca0e569605eb6f896b04c604bfae877579ee5fb5724ed9a778b7c1a82"
+hash = "b4ed024adca15c692250d5da806560467227a9e274eb897e1aea1398c627961b"
 
 [[files]]
 file = "config/reliable_recipes/replace_input.json"
@@ -1510,11 +1798,23 @@ hash = "590ea074ec1c84ced8a0c60dedd7111edd69801f7441fe78654c2f6fdfb655b7"
 
 [[files]]
 file = "config/reliable_remover.json"
-hash = "a03d19febe2e40a3d01e378bbae71375c5266bdbac25a5e983975280b1d20de4"
+hash = "1b6f8f8868d73c701832f7618c8ecaacea3283faf608449d7002257053ebeef2"
+
+[[files]]
+file = "config/reliable_remover/caverns_and_chasms.json"
+hash = "6103d78cd2a037eccdb567690b84cf59236a3436aad78bd303160fbc10bc4204"
+
+[[files]]
+file = "config/reliable_remover/ecologics.json"
+hash = "d8523b9da685f42ff1e37df6a8281609bd7d6c0ac644f4fe49ccd809325337b6"
 
 [[files]]
 file = "config/reliable_remover/remove_paintings.json"
 hash = "effe312243642c68d108b42591a02765eef17ee4beacb1bcb907c63635b64c9e"
+
+[[files]]
+file = "config/reliable_remover/valhelsia_structures.json"
+hash = "90276c5670b24451aabca336746401dc15f731666053b7b6e44a4f4aff477cc4"
 
 [[files]]
 file = "config/reliable_replacer.json"
@@ -1522,7 +1822,7 @@ hash = "edc895152a7d7023fbfde32e4e6f3cc6f224a15228a3c37e649bdbac6130e9dc"
 
 [[files]]
 file = "config/reliable_replacer/swapper.json"
-hash = "0d3d81238bdcb38fdda0fd62494be77db2db23af6eb3a5afd666e85ed9c3ec18"
+hash = "5faf1aeafb188d7eeae5d90274c06231131e15ba29087ea2b8e678b3b2776854"
 
 [[files]]
 file = "config/reliable_requiem.json"
@@ -1555,26 +1855,6 @@ hash = "f3959e957253ab5631cdd55fae4acad3dd6ce39aef76791b00335ba3716e14db"
 [[files]]
 file = "config/scholar-common.toml"
 hash = "62e10948b3244c03963ea88598770268cd3d89e6d4e23706885b3542633e820b"
-
-[[files]]
-file = "config/screenshot_viewer-client-1.toml.bak"
-hash = "72a1f489ae45e7903278581c368ac66f2ee71f7710fbc229afd8d6416c29f79f"
-
-[[files]]
-file = "config/screenshot_viewer-client-2.toml.bak"
-hash = "72a1f489ae45e7903278581c368ac66f2ee71f7710fbc229afd8d6416c29f79f"
-
-[[files]]
-file = "config/screenshot_viewer-client-3.toml.bak"
-hash = "72a1f489ae45e7903278581c368ac66f2ee71f7710fbc229afd8d6416c29f79f"
-
-[[files]]
-file = "config/screenshot_viewer-client-4.toml.bak"
-hash = "72a1f489ae45e7903278581c368ac66f2ee71f7710fbc229afd8d6416c29f79f"
-
-[[files]]
-file = "config/screenshot_viewer-client-5.toml.bak"
-hash = "72a1f489ae45e7903278581c368ac66f2ee71f7710fbc229afd8d6416c29f79f"
 
 [[files]]
 file = "config/screenshot_viewer-client.toml"
@@ -1629,6 +1909,14 @@ file = "config/sodium-options.json"
 hash = "be40d116c4d2eff2e12e2ebd811a6c365955acbfed39361cef22cbd23e0dd74f"
 
 [[files]]
+file = "config/sootychimneys-client.toml"
+hash = "5cc5b0f1336e3307f346bdbd035c39f4f89fe3df54ceb37d5a879be7cfac7ffb"
+
+[[files]]
+file = "config/sootychimneys-common.toml"
+hash = "869a0eca9d42df4a4d43c690f9f16c9220a44a8673a509919d8f1eb819c33706"
+
+[[files]]
 file = "config/sound_physics_remastered/occlusion.properties"
 hash = "ebbac45fbb3ca01487b85ffee9601b213b71896e6606fb297bcb0f3ac9c30ffb"
 
@@ -1666,7 +1954,7 @@ hash = "71c6f65022cb095402596003a4896d66de91b15294c5e8ef9118ce10b3503829"
 
 [[files]]
 file = "config/spicedcider/spicedcider_manifest.json"
-hash = "d94dc5b2d06927e936433ed3df834408974ef10a8bcd7ca91836116f682f565f"
+hash = "64bef6561e0c33c985d09f888a8875ede8dca6fe6e6ae89bcc68d192854618cd"
 
 [[files]]
 file = "config/structure_layout_optimizer.jsonc"
@@ -1674,7 +1962,7 @@ hash = "5a9058652bc0b88b8810e0b94eba0e1a90cbff2472845c53a7e67442682a1579"
 
 [[files]]
 file = "config/structurify.json"
-hash = "2c2151bcfe9a8d250600e48ea94e9d004467494c68265bbc39762cbca426d571"
+hash = "450155883a8c07c79848c9f658399558a5483a21683f043d70b128bd0fe9a55d"
 
 [[files]]
 file = "config/structurify/structurify_backup_2026-06-04_20-15-53.json"
@@ -1683,6 +1971,10 @@ hash = "8ce0745434eae8fc8256c1e3d9a2c629b2e61fd2c0d9cd03b322fed49559db46"
 [[files]]
 file = "config/structurify/structurify_backup_2026-06-09_23-33-16.json"
 hash = "5e89bc00a2cf534573fc4b1337c7170acea7568824d55174f245b51ed31538a1"
+
+[[files]]
+file = "config/structurify/structurify_backup_2026-06-11_21-01-25.json"
+hash = "2c2151bcfe9a8d250600e48ea94e9d004467494c68265bbc39762cbca426d571"
 
 [[files]]
 file = "config/stylisheffects-client.toml"
@@ -1729,12 +2021,24 @@ file = "config/trender.json"
 hash = "0a282f3623f7f9443a1d10b5768865f69e58b74e000dcfb4f40399626b7a6124"
 
 [[files]]
+file = "config/upgrade_aquatic-client.toml"
+hash = "3825d9207e68afb1b0950db3901e87772bf43d057850311d51549a427df2031f"
+
+[[files]]
+file = "config/upgrade_aquatic-common.toml"
+hash = "54a5d5af64899fa48cc385aeca1908df4c486e000726a34400dd5a96a89f14e5"
+
+[[files]]
 file = "config/usefulspyglass-client.toml"
 hash = "61010ca092a2a3e61535144d2e2cfa7c3db271d2d073043fde39c582ae823873"
 
 [[files]]
 file = "config/usefulspyglass-common.toml"
 hash = "7d12e5d1538b0b4bb0ce0c3e0a66e59c08aa477dc75f6689af86c5d06b333e85"
+
+[[files]]
+file = "config/valhelsia_structures-client.toml"
+hash = "4f3211cfcfc075d9f84b773df5d82c0dadb1d1bf939cf21c9f76b7d1891e78e4"
 
 [[files]]
 file = "config/vanillabackport-client.toml"
@@ -1803,6 +2107,10 @@ hash = "00c6e34f0adbb41db954d296fd7c55dc3412463a38038dc836626433dd7f6d92"
 [[files]]
 file = "config/wilderflowers.toml"
 hash = "d94260a1fd2d43101b40623f6a72ee4d5aaf07db5af31eedde419397eefb5070"
+
+[[files]]
+file = "config/woodworks-common.toml"
+hash = "7c2f4b02094bf2978c37239b6a56f84423d3c26948b20e5ce60dade4c2359e6e"
 
 [[files]]
 file = "config/worldplaytime/config.json"
@@ -2087,6 +2395,11 @@ metafile = true
 [[files]]
 file = "mods/controlling.pw.toml"
 hash = "65c8086d2ec3d39acc7bd36c7a0306ccc43b602b38fa07d13291bc478ef7dfff"
+metafile = true
+
+[[files]]
+file = "mods/cooks-collection.pw.toml"
+hash = "b5e74856fb7199c368c3caf9db1725c36f7ef021082345b0584c85ad2c5a8060"
 metafile = true
 
 [[files]]
@@ -2434,6 +2747,11 @@ hash = "35725a7bee95c5f0df1eeccd3ed406036c35fae26a7d7864fae1127a85957fdb"
 metafile = true
 
 [[files]]
+file = "mods/lodestonelib.pw.toml"
+hash = "f5d0701055478e980b50849f199f266e6ab1940277a17ad2e5060df0d978be83"
+metafile = true
+
+[[files]]
 file = "mods/mannequins.pw.toml"
 hash = "eec3cb49395a1a9b9b5aa1e7b9c6906933d1cb634e3bdcb3b55ca864e638f104"
 metafile = true
@@ -2454,8 +2772,18 @@ hash = "9dff522b00f5269538d0351536f34b22384996de30be454ef1369f1b1e5c1aeb"
 metafile = true
 
 [[files]]
+file = "mods/milky-way.pw.toml"
+hash = "4d526c53dfa7ab6f0370e301b58ce0bea21bf8b6eb18447e5f1120b7c825e9ca"
+metafile = true
+
+[[files]]
 file = "mods/minecraft-cursor.pw.toml"
 hash = "e33eecdf643bb0f6d9401c4b7e8fa84ec5f8c38eefc815256c488fee643b1b34"
+metafile = true
+
+[[files]]
+file = "mods/miners-delight.pw.toml"
+hash = "13481133d139f134bd3407983e29f86df835ff66bacb013d9d43e14f155241f4"
 metafile = true
 
 [[files]]
@@ -2476,6 +2804,11 @@ metafile = true
 [[files]]
 file = "mods/modelfix.pw.toml"
 hash = "6f0dcbcffd4400c6cef07f1eeb48cdc25bac0fa01270936feab4c549aff4738e"
+metafile = true
+
+[[files]]
+file = "mods/moderately-enough-effect-descriptions-meed.pw.toml"
+hash = "5fc57cdc9ce8c23e0d77eaf7f0d784c1c247fec342a600f0857f7273578fc043"
 metafile = true
 
 [[files]]
@@ -2764,6 +3097,11 @@ hash = "0281ed9713f3141bdac363056a791845510e14761ea65b4b2813cf96d664b20a"
 metafile = true
 
 [[files]]
+file = "mods/sooty-chimneys.pw.toml"
+hash = "924b292f54a9a8c7196773b03e1f503a0eb70af4c0aa06a02bfb6c8f4617c660"
+metafile = true
+
+[[files]]
 file = "mods/spark.pw.toml"
 hash = "593fa7b30ab016aa45be07bd6bef3a9f160ed0f24689850d60bf84995d69b843"
 metafile = true
@@ -2854,6 +3192,16 @@ metafile = true
 [[files]]
 file = "mods/useful-spyglass.pw.toml"
 hash = "b288f8bf3f0db0254efb9f2ec8f5a56d090954eceddfec388588919218adf9a4"
+metafile = true
+
+[[files]]
+file = "mods/valhelsia-core.pw.toml"
+hash = "f05197caaa06d6cf3807ae2d81928c4f5eff1336597b863207c6320ab7f2e4b0"
+metafile = true
+
+[[files]]
+file = "mods/valhelsia-structures.pw.toml"
+hash = "7389025d1fa215f56e9ecabf6f84e4092271322de1ec28f3a835b9e7b13238bb"
 metafile = true
 
 [[files]]
@@ -3106,6 +3454,14 @@ hash = "fae1dd88ceea896fcdadeafdb6e93c261876dd229e78107b1e34be5f2107c2d7"
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/amendments/textures/block/wall_lanterns/wall_lantern.png"
 hash = "26325028155c55fcfbe8fa5259391a253534be82f47f4b7aed25d44823d34701"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/atmospheric/textures/block/crustose_path_side.png"
+hash = "3298c5b6058d5da285eaab7b8fd13860a868f1ba7264d1f69ed051a2d4d39761"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/atmospheric/textures/block/crustose_side.png"
+hash = "6085221b65968331c37b78fbc340054d73748b7b62ebc46ac7ecd92569218e4f"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/bountifulfares/textures/block/fallen_walnuts_0.png"
@@ -3420,6 +3776,34 @@ file = "resourcepacks/spicedcider_resources/assets/chalk/textures/item/yellow_ch
 hash = "ad88edd4452947facfca172f727ecf32c5acde7ab53cc59cdb5c28295e7b61ef"
 
 [[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/textures/block/chiseled_bricks.png"
+hash = "fd75df5dbd509e3671bae0a8c5cb0148b243568dedd0a98be26043682721480a"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/cookscollection/textures/block/oven_front.png"
+hash = "44cb9cd21489c798a8e2b57805c0e5b74b7db19b39f3c6fc769d57a80ef0c9f3"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/cookscollection/textures/block/oven_front_lit.png"
+hash = "7bd4a99ca09cd96c710c9dd96b0483b31813c4d13d01f5e57ef6701b221f586c"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/cookscollection/textures/block/oven_front_open.png"
+hash = "7c9d602506b5e933a350f7bd5a0c181cb0db9beb2df20654260bba5d571b59a6"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/cookscollection/textures/block/oven_front_open_lit.png"
+hash = "bfe6e1cc5897f2c835ddad035c5a1390bd7347401a4633b6ed1a04c5fcff9ac2"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/cookscollection/textures/block/oven_side.png"
+hash = "9bc4e5b46c7879d50e33dac1f7acb61612375c00f28aa2ad59ee623077e7037c"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/cookscollection/textures/block/oven_top.png"
+hash = "8baa45d3c206fa1618ed81932bde0a763a89d7ba480d372429752c3f615fcb7f"
+
+[[files]]
 file = "resourcepacks/spicedcider_resources/assets/create/lang/en_us.json"
 hash = "3d7015bf09a1723bb44488df3441ee8a54f7af18308fb9b803b4101afff8098d"
 
@@ -3488,6 +3872,26 @@ file = "resourcepacks/spicedcider_resources/assets/everycomp/textures/block/q/no
 hash = "f992891e6af71c2ad9e5999fbb5c35bc98565884707330086e0dcc428dc4e402"
 
 [[files]]
+file = "resourcepacks/spicedcider_resources/assets/farmersdelight/textures/block/stove_bottom.png"
+hash = "5edc4ddede76220169ff79989923ba9f8f8a2d6ba1cf977fc57c8f2aae2407a7"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/farmersdelight/textures/block/stove_front.png"
+hash = "263aceab067d0c12888553c4730941019b4406f75a0752099ffd7386b600d551"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/farmersdelight/textures/block/stove_front_on.png"
+hash = "dcd7cebe40db0197c6d8f411f00dc5f032db38d9d73290c0c3f06abce38fd490"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/farmersdelight/textures/block/stove_front_on.png.mcmeta"
+hash = "a47d72bdf590b573a93c3e80d5ba9802f15f635092d4baed8127dc01ef3c858c"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/farmersdelight/textures/block/stove_side.png"
+hash = "115ea494c3757f96b2d39735e0b9bd2aa2c63a3230320a10cac72826f6733f11"
+
+[[files]]
 file = "resourcepacks/spicedcider_resources/assets/farmersdelight/textures/gui/cooking_pot.png"
 hash = "650c0b4298b91fb4b32cfcebf3ae3fc2504de3681129eada251431221d6fa8bb"
 
@@ -3541,7 +3945,27 @@ hash = "ce2533eaf7bdd8c775748bfeb35ef3421205efb6c98f1bd8304b68236434eb9c"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/minecraft/lang/en_us.json"
-hash = "30f7e8cfc1dda44641ad2462f0f056e2203dab3f71cf57b1230197bc6e5f37d0"
+hash = "01f3de4857777ef5ac734105e53b9db857229bf6f6f995513cccfc3b8c7e3b66"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/models/block/farmland.json"
+hash = "a57929a212459de643469ee5fc7797a8aa45ff6dd26de934aa5a59d8f6049c89"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/models/block/farmland_moist.json"
+hash = "b49106be46f00fb2914fd1c0f9925505a742c369805c7374c04646038fdcda8a"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/models/item/dragon_egg.json"
+hash = "99093e2987afdb9ed3ed3fc5f4e3debb707eaef3316cadb4c2182f9f8932cf6e"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/models/item/lightning_rod.json"
+hash = "7f9a444a02eb839b1160e5d6fd7a05ab9a912f9fe518b7151ce1a63c360cd5d5"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/models/item/spore_blossom.json"
+hash = "e8300ab64a68093f53643f034c38a9ab1de3ea50f6f7f86daafc4538d17d73d2"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/minecraft/sounds.json"
@@ -3748,6 +4172,14 @@ file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/block/bric
 hash = "7ab4f3aedb3be5961b9e3e3b6355e0b537fa52907154263e48d1aa13bd8797a1"
 
 [[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/block/crimson_stem.png"
+hash = "92cdc6246c3fb37d0bd06f3a2b6a22e27d8180fbbfc4dd1134289d73d3318324"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/block/crimson_stem.png.mcmeta"
+hash = "a1d4171d971c3a7b3202d9aa67062f643f579443a71cc92efe38f1acd8990f03"
+
+[[files]]
 file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/block/detector_rail.png"
 hash = "871a288c67bf37ccebac6522708b9a9644159ce071b491a141f5e9ada634bca5"
 
@@ -3776,8 +4208,24 @@ file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/block/expo
 hash = "c4ab68831adb6ba771799ae11405568a0c140bf63d6efaa98300d77de7b34cb6"
 
 [[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/block/farmland_side.png"
+hash = "400fcff448fdfd34804ff127e4516198368259b883a342cc922f50643954dcd1"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/block/farmland_side_moist.png"
+hash = "bef81cae5ba04dd987ff34bc1419b812a3ebc93c96b37dac3c7cb7b7546f72a2"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/block/glow_lichen.png"
+hash = "e7241c31120704c245e3326dacff808e86ea9a10d66ca1e133d8d8193d4479a3"
+
+[[files]]
 file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/block/iron_bars.png"
 hash = "3d39e73761b162e236b4a69798b1556281aba4cf01e973cc29eba15efe80bda5"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/block/nether_wart_block.png"
+hash = "e87e978a6d3198a891d45a1b07ac2ac78da61e434a13e985115d2d91dfaf47d9"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/block/oxidized_powered_rail.png"
@@ -3802,6 +4250,26 @@ hash = "e885779f509dd97e46d825108d6454335e1af53cbccfc6707ebec2c2704db466"
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/block/rail_corner.png"
 hash = "2555a70ef588fc43c117719aa800fc8979d546433d3e4c8d96c8753113995f6e"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/block/stripped_crimson_stem.png"
+hash = "1ddc749f5644e9036edaa54eb81a7803750c1878dd236bf55b9dd9bbf30ab377"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/block/stripped_warped_stem.png"
+hash = "14883bdfb7d4115f53cbaec0360bb12ff46fb2927a0fe7c18c42ee10aa69eba0"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/block/warped_stem.png"
+hash = "6c81e1975b02fd44e6d385255d4b6cce9f12f0e7cbb3cd3672a1f5f2f99de77a"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/block/warped_stem.png.mcmeta"
+hash = "a1d4171d971c3a7b3202d9aa67062f643f579443a71cc92efe38f1acd8990f03"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/block/warped_wart_block.png"
+hash = "344ca00b13c0718684891d954a75ba757c188ded4b04f4a8cab5873f82d66b49"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/block/weathered_powered_rail.png"
@@ -4344,12 +4812,372 @@ file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/gui/title/
 hash = "3d33fc49db9632d5fab7e479bcee02673952234453e7ae2a9d077689ce4d03c2"
 
 [[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/arrow.png"
+hash = "38e1273f407ebfecf6f593e7ce68472fe5936b7bb2277499ef3b4ca643be49cc"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/barrier.png"
+hash = "ad7d11668d3d951bad94a543d82f997e8c3a0e6250f58b08f91859642977b888"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/black_dye.png"
+hash = "8158b7ed565f78f8c7b151b7bb60958c5893931f6b5c5f1a0bc67548415c7ab7"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/blaze_powder.png"
+hash = "68f80b329c91e73ebb95db407dc35fb02a6b9681ccba723e08459296fbc90a14"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/blue_dye.png"
+hash = "7f0e6f7c9fd4c11055bfbf5d01a99c3daa6768bac2a1144911279790e84f2de4"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/bone_meal.png"
+hash = "0e5f506e753519edf9fa66b1d58bdde8f31df78288fc2cd75cb501a7b1152662"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/brown_dye.png"
+hash = "0d82a9ab48edf5b56ce1b698421f76ca51184fa49363e221ef8ea1f635a556e3"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/comparator.png"
+hash = "2a60e9dffa9fb0556d9875c5e5b850a803590e972a7f33607b7f09f675dce30c"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/compass_00.png"
+hash = "151a054c6ab0ce1376d6b110c66ef581ffcffaa268626fb50faf7ee82fd13a71"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/compass_01.png"
+hash = "15a816a472d3ea098318cae1d6755235be03e5759331281a11c9f5da517ca5de"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/compass_02.png"
+hash = "bd56d35c713b9e3bf996bc8fe1271c8a1d87b7407e95259e219ff8a219ae4a8b"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/compass_03.png"
+hash = "0d10b372d9fa187ec35c8eb9ea2cc29e1632629088e0648f56c277d60f28f0a0"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/compass_04.png"
+hash = "9f0755acec8d2bde6028d34d2b576c14f3ac4c3a0a47ff713e94f198e25bea12"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/compass_05.png"
+hash = "417de044e7cfd7e860639f027e47388496cf04f137e269f77d4f6d9b0a38ade8"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/compass_06.png"
+hash = "5501fbad0408f885ed399ceeccb11a9b618ee66a7907d424aa8f47db0840a9c5"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/compass_07.png"
+hash = "3a0dcb2fc43aee03f8cbd38729a976ea88c82fdba251d8317fb50acd2dbf81c9"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/compass_08.png"
+hash = "e44f4f73f7035717981f0b6f83a4dc77d85eb4b33b66b37a533aceb9c0af62b2"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/compass_09.png"
+hash = "b98a172ed105a8a2598936d4e96be5f5ea2fe8dfeb35958863e7df66d5bb94ba"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/compass_10.png"
+hash = "6f01b3cf2e88df9024ac202beffedfd31642524f09ec31979ce5672db7238dca"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/compass_11.png"
+hash = "15f196d2e26348040cb8503d1fd89e9f03646ee771694db66786bfcd1ec70efa"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/compass_12.png"
+hash = "8774ba8538d79ec491e19db5d29115a28c8b1066962c3c85935467f63b5db9d2"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/compass_13.png"
+hash = "213ed616569bbc24f9488602c25369d22cea4b579e4dcedc078b2e7e0adcae81"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/compass_14.png"
+hash = "72ed8506709ef502e451a499f4ad4f0c5cb111c75690c685286d9bdcb89d1845"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/compass_15.png"
+hash = "50556229ecbc9563e8752d525720b2672283f2495c375aa5befa90601bc503b4"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/compass_16.png"
+hash = "38b1f3906c27ede62521be3a64803029115c3a804e5616ce2285cc7c0866b4da"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/compass_17.png"
+hash = "b7bde24859c87ba064551297a36d207eb214cb56dc7cf977478fcd32313bdf09"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/compass_18.png"
+hash = "82b374f098ff59cc79239be14e8fc6019a5767c54f8c28210691865d5d20e026"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/compass_19.png"
+hash = "98d29850a4d8cd77ade2118ce6a10f9955cd5b04410c281c3bdb73ea5337f774"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/compass_20.png"
+hash = "6da892641a1fa3efc1526e4ced226abf51e37e7dbf6a1ec9f904e168b389e0c4"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/compass_21.png"
+hash = "0a4ef9a31fc58415977ef2732c2ace189ddd5978c6dd5fdbfa28c2227f70232e"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/compass_22.png"
+hash = "922bdba3744888a824625677e52d8ca89fe0d84b76461c4ce234ddeff4285072"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/compass_23.png"
+hash = "42542facc8864726bf9a92b596449d8a015971aa62a0746b3c746ca324e2fe8c"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/compass_24.png"
+hash = "c7051a7ed18b4b729ed6dd3d3fdc48f97983bba0ce00b9e71f458c2b2fdbd923"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/compass_25.png"
+hash = "ff8eb84a05d6ee0c41255f36663fe0649dbda390b7f8c71f21142b108af8acba"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/compass_26.png"
+hash = "a32c449f8287a8134b610298bd07331e45dab62964f49f3f76f70595792d8e8b"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/compass_27.png"
+hash = "724be71a49b111d1a4306ec04e1f47235aa2b51cc752c3387a22b04cdce76500"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/compass_28.png"
+hash = "2cdda32323ebadc0156f4ff7785c47b23d71d4ffbe99e40be81c098cdf37c8a8"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/compass_29.png"
+hash = "7df0666991152285e53df5b85ec546acfa089af12f28d43bf1552e87f0d3fd0e"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/compass_30.png"
+hash = "aded9280ea655fa745eb08904502bf1812356356bb0838d9fc09924aa16cdcec"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/compass_31.png"
+hash = "ae92923f40617f5caee1da5d248a35c62f5ee74aadc13244a72a495afb996c51"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/cooked_porkchop.png"
+hash = "03a456e3e468045d8ce9a8dbe8d946723f825fda01c039166af66e6c245116fe"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/cyan_dye.png"
+hash = "8cce1c1b81e587a5e11936b20a9aaadf16c532d6e60c4b7eaf60d5322cf2484d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/dried_kelp.png"
+hash = "2a80ee37c2ae562363e274127a95c920054ebc8f11cc5fd87105d0ab3e8deb77"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/ender_pearl.png"
+hash = "b08d89c8793a5eda72b080eb1ab3cbfb02d5168414c782e3169c21660ea0ae2a"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/firework_star.png"
+hash = "8bf8b5fa248bacdcb551f26bf3098324a09cae43cdb255cb90d695d2851e46db"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/firework_star_overlay.png"
+hash = "a3f5e27d0ec541b9accb2a1ab525f9b22020fdcce4953edb95056a76cdf06127"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/glistering_melon_slice.png"
+hash = "80104599523193dd0466f603c59ddeb41948d9749076df5a9281de3b246cbc04"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/gray_dye.png"
+hash = "7d2ba9f5d994a0ae1cf71d48199067dbd4476fb827789a4fd054e25273b4e2ef"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/green_dye.png"
+hash = "7690208c196ac290dd780098698c0fba90ce84bb2ae5d001f4dde3890a1083e6"
+
+[[files]]
 file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/iron_sword.png"
 hash = "dff18ad986d3be0efb92b12e033530913bfe2cc26aabe7eb558c5375f7d15d97"
 
 [[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/light_blue_dye.png"
+hash = "f186c6bdedd1c7fd346623b5fb2ef42218682b9506a86bab575600b8777bc8ad"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/light_gray_dye.png"
+hash = "aa190a61e0f7909b101fc71f211afe0c1bc228c7b72e5dfd51b493990c1ba7e7"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/lightning_rod.png"
+hash = "5ea3aa6011bc481d27b7ae440b400607bc7d29eb3d836d699ea377e9f0acab54"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/lime_dye.png"
+hash = "e4dcd7c265f6144524018a550d792e4cd7fc1ff6d616f759977231f826624711"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/magenta_dye.png"
+hash = "d5fb88248d3969eba0ebbc951355f898a07fdf24cac41c247de2425c468a63ac"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/orange_dye.png"
+hash = "f1539b12108ce68c740d5d28be91a293d475f06973dbefa3f6064e5fa913fe54"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/pink_dye.png"
+hash = "8789882aca9e9b4011b0fc9e99f3a961d7aa835ef357332f4b838e45640e3bfe"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/purple_dye.png"
+hash = "a7f5e827e4fbf98463804555861815b02de3dd9a68c9d3e3eb9c514bd095a9e8"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/red_dye.png"
+hash = "165abacc549e51e7ab64479e347d90e90b704c412cf57435a027a6a313e9ea42"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/repeater.png"
+hash = "2e71f17777f52ae08137c4fe6e20062eb221bdc71a4bce9a1a2cfb253c44820d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/scute.png"
+hash = "713979dd215d9fc7d2d6fbc0946a223cebfa86069f6529b31a44aaaa6a39319e"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/sea_pickle.png"
+hash = "5000a3e016ec0a816d382bbc408aebdd0b12af3bc57565ed4cb4ea22521875ce"
+
+[[files]]
 file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/shears.png"
 hash = "2f3029434b0cc4ba07082f731affa4b5406c4e75139a1e643a57eef55824af4a"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/shulker_shell.png"
+hash = "7c3b130e9a5ea460f1ea02cd817260d764cf84537fa391316fbb973e22548322"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/spawn_egg.png"
+hash = "d33650cb9725d5ac9f41d810f0c37239786a35bf5780a9bc7f17ee837f2c6c97"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/spawn_egg_overlay.png"
+hash = "6a64db4700ebce8a2217c3edd5e11056ae6ebddd0d88477e92706f19a88eddc1"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/spore_blossom.png"
+hash = "7e844dcd23247bfb548dae8b3246f87cf2079428c1e6cb7f22b1d692fffead8d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/structure_void.png"
+hash = "d803db9dce8c0382af7638aaef4d1fba30932ae27dbbad5968314de96e884308"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/tipped_arrow_base.png"
+hash = "aec19e529600c02ed1dce475303a95bf2684733df886efd910d4260a8c75355f"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/turtle_helmet.png"
+hash = "1c13451b6b2484fe61dff4fdbdb4d0bfa6270dfbaf269bea04a90fcb95b17a4c"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/white_dye.png"
+hash = "d98f2678d85ab0856fd8a1a3924f10ea349cbb9f58131b4c1488287dae9eb062"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/yellow_dye.png"
+hash = "5d61c2ee4d8829baee08a643631102e3501bf752350839124880a1e108ef9eb7"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minersdelight/textures/block/copper_pot.png"
+hash = "35cd9b26a0ea98cba217da08ad53416f0b45e059a8e3f2b9c491a0e2836184a7"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minersdelight/textures/item/baked_cod_stew_cup.png"
+hash = "ec546ae45e1d0c74af2c0bc04ddadc413246ba30cffd7cf03c8875ea5daefbb3"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minersdelight/textures/item/bat_soup_cup.png"
+hash = "f270ee6357b85d47e1b86d81fe64c0ac612ed1df3574f646d277c7f6cf6e302d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minersdelight/textures/item/beef_stew_cup.png"
+hash = "e3e3e40542b56e780422ca7b037bc129169b08203c6031319d5aeb08550058e7"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minersdelight/textures/item/beetroot_soup_cup.png"
+hash = "db5adb2be8a63f9b1c0bad5dbd32c5ea0aab22fa41c6a236205d702273ce9c33"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minersdelight/textures/item/bone_broth_cup.png"
+hash = "8b7462ab88e61cc56bf8eaa33bea8cca9f2b29767ffaedcfe0ad7edb21255a9f"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minersdelight/textures/item/cave_soup_cup.png"
+hash = "98e547bf1f50cd01bce996ad58aa1611124580e6de127719813bbd1498219573"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minersdelight/textures/item/chicken_soup_cup.png"
+hash = "5abb0158e9d9f3ee2c891fb22ffcc94387054ea21ec9d84ad462210e68293203"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minersdelight/textures/item/copper_cup.png"
+hash = "3b4378c5676b254cfec8355546ef5fefe3b6b1f0ae090814bf538f200ab88d82"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minersdelight/textures/item/fish_stew_cup.png"
+hash = "22d8314146c4bbddfd921bd3d25d79d2ccb8157fd4d15a19c1ffcf414b9ffbc6"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minersdelight/textures/item/insect_stew_cup.png"
+hash = "b738e1c6fa81072f57dd7972bc423f08a086acdfe7e436f17ae12adfb74d5ce9"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minersdelight/textures/item/milk_cup.png"
+hash = "d76b339eab058087bda17dd9dad15768c77ce285fcbdfc9a121052094944d7df"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minersdelight/textures/item/mushroom_stew_cup.png"
+hash = "b183b2912754d03dd9083686892d10bf37c15bc34f4a3d8f39eae3fed592d50e"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minersdelight/textures/item/noodle_soup_cup.png"
+hash = "4b7ca681d430a126061bbb357157beaa98bdcf8e7792e19c978c8743a4358e28"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minersdelight/textures/item/onion_soup_cup.png"
+hash = "f6a4efc64c070b7f065e40725f23c3175b9598008db3a0cacd12a40f750d237a"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minersdelight/textures/item/powder_snow_cup.png"
+hash = "83df6899ba8308c1f21c4ff67afd1a4a571dc2292a61d92123b58e25716d2f16"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minersdelight/textures/item/pumpkin_soup_cup.png"
+hash = "dee976fe896fdaca3e8100bbf73118dab627296a7603cdfbb06f1011d20b5217"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minersdelight/textures/item/rabbit_stew_cup.png"
+hash = "e3a0cbc2e6c8c768e34d106a90f41b97e5c8004066ffaffc9414acae207022c7"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minersdelight/textures/item/vegetable_soup_cup.png"
+hash = "bb829575de75896e532caa4019cb1c36e234afadd2831dfe88a6fc29ae00c07b"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minersdelight/textures/item/water_cup.png"
+hash = "648ac9709044edc0bced8c594aae13eac235242467ed9dd746425e346f81b7a8"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/modernworldcreation/textures/gamemodes/background_creative.png"
@@ -4536,8 +5364,16 @@ file = "resourcepacks/spicedcider_resources/assets/neapolitan/textures/mob_effec
 hash = "54ce9ce8797299f378a361ef1a49c25500721b81c49ee472d70727ea586bf1f3"
 
 [[files]]
+file = "resourcepacks/spicedcider_resources/assets/nomansland/textures/item/incendiary_arrow.png"
+hash = "7a8cd0969f6206bfa9cb8dab4b1492d9358db3fbe4957e0f11d54035d97f49b4"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/nomansland/textures/item/potmaster_debug_stick.png"
+hash = "e5fd6335aa6b69b6b0f06186ffdec562a7f8c4b62174387265e1937678a671a8"
+
+[[files]]
 file = "resourcepacks/spicedcider_resources/assets/quark/lang/en_us.json"
-hash = "7fcf40ef2f8273acf96b6f28bd45f2c3d776cc64ed9621b9b87d4f207f20c995"
+hash = "1c9e326a877f021f4a3ae8057eb38ccfeb14d7c22dd3088b6eb6aae01f102595"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/quark/textures/block/black_shingles.png"
@@ -4662,6 +5498,30 @@ hash = "0e24d3805cc3992a1426ab2b234737237378ae6ccb1ff31aaa0843067ea2fca7"
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/screenshot_viewer/textures/gui/sprites/widget/icons/screenshot_viewer.png"
 hash = "4767f952ca15d652b414c3ecbb5166a065b3492932276849e67fa3aa00f463b3"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/sootychimneys/textures/block/brick_chimney.png"
+hash = "321976e68a6e4021cb654b51160395ac9e6d9765600929889ce894bcb4fff974"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spawn/textures/block/ant_farm.png"
+hash = "a6def5b4235dc4c667610a61b56f8c1d2912fc713e5a438d79367692e498157f"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spawn/textures/block/ant_mound_0.png"
+hash = "c7519411fa790fb8fa3616f41691ecad9cfd282c08c66e36404e4a5cb28ca117"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spawn/textures/block/ant_mound_1.png"
+hash = "8e570d3b233bf8d2ff2459d57736b3deffaba930db415027181d5bf5405f9de3"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spawn/textures/block/anthill.png"
+hash = "3e163f39cb2d221bddd8b3dc42328991e6fe28acf1e1b06f11294b86de253aff"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spawn/textures/block/anthill_ready.png"
+hash = "670882716a0791233b99900802687ced96de4254bf5042b33224c42856b85838"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/spicedcider/lang/en_us.json"
