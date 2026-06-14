@@ -24,9 +24,6 @@ public class SpicedCiderMixinPlugin implements IMixinConfigPlugin {
         if (mixinClassName.contains("namingunconvention.ModernWorldCreationGameTabMixin")) {
             return FMLLoader.getLoadingModList().getModFileById("modernworldcreation") != null;
         }
-        if (mixinClassName.contains("vanillin.VanillinItemColorsMixin")) {
-            return FMLLoader.getLoadingModList().getModFileById("vanillin") != null;
-        }
         if (mixinClassName.contains("cookscollection.CooksCollectionModBlocksMixin")) {
             return FMLLoader.getLoadingModList().getModFileById("cookscollection") != null;
         }

@@ -59,15 +59,6 @@
 		[types.wood_type.autumnity]
 			maple = false
 
-		[types.wood_type.atmospheric]
-			rosewood = true
-			morado = true
-			yucca = true
-			aspen = true
-			laurel = true
-			kousa = true
-			grimwood = true
-
 		[types.wood_type.newworld]
 			fir = true
 
@@ -135,25 +126,15 @@
 			orange_maple = true
 			red_maple = true
 
-		[types.leaves_type.atmospheric]
-			rosewood = true
-			morado = true
-			flowering_morado = true
-			yucca = true
-			aspen = true
-			green_aspen = true
-			laurel = true
-			dry_laurel = true
-			kousa = true
-			currant = true
-			grimwood = true
-
 		[types.leaves_type.newworld]
 			fir = true
 
 		[types.leaves_type.cookscollection]
 			lemon = true
 			fruiting_lemon = true
+
+		[types.leaves_type.primal]
+			thorny_acacia = true
 
 #Disables specific entries
 [entries]
