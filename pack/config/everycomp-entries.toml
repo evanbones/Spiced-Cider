@@ -47,9 +47,9 @@
 			cork = true
 
 		[types.wood_type.environmental]
-			willow = true
+			willow = false
 			pine = true
-			plum = true
+			plum = false
 			wisteria = true
 
 		[types.wood_type.upgrade_aquatic]
@@ -133,8 +133,9 @@
 			lemon = true
 			fruiting_lemon = true
 
-		[types.leaves_type.primal]
-			thorny_acacia = true
+		[types.leaves_type.culturaldelights]
+			avocado = true
+			fruiting_avocado = true
 
 #Disables specific entries
 [entries]

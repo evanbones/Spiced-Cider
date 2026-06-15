@@ -17,7 +17,7 @@ render_lead_indication_without_slot = true
 #Makes horse-type mobs that named 'jeb_' render with rainbow effect, like sheep. Default: true.
 jeb_horse = true
 #Copper Horn tooltip will show details.
-copper_horn_details_tooltip = true
+copper_horn_details_tooltip = false
 
 [switch_inventory]
 	#Adds button and hotkey to switch between player and horse inventory. Default: true

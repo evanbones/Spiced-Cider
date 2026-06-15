@@ -1,0 +1,65 @@
+	[common.effect_radius]
+		#XZ radius where baby mooblooms grant the Sunny effect
+		# Default: 2.0
+		# Range: 0.0 ~ 12.0
+		"Baby XZ sunny radius" = 2.0
+		#Reduced XZ radius where baby mooblooms passively grant the Sunny effect, if sun_feed required
+		# Default: 0.0
+		# Range: 0.0 ~ 12.0
+		"Baby passive XZ sunny radius" = 0.0
+		#Vertical radius where baby mooblooms grant the Sunny effect
+		# Default: 1.0
+		# Range: 0.0 ~ 12.0
+		"Baby Y sunny radius" = 1.0
+		#XZ radius where adult mooblooms grant the Sunny effect
+		# Default: 7.0
+		# Range: 0.0 ~ 12.0
+		"Adult XZ sunny radius" = 7.0
+		#XZ radius where adult mooblooms grant the Sunny effect, if sun_feed required
+		# Default: 3.0
+		# Range: 0.0 ~ 12.0
+		"Adult passive XZ sunny radius" = 3.0
+		#Vertical radius where adult mooblooms grant the Sunny effect
+		# Default: 3.0
+		# Range: 0.0 ~ 12.0
+		"Adult Y sunny radius" = 3.0
+
+	[common.sunny_behaviors]
+		#Only mobs actively 'burned' by a moobloom in the moobloom_hostiles tag will aggro on mooblooms
+		"Hostiles only retaliate" = true
+		#Mobs afflicted with Sunny use behaviors affected by skylight, like spiders and endermen
+		"Light level dependent magic value is high when sunny" = true
+		#Phantoms can still attack players afflicted with Sunny
+		"Phantoms can attack sunny players" = true
+		#Bees afflicted with Sunny can work even at nighttime
+		"Busy bees on sunny nights" = true
+		#Mooblooms must be fed items from the sun_feed tag to induce Sunny in its typical radius
+		"Sunflower feed" = true
+		#Duration for which mooblooms fed sun_feed are able to induce Sunny
+		"Sunflower feed duration" = 2400
+		#Mobs afflicted by Sunny exude buttercup particles
+		"Sunny particle indicator" = true
+
+	[common.eternal_youth]
+		#Mooblooms always spawn as ageless babies during world generation
+		"Mooblooms worldgen as ageless babies" = true
+		#Players can use youth extenders/resumers on baby mob to control their aging, like 26.1's golden dandelions
+		"Buttercup ageless" = true
+		#Using an extender or resumer depletes the stack by one, using the item.
+		"ItemStack shrinkage" = true
+		#Using an extender or resumer plays an eating sound as well as the usual SoundEvent.
+		"Eating sound" = true
+
+		[common.compat.spawn]
+			#Iguanas afflicted with Sunny can bask even during nighttime
+			"Iguanas bask on sunny nights" = true
+			#Sunfish afflicted with Sunny can bask even during nighttime
+			"Sunfish bask on sunny nights" = true
+			#Entities standing on a sunstone block from Spawn incur the Sunny effect
+			"Sunstones sunny" = true
+			#Sunflowers from Spawn follow Mooblooms
+			"Sunflowers follow mooblooms" = true
+
+		[common.compat.vanillabackport]
+			#Eyeblossoms shut near Mooblooms
+			"Eyeblossoms shut" = true
