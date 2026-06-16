@@ -2,5 +2,13 @@
     "pack": {
         "description": "Spiced Cider Resources",
         "pack_format": 34
+    },
+    "filter": {
+        "block": [
+            {
+                "namespace": "wilderflowers",
+                "path": "items/.*"
+            }
+        ]
     }
 }

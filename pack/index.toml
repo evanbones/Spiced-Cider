@@ -294,7 +294,7 @@ hash = "943e1c3672b8a03f27519b357091133205119c7b3db2fcc4c25b597cabf8926d"
 
 [[files]]
 file = "config/crash_assistant/modlist.json"
-hash = "fe7d516dc5c0358fee3e2a4de23c511adf035eb5048bbc7ae514c8376dc32f1c"
+hash = "421f85a7de413dce63141c11dd98ae56e79d9106d7ea336d9269defe7a6e6aab"
 
 [[files]]
 file = "config/crash_assistant/scripts/log_analysis/example.jexl"
@@ -473,6 +473,10 @@ file = "config/emixx/stack_groups/caverns_and_chasms_sparklers.json"
 hash = "8bbb4ebb2fd48c5d77ab1e2708f76a1c14f61d2a8dce0f1b3db50ca27fb7bfd2"
 
 [[files]]
+file = "config/emixx/stack_groups/copperagebackport_wooden_shelves.json"
+hash = "85f8c57342db735a4219b259a6f58ec7ca96afca5bcec3201e627226b3ae1fd2"
+
+[[files]]
 file = "config/emixx/stack_groups/create_postboxes.json"
 hash = "517366942aba17ba9d16bf0d2687fa97a1b380e5b3016ea7584f4549a785126d"
 
@@ -531,6 +535,10 @@ hash = "ea5c65131dda7eb4b516666e8663eb54e739b7d9b50d9dbfaafd66bf9618d14f"
 [[files]]
 file = "config/emixx/stack_groups/supplementaries_awnings.json"
 hash = "189ba033c24096349f56d818ec0b9967a618d60990a46de8bd65b8135f8e2b7c"
+
+[[files]]
+file = "config/emixx/stack_groups/supplementaries_bamboo_spikes.json"
+hash = "cdb66ff838ad7ea731d87a055ab56064f92c63eb66aaeec247742790faaa5789"
 
 [[files]]
 file = "config/emixx/stack_groups/supplementaries_buntings.json"
@@ -686,7 +694,7 @@ hash = "09d330b29443d9579ecc014f2be2fcb31075bfe1e9f9ac4e750f271128650fe6"
 
 [[files]]
 file = "config/fabric/indigo-renderer.properties"
-hash = "b3b843f30b6afa1cc7086b5f81f48fe13fcf448f8bb074c0ed137dfdef05d888"
+hash = "bcf07c8b7dfcd1b991cf164d137ac7b54c28ba81e6e964e1e6d13a2ea9ff518f"
 
 [[files]]
 file = "config/fallingleaves-client.toml"
@@ -1349,6 +1357,10 @@ file = "config/openloader/packs/spicedcider_data/data/clutternomore/shape_map/va
 hash = "155f0cbb624c607063d82882a792b97209cb67ea52d66d7af55d02507e715cf2"
 
 [[files]]
+file = "config/openloader/packs/spicedcider_data/data/copperagebackport/tags/item/wooden_shelves.json"
+hash = "0d76ff518c2bd2020198437cf7e999447738e878f303be5b3d081debab38a9c8"
+
+[[files]]
 file = "config/openloader/packs/spicedcider_data/data/easyshulkerboxes/item_contents_provider/backpack.json"
 hash = "0dbd45f151cbc35032ca390f4e02f247570e43d32f2de95caef8bbd067151656"
 
@@ -1814,7 +1826,7 @@ hash = "05022be17b8d67f7f6e766884518e40b20efc01dbfd531ad10ec009af6724342"
 
 [[files]]
 file = "config/packetfixer.properties"
-hash = "c21863b92a9bf1910cf7d662694315536f17d6ce171140bad802a84b424fa646"
+hash = "56a9919d8f8ce060d3b0e7c8babcfeacedaf6cc30c9d51dc4e12e599c320ad2a"
 
 [[files]]
 file = "config/particle_core_config.toml"
@@ -1870,7 +1882,7 @@ hash = "32b47027c78091d1e42d497994f81791bbf1c0541503cc58294c0a34fcdaa135"
 
 [[files]]
 file = "config/quark-common.toml"
-hash = "42522e48f64aeabeda66d33faf1f04f8d608440dd9c134e0c13c61e534237ce0"
+hash = "aa50cfcc0daaa9c252b312c635d49e152eeace251478ba3b6f71649f0786e98a"
 
 [[files]]
 file = "config/quick-pack.json"
@@ -1934,7 +1946,7 @@ hash = "590ea074ec1c84ced8a0c60dedd7111edd69801f7441fe78654c2f6fdfb655b7"
 
 [[files]]
 file = "config/reliable_remover.json"
-hash = "1a23d99f3bf817ebd832c9ccc3f36b81018c90b221670eebed2acceb70546a6a"
+hash = "f5fb004f26b890c2a22827b76d5fd7712c6b16fbab1b5c59fe042f1feedef495"
 
 [[files]]
 file = "config/reliable_remover/caverns_and_chasms.json"
@@ -1970,7 +1982,7 @@ hash = "1c970fc0cc8a3989889a43fdc6c40c89cabf81ffac2405f92c6abf489a410674"
 
 [[files]]
 file = "config/resourcepackoverrides.json"
-hash = "03aec5641ffce3403626fc09be6fcf1f4e3364ac39a73727280073b1489763b6"
+hash = "9823490cbdc86ad4c52b388c01a1cc439799f5f2a6d16f6daaf04e5b3968271e"
 
 [[files]]
 file = "config/sage_brush-client.toml"
@@ -2035,6 +2047,10 @@ hash = "a665430f1033038b616f70c4e5dfe39b5787d7214d11cfe82aa4b25b930dceed"
 [[files]]
 file = "config/simple_snowy_fix_common.json"
 hash = "df2f5f82cd136174167bf1febeaddfd2bf86ccf60c61d90afa56f81abe04d2cc"
+
+[[files]]
+file = "config/slime_time.toml"
+hash = "dcd14fc62e0a76203ae941c848351c08520946711ab17d87c801f86c0a5938f5"
 
 [[files]]
 file = "config/smoothskies.json"
@@ -2334,8 +2350,14 @@ hash = "8952abb250ea4f766eb08f18f3dbc5b24991de1d33a8e4adf3c24dac0a841472"
 metafile = true
 
 [[files]]
-file = "mods/abundant_atmosphere-1.21.1-2.0.0-neoforge.jar"
-hash = "de64080f57f898432f937340ea5f89770e28a0c3795b8ab2eb30c867837e28a9"
+file = "mods/abundant-atmosphere.pw.toml"
+hash = "9e931b19c0dd7a1043c14b1ffc1291cb741b8cdfb7db685d221c3c7b36efd6b3"
+metafile = true
+
+[[files]]
+file = "mods/abundant-delight.pw.toml"
+hash = "f701c88318b9b249fd400dc74a80de731654f5cbfacb562425530d2b6c0e61fe"
+metafile = true
 
 [[files]]
 file = "mods/achievements-optimizer.pw.toml"
@@ -2458,7 +2480,7 @@ metafile = true
 
 [[files]]
 file = "mods/biolith.pw.toml"
-hash = "9e8e6fefe7bbb8d00c64a5c9ee6b9dff3c7f18804f7fa7d72f07c37a1cb348a3"
+hash = "f301f059c76ece8badbcdd250ef2ac2aadf66a2759d088f95ab74c23279585e1"
 metafile = true
 
 [[files]]
@@ -2917,7 +2939,12 @@ hash = "bd461ec4cf14831dc19bbff54595c12a5d12c8a6610112b00f01d4905cdfcd1c"
 
 [[files]]
 file = "mods/lambdynamiclights.pw.toml"
-hash = "d77c41bf5a8dd470d65e7946d507657a910b54d2e76f4b3ced4fe4addc2d52d4"
+hash = "e2743788609a0cd12f6fa71181525116c2033d17fc050ea2cafb07e2547c742a"
+metafile = true
+
+[[files]]
+file = "mods/leaf-it-to-me.pw.toml"
+hash = "1b85d99def51925b250c462b59599b19f1291c9b8e537351c0da4d57ec1a63e3"
 metafile = true
 
 [[files]]
@@ -2982,7 +3009,7 @@ metafile = true
 
 [[files]]
 file = "mods/mini-music-tweaks.pw.toml"
-hash = "0e95d8cd9e34c83f612eb064f5c2b56ee5ea72de31728c92ffab245e60ce3158"
+hash = "57995d07dedf0d05cba10db0ddea06536fa1257ab23b064eb5466dc37779bc7f"
 metafile = true
 
 [[files]]
@@ -3012,7 +3039,7 @@ metafile = true
 
 [[files]]
 file = "mods/modernfix.pw.toml"
-hash = "c8ac0bf19049381f3f05aa46bfea8f2a742d340a3285ecfb7118eab6327cff99"
+hash = "983d6ab9d9a7d40031f1789f5ae018cccb889832ac8ce741df60a9d8e5f42817"
 metafile = true
 
 [[files]]
@@ -3078,6 +3105,11 @@ metafile = true
 [[files]]
 file = "mods/not-enough-animations.pw.toml"
 hash = "03bfdca138de9c56b29b120a3a1693269951d261916a8bc16e48d0c3576e72fe"
+metafile = true
+
+[[files]]
+file = "mods/onion-onion.pw.toml"
+hash = "d3702e5478468ab7395819e06d1118f269457a91dd26a2fffeefe0ff40068b25"
 metafile = true
 
 [[files]]
@@ -3147,7 +3179,7 @@ metafile = true
 
 [[files]]
 file = "mods/puzzles-lib.pw.toml"
-hash = "22dde7441f5bd5d2b4699d00f0efed79f75664dade5a66a36f181a0a823c751c"
+hash = "6be463e57622036302e6555834d4b915e9d0407ce646a20edc770901111eca0d"
 metafile = true
 
 [[files]]
@@ -3242,7 +3274,7 @@ metafile = true
 
 [[files]]
 file = "mods/scholar.pw.toml"
-hash = "d4203b8c55087cdc2ccf310d83b6d598ba85308a18a3efa44cbec375dd06ab55"
+hash = "ce0e68d65baacfe8ae0631e5ce9dfdedbb18b12ad44000c5168a222f18a9d11e"
 metafile = true
 
 [[files]]
@@ -3278,6 +3310,11 @@ metafile = true
 [[files]]
 file = "mods/shutter-up.pw.toml"
 hash = "daad0e0d38590edc5dd0b1c828c59d308fdb14b6b8d94aff426ac26decd0a332"
+metafile = true
+
+[[files]]
+file = "mods/slime-time.pw.toml"
+hash = "432fe81bede96c28d308d617c47cd2697cd5596dcbb2f910159664f05b437cb4"
 metafile = true
 
 [[files]]
@@ -4226,6 +4263,10 @@ hash = "9bc4e5b46c7879d50e33dac1f7acb61612375c00f28aa2ad59ee623077e7037c"
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/cookscollection/textures/block/oven_top.png"
 hash = "8baa45d3c206fa1618ed81932bde0a763a89d7ba480d372429752c3f615fcb7f"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/copperagebackport/stack_groups/wooden_shelves.json"
+hash = "9221d5d73e9d111341f2db77c7e3bf4f6fc572077aa4b960260b6261a81974b8"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/create/lang/en_us.json"
@@ -6581,7 +6622,7 @@ hash = "2512951dda558f078a906914b5c5a02fcaadda069ac636eb022fcbe4655dcfbf"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/supplementaries/lang/en_us.json"
-hash = "1f15fdb07f998a0573fe91e840ed7d7882d533aa70cc1e1fe8b81726915f8e4c"
+hash = "0fdf2e2f61194de1822b289de00c8d543f585d1f3085cae29b00211c8ecfd45f"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/supplementaries/textures/block/awnings/awning.png"
@@ -6973,7 +7014,7 @@ hash = "76f80cd8af5f2dec4303f9c6c3e29327eb2159fa9afb16c75a0df9f4008750e8"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/pack.mcmeta"
-hash = "2dd600444e393e947e1784351115660dd9321ef964ff619f5e6916e0262e478a"
+hash = "785420f84baaac0987e327c1d434e6faec1defc5098fab3ca50f8769da013fe8"
 
 [[files]]
 file = "resourcepacks/supplementaries-touch-ups.pw.toml"
