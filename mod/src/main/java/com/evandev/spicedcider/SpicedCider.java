@@ -1,7 +1,6 @@
 package com.evandev.spicedcider;
 
 import com.evandev.spicedcider.command.SpicedCiderQueryCommand;
-import com.evandev.spicedcider.command.SpicedCiderStructureCommand;
 import com.evandev.spicedcider.config.ConfigFileHandler;
 import com.evandev.spicedcider.config.LoggerNamePatternSelector;
 import com.evandev.spicedcider.config.Reconfigurator;
@@ -114,7 +113,6 @@ public class SpicedCider {
     }
 
     private void registerCommands(RegisterCommandsEvent event) {
-        SpicedCiderStructureCommand.register(event.getDispatcher(), event.getBuildContext());
         SpicedCiderQueryCommand.register(event.getDispatcher(), event.getBuildContext());
     }
 }

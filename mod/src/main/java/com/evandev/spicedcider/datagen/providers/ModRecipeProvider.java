@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.datagen.providers;
 
+import com.evandev.spicedcider.recipe.RenameRecipe;
 import com.evandev.spicedcider.registry.ModBlocks;
 import com.evandev.spicedcider.registry.ModItems;
 import net.minecraft.core.HolderLookup;
@@ -76,5 +77,8 @@ public class ModRecipeProvider extends RecipeProvider {
         ).unlocks("has_netherite_ingot", has(Items.NETHERITE_INGOT)).save(output, "netherite_hammer_smithing");
 
         WorkstoneRecipeProvider.buildRecipes(output);
+
+        SpecialRecipeBuilder.special(RenameRecipe::new)
+                .save(output, "spicedcider:rename_item");
     }
 }

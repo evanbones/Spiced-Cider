@@ -169,23 +169,16 @@ repositories {
         }
     }
 
-    exclusiveContent {
-        forRepository {
-            maven { url = "https://maven.bawnorton.com/releases" }
-        }
-        filter {
-            includeGroup("com.github.bawnorton.mixinsquared")
-        }
-    }
-
     flatDir {
         dirs("libs")
     }
 
     repositories {
-        maven { url = "https://maven.bawnorton.com/releases" }
-
         maven { url = "https://maven.enjarai.dev/mirrors" }
+        maven {
+            name = "MixinSquared"
+            url = "https://maven.bawnorton.com/releases"
+        }
     }
 
     mavenCentral()
@@ -250,11 +243,11 @@ dependencies {
     implementation "maven.modrinth:cooks-collection:0.5.5"
     implementation "maven.modrinth:farmers-delight:1.21.1-1.3.2"
     compileOnly "maven.modrinth:nostalgic-tweaks:POrRfSqe"
-    compileOnly(annotationProcessor("com.github.bawnorton.mixinsquared:mixinsquared-common:0.3.7-beta.2"))
+    compileOnly(annotationProcessor("com.github.bawnorton.mixinsquared:mixinsquared-common:0.3.3"))
     jarJar(implementation("com.github.bawnorton.mixinsquared:mixinsquared-neoforge")) {
         version {
-            strictly "[0.3.7-beta.2,)"
-            prefer "0.3.7-beta.2"
+            strictly "[0.3.3,)"
+            prefer "0.3.3"
         }
     }
 }
