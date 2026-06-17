@@ -1,6 +1,6 @@
 	[mobs.creeper]
 		#Creeper explosions have a weaker power
-		"Creeper explosion nerf" = true
+		"Creeper explosion nerf" = false
 		#How much weaker Creeper explosions are
 		# Default: 0.5
 		# Range: 0.0 ~ 1.7976931348623157E308
@@ -68,7 +68,7 @@
 	[tweaks.trims]
 		#Prevents replacing/applying a Trim Template & Material over a previously trimmed item
 		#This is to prevent the player from wasting materials that could be returned at a Dismantling Table
-		"Prevent replacing trims" = false
+		"Prevent replacing trims" = true
 
 	[tweaks.trial_chambers]
 		#If Copper Blocks are replaced with Schist Pillars in Trial Chambers
