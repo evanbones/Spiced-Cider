@@ -171,13 +171,13 @@ chunk_rebuild_scheduler = "culling"
 			[light_sources.settings.entities.usefulspyglass]
 				watcher_eye = true
 
-			[light_sources.settings.entities.nirvana]
-				reefer = true
-				thc_minecart = true
-				thc = true
+			[light_sources.settings.entities.boatload]
+				large_boat = true
+				furnace_boat = true
 
-			[light_sources.settings.entities.abundant_atmosphere]
-				nutling = true
+			[light_sources.settings.entities.buzzier_bees]
+				moobloom = true
+				grizzly_bear = true
 
 			[light_sources.settings.entities.infernalexp]
 				throwable_fire_charge = true
@@ -209,6 +209,134 @@ chunk_rebuild_scheduler = "culling"
 
 			[light_sources.settings.entities.bountifulfares]
 				flour = true
+
+			[light_sources.settings.entities.tolerable_creepers]
+				mischief_arrow = true
+				spore_bomb = true
+				spore_barrel = true
+				creepie = true
+				creeper_spores = true
+
+			[light_sources.settings.entities.nomansland]
+				deer = true
+				explosive = true
+				lingering_cloud = true
+				ember = true
+				pacified_cloud = true
+				goose = true
+				living_urn = true
+				dreaming_player = true
+				billhook_bass = true
+				fat_joint = true
+				living_pot = true
+				incendiary_arrow = true
+				falling_pot = true
+				tortoise = true
+				ink_bomb = true
+				ink_cloud = true
+				firebomb = true
+				buddy = true
+				frienderman = true
+
+			[light_sources.settings.entities.upgrade_aquatic]
+				thrasher = true
+				flare = true
+				lionfish = true
+				great_thrasher = true
+				immortal_jellyfish = true
+				cassiopea_jellyfish = true
+				box_jellyfish = true
+				goose = true
+				pike = true
+				sonar_wave = true
+				nautilus = true
+				perch = true
+
+			[light_sources.settings.entities.quark]
+				quark_boat = true
+				dyed_item_frame = true
+				stool = true
+				skull_pike = true
+				toretoise = true
+				gravisand = true
+				parrot_egg = true
+				stoneling = true
+				foxhound = true
+				torch_arrow = true
+				wraith = true
+				shiba = true
+				totem = true
+				forgotten = true
+				quark_chest_boat = true
+				glass_frame = true
+				crab = true
+				pickarang = true
+				soul_bead = true
+				flamerang = true
+
+			[light_sources.settings.entities.create]
+				carriage_contraption = true
+				seat = true
+				stationary_contraption = true
+				package = true
+				contraption = true
+				gantry_contraption = true
+				super_glue = true
+				crafting_blueprint = true
+				potato_projectile = true
+
+			[light_sources.settings.entities.etched]
+				jukebox_minecart = true
+
+			[light_sources.settings.entities.newworld]
+				fir_chest_boat = true
+				fir_boat = true
+
+			[light_sources.settings.entities.arts_and_crafts]
+				floating_block = true
+				chest_boat = true
+				boat = true
+
+			[light_sources.settings.entities.autumnity]
+				snail = true
+				turkey = true
+				turkey_egg = true
+
+			[light_sources.settings.entities.nirvana]
+				reefer = true
+				thc_minecart = true
+				thc = true
+
+			[light_sources.settings.entities.environmental]
+				deer = true
+				zebra = true
+				yak = true
+				reindeer = true
+				koi = true
+				mud_ball = true
+				zorse = true
+				slabfish = true
+				duck_egg = true
+				duck = true
+				zonkey = true
+				pinecone_golem = true
+				tapir = true
+
+			[light_sources.settings.entities.hominid]
+				rock = true
+				incendiary = true
+				bellman = true
+				juggernaut = true
+				vampire = true
+				famished = true
+				mellified = true
+				fossilized = true
+
+			[light_sources.settings.entities.abundant_atmosphere]
+				nutling = true
+
+			[light_sources.settings.entities.slime_time]
+				slimeball = true
 
 			[light_sources.settings.entities.blueprint]
 				falling_block = true
@@ -244,58 +372,8 @@ chunk_rebuild_scheduler = "culling"
 				camera_stand = true
 				photograph_frame = true
 
-			[light_sources.settings.entities.tolerable_creepers]
-				mischief_arrow = true
-				spore_bomb = true
-				spore_barrel = true
-				creepie = true
-				creeper_spores = true
-
-			[light_sources.settings.entities.nomansland]
-				deer = true
-				explosive = true
-				lingering_cloud = true
-				ember = true
-				pacified_cloud = true
-				goose = true
-				living_urn = true
-				dreaming_player = true
-				billhook_bass = true
-				fat_joint = true
-				living_pot = true
-				incendiary_arrow = true
-				falling_pot = true
-				tortoise = true
-				ink_bomb = true
-				ink_cloud = true
-				firebomb = true
-				buddy = true
-				frienderman = true
-
 			[light_sources.settings.entities.spicedcider]
 				cobweb_projectile = true
-
-			[light_sources.settings.entities.quark]
-				quark_boat = true
-				dyed_item_frame = true
-				stool = true
-				skull_pike = true
-				toretoise = true
-				gravisand = true
-				parrot_egg = true
-				stoneling = true
-				foxhound = true
-				torch_arrow = true
-				wraith = true
-				shiba = true
-				totem = true
-				forgotten = true
-				quark_chest_boat = true
-				glass_frame = true
-				crab = true
-				pickarang = true
-				soul_bead = true
-				flamerang = true
 
 			[light_sources.settings.entities.supplementaries]
 				dispenser_minecart = true
@@ -314,24 +392,11 @@ chunk_rebuild_scheduler = "culling"
 				rope_arrow = true
 				slimeball_projectile = true
 
-			[light_sources.settings.entities.create]
-				carriage_contraption = true
-				seat = true
-				stationary_contraption = true
-				package = true
-				contraption = true
-				gantry_contraption = true
-				super_glue = true
-				crafting_blueprint = true
-				potato_projectile = true
-
-			[light_sources.settings.entities.etched]
-				jukebox_minecart = true
-
-			[light_sources.settings.entities.arts_and_crafts]
-				floating_block = true
-				chest_boat = true
-				boat = true
+			[light_sources.settings.entities.neapolitan]
+				plantain_spider = true
+				bananarrow = true
+				chimpanzee = true
+				banana_peel = true
 
 			[light_sources.settings.entities.blockbox]
 				seat = true

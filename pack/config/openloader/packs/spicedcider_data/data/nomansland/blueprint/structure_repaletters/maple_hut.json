@@ -1,0 +1,20 @@
+{
+  "repaletter": [
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "autumnity:stripped_maple_log",
+      "replaces_with": "nomansland:stripped_maple_log"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "autumnity:maple_log",
+      "replaces_with": "nomansland:maple_log"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "autumnity:maple_planks",
+      "replaces_with": "nomansland:maple_planks"
+    }
+  ],
+  "structures": "autumnity:maple_hut"
+}

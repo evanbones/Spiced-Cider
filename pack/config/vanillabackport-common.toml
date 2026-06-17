@@ -28,21 +28,21 @@
 
 ["Spring to Life"]
 	#allow bushes to generate in the overworld
-	bushes = true
+	bushes = false
 	#allow firefly bushes to generate in the overworld
-	firefly_bushes = true
+	firefly_bushes = false
 	#allow wildflowers to generate in the overworld
-	wildflowers = true
+	wildflowers = false
 	#allow dry grass to generate in the overworld
-	dry_grass = true
+	dry_grass = false
 	#allow fallen trees to generate in the overworld
-	fallen_trees = true
+	fallen_trees = false
 	#allow leaf litter to generate in the overworld
 	leaf_litter = true
 	#allow cactus flowers to generate
 	cactus_flowers = true
 	#allow variants for pigs, cows and chickens to generate
-	farm_animal_variants = true
+	farm_animal_variants = false
 	#allow wolfs to have variants for their sounds
 	wolf_sound_variants = true
 	#allow features from 'Spring to Life' to be obtainable through wandering traders
