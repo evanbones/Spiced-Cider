@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "SS",
+    "LL",
+    "MM"
+  ],
+  "key": {
+    "S": {
+      "tag": "c:rods/wooden"
+    },
+    "L": {
+      "tag": "minecraft:logs_that_burn"
+    },
+    "M": {
+      "tag": "caverns_and_chasms:cupric_fire_base_blocks"
+    }
+  },
+  "result": {
+    "id": "caverns_and_chasms:cupric_campfire",
+    "count": 1
+  }
+}

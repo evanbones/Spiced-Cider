@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "SS",
+    "LL",
+    "MM"
+  ],
+  "key": {
+    "S": {
+      "tag": "c:rods/wooden"
+    },
+    "L": {
+      "tag": "minecraft:logs_that_burn"
+    },
+    "M": {
+      "item": "infernalexp:glowcoke"
+    }
+  },
+  "result": {
+    "id": "infernalexp:glowlight_campfire",
+    "count": 1
+  }
+}

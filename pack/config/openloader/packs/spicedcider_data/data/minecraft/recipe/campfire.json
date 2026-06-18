@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "SS",
+    "LL"
+  ],
+  "key": {
+    "S": {
+      "tag": "c:rods/wooden"
+    },
+    "L": {
+      "tag": "minecraft:logs_that_burn"
+    }
+  },
+  "result": {
+    "id": "minecraft:campfire",
+    "count": 1
+  }
+}
