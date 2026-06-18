@@ -46,7 +46,7 @@ hash = "43303ea5835f439a1fc1e7eb771834cfce26450a2381ad192621e4ed5532ff29"
 
 [[files]]
 file = "config/amendments-client.toml"
-hash = "2ed708c88bd2cac36ba9d0a94ddc0ff4eecd985f42bc65c21694267a1af12f7d"
+hash = "f35c31d8a232b7cf7987841401ea8f73701296986584526fbce653bc76ce569b"
 
 [[files]]
 file = "config/amendments-common.toml"
@@ -111,6 +111,10 @@ hash = "5710c0819ce9d157528bf88d3cbba3acc48ef55289ba2b4954341b4819b7c561"
 [[files]]
 file = "config/betterf3.toml"
 hash = "239c340b28a13ffdb67d85efbabdfc28b5b4b4ee6070173f2b5fb3d674084bba"
+
+[[files]]
+file = "config/betternightvision.json"
+hash = "a1fb2a4f24236df5941e5620aa0179334e2b1363514958461a9b4f3e2ad10d16"
 
 [[files]]
 file = "config/betterthirdperson-common.toml"
@@ -278,7 +282,7 @@ hash = "943e1c3672b8a03f27519b357091133205119c7b3db2fcc4c25b597cabf8926d"
 
 [[files]]
 file = "config/crash_assistant/modlist.json"
-hash = "6efd43cdafe877896d1fee76415f4135bcd66cc026a7d1b22f71f5a01deb1a07"
+hash = "6a75d1650efb03cbc8c50a25f5f73144ad42062ebc66421d7292a67ad5377a7b"
 
 [[files]]
 file = "config/crash_assistant/scripts/log_analysis/example.jexl"
@@ -646,7 +650,7 @@ hash = "c62152b20b386b70863e3e3bc4b36304a7aaa7d281b62c47aa4db61085710a1a"
 
 [[files]]
 file = "config/everycomp-entries.toml"
-hash = "a39c9eedc05bab8b23b0c8877d850c830d9384392b6ea484e1d37ef5690b9ec0"
+hash = "cb19ce47cec692276d4733a960bd94b2a2a08313e8a480cd7bddc1cfad801312"
 
 [[files]]
 file = "config/everycomp-hazardous.toml"
@@ -682,7 +686,7 @@ hash = "09d330b29443d9579ecc014f2be2fcb31075bfe1e9f9ac4e750f271128650fe6"
 
 [[files]]
 file = "config/fabric/indigo-renderer.properties"
-hash = "226139958fc9ac4c695f339705f2fcda66da1b855ab123c6a31d55b65b53dcce"
+hash = "ac7a8d5c49df1de73066bf1f1fee3ad41408675c9590da10e5ccba378d1a9a2e"
 
 [[files]]
 file = "config/fallingleaves-client.toml"
@@ -1509,6 +1513,10 @@ file = "config/openloader/packs/spicedcider_data/data/environmental/blueprint/mo
 hash = "5ba448786cfce330d0f008fed06fed0fe79b75f962012377a1c674aa7f2c82f2"
 
 [[files]]
+file = "config/openloader/packs/spicedcider_data/data/environmental/blueprint/modded_biome_slices/pine_barrens.json"
+hash = "a19c10e3165ba87213760a0595dd07224837bd163a04dbfafb8b499e5254af18"
+
+[[files]]
 file = "config/openloader/packs/spicedcider_data/data/environmental/loot_table/entities/duck.json"
 hash = "26f446e01b54abfe217430be5cd4d991662df387e018b9c89060d98f4d80ea6a"
 
@@ -1850,7 +1858,7 @@ hash = "05022be17b8d67f7f6e766884518e40b20efc01dbfd531ad10ec009af6724342"
 
 [[files]]
 file = "config/packetfixer.properties"
-hash = "9836d2ebc950f9568ba6dd31967a166fd73a11416703a44605f8a7bffaca7bf6"
+hash = "b02b6702fb80c1a0643578f4a258326fa303ffde79a59a551fe04e867a360e7d"
 
 [[files]]
 file = "config/particle_core_config.toml"
@@ -1869,8 +1877,12 @@ file = "config/particlerain/particles.json"
 hash = "56279670beda962d9f066142ea4665e8e3a79258fae5699ee20acec999f5b501"
 
 [[files]]
-file = "config/particular-common.toml"
+file = "config/particular-common-1.toml.bak"
 hash = "2459b0f46485ae0611a4eabc2e071c7f4f64c5acd27e0101654f6b957e58519e"
+
+[[files]]
+file = "config/particular-common.toml"
+hash = "2bd8b1181568aa4c9cecd08e5ac40bf2e0ce254df38df290dc8ecc27b3aad1c9"
 
 [[files]]
 file = "config/peeping_angels-common.toml"
@@ -1970,7 +1982,7 @@ hash = "590ea074ec1c84ced8a0c60dedd7111edd69801f7441fe78654c2f6fdfb655b7"
 
 [[files]]
 file = "config/reliable_remover.json"
-hash = "09176fbed05821bff6abdb0f115895b9432b19116ee1a96869c9ee9aa60ce4b9"
+hash = "fa518722fa90e48328a6f392ee3494e2f3ba138437ed19174347303b2c8156cb"
 
 [[files]]
 file = "config/reliable_remover/autumnity.json"
@@ -2031,6 +2043,10 @@ hash = "1f9918737141d77a7c4bf809f09e40b3a5b8a09171cd38a27e443a05c5cc8037"
 [[files]]
 file = "config/scholar-common.toml"
 hash = "797cdb72c29122c892a3ea0408930207ac07e87d1a11499d43d37a11f9fac10b"
+
+[[files]]
+file = "config/screenshot_viewer-client-1.toml.bak"
+hash = "72a1f489ae45e7903278581c368ac66f2ee71f7710fbc229afd8d6416c29f79f"
 
 [[files]]
 file = "config/screenshot_viewer-client.toml"
@@ -2138,7 +2154,7 @@ hash = "71c6f65022cb095402596003a4896d66de91b15294c5e8ef9118ce10b3503829"
 
 [[files]]
 file = "config/spicedcider/spicedcider_manifest.json"
-hash = "2a09044a0c6ad3efc7056cf0cff538ecefb1e6ce5940d6c0fa2404c2795b9521"
+hash = "0c7467e5310dcd1bb12d4c8c683da00e5541e2131e5588c55c3d120aa9351308"
 
 [[files]]
 file = "config/structure_layout_optimizer.jsonc"
@@ -2170,7 +2186,7 @@ hash = "7ad6b2451abf46d64ad034e35f516cdb5ca5eb9551b836746398e91149a04197"
 
 [[files]]
 file = "config/supplementaries-common.toml"
-hash = "83f1b0d875623379163f859d677e4337f81f462c74427742a480ce2a1bbf0a86"
+hash = "fd3444dfbff65097774f7096cfd80d364f97051c9b31d07da40f812fae87864b"
 
 [[files]]
 file = "config/surveyor.toml"
@@ -2483,6 +2499,11 @@ hash = "fb25ef9498cc77cf7122ac6e8a786c30f8ba0420b7682868b7322ad33579b92c"
 metafile = true
 
 [[files]]
+file = "mods/big-brain.pw.toml"
+hash = "4fd7e91f2d32553b63ea75455b6dc83e70baf717bf53abbf7f4fa71ee83c75e0"
+metafile = true
+
+[[files]]
 file = "mods/big-rod-energy.pw.toml"
 hash = "2b1abc3c6a8fc2f61c5b44151bc65f9ee5f7fd17b2f8e1315619a08790434602"
 metafile = true
@@ -2639,7 +2660,7 @@ metafile = true
 
 [[files]]
 file = "mods/crash-assistant.pw.toml"
-hash = "ebc4237417524e557b8dfc39dd8dbe884c9b99ecae0ceaa234426c61fa9449e8"
+hash = "518e7935a14f6612328c283bea9eb7092db6a0d637fb6cf6ac6820d4e3228f03"
 metafile = true
 
 [[files]]
@@ -2770,6 +2791,11 @@ metafile = true
 [[files]]
 file = "mods/every-compat.pw.toml"
 hash = "688cbfbaac97d3c9089bf2afa43bfd920ae8f4d210ad892b8ea52177bed67949"
+metafile = true
+
+[[files]]
+file = "mods/explorify.pw.toml"
+hash = "6adce6422e74091638dbd7872270ee58d9a22dc18340580f809cc50c739e0d4f"
 metafile = true
 
 [[files]]
@@ -3158,7 +3184,7 @@ metafile = true
 
 [[files]]
 file = "mods/particular-reforged.pw.toml"
-hash = "946427fd1d5d6efda378bab0afc23bf0c450ae3ab04fd83789828e98b2cd1a81"
+hash = "43d1779ac65ee63c9b3ca1c1b5c19d8fbf1dcea9109f25d8db71181982b06b52"
 metafile = true
 
 [[files]]
@@ -3173,7 +3199,7 @@ metafile = true
 
 [[files]]
 file = "mods/picture-mode.pw.toml"
-hash = "f56f0747492a22300833c43938f0d7e0f0782bd3d40bc13f69ae8679e4903d6a"
+hash = "8bf3b2d56bccb63f421eb5fb71038341d1ef10401a208d4b3d057494c5cef6fd"
 metafile = true
 
 [[files]]
@@ -3253,7 +3279,7 @@ metafile = true
 
 [[files]]
 file = "mods/reliable-remover.pw.toml"
-hash = "9af8194b05eb83483f65b238f9c356a1489f25bee55e783806bd2bae4b60ae37"
+hash = "697eed71317ce01a1d519c163737907c7c8e2e830f699f47156f39989abc5e54"
 metafile = true
 
 [[files]]
@@ -3421,8 +3447,9 @@ hash = "b28cc434de3932e66c46ed31a8e28d5ea1e28ad1b77f0a9bfa863cfc71c51071"
 metafile = true
 
 [[files]]
-file = "mods/tolerable_creepers-neoforge-1.21.1-2.2.0.jar"
-hash = "3863797af07e1c281fc5485d5b0d719fca72d3ef7f162be8bb5b4a49283e4157"
+file = "mods/tolerable-creepers.pw.toml"
+hash = "a5fcd4c45fcc2a2feb56b392a7ac8bdae056e6e1c656801283dc6514851906c1"
+metafile = true
 
 [[files]]
 file = "mods/treeliable.pw.toml"
@@ -3531,7 +3558,7 @@ metafile = true
 
 [[files]]
 file = "mods/ziplines-rezipped.pw.toml"
-hash = "f15b881dca5bb7d85fae51c570204f67623b1515e324f0a4d8433a8eb550f047"
+hash = "1e1cc98f2bbfd6c5a985b99a693c4fa9cade747df632c47454f6d470c195ffeb"
 metafile = true
 
 [[files]]
@@ -3571,6 +3598,11 @@ metafile = true
 [[files]]
 file = "resourcepacks/brush-and-juice.pw.toml"
 hash = "596d4292b7e540fed65480cb4d6775e70bd67866b85944b6177430d977312212"
+metafile = true
+
+[[files]]
+file = "resourcepacks/consistent-2d-items.pw.toml"
+hash = "46ec4aff4b9fe7f801803e6539911863852dfe1c882919cb6d10a126632f95a9"
 metafile = true
 
 [[files]]
