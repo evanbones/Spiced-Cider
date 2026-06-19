@@ -1,7 +1,7 @@
 #How many marks you can draw with a single chalk. Default: 64
 # Default: 64
 # Range: > 0
-ChalkDurability = 64
+ChalkDurability = 128
 #How much light glowing mark produces. Default: 5
 # Default: 5
 # Range: 0 ~ 15
@@ -24,12 +24,12 @@ GenerateChalkInLootChests = true
 	CrossEnabled = true
 	CrossUnlockAdvancement = ""
 	SkullEnabled = true
-	SkullUnlockAdvancement = "chalk:adventure/bound_by_bone"
+	SkullUnlockAdvancement = ""
 	HeartEnabled = true
-	HeartUnlockAdvancement = "minecraft:husbandry/tame_an_animal"
+	HeartUnlockAdvancement = ""
 	PickaxeEnabled = true
-	PickaxeUnlockAdvancement = "minecraft:story/iron_tools"
+	PickaxeUnlockAdvancement = ""
 	CheckEnabled = true
 	CheckUnlockAdvancement = ""
 	HouseEnabled = true
-	HouseUnlockAdvancement = "chalk:adventure/home_is_where_the_bed_is"
+	HouseUnlockAdvancement = ""

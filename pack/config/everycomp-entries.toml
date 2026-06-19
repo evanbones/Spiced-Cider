@@ -43,9 +43,6 @@
 		[types.wood_type.infernalexp]
 			luminous = true
 
-		[types.wood_type.arts_and_crafts]
-			cork = true
-
 		[types.wood_type.environmental]
 			willow = false
 			pine = true
@@ -61,6 +58,12 @@
 
 		[types.wood_type.newworld]
 			fir = true
+
+		[types.wood_type.minecraft]
+			pale_oak = true
+
+		[types.wood_type.arts_and_crafts]
+			cork = true
 
 		[types.leaves_type.quark]
 			ancient = false
@@ -101,9 +104,6 @@
 			apple_fruit = true
 			pear_fruit = true
 
-		[types.leaves_type.arts_and_crafts]
-			cork = true
-
 		[types.leaves_type.environmental]
 			hibiscus = true
 			willow = true
@@ -136,6 +136,12 @@
 		[types.leaves_type.culturaldelights]
 			avocado = true
 			fruiting_avocado = true
+
+		[types.leaves_type.minecraft]
+			pale_oak = true
+
+		[types.leaves_type.arts_and_crafts]
+			cork = true
 
 #Disables specific entries
 [entries]
