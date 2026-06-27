@@ -1,0 +1,20 @@
+{
+	useCustomFont: true,
+	shortenItemAmounts: true,
+	itemStackLimit: 512,
+	blockStackLimit: 256,
+	foodStackLimit: 128,
+	lowStackLimit: 64,
+	stewStackLimit: 32,
+	potionStackLimit: 16,
+	bucketStackLimit: 16,
+	playableStackLimit: 16,
+	vehicleStackLimit: 16,
+	bedStackLimit: 16,
+	bannerPatternStackLimit: 16,
+	enchantedBookStackLimit: 16,
+	nonStackableStackLimit: 1,
+	overrides: [
+		"minecraft:example_item=64"
+	]
+}
