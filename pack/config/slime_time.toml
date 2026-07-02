@@ -23,6 +23,8 @@
 	# Whether to play a sound when an entity with Slime Boots bounces.
 	# default: true
 	slimyBounceSound = true
+	# default: false
+	warnedAboutModefite = false
 
 [bounciness]
 	# Whether to allow bouncing horizontally, based on 26.2+ bounciness logic.
