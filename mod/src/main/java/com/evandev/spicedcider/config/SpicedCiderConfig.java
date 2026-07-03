@@ -21,13 +21,9 @@ public class SpicedCiderConfig {
     }
 
     public static class Client {
-        public final ModConfigSpec.ConfigValue<String> exportDirectory;
 
         public Client(ModConfigSpec.Builder builder) {
-            builder.push("general");
-            exportDirectory = builder.comment("The directory path where assets are exported. Can be relative to the game directory or an absolute path (e.g., C:/Users/Name/Downloads).")
-                    .define("exportDirectory", "resourcepacks/spicedcider_resources/assets");
-            builder.pop();
+
         }
     }
 

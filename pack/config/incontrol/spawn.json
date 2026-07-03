@@ -25,6 +25,11 @@
     "result": "deny"
   },
   {
+    "mob": "minecraft:zombie_villager",
+    "when": "onjoin",
+    "result": "deny"
+  },
+  {
     "mob": "minecraft:wandering_trader",
     "when": "onjoin",
     "result": "deny"

@@ -1,6 +1,5 @@
 package com.evandev.spicedcider;
 
-import com.evandev.spicedcider.command.SpicedCiderQueryCommand;
 import com.evandev.spicedcider.compat.everycompat.BlockBoxEveryCompat;
 import com.evandev.spicedcider.compat.yacl.SpicedCiderConfigScreen;
 import com.evandev.spicedcider.config.ConfigFileHandler;
@@ -23,9 +22,7 @@ import net.neoforged.fml.config.ModConfig;
 import net.neoforged.neoforge.capabilities.Capabilities;
 import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
 import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
-import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
-import net.neoforged.neoforge.event.RegisterCommandsEvent;
 import net.neoforged.neoforge.event.entity.EntityAttributeModificationEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -56,7 +53,6 @@ public class SpicedCider {
 
         modContainer.registerExtensionPoint(IConfigScreenFactory.class, (mc, screen) -> SpicedCiderConfigScreen.create(screen));
 
-        NeoForge.EVENT_BUS.addListener(this::registerCommands);
         ModEntityTypes.ENTITY_TYPES.register(modEventBus);
         ModEntityTypes.ITEMS.register(modEventBus);
         ModBlocks.BLOCKS.register(modEventBus);
@@ -115,9 +111,5 @@ public class SpicedCider {
         if (event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
             event.accept(ModItems.WORKSTONE_ITEM);
         }
-    }
-
-    private void registerCommands(RegisterCommandsEvent event) {
-        SpicedCiderQueryCommand.register(event.getDispatcher(), event.getBuildContext());
     }
 }

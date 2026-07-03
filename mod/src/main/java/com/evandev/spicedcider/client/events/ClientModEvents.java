@@ -6,7 +6,6 @@ import com.evandev.spicedcider.client.renderer.projectiles.CobwebProjectileRende
 import com.evandev.spicedcider.registry.ModBlockEntities;
 import com.evandev.spicedcider.registry.ModBlocks;
 import com.evandev.spicedcider.registry.ModEntityTypes;
-import net.minecraft.client.KeyMapping;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.neoforged.api.distmarker.Dist;
@@ -15,24 +14,11 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.event.RegisterClientReloadListenersEvent;
-import net.neoforged.neoforge.client.event.RegisterKeyMappingsEvent;
-import org.lwjgl.glfw.GLFW;
 
 public class ClientModEvents {
 
     @EventBusSubscriber(modid = SpicedCider.MOD_ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static class ModEvents {
-        public static final KeyMapping OPEN_TEXTURE_FOLDER = new KeyMapping(
-                "key.spicedcider.open_texture_folder",
-                GLFW.GLFW_KEY_O,
-                "key.categories.spicedcider"
-        );
-
-        public static final KeyMapping EXPORT_LANG = new KeyMapping(
-                "key.spicedcider.export_lang",
-                GLFW.GLFW_KEY_C,
-                "key.categories.spicedcider"
-        );
 
         @SubscribeEvent
         public static void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
@@ -52,10 +38,5 @@ public class ClientModEvents {
             });
         }
 
-        @SubscribeEvent
-        public static void registerKeyMappings(RegisterKeyMappingsEvent event) {
-            event.register(OPEN_TEXTURE_FOLDER);
-            event.register(EXPORT_LANG);
-        }
     }
 }
