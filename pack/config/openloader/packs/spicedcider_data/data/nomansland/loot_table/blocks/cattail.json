@@ -28,39 +28,21 @@
       ],
       "entries": [
         {
-          "type": "minecraft:alternatives",
-          "children": [
+          "type": "minecraft:item",
+          "conditions": [
             {
-              "type": "minecraft:item",
-              "conditions": [
-                {
-                  "ability": "shears_dig",
-                  "condition": "neoforge:can_item_perform_ability"
-                }
-              ],
-              "functions": [
-                {
-                  "add": false,
-                  "count": 1.0,
-                  "function": "minecraft:set_count"
-                }
-              ],
-              "name": "nomansland:cattail"
-            },
-            {
-              "type": "minecraft:item",
-              "conditions": [
-                {
-                  "condition": "minecraft:survives_explosion"
-                },
-                {
-                  "chance": 0.125,
-                  "condition": "minecraft:random_chance"
-                }
-              ],
-              "name": "minecraft:string"
+              "ability": "shears_dig",
+              "condition": "neoforge:can_item_perform_ability"
             }
-          ]
+          ],
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 1,
+              "add": false
+            }
+          ],
+          "name": "nomansland:cattail"
         }
       ],
       "rolls": 1.0

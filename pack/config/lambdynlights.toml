@@ -207,8 +207,47 @@ chunk_rebuild_scheduler = "culling"
 				chain_lightning = true
 				following_jukebox = true
 
+			[light_sources.settings.entities.oreganized]
+				shrapnel_bomb = true
+				lead_bolt = true
+				shrapnel_bomb_minecart = true
+
 			[light_sources.settings.entities.bountifulfares]
 				flour = true
+
+			[light_sources.settings.entities.naturalist]
+				deer = true
+				alligator = true
+				snail = true
+				rhino = true
+				bluejay = true
+				snake = true
+				catfish = true
+				boar = true
+				caterpillar = true
+				dragonfly = true
+				robin = true
+				duck_egg = true
+				tortoise = true
+				duck = true
+				butterfly = true
+				bear = true
+				sparrow = true
+				lizard = true
+				rattlesnake = true
+				zebra = true
+				canary = true
+				firefly = true
+				hippo = true
+				coral_snake = true
+				cardinal = true
+				lion = true
+				vulture = true
+				bass = true
+				giraffe = true
+				lizard_tail = true
+				elephant = true
+				finch = true
 
 			[light_sources.settings.entities.tolerable_creepers]
 				mischief_arrow = true
@@ -296,6 +335,10 @@ chunk_rebuild_scheduler = "culling"
 				floating_block = true
 				chest_boat = true
 				boat = true
+
+			[light_sources.settings.entities.piglinproliferation]
+				piglin_traveler = true
+				piglin_alchemist = true
 
 			[light_sources.settings.entities.autumnity]
 				snail = true

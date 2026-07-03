@@ -1,4 +1,4 @@
-package com.evandev.spicedcider.integration.emi;
+package com.evandev.spicedcider.compat.emi;
 
 import com.evandev.spicedcider.recipe.WorkstoneRecipe;
 import com.evandev.spicedcider.registry.ModRecipeTypes;

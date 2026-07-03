@@ -201,7 +201,7 @@ neoForge {
     runs {
         configureEach {
             systemProperty 'forge.logging.markers', 'REGISTRIES'
-            logLevel = org.slf4j.event.Level.DEBUG
+            logLevel = org.slf4j.event.Level.WARN
         }
 
         client {
@@ -242,6 +242,11 @@ dependencies {
     compileOnly "maven.modrinth:melancholic_hunger:vKSreUAW"
     implementation "maven.modrinth:cooks-collection:0.5.5"
     implementation "maven.modrinth:farmers-delight:1.21.1-1.3.2"
+    implementation "maven.modrinth:the-block-box:0.1.3"
+    implementation "maven.modrinth:every-compat:1.21-2.11.46"
+    implementation "maven.modrinth:moonlight:1.21.1-3.0.22"
+    implementation "maven.modrinth:environmental:5.0.1"
+    implementation "maven.modrinth:blueprint:8.1.0"
     compileOnly "maven.modrinth:nostalgic-tweaks:POrRfSqe"
     compileOnly(annotationProcessor("com.github.bawnorton.mixinsquared:mixinsquared-common:0.3.3"))
     jarJar(implementation("com.github.bawnorton.mixinsquared:mixinsquared-neoforge")) {

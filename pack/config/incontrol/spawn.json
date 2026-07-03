@@ -45,6 +45,11 @@
     "result": "deny"
   },
   {
+    "mob": "supplementaries:red_merchant",
+    "when": "onjoin",
+    "result": "deny"
+  },
+  {
     "mob": "minecraft:drowned",
     "when": "onjoin",
     "random": 0.01,

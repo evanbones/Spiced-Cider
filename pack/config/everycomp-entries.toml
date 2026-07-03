@@ -178,9 +178,6 @@
 			hollow_log = true
 			vertical_slab = false
 
-		[entries.wood_type.shutterup]
-			shutter = true
-
 		[entries.wood_type.farmersdelight]
 			cabinet = true
 
@@ -215,6 +212,15 @@
 			bundled_posts = true
 			post = true
 			cut_stripped_post = true
+
+		[entries.wood_type.blockbox]
+			spiked_palisade = true
+			stripped_palisade = true
+			palisade = true
+			stripped_spiked_palisade = true
+
+		[entries.wood_type.shutterup]
+			shutter = true
 
 		[entries.leaves_type.quark]
 			hedge = true

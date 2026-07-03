@@ -1,4 +1,4 @@
-package com.evandev.spicedcider.integration.yacl;
+package com.evandev.spicedcider.compat.yacl;
 
 import com.evandev.spicedcider.config.SpicedCiderConfig;
 import dev.isxander.yacl3.api.ConfigCategory;

@@ -1,13 +1,16 @@
 package com.evandev.spicedcider;
 
 import com.evandev.spicedcider.command.SpicedCiderQueryCommand;
+import com.evandev.spicedcider.compat.everycompat.BlockBoxEveryCompat;
+import com.evandev.spicedcider.compat.yacl.SpicedCiderConfigScreen;
 import com.evandev.spicedcider.config.ConfigFileHandler;
 import com.evandev.spicedcider.config.LoggerNamePatternSelector;
 import com.evandev.spicedcider.config.Reconfigurator;
 import com.evandev.spicedcider.config.SpicedCiderConfig;
-import com.evandev.spicedcider.integration.yacl.SpicedCiderConfigScreen;
 import com.evandev.spicedcider.namingunconvention.RandomNameGenerator;
+import com.evandev.spicedcider.perf.NamespaceCache;
 import com.evandev.spicedcider.registry.*;
+import net.mehvahdjukaar.every_compat.api.EveryCompatAPI;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -63,6 +66,8 @@ public class SpicedCider {
         ModRecipeTypes.RECIPE_TYPES.register(modEventBus);
         ModRecipeSerializers.RECIPE_SERIALIZERS.register(modEventBus);
         ModSounds.SOUNDS.register(modEventBus);
+        EveryCompatAPI.registerModule(new BlockBoxEveryCompat(MOD_ID));
+        NamespaceCache.init();
 
         LOGGER.info("Starting Log4j reconfiguration.");
         loadPlugin();
