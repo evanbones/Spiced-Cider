@@ -50,7 +50,7 @@ hash = "d15bd01bf6464043930c65fc6cc8106290f9ac10f68da803f589ea003dc7fbb0"
 
 [[files]]
 file = "config/amendments-common.toml"
-hash = "88a7589f5f621ab65ccf7445b1553206390ae7e89a99d04e129fdd195bb40feb"
+hash = "3dd85964f8bfbc3a4d0b04db2658de19b332c45ec19740eec5c97316bd1cde94"
 
 [[files]]
 file = "config/apeeling-common.toml"
@@ -294,7 +294,7 @@ hash = "943e1c3672b8a03f27519b357091133205119c7b3db2fcc4c25b597cabf8926d"
 
 [[files]]
 file = "config/crash_assistant/modlist.json"
-hash = "e5b9cbe205e4726c2ef7f5549e27b1079bf5299a304f4418488e18a5e13d9883"
+hash = "0d76f1fed91b77b162e5d226be8e46c326ddf835e54526bc94998aa432256f3f"
 
 [[files]]
 file = "config/crash_assistant/scripts/log_analysis/example.jexl"
@@ -417,6 +417,10 @@ file = "config/emixx/stack_groups/blockbox_sky_lanterns.json"
 hash = "da2beadf83d6274ee7db47ecd001d772fe73cd863f3c214a7797742874d91bf0"
 
 [[files]]
+file = "config/emixx/stack_groups/blockbox_spiked_palisades.json"
+hash = "3a0669a6ac87a2d5b7713ed93c407e989a5a63b50eccb057c7e01414b0fe523e"
+
+[[files]]
 file = "config/emixx/stack_groups/blockbox_wooden_seats.json"
 hash = "29e69baad9fb08166151f9176182be8c488997b364b4b9b1e635a91a425ab579"
 
@@ -453,6 +457,10 @@ file = "config/emixx/stack_groups/c_bricks.json"
 hash = "5a7e3c669cbfe70d6415d461787933bf2c65b760c33f51b7a7f74039eb350896"
 
 [[files]]
+file = "config/emixx/stack_groups/c_chests_trapped.json"
+hash = "7ee9d5b39ac18c3a253a5c2242f8e67e6b11a83c99096bf9b9665d21b41903f4"
+
+[[files]]
 file = "config/emixx/stack_groups/c_chests_wooden.json"
 hash = "8ae2f5dd2151dc69d4b5a90c740a0bb8a3e4b617396dd842e381eff6d0aebace"
 
@@ -481,8 +489,24 @@ file = "config/emixx/stack_groups/chalk_chalks.json"
 hash = "e234f40a7074d345162b01c69b705317c424ce534a94848b8b86b638a1f59a04"
 
 [[files]]
+file = "config/emixx/stack_groups/clayworks_chiseled_terracotta_bricks.json"
+hash = "6b927ef6d92306e237f7bb3d396c96bacbc4f7f4a5abbf7339a95fe72a1dc666"
+
+[[files]]
+file = "config/emixx/stack_groups/clayworks_terracotta_bricks.json"
+hash = "c8ff524bdea49170ae4a52069e5edd204e1edc48d915be30d724c2c08b401c9c"
+
+[[files]]
 file = "config/emixx/stack_groups/copperagebackport_wooden_shelves.json"
 hash = "85f8c57342db735a4219b259a6f58ec7ca96afca5bcec3201e627226b3ae1fd2"
+
+[[files]]
+file = "config/emixx/stack_groups/coral_fans.json"
+hash = "e381d32024d43a29df79fc2be50659a256c9861137eb85e0ee9336ecc5929703"
+
+[[files]]
+file = "config/emixx/stack_groups/corals.json"
+hash = "8922e6083cca40c9804c6a9013fff09f044a86e07cb8efbe78d8a63782d4be4b"
 
 [[files]]
 file = "config/emixx/stack_groups/create_postboxes.json"
@@ -503,6 +527,10 @@ hash = "dbac7760264be323346d59d140d0deb5a8ce9869d2cfcb0b09d2b410f7f88c1a"
 [[files]]
 file = "config/emixx/stack_groups/create_valve_handles.json"
 hash = "62c36d2f918fa169c1a0194436158eba624ce10c0110bffc3424284548833013"
+
+[[files]]
+file = "config/emixx/stack_groups/dead_corals.json"
+hash = "eea4b823c77217771c86e675c9a5ac6e9dcf85f838153914de2de135e74d93fa"
 
 [[files]]
 file = "config/emixx/stack_groups/decorated_pots.json"
@@ -555,6 +583,10 @@ hash = "3c78eec45267b303a12166e456e5bc6625b67b04ef156fe5738c924187c56d3e"
 [[files]]
 file = "config/emixx/stack_groups/quark_stools.json"
 hash = "0e521991b5ed630aae63831af07de7ce6fc22e9c2cbee2d534a32cb100bab9d5"
+
+[[files]]
+file = "config/emixx/stack_groups/quark_terracotta_bricks.json"
+hash = "8341c865c8c13e8396148edf11cdd7bf87bd57e8aeb607f25a5ae346aac50526"
 
 [[files]]
 file = "config/emixx/stack_groups/redomesticate_pet_beds.json"
@@ -673,16 +705,8 @@ file = "config/everycomp-common.toml"
 hash = "7f9600976b415a1f3196fbc51d0aebd62731168f6786fa6555e058e47b2c30a4"
 
 [[files]]
-file = "config/everycomp-entries-1.toml.bak"
-hash = "6b5ce0ddecc5514b7fc9a413afd2d77d7f795276a45db2a4d97d01628fdafb2d"
-
-[[files]]
-file = "config/everycomp-entries-2.toml.bak"
-hash = "7bf38d5590fd905555330a174f52dfe620d33dc135e2ab5544e68534638e35bd"
-
-[[files]]
 file = "config/everycomp-entries.toml"
-hash = "9009b06b0fc941d0407ae2f0d8abfb8bc12ed2298e7a5489f0448ce9f2a51f60"
+hash = "c80de568411c31303de957a540c7599fb354f00cc0efd45805b3fe991a39ab4c"
 
 [[files]]
 file = "config/everycomp-hazardous.toml"
@@ -718,7 +742,7 @@ hash = "09d330b29443d9579ecc014f2be2fcb31075bfe1e9f9ac4e750f271128650fe6"
 
 [[files]]
 file = "config/fabric/indigo-renderer.properties"
-hash = "f86f5824f51ab848b8599474a54e7eec26dbb4e86ac7661ce34e5afde3705902"
+hash = "37e0bbbd707ffeccfefd2b4879ad369aa89333aa4de52698cca6a179b3f1afd2"
 
 [[files]]
 file = "config/fallingleaves-client.toml"
@@ -1418,7 +1442,7 @@ hash = "c14e7c3fd0992fd2a1cea6ab5230972888121cebd39115b107e2a544c14bfef8"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/clutternomore/shape_map/valhelsia_structures.json"
-hash = "155f0cbb624c607063d82882a792b97209cb67ea52d66d7af55d02507e715cf2"
+hash = "c8a993176c36e843ee1963beb92f9b0c0fe60f37efd485e4c5ecacd68eb5d8ca"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/copperagebackport/tags/item/wooden_shelves.json"
@@ -1821,6 +1845,10 @@ file = "config/openloader/packs/spicedcider_data/data/spicedcider/neoforge/biome
 hash = "e465f45145a610f689d0ab4f85af23efc9af14d2072828172d79283909ab21bf"
 
 [[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/neoforge/biome_modifier/remove_cnc_rhyolite.json"
+hash = "d24ebe995772b3d830d769cf38f4db2939ad16a3c1229b700886c7ec2acd62a4"
+
+[[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/neoforge/biome_modifier/remove_cnc_rocky_dirt.json"
 hash = "df86928ef63b3449a41f54d447347687832a86fe28aa545a867cedc19af5ecec"
 
@@ -1954,7 +1982,7 @@ hash = "e0056a098e58dd031bf11adb62d892494c608a6ce82eec63194eebc63e77e2b9"
 
 [[files]]
 file = "config/packetfixer.properties"
-hash = "f75f068a89fa6f349698dd3b2774806949a2eb19bfae25b499b2571ac3b706fd"
+hash = "9111a1fbe2deb41b25c6b58486ebd8d387455369634ee69b6a266646c95c29ae"
 
 [[files]]
 file = "config/particle_core_config.toml"
@@ -2018,7 +2046,7 @@ hash = "32b47027c78091d1e42d497994f81791bbf1c0541503cc58294c0a34fcdaa135"
 
 [[files]]
 file = "config/quark-common.toml"
-hash = "f1358ee47294e4fe71206a2e8f4e67d843c354035163f375a1d584a0bcb34a4f"
+hash = "0e42d42770b164f934b3b70189bca020b0499694c56ea575ec43f3f43c429c6e"
 
 [[files]]
 file = "config/quick-pack.json"
@@ -2082,7 +2110,7 @@ hash = "590ea074ec1c84ced8a0c60dedd7111edd69801f7441fe78654c2f6fdfb655b7"
 
 [[files]]
 file = "config/reliable_remover.json"
-hash = "7e50d22c8b4a260a4376711800ba328022acb5100946cbba0f4cea9d9c1972c8"
+hash = "d6202e746ed57cfb2089a82769117e42088cc3f4fab1bac7d356fe54a9033d26"
 
 [[files]]
 file = "config/reliable_remover/aether.json"
@@ -2147,26 +2175,6 @@ hash = "1f9918737141d77a7c4bf809f09e40b3a5b8a09171cd38a27e443a05c5cc8037"
 [[files]]
 file = "config/scholar-common.toml"
 hash = "797cdb72c29122c892a3ea0408930207ac07e87d1a11499d43d37a11f9fac10b"
-
-[[files]]
-file = "config/screenshot_viewer-client-1.toml.bak"
-hash = "72a1f489ae45e7903278581c368ac66f2ee71f7710fbc229afd8d6416c29f79f"
-
-[[files]]
-file = "config/screenshot_viewer-client-2.toml.bak"
-hash = "72a1f489ae45e7903278581c368ac66f2ee71f7710fbc229afd8d6416c29f79f"
-
-[[files]]
-file = "config/screenshot_viewer-client-3.toml.bak"
-hash = "72a1f489ae45e7903278581c368ac66f2ee71f7710fbc229afd8d6416c29f79f"
-
-[[files]]
-file = "config/screenshot_viewer-client-4.toml.bak"
-hash = "72a1f489ae45e7903278581c368ac66f2ee71f7710fbc229afd8d6416c29f79f"
-
-[[files]]
-file = "config/screenshot_viewer-client-5.toml.bak"
-hash = "72a1f489ae45e7903278581c368ac66f2ee71f7710fbc229afd8d6416c29f79f"
 
 [[files]]
 file = "config/screenshot_viewer-client.toml"
@@ -2263,14 +2271,6 @@ hash = "d7514c0ddb6ae8611a281527bf04ca6cbcea1fa21758534fdcd08ed0f51c19c0"
 [[files]]
 file = "config/spark/tmp/about.txt"
 hash = "d7514c0ddb6ae8611a281527bf04ca6cbcea1fa21758534fdcd08ed0f51c19c0"
-
-[[files]]
-file = "config/spawn-client.toml"
-hash = "1e788c7324070e4aa43680d3acaf2433d03f71f624b6819eea2ff92b7789d18f"
-
-[[files]]
-file = "config/spawn-server.toml"
-hash = "73bdc225876ce0960c703299d37f1055a35c7f498ea7dabb997ef95e6de007b6"
 
 [[files]]
 file = "config/spicedcider-client.toml"
@@ -6677,12 +6677,16 @@ file = "resourcepacks/spicedcider_resources/assets/quark/textures/block/yellow_s
 hash = "9922f5149cddd86d6f1d609c74dcf761450bc4879074e2157080b43353c7911f"
 
 [[files]]
+file = "resourcepacks/spicedcider_resources/assets/quark/textures/gui/container/feeding_trough.png"
+hash = "57c0f425ea14a89141e97bd745d1c873bf4fdc4a22b2480bf498984e2c024c4d"
+
+[[files]]
 file = "resourcepacks/spicedcider_resources/assets/quark/textures/gui/crate.png"
 hash = "df2b3cb96e394f2bf1d4f8d4cdb3dc8afb7bd57708141694ae0040e3be937eaa"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/quark/textures/gui/general_icons.png"
-hash = "7f5dcc7da02edad1e595d093cd9bd932a7511b71e598fce3bacc6489ba7a9f76"
+hash = "cbfbd1723b1080f14950a074980856424ff26cb34ab8a81b5fc16b8d448151e4"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/reliable_advancements/textures/gui/inventory_button.png"

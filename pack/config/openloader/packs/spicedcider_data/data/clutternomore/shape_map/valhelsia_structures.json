@@ -1,7 +1,7 @@
 {
   "priority": 1000,
   "add": {
-    "/(?<namespace>(?!everycomp|spicedcider)[^:]+):(?<stripped>stripped_)?(?:spiked_)?(?<wood>.+)_palisade/": [
+    "/(?<namespace>(?!everycomp|spicedcider)[^:]+):(?<stripped>stripped_)?(?!spiked_)(?<wood>.+)_palisade/": [
       "${namespace}:${stripped}${wood}_palisade",
       "${namespace}:${stripped}spiked_${wood}_palisade",
       "valhelsia_structures:${stripped}${wood}_post",
@@ -11,7 +11,7 @@
       "everycomp:vs/${namespace}/${stripped}${wood}_post",
       "everycomp:vs/${namespace}/cut_${stripped}${wood}_post"
     ],
-    "/(?<prefix>everycomp|spicedcider):(?<dir>[^/]+)/(?<namespace>[^/]+)/(?<stripped>stripped_)?(?:spiked_)?(?<wood>.+)_palisade/": [
+    "/(?<prefix>everycomp|spicedcider):(?<dir>[^/]+)/(?<namespace>[^/]+)/(?<stripped>stripped_)?(?!spiked_)(?<wood>.+)_palisade/": [
       "${prefix}:${dir}/${namespace}/${stripped}${wood}_palisade",
       "${prefix}:${dir}/${namespace}/${stripped}spiked_${wood}_palisade",
       "valhelsia_structures:${stripped}${wood}_post",
