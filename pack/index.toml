@@ -294,7 +294,7 @@ hash = "943e1c3672b8a03f27519b357091133205119c7b3db2fcc4c25b597cabf8926d"
 
 [[files]]
 file = "config/crash_assistant/modlist.json"
-hash = "0d76f1fed91b77b162e5d226be8e46c326ddf835e54526bc94998aa432256f3f"
+hash = "030f4dbf4a99647c2597b58ad1c450dbf4fcbe38b4d6ddd65727847410fa1cce"
 
 [[files]]
 file = "config/crash_assistant/scripts/log_analysis/example.jexl"
@@ -415,10 +415,6 @@ hash = "3317ce9a118f3fe6485581376780b5fd85e8346cfa260f487c180004c1189e6a"
 [[files]]
 file = "config/emixx/stack_groups/blockbox_sky_lanterns.json"
 hash = "da2beadf83d6274ee7db47ecd001d772fe73cd863f3c214a7797742874d91bf0"
-
-[[files]]
-file = "config/emixx/stack_groups/blockbox_spiked_palisades.json"
-hash = "3a0669a6ac87a2d5b7713ed93c407e989a5a63b50eccb057c7e01414b0fe523e"
 
 [[files]]
 file = "config/emixx/stack_groups/blockbox_wooden_seats.json"
@@ -705,8 +701,12 @@ file = "config/everycomp-common.toml"
 hash = "7f9600976b415a1f3196fbc51d0aebd62731168f6786fa6555e058e47b2c30a4"
 
 [[files]]
-file = "config/everycomp-entries.toml"
+file = "config/everycomp-entries-1.toml.bak"
 hash = "c80de568411c31303de957a540c7599fb354f00cc0efd45805b3fe991a39ab4c"
+
+[[files]]
+file = "config/everycomp-entries.toml"
+hash = "86ef99ff975854e5f7e68c7c34b2f8d3cab6be020d8a9de467c92484640c8fba"
 
 [[files]]
 file = "config/everycomp-hazardous.toml"
@@ -742,7 +742,7 @@ hash = "09d330b29443d9579ecc014f2be2fcb31075bfe1e9f9ac4e750f271128650fe6"
 
 [[files]]
 file = "config/fabric/indigo-renderer.properties"
-hash = "37e0bbbd707ffeccfefd2b4879ad369aa89333aa4de52698cca6a179b3f1afd2"
+hash = "1e91edb1be616b8227130625bc3c9ee42d081ddd64027bf0c705f6ffe10ca26f"
 
 [[files]]
 file = "config/fallingleaves-client.toml"
@@ -1442,7 +1442,7 @@ hash = "c14e7c3fd0992fd2a1cea6ab5230972888121cebd39115b107e2a544c14bfef8"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/clutternomore/shape_map/valhelsia_structures.json"
-hash = "c8a993176c36e843ee1963beb92f9b0c0fe60f37efd485e4c5ecacd68eb5d8ca"
+hash = "c131d75195d07ddd2bd8ae954d528940f356aebb0e112eab8818c507a6ab9e37"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/copperagebackport/tags/item/wooden_shelves.json"
@@ -1821,6 +1821,10 @@ file = "config/openloader/packs/spicedcider_data/data/reliable_requiem/tags/item
 hash = "d25d24b05fc4515c16ddd95fcf9023774c1e59ee8878b1dbfb14fd1dc4271fd8"
 
 [[files]]
+file = "config/openloader/packs/spicedcider_data/data/shutterup/tags/item/shutters.json"
+hash = "15e0f7704b97a8c0783d66f30d42d87f0fa69b971fff24679186a65c8b35f072"
+
+[[files]]
 file = "config/openloader/packs/spicedcider_data/data/snowrealmagic/tags/block/containables.json"
 hash = "cb7d7fb71787bd8640b258de5b4469dc4f7317683fd83be3e7b5895b2da54b17"
 
@@ -1982,7 +1986,7 @@ hash = "e0056a098e58dd031bf11adb62d892494c608a6ce82eec63194eebc63e77e2b9"
 
 [[files]]
 file = "config/packetfixer.properties"
-hash = "9111a1fbe2deb41b25c6b58486ebd8d387455369634ee69b6a266646c95c29ae"
+hash = "e641fec19e93a9909cdcf17f384032b3d5450748b7033b1651ed498e88e53173"
 
 [[files]]
 file = "config/particle_core_config.toml"
@@ -2051,6 +2055,10 @@ hash = "0e42d42770b164f934b3b70189bca020b0499694c56ea575ec43f3f43c429c6e"
 [[files]]
 file = "config/quick-pack.json"
 hash = "18bb4bac8bf47499a99702cc1edcc2f70903524e365290a200b4c0cdadc9c6b2"
+
+[[files]]
+file = "config/raised.json"
+hash = "6bd9b64f1838ff694d0aed7a11439ffdad9d810733f80798732b339f1566e6f9"
 
 [[files]]
 file = "config/recreative/magical_tab.json"
@@ -2177,6 +2185,10 @@ file = "config/scholar-common.toml"
 hash = "797cdb72c29122c892a3ea0408930207ac07e87d1a11499d43d37a11f9fac10b"
 
 [[files]]
+file = "config/screenshot_viewer-client-1.toml.bak"
+hash = "72a1f489ae45e7903278581c368ac66f2ee71f7710fbc229afd8d6416c29f79f"
+
+[[files]]
 file = "config/screenshot_viewer-client.toml"
 hash = "72a1f489ae45e7903278581c368ac66f2ee71f7710fbc229afd8d6416c29f79f"
 
@@ -2282,7 +2294,7 @@ hash = "71c6f65022cb095402596003a4896d66de91b15294c5e8ef9118ce10b3503829"
 
 [[files]]
 file = "config/spicedcider/spicedcider_manifest.json"
-hash = "9fbe5e1e3c12eca4f70e0c27bf66ff3d4ad97c87eeb0f28b2be099e22bb66499"
+hash = "61152e0cd9acd933829212634bba2ae26d5ee7fc505172454501d08603628a87"
 
 [[files]]
 file = "config/stacksizetweaks.json5"
@@ -3554,7 +3566,7 @@ metafile = true
 
 [[files]]
 file = "mods/spicedcider-1.0.0.jar"
-hash = "a613342aad1ca3104065b76cf4e852d9c8362d02be4e9c4ec9425cb007cdb4dd"
+hash = "ef6f0beda934c0623a7d2f5d8a7f1c3f4b7763dbc8320547c70fb5b5a58d2d46"
 
 [[files]]
 file = "mods/stacksizetweaks-neoforge-0.3.2+1.21.jar"
