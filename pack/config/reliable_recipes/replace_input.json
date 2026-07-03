@@ -2,12 +2,16 @@
   {
     "action": "replace_input",
     "target": "bountifulfares:walnut",
-    "replacement": ["nomansland:walnuts"]
+    "replacement": [
+      "nomansland:walnuts"
+    ]
   },
   {
     "action": "replace_input",
     "target": "bountifulfares:walnut_planks",
-    "replacement": ["nomansland:walnut_planks"]
+    "replacement": [
+      "nomansland:walnut_planks"
+    ]
   },
   {
     "action": "replace_output",
@@ -17,11 +21,22 @@
   {
     "action": "replace_input",
     "target": "create:andesite_alloy",
-    "replacement": ["alloyed:bronze_ingot"]
+    "replacement": [
+      "alloyed:bronze_ingot"
+    ]
+  },
+  {
+    "action": "replace_input",
+    "target": "cookscollection:lemon",
+    "replacement": [
+      "bountifulfares:lemon"
+    ]
   },
   {
     "action": "replace_input",
     "target": "nomansland:clover_patch",
-    "replacement": ["wilderflowers:clovers"]
+    "replacement": [
+      "wilderflowers:clovers"
+    ]
   }
 ]
