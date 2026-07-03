@@ -1,6 +1,7 @@
 package com.evandev.spicedcider.mixin.cookscollection;
 
 import com.baisylia.cookscollection.block.ModBlocks;
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import net.minecraft.world.level.block.Block;
@@ -27,7 +28,7 @@ public class CooksCollectionModBlocksMixin {
             Supplier<Block> supplier,
             Operation<DeferredBlock<?>> original) {
 
-        if ("salted_dripstone_block".equals(name)) {
+        if ("salted_dripstone_block".equals(name) && SpicedCiderConfig.STARTUP.cooksCollectionDripstoneFix.get()) {
             supplier = () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DRIPSTONE_BLOCK));
         }
 

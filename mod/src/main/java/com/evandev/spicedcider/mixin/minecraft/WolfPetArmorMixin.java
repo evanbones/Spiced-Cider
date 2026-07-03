@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.mixin.minecraft;
 
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.damagesource.DamageSource;
@@ -17,6 +18,8 @@ public class WolfPetArmorMixin {
 
     @Inject(method = "mobInteract", at = @At("HEAD"), cancellable = true)
     private void cider$equipAnyPetArmor(Player player, InteractionHand hand, CallbackInfoReturnable<InteractionResult> cir) {
+        if (!SpicedCiderConfig.COMMON.wolvesWearAnyArmor.get()) return;
+
         Wolf wolf = (Wolf) (Object) this;
         ItemStack stack = player.getItemInHand(hand);
 
@@ -31,6 +34,8 @@ public class WolfPetArmorMixin {
 
     @Inject(method = "hasArmor", at = @At("HEAD"), cancellable = true)
     private void cider$hasArmor(CallbackInfoReturnable<Boolean> cir) {
+        if (!SpicedCiderConfig.COMMON.wolvesWearAnyArmor.get()) return;
+
         Wolf wolf = (Wolf) (Object) this;
         if (wolf.getBodyArmorItem().getItem() instanceof AnimalArmorItem) {
             cir.setReturnValue(true);
@@ -39,6 +44,8 @@ public class WolfPetArmorMixin {
 
     @Inject(method = "canArmorAbsorb", at = @At("HEAD"), cancellable = true)
     private void cider$canArmorAbsorb(DamageSource damageSource, CallbackInfoReturnable<Boolean> cir) {
+        if (!SpicedCiderConfig.COMMON.wolvesWearAnyArmor.get()) return;
+
         Wolf wolf = (Wolf) (Object) this;
         if (wolf.getBodyArmorItem().getItem() instanceof AnimalArmorItem) {
             cir.setReturnValue(true);

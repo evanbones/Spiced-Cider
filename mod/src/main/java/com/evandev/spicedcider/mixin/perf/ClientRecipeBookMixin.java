@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.mixin.perf;
 
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import net.minecraft.client.ClientRecipeBook;
 import net.minecraft.core.RegistryAccess;
 import net.minecraft.world.item.crafting.Recipe;
@@ -12,6 +13,8 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class ClientRecipeBookMixin {
     @Inject(method = "setupCollections", at = @At("HEAD"), cancellable = true)
     public void onSetup(Iterable<Recipe<?>> iterable, RegistryAccess registryAccess, CallbackInfo ci) {
-        ci.cancel();
+        if (SpicedCiderConfig.COMMON.disableRecipeBookTracking.get()) {
+            ci.cancel();
+        }
     }
 }

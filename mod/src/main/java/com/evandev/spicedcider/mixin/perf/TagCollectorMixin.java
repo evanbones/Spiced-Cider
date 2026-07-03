@@ -1,6 +1,8 @@
 package com.evandev.spicedcider.mixin.perf;
 
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import net.minecraft.client.multiplayer.TagCollector;
+import net.minecraft.world.level.block.Blocks;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
@@ -9,6 +11,9 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 public class TagCollectorMixin {
     @Redirect(method = "refreshBuiltInTagDependentData", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/level/block/Blocks;rebuildCache()V"))
     private static void rebuildBlockCache() {
-        // Don't need to do anything - block shape properties that are rebuilt here don't depend on tags
+        // Block shape properties rebuilt here don't depend on tags, so this is safe to skip
+        if (!SpicedCiderConfig.COMMON.skipRedundantBlockCacheRebuild.get()) {
+            Blocks.rebuildCache();
+        }
     }
 }

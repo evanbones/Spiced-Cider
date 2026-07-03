@@ -234,19 +234,17 @@ neoForge {
 }
 
 dependencies {
-    compileOnly "maven.modrinth:particle-rain:v4-beta.9+1.21.1-neoforge"
     compileOnly "maven.modrinth:modern-world-creation:2.0.1-1.21.1-neoforge"
     implementation "maven.modrinth:emi:1.1.22+1.21.1+neoforge"
-    implementation "maven.modrinth:geckolib:gFmrC8Ru"
     implementation "maven.modrinth:yacl:3.8.2+1.21.1-neoforge"
     compileOnly "maven.modrinth:melancholic_hunger:vKSreUAW"
-    implementation "maven.modrinth:cooks-collection:0.5.5"
-    implementation "maven.modrinth:farmers-delight:1.21.1-1.3.2"
-    implementation "maven.modrinth:the-block-box:0.1.3"
-    implementation "maven.modrinth:every-compat:1.21-2.11.46"
-    implementation "maven.modrinth:moonlight:1.21.1-3.0.22"
-    implementation "maven.modrinth:environmental:5.0.1"
-    implementation "maven.modrinth:blueprint:8.1.0"
+    compileOnly "maven.modrinth:cooks-collection:0.5.5"
+    compileOnly "maven.modrinth:farmers-delight:1.21.1-1.3.2"
+    compileOnly "maven.modrinth:the-block-box:0.1.3"
+    compileOnly "maven.modrinth:every-compat:1.21-2.11.46"
+    compileOnly "maven.modrinth:moonlight:1.21.1-3.0.22"
+    compileOnly "maven.modrinth:environmental:5.0.1"
+    compileOnly "maven.modrinth:blueprint:8.1.0"
     compileOnly "maven.modrinth:nostalgic-tweaks:POrRfSqe"
     compileOnly(annotationProcessor("com.github.bawnorton.mixinsquared:mixinsquared-common:0.3.3"))
     jarJar(implementation("com.github.bawnorton.mixinsquared:mixinsquared-neoforge")) {

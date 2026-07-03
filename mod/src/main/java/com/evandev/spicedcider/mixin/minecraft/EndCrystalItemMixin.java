@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.mixin.minecraft;
 
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import net.minecraft.world.item.EndCrystalItem;
 import org.spongepowered.asm.mixin.Mixin;
@@ -16,6 +17,6 @@ public class EndCrystalItemMixin {
             )
     )
     private boolean allowPlacementOnAnyBlock(boolean original) {
-        return true;
+        return original || SpicedCiderConfig.COMMON.endCrystalPlaceAnywhere.get();
     }
 }

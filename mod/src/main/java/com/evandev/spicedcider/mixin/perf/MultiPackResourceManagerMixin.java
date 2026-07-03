@@ -1,6 +1,7 @@
 package com.evandev.spicedcider.mixin.perf;
 
 import com.evandev.spicedcider.SpicedCider;
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.evandev.spicedcider.perf.NamespaceCache;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
@@ -29,7 +30,7 @@ public class MultiPackResourceManagerMixin {
     private Set<String> fastAssetsLoad$filterNamespaces(PackResources instance, PackType packType, Operation<Set<String>> original) {
         Set<String> originalNamespaces = original.call(instance, packType);
 
-        if (packType != PackType.CLIENT_RESOURCES) {
+        if (packType != PackType.CLIENT_RESOURCES || !SpicedCiderConfig.STARTUP.filterUnusedResourcePackNamespaces.get()) {
             return originalNamespaces;
         }
 

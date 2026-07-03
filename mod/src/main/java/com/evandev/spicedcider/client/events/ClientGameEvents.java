@@ -2,6 +2,7 @@ package com.evandev.spicedcider.client.events;
 
 import com.evandev.spicedcider.SpicedCider;
 import com.evandev.spicedcider.client.music.DeathSoundInstance;
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.evandev.spicedcider.registry.ModSounds;
 import net.minecraft.client.Minecraft;
 import net.minecraft.network.chat.contents.TranslatableContents;
@@ -18,6 +19,8 @@ public class ClientGameEvents {
 
     @SubscribeEvent
     public static void onClientTick(ClientTickEvent.Post event) {
+        if (!SpicedCiderConfig.CLIENT.customDeathSound.get()) return;
+
         Minecraft mc = Minecraft.getInstance();
 
         if (mc.player != null) {
@@ -35,6 +38,8 @@ public class ClientGameEvents {
 
     @SubscribeEvent(priority = EventPriority.LOWEST)
     public static void onItemTooltip(ItemTooltipEvent event) {
+        if (!SpicedCiderConfig.CLIENT.hideMelancholicHungerTooltip.get()) return;
+
         event.getToolTip().removeIf(component ->
                 component.getContents() instanceof TranslatableContents translatable &&
                         translatable.getKey().startsWith("gui.melancholic_hunger.regeneration_tooltip.")

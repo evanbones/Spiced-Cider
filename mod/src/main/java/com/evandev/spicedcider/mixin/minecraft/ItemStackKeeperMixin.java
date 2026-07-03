@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.mixin.minecraft;
 
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.Holder;
@@ -39,6 +40,8 @@ public abstract class ItemStackKeeperMixin {
 
     @Unique
     private boolean cider$isBroken() {
+        if (!SpicedCiderConfig.COMMON.keepBrokenItems.get()) return false;
+
         ItemStack self = (ItemStack) (Object) this;
         int maxDamage = self.getMaxDamage() - (self.getItem() instanceof ElytraItem ? 1 : 0);
         return self.isDamageableItem() && self.getDamageValue() > 0 && self.getDamageValue() >= maxDamage;

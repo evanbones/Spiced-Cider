@@ -1,6 +1,7 @@
 package com.evandev.spicedcider.mixin.minecraft.client;
 
 import com.evandev.spicedcider.SpicedCider;
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.minecraft.client.model.WolfModel;
@@ -30,6 +31,8 @@ public class WolfArmorLayerMixin {
 
     @Inject(method = "render*", at = @At("HEAD"), cancellable = true)
     private void cider$renderHorseArmorAsWolfArmor(PoseStack poseStack, MultiBufferSource bufferSource, int packedLight, Wolf wolf, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch, CallbackInfo ci) {
+        if (!SpicedCiderConfig.COMMON.wolvesWearAnyArmor.get()) return;
+
         ItemStack stack = wolf.getBodyArmorItem();
 
         if (stack.getItem() instanceof AnimalArmorItem armorItem && armorItem.getBodyType() == AnimalArmorItem.BodyType.EQUESTRIAN) {

@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.mixin.environmental;
 
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.teamabnormals.blueprint.common.levelgen.feature.BlueprintTreeFeature;
 import com.teamabnormals.environmental.common.levelgen.feature.WisteriaTreeFeature;
 import net.minecraft.core.BlockPos;
@@ -22,6 +23,8 @@ public class WisteriaTreeFeatureMixin {
             remap = false
     )
     private void spicedcider$replaceLeaves(BlockPos pos, Direction direction, RandomSource random, TreeConfiguration config, BlueprintTreeFeature.TreeInfo info, CallbackInfo ci) {
+        if (!SpicedCiderConfig.COMMON.wisteriaLeafDensityFix.get()) return;
+
         for (int x = -1; x <= 1; ++x) {
             for (int z = -1; z <= 1; ++z) {
                 int i = -1 - (random.nextInt(3) == 0 ? 1 : 0);

@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.mixin.minecraft;
 
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.evandev.spicedcider.interfaces.IEndCrystalHealer;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.LivingEntity;
@@ -32,6 +33,11 @@ public abstract class EndCrystalMixin implements IEndCrystalHealer {
 
     @Inject(method = "tick", at = @At("TAIL"))
     private void cider$healNearbyEntities(CallbackInfo ci) {
+        if (!SpicedCiderConfig.COMMON.endCrystalHealing.get()) {
+            this.cider$healingTarget = null;
+            return;
+        }
+
         EndCrystal crystal = (EndCrystal) (Object) this;
         Level level = crystal.level();
 

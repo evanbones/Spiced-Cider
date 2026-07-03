@@ -10,6 +10,10 @@ import java.util.Set;
 
 public class SpicedCiderMixinPlugin implements IMixinConfigPlugin {
 
+    private static boolean isModLoaded(String modId) {
+        return FMLLoader.getLoadingModList().getModFileById(modId) != null;
+    }
+
     @Override
     public void onLoad(String mixinPackage) {
     }
@@ -22,10 +26,13 @@ public class SpicedCiderMixinPlugin implements IMixinConfigPlugin {
     @Override
     public boolean shouldApplyMixin(String targetClassName, String mixinClassName) {
         if (mixinClassName.contains("namingunconvention.ModernWorldCreationGameTabMixin")) {
-            return FMLLoader.getLoadingModList().getModFileById("modernworldcreation") != null;
+            return isModLoaded("modernworldcreation");
         }
         if (mixinClassName.contains("cookscollection.CooksCollectionModBlocksMixin")) {
-            return FMLLoader.getLoadingModList().getModFileById("cookscollection") != null;
+            return isModLoaded("cookscollection");
+        }
+        if (mixinClassName.contains("environmental.WisteriaTreeFeatureMixin")) {
+            return isModLoaded("environmental");
         }
         return true;
     }

@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.mixin.minecraft;
 
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionResult;
@@ -31,6 +32,8 @@ public abstract class BedMixin extends Block {
 
     @Inject(method = "useWithoutItem", at = @At("HEAD"), cancellable = true)
     private void spicedcider$onUseWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult, CallbackInfoReturnable<InteractionResult> cir) {
+        if (!SpicedCiderConfig.COMMON.bedExplosionPrevention.get()) return;
+
         if (!level.dimensionType().bedWorks()) {
             if (!level.isClientSide) {
                 cir.setReturnValue(InteractionResult.SUCCESS);

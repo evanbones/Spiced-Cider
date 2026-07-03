@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.mixin.perf;
 
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.protocol.game.ClientboundRecipePacket;
 import net.minecraft.resources.ResourceLocation;
@@ -18,16 +19,22 @@ import java.util.List;
 public class ServerRecipeBookMixin {
     @Inject(method = "toNbt", at = @At("HEAD"), cancellable = true)
     public void onSave(CallbackInfoReturnable<CompoundTag> cir) {
-        cir.setReturnValue(new CompoundTag());
+        if (SpicedCiderConfig.COMMON.disableRecipeBookTracking.get()) {
+            cir.setReturnValue(new CompoundTag());
+        }
     }
 
     @Inject(method = "fromNbt", at = @At("HEAD"), cancellable = true)
     public void onLoad(CompoundTag pTag, RecipeManager pRecipeManager, CallbackInfo ci) {
-        ci.cancel();
+        if (SpicedCiderConfig.COMMON.disableRecipeBookTracking.get()) {
+            ci.cancel();
+        }
     }
 
     @Inject(method = "sendRecipes", at = @At("HEAD"), cancellable = true)
     public void onLoad(ClientboundRecipePacket.State pState, ServerPlayer pPlayer, List<ResourceLocation> pRecipes, CallbackInfo ci) {
-        ci.cancel();
+        if (SpicedCiderConfig.COMMON.disableRecipeBookTracking.get()) {
+            ci.cancel();
+        }
     }
 }

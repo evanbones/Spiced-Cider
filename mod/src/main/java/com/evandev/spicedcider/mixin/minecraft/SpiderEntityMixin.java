@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.mixin.minecraft;
 
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.evandev.spicedcider.goals.RangedWebAttackGoal;
 import com.evandev.spicedcider.interfaces.ITrapsTarget;
 import com.evandev.spicedcider.interfaces.IWebShooter;
@@ -69,6 +70,8 @@ public abstract class SpiderEntityMixin extends Monster implements IWebShooter {
 
     @Unique
     private void cider$reassessAttackGoals() {
+        if (!SpicedCiderConfig.COMMON.spiderRangedWebAttacks.get()) return;
+
         LivingEntity target = this.getTarget();
         if (this.cider$meleeAttackGoal != null
                 && this.cider$rangedWebAttackGoal != null

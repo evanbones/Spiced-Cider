@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.mixin.perf;
 
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.item.crafting.RecipeHolder;
@@ -16,11 +17,15 @@ import java.util.List;
 public class ServerPlayerMixin {
     @Inject(method = "awardRecipes", at = @At("HEAD"), cancellable = true)
     public void onAwardRecipes(Collection<RecipeHolder<?>> holders, CallbackInfoReturnable<Integer> cir) {
-        cir.setReturnValue(0);
+        if (SpicedCiderConfig.COMMON.disableRecipeBookTracking.get()) {
+            cir.setReturnValue(0);
+        }
     }
 
     @Inject(method = "awardRecipesByKey", at = @At("HEAD"), cancellable = true)
     public void onAwardRecipesByKey(List<ResourceLocation> recipes, CallbackInfo ci) {
-        ci.cancel();
+        if (SpicedCiderConfig.COMMON.disableRecipeBookTracking.get()) {
+            ci.cancel();
+        }
     }
 }

@@ -1,6 +1,6 @@
 package com.evandev.spicedcider;
 
-import com.evandev.spicedcider.compat.everycompat.BlockBoxEveryCompat;
+import com.evandev.spicedcider.compat.everycompat.BlockBoxEveryCompatLoader;
 import com.evandev.spicedcider.compat.yacl.SpicedCiderConfigScreen;
 import com.evandev.spicedcider.config.ConfigFileHandler;
 import com.evandev.spicedcider.config.LoggerNamePatternSelector;
@@ -9,13 +9,13 @@ import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.evandev.spicedcider.namingunconvention.RandomNameGenerator;
 import com.evandev.spicedcider.perf.NamespaceCache;
 import com.evandev.spicedcider.registry.*;
-import net.mehvahdjukaar.every_compat.api.EveryCompatAPI;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModContainer;
+import net.neoforged.fml.ModList;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
@@ -48,6 +48,7 @@ public class SpicedCider {
     public SpicedCider(IEventBus modEventBus, ModContainer modContainer) {
         CLASSLOADER = SpicedCider.class.getClassLoader();
 
+        modContainer.registerConfig(ModConfig.Type.STARTUP, SpicedCiderConfig.STARTUP_SPEC);
         modContainer.registerConfig(ModConfig.Type.COMMON, SpicedCiderConfig.COMMON_SPEC);
         modContainer.registerConfig(ModConfig.Type.CLIENT, SpicedCiderConfig.CLIENT_SPEC);
 
@@ -62,7 +63,14 @@ public class SpicedCider {
         ModRecipeTypes.RECIPE_TYPES.register(modEventBus);
         ModRecipeSerializers.RECIPE_SERIALIZERS.register(modEventBus);
         ModSounds.SOUNDS.register(modEventBus);
-        EveryCompatAPI.registerModule(new BlockBoxEveryCompat(MOD_ID));
+
+        if (SpicedCiderConfig.STARTUP.blockBoxWoodVariants.get()
+                && ModList.get().isLoaded("blockbox")
+                && ModList.get().isLoaded("everycomp")
+                && ModList.get().isLoaded("moonlight")) {
+            BlockBoxEveryCompatLoader.register(MOD_ID);
+        }
+
         NamespaceCache.init();
 
         LOGGER.info("Starting Log4j reconfiguration.");
@@ -95,6 +103,8 @@ public class SpicedCider {
 
     @SubscribeEvent
     public static void modifyVanillaAttributes(EntityAttributeModificationEvent event) {
+        if (!SpicedCiderConfig.STARTUP.skeletonHealthNerf.get()) return;
+
         event.add(EntityType.SKELETON, Attributes.MAX_HEALTH, 12.0D);
         event.add(EntityType.STRAY, Attributes.MAX_HEALTH, 12.0D);
     }

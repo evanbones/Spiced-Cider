@@ -1,6 +1,7 @@
 package com.evandev.spicedcider.mixin.namingunconvention;
 
 import com.evandev.spicedcider.SpicedCider;
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import net.minecraft.client.gui.screens.worldselection.WorldCreationContext;
 import net.minecraft.client.gui.screens.worldselection.WorldCreationUiState;
 import net.minecraft.network.chat.Component;
@@ -27,6 +28,8 @@ public abstract class WorldCreationUiStateMixin {
 
     @Inject(method = "<init>", at = @At("TAIL"))
     private void cider$applyRandomName(Path savesFolder, WorldCreationContext settings, Optional<ResourceKey<WorldPreset>> preset, OptionalLong seed, CallbackInfo ci) {
+        if (!SpicedCiderConfig.CLIENT.randomWorldNaming.get()) return;
+
         String defaultName = Component.translatable("selectWorld.newWorld").getString();
         if (this.name == null || this.name.equals(defaultName) || this.name.trim().isEmpty()) {
             this.setName(SpicedCider.RANDOM_NAME_GENERATOR.generateRandomName());

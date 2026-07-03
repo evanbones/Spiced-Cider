@@ -1,6 +1,7 @@
 package com.evandev.spicedcider.mixin.namingunconvention;
 
 import com.evandev.spicedcider.SpicedCider;
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import de.keksuccino.modernworldcreation.ModernWorldCreationGameTab;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.components.EditBox;
@@ -41,7 +42,7 @@ public class ModernWorldCreationGameTabMixin {
     private Layout cider$wrapNameEditBox(Font font, LayoutElement element, Component label) {
         Layout originalLayout = CommonLayouts.labeledElement(font, element, label);
 
-        if (element == this.nameEdit) {
+        if (element == this.nameEdit && SpicedCiderConfig.CLIENT.randomWorldNaming.get()) {
             ImageButton rerollBtn = new ImageButton(
                     0, 0, 20, 20, REROLL_SPRITES,
                     btn -> {
