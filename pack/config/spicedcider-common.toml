@@ -1,33 +1,25 @@
-[structures]
-	#Maximum time (in seconds) a structure search is allowed to take.
-	# Default: 50
-	# Range: 1 ~ 300
-	structureSearchTimeout = 50
-	#Enables faster structure search.
-	useFastStructureLookup = true
-	#Maximum radius map items can search for structures.
-	# Default: 40
-	# Range: 1 ~ 200
-	mapSearchRadius = 40
-	#Global maximum structure search radius.
-	# Default: 70
-	# Range: 1 ~ 200
-	globalSearchRadius = 70
-	#Search radius for the locate structure command.
-	# Default: 110
-	# Range: 1 ~ 500
-	locateSearchRadius = 110
-	#Adjusts structure spacing and separation.
-	# Default: 1.0
-	# Range: 0.1 ~ 10.0
-	spacingSeparationModifier = 1.0
-	#Log duplicated salt values to prevent overlapping structures.
-	logDuplicatedSalt = true
+[compat]
+	#Fix Environmental's wisteria trees generating with sparse/patchy leaves. Requires Environmental.
+	wisteriaLeafDensityFix = true
 
-	[structures.minimum_structure_distance]
-		#Set a minimum distance in blocks between structures generated.
-		# Default: 32
-		# Range: 16 ~ 512
-		distance = 32
-		#Enable minimum structure distance.
-		enabled = false
+[gameplay]
+	#Beds don't explode outside the Overworld; instead they show a message and wake sleeping villagers.
+	bedExplosionPrevention = true
+	#Respawn anchors don't explode outside dimensions where they work; instead they show a message.
+	respawnAnchorExplosionPrevention = true
+	#End crystals can be placed on any block, not just obsidian/bedrock.
+	endCrystalPlaceAnywhere = true
+	#End crystals with no beam target heal nearby damaged entities and render a beam to their heal target.
+	endCrystalHealing = true
+	#Enchanted, named, or elytra items become "Broken" instead of being destroyed when they run out of durability.
+	keepBrokenItems = true
+	#Tamed wolves can be equipped with horse/animal armor as body armor.
+	wolvesWearAnyArmor = true
+	#Spiders switch to shooting cobweb projectiles at range when their target is trapped.
+	spiderRangedWebAttacks = true
+
+[performance]
+	#Disable recipe book unlock tracking/saving/syncing entirely, since it's unused. Saves memory and disk I/O.
+	disableRecipeBookTracking = true
+	#Skip the redundant block shape cache rebuild that happens on every tag reload.
+	skipRedundantBlockCacheRebuild = true

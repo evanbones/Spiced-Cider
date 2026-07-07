@@ -1,0 +1,8 @@
+#Fix Cooks' Collection's salted dripstone block causing occlusion/culling issues by basing it on vanilla dripstone block. Requires Cooks' Collection. Requires a restart to take effect.
+cooksCollectionDripstoneFix = true
+#Register Every Compat wood-type variants (seats, palisades) for The Block Box. Requires The Block Box, Every Compat, and Moonlight Lib. Requires a restart to take effect.
+blockBoxWoodVariants = true
+#Skeletons and strays get 12 max health. Requires a restart to take effect.
+skeletonHealthNerf = true
+#Filter out resource pack namespaces that aren't used by any loaded mod, speeding up client asset loading. Requires a restart to take effect.
+filterUnusedResourcePackNamespaces = true

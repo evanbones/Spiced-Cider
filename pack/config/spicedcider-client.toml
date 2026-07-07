@@ -1,3 +1,9 @@
-[general]
-	#The directory path where assets are exported. Can be relative to the game directory or an absolute path (e.g., C:/Users/Name/Downloads).
-	exportDirectory = "C:/Users/evan/Documents/GitHub/Spiced-Cider/pack/resourcepacks/spicedcider_resources"
+[naming]
+	#Auto-generate a random world name on the world creation screen, with a reroll button (if Modern World Creation is present).
+	randomWorldNaming = true
+
+[misc]
+	#Play a custom sound when you die.
+	customDeathSound = true
+	#Hide Melancholic Hunger's regeneration tooltip lines from item tooltips. Requires Melancholic Hunger.
+	hideMelancholicHungerTooltip = true

@@ -8,6 +8,15 @@ public class SpicedCiderMixinCanceller implements MixinCanceller {
 
     @Override
     public boolean shouldCancel(List<String> targetClassNames, String mixinClassName) {
-        return "mod.adrenix.nostalgic.mixin.tweak.candy.missing_texture.MissingTextureAtlasSpriteMixin".equals(mixinClassName);
+
+        if ("mod.adrenix.nostalgic.mixin.tweak.candy.missing_texture.MissingTextureAtlasSpriteMixin".equals(mixinClassName)) {
+            return true;
+        }
+
+        if ("dev.tazer.clutternomore.common.mixin.compat.emi.EMIRenderMixin".equals(mixinClassName)) {
+            return true;
+        }
+
+        return false;
     }
 }
