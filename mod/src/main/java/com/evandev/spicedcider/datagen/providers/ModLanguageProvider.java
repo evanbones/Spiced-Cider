@@ -22,11 +22,17 @@ public class ModLanguageProvider extends LanguageProvider {
         addItem(ModItems.DIAMOND_HAMMER, "Diamond Hammer");
         addItem(ModItems.NETHERITE_HAMMER, "Netherite Hammer");
 
+        addItem(ModItems.GRAPPLING_HOOK, "Grappling Hook");
+        addItem(ModItems.STICKY_GRAPPLING_HOOK, "Sticky Grappling Hook");
+        add("item.spicedcider.grappling_hook.desc", "Good for climbing, not fishing");
+        add("item.spicedcider.sticky_grappling_hook.desc", "Good for climbing, not fishing. Adheres to walls rather than bouncing off them.");
+
         add("spicedcider.respawn_blocked", "The Respawn Anchor is unresponsive in this dimension");
 
         add("key.category.naming_unconvention.naming_unconvention", "Naming Unconvention");
         add("key.naming_unconvention.reroll", "Reroll World Name");
         add("subtitles.spicedcider.block.workstone.hammer", "Workstone hammered");
+        add("subtitles.spicedcider.entity.player.grappling_hook.tighten", "Rope tightens");
         add("emi.category.spicedcider.workstone", "Workstone");
         add("subtitles.spicedcider.music.death.death1", "Player died");
 
@@ -86,5 +92,9 @@ public class ModLanguageProvider extends LanguageProvider {
         add("option.spicedcider.hideMelancholicHungerTooltip.tooltip", "Hides Melancholic Hunger's regeneration tooltip lines from item tooltips.");
 
         add("item.spicedcider.broken", "Broken");
+
+        add("tooltip.spicedcider.angling_slot.line.title", "Fishing Line");
+        add("tooltip.spicedcider.angling_slot.bobber.title", "Fishing Bobber");
+        add("tooltip.spicedcider.angling_slot.hook.title", "Fishing Hook");
     }
 }

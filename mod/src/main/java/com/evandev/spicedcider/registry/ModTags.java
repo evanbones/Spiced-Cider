@@ -9,6 +9,7 @@ import net.minecraft.world.item.Item;
 public class ModTags {
     public static class Items {
         public static final TagKey<Item> HAMMERS = tag("hammers");
+        public static final TagKey<Item> TIDE_HOOKS = tag("tide", "hooks");
 
         private static TagKey<Item> tag(String name) {
             return ItemTags.create(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, name));

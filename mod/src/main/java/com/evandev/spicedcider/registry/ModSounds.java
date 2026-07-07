@@ -28,4 +28,7 @@ public class ModSounds {
     public static final DeferredHolder<SoundEvent, SoundEvent> SPIDER_WEB_IMPACT = SOUNDS.register("entity.spider.web_impact",
             () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "entity.spider.web_impact")));
 
+    public static final DeferredHolder<SoundEvent, SoundEvent> GRAPPLING_HOOK_TIGHTEN = SOUNDS.register("entity.player.grappling_hook.tighten",
+            () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "entity.player.grappling_hook.tighten")));
+
 }

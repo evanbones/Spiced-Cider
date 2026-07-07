@@ -23,6 +23,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.GOLDEN_HAMMER.get());
         handheldItem(ModItems.DIAMOND_HAMMER.get());
         handheldItem(ModItems.NETHERITE_HAMMER.get());
+
+        basicItem(ModItems.GRAPPLING_HOOK.get());
+        basicItem(ModItems.STICKY_GRAPPLING_HOOK.get());
     }
 
     public @NotNull ItemModelBuilder handheldItem(@NotNull Item item) {

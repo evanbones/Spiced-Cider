@@ -35,5 +35,9 @@ public class ModItemTagsProvider extends ItemTagsProvider {
                 .add(ModItems.GOLDEN_HAMMER.get())
                 .add(ModItems.DIAMOND_HAMMER.get())
                 .add(ModItems.NETHERITE_HAMMER.get());
+
+        this.tag(ModTags.Items.TIDE_HOOKS)
+                .add(ModItems.GRAPPLING_HOOK.get())
+                .add(ModItems.STICKY_GRAPPLING_HOOK.get());
     }
 }

@@ -11,6 +11,7 @@
     "minecraft.EndCrystalItemMixin",
     "minecraft.EndCrystalMixin",
     "minecraft.ItemStackKeeperMixin",
+    "minecraft.PlayerMixin",
     "minecraft.RespawnAnchorMixin",
     "minecraft.SpiderEntityMixin",
     "minecraft.WolfPetArmorMixin",
@@ -18,10 +19,13 @@
     "perf.RecipeBookMixin",
     "perf.ReloadableServerResourcesMixin",
     "perf.ServerPlayerMixin",
-    "perf.ServerRecipeBookMixin"
+    "perf.ServerRecipeBookMixin",
+    "tide.TideFishingRodItemMixin"
   ],
   "client": [
+    "minecraft.client.AbstractContainerScreenMixin",
     "minecraft.client.EndCrystalRendererMixin",
+    "minecraft.client.ItemPropertiesMixin",
     "minecraft.client.SpiderModelMixin",
     "minecraft.client.WolfArmorLayerMixin",
     "namingunconvention.ModernWorldCreationGameTabMixin",

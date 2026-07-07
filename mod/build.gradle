@@ -246,6 +246,9 @@ dependencies {
     compileOnly "maven.modrinth:environmental:5.0.1"
     compileOnly "maven.modrinth:blueprint:8.1.0"
     compileOnly "maven.modrinth:nostalgic-tweaks:POrRfSqe"
+    compileOnly "maven.modrinth:tide:NyZj7kJm"
+    runtimeOnly "maven.modrinth:tide:NyZj7kJm"
+    runtimeOnly "me.shedaniel.cloth:cloth-config-neoforge:15.0.130"
     compileOnly(annotationProcessor("com.github.bawnorton.mixinsquared:mixinsquared-common:0.3.3"))
     jarJar(implementation("com.github.bawnorton.mixinsquared:mixinsquared-neoforge")) {
         version {

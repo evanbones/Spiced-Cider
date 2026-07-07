@@ -8,6 +8,8 @@ import net.minecraft.world.item.Tiers;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
+import com.li64.tide.registries.items.FishingHookItem;
+
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(SpicedCider.MOD_ID);
 
@@ -19,4 +21,9 @@ public class ModItems {
     public static final DeferredItem<Item> GOLDEN_HAMMER = ITEMS.register("golden_hammer", () -> new HammerItem(Tiers.GOLD, 6.0f, -3.0f, new Item.Properties()));
     public static final DeferredItem<Item> DIAMOND_HAMMER = ITEMS.register("diamond_hammer", () -> new HammerItem(Tiers.DIAMOND, 5.0f, -3.0f, new Item.Properties()));
     public static final DeferredItem<Item> NETHERITE_HAMMER = ITEMS.register("netherite_hammer", () -> new HammerItem(Tiers.NETHERITE, 6.0f, -3.0f, new Item.Properties().fireResistant()));
+
+    public static final DeferredItem<Item> GRAPPLING_HOOK = ITEMS.register("grappling_hook",
+            () -> new FishingHookItem(new Item.Properties(), "item.spicedcider.grappling_hook.desc"));
+    public static final DeferredItem<Item> STICKY_GRAPPLING_HOOK = ITEMS.register("sticky_grappling_hook",
+            () -> new FishingHookItem(new Item.Properties(), "item.spicedcider.sticky_grappling_hook.desc"));
 }

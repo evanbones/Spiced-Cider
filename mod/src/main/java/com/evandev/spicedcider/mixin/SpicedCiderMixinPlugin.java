@@ -34,6 +34,9 @@ public class SpicedCiderMixinPlugin implements IMixinConfigPlugin {
         if (mixinClassName.contains("environmental.WisteriaTreeFeatureMixin")) {
             return isModLoaded("environmental");
         }
+        if (mixinClassName.contains("tide.TideFishingRodItemMixin")) {
+            return isModLoaded("tide");
+        }
         return true;
     }
 

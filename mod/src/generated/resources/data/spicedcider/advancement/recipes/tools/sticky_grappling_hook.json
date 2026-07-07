@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_grappling_hook": {
+      "conditions": {
+        "items": [
+          {
+            "items": "spicedcider:grappling_hook"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "spicedcider:sticky_grappling_hook"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_grappling_hook"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "spicedcider:sticky_grappling_hook"
+    ]
+  }
+}

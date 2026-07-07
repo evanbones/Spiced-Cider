@@ -78,6 +78,19 @@ public class ModRecipeProvider extends RecipeProvider {
 
         WorkstoneRecipeProvider.buildRecipes(output);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.GRAPPLING_HOOK.get())
+                .pattern(" C")
+                .pattern("CC")
+                .define('C', Tags.Items.INGOTS_IRON)
+                .unlockedBy("has_iron_ingot", has(Tags.Items.INGOTS_IRON))
+                .save(output);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.TOOLS, ModItems.STICKY_GRAPPLING_HOOK.get())
+                .requires(ModItems.GRAPPLING_HOOK.get())
+                .requires(Items.SLIME_BALL)
+                .unlockedBy("has_grappling_hook", has(ModItems.GRAPPLING_HOOK.get()))
+                .save(output);
+
         SpecialRecipeBuilder.special(RenameRecipe::new)
                 .save(output, "spicedcider:rename_item");
     }
