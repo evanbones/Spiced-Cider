@@ -7,6 +7,7 @@
   "mixins": [
     "cookscollection.CooksCollectionModBlocksMixin",
     "environmental.WisteriaTreeFeatureMixin",
+    "hominid.HominidClientEventsMixin",
     "minecraft.BedMixin",
     "minecraft.EndCrystalItemMixin",
     "minecraft.EndCrystalMixin",
@@ -15,7 +16,6 @@
     "minecraft.RespawnAnchorMixin",
     "minecraft.SpiderEntityMixin",
     "minecraft.WolfPetArmorMixin",
-    "perf.MultiPackResourceManagerMixin",
     "perf.RecipeBookMixin",
     "perf.ReloadableServerResourcesMixin",
     "perf.ServerPlayerMixin",

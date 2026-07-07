@@ -298,7 +298,7 @@ hash = "943e1c3672b8a03f27519b357091133205119c7b3db2fcc4c25b597cabf8926d"
 
 [[files]]
 file = "config/crash_assistant/modlist.json"
-hash = "729fd5ad36248cfd2403f1e929c81868bb2186727144f368e3648e9978d56e4a"
+hash = "b314afd271ee2449ff091d2fa9313d418ea777eababe4187eb0c57cdee13ddc8"
 
 [[files]]
 file = "config/crash_assistant/scripts/log_analysis/example.jexl"
@@ -754,27 +754,27 @@ hash = "7f9600976b415a1f3196fbc51d0aebd62731168f6786fa6555e058e47b2c30a4"
 
 [[files]]
 file = "config/everycomp-entries-1.toml.bak"
-hash = "243d09f987b0dbaa139bcf251416253e6e1292ac1d6ec6e3395f878b911e4203"
-
-[[files]]
-file = "config/everycomp-entries-2.toml.bak"
-hash = "c59b311c601773491f73e72efea3479ba5137327a07c1eac708e0f90dd6b047e"
-
-[[files]]
-file = "config/everycomp-entries-3.toml.bak"
-hash = "caa7c1bcd6544cc577cea9f3ca552c935e86482eb9c2a3871ba315d9041c43f5"
-
-[[files]]
-file = "config/everycomp-entries-4.toml.bak"
 hash = "dbc55daac4e811a354b1dd61ff97cf26c2647aad9cb835ab3a69eb0af6d35b59"
 
 [[files]]
-file = "config/everycomp-entries-5.toml.bak"
+file = "config/everycomp-entries-2.toml.bak"
 hash = "86ef99ff975854e5f7e68c7c34b2f8d3cab6be020d8a9de467c92484640c8fba"
 
 [[files]]
+file = "config/everycomp-entries-3.toml.bak"
+hash = "dbc55daac4e811a354b1dd61ff97cf26c2647aad9cb835ab3a69eb0af6d35b59"
+
+[[files]]
+file = "config/everycomp-entries-4.toml.bak"
+hash = "c80de568411c31303de957a540c7599fb354f00cc0efd45805b3fe991a39ab4c"
+
+[[files]]
+file = "config/everycomp-entries-5.toml.bak"
+hash = "243d09f987b0dbaa139bcf251416253e6e1292ac1d6ec6e3395f878b911e4203"
+
+[[files]]
 file = "config/everycomp-entries.toml"
-hash = "37e83709a74abdf9b807290eb6490c376f4cde65403b89276ed095a3b38d4412"
+hash = "c80de568411c31303de957a540c7599fb354f00cc0efd45805b3fe991a39ab4c"
 
 [[files]]
 file = "config/everycomp-hazardous.toml"
@@ -810,7 +810,7 @@ hash = "09d330b29443d9579ecc014f2be2fcb31075bfe1e9f9ac4e750f271128650fe6"
 
 [[files]]
 file = "config/fabric/indigo-renderer.properties"
-hash = "921e511224c66aafef4701bea27acb4a2564bf73a2fe7578e8a16fd44ed57787"
+hash = "6204e0746a782945ecae0febda8122d00a4bba90287bca4090a5ac819072d083"
 
 [[files]]
 file = "config/fallingleaves-client.toml"
@@ -938,7 +938,7 @@ hash = "fc7828e5a9ba53eb0526bb51af9cd3bb728a33fbcd0c35cefb4902977a77a56d"
 
 [[files]]
 file = "config/fancymenu/customization/title_screen_layout.txt"
-hash = "f84d7d8e6f80f5d70cce3abd86b0403a26f045c66548bc8f1d47f6d867f88c39"
+hash = "9d4de54e5fbbf6cb2fc656e5c39a9dba1ceaf9d98bf1aa2633bd4f823002d356"
 
 [[files]]
 file = "config/fancymenu/layout_editor/widgets/element_layer_control.lewidget"
@@ -1262,7 +1262,7 @@ hash = "b8e5bd2e2bf2bde44e2af79373447fc74f8e614dc81b7d887e66812e93758327"
 
 [[files]]
 file = "config/lambdynlights.toml"
-hash = "e7304b37ce34e24755708938f4f91e4a84893f16d7b1a376b91bb802d9ac4b4e"
+hash = "06fada181118ab3764efda6221d10ef7242db0c8279708e91df137486688f8ca"
 
 [[files]]
 file = "config/leahs-immersive-thunder.toml"
@@ -2134,7 +2134,7 @@ hash = "13b2b1384f949e6e409c3c3cc423ecb854df6b386d4466d424a57a887e89f3d8"
 
 [[files]]
 file = "config/packetfixer.properties"
-hash = "154123baed34d85198e195aede98aaf8f6aafa7cce5520b3c63ecea0054e6082"
+hash = "e3d93b6a97c255d8b23d32cc2f85d24d9d9115ce647b29a454a45e730ffe2892"
 
 [[files]]
 file = "config/particle_core_config.toml"
@@ -2318,7 +2318,7 @@ hash = "1c970fc0cc8a3989889a43fdc6c40c89cabf81ffac2405f92c6abf489a410674"
 
 [[files]]
 file = "config/resourcepackoverrides.json"
-hash = "599219b9ba142439abfbad40b739698825f0a4f3fa95534120541127dbf53bdf"
+hash = "324e601ab5dffb35c848473a2f6eab2bffeb2794d29de26c1ea9017252f9a564"
 
 [[files]]
 file = "config/sage_brush-client.toml"
@@ -2335,6 +2335,26 @@ hash = "1f9918737141d77a7c4bf809f09e40b3a5b8a09171cd38a27e443a05c5cc8037"
 [[files]]
 file = "config/scholar-common.toml"
 hash = "797cdb72c29122c892a3ea0408930207ac07e87d1a11499d43d37a11f9fac10b"
+
+[[files]]
+file = "config/screenshot_viewer-client-1.toml.bak"
+hash = "72a1f489ae45e7903278581c368ac66f2ee71f7710fbc229afd8d6416c29f79f"
+
+[[files]]
+file = "config/screenshot_viewer-client-2.toml.bak"
+hash = "72a1f489ae45e7903278581c368ac66f2ee71f7710fbc229afd8d6416c29f79f"
+
+[[files]]
+file = "config/screenshot_viewer-client-3.toml.bak"
+hash = "72a1f489ae45e7903278581c368ac66f2ee71f7710fbc229afd8d6416c29f79f"
+
+[[files]]
+file = "config/screenshot_viewer-client-4.toml.bak"
+hash = "72a1f489ae45e7903278581c368ac66f2ee71f7710fbc229afd8d6416c29f79f"
+
+[[files]]
+file = "config/screenshot_viewer-client-5.toml.bak"
+hash = "72a1f489ae45e7903278581c368ac66f2ee71f7710fbc229afd8d6416c29f79f"
 
 [[files]]
 file = "config/screenshot_viewer-client.toml"
@@ -2433,16 +2453,8 @@ file = "config/spark/tmp/about.txt"
 hash = "d7514c0ddb6ae8611a281527bf04ca6cbcea1fa21758534fdcd08ed0f51c19c0"
 
 [[files]]
-file = "config/spicedcider-client-1.toml.bak"
-hash = "6b88cea181decff06cd48dddc65f356a76d4d468b1551ba6e79d0898f32d0c50"
-
-[[files]]
 file = "config/spicedcider-client.toml"
 hash = "d690e1819b25873af1edf4a9de4dc2a6ca59c1747559f7e5cd2566c5c3d08e5f"
-
-[[files]]
-file = "config/spicedcider-common-1.toml.bak"
-hash = "71c6f65022cb095402596003a4896d66de91b15294c5e8ef9118ce10b3503829"
 
 [[files]]
 file = "config/spicedcider-common.toml"
@@ -2454,7 +2466,7 @@ hash = "e579d9066f8d342027194b6eb3cb2a922606f994a92148abd7e7df08713dbaae"
 
 [[files]]
 file = "config/spicedcider/spicedcider_manifest.json"
-hash = "18e9234fd12f834791bdd93c6c0c57c38b9e7ecbe72d777ddc5f9888a2acaaa0"
+hash = "3de28ab1bbe7c0d181ed967b63aead9f9a96e90da8accb60118e90b0ed5d8455"
 
 [[files]]
 file = "config/stacksizetweaks.json5"
@@ -2826,11 +2838,6 @@ metafile = true
 [[files]]
 file = "mods/big-brain.pw.toml"
 hash = "4fd7e91f2d32553b63ea75455b6dc83e70baf717bf53abbf7f4fa71ee83c75e0"
-metafile = true
-
-[[files]]
-file = "mods/big-rod-energy.pw.toml"
-hash = "2b1abc3c6a8fc2f61c5b44151bc65f9ee5f7fd17b2f8e1315619a08790434602"
 metafile = true
 
 [[files]]
@@ -3329,7 +3336,7 @@ metafile = true
 
 [[files]]
 file = "mods/lithostitched.pw.toml"
-hash = "f0c66fc8c3d9dbea2704b007e79125377d50484ff3a40c280b48707659209045"
+hash = "e06a9a886181277591baeb9e82b484bd6204fe3aec0ffc8781bb05bb11b4d1a9"
 metafile = true
 
 [[files]]
@@ -3588,7 +3595,7 @@ metafile = true
 
 [[files]]
 file = "mods/redomesticate.pw.toml"
-hash = "61ea947af396e088a85b2be615cac6888fd761ac6867789aa1b372395e5e2c4e"
+hash = "bfe3ecfde788a0135678b667a48c6a5d72cbebcfd83b1dd1de73d374453d84a9"
 metafile = true
 
 [[files]]
@@ -3603,7 +3610,7 @@ metafile = true
 
 [[files]]
 file = "mods/reliable-backpacks.pw.toml"
-hash = "b89d115a594c76a2080024f40c7074008a87c909ac2e44cfe19b68e824e583a0"
+hash = "c7fec96ee37c4236c454e91e428fd27c4b5a0a2a77abcbc60f017e98e1177d59"
 metafile = true
 
 [[files]]
@@ -3728,7 +3735,7 @@ metafile = true
 
 [[files]]
 file = "mods/spicedcider-1.0.0.jar"
-hash = "48b8c2ad82976008b51ac26f10e05361f69e3ca966cd4d5ebbc7017040798648"
+hash = "62dac46534e6c2cdc78ad09c81f33c46b34619dc46267d4c020a34f3a9778ec4"
 
 [[files]]
 file = "mods/stacksizetweaks-neoforge-0.3.2+1.21.jar"

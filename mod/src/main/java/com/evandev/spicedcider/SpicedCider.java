@@ -7,7 +7,6 @@ import com.evandev.spicedcider.config.LoggerNamePatternSelector;
 import com.evandev.spicedcider.config.Reconfigurator;
 import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.evandev.spicedcider.namingunconvention.RandomNameGenerator;
-import com.evandev.spicedcider.perf.NamespaceCache;
 import com.evandev.spicedcider.registry.*;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -70,8 +69,6 @@ public class SpicedCider {
                 && ModList.get().isLoaded("moonlight")) {
             BlockBoxEveryCompatLoader.register(MOD_ID);
         }
-
-        NamespaceCache.init();
 
         LOGGER.info("Starting Log4j reconfiguration.");
         loadPlugin();
