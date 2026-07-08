@@ -298,7 +298,7 @@ hash = "943e1c3672b8a03f27519b357091133205119c7b3db2fcc4c25b597cabf8926d"
 
 [[files]]
 file = "config/crash_assistant/modlist.json"
-hash = "b314afd271ee2449ff091d2fa9313d418ea777eababe4187eb0c57cdee13ddc8"
+hash = "60aca756cd8e21c273205bc3c9f8181bbe3ee0849caf1059cea6b2f290c6eb8a"
 
 [[files]]
 file = "config/crash_assistant/scripts/log_analysis/example.jexl"
@@ -758,27 +758,27 @@ hash = "7f9600976b415a1f3196fbc51d0aebd62731168f6786fa6555e058e47b2c30a4"
 
 [[files]]
 file = "config/everycomp-entries-1.toml.bak"
-hash = "c80de568411c31303de957a540c7599fb354f00cc0efd45805b3fe991a39ab4c"
+hash = "86ef99ff975854e5f7e68c7c34b2f8d3cab6be020d8a9de467c92484640c8fba"
 
 [[files]]
 file = "config/everycomp-entries-2.toml.bak"
-hash = "dbc55daac4e811a354b1dd61ff97cf26c2647aad9cb835ab3a69eb0af6d35b59"
-
-[[files]]
-file = "config/everycomp-entries-3.toml.bak"
-hash = "86ef99ff975854e5f7e68c7c34b2f8d3cab6be020d8a9de467c92484640c8fba"
-
-[[files]]
-file = "config/everycomp-entries-4.toml.bak"
-hash = "dbc55daac4e811a354b1dd61ff97cf26c2647aad9cb835ab3a69eb0af6d35b59"
-
-[[files]]
-file = "config/everycomp-entries-5.toml.bak"
 hash = "c80de568411c31303de957a540c7599fb354f00cc0efd45805b3fe991a39ab4c"
 
 [[files]]
-file = "config/everycomp-entries.toml"
+file = "config/everycomp-entries-3.toml.bak"
+hash = "dbc55daac4e811a354b1dd61ff97cf26c2647aad9cb835ab3a69eb0af6d35b59"
+
+[[files]]
+file = "config/everycomp-entries-4.toml.bak"
 hash = "86ef99ff975854e5f7e68c7c34b2f8d3cab6be020d8a9de467c92484640c8fba"
+
+[[files]]
+file = "config/everycomp-entries-5.toml.bak"
+hash = "dbc55daac4e811a354b1dd61ff97cf26c2647aad9cb835ab3a69eb0af6d35b59"
+
+[[files]]
+file = "config/everycomp-entries.toml"
+hash = "7fff8815c10c76c2937c6aab433452036413622cd8e2b2d5e579c676360c1c56"
 
 [[files]]
 file = "config/everycomp-hazardous.toml"
@@ -814,7 +814,7 @@ hash = "09d330b29443d9579ecc014f2be2fcb31075bfe1e9f9ac4e750f271128650fe6"
 
 [[files]]
 file = "config/fabric/indigo-renderer.properties"
-hash = "525c9a77ab0017377e3cb704ea4c08678559b7346e33007f13d629cf15df0e8d"
+hash = "7344a9805bddbbdc5b24b92ce7342659c4bdf896318d886a9fd132bb6564624f"
 
 [[files]]
 file = "config/fallingleaves-client.toml"
@@ -1206,7 +1206,7 @@ hash = "36b5a856aa405c89ef00a366ed8d8c5acae1e38fe58ee4788b5e007a32201436"
 
 [[files]]
 file = "config/ixeris.toml"
-hash = "f5c147bd62399f62d933cebf52702085d9c960dfc5dc7508c64564c79c71708e"
+hash = "81eba96be0162e3f0e6e3d6a9b481103bff2041246eeb14c970fdac5c7fa3d88"
 
 [[files]]
 file = "config/jade/hide-blocks.json"
@@ -2138,7 +2138,7 @@ hash = "13b2b1384f949e6e409c3c3cc423ecb854df6b386d4466d424a57a887e89f3d8"
 
 [[files]]
 file = "config/packetfixer.properties"
-hash = "1c863fefb970f5eff22fae82148421502a00af44daff6a789766113107942c3f"
+hash = "1f2c50dfdaada099609a40d3d71c3fa5058a64a3910d4454466bf0ffc6a77c3a"
 
 [[files]]
 file = "config/particle_core_config.toml"
@@ -2270,7 +2270,7 @@ hash = "590ea074ec1c84ced8a0c60dedd7111edd69801f7441fe78654c2f6fdfb655b7"
 
 [[files]]
 file = "config/reliable_remover.json"
-hash = "e301b428d83a99b76fec65a80b3619c8c1d57cfd88708e7dd03d7f029021c573"
+hash = "226a8674d160cf7b189ce4d82d2b1c1bf93fdc0b4283ce718ac1b6bb08b8f173"
 
 [[files]]
 file = "config/reliable_remover/gates/aether.json"
@@ -4076,6 +4076,22 @@ hash = "ec0d73996f6291ebcd6aa855f3f857dc9d9a39bbc28940fa20588aea0cf723c5"
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/advancementplaques/sounds/ui/toast/task_complete.ogg"
 hash = "45ae0eca329fc7a63af2c7485046edafff45e63f724c69ea944bb35f9250fdcb"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/alloyed/models/block/steel_bars/steel_bars_post.json"
+hash = "1927fe4653c0b9c3d3bcae75cc8628696c8130b10f6f6fbaa118e1637f2e232c"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/alloyed/models/block/steel_bars/steel_bars_post_ends.json"
+hash = "741fc934d6e85d2f61fe9f86fc58ac88eaeed6c1edb3df183dea1401beb1cdac"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/alloyed/models/block/steel_bars/steel_bars_side.json"
+hash = "d851c5485628875f9290666796cbc1d2c5eff3ff7c96dc6f565f111a18f3804b"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/alloyed/models/block/steel_bars/steel_bars_side_alt.json"
+hash = "464a2b942ca123fbc825d003f3ec04d9b185d8d62941179f6f6a773c1de8576d"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/alloyed/textures/block/bronze/bronze_block.png"
