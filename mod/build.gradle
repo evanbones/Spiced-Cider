@@ -237,20 +237,49 @@ dependencies {
     compileOnly "maven.modrinth:modern-world-creation:2.0.1-1.21.1-neoforge"
     implementation "maven.modrinth:emi:1.1.22+1.21.1+neoforge"
     implementation "maven.modrinth:yacl:3.8.2+1.21.1-neoforge"
+
+    // Tide
+    implementation "maven.modrinth:tide:NyZj7kJm"
+    runtimeOnly "me.shedaniel.cloth:cloth-config-neoforge:15.0.130"
+
+    // Melancholic Hunger
     compileOnly "maven.modrinth:melancholic_hunger:vKSreUAW"
+
+    // Cook's Collection
     compileOnly "maven.modrinth:cooks-collection:0.5.5"
+
+    // Farmer's Delight
     compileOnly "maven.modrinth:farmers-delight:1.21.1-1.3.2"
+
+    // Block Box
     compileOnly "maven.modrinth:the-block-box:0.1.3"
+
+    // Every Compat
     compileOnly "maven.modrinth:every-compat:1.21-2.11.46"
     compileOnly "maven.modrinth:moonlight:1.21.1-3.0.22"
+    runtimeOnly "maven.modrinth:moonlight:1.21.1-3.0.22"
+
+    // Supplementaries
+    compileOnly "maven.modrinth:supplementaries:FPL7hXrE"
+
+    // Abnormals
     compileOnly "maven.modrinth:environmental:5.0.1"
+    compileOnly "maven.modrinth:caverns-and-chasms:3.0.0"
     compileOnly "maven.modrinth:blueprint:8.1.0"
+
+    // Nostalgic Tweaks
     compileOnly "maven.modrinth:nostalgic-tweaks:POrRfSqe"
-    compileOnly "maven.modrinth:tide:NyZj7kJm"
-    runtimeOnly "maven.modrinth:tide:NyZj7kJm"
+
+    // Hominid
     compileOnly "maven.modrinth:hominid:1.3.4"
-    runtimeOnly "maven.modrinth:hominid:1.3.4"
-    runtimeOnly "me.shedaniel.cloth:cloth-config-neoforge:15.0.130"
+
+    // Jade
+    compileOnly "maven.modrinth:jade:15.10.5+neoforge"
+
+    // Quark
+    compileOnly "maven.modrinth:quark:4.1-481"
+    compileOnly "maven.modrinth:zeta:1.1-40"
+
     compileOnly(annotationProcessor("com.github.bawnorton.mixinsquared:mixinsquared-common:0.3.3"))
     jarJar(implementation("com.github.bawnorton.mixinsquared:mixinsquared-neoforge")) {
         version {

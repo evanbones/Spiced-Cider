@@ -31,7 +31,7 @@ import java.io.IOException;
 import java.net.URI;
 
 @Mod(SpicedCider.MOD_ID)
-@EventBusSubscriber(modid = SpicedCider.MOD_ID, bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber(modid = SpicedCider.MOD_ID)
 public class SpicedCider {
     public static final String MOD_ID = "spicedcider";
     public static final Logger LOGGER = LogManager.getLogger("Spiced Cider");

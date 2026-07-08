@@ -37,6 +37,8 @@ public class SpicedCiderConfigScreen {
                         .option(toggle("keepBrokenItems", common.keepBrokenItems))
                         .option(toggle("wolvesWearAnyArmor", common.wolvesWearAnyArmor))
                         .option(toggle("spiderRangedWebAttacks", common.spiderRangedWebAttacks))
+                        .option(toggle("allowRedstonePlacement", common.allowRedstonePlacement))
+                        .option(toggle("removeQuasiConnectivity", common.removeQuasiConnectivity))
                         .option(toggle("skeletonHealthNerf", startup.skeletonHealthNerf))
                         .build())
                 .category(ConfigCategory.createBuilder()

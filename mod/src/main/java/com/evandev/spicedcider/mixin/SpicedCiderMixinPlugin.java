@@ -28,14 +28,23 @@ public class SpicedCiderMixinPlugin implements IMixinConfigPlugin {
         if (mixinClassName.contains("namingunconvention.ModernWorldCreationGameTabMixin")) {
             return isModLoaded("modernworldcreation");
         }
-        if (mixinClassName.contains("cookscollection.CooksCollectionModBlocksMixin")) {
+        if (mixinClassName.contains("cookscollection")) {
             return isModLoaded("cookscollection");
         }
-        if (mixinClassName.contains("environmental.WisteriaTreeFeatureMixin")) {
+        if (mixinClassName.contains("environmental")) {
             return isModLoaded("environmental");
         }
-        if (mixinClassName.contains("tide.TideFishingRodItemMixin")) {
+        if (mixinClassName.contains("tide")) {
             return isModLoaded("tide");
+        }
+        if (mixinClassName.contains("jade")) {
+            return isModLoaded("jade");
+        }
+        if (mixinClassName.contains("quark")) {
+            return isModLoaded("quark");
+        }
+        if (mixinClassName.contains("caverns_and_chasms")) {
+            return isModLoaded("caverns_and_chasms");
         }
         return true;
     }

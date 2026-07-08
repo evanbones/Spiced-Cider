@@ -1,0 +1,23 @@
+{
+  "key": {
+    "X": {
+      "item": "minecraft:stick"
+    },
+    "Y": [
+      {
+        "tag": "minecraft:planks"
+      }
+    ]
+  },
+  "pattern": [
+    "YYY",
+    "XXX",
+    "   "
+  ],
+  "result": {
+    "id": "nomansland:wooden_platform",
+    "count": 8
+  },
+  "category": "misc",
+  "type": "minecraft:crafting_shaped"
+}

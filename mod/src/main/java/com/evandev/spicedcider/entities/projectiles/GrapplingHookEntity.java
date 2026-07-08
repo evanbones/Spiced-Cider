@@ -1,6 +1,6 @@
 package com.evandev.spicedcider.entities.projectiles;
 
-import com.evandev.spicedcider.interfaces.PlayerWithGrapplingHook;
+import com.evandev.spicedcider.interfaces.IPlayerWithGrapplingHook;
 import com.evandev.spicedcider.registry.ModEntityTypes;
 import com.evandev.spicedcider.registry.ModSounds;
 import com.li64.tide.data.rods.CustomRodManager;
@@ -466,7 +466,7 @@ public class GrapplingHookEntity extends Projectile {
     private void updateOwnerInfo(@Nullable GrapplingHookEntity grapplingHook) {
         Player player = this.getPlayerOwner();
         if (player != null) {
-            ((PlayerWithGrapplingHook) player).spicedcider$setHook(grapplingHook);
+            ((IPlayerWithGrapplingHook) player).spicedcider$setHook(grapplingHook);
         }
     }
 

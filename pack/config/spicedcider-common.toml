@@ -17,6 +17,8 @@
 	wolvesWearAnyArmor = true
 	#Spiders switch to shooting cobweb projectiles at range when their target is trapped.
 	spiderRangedWebAttacks = true
+	#Allow placing Redstone Dust.
+	allowRedstonePlacement = false
 
 [performance]
 	#Disable recipe book unlock tracking/saving/syncing entirely, since it's unused. Saves memory and disk I/O.

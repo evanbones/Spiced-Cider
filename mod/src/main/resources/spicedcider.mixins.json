@@ -8,6 +8,7 @@
     "cookscollection.CooksCollectionModBlocksMixin",
     "environmental.WisteriaTreeFeatureMixin",
     "hominid.HominidClientEventsMixin",
+    "jade.JadeDepthFixMixin",
     "minecraft.BedMixin",
     "minecraft.EndCrystalItemMixin",
     "minecraft.EndCrystalMixin",
@@ -20,6 +21,14 @@
     "perf.ReloadableServerResourcesMixin",
     "perf.ServerPlayerMixin",
     "perf.ServerRecipeBookMixin",
+    "redstone.DispenserBlockMixin",
+    "redstone.PistonBaseBlockMixin",
+    "redstone.WaterloggableComparatorMixin",
+    "redstone.WaterloggableDiodeMixin",
+    "redstone.WaterloggableRepeaterMixin",
+    "redstone.caverns_and_chasms.WaterloggableRefractorMixin",
+    "redstone.caverns_and_chasms.WaterloggableResistorMixin",
+    "redstone.quark.WaterloggableRedstoneRandomizerMixin",
     "tide.TideFishingRodItemMixin"
   ],
   "client": [

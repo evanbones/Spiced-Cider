@@ -1,6 +1,6 @@
 package com.evandev.spicedcider.mixin.minecraft.client;
 
-import com.evandev.spicedcider.interfaces.PlayerWithGrapplingHook;
+import com.evandev.spicedcider.interfaces.IPlayerWithGrapplingHook;
 import net.minecraft.client.renderer.item.ClampedItemPropertyFunction;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.resources.ResourceLocation;
@@ -19,7 +19,7 @@ public class ItemPropertiesMixin {
             return (stack, level, entity, seed) -> {
                 float val = original.unclampedCall(stack, level, entity, seed);
                 if (val == 0.0f && entity instanceof Player player) {
-                    if (((PlayerWithGrapplingHook) player).spicedcider$getHook() != null) {
+                    if (((IPlayerWithGrapplingHook) player).spicedcider$getHook() != null) {
                         return 1.0f;
                     }
                 }

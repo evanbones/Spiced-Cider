@@ -209,8 +209,11 @@
 			spiked_palisade = true
 			stripped_palisade = true
 			palisade = true
-			stripped_spiked_palisade = true
 			seat = true
+			stripped_spiked_palisade = true
+
+		[entries.wood_type.shutterup]
+			shutter = true
 
 		[entries.leaves_type.quark]
 			hedge = true

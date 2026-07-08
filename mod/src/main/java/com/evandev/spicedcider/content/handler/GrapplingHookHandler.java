@@ -1,7 +1,7 @@
 package com.evandev.spicedcider.content.handler;
 
 import com.evandev.spicedcider.entities.projectiles.GrapplingHookEntity;
-import com.evandev.spicedcider.interfaces.PlayerWithGrapplingHook;
+import com.evandev.spicedcider.interfaces.IPlayerWithGrapplingHook;
 import com.evandev.spicedcider.registry.ModItems;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -15,7 +15,7 @@ import net.minecraft.world.level.gameevent.GameEvent;
 public class GrapplingHookHandler {
 
     public static InteractionResultHolder<ItemStack> useGrapplingHook(Level level, Player player, InteractionHand hand, ItemStack rod, ItemStack hookStack) {
-        GrapplingHookEntity grapplingHook = ((PlayerWithGrapplingHook) player).spicedcider$getHook();
+        GrapplingHookEntity grapplingHook = ((IPlayerWithGrapplingHook) player).spicedcider$getHook();
 
         if (grapplingHook != null) {
             if (!level.isClientSide()) {

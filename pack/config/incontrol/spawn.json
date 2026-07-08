@@ -69,6 +69,11 @@
     "result": "deny"
   },
   {
+    "mob": "environmental:deer",
+    "when": "onjoin",
+    "result": "deny"
+  },
+  {
     "mob": "caverns_and_chasms:saddled_grazer",
     "when": "onjoin",
     "result": "deny"
