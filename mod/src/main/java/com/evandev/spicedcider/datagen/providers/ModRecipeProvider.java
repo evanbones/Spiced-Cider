@@ -91,6 +91,11 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_grappling_hook", has(ModItems.GRAPPLING_HOOK.get()))
                 .save(output);
 
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.TOOLS, ModItems.FIRE_STRIKER.get())
+                .requires(Items.FLINT, 2)
+                .unlockedBy("has_flint", has(Items.FLINT))
+                .save(output);
+
         SpecialRecipeBuilder.special(RenameRecipe::new)
                 .save(output, "spicedcider:rename_item");
     }

@@ -8,6 +8,7 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.level.block.Block;
+import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -39,5 +40,8 @@ public class ModItemTagsProvider extends ItemTagsProvider {
         this.tag(ModTags.Items.TIDE_HOOKS)
                 .add(ModItems.GRAPPLING_HOOK.get())
                 .add(ModItems.STICKY_GRAPPLING_HOOK.get());
+
+        this.tag(Tags.Items.TOOLS)
+                .add(ModItems.FIRE_STRIKER.get());
     }
 }

@@ -116,6 +116,7 @@ public class SpicedCider {
             event.accept(ModItems.NETHERITE_HAMMER);
             event.accept(ModItems.GRAPPLING_HOOK);
             event.accept(ModItems.STICKY_GRAPPLING_HOOK);
+            event.accept(ModItems.FIRE_STRIKER);
         }
         if (event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
             event.accept(ModItems.WORKSTONE_ITEM);

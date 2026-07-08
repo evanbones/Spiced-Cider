@@ -22,6 +22,8 @@ public class ModLanguageProvider extends LanguageProvider {
         addItem(ModItems.DIAMOND_HAMMER, "Diamond Hammer");
         addItem(ModItems.NETHERITE_HAMMER, "Netherite Hammer");
 
+        addItem(ModItems.FIRE_STRIKER, "Fire Striker");
+
         addItem(ModItems.GRAPPLING_HOOK, "Grappling Hook");
         addItem(ModItems.STICKY_GRAPPLING_HOOK, "Sticky Grappling Hook");
         add("item.spicedcider.grappling_hook.desc", "Good for climbing, not fishing");
