@@ -174,7 +174,7 @@ hash = "4bae7b08380558f4e00f45f9862e6cbfee07a199b5fc2123c112e965fbb65274"
 
 [[files]]
 file = "config/c2me.toml"
-hash = "df7859de4a9ace9fbdf2fff3b7d1c862904b8581c8bbf4e2074777897282c2ab"
+hash = "db22a4ce1122d06a4f168206fafcac2d5d995c375667b86e51182fed089e676f"
 
 [[files]]
 file = "config/capes.json5"
@@ -346,7 +346,7 @@ hash = "176c5a38e25059d79b0fca5875c796c98c8d2c29f376386a0e82bf68b93c6ca6"
 
 [[files]]
 file = "config/darkness-client.toml"
-hash = "3a5215067b4c876644c0ab9cacea6bd501e2eb7ca73634443813896717d02d21"
+hash = "1d153818385e1551529a20ac7c1b4627738d71cdc22786e79add1d463a04f190"
 
 [[files]]
 file = "config/dimensional_tears-client.toml"
@@ -669,6 +669,10 @@ file = "config/emixx/stack_groups/supplementaries_way_signs.json"
 hash = "7e63130ae863e249ede069393868db57d14ff40814e97935c8bb152f518d2df1"
 
 [[files]]
+file = "config/emixx/stack_groups/tide_bobbers.json"
+hash = "b2f95c08edc365ff8554edc8044e6f8392277427660bd4b0af9ef826c915448b"
+
+[[files]]
 file = "config/emixx/stack_groups/valhelsia_structures_jars.json"
 hash = "69816cfcd9b9e38d8316114d6dbe23982fc61f54622a63bef5e4a0df2a2ec036"
 
@@ -754,27 +758,27 @@ hash = "7f9600976b415a1f3196fbc51d0aebd62731168f6786fa6555e058e47b2c30a4"
 
 [[files]]
 file = "config/everycomp-entries-1.toml.bak"
-hash = "dbc55daac4e811a354b1dd61ff97cf26c2647aad9cb835ab3a69eb0af6d35b59"
+hash = "c80de568411c31303de957a540c7599fb354f00cc0efd45805b3fe991a39ab4c"
 
 [[files]]
 file = "config/everycomp-entries-2.toml.bak"
-hash = "86ef99ff975854e5f7e68c7c34b2f8d3cab6be020d8a9de467c92484640c8fba"
-
-[[files]]
-file = "config/everycomp-entries-3.toml.bak"
 hash = "dbc55daac4e811a354b1dd61ff97cf26c2647aad9cb835ab3a69eb0af6d35b59"
 
 [[files]]
+file = "config/everycomp-entries-3.toml.bak"
+hash = "86ef99ff975854e5f7e68c7c34b2f8d3cab6be020d8a9de467c92484640c8fba"
+
+[[files]]
 file = "config/everycomp-entries-4.toml.bak"
-hash = "c80de568411c31303de957a540c7599fb354f00cc0efd45805b3fe991a39ab4c"
+hash = "dbc55daac4e811a354b1dd61ff97cf26c2647aad9cb835ab3a69eb0af6d35b59"
 
 [[files]]
 file = "config/everycomp-entries-5.toml.bak"
-hash = "243d09f987b0dbaa139bcf251416253e6e1292ac1d6ec6e3395f878b911e4203"
+hash = "c80de568411c31303de957a540c7599fb354f00cc0efd45805b3fe991a39ab4c"
 
 [[files]]
 file = "config/everycomp-entries.toml"
-hash = "c80de568411c31303de957a540c7599fb354f00cc0efd45805b3fe991a39ab4c"
+hash = "86ef99ff975854e5f7e68c7c34b2f8d3cab6be020d8a9de467c92484640c8fba"
 
 [[files]]
 file = "config/everycomp-hazardous.toml"
@@ -810,7 +814,7 @@ hash = "09d330b29443d9579ecc014f2be2fcb31075bfe1e9f9ac4e750f271128650fe6"
 
 [[files]]
 file = "config/fabric/indigo-renderer.properties"
-hash = "6204e0746a782945ecae0febda8122d00a4bba90287bca4090a5ac819072d083"
+hash = "525c9a77ab0017377e3cb704ea4c08678559b7346e33007f13d629cf15df0e8d"
 
 [[files]]
 file = "config/fallingleaves-client.toml"
@@ -1070,7 +1074,7 @@ hash = "edb48061400dd675918d7e5d1b5f0846f056ceb09f5f4eada9fa36500c9bff36"
 
 [[files]]
 file = "config/gnetum.json"
-hash = "a3f212790515056b30579e5e908196b4a7c67691a1717f27689118b2bfea57a4"
+hash = "72678bee2afb9706f59b9003268037f88ebc2a80052a2ab99a30c1a63e97052d"
 
 [[files]]
 file = "config/high_noon-client.toml"
@@ -2134,7 +2138,7 @@ hash = "13b2b1384f949e6e409c3c3cc423ecb854df6b386d4466d424a57a887e89f3d8"
 
 [[files]]
 file = "config/packetfixer.properties"
-hash = "e3d93b6a97c255d8b23d32cc2f85d24d9d9115ce647b29a454a45e730ffe2892"
+hash = "1c863fefb970f5eff22fae82148421502a00af44daff6a789766113107942c3f"
 
 [[files]]
 file = "config/particle_core_config.toml"
@@ -2751,11 +2755,6 @@ hash = "e2fa0a0c652d1a4cdec2ecc122c968c2a4b1cb36c2cdd874e10d8b04edb737fa"
 metafile = true
 
 [[files]]
-file = "mods/apeeling.pw.toml"
-hash = "13b4fb86f32e99b1b82a58f2a8fc453d997dfebe2cb64100c4fcad6c155e418f"
-metafile = true
-
-[[files]]
 file = "mods/architectury-api.pw.toml"
 hash = "ea336d25c3e21ef168aec20e1ea470c96949ad29632646ee8e8ab0d74b4bbfc9"
 metafile = true
@@ -3220,11 +3219,6 @@ hash = "5a26489b734991c0511abfe43bf9143c935b8483d854a78fecd2e84993fb09cc"
 metafile = true
 
 [[files]]
-file = "mods/gnetum.pw.toml"
-hash = "3979402652cc5c5eb7e4b08cecd19e1745832923ebe6679b239bca8864578cb1"
-metafile = true
-
-[[files]]
 file = "mods/highlight.pw.toml"
 hash = "554fc5e8aba13353c9b9d4ff066ec6aaf1bd559550633ef4ace120541cada94b"
 metafile = true
@@ -3282,6 +3276,11 @@ metafile = true
 [[files]]
 file = "mods/item-descriptions.pw.toml"
 hash = "e5347f876614ddeaff10c2e7417f946ac5ef56c56acf7838d166d1cd5a8d9d1c"
+metafile = true
+
+[[files]]
+file = "mods/ixeris.pw.toml"
+hash = "261885cca2c4fad2e0c53fdbc6eecb29982afccab576d5ddedfa1a7827bfc20e"
 metafile = true
 
 [[files]]
@@ -3427,11 +3426,6 @@ metafile = true
 [[files]]
 file = "mods/mouse-tweaks.pw.toml"
 hash = "6bc414cc0f2d4c078fe83f384d786343f701f371d657c5279b5b0df1595804bd"
-metafile = true
-
-[[files]]
-file = "mods/neapolitan.pw.toml"
-hash = "e68a5fa89a2b2c17a3f807875c8f32b5f69d7c083a8c88e8f29f3832c9bb4385"
 metafile = true
 
 [[files]]

@@ -14,7 +14,6 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-
 // hominid man I love you but you gotta leave my console alone
 @Mixin(value = HominidClientEvents.class, remap = false)
 public class HominidClientEventsMixin {
