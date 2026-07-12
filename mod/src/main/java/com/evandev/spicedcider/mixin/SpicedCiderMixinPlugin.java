@@ -43,6 +43,9 @@ public class SpicedCiderMixinPlugin implements IMixinConfigPlugin {
         if (mixinClassName.contains("quark")) {
             return isModLoaded("quark");
         }
+        if (mixinClassName.contains("snowyspirit")) {
+            return isModLoaded("snowyspirit");
+        }
         if (mixinClassName.contains("caverns_and_chasms")) {
             return isModLoaded("caverns_and_chasms");
         }

@@ -78,8 +78,6 @@ public class ModLanguageProvider extends LanguageProvider {
         add("option.spicedcider.spiderRangedWebAttacks.tooltip", "Spiders switch to shooting cobweb projectiles at range when their target is trapped.");
         add("option.spicedcider.skeletonHealthNerf", "Skeleton Health Nerf");
         add("option.spicedcider.skeletonHealthNerf.tooltip", "Skeletons and strays get 12 max health. Requires a restart to take effect.");
-        add("option.spicedcider.allowRedstonePlacement", "Allow Redstone Dust placement");
-        add("option.spicedcider.allowRedstonePlacement.tooltip", "When disabled, Redstone Dust will no longer be placeable.");
         add("option.spicedcider.removeQuasiConnectivity", "Remove Quasi-Connectivity");
         add("option.spicedcider.removeQuasiConnectivity.tooltip", "Removes quasi-connectivity from pistons, dispensers, and droppers.");
 

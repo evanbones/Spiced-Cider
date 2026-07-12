@@ -79,6 +79,21 @@
     "result": "deny"
   },
   {
+    "mob": "hominid:incendiary",
+    "when": "onjoin",
+    "result": "deny"
+  },
+  {
+    "mob": "hominid:vampire",
+    "when": "onjoin",
+    "result": "deny"
+  },
+  {
+    "mob": "etcetera:weaver",
+    "when": "onjoin",
+    "result": "deny"
+  },
+  {
     "mob": "caverns_and_chasms:mime",
     "when": "onjoin",
     "result": "deny"

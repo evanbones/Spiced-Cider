@@ -66,7 +66,6 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.BooleanValue keepBrokenItems;
         public final ModConfigSpec.BooleanValue wolvesWearAnyArmor;
         public final ModConfigSpec.BooleanValue spiderRangedWebAttacks;
-        public final ModConfigSpec.BooleanValue allowRedstonePlacement;
         public final ModConfigSpec.BooleanValue removeQuasiConnectivity;
 
         public final ModConfigSpec.BooleanValue disableRecipeBookTracking;
@@ -117,11 +116,6 @@ public class SpicedCiderConfig {
                     .comment("Spiders switch to shooting cobweb projectiles at range when their target is trapped.")
                     .translation("option.spicedcider.spiderRangedWebAttacks")
                     .define("spiderRangedWebAttacks", true);
-
-            allowRedstonePlacement = builder
-                    .comment("Allow placing Redstone Dust.")
-                    .translation("option.spicedcider.allowRedstonePlacement")
-                    .define("allowRedstonePlacement", false);
 
             removeQuasiConnectivity = builder
                     .comment("Removes quasi-connectivity from pistons, dispensers, and droppers.")

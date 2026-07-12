@@ -98,12 +98,12 @@
 
 		[types.leaves_type.environmental]
 			hibiscus = true
-			willow = true
-			pine = true
-			plum = true
-			cheerful_plum = true
-			moody_plum = true
-			wisteria = true
+			willow = false
+			pine = false
+			plum = false
+			cheerful_plum = false
+			moody_plum = false
+			wisteria = false
 			pink_wisteria = true
 			blue_wisteria = true
 			purple_wisteria = true
@@ -209,8 +209,8 @@
 			spiked_palisade = true
 			stripped_palisade = true
 			palisade = true
-			seat = true
 			stripped_spiked_palisade = true
+			seat = true
 
 		[entries.wood_type.shutterup]
 			shutter = true
