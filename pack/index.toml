@@ -70,7 +70,7 @@ hash = "6c19539e05905c97a444a612dd2b597001244355cc9a59c25b3079cd4665731a"
 
 [[files]]
 file = "config/asyncparticles/asyncparticles-mixin.properties"
-hash = "50fb3258597b985d70814bec0f8603a9d3b717a44a777a3f9cbf009f9afb3ff1"
+hash = "7e348d72692574b7a52e4ebdaebbe4aa2dabeee422c034a6bf72ff7453a4b221"
 
 [[files]]
 file = "config/asyncparticles/asyncparticles.json"
@@ -310,7 +310,7 @@ hash = "943e1c3672b8a03f27519b357091133205119c7b3db2fcc4c25b597cabf8926d"
 
 [[files]]
 file = "config/crash_assistant/modlist.json"
-hash = "27e781065013a6d2ae574989f05320d9ab01dafd44cb77901657f4194aed36be"
+hash = "61027c536d95482ab943d59b7aaa5e3f57856d2760f53c01953529bb4709eb5b"
 
 [[files]]
 file = "config/crash_assistant/scripts/log_analysis/example.jexl"
@@ -649,6 +649,10 @@ file = "config/emixx/stack_groups/slime_time_slime_blocks.json"
 hash = "c3ef36ebddcae21e590989e19e43e49c99ea1e284d9d102093cb107bdcc98065"
 
 [[files]]
+file = "config/emixx/stack_groups/snowyspirit_sleds.json"
+hash = "d03529bf7ef54085a4c716cf02d1073069b5bde64b43566823e20073ed41e26b"
+
+[[files]]
 file = "config/emixx/stack_groups/spicedcider_hammers.json"
 hash = "ea5c65131dda7eb4b516666e8663eb54e739b7d9b50d9dbfaafd66bf9618d14f"
 
@@ -770,27 +774,27 @@ hash = "7f9600976b415a1f3196fbc51d0aebd62731168f6786fa6555e058e47b2c30a4"
 
 [[files]]
 file = "config/everycomp-entries-1.toml.bak"
-hash = "8a9981e9b41388ef6788f7e5548770e962d0204ca6365871d290cd8e81549ecc"
-
-[[files]]
-file = "config/everycomp-entries-2.toml.bak"
 hash = "08db84491140e77d99122dbe91a2c734ac632149d28d9a8e93e0a5d04b99cd90"
 
 [[files]]
+file = "config/everycomp-entries-2.toml.bak"
+hash = "00a405c060fa83922d0fea263797f761e341219f9087f3988bfe609414d5bfba"
+
+[[files]]
 file = "config/everycomp-entries-3.toml.bak"
-hash = "0895c6785962c69523c69c7bbe71157cbe548ff1ad545d5388c61c2f8ef341cf"
+hash = "8a9981e9b41388ef6788f7e5548770e962d0204ca6365871d290cd8e81549ecc"
 
 [[files]]
 file = "config/everycomp-entries-4.toml.bak"
-hash = "7b87669d871fde0551f11260b3959e72852635ca6b28e4489698fbed69e6ae38"
+hash = "00a405c060fa83922d0fea263797f761e341219f9087f3988bfe609414d5bfba"
 
 [[files]]
 file = "config/everycomp-entries-5.toml.bak"
-hash = "23e8c576bff365e4e162ec6df21b8764974b9e1f398a4a572a096fc884918bbb"
+hash = "8a9981e9b41388ef6788f7e5548770e962d0204ca6365871d290cd8e81549ecc"
 
 [[files]]
 file = "config/everycomp-entries.toml"
-hash = "00a405c060fa83922d0fea263797f761e341219f9087f3988bfe609414d5bfba"
+hash = "8a9981e9b41388ef6788f7e5548770e962d0204ca6365871d290cd8e81549ecc"
 
 [[files]]
 file = "config/everycomp-hazardous.toml"
@@ -826,7 +830,7 @@ hash = "09d330b29443d9579ecc014f2be2fcb31075bfe1e9f9ac4e750f271128650fe6"
 
 [[files]]
 file = "config/fabric/indigo-renderer.properties"
-hash = "3ea3e2cc5012b53f9e656e4921db70ca5225975e7c08c640b18809f211183c9c"
+hash = "fd1b93be6b8530d259c1cfbe358e6853f1663729e81fdbec341273cb38f4cafa"
 
 [[files]]
 file = "config/falling_snow.json"
@@ -2166,7 +2170,7 @@ hash = "13b2b1384f949e6e409c3c3cc423ecb854df6b386d4466d424a57a887e89f3d8"
 
 [[files]]
 file = "config/packetfixer.properties"
-hash = "72d1010a853a0674a5e6dd11278f9b6b28d9ea54d9385ec49df67c7606325565"
+hash = "309db9dd990e443ca192735eb58fdcc494fa8c13bd8b80874780c3e029a1384f"
 
 [[files]]
 file = "config/particle_core_config.toml"
@@ -2403,6 +2407,10 @@ hash = "d77ca071a4d079a55188d4b6d20c28a2481fe78200e27728fa5a205d03ee64bb"
 [[files]]
 file = "config/shadowdrop-client.toml"
 hash = "29c323202dc39807be80a37f946cd163592ceb92f1eef944f30f1322e58acffe"
+
+[[files]]
+file = "config/shadowdrop.json"
+hash = "c8d7ee7653146f167adcf50aacb866f1cdb49ffd97be9601e27694301cae4a23"
 
 [[files]]
 file = "config/shieldexp-common.json"
@@ -2758,7 +2766,7 @@ hash = "d985bfc68899c91aa642736400472f6ab876dedaaef4b8c31f38b52d48de633d"
 
 [[files]]
 file = "config/zfastnoise.mixin.properties"
-hash = "cbe3bb07dcec48f73a007abd26188796958bd48a66a9eccfb6f98ef4720ae21f"
+hash = "872123825490d066e6b4542e9c3b03dc7339a703aa40b0b1cf6729f369626324"
 
 [[files]]
 file = "config/zipline.json"
@@ -2793,6 +2801,11 @@ hash = "e30ba5c8e77e4e5381e4deed8f047788d04c37af5671b7e691f530901890cdaf"
 metafile = true
 
 [[files]]
+file = "mods/adapted-mobs.pw.toml"
+hash = "77c7d8a36603f34ba6331f749b3ce1dcc8dd3ad6bc0dc49216a347097b01059a"
+metafile = true
+
+[[files]]
 file = "mods/advancement-plaques.pw.toml"
 hash = "2b02594380f31aa857c89d296afb53bec67621b491956be09a54ab6845552e2a"
 metafile = true
@@ -2823,7 +2836,7 @@ metafile = true
 
 [[files]]
 file = "mods/amplified-nether.pw.toml"
-hash = "786993e5bb314f53039578ace75997775d59b1c3766acd506781c1b170b0d791"
+hash = "9efd2467725934e660f256346950d4e10ca44f034475ce8909a29fe0790dd5cc"
 metafile = true
 
 [[files]]
@@ -2843,7 +2856,7 @@ metafile = true
 
 [[files]]
 file = "mods/asyncparticles.pw.toml"
-hash = "91bc899ef3887b161605310a2ef6d3a2657dcdf1d4e0ece5ed12995c39b70e5a"
+hash = "2cfb28351a5a5d4af8b38130cca9f935c26c22524e0b6823196f0eb39ec55ead"
 metafile = true
 
 [[files]]
@@ -2923,7 +2936,7 @@ metafile = true
 
 [[files]]
 file = "mods/biolith.pw.toml"
-hash = "bf235add2b3e6d5ce63b07ad63203261a041f64076ca004f7286d9cdf9fa2751"
+hash = "6fc8fabab14eea715920ad5b391fd15eb46df0cbbe60b0a41b67385983fd12bc"
 metafile = true
 
 [[files]]
@@ -3073,7 +3086,7 @@ metafile = true
 
 [[files]]
 file = "mods/crash-assistant.pw.toml"
-hash = "518e7935a14f6612328c283bea9eb7092db6a0d637fb6cf6ac6820d4e3228f03"
+hash = "9429e94f2f8810910071d178a115491ce1309be2202eaae981f107f8ccc4d017"
 metafile = true
 
 [[files]]
@@ -3103,7 +3116,7 @@ metafile = true
 
 [[files]]
 file = "mods/defaulted.pw.toml"
-hash = "148b0eed4ae7abc35039248ccfbbea12e25918f5b3adb3ea962aa46eac35d3f2"
+hash = "89ab3dbeecb46de19a917acb388c18b43a69a985304bfbe21795fd630b21100a"
 metafile = true
 
 [[files]]
@@ -3228,7 +3241,7 @@ metafile = true
 
 [[files]]
 file = "mods/fancymenu.pw.toml"
-hash = "3e01a509e0cdde9bc8f257ab201671531ecb1e9395b42e1a6c673ae72bdf1b1c"
+hash = "b3993e303703cbd376600ac2946a01e146e373cc54157948d4944bc852a3e506"
 metafile = true
 
 [[files]]
@@ -3362,11 +3375,6 @@ hash = "e5347f876614ddeaff10c2e7417f946ac5ef56c56acf7838d166d1cd5a8d9d1c"
 metafile = true
 
 [[files]]
-file = "mods/ixeris.pw.toml"
-hash = "261885cca2c4fad2e0c53fdbc6eecb29982afccab576d5ddedfa1a7827bfc20e"
-metafile = true
-
-[[files]]
 file = "mods/jade.pw.toml"
 hash = "b6e0a61fea06f8d6d8e1672cf07b682625c4b74efd548d5093cd9c1fed167eec"
 metafile = true
@@ -3493,12 +3501,12 @@ metafile = true
 
 [[files]]
 file = "mods/modulation.pw.toml"
-hash = "6ef252cfffac3d525cd09c92cee1d537fecc615382257fd7dfb5a7b16c09202e"
+hash = "427ce5bef39ec7600e24a7a9051fb0eab25eee76c7a2a166376e2ebe25638917"
 metafile = true
 
 [[files]]
 file = "mods/moonlight.pw.toml"
-hash = "018eeaa17d34a6010be48e946ad26973e24e125cfdf6f87cbd79f0cd7d5901ce"
+hash = "b6d7448e14c747318b083d7903baa4801ad524853f34205aa19f0cfa18ec0a92"
 metafile = true
 
 [[files]]
@@ -3613,7 +3621,7 @@ metafile = true
 
 [[files]]
 file = "mods/polytone.pw.toml"
-hash = "260b92538ce9610024583c6c92b8c2f99e055f5196d0ed356bebad374ab2b811"
+hash = "67ea71a3edcd88bb031720932f519151923b8dbb94633ddd8fb0f9585e8d9e7a"
 metafile = true
 
 [[files]]
@@ -3643,7 +3651,7 @@ metafile = true
 
 [[files]]
 file = "mods/quark.pw.toml"
-hash = "c5f891f486c303cae5fb41223bdc54e8c8c9da259f5c950c23df8b8ebdc40eea"
+hash = "726970c838cd6d724366956c2469b5a36dbe574abbd087317513359dfd1dd89e"
 metafile = true
 
 [[files]]
@@ -3703,7 +3711,7 @@ metafile = true
 
 [[files]]
 file = "mods/reliable-remover.pw.toml"
-hash = "2b371cb053f7e314a9d054258aa634883a494278e0e62b755c41121441c9457d"
+hash = "6e1124daa2411b732d1e11e91dd2d54b50957cc67f6c7246a4902a29a1553ce0"
 metafile = true
 
 [[files]]
@@ -3767,6 +3775,11 @@ hash = "e0f952317c108547176ca8989c4ecb81b734e642b8ebe7ddf9aae94a10c4dea2"
 metafile = true
 
 [[files]]
+file = "mods/shadows-redropped.pw.toml"
+hash = "1e892cb80706e2979a549ea8eed2e9223484c280e44eeaf010780213821105e2"
+metafile = true
+
+[[files]]
 file = "mods/shield-expansion.pw.toml"
 hash = "87db45eeaa826bfb058d0f6e426c8a0c5381c127c4fd1479fd2886aa48ecbda7"
 metafile = true
@@ -3812,11 +3825,6 @@ hash = "aa7a2c186bf1ce65441be06d1c9a5af18b054098e4bdc37273fb4e75f0d27fc5"
 metafile = true
 
 [[files]]
-file = "mods/sound-physics-perfected.pw.toml"
-hash = "44d8909d4501cf0d323a12c0f8a42893ac034a87c1d4faa757843c2a91866a6e"
-metafile = true
-
-[[files]]
 file = "mods/spark.pw.toml"
 hash = "593fa7b30ab016aa45be07bd6bef3a9f160ed0f24689850d60bf84995d69b843"
 metafile = true
@@ -3856,7 +3864,7 @@ metafile = true
 
 [[files]]
 file = "mods/supplementaries.pw.toml"
-hash = "f4362615b463f2e68e4a9573720ef19d3c483e2c035981791b5834082a3e56be"
+hash = "28e1627fe3182a3b4b2cbb2a31fcbf2269192dea1d4b576f78702d8fcc199d6f"
 metafile = true
 
 [[files]]
@@ -3886,7 +3894,7 @@ metafile = true
 
 [[files]]
 file = "mods/tiny-takeover-backport.pw.toml"
-hash = "28c93ea85361ac66ea487f6ba279abb950967b677983d68d6da656ffcf0b636e"
+hash = "93ce52993f4187f0f1945d2bdb006bab68ccbe868cdb615454274d638f4e98db"
 metafile = true
 
 [[files]]
@@ -3896,7 +3904,7 @@ metafile = true
 
 [[files]]
 file = "mods/tolerable-creepers.pw.toml"
-hash = "42de88fa9ba0c4d0d3f3a21fc27c912f8e6fd6fef035507c1397ce29f0a57312"
+hash = "9ea9536d26d15e6035d181c48c0f32cd37f08b7cfacd9b204abcc214ae5d987e"
 metafile = true
 
 [[files]]
@@ -4303,8 +4311,20 @@ file = "resourcepacks/spicedcider_resources/assets/ambient_fog/polytone/biome_mo
 hash = "859e8f40e1039e2df29e72c956ddf9e099ea03cc81b61dd24e16d8e624065a29"
 
 [[files]]
+file = "resourcepacks/spicedcider_resources/assets/amendments/models/block/wall_lantern.json"
+hash = "75caa4197e0abfd01435805099ef996c589a6592f5f46457e344a9f24d0fb4e3"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/amendments/textures/block/wall_lanterns/bountifulfares/feldspar_lantern.png"
+hash = "2039fd30ca743d8667c6cab229fac5fcc06f692a0bb1d4d55b1dce76e7445926"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/amendments/textures/block/wall_lanterns/infernalexp/glowlight_lantern.png"
+hash = "2039fd30ca743d8667c6cab229fac5fcc06f692a0bb1d4d55b1dce76e7445926"
+
+[[files]]
 file = "resourcepacks/spicedcider_resources/assets/amendments/textures/block/wall_lanterns/wall_lantern.png"
-hash = "26325028155c55fcfbe8fa5259391a253534be82f47f4b7aed25d44823d34701"
+hash = "2039fd30ca743d8667c6cab229fac5fcc06f692a0bb1d4d55b1dce76e7445926"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/arts_and_crafts/models/item/bleached_bed.json"
@@ -4397,6 +4417,14 @@ hash = "79e3c3ab364edb298bb58a4567e66247389de88a1bfad8450e48234a82f61a53"
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/bountifulfares/textures/block/fallen_walnuts_3.png"
 hash = "4587265926134cbbb040a65d9d266fede24d0933edbeef4ca365279f6579d04f"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/bountifulfares/textures/block/feldspar_lantern.png"
+hash = "b7a457c2e82e691f96c9a87427a9b430b0c9926d518a668b1720d0e8cbe54f02"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/bountifulfares/textures/block/feldspar_lantern.png.mcmeta"
+hash = "c448c648b6f3eb5338f5ad8ea0f5c4a63fbb3a804033da898c55f63beaf91640"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/bountifulfares/textures/block/grassy_dirt_side.png"
@@ -4505,6 +4533,10 @@ hash = "404d39072504ecd31a8bd552ff5c32dba02a17f4dd2298a909cb26fa251f0e43"
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/bountifulfares/textures/item/chamomile_flowers.png"
 hash = "1e4eafe9f3b4b213c86ae8a21c9f5320c032a5051153b68151d6a7ff7c904105"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/bountifulfares/textures/item/feldspar_lantern.png"
+hash = "7248f0fb3c212af2e12da7ad733e2954e6f6ee2c46ec035543a155bc0ad9b080"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/bountifulfares/textures/item/hoary_apple.png"
@@ -5303,6 +5335,18 @@ file = "resourcepacks/spicedcider_resources/assets/minecraft/lang/en_us.json"
 hash = "aac2d98a8028ceff207ca653fd2ea757a40be0046d3dc28f7138f365e8c9d27e"
 
 [[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/models/block/lantern.json"
+hash = "880a9f063f1c0c3131ec05fcc8e1bde827f004f6bb58caea4ec76ea722b368dc"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/models/block/template_hanging_lantern.json"
+hash = "1bbb4d07df5c055abe7e30d9ff67c8cb58366327af1ce91186f7b98c5edcf0af"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/models/block/template_lantern.json"
+hash = "77f930dee7635f2f99856baaae615699d68ed894a48107d8ce2c509c35be90dc"
+
+[[files]]
 file = "resourcepacks/spicedcider_resources/assets/minecraft/models/item/light_gray_bed.json"
 hash = "efcdc1b0013db5fa941ed3ffa0c6b60d24472125f7ebd88b016c6ec400982e8c"
 
@@ -5532,7 +5576,7 @@ hash = "351a4511447c9f77536458b572309573b1128861f3d4200c4c37ec71bf990b7c"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/block/chain.png"
-hash = "5d603e4f4cc5c9c1582e95abf8e527c31eb1da4c8bbd3e2aa045b971e80454fa"
+hash = "420fc9b1312acacb224b65876938f04750813c49b0b13e0e84d65f9948c3d66a"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/block/cobblestone.png"
@@ -5545,6 +5589,10 @@ hash = "92cdc6246c3fb37d0bd06f3a2b6a22e27d8180fbbfc4dd1134289d73d3318324"
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/block/crimson_stem.png.mcmeta"
 hash = "a1d4171d971c3a7b3202d9aa67062f643f579443a71cc92efe38f1acd8990f03"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/block/dead_bush.png"
+hash = "1fcb0c682e31af6e30bfece4e3cac26e02268f880ef5e2d17f3a5c5f12dbc13a"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/block/detector_rail.png"
@@ -5603,6 +5651,14 @@ file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/block/iron
 hash = "3d39e73761b162e236b4a69798b1556281aba4cf01e973cc29eba15efe80bda5"
 
 [[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/block/lantern.png"
+hash = "cf36da12126a842105b1ffb73bf15d5ee00316a3570ba24f42188b03761f2ebd"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/block/lantern.png.mcmeta"
+hash = "47d0745c207d83797ce2657a2899560ac06dcfa332bc25e24aee850d76b1d705"
+
+[[files]]
 file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/block/mossy_cobblestone.png"
 hash = "fad2468d652dd21c518dccef22d824c4382de735cdb47efb226e76a1e18daa1e"
 
@@ -5645,6 +5701,14 @@ hash = "2555a70ef588fc43c117719aa800fc8979d546433d3e4c8d96c8753113995f6e"
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/block/snow.png"
 hash = "8d9016d337e041cc626756a9ac872080395aa6b226fe0b94578eb0d23e894eae"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/block/soul_lantern.png"
+hash = "97c17003447b5b4efce4da369d289dd11b576610c7d3cf931837bbcb72f85c36"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/block/soul_lantern.png.mcmeta"
+hash = "47d0745c207d83797ce2657a2899560ac06dcfa332bc25e24aee850d76b1d705"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/block/stripped_crimson_stem.png"
@@ -6435,6 +6499,10 @@ file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/knowl
 hash = "d9b19bb45600e44cef81ee954cd1bbe801ecf7cf8c7ee4d3fb02774e783b95c2"
 
 [[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/lantern.png"
+hash = "cf0520a9be34983d62bea00b5e73c0b459a86f02b3b236ee76aa6ab72c9fe433"
+
+[[files]]
 file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/light_blue_dye.png"
 hash = "f186c6bdedd1c7fd346623b5fb2ef42218682b9506a86bab575600b8777bc8ad"
 
@@ -6493,6 +6561,10 @@ hash = "2f3029434b0cc4ba07082f731affa4b5406c4e75139a1e643a57eef55824af4a"
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/shulker_shell.png"
 hash = "7c3b130e9a5ea460f1ea02cd817260d764cf84537fa391316fbb973e22548322"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/soul_lantern.png"
+hash = "7a77a10e1d6c2dff8abecf4686f222e3a353dce7639b823d28aad1cd63a681e1"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/spawn_egg.png"
