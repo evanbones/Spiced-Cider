@@ -1,0 +1,28 @@
+{
+  "modEnabled": true,
+  "shadowColor": "#000000",
+  "shadowAlpha": 99,
+  "shadowXOffset": 1,
+  "shadowYOffset": 1,
+  "offsetItems": true,
+  "shadowsAlways": true,
+  "shadowsInSlots": true,
+  "shadowsInHotbar": true,
+  "shadowsInCursor": true,
+  "cropToSlots": true,
+  "cropToHotbar": true,
+  "uncropUnderCursor": false,
+  "slotBrColors": [
+    "#E5E5E5",
+    "#C6C5C1"
+  ],
+  "translucentItems": [
+    "#c:glass",
+    "#c:glass_panes",
+    "#forge:glass",
+    "#forge:glass_panes",
+    "minecraft:beacon"
+  ],
+  "transparentItems": [],
+  "forceDepthRefresh": false
+}
