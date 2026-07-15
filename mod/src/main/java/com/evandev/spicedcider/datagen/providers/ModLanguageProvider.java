@@ -96,6 +96,10 @@ public class ModLanguageProvider extends LanguageProvider {
         add("option.spicedcider.customDeathSound.tooltip", "Plays a custom sound when your player character dies.");
         add("option.spicedcider.hideMelancholicHungerTooltip", "Hide Melancholic Hunger Tooltip");
         add("option.spicedcider.hideMelancholicHungerTooltip.tooltip", "Hides Melancholic Hunger's regeneration tooltip lines from item tooltips.");
+        add("option.spicedcider.cloudFarPlaneFix", "Cloud Far Plane Fix");
+        add("option.spicedcider.cloudFarPlaneFix.tooltip", "Gives clouds their own extended far plane instead of sharing terrain's (which is capped at render distance * 4 blocks), so far away clouds don't get hard-clipped.");
+        add("option.spicedcider.cloudFarPlaneDistance", "Cloud Far Plane Distance");
+        add("option.spicedcider.cloudFarPlaneDistance.tooltip", "Far clip plane distance in blocks used for clouds.");
 
         add("option.spicedcider.vistaMirrorAlwaysConnect", "Always Connect Mirrors");
         add("option.spicedcider.vistaMirrorAlwaysConnect.tooltip", "Ignores Vista's square-aspect-ratio restriction when growing connected mirrors, so adjacent mirrors always merge into one group regardless of shape.");

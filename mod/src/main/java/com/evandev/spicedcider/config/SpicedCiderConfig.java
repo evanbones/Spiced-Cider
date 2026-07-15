@@ -150,6 +150,9 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.BooleanValue customDeathSound;
         public final ModConfigSpec.BooleanValue hideMelancholicHungerTooltip;
 
+        public final ModConfigSpec.BooleanValue cloudFarPlaneFix;
+        public final ModConfigSpec.IntValue cloudFarPlaneDistance;
+
         public final ModConfigSpec.BooleanValue vistaMirrorPerfFixes;
         public final ModConfigSpec.IntValue vistaMirrorReflectionDistance;
         public final ModConfigSpec.DoubleValue vistaMirrorUpdateFps;
@@ -177,6 +180,19 @@ public class SpicedCiderConfig {
                     .comment("Hide Melancholic Hunger's regeneration tooltip lines from item tooltips. Requires Melancholic Hunger.")
                     .translation("option.spicedcider.hideMelancholicHungerTooltip")
                     .define("hideMelancholicHungerTooltip", true);
+
+            builder.pop();
+            builder.push("clouds");
+
+            cloudFarPlaneFix = builder
+                    .comment("Give clouds their own extended far clip plane instead of sharing terrain's (which is capped at render distance * 4 blocks), so cloud mods that draw clouds far away don't get hard-clipped by the GPU with no fade.")
+                    .translation("option.spicedcider.cloudFarPlaneFix")
+                    .define("cloudFarPlaneFix", true);
+
+            cloudFarPlaneDistance = builder
+                    .comment("Far clip plane distance in blocks used for the clouds draw call.")
+                    .translation("option.spicedcider.cloudFarPlaneDistance")
+                    .defineInRange("cloudFarPlaneDistance", 2048, 256, 65536);
 
             builder.pop();
             builder.push("vista");

@@ -3,6 +3,7 @@ plugins {
     id 'maven-publish'
     id 'net.neoforged.moddev' version '2.0.141'
     id 'idea'
+    id 'org.sinytra.adapter.userdev' version '1.2.1-SNAPSHOT'
     id "me.modmuss50.mod-publish-plugin" version "1.1.0"
 }
 
@@ -181,6 +182,11 @@ repositories {
         }
     }
 
+    maven {
+        name = "Sinytra"
+        url = "https://maven.sinytra.org/"
+    }
+
     mavenCentral()
 }
 
@@ -263,6 +269,23 @@ dependencies {
     compileOnly "maven.modrinth:supplementaries:FPL7hXrE"
     compileOnly "maven.modrinth:snowy-spirit:1.21.1-3.1.7"
 
+    // NML
+    compileOnly "maven.modrinth:no-mans-land:1.5.12"
+    // runtimeOnly "maven.modrinth:biolith:7VJXS9CG"
+
+    // Sinytra
+    additionalRuntimeClasspath "org.sinytra:connector:2.0.0-beta.9+1.21.1"
+    runtimeOnly "org.sinytra.forgified-fabric-api:forgified-fabric-api:0.116.7+2.2.4+1.21.1"
+    compileOnly "org.sinytra:forgified-fabric-loader:2.5.68+0.18.4+1.21.1"
+
+    // Sodium
+    compileOnly "maven.modrinth:sodium:mc1.21.1-0.8.12-neoforge"
+    runtimeOnly "maven.modrinth:sodium:mc1.21.1-0.8.12-neoforge"
+
+    // LambDynLights
+    compileOnly "maven.modrinth:lambdynamiclights:4.8.10+1.21.1"
+    runtimeOnly "maven.modrinth:lambdynamiclights:4.8.10+1.21.1"
+
     // Abnormals
     compileOnly "maven.modrinth:environmental:5.0.1"
     compileOnly "maven.modrinth:caverns-and-chasms:3.0.0"
@@ -283,7 +306,6 @@ dependencies {
 
     // Vista
     compileOnly "maven.modrinth:vista_tv:1.21.1-5.1.2"
-    runtimeOnly "maven.modrinth:vista_tv:1.21.1-5.1.2"
 
     compileOnly(annotationProcessor("com.github.bawnorton.mixinsquared:mixinsquared-common:0.3.3"))
     jarJar(implementation("com.github.bawnorton.mixinsquared:mixinsquared-neoforge")) {

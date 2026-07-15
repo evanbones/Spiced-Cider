@@ -25,3 +25,7 @@
 	disableRecipeBookTracking = true
 	#Skip the redundant block shape cache rebuild that happens on every tag reload.
 	skipRedundantBlockCacheRebuild = true
+
+[vista]
+	#Ignore Vista's square-aspect-ratio restriction when growing connected mirrors, so adjacent mirrors always merge regardless of shape. Requires Vista (obviously).
+	vistaMirrorAlwaysConnect = true

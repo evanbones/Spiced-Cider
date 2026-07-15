@@ -7,3 +7,27 @@
 	customDeathSound = true
 	#Hide Melancholic Hunger's regeneration tooltip lines from item tooltips. Requires Melancholic Hunger.
 	hideMelancholicHungerTooltip = true
+
+[vista]
+	#Apply performance fixes to Vista's mirror/TV reflection rendering (tightened culling, shared-state thrash suppression, throttled re-renders). Requires Vista (obviously).
+	vistaMirrorPerfFixes = true
+	#Max distance in blocks that terrain and entities render to inside a mirror/TV reflection.
+	# Default: 64
+	# Range: 16 ~ 2048
+	vistaMirrorReflectionDistance = 64
+	#How many times per second each mirror re-renders its reflection while the viewer is moving.
+	# Default: 60.0
+	# Range: 1.0 ~ 240.0
+	vistaMirrorUpdateFps = 60.0
+	#The floor that the mirror update rate will never drop below.
+	# Default: 10.0
+	# Range: 0.25 ~ 240.0
+	vistaMirrorMinUpdateFps = 10.0
+	#Reflection update rate used while the viewer's eye is stationary.
+	# Default: 20.0
+	# Range: 0.25 ~ 240.0
+	vistaMirrorIdleUpdateFps = 20.0
+	#Max milliseconds per frame that all mirror reflection re-renders together may take before update-rate throttling kicks in.
+	# Default: 3.5
+	# Range: 0.5 ~ 1000.0
+	vistaMirrorThrottleBudgetMs = 3.5

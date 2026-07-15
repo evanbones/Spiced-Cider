@@ -4,5 +4,3 @@ cooksCollectionDripstoneFix = true
 blockBoxWoodVariants = true
 #Skeletons and strays get 12 max health. Requires a restart to take effect.
 skeletonHealthNerf = true
-#Filter out resource pack namespaces that aren't used by any loaded mod, speeding up client asset loading. Requires a restart to take effect.
-filterUnusedResourcePackNamespaces = true

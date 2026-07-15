@@ -315,6 +315,12 @@ chunk_rebuild_scheduler = "culling"
 				chain_lightning = true
 				following_jukebox = true
 
+			[light_sources.settings.entities.snowyspirit]
+				gingerbread_golem = true
+				container_entity = true
+				sled = true
+				gingerbread_giant = true
+
 			[light_sources.settings.entities.oreganized]
 				shrapnel_bomb = true
 				lead_bolt = true
@@ -453,6 +459,21 @@ chunk_rebuild_scheduler = "culling"
 				turkey = true
 				turkey_egg = true
 
+			[light_sources.settings.entities.adaptedmobs]
+				support_creeper = true
+				festive_creeper = true
+				rocket_creepie = true
+				primed_spore_barrel = true
+				rocket_spores = true
+				support_spores = true
+				support_creepie = true
+				mystery_egg = true
+				festive_tnt = true
+				festive_creepie = true
+				rocket_creeper = true
+				creeper = true
+				festive_spores = true
+
 			[light_sources.settings.entities.nirvana]
 				reefer = true
 				thc_minecart = true
@@ -527,6 +548,16 @@ chunk_rebuild_scheduler = "culling"
 
 			[light_sources.settings.entities.mannequins]
 				dummy = true
+
+			[light_sources.settings.entities.spelunkery]
+				dust_bunny = true
+				pebble = true
+				falling_layer = true
+				glowstick = true
+				pick = true
+				egg_plither = true
+				mineomite = true
+				eggplant = true
 
 			[light_sources.settings.entities.exposure]
 				glass_photograph_frame = true
