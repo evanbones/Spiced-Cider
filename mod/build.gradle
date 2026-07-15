@@ -281,6 +281,10 @@ dependencies {
     compileOnly "maven.modrinth:quark:4.1-481"
     compileOnly "maven.modrinth:zeta:1.1-40"
 
+    // Vista
+    compileOnly "maven.modrinth:vista_tv:1.21.1-5.1.2"
+    runtimeOnly "maven.modrinth:vista_tv:1.21.1-5.1.2"
+
     compileOnly(annotationProcessor("com.github.bawnorton.mixinsquared:mixinsquared-common:0.3.3"))
     jarJar(implementation("com.github.bawnorton.mixinsquared:mixinsquared-neoforge")) {
         version {

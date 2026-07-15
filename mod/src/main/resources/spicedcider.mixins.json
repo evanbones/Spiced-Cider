@@ -29,7 +29,8 @@
     "redstone.caverns_and_chasms.WaterloggableRefractorMixin",
     "redstone.caverns_and_chasms.WaterloggableResistorMixin",
     "redstone.quark.WaterloggableRedstoneRandomizerMixin",
-    "tide.TideFishingRodItemMixin"
+    "tide.TideFishingRodItemMixin",
+    "vista.VistaMirrorAlwaysConnectMixin"
   ],
   "client": [
     "minecraft.client.AbstractContainerScreenMixin",
@@ -41,7 +42,14 @@
     "namingunconvention.WorldCreationUiStateMixin",
     "perf.ClientRecipeBookMixin",
     "perf.TagCollectorMixin",
-    "snowyspirit.GlowLightParticleMixin"
+    "snowyspirit.GlowLightParticleMixin",
+    "vista.accessor.GameRendererAccessor",
+    "vista.accessor.LevelRendererAccessor",
+    "vista.VistaCullFrustumFarPlaneMixin",
+    "vista.VistaMirrorReflectionDistanceMixin",
+    "vista.VistaMirrorThrottleMixin",
+    "vista.VistaOffAxisFrustumCacheMixin",
+    "vista.VistaSharedStateThrashMixin"
   ],
   "server": [
   ],

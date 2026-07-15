@@ -5,6 +5,8 @@ import dev.isxander.yacl3.api.ConfigCategory;
 import dev.isxander.yacl3.api.Option;
 import dev.isxander.yacl3.api.OptionDescription;
 import dev.isxander.yacl3.api.YetAnotherConfigLib;
+import dev.isxander.yacl3.api.controller.DoubleSliderControllerBuilder;
+import dev.isxander.yacl3.api.controller.IntegerSliderControllerBuilder;
 import dev.isxander.yacl3.api.controller.TickBoxControllerBuilder;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
@@ -55,7 +57,6 @@ public class SpicedCiderConfigScreen {
                         .tooltip(Component.translatable("category.spicedcider.performance.tooltip"))
                         .option(toggle("disableRecipeBookTracking", common.disableRecipeBookTracking))
                         .option(toggle("skipRedundantBlockCacheRebuild", common.skipRedundantBlockCacheRebuild))
-                        .option(toggle("filterUnusedResourcePackNamespaces", startup.filterUnusedResourcePackNamespaces))
                         .build())
                 .category(ConfigCategory.createBuilder()
                         .name(Component.translatable("category.spicedcider.client"))
@@ -64,6 +65,17 @@ public class SpicedCiderConfigScreen {
                         .option(toggle("customDeathSound", client.customDeathSound))
                         .optionIf(ModList.get().isLoaded("melancholic_hunger"),
                                 toggle("hideMelancholicHungerTooltip", client.hideMelancholicHungerTooltip))
+                        .build())
+                .categoryIf(ModList.get().isLoaded("vista"), ConfigCategory.createBuilder()
+                        .name(Component.translatable("category.spicedcider.vista"))
+                        .tooltip(Component.translatable("category.spicedcider.vista.tooltip"))
+                        .option(toggle("vistaMirrorAlwaysConnect", common.vistaMirrorAlwaysConnect))
+                        .option(toggle("vistaMirrorPerfFixes", client.vistaMirrorPerfFixes))
+                        .option(intSlider("vistaMirrorReflectionDistance", client.vistaMirrorReflectionDistance, 16, 2048, 16))
+                        .option(doubleSlider("vistaMirrorUpdateFps", client.vistaMirrorUpdateFps, 1.0, 240.0, 1.0))
+                        .option(doubleSlider("vistaMirrorMinUpdateFps", client.vistaMirrorMinUpdateFps, 0.25, 240.0, 0.25))
+                        .option(doubleSlider("vistaMirrorIdleUpdateFps", client.vistaMirrorIdleUpdateFps, 0.25, 240.0, 0.25))
+                        .option(doubleSlider("vistaMirrorThrottleBudgetMs", client.vistaMirrorThrottleBudgetMs, 0.5, 1000.0, 0.5))
                         .build())
                 .build()
                 .generateScreen(parent);
@@ -77,6 +89,24 @@ public class SpicedCiderConfigScreen {
                 .description(OptionDescription.of(Component.translatable("option.spicedcider." + key + ".tooltip")))
                 .binding(true, value, setter)
                 .controller(TickBoxControllerBuilder::create)
+                .build();
+    }
+
+    private static Option<Integer> intSlider(String key, ModConfigSpec.IntValue value, int min, int max, int step) {
+        return Option.<Integer>createBuilder()
+                .name(Component.translatable("option.spicedcider." + key))
+                .description(OptionDescription.of(Component.translatable("option.spicedcider." + key + ".tooltip")))
+                .binding(value.getDefault(), value, value::set)
+                .controller(opt -> IntegerSliderControllerBuilder.create(opt).range(min, max).step(step))
+                .build();
+    }
+
+    private static Option<Double> doubleSlider(String key, ModConfigSpec.DoubleValue value, double min, double max, double step) {
+        return Option.<Double>createBuilder()
+                .name(Component.translatable("option.spicedcider." + key))
+                .description(OptionDescription.of(Component.translatable("option.spicedcider." + key + ".tooltip")))
+                .binding(value.getDefault(), value, value::set)
+                .controller(opt -> DoubleSliderControllerBuilder.create(opt).range(min, max).step(step))
                 .build();
     }
 }

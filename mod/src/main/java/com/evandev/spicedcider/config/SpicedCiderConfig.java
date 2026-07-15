@@ -31,7 +31,6 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.BooleanValue cooksCollectionDripstoneFix;
         public final ModConfigSpec.BooleanValue blockBoxWoodVariants;
         public final ModConfigSpec.BooleanValue skeletonHealthNerf;
-        public final ModConfigSpec.BooleanValue filterUnusedResourcePackNamespaces;
 
         public Startup(ModConfigSpec.Builder builder) {
             cooksCollectionDripstoneFix = builder
@@ -49,10 +48,6 @@ public class SpicedCiderConfig {
                     .translation("option.spicedcider.skeletonHealthNerf")
                     .define("skeletonHealthNerf", true);
 
-            filterUnusedResourcePackNamespaces = builder
-                    .comment("Filter out resource pack namespaces that aren't used by any loaded mod, speeding up client asset loading. Requires a restart to take effect.")
-                    .translation("option.spicedcider.filterUnusedResourcePackNamespaces")
-                    .define("filterUnusedResourcePackNamespaces", true);
         }
     }
 
@@ -70,6 +65,8 @@ public class SpicedCiderConfig {
 
         public final ModConfigSpec.BooleanValue disableRecipeBookTracking;
         public final ModConfigSpec.BooleanValue skipRedundantBlockCacheRebuild;
+
+        public final ModConfigSpec.BooleanValue vistaMirrorAlwaysConnect;
 
         public Common(ModConfigSpec.Builder builder) {
             builder.push("compat");
@@ -136,6 +133,14 @@ public class SpicedCiderConfig {
                     .define("skipRedundantBlockCacheRebuild", true);
 
             builder.pop();
+            builder.push("vista");
+
+            vistaMirrorAlwaysConnect = builder
+                    .comment("Ignore Vista's square-aspect-ratio restriction when growing connected mirrors, so adjacent mirrors always merge regardless of shape. Requires Vista (obviously).")
+                    .translation("option.spicedcider.vistaMirrorAlwaysConnect")
+                    .define("vistaMirrorAlwaysConnect", true);
+
+            builder.pop();
         }
     }
 
@@ -144,6 +149,13 @@ public class SpicedCiderConfig {
 
         public final ModConfigSpec.BooleanValue customDeathSound;
         public final ModConfigSpec.BooleanValue hideMelancholicHungerTooltip;
+
+        public final ModConfigSpec.BooleanValue vistaMirrorPerfFixes;
+        public final ModConfigSpec.IntValue vistaMirrorReflectionDistance;
+        public final ModConfigSpec.DoubleValue vistaMirrorUpdateFps;
+        public final ModConfigSpec.DoubleValue vistaMirrorMinUpdateFps;
+        public final ModConfigSpec.DoubleValue vistaMirrorIdleUpdateFps;
+        public final ModConfigSpec.DoubleValue vistaMirrorThrottleBudgetMs;
 
         public Client(ModConfigSpec.Builder builder) {
             builder.push("naming");
@@ -165,6 +177,39 @@ public class SpicedCiderConfig {
                     .comment("Hide Melancholic Hunger's regeneration tooltip lines from item tooltips. Requires Melancholic Hunger.")
                     .translation("option.spicedcider.hideMelancholicHungerTooltip")
                     .define("hideMelancholicHungerTooltip", true);
+
+            builder.pop();
+            builder.push("vista");
+
+            vistaMirrorPerfFixes = builder
+                    .comment("Apply performance fixes to Vista's mirror/TV reflection rendering (tightened culling, shared-state thrash suppression, throttled re-renders). Requires Vista (obviously).")
+                    .translation("option.spicedcider.vistaMirrorPerfFixes")
+                    .define("vistaMirrorPerfFixes", true);
+
+            vistaMirrorReflectionDistance = builder
+                    .comment("Max distance in blocks that terrain and entities render to inside a mirror/TV reflection.")
+                    .translation("option.spicedcider.vistaMirrorReflectionDistance")
+                    .defineInRange("vistaMirrorReflectionDistance", 64, 16, 2048);
+
+            vistaMirrorUpdateFps = builder
+                    .comment("How many times per second each mirror re-renders its reflection while the viewer is moving.")
+                    .translation("option.spicedcider.vistaMirrorUpdateFps")
+                    .defineInRange("vistaMirrorUpdateFps", 60.0, 1.0, 240.0);
+
+            vistaMirrorMinUpdateFps = builder
+                    .comment("The floor that the mirror update rate will never drop below.")
+                    .translation("option.spicedcider.vistaMirrorMinUpdateFps")
+                    .defineInRange("vistaMirrorMinUpdateFps", 10.0, 0.25, 240.0);
+
+            vistaMirrorIdleUpdateFps = builder
+                    .comment("Reflection update rate used while the viewer's eye is stationary.")
+                    .translation("option.spicedcider.vistaMirrorIdleUpdateFps")
+                    .defineInRange("vistaMirrorIdleUpdateFps", 20.0, 0.25, 240.0);
+
+            vistaMirrorThrottleBudgetMs = builder
+                    .comment("Max milliseconds per frame that all mirror reflection re-renders together may take before update-rate throttling kicks in.")
+                    .translation("option.spicedcider.vistaMirrorThrottleBudgetMs")
+                    .defineInRange("vistaMirrorThrottleBudgetMs", 3.5, 0.5, 1000.0);
 
             builder.pop();
         }

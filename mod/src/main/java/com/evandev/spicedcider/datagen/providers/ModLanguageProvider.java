@@ -54,6 +54,8 @@ public class ModLanguageProvider extends LanguageProvider {
         add("category.spicedcider.performance.tooltip", "Performance optimizations.");
         add("category.spicedcider.client", "Client Settings");
         add("category.spicedcider.client.tooltip", "Settings that only apply to your game client.");
+        add("category.spicedcider.vista", "Vista Mirrors");
+        add("category.spicedcider.vista.tooltip", "Performance tuning for Vista's mirror/TV reflection rendering. Only shown if Vista is installed.");
 
         add("option.spicedcider.cooksCollectionDripstoneFix", "Fix Salted Dripstone Occlusion");
         add("option.spicedcider.cooksCollectionDripstoneFix.tooltip", "Fixes Cooks' Collection's salted dripstone block causing occlusion/culling issues by basing it on vanilla dripstone block. Requires a restart to take effect.");
@@ -94,6 +96,21 @@ public class ModLanguageProvider extends LanguageProvider {
         add("option.spicedcider.customDeathSound.tooltip", "Plays a custom sound when your player character dies.");
         add("option.spicedcider.hideMelancholicHungerTooltip", "Hide Melancholic Hunger Tooltip");
         add("option.spicedcider.hideMelancholicHungerTooltip.tooltip", "Hides Melancholic Hunger's regeneration tooltip lines from item tooltips.");
+
+        add("option.spicedcider.vistaMirrorAlwaysConnect", "Always Connect Mirrors");
+        add("option.spicedcider.vistaMirrorAlwaysConnect.tooltip", "Ignores Vista's square-aspect-ratio restriction when growing connected mirrors, so adjacent mirrors always merge into one group regardless of shape.");
+        add("option.spicedcider.vistaMirrorPerfFixes", "Mirror Performance Fixes");
+        add("option.spicedcider.vistaMirrorPerfFixes.tooltip", "Applies performance fixes to Vista's mirror/TV reflection rendering (tightened culling, shared-state thrash suppression, throttled re-renders).");
+        add("option.spicedcider.vistaMirrorReflectionDistance", "Mirror Reflection Distance");
+        add("option.spicedcider.vistaMirrorReflectionDistance.tooltip", "Max distance in blocks that terrain and entities render to inside a mirror/TV reflection.");
+        add("option.spicedcider.vistaMirrorUpdateFps", "Mirror Update Rate");
+        add("option.spicedcider.vistaMirrorUpdateFps.tooltip", "How many times per second each mirror re-renders its reflection while the viewer is moving.");
+        add("option.spicedcider.vistaMirrorMinUpdateFps", "Mirror Minimum Update Rate");
+        add("option.spicedcider.vistaMirrorMinUpdateFps.tooltip", "The floor that the mirror update rate will never drop below.");
+        add("option.spicedcider.vistaMirrorIdleUpdateFps", "Mirror Idle Update Rate");
+        add("option.spicedcider.vistaMirrorIdleUpdateFps.tooltip", "Reflection update rate used while the viewer's eye is stationary. Set equal to update rate to disable the idle slowdown.");
+        add("option.spicedcider.vistaMirrorThrottleBudgetMs", "Mirror Frame Budget (ms)");
+        add("option.spicedcider.vistaMirrorThrottleBudgetMs.tooltip", "Max milliseconds per frame all mirror reflection re-renders together may take before update-rate throttling kicks in.");
 
         add("item.spicedcider.broken", "Broken");
 
