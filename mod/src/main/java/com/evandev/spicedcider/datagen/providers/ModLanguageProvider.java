@@ -26,6 +26,7 @@ public class ModLanguageProvider extends LanguageProvider {
 
         addItem(ModItems.GRAPPLING_HOOK, "Grappling Hook");
         addItem(ModItems.STICKY_GRAPPLING_HOOK, "Sticky Grappling Hook");
+        addItem(ModItems.RUBBER_CABLE, "Rubber Cable");
         add("item.spicedcider.grappling_hook.desc", "Good for climbing, not fishing");
         add("item.spicedcider.sticky_grappling_hook.desc", "Good for climbing, not fishing. Adheres to walls rather than bouncing off them.");
 
@@ -63,6 +64,8 @@ public class ModLanguageProvider extends LanguageProvider {
         add("option.spicedcider.wisteriaLeafDensityFix.tooltip", "Fixes Environmental's wisteria trees generating with sparse/patchy leaves.");
         add("option.spicedcider.blockBoxWoodVariants", "Block Box Wood Variants");
         add("option.spicedcider.blockBoxWoodVariants.tooltip", "Registers Every Compat wood-type variants (seats, palisades) for The Block Box. Requires a restart to take effect.");
+        add("option.spicedcider.sodiumLightingParityFix", "Sodium Lighting Parity Fix");
+        add("option.spicedcider.sodiumLightingParityFix.tooltip", "Restores vanilla parity for Sodium's Smooth Lighting corner blending, which stretches light further out than vanilla.");
 
         add("option.spicedcider.bedExplosionPrevention", "Prevent Bed Explosions");
         add("option.spicedcider.bedExplosionPrevention.tooltip", "Beds don't explode outside the Overworld; instead they show a message and wake sleeping villagers.");

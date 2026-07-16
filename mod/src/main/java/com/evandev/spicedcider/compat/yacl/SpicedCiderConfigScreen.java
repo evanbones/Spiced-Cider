@@ -51,6 +51,8 @@ public class SpicedCiderConfigScreen {
                                 toggle("wisteriaLeafDensityFix", common.wisteriaLeafDensityFix))
                         .optionIf(ModList.get().isLoaded("blockbox") && ModList.get().isLoaded("everycomp") && ModList.get().isLoaded("moonlight"),
                                 toggle("blockBoxWoodVariants", startup.blockBoxWoodVariants))
+                        .optionIf(ModList.get().isLoaded("sodium"),
+                                toggle("sodiumLightingParityFix", client.sodiumLightingParityFix))
                         .build())
                 .category(ConfigCategory.createBuilder()
                         .name(Component.translatable("category.spicedcider.performance"))

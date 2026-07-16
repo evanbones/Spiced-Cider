@@ -49,6 +49,9 @@ public class SpicedCiderMixinPlugin implements IMixinConfigPlugin {
         if (mixinClassName.contains("snowyspirit")) {
             return isModLoaded("snowyspirit");
         }
+        if (mixinClassName.contains("sodium")) {
+            return isModLoaded("sodium");
+        }
         if (mixinClassName.contains("caverns_and_chasms")) {
             return isModLoaded("caverns_and_chasms");
         }

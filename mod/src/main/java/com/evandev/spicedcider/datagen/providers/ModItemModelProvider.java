@@ -28,6 +28,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         
         basicItem(ModItems.GRAPPLING_HOOK.get());
         basicItem(ModItems.STICKY_GRAPPLING_HOOK.get());
+
+        withExistingParent("rubber_cable", "item/generated")
+                .texture("layer0", modLoc("item/cable"));
     }
 
     public @NotNull ItemModelBuilder handheldItem(@NotNull Item item) {

@@ -29,4 +29,7 @@ public class ModItems {
             () -> new FishingHookItem(new Item.Properties(), "item.spicedcider.grappling_hook.desc"));
     public static final DeferredItem<Item> STICKY_GRAPPLING_HOOK = ITEMS.register("sticky_grappling_hook",
             () -> new FishingHookItem(new Item.Properties(), "item.spicedcider.sticky_grappling_hook.desc"));
+
+    public static final DeferredItem<Item> RUBBER_CABLE = ITEMS.register("rubber_cable",
+            () -> new Item(new Item.Properties()));
 }

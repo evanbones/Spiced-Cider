@@ -160,7 +160,17 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.DoubleValue vistaMirrorIdleUpdateFps;
         public final ModConfigSpec.DoubleValue vistaMirrorThrottleBudgetMs;
 
+        public final ModConfigSpec.BooleanValue sodiumLightingParityFix;
+
         public Client(ModConfigSpec.Builder builder) {
+            builder.push("compat");
+
+            sodiumLightingParityFix = builder
+                    .comment("Restore vanilla parity for Sodium's Smooth Lighting corner blending, which stretches light further out than vanilla and causes flicker near moving dynamic light sources (e.g. LambDynamicLights). Requires Sodium.")
+                    .translation("option.spicedcider.sodiumLightingParityFix")
+                    .define("sodiumLightingParityFix", true);
+
+            builder.pop();
             builder.push("naming");
 
             randomWorldNaming = builder

@@ -43,6 +43,30 @@ repositories {
     exclusiveContent {
         forRepository {
             maven {
+                name = "Gegy"
+                url = "https://maven.gegy.dev"
+            }
+        }
+        filter {
+            includeGroup "dev.lambdaurora.lambdynamiclights"
+        }
+    }
+
+    exclusiveContent {
+        forRepository {
+            maven {
+                name = "CaffeineMC"
+                url = "https://maven.caffeinemc.net/releases"
+            }
+        }
+        filter {
+            includeGroup "net.caffeinemc"
+        }
+    }
+
+    exclusiveContent {
+        forRepository {
+            maven {
                 name = "TerraformersMC"
                 url = "https://maven.terraformersmc.com/"
             }
@@ -239,14 +263,20 @@ neoForge {
     }
 }
 
+def mappingsAttribute = Attribute.of("net.minecraft.mappings", String)
+
 dependencies {
+    attributesSchema {
+        attribute(mappingsAttribute)
+    }
+
     compileOnly "maven.modrinth:modern-world-creation:2.0.1-1.21.1-neoforge"
     implementation "maven.modrinth:emi:1.1.22+1.21.1+neoforge"
     implementation "maven.modrinth:yacl:3.8.2+1.21.1-neoforge"
 
     // Tide
     implementation "maven.modrinth:tide:NyZj7kJm"
-    runtimeOnly "me.shedaniel.cloth:cloth-config-neoforge:15.0.130"
+    runtimeOnly "me.shedaniel.cloth:cloth-config-neoforge:15.0.140"
 
     // Melancholic Hunger
     compileOnly "maven.modrinth:melancholic_hunger:vKSreUAW"
@@ -274,17 +304,15 @@ dependencies {
     // runtimeOnly "maven.modrinth:biolith:7VJXS9CG"
 
     // Sinytra
-    additionalRuntimeClasspath "org.sinytra:connector:2.0.0-beta.9+1.21.1"
-    runtimeOnly "org.sinytra.forgified-fabric-api:forgified-fabric-api:0.116.7+2.2.4+1.21.1"
-    compileOnly "org.sinytra:forgified-fabric-loader:2.5.68+0.18.4+1.21.1"
+    // additionalRuntimeClasspath "org.sinytra:connector:2.0.0-beta.9+1.21.1"
+    // runtimeOnly "org.sinytra.forgified-fabric-api:forgified-fabric-api:0.116.7+2.2.4+1.21.1"
+    // compileOnly "org.sinytra:forgified-fabric-loader:2.5.68+0.18.4+1.21.1"
 
     // Sodium
-    compileOnly "maven.modrinth:sodium:mc1.21.1-0.8.12-neoforge"
-    runtimeOnly "maven.modrinth:sodium:mc1.21.1-0.8.12-neoforge"
+    compileOnly "net.caffeinemc:sodium-neoforge-mod:0.8.12+mc1.21.1"
 
-    // LambDynLights
-    compileOnly "maven.modrinth:lambdynamiclights:4.8.10+1.21.1"
-    runtimeOnly "maven.modrinth:lambdynamiclights:4.8.10+1.21.1"
+    // Reconnectible Chains
+    compileOnly "maven.modrinth:reconnectible-chains:2.2.5-1.21.1-neoforge"
 
     // Abnormals
     compileOnly "maven.modrinth:environmental:5.0.1"
