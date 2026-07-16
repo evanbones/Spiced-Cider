@@ -31,3 +31,15 @@
 	# Default: 3.5
 	# Range: 0.5 ~ 1000.0
 	vistaMirrorThrottleBudgetMs = 3.5
+
+[clouds]
+	#Give clouds their own extended far clip plane instead of sharing terrain's (which is capped at render distance * 4 blocks), so cloud mods that draw clouds far away don't get hard-clipped by the GPU with no fade.
+	cloudFarPlaneFix = true
+	#Far clip plane distance in blocks used for the clouds draw call.
+	# Default: 2048
+	# Range: 256 ~ 65536
+	cloudFarPlaneDistance = 2048
+
+[compat]
+	#Restore vanilla parity for Sodium's Smooth Lighting corner blending, which stretches light further out than vanilla and causes flicker near moving dynamic light sources (e.g. LambDynamicLights). Requires Sodium.
+	sodiumLightingParityFix = true

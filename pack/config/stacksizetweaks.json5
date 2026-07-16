@@ -1,6 +1,8 @@
 {
-	useCustomFont: true,
+	amountTooltip: true,
+	customFont: "Small",
 	shortenItemAmounts: true,
+	vanillaComparatorAmounts: false,
 	itemStackLimit: 512,
 	blockStackLimit: 256,
 	foodStackLimit: 128,
