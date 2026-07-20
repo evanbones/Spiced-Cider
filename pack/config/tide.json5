@@ -39,19 +39,19 @@
 		   extra data will be added to fish item stacks that make them unstackable.
 		   To make fish stackable, simply change both settings to something other than their defaults.
 		*/
-		"fishItemSizes": "ALWAYS",
+		"fishItemSizes": "NEVER",
 		// Controls when fish items should be bucketable via menus. See above note for fish stacking!
 		"bucketableFishItems": "WHEN_LIVING",
 		// Enables the bedrock eating functionality of the Chasm Eel item
-		"enableBedrockBreakingItems": true,
+		"enableBedrockBreakingItems": false,
 		// Entity IDs added to this list are unaffected by the Enchanted Pocket Watch
 		"pocketWatchBlacklist": []
 	},
 	"journal": {
 		// Give players a fishing journal upon joining a world for the first time
-		"giveJournal": true,
+		"giveJournal": false,
 		// Shows a notification (toast) that appears when a new fish is discovered
-		"showToasts": true
+		"showToasts": false
 	},
 	"minigame": {
 		// Enables the fishing minigame

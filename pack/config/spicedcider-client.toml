@@ -38,7 +38,7 @@
 	#Far clip plane distance in blocks used for the clouds draw call.
 	# Default: 2048
 	# Range: 256 ~ 65536
-	cloudFarPlaneDistance = 2048
+	cloudFarPlaneDistance = 2560
 
 [compat]
 	#Restore vanilla parity for Sodium's Smooth Lighting corner blending, which stretches light further out than vanilla and causes flicker near moving dynamic light sources (e.g. LambDynamicLights). Requires Sodium.
