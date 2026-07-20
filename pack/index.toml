@@ -58,7 +58,7 @@ hash = "d15bd01bf6464043930c65fc6cc8106290f9ac10f68da803f589ea003dc7fbb0"
 
 [[files]]
 file = "config/amendments-common.toml"
-hash = "3dd85964f8bfbc3a4d0b04db2658de19b332c45ec19740eec5c97316bd1cde94"
+hash = "88a7589f5f621ab65ccf7445b1553206390ae7e89a99d04e129fdd195bb40feb"
 
 [[files]]
 file = "config/apeeling-common.toml"
@@ -782,19 +782,19 @@ hash = "a015c4f3d24db9795547c4913b69a73634932e1bbcaac6cad95efba53017d415"
 
 [[files]]
 file = "config/everycomp-entries-2.toml.bak"
-hash = "5b6d3969b25fb3b693c9b3844743378bc0e7587b298ec95c715c8e21a71b5aeb"
-
-[[files]]
-file = "config/everycomp-entries-3.toml.bak"
 hash = "d42cb8ffa82c40090e4f38d3d4e3764007a0ac13fdd10c7fcafd837ebf7fe015"
 
 [[files]]
-file = "config/everycomp-entries-4.toml.bak"
+file = "config/everycomp-entries-3.toml.bak"
 hash = "a015c4f3d24db9795547c4913b69a73634932e1bbcaac6cad95efba53017d415"
 
 [[files]]
+file = "config/everycomp-entries-4.toml.bak"
+hash = "5b6d3969b25fb3b693c9b3844743378bc0e7587b298ec95c715c8e21a71b5aeb"
+
+[[files]]
 file = "config/everycomp-entries-5.toml.bak"
-hash = "3f266b82e4eada2ceec5294ec878ea54eadab271e57decfdaed0c16ac339f807"
+hash = "d42cb8ffa82c40090e4f38d3d4e3764007a0ac13fdd10c7fcafd837ebf7fe015"
 
 [[files]]
 file = "config/everycomp-entries.toml"
@@ -838,7 +838,7 @@ hash = "09d330b29443d9579ecc014f2be2fcb31075bfe1e9f9ac4e750f271128650fe6"
 
 [[files]]
 file = "config/fabric/indigo-renderer.properties"
-hash = "8f198310be8400df86c1209207e6a20ec51561459b464284dbc5c45ab1544f75"
+hash = "325ee67a14c588ab0410a07d0e6f78638342c413c01767f9b533cb6015710d45"
 
 [[files]]
 file = "config/falling_snow.json"
@@ -1989,6 +1989,10 @@ file = "config/openloader/packs/spicedcider_data/data/minecraft/recipe/end_rod.j
 hash = "9e30ea7cfe78cfbb7b44b66e42f8174f3fe4bd20b757654c524bd7d993c6af5b"
 
 [[files]]
+file = "config/openloader/packs/spicedcider_data/data/minecraft/recipe/flint_and_steel.json"
+hash = "204eccfdd51785447aa307e4270b8855d1b92775dab14a14b7f8b5a300c68307"
+
+[[files]]
 file = "config/openloader/packs/spicedcider_data/data/minecraft/recipe/furnace.json"
 hash = "28fc9ce49fd11d97d6be906f1101ff5abf7ad98f408c2b31f9f52786be32720f"
 
@@ -2402,7 +2406,7 @@ hash = "13b2b1384f949e6e409c3c3cc423ecb854df6b386d4466d424a57a887e89f3d8"
 
 [[files]]
 file = "config/packetfixer.properties"
-hash = "323093f64fca919178b08cd4cd9023c12f540fe4973ce8ae80b1a103574d8649"
+hash = "322791a2d0bc5e773d3c9fd6ba43c9088b281d2443fc9121b0d73c872488fdcc"
 
 [[files]]
 file = "config/particle_core_config.toml"
@@ -2534,7 +2538,7 @@ hash = "590ea074ec1c84ced8a0c60dedd7111edd69801f7441fe78654c2f6fdfb655b7"
 
 [[files]]
 file = "config/reliable_remover.json"
-hash = "5ea6c65019db79feaa82518098ce1eabb255f59d7f0e55d96669ede43d9673cc"
+hash = "27a558929bbc9555f0197980ee49bcb1ea6804f9562222038cdc9c8bd444da75"
 
 [[files]]
 file = "config/reliable_remover/gates/aether.json"
@@ -2586,7 +2590,7 @@ hash = "1c970fc0cc8a3989889a43fdc6c40c89cabf81ffac2405f92c6abf489a410674"
 
 [[files]]
 file = "config/resourcepackoverrides.json"
-hash = "5dd4a3c20be811bf50e80d3ca4bd668d4eb3cd5ddd4974c46e2d3693b70919ed"
+hash = "09f41d90ce09831f65eb70c20533cccc6d0bbf98b1dcb46a80075bda68ed7b29"
 
 [[files]]
 file = "config/sage_brush-client.toml"
@@ -3022,7 +3026,7 @@ hash = "d985bfc68899c91aa642736400472f6ab876dedaaef4b8c31f38b52d48de633d"
 
 [[files]]
 file = "config/zfastnoise.mixin.properties"
-hash = "2727081775a78775d619bbecf88aadf64b09de21adbd1259f5054a660ac7a9d4"
+hash = "60f655cdd3e2ac8f7be8e7c74917bfb1c5b4ded6f6f585e37762c63344ff56cb"
 
 [[files]]
 file = "config/zipline.json"
@@ -4951,6 +4955,10 @@ hash = "0bec8bb4bb3346c2800fed2b5c9762b8ed941af9841e95017408a748c6a6cf5b"
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/caverns_and_chasms/textures/item/weathered_copper_ingot.png"
 hash = "70eaf2d30a63523598b2955c211bce5760a3d79e2ad9cb8e13b068fcf74e6f9a"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/caverns_and_chasms/textures/item/zirconia.png"
+hash = "461ed9647bde00b9cc02df4155901cae4dd4bd48c171b0972664b5ecb42388f5"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/caverns_and_chasms/textures/misc/monocle_scope.png"
