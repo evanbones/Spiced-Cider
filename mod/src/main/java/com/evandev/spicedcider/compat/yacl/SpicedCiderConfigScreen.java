@@ -53,6 +53,8 @@ public class SpicedCiderConfigScreen {
                                 toggle("blockBoxWoodVariants", startup.blockBoxWoodVariants))
                         .optionIf(ModList.get().isLoaded("sodium"),
                                 toggle("sodiumLightingParityFix", client.sodiumLightingParityFix))
+                        .optionIf(ModList.get().isLoaded("slime_time"),
+                                toggle("slimeTimeDisableItemMerging", common.slimeTimeDisableItemMerging))
                         .build())
                 .category(ConfigCategory.createBuilder()
                         .name(Component.translatable("category.spicedcider.performance"))

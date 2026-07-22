@@ -61,6 +61,9 @@ public class SpicedCiderMixinPlugin implements IMixinConfigPlugin {
         if (mixinClassName.contains("spelunkery")) {
             return isModLoaded("spelunkery");
         }
+        if (mixinClassName.contains("slimetime")) {
+            return isModLoaded("slime_time");
+        }
         return true;
     }
 

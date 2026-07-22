@@ -53,6 +53,7 @@ public class SpicedCiderConfig {
 
     public static class Common {
         public final ModConfigSpec.BooleanValue wisteriaLeafDensityFix;
+        public final ModConfigSpec.BooleanValue slimeTimeDisableItemMerging;
 
         public final ModConfigSpec.BooleanValue bedExplosionPrevention;
         public final ModConfigSpec.BooleanValue respawnAnchorExplosionPrevention;
@@ -75,6 +76,11 @@ public class SpicedCiderConfig {
                     .comment("Fix Environmental's wisteria trees generating with sparse/patchy leaves. Requires Environmental.")
                     .translation("option.spicedcider.wisteriaLeafDensityFix")
                     .define("wisteriaLeafDensityFix", true);
+
+            slimeTimeDisableItemMerging = builder
+                    .comment("Disables Slime Time's slimeball item stack merging feature. Requires Slime Time.")
+                    .translation("option.spicedcider.slimeTimeDisableItemMerging")
+                    .define("slimeTimeDisableItemMerging", true);
 
             builder.pop();
             builder.push("gameplay");

@@ -66,6 +66,8 @@ public class ModLanguageProvider extends LanguageProvider {
         add("option.spicedcider.blockBoxWoodVariants.tooltip", "Registers Every Compat wood-type variants (seats, palisades) for The Block Box. Requires a restart to take effect.");
         add("option.spicedcider.sodiumLightingParityFix", "Sodium Lighting Parity Fix");
         add("option.spicedcider.sodiumLightingParityFix.tooltip", "Restores vanilla parity for Sodium's Smooth Lighting corner blending, which stretches light further out than vanilla.");
+        add("option.spicedcider.slimeTimeDisableItemMerging", "Disable Slime Time Slimeball Merging");
+        add("option.spicedcider.slimeTimeDisableItemMerging.tooltip", "Disables Slime Time's feature where clicking slimeballs together in inventory merges them.");
 
         add("option.spicedcider.bedExplosionPrevention", "Prevent Bed Explosions");
         add("option.spicedcider.bedExplosionPrevention.tooltip", "Beds don't explode outside the Overworld; instead they show a message and wake sleeping villagers.");
