@@ -293,7 +293,6 @@ dependencies {
     // Every Compat
     compileOnly "maven.modrinth:every-compat:1.21-2.11.46"
     compileOnly "maven.modrinth:moonlight:1.21.1-3.0.22"
-    runtimeOnly "maven.modrinth:moonlight:1.21.1-3.0.22"
 
     // Supplementaries
     compileOnly "maven.modrinth:supplementaries:FPL7hXrE"
@@ -327,6 +326,13 @@ dependencies {
 
     // Jade
     compileOnly "maven.modrinth:jade:15.10.5+neoforge"
+
+    // Vanilla Backport
+    compileOnly "maven.modrinth:vanillabackport:rUSWdBok"
+    compileOnly "maven.modrinth:platform:v7P0nBi2"
+
+    // Spelunkery
+    compileOnly "maven.modrinth:spelunkery:oLqPJYV9"
 
     // Quark
     compileOnly "maven.modrinth:quark:4.1-481"

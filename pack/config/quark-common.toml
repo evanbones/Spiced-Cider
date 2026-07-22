@@ -764,7 +764,7 @@
 	#(Ashen Trees)
 	"Ancient Wood" = false
 	"Azalea Wood" = true
-	"Big Stone Clusters" = true
+	"Big Stone Clusters" = false
 	#(Trumpet Trees)
 	"Blossom Trees" = false
 	"Cherry Grove Water Petals" = true
@@ -809,7 +809,7 @@
 		"Blocks To Replace" = ["minecraft:stone", "minecraft:andesite", "minecraft:diorite", "minecraft:granite", "minecraft:netherrack|minecraft:the_nether", "minecraft:end_stone|minecraft:the_end", "quark:limestone", "quark:jasper", "quark:slate"]
 
 		[world.big_stone_clusters.calcite]
-			Enabled = true
+			Enabled = false
 			#Allowed values: [0,)
 			Rarity = 4
 			"Min Y Level" = 20
@@ -838,7 +838,7 @@
 					"Is Blacklist" = true
 
 		[world.big_stone_clusters.limestone]
-			Enabled = true
+			Enabled = false
 			#Allowed values: [0,)
 			Rarity = 4
 			"Min Y Level" = 20
@@ -867,7 +867,7 @@
 					"Is Blacklist" = true
 
 		[world.big_stone_clusters.jasper]
-			Enabled = true
+			Enabled = false
 			#Allowed values: [0,)
 			Rarity = 4
 			"Min Y Level" = 20
@@ -896,7 +896,7 @@
 					"Is Blacklist" = true
 
 		[world.big_stone_clusters.shale]
-			Enabled = true
+			Enabled = false
 			#Allowed values: [0,)
 			Rarity = 4
 			"Min Y Level" = 20
@@ -926,7 +926,7 @@
 
 		[world.big_stone_clusters.myalite]
 			"Generate In Air" = true
-			Enabled = true
+			Enabled = false
 			#Allowed values: [0,)
 			Rarity = 100
 			"Min Y Level" = 58
@@ -1656,7 +1656,7 @@
 	"Overlay Shader" = false
 	"Spawner Replacer" = false
 	#Big Stone Clusters for Granite, Diorite, and Andesite, like Quark pre-1.18
-	"Vanilla Stone Clusters" = true
+	"Vanilla Stone Clusters" = false
 	#Allows placing variant blocks automatically via a selector menu triggered from a keybind
 	"Variant Selector" = false
 	"Villager Rerolling Rework" = false

@@ -30,7 +30,10 @@
     "redstone.caverns_and_chasms.WaterloggableResistorMixin",
     "redstone.quark.WaterloggableRedstoneRandomizerMixin",
     "tide.TideFishingRodItemMixin",
-    "vista.VistaMirrorAlwaysConnectMixin"
+    "vanillabackport.ModSurfaceRuleDataMixin",
+    "vanillabackport.SulfurPoolCalciteMixin",
+    "vista.VistaMirrorAlwaysConnectMixin",
+    "spelunkery.SpelunkeryMoresFixMixin"
   ],
   "client": [
     "minecraft.client.AbstractContainerScreenMixin",

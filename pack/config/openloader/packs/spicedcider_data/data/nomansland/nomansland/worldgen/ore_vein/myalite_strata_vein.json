@@ -1,0 +1,106 @@
+{
+  "biomes": "#quark:has_myalite_clusters",
+  "sample_biome_at_surface": false,
+  "spacing": 128,
+  "separation": 64,
+  "probability": 0.5,
+  "generation_order": 38,
+
+  "radius": {
+    "type": "uniform",
+    "min_inclusive": 16,
+    "max_inclusive": 64
+  },
+  "target_condition": {
+    "type": "matching_blocks",
+    "blocks": [
+      "minecraft:end_stone"
+    ]
+  },
+  "min_height": {
+    "type": "constant",
+    "value": {
+      "above_bottom": 10
+    }
+  },
+  "max_height": {
+    "type": "constant",
+    "value": {
+      "above_bottom": 100
+    }
+  },
+
+  "vein_radius": {
+    "type": "constant",
+    "value": 40.0
+  },
+  "inverted": true,
+
+  "filler": {
+    "state_provider": {
+      "type": "nomansland:strata_state_provider",
+      "layers": [
+        {
+          "data": {
+            "type": "minecraft:simple_state_provider",
+            "state": { "Name": "quark:myalite" }
+          },
+          "height": 4
+        },
+        {
+          "data": {
+            "type": "minecraft:simple_state_provider",
+            "state": { "Name": "minecraft:end_stone" }
+          },
+          "height": 2
+        },
+        {
+          "data": {
+            "type": "minecraft:simple_state_provider",
+            "state": { "Name": "quark:myalite" }
+          },
+          "height": 3
+        },
+        {
+          "data": {
+            "type": "minecraft:simple_state_provider",
+            "state": { "Name": "minecraft:end_stone" }
+          },
+          "height": 2
+        },
+        {
+          "data": {
+            "type": "minecraft:simple_state_provider",
+            "state": { "Name": "quark:myalite" }
+          },
+          "height": 3
+        },
+        {
+          "data": {
+            "type": "minecraft:simple_state_provider",
+            "state": { "Name": "minecraft:end_stone" }
+          },
+          "height": 1
+        },
+        {
+          "data": {
+            "type": "minecraft:simple_state_provider",
+            "state": { "Name": "quark:myalite" }
+          },
+          "height": 4
+        },
+        {
+          "data": {
+            "type": "minecraft:simple_state_provider",
+            "state": { "Name": "minecraft:end_stone" }
+          },
+          "height": 3
+        }
+      ],
+      "noise_intensity": 2.0,
+      "randomize": false
+    },
+    "probability": 1.0,
+    "incoherence": 0.0
+  }
+}

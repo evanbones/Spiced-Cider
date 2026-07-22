@@ -55,6 +55,12 @@ public class SpicedCiderMixinPlugin implements IMixinConfigPlugin {
         if (mixinClassName.contains("caverns_and_chasms")) {
             return isModLoaded("caverns_and_chasms");
         }
+        if (mixinClassName.contains("vanillabackport")) {
+            return isModLoaded("vanillabackport");
+        }
+        if (mixinClassName.contains("spelunkery")) {
+            return isModLoaded("spelunkery");
+        }
         return true;
     }
 

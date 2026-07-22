@@ -1,0 +1,33 @@
+{
+  "neoforge:conditions": [
+    {
+      "modid": "oreganized",
+      "type": "neoforge:mod_loaded"
+    }
+  ],
+  "config": {
+    "discard_chance_on_air_exposure": 0.0,
+    "size": 7,
+    "targets": [
+      {
+        "state": {
+          "Name": "oreganized:lead_ore"
+        },
+        "target": {
+          "block": "minecraft:stone",
+          "predicate_type": "minecraft:block_match"
+        }
+      },
+      {
+        "state": {
+          "Name": "oreganized:deepslate_lead_ore"
+        },
+        "target": {
+          "block": "minecraft:deepslate",
+          "predicate_type": "minecraft:block_match"
+        }
+      }
+    ]
+  },
+  "type": "minecraft:ore"
+}

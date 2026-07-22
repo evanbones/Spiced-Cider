@@ -7,7 +7,7 @@
 	# Default: 10
 	# Range: 0 ~ 128
 	parachute_opening_delay = 10
-	enable_mores = true
+	enable_mores = false
 	enable_rough_gems = true
 	enable_raw_nuggets = true
 
@@ -52,4 +52,5 @@
 	slime_growth_max = 5
 
 [worldgen]
-	stone_stripe_features = true
+	stone_stripe_features = false
+

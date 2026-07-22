@@ -94,6 +94,25 @@
     "result": "deny"
   },
   {
+    "mob": "quark:stoneling",
+    "when": "onjoin",
+    "result": "deny"
+  },
+  {
+    "mob": "minecraft:sulfur_cube",
+    "when": "onjoin",
+    "spawntype": [
+      "mob_summoned",
+      "spawn_egg"
+    ],
+    "result": "default"
+  },
+  {
+    "mob": "minecraft:sulfur_cube",
+    "when": "onjoin",
+    "result": "deny"
+  },
+  {
     "mob": "caverns_and_chasms:mime",
     "when": "onjoin",
     "result": "deny"
