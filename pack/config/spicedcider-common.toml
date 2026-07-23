@@ -1,6 +1,8 @@
 [compat]
 	#Fix Environmental's wisteria trees generating with sparse/patchy leaves. Requires Environmental.
 	wisteriaLeafDensityFix = true
+	#Disables Slime Time's slimeball item stack merging feature. Requires Slime Time.
+	slimeTimeDisableItemMerging = true
 
 [gameplay]
 	#Beds don't explode outside the Overworld; instead they show a message and wake sleeping villagers.
