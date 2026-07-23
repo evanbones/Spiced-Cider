@@ -43,5 +43,54 @@ public class ModItemTagsProvider extends ItemTagsProvider {
 
         this.tag(Tags.Items.TOOLS)
                 .add(ModItems.FIRE_STRIKER.get());
+
+        this.tag(Tags.Items.TOOLS)
+                .add(ModItems.CLEAVER_OF_BEHEADING.get());
+        this.tag(Tags.Items.MELEE_WEAPON_TOOLS)
+                .add(ModItems.CLEAVER_OF_BEHEADING.get());
+        this.tag(ItemTags.SWORD_ENCHANTABLE)
+                .add(ModItems.CLEAVER_OF_BEHEADING.get());
+        this.tag(ItemTags.SHARP_WEAPON_ENCHANTABLE)
+                .add(ModItems.CLEAVER_OF_BEHEADING.get());
+        this.tag(ItemTags.WEAPON_ENCHANTABLE)
+                .add(ModItems.CLEAVER_OF_BEHEADING.get());
+        this.tag(ItemTags.FIRE_ASPECT_ENCHANTABLE)
+                .add(ModItems.CLEAVER_OF_BEHEADING.get());
+        this.tag(ItemTags.DURABILITY_ENCHANTABLE)
+                .add(ModItems.CLEAVER_OF_BEHEADING.get())
+                .add(ModItems.MISCHIEF_HELMET.get())
+                .add(ModItems.MISCHIEF_CHESTPLATE.get())
+                .add(ModItems.MISCHIEF_LEGGINGS.get())
+                .add(ModItems.MISCHIEF_BOOTS.get());
+        this.tag(ItemTags.VANISHING_ENCHANTABLE)
+                .add(ModItems.CLEAVER_OF_BEHEADING.get())
+                .add(ModItems.MISCHIEF_HELMET.get())
+                .add(ModItems.MISCHIEF_CHESTPLATE.get())
+                .add(ModItems.MISCHIEF_LEGGINGS.get())
+                .add(ModItems.MISCHIEF_BOOTS.get());
+
+        this.tag(Tags.Items.ARMORS)
+                .add(ModItems.MISCHIEF_HELMET.get())
+                .add(ModItems.MISCHIEF_CHESTPLATE.get())
+                .add(ModItems.MISCHIEF_LEGGINGS.get())
+                .add(ModItems.MISCHIEF_BOOTS.get());
+        this.tag(ItemTags.ARMOR_ENCHANTABLE)
+                .add(ModItems.MISCHIEF_HELMET.get())
+                .add(ModItems.MISCHIEF_CHESTPLATE.get())
+                .add(ModItems.MISCHIEF_LEGGINGS.get())
+                .add(ModItems.MISCHIEF_BOOTS.get());
+        this.tag(ItemTags.EQUIPPABLE_ENCHANTABLE)
+                .add(ModItems.MISCHIEF_HELMET.get())
+                .add(ModItems.MISCHIEF_CHESTPLATE.get())
+                .add(ModItems.MISCHIEF_LEGGINGS.get())
+                .add(ModItems.MISCHIEF_BOOTS.get());
+        this.tag(ItemTags.HEAD_ARMOR_ENCHANTABLE)
+                .add(ModItems.MISCHIEF_HELMET.get());
+        this.tag(ItemTags.CHEST_ARMOR_ENCHANTABLE)
+                .add(ModItems.MISCHIEF_CHESTPLATE.get());
+        this.tag(ItemTags.LEG_ARMOR_ENCHANTABLE)
+                .add(ModItems.MISCHIEF_LEGGINGS.get());
+        this.tag(ItemTags.FOOT_ARMOR_ENCHANTABLE)
+                .add(ModItems.MISCHIEF_BOOTS.get());
     }
 }

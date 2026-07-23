@@ -1,0 +1,40 @@
+{
+  "values": {
+    "minecraft:skeleton": {
+      "skull": "minecraft:skeleton_skull",
+      "chance": 0.1
+    },
+    "minecraft:wither_skeleton": {
+      "skull": "minecraft:wither_skeleton_skull",
+      "chance": 0.1
+    },
+    "minecraft:zombie": {
+      "skull": "minecraft:zombie_head",
+      "chance": 0.1
+    },
+    "minecraft:creeper": {
+      "skull": "minecraft:creeper_head",
+      "chance": 0.1
+    },
+    "minecraft:piglin": {
+      "skull": "minecraft:piglin_head",
+      "chance": 0.1
+    },
+    "minecraft:ender_dragon": {
+      "skull": "minecraft:dragon_head",
+      "chance": 0.1
+    },
+    "minecraft:enderman": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "supplementaries"
+        }
+      ],
+      "neoforge:value": {
+        "skull": "supplementaries:enderman_head",
+        "chance": 0.1
+      }
+    }
+  }
+}

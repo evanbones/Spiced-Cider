@@ -30,6 +30,14 @@ public class ModLanguageProvider extends LanguageProvider {
         add("item.spicedcider.grappling_hook.desc", "Good for climbing, not fishing");
         add("item.spicedcider.sticky_grappling_hook.desc", "Good for climbing, not fishing. Adheres to walls rather than bouncing off them.");
 
+        addItem(ModItems.BLAST_PROOF_PLATING, "Blast-Proof Plating");
+        addItem(ModItems.MISCHIEF_HELMET, "Mischief Helmet");
+        addItem(ModItems.MISCHIEF_CHESTPLATE, "Mischief Chestplate");
+        addItem(ModItems.MISCHIEF_LEGGINGS, "Mischief Leggings");
+        addItem(ModItems.MISCHIEF_BOOTS, "Mischief Boots");
+        addItem(ModItems.CLEAVER_OF_BEHEADING, "Cleaver of Beheading");
+        add("attribute.name.spicedcider.explosive_damage_reduction", "Explosive Damage Reduction");
+
         add("spicedcider.respawn_blocked", "The Respawn Anchor is unresponsive in this dimension");
 
         add("key.category.naming_unconvention.naming_unconvention", "Naming Unconvention");

@@ -57,11 +57,15 @@ public class SpicedCider {
         ModEntityTypes.ITEMS.register(modEventBus);
         ModBlocks.BLOCKS.register(modEventBus);
         ModAttachments.ATTACHMENT_TYPES.register(modEventBus);
+        ModAttributes.ATTRIBUTES.register(modEventBus);
+        ModArmorMaterials.ARMOR_MATERIALS.register(modEventBus);
         ModItems.ITEMS.register(modEventBus);
         ModBlockEntities.BLOCK_ENTITIES.register(modEventBus);
         ModRecipeTypes.RECIPE_TYPES.register(modEventBus);
         ModRecipeSerializers.RECIPE_SERIALIZERS.register(modEventBus);
         ModSounds.SOUNDS.register(modEventBus);
+        ModParticleTypes.PARTICLE_TYPES.register(modEventBus);
+        ModLootModifiers.LOOT_MODIFIER_SERIALIZERS.register(modEventBus);
 
         if (SpicedCiderConfig.STARTUP.blockBoxWoodVariants.get()
                 && ModList.get().isLoaded("blockbox")
@@ -121,6 +125,16 @@ public class SpicedCider {
         }
         if (event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
             event.accept(ModItems.WORKSTONE_ITEM);
+        }
+        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.BLAST_PROOF_PLATING);
+        }
+        if (event.getTabKey() == CreativeModeTabs.COMBAT) {
+            event.accept(ModItems.MISCHIEF_HELMET);
+            event.accept(ModItems.MISCHIEF_CHESTPLATE);
+            event.accept(ModItems.MISCHIEF_LEGGINGS);
+            event.accept(ModItems.MISCHIEF_BOOTS);
+            event.accept(ModItems.CLEAVER_OF_BEHEADING);
         }
     }
 }

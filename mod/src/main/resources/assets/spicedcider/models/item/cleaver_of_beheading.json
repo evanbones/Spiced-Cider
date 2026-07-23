@@ -1,0 +1,18 @@
+{
+  "parent": "minecraft:item/handheld",
+  "loader": "neoforge:separate_transforms",
+  "textures": {
+    "layer0": "spicedcider:item/cleaver_of_beheading_gui"
+  },
+  "base": {
+    "parent": "spicedcider:item/cleaver_of_beheading_handheld"
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "spicedcider:item/cleaver_of_beheading_gui"
+    },
+    "fixed": {
+      "parent": "spicedcider:item/cleaver_of_beheading_gui"
+    }
+  }
+}

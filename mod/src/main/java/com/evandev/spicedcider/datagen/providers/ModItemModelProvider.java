@@ -25,12 +25,18 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.NETHERITE_HAMMER.get());
 
         handheldItem(ModItems.FIRE_STRIKER.get());
-        
+
         basicItem(ModItems.GRAPPLING_HOOK.get());
         basicItem(ModItems.STICKY_GRAPPLING_HOOK.get());
 
         withExistingParent("rubber_cable", "item/generated")
                 .texture("layer0", modLoc("item/cable"));
+
+        basicItem(ModItems.BLAST_PROOF_PLATING.get());
+        basicItem(ModItems.MISCHIEF_HELMET.get());
+        basicItem(ModItems.MISCHIEF_CHESTPLATE.get());
+        basicItem(ModItems.MISCHIEF_LEGGINGS.get());
+        basicItem(ModItems.MISCHIEF_BOOTS.get());
     }
 
     public @NotNull ItemModelBuilder handheldItem(@NotNull Item item) {

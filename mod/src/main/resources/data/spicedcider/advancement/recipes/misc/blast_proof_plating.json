@@ -1,0 +1,30 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_creeper_spores": {
+      "conditions": {
+        "items": [
+          { "items": "tolerable_creepers:creeper_spores" }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "spicedcider:blast_proof_plating"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_creeper_spores"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "spicedcider:blast_proof_plating"
+    ]
+  }
+}

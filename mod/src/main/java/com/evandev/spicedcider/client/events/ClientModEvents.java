@@ -1,14 +1,13 @@
 package com.evandev.spicedcider.client.events;
 
 import com.evandev.spicedcider.SpicedCider;
+import com.evandev.spicedcider.client.models.armor.MischiefArmorModel;
 import com.evandev.spicedcider.client.models.projectile.CobwebProjectileModel;
+import com.evandev.spicedcider.client.particle.CleaverSweepParticle;
 import com.evandev.spicedcider.client.renderer.WorkstoneRenderer;
 import com.evandev.spicedcider.client.renderer.projectiles.CobwebProjectileRenderer;
 import com.evandev.spicedcider.client.renderer.projectiles.GrapplingHookRenderer;
-import com.evandev.spicedcider.registry.ModBlockEntities;
-import com.evandev.spicedcider.registry.ModBlocks;
-import com.evandev.spicedcider.registry.ModEntityTypes;
-import com.evandev.spicedcider.registry.ModModelLayers;
+import com.evandev.spicedcider.registry.*;
 import com.evandev.spicedcider.resource.ResourceBaker;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -26,6 +25,9 @@ import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.loading.FMLPaths;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.event.RegisterClientReloadListenersEvent;
+import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
+import net.neoforged.neoforge.client.extensions.common.IClientItemExtensions;
+import net.neoforged.neoforge.client.extensions.common.RegisterClientExtensionsEvent;
 import net.neoforged.neoforge.event.AddPackFindersEvent;
 
 import java.nio.file.Files;
@@ -45,6 +47,31 @@ public class ClientModEvents {
     @SubscribeEvent
     public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
         event.registerLayerDefinition(ModModelLayers.COBWEB_PROJECTILE, CobwebProjectileModel::createBodyLayer);
+    }
+
+    @SubscribeEvent
+    public static void registerParticleProviders(RegisterParticleProvidersEvent event) {
+        event.registerSpriteSet(ModParticleTypes.CLEAVER_SWEEP.get(), CleaverSweepParticle.Factory::new);
+    }
+
+    @SubscribeEvent
+    public static void registerClientExtensions(RegisterClientExtensionsEvent event) {
+        IClientItemExtensions mischiefArmorExtensions = new IClientItemExtensions() {
+            @Override
+            public net.minecraft.client.model.HumanoidModel<?> getHumanoidArmorModel(
+                    net.minecraft.world.entity.LivingEntity livingEntity,
+                    net.minecraft.world.item.ItemStack itemStack,
+                    net.minecraft.world.entity.EquipmentSlot equipmentSlot,
+                    net.minecraft.client.model.HumanoidModel<?> original
+            ) {
+                return MischiefArmorModel.getModel(equipmentSlot, livingEntity);
+            }
+        };
+        event.registerItem(mischiefArmorExtensions,
+                ModItems.MISCHIEF_HELMET.get(),
+                ModItems.MISCHIEF_CHESTPLATE.get(),
+                ModItems.MISCHIEF_LEGGINGS.get(),
+                ModItems.MISCHIEF_BOOTS.get());
     }
 
     @SubscribeEvent

@@ -18,4 +18,9 @@ public class ModAttachments {
                     .serialize(Codec.BOOL)
                     .build()
     );
+
+    public static final Supplier<AttachmentType<Boolean>> NO_KNOCKBACK = ATTACHMENT_TYPES.register(
+            "no_knockback",
+            () -> AttachmentType.builder(() -> false).build()
+    );
 }

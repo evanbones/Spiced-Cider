@@ -838,7 +838,7 @@ hash = "09d330b29443d9579ecc014f2be2fcb31075bfe1e9f9ac4e750f271128650fe6"
 
 [[files]]
 file = "config/fabric/indigo-renderer.properties"
-hash = "02f21caf1818fd387c4d09bba9a0b9eac10d5826a246cc8a3b83098649b8618e"
+hash = "22ce39ad3ed52081dd35c7422e716333d0c3aebaea9c925342e4f93e1ce75d61"
 
 [[files]]
 file = "config/falling_snow.json"
@@ -926,7 +926,7 @@ hash = "e6c2348fd2f7f600ae1a9fa0b364c41307f5bee6ebe92fa7ddd5a0adced09b2c"
 
 [[files]]
 file = "config/fancymenu/assets/title_splashes.txt"
-hash = "159fab690e37f2f6f79c3c05665ff85e28649c588f2fe1a6763a880bbcfd58eb"
+hash = "75e9a076524fde331f143fbb189614da9d8cca8ad4fb287b072434a09318dcad"
 
 [[files]]
 file = "config/fancymenu/audio_element_controller_metas.json"
@@ -1759,6 +1759,14 @@ hash = "8ecbdc8146000402871ea3000fba4f6e9d6db8e486b8ef9e54ed159c863a5669"
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/c/tags/item/foods.json"
 hash = "1430224d00707d804b3950e4493b617dc265e10bf6f89d375cab1c8fe455af16"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/c/tags/item/glass_blocks.json"
+hash = "06e393ded5f09d42f5e886b3fa101e991cf507931d023b0f9c4fb031ddb9cf2b"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/c/tags/item/glass_panes.json"
+hash = "656bd95fce3a851721c417198fa43dc0c10ed543d92a286edd4bdbcf5b97f04e"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/c/tags/item/hidden_from_recipe_viewers.json"
@@ -2682,7 +2690,7 @@ hash = "13b2b1384f949e6e409c3c3cc423ecb854df6b386d4466d424a57a887e89f3d8"
 
 [[files]]
 file = "config/packetfixer.properties"
-hash = "9dd6e28915bdf464b14d9b3ead3bd4bc50e46a942e027994270052176a8f8de2"
+hash = "9ec3d3f824f57023309ac89dc902e29fa8fb5ec7cfbcc813911b8b41d123f7c8"
 
 [[files]]
 file = "config/particle_core_config.toml"
@@ -2802,7 +2810,7 @@ hash = "51eb041341bd5c3cfa9828b20e167a4bdfe50e24593b6df8755f999d2f2c9004"
 
 [[files]]
 file = "config/reliable_recipes/generated_removals.json"
-hash = "496fe5527dd2c7b8468a183871361ae7c65bac3046bb0d38e2addb5419380861"
+hash = "b1b873579e8e985cf7d3500570c97fcab0547253b8c6afb7ccce98fd354ea41e"
 
 [[files]]
 file = "config/reliable_recipes/replace_input.json"
@@ -3070,7 +3078,7 @@ hash = "6c6490ba54d049b3ce9621c02955817ca0d923d9eb131a17bd729a1b9f3ecad5"
 
 [[files]]
 file = "config/spicedcider/spicedcider_manifest.json"
-hash = "e98bc1d71b0dacf68ebb3f1df187f93fe6c9725aba346da35e34356150543b90"
+hash = "8dd46e1a4afc5ce12860bb57e5637d0dc4cb5d0aa4229e9bba299db2b0b49cdf"
 
 [[files]]
 file = "config/stacksizetweaks.json5"
@@ -3326,7 +3334,7 @@ hash = "d985bfc68899c91aa642736400472f6ab876dedaaef4b8c31f38b52d48de633d"
 
 [[files]]
 file = "config/zfastnoise.mixin.properties"
-hash = "b029e5ba14d0d24cd9ecd36689ed253e1288b70c372f65021f7edf7abf703ca8"
+hash = "c527310de6c02e1960fa622b98590062579027d2aa8729bfa02eccff4bd7df9a"
 
 [[files]]
 file = "config/zipline.json"
@@ -3532,6 +3540,11 @@ metafile = true
 [[files]]
 file = "mods/bygone-fortress.pw.toml"
 hash = "67d2a8b3eb06e3a1eddd5786f40ac3ad6a95a6f575f881cbb00dde44535536fc"
+metafile = true
+
+[[files]]
+file = "mods/c2me-neoforge.pw.toml"
+hash = "3a9295215e3a815a0dd459a04ca8e9ac39eefed7e6fa7c08eb53165f5f3b165b"
 metafile = true
 
 [[files]]
@@ -4386,7 +4399,7 @@ metafile = true
 
 [[files]]
 file = "mods/spicedcider-1.0.0.jar"
-hash = "2302e6fcd3c748547c6c13d629234c801f4eecab5a27b120736f7845d8051e89"
+hash = "9c9ce138d3700fee0cd26773ab3c30f80893eb95935c5a7cb957185de76e31f5"
 
 [[files]]
 file = "mods/stacksizetweaks.pw.toml"
