@@ -1,0 +1,18 @@
+{
+  "parent": "minecraft:item/handheld",
+  "loader": "neoforge:separate_transforms",
+  "textures": {
+    "layer0": "spicedcider:item/infernite_cleaver_gui"
+  },
+  "base": {
+    "parent": "spicedcider:item/infernite_cleaver_handheld"
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "spicedcider:item/infernite_cleaver_gui"
+    },
+    "fixed": {
+      "parent": "spicedcider:item/infernite_cleaver_gui"
+    }
+  }
+}

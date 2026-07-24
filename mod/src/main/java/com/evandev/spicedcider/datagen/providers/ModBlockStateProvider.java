@@ -34,5 +34,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         horizontalBlock(ModBlocks.WORKSTONE.get(), workstoneModel);
         simpleBlockItem(ModBlocks.WORKSTONE.get(), workstoneModel);
+
+        simpleBlockWithItem(ModBlocks.CAST_IRON_BLOCK.get(), cubeAll(ModBlocks.CAST_IRON_BLOCK.get()));
     }
 }

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "spicedcider:cast_iron_plate"
+    },
+    "I": {
+      "item": "spicedcider:cast_iron_ingot"
+    }
+  },
+  "pattern": [
+    "A",
+    "I",
+    "A"
+  ],
+  "result": {
+    "count": 4,
+    "id": "create:chute"
+  }
+}

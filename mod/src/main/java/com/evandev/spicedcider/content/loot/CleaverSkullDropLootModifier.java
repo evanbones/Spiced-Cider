@@ -27,7 +27,7 @@ public class CleaverSkullDropLootModifier extends LootModifier {
     protected @NotNull ObjectArrayList<ItemStack> doApply(@NotNull ObjectArrayList<ItemStack> generatedLoot, LootContext context) {
         DamageSource damageSource = context.getParamOrNull(LootContextParams.DAMAGE_SOURCE);
         ItemStack weapon = damageSource != null ? damageSource.getWeaponItem() : null;
-        if (weapon == null || !weapon.is(ModItems.CLEAVER_OF_BEHEADING.get())) {
+        if (weapon == null || !weapon.is(ModItems.INFERNITE_CLEAVER.get())) {
             return generatedLoot;
         }
 

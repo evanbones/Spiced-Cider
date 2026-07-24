@@ -19,4 +19,6 @@ public class ModBlocks {
     public static final DeferredBlock<Block> TEMPORARY_COBWEB = BLOCKS.register("temporary_cobweb",
             () -> new TemporaryCobwebBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBWEB)));
 
+    public static final DeferredBlock<Block> CAST_IRON_BLOCK = BLOCKS.register("cast_iron_block",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK)));
 }

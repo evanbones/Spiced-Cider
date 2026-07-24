@@ -45,25 +45,25 @@ public class ModItemTagsProvider extends ItemTagsProvider {
                 .add(ModItems.FIRE_STRIKER.get());
 
         this.tag(Tags.Items.TOOLS)
-                .add(ModItems.CLEAVER_OF_BEHEADING.get());
+                .add(ModItems.INFERNITE_CLEAVER.get());
         this.tag(Tags.Items.MELEE_WEAPON_TOOLS)
-                .add(ModItems.CLEAVER_OF_BEHEADING.get());
+                .add(ModItems.INFERNITE_CLEAVER.get());
         this.tag(ItemTags.SWORD_ENCHANTABLE)
-                .add(ModItems.CLEAVER_OF_BEHEADING.get());
+                .add(ModItems.INFERNITE_CLEAVER.get());
         this.tag(ItemTags.SHARP_WEAPON_ENCHANTABLE)
-                .add(ModItems.CLEAVER_OF_BEHEADING.get());
+                .add(ModItems.INFERNITE_CLEAVER.get());
         this.tag(ItemTags.WEAPON_ENCHANTABLE)
-                .add(ModItems.CLEAVER_OF_BEHEADING.get());
+                .add(ModItems.INFERNITE_CLEAVER.get());
         this.tag(ItemTags.FIRE_ASPECT_ENCHANTABLE)
-                .add(ModItems.CLEAVER_OF_BEHEADING.get());
+                .add(ModItems.INFERNITE_CLEAVER.get());
         this.tag(ItemTags.DURABILITY_ENCHANTABLE)
-                .add(ModItems.CLEAVER_OF_BEHEADING.get())
+                .add(ModItems.INFERNITE_CLEAVER.get())
                 .add(ModItems.MISCHIEF_HELMET.get())
                 .add(ModItems.MISCHIEF_CHESTPLATE.get())
                 .add(ModItems.MISCHIEF_LEGGINGS.get())
                 .add(ModItems.MISCHIEF_BOOTS.get());
         this.tag(ItemTags.VANISHING_ENCHANTABLE)
-                .add(ModItems.CLEAVER_OF_BEHEADING.get())
+                .add(ModItems.INFERNITE_CLEAVER.get())
                 .add(ModItems.MISCHIEF_HELMET.get())
                 .add(ModItems.MISCHIEF_CHESTPLATE.get())
                 .add(ModItems.MISCHIEF_LEGGINGS.get())
@@ -92,5 +92,25 @@ public class ModItemTagsProvider extends ItemTagsProvider {
                 .add(ModItems.MISCHIEF_LEGGINGS.get());
         this.tag(ItemTags.FOOT_ARMOR_ENCHANTABLE)
                 .add(ModItems.MISCHIEF_BOOTS.get());
+
+        this.tag(ItemTags.create(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("c", "ingots")))
+                .add(ModItems.CAST_IRON_INGOT.get());
+        this.tag(ItemTags.create(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("c", "ingots/cast_iron")))
+                .add(ModItems.CAST_IRON_INGOT.get());
+
+        this.tag(ItemTags.create(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("c", "nuggets")))
+                .add(ModItems.CAST_IRON_NUGGET.get());
+        this.tag(ItemTags.create(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("c", "nuggets/cast_iron")))
+                .add(ModItems.CAST_IRON_NUGGET.get());
+
+        this.tag(ItemTags.create(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("c", "storage_blocks")))
+                .add(ModItems.CAST_IRON_BLOCK.get());
+        this.tag(ItemTags.create(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("c", "storage_blocks/cast_iron")))
+                .add(ModItems.CAST_IRON_BLOCK.get());
+
+        this.tag(ItemTags.create(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("c", "plates")))
+                .add(ModItems.CAST_IRON_PLATE.get());
+        this.tag(ItemTags.create(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("c", "plates/cast_iron")))
+                .add(ModItems.CAST_IRON_PLATE.get());
     }
 }

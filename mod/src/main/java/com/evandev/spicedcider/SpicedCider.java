@@ -126,15 +126,21 @@ public class SpicedCider {
         if (event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
             event.accept(ModItems.WORKSTONE_ITEM);
         }
+        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModItems.CAST_IRON_BLOCK);
+        }
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.BLAST_PROOF_PLATING);
+            event.accept(ModItems.CAST_IRON_INGOT);
+            event.accept(ModItems.CAST_IRON_NUGGET);
+            event.accept(ModItems.CAST_IRON_PLATE);
         }
         if (event.getTabKey() == CreativeModeTabs.COMBAT) {
             event.accept(ModItems.MISCHIEF_HELMET);
             event.accept(ModItems.MISCHIEF_CHESTPLATE);
             event.accept(ModItems.MISCHIEF_LEGGINGS);
             event.accept(ModItems.MISCHIEF_BOOTS);
-            event.accept(ModItems.CLEAVER_OF_BEHEADING);
+            event.accept(ModItems.INFERNITE_CLEAVER);
         }
     }
 }

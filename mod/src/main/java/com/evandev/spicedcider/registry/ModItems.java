@@ -1,7 +1,7 @@
 package com.evandev.spicedcider.registry;
 
 import com.evandev.spicedcider.SpicedCider;
-import com.evandev.spicedcider.content.item.CleaverOfBeheadingItem;
+import com.evandev.spicedcider.content.item.InferniteCleaverItem;
 import com.evandev.spicedcider.content.item.FireStrikerItem;
 import com.evandev.spicedcider.content.item.HammerItem;
 import com.evandev.spicedcider.content.item.MischiefArmorItem;
@@ -49,8 +49,17 @@ public class ModItems {
             () -> new MischiefArmorItem(ModArmorMaterials.MISCHIEF, ArmorItem.Type.BOOTS,
                     new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(15))));
 
-    public static final DeferredItem<Item> CLEAVER_OF_BEHEADING = ITEMS.register("cleaver_of_beheading",
-            () -> new CleaverOfBeheadingItem(ModItemTiers.CLEAVER,
+    public static final DeferredItem<Item> INFERNITE_CLEAVER = ITEMS.register("infernite_cleaver",
+            () -> new InferniteCleaverItem(ModItemTiers.CLEAVER,
                     new Item.Properties().rarity(Rarity.UNCOMMON).stacksTo(1)
-                            .attributes(net.minecraft.world.item.DiggerItem.createAttributes(ModItemTiers.CLEAVER, 11.0F, -3.4F))));
+                            .attributes(DiggerItem.createAttributes(ModItemTiers.CLEAVER, 11.0F, -3.4F))));
+
+    public static final DeferredItem<Item> CAST_IRON_INGOT = ITEMS.register("cast_iron_ingot",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> CAST_IRON_NUGGET = ITEMS.register("cast_iron_nugget",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> CAST_IRON_BLOCK = ITEMS.register("cast_iron_block",
+            () -> new BlockItem(ModBlocks.CAST_IRON_BLOCK.get(), new Item.Properties()));
+    public static final DeferredItem<Item> CAST_IRON_PLATE = ITEMS.register("cast_iron_plate",
+            () -> new Item(new Item.Properties()));
 }

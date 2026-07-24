@@ -926,7 +926,7 @@ hash = "e6c2348fd2f7f600ae1a9fa0b364c41307f5bee6ebe92fa7ddd5a0adced09b2c"
 
 [[files]]
 file = "config/fancymenu/assets/title_splashes.txt"
-hash = "75e9a076524fde331f143fbb189614da9d8cca8ad4fb287b072434a09318dcad"
+hash = "07a7ae13cff685e6f819a4935a3e8950a74428a551546682f09f36f12730e6b6"
 
 [[files]]
 file = "config/fancymenu/audio_element_controller_metas.json"
@@ -1821,6 +1821,10 @@ file = "config/openloader/packs/spicedcider_data/data/copperagebackport/tags/ite
 hash = "0d76ff518c2bd2020198437cf7e999447738e878f303be5b3d081debab38a9c8"
 
 [[files]]
+file = "config/openloader/packs/spicedcider_data/data/create/recipe/crafting/kinetics/chute.json"
+hash = "ef19c01ccca6936d6f4843c1507e060a27d4b935717b48cc5d83ffd9794dc6e1"
+
+[[files]]
 file = "config/openloader/packs/spicedcider_data/data/easyshulkerboxes/item_contents_provider/backpack.json"
 hash = "0dbd45f151cbc35032ca390f4e02f247570e43d32f2de95caef8bbd067151656"
 
@@ -2001,8 +2005,16 @@ file = "config/openloader/packs/spicedcider_data/data/infernalexp/recipe/glowlig
 hash = "79ce143f55097cc0f127804f7e1f2ecc449712960ea2920dd7c3efd4b7d64a42"
 
 [[files]]
+file = "config/openloader/packs/spicedcider_data/data/minecraft/recipe/anvil.json"
+hash = "d0cc5c6a8df5bc62e52b8f6ded21dc529d322f1600d565390151e5c41ee17f98"
+
+[[files]]
 file = "config/openloader/packs/spicedcider_data/data/minecraft/recipe/campfire.json"
 hash = "4b2aacfe10a034137fc92b3d51c5df5f5d33e1f887c4969978c312e728aa7013"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/minecraft/recipe/cauldron.json"
+hash = "3d4ae728d7ee08e9c44144ef67c84236c74bb2804e37f2426064af1e00a4745c"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/minecraft/recipe/end_rod.json"
@@ -2017,8 +2029,20 @@ file = "config/openloader/packs/spicedcider_data/data/minecraft/recipe/furnace.j
 hash = "28fc9ce49fd11d97d6be906f1101ff5abf7ad98f408c2b31f9f52786be32720f"
 
 [[files]]
+file = "config/openloader/packs/spicedcider_data/data/minecraft/recipe/hopper.json"
+hash = "c8de2d5ccc349022fd041ed65fdd037777ab62929db36ccf522c4fb984cca03d"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/minecraft/recipe/minecart.json"
+hash = "957649e993fe2eb4f9e1c5531d5702be577344caf2967adf6ca1184fc489f0ea"
+
+[[files]]
 file = "config/openloader/packs/spicedcider_data/data/minecraft/recipe/shears.json"
 hash = "f0948fa60982ec7b8cabd3d659f10b980bc265db2ae9ed2886f49716dfd9d174"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/minecraft/recipe/smithing_table.json"
+hash = "1c568b2a0356cf13767d4f791b426ec8c859a32dc7047fad8a4be9349e3546a1"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/minecraft/recipe/soul_campfire.json"
@@ -2531,6 +2555,10 @@ hash = "4adce9fd16718b91039c71c821d95247583509a2cffd623b99c749b81a6552e1"
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/supplementaries/recipe/awnings/awning.json"
 hash = "5d4c1e17beee20a2694d95fcca0ceb20a72e590d3748f21b335c58470276f186"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/supplementaries/recipe/cage.json"
+hash = "075deb18d18070f357bbc44ea46dad20a1f59748ffdfb3fb0e88d2c1ce32ff79"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/supplementaries/recipe/doormat_2.json"
@@ -4399,7 +4427,7 @@ metafile = true
 
 [[files]]
 file = "mods/spicedcider-1.0.0.jar"
-hash = "9c9ce138d3700fee0cd26773ab3c30f80893eb95935c5a7cb957185de76e31f5"
+hash = "74807501ed170b19d39216cb1097dbf47f77c9035889ac0354c1f4e5e7ff34db"
 
 [[files]]
 file = "mods/stacksizetweaks.pw.toml"

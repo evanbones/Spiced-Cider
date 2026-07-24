@@ -1,7 +1,7 @@
 package com.evandev.spicedcider.content.handler;
 
 import com.evandev.spicedcider.SpicedCider;
-import com.evandev.spicedcider.content.item.CleaverOfBeheadingItem;
+import com.evandev.spicedcider.content.item.InferniteCleaverItem;
 import com.evandev.spicedcider.registry.ModAttachments;
 import com.evandev.spicedcider.registry.ModAttributes;
 import com.evandev.spicedcider.registry.ModItems;
@@ -59,7 +59,7 @@ public class MischiefEvents {
         Level level = player.level();
 
         if (!(target instanceof LivingEntity)) return;
-        if (!(player.getMainHandItem().getItem() instanceof CleaverOfBeheadingItem)) return;
+        if (!(player.getMainHandItem().getItem() instanceof InferniteCleaverItem)) return;
 
         float attackStrength = player.getAttackStrengthScale(0.5F);
         if (attackStrength <= 0.9F) return;
@@ -171,7 +171,7 @@ public class MischiefEvents {
 
         Entity attacker = event.getSource().getEntity();
         if (!(attacker instanceof LivingEntity livingAttacker)) return;
-        if (!livingAttacker.getMainHandItem().is(ModItems.CLEAVER_OF_BEHEADING.get())) return;
+        if (!livingAttacker.getMainHandItem().is(ModItems.INFERNITE_CLEAVER.get())) return;
 
         ItemStack head = new ItemStack(Items.PLAYER_HEAD);
         head.set(DataComponents.PROFILE, new ResolvableProfile(player.getGameProfile()));

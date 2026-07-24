@@ -15,9 +15,9 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 
-public class CleaverOfBeheadingItem extends TieredItem {
+public class InferniteCleaverItem extends TieredItem {
 
-    public CleaverOfBeheadingItem(Tier tier, Properties properties) {
+    public InferniteCleaverItem(Tier tier, Properties properties) {
         super(tier, properties);
     }
 

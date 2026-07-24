@@ -21,9 +21,16 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
     @Override
     protected void addTags(HolderLookup.@NotNull Provider provider) {
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
-                .add(ModBlocks.WORKSTONE.get());
+                .add(ModBlocks.WORKSTONE.get())
+                .add(ModBlocks.CAST_IRON_BLOCK.get());
 
         this.tag(BlockTags.NEEDS_STONE_TOOL)
-                .add(ModBlocks.WORKSTONE.get());
+                .add(ModBlocks.WORKSTONE.get())
+                .add(ModBlocks.CAST_IRON_BLOCK.get());
+
+        this.tag(BlockTags.create(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("c", "storage_blocks")))
+                .add(ModBlocks.CAST_IRON_BLOCK.get());
+        this.tag(BlockTags.create(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("c", "storage_blocks/cast_iron")))
+                .add(ModBlocks.CAST_IRON_BLOCK.get());
     }
 }

@@ -15,6 +15,7 @@ public class ModLanguageProvider extends LanguageProvider {
     @Override
     protected void addTranslations() {
         addBlock(ModBlocks.WORKSTONE, "Workstone");
+        addBlock(ModBlocks.CAST_IRON_BLOCK, "Block of Cast Iron");
 
         addItem(ModItems.FLINT_HAMMER, "Flint Hammer");
         addItem(ModItems.IRON_HAMMER, "Iron Hammer");
@@ -35,7 +36,10 @@ public class ModLanguageProvider extends LanguageProvider {
         addItem(ModItems.MISCHIEF_CHESTPLATE, "Mischief Chestplate");
         addItem(ModItems.MISCHIEF_LEGGINGS, "Mischief Leggings");
         addItem(ModItems.MISCHIEF_BOOTS, "Mischief Boots");
-        addItem(ModItems.CLEAVER_OF_BEHEADING, "Cleaver of Beheading");
+        addItem(ModItems.INFERNITE_CLEAVER, "Infernite Cleaver");
+        addItem(ModItems.CAST_IRON_INGOT, "Cast Iron Ingot");
+        addItem(ModItems.CAST_IRON_NUGGET, "Cast Iron Nugget");
+        addItem(ModItems.CAST_IRON_PLATE, "Cast Iron Plate");
         add("attribute.name.spicedcider.explosive_damage_reduction", "Explosive Damage Reduction");
 
         add("spicedcider.respawn_blocked", "The Respawn Anchor is unresponsive in this dimension");

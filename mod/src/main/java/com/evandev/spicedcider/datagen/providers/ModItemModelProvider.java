@@ -37,6 +37,10 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.MISCHIEF_CHESTPLATE.get());
         basicItem(ModItems.MISCHIEF_LEGGINGS.get());
         basicItem(ModItems.MISCHIEF_BOOTS.get());
+        basicItem(ModItems.CAST_IRON_INGOT.get());
+        basicItem(ModItems.CAST_IRON_NUGGET.get());
+        basicItem(ModItems.CAST_IRON_PLATE.get());
+        withExistingParent("cast_iron_block", modLoc("block/cast_iron_block"));
     }
 
     public @NotNull ItemModelBuilder handheldItem(@NotNull Item item) {
