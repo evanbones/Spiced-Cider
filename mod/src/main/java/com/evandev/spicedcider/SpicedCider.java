@@ -133,7 +133,7 @@ public class SpicedCider {
             event.accept(ModItems.BLAST_PROOF_PLATING);
             event.accept(ModItems.CAST_IRON_INGOT);
             event.accept(ModItems.CAST_IRON_NUGGET);
-            event.accept(ModItems.CAST_IRON_PLATE);
+            event.accept(ModItems.CAST_IRON_SHEET);
         }
         if (event.getTabKey() == CreativeModeTabs.COMBAT) {
             event.accept(ModItems.MISCHIEF_HELMET);

@@ -109,8 +109,8 @@ public class ModItemTagsProvider extends ItemTagsProvider {
                 .add(ModItems.CAST_IRON_BLOCK.get());
 
         this.tag(ItemTags.create(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("c", "plates")))
-                .add(ModItems.CAST_IRON_PLATE.get());
+                .add(ModItems.CAST_IRON_SHEET.get());
         this.tag(ItemTags.create(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("c", "plates/cast_iron")))
-                .add(ModItems.CAST_IRON_PLATE.get());
+                .add(ModItems.CAST_IRON_SHEET.get());
     }
 }

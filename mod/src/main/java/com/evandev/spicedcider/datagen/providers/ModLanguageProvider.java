@@ -39,7 +39,7 @@ public class ModLanguageProvider extends LanguageProvider {
         addItem(ModItems.INFERNITE_CLEAVER, "Infernite Cleaver");
         addItem(ModItems.CAST_IRON_INGOT, "Cast Iron Ingot");
         addItem(ModItems.CAST_IRON_NUGGET, "Cast Iron Nugget");
-        addItem(ModItems.CAST_IRON_PLATE, "Cast Iron Plate");
+        addItem(ModItems.CAST_IRON_SHEET, "Cast Iron Sheet");
         add("attribute.name.spicedcider.explosive_damage_reduction", "Explosive Damage Reduction");
 
         add("spicedcider.respawn_blocked", "The Respawn Anchor is unresponsive in this dimension");

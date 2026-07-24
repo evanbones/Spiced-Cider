@@ -60,6 +60,6 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> CAST_IRON_BLOCK = ITEMS.register("cast_iron_block",
             () -> new BlockItem(ModBlocks.CAST_IRON_BLOCK.get(), new Item.Properties()));
-    public static final DeferredItem<Item> CAST_IRON_PLATE = ITEMS.register("cast_iron_plate",
+    public static final DeferredItem<Item> CAST_IRON_SHEET = ITEMS.register("cast_iron_sheet",
             () -> new Item(new Item.Properties()));
 }
