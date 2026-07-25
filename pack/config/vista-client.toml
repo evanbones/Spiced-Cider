@@ -61,7 +61,6 @@
 		render_debug = false
 
 	[television.screen_effects]
-		#Turns off all the tv screen effects and draws it as a simple texture. Disabling can make the render slightly faster. All below options will be ignored if this is disabled
 		enabled = true
 		#Pixel density of televisions, in pixels per block side
 		# Default: 1.3700000047683716

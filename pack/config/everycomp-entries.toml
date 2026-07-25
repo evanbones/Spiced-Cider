@@ -1,5 +1,4 @@
 		[types.cake.bountifulfares]
-			#Disables certain types. Note that all these configs, like in any other mod, only hide stuff from tabs and disable their recipes
 			coconut_cake = true
 			cocoa_cake = true
 			sponge_cake = true
@@ -211,6 +210,9 @@
 			palisade = true
 			stripped_spiked_palisade = true
 			seat = true
+
+		[entries.wood_type.shutterup]
+			shutter = true
 
 		[entries.leaves_type.quark]
 			hedge = true
