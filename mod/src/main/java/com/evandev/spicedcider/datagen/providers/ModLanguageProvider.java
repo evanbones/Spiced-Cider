@@ -14,14 +14,7 @@ public class ModLanguageProvider extends LanguageProvider {
 
     @Override
     protected void addTranslations() {
-        addBlock(ModBlocks.WORKSTONE, "Workstone");
         addBlock(ModBlocks.CAST_IRON_BLOCK, "Block of Cast Iron");
-
-        addItem(ModItems.FLINT_HAMMER, "Flint Hammer");
-        addItem(ModItems.IRON_HAMMER, "Iron Hammer");
-        addItem(ModItems.GOLDEN_HAMMER, "Golden Hammer");
-        addItem(ModItems.DIAMOND_HAMMER, "Diamond Hammer");
-        addItem(ModItems.NETHERITE_HAMMER, "Netherite Hammer");
 
         addItem(ModItems.FIRE_STRIKER, "Fire Striker");
 
@@ -46,10 +39,11 @@ public class ModLanguageProvider extends LanguageProvider {
 
         add("key.category.naming_unconvention.naming_unconvention", "Naming Unconvention");
         add("key.naming_unconvention.reroll", "Reroll World Name");
-        add("subtitles.spicedcider.block.workstone.hammer", "Workstone hammered");
         add("subtitles.spicedcider.entity.player.grappling_hook.tighten", "Rope tightens");
-        add("emi.category.spicedcider.workstone", "Workstone");
         add("subtitles.spicedcider.music.death.death1", "Player died");
+        add("subtitles.entity.spider.shoot", "Spider shoots a web");
+        add("subtitles.entity.spider.web_impact", "Web hits the ground");
+        add("subtitles.entity.spider.prepare_shoot", "Spider chitters");
 
         add("block_type.blockbox.seat", "%s Seat");
         add("block_type.blockbox.palisade", "%s Palisade");

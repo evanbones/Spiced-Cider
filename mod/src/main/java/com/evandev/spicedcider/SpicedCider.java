@@ -60,8 +60,6 @@ public class SpicedCider {
         ModAttributes.ATTRIBUTES.register(modEventBus);
         ModArmorMaterials.ARMOR_MATERIALS.register(modEventBus);
         ModItems.ITEMS.register(modEventBus);
-        ModBlockEntities.BLOCK_ENTITIES.register(modEventBus);
-        ModRecipeTypes.RECIPE_TYPES.register(modEventBus);
         ModRecipeSerializers.RECIPE_SERIALIZERS.register(modEventBus);
         ModSounds.SOUNDS.register(modEventBus);
         ModParticleTypes.PARTICLE_TYPES.register(modEventBus);
@@ -94,15 +92,6 @@ public class SpicedCider {
     }
 
     @SubscribeEvent
-    public static void registerCapabilities(RegisterCapabilitiesEvent event) {
-        event.registerBlockEntity(
-                Capabilities.ItemHandler.BLOCK,
-                ModBlockEntities.WORKSTONE.get(),
-                (be, context) -> be.getInventory()
-        );
-    }
-
-    @SubscribeEvent
     public static void modifyVanillaAttributes(EntityAttributeModificationEvent event) {
         if (!SpicedCiderConfig.STARTUP.skeletonHealthNerf.get()) return;
 
@@ -113,18 +102,10 @@ public class SpicedCider {
     @SubscribeEvent
     public static void buildContents(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
-            event.accept(ModItems.FLINT_HAMMER);
-            event.accept(ModItems.IRON_HAMMER);
-            event.accept(ModItems.GOLDEN_HAMMER);
-            event.accept(ModItems.DIAMOND_HAMMER);
-            event.accept(ModItems.NETHERITE_HAMMER);
             event.accept(ModItems.GRAPPLING_HOOK);
             event.accept(ModItems.STICKY_GRAPPLING_HOOK);
             event.accept(ModItems.FIRE_STRIKER);
             event.accept(ModItems.RUBBER_CABLE);
-        }
-        if (event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
-            event.accept(ModItems.WORKSTONE_ITEM);
         }
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(ModItems.CAST_IRON_BLOCK);

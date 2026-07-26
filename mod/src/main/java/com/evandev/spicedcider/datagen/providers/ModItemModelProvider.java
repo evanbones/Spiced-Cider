@@ -18,12 +18,6 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-        handheldItem(ModItems.FLINT_HAMMER.get());
-        handheldItem(ModItems.IRON_HAMMER.get());
-        handheldItem(ModItems.GOLDEN_HAMMER.get());
-        handheldItem(ModItems.DIAMOND_HAMMER.get());
-        handheldItem(ModItems.NETHERITE_HAMMER.get());
-
         handheldItem(ModItems.FIRE_STRIKER.get());
 
         basicItem(ModItems.GRAPPLING_HOOK.get());

@@ -10,12 +10,6 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 public class ModSounds {
     public static final DeferredRegister<SoundEvent> SOUNDS = DeferredRegister.create(BuiltInRegistries.SOUND_EVENT, SpicedCider.MOD_ID);
 
-    public static final DeferredHolder<SoundEvent, SoundEvent> HAMMER1 = SOUNDS.register("block.workstone.hammer1",
-            () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "block.workstone.hammer1")));
-
-    public static final DeferredHolder<SoundEvent, SoundEvent> HAMMER2 = SOUNDS.register("block.workstone.hammer2",
-            () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "block.workstone.hammer2")));
-
     public static final DeferredHolder<SoundEvent, SoundEvent> PLAYER_DEATH = SOUNDS.register("music.death.death1",
             () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "music.death.death1")));
 

@@ -4,7 +4,6 @@ import com.evandev.spicedcider.SpicedCider;
 import com.evandev.spicedcider.client.models.armor.MischiefArmorModel;
 import com.evandev.spicedcider.client.models.projectile.CobwebProjectileModel;
 import com.evandev.spicedcider.client.particle.CleaverSweepParticle;
-import com.evandev.spicedcider.client.renderer.WorkstoneRenderer;
 import com.evandev.spicedcider.client.renderer.projectiles.CobwebProjectileRenderer;
 import com.evandev.spicedcider.client.renderer.projectiles.GrapplingHookRenderer;
 import com.evandev.spicedcider.registry.*;
@@ -39,7 +38,6 @@ public class ClientModEvents {
 
     @SubscribeEvent
     public static void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
-        event.registerBlockEntityRenderer(ModBlockEntities.WORKSTONE.get(), WorkstoneRenderer::new);
         event.registerEntityRenderer(ModEntityTypes.COBWEB_PROJECTILE.get(), CobwebProjectileRenderer::new);
         event.registerEntityRenderer(ModEntityTypes.GRAPPLING_HOOK.get(), GrapplingHookRenderer::new);
     }

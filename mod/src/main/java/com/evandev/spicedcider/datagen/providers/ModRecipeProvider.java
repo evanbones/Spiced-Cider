@@ -23,61 +23,6 @@ public class ModRecipeProvider extends RecipeProvider {
 
     @Override
     protected void buildRecipes(@NotNull RecipeOutput output) {
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.WORKSTONE.get())
-                .pattern("SSS")
-                .pattern("L L")
-                .pattern("L L")
-                .define('S', Blocks.SMOOTH_STONE)
-                .define('L', ItemTags.LOGS)
-                .unlockedBy("has_smooth_stone", has(Blocks.SMOOTH_STONE))
-                .save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.FLINT_HAMMER.get())
-                .pattern("XXX")
-                .pattern("X|X")
-                .pattern(" | ")
-                .define('X', Items.FLINT)
-                .define('|', Items.STICK)
-                .unlockedBy("has_flint", has(Items.FLINT))
-                .save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.IRON_HAMMER.get())
-                .pattern("XXX")
-                .pattern("X|X")
-                .pattern(" | ")
-                .define('X', Tags.Items.INGOTS_IRON)
-                .define('|', Items.STICK)
-                .unlockedBy("has_iron", has(Tags.Items.INGOTS_IRON))
-                .save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.GOLDEN_HAMMER.get())
-                .pattern("XXX")
-                .pattern("X|X")
-                .pattern(" | ")
-                .define('X', Tags.Items.INGOTS_GOLD)
-                .define('|', Items.STICK)
-                .unlockedBy("has_gold", has(Tags.Items.INGOTS_GOLD))
-                .save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.DIAMOND_HAMMER.get())
-                .pattern("XXX")
-                .pattern("X|X")
-                .pattern(" | ")
-                .define('X', Tags.Items.GEMS_DIAMOND)
-                .define('|', Items.STICK)
-                .unlockedBy("has_diamond", has(Tags.Items.GEMS_DIAMOND))
-                .save(output);
-
-        SmithingTransformRecipeBuilder.smithing(
-                Ingredient.of(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
-                Ingredient.of(ModItems.DIAMOND_HAMMER.get()),
-                Ingredient.of(Items.NETHERITE_INGOT),
-                RecipeCategory.TOOLS,
-                ModItems.NETHERITE_HAMMER.get()
-        ).unlocks("has_netherite_ingot", has(Items.NETHERITE_INGOT)).save(output, "netherite_hammer_smithing");
-
-        WorkstoneRecipeProvider.buildRecipes(output);
-
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.GRAPPLING_HOOK.get())
                 .pattern(" C")
                 .pattern("CC")

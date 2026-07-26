@@ -23,20 +23,6 @@ public class ModItemTagsProvider extends ItemTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.@NotNull Provider provider) {
-        this.tag(ItemTags.CLUSTER_MAX_HARVESTABLES)
-                .add(ModItems.FLINT_HAMMER.get())
-                .add(ModItems.IRON_HAMMER.get())
-                .add(ModItems.GOLDEN_HAMMER.get())
-                .add(ModItems.DIAMOND_HAMMER.get())
-                .add(ModItems.NETHERITE_HAMMER.get());
-
-        this.tag(ModTags.Items.HAMMERS)
-                .add(ModItems.FLINT_HAMMER.get())
-                .add(ModItems.IRON_HAMMER.get())
-                .add(ModItems.GOLDEN_HAMMER.get())
-                .add(ModItems.DIAMOND_HAMMER.get())
-                .add(ModItems.NETHERITE_HAMMER.get());
-
         this.tag(ModTags.Items.TIDE_HOOKS)
                 .add(ModItems.GRAPPLING_HOOK.get())
                 .add(ModItems.STICKY_GRAPPLING_HOOK.get());
