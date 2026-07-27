@@ -1,0 +1,109 @@
+{
+	"credit": "Made with Blockbench",
+	"textureSize": [128, 128],
+	"texture": "textures/entity/minecart.png",
+	"models": [
+		{
+			"part": "front",
+			"id": "front",
+			"invertAxis": "xy",
+			"translate": [0, -2, 8],
+			"rotate": [0, -180, 0],
+			"boxes": [
+				{"coordinates": [-6, 4, -9, 12, 9, 2], "textureOffset": [0, 14]}
+			],
+			"animations": [
+				{
+					"this.ry": 0
+				}
+			]
+		},
+		{
+			"part": "left",
+			"id": "left",
+			"invertAxis": "xy",
+			"translate": [-7, -2, -1],
+			"rotate": [0, 90, 0],
+			"boxes": [
+				{"coordinates": [-3, 4, 0, 20, 9, 2], "textureOffset": [0, 25]}
+			],
+			"animations": [
+				{
+					"this.ry": 0
+				}
+			]
+		},
+		{
+			"part": "right",
+			"id": "right",
+			"invertAxis": "xy",
+			"translate": [7, -2, -1],
+			"rotate": [0, -90, 0],
+			"boxes": [
+				{"coordinates": [-17, 4, 0, 20, 9, 2], "textureOffset": [0, 36]}
+			],
+			"animations": [
+				{
+					"this.ry": 0
+				}
+			]
+		},
+		{
+			"part": "back",
+			"id": "back",
+			"invertAxis": "xy",
+			"translate": [0, -2, -10],
+			"boxes": [
+				{"coordinates": [-6, 4, 9, 12, 9, 2], "textureOffset": [0, 47]}
+			],
+			"submodels": [
+				{
+					"id": "bone",
+					"invertAxis": "xy",
+					"translate": [0, 3.75, 12.75],
+					"rotate": [-45, 0, 0]
+				}
+			]
+		},
+		{
+			"part": "bottom",
+			"id": "bottom",
+			"invertAxis": "xy",
+			"translate": [0, -1, -1],
+			"rotate": [0, 90, 90],
+			"boxes": [
+				{"coordinates": [-10, -7, 1, 20, 16, 2], "textureOffset": [28, 47]},
+				{"coordinates": [-10, 3, -1, 20, 3, 2], "textureOffset": [0, 0]},
+				{"coordinates": [-10, -4, -1, 20, 3, 2], "textureOffset": [0, 5]}
+			],
+			"submodels": [
+				{
+					"id": "back_wheels",
+					"invertAxis": "xy",
+					"translate": [-5.5, 1, -0.5],
+					"boxes": [
+						{"coordinates": [-1.5, 5.05, -1.5, 3, 0, 3], "textureOffset": [25, 15]},
+						{"coordinates": [-1.5, -5.1, -1.5, 3, 0, 3], "textureOffset": [25, 18]}
+					]
+				},
+				{
+					"id": "front_wheels",
+					"invertAxis": "xy",
+					"translate": [5.5, 1, -0.5],
+					"boxes": [
+						{"coordinates": [-1.5, -5.1, -1.5, 3, 0, 3], "textureOffset": [25, 21]},
+						{"coordinates": [-1.5, 5.05, -1.5, 3, 0, 3], "textureOffset": [25, 24]}
+					]
+				}
+			],
+			"animations": [
+				{
+					"back_wheels.ry": "limb_swing*4",
+					"front_wheels.ry": "limb_swing*4",
+					"this.ry": 0,
+					"this.rz": 0
+				}
+			]
+		}
+	]
+}

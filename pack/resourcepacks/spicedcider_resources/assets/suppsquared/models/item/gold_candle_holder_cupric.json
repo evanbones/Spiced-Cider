@@ -1,0 +1,42 @@
+{
+    "parent": "suppsquared:block/candle_holders/cupric_floor_1",
+    "display": {
+		"gui": {
+		  "rotation": [30, 45, 0],
+		  "translation": [0, 2, 0],
+		  "scale": [1, 1, 1]
+		},
+		"thirdperson_righthand": {
+		  "rotation": [75, 225, 0],
+		  "translation": [0, 1.5, 3],
+		  "scale": [0.625, 0.625, 0.625]
+		},
+		"thirdperson_lefthand": {
+		  "rotation": [75, 225, 0],
+		  "translation": [0, 1.5, 3],
+		  "scale": [0.625, 0.625, 0.625]
+		},
+		"firstperson_righthand": {
+		  "rotation": [0, 225, 0],
+          "translation": [0, 3, 0],
+		  "scale": [0.625, 0.625, 0.625]
+		},
+		"firstperson_lefthand": {
+		  "rotation": [0, 225, 0],
+          "translation": [0, 3, 0],
+		  "scale": [0.625, 0.625, 0.625]
+		},
+		"ground": {
+		  "translation": [0, 3, 0],
+		  "scale": [0.4, 0.4, 0.4]   
+		},
+		"head": {
+		 "translation": [0, 14.5, 0]
+		},
+		"fixed": {
+		  "rotation": [0, 90, 0],
+		  "translation": [0, 3.5, 0],
+		  "scale": [0.75, 0.75, 0.75]
+		}
+	  }
+}
