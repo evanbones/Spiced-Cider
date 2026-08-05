@@ -1,6 +1,7 @@
 package com.evandev.spicedcider.client.events;
 
 import com.evandev.spicedcider.SpicedCider;
+import com.evandev.spicedcider.blockgrid.ClientOffsetCache;
 import com.evandev.spicedcider.client.models.armor.MischiefArmorModel;
 import com.evandev.spicedcider.client.models.projectile.CobwebProjectileModel;
 import com.evandev.spicedcider.client.particle.CleaverSweepParticle;
@@ -81,6 +82,7 @@ public class ClientModEvents {
     public static void onClientSetup(FMLClientSetupEvent event) {
         event.enqueueWork(() -> {
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.TEMPORARY_COBWEB.get(), RenderType.cutout());
+            ClientOffsetCache.install();
         });
     }
 

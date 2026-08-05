@@ -342,7 +342,7 @@ dependencies {
     compileOnly "maven.modrinth:slime-time:1.2.2+1.21.1-neoforge"
 
     // Vista
-    compileOnly "maven.modrinth:vista_tv:1.21.1-5.1.2"
+    compileOnly "maven.modrinth:vista_tv:1.21.1-5.2.5"
 
     compileOnly(annotationProcessor("com.github.bawnorton.mixinsquared:mixinsquared-common:0.3.3"))
     jarJar(implementation("com.github.bawnorton.mixinsquared:mixinsquared-neoforge")) {

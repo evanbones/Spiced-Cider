@@ -67,8 +67,6 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.BooleanValue disableRecipeBookTracking;
         public final ModConfigSpec.BooleanValue skipRedundantBlockCacheRebuild;
 
-        public final ModConfigSpec.BooleanValue vistaMirrorAlwaysConnect;
-
         public Common(ModConfigSpec.Builder builder) {
             builder.push("compat");
 
@@ -137,14 +135,6 @@ public class SpicedCiderConfig {
                     .comment("Skip the redundant block shape cache rebuild that happens on every tag reload.")
                     .translation("option.spicedcider.skipRedundantBlockCacheRebuild")
                     .define("skipRedundantBlockCacheRebuild", true);
-
-            builder.pop();
-            builder.push("vista");
-
-            vistaMirrorAlwaysConnect = builder
-                    .comment("Ignore Vista's square-aspect-ratio restriction when growing connected mirrors, so adjacent mirrors always merge regardless of shape. Requires Vista (obviously).")
-                    .translation("option.spicedcider.vistaMirrorAlwaysConnect")
-                    .define("vistaMirrorAlwaysConnect", true);
 
             builder.pop();
         }

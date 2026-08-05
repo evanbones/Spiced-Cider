@@ -1,5 +1,7 @@
 package com.evandev.spicedcider;
 
+import com.evandev.spicedcider.blockgrid.ClientOffsetCache;
+import com.evandev.spicedcider.blockgrid.SupportOffsets;
 import com.evandev.spicedcider.compat.everycompat.BlockBoxEveryCompatLoader;
 import com.evandev.spicedcider.compat.yacl.SpicedCiderConfigScreen;
 import com.evandev.spicedcider.config.ConfigFileHandler;
@@ -7,6 +9,7 @@ import com.evandev.spicedcider.config.LoggerNamePatternSelector;
 import com.evandev.spicedcider.config.Reconfigurator;
 import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.evandev.spicedcider.namingunconvention.RandomNameGenerator;
+import com.evandev.spicedcider.networking.ChunkOffsetsPayload;
 import com.evandev.spicedcider.registry.*;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -18,11 +21,13 @@ import net.neoforged.fml.ModList;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
-import net.neoforged.neoforge.capabilities.Capabilities;
-import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
 import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
+import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
+import net.neoforged.neoforge.event.TagsUpdatedEvent;
 import net.neoforged.neoforge.event.entity.EntityAttributeModificationEvent;
+import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;
+import net.neoforged.neoforge.network.registration.PayloadRegistrar;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.core.config.plugins.util.PluginRegistry;
@@ -65,6 +70,9 @@ public class SpicedCider {
         ModParticleTypes.PARTICLE_TYPES.register(modEventBus);
         ModLootModifiers.LOOT_MODIFIER_SERIALIZERS.register(modEventBus);
 
+        modEventBus.addListener(this::registerPayloads);
+        NeoForge.EVENT_BUS.addListener(this::onTagsUpdated);
+
         if (SpicedCiderConfig.STARTUP.blockBoxWoodVariants.get()
                 && ModList.get().isLoaded("blockbox")
                 && ModList.get().isLoaded("everycomp")
@@ -82,6 +90,20 @@ public class SpicedCider {
             LOGGER.error("Failed to reconfigure Log4j:", e);
         }
         LOGGER.info("Finished Log4j reconfiguration.");
+    }
+
+    private void registerPayloads(RegisterPayloadHandlersEvent event) {
+        PayloadRegistrar registrar = event.registrar(MOD_ID);
+
+        registrar.playToClient(
+                ChunkOffsetsPayload.TYPE,
+                ChunkOffsetsPayload.CODEC,
+                (payload, context) -> context.enqueueWork(() -> ClientOffsetCache.receive(payload.chunk(), payload.entries()))
+        );
+    }
+
+    private void onTagsUpdated(TagsUpdatedEvent event) {
+        SupportOffsets.onTagsUpdated();
     }
 
     /**

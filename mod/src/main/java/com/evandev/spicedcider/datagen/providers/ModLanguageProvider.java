@@ -112,8 +112,6 @@ public class ModLanguageProvider extends LanguageProvider {
         add("option.spicedcider.cloudFarPlaneDistance", "Cloud Far Plane Distance");
         add("option.spicedcider.cloudFarPlaneDistance.tooltip", "Far clip plane distance in blocks used for clouds.");
 
-        add("option.spicedcider.vistaMirrorAlwaysConnect", "Always Connect Mirrors");
-        add("option.spicedcider.vistaMirrorAlwaysConnect.tooltip", "Ignores Vista's square-aspect-ratio restriction when growing connected mirrors, so adjacent mirrors always merge into one group regardless of shape.");
         add("option.spicedcider.vistaMirrorPerfFixes", "Mirror Performance Fixes");
         add("option.spicedcider.vistaMirrorPerfFixes.tooltip", "Applies performance fixes to Vista's mirror/TV reflection rendering (tightened culling, shared-state thrash suppression, throttled re-renders).");
         add("option.spicedcider.vistaMirrorReflectionDistance", "Mirror Reflection Distance");

@@ -176,6 +176,28 @@
       },
       "sync": "farmersdelight:nourishment"
     },
+    "figura:figura_overlay": {
+      "displacement": {
+        "x": 0,
+        "y": 0
+      },
+      "direction": {
+        "x": "NONE",
+        "y": "NONE"
+      },
+      "sync": "figura:figura_overlay"
+    },
+    "figura:figura_underlay": {
+      "displacement": {
+        "x": 0,
+        "y": 0
+      },
+      "direction": {
+        "x": "NONE",
+        "y": "NONE"
+      },
+      "sync": "figura:figura_underlay"
+    },
     "immersiveoverlays:biome": {
       "displacement": {
         "x": 0,
@@ -472,6 +494,17 @@
         "y": "NONE"
       },
       "sync": "vista:viewfinder"
+    },
+    "windswept:carved_pinecone": {
+      "displacement": {
+        "x": 0,
+        "y": 0
+      },
+      "direction": {
+        "x": "NONE",
+        "y": "NONE"
+      },
+      "sync": "windswept:carved_pinecone"
     }
   },
   "resource": {

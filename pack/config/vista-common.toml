@@ -28,7 +28,7 @@
 	# Range: 1 ~ 24
 	max_connected_size = 8
 	#Forces connected mirrors to have a square aspect ratio.
-	square_aspect_ratio = true
+	square_aspect_ratio = false
 	#Which mirror placements are allowed. NEAR: surface always flush with the front face. FAR: surface always recessed into the block. BOTH: near or far is chosen from where you click along the block's depth axis (near half = near, far half = recessed).
 	#Allowed Values: NEAR, FAR, BOTH
 	placement = "BOTH"

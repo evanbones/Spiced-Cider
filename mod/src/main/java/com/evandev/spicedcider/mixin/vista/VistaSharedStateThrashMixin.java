@@ -17,7 +17,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class VistaSharedStateThrashMixin {
 
     @Inject(
-            method = "render(Lnet/mehvahdjukaar/vista/client/textures/PerspectiveTexture;Ljava/lang/Object;Lnet/mehvahdjukaar/vista/client/renderer/SceneCameraSetup;FZLorg/joml/Matrix4f;Lnet/minecraft/world/phys/Vec3;Ljava/lang/Integer;)V",
+            method = "doRender(Lnet/minecraft/client/Minecraft;Lnet/mehvahdjukaar/vista/client/textures/PerspectiveTexture;Ljava/lang/Object;Lnet/mehvahdjukaar/vista/client/renderer/SceneCameraSetup;FZLorg/joml/Matrix4f;Lnet/minecraft/world/phys/Vec3;Ljava/lang/Integer;)V",
             at = @At(
                     value = "INVOKE",
                     target = "Lnet/mehvahdjukaar/vista/client/renderer/LevelRendererFrustumState;apply(Lnet/minecraft/client/renderer/LevelRenderer;)V",

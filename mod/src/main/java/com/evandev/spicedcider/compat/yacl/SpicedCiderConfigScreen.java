@@ -75,7 +75,6 @@ public class SpicedCiderConfigScreen {
                 .categoryIf(ModList.get().isLoaded("vista"), ConfigCategory.createBuilder()
                         .name(Component.translatable("category.spicedcider.vista"))
                         .tooltip(Component.translatable("category.spicedcider.vista.tooltip"))
-                        .option(toggle("vistaMirrorAlwaysConnect", common.vistaMirrorAlwaysConnect))
                         .option(toggle("vistaMirrorPerfFixes", client.vistaMirrorPerfFixes))
                         .option(intSlider("vistaMirrorReflectionDistance", client.vistaMirrorReflectionDistance, 8, 2048, 8))
                         .option(doubleSlider("vistaMirrorUpdateFps", client.vistaMirrorUpdateFps, 1.0, 240.0, 1.0))
