@@ -5,6 +5,7 @@ import com.evandev.spicedcider.blockgrid.ClientOffsetCache;
 import com.evandev.spicedcider.client.models.armor.MischiefArmorModel;
 import com.evandev.spicedcider.client.models.projectile.CobwebProjectileModel;
 import com.evandev.spicedcider.client.particle.CleaverSweepParticle;
+import com.evandev.spicedcider.client.resource.BrokenTextureReloadListener;
 import com.evandev.spicedcider.client.renderer.projectiles.CobwebProjectileRenderer;
 import com.evandev.spicedcider.client.renderer.projectiles.GrapplingHookRenderer;
 import com.evandev.spicedcider.registry.*;
@@ -76,6 +77,7 @@ public class ClientModEvents {
     @SubscribeEvent
     public static void registerClientReloadListeners(RegisterClientReloadListenersEvent event) {
         event.registerReloadListener(SpicedCider.RANDOM_NAME_GENERATOR);
+        event.registerReloadListener(new BrokenTextureReloadListener());
     }
 
     @SubscribeEvent

@@ -167,12 +167,12 @@
 	/**
 	 * The pages in the left sidebar
 	 */
-	left-sidebar-pages: index, lookup-history;
+	left-sidebar-pages: index;
 
 	/**
 	 * The subpanels in the left sidebar
 	 */
-	left-sidebar-subpanels: none;
+	left-sidebar-subpanels: favorites 1;
 
 	/**
 	 * How many columns and rows of ingredients to limit the left sidebar to

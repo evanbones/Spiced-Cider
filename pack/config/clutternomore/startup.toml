@@ -7,6 +7,12 @@ vertical_slabs = true
 # If steps should be added to all existing stairs
 # default: true
 steps = true
+# If recipes should have their shapes replaced by the parent block
+# default: true
+recipe_fixes = true
+# If shapes should inherit their parent block's loot table
+# default: true
+inherit_loot_tables = true
 # If detailed warnings should be logged for development purposes
 # default: false
 detailed_logs = false

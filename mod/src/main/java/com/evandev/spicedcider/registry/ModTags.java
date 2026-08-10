@@ -14,6 +14,9 @@ public class ModTags {
         public static final TagKey<Item> HAMMERS = tag("hammers");
         public static final TagKey<Item> TIDE_HOOKS = tag("tide", "hooks");
 
+        public static final TagKey<Item> KEPT_WHEN_BROKEN = tag("kept_when_broken");
+        public static final TagKey<Item> DESTROYED_WHEN_BROKEN = tag("destroyed_when_broken");
+
         private static TagKey<Item> tag(String name) {
             return ItemTags.create(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, name));
         }

@@ -54,6 +54,9 @@
 		[types.wood_type.arts_and_crafts]
 			cork = false
 
+		[types.wood_type.architects_palette]
+			twisted = true
+
 		[types.leaves_type.quark]
 			ancient = false
 			blue_blossom = false
@@ -128,6 +131,9 @@
 		[types.leaves_type.arts_and_crafts]
 			cork = true
 
+		[types.leaves_type.architects_palette]
+			twisted = true
+
 		[types.lantern.infernalexp]
 			glowlight_lantern = true
 
@@ -153,6 +159,9 @@
 			copper_lantern = true
 			brass_lantern = true
 			crimson_lantern = true
+
+		[types.lantern.architects_palette]
+			nether_brass_lantern = true
 
 		[entries.wood_type.nomansland]
 			bookshelf = true
@@ -203,6 +212,16 @@
 			bundled_posts = true
 			post = true
 			cut_stripped_post = true
+
+		[entries.wood_type.shutterup]
+			shutter = true
+
+		[entries.wood_type.architects_palette]
+			board_stairs = true
+			railing = true
+			board_slab = true
+			boards = true
+			board_wall = true
 
 		[entries.wood_type.blockbox]
 			spiked_palisade = true

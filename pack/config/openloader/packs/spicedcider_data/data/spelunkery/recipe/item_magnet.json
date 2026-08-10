@@ -1,0 +1,21 @@
+{
+  "key": {
+    "#": {
+      "tag": "c:ingots/iron"
+    },
+    "X": {
+      "item": "spelunkery:cinnabar"
+    }
+  },
+  "pattern": [
+    "X X",
+    "# #",
+    "###"
+  ],
+  "result": {
+    "id": "spelunkery:item_magnet",
+    "count": 1
+  },
+  "category": "misc",
+  "type": "minecraft:crafting_shaped"
+}

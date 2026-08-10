@@ -1,10 +1,9 @@
 package com.evandev.spicedcider.mixin.minecraft;
 
-import com.evandev.spicedcider.config.SpicedCiderConfig;
+import com.evandev.spicedcider.util.BrokenItemUtil;
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.Holder;
-import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.InteractionHand;
@@ -15,7 +14,6 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.ElytraItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
@@ -40,17 +38,12 @@ public abstract class ItemStackKeeperMixin {
 
     @Unique
     private boolean cider$isBroken() {
-        if (!SpicedCiderConfig.COMMON.keepBrokenItems.get()) return false;
-
-        ItemStack self = (ItemStack) (Object) this;
-        int maxDamage = self.getMaxDamage() - (self.getItem() instanceof ElytraItem ? 1 : 0);
-        return self.isDamageableItem() && self.getDamageValue() > 0 && self.getDamageValue() >= maxDamage;
+        return BrokenItemUtil.isBroken((ItemStack) (Object) this);
     }
 
     @Unique
     private boolean cider$isKeeper() {
-        ItemStack self = (ItemStack) (Object) this;
-        return self.has(DataComponents.CUSTOM_NAME) || self.isEnchanted() || self.getItem() instanceof ElytraItem;
+        return BrokenItemUtil.isKeeper((ItemStack) (Object) this);
     }
 
     @Inject(method = "getDestroySpeed", at = @At("HEAD"), cancellable = true)
@@ -125,7 +118,7 @@ public abstract class ItemStackKeeperMixin {
     public void cider$brokenShowTooltip(Item.TooltipContext tooltipContext, Player player, TooltipFlag tooltipFlag, CallbackInfoReturnable<List<Component>> cir) {
         if (cider$isBroken()) {
             List<Component> list = new ArrayList<>(cir.getReturnValue());
-            list.add(Component.translatable("item.spicedcider.broken").withStyle(ChatFormatting.DARK_RED));
+            list.add(Component.translatable("item.spicedcider.broken").withStyle(ChatFormatting.DARK_RED, ChatFormatting.BOLD));
             cir.setReturnValue(list);
         }
     }

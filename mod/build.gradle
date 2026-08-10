@@ -344,6 +344,9 @@ dependencies {
     // Vista
     compileOnly "maven.modrinth:vista_tv:1.21.1-5.2.5"
 
+    // Alloyed
+    runtimeOnly "maven.modrinth:create-alloyed:3.0.11+1.21.1-neoforge"
+
     compileOnly(annotationProcessor("com.github.bawnorton.mixinsquared:mixinsquared-common:0.3.3"))
     jarJar(implementation("com.github.bawnorton.mixinsquared:mixinsquared-neoforge")) {
         version {
