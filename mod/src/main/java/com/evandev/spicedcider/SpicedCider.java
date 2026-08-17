@@ -13,7 +13,10 @@ import com.evandev.spicedcider.networking.ChunkOffsetsPayload;
 import com.evandev.spicedcider.registry.*;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModContainer;
@@ -92,20 +95,6 @@ public class SpicedCider {
         LOGGER.info("Finished Log4j reconfiguration.");
     }
 
-    private void registerPayloads(RegisterPayloadHandlersEvent event) {
-        PayloadRegistrar registrar = event.registrar(MOD_ID);
-
-        registrar.playToClient(
-                ChunkOffsetsPayload.TYPE,
-                ChunkOffsetsPayload.CODEC,
-                (payload, context) -> context.enqueueWork(() -> ClientOffsetCache.receive(payload.chunk(), payload.entries()))
-        );
-    }
-
-    private void onTagsUpdated(TagsUpdatedEvent event) {
-        SupportOffsets.onTagsUpdated();
-    }
-
     /**
      * Prompts Log4j to scan for our {@link LoggerNamePatternSelector} plugin.
      */
@@ -123,27 +112,42 @@ public class SpicedCider {
 
     @SubscribeEvent
     public static void buildContents(BuildCreativeModeTabContentsEvent event) {
+        CreativeModeTab.TabVisibility vis = CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS;
         if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
-            event.accept(ModItems.GRAPPLING_HOOK);
-            event.accept(ModItems.STICKY_GRAPPLING_HOOK);
-            event.accept(ModItems.FIRE_STRIKER);
-            event.accept(ModItems.RUBBER_CABLE);
+            event.insertAfter(new ItemStack(Items.FISHING_ROD), new ItemStack(ModItems.GRAPPLING_HOOK.get()), vis);
+            event.insertAfter(new ItemStack(ModItems.GRAPPLING_HOOK.get()), new ItemStack(ModItems.STICKY_GRAPPLING_HOOK.get()), vis);
+            event.insertAfter(new ItemStack(Items.FLINT_AND_STEEL), new ItemStack(ModItems.FIRE_STRIKER.get()), vis);
+            event.insertAfter(new ItemStack(Items.LEAD), new ItemStack(ModItems.RUBBER_CABLE.get()), vis);
         }
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
-            event.accept(ModItems.CAST_IRON_BLOCK);
+            event.insertAfter(new ItemStack(Items.IRON_BLOCK), new ItemStack(ModItems.CAST_IRON_BLOCK.get()), vis);
         }
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ModItems.BLAST_PROOF_PLATING);
-            event.accept(ModItems.CAST_IRON_INGOT);
-            event.accept(ModItems.CAST_IRON_NUGGET);
-            event.accept(ModItems.CAST_IRON_SHEET);
+            event.insertAfter(new ItemStack(Items.GOLD_NUGGET), new ItemStack(ModItems.CAST_IRON_NUGGET.get()), vis);
+            event.insertAfter(new ItemStack(Items.IRON_INGOT), new ItemStack(ModItems.CAST_IRON_INGOT.get()), vis);
+            event.insertAfter(new ItemStack(ModItems.CAST_IRON_INGOT.get()), new ItemStack(ModItems.CAST_IRON_SHEET.get()), vis);
+            event.insertAfter(new ItemStack(ModItems.CAST_IRON_SHEET.get()), new ItemStack(ModItems.BLAST_PROOF_PLATING.get()), vis);
         }
         if (event.getTabKey() == CreativeModeTabs.COMBAT) {
-            event.accept(ModItems.MISCHIEF_HELMET);
-            event.accept(ModItems.MISCHIEF_CHESTPLATE);
-            event.accept(ModItems.MISCHIEF_LEGGINGS);
-            event.accept(ModItems.MISCHIEF_BOOTS);
-            event.accept(ModItems.INFERNITE_CLEAVER);
+            event.insertAfter(new ItemStack(Items.NETHERITE_AXE), new ItemStack(ModItems.INFERNITE_CLEAVER.get()), vis);
+            event.insertAfter(new ItemStack(Items.IRON_BOOTS), new ItemStack(ModItems.MISCHIEF_HELMET.get()), vis);
+            event.insertAfter(new ItemStack(ModItems.MISCHIEF_HELMET.get()), new ItemStack(ModItems.MISCHIEF_CHESTPLATE.get()), vis);
+            event.insertAfter(new ItemStack(ModItems.MISCHIEF_CHESTPLATE.get()), new ItemStack(ModItems.MISCHIEF_LEGGINGS.get()), vis);
+            event.insertAfter(new ItemStack(ModItems.MISCHIEF_LEGGINGS.get()), new ItemStack(ModItems.MISCHIEF_BOOTS.get()), vis);
         }
+    }
+
+    private void registerPayloads(RegisterPayloadHandlersEvent event) {
+        PayloadRegistrar registrar = event.registrar(MOD_ID);
+
+        registrar.playToClient(
+                ChunkOffsetsPayload.TYPE,
+                ChunkOffsetsPayload.CODEC,
+                (payload, context) -> context.enqueueWork(() -> ClientOffsetCache.receive(payload.chunk(), payload.entries()))
+        );
+    }
+
+    private void onTagsUpdated(TagsUpdatedEvent event) {
+        SupportOffsets.onTagsUpdated();
     }
 }

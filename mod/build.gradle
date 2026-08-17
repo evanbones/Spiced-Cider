@@ -4,7 +4,7 @@ plugins {
     id 'net.neoforged.moddev' version '2.0.141'
     id 'idea'
     id 'org.sinytra.adapter.userdev' version '1.2.1-SNAPSHOT'
-    id "me.modmuss50.mod-publish-plugin" version "1.1.0"
+    id "me.modmuss50.mod-publish-plugin" version "2.2.0"
 }
 
 version = mod_version
@@ -316,10 +316,9 @@ dependencies {
     // Abnormals
     compileOnly "maven.modrinth:environmental:5.0.1"
     compileOnly "maven.modrinth:caverns-and-chasms:3.0.0"
+    runtimeOnly "maven.modrinth:caverns-and-chasms:3.0.0"
     compileOnly "maven.modrinth:blueprint:8.1.0"
-
-    // Nostalgic Tweaks
-    compileOnly "maven.modrinth:nostalgic-tweaks:POrRfSqe"
+    runtimeOnly "maven.modrinth:blueprint:8.1.0"
 
     // Hominid
     compileOnly "maven.modrinth:hominid:1.3.4"
@@ -405,7 +404,7 @@ idea {
 publishMods {
     file = tasks.named("jar").get().archiveFile
     changelog = rootProject.file("CHANGELOG-LATEST.md").exists() ? rootProject.file("CHANGELOG-LATEST.md").text : ""
-    type = BETA
+    type = STABLE
     version = "${project.version} - ${project.minecraft_version}"
     displayName = "Spiced Cider ${project.version}"
     modLoaders.add("neoforge")

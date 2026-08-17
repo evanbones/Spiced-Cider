@@ -105,6 +105,12 @@ public class ModLanguageProvider extends LanguageProvider {
         add("option.spicedcider.randomWorldNaming.tooltip", "Auto-generates a random world name on the world creation screen, with a reroll button if Modern World Creation is present.");
         add("option.spicedcider.customDeathSound", "Custom Death Sound");
         add("option.spicedcider.customDeathSound.tooltip", "Plays a custom sound when your player character dies.");
+        add("option.spicedcider.customWindowTitle", "Custom Window Title");
+        add("option.spicedcider.customWindowTitle.tooltip", "Customize the OS window title bar text.");
+        add("option.spicedcider.oldProgressScreen", "Old Progress Screen");
+        add("option.spicedcider.oldProgressScreen.tooltip", "Restore classic style loading/progress screen when loading worlds, saving worlds, or changing dimensions.");
+        add("option.spicedcider.unmineableBlockSparks", "Unmineable Block Sparks");
+        add("option.spicedcider.unmineableBlockSparks.tooltip", "Spawns sparks, plays hit sounds, and displays a warning message when attempting to mine a block that requires a stronger tool.");
         add("option.spicedcider.hideMelancholicHungerTooltip", "Hide Melancholic Hunger Tooltip");
         add("option.spicedcider.hideMelancholicHungerTooltip.tooltip", "Hides Melancholic Hunger's regeneration tooltip lines from item tooltips.");
         add("option.spicedcider.cloudFarPlaneFix", "Cloud Far Plane Fix");
@@ -130,5 +136,14 @@ public class ModLanguageProvider extends LanguageProvider {
         add("tooltip.spicedcider.angling_slot.line.title", "Fishing Line");
         add("tooltip.spicedcider.angling_slot.bobber.title", "Fishing Bobber");
         add("tooltip.spicedcider.angling_slot.hook.title", "Fishing Hook");
+
+        add("gui.spicedcider.screen.level.loading", "Loading level");
+        add("gui.spicedcider.screen.level.saving", "Saving chunks");
+        add("gui.spicedcider.screen.level.building", "Building terrain");
+        add("gui.spicedcider.screen.level.simulate", "Simulating world for a bit");
+        add("gui.spicedcider.screen.level.enterNether", "Entering the Nether");
+        add("gui.spicedcider.screen.level.leaveNether", "Leaving the Nether");
+        add("gui.spicedcider.screen.level.enterEnd", "Entering the End");
+        add("gui.spicedcider.screen.level.leaveEnd", "Leaving the End");
     }
 }

@@ -7,6 +7,14 @@
 	customDeathSound = true
 	#Hide Melancholic Hunger's regeneration tooltip lines from item tooltips. Requires Melancholic Hunger.
 	hideMelancholicHungerTooltip = true
+	#Spawns sparks, plays hit sounds, and displays a warning message when attempting to mine a block that requires a stronger tool.
+	unmineableBlockSparks = true
+	#Customize the OS window title.
+	customWindowTitle = true
+	#Format string for the OS window title. %v will be replaced with the current Minecraft version.
+	windowTitleFormat = "Minecraft - Spiced Cider %v"
+	#Restore classic style loading/progress screen when loading worlds, saving worlds, or changing dimensions.
+	oldProgressScreen = true
 
 [vista]
 	#Apply performance fixes to Vista's mirror/TV reflection rendering (tightened culling, shared-state thrash suppression, throttled re-renders). Requires Vista (obviously).

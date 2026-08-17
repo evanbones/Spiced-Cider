@@ -3,5 +3,6 @@ maxChainRange = 32
 quality = 4
 showToolTip = false
 showRangeWarningHud = false
-collisionsEnabled = false
+collisionsEnabled = true
+hangingBlockCollisions = true
 debugDraw = false

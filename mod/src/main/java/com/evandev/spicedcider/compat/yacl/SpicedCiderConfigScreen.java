@@ -67,6 +67,9 @@ public class SpicedCiderConfigScreen {
                         .tooltip(Component.translatable("category.spicedcider.client.tooltip"))
                         .option(toggle("randomWorldNaming", client.randomWorldNaming))
                         .option(toggle("customDeathSound", client.customDeathSound))
+                        .option(toggle("unmineableBlockSparks", client.unmineableBlockSparks))
+                        .option(toggle("customWindowTitle", client.customWindowTitle))
+                        .option(toggle("oldProgressScreen", client.oldProgressScreen))
                         .optionIf(ModList.get().isLoaded("melancholic_hunger"),
                                 toggle("hideMelancholicHungerTooltip", client.hideMelancholicHungerTooltip))
                         .option(toggle("cloudFarPlaneFix", client.cloudFarPlaneFix))

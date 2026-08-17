@@ -7,14 +7,14 @@
 	# Default: 8
 	# Range: 1 ~ 32
 	resolution_scale = 8
-	#How mirror reflections are dispatched. RENDER_TICK_END (default, recommended): the BE renderer queues mirrors into a pending list; the queue is flushed from a top-level frame hook (Fabric mixin after GameRenderer.render; NeoForge RenderFrameEvent.Post) that's guaranteed to run outside any level render — safe under recursive renderLevel calls from other mods. TEXTURE_REFRESH: piggybacks on the live-feed texture refresh dispatch (one render per visible mirror, end-of-frame). Switch to TEXTURE_REFRESH if you suspect a timing-related rendering glitch.
+	#How mirror reflections are dispatched. RENDER_TICK_END (default): mirrors are queued and flushed from a top level frame hook, which is guaranteed to run outside any level render and stays safe when other mods render the level recursively. TEXTURE_REFRESH: rides along with the live feed texture refresh instead, one render per visible mirror at the end of the frame. Try TEXTURE_REFRESH if you suspect a timing related rendering glitch.
 	#Allowed Values: TEXTURE_REFRESH, RENDER_TICK_END
 	update_mode = "RENDER_TICK_END"
 	#Smooth the mirror reflection with bilinear texture filtering. Enabled gives a softer, less pixelated reflection; disabled keeps it crisp and pixelated.
 	smooth_reflection = false
 
 	[mirror.recursion]
-		#How mirrors-inside-mirrors are handled. OFF: nested mirrors don't render at all (you see the frame, no reflection). SHARED (cheap): each mirror reuses its own self-reflection texture when seen inside another mirror — looks fine at a glance but parallax is wrong at depth >=1 (the deeper reflections won't slide correctly as you move). RECURSIVE (expensive): each chain gets its own off-axis render with correct parallax, up to max_depth. Beyond the depth cap the nested mirror is not drawn at all.
+		#How mirrors inside mirrors are handled. OFF: nested mirrors don't render at all, you just see the frame. SHARED (cheap): each mirror reuses its own reflection texture when seen inside another. Fine at a glance, but the deeper reflections won't slide correctly as you move. RECURSIVE (expensive): every chain gets its own render with correct parallax, up to max_depth. Past the cap the nested mirror isn't drawn.
 		#Allowed Values: OFF, SHARED, RECURSIVE
 		mode = "RECURSIVE"
 		#Max nesting depth in RECURSIVE recursion mode. 0 = no recursion (equivalent to OFF). 1 = one level of correct nested reflection. Each extra level multiplies cost, but resolution_divider and distance_divider attenuate per-level cost.

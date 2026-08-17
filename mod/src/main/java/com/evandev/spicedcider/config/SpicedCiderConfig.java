@@ -145,6 +145,11 @@ public class SpicedCiderConfig {
 
         public final ModConfigSpec.BooleanValue customDeathSound;
         public final ModConfigSpec.BooleanValue hideMelancholicHungerTooltip;
+        public final ModConfigSpec.BooleanValue unmineableBlockSparks;
+
+        public final ModConfigSpec.BooleanValue customWindowTitle;
+        public final ModConfigSpec.ConfigValue<String> windowTitleFormat;
+        public final ModConfigSpec.BooleanValue oldProgressScreen;
 
         public final ModConfigSpec.BooleanValue cloudFarPlaneFix;
         public final ModConfigSpec.IntValue cloudFarPlaneDistance;
@@ -177,6 +182,11 @@ public class SpicedCiderConfig {
             builder.pop();
             builder.push("misc");
 
+            unmineableBlockSparks = builder
+                    .comment("Spawns sparks, plays hit sounds, and displays a warning message when attempting to mine a block that requires a stronger tool.")
+                    .translation("option.spicedcider.unmineableBlockSparks")
+                    .define("unmineableBlockSparks", true);
+
             customDeathSound = builder
                     .comment("Play a custom sound when you die.")
                     .translation("option.spicedcider.customDeathSound")
@@ -186,6 +196,21 @@ public class SpicedCiderConfig {
                     .comment("Hide Melancholic Hunger's regeneration tooltip lines from item tooltips. Requires Melancholic Hunger.")
                     .translation("option.spicedcider.hideMelancholicHungerTooltip")
                     .define("hideMelancholicHungerTooltip", true);
+
+            customWindowTitle = builder
+                    .comment("Customize the OS window title.")
+                    .translation("option.spicedcider.customWindowTitle")
+                    .define("customWindowTitle", true);
+
+            windowTitleFormat = builder
+                    .comment("Format string for the OS window title. %v will be replaced with the current Minecraft version.")
+                    .translation("option.spicedcider.windowTitleFormat")
+                    .define("windowTitleFormat", "Minecraft - Spiced Cider %v");
+
+            oldProgressScreen = builder
+                    .comment("Restore classic style loading/progress screen when loading worlds, saving worlds, or changing dimensions.")
+                    .translation("option.spicedcider.oldProgressScreen")
+                    .define("oldProgressScreen", true);
 
             builder.pop();
             builder.push("clouds");

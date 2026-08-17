@@ -1,0 +1,18 @@
+#Should lead ore generate in the world? (Applies to newly generated chunks.)
+generate_lead_ore = true
+#Should mining lead ore sometimes release fumes (the Lead Sickness effect + particles)?
+enable_lead_ore_sickness = true
+#Should creepers keep away from lit lead torches? They back off rather than close in, but a creeper cornered next to you can still explode.
+creepers_avoid_lead_fumes = true
+#Should pillagers keep away from lit lead torches? Only while wandering — raids, patrols and pillagers already shooting at you are unaffected.
+pillagers_avoid_lead_fumes = true
+#Master toggle for the lead recipe overrides below. When off, none of them apply and vanilla recipes are kept.
+enable_recipe_overrides = true
+#Craft the Fishing Rod with a lead nugget instead of the bottom string. Requires the master toggle.
+override_fishing_rod_recipe = true
+#Allow crafting the otherwise-uncraftable Heavy Core from lead blocks + a netherite ingot. Off by default: it makes a Trial-Chamber-exclusive item renewable, so it is opt-in. Requires the master toggle.
+override_heavy_core_recipe = false
+#Should lead items appear in structure/chest loot? (Lead horse armor occasionally replaces iron horse armor.)
+enable_structure_loot = true
+#Should villagers offer lead trades?
+enable_villager_trades = true

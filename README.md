@@ -50,6 +50,11 @@ Unconvention.
 
 - Plays the piano motif from C418 - Death when you die.
 
+**Unmineable Block Sparks**
+
+- Hitting a block that requires a stronger tool spawns spark particles, plays hit sounds, and displays a warning
+  message. Ported from Valcon (thanks, Ivqry!).
+
 **Performance Optimizations**
 
 - Recipe book tracking disabled
@@ -71,6 +76,7 @@ Spiced Cider runs fine without any of these: each one only unlocks the specific 
 
 | Mod                                                                                                             | Feature added when installed                                                                     |
 |-----------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|
+| [Caverns & Chasms](https://modrinth.com/mod/caverns-and-chasms)                                                 | Uses C&C's tin spark particles for unmineable block sparks                                       |
 | [Cooks' Collection](https://modrinth.com/mod/cooks-collection)                                                  | Fixes occlusion/culling issues with the salted dripstone block                                   |
 | [Environmental](https://modrinth.com/mod/environmental)                                                         | Removes the green leaves from Wisteria trees                                                     | 
 | [The Block Box](https://modrinth.com/mod/the-block-box) + [Every Compat](https://modrinth.com/mod/every-compat) | Registers wood-type variants (seats, palisades) for every wood type in the pack                  | 
@@ -102,6 +108,8 @@ its [Apache License 2.0](https://github.com/BigWingBeat/better_log4j_config/blob
 
 Randomized world names are from [Naming Unconvention](https://github.com/QinomeD/Naming-Unconvention/), used under
 its [LGPLv3 license](https://github.com/QinomeD/Naming-Unconvention/blob/master/LICENSE).
+
+Sparks for hitting unmineable blocks ported from Valcon by [Ivqry](https://github.com/ivqrydev).
 
 ---
 

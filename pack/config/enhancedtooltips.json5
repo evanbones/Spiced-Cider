@@ -123,7 +123,11 @@
 		/* Shows a preview of the spawn egg entity.
 		   (default: true)
 		*/
-		"spawnEggTooltip": false
+		"spawnEggTooltip": false,
+		/* Disables EMF models completely. Can help prevent some UI glitches when used with resource-packs like Fresh Animations.
+		   (default: false)
+		*/
+		"disableEmfModels": false
 	},
 	"mapTooltip": {
 		/* Shows a preview of the filled map in its tooltip.

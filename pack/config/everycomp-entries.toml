@@ -163,6 +163,9 @@
 		[types.lantern.architects_palette]
 			nether_brass_lantern = true
 
+		[types.lantern.theleadage]
+			lead_lantern = true
+
 		[entries.wood_type.nomansland]
 			bookshelf = true
 			trimmed_planks = true
@@ -212,9 +215,6 @@
 			bundled_posts = true
 			post = true
 			cut_stripped_post = true
-
-		[entries.wood_type.shutterup]
-			shutter = true
 
 		[entries.wood_type.architects_palette]
 			board_stairs = true

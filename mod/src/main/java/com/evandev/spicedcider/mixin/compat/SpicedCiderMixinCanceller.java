@@ -13,14 +13,6 @@ public class SpicedCiderMixinCanceller implements MixinCanceller {
             return true;
         }
 
-        if ("mod.adrenix.nostalgic.mixin.tweak.candy.world_lighting.LightTextureMixin".equals(mixinClassName)) {
-            return true;
-        }
-
-        if ("mod.adrenix.nostalgic.mixin.tweak.candy.missing_texture.MissingTextureAtlasSpriteMixin".equals(mixinClassName)) {
-            return true;
-        }
-
         if ("dev.tazer.clutternomore.common.mixin.compat.emi.EMIRenderMixin".equals(mixinClassName)) {
             return true;
         }
