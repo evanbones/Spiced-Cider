@@ -163,9 +163,6 @@
 		[types.lantern.architects_palette]
 			nether_brass_lantern = true
 
-		[types.lantern.theleadage]
-			lead_lantern = true
-
 		[entries.wood_type.nomansland]
 			bookshelf = true
 			trimmed_planks = true
@@ -228,7 +225,9 @@
 			stripped_palisade = true
 			palisade = true
 			stripped_spiked_palisade = true
-			seat = true
+
+		[entries.wood_type.shutterup]
+			shutter = true
 
 		[entries.leaves_type.quark]
 			hedge = true

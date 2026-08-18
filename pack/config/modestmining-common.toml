@@ -10,6 +10,8 @@
 	generate_silver_ore = true
 	#Generate Clams on Cold Ocean Floors.
 	generate_clams = true
+	#Generate Meteorites in the Overworld.
+	generate_meteorite = true
 
 [replacements]
 	#Vanilla wooden tools replaced by flint.
@@ -78,3 +80,29 @@
 	lamp_uses_electrum = false
 	#Jukebox uses steel instead of electrum.
 	jukebox_uses_electrum = false
+
+[loot]
+	#Add a chance for Copper Screws to be found in archaeology loot.
+	generate_copper_screw_loot = true
+	#Chance for Copper Screws to be found in archaeology loot (0.0 to 1.0).
+	# Default: 0.07
+	# Range: 0.0 ~ 1.0
+	copper_screw_loot_chance = 0.07
+
+[weapons]
+	#Allow drowned to spawn holding javelins.
+	drowned_spawn_with_javelins = true
+	#Allow regular zombies, husks, and zombie villagers to naturally spawn holding iron javelins.
+	zombies_spawn_with_javelins = true
+	#Allow all zombie-type mobs (Zombies, Husks, Drowned, Zombie Villagers, Zombified Piglins) to throw javelins when held.
+	zombies_throw_javelins = true
+	#Allow all zombie-type mobs to throw tridents when held.
+	zombies_throw_tridents = true
+	#Remove the charging movement slowdown and allow sprinting while aiming a javelin.
+	remove_javelin_slowdown = true
+	#Remove the charging movement slowdown and allow tridents to deal critical damage when sprint-thrown or thrown while falling (matching javelins).
+	enhanced_tridents = false
+	#Multiplier applied to javelin melee attack damage to determine ranged throw damage (1.0 = equal to melee damage).
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	javelin_ranged_damage_multiplier = 1.0

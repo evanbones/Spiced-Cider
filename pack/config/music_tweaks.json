@@ -7,8 +7,10 @@
     "minecraft:music_disc.mellohi"
   ],
   "music_frequency": "DEFAULT",
-  "show_music_toast": false,
+  "show_music_toast": true,
   "better_jukeboxes": true,
   "jukebox_distance": 64.0,
-  "permanent_toast_in_options": true
+  "permanent_toast_in_options": true,
+  "play_toast_sound": true,
+  "play_music_when_paused": true
 }
