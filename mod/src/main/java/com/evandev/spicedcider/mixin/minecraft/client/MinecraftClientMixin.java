@@ -30,9 +30,6 @@ public abstract class MinecraftClientMixin {
     @Nullable
     public Screen screen;
 
-    @Shadow
-    public abstract RenderBuffers renderBuffers();
-
     @ModifyArg(
             method = "updateTitle",
             at = @At(
@@ -68,13 +65,7 @@ public abstract class MinecraftClientMixin {
     private void spicedcider$onRunTick(boolean renderLevel, CallbackInfo callback) {
         if (SpicedCiderConfig.CLIENT.oldProgressScreen.get() && !renderLevel) {
             if (this.screen instanceof OldProgressScreen progressScreen) {
-                Minecraft minecraft = Minecraft.getInstance();
-                GuiGraphics graphics = new GuiGraphics(minecraft, this.renderBuffers().bufferSource());
-                double mouseX = minecraft.mouseHandler.xpos() * (double) minecraft.getWindow().getGuiScaledWidth() / (double) minecraft.getWindow().getWidth();
-                double mouseY = minecraft.mouseHandler.ypos() * (double) minecraft.getWindow().getGuiScaledHeight() / (double) minecraft.getWindow().getHeight();
-
                 progressScreen.tick();
-                progressScreen.render(graphics, (int) mouseX, (int) mouseY, minecraft.getTimer().getGameTimeDeltaPartialTick(true));
             }
         }
     }

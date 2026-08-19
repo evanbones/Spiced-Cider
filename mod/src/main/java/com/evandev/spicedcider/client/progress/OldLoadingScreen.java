@@ -43,4 +43,11 @@ public class OldLoadingScreen extends Screen {
         ProgressRenderer.drawStageText(graphics, this.stage, this.width);
         ProgressRenderer.renderProgressWithInt(this.progressListener.getProgress());
     }
+
+    @Override
+    public void renderBackground(GuiGraphics graphics, int mouseX, int mouseY, float partialTick) {
+        this.renderPanorama(graphics, partialTick);
+        this.renderBlurredBackground(partialTick);
+        renderMenuBackgroundTexture(graphics, MENU_BACKGROUND, 0, 0, 0.0F, 0.0F, this.width, this.height);
+    }
 }

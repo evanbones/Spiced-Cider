@@ -278,9 +278,6 @@ dependencies {
     implementation "maven.modrinth:tide:NyZj7kJm"
     runtimeOnly "me.shedaniel.cloth:cloth-config-neoforge:15.0.140"
 
-    // Melancholic Hunger
-    compileOnly "maven.modrinth:melancholic_hunger:vKSreUAW"
-
     // Cook's Collection
     compileOnly "maven.modrinth:cooks-collection:0.5.5"
 
@@ -324,7 +321,10 @@ dependencies {
     compileOnly "maven.modrinth:hominid:1.3.4"
 
     // Jade
-    compileOnly "maven.modrinth:jade:15.10.5+neoforge"
+    compileOnly "maven.modrinth:jade:15.10.6+neoforge"
+
+    // Resource Pack Overrides
+    compileOnly "maven.modrinth:resource-pack-overrides:15.10.6+neoforge"
 
     // Vanilla Backport
     compileOnly "maven.modrinth:vanillabackport:rUSWdBok"
@@ -341,7 +341,10 @@ dependencies {
     compileOnly "maven.modrinth:slime-time:1.2.2+1.21.1-neoforge"
 
     // Vista
-    compileOnly "maven.modrinth:vista_tv:1.21.1-5.2.5"
+    compileOnly "maven.modrinth:vista_tv:lRpm2YCs"
+
+    // Bountiful Fares
+    compileOnly "maven.modrinth:bountiful-fares:3EC8C1GU"
 
     // Alloyed
     runtimeOnly "maven.modrinth:create-alloyed:3.0.11+1.21.1-neoforge"

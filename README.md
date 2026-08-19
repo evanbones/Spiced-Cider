@@ -7,19 +7,13 @@ and its core mod into a single repo.
 
 ## Core Mod Features
 
-**Hammers & Workstone**
-
-Place an item on the workstone and hit it with a hammer for chance-based, multi-output crafting (e.g. cobblestone →
-gravel → sand/flint), with EMI recipe support.
-
 **Anvil-Free Item Renaming**
 
 Combine a named item tag with any item in the crafting grid to rename it.
 
 **Unbreakable "Broken" Items**
 
-Enchanted, named, or elytra items become **Broken** instead of being destroyed
-when they run out of durability.
+Tools become **Broken** instead of being destroyed when they run out of durability.
 
 **Less Deadly Bed & Respawn Anchors**
 
@@ -81,8 +75,6 @@ Spiced Cider runs fine without any of these: each one only unlocks the specific 
 | [Environmental](https://modrinth.com/mod/environmental)                                                         | Removes the green leaves from Wisteria trees                                                     | 
 | [The Block Box](https://modrinth.com/mod/the-block-box) + [Every Compat](https://modrinth.com/mod/every-compat) | Registers wood-type variants (seats, palisades) for every wood type in the pack                  | 
 | [Modern World Creation](https://modrinth.com/mod/modern-world-creation)                                         | Adds a reroll button next to the world name field                                                | 
-| [Melancholic Hunger](https://modrinth.com/mod/melancholic-hunger)                                               | Hides its regeneration tooltip text from item tooltips                                           | 
-| [Nostalgic Tweaks](https://modrinth.com/mod/nostalgic-tweaks)                                                   | Fixes [Nostalgic-Tweaks #155](https://github.com/Nostalgica-Reverie/Nostalgic-Tweaks/issues/155) |
 
 ## Modifying the Core Mod
 

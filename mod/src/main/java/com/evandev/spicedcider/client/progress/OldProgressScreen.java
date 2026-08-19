@@ -135,6 +135,13 @@ public class OldProgressScreen extends ProgressScreen implements ProgressListene
     }
 
     @Override
+    public void renderBackground(GuiGraphics graphics, int mouseX, int mouseY, float partialTick) {
+        this.renderPanorama(graphics, partialTick);
+        this.renderBlurredBackground(partialTick);
+        renderMenuBackgroundTexture(graphics, MENU_BACKGROUND, 0, 0, 0.0F, 0.0F, this.width, this.height);
+    }
+
+    @Override
     public void progressStartNoAbort(Component component) {
         this.progressStart(component);
     }

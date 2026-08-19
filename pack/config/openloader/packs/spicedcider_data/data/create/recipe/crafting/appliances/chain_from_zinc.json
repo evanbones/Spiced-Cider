@@ -1,0 +1,21 @@
+{
+  "key": {
+    "C": {
+      "tag": "c:ingots/cast_iron"
+    },
+    "S": {
+      "tag": "c:nuggets/cast_iron"
+    }
+  },
+  "pattern": [
+    "S",
+    "C",
+    "S"
+  ],
+  "result": {
+    "id": "minecraft:chain",
+    "count": 8
+  },
+  "category": "misc",
+  "type": "minecraft:crafting_shaped"
+}
