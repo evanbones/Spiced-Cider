@@ -1,5 +1,5 @@
 #Enables Where Winds Blow's added grass worldgen. Changes require a world reload/restart and only affect newly generated chunks.
-enableDenseGrassWorldgen = true
+enableDenseGrassWorldgen = false
 #Multiplies dense short grass feature passes. Rounded to whole passes when biome modifiers load; changes require a world reload/restart.
 # Default: 8.0
 # Range: 0.0 ~ 8.0
@@ -36,3 +36,7 @@ overgrownGrassPatchMultiplier = 1.0
 # Default: 0.0
 # Range: 0.0 ~ 8.0
 wildWheatPatchMultiplier = 0.0
+#Multiplies coherent vanilla fern accent passes. Rounded to whole passes when biome modifiers load; changes require a world reload/restart.
+# Default: 2.0
+# Range: 0.0 ~ 8.0
+fernAccentPatchMultiplier = 2.0

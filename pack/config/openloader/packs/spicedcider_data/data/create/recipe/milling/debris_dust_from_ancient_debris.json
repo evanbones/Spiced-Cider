@@ -1,0 +1,19 @@
+﻿{
+    "type":  "create:milling",
+    "ingredients":  [
+                        {
+                            "item":  "minecraft:ancient_debris"
+                        }
+                    ],
+    "processing_time":  400,
+    "results":  [
+                    {
+                        "id":  "modestmining:debris_dust",
+                        "count":  1
+                    },
+                    {
+                        "id":  "modestmining:debris_dust",
+                        "chance":  0.2
+                    }
+                ]
+}

@@ -20,7 +20,9 @@
     },
     "worldGeneration": {
       "enablePlantedQuartz": true,
-      "enableBuriedBone": true
+      "enableBuriedBone": true,
+      "preventQuartzPlacement": false,
+      "preventBonePlacement": false
     }
   },
   "client": {}

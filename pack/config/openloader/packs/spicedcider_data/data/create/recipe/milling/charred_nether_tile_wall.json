@@ -1,0 +1,15 @@
+﻿{
+    "type":  "create:milling",
+    "ingredients":  [
+                        {
+                            "item":  "brick_and_mortar:charred_nether_tile_wall"
+                        }
+                    ],
+    "processing_time":  200,
+    "results":  [
+                    {
+                        "id":  "brick_and_mortar:charred_nether_brick",
+                        "count":  4
+                    }
+                ]
+}

@@ -1,5 +1,5 @@
 {
-  "version": 4,
+  "version": 5,
   "enabled": true,
   "avoid_overlapping": true,
   "moved_by_effects": true,
@@ -33,7 +33,8 @@
     "caverns_and_chasms:depth_gauge",
     "additionaladditions:depth_meter",
     "supplementaries:altimeter",
-    "depthmeter:depthmeter"
+    "depthmeter:depthmeter",
+    "reduced_world_infos:altimeter"
   ],
   "compass_z_items": [
     "firmaciv:sextant"
@@ -61,7 +62,9 @@
     "caverns_and_chasms:barometer",
     "firmaciv:barometer"
   ],
-  "clock_day_count_items": [],
+  "clock_day_count_items": [
+    "reduced_world_infos:attuned_clock"
+  ],
   "clock_blocks": [
     "supplementaries:clock_block"
   ],
@@ -96,10 +99,15 @@
   "biome_vertical_position": 112,
   "biome_horizontal_position_left": false,
   "biome_items": [
+    "minecraft:map",
     "minecraft:filled_map",
+    "minecraft:empty_map",
     "map_atlases:atlas",
     "map_atlases:end_atlas",
-    "map_atlases:nether_atlas"
+    "map_atlases:nether_atlas",
+    "naturescompass:naturescompass",
+    "antiqueatlas:antique_atlas",
+    "reduced_world_infos:biome_recognizer"
   ],
   "biome_blocks": [],
   "season_items": [
@@ -142,5 +150,24 @@
     "breezy:gust_gauge"
   ],
   "wind_blocks": [],
-  "compat_dead_reckoning": true
+  "compat_dead_reckoning": true,
+  "compass_lodestone_colour": -1500560,
+  "compass_recovery_colour": -7405585,
+  "moon_enable": true,
+  "moon_horizontal_position_left": false,
+  "moon_text_colour": -1507334,
+  "moon_text_colour_from_events": true,
+  "moon_vertical_position": 62,
+  "moon_reduced_info": true,
+  "moon_only_at_night": true,
+  "moon_items": [
+    "urkazmoontools:moonclock_item",
+    "tide:lunar_calendar",
+    "twilightforest:moon_dial",
+    "spectrum:crescent_clock"
+  ],
+  "moon_blocks": [
+    "tide:lunar_calendar",
+    "urkazmoontools:moonsensor_blockitem"
+  ]
 }

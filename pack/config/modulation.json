@@ -2,6 +2,9 @@
   "figura": {
     "enable_target_selectors": true
   },
+  "farmers_delight": {
+    "stoves_place_unlit": true
+  },
   "reconnectible_chains": {
     "enabled": false,
     "charge_up_ticks": 10,
@@ -10,6 +13,7 @@
   },
   "passable_foliage": {
     "enable_passable_foliage": true,
+    "enable_scaffolding_mode": false,
     "enable_pale_oak_leaves": true,
     "enable_tinted_leaves": true,
     "enable_tinted_needles": true,
@@ -18,22 +22,43 @@
     "max_drag": 0.7,
     "enable_leaf_sounds": true
   },
-  "vanilla_anvil": {
-    "remove_anvil_limit": true,
-    "no_anvil_enchant_cost": false,
-    "no_anvil_repair_cost": false,
-    "no_anvil_rename_cost": false
-  },
   "vanilla_bugfixes": {
     "fix_focus_bug": true,
     "attack_sleeping_villagers": true,
     "fix_experience_loss": true,
     "fix_resource_filter_leak": true,
-    "fix_density_memoization": true
+    "fix_horizon_line": false,
+    "fix_cave_sky": true,
+    "better_pause_freezing": true,
+    "colored_crack_particles": true,
+    "ghast_charging": true,
+    "fix_mobs_crossing_rails": true
   },
   "vanilla_gameplay": {
     "flammable_cobwebs": true,
-    "campfires_place_unlit": true
+    "campfires_place_unlit": true,
+    "campfires_ignite_entities": true,
+    "disable_axe_stripping": false,
+    "disable_copper_scraping": false,
+    "no_dinnerlava": true,
+    "ender_pearl_sound": true,
+    "cracking_spawn_eggs": true,
+    "disable_anvil_damage": true,
+    "tridents_in_void_return": true,
+    "cactus_punching_hurts": true,
+    "chaining_creepers": true,
+    "furnace_minecart_any_fuel": true,
+    "infibows": true,
+    "tridents_accept_sharpness": true,
+    "bedrock_impaling": true,
+    "nether_cauldron": true,
+    "fire_aspect_is_flint_and_steel": false,
+    "no_chest_when_targeted": false,
+    "disable_path_creation": false,
+    "disable_farmland_creation": false,
+    "disable_ender_pearl_damage": true,
+    "dispenser_shears_pumpkins": true,
+    "water_bottles_on_concrete": true
   },
   "vanilla_gui": {
     "ctrl_drag_to_crafting_grid": true,
@@ -41,13 +66,18 @@
     "disable_creative_inventory": true,
     "creative_deletion_button": true,
     "clear_button_x": 148,
-    "clear_button_y": 162
+    "clear_button_y": 162,
+    "chat_markdown": true,
+    "cursor_feedback": false
   },
   "vanilla_visual": {
     "nicer_map_colors": true,
     "waxed_item_icon_overlay": true,
     "extra_item_icon_overlays": true,
-    "better_copper_tooltips": true
+    "better_copper_tooltips": true,
+    "legible_signs": true,
+    "less_annoying_fire": true,
+    "pixel_consistent_block_drops": false
   },
   "vanilla_walls": {
     "walls_connect_to_fences": true,

@@ -1,0 +1,19 @@
+﻿{
+    "type":  "create:milling",
+    "ingredients":  [
+                        {
+                            "item":  "modestmining:raw_silver"
+                        }
+                    ],
+    "processing_time":  200,
+    "results":  [
+                    {
+                        "id":  "modestmining:silver_dust",
+                        "count":  1
+                    },
+                    {
+                        "id":  "modestmining:silver_dust",
+                        "chance":  0.5
+                    }
+                ]
+}

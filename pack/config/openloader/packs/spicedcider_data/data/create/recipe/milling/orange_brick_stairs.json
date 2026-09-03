@@ -1,0 +1,15 @@
+﻿{
+    "type":  "create:milling",
+    "ingredients":  [
+                        {
+                            "item":  "brick_and_mortar:orange_brick_stairs"
+                        }
+                    ],
+    "processing_time":  200,
+    "results":  [
+                    {
+                        "id":  "brick_and_mortar:orange_brick",
+                        "count":  3
+                    }
+                ]
+}

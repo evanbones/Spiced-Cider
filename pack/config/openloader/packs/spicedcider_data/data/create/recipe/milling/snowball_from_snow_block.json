@@ -1,0 +1,15 @@
+﻿{
+    "type":  "create:milling",
+    "ingredients":  [
+                        {
+                            "item":  "minecraft:snow_block"
+                        }
+                    ],
+    "processing_time":  100,
+    "results":  [
+                    {
+                        "id":  "minecraft:snowball",
+                        "count":  4
+                    }
+                ]
+}

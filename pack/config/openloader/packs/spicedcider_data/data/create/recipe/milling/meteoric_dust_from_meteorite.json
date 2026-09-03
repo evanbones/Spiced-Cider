@@ -1,0 +1,19 @@
+﻿{
+    "type":  "create:milling",
+    "ingredients":  [
+                        {
+                            "item":  "modestmining:meteorite"
+                        }
+                    ],
+    "processing_time":  400,
+    "results":  [
+                    {
+                        "id":  "modestmining:meteoric_dust",
+                        "count":  1
+                    },
+                    {
+                        "id":  "modestmining:meteoric_dust",
+                        "chance":  0.2
+                    }
+                ]
+}

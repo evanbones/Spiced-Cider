@@ -1,0 +1,19 @@
+﻿{
+    "type":  "create:milling",
+    "ingredients":  [
+                        {
+                            "item":  "minecraft:melon_slice"
+                        }
+                    ],
+    "processing_time":  50,
+    "results":  [
+                    {
+                        "id":  "minecraft:melon_seeds",
+                        "count":  1
+                    },
+                    {
+                        "id":  "minecraft:melon_seeds",
+                        "chance":  0.5
+                    }
+                ]
+}

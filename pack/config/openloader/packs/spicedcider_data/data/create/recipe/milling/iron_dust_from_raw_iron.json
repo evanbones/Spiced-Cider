@@ -1,0 +1,19 @@
+﻿{
+    "type":  "create:milling",
+    "ingredients":  [
+                        {
+                            "item":  "minecraft:raw_iron"
+                        }
+                    ],
+    "processing_time":  200,
+    "results":  [
+                    {
+                        "id":  "modestmining:iron_dust",
+                        "count":  1
+                    },
+                    {
+                        "id":  "modestmining:iron_dust",
+                        "chance":  0.5
+                    }
+                ]
+}

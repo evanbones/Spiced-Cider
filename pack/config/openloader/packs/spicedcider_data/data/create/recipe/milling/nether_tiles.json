@@ -1,0 +1,15 @@
+﻿{
+    "type":  "create:milling",
+    "ingredients":  [
+                        {
+                            "item":  "brick_and_mortar:nether_tiles"
+                        }
+                    ],
+    "processing_time":  200,
+    "results":  [
+                    {
+                        "id":  "minecraft:nether_brick",
+                        "count":  4
+                    }
+                ]
+}

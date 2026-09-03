@@ -1,0 +1,15 @@
+﻿{
+    "type":  "create:milling",
+    "ingredients":  [
+                        {
+                            "item":  "minecraft:brick_wall"
+                        }
+                    ],
+    "processing_time":  200,
+    "results":  [
+                    {
+                        "id":  "minecraft:brick",
+                        "count":  4
+                    }
+                ]
+}

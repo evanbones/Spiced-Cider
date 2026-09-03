@@ -1,0 +1,712 @@
+{
+  "version": 1,
+  "tabs": {
+    "bountifulfares:bountiful_fares": {
+      "background": "minecraft:textures/block/farmland_moist.png",
+      "index": 5,
+      "deleted": true,
+      "roots": [
+        "bountifulfares:bountiful_fares"
+      ],
+      "positions": {
+        "bountifulfares:bountiful_fares": [
+          0,
+          182
+        ],
+        "bountifulfares:plant_on_trellis": [
+          32,
+          324
+        ],
+        "bountifulfares:obtain_sun_hat": [
+          32,
+          270
+        ],
+        "bountifulfares:obtain_spongekin_seeds": [
+          32,
+          243
+        ],
+        "bountifulfares:place_gristmill": [
+          32,
+          182
+        ],
+        "bountifulfares:obtain_tiffin": [
+          32,
+          13
+        ],
+        "bountifulfares:obtain_flour": [
+          64,
+          202
+        ],
+        "bountifulfares:throw_flour_as_cover": [
+          96,
+          216
+        ],
+        "bountifulfares:place_all_baked_goods": [
+          96,
+          189
+        ],
+        "bountifulfares:obtain_feldspar": [
+          64,
+          162
+        ],
+        "bountifulfares:make_first_food": [
+          32,
+          351
+        ],
+        "bountifulfares:obtain_ceramic_clay": [
+          96,
+          162
+        ],
+        "bountifulfares:obtain_fermentation_vessel": [
+          128,
+          155
+        ],
+        "bountifulfares:pick_fruit": [
+          32,
+          94
+        ],
+        "bountifulfares:obtain_walnut": [
+          32,
+          297
+        ],
+        "bountifulfares:obtain_golden_apple_sapling": [
+          64,
+          81
+        ],
+        "bountifulfares:obtain_lemon_block": [
+          64,
+          108
+        ],
+        "bountifulfares:fill_tiffin": [
+          64,
+          27
+        ],
+        "bountifulfares:eat_all_food": [
+          64,
+          378
+        ],
+        "bountifulfares:craft_food_in_tiffin": [
+          64,
+          0
+        ],
+        "bountifulfares:obtain_artisan_brush": [
+          128,
+          195
+        ],
+        "bountifulfares:feed_wolf_mulch": [
+          64,
+          297
+        ],
+        "bountifulfares:eat_all_bad_foods": [
+          64,
+          324
+        ],
+        "bountifulfares:obtain_all_fruit": [
+          64,
+          135
+        ],
+        "bountifulfares:eat_ancient_fruit": [
+          64,
+          54
+        ],
+        "bountifulfares:obtain_tea_blends": [
+          128,
+          128
+        ],
+        "bountifulfares:eat_citrus_essence": [
+          160,
+          155
+        ],
+        "bountifulfares:obtain_spongekin": [
+          64,
+          243
+        ],
+        "bountifulfares:eat_all_candy": [
+          64,
+          351
+        ],
+        "bountifulfares:dye_leather_armor_on_armor_stand": [
+          160,
+          182
+        ],
+        "bountifulfares:obtain_golden_apple": [
+          96,
+          81
+        ],
+        "bountifulfares:place_all_tea_candles": [
+          160,
+          128
+        ],
+        "bountifulfares:acidify_effect_2_levels": [
+          192,
+          155
+        ],
+        "bountifulfares:obtain_prismarine_blossom": [
+          96,
+          243
+        ],
+        "bountifulfares:dye_ceramic_block": [
+          160,
+          209
+        ]
+      }
+    },
+    "fieldguide:root": {
+      "background": "minecraft:textures/block/oak_log.png",
+      "index": 5,
+      "deleted": true,
+      "roots": [
+        "fieldguide:root"
+      ],
+      "positions": {
+        "fieldguide:root": [
+          -2,
+          95
+        ],
+        "fieldguide:first_discovery": [
+          32,
+          94
+        ],
+        "fieldguide:mushroom_collector": [
+          64,
+          81
+        ],
+        "fieldguide:let_him_cook": [
+          64,
+          135
+        ],
+        "fieldguide:animal_expert": [
+          64,
+          108
+        ],
+        "fieldguide:quick_review": [
+          64,
+          0
+        ],
+        "fieldguide:monster_hunter": [
+          64,
+          189
+        ],
+        "fieldguide:invisible_scan": [
+          64,
+          54
+        ],
+        "fieldguide:gem_alert": [
+          64,
+          162
+        ],
+        "fieldguide:enderman_scan": [
+          64,
+          27
+        ]
+      }
+    },
+    "hominid:adventure/hematoma": {
+      "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+      "index": 5,
+      "deleted": true,
+      "roots": [
+        "hominid:adventure/hematoma"
+      ],
+      "positions": {
+        "hominid:adventure/hematoma": [
+          0,
+          0
+        ]
+      }
+    },
+    "architects_palette:main/root": {
+      "background": "architects_palette:textures/block/myonite_bricks.png",
+      "index": 5,
+      "deleted": true,
+      "roots": [
+        "architects_palette:main/root"
+      ]
+    },
+    "tide:root": {
+      "background": "tide:textures/gui/advancements/backgrounds/prismarine.png",
+      "index": 5,
+      "deleted": true,
+      "roots": [
+        "tide:root"
+      ]
+    }
+  },
+  "deleted_advancements": {
+    "hominid:adventure/hematoma": {
+      "owner": "reliable_advancements:standalone",
+      "tab": "hominid:adventure/hematoma",
+      "title": "{\"translate\":\"advancements.adventure.hematoma.title\"}",
+      "icon": "hominid:music_disc_hematoma"
+    },
+    "architects_palette:main/root": {
+      "owner": "architects_palette:main/root",
+      "tab": "architects_palette:main/root",
+      "title": "{\"translate\":\"architects_palette.advancement.root\"}",
+      "icon": "architects_palette:chiseled_abyssaline_bricks"
+    },
+    "architects_palette:main/buy_pipe": {
+      "owner": "architects_palette:main/root",
+      "tab": "architects_palette:main/root",
+      "title": "{\"translate\":\"architects_palette.advancement.buy_pipe\"}",
+      "icon": "architects_palette:pipe"
+    },
+    "architects_palette:main/buy_entrails": {
+      "owner": "architects_palette:main/root",
+      "tab": "architects_palette:main/root",
+      "title": "{\"translate\":\"architects_palette.advancement.buy_entrails\"}",
+      "icon": "architects_palette:entrails"
+    },
+    "architects_palette:main/place_entrails": {
+      "owner": "architects_palette:main/root",
+      "tab": "architects_palette:main/root",
+      "title": "{\"translate\":\"architects_palette.advancement.place_entrails\"}",
+      "icon": "architects_palette:entrails"
+    },
+    "architects_palette:main/find_warpstone": {
+      "owner": "architects_palette:main/root",
+      "tab": "architects_palette:main/root",
+      "title": "{\"translate\":\"architects_palette.advancement.find_warpstone\"}",
+      "icon": "architects_palette:warpstone"
+    },
+    "architects_palette:main/buy_plating": {
+      "owner": "architects_palette:main/root",
+      "tab": "architects_palette:main/root",
+      "title": "{\"translate\":\"architects_palette.advancement.buy_plating\"}",
+      "icon": "architects_palette:plating_block"
+    },
+    "architects_palette:main/buy_spool": {
+      "owner": "architects_palette:main/root",
+      "tab": "architects_palette:main/root",
+      "title": "{\"translate\":\"architects_palette.advancement.buy_spool\"}",
+      "icon": "architects_palette:spool"
+    },
+    "architects_palette:main/buy_fish_block": {
+      "owner": "architects_palette:main/root",
+      "tab": "architects_palette:main/root",
+      "title": "{\"translate\":\"architects_palette.advancement.buy_fish_block\"}",
+      "icon": "architects_palette:cod_log"
+    },
+    "architects_palette:main/find_twisted_sapling": {
+      "owner": "architects_palette:main/root",
+      "tab": "architects_palette:main/root",
+      "title": "{\"translate\":\"architects_palette.advancement.find_twisted_sapling\"}",
+      "icon": "architects_palette:twisted_sapling"
+    },
+    "architects_palette:main/totem_carving": {
+      "owner": "architects_palette:main/root",
+      "tab": "architects_palette:main/root",
+      "title": "{\"translate\":\"architects_palette.advancement.totem_carving\"}",
+      "icon": "architects_palette:placid_acacia_totem"
+    },
+    "architects_palette:main/buy_celestial_stone": {
+      "owner": "architects_palette:main/root",
+      "tab": "architects_palette:main/root",
+      "title": "{\"translate\":\"architects_palette.advancement.buy_celestial_stone\"}",
+      "icon": "architects_palette:sunstone"
+    },
+    "bountifulfares:bountiful_fares": {
+      "owner": "bountifulfares:bountiful_fares",
+      "tab": "bountifulfares:bountiful_fares",
+      "title": "{\"translate\":\"advancement.bountifulfares.bountiful_fares\"}",
+      "icon": "bountifulfares:passion_fruit"
+    },
+    "bountifulfares:make_first_food": {
+      "owner": "bountifulfares:bountiful_fares",
+      "tab": "bountifulfares:bountiful_fares",
+      "title": "{\"translate\":\"advancement.bountifulfares.make_first_food\"}",
+      "icon": "bountifulfares:leek_stew"
+    },
+    "bountifulfares:pick_fruit": {
+      "owner": "bountifulfares:bountiful_fares",
+      "tab": "bountifulfares:bountiful_fares",
+      "title": "{\"translate\":\"advancement.bountifulfares.pick_fruit\"}",
+      "icon": "minecraft:apple"
+    },
+    "bountifulfares:obtain_walnut": {
+      "owner": "bountifulfares:bountiful_fares",
+      "tab": "bountifulfares:bountiful_fares",
+      "title": "{\"translate\":\"advancement.bountifulfares.obtain_walnut\"}",
+      "icon": "bountifulfares:walnut"
+    },
+    "bountifulfares:plant_on_trellis": {
+      "owner": "bountifulfares:bountiful_fares",
+      "tab": "bountifulfares:bountiful_fares",
+      "title": "{\"translate\":\"advancement.bountifulfares.plant_on_trellis\"}",
+      "icon": "bountifulfares:trellis"
+    },
+    "bountifulfares:obtain_golden_apple_sapling": {
+      "owner": "bountifulfares:bountiful_fares",
+      "tab": "bountifulfares:bountiful_fares",
+      "title": "{\"translate\":\"advancement.bountifulfares.obtain_golden_apple_sapling\"}",
+      "icon": "bountifulfares:golden_apple_sapling"
+    },
+    "bountifulfares:obtain_lemon_block": {
+      "owner": "bountifulfares:bountiful_fares",
+      "tab": "bountifulfares:bountiful_fares",
+      "title": "{\"translate\":\"advancement.bountifulfares.how_easy\"}",
+      "icon": "bountifulfares:lemon"
+    },
+    "bountifulfares:eat_all_food": {
+      "owner": "bountifulfares:bountiful_fares",
+      "tab": "bountifulfares:bountiful_fares",
+      "title": "{\"translate\":\"advancement.bountifulfares.eat_all_food\"}",
+      "icon": "bountifulfares:crusted_beef"
+    },
+    "bountifulfares:feed_wolf_mulch": {
+      "owner": "bountifulfares:bountiful_fares",
+      "tab": "bountifulfares:bountiful_fares",
+      "title": "{\"translate\":\"advancement.bountifulfares.feed_wolf_mulch\"}",
+      "icon": "bountifulfares:walnut_mulch"
+    },
+    "bountifulfares:eat_all_bad_foods": {
+      "owner": "bountifulfares:bountiful_fares",
+      "tab": "bountifulfares:bountiful_fares",
+      "title": "{\"translate\":\"advancement.bountifulfares.eat_all_bad_foods\"}",
+      "icon": "minecraft:chicken"
+    },
+    "bountifulfares:obtain_all_fruit": {
+      "owner": "bountifulfares:bountiful_fares",
+      "tab": "bountifulfares:bountiful_fares",
+      "title": "{\"translate\":\"advancement.bountifulfares.obtain_all_fruit\"}",
+      "icon": "bountifulfares:plum"
+    },
+    "bountifulfares:eat_ancient_fruit": {
+      "owner": "bountifulfares:bountiful_fares",
+      "tab": "bountifulfares:bountiful_fares",
+      "title": "{\"translate\":\"advancement.bountifulfares.eat_ancient_fruit\"}",
+      "icon": "bountifulfares:hoary_apple"
+    },
+    "bountifulfares:obtain_sun_hat": {
+      "owner": "bountifulfares:bountiful_fares",
+      "tab": "bountifulfares:bountiful_fares",
+      "title": "{\"translate\":\"advancement.bountifulfares.obtain_sun_hat\"}",
+      "icon": "bountifulfares:sun_hat"
+    },
+    "bountifulfares:obtain_spongekin_seeds": {
+      "owner": "bountifulfares:bountiful_fares",
+      "tab": "bountifulfares:bountiful_fares",
+      "title": "{\"translate\":\"advancement.bountifulfares.obtain_spongekin_seeds\"}",
+      "icon": "bountifulfares:spongekin_seeds"
+    },
+    "bountifulfares:place_gristmill": {
+      "owner": "bountifulfares:bountiful_fares",
+      "tab": "bountifulfares:bountiful_fares",
+      "title": "{\"translate\":\"advancement.bountifulfares.place_gristmill\"}",
+      "icon": "bountifulfares:gristmill"
+    },
+    "bountifulfares:obtain_tiffin": {
+      "owner": "bountifulfares:bountiful_fares",
+      "tab": "bountifulfares:bountiful_fares",
+      "title": "{\"translate\":\"advancement.bountifulfares.obtain_tiffin\"}",
+      "icon": "bountifulfares:shulker_tiffin"
+    },
+    "bountifulfares:obtain_flour": {
+      "owner": "bountifulfares:bountiful_fares",
+      "tab": "bountifulfares:bountiful_fares",
+      "title": "{\"translate\":\"advancement.bountifulfares.obtain_flour\"}",
+      "icon": "bountifulfares:flour"
+    },
+    "bountifulfares:throw_flour_as_cover": {
+      "owner": "bountifulfares:bountiful_fares",
+      "tab": "bountifulfares:bountiful_fares",
+      "title": "{\"translate\":\"advancement.bountifulfares.throw_flour_as_cover\"}",
+      "icon": "bountifulfares:flour"
+    },
+    "bountifulfares:place_all_baked_goods": {
+      "owner": "bountifulfares:bountiful_fares",
+      "tab": "bountifulfares:bountiful_fares",
+      "title": "{\"translate\":\"advancement.bountifulfares.place_all_baked_goods\"}",
+      "icon": "bountifulfares:artisan_bread"
+    },
+    "bountifulfares:eat_all_candy": {
+      "owner": "bountifulfares:bountiful_fares",
+      "tab": "bountifulfares:bountiful_fares",
+      "title": "{\"translate\":\"advancement.bountifulfares.eat_all_candy\"}",
+      "icon": "bountifulfares:candy"
+    },
+    "bountifulfares:obtain_golden_apple": {
+      "owner": "bountifulfares:bountiful_fares",
+      "tab": "bountifulfares:bountiful_fares",
+      "title": "{\"translate\":\"advancement.bountifulfares.obtain_golden_apple\"}",
+      "icon": "minecraft:golden_apple"
+    },
+    "bountifulfares:obtain_feldspar": {
+      "owner": "bountifulfares:bountiful_fares",
+      "tab": "bountifulfares:bountiful_fares",
+      "title": "{\"translate\":\"advancement.bountifulfares.obtain_feldspar\"}",
+      "icon": "bountifulfares:feldspar"
+    },
+    "bountifulfares:obtain_ceramic_clay": {
+      "owner": "bountifulfares:bountiful_fares",
+      "tab": "bountifulfares:bountiful_fares",
+      "title": "{\"translate\":\"advancement.bountifulfares.obtain_ceramic_clay\"}",
+      "icon": "bountifulfares:ceramic_clay"
+    },
+    "bountifulfares:obtain_fermentation_vessel": {
+      "owner": "bountifulfares:bountiful_fares",
+      "tab": "bountifulfares:bountiful_fares",
+      "title": "{\"translate\":\"advancement.bountifulfares.obtain_fermentation_vessel\"}",
+      "icon": "bountifulfares:fermentation_vessel"
+    },
+    "bountifulfares:fill_tiffin": {
+      "owner": "bountifulfares:bountiful_fares",
+      "tab": "bountifulfares:bountiful_fares",
+      "title": "{\"translate\":\"advancement.bountifulfares.fill_tiffin\"}",
+      "icon": "bountifulfares:purple_shulker_tiffin"
+    },
+    "bountifulfares:craft_food_in_tiffin": {
+      "owner": "bountifulfares:bountiful_fares",
+      "tab": "bountifulfares:bountiful_fares",
+      "title": "{\"translate\":\"advancement.bountifulfares.craft_food_in_tiffin\"}",
+      "icon": "bountifulfares:white_shulker_tiffin"
+    },
+    "bountifulfares:obtain_artisan_brush": {
+      "owner": "bountifulfares:bountiful_fares",
+      "tab": "bountifulfares:bountiful_fares",
+      "title": "{\"translate\":\"advancement.bountifulfares.obtain_artisan_brush\"}",
+      "icon": "bountifulfares:artisan_brush"
+    },
+    "bountifulfares:obtain_tea_blends": {
+      "owner": "bountifulfares:bountiful_fares",
+      "tab": "bountifulfares:bountiful_fares",
+      "title": "{\"translate\":\"advancement.bountifulfares.obtain_tea_blends\"}",
+      "icon": "bountifulfares:tea_leaves"
+    },
+    "bountifulfares:eat_citrus_essence": {
+      "owner": "bountifulfares:bountiful_fares",
+      "tab": "bountifulfares:bountiful_fares",
+      "title": "{\"translate\":\"advancement.bountifulfares.eat_citrus_essence\"}",
+      "icon": "bountifulfares:citrus_essence"
+    },
+    "bountifulfares:obtain_spongekin": {
+      "owner": "bountifulfares:bountiful_fares",
+      "tab": "bountifulfares:bountiful_fares",
+      "title": "{\"translate\":\"advancement.bountifulfares.obtain_spongekin\"}",
+      "icon": "bountifulfares:spongekin"
+    },
+    "bountifulfares:dye_leather_armor_on_armor_stand": {
+      "owner": "bountifulfares:bountiful_fares",
+      "tab": "bountifulfares:bountiful_fares",
+      "title": "{\"translate\":\"advancement.bountifulfares.dye_leather_armor_on_armor_stand\"}",
+      "icon": "minecraft:leather_leggings"
+    },
+    "bountifulfares:place_all_tea_candles": {
+      "owner": "bountifulfares:bountiful_fares",
+      "tab": "bountifulfares:bountiful_fares",
+      "title": "{\"translate\":\"advancement.bountifulfares.place_all_tea_candles\"}",
+      "icon": "bountifulfares:green_tea_candle"
+    },
+    "bountifulfares:acidify_effect_2_levels": {
+      "owner": "bountifulfares:bountiful_fares",
+      "tab": "bountifulfares:bountiful_fares",
+      "title": "{\"translate\":\"advancement.bountifulfares.acidify_effect_2_levels\"}",
+      "icon": "minecraft:potion"
+    },
+    "bountifulfares:obtain_prismarine_blossom": {
+      "owner": "bountifulfares:bountiful_fares",
+      "tab": "bountifulfares:bountiful_fares",
+      "title": "{\"translate\":\"advancement.bountifulfares.obtain_prismarine_blossom\"}",
+      "icon": "bountifulfares:prismarine_blossom"
+    },
+    "bountifulfares:dye_ceramic_block": {
+      "owner": "bountifulfares:bountiful_fares",
+      "tab": "bountifulfares:bountiful_fares",
+      "title": "{\"translate\":\"advancement.bountifulfares.dye_ceramic_block\"}",
+      "icon": "bountifulfares:ceramic_tiles"
+    },
+    "fieldguide:root": {
+      "owner": "fieldguide:root",
+      "tab": "fieldguide:root",
+      "title": "{\"translate\":\"advancements.fieldguide.root.title\"}",
+      "icon": "minecraft:spyglass"
+    },
+    "fieldguide:first_discovery": {
+      "owner": "fieldguide:root",
+      "tab": "fieldguide:root",
+      "title": "{\"translate\":\"advancements.fieldguide.first_discovery.title\"}",
+      "icon": "minecraft:spyglass"
+    },
+    "fieldguide:mushroom_collector": {
+      "owner": "fieldguide:root",
+      "tab": "fieldguide:root",
+      "title": "{\"translate\":\"advancements.fieldguide.mushroom_collector.title\"}",
+      "icon": "minecraft:red_mushroom"
+    },
+    "fieldguide:let_him_cook": {
+      "owner": "fieldguide:root",
+      "tab": "fieldguide:root",
+      "title": "{\"translate\":\"advancements.fieldguide.let_him_cook.title\"}",
+      "icon": "minecraft:flint_and_steel"
+    },
+    "fieldguide:animal_expert": {
+      "owner": "fieldguide:root",
+      "tab": "fieldguide:root",
+      "title": "{\"translate\":\"advancements.fieldguide.animal_expert.title\"}",
+      "icon": "minecraft:pig_spawn_egg"
+    },
+    "fieldguide:quick_review": {
+      "owner": "fieldguide:root",
+      "tab": "fieldguide:root",
+      "title": "{\"translate\":\"advancements.fieldguide.quick_review.title\"}",
+      "icon": "minecraft:diamond_sword"
+    },
+    "fieldguide:monster_hunter": {
+      "owner": "fieldguide:root",
+      "tab": "fieldguide:root",
+      "title": "{\"translate\":\"advancements.fieldguide.monster_hunter.title\"}",
+      "icon": "minecraft:zombie_head"
+    },
+    "fieldguide:invisible_scan": {
+      "owner": "fieldguide:root",
+      "tab": "fieldguide:root",
+      "title": "{\"translate\":\"advancements.fieldguide.invisible_scan.title\"}",
+      "icon": "minecraft:potion"
+    },
+    "fieldguide:gem_alert": {
+      "owner": "fieldguide:root",
+      "tab": "fieldguide:root",
+      "title": "{\"translate\":\"advancements.fieldguide.gem_alert.title\"}",
+      "icon": "minecraft:diamond"
+    },
+    "fieldguide:enderman_scan": {
+      "owner": "fieldguide:root",
+      "tab": "fieldguide:root",
+      "title": "{\"translate\":\"advancements.fieldguide.enderman_scan.title\"}",
+      "icon": "minecraft:ender_pearl"
+    },
+    "tide:root": {
+      "owner": "tide:root",
+      "tab": "tide:root",
+      "title": "{\"translate\":\"advancements.tide.root.title\"}",
+      "icon": "tide:angelfish"
+    },
+    "tide:all_fishing_rods": {
+      "owner": "tide:root",
+      "tab": "tide:root",
+      "title": "{\"translate\":\"advancements.tide.all_fishing_rods.title\"}",
+      "icon": "tide:crystal_fishing_rod"
+    },
+    "tide:get_bait": {
+      "owner": "tide:root",
+      "tab": "tide:root",
+      "title": "{\"translate\":\"advancements.tide.get_bait.title\"}",
+      "icon": "tide:bait"
+    },
+    "tide:journal_halfway_completed": {
+      "owner": "tide:root",
+      "tab": "tide:root",
+      "title": "{\"translate\":\"advancements.tide.journal_halfway_completed.title\"}",
+      "icon": "tide:fishy_note"
+    },
+    "tide:pull_crate": {
+      "owner": "tide:root",
+      "tab": "tide:root",
+      "title": "{\"translate\":\"advancements.tide.pull_crate.title\"}",
+      "icon": "tide:wooden_crate"
+    },
+    "tide:catch_legendary": {
+      "owner": "tide:root",
+      "tab": "tide:root",
+      "title": "{\"translate\":\"advancements.tide.catch_legendary.title\"}",
+      "icon": "tide:shooting_starfish"
+    },
+    "tide:fish_in_lava": {
+      "owner": "tide:root",
+      "tab": "tide:root",
+      "title": "{\"translate\":\"advancements.tide.fish_in_lava.title\"}",
+      "icon": "tide:lavaproof_hook"
+    },
+    "tide:journal_completed": {
+      "owner": "tide:root",
+      "tab": "tide:root",
+      "title": "{\"translate\":\"advancements.tide.journal_completed.title\"}",
+      "icon": "tide:fishing_journal"
+    },
+    "tide:freeze_coelacanth": {
+      "owner": "tide:root",
+      "tab": "tide:root",
+      "title": "{\"translate\":\"advancements.tide.freeze_coelacanth.title\"}",
+      "icon": "tide:coelacanth"
+    },
+    "tide:catch_midas_with_midas_rod": {
+      "owner": "tide:root",
+      "tab": "tide:root",
+      "title": "{\"translate\":\"advancements.tide.catch_midas_with_midas_rod.title\"}",
+      "icon": "tide:midas_fish"
+    },
+    "tide:release_pupfish": {
+      "owner": "tide:root",
+      "tab": "tide:root",
+      "title": "{\"translate\":\"advancements.tide.release_pupfish.title\"}",
+      "icon": "tide:devils_hole_pupfish"
+    },
+    "tide:fish_in_void": {
+      "owner": "tide:root",
+      "tab": "tide:root",
+      "title": "{\"translate\":\"advancements.tide.fish_in_void.title\"}",
+      "icon": "tide:void_hook"
+    }
+  },
+  "derived_presentation": {
+    "architects_palette:main/root": {
+      "title": "Architect\u0027s Palette",
+      "icon": "architects_palette:chiseled_abyssaline_bricks",
+      "background": "architects_palette:textures/block/myonite_bricks.png"
+    },
+    "fieldguide:root": {
+      "title": "Field Guide",
+      "icon": "minecraft:spyglass",
+      "background": "minecraft:textures/block/oak_log.png"
+    },
+    "tide:root": {
+      "title": "Tide",
+      "icon": "tide:angelfish",
+      "background": "tide:textures/gui/advancements/backgrounds/prismarine.png"
+    },
+    "bountifulfares:bountiful_fares": {
+      "title": "Bountiful Fares",
+      "icon": "bountifulfares:passion_fruit",
+      "background": "minecraft:textures/block/farmland_moist.png"
+    },
+    "hominid:adventure/hematoma": {
+      "title": "Dracula Flow",
+      "icon": "hominid:music_disc_hematoma"
+    },
+    "minecraft:story/root": {
+      "title": "Minecraft",
+      "icon": "minecraft:grass_block",
+      "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
+    },
+    "farmersdelight:main/root": {
+      "title": "Farmer\u0027s Delight",
+      "icon": "farmersdelight:cooking_pot",
+      "background": "minecraft:textures/block/bricks.png"
+    },
+    "create:root": {
+      "title": "Welcome to Create",
+      "icon": "create:brass_hand",
+      "background": "create:textures/gui/advancements.png"
+    },
+    "minecraft:end/root": {
+      "title": "The End",
+      "icon": "minecraft:end_stone",
+      "background": "minecraft:textures/gui/advancements/backgrounds/end.png"
+    },
+    "minecraft:nether/root": {
+      "title": "Nether",
+      "icon": "minecraft:red_nether_bricks",
+      "background": "minecraft:textures/gui/advancements/backgrounds/nether.png"
+    },
+    "minecraft:husbandry/root": {
+      "title": "Husbandry",
+      "icon": "minecraft:hay_block",
+      "background": "minecraft:textures/gui/advancements/backgrounds/husbandry.png"
+    },
+    "minecraft:adventure/root": {
+      "title": "Adventure",
+      "icon": "minecraft:map",
+      "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png"
+    }
+  }
+}

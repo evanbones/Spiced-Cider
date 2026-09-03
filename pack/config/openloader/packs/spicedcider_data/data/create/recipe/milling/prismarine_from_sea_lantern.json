@@ -1,0 +1,19 @@
+﻿{
+    "type":  "create:milling",
+    "ingredients":  [
+                        {
+                            "item":  "minecraft:sea_lantern"
+                        }
+                    ],
+    "processing_time":  200,
+    "results":  [
+                    {
+                        "id":  "minecraft:prismarine_shard",
+                        "count":  4
+                    },
+                    {
+                        "id":  "minecraft:prismarine_crystals",
+                        "count":  5
+                    }
+                ]
+}

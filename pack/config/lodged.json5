@@ -7,7 +7,7 @@
 	},
 	"arrowRecovery": {
 		"enableArrowRecovery": true,
-		"recoveryChance": 0.5,
+		"recoveryChance": 1.0,
 		"maxTrackedArrowsPerEntity": 8,
 		"recoverPlayerArrowsOnly": true,
 		"recoverMobArrows": true,
@@ -23,17 +23,17 @@
 		]
 	},
 	"arrowBreakage": {
-		"enableArrowBreakOnEntityHit": true,
-		"enableArrowBreakOnBlockHit": true,
-		"enableMobArrowBreak": true,
+		"enableArrowBreakOnEntityHit": false,
+		"enableArrowBreakOnBlockHit": false,
+		"enableMobArrowBreak": false,
 		"regularArrowImpactBreakChance": 0.02,
 		"mobArrowImpactBreakChance": 0.0,
 		"infinityArrowImpactBreakChance": 0.0
 	},
 	"playerArrowRemoval": {
-		"enablePlayerArrowRemoval": true,
-		"showInventoryTurnHint": true,
-		"showInventoryTurnHintTooltip": true,
+		"enablePlayerArrowRemoval": false,
+		"showInventoryTurnHint": false,
+		"showInventoryTurnHintTooltip": false,
 		"enableArrowRemovalAnimation": true,
 		"arrowRemovalAnimationSpeedMultiplier": 1.0,
 		"playerArrowRemovalHeadSuccessChance": 0.5,
@@ -48,14 +48,14 @@
 		"maxRemovablePlayerArrows": 0,
 		"inWorldBodyArrowRemovalMinTicks": 40,
 		"inWorldBodyArrowRemovalMaxTicks": 60,
-		"enableLodgedArrowDizziness": true,
+		"enableLodgedArrowDizziness": false,
 		"lodgedArrowDizzinessMinArrows": 4,
 		"lodgedArrowDizzinessPercentOfMax": 0.5,
 		"lodgedArrowDizzinessDuration": 80,
 		"lodgedArrowDizzinessRefreshInterval": 20
 	},
 	"tamedMobArrowRemoval": {
-		"enableTamedMobArrowRemoval": true,
+		"enableTamedMobArrowRemoval": false,
 		"requireMobOwnership": false,
 		"tamedMobArrowRemovalCausesBleeding": false,
 		"tamedMobArrowRemovalParticles": true,
@@ -68,7 +68,7 @@
 		"tamedMobArrowRemovalMaxTicks": 60
 	},
 	"arrowDepth": {
-		"enableArrowDepthTiers": true,
+		"enableArrowDepthTiers": false,
 		"deepLodgedHeadChance": 0.06,
 		"deepLodgedChestChance": 0.1,
 		"deepLodgedArmChance": 0.02,
@@ -78,7 +78,7 @@
 		"shallowArmChance": 0.78,
 		"shallowLegChance": 0.8,
 		"velocityBonusStart": 2.2,
-		"velocityBonusRange": 1.4,
+		"velocityBonusRange": 1.4000000000000001,
 		"velocityDeepLodgedMaxBonus": 0.12,
 		"velocityShallowMaxPenalty": 0.18,
 		"criticalDeepLodgedBonus": 0.08,
@@ -128,7 +128,7 @@
 		"enableArmorArrowLodging": true,
 		"recoverMobArmorArrows": true,
 		"renderArmorArrows": true,
-		"enableArmorArrowDurabilityPenalty": true,
+		"enableArmorArrowDurabilityPenalty": false,
 		"maxTrackedArrowsPerArmorPiece": 4,
 		"armorArrowBasePenetrationChance": 0.72,
 		"armorArrowDefensePenaltyPerPoint": 0.055,
@@ -145,12 +145,12 @@
 		"armorArrowExtraDurabilityLossAmount": 1
 	},
 	"legShotSlowness": {
-		"enableLegShotSlowness": true,
+		"enableLegShotSlowness": false,
 		"legShotSlownessDuration": 40,
 		"legShotSlownessLevel": 1
 	},
 	"bleedingRules": {
-		"enableBleeding": true,
+		"enableBleeding": false,
 		"arrowRemovalCausesBleeding": true,
 		"enchantsCauseBleeding": true,
 		"weaponsCauseBleeding": false,

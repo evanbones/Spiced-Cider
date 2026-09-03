@@ -1,0 +1,19 @@
+﻿{
+    "type":  "create:milling",
+    "ingredients":  [
+                        {
+                            "item":  "minecraft:raw_copper"
+                        }
+                    ],
+    "processing_time":  200,
+    "results":  [
+                    {
+                        "id":  "modestmining:copper_dust",
+                        "count":  1
+                    },
+                    {
+                        "id":  "modestmining:copper_dust",
+                        "chance":  0.5
+                    }
+                ]
+}

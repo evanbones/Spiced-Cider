@@ -1,0 +1,31 @@
+﻿{
+    "type":  "create:milling",
+    "ingredients":  [
+                        {
+                            "item":  "minecraft:pumpkin"
+                        }
+                    ],
+    "processing_time":  100,
+    "results":  [
+                    {
+                        "id":  "minecraft:pumpkin_seeds",
+                        "count":  4
+                    },
+                    {
+                        "id":  "minecraft:pumpkin_seeds",
+                        "chance":  0.5
+                    },
+                    {
+                        "id":  "minecraft:pumpkin_seeds",
+                        "chance":  0.5
+                    },
+                    {
+                        "id":  "minecraft:pumpkin_seeds",
+                        "chance":  0.5
+                    },
+                    {
+                        "id":  "minecraft:pumpkin_seeds",
+                        "chance":  0.5
+                    }
+                ]
+}

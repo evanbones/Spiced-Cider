@@ -1,0 +1,19 @@
+﻿{
+    "type":  "create:milling",
+    "ingredients":  [
+                        {
+                            "item":  "minecraft:raw_gold"
+                        }
+                    ],
+    "processing_time":  200,
+    "results":  [
+                    {
+                        "id":  "modestmining:gold_dust",
+                        "count":  1
+                    },
+                    {
+                        "id":  "modestmining:gold_dust",
+                        "chance":  0.5
+                    }
+                ]
+}
