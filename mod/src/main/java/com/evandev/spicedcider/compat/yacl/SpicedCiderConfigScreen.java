@@ -38,6 +38,7 @@ public class SpicedCiderConfigScreen {
                         .option(toggle("endCrystalHealing", common.endCrystalHealing))
                         .option(toggle("keepBrokenItems", common.keepBrokenItems))
                         .option(toggle("wolvesWearAnyArmor", common.wolvesWearAnyArmor))
+                        .option(toggle("unifiedPetArmor", startup.unifiedPetArmor))
                         .option(toggle("spiderRangedWebAttacks", common.spiderRangedWebAttacks))
                         .option(toggle("removeQuasiConnectivity", common.removeQuasiConnectivity))
                         .option(toggle("skeletonHealthNerf", startup.skeletonHealthNerf))
@@ -72,8 +73,6 @@ public class SpicedCiderConfigScreen {
                         .option(toggle("oldProgressScreen", client.oldProgressScreen))
                         .optionIf(ModList.get().isLoaded("melancholic_hunger"),
                                 toggle("hideMelancholicHungerTooltip", client.hideMelancholicHungerTooltip))
-                        .option(toggle("cloudFarPlaneFix", client.cloudFarPlaneFix))
-                        .option(intSlider("cloudFarPlaneDistance", client.cloudFarPlaneDistance, 0, 32768, 128))
                         .build())
                 .categoryIf(ModList.get().isLoaded("vista"), ConfigCategory.createBuilder()
                         .name(Component.translatable("category.spicedcider.vista"))

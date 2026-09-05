@@ -4,6 +4,7 @@ import com.evandev.spicedcider.SpicedCider;
 import com.evandev.spicedcider.registry.ModBlocks;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.neoforged.neoforge.common.data.BlockTagsProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
@@ -21,14 +22,17 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
     @Override
     protected void addTags(HolderLookup.@NotNull Provider provider) {
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
-                .add(ModBlocks.CAST_IRON_BLOCK.get());
+                .add(ModBlocks.CAST_IRON_BLOCK.get())
+                .addOptional(ResourceLocation.fromNamespaceAndPath("caverns_and_chasms", "tuff_tiles"))
+                .addOptional(ResourceLocation.fromNamespaceAndPath("caverns_and_chasms", "tuff_tile_stairs"))
+                .addOptional(ResourceLocation.fromNamespaceAndPath("caverns_and_chasms", "tuff_tile_slab"));
 
         this.tag(BlockTags.NEEDS_STONE_TOOL)
                 .add(ModBlocks.CAST_IRON_BLOCK.get());
 
-        this.tag(BlockTags.create(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("c", "storage_blocks")))
+        this.tag(BlockTags.create(ResourceLocation.fromNamespaceAndPath("c", "storage_blocks")))
                 .add(ModBlocks.CAST_IRON_BLOCK.get());
-        this.tag(BlockTags.create(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("c", "storage_blocks/cast_iron")))
+        this.tag(BlockTags.create(ResourceLocation.fromNamespaceAndPath("c", "storage_blocks/cast_iron")))
                 .add(ModBlocks.CAST_IRON_BLOCK.get());
     }
 }

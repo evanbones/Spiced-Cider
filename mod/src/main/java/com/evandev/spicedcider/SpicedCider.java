@@ -3,7 +3,7 @@ package com.evandev.spicedcider;
 import com.evandev.spicedcider.blockgrid.ClientOffsetCache;
 import com.evandev.spicedcider.blockgrid.SupportOffsets;
 import com.evandev.spicedcider.compat.everycompat.BlockBoxEveryCompatLoader;
-import com.evandev.spicedcider.compat.yacl.SpicedCiderConfigScreen;
+import com.evandev.spicedcider.compat.yacl.ConfigScreenLoader;
 import com.evandev.spicedcider.config.ConfigFileHandler;
 import com.evandev.spicedcider.config.LoggerNamePatternSelector;
 import com.evandev.spicedcider.config.Reconfigurator;
@@ -17,6 +17,7 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModContainer;
@@ -24,7 +25,7 @@ import net.neoforged.fml.ModList;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
-import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
+import net.neoforged.fml.loading.FMLEnvironment;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.TagsUpdatedEvent;
@@ -59,7 +60,9 @@ public class SpicedCider {
         modContainer.registerConfig(ModConfig.Type.COMMON, SpicedCiderConfig.COMMON_SPEC);
         modContainer.registerConfig(ModConfig.Type.CLIENT, SpicedCiderConfig.CLIENT_SPEC);
 
-        modContainer.registerExtensionPoint(IConfigScreenFactory.class, (mc, screen) -> SpicedCiderConfigScreen.create(screen));
+        if (FMLEnvironment.dist == Dist.CLIENT) {
+            ConfigScreenLoader.register(modContainer);
+        }
 
         ModEntityTypes.ENTITY_TYPES.register(modEventBus);
         ModEntityTypes.ITEMS.register(modEventBus);

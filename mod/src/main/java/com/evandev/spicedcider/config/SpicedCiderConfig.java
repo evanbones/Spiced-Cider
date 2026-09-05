@@ -31,6 +31,7 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.BooleanValue cooksCollectionDripstoneFix;
         public final ModConfigSpec.BooleanValue blockBoxWoodVariants;
         public final ModConfigSpec.BooleanValue skeletonHealthNerf;
+        public final ModConfigSpec.BooleanValue unifiedPetArmor;
 
         public Startup(ModConfigSpec.Builder builder) {
             cooksCollectionDripstoneFix = builder
@@ -47,6 +48,11 @@ public class SpicedCiderConfig {
                     .comment("Skeletons and strays get 12 max health. Requires a restart to take effect.")
                     .translation("option.spicedcider.skeletonHealthNerf")
                     .define("skeletonHealthNerf", true);
+
+            unifiedPetArmor = builder
+                    .comment("Horse armor works like wolf armor: it tanks the hit, loses durability, and is repaired by right-clicking the pet with the armor's material. Applies to horses and, with wolvesWearAnyArmor, to wolves. Requires a restart to take effect.")
+                    .translation("option.spicedcider.unifiedPetArmor")
+                    .define("unifiedPetArmor", true);
 
         }
     }
@@ -151,9 +157,6 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.ConfigValue<String> windowTitleFormat;
         public final ModConfigSpec.BooleanValue oldProgressScreen;
 
-        public final ModConfigSpec.BooleanValue cloudFarPlaneFix;
-        public final ModConfigSpec.IntValue cloudFarPlaneDistance;
-
         public final ModConfigSpec.BooleanValue vistaMirrorPerfFixes;
         public final ModConfigSpec.IntValue vistaMirrorReflectionDistance;
         public final ModConfigSpec.DoubleValue vistaMirrorUpdateFps;
@@ -211,19 +214,6 @@ public class SpicedCiderConfig {
                     .comment("Restore classic style loading/progress screen when loading worlds, saving worlds, or changing dimensions.")
                     .translation("option.spicedcider.oldProgressScreen")
                     .define("oldProgressScreen", true);
-
-            builder.pop();
-            builder.push("clouds");
-
-            cloudFarPlaneFix = builder
-                    .comment("Give clouds their own extended far clip plane instead of sharing terrain's (which is capped at render distance * 4 blocks), so cloud mods that draw clouds far away don't get hard-clipped by the GPU with no fade.")
-                    .translation("option.spicedcider.cloudFarPlaneFix")
-                    .define("cloudFarPlaneFix", true);
-
-            cloudFarPlaneDistance = builder
-                    .comment("Far clip plane distance in blocks used for the clouds draw call.")
-                    .translation("option.spicedcider.cloudFarPlaneDistance")
-                    .defineInRange("cloudFarPlaneDistance", 2048, 256, 65536);
 
             builder.pop();
             builder.push("vista");

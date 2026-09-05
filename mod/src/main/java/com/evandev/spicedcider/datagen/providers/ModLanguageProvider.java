@@ -87,6 +87,8 @@ public class ModLanguageProvider extends LanguageProvider {
         add("option.spicedcider.keepBrokenItems.tooltip", "Enchanted, named, or elytra items become \"Broken\" instead of being destroyed when they run out of durability.");
         add("option.spicedcider.wolvesWearAnyArmor", "Wolves Wear Any Armor");
         add("option.spicedcider.wolvesWearAnyArmor.tooltip", "Tamed wolves can be equipped with horse/animal armor as body armor.");
+        add("option.spicedcider.unifiedPetArmor", "Unified Pet Armor");
+        add("option.spicedcider.unifiedPetArmor.tooltip", "Horse armor works like wolf armor: it tanks the hit, loses durability, and is repaired by right-clicking the pet with the armor's material. Applies to horses and, with wolvesWearAnyArmor, to wolves. Requires a restart to take effect.");
         add("option.spicedcider.spiderRangedWebAttacks", "Spider Ranged Web Attacks");
         add("option.spicedcider.spiderRangedWebAttacks.tooltip", "Spiders switch to shooting cobweb projectiles at range when their target is trapped.");
         add("option.spicedcider.skeletonHealthNerf", "Skeleton Health Nerf");
@@ -113,11 +115,6 @@ public class ModLanguageProvider extends LanguageProvider {
         add("option.spicedcider.unmineableBlockSparks.tooltip", "Spawns sparks, plays hit sounds, and displays a warning message when attempting to mine a block that requires a stronger tool.");
         add("option.spicedcider.hideMelancholicHungerTooltip", "Hide Melancholic Hunger Tooltip");
         add("option.spicedcider.hideMelancholicHungerTooltip.tooltip", "Hides Melancholic Hunger's regeneration tooltip lines from item tooltips.");
-        add("option.spicedcider.cloudFarPlaneFix", "Cloud Far Plane Fix");
-        add("option.spicedcider.cloudFarPlaneFix.tooltip", "Gives clouds their own extended far plane instead of sharing terrain's (which is capped at render distance * 4 blocks), so far away clouds don't get hard-clipped.");
-        add("option.spicedcider.cloudFarPlaneDistance", "Cloud Far Plane Distance");
-        add("option.spicedcider.cloudFarPlaneDistance.tooltip", "Far clip plane distance in blocks used for clouds.");
-
         add("option.spicedcider.vistaMirrorPerfFixes", "Mirror Performance Fixes");
         add("option.spicedcider.vistaMirrorPerfFixes.tooltip", "Applies performance fixes to Vista's mirror/TV reflection rendering (tightened culling, shared-state thrash suppression, throttled re-renders).");
         add("option.spicedcider.vistaMirrorReflectionDistance", "Mirror Reflection Distance");

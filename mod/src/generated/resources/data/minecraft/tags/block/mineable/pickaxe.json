@@ -1,5 +1,17 @@
 {
   "values": [
-    "spicedcider:cast_iron_block"
+    "spicedcider:cast_iron_block",
+    {
+      "id": "caverns_and_chasms:tuff_tiles",
+      "required": false
+    },
+    {
+      "id": "caverns_and_chasms:tuff_tile_stairs",
+      "required": false
+    },
+    {
+      "id": "caverns_and_chasms:tuff_tile_slab",
+      "required": false
+    }
   ]
 }

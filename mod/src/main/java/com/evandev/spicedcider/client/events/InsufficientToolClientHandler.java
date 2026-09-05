@@ -35,6 +35,7 @@ public final class InsufficientToolClientHandler {
 
         Minecraft mc = Minecraft.getInstance();
         if (mc.level == null || mc.player == null) return;
+        if (mc.player.isCreative()) return;
         if (mc.hitResult == null || mc.hitResult.getType() != HitResult.Type.BLOCK) return;
 
         Player player = mc.player;

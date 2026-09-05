@@ -11,6 +11,7 @@ import net.minecraft.client.renderer.entity.layers.WolfArmorLayer;
 import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.world.entity.Crackiness;
 import net.minecraft.world.entity.animal.Wolf;
 import net.minecraft.world.item.AnimalArmorItem;
 import net.minecraft.world.item.ItemStack;
@@ -18,12 +19,25 @@ import net.minecraft.world.item.component.DyedItemColor;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
+import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
+import java.util.Map;
+
 @Mixin(WolfArmorLayer.class)
 public class WolfArmorLayerMixin {
+
+    @Unique
+    private static final Map<Crackiness.Level, ResourceLocation> CIDER$ARMOR_CRACK_LOCATIONS = Map.of(
+            Crackiness.Level.LOW,
+            ResourceLocation.withDefaultNamespace("textures/entity/wolf/wolf_armor_crackiness_low.png"),
+            Crackiness.Level.MEDIUM,
+            ResourceLocation.withDefaultNamespace("textures/entity/wolf/wolf_armor_crackiness_medium.png"),
+            Crackiness.Level.HIGH,
+            ResourceLocation.withDefaultNamespace("textures/entity/wolf/wolf_armor_crackiness_high.png")
+    );
 
     @Shadow
     @Final
@@ -57,7 +71,18 @@ public class WolfArmorLayerMixin {
             VertexConsumer vertexConsumer = bufferSource.getBuffer(RenderType.entityCutoutNoCull(texture));
             this.model.renderToBuffer(poseStack, vertexConsumer, packedLight, OverlayTexture.NO_OVERLAY, renderColor);
 
+            cider$renderCracks(poseStack, bufferSource, packedLight, stack);
+
             ci.cancel();
         }
+    }
+
+    @Unique
+    private void cider$renderCracks(PoseStack poseStack, MultiBufferSource bufferSource, int packedLight, ItemStack stack) {
+        Crackiness.Level level = Crackiness.WOLF_ARMOR.byDamage(stack);
+        if (level == Crackiness.Level.NONE) return;
+
+        VertexConsumer cracks = bufferSource.getBuffer(RenderType.entityTranslucent(CIDER$ARMOR_CRACK_LOCATIONS.get(level)));
+        this.model.renderToBuffer(poseStack, cracks, packedLight, OverlayTexture.NO_OVERLAY);
     }
 }
