@@ -1,0 +1,10 @@
+{
+  "vertex": "lodestone:base",
+  "fragment": "lodestone:blend",
+  "attributes": [ "Position" ],
+  "samplers": [
+    { "name": "DiffuseSampler" },
+    { "name": "BlendSampler" }
+  ],
+  "uniforms": []
+}
