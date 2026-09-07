@@ -1,11 +1,13 @@
 package com.evandev.spicedcider.mixin.caverns_and_chasms;
 
+import com.moulberry.mixinconstraints.annotations.IfModLoaded;
 import com.teamabnormals.caverns_and_chasms.core.registry.CCBlocks;
 import net.minecraft.world.level.material.MapColor;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.ModifyArg;
 
+@IfModLoaded("caverns_and_chasms")
 @Mixin(CCBlocks.CCProperties.class)
 public abstract class IronPlatedBricksMapColorMixin {
 

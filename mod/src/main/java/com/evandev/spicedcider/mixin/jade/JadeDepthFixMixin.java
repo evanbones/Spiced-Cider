@@ -1,6 +1,7 @@
 package com.evandev.spicedcider.mixin.jade;
 
 import com.mojang.blaze3d.systems.RenderSystem;
+import com.moulberry.mixinconstraints.annotations.IfModLoaded;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import org.spongepowered.asm.mixin.Mixin;
@@ -10,6 +11,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import snownee.jade.impl.ui.BoxElement;
 import snownee.jade.overlay.OverlayRenderer;
 
+@IfModLoaded("jade")
 @Mixin(value = OverlayRenderer.class, remap = false)
 public class JadeDepthFixMixin {
 

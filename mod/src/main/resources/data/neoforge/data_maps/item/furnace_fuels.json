@@ -1,7 +1,15 @@
 {
   "values": {
     "caverns_and_chasms:charcoal_block": {
-      "burn_time": 14400
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "caverns_and_chasms"
+        }
+      ],
+      "neoforge:value": {
+        "burn_time": 14400
+      }
     }
   }
 }

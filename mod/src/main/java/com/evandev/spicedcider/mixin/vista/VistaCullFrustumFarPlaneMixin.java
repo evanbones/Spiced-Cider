@@ -2,6 +2,7 @@ package com.evandev.spicedcider.mixin.vista;
 
 import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.evandev.spicedcider.mixin.vista.accessor.GameRendererAccessor;
+import com.moulberry.mixinconstraints.annotations.IfModLoaded;
 import net.mehvahdjukaar.vista.client.renderer.VistaLevelRenderer;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.LevelRenderer;
@@ -12,6 +13,7 @@ import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
 
+@IfModLoaded("vista")
 @Mixin(value = VistaLevelRenderer.class, remap = false)
 public class VistaCullFrustumFarPlaneMixin {
 

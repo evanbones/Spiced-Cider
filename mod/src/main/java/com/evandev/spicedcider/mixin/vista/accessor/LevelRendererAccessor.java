@@ -1,11 +1,13 @@
 package com.evandev.spicedcider.mixin.vista.accessor;
 
+import com.moulberry.mixinconstraints.annotations.IfModLoaded;
 import net.minecraft.client.CloudStatus;
 import net.minecraft.client.renderer.LevelRenderer;
 import net.minecraft.world.phys.Vec3;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.gen.Accessor;
 
+@IfModLoaded("vista")
 @Mixin(LevelRenderer.class)
 public interface LevelRendererAccessor {
     @Accessor("xTransparentOld")

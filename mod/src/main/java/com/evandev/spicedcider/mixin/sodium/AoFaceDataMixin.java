@@ -1,11 +1,13 @@
 package com.evandev.spicedcider.mixin.sodium;
 
 import com.evandev.spicedcider.config.SpicedCiderConfig;
+import com.moulberry.mixinconstraints.annotations.IfModLoaded;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
+@IfModLoaded("sodium")
 @Mixin(targets = "net.caffeinemc.mods.sodium.client.model.light.smooth.AoFaceData")
 public abstract class AoFaceDataMixin {
 

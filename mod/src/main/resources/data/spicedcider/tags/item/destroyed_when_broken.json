@@ -1,12 +1,34 @@
 {
+  "replace": false,
   "values": [
     "spicedcider:fire_striker",
-    "manual_labour:flint_hammer",
-    "modestmining:flint_hatchet",
-    "modestmining:flint_spade",
-    "modestmining:flint_mattock",
-    "modestmining:flint_hoe",
-    "modestmining:flint_blade",
-    "farmersdelight:flint_knife"
+    {
+      "id": "manual_labour:flint_hammer",
+      "required": false
+    },
+    {
+      "id": "modestmining:flint_hatchet",
+      "required": false
+    },
+    {
+      "id": "modestmining:flint_spade",
+      "required": false
+    },
+    {
+      "id": "modestmining:flint_mattock",
+      "required": false
+    },
+    {
+      "id": "modestmining:flint_hoe",
+      "required": false
+    },
+    {
+      "id": "modestmining:flint_blade",
+      "required": false
+    },
+    {
+      "id": "farmersdelight:flint_knife",
+      "required": false
+    }
   ]
 }

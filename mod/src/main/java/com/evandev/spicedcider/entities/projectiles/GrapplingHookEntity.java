@@ -3,7 +3,7 @@ package com.evandev.spicedcider.entities.projectiles;
 import com.evandev.spicedcider.interfaces.IPlayerWithGrapplingHook;
 import com.evandev.spicedcider.registry.ModEntityTypes;
 import com.evandev.spicedcider.registry.ModSounds;
-import com.li64.tide.data.rods.CustomRodManager;
+import com.evandev.spicedcider.compat.tide.TideCompat;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.BlockParticleOption;
@@ -487,7 +487,7 @@ public class GrapplingHookEntity extends Projectile {
                 rod = player.getOffhandItem();
             }
             if (!rod.isEmpty() && rod.getItem() instanceof FishingRodItem) {
-                return CustomRodManager.getLine(rod);
+                return TideCompat.getLine(rod);
             }
         }
         return ItemStack.EMPTY;
@@ -504,7 +504,7 @@ public class GrapplingHookEntity extends Projectile {
                 rod = player.getOffhandItem();
             }
             if (!rod.isEmpty() && rod.getItem() instanceof FishingRodItem) {
-                return CustomRodManager.getBobber(rod);
+                return TideCompat.getBobber(rod);
             }
         }
         return ItemStack.EMPTY;

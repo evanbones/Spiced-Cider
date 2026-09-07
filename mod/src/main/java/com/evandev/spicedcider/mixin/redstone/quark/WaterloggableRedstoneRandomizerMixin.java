@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.mixin.redstone.quark;
 
+import com.moulberry.mixinconstraints.annotations.IfModLoaded;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -19,6 +20,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import org.violetmoon.quark.content.automation.block.RedstoneRandomizerBlock;
 
+@IfModLoaded("quark")
 @Mixin(RedstoneRandomizerBlock.class)
 public abstract class WaterloggableRedstoneRandomizerMixin extends Block implements SimpleWaterloggedBlock {
 

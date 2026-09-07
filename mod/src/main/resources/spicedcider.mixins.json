@@ -2,7 +2,7 @@
   "required": true,
   "minVersion": "0.8",
   "package": "com.evandev.spicedcider.mixin",
-  "plugin": "com.evandev.spicedcider.mixin.SpicedCiderMixinPlugin",
+  "plugin": "com.moulberry.mixinconstraints.ConstraintsMixinPlugin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
     "blockgrid.BlockStateOffsetMixin",
@@ -48,7 +48,7 @@
     "redstone.caverns_and_chasms.WaterloggableRefractorMixin",
     "redstone.caverns_and_chasms.WaterloggableResistorMixin",
     "redstone.quark.WaterloggableRedstoneRandomizerMixin",
-    "slimetime.SlimeHelpersMixin",
+    "slime_time.SlimeHelpersMixin",
     "spelunkery.SpelunkeryMoresFixMixin",
     "tide.TideFishingRodItemMixin",
     "vanillabackport.ModSurfaceRuleDataMixin",

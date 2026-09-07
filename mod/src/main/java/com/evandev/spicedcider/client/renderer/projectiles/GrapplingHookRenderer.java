@@ -2,7 +2,7 @@ package com.evandev.spicedcider.client.renderer.projectiles;
 
 import com.evandev.spicedcider.SpicedCider;
 import com.evandev.spicedcider.entities.projectiles.GrapplingHookEntity;
-import com.li64.tide.registries.items.FishingLineItem;
+import com.evandev.spicedcider.compat.tide.TideCompat;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.math.Axis;
@@ -136,7 +136,7 @@ public class GrapplingHookRenderer extends EntityRenderer<GrapplingHookEntity> {
         );
 
         if (!line.isEmpty()) {
-            String colorHex = FishingLineItem.getColor(line);
+            String colorHex = TideCompat.getLineColor(line);
             try {
                 Color color = Color.decode(colorHex);
                 int colorInt = color.getRGB() & 0xFFFFFF;

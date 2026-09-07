@@ -1,6 +1,7 @@
 package com.evandev.spicedcider.mixin.environmental;
 
 import com.evandev.spicedcider.config.SpicedCiderConfig;
+import com.moulberry.mixinconstraints.annotations.IfModLoaded;
 import com.teamabnormals.blueprint.common.levelgen.feature.BlueprintTreeFeature;
 import com.teamabnormals.environmental.common.levelgen.feature.WisteriaTreeFeature;
 import net.minecraft.core.BlockPos;
@@ -13,6 +14,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
+@IfModLoaded("environmental")
 @Mixin(WisteriaTreeFeature.class)
 public class WisteriaTreeFeatureMixin {
 

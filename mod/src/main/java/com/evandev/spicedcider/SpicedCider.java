@@ -3,6 +3,7 @@ package com.evandev.spicedcider;
 import com.evandev.spicedcider.blockgrid.ClientOffsetCache;
 import com.evandev.spicedcider.blockgrid.SupportOffsets;
 import com.evandev.spicedcider.compat.everycompat.BlockBoxEveryCompatLoader;
+import com.evandev.spicedcider.compat.tide.TideCompat;
 import com.evandev.spicedcider.compat.yacl.ConfigScreenLoader;
 import com.evandev.spicedcider.config.ConfigFileHandler;
 import com.evandev.spicedcider.config.LoggerNamePatternSelector;
@@ -117,8 +118,10 @@ public class SpicedCider {
     public static void buildContents(BuildCreativeModeTabContentsEvent event) {
         CreativeModeTab.TabVisibility vis = CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS;
         if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
-            event.insertAfter(new ItemStack(Items.FISHING_ROD), new ItemStack(ModItems.GRAPPLING_HOOK.get()), vis);
-            event.insertAfter(new ItemStack(ModItems.GRAPPLING_HOOK.get()), new ItemStack(ModItems.STICKY_GRAPPLING_HOOK.get()), vis);
+            if (TideCompat.isLoaded()) {
+                event.insertAfter(new ItemStack(Items.FISHING_ROD), new ItemStack(ModItems.GRAPPLING_HOOK.get()), vis);
+                event.insertAfter(new ItemStack(ModItems.GRAPPLING_HOOK.get()), new ItemStack(ModItems.STICKY_GRAPPLING_HOOK.get()), vis);
+            }
             event.insertAfter(new ItemStack(Items.FLINT_AND_STEEL), new ItemStack(ModItems.FIRE_STRIKER.get()), vis);
             event.insertAfter(new ItemStack(Items.LEAD), new ItemStack(ModItems.RUBBER_CABLE.get()), vis);
         }

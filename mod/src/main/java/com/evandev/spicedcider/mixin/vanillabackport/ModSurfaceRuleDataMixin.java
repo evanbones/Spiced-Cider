@@ -5,6 +5,7 @@ import com.blackgear.vanillabackport.common.registries.ModBlocks;
 import com.blackgear.vanillabackport.common.registries.ModNoises;
 import com.blackgear.vanillabackport.common.worldgen.ModSurfaceRuleData;
 import com.blackgear.vanillabackport.common.worldgen.surface.SpatialNoiseThresholdConditionSource;
+import com.moulberry.mixinconstraints.annotations.IfModLoaded;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.SurfaceRules;
@@ -13,6 +14,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;
 import org.spongepowered.asm.mixin.Unique;
 
+@IfModLoaded("vanillabackport")
 @Mixin(value = ModSurfaceRuleData.class, remap = false)
 public class ModSurfaceRuleDataMixin {
 

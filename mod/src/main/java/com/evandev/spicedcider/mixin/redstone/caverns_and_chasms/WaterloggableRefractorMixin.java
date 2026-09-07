@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.mixin.redstone.caverns_and_chasms;
 
+import com.moulberry.mixinconstraints.annotations.IfModLoaded;
 import com.teamabnormals.caverns_and_chasms.common.block.RefractorBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
@@ -11,6 +12,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
+@IfModLoaded("caverns_and_chasms")
 @Mixin(RefractorBlock.class)
 public abstract class WaterloggableRefractorMixin extends Block {
 

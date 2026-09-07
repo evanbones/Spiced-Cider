@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.mixin.snowyspirit;
 
+import com.moulberry.mixinconstraints.annotations.IfModLoaded;
 import net.mehvahdjukaar.snowyspirit.client.GlowLightParticle;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.particle.SpriteSet;
@@ -9,6 +10,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
+@IfModLoaded("snowyspirit")
 @Mixin(GlowLightParticle.class)
 public abstract class GlowLightParticleMixin extends TextureSheetParticle {
 

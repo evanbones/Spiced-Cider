@@ -6,6 +6,7 @@ import com.evandev.spicedcider.registry.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.Tags;
@@ -24,8 +25,8 @@ public class ModItemTagsProvider extends ItemTagsProvider {
     @Override
     protected void addTags(HolderLookup.@NotNull Provider provider) {
         this.tag(ModTags.Items.TIDE_HOOKS)
-                .add(ModItems.GRAPPLING_HOOK.get())
-                .add(ModItems.STICKY_GRAPPLING_HOOK.get());
+                .addOptional(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "grappling_hook"))
+                .addOptional(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "sticky_grappling_hook"));
 
         this.tag(Tags.Items.TOOLS)
                 .add(ModItems.FIRE_STRIKER.get());

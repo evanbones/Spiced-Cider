@@ -4,6 +4,7 @@ import com.baisylia.cookscollection.block.ModBlocks;
 import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
+import com.moulberry.mixinconstraints.annotations.IfModLoaded;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -13,6 +14,7 @@ import org.spongepowered.asm.mixin.injection.At;
 
 import java.util.function.Supplier;
 
+@IfModLoaded("cookscollection")
 @Mixin(ModBlocks.class)
 public class CooksCollectionModBlocksMixin {
 
@@ -28,7 +30,8 @@ public class CooksCollectionModBlocksMixin {
             Supplier<Block> supplier,
             Operation<DeferredBlock<?>> original) {
 
-        if ("salted_dripstone_block".equals(name) && SpicedCiderConfig.STARTUP.cooksCollectionDripstoneFix.get()) {
+        boolean fixEnabled = !SpicedCiderConfig.STARTUP_SPEC.isLoaded() || SpicedCiderConfig.STARTUP.cooksCollectionDripstoneFix.get();
+        if ("salted_dripstone_block".equals(name) && fixEnabled) {
             supplier = () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DRIPSTONE_BLOCK));
         }
 

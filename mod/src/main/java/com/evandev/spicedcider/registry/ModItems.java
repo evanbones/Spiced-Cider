@@ -4,10 +4,11 @@ import com.evandev.spicedcider.SpicedCider;
 import com.evandev.spicedcider.content.item.InferniteCleaverItem;
 import com.evandev.spicedcider.content.item.FireStrikerItem;
 import com.evandev.spicedcider.content.item.MischiefArmorItem;
-import com.li64.tide.registries.items.FishingHookItem;
+import com.evandev.spicedcider.compat.tide.TideCompat;
 import net.minecraft.world.item.*;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
+import org.jetbrains.annotations.Nullable;
 
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(SpicedCider.MOD_ID);
@@ -15,10 +16,16 @@ public class ModItems {
     public static final DeferredItem<Item> FIRE_STRIKER = ITEMS.register("fire_striker",
             () -> new FireStrikerItem(new Item.Properties()));
 
-    public static final DeferredItem<Item> GRAPPLING_HOOK = ITEMS.register("grappling_hook",
-            () -> new FishingHookItem(new Item.Properties(), "item.spicedcider.grappling_hook.desc"));
-    public static final DeferredItem<Item> STICKY_GRAPPLING_HOOK = ITEMS.register("sticky_grappling_hook",
-            () -> new FishingHookItem(new Item.Properties(), "item.spicedcider.sticky_grappling_hook.desc"));
+    @Nullable
+    public static final DeferredItem<Item> GRAPPLING_HOOK = TideCompat.isLoaded()
+            ? ITEMS.register("grappling_hook",
+            () -> TideCompat.createHookItem(new Item.Properties(), "item.spicedcider.grappling_hook.desc"))
+            : null;
+    @Nullable
+    public static final DeferredItem<Item> STICKY_GRAPPLING_HOOK = TideCompat.isLoaded()
+            ? ITEMS.register("sticky_grappling_hook",
+            () -> TideCompat.createHookItem(new Item.Properties(), "item.spicedcider.sticky_grappling_hook.desc"))
+            : null;
 
     public static final DeferredItem<Item> RUBBER_CABLE = ITEMS.register("rubber_cable",
             () -> new Item(new Item.Properties()));

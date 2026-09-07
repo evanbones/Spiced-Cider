@@ -5,6 +5,7 @@ import com.alganaut.hominid.registry.entity.custom.Bellman;
 import com.alganaut.hominid.registry.entity.custom.Juggernaut;
 import com.alganaut.hominid.registry.entity.custom.Vampire;
 import com.alganaut.hominid.registry.event.HominidClientEvents;
+import com.moulberry.mixinconstraints.annotations.IfModLoaded;
 import net.minecraft.world.entity.ai.goal.AvoidEntityGoal;
 import net.minecraft.world.entity.monster.AbstractIllager;
 import net.minecraft.world.entity.monster.Zombie;
@@ -15,6 +16,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 // hominid man I love you but you gotta leave my console alone
+@IfModLoaded("hominid")
 @Mixin(value = HominidClientEvents.class, remap = false)
 public class HominidClientEventsMixin {
 

@@ -2,6 +2,7 @@ package com.evandev.spicedcider.mixin.vista;
 
 import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.llamalad7.mixinextras.sugar.Local;
+import com.moulberry.mixinconstraints.annotations.IfModLoaded;
 import net.mehvahdjukaar.vista.client.renderer.VistaLevelRenderer;
 import net.minecraft.client.Camera;
 import net.minecraft.client.renderer.LevelRenderer;
@@ -16,6 +17,7 @@ import org.spongepowered.asm.mixin.injection.ModifyVariable;
 import java.util.Map;
 import java.util.WeakHashMap;
 
+@IfModLoaded("vista")
 @Mixin(value = VistaLevelRenderer.class, remap = false)
 public class VistaOffAxisFrustumCacheMixin {
 

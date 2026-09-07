@@ -2,6 +2,7 @@ package com.evandev.spicedcider.registry;
 
 import com.evandev.spicedcider.SpicedCider;
 import com.evandev.spicedcider.entities.projectiles.CobwebProjectileEntity;
+import com.evandev.spicedcider.compat.tide.TideCompat;
 import com.evandev.spicedcider.entities.projectiles.GrapplingHookEntity;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
@@ -13,6 +14,8 @@ import net.minecraft.world.item.Item;
 import net.neoforged.neoforge.common.DeferredSpawnEggItem;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
+
+import org.jetbrains.annotations.Nullable;
 
 import java.util.function.Supplier;
 
@@ -29,7 +32,9 @@ public class ModEntityTypes {
                     .build(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "cobweb_projectile").toString())
     );
 
-    public static final DeferredHolder<EntityType<?>, EntityType<GrapplingHookEntity>> GRAPPLING_HOOK = registerEntityWithoutEgg("grappling_hook", () ->
+    @Nullable
+    public static final DeferredHolder<EntityType<?>, EntityType<GrapplingHookEntity>> GRAPPLING_HOOK = TideCompat.isLoaded()
+            ? registerEntityWithoutEgg("grappling_hook", () ->
             EntityType.Builder.<GrapplingHookEntity>of(GrapplingHookEntity::new, MobCategory.MISC)
                     .sized(0.25F, 0.25F)
                     .clientTrackingRange(4)
@@ -37,7 +42,8 @@ public class ModEntityTypes {
                     .noSave()
                     .noSummon()
                     .build(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "grappling_hook").toString())
-    );
+    )
+            : null;
 
     private static <T extends Mob> DeferredHolder<EntityType<?>, EntityType<T>> registerEntity(String key, Supplier<EntityType<T>> sup, int primaryColor, int secondaryColor) {
         DeferredHolder<EntityType<?>, EntityType<T>> entityType = ENTITY_TYPES.register(key, sup);

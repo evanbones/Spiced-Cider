@@ -1,6 +1,12 @@
 {
   "values": [
-    "spicedcider:grappling_hook",
-    "spicedcider:sticky_grappling_hook"
+    {
+      "id": "spicedcider:grappling_hook",
+      "required": false
+    },
+    {
+      "id": "spicedcider:sticky_grappling_hook",
+      "required": false
+    }
   ]
 }

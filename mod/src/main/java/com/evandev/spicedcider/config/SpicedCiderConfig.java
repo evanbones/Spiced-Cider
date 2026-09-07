@@ -27,6 +27,10 @@ public class SpicedCiderConfig {
         CLIENT = clientPair.getLeft();
     }
 
+    public static <T> T clientOr(ModConfigSpec.ConfigValue<T> value, T fallback) {
+        return CLIENT_SPEC.isLoaded() ? value.get() : fallback;
+    }
+
     public static class Startup {
         public final ModConfigSpec.BooleanValue cooksCollectionDripstoneFix;
         public final ModConfigSpec.BooleanValue blockBoxWoodVariants;

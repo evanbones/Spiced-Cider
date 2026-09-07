@@ -271,11 +271,15 @@ dependencies {
     }
 
     compileOnly "maven.modrinth:modern-world-creation:2.0.1-1.21.1-neoforge"
-    implementation "maven.modrinth:emi:1.1.22+1.21.1+neoforge"
-    implementation "maven.modrinth:yacl:3.8.2+1.21.1-neoforge"
+    runtimeOnly "maven.modrinth:emi:1.1.22+1.21.1+neoforge"
+
+    // YACL
+    compileOnly "maven.modrinth:yacl:3.8.2+1.21.1-neoforge"
+    runtimeOnly "maven.modrinth:yacl:3.8.2+1.21.1-neoforge"
 
     // Tide
-    implementation "maven.modrinth:tide:NyZj7kJm"
+    compileOnly "maven.modrinth:tide:NyZj7kJm"
+    runtimeOnly "maven.modrinth:tide:NyZj7kJm"
     runtimeOnly "me.shedaniel.cloth:cloth-config-neoforge:15.0.140"
 
     // Cook's Collection
@@ -349,6 +353,14 @@ dependencies {
 
     // Alloyed
     runtimeOnly "maven.modrinth:create-alloyed:3.0.11+1.21.1-neoforge"
+
+    compileOnly "com.moulberry:mixinconstraints:1.1.0"
+    jarJar(implementation("com.moulberry:mixinconstraints")) {
+        version {
+            strictly "[1.1.0,)"
+            prefer "1.1.0"
+        }
+    }
 
     compileOnly(annotationProcessor("com.github.bawnorton.mixinsquared:mixinsquared-common:0.3.3"))
     jarJar(implementation("com.github.bawnorton.mixinsquared:mixinsquared-neoforge")) {

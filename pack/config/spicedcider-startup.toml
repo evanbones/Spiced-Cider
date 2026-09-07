@@ -4,3 +4,5 @@ cooksCollectionDripstoneFix = true
 blockBoxWoodVariants = true
 #Skeletons and strays get 12 max health. Requires a restart to take effect.
 skeletonHealthNerf = true
+#Horse armor works like wolf armor: it tanks the hit, loses durability, and is repaired by right-clicking the pet with the armor's material. Applies to horses and, with wolvesWearAnyArmor, to wolves. Requires a restart to take effect.
+unifiedPetArmor = true

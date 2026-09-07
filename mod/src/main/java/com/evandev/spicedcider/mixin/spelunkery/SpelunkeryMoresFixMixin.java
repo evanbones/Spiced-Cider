@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.mixin.spelunkery;
 
+import com.moulberry.mixinconstraints.annotations.IfModLoaded;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.PackType;
 import net.minecraft.server.packs.PathPackResources;
@@ -11,6 +12,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import java.io.InputStream;
 
+@IfModLoaded("spelunkery")
 @Mixin(PathPackResources.class)
 public class SpelunkeryMoresFixMixin {
 

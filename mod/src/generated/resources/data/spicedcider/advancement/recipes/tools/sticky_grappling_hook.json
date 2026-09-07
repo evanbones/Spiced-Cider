@@ -1,4 +1,10 @@
 {
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "tide"
+    }
+  ],
   "parent": "minecraft:recipes/root",
   "criteria": {
     "has_grappling_hook": {

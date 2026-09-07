@@ -2,6 +2,7 @@ package com.evandev.spicedcider.mixin.namingunconvention;
 
 import com.evandev.spicedcider.SpicedCider;
 import com.evandev.spicedcider.config.SpicedCiderConfig;
+import com.moulberry.mixinconstraints.annotations.IfModLoaded;
 import de.keksuccino.modernworldcreation.ModernWorldCreationGameTab;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.components.EditBox;
@@ -20,6 +21,7 @@ import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
 
+@IfModLoaded("modernworldcreation")
 @Mixin(ModernWorldCreationGameTab.class)
 public class ModernWorldCreationGameTabMixin {
 

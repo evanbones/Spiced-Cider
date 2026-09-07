@@ -2,15 +2,11 @@ package com.evandev.spicedcider.mixin.minecraft.client;
 
 import com.evandev.spicedcider.client.progress.OldProgressScreen;
 import com.evandev.spicedcider.config.SpicedCiderConfig;
-import com.llamalad7.mixinextras.injector.v2.WrapWithCondition;
 import net.minecraft.SharedConstants;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.ReceivingLevelScreen;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.multiplayer.ClientLevel;
-import net.minecraft.client.renderer.RenderBuffers;
-import net.minecraft.client.sounds.SoundManager;
 import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -38,12 +34,12 @@ public abstract class MinecraftClientMixin {
             )
     )
     private String spicedcider$modifyWindowTitle(String title) {
-        if (!SpicedCiderConfig.CLIENT.customWindowTitle.get()) {
+        if (!SpicedCiderConfig.clientOr(SpicedCiderConfig.CLIENT.customWindowTitle, false)) {
             return title;
         }
 
         String version = SharedConstants.getCurrentVersion().getName();
-        String format = SpicedCiderConfig.CLIENT.windowTitleFormat.get();
+        String format = SpicedCiderConfig.clientOr(SpicedCiderConfig.CLIENT.windowTitleFormat, title);
         String result = format.replace("%v", version);
 
         if (result.length() > 100) {
@@ -63,7 +59,7 @@ public abstract class MinecraftClientMixin {
             )
     )
     private void spicedcider$onRunTick(boolean renderLevel, CallbackInfo callback) {
-        if (SpicedCiderConfig.CLIENT.oldProgressScreen.get() && !renderLevel) {
+        if (SpicedCiderConfig.clientOr(SpicedCiderConfig.CLIENT.oldProgressScreen, false) && !renderLevel) {
             if (this.screen instanceof OldProgressScreen progressScreen) {
                 progressScreen.tick();
             }

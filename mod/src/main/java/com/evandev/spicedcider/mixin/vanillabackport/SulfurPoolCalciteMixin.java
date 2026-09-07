@@ -3,6 +3,7 @@ package com.evandev.spicedcider.mixin.vanillabackport;
 import com.blackgear.vanillabackport.common.registries.ModBlocks;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
+import com.moulberry.mixinconstraints.annotations.IfModLoaded;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.WorldGenLevel;
 import net.minecraft.world.level.block.Blocks;
@@ -12,6 +13,7 @@ import net.minecraft.world.level.levelgen.feature.LakeFeature;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 
+@IfModLoaded("vanillabackport")
 @Mixin(LakeFeature.class)
 public class SulfurPoolCalciteMixin {
 

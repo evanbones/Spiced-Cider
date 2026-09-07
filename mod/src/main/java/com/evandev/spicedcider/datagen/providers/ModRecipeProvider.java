@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.datagen.providers;
 
+import com.evandev.spicedcider.compat.tide.TideCompat;
 import com.evandev.spicedcider.recipe.RenameRecipe;
 import com.evandev.spicedcider.registry.ModBlocks;
 import com.evandev.spicedcider.registry.ModItems;
@@ -11,6 +12,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.common.Tags;
+import net.neoforged.neoforge.common.conditions.ModLoadedCondition;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.concurrent.CompletableFuture;
@@ -23,18 +25,20 @@ public class ModRecipeProvider extends RecipeProvider {
 
     @Override
     protected void buildRecipes(@NotNull RecipeOutput output) {
+        RecipeOutput tideOutput = output.withConditions(new ModLoadedCondition(TideCompat.MOD_ID));
+
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.GRAPPLING_HOOK.get())
                 .pattern(" C")
                 .pattern("CC")
                 .define('C', Tags.Items.INGOTS_IRON)
                 .unlockedBy("has_iron_ingot", has(Tags.Items.INGOTS_IRON))
-                .save(output);
+                .save(tideOutput);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.TOOLS, ModItems.STICKY_GRAPPLING_HOOK.get())
                 .requires(ModItems.GRAPPLING_HOOK.get())
                 .requires(Items.SLIME_BALL)
                 .unlockedBy("has_grappling_hook", has(ModItems.GRAPPLING_HOOK.get()))
-                .save(output);
+                .save(tideOutput);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.TOOLS, ModItems.FIRE_STRIKER.get())
                 .requires(Items.FLINT, 2)

@@ -1,10 +1,18 @@
 {
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "tolerable_creepers"
+    }
+  ],
   "parent": "minecraft:recipes/root",
   "criteria": {
     "has_creeper_spores": {
       "conditions": {
         "items": [
-          { "items": "tolerable_creepers:creeper_spores" }
+          {
+            "items": "tolerable_creepers:creeper_spores"
+          }
         ]
       },
       "trigger": "minecraft:inventory_changed"

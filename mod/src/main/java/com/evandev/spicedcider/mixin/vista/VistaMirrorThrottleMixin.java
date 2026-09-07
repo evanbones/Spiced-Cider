@@ -2,6 +2,7 @@ package com.evandev.spicedcider.mixin.vista;
 
 import com.evandev.spicedcider.compat.vista.VistaMirrorScheduler;
 import com.evandev.spicedcider.config.SpicedCiderConfig;
+import com.moulberry.mixinconstraints.annotations.IfModLoaded;
 import net.mehvahdjukaar.vista.client.textures.MirrorReflectionTexture;
 import net.mehvahdjukaar.vista.client.textures.MirrorTextureManager;
 import net.mehvahdjukaar.vista.common.mirror.MirrorBlockEntity;
@@ -12,6 +13,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.Redirect;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
+@IfModLoaded("vista")
 @Mixin(value = MirrorTextureManager.class, remap = false)
 public class VistaMirrorThrottleMixin {
 

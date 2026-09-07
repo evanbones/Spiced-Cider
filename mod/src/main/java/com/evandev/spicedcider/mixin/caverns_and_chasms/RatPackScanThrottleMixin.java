@@ -2,6 +2,7 @@ package com.evandev.spicedcider.mixin.caverns_and_chasms;
 
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
+import com.moulberry.mixinconstraints.annotations.IfModLoaded;
 import com.teamabnormals.caverns_and_chasms.common.entity.animal.rat.Rat;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.AABB;
@@ -12,6 +13,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import java.util.List;
 import java.util.function.Predicate;
 
+@IfModLoaded("caverns_and_chasms")
 @Mixin(Rat.class)
 public abstract class RatPackScanThrottleMixin {
 
