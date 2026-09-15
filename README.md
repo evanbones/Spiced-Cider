@@ -35,6 +35,20 @@ Spiders shoot cobwebs at range then switch to melee once their target is trapped
 
 Reduced to 12 max health instead of 20.
 
+**Waterloggable Redstone**
+
+Repeaters and comparators can be placed underwater. With the relevant mod installed, this extends to Caverns &
+Chasms' Refractor/Resistor and Quark's Redstone Randomizer.
+
+**Quasi-Connectivity Removal**
+
+Optional toggle that removes quasi-connectivity from pistons, dispensers, and droppers.
+
+**Grappling Hooks**
+
+Adds a Grappling Hook and a Sticky Grappling Hook. Attach one to a Tide fishing rod to grapple instead of fish.
+Requires Tide.
+
 **Random World Naming**
 
 New worlds get an auto-generated name, with a reroll button if Modern World Creation is present. Ported from Naming
@@ -59,22 +73,30 @@ Nearly every feature above (and every fix below) can be toggled individually fro
 
 ## Installation
 
-### Required Dependencies
-
-- [EMI](https://modrinth.com/mod/emi) is required.
-- [YACL](https://modrinth.com/mod/yacl) is required.
+Spiced Cider has no required dependencies. [YACL](https://modrinth.com/mod/yacl) is recommended for the in-game config
+screen.
 
 ### Optional Dependencies
 
 Spiced Cider runs fine without any of these: each one only unlocks the specific fix/feature listed below when present.
 
-| Mod                                                                                                             | Feature added when installed                                                                     |
-|-----------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|
-| [Caverns & Chasms](https://modrinth.com/mod/caverns-and-chasms)                                                 | Uses C&C's tin spark particles for unmineable block sparks                                       |
-| [Cooks' Collection](https://modrinth.com/mod/cooks-collection)                                                  | Fixes occlusion/culling issues with the salted dripstone block                                   |
-| [Environmental](https://modrinth.com/mod/environmental)                                                         | Removes the green leaves from Wisteria trees                                                     | 
-| [The Block Box](https://modrinth.com/mod/the-block-box) + [Every Compat](https://modrinth.com/mod/every-compat) | Registers wood-type variants (seats, palisades) for every wood type in the pack                  | 
-| [Modern World Creation](https://modrinth.com/mod/modern-world-creation)                                         | Adds a reroll button next to the world name field                                                | 
+| Mod                                                                                                             | Feature added when installed                                                                                                                                                                                                                                   |
+|-----------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [Caverns & Chasms](https://modrinth.com/mod/caverns-and-chasms)                                                 | Uses C&C's tin spark particles for unmineable block sparks; fixes Iron-Plated Bricks' map color, Packing Container item detection, and its broken "placeable items" config option; adds waterlogging to Refractors/Resistors; throttles Rat pack-mate scanning |
+| [Clutter No More](https://modrinth.com/mod/clutter-no-more)                                                     | Fixes missing textures on waterlogged steps/vertical slabs                                                                                                                                                                                                     |
+| [Environmental](https://modrinth.com/mod/environmental)                                                         | Removes the green leaves from Wisteria trees                                                                                                                                                                                                                   |
+| [Hominid](https://modrinth.com/mod/hominid)                                                                     | Fixes annoying log spam                                                                                                                                                                                                                                        |
+| [Jade](https://modrinth.com/mod/jade)                                                                           | Fixes a depth-buffer rendering glitch in Jade's tooltip overlay                                                                                                                                                                                                |
+| [Modern World Creation](https://modrinth.com/mod/modern-world-creation)                                         | Adds a reroll button next to the world name field                                                                                                                                                                                                              |
+| [Quark](https://modrinth.com/mod/quark)                                                                         | Adds waterlogging to the Redstone Randomizer block                                                                                                                                                                                                             |
+| [Slime Time](https://modrinth.com/mod/slime-time)                                                               | Disables slimeball stack-merging (configurable)                                                                                                                                                                                                                |
+| [Snowy Spirit](https://modrinth.com/mod/snowy-spirit)                                                           | Fixes glow-light particles crashing with Sodium                                                                                                                                                                                                                |
+| [Sodium](https://modrinth.com/mod/sodium)                                                                       | Fixes Smooth Lighting flicker near moving dynamic light sources, e.g. LambDynamicLights (experimental, configurable)                                                                                                                                           |
+| [Spelunkery](https://modrinth.com/mod/spelunkery)                                                               | Stops Spelunkery's bundled resource pack from overriding worldgen features from Minecraft, Oreganized, Sully's Mod, and Create                                                                                                                                 |
+| [The Block Box](https://modrinth.com/mod/the-block-box) + [Every Compat](https://modrinth.com/mod/every-compat) | Registers wood-type variants (seats, palisades) for every wood type in the pack                                                                                                                                                                                |
+| [Tide](https://modrinth.com/mod/tide)                                                                           | Adds Grappling Hook / Sticky Grappling Hook items that grapple instead of fish when used with a Tide rod                                                                                                                                                       |
+| [Vanillabackport](https://modrinth.com/mod/vanillabackport)                                                     | Reworks Sulphur Cave surface generation: tuff rings and calcite pool rims                                                                                                                                                                                      |
+| [Vista](https://modrinth.com/mod/vista)                                                                         | Performance fixes for Vista's mirror/TV reflections: tighter culling, distance falloff, throttled re-renders (configurable)                                                                                                                                    |
 
 ## Modifying the Core Mod
 
@@ -102,6 +124,8 @@ Randomized world names are from [Naming Unconvention](https://github.com/QinomeD
 its [LGPLv3 license](https://github.com/QinomeD/Naming-Unconvention/blob/master/LICENSE).
 
 Sparks for hitting unmineable blocks ported from Valcon by [Ivqry](https://github.com/ivqrydev).
+
+Grappling Hooks are modified from [Bigger Fish](https://modrinth.com/mod/always-a-bigger-fish), created by cassiancc and implemented by Kobber (originally ported from Raspberry Core).
 
 ---
 

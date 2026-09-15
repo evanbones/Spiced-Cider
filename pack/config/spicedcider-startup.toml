@@ -1,8 +1,6 @@
-#Fix Cooks' Collection's salted dripstone block causing occlusion/culling issues by basing it on vanilla dripstone block. Requires Cooks' Collection. Requires a restart to take effect.
-cooksCollectionDripstoneFix = true
 #Register Every Compat wood-type variants (seats, palisades) for The Block Box. Requires The Block Box, Every Compat, and Moonlight Lib. Requires a restart to take effect.
 blockBoxWoodVariants = true
 #Skeletons and strays get 12 max health. Requires a restart to take effect.
-skeletonHealthNerf = true
+skeletonHealthNerf = false
 #Horse armor works like wolf armor: it tanks the hit, loses durability, and is repaired by right-clicking the pet with the armor's material. Applies to horses and, with wolvesWearAnyArmor, to wolves. Requires a restart to take effect.
-unifiedPetArmor = true
+unifiedPetArmor = false

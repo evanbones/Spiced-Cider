@@ -32,17 +32,11 @@ public class SpicedCiderConfig {
     }
 
     public static class Startup {
-        public final ModConfigSpec.BooleanValue cooksCollectionDripstoneFix;
         public final ModConfigSpec.BooleanValue blockBoxWoodVariants;
         public final ModConfigSpec.BooleanValue skeletonHealthNerf;
         public final ModConfigSpec.BooleanValue unifiedPetArmor;
 
         public Startup(ModConfigSpec.Builder builder) {
-            cooksCollectionDripstoneFix = builder
-                    .comment("Fix Cooks' Collection's salted dripstone block causing occlusion/culling issues by basing it on vanilla dripstone block. Requires Cooks' Collection. Requires a restart to take effect.")
-                    .translation("option.spicedcider.cooksCollectionDripstoneFix")
-                    .define("cooksCollectionDripstoneFix", true);
-
             blockBoxWoodVariants = builder
                     .comment("Register Every Compat wood-type variants (seats, palisades) for The Block Box. Requires The Block Box, Every Compat, and Moonlight Lib. Requires a restart to take effect.")
                     .translation("option.spicedcider.blockBoxWoodVariants")
@@ -51,18 +45,18 @@ public class SpicedCiderConfig {
             skeletonHealthNerf = builder
                     .comment("Skeletons and strays get 12 max health. Requires a restart to take effect.")
                     .translation("option.spicedcider.skeletonHealthNerf")
-                    .define("skeletonHealthNerf", true);
+                    .define("skeletonHealthNerf", false);
 
             unifiedPetArmor = builder
                     .comment("Horse armor works like wolf armor: it tanks the hit, loses durability, and is repaired by right-clicking the pet with the armor's material. Applies to horses and, with wolvesWearAnyArmor, to wolves. Requires a restart to take effect.")
                     .translation("option.spicedcider.unifiedPetArmor")
-                    .define("unifiedPetArmor", true);
+                    .define("unifiedPetArmor", false);
 
         }
     }
 
     public static class Common {
-        public final ModConfigSpec.BooleanValue wisteriaLeafDensityFix;
+        public final ModConfigSpec.BooleanValue oldWisteriaTrees;
         public final ModConfigSpec.BooleanValue slimeTimeDisableItemMerging;
 
         public final ModConfigSpec.BooleanValue bedExplosionPrevention;
@@ -80,10 +74,10 @@ public class SpicedCiderConfig {
         public Common(ModConfigSpec.Builder builder) {
             builder.push("compat");
 
-            wisteriaLeafDensityFix = builder
-                    .comment("Fix Environmental's wisteria trees generating with sparse/patchy leaves. Requires Environmental.")
-                    .translation("option.spicedcider.wisteriaLeafDensityFix")
-                    .define("wisteriaLeafDensityFix", true);
+            oldWisteriaTrees = builder
+                    .comment("Use Environmental's old 1.19 wisteria tree leaf generation instead of the current sparse/patchy one. Requires Environmental.")
+                    .translation("option.spicedcider.oldWisteriaTrees")
+                    .define("oldWisteriaTrees", true);
 
             slimeTimeDisableItemMerging = builder
                     .comment("Disables Slime Time's slimeball item stack merging feature. Requires Slime Time.")
@@ -96,48 +90,48 @@ public class SpicedCiderConfig {
             bedExplosionPrevention = builder
                     .comment("Beds don't explode outside the Overworld; instead they show a message and wake sleeping villagers.")
                     .translation("option.spicedcider.bedExplosionPrevention")
-                    .define("bedExplosionPrevention", true);
+                    .define("bedExplosionPrevention", false);
 
             respawnAnchorExplosionPrevention = builder
                     .comment("Respawn anchors don't explode outside dimensions where they work; instead they show a message.")
                     .translation("option.spicedcider.respawnAnchorExplosionPrevention")
-                    .define("respawnAnchorExplosionPrevention", true);
+                    .define("respawnAnchorExplosionPrevention", false);
 
             endCrystalPlaceAnywhere = builder
                     .comment("End crystals can be placed on any block, not just obsidian/bedrock.")
                     .translation("option.spicedcider.endCrystalPlaceAnywhere")
-                    .define("endCrystalPlaceAnywhere", true);
+                    .define("endCrystalPlaceAnywhere", false);
 
             endCrystalHealing = builder
                     .comment("End crystals with no beam target heal nearby damaged entities and render a beam to their heal target.")
                     .translation("option.spicedcider.endCrystalHealing")
-                    .define("endCrystalHealing", true);
+                    .define("endCrystalHealing", false);
 
             keepBrokenItems = builder
                     .comment("Enchanted, named, or elytra items become \"Broken\" instead of being destroyed when they run out of durability.")
                     .translation("option.spicedcider.keepBrokenItems")
-                    .define("keepBrokenItems", true);
+                    .define("keepBrokenItems", false);
 
             wolvesWearAnyArmor = builder
                     .comment("Tamed wolves can be equipped with horse/animal armor as body armor.")
                     .translation("option.spicedcider.wolvesWearAnyArmor")
-                    .define("wolvesWearAnyArmor", true);
+                    .define("wolvesWearAnyArmor", false);
 
             spiderRangedWebAttacks = builder
                     .comment("Spiders switch to shooting cobweb projectiles at range when their target is trapped.")
                     .translation("option.spicedcider.spiderRangedWebAttacks")
-                    .define("spiderRangedWebAttacks", true);
+                    .define("spiderRangedWebAttacks", false);
 
             removeQuasiConnectivity = builder
                     .comment("Removes quasi-connectivity from pistons, dispensers, and droppers.")
                     .translation("option.spicedcider.removeQuasiConnectivity")
-                    .define("removeQuasiConnectivity", true);
+                    .define("removeQuasiConnectivity", false);
 
             builder.pop();
             builder.push("performance");
 
             disableRecipeBookTracking = builder
-                    .comment("Disable recipe book unlock tracking/saving/syncing entirely, since it's unused. Saves memory and disk I/O.")
+                    .comment("Disable recipe book unlock tracking/saving/syncing entirely. Saves memory and disk I/O.")
                     .translation("option.spicedcider.disableRecipeBookTracking")
                     .define("disableRecipeBookTracking", true);
 
@@ -154,7 +148,6 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.BooleanValue randomWorldNaming;
 
         public final ModConfigSpec.BooleanValue customDeathSound;
-        public final ModConfigSpec.BooleanValue hideMelancholicHungerTooltip;
         public final ModConfigSpec.BooleanValue unmineableBlockSparks;
 
         public final ModConfigSpec.BooleanValue customWindowTitle;
@@ -195,19 +188,14 @@ public class SpicedCiderConfig {
                     .define("unmineableBlockSparks", true);
 
             customDeathSound = builder
-                    .comment("Play a custom sound when you die.")
+                    .comment("Plays C418 - Death when you die.")
                     .translation("option.spicedcider.customDeathSound")
                     .define("customDeathSound", true);
-
-            hideMelancholicHungerTooltip = builder
-                    .comment("Hide Melancholic Hunger's regeneration tooltip lines from item tooltips. Requires Melancholic Hunger.")
-                    .translation("option.spicedcider.hideMelancholicHungerTooltip")
-                    .define("hideMelancholicHungerTooltip", true);
 
             customWindowTitle = builder
                     .comment("Customize the OS window title.")
                     .translation("option.spicedcider.customWindowTitle")
-                    .define("customWindowTitle", true);
+                    .define("customWindowTitle", false);
 
             windowTitleFormat = builder
                     .comment("Format string for the OS window title. %v will be replaced with the current Minecraft version.")
