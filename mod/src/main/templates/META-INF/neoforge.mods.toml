@@ -52,13 +52,6 @@ ordering = "AFTER"
 side = "BOTH"
 
 [[dependencies.${ mod_id }]]
-modId = "cookscollection"
-type = "optional"
-versionRange = "*"
-ordering = "AFTER"
-side = "BOTH"
-
-[[dependencies.${ mod_id }]]
 modId = "blockbox"
 type = "optional"
 versionRange = "*"

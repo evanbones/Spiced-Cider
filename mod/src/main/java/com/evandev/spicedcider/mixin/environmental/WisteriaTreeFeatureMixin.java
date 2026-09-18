@@ -25,7 +25,7 @@ public class WisteriaTreeFeatureMixin {
             remap = false
     )
     private void spicedcider$replaceLeaves(BlockPos pos, Direction direction, RandomSource random, TreeConfiguration config, BlueprintTreeFeature.TreeInfo info, CallbackInfo ci) {
-        if (!SpicedCiderConfig.COMMON.wisteriaLeafDensityFix.get()) return;
+        if (!SpicedCiderConfig.COMMON.oldWisteriaTrees.get()) return;
 
         for (int x = -1; x <= 1; ++x) {
             for (int z = -1; z <= 1; ++z) {

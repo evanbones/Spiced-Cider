@@ -46,10 +46,8 @@ public class SpicedCiderConfigScreen {
                 .category(ConfigCategory.createBuilder()
                         .name(Component.translatable("category.spicedcider.compat"))
                         .tooltip(Component.translatable("category.spicedcider.compat.tooltip"))
-                        .optionIf(ModList.get().isLoaded("cookscollection"),
-                                toggle("cooksCollectionDripstoneFix", startup.cooksCollectionDripstoneFix))
                         .optionIf(ModList.get().isLoaded("environmental"),
-                                toggle("wisteriaLeafDensityFix", common.wisteriaLeafDensityFix))
+                                toggle("oldWisteriaTrees", common.oldWisteriaTrees))
                         .optionIf(ModList.get().isLoaded("blockbox") && ModList.get().isLoaded("everycomp") && ModList.get().isLoaded("moonlight"),
                                 toggle("blockBoxWoodVariants", startup.blockBoxWoodVariants))
                         .optionIf(ModList.get().isLoaded("sodium"),
@@ -71,8 +69,6 @@ public class SpicedCiderConfigScreen {
                         .option(toggle("unmineableBlockSparks", client.unmineableBlockSparks))
                         .option(toggle("customWindowTitle", client.customWindowTitle))
                         .option(toggle("oldProgressScreen", client.oldProgressScreen))
-                        .optionIf(ModList.get().isLoaded("melancholic_hunger"),
-                                toggle("hideMelancholicHungerTooltip", client.hideMelancholicHungerTooltip))
                         .build())
                 .categoryIf(ModList.get().isLoaded("vista"), ConfigCategory.createBuilder()
                         .name(Component.translatable("category.spicedcider.vista"))
