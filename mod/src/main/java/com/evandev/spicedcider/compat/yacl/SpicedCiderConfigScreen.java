@@ -7,6 +7,7 @@ import dev.isxander.yacl3.api.OptionDescription;
 import dev.isxander.yacl3.api.YetAnotherConfigLib;
 import dev.isxander.yacl3.api.controller.DoubleSliderControllerBuilder;
 import dev.isxander.yacl3.api.controller.IntegerSliderControllerBuilder;
+import dev.isxander.yacl3.api.controller.StringControllerBuilder;
 import dev.isxander.yacl3.api.controller.TickBoxControllerBuilder;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
@@ -68,6 +69,7 @@ public class SpicedCiderConfigScreen {
                         .option(toggle("customDeathSound", client.customDeathSound))
                         .option(toggle("unmineableBlockSparks", client.unmineableBlockSparks))
                         .option(toggle("customWindowTitle", client.customWindowTitle))
+                        .option(stringField("windowTitleFormat", client.windowTitleFormat))
                         .option(toggle("oldProgressScreen", client.oldProgressScreen))
                         .build())
                 .categoryIf(ModList.get().isLoaded("vista"), ConfigCategory.createBuilder()
@@ -92,6 +94,15 @@ public class SpicedCiderConfigScreen {
                 .description(OptionDescription.of(Component.translatable("option.spicedcider." + key + ".tooltip")))
                 .binding(true, value, setter)
                 .controller(TickBoxControllerBuilder::create)
+                .build();
+    }
+
+    private static Option<String> stringField(String key, ModConfigSpec.ConfigValue<String> value) {
+        return Option.<String>createBuilder()
+                .name(Component.translatable("option.spicedcider." + key))
+                .description(OptionDescription.of(Component.translatable("option.spicedcider." + key + ".tooltip")))
+                .binding(value.getDefault(), value, value::set)
+                .controller(StringControllerBuilder::create)
                 .build();
     }
 

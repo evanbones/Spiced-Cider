@@ -2,6 +2,8 @@ package com.evandev.spicedcider.mixin.vista;
 
 import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.evandev.spicedcider.mixin.vista.accessor.GameRendererAccessor;
+import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
+import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import com.moulberry.mixinconstraints.annotations.IfModLoaded;
 import net.mehvahdjukaar.vista.client.renderer.VistaLevelRenderer;
 import net.minecraft.client.Minecraft;
@@ -11,25 +13,25 @@ import org.joml.Matrix4f;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Redirect;
 
 @IfModLoaded("vista")
 @Mixin(value = VistaLevelRenderer.class, remap = false)
 public class VistaCullFrustumFarPlaneMixin {
 
-    @Redirect(
+    @WrapOperation(
             method = "renderLevel(Lnet/minecraft/client/Minecraft;Lcom/mojang/blaze3d/pipeline/RenderTarget;Lnet/minecraft/client/Camera;FLorg/joml/Matrix4f;)V",
             at = @At(value = "INVOKE",
                     target = "Lnet/minecraft/client/renderer/LevelRenderer;prepareCullFrustum(Lnet/minecraft/world/phys/Vec3;Lorg/joml/Matrix4f;Lorg/joml/Matrix4f;)V")
     )
-    private static void spicedcider$tightenCullFarPlane(LevelRenderer lr, Vec3 cameraPosition, Matrix4f frustumMatrix, Matrix4f projectionMatrix) {
+    private static void spicedcider$tightenCullFarPlane(LevelRenderer lr, Vec3 cameraPosition, Matrix4f frustumMatrix,
+                                                         Matrix4f projectionMatrix, Operation<Void> original) {
         if (!SpicedCiderConfig.CLIENT.vistaMirrorPerfFixes.get()) {
-            lr.prepareCullFrustum(cameraPosition, frustumMatrix, projectionMatrix);
+            original.call(lr, cameraPosition, frustumMatrix, projectionMatrix);
             return;
         }
         float renderDistanceBlocks = ((GameRendererAccessor) Minecraft.getInstance().gameRenderer).spicedcider$getRenderDistance();
         float cullFar = Math.max(renderDistanceBlocks, 32f) * 1.15f + 32f;
-        lr.prepareCullFrustum(cameraPosition, frustumMatrix, spicedcider$tightenFarPlane(projectionMatrix, cullFar));
+        original.call(lr, cameraPosition, frustumMatrix, spicedcider$tightenFarPlane(projectionMatrix, cullFar));
     }
 
     @Unique

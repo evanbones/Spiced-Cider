@@ -75,10 +75,13 @@
     "sodium.AoFaceDataMixin",
     "sodium.SodiumBlockOffsetMixin",
     "vista.VistaCullFrustumFarPlaneMixin",
+    "vista.VistaMirrorFramePacingMixin",
     "vista.VistaMirrorReflectionDistanceMixin",
+    "vista.VistaMirrorRenderCostMixin",
     "vista.VistaMirrorThrottleMixin",
     "vista.VistaOffAxisFrustumCacheMixin",
     "vista.VistaSharedStateThrashMixin",
+    "vista.accessor.AdaptiveUpdateSchedulerAccessor",
     "vista.accessor.GameRendererAccessor",
     "vista.accessor.LevelRendererAccessor"
   ],

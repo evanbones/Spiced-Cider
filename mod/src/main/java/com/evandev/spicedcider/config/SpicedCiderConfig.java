@@ -1,9 +1,19 @@
 package com.evandev.spicedcider.config;
 
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 import net.neoforged.neoforge.common.ModConfigSpec;
 import org.apache.commons.lang3.tuple.Pair;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
+
 public class SpicedCiderConfig {
+    private static final String LANG_PATH = "assets/spicedcider/lang/en_us.json";
+    private static final JsonObject LANG = loadLang();
+
     public static final ModConfigSpec STARTUP_SPEC;
     public static final Startup STARTUP;
 
@@ -31,6 +41,25 @@ public class SpicedCiderConfig {
         return CLIENT_SPEC.isLoaded() ? value.get() : fallback;
     }
 
+    private static JsonObject loadLang() {
+        try (InputStream stream = SpicedCiderConfig.class.getClassLoader().getResourceAsStream(LANG_PATH)) {
+            if (stream == null) {
+                throw new IllegalStateException("Missing " + LANG_PATH);
+            }
+            return JsonParser.parseReader(new InputStreamReader(stream, StandardCharsets.UTF_8)).getAsJsonObject();
+        } catch (IOException e) {
+            throw new IllegalStateException("Failed to read " + LANG_PATH, e);
+        }
+    }
+
+    private static String tooltip(String key) {
+        String fullKey = "option.spicedcider." + key + ".tooltip";
+        if (!LANG.has(fullKey)) {
+            throw new IllegalStateException("Missing lang key " + fullKey);
+        }
+        return LANG.get(fullKey).getAsString();
+    }
+
     public static class Startup {
         public final ModConfigSpec.BooleanValue blockBoxWoodVariants;
         public final ModConfigSpec.BooleanValue skeletonHealthNerf;
@@ -38,17 +67,17 @@ public class SpicedCiderConfig {
 
         public Startup(ModConfigSpec.Builder builder) {
             blockBoxWoodVariants = builder
-                    .comment("Register Every Compat wood-type variants (seats, palisades) for The Block Box. Requires The Block Box, Every Compat, and Moonlight Lib. Requires a restart to take effect.")
+                    .comment(tooltip("blockBoxWoodVariants"))
                     .translation("option.spicedcider.blockBoxWoodVariants")
                     .define("blockBoxWoodVariants", true);
 
             skeletonHealthNerf = builder
-                    .comment("Skeletons and strays get 12 max health. Requires a restart to take effect.")
+                    .comment(tooltip("skeletonHealthNerf"))
                     .translation("option.spicedcider.skeletonHealthNerf")
                     .define("skeletonHealthNerf", false);
 
             unifiedPetArmor = builder
-                    .comment("Horse armor works like wolf armor: it tanks the hit, loses durability, and is repaired by right-clicking the pet with the armor's material. Applies to horses and, with wolvesWearAnyArmor, to wolves. Requires a restart to take effect.")
+                    .comment(tooltip("unifiedPetArmor"))
                     .translation("option.spicedcider.unifiedPetArmor")
                     .define("unifiedPetArmor", false);
 
@@ -75,12 +104,12 @@ public class SpicedCiderConfig {
             builder.push("compat");
 
             oldWisteriaTrees = builder
-                    .comment("Use Environmental's old 1.19 wisteria tree leaf generation instead of the current sparse/patchy one. Requires Environmental.")
+                    .comment(tooltip("oldWisteriaTrees"))
                     .translation("option.spicedcider.oldWisteriaTrees")
                     .define("oldWisteriaTrees", true);
 
             slimeTimeDisableItemMerging = builder
-                    .comment("Disables Slime Time's slimeball item stack merging feature. Requires Slime Time.")
+                    .comment(tooltip("slimeTimeDisableItemMerging"))
                     .translation("option.spicedcider.slimeTimeDisableItemMerging")
                     .define("slimeTimeDisableItemMerging", true);
 
@@ -88,42 +117,42 @@ public class SpicedCiderConfig {
             builder.push("gameplay");
 
             bedExplosionPrevention = builder
-                    .comment("Beds don't explode outside the Overworld; instead they show a message and wake sleeping villagers.")
+                    .comment(tooltip("bedExplosionPrevention"))
                     .translation("option.spicedcider.bedExplosionPrevention")
                     .define("bedExplosionPrevention", false);
 
             respawnAnchorExplosionPrevention = builder
-                    .comment("Respawn anchors don't explode outside dimensions where they work; instead they show a message.")
+                    .comment(tooltip("respawnAnchorExplosionPrevention"))
                     .translation("option.spicedcider.respawnAnchorExplosionPrevention")
                     .define("respawnAnchorExplosionPrevention", false);
 
             endCrystalPlaceAnywhere = builder
-                    .comment("End crystals can be placed on any block, not just obsidian/bedrock.")
+                    .comment(tooltip("endCrystalPlaceAnywhere"))
                     .translation("option.spicedcider.endCrystalPlaceAnywhere")
                     .define("endCrystalPlaceAnywhere", false);
 
             endCrystalHealing = builder
-                    .comment("End crystals with no beam target heal nearby damaged entities and render a beam to their heal target.")
+                    .comment(tooltip("endCrystalHealing"))
                     .translation("option.spicedcider.endCrystalHealing")
                     .define("endCrystalHealing", false);
 
             keepBrokenItems = builder
-                    .comment("Enchanted, named, or elytra items become \"Broken\" instead of being destroyed when they run out of durability.")
+                    .comment(tooltip("keepBrokenItems"))
                     .translation("option.spicedcider.keepBrokenItems")
                     .define("keepBrokenItems", false);
 
             wolvesWearAnyArmor = builder
-                    .comment("Tamed wolves can be equipped with horse/animal armor as body armor.")
+                    .comment(tooltip("wolvesWearAnyArmor"))
                     .translation("option.spicedcider.wolvesWearAnyArmor")
                     .define("wolvesWearAnyArmor", false);
 
             spiderRangedWebAttacks = builder
-                    .comment("Spiders switch to shooting cobweb projectiles at range when their target is trapped.")
+                    .comment(tooltip("spiderRangedWebAttacks"))
                     .translation("option.spicedcider.spiderRangedWebAttacks")
                     .define("spiderRangedWebAttacks", false);
 
             removeQuasiConnectivity = builder
-                    .comment("Removes quasi-connectivity from pistons, dispensers, and droppers.")
+                    .comment(tooltip("removeQuasiConnectivity"))
                     .translation("option.spicedcider.removeQuasiConnectivity")
                     .define("removeQuasiConnectivity", false);
 
@@ -131,12 +160,12 @@ public class SpicedCiderConfig {
             builder.push("performance");
 
             disableRecipeBookTracking = builder
-                    .comment("Disable recipe book unlock tracking/saving/syncing entirely. Saves memory and disk I/O.")
+                    .comment(tooltip("disableRecipeBookTracking"))
                     .translation("option.spicedcider.disableRecipeBookTracking")
                     .define("disableRecipeBookTracking", true);
 
             skipRedundantBlockCacheRebuild = builder
-                    .comment("Skip the redundant block shape cache rebuild that happens on every tag reload.")
+                    .comment(tooltip("skipRedundantBlockCacheRebuild"))
                     .translation("option.spicedcider.skipRedundantBlockCacheRebuild")
                     .define("skipRedundantBlockCacheRebuild", true);
 
@@ -167,7 +196,7 @@ public class SpicedCiderConfig {
             builder.push("compat");
 
             sodiumLightingParityFix = builder
-                    .comment("Restore vanilla parity for Sodium's Smooth Lighting corner blending, which stretches light further out than vanilla and causes flicker near moving dynamic light sources (e.g. LambDynamicLights). Requires Sodium.")
+                    .comment(tooltip("sodiumLightingParityFix"))
                     .translation("option.spicedcider.sodiumLightingParityFix")
                     .define("sodiumLightingParityFix", true);
 
@@ -175,7 +204,7 @@ public class SpicedCiderConfig {
             builder.push("naming");
 
             randomWorldNaming = builder
-                    .comment("Auto-generate a random world name on the world creation screen, with a reroll button (if Modern World Creation is present).")
+                    .comment(tooltip("randomWorldNaming"))
                     .translation("option.spicedcider.randomWorldNaming")
                     .define("randomWorldNaming", true);
 
@@ -183,27 +212,27 @@ public class SpicedCiderConfig {
             builder.push("misc");
 
             unmineableBlockSparks = builder
-                    .comment("Spawns sparks, plays hit sounds, and displays a warning message when attempting to mine a block that requires a stronger tool.")
+                    .comment(tooltip("unmineableBlockSparks"))
                     .translation("option.spicedcider.unmineableBlockSparks")
                     .define("unmineableBlockSparks", true);
 
             customDeathSound = builder
-                    .comment("Plays C418 - Death when you die.")
+                    .comment(tooltip("customDeathSound"))
                     .translation("option.spicedcider.customDeathSound")
                     .define("customDeathSound", true);
 
             customWindowTitle = builder
-                    .comment("Customize the OS window title.")
+                    .comment(tooltip("customWindowTitle"))
                     .translation("option.spicedcider.customWindowTitle")
                     .define("customWindowTitle", false);
 
             windowTitleFormat = builder
-                    .comment("Format string for the OS window title. %v will be replaced with the current Minecraft version.")
+                    .comment(tooltip("windowTitleFormat"))
                     .translation("option.spicedcider.windowTitleFormat")
                     .define("windowTitleFormat", "Minecraft - Spiced Cider %v");
 
             oldProgressScreen = builder
-                    .comment("Restore classic style loading/progress screen when loading worlds, saving worlds, or changing dimensions.")
+                    .comment(tooltip("oldProgressScreen"))
                     .translation("option.spicedcider.oldProgressScreen")
                     .define("oldProgressScreen", true);
 
@@ -211,32 +240,32 @@ public class SpicedCiderConfig {
             builder.push("vista");
 
             vistaMirrorPerfFixes = builder
-                    .comment("Apply performance fixes to Vista's mirror/TV reflection rendering (tightened culling, shared-state thrash suppression, throttled re-renders). Requires Vista (obviously).")
+                    .comment(tooltip("vistaMirrorPerfFixes"))
                     .translation("option.spicedcider.vistaMirrorPerfFixes")
                     .define("vistaMirrorPerfFixes", true);
 
             vistaMirrorReflectionDistance = builder
-                    .comment("Max distance in blocks that terrain and entities render to inside a mirror/TV reflection.")
+                    .comment(tooltip("vistaMirrorReflectionDistance"))
                     .translation("option.spicedcider.vistaMirrorReflectionDistance")
                     .defineInRange("vistaMirrorReflectionDistance", 64, 16, 2048);
 
             vistaMirrorUpdateFps = builder
-                    .comment("How many times per second each mirror re-renders its reflection while the viewer is moving.")
+                    .comment(tooltip("vistaMirrorUpdateFps"))
                     .translation("option.spicedcider.vistaMirrorUpdateFps")
-                    .defineInRange("vistaMirrorUpdateFps", 60.0, 1.0, 240.0);
+                    .defineInRange("vistaMirrorUpdateFps", 15.0, 1.0, 240.0);
 
             vistaMirrorMinUpdateFps = builder
-                    .comment("The floor that the mirror update rate will never drop below.")
+                    .comment(tooltip("vistaMirrorMinUpdateFps"))
                     .translation("option.spicedcider.vistaMirrorMinUpdateFps")
-                    .defineInRange("vistaMirrorMinUpdateFps", 10.0, 0.25, 240.0);
+                    .defineInRange("vistaMirrorMinUpdateFps", 4.0, 0.25, 240.0);
 
             vistaMirrorIdleUpdateFps = builder
-                    .comment("Reflection update rate used while the viewer's eye is stationary.")
+                    .comment(tooltip("vistaMirrorIdleUpdateFps"))
                     .translation("option.spicedcider.vistaMirrorIdleUpdateFps")
-                    .defineInRange("vistaMirrorIdleUpdateFps", 20.0, 0.25, 240.0);
+                    .defineInRange("vistaMirrorIdleUpdateFps", 5.0, 0.25, 240.0);
 
             vistaMirrorThrottleBudgetMs = builder
-                    .comment("Max milliseconds per frame that all mirror reflection re-renders together may take before update-rate throttling kicks in.")
+                    .comment(tooltip("vistaMirrorThrottleBudgetMs"))
                     .translation("option.spicedcider.vistaMirrorThrottleBudgetMs")
                     .defineInRange("vistaMirrorThrottleBudgetMs", 3.5, 0.5, 1000.0);
 

@@ -2,6 +2,8 @@ package com.evandev.spicedcider.mixin.namingunconvention;
 
 import com.evandev.spicedcider.SpicedCider;
 import com.evandev.spicedcider.config.SpicedCiderConfig;
+import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
+import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import com.moulberry.mixinconstraints.annotations.IfModLoaded;
 import de.keksuccino.modernworldcreation.ModernWorldCreationGameTab;
 import net.minecraft.client.gui.Font;
@@ -19,7 +21,6 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Redirect;
 
 @IfModLoaded("modernworldcreation")
 @Mixin(ModernWorldCreationGameTab.class)
@@ -34,15 +35,16 @@ public class ModernWorldCreationGameTabMixin {
     @Shadow
     protected EditBox nameEdit;
 
-    @Redirect(
+    @WrapOperation(
             method = "<init>",
             at = @At(
                     value = "INVOKE",
                     target = "Lnet/minecraft/client/gui/layouts/CommonLayouts;labeledElement(Lnet/minecraft/client/gui/Font;Lnet/minecraft/client/gui/layouts/LayoutElement;Lnet/minecraft/network/chat/Component;)Lnet/minecraft/client/gui/layouts/Layout;"
             )
     )
-    private Layout cider$wrapNameEditBox(Font font, LayoutElement element, Component label) {
-        Layout originalLayout = CommonLayouts.labeledElement(font, element, label);
+    private Layout cider$wrapNameEditBox(Font font, LayoutElement element, Component label,
+                                        Operation<Layout> original) {
+        Layout originalLayout = original.call(font, element, label);
 
         if (element == this.nameEdit && SpicedCiderConfig.CLIENT.randomWorldNaming.get()) {
             ImageButton rerollBtn = new ImageButton(
