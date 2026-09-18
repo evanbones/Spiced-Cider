@@ -98,7 +98,6 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.BooleanValue removeQuasiConnectivity;
 
         public final ModConfigSpec.BooleanValue disableRecipeBookTracking;
-        public final ModConfigSpec.BooleanValue skipRedundantBlockCacheRebuild;
 
         public Common(ModConfigSpec.Builder builder) {
             builder.push("compat");
@@ -163,11 +162,6 @@ public class SpicedCiderConfig {
                     .comment(tooltip("disableRecipeBookTracking"))
                     .translation("option.spicedcider.disableRecipeBookTracking")
                     .define("disableRecipeBookTracking", true);
-
-            skipRedundantBlockCacheRebuild = builder
-                    .comment(tooltip("skipRedundantBlockCacheRebuild"))
-                    .translation("option.spicedcider.skipRedundantBlockCacheRebuild")
-                    .define("skipRedundantBlockCacheRebuild", true);
 
             builder.pop();
         }

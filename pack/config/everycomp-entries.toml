@@ -6,6 +6,14 @@
 		[types.cake.nomansland]
 			fruit_cake = true
 
+		[types.cake.neapolitan]
+			vanilla_cake = true
+			chocolate_cake = true
+			strawberry_cake = true
+			banana_cake = true
+			mint_cake = true
+			adzuki_cake = true
+
 		[types.wood_type.abundant_atmosphere]
 			red_bamboo = true
 			ashroot = true
@@ -56,6 +64,9 @@
 
 		[types.wood_type.architects_palette]
 			twisted = true
+
+		[types.wood_type.mynethersdelight]
+			powdery = true
 
 		[types.leaves_type.quark]
 			ancient = false
@@ -134,6 +145,10 @@
 		[types.leaves_type.architects_palette]
 			twisted = true
 
+		[types.leaves_type.culturaldelights]
+			avocado = true
+			fruiting_avocado = true
+
 		[types.lantern.infernalexp]
 			glowlight_lantern = true
 
@@ -204,6 +219,8 @@
 			bookshelf = false
 			chiseled_bookshelf = true
 			ladder = true
+			closet = true
+			trapped_closet = true
 
 		[entries.wood_type.valhelsia_structures]
 			bundled_stripped_posts = true
@@ -220,15 +237,15 @@
 			boards = true
 			board_wall = true
 
+		[entries.wood_type.shutterup]
+			shutter = true
+
 		[entries.wood_type.blockbox]
 			spiked_palisade = true
 			stripped_palisade = true
 			palisade = true
-			stripped_spiked_palisade = true
 			seat = true
-
-		[entries.wood_type.shutterup]
-			shutter = true
+			stripped_spiked_palisade = true
 
 		[entries.leaves_type.quark]
 			hedge = true

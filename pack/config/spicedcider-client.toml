@@ -1,5 +1,5 @@
 [naming]
-	#Auto-generate a random world name on the world creation screen, with a reroll button (if Modern World Creation is present).
+	#Auto-generates a random world name on the world creation screen, with a reroll button if Modern World Creation is present.
 	randomWorldNaming = true
 
 [misc]
@@ -7,7 +7,7 @@
 	customDeathSound = true
 	#Spawns sparks, plays hit sounds, and displays a warning message when attempting to mine a block that requires a stronger tool.
 	unmineableBlockSparks = true
-	#Customize the OS window title.
+	#Customize the OS window title bar text.
 	customWindowTitle = true
 	#Format string for the OS window title. %v will be replaced with the current Minecraft version.
 	windowTitleFormat = "Minecraft - Spiced Cider %v"
@@ -15,29 +15,29 @@
 	oldProgressScreen = true
 
 [vista]
-	#Apply performance fixes to Vista's mirror/TV reflection rendering (tightened culling, shared-state thrash suppression, throttled re-renders). Requires Vista (obviously).
+	#Applies performance fixes to Vista's mirror/TV reflection rendering (better culling, better shared-states, re-render throttling). Requires Vista (obviously).
 	vistaMirrorPerfFixes = true
-	#Max distance in blocks that terrain and entities render to inside a mirror/TV reflection.
+	#Max distance in blocks that terrain and entities render to inside a mirror reflection. Only lowers Vista's own television.render_distance (which affects TVs and mirrors). Does not affect TV live feeds.
 	# Default: 64
 	# Range: 16 ~ 2048
 	vistaMirrorReflectionDistance = 64
-	#How many times per second each mirror re-renders its reflection while the viewer is moving.
-	# Default: 60.0
+	#Regular reflection render rate per mirror, in updates per second, when the frame budget is not under pressure. Values at or above 20 mean effectively every frame.
+	# Default: 15.0
 	# Range: 1.0 ~ 240.0
-	vistaMirrorUpdateFps = 60.0
-	#The floor that the mirror update rate will never drop below.
-	# Default: 10.0
+	vistaMirrorUpdateFps = 15.0
+	#The floor that the mirror update rate will never drop below. Values above the base update rate are ignored.
+	# Default: 4.0
 	# Range: 0.25 ~ 240.0
-	vistaMirrorMinUpdateFps = 10.0
-	#Reflection update rate used while the viewer's eye is stationary.
-	# Default: 20.0
+	vistaMirrorMinUpdateFps = 4.0
+	#Reflection update rate used while the viewer's eye is stationary. Set equal to update rate to disable the idle slowdown.
+	# Default: 5.0
 	# Range: 0.25 ~ 240.0
-	vistaMirrorIdleUpdateFps = 20.0
-	#Max milliseconds per frame that all mirror reflection re-renders together may take before update-rate throttling kicks in.
+	vistaMirrorIdleUpdateFps = 5.0
+	#Max milliseconds per frame that all mirror reflection renders may take before being throttled.
 	# Default: 3.5
 	# Range: 0.5 ~ 1000.0
 	vistaMirrorThrottleBudgetMs = 3.5
 
 [compat]
-	#Restore vanilla parity for Sodium's Smooth Lighting corner blending, which stretches light further out than vanilla and causes flicker near moving dynamic light sources (e.g. LambDynamicLights). Requires Sodium.
+	#Restores vanilla parity for Sodium's Smooth Lighting corner blending, which stretches light further out than vanilla and causes flicker near moving dynamic light sources (e.g. LambDynamicLights). Requires Sodium.
 	sodiumLightingParityFix = true

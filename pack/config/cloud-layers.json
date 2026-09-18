@@ -2,6 +2,10 @@
   "enableMod": true,
   "heightOffset": 76,
   "useWorldOffset": true,
+  "useWorldTime": true,
+  "renderDistance": 0,
+  "useVanillaFog": false,
+  "useCustomLayers": true,
   "layers": [
     {
       "name": "First",
@@ -11,16 +15,20 @@
         "thickness": 9,
         "scale": 9,
         "color": 16777215,
-        "opacity": 90
+        "opacity": 90,
+        "texture": "DEFAULT"
       },
       "movement": {
         "speed": 120,
         "direction": "WEST",
-        "useRelativeHeight": false
+        "skyboxMode": false
       },
       "conditions": {
-        "dimension": "minecraft:overworld",
-        "rainingOnly": false
+        "clearWeather": true,
+        "rainyWeather": true,
+        "stormyWeather": true,
+        "startTime": 0,
+        "endTime": 24000
       }
     },
     {
@@ -31,16 +39,20 @@
         "thickness": 4,
         "scale": 9,
         "color": 16777215,
-        "opacity": 60
+        "opacity": 60,
+        "texture": "DEFAULT"
       },
       "movement": {
         "speed": 120,
         "direction": "WEST",
-        "useRelativeHeight": false
+        "skyboxMode": false
       },
       "conditions": {
-        "dimension": "minecraft:overworld",
-        "rainingOnly": false
+        "clearWeather": true,
+        "rainyWeather": true,
+        "stormyWeather": true,
+        "startTime": 0,
+        "endTime": 24000
       }
     },
     {
@@ -51,20 +63,21 @@
         "thickness": 3,
         "scale": 9,
         "color": 16777215,
-        "opacity": 30
+        "opacity": 30,
+        "texture": "DEFAULT"
       },
       "movement": {
         "speed": 120,
         "direction": "WEST",
-        "useRelativeHeight": false
+        "skyboxMode": false
       },
       "conditions": {
-        "dimension": "minecraft:overworld",
-        "rainingOnly": false
+        "clearWeather": true,
+        "rainyWeather": true,
+        "stormyWeather": true,
+        "startTime": 0,
+        "endTime": 24000
       }
     }
-  ],
-  "useWorldTime": true,
-  "renderDistance": 64,
-  "disableFog": false
+  ]
 }

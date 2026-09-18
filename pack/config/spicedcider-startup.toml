@@ -1,6 +1,6 @@
-#Register Every Compat wood-type variants (seats, palisades) for The Block Box. Requires The Block Box, Every Compat, and Moonlight Lib. Requires a restart to take effect.
+#Registers Every Compat wood-type variants (seats, palisades) for The Block Box. Requires The Block Box, Every Compat, and Moonlight Lib. Requires a restart to take effect.
 blockBoxWoodVariants = true
 #Skeletons and strays get 12 max health. Requires a restart to take effect.
-skeletonHealthNerf = false
+skeletonHealthNerf = true
 #Horse armor works like wolf armor: it tanks the hit, loses durability, and is repaired by right-clicking the pet with the armor's material. Applies to horses and, with wolvesWearAnyArmor, to wolves. Requires a restart to take effect.
-unifiedPetArmor = false
+unifiedPetArmor = true

@@ -60,7 +60,6 @@ public class SpicedCiderConfigScreen {
                         .name(Component.translatable("category.spicedcider.performance"))
                         .tooltip(Component.translatable("category.spicedcider.performance.tooltip"))
                         .option(toggle("disableRecipeBookTracking", common.disableRecipeBookTracking))
-                        .option(toggle("skipRedundantBlockCacheRebuild", common.skipRedundantBlockCacheRebuild))
                         .build())
                 .category(ConfigCategory.createBuilder()
                         .name(Component.translatable("category.spicedcider.client"))

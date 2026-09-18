@@ -118,6 +118,11 @@
     "result": "deny"
   },
   {
+    "mob": "hominid:fossilized",
+    "when": "onjoin",
+    "result": "deny"
+  },
+  {
     "mob": "caverns_and_chasms:mime",
     "when": "onjoin",
     "result": "deny"
