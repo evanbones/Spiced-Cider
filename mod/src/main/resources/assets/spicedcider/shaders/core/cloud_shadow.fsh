@@ -1,5 +1,7 @@
 #version 150
 
+#moj_import <fog.glsl>
+
 uniform sampler2D DepthSampler;
 uniform sampler2D CoverageSampler;
 
@@ -10,6 +12,10 @@ uniform vec2 CloudPlane;
 uniform vec4 CoverageOrigin;
 uniform vec4 ShadowColor;
 uniform vec2 FadeParams;
+uniform float FogStart;
+uniform float FogEnd;
+uniform vec4 FogColor;
+uniform int FogShape;
 
 in vec2 texCoord;
 
@@ -48,6 +54,9 @@ void main() {
     float fade = 1.0 - smoothstep(FadeParams.x, FadeParams.y, length(relative.xz));
     if (fade <= 0.0) discard;
 
-    float shade = clamp(ShadowColor.a * coverage * fade, 0.0, 1.0);
+    float visibility = mix(1.0, linear_fog_fade(fog_distance(relative, FogShape), FogStart, FogEnd), FogColor.a);
+    if (visibility <= 0.0) discard;
+
+    float shade = clamp(ShadowColor.a * coverage * fade * visibility, 0.0, 1.0);
     fragColor = vec4(mix(vec3(1.0), ShadowColor.rgb, shade), 1.0);
 }
