@@ -186,10 +186,6 @@ public class SpicedCiderConfig {
 
         public final ModConfigSpec.BooleanValue sodiumLightingParityFix;
 
-        public final ModConfigSpec.BooleanValue cloudShadows;
-        public final ModConfigSpec.DoubleValue cloudShadowStrength;
-        public final ModConfigSpec.IntValue cloudShadowSoftness;
-
         public Client(ModConfigSpec.Builder builder) {
             builder.push("compat");
 
@@ -266,24 +262,6 @@ public class SpicedCiderConfig {
                     .comment(tooltip("vistaMirrorThrottleBudgetMs"))
                     .translation("option.spicedcider.vistaMirrorThrottleBudgetMs")
                     .defineInRange("vistaMirrorThrottleBudgetMs", 3.5, 0.5, 1000.0);
-
-            builder.pop();
-            builder.push("betterclouds");
-
-            cloudShadows = builder
-                    .comment(tooltip("cloudShadows"))
-                    .translation("option.spicedcider.cloudShadows")
-                    .define("cloudShadows", true);
-
-            cloudShadowStrength = builder
-                    .comment(tooltip("cloudShadowStrength"))
-                    .translation("option.spicedcider.cloudShadowStrength")
-                    .defineInRange("cloudShadowStrength", 0.7, 0.0, 1.0);
-
-            cloudShadowSoftness = builder
-                    .comment(tooltip("cloudShadowSoftness"))
-                    .translation("option.spicedcider.cloudShadowSoftness")
-                    .defineInRange("cloudShadowSoftness", 16, 0, 64);
 
             builder.pop();
         }
