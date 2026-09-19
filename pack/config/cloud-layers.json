@@ -1,10 +1,10 @@
 {
   "enableMod": true,
   "heightOffset": 76,
-  "useWorldOffset": true,
+  "useWorldOffset": false,
   "useWorldTime": true,
   "renderDistance": 0,
-  "useVanillaFog": false,
+  "useVanillaFog": true,
   "useCustomLayers": true,
   "layers": [
     {
@@ -15,7 +15,7 @@
         "thickness": 9,
         "scale": 9,
         "color": 16777215,
-        "opacity": 90,
+        "opacity": 100,
         "texture": "DEFAULT"
       },
       "movement": {

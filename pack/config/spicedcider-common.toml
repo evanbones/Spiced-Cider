@@ -25,5 +25,3 @@
 [performance]
 	#Disables recipe book unlock tracking/saving/syncing entirely. Saves memory and disk I/O.
 	disableRecipeBookTracking = true
-	#Skips the redundant block shape cache rebuild that happens on every tag reload.
-	skipRedundantBlockCacheRebuild = true

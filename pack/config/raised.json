@@ -22,6 +22,50 @@
       },
       "sync": "caverns_and_chasms:monocle_head"
     },
+    "cold_sweat:body_temp": {
+      "displacement": {
+        "x": 0,
+        "y": 0
+      },
+      "direction": {
+        "x": "NONE",
+        "y": "NONE"
+      },
+      "sync": "cold_sweat:body_temp"
+    },
+    "cold_sweat:food_effects": {
+      "displacement": {
+        "x": 0,
+        "y": 0
+      },
+      "direction": {
+        "x": "NONE",
+        "y": "NONE"
+      },
+      "sync": "cold_sweat:food_effects"
+    },
+    "cold_sweat:vague_temp": {
+      "displacement": {
+        "x": 0,
+        "y": 0
+      },
+      "direction": {
+        "x": "NONE",
+        "y": "NONE"
+      },
+      "sync": "cold_sweat:vague_temp"
+    },
+    "cold_sweat:world_temp": {
+      "displacement": {
+        "x": 0,
+        "y": 0
+      },
+      "direction": {
+        "x": "NONE",
+        "y": "NONE"
+      },
+      "sync": "cold_sweat:world_temp"
+    },
     "create:blueprint": {
       "displacement": {
         "x": 0,
@@ -571,6 +615,17 @@
         "y": "NONE"
       },
       "sync": "vista:viewfinder"
+    },
+    "voxyworldgenv2:debug_overlay": {
+      "displacement": {
+        "x": 0,
+        "y": 0
+      },
+      "direction": {
+        "x": "NONE",
+        "y": "NONE"
+      },
+      "sync": "voxyworldgenv2:debug_overlay"
     },
     "windswept:carved_pinecone": {
       "displacement": {

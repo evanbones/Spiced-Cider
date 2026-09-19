@@ -271,6 +271,7 @@ dependencies {
     }
 
     compileOnly "maven.modrinth:modern-world-creation:2.0.1-1.21.1-neoforge"
+    compileOnly "maven.modrinth:fancymenu:3.9.12-1.21.1-neoforge"
     //runtimeOnly "maven.modrinth:modern-world-creation:2.0.1-1.21.1-neoforge"
     //runtimeOnly "maven.modrinth:konkrete:1.9.9-1.21-neoforge"
     runtimeOnly "maven.modrinth:emi:1.1.22+1.21.1+neoforge"
@@ -311,6 +312,10 @@ dependencies {
     // Sodium
     compileOnly "net.caffeinemc:sodium-neoforge-mod:0.8.12+mc1.21.1"
 
+    // Better Clouds
+    compileOnly "maven.modrinth:better-clouds:98i9IvGb"
+    runtimeOnly "maven.modrinth:better-clouds:98i9IvGb"
+
     // Reconnectible Chains
     compileOnly "maven.modrinth:reconnectible-chains:2.2.5-1.21.1-neoforge"
 
@@ -350,8 +355,8 @@ dependencies {
     compileOnly "maven.modrinth:slime-time:1.2.2+1.21.1-neoforge"
 
     // Vista
-    compileOnly "maven.modrinth:vista_tv:M1F8Vuva"
-    runtimeOnly "maven.modrinth:vista_tv:M1F8Vuva"
+    compileOnly "maven.modrinth:vista_tv:PjmUcPQW"
+    runtimeOnly "maven.modrinth:vista_tv:PjmUcPQW"
 
     // Bountiful Fares
     compileOnly "maven.modrinth:bountiful-fares:3EC8C1GU"

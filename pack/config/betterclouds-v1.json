@@ -1,59 +1,37 @@
 {
+	"bottomSparsity": 0.0,
 	"migrationVersion": 2,
 	"enabled": true,
-	"distance": 4.0,
-	"randomPlacement": 1.0,
-	"fuzziness": 1.0,
-	"shuffle": false,
-	"yRange": 64.0,
+	"distance": 16.0,
+	"randomPlacement": 0.0,
+	"fuzziness": 0.0,
+	"yRange": 0.0,
 	"yOffset": 0.0,
+	"timeSource": "WORLD",
 	"sparsity": 0.0,
-	"spacing": 3.5,
-	"sizeXZ": 20.0,
-	"sizeY": 25.0,
-	"travelSpeed": 0.03,
-	"windEffectFactor": 0.6,
-	"windSpeedFactor": 0.8,
-	"colorVariationFactor": 0.8,
-	"celestialBodyHalo": false,
-	"chunkSize": 32,
+	"spacing": 8.0,
+	"sizeXZ": 16.0,
+	"sizeY": 0.0,
+	"travelSpeed": 0.099999994,
+	"windEffectFactor": 0.0,
+	"windSpeedFactor": 0.0,
+	"colorVariationFactor": 0.0,
+	"celestialBodyHalo": true,
+	"chunkSize": 16,
 	"samplingScale": 1.0,
-	"scaleFalloffMin": 0.25,
+	"scaleFalloffMin": 1.0,
 	"fogRangeFactor": 1.0,
 	"fogEndFactor": 1.0,
 	"usePersistentBuffers": true,
+	"useSamplerCaching": true,
 	"useFrustumCulling": true,
-	"irisSupport": true,
+	"irisSupport": false,
+	"selectedNoisePreset": 3,
 	"cloudOverride": true,
-	"useIrisFBO": true,
+	"useIrisFBO": false,
 	"selectedPreset": 0,
 	"presets": [
 		{
-			"title": "",
-			"key": null,
-			"editable": true,
-			"upscale_resolution_factor": 1.0,
-			"gamma": 1.0,
-			"sun_path_angle": 0.0,
-			"sunrise_start_time": -785,
-			"sunrise_end_time": 1163,
-			"sunset_start_time": 10837,
-			"sunset_end_time": 12785,
-			"day_brightness": 1.0,
-			"night_brightness": 1.2099999,
-			"saturation": 1.0,
-			"opacity": 0.16,
-			"opacity_factor": 1.0,
-			"opacity_exponent": 1.25,
-			"tint_red": 1.0,
-			"tint_green": 1.0,
-			"tint_blue": 1.0,
-			"world_curvature_size": 0
-		},
-		{
-			"title": "Default",
-			"key": "default",
-			"editable": false,
 			"upscale_resolution_factor": 1.0,
 			"gamma": 1.0,
 			"sun_path_angle": 0.0,
@@ -70,12 +48,36 @@
 			"tint_red": 1.0,
 			"tint_green": 1.0,
 			"tint_blue": 1.0,
-			"world_curvature_size": 0
+			"world_curvature_size": 0,
+			"title": "",
+			"key": null,
+			"description": "",
+			"editable": true
 		},
 		{
-			"title": "BSL V8",
-			"key": "bsl_v8",
-			"editable": false,
+			"upscale_resolution_factor": 1.0,
+			"gamma": 1.0,
+			"sun_path_angle": 0.0,
+			"sunrise_start_time": -785,
+			"sunrise_end_time": 1163,
+			"sunset_start_time": 10837,
+			"sunset_end_time": 12785,
+			"day_brightness": 1.0,
+			"night_brightness": 1.0,
+			"saturation": 1.0,
+			"opacity": 0.2,
+			"opacity_factor": 1.0,
+			"opacity_exponent": 1.5,
+			"tint_red": 1.0,
+			"tint_green": 1.0,
+			"tint_blue": 1.0,
+			"world_curvature_size": 0,
+			"title": "Default",
+			"key": "default",
+			"description": "",
+			"editable": false
+		},
+		{
 			"upscale_resolution_factor": 1.0,
 			"gamma": 1.0,
 			"sun_path_angle": -40.0,
@@ -92,12 +94,13 @@
 			"tint_red": 1.0,
 			"tint_green": 1.0,
 			"tint_blue": 1.0,
-			"world_curvature_size": 0
+			"world_curvature_size": 0,
+			"title": "BSL V8",
+			"key": "bsl_v8",
+			"description": "",
+			"editable": false
 		},
 		{
-			"title": "Chocapic13 V6",
-			"key": "chocapic13_v6",
-			"editable": false,
 			"upscale_resolution_factor": 1.0,
 			"gamma": -2.25,
 			"sun_path_angle": -40.0,
@@ -114,12 +117,13 @@
 			"tint_red": 1.0,
 			"tint_green": 1.0,
 			"tint_blue": 1.0,
-			"world_curvature_size": 0
+			"world_curvature_size": 0,
+			"title": "Chocapic13 V6",
+			"key": "chocapic13_v6",
+			"description": "",
+			"editable": false
 		},
 		{
-			"title": "Chocapic13 V9",
-			"key": "chocapic13_v9",
-			"editable": false,
 			"upscale_resolution_factor": 0.75,
 			"gamma": -2.25,
 			"sun_path_angle": -40.0,
@@ -136,12 +140,13 @@
 			"tint_red": 1.0,
 			"tint_green": 1.0,
 			"tint_blue": 1.0,
-			"world_curvature_size": 0
+			"world_curvature_size": 0,
+			"title": "Chocapic13 V9",
+			"key": "chocapic13_v9",
+			"description": "",
+			"editable": false
 		},
 		{
-			"title": "Complementary Reimagined V2",
-			"key": "complementary_reimagined_v2",
-			"editable": false,
 			"upscale_resolution_factor": 1.0,
 			"gamma": 1.0,
 			"sun_path_angle": 0.0,
@@ -158,12 +163,13 @@
 			"tint_red": 1.0,
 			"tint_green": 1.0,
 			"tint_blue": 1.0,
-			"world_curvature_size": 0
+			"world_curvature_size": 0,
+			"title": "Complementary Reimagined V2",
+			"key": "complementary_reimagined_v2",
+			"description": "",
+			"editable": false
 		},
 		{
-			"title": "Complementary V4",
-			"key": "complementary_v4",
-			"editable": false,
 			"upscale_resolution_factor": 1.0,
 			"gamma": -2.25,
 			"sun_path_angle": -40.0,
@@ -180,12 +186,13 @@
 			"tint_red": 1.0,
 			"tint_green": 1.0,
 			"tint_blue": 1.0,
-			"world_curvature_size": 0
+			"world_curvature_size": 0,
+			"title": "Complementary V4",
+			"key": "complementary_v4",
+			"description": "",
+			"editable": false
 		},
 		{
-			"title": "Kappa V5",
-			"key": "kappa_v5",
-			"editable": false,
 			"upscale_resolution_factor": 0.75,
 			"gamma": -2.4,
 			"sun_path_angle": -35.0,
@@ -202,12 +209,13 @@
 			"tint_red": 1.0,
 			"tint_green": 1.0,
 			"tint_blue": 1.0,
-			"world_curvature_size": 0
+			"world_curvature_size": 0,
+			"title": "Kappa V5",
+			"key": "kappa_v5",
+			"description": "",
+			"editable": false
 		},
 		{
-			"title": "Rethinking Voxels V0",
-			"key": "rethinking_voxels_v0",
-			"editable": false,
 			"upscale_resolution_factor": 1.0,
 			"gamma": 1.5,
 			"sun_path_angle": 0.0,
@@ -224,12 +232,13 @@
 			"tint_red": 1.0,
 			"tint_green": 1.0,
 			"tint_blue": 1.0,
-			"world_curvature_size": 0
+			"world_curvature_size": 0,
+			"title": "Rethinking Voxels V0",
+			"key": "rethinking_voxels_v0",
+			"description": "",
+			"editable": false
 		},
 		{
-			"title": "Soft Voxels Lite V1",
-			"key": "soft_voxels_lite_v1",
-			"editable": false,
 			"upscale_resolution_factor": 0.5,
 			"gamma": -2.2,
 			"sun_path_angle": -25.0,
@@ -246,12 +255,13 @@
 			"tint_red": 1.0,
 			"tint_green": 1.0,
 			"tint_blue": 1.0,
-			"world_curvature_size": 0
+			"world_curvature_size": 0,
+			"title": "Soft Voxels Lite V1",
+			"key": "soft_voxels_lite_v1",
+			"description": "",
+			"editable": false
 		},
 		{
-			"title": "Solas V1",
-			"key": "solas_v1",
-			"editable": false,
 			"upscale_resolution_factor": 1.0,
 			"gamma": 1.0,
 			"sun_path_angle": -40.0,
@@ -268,16 +278,141 @@
 			"tint_red": 1.0,
 			"tint_green": 1.0,
 			"tint_blue": 1.0,
-			"world_curvature_size": 0
+			"world_curvature_size": 0,
+			"title": "Solas V1",
+			"key": "solas_v1",
+			"description": "",
+			"editable": false
+		}
+	],
+	"noisePresets": [
+		{
+			"octaves": [
+				[
+					-1,
+					0,
+					1,
+					2
+				],
+				[
+					-3,
+					-1,
+					0,
+					1,
+					2
+				],
+				[
+					-2,
+					0,
+					1,
+					2
+				],
+				[
+					0,
+					1,
+					2
+				]
+			],
+			"title": "Default",
+			"key": null,
+			"description": "Varied patches of clouds. Creates different cloud patterns every day!",
+			"editable": true
+		},
+		{
+			"octaves": [
+				[
+					-1,
+					0,
+					1,
+					2
+				],
+				[
+					-3,
+					-1,
+					0,
+					1,
+					2
+				],
+				[
+					-2,
+					0,
+					1,
+					2
+				],
+				[
+					0,
+					1,
+					2
+				]
+			],
+			"title": "Default",
+			"key": "default",
+			"description": "Varied patches of clouds. Creates different cloud patterns every day!",
+			"editable": false
+		},
+		{
+			"octaves": [
+				[
+					0,
+					1,
+					2
+				]
+			],
+			"title": "Dotted",
+			"key": "dotted",
+			"description": "Many patches of small clouds, with medium holes of clear sky",
+			"editable": false
+		},
+		{
+			"octaves": [
+				[
+					-1,
+					0,
+					1,
+					2
+				]
+			],
+			"title": "Fluffy",
+			"key": "fluffy",
+			"description": "The old, fluffy clouds from 1.12.x Better Clouds",
+			"editable": false
+		},
+		{
+			"octaves": [
+				[
+					-3,
+					-1,
+					0,
+					1,
+					2
+				]
+			],
+			"title": "Grand",
+			"key": "sparse",
+			"description": "Grand, vast fields of clouds. May be too performance-heavy on high render distance.",
+			"editable": false
+		},
+		{
+			"octaves": [
+				[
+					-2,
+					0,
+					1,
+					2
+				]
+			],
+			"title": "Medium",
+			"key": "medium",
+			"description": "Medium-sized heaps of clouds, with fields of clear sky",
+			"editable": false
 		}
 	],
 	"lastTelemetryVersion": 0,
 	"gpuIncompatibleMessageEnabled": true,
 	"issueReportEnabled": true,
+	"cloudsDisabledMessageEnabled": true,
 	"enabledDimensions": [
-		"minecraft:overworld",
-		"bigglobe:overworld",
-		"me:middle_earth_type"
+		"minecraft:overworld"
 	],
 	"sereneSeasonsConfig": {
 		"transition_days": 2.0,

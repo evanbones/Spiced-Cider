@@ -445,6 +445,9 @@ chunk_rebuild_scheduler = "culling"
 				fir_chest_boat = true
 				fir_boat = true
 
+			[light_sources.settings.entities.mynethersdelight]
+				strider_rock = true
+
 			[light_sources.settings.entities.arts_and_crafts]
 				floating_block = true
 				chest_boat = true
@@ -507,6 +510,9 @@ chunk_rebuild_scheduler = "culling"
 			[light_sources.settings.entities.abundant_atmosphere]
 				nutling = true
 
+			[light_sources.settings.entities.modestmining]
+				thrown_javelin = true
+
 			[light_sources.settings.entities.slime_time]
 				slimeball = true
 
@@ -524,6 +530,9 @@ chunk_rebuild_scheduler = "culling"
 				falling_block = true
 				chest_boat = true
 				boat = true
+
+			[light_sources.settings.entities.cold_sweat]
+				chameleon = true
 
 			[light_sources.settings.entities.caverns_and_chasms]
 				copper_golem = true

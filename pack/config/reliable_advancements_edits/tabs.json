@@ -707,6 +707,28 @@
       "title": "Adventure",
       "icon": "minecraft:map",
       "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png"
+    },
+    "caverns_and_chasms:adventure/dismantle_item": {
+      "title": "Not An Uncrafting Table",
+      "icon": "caverns_and_chasms:dismantling_table"
+    },
+    "frostiful:adventure/root": {
+      "title": "Frostiful",
+      "icon": "frostiful:frost_wand",
+      "background": "frostiful:textures/block/brittle_ice/cracked_0.png"
+    },
+    "hominid:adventure/fossilised": {
+      "title": "Return the Slab",
+      "icon": "hominid:remains_armor_trim_smithing_template"
+    },
+    "minecraft:adventure/trim_with_all_exclusive_armor_patterns": {
+      "title": "Smithing with Style",
+      "icon": "minecraft:silence_armor_trim_smithing_template"
+    },
+    "cold_sweat:root": {
+      "title": "Cold Sweat",
+      "icon": "cold_sweat:thermometer",
+      "background": "minecraft:textures/block/smooth_basalt.png"
     }
   }
 }
