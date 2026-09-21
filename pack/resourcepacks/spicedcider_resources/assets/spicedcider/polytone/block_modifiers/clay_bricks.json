@@ -1,0 +1,165 @@
+{
+  "targets": [
+    "minecraft:bricks",
+    "minecraft:brick_slab",
+    "minecraft:brick_stairs",
+    "minecraft:brick_wall",
+    {
+      "id": "clayworks:chiseled_bricks",
+      "required": false
+    },
+    {
+      "id": "clayworks:terracotta_bricks",
+      "required": false
+    },
+    {
+      "id": "clayworks:terracotta_brick_stairs",
+      "required": false
+    },
+    {
+      "id": "clayworks:terracotta_brick_slab",
+      "required": false
+    },
+    {
+      "id": "clayworks:chiseled_terracotta_bricks",
+      "required": false
+    },
+    {
+      "id": "clayworks:terracotta_brick_wall",
+      "required": false
+    },
+    {
+      "id": "twigs:silt_bricks",
+      "required": false
+    },
+    {
+      "id": "twigs:silt_brick_stairs",
+      "required": false
+    },
+    {
+      "id": "twigs:silt_brick_slab",
+      "required": false
+    },
+    {
+      "id": "twigs:silt_brick_wall",
+      "required": false
+    },
+    {
+      "id": "twigs:chiseled_silt_bricks",
+      "required": false
+    },
+    {
+      "id": "twigs:cracked_silt_bricks",
+      "required": false
+    },
+    {
+      "id": "architects_palette:olivestone_bricks",
+      "required": false
+    },
+    {
+      "id": "architects_palette:olivestone_brick_stairs",
+      "required": false
+    },
+    {
+      "id": "architects_palette:olivestone_brick_slab",
+      "required": false
+    },
+    {
+      "id": "architects_palette:olivestone_brick_wall",
+      "required": false
+    },
+    {
+      "id": "architects_palette:cracked_olivestone_bricks",
+      "required": false
+    },
+    {
+      "id": "architects_palette:algal_bricks",
+      "required": false
+    },
+    {
+      "id": "architects_palette:algal_brick_slab",
+      "required": false
+    },
+    {
+      "id": "architects_palette:algal_brick_stairs",
+      "required": false
+    },
+    {
+      "id": "architects_palette:algal_brick_wall",
+      "required": false
+    },
+    {
+      "id": "architects_palette:cracked_algal_bricks",
+      "required": false
+    },
+    {
+      "id": "architects_palette:chiseled_algal_bricks",
+      "required": false
+    },
+    {
+      "id": "architects_palette:overgrown_algal_bricks",
+      "required": false
+    },
+    {
+      "id": "architects_palette:overgrown_algal_brick_slab",
+      "required": false
+    },
+    {
+      "id": "architects_palette:overgrown_algal_brick_stairs",
+      "required": false
+    },
+    {
+      "id": "architects_palette:overgrown_algal_brick_wall",
+      "required": false
+    },
+    {
+      "id": "farmersdelight:stove",
+      "required": false
+    },
+    {
+      "id": "cookscollection:oven",
+      "required": false
+    },
+    {
+      "id": "supplementaries:ash_bricks",
+      "required": false
+    },
+    {
+      "id": "supplementaries:ash_bricks_stairs",
+      "required": false
+    },
+    {
+      "id": "supplementaries:ash_bricks_slab",
+      "required": false
+    },
+    {
+      "id": "supplementaries:ash_bricks_wall",
+      "required": false
+    },
+    {
+      "id": "supplementaries:lapis_bricks",
+      "required": false
+    },
+    {
+      "id": "supplementaries:lapis_bricks_stairs",
+      "required": false
+    },
+    {
+      "id": "supplementaries:lapis_bricks_slab",
+      "required": false
+    },
+    {
+      "id": "supplementaries:lapis_bricks_wall",
+      "required": false
+    }
+  ],
+  "sound_type": {
+    "break_sound": "minecraft:block.nether_bricks.break",
+    "place_sound": "minecraft:block.nether_bricks.place",
+    "hit_sound": "minecraft:block.nether_bricks.hit",
+    "step_sound": "minecraft:block.nether_bricks.step",
+    "fall_sound": "minecraft:block.nether_bricks.fall",
+    "pitch": 1.3,
+    "volume": 1.0
+  }
+}

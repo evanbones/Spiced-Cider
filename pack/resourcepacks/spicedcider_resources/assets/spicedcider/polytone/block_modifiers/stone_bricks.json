@@ -1,0 +1,240 @@
+{
+  "targets": [
+    "minecraft:stone_bricks",
+    "minecraft:stone_brick_stairs",
+    "minecraft:stone_brick_slab",
+    "minecraft:stone_brick_wall",
+    "minecraft:mossy_stone_bricks",
+    "minecraft:mossy_stone_brick_stairs",
+    "minecraft:mossy_stone_brick_slab",
+    "minecraft:mossy_stone_brick_wall",
+    "minecraft:cracked_stone_bricks",
+    "minecraft:chiseled_stone_bricks",
+    "minecraft:deepslate_bricks",
+    "minecraft:cracked_deepslate_bricks",
+    "minecraft:deepslate_brick_wall",
+    "minecraft:deepslate_brick_stairs",
+    "minecraft:deepslate_brick_slab",
+    {
+      "id": "architects_palette:heavy_stone_bricks",
+      "required": false
+    },
+    {
+      "id": "architects_palette:heavy_mossy_stone_bricks",
+      "required": false
+    },
+    {
+      "id": "architects_palette:heavy_cracked_stone_bricks",
+      "required": false
+    },
+    {
+      "id": "architects_palette:onyx_bricks",
+      "required": false
+    },
+    {
+      "id": "architects_palette:onyx_brick_stairs",
+      "required": false
+    },
+    {
+      "id": "architects_palette:onyx_brick_slab",
+      "required": false
+    },
+    {
+      "id": "architects_palette:onyx_brick_wall",
+      "required": false
+    },
+    {
+      "id": "architects_palette:oracle_bricks",
+      "required": false
+    },
+    {
+      "id": "architects_palette:oracle_brick_stairs",
+      "required": false
+    },
+    {
+      "id": "architects_palette:oracle_brick_slab",
+      "required": false
+    },
+    {
+      "id": "architects_palette:oracle_brick_wall",
+      "required": false
+    },
+    {
+      "id": "architects_palette:dark_oracle_bricks",
+      "required": false
+    },
+    {
+      "id": "architects_palette:dark_oracle_brick_stairs",
+      "required": false
+    },
+    {
+      "id": "architects_palette:dark_oracle_brick_slab",
+      "required": false
+    },
+    {
+      "id": "architects_palette:dark_oracle_brick_wall",
+      "required": false
+    },
+    {
+      "id": "upgrade_aquatic:kelpy_stone_bricks",
+      "required": false
+    },
+    {
+      "id": "upgrade_aquatic:kelpy_stone_brick_stairs",
+      "required": false
+    },
+    {
+      "id": "upgrade_aquatic:kelpy_stone_brick_slab",
+      "required": false
+    },
+    {
+      "id": "upgrade_aquatic:kelpy_stone_brick_wall",
+      "required": false
+    },
+    {
+      "id": "quark:granite_bricks",
+      "required": false
+    },
+    {
+      "id": "quark:granite_bricks_stairs",
+      "required": false
+    },
+    {
+      "id": "quark:granite_bricks_slab",
+      "required": false
+    },
+    {
+      "id": "quark:granite_bricks_wall",
+      "required": false
+    },
+    {
+      "id": "quark:chiseled_granite_bricks",
+      "required": false
+    },
+    {
+      "id": "quark:diorite_bricks",
+      "required": false
+    },
+    {
+      "id": "quark:diorite_bricks_stairs",
+      "required": false
+    },
+    {
+      "id": "quark:diorite_bricks_slab",
+      "required": false
+    },
+    {
+      "id": "quark:diorite_bricks_wall",
+      "required": false
+    },
+    {
+      "id": "quark:chiseled_diorite_bricks",
+      "required": false
+    },
+    {
+      "id": "quark:andesite_bricks",
+      "required": false
+    },
+    {
+      "id": "quark:andesite_bricks_stairs",
+      "required": false
+    },
+    {
+      "id": "quark:andesite_bricks_slab",
+      "required": false
+    },
+    {
+      "id": "quark:andesite_bricks_wall",
+      "required": false
+    },
+    {
+      "id": "quark:chiseled_andesite_bricks",
+      "required": false
+    },
+    {
+      "id": "quark:calcite_bricks",
+      "required": false
+    },
+    {
+      "id": "quark:calcite_bricks_stairs",
+      "required": false
+    },
+    {
+      "id": "quark:calcite_bricks_slab",
+      "required": false
+    },
+    {
+      "id": "quark:calcite_bricks_wall",
+      "required": false
+    },
+    {
+      "id": "quark:chiseled_calcite_bricks",
+      "required": false
+    },
+    {
+      "id": "quark:dripstone_bricks",
+      "required": false
+    },
+    {
+      "id": "quark:dripstone_bricks_stairs",
+      "required": false
+    },
+    {
+      "id": "quark:dripstone_bricks_slab",
+      "required": false
+    },
+    {
+      "id": "quark:dripstone_bricks_wall",
+      "required": false
+    },
+    {
+      "id": "quark:chiseled_dripstone_bricks",
+      "required": false
+    },
+    {
+      "id": "quark:tuff_bricks",
+      "required": false
+    },
+    {
+      "id": "quark:tuff_bricks_stairs",
+      "required": false
+    },
+    {
+      "id": "quark:tuff_bricks_slab",
+      "required": false
+    },
+    {
+      "id": "quark:tuff_bricks_wall",
+      "required": false
+    },
+    {
+      "id": "quark:chiseled_tuff_bricks",
+      "required": false
+    },
+    {
+      "id": "oreganized:glance_bricks",
+      "required": false
+    },
+    {
+      "id": "oreganized:glance_brick_slab",
+      "required": false
+    },
+    {
+      "id": "oreganized:glance_brick_stairs",
+      "required": false
+    },
+    {
+      "id": "oreganized:glance_brick_wall",
+      "required": false
+    }
+  ],
+  "sound_type": {
+    "break_sound": "minecraft:block.deepslate_tiles.break",
+    "place_sound": "minecraft:block.deepslate_tiles.place",
+    "hit_sound": "minecraft:block.deepslate_tiles.hit",
+    "step_sound": "minecraft:block.deepslate_tiles.step",
+    "fall_sound": "minecraft:block.deepslate_tiles.fall",
+    "pitch": 0.6,
+    "volume": 1.0
+  }
+}

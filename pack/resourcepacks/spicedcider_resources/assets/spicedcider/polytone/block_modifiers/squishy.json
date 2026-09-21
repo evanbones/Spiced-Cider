@@ -1,0 +1,77 @@
+{
+  "targets": [
+    {
+      "id": "supplementaries:double_cake",
+      "required": false
+    },
+    {
+      "id": "atmospheric:yucca_gateau",
+      "required": false
+    },
+    {
+      "id": "autumnity:turkey",
+      "required": false
+    },
+    {
+      "id": "autumnity:cooked_turkey",
+      "required": false
+    },
+    {
+      "id": "create_central_kitchen:pumpkin_pie",
+      "required": false
+    },
+    {
+      "id": "create_central_kitchen:cherry_pie",
+      "required": false
+    },
+    {
+      "id": "create_central_kitchen:truffle_pie",
+      "required": false
+    },
+    {
+      "id": "create_central_kitchen:mulberry_pie",
+      "required": false
+    },
+    {
+      "id": "farmersdelight:sweet_berry_cheesecake",
+      "required": false
+    },
+    {
+      "id": "farmersdelight:apple_pie",
+      "required": false
+    },
+    {
+      "id": "farmersdelight:chocolate_pie",
+      "required": false
+    },
+    {
+      "id": "farmersrespite:rose_hip_pie",
+      "required": false
+    },
+    {
+      "id": "brewinandchewin:quiche",
+      "required": false
+    },
+    {
+      "id": "brewinandchewin:pizza",
+      "required": false
+    },
+    {
+      "id": "brewinandchewin:flaxen_cheese_wheel",
+      "required": false
+    },
+    {
+      "id": "supplementaries:pancake",
+      "required": false
+    }
+  ],
+  "sound_type": {
+    "break_sound": "spicedcider:sound.squishy.break",
+    "place_sound": "spicedcider:sound.squishy.place",
+    "hit_sound": "spicedcider:sound.squishy.hit",
+    "fall_sound": "spicedcider:sound.squishy.fall",
+    "step_sound": "spicedcider:sound.squishy.step",
+    "pitch": 1.1,
+    "volume": 1
+  }
+}

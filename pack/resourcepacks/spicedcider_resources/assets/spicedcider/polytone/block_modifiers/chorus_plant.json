@@ -1,0 +1,12 @@
+{
+  "targets": [
+    "minecraft:chorus_plant",
+    "minecraft:chorus_flower",
+    "minecraft:cactus",
+    {
+      "id": "quark:cactus_block",
+      "required": false
+    }
+  ],
+  "sound_type": "auditory:chorus_plant"
+}

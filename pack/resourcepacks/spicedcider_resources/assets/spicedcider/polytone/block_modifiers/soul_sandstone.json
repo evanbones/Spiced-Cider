@@ -1,0 +1,69 @@
+{
+  "targets": [
+    {
+      "id": "quark:soul_sandstone",
+      "required": false
+    },
+    {
+      "id": "quark:soul_sandstone_slab",
+      "required": false
+    },
+    {
+      "id": "quark:soul_sandstone_stairs",
+      "required": false
+    },
+    {
+      "id": "quark:soul_sandstone_wall",
+      "required": false
+    },
+    {
+      "id": "quark:chiseled_soul_sandstone",
+      "required": false
+    },
+    {
+      "id": "quark:cut_soul_sandstone",
+      "required": false
+    },
+    {
+      "id": "quark:cut_soul_sandstone_slab",
+      "required": false
+    },
+    {
+      "id": "quark:smooth_soul_sandstone",
+      "required": false
+    },
+    {
+      "id": "quark:smooth_soul_sandstone_slab",
+      "required": false
+    },
+    {
+      "id": "quark:smooth_soul_sandstone_stairs",
+      "required": false
+    },
+    {
+      "id": "quark:soul_sandstone_bricks",
+      "required": false
+    },
+    {
+      "id": "quark:soul_sandstone_bricks_slab",
+      "required": false
+    },
+    {
+      "id": "quark:soul_sandstone_bricks_stairs",
+      "required": false
+    },
+    {
+      "id": "quark:soul_sandstone_bricks_wall",
+      "required": false
+    }
+  ],
+  "sound_type": {
+    "break_sound": "spicedcider:sound.soul_sandstone.break",
+    "place_sound": "spicedcider:sound.soul_sandstone.place",
+    "hit_sound": "spicedcider:sound.soul_sandstone.hit",
+    "fall_sound": "spicedcider:sound.soul_sandstone.fall",
+    "step_sound": "spicedcider:sound.soul_sandstone.step",
+    "pitch": 1,
+    "volume": 1
+  }
+}

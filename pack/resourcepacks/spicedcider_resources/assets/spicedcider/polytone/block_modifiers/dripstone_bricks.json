@@ -1,0 +1,93 @@
+{
+  "targets": [
+    {
+      "id": "architects_palette:dripstone_bricks",
+      "required": false
+    },
+    {
+      "id": "architects_palette:dripstone_brick_slab",
+      "required": false
+    },
+    {
+      "id": "architects_palette:dripstone_brick_stairs",
+      "required": false
+    },
+    {
+      "id": "architects_palette:dripstone_brick_wall",
+      "required": false
+    },
+    {
+      "id": "architects_palette:dripstone_pillar",
+      "required": false
+    },
+    {
+      "id": "architects_palette:chiseled_dripstone",
+      "required": false
+    },
+    {
+      "id": "architects_palette:heavy_dripstone_bricks",
+      "required": false
+    },
+    {
+      "id": "create:cut_dripstone_bricks",
+      "required": false
+    },
+    {
+      "id": "create:cut_dripstone_brick_stairs",
+      "required": false
+    },
+    {
+      "id": "create:cut_dripstone_brick_slab",
+      "required": false
+    },
+    {
+      "id": "create:cut_dripstone_brick_wall",
+      "required": false
+    },
+    {
+      "id": "create:small_dripstone_bricks",
+      "required": false
+    },
+    {
+      "id": "create:small_dripstone_brick_stairs",
+      "required": false
+    },
+    {
+      "id": "create:small_dripstone_brick_slab",
+      "required": false
+    },
+    {
+      "id": "create:small_dripstone_brick_wall",
+      "required": false
+    },
+    {
+      "id": "quark:dripstone_bricks",
+      "required": false
+    },
+    {
+      "id": "quark:dripstone_bricks_slab",
+      "required": false
+    },
+    {
+      "id": "quark:dripstone_bricks_stairs",
+      "required": false
+    },
+    {
+      "id": "quark:dripstone_bricks_wall",
+      "required": false
+    },
+    {
+      "id": "quark:chiseled_dripstone_bricks",
+      "required": false
+    }
+  ],
+  "sound_type": {
+    "break_sound": "spicedcider:sound.brick_variant.break",
+    "place_sound": "spicedcider:sound.brick_variant.place",
+    "hit_sound": "spicedcider:sound.brick_variant.hit",
+    "fall_sound": "spicedcider:sound.brick_variant.fall",
+    "step_sound": "spicedcider:sound.brick_variant.step",
+    "pitch": 0.8,
+    "volume": 1
+  }
+}

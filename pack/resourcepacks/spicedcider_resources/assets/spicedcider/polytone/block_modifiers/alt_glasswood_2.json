@@ -1,0 +1,61 @@
+{
+  "targets": [
+    {
+      "id": "create:spruce_window",
+      "required": false
+    },
+    {
+      "id": "create:dark_oak_window",
+      "required": false
+    },
+    {
+      "id": "everycomp:c/atmospheric/grimwood_window",
+      "required": false
+    },
+    {
+      "id": "everycomp:c/upgrade_aquatic/driftwood_window",
+      "required": false
+    },
+    {
+      "id": "everycomp:c/environmental/cherry_window",
+      "required": false
+    },
+    {
+      "id": "everycomp:c/atmospheric/morado_window",
+      "required": false
+    },
+    {
+      "id": "create:spruce_window_pane",
+      "required": false
+    },
+    {
+      "id": "create:dark_oak_window_pane",
+      "required": false
+    },
+    {
+      "id": "everycomp:c/atmospheric/grimwood_window_pane",
+      "required": false
+    },
+    {
+      "id": "everycomp:c/upgrade_aquatic/driftwood_window_pane",
+      "required": false
+    },
+    {
+      "id": "everycomp:c/environmental/cherry_window_pane",
+      "required": false
+    },
+    {
+      "id": "everycomp:c/atmospheric/morado_window_pane",
+      "required": false
+    }
+  ],
+  "sound_type": {
+    "break_sound": "spicedcider:sound.altglasswood2.break",
+    "place_sound": "spicedcider:sound.altglasswood2.place",
+    "hit_sound": "spicedcider:sound.altglasswood2.hit",
+    "fall_sound": "spicedcider:sound.altglasswood2.fall",
+    "step_sound": "spicedcider:sound.altglasswood2.step",
+    "pitch": 1,
+    "volume": 1
+  }
+}

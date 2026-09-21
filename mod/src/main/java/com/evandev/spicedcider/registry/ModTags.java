@@ -6,6 +6,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 
@@ -37,6 +38,15 @@ public class ModTags {
 
         private static TagKey<Block> tag(String namespace, String name) {
             return BlockTags.create(ResourceLocation.fromNamespaceAndPath(namespace, name));
+        }
+    }
+
+    public static class EntityTypes {
+        public static final TagKey<EntityType<?>> DENY_SPAWN = tag("deny_spawn");
+        public static final TagKey<EntityType<?>> DENY_NATURAL_SPAWN = tag("deny_natural_spawn");
+
+        private static TagKey<EntityType<?>> tag(String name) {
+            return TagKey.create(Registries.ENTITY_TYPE, ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, name));
         }
     }
 }

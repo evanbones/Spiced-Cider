@@ -1,0 +1,69 @@
+{
+  "targets": [
+    {
+      "id": "create:oak_window",
+      "required": false
+    },
+    {
+      "id": "create:birch_window",
+      "required": false
+    },
+    {
+      "id": "create:acacia_window",
+      "required": false
+    },
+    {
+      "id": "everycomp:c/ecologics/coconut_window",
+      "required": false
+    },
+    {
+      "id": "everycomp:c/environmental/wisteria_window",
+      "required": false
+    },
+    {
+      "id": "everycomp:c/autumnity/maple_window",
+      "required": false
+    },
+    {
+      "id": "everycomp:c/windswept/chestnut_window",
+      "required": false
+    },
+    {
+      "id": "create:oak_window_pane",
+      "required": false
+    },
+    {
+      "id": "create:birch_window_pane",
+      "required": false
+    },
+    {
+      "id": "create:acacia_window_pane",
+      "required": false
+    },
+    {
+      "id": "everycomp:c/ecologics/coconut_window_pane",
+      "required": false
+    },
+    {
+      "id": "everycomp:c/environmental/wisteria_window_pane",
+      "required": false
+    },
+    {
+      "id": "everycomp:c/autumnity/maple_window_pane",
+      "required": false
+    },
+    {
+      "id": "everycomp:c/windswept/chestnut_window_pane",
+      "required": false
+    }
+  ],
+  "sound_type": {
+    "break_sound": "spicedcider:sound.glasswood.break",
+    "place_sound": "spicedcider:sound.glasswood.place",
+    "hit_sound": "spicedcider:sound.glasswood.hit",
+    "fall_sound": "spicedcider:sound.glasswood.fall",
+    "step_sound": "spicedcider:sound.glasswood.step",
+    "pitch": 1,
+    "volume": 1
+  }
+}

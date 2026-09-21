@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "  S",
+    " C ",
+    "C  "
+  ],
+  "key": {
+    "S": {
+      "tag": "c:strings"
+    },
+    "C": {
+      "item": "create:cardboard"
+    }
+  },
+  "result": {
+    "id": "minecraft:name_tag",
+    "count": 1
+  }
+}

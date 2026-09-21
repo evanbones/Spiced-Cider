@@ -20,10 +20,12 @@
 	creative_teleport = true
 	#Marker id associated with the red pin button on the atlas screen. Set to empty string to disable
 	pin_marked_id = "map_atlases:pin"
-	#Shows light color on maps. Needs Moonlight lib
+	#Shows light color on maps
 	light_map = false
 	#Show nearby mobs on minimap. Needs matching client config also set
 	mob_radar = false
+	#If active, when Supplementaries is installed, the atlas will need to be filled with slice maps to be able to create new sliced maps
+	requires_slice_maps = false
 
 [update_logic]
 	#Update maps in simple round robin fashion instead of prioritizing the ones closer

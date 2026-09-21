@@ -1,0 +1,37 @@
+{
+  "targets": [
+    {
+      "id": "supplementaries:hanging_sign_mangrove",
+      "required": false
+    },
+    {
+      "id": "supplementaries:hanging_sign_jungle",
+      "required": false
+    },
+    {
+      "id": "supplementaries:atmospheric/hanging_sign_rosewood",
+      "required": false
+    },
+    {
+      "id": "supplementaries:atmospheric/hanging_sign_yucca",
+      "required": false
+    },
+    {
+      "id": "supplementaries:environmental/hanging_sign_willow",
+      "required": false
+    },
+    {
+      "id": "supplementaries:ecologics/hanging_sign_azalea",
+      "required": false
+    }
+  ],
+  "sound_type": {
+    "break_sound": "spicedcider:sound.alt_hanging_sign.break",
+    "place_sound": "spicedcider:sound.alt_hanging_sign.place",
+    "hit_sound": "spicedcider:sound.alt_hanging_sign.hit",
+    "fall_sound": "spicedcider:sound.alt_hanging_sign.fall",
+    "step_sound": "spicedcider:sound.alt_hanging_sign.step",
+    "pitch": 1,
+    "volume": 1
+  }
+}

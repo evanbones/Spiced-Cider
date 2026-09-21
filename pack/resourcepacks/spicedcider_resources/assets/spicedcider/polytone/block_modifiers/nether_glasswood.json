@@ -1,0 +1,37 @@
+{
+  "targets": [
+    {
+      "id": "create:crimson_window",
+      "required": false
+    },
+    {
+      "id": "create:warped_window",
+      "required": false
+    },
+    {
+      "id": "create:crimson_window_pane",
+      "required": false
+    },
+    {
+      "id": "create:warped_window_pane",
+      "required": false
+    },
+    {
+      "id": "everycomp:c/architects_palette/twisted_window",
+      "required": false
+    },
+    {
+      "id": "everycomp:c/architects_palette/twisted_window_pane",
+      "required": false
+    }
+  ],
+  "sound_type": {
+    "break_sound": "spicedcider:sound.netherglasswood.break",
+    "place_sound": "spicedcider:sound.netherglasswood.place",
+    "hit_sound": "spicedcider:sound.netherglasswood.hit",
+    "fall_sound": "spicedcider:sound.netherglasswood.fall",
+    "step_sound": "spicedcider:sound.netherglasswood.step",
+    "pitch": 0.925,
+    "volume": 1
+  }
+}

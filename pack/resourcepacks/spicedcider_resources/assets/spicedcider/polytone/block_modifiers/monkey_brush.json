@@ -1,0 +1,37 @@
+{
+  "targets": [
+    {
+      "id": "atmospheric:warm_monkey_brush",
+      "required": false
+    },
+    {
+      "id": "atmospheric:hot_monkey_brush",
+      "required": false
+    },
+    {
+      "id": "atmospheric:scalding_monkey_brush",
+      "required": false
+    },
+    {
+      "id": "atmospheric:warm_wall_monkey_brush",
+      "required": false
+    },
+    {
+      "id": "atmospheric:hot_wall_monkey_brush",
+      "required": false
+    },
+    {
+      "id": "atmospheric:scalding_wall_monkey_brush",
+      "required": false
+    }
+  ],
+  "sound_type": {
+    "break_sound": "spicedcider:sound.monkey_brush.break",
+    "place_sound": "spicedcider:sound.monkey_brush.place",
+    "hit_sound": "spicedcider:sound.monkey_brush.hit",
+    "fall_sound": "spicedcider:sound.monkey_brush.fall",
+    "step_sound": "spicedcider:sound.monkey_brush.step",
+    "pitch": 1.25,
+    "volume": 1
+  }
+}

@@ -1,0 +1,197 @@
+{
+  "targets": [
+    "minecraft:sandstone",
+    "minecraft:chiseled_sandstone",
+    "minecraft:cut_sandstone",
+    "minecraft:sandstone_slab",
+    "minecraft:cut_sandstone_slab",
+    "minecraft:red_sandstone_slab",
+    "minecraft:cut_red_sandstone_slab",
+    "minecraft:smooth_red_sandstone",
+    "minecraft:smooth_sandstone",
+    "minecraft:sandstone_stairs",
+    "minecraft:red_sandstone_wall",
+    "minecraft:sandstone_wall",
+    "minecraft:red_sandstone",
+    "minecraft:chiseled_red_sandstone",
+    "minecraft:cut_red_sandstone",
+    "minecraft:red_sandstone_stairs",
+    "minecraft:smooth_red_sandstone_stairs",
+    "minecraft:smooth_sandstone_stairs",
+    "minecraft:smooth_red_sandstone_slab",
+    "minecraft:smooth_sandstone_slab",
+    {
+      "id": "architects_palette:gilded_sandstone",
+      "required": false
+    },
+    {
+      "id": "architects_palette:gilded_sandstone_slab",
+      "required": false
+    },
+    {
+      "id": "architects_palette:gilded_sandstone_stairs",
+      "required": false
+    },
+    {
+      "id": "architects_palette:gilded_sandstone_pillar",
+      "required": false
+    },
+    {
+      "id": "architects_palette:chiseled_gilded_sandstone",
+      "required": false
+    },
+    {
+      "id": "atmospheric:arid_sandstone",
+      "required": false
+    },
+    {
+      "id": "atmospheric:arid_sandstone_slab",
+      "required": false
+    },
+    {
+      "id": "atmospheric:arid_sandstone_stairs",
+      "required": false
+    },
+    {
+      "id": "atmospheric:arid_sandstone_wall",
+      "required": false
+    },
+    {
+      "id": "atmospheric:smooth_arid_sandstone",
+      "required": false
+    },
+    {
+      "id": "atmospheric:smooth_arid_sandstone_slab",
+      "required": false
+    },
+    {
+      "id": "atmospheric:smooth_arid_sandstone_stairs",
+      "required": false
+    },
+    {
+      "id": "atmospheric:cut_arid_sandstone",
+      "required": false
+    },
+    {
+      "id": "atmospheric:cut_arid_sandstone_slab",
+      "required": false
+    },
+    {
+      "id": "atmospheric:chiseled_arid_sandstone",
+      "required": false
+    },
+    {
+      "id": "atmospheric:red_arid_sandstone",
+      "required": false
+    },
+    {
+      "id": "atmospheric:red_arid_sandstone_slab",
+      "required": false
+    },
+    {
+      "id": "atmospheric:red_arid_sandstone_stairs",
+      "required": false
+    },
+    {
+      "id": "atmospheric:red_arid_sandstone_wall",
+      "required": false
+    },
+    {
+      "id": "atmospheric:smooth_red_arid_sandstone",
+      "required": false
+    },
+    {
+      "id": "atmospheric:smooth_red_arid_sandstone_slab",
+      "required": false
+    },
+    {
+      "id": "atmospheric:smooth_red_arid_sandstone_stairs",
+      "required": false
+    },
+    {
+      "id": "atmospheric:cut_red_arid_sandstone",
+      "required": false
+    },
+    {
+      "id": "atmospheric:cut_red_arid_sandstone_slab",
+      "required": false
+    },
+    {
+      "id": "atmospheric:chiseled_red_arid_sandstone",
+      "required": false
+    },
+    {
+      "id": "atmospheric:arid_sandstone_bricks",
+      "required": false
+    },
+    {
+      "id": "atmospheric:arid_sandstone_brick_slab",
+      "required": false
+    },
+    {
+      "id": "atmospheric:arid_sandstone_brick_stairs",
+      "required": false
+    },
+    {
+      "id": "atmospheric:arid_sandstone_brick_wall",
+      "required": false
+    },
+    {
+      "id": "atmospheric:red_arid_sandstone_bricks",
+      "required": false
+    },
+    {
+      "id": "atmospheric:red_arid_sandstone_brick_slab",
+      "required": false
+    },
+    {
+      "id": "atmospheric:red_arid_sandstone_brick_stairs",
+      "required": false
+    },
+    {
+      "id": "atmospheric:red_arid_sandstone_brick_wall",
+      "required": false
+    },
+    {
+      "id": "quark:sandstone_bricks",
+      "required": false
+    },
+    {
+      "id": "quark:sandstone_bricks_slab",
+      "required": false
+    },
+    {
+      "id": "quark:sandstone_bricks_stairs",
+      "required": false
+    },
+    {
+      "id": "quark:sandstone_bricks_wall",
+      "required": false
+    },
+    {
+      "id": "quark:red_sandstone_bricks",
+      "required": false
+    },
+    {
+      "id": "quark:red_sandstone_bricks_slab",
+      "required": false
+    },
+    {
+      "id": "quark:red_sandstone_bricks_stairs",
+      "required": false
+    },
+    {
+      "id": "quark:red_sandstone_bricks_wall",
+      "required": false
+    }
+  ],
+  "sound_type": {
+    "break_sound": "spicedcider:sound.sandstone.break",
+    "place_sound": "spicedcider:sound.sandstone.place",
+    "hit_sound": "spicedcider:sound.sandstone.hit",
+    "fall_sound": "spicedcider:sound.sandstone.fall",
+    "step_sound": "spicedcider:sound.sandstone.step",
+    "pitch": 1,
+    "volume": 1
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "targets": [
+    "minecraft:purpur_block",
+    "minecraft:purpur_pillar",
+    "minecraft:purpur_slab",
+    "minecraft:purpur_stairs",
+    {
+      "id": "quark:purpur_chest",
+      "required": false
+    },
+    {
+      "id": "quark:purpur_trapped_chest",
+      "required": false
+    },
+    {
+      "id": "quark:midori_block",
+      "required": false
+    },
+    {
+      "id": "quark:midori_pillar",
+      "required": false
+    },
+    {
+      "id": "quark:midori_block_stairs",
+      "required": false
+    },
+    {
+      "id": "quark:midori_block_slab",
+      "required": false
+    },
+    {
+      "id": "quark:duskbound_block",
+      "required": false
+    },
+    {
+      "id": "quark:duskbound_block_slab",
+      "required": false
+    },
+    {
+      "id": "quark:duskbound_block_stairs",
+      "required": false
+    },
+    {
+      "id": "quark:duskbound_lantern",
+      "required": false
+    }
+  ],
+  "sound_type": "auditory:purpur"
+}

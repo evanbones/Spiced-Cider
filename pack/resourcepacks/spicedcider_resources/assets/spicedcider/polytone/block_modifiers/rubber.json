@@ -1,0 +1,17 @@
+{
+  "targets": [
+    {
+      "id": "quark:bonded_leather",
+      "required": false
+    }
+  ],
+  "sound_type": {
+    "break_sound": "spicedcider:sound.rubber.break",
+    "place_sound": "spicedcider:sound.rubber.place",
+    "hit_sound": "spicedcider:sound.rubber.hit",
+    "fall_sound": "spicedcider:sound.rubber.fall",
+    "step_sound": "spicedcider:sound.rubber.step",
+    "pitch": 1,
+    "volume": 1
+  }
+}

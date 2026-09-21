@@ -1,0 +1,33 @@
+{
+  "targets": [
+    {
+      "id": "atmospheric:arid_sand",
+      "required": false
+    },
+    {
+      "id": "atmospheric:red_arid_sand",
+      "required": false
+    },
+    {
+      "id": "spelunkery:salt_block",
+      "required": false
+    },
+    {
+      "id": "spelunkery:salt",
+      "required": false
+    },
+    {
+      "id": "supplementaries:ash",
+      "required": false
+    }
+  ],
+  "sound_type": {
+    "break_sound": "spicedcider:sound.arid_sand.break",
+    "place_sound": "spicedcider:sound.arid_sand.place",
+    "hit_sound": "spicedcider:sound.arid_sand.hit",
+    "fall_sound": "spicedcider:sound.arid_sand.fall",
+    "step_sound": "spicedcider:sound.arid_sand.step",
+    "pitch": 1.0,
+    "volume": 1
+  }
+}

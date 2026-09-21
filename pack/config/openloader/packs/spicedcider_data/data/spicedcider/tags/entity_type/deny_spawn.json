@@ -1,0 +1,20 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:phantom",
+    "minecraft:pillager",
+    "minecraft:vindicator",
+    "minecraft:ravager",
+    "minecraft:villager",
+    "minecraft:zombie_villager",
+    "minecraft:wandering_trader",
+    "minecraft:trader_llama",
+    { "id": "supplementaries:red_merchant", "required": false },
+    { "id": "caverns_and_chasms:grazer", "required": false },
+    { "id": "caverns_and_chasms:saddled_grazer", "required": false },
+    { "id": "caverns_and_chasms:mime", "required": false },
+    { "id": "environmental:deer", "required": false },
+    { "id": "etcetera:weaver", "required": false },
+    { "id": "quark:stoneling", "required": false }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "targets": [
+    {
+      "id": "supplementaries:hanging_sign_spruce",
+      "required": false
+    },
+    {
+      "id": "supplementaries:hanging_sign_dark_oak",
+      "required": false
+    },
+    {
+      "id": "supplementaries:atmospheric/hanging_sign_grimwood",
+      "required": false
+    },
+    {
+      "id": "supplementaries:upgrade_aquatic/hanging_sign_driftwood",
+      "required": false
+    },
+    {
+      "id": "supplementaries:environmental/hanging_sign_cherry",
+      "required": false
+    },
+    {
+      "id": "supplementaries:atmospheric/hanging_sign_morado",
+      "required": false
+    }
+  ],
+  "sound_type": {
+    "break_sound": "spicedcider:sound.alt_hanging_sign2.break",
+    "place_sound": "spicedcider:sound.alt_hanging_sign2.place",
+    "hit_sound": "spicedcider:sound.alt_hanging_sign2.hit",
+    "fall_sound": "spicedcider:sound.alt_hanging_sign2.fall",
+    "step_sound": "spicedcider:sound.alt_hanging_sign2.step",
+    "pitch": 1,
+    "volume": 1
+  }
+}

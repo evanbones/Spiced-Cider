@@ -1,0 +1,94 @@
+{
+  "targets": [
+    "minecraft:bee_nest",
+    {
+      "id": "miners_delight:sticky_basket",
+      "required": false
+    },
+    {
+      "id": "neapolitan:chocolate_block",
+      "required": false
+    },
+    {
+      "id": "neapolitan:chocolate_bricks",
+      "required": false
+    },
+    {
+      "id": "neapolitan:chocolate_brick_slab",
+      "required": false
+    },
+    {
+      "id": "neapolitan:chocolate_brick_stairs",
+      "required": false
+    },
+    {
+      "id": "neapolitan:chocolate_brick_wall",
+      "required": false
+    },
+    {
+      "id": "neapolitan:chiseled_chocolate_bricks",
+      "required": false
+    },
+    {
+      "id": "neapolitan:chocolate_tiles",
+      "required": false
+    },
+    {
+      "id": "neapolitan:chocolate_tile_slab",
+      "required": false
+    },
+    {
+      "id": "neapolitan:chocolate_tile_stairs",
+      "required": false
+    },
+    {
+      "id": "neapolitan:chocolate_tile_wall",
+      "required": false
+    },
+    {
+      "id": "create_confectionery:chocolate_bricks",
+      "required": false
+    },
+    {
+      "id": "create_confectionery:chocolate_bricks_stairs",
+      "required": false
+    },
+    {
+      "id": "create_confectionery:chocolate_bricks_slab",
+      "required": false
+    },
+    {
+      "id": "create_confectionery:black_chocolate_bricks",
+      "required": false
+    },
+    {
+      "id": "create_confectionery:black_chocolate_bricks_stairs",
+      "required": false
+    },
+    {
+      "id": "create_confectionery:black_chocolate_bricks_slab",
+      "required": false
+    },
+    {
+      "id": "create_confectionery:white_chocolate_bricks",
+      "required": false
+    },
+    {
+      "id": "create_confectionery:white_chocolate_bricks_stairs",
+      "required": false
+    },
+    {
+      "id": "create_confectionery:white_chocolate_bricks_slab",
+      "required": false
+    }
+  ],
+  "sound_type": {
+    "break_sound": "spicedcider:sound.stickywood.break",
+    "place_sound": "spicedcider:sound.stickywood.place",
+    "hit_sound": "spicedcider:sound.stickywood.hit",
+    "fall_sound": "spicedcider:sound.stickywood.fall",
+    "step_sound": "spicedcider:sound.stickywood.step",
+    "pitch": 1,
+    "volume": 1
+  }
+}

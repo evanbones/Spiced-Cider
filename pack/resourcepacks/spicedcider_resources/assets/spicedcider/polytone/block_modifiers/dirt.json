@@ -1,0 +1,45 @@
+{
+  "targets": [
+    "minecraft:dirt",
+    "minecraft:coarse_dirt",
+    "minecraft:podzol",
+    "minecraft:farmland",
+    {
+      "id": "environmental:podzol_path",
+      "required": false
+    },
+    {
+      "id": "environmental:buried_truffle",
+      "required": false
+    },
+    {
+      "id": "neapolitan:adzuki_soil",
+      "required": false
+    },
+    {
+      "id": "farmersdelight:rich_soil",
+      "required": false
+    },
+    {
+      "id": "farmersdelight:rich_soil_farmland",
+      "required": false
+    },
+    {
+      "id": "quark:dirt_bricks",
+      "required": false
+    },
+    {
+      "id": "quark:dirt_bricks_slab",
+      "required": false
+    },
+    {
+      "id": "quark:dirt_bricks_stairs",
+      "required": false
+    },
+    {
+      "id": "quark:dirt_bricks_wall",
+      "required": false
+    }
+  ],
+  "sound_type": "rooted_dirt"
+}

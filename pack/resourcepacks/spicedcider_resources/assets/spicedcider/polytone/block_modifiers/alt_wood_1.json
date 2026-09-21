@@ -1,0 +1,985 @@
+{
+  "targets": [
+    "minecraft:mangrove_planks",
+    "minecraft:mangrove_log",
+    "minecraft:stripped_mangrove_log",
+    "minecraft:stripped_mangrove_wood",
+    "minecraft:mangrove_wood",
+    "minecraft:mangrove_slab",
+    "minecraft:mangrove_fence",
+    "minecraft:mangrove_stairs",
+    "minecraft:mangrove_button",
+    "minecraft:mangrove_pressure_plate",
+    "minecraft:mangrove_door",
+    "minecraft:mangrove_trapdoor",
+    "minecraft:mangrove_fence_gate",
+    "minecraft:mangrove_sign",
+    {
+      "id": "architects_palette:mangrove_railing",
+      "required": false
+    },
+    {
+      "id": "farmersdelight:mangrove_cabinet",
+      "required": false
+    },
+    {
+      "id": "modestmining:mangrove_pillar",
+      "required": false
+    },
+    {
+      "id": "modestmining:mangrove_boards",
+      "required": false
+    },
+    {
+      "id": "modestmining:mangrove_board_slab",
+      "required": false
+    },
+    {
+      "id": "modestmining:mangrove_board_stairs",
+      "required": false
+    },
+    {
+      "id": "modestmining:mangrove_board_wall",
+      "required": false
+    },
+    {
+      "id": "another_furniture:mangrove_chair",
+      "required": false
+    },
+    {
+      "id": "another_furniture:mangrove_shelf",
+      "required": false
+    },
+    {
+      "id": "another_furniture:mangrove_table",
+      "required": false
+    },
+    {
+      "id": "another_furniture:mangrove_shutter",
+      "required": false
+    },
+    {
+      "id": "another_furniture:mangrove_bench",
+      "required": false
+    },
+    {
+      "id": "another_furniture:mangrove_drawer",
+      "required": false
+    },
+    {
+      "id": "quark:mangrove_ladder",
+      "required": false
+    },
+    {
+      "id": "quark:mangrove_post",
+      "required": false
+    },
+    {
+      "id": "quark:stripped_mangrove_post",
+      "required": false
+    },
+    {
+      "id": "quark:hollow_mangrove_log",
+      "required": false
+    },
+    {
+      "id": "woodworks:mangrove_boards",
+      "required": false
+    },
+    {
+      "id": "woodworks:mangrove_beehive",
+      "required": false
+    },
+    {
+      "id": "woodworks:mangrove_chest",
+      "required": false
+    },
+    {
+      "id": "woodworks:mangrove_trapped_chest",
+      "required": false
+    },
+    "minecraft:jungle_planks",
+    "minecraft:jungle_log",
+    "minecraft:stripped_jungle_log",
+    "minecraft:stripped_jungle_wood",
+    "minecraft:jungle_wood",
+    "minecraft:jungle_slab",
+    "minecraft:jungle_fence",
+    "minecraft:jungle_stairs",
+    "minecraft:jungle_button",
+    "minecraft:jungle_pressure_plate",
+    "minecraft:jungle_door",
+    "minecraft:jungle_trapdoor",
+    "minecraft:jungle_fence_gate",
+    "minecraft:jungle_sign",
+    {
+      "id": "architects_palette:jungle_railing",
+      "required": false
+    },
+    {
+      "id": "farmersdelight:jungle_cabinet",
+      "required": false
+    },
+    {
+      "id": "modestmining:jungle_pillar",
+      "required": false
+    },
+    {
+      "id": "modestmining:jungle_boards",
+      "required": false
+    },
+    {
+      "id": "modestmining:jungle_board_slab",
+      "required": false
+    },
+    {
+      "id": "modestmining:jungle_board_stairs",
+      "required": false
+    },
+    {
+      "id": "modestmining:jungle_board_wall",
+      "required": false
+    },
+    {
+      "id": "another_furniture:jungle_chair",
+      "required": false
+    },
+    {
+      "id": "another_furniture:jungle_shelf",
+      "required": false
+    },
+    {
+      "id": "another_furniture:jungle_table",
+      "required": false
+    },
+    {
+      "id": "another_furniture:jungle_shutter",
+      "required": false
+    },
+    {
+      "id": "another_furniture:jungle_bench",
+      "required": false
+    },
+    {
+      "id": "another_furniture:jungle_drawer",
+      "required": false
+    },
+    {
+      "id": "quark:jungle_ladder",
+      "required": false
+    },
+    {
+      "id": "quark:jungle_post",
+      "required": false
+    },
+    {
+      "id": "quark:stripped_jungle_post",
+      "required": false
+    },
+    {
+      "id": "quark:hollow_jungle_log",
+      "required": false
+    },
+    {
+      "id": "woodworks:jungle_boards",
+      "required": false
+    },
+    {
+      "id": "woodworks:jungle_beehive",
+      "required": false
+    },
+    {
+      "id": "woodworks:jungle_chest",
+      "required": false
+    },
+    {
+      "id": "woodworks:jungle_trapped_chest",
+      "required": false
+    },
+    {
+      "id": "everycomp:mm/atmospheric/rosewood_pillar",
+      "required": false
+    },
+    {
+      "id": "everycomp:mm/atmospheric/rosewood_boards",
+      "required": false
+    },
+    {
+      "id": "everycomp:mm/atmospheric/rosewood_board_slab",
+      "required": false
+    },
+    {
+      "id": "everycomp:mm/atmospheric/rosewood_board_stairs",
+      "required": false
+    },
+    {
+      "id": "everycomp:mm/atmospheric/rosewood_board_wall",
+      "required": false
+    },
+    {
+      "id": "everycomp:af/atmospheric/rosewood_shutter",
+      "required": false
+    },
+    {
+      "id": "everycomp:af/atmospheric/rosewood_table",
+      "required": false
+    },
+    {
+      "id": "everycomp:af/atmospheric/rosewood_chair",
+      "required": false
+    },
+    {
+      "id": "everycomp:af/atmospheric/rosewood_shelf",
+      "required": false
+    },
+    {
+      "id": "everycomp:af/atmospheric/rosewood_drawer",
+      "required": false
+    },
+    {
+      "id": "everycomp:af/atmospheric/rosewood_bench",
+      "required": false
+    },
+    {
+      "id": "everycomp:ap/atmospheric/rosewood_railing",
+      "required": false
+    },
+    {
+      "id": "everycomp:q/atmospheric/hollow_rosewood_log",
+      "required": false
+    },
+    {
+      "id": "atmospheric:stripped_rosewood_log",
+      "required": false
+    },
+    {
+      "id": "atmospheric:stripped_rosewood",
+      "required": false
+    },
+    {
+      "id": "atmospheric:rosewood_log",
+      "required": false
+    },
+    {
+      "id": "atmospheric:rosewood",
+      "required": false
+    },
+    {
+      "id": "atmospheric:rosewood_planks",
+      "required": false
+    },
+    {
+      "id": "atmospheric:rosewood_stairs",
+      "required": false
+    },
+    {
+      "id": "atmospheric:rosewood_slab",
+      "required": false
+    },
+    {
+      "id": "atmospheric:rosewood_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "atmospheric:rosewood_button",
+      "required": false
+    },
+    {
+      "id": "atmospheric:rosewood_fence",
+      "required": false
+    },
+    {
+      "id": "atmospheric:rosewood_fence_gate",
+      "required": false
+    },
+    {
+      "id": "atmospheric:rosewood_door",
+      "required": false
+    },
+    {
+      "id": "atmospheric:rosewood_trapdoor",
+      "required": false
+    },
+    {
+      "id": "atmospheric:rosewood_sign",
+      "required": false
+    },
+    {
+      "id": "atmospheric:rosewood_boards",
+      "required": false
+    },
+    {
+      "id": "atmospheric:rosewood_ladder",
+      "required": false
+    },
+    {
+      "id": "atmospheric:rosewood_beehive",
+      "required": false
+    },
+    {
+      "id": "atmospheric:rosewood_chest",
+      "required": false
+    },
+    {
+      "id": "atmospheric:rosewood_trapped_chest",
+      "required": false
+    },
+    {
+      "id": "atmospheric:stripped_rosewood_post",
+      "required": false
+    },
+    {
+      "id": "atmospheric:rosewood_post",
+      "required": false
+    },
+    {
+      "id": "abnormals_delight:rosewood_cabinet",
+      "required": false
+    },
+    {
+      "id": "everycomp:mm/atmospheric/yucca_pillar",
+      "required": false
+    },
+    {
+      "id": "everycomp:mm/atmospheric/yucca_boards",
+      "required": false
+    },
+    {
+      "id": "everycomp:mm/atmospheric/yucca_board_slab",
+      "required": false
+    },
+    {
+      "id": "everycomp:mm/atmospheric/yucca_board_stairs",
+      "required": false
+    },
+    {
+      "id": "everycomp:mm/atmospheric/yucca_board_wall",
+      "required": false
+    },
+    {
+      "id": "everycomp:af/atmospheric/yucca_shutter",
+      "required": false
+    },
+    {
+      "id": "everycomp:af/atmospheric/yucca_table",
+      "required": false
+    },
+    {
+      "id": "everycomp:af/atmospheric/yucca_chair",
+      "required": false
+    },
+    {
+      "id": "everycomp:af/atmospheric/yucca_shelf",
+      "required": false
+    },
+    {
+      "id": "everycomp:af/atmospheric/yucca_drawer",
+      "required": false
+    },
+    {
+      "id": "everycomp:af/atmospheric/yucca_bench",
+      "required": false
+    },
+    {
+      "id": "everycomp:ap/atmospheric/yucca_railing",
+      "required": false
+    },
+    {
+      "id": "everycomp:q/atmospheric/hollow_yucca_log",
+      "required": false
+    },
+    {
+      "id": "atmospheric:stripped_yucca_log",
+      "required": false
+    },
+    {
+      "id": "atmospheric:stripped_yucca_wood",
+      "required": false
+    },
+    {
+      "id": "atmospheric:yucca_log",
+      "required": false
+    },
+    {
+      "id": "atmospheric:yucca_wood",
+      "required": false
+    },
+    {
+      "id": "atmospheric:yucca_planks",
+      "required": false
+    },
+    {
+      "id": "atmospheric:yucca_stairs",
+      "required": false
+    },
+    {
+      "id": "atmospheric:yucca_slab",
+      "required": false
+    },
+    {
+      "id": "atmospheric:yucca_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "atmospheric:yucca_button",
+      "required": false
+    },
+    {
+      "id": "atmospheric:yucca_fence",
+      "required": false
+    },
+    {
+      "id": "atmospheric:yucca_fence_gate",
+      "required": false
+    },
+    {
+      "id": "atmospheric:yucca_door",
+      "required": false
+    },
+    {
+      "id": "atmospheric:yucca_trapdoor",
+      "required": false
+    },
+    {
+      "id": "atmospheric:yucca_sign",
+      "required": false
+    },
+    {
+      "id": "atmospheric:yucca_boards",
+      "required": false
+    },
+    {
+      "id": "atmospheric:yucca_ladder",
+      "required": false
+    },
+    {
+      "id": "atmospheric:yucca_beehive",
+      "required": false
+    },
+    {
+      "id": "atmospheric:yucca_chest",
+      "required": false
+    },
+    {
+      "id": "atmospheric:yucca_trapped_chest",
+      "required": false
+    },
+    {
+      "id": "atmospheric:stripped_yucca_post",
+      "required": false
+    },
+    {
+      "id": "atmospheric:yucca_post",
+      "required": false
+    },
+    {
+      "id": "abnormals_delight:yucca_cabinet",
+      "required": false
+    },
+    {
+      "id": "everycomp:mm/environmental/willow_pillar",
+      "required": false
+    },
+    {
+      "id": "everycomp:mm/environmental/willow_boards",
+      "required": false
+    },
+    {
+      "id": "everycomp:mm/environmental/willow_board_slab",
+      "required": false
+    },
+    {
+      "id": "everycomp:mm/environmental/willow_board_stairs",
+      "required": false
+    },
+    {
+      "id": "everycomp:mm/environmental/willow_board_wall",
+      "required": false
+    },
+    {
+      "id": "everycomp:af/environmental/willow_shutter",
+      "required": false
+    },
+    {
+      "id": "everycomp:af/environmental/willow_table",
+      "required": false
+    },
+    {
+      "id": "everycomp:af/environmental/willow_chair",
+      "required": false
+    },
+    {
+      "id": "everycomp:af/environmental/willow_shelf",
+      "required": false
+    },
+    {
+      "id": "everycomp:af/environmental/willow_drawer",
+      "required": false
+    },
+    {
+      "id": "everycomp:af/environmental/willow_bench",
+      "required": false
+    },
+    {
+      "id": "everycomp:ap/environmental/willow_railing",
+      "required": false
+    },
+    {
+      "id": "everycomp:q/environmental/hollow_willow_log",
+      "required": false
+    },
+    {
+      "id": "environmental:stripped_willow_log",
+      "required": false
+    },
+    {
+      "id": "environmental:stripped_willow_wood",
+      "required": false
+    },
+    {
+      "id": "environmental:willow_log",
+      "required": false
+    },
+    {
+      "id": "environmental:willow_wood",
+      "required": false
+    },
+    {
+      "id": "environmental:willow_planks",
+      "required": false
+    },
+    {
+      "id": "environmental:willow_stairs",
+      "required": false
+    },
+    {
+      "id": "environmental:willow_slab",
+      "required": false
+    },
+    {
+      "id": "environmental:willow_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "environmental:willow_button",
+      "required": false
+    },
+    {
+      "id": "environmental:willow_fence",
+      "required": false
+    },
+    {
+      "id": "environmental:willow_fence_gate",
+      "required": false
+    },
+    {
+      "id": "environmental:willow_door",
+      "required": false
+    },
+    {
+      "id": "environmental:willow_trapdoor",
+      "required": false
+    },
+    {
+      "id": "environmental:willow_sign",
+      "required": false
+    },
+    {
+      "id": "environmental:willow_boards",
+      "required": false
+    },
+    {
+      "id": "environmental:willow_ladder",
+      "required": false
+    },
+    {
+      "id": "environmental:willow_beehive",
+      "required": false
+    },
+    {
+      "id": "environmental:willow_chest",
+      "required": false
+    },
+    {
+      "id": "environmental:willow_trapped_chest",
+      "required": false
+    },
+    {
+      "id": "environmental:stripped_willow_post",
+      "required": false
+    },
+    {
+      "id": "environmental:willow_post",
+      "required": false
+    },
+    {
+      "id": "abnormals_delight:willow_cabinet",
+      "required": false
+    },
+    {
+      "id": "ecologics:azalea_log",
+      "required": false
+    },
+    {
+      "id": "ecologics:stripped_azalea_log",
+      "required": false
+    },
+    {
+      "id": "ecologics:azalea_wood",
+      "required": false
+    },
+    {
+      "id": "ecologics:stripped_azalea_wood",
+      "required": false
+    },
+    {
+      "id": "ecologics:azalea_planks",
+      "required": false
+    },
+    {
+      "id": "ecologics:azalea_slab",
+      "required": false
+    },
+    {
+      "id": "ecologics:azalea_stairs",
+      "required": false
+    },
+    {
+      "id": "ecologics:azalea_fence",
+      "required": false
+    },
+    {
+      "id": "ecologics:azalea_fence_gate",
+      "required": false
+    },
+    {
+      "id": "ecologics:azalea_door",
+      "required": false
+    },
+    {
+      "id": "ecologics:azalea_trapdoor",
+      "required": false
+    },
+    {
+      "id": "ecologics:azalea_button",
+      "required": false
+    },
+    {
+      "id": "ecologics:azalea_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "ecologics:azalea_sign",
+      "required": false
+    },
+    {
+      "id": "everycomp:mm/ecologics/azalea_pillar",
+      "required": false
+    },
+    {
+      "id": "everycomp:mm/ecologics/azalea_boards",
+      "required": false
+    },
+    {
+      "id": "everycomp:mm/ecologics/azalea_board_slab",
+      "required": false
+    },
+    {
+      "id": "everycomp:mm/ecologics/azalea_board_stairs",
+      "required": false
+    },
+    {
+      "id": "everycomp:mm/ecologics/azalea_board_wall",
+      "required": false
+    },
+    {
+      "id": "everycomp:af/ecologics/azalea_shutter",
+      "required": false
+    },
+    {
+      "id": "everycomp:af/ecologics/azalea_table",
+      "required": false
+    },
+    {
+      "id": "everycomp:af/ecologics/azalea_chair",
+      "required": false
+    },
+    {
+      "id": "everycomp:af/ecologics/azalea_shelf",
+      "required": false
+    },
+    {
+      "id": "everycomp:af/ecologics/azalea_drawer",
+      "required": false
+    },
+    {
+      "id": "everycomp:af/ecologics/azalea_bench",
+      "required": false
+    },
+    {
+      "id": "everycomp:ap/ecologics/azalea_railing",
+      "required": false
+    },
+    {
+      "id": "everycomp:fd/ecologics/azalea_cabinet",
+      "required": false
+    },
+    {
+      "id": "everycomp:q/ecologics/azalea_post",
+      "required": false
+    },
+    {
+      "id": "everycomp:q/ecologics/stripped_azalea_post",
+      "required": false
+    },
+    {
+      "id": "everycomp:q/ecologics/azalea_ladder",
+      "required": false
+    },
+    {
+      "id": "everycomp:q/ecologics/hollow_azalea_log",
+      "required": false
+    },
+    {
+      "id": "everycomp:q/ecologics/azalea_chest",
+      "required": false
+    },
+    {
+      "id": "everycomp:q/ecologics/azalea_trapped_chest",
+      "required": false
+    },
+    {
+      "id": "everycomp:abnww/ecologics/azalea_boards",
+      "required": false
+    },
+    {
+      "id": "everycomp:abnww/ecologics/azalea_beehive",
+      "required": false
+    },
+    {
+      "id": "modestmasonry:mangrove_tiles",
+      "required": false
+    },
+    {
+      "id": "modestmasonry:jungle_carved_plank_wall",
+      "required": false
+    },
+    {
+      "id": "modestmasonry:jungle_carved_plank_stairs",
+      "required": false
+    },
+    {
+      "id": "modestmasonry:jungle_carved_plank_slab",
+      "required": false
+    },
+    {
+      "id": "modestmasonry:carved_jungle_planks",
+      "required": false
+    },
+    {
+      "id": "modestmasonry:mangrove_carved_plank_wall",
+      "required": false
+    },
+    {
+      "id": "modestmasonry:mangrove_carved_plank_stairs",
+      "required": false
+    },
+    {
+      "id": "modestmasonry:mangrove_carved_plank_slab",
+      "required": false
+    },
+    {
+      "id": "modestmasonry:carved_mangrove_planks",
+      "required": false
+    },
+    {
+      "id": "everycomp:mm/atmospheric/rosewood_tile_wall",
+      "required": false
+    },
+    {
+      "id": "everycomp:mm/atmospheric/rosewood_tile_slab",
+      "required": false
+    },
+    {
+      "id": "everycomp:mm/atmospheric/rosewood_tile_stairs",
+      "required": false
+    },
+    {
+      "id": "everycomp:mm/atmospheric/rosewood_tiles",
+      "required": false
+    },
+    {
+      "id": "everycomp:mm/ecologics/azalea_carved_plank_wall",
+      "required": false
+    },
+    {
+      "id": "everycomp:mm/ecologics/azalea_carved_plank_slab",
+      "required": false
+    },
+    {
+      "id": "everycomp:mm/ecologics/azalea_carved_plank_stairs",
+      "required": false
+    },
+    {
+      "id": "everycomp:mm/ecologics/carved_azalea_planks",
+      "required": false
+    },
+    {
+      "id": "everycomp:mm/environmental/willow_carved_plank_wall",
+      "required": false
+    },
+    {
+      "id": "everycomp:mm/environmental/willow_carved_plank_slab",
+      "required": false
+    },
+    {
+      "id": "everycomp:mm/environmental/willow_carved_plank_stairs",
+      "required": false
+    },
+    {
+      "id": "everycomp:mm/environmental/carved_willow_planks",
+      "required": false
+    },
+    {
+      "id": "everycomp:mm/atmospheric/yucca_carved_plank_wall",
+      "required": false
+    },
+    {
+      "id": "everycomp:mm/atmospheric/yucca_carved_plank_slab",
+      "required": false
+    },
+    {
+      "id": "everycomp:mm/atmospheric/yucca_carved_plank_stairs",
+      "required": false
+    },
+    {
+      "id": "everycomp:mm/atmospheric/carved_yucca_planks",
+      "required": false
+    },
+    {
+      "id": "everycomp:mm/atmospheric/rosewood_carved_plank_wall",
+      "required": false
+    },
+    {
+      "id": "everycomp:mm/atmospheric/rosewood_carved_plank_slab",
+      "required": false
+    },
+    {
+      "id": "everycomp:mm/atmospheric/rosewood_carved_plank_stairs",
+      "required": false
+    },
+    {
+      "id": "everycomp:mm/atmospheric/carved_rosewood_planks",
+      "required": false
+    },
+    {
+      "id": "modestmasonry:jungle_tile_wall",
+      "required": false
+    },
+    {
+      "id": "modestmasonry:jungle_tile_stairs",
+      "required": false
+    },
+    {
+      "id": "modestmasonry:jungle_tile_slab",
+      "required": false
+    },
+    {
+      "id": "modestmasonry:jungle_tiles",
+      "required": false
+    },
+    {
+      "id": "modestmasonry:mangrove_tile_wall",
+      "required": false
+    },
+    {
+      "id": "modestmasonry:mangrove_tile_stairs",
+      "required": false
+    },
+    {
+      "id": "modestmasonry:mangrove_tile_slab",
+      "required": false
+    },
+    {
+      "id": "everycomp:mm/ecologics/azalea_tiles",
+      "required": false
+    },
+    {
+      "id": "everycomp:mm/environmental/willow_tile_wall",
+      "required": false
+    },
+    {
+      "id": "everycomp:mm/environmental/willow_tile_slab",
+      "required": false
+    },
+    {
+      "id": "everycomp:mm/environmental/willow_tile_stairs",
+      "required": false
+    },
+    {
+      "id": "everycomp:mm/environmental/willow_tiles",
+      "required": false
+    },
+    {
+      "id": "everycomp:mm/atmospheric/yucca_tile_wall",
+      "required": false
+    },
+    {
+      "id": "everycomp:mm/atmospheric/yucca_tile_slab",
+      "required": false
+    },
+    {
+      "id": "everycomp:mm/atmospheric/yucca_tile_stairs",
+      "required": false
+    },
+    {
+      "id": "everycomp:mm/atmospheric/yucca_tiles",
+      "required": false
+    },
+    {
+      "id": "hnh:jungle_trim",
+      "required": false
+    },
+    {
+      "id": "hnh:mangrove_trim",
+      "required": false
+    },
+    {
+      "id": "everycomp:hnh/ecologics/azalea_trim",
+      "required": false
+    },
+    {
+      "id": "everycomp:hnh/environmental/willow_trim",
+      "required": false
+    },
+    {
+      "id": "everycomp:hnh/atmospheric/yucca_trim",
+      "required": false
+    },
+    {
+      "id": "everycomp:hnh/atmospheric/rosewood_trim",
+      "required": false
+    },
+    {
+      "id": "everycomp:mm/ecologics/azalea_tile_wall",
+      "required": false
+    },
+    {
+      "id": "everycomp:mm/ecologics/azalea_tile_slab",
+      "required": false
+    },
+    {
+      "id": "everycomp:mm/ecologics/azalea_tile_stairs",
+      "required": false
+    }
+  ],
+  "sound_type": {
+    "break_sound": "spicedcider:sound.altwood1.break",
+    "place_sound": "spicedcider:sound.altwood1.place",
+    "hit_sound": "spicedcider:sound.altwood1.hit",
+    "fall_sound": "spicedcider:sound.altwood1.fall",
+    "step_sound": "spicedcider:sound.altwood1.step",
+    "pitch": 1,
+    "volume": 1
+  }
+}

@@ -1,0 +1,146 @@
+{
+  "targets": [
+    "minecraft:dandelion",
+    "minecraft:poppy",
+    "minecraft:blue_orchid",
+    "minecraft:allium",
+    "minecraft:azure_bluet",
+    "minecraft:red_tulip",
+    "minecraft:orange_tulip",
+    "minecraft:white_tulip",
+    "minecraft:pink_tulip",
+    "minecraft:oxeye_daisy",
+    "minecraft:cornflower",
+    "minecraft:lily_of_the_valley",
+    "minecraft:wither_rose",
+    {
+      "id": "windswept:red_rose",
+      "required": false
+    },
+    {
+      "id": "windswept:pink_rose",
+      "required": false
+    },
+    {
+      "id": "windswept:blue_rose",
+      "required": false
+    },
+    {
+      "id": "windswept:white_rose",
+      "required": false
+    },
+    {
+      "id": "windswept:yellow_rose",
+      "required": false
+    },
+    {
+      "id": "windswept:foxglove",
+      "required": false
+    },
+    {
+      "id": "windswept:nightshade",
+      "required": false
+    },
+    {
+      "id": "ecologics:azalea_flower",
+      "required": false
+    },
+    {
+      "id": "environmental:cartwheel",
+      "required": false
+    },
+    {
+      "id": "environmental:bluebell",
+      "required": false
+    },
+    {
+      "id": "environmental:violet",
+      "required": false
+    },
+    {
+      "id": "environmental:dianthus",
+      "required": false
+    },
+    {
+      "id": "environmental:red_lotus_flower",
+      "required": false
+    },
+    {
+      "id": "environmental:white_lotus_flower",
+      "required": false
+    },
+    {
+      "id": "environmental:yellow_hibiscus",
+      "required": false
+    },
+    {
+      "id": "environmental:orange_hibiscus",
+      "required": false
+    },
+    {
+      "id": "environmental:red_hibiscus",
+      "required": false
+    },
+    {
+      "id": "environmental:pink_hibiscus",
+      "required": false
+    },
+    {
+      "id": "environmental:magenta_hibiscus",
+      "required": false
+    },
+    {
+      "id": "environmental:purple_hibiscus",
+      "required": false
+    },
+    {
+      "id": "upgrade_aquatic:white_searocket",
+      "required": false
+    },
+    {
+      "id": "upgrade_aquatic:pink_searocket",
+      "required": false
+    },
+    {
+      "id": "autumnity:autumn_crocus",
+      "required": false
+    },
+    {
+      "id": "buzzier_bees:buttercup",
+      "required": false
+    },
+    {
+      "id": "buzzier_bees:white_clover",
+      "required": false
+    },
+    {
+      "id": "buzzier_bees:pink_clover",
+      "required": false
+    },
+    {
+      "id": "atmospheric:yucca_flower",
+      "required": false
+    },
+    {
+      "id": "atmospheric:gilia",
+      "required": false
+    },
+    {
+      "id": "upgrade_aquatic:flowering_rush",
+      "required": false
+    },
+    {
+      "id": "farmersrespite:small_tea_bush",
+      "required": false
+    }
+  ],
+  "sound_type": {
+    "break_sound": "minecraft:block.azalea.break",
+    "place_sound": "minecraft:block.azalea.place",
+    "hit_sound": "minecraft:block.azalea.hit",
+    "fall_sound": "minecraft:block.azalea.fall",
+    "step_sound": "minecraft:block.azalea.step",
+    "pitch": 1.15,
+    "volume": 1
+  }
+}

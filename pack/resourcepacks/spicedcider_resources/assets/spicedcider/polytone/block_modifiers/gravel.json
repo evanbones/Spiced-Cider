@@ -1,0 +1,22 @@
+{
+  "targets": [
+    "minecraft:gravel",
+    {
+      "id": "supplementaries:raked_gravel",
+      "required": false
+    },
+    {
+      "id": "additionaladditions:patina_block",
+      "required": false
+    }
+  ],
+  "sound_type": {
+    "break_sound": "spicedcider:sound.gravel.break",
+    "place_sound": "spicedcider:sound.gravel.place",
+    "hit_sound": "spicedcider:sound.gravel.hit",
+    "fall_sound": "spicedcider:sound.gravel.fall",
+    "step_sound": "spicedcider:sound.gravel.step",
+    "pitch": 1.1,
+    "volume": 1
+  }
+}

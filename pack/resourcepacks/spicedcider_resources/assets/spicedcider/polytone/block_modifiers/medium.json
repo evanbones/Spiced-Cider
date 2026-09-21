@@ -1,0 +1,21 @@
+{
+  "targets": [
+    {
+      "id": "supplementaries:crank",
+      "required": false
+    },
+    {
+      "id": "brewinandchewin:item_coaster",
+      "required": false
+    }
+  ],
+  "sound_type": {
+    "break_sound": "spicedcider:sound.small.break",
+    "place_sound": "spicedcider:sound.small.place",
+    "hit_sound": "spicedcider:sound.small.place",
+    "fall_sound": "spicedcider:sound.small.place",
+    "step_sound": "spicedcider:sound.small.place",
+    "pitch": 0.85,
+    "volume": 1
+  }
+}

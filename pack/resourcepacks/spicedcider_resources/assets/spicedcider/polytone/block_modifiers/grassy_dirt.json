@@ -1,0 +1,20 @@
+{
+  "targets": [
+    "minecraft:grass_block",
+    "minecraft:mycelium",
+    "minecraft:dirt_path",
+    {
+      "id": "environmental:mycelium_path",
+      "required": false
+    }
+  ],
+  "sound_type": {
+    "break_sound": "spicedcider:sound.grass_block.break",
+    "place_sound": "spicedcider:sound.grass_block.place",
+    "hit_sound": "spicedcider:sound.grass_block.hit",
+    "fall_sound": "spicedcider:sound.grass_block.fall",
+    "step_sound": "spicedcider:sound.grass_block.step",
+    "pitch": 1,
+    "volume": 1
+  }
+}

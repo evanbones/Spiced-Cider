@@ -1,0 +1,8 @@
+#Length that liquids extend into the void. Must be an integer greater than or equal to 0.
+# Default: 16
+# Range: > 0
+liquidTrailLength = 16
+#How fast the trails fade. Must be greater than 0.
+# Default: 2.0
+# Range: 4.9E-324 ~ 1.7976931348623157E308
+liquidTrailDecay = 2.0

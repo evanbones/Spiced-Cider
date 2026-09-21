@@ -58,7 +58,7 @@ hash = "43303ea5835f439a1fc1e7eb771834cfce26450a2381ad192621e4ed5532ff29"
 
 [[files]]
 file = "config/ambientsounds-client.json"
-hash = "aaa9fed6412bbc452236fd3586007c4ac469c4f06bef815778ae1f3e75f3de9a"
+hash = "a8c0abba6dc195fcfdba6ef7e37982a59c9f62d167bb45132b3e9108b0e2abe1"
 
 [[files]]
 file = "config/amendments-client-1.toml.bak"
@@ -83,10 +83,6 @@ hash = "6789b3c75a7623c6eca4d0dab92fe937e3deab771f548de51763bcf141c990cc"
 [[files]]
 file = "config/architects_palette-common.toml"
 hash = "bc9477568da85e83ba30418ba3b558d3cc32024d6fcb36e8bfb34d96cd63205a"
-
-[[files]]
-file = "config/arts_and_crafts-common.toml"
-hash = "2af68e12100e2dba177afcac23cec23e3ec26a39dad0f7bb486107dcc0ebfda4"
 
 [[files]]
 file = "config/asynclocator.toml"
@@ -129,6 +125,10 @@ file = "config/bestylewither-pre.json"
 hash = "7da5d34927922c48a9cf0281f36e9796ef3a88a873e9a82500666d862f2806c3"
 
 [[files]]
+file = "config/better_cloud_shadows.json"
+hash = "3f32151d6709fdc4b641cdb82e819b4bdf4ba84538d6ddb46f2818ef3cbffdf2"
+
+[[files]]
 file = "config/better_log4j_config.xml"
 hash = "761d6a6c702ac7afe8aad81b186837d861bede636a0527857b482284c7c21a67"
 
@@ -142,7 +142,7 @@ hash = "ff969e49f26c08ab2f7336c0b2c965892c25d38e5365fb8473ed8d461565efe7"
 
 [[files]]
 file = "config/betterclouds-v1.json"
-hash = "eb24d2da80fd3b670bc5cfb238c8d66be985ab1ab00d3712da863a99a6d45ebc"
+hash = "84df82348377a8cdfdef0ea2041ef2168a060a16806d34e1a08a0778b68daaa1"
 
 [[files]]
 file = "config/betterdays-client.toml"
@@ -289,6 +289,14 @@ file = "config/clayworks-common.toml"
 hash = "ef65725eaf5e00e3a74ace814ac6ad53f541fc05af04ba9af63a21c67b2802f1"
 
 [[files]]
+file = "config/clean_tooltips-client-1.toml.bak"
+hash = "c7e88676483149da20e0ed2e4fab082f99c8099e59961d7182b1d1db9e57b916"
+
+[[files]]
+file = "config/clean_tooltips-client.toml"
+hash = "f71b9a3f052f673150ca4d452fc25c96bb2cd337518af21291b1ee5c26a1ac73"
+
+[[files]]
 file = "config/clickthrough.json"
 hash = "fa77382569bcc6a93a4b38f7f63a4de7de17acefada9cd774b3b3442dc8bae34"
 
@@ -305,24 +313,12 @@ file = "config/cloud_presets/colors/default.json"
 hash = "8c56957c3bcf7805b7892b06f7bc201f43c81e975bc4832a11fff1b18fba69fb"
 
 [[files]]
-file = "config/cloud_presets/colors/presets.json"
-hash = "9d62367ad3f502ab0f94797dcc053be0f7c9cb1027288e31fcff415668579099"
-
-[[files]]
 file = "config/cloud_presets/light_sources/default.json"
 hash = "1ccf855b959beefd4520d4f415b79a70d7ce67227118bbbc12d932840defac2d"
 
 [[files]]
-file = "config/cloud_presets/light_sources/presets.json"
-hash = "f36ab2df02e8b22ab1a4d6aa0ccb64ace1195e14f88652e2c7ee9a1dda8e2419"
-
-[[files]]
 file = "config/cloud_presets/lighting/default.json"
 hash = "44623a04b9057306c1b4b4a1bdbee60e8327b20f8b11a3bdecfaabcbbabb4160"
-
-[[files]]
-file = "config/cloud_presets/lighting/presets.json"
-hash = "e8152ad83f42df0f44c441aa9eb0ff60d21453db07e97252804dc1d52bd5e0ad"
 
 [[files]]
 file = "config/clutternomore/client.toml"
@@ -334,7 +330,7 @@ hash = "8d2c5d6339c0624879db943d7b46772a486f99cb4c1b8f62329486be9f549770"
 
 [[files]]
 file = "config/coldsweat/client.toml"
-hash = "bf9d52d397271540e0377440e13b3fd888c25585f4209828b945d2fd0fd83ffd"
+hash = "128e10d6a9333c6da55be543a3ff256e526494f6f640e7d8ee1aa991a3fbb554"
 
 [[files]]
 file = "config/coldsweat/disabled_mods.txt"
@@ -350,7 +346,7 @@ hash = "ebdcd68d4fb7b455c0997c2de5fb216b093d9ffc987c5df01b44d8474f0b0c1e"
 
 [[files]]
 file = "config/coldsweat/main.toml"
-hash = "3286ecf8c86cd780643361f696b6837c396f0925504d42d1f866cf3d7f078ef0"
+hash = "6ec31b1a628dfa555749fae93af4b53a99f865040452633f4fd2751bbf45b6dc"
 
 [[files]]
 file = "config/coldsweat/world.toml"
@@ -370,7 +366,7 @@ hash = "d276f6d30c54c14e6580103fa93170598cf5ff97912daccb64d0d6205db80274"
 
 [[files]]
 file = "config/comfortable_campfires.toml"
-hash = "12ee86f832affb556323e15e13355022564a6398faab26417ddaa3a41c073a8f"
+hash = "bf86cea4850d9c643210bb9546f329792c181f271585961cd10dd17173c8a5ae"
 
 [[files]]
 file = "config/configured-client.properties"
@@ -422,7 +418,7 @@ hash = "943e1c3672b8a03f27519b357091133205119c7b3db2fcc4c25b597cabf8926d"
 
 [[files]]
 file = "config/crash_assistant/modlist.json"
-hash = "bfe8ded5fee2e4eabfa65cbc490a267a440a9ebb3a43d140692c4cd0f7e18e3f"
+hash = "f5551da1c58d3741a30308834cfe28be89bd212d565ca407fcc85eadf4bcf1fe"
 
 [[files]]
 file = "config/crash_assistant/scripts/log_analysis/example.jexl"
@@ -443,6 +439,14 @@ hash = "3291675385ad25c0f4d6a9bf9c1a7815bb9660017bc68fa793fe2295da7d589b"
 [[files]]
 file = "config/create-server.toml"
 hash = "36216a05f3ed63106ba587c8c24ed6315385829e7f3dae695dcf545aba41a270"
+
+[[files]]
+file = "config/creativecore-client.json"
+hash = "acb6c8c1394d4d6f2d0c98d5c314c5ef8ad34b8a76f0a420fc596733bcbc51ac"
+
+[[files]]
+file = "config/creativecore.json"
+hash = "5f08d0878d7f89c6b4c947a49dce368d7738255d44fecf9aad59ec6ae8a4fcef"
 
 [[files]]
 file = "config/critterarmory.json"
@@ -482,7 +486,7 @@ hash = "0030656736b21f06f9f5b73078ce3ea41778f0f744c9d5da0055712a493ced85"
 
 [[files]]
 file = "config/drippyloadingscreen/early_window_reference.properties"
-hash = "3f2ca339628042157fe7f7bf801e1e87e7bc5ec698d7e1df8b20846c9a136aa6"
+hash = "7956f73f5d16131f8af55970a283c1e258d97faf5d5905baa0224c6eab4af45b"
 
 [[files]]
 file = "config/drippyloadingscreen/options.txt"
@@ -542,7 +546,7 @@ hash = "ffbfaf9d5e87f0b43e3c2568982e11bbd11b084e0dcd1f379723055ff91da49d"
 
 [[files]]
 file = "config/entityculling.json"
-hash = "48527836eabbda32f541d1e44b718a3a384e7aaa4a377b70666bc4f1dabfadde"
+hash = "7c617805e9f4fbece05a7b500905b687e6dbd6d715fe8df996f35e321d2afa4d"
 
 [[files]]
 file = "config/environmental-client.toml"
@@ -590,27 +594,27 @@ hash = "6bccd9a5af80821fe4b83ea397da43adac0b8511bfb7d3b297c038f2b69da8f1"
 
 [[files]]
 file = "config/everycomp-entries-1.toml.bak"
-hash = "6fd356aa61cfb7ccf55f2538818d8fb3ea55593639ec2a701c6b9ec35de2ef9a"
+hash = "65c8972ce8da5afce46eb57d2346fb81fe30775e5a2d75c8f4ea008fe2d8508f"
 
 [[files]]
 file = "config/everycomp-entries-2.toml.bak"
-hash = "94c57bd7e0f6fdb5b800700a168a01f865f6a4b7d65fd6c7e556c8bd055d4c4c"
+hash = "6fd356aa61cfb7ccf55f2538818d8fb3ea55593639ec2a701c6b9ec35de2ef9a"
 
 [[files]]
 file = "config/everycomp-entries-3.toml.bak"
-hash = "a92ffd38b15d1c4ef7f9464d3f00cdfe0b4c7141c76ff1ec6604fddce0084943"
+hash = "94c57bd7e0f6fdb5b800700a168a01f865f6a4b7d65fd6c7e556c8bd055d4c4c"
 
 [[files]]
 file = "config/everycomp-entries-4.toml.bak"
-hash = "ea812b942bcf67f67d446250905e5e9cc11b18285d0ab47a1afffd281fd7d763"
+hash = "a92ffd38b15d1c4ef7f9464d3f00cdfe0b4c7141c76ff1ec6604fddce0084943"
 
 [[files]]
 file = "config/everycomp-entries-5.toml.bak"
-hash = "c8d95c6511c35bba9d5a1a48ad27a3db736bc046427f7e420fdef4ed11b2f96c"
+hash = "ea812b942bcf67f67d446250905e5e9cc11b18285d0ab47a1afffd281fd7d763"
 
 [[files]]
 file = "config/everycomp-entries.toml"
-hash = "65c8972ce8da5afce46eb57d2346fb81fe30775e5a2d75c8f4ea008fe2d8508f"
+hash = "5d796193f6afcad64b71e683eb2d69f64806b1bc7744890bc54b93f94fc8c573"
 
 [[files]]
 file = "config/everycomp-hazardous-1.toml.bak"
@@ -658,7 +662,7 @@ hash = "09d330b29443d9579ecc014f2be2fcb31075bfe1e9f9ac4e750f271128650fe6"
 
 [[files]]
 file = "config/fabric/indigo-renderer.properties"
-hash = "c9c8674d7a21a3fe80de345f807e92673c6ce11f134ead596732863a0e4b35f8"
+hash = "a3a30ff04a63d2d38dac10392fe7a0e56827eed53ab0a2a9fe0916e7dcf4b1d7"
 
 [[files]]
 file = "config/falling_snow.json"
@@ -890,7 +894,7 @@ hash = "9b9525f6baadc8312819ae21ad8688b20fb887e0e2bec4bceece4cbb296196b8"
 
 [[files]]
 file = "config/fml.toml"
-hash = "cc512c3d6250b35fece71595794d3cd36485a280a16955637e20329ce3c0aeb0"
+hash = "56793c2d4c7c2132e38f32897a1d93920cd3930f82f65aafd0b8a99a40613610"
 
 [[files]]
 file = "config/fog/config.json"
@@ -931,6 +935,14 @@ hash = "edb48061400dd675918d7e5d1b5f0846f056ceb09f5f4eada9fa36500c9bff36"
 [[files]]
 file = "config/gnetum.json"
 hash = "72678bee2afb9706f59b9003268037f88ebc2a80052a2ab99a30c1a63e97052d"
+
+[[files]]
+file = "config/helditemtooltips-client-1.toml.bak"
+hash = "8b01d6c735c257eb6f94ea4248fdcc3c3abfa147f94016949626486b741106da"
+
+[[files]]
+file = "config/helditemtooltips-client.toml"
+hash = "2719dc065ecf8a4f1e586ae5c6a311f22011ed1d6b613cdefd580c6521d06949"
 
 [[files]]
 file = "config/heraldics-common.toml"
@@ -979,58 +991,6 @@ hash = "873f4391487d89d3a316333d6166fa46497cc9aac147a824ddb1498e9239c641"
 [[files]]
 file = "config/immersiveoverlays.json"
 hash = "3826b8194178be63494585a155157030b568798ef3751109ae9148ba30171fbb"
-
-[[files]]
-file = "config/incontrol-server.toml"
-hash = "3e6efcad6e8fc9714583efa0771c386698f2f147d16b91319fa334a5ad5703a9"
-
-[[files]]
-file = "config/incontrol/areas.json"
-hash = "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
-
-[[files]]
-file = "config/incontrol/breakevents.json"
-hash = "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
-
-[[files]]
-file = "config/incontrol/effects.json"
-hash = "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
-
-[[files]]
-file = "config/incontrol/events.json"
-hash = "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
-
-[[files]]
-file = "config/incontrol/experience.json"
-hash = "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
-
-[[files]]
-file = "config/incontrol/leftclicks.json"
-hash = "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
-
-[[files]]
-file = "config/incontrol/loot.json"
-hash = "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
-
-[[files]]
-file = "config/incontrol/phases.json"
-hash = "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
-
-[[files]]
-file = "config/incontrol/placeevents.json"
-hash = "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
-
-[[files]]
-file = "config/incontrol/rightclicks.json"
-hash = "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
-
-[[files]]
-file = "config/incontrol/spawn.json"
-hash = "5fbc67ef18e670cdbd47f13b0e50a776eb7dfac4bd48fc8c51a70d1830f22aab"
-
-[[files]]
-file = "config/incontrol/spawner.json"
-hash = "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
 
 [[files]]
 file = "config/infernalexp.json"
@@ -1130,7 +1090,7 @@ hash = "b8e5bd2e2bf2bde44e2af79373447fc74f8e614dc81b7d887e66812e93758327"
 
 [[files]]
 file = "config/lambdynlights.toml"
-hash = "af3f09dbc2afaf0603ed9ef684f71211c6c90933bd7f03c86277040f156da85a"
+hash = "1c60932b0d0b24e8fae247e8a610e8b5fd274d12d1574d5d993519aa65906fe5"
 
 [[files]]
 file = "config/leahs-immersive-thunder.toml"
@@ -1169,12 +1129,20 @@ file = "config/manual_labour.json"
 hash = "b5ec45ab831815153e1cb2edfe275c228cc9fd0bd87cbcde3055663e633b5664"
 
 [[files]]
-file = "config/map_atlases-client.toml"
+file = "config/map_atlases-client-1.toml.bak"
 hash = "b30ba53d2bbc356d56087389cada0894967b932683b1b7c7278c3a56f6fef0c0"
 
 [[files]]
-file = "config/map_atlases-common.toml"
+file = "config/map_atlases-client.toml"
+hash = "fe8d76c8d39f7063335328b9060ecd0c5eba639d3e7f13fcfd226fe50cb4fc92"
+
+[[files]]
+file = "config/map_atlases-common-1.toml.bak"
 hash = "e26a83584a73149bb044601289bddbcc6095cfe5712caf7a1bae49230d2f2ed4"
+
+[[files]]
+file = "config/map_atlases-common.toml"
+hash = "7e6c7164aff5dfb227688ed085c10338d974636e8ecc040f840e8552aaea7a9b"
 
 [[files]]
 file = "config/mcqoy.toml"
@@ -1254,31 +1222,31 @@ hash = "9fe669b2f68354814b9156f038e84074b149d5bc6d7e9991530bb4d8b6f09387"
 
 [[files]]
 file = "config/modulation.json"
-hash = "eb64da9475b4f5f68dcd7587def5ea41b6170bc554d85484e4bef5f16b71ef48"
+hash = "22a914de055ef1edf84bfd42ca891644fcd9d0aeacd2a46b9abc12d05e985fe4"
 
 [[files]]
 file = "config/moonlight-client-1.toml.bak"
-hash = "6f98eba5f152d577bb951daf76e9d04e04d6883561ca287de0f49e237cb6593b"
+hash = "9a18128783564061e6a5d7fec3cf26b5a947e74b3e81c2dc5183b360be501c77"
 
 [[files]]
 file = "config/moonlight-client-2.toml.bak"
-hash = "b18c59b940208d3a09e43481f7f2177489b42653530a858483495f5fde991425"
+hash = "6f98eba5f152d577bb951daf76e9d04e04d6883561ca287de0f49e237cb6593b"
 
 [[files]]
 file = "config/moonlight-client-3.toml.bak"
-hash = "d1e73a7c80c8457109ceb816faf68ba2e7e439addc4d97e273af2f82d6c7ded0"
+hash = "b18c59b940208d3a09e43481f7f2177489b42653530a858483495f5fde991425"
 
 [[files]]
 file = "config/moonlight-client-4.toml.bak"
-hash = "64b5e9c96b840914b5d0faa51f7666f03f0433f17ae7a1c5f57f8c8ca62442a4"
+hash = "d1e73a7c80c8457109ceb816faf68ba2e7e439addc4d97e273af2f82d6c7ded0"
 
 [[files]]
 file = "config/moonlight-client-5.toml.bak"
-hash = "e2357f0bf63a70d3600c6f698df59de39927ff038f61ec740ec57a58cfb69c05"
+hash = "64b5e9c96b840914b5d0faa51f7666f03f0433f17ae7a1c5f57f8c8ca62442a4"
 
 [[files]]
 file = "config/moonlight-client.toml"
-hash = "9a18128783564061e6a5d7fec3cf26b5a947e74b3e81c2dc5183b360be501c77"
+hash = "a1a6103b689aa57a26b20fb90ab6c558d58ff06f9f634c837db6c7adb30acfaa"
 
 [[files]]
 file = "config/moonlight-common.toml"
@@ -1593,16 +1561,72 @@ file = "config/openloader/packs/spicedcider_data/data/abnormals_delight/tags/ite
 hash = "bafa6c01f255358022536e4a998602e103cc981e70f9913a46f52d88dd963904"
 
 [[files]]
-file = "config/openloader/packs/spicedcider_data/data/arts_and_crafts/loot_modifiers/bleachdew_from_archaeology_common.json"
-hash = "5fd60eef8a56b3e27b82be8439cb1c43c950b5c3e5bbed53387a3a359648f76f"
+file = "config/openloader/packs/spicedcider_data/data/alloyed/recipe/forging/bronze_ingot_from_create.json"
+hash = "c61ce4563a1c1dafb19d537321c63b37071a0b8395374a175e325fcb96222d74"
 
 [[files]]
-file = "config/openloader/packs/spicedcider_data/data/arts_and_crafts/loot_modifiers/cork_hanging_sign_from_archaeology_common.json"
-hash = "5fd60eef8a56b3e27b82be8439cb1c43c950b5c3e5bbed53387a3a359648f76f"
+file = "config/openloader/packs/spicedcider_data/data/alloyed/recipe/forging/fishing_rod.json"
+hash = "00ca4311e54ed3436217bec1d1c7c35504fe9ea25c56d2c6b75a23fdbf6d9a50"
 
 [[files]]
-file = "config/openloader/packs/spicedcider_data/data/arts_and_crafts/loot_modifiers/lotus_pistils_from_sniffer.json"
-hash = "5fd60eef8a56b3e27b82be8439cb1c43c950b5c3e5bbed53387a3a359648f76f"
+file = "config/openloader/packs/spicedcider_data/data/alloyed/recipe/forging/steel_axe.json"
+hash = "2b0538bd7a4a32d8f391d35387c62a1c708eab0ed32287cbd939a8010a1dfd1f"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/alloyed/recipe/forging/steel_boots.json"
+hash = "26c18d65814231309ced7cfaa499c38e96503d9e612e215e64734454e111e16f"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/alloyed/recipe/forging/steel_chestplate.json"
+hash = "d12f0df57561e3a5eaffe128d790af43bb0753e35e2583a1f8d2862ee3fd997e"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/alloyed/recipe/forging/steel_helmet.json"
+hash = "e82e3aa6f261e6542842e266852c7cdf2b1b0afd51349c84f2ab32c0b80804a9"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/alloyed/recipe/forging/steel_hoe.json"
+hash = "1bc6483d1c181f35a5d78f70735fc6e2906f7528d0446d894c7b09312a25415e"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/alloyed/recipe/forging/steel_horse_armor.json"
+hash = "2647a72b800cd23b2c5e58c857ee4c21880ea16b4079f1f448c53d9f9fccc0f7"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/alloyed/recipe/forging/steel_ingot.json"
+hash = "18acab2e8aee61bb2a7f4991081a6ceca84621c0c8ca738ca7c66e42b1fbb015"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/alloyed/recipe/forging/steel_knife.json"
+hash = "a8cc82f7cfcd13c567f88bff61eed1394d66c2c341d0e1670f10fa50122e50f4"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/alloyed/recipe/forging/steel_leggings.json"
+hash = "9f98c2c918b1f7a75003b47b2c61ceaa7928f04c4e44dd253ee88ee5984928e0"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/alloyed/recipe/forging/steel_nautilus_armor.json"
+hash = "e463a3464c568f0d20bec61a85d2a11f241f99404d413b55acc19b7154766ac6"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/alloyed/recipe/forging/steel_pickaxe.json"
+hash = "63ce89a2f810561ac0a0d21719aebc7d9e144538975352ad989c6b4c84e4dc53"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/alloyed/recipe/forging/steel_shears.json"
+hash = "d64e9e80604e1952e7d69895215b89dfd99e7e18851bc7daa8a03464ea5a5773"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/alloyed/recipe/forging/steel_shovel.json"
+hash = "71e094ef08a20ca55447aad32c7f7150e2673fa8ac31ebbcea382dfa169aa402"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/alloyed/recipe/forging/steel_spear.json"
+hash = "90a7264177b1f8ed8851b6d48f2ef27bd5fbae0650078caefeb8729943cf678a"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/alloyed/recipe/forging/steel_sword.json"
+hash = "0326557274b7fad832233a7dc40f093cca44588cea5900a312960aee802e69d8"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/autumnity/blueprint/modded_biome_slices/autumn.json"
@@ -1643,6 +1667,10 @@ hash = "cc994e006cc599e61b0b3e14efebb7c869c490a9390fefe7c726bfed271b6565"
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/c/tags/item/foods.json"
 hash = "ba33c168caff74d42d5b6a9604fa449fa83258dfee208dbb099f74db62ee68a4"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/c/tags/item/fruits/lemon.json"
+hash = "6d9ddec2791b8bc9549e6fbc2b242a9c3c822b103b90bad60f63b0e73b6916f6"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/c/tags/item/glass_blocks.json"
@@ -1706,7 +1734,7 @@ hash = "c131d75195d07ddd2bd8ae954d528940f356aebb0e112eab8818c507a6ab9e37"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/copperagebackport/tags/item/wooden_shelves.json"
-hash = "0d76ff518c2bd2020198437cf7e999447738e878f303be5b3d081debab38a9c8"
+hash = "e4535bb0a126af3779e547338400e1c80a823fb0de7718d48bceb49b9163e322"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/create/recipe/crafting/appliances/chain_from_zinc.json"
@@ -2709,6 +2737,14 @@ file = "config/openloader/packs/spicedcider_data/data/create/recipe/milling/waln
 hash = "4496c1f854c1c1616dc9b393d8e6bdaaea4853db3f60e7c259968660d72ba4c8"
 
 [[files]]
+file = "config/openloader/packs/spicedcider_data/data/dynamiccrosshair/tags/block/always_interactable.json"
+hash = "fc12f4092e84213f0c18019371d9af3b9f6435eb7b097cb625ba43df61a8581f"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/dynamiccrosshair/tags/block/interactable.json"
+hash = "fc12f4092e84213f0c18019371d9af3b9f6435eb7b097cb625ba43df61a8581f"
+
+[[files]]
 file = "config/openloader/packs/spicedcider_data/data/dynamiccrosshair/tags/item/tools.json"
 hash = "cc994e006cc599e61b0b3e14efebb7c869c490a9390fefe7c726bfed271b6565"
 
@@ -2997,12 +3033,20 @@ file = "config/openloader/packs/spicedcider_data/data/minecraft/tags/block/allow
 hash = "9504bab4776bc7c944f9e2ded1d1f80f391fa06335cf9790a1f77735c85df1e8"
 
 [[files]]
+file = "config/openloader/packs/spicedcider_data/data/minecraft/tags/block/beds.json"
+hash = "fc12f4092e84213f0c18019371d9af3b9f6435eb7b097cb625ba43df61a8581f"
+
+[[files]]
 file = "config/openloader/packs/spicedcider_data/data/minecraft/tags/block/concrete_powder.json"
-hash = "8ecbdc8146000402871ea3000fba4f6e9d6db8e486b8ef9e54ed159c863a5669"
+hash = "ed7fc269b4ba990cce316a6e8401781238dfe3242736757b56b200473763a94a"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/minecraft/tags/block/overworld_carver_replaceables.json"
 hash = "d0c0e04a0d23d66f5693af35faa485918da8fdbb162384b931d3d4a0a50f7f69"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/minecraft/tags/item/beds.json"
+hash = "fc12f4092e84213f0c18019371d9af3b9f6435eb7b097cb625ba43df61a8581f"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/minecraft/tags/item/buttons.json"
@@ -3238,27 +3282,23 @@ hash = "e6124d31a9cfcba12a939b69ab43a2147ca52465c08255a6a187d8b8da837708"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/nomansland/nomansland/worldgen/ore_vein/calcite_strata_vein.json"
-hash = "48e6caa241e83774734e19e41bcc42ac72baf5b4d1498cd540073fa2afad645b"
+hash = "6c9479375e73cd14586622156a6bca83c3a9443ac33eb312ba0590908546012f"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/nomansland/nomansland/worldgen/ore_vein/jasper_strata_vein.json"
-hash = "0fa165374fa786caf308d31a982fd5831cff7d7ce17f6c7b82f4a3a6f4115811"
+hash = "8a2e5d28252f4b3dea6407b2b062133939f14bc11e7cfe9169d84ec5a51c260f"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/nomansland/nomansland/worldgen/ore_vein/limestone_strata_vein.json"
-hash = "81378cf45ae54fe6fe010c34b9f79123c9ee359be624a207d8ecedaca3d427d4"
+hash = "5a905ae37838a6d4e275cbd0519bcb7f4f786bcbca7a51cbf8d7e4a2fde12ed7"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/nomansland/nomansland/worldgen/ore_vein/myalite_strata_vein.json"
-hash = "49a466d334f756f3cd3a68c8cbb6cef3d3050c3cdd9f948ac060271e83559246"
-
-[[files]]
-file = "config/openloader/packs/spicedcider_data/data/nomansland/nomansland/worldgen/ore_vein/permafrost_strata_vein.json"
-hash = "9d859cd40359e673e9cf373598d1c81e5869b9d7cc8819a421f84c2c511b5bf4"
+hash = "010f43d68c86874e9a496379d2262686fb61b0fbc184680e274a7e6aa82f8645"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/nomansland/nomansland/worldgen/ore_vein/shale_strata_vein.json"
-hash = "98a3ecbc1c4f5adb7d3678025b9e4143483396028512580dc86953509b0aa244"
+hash = "0562f06d21a8e2a16a88d0296af4d4bc971eda4feb9077f59102307bb4681171"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/nomansland/recipe/building/straw_bed.json"
@@ -3290,7 +3330,7 @@ hash = "084db9346c743c4ea4c83e99f4c26214dda8da8d2f47aeb9bb215f07305e64b9"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/nomansland/tags/block/ore_vein_replaceable.json"
-hash = "db7ae936519bc5cce642800bcf814c016d5bb2c2b5e8b353e9ecaf33416208f6"
+hash = "e5250fbc7a20d733b849e04e84c13c36cb7d25243ce39065afe51139eb0f4389"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/nomansland/tags/item/firestarters.json"
@@ -3357,6 +3397,30 @@ file = "config/openloader/packs/spicedcider_data/data/nomansland/worldgen/config
 hash = "ce176811ec3de56d55e91877ee1469a48338a662236222218178b42df253356a"
 
 [[files]]
+file = "config/openloader/packs/spicedcider_data/data/quark/tags/block/cannot_replace_scaffolding.json"
+hash = "fc12f4092e84213f0c18019371d9af3b9f6435eb7b097cb625ba43df61a8581f"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/quark/tags/worldgen/biome/has_calcite_clusters.json"
+hash = "ae4c30b0ee20c1ba8b44bfa0503da48fd8e4544e4ec1acd46c4e71abb87565f3"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/quark/tags/worldgen/biome/has_jasper_clusters.json"
+hash = "086151b869d4bbca777944459e9994943f6728104cefd33a473743711ceb59f5"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/quark/tags/worldgen/biome/has_limestone_clusters.json"
+hash = "371282ef6d3db946a5e0102a185d8713279b552e957bae7aa882eae40d2626d2"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/quark/tags/worldgen/biome/has_myalite_clusters.json"
+hash = "e840132538bed656afc09f1956a17e6d8b6b6f362c0530887e2197c86aeb0be0"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/quark/tags/worldgen/biome/has_shale.json"
+hash = "b0625763ada1855cfe2caf947f3fc53b235e6735ac45d6c7ccdc307b8f0c5f13"
+
+[[files]]
 file = "config/openloader/packs/spicedcider_data/data/reliable_gliders/recipe/glider.json"
 hash = "0daf066cb42fcc56f009d69442aee8f7b665732b1dd3e0a24a9e080899859f49"
 
@@ -3385,12 +3449,20 @@ file = "config/openloader/packs/spicedcider_data/data/snowrealmagic/tags/block/c
 hash = "cb7d7fb71787bd8640b258de5b4469dc4f7317683fd83be3e7b5895b2da54b17"
 
 [[files]]
+file = "config/openloader/packs/spicedcider_data/data/snowyspirit/loot_table/chests/present_villager.json"
+hash = "7b4dd2bdf11e324268c4795033a9f44fa768bff96f0b53eff3dc18191a935057"
+
+[[files]]
 file = "config/openloader/packs/spicedcider_data/data/spelunkery/recipe/item_magnet.json"
 hash = "00ff8f567cf2fa9f22ef5936300913a1958df46c087d18c80be4c2ae40d90b87"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/blueprint/structure_repaletters/chest_repaletters.json"
 hash = "deb72e92240a378976d5924739e0debb46f0ba2ce29387061bf589363de1e55f"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/data_maps/entity_type/spawn_equipment.json"
+hash = "347b271e4bdfc73a6c6b5bd28de45f025efc191e2c01b691826eabd4c041bf5d"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/defaulted/default_component_patches/caverns_and_chasms_rarity.json"
@@ -3403,10 +3475,6 @@ hash = "f408c033986d40b3bca602a2d2624a04d2849e533ef907c50dfeae3c821aa1ee"
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/neoforge/biome_modifier/remove_aa_leaves.json"
 hash = "860663ee1650781b77c354bc41e9683daaff2ec5d631d185f361c7375ed65ba0"
-
-[[files]]
-file = "config/openloader/packs/spicedcider_data/data/spicedcider/neoforge/biome_modifier/remove_aandc_features.json"
-hash = "e3889ba31e3884ca8d62058016f2f7f397071684919b22bc617b21c35491a60b"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/neoforge/biome_modifier/remove_aut_maple.json"
@@ -3469,8 +3537,24 @@ file = "config/openloader/packs/spicedcider_data/data/spicedcider/neoforge/biome
 hash = "4adce9fd16718b91039c71c821d95247583509a2cffd623b99c749b81a6552e1"
 
 [[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/bb/bountifulfares/spiked_walnut_palisade.json"
+hash = "31b652085352ab7344d22a853fd6dc532b627d754912d9fa4883fd5674ee0886"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/bb/bountifulfares/stripped_spiked_walnut_palisade.json"
+hash = "5e9f6410a17b779889d9ef077ebca82617cdee4b2e457959c01ca0abf96d643f"
+
+[[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/tags/block/sits_on_slabs.json"
 hash = "79668f8f64cad5dc8a5f30618a2130d03cdaece8810d38615abd03661f59c69d"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/tags/entity_type/deny_natural_spawn.json"
+hash = "bba97009ca2fae9fc37c5ef459f824aa614a2439c3ca831003f90abc73745384"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/tags/entity_type/deny_spawn.json"
+hash = "88e4da414c3aedcb613470d18e82df0935a73f55ba17ba8a9cbcaa510bfdc5c2"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/supplementaries/recipe/awnings/awning.json"
@@ -3625,6 +3709,10 @@ file = "config/openloader/packs/spicedcider_data/data/wilderflowers/loot_table/b
 hash = "2d5136d9a5061d7d5b60a2b703b0c671d6367d09d0f919572c50b8c2d6a33fa5"
 
 [[files]]
+file = "config/openloader/packs/spicedcider_data/data/wilderflowers/recipe/milling/pink_dye_from_hopeful_wildflowers.json"
+hash = "c2f52acf1443b6ba0d86cc2f1bdf89945337d680fec155318b7249e2d499ed3b"
+
+[[files]]
 file = "config/openloader/packs/spicedcider_data/icon.png"
 hash = "76f80cd8af5f2dec4303f9c6c3e29327eb2159fa9afb16c75a0df9f4008750e8"
 
@@ -3650,11 +3738,11 @@ hash = "13b2b1384f949e6e409c3c3cc423ecb854df6b386d4466d424a57a887e89f3d8"
 
 [[files]]
 file = "config/packetfixer.properties"
-hash = "bd535bf451f2d5642d5bbf83ded5672ad200782823eceedb682e9d73ace8fc75"
+hash = "3310ea98fb0a670e475acb3566cb4f19510c3b2c8788c17eb74a3c8137beaa54"
 
 [[files]]
 file = "config/particle_core_config.toml"
-hash = "9f21aae26ba31a4fd9bab85c4bb4e37d10ac408aff9feed91ad6acdf1e269634"
+hash = "df58bc14bc15f015d25cdf96ea15d54bba59fc68de346231e12f6defaf62aba9"
 
 [[files]]
 file = "config/particle_core_disabled_optimizations_v2.json"
@@ -3722,7 +3810,7 @@ hash = "052c0215d8f65fe7bbd37427a81a0086237e7ceb6a3d2939df79ea0e9ea2841a"
 
 [[files]]
 file = "config/quark-common.toml"
-hash = "79cc682477c56b8e11871170458e1cf222f7818ca98e5985133fed5e5ef9ab6d"
+hash = "0a1118519d3d966aed4e724acefd4b8eb3dfde396d6c032ea103e4f6e6bbcf4e"
 
 [[files]]
 file = "config/quark_ponders-client.toml"
@@ -3734,7 +3822,7 @@ hash = "18bb4bac8bf47499a99702cc1edcc2f70903524e365290a200b4c0cdadc9c6b2"
 
 [[files]]
 file = "config/raised.json"
-hash = "67056376c983a63eb1d15cc6ceaea5da2778fb5ebf9b445b9c9b559926037cff"
+hash = "a5da41935f8d6d15f8e5a4845fd5b64e4a41a9cc4283df7b3defc96c6279d889"
 
 [[files]]
 file = "config/recreative/magical_tab.json"
@@ -3742,7 +3830,7 @@ hash = "7e94c5d008e4b4a90365cb98a50748f5764ab592b8f29179de4e370d352656eb"
 
 [[files]]
 file = "config/recreative/remove_tabs.json"
-hash = "3d3927c81e2281715ea4395c69ff1cdf1abac2ad7f477785b2e915b056206c6b"
+hash = "aa60a5b03b38ed65154c3380aa8f02f8f10075c778d405556d191e9b895fe05b"
 
 [[files]]
 file = "config/recreative/tab_icons.json"
@@ -3758,7 +3846,7 @@ hash = "c74c516a193e42450bc2947c46df59d72910af8a108f38cc0fb28b44b9a98f93"
 
 [[files]]
 file = "config/redelightmap.json"
-hash = "03fb4173820bcaea26cb2e5030535cecb56e17b66bbc71840cceb8b564440f94"
+hash = "c82e04d0ceddbe7602e14cf9e8a9fcdcca5e9d8f7c9bc956622cfe1e711a01e6"
 
 [[files]]
 file = "config/redomesticate.json"
@@ -3802,7 +3890,7 @@ hash = "590ea074ec1c84ced8a0c60dedd7111edd69801f7441fe78654c2f6fdfb655b7"
 
 [[files]]
 file = "config/reliable_remover.json"
-hash = "8e779d02a218c1f4935c5c8d013c562d36f09b73d92e3654606e9d0c255e53c6"
+hash = "b61cf6790e24dfb72aa04b77fa7a48f1595d98625d44178d1403c54010725b36"
 
 [[files]]
 file = "config/reliable_remover/hide_effects.json"
@@ -3857,22 +3945,6 @@ file = "config/remi/remi.json"
 hash = "62209fb79d1a7d49ac6967bb2f72626894418c6eb6b3b29c3b90626cfdbf7ab3"
 
 [[files]]
-file = "config/remi/stack_groups/arts_and_crafts_chalk.json"
-hash = "8eef6a17aee201eabf8b19ad495d5cda492025da76ae08c03d88e2d4f52f74ab"
-
-[[files]]
-file = "config/remi/stack_groups/arts_and_crafts_chalk_sticks.json"
-hash = "f477cc1c03cea71b8e11e452ebab5b03f29e2f5fe51960910a6d4a103aae7b19"
-
-[[files]]
-file = "config/remi/stack_groups/arts_and_crafts_paintbrushes.json"
-hash = "e058f4754d1cd9ed13fc35aa90fc67bee969ee8268a2e43710b92dee0a486707"
-
-[[files]]
-file = "config/remi/stack_groups/arts_and_crafts_plaster.json"
-hash = "18d04b2de128abb2600c62e8b0e292051a7919eada6a1edc5e64fe5e891b90bb"
-
-[[files]]
 file = "config/remi/stack_groups/blockbox_copper_bars.json"
 hash = "4db91e1e4e05e65e80acc2bb28cf6eec82a3bd0596c7255bedf8e16762839f57"
 
@@ -3894,7 +3966,7 @@ hash = "1de435eb5af3e16d958a2d4ec45dfadee824ea9930142af772dad50be48290da"
 
 [[files]]
 file = "config/remi/stack_groups/blueprint_wooden_bookshelves.json"
-hash = "f94a7ea6636e543c03fdd8ef07ba571fbce60625560392f1a65b89139026e424"
+hash = "dd0c0aaa0bcb9d4bd7d02eb6a928d609f5afa0446caeced063beb1d89849358f"
 
 [[files]]
 file = "config/remi/stack_groups/blueprint_wooden_chiseled_bookshelves.json"
@@ -3954,11 +4026,11 @@ hash = "8643e1e02cd605e656d52e6fe5fd73ce318393e60334ff8fd366a567dc1043e5"
 
 [[files]]
 file = "config/remi/stack_groups/c_fence_gates.json"
-hash = "655483bbbe659151dc52a55a4e349ef99bac3adcddadb5f9ba90780a1a296822"
+hash = "93763cc43756cf3e5359228de8716790b558e0ca705c0e2b75b3b5695f458fbe"
 
 [[files]]
 file = "config/remi/stack_groups/c_foods.json"
-hash = "f58ca38104014b16e0451fef0cd69cad185595af549de437fc07b855882a1b78"
+hash = "a928f836d221c246d1e4edb5eda49460ee22da7548cbffac64c6349ea567b33e"
 
 [[files]]
 file = "config/remi/stack_groups/c_gems.json"
@@ -3970,7 +4042,7 @@ hash = "aaa13a5bf832a77d6ee6196092273d8b111dcb816fa56618e08594118f11ed73"
 
 [[files]]
 file = "config/remi/stack_groups/c_tools_knife.json"
-hash = "b2cdc4154899462b4acff8fe61947a30cc0ae25620e67f77bc5f55356e583b1a"
+hash = "fd65379f5da767e5901c8b7e9487680744ad2b4edda7921e5ab08635e79b3416"
 
 [[files]]
 file = "config/remi/stack_groups/caverns_and_chasms_sparklers.json"
@@ -4025,10 +4097,6 @@ file = "config/remi/stack_groups/dead_corals.json"
 hash = "d6ef61bb3dee70ad3823b6b31b06a8e02d755b011b82274633c3b8f7893a97dd"
 
 [[files]]
-file = "config/remi/stack_groups/decorated_pots.json"
-hash = "5491e29f909a8b8eed2ef5eb91e29f4af753b3246f938e16e64778ac6e6c2eb9"
-
-[[files]]
 file = "config/remi/stack_groups/farmersdelight_cabinets.json"
 hash = "12c986150b3867751a894107ccca9c9fa77d30de3611eab1f70c57743b5da6f0"
 
@@ -4041,20 +4109,12 @@ file = "config/remi/stack_groups/farmersdelight_tools_knives.json"
 hash = "75bcfdd79d299628afdc40c4844a7231a7c04f0ffbdcc7aef45b961e1b3b9210"
 
 [[files]]
-file = "config/remi/stack_groups/flower_pots.json"
-hash = "681c465c108e1c9927dd1efd314ff5b064dd0b1088959e1a5c891c59efb039d5"
-
-[[files]]
 file = "config/remi/stack_groups/minecraft_bundles.json"
 hash = "c2f7ba66cacd9f2db1d2be2ac46ccb9865697e577123ae3a7b0640af413eb8e2"
 
 [[files]]
 file = "config/remi/stack_groups/minecraft_harnesses.json"
 hash = "5c8fbaad73172a8b3d44a009a96712f499ab1066e798aba044c7510113764fd5"
-
-[[files]]
-file = "config/remi/stack_groups/mud_bricks.json"
-hash = "0acb444477c3703bbddbed2e2e7d2055bbbc6086e566f84fa30da129ace018fe"
 
 [[files]]
 file = "config/remi/stack_groups/nirvana_burlap.json"
@@ -4178,7 +4238,7 @@ hash = "d419d71c43b48433de84651809278404efacd651ff0870ff26fda83bc2075f7c"
 
 [[files]]
 file = "config/remi/stack_groups/woodworks_wooden_boards.json"
-hash = "41bbd473f125d585ae0e8f58166bb0556cc866ccd9db93d7250ee91c12c89b1a"
+hash = "d5c3fc63686d68430d0f41c5f5a1cce835ae4b9176dbd93f90a741864f944de7"
 
 [[files]]
 file = "config/resourceful-config-web.json"
@@ -4186,7 +4246,7 @@ hash = "1c970fc0cc8a3989889a43fdc6c40c89cabf81ffac2405f92c6abf489a410674"
 
 [[files]]
 file = "config/resourcepackoverrides.json"
-hash = "ebfeb0d02038f1e312cd4f324513f07b0c2f8a3de2f893af082147756e7d4280"
+hash = "396a7a6c404d7538493ad64f7ebce525393cb84df0ed2603ff47968d89e0220f"
 
 [[files]]
 file = "config/roxy-fog.json"
@@ -4203,6 +4263,10 @@ hash = "de881976ab08f520f31b466a1f2bb28a7b21de89af261826ccde12c0bef9dd04"
 [[files]]
 file = "config/sawmill-common.toml"
 hash = "6d42c3a82a1e6663badf4408764a03a5ff8a99052dae0a8dfdfc4fb5ad73175d"
+
+[[files]]
+file = "config/scalablelux.properties"
+hash = "7df38f36e1b1cae8a1a1dd0246c310a0c71c732cfc6de2f7d856d881552a7dda"
 
 [[files]]
 file = "config/scholar-client.toml"
@@ -4250,7 +4314,7 @@ hash = "29c323202dc39807be80a37f946cd163592ceb92f1eef944f30f1322e58acffe"
 
 [[files]]
 file = "config/shadowdrop.json"
-hash = "227275ffb1577aaa8b889f2208e7b5ed93295fbc20bd128d72d4f07794b70546"
+hash = "79445f60c14a6e6cc5b615ce0f3f107d158897debb53a384417fab23ebef62bc"
 
 [[files]]
 file = "config/shieldexp-common.json"
@@ -4306,7 +4370,7 @@ hash = "b627c4456e6fa0bc4b5f85e2f1cd949faedae3cb9afdaf2a5f52e6f3b6ae1f01"
 
 [[files]]
 file = "config/sodium-options.json"
-hash = "4373383ab5f32c24da0e975aeb679c4e150537bd3f5a3cefaa5a53012c1caadb"
+hash = "4056d1df6ceaf99ce534f5f61bf978bc2f6d62381deed617cf361e180e1f1ca4"
 
 [[files]]
 file = "config/sootychimneys-client.toml"
@@ -4337,10 +4401,6 @@ file = "config/sounds/world.json"
 hash = "58c699e5412278850e507c95d4e5107191a0c30f188c43985c0af2fc2045b463"
 
 [[files]]
-file = "config/spark/activity.json"
-hash = "b5c4e52793caccb36f03f0457c67f48c5bc83c82194c35080896b50110934ec2"
-
-[[files]]
 file = "config/spark/config.json"
 hash = "992ba9f3a4a7ce3de112eb95575328956fdc3ce6781c455ebce7b23db7e7da42"
 
@@ -4362,15 +4422,15 @@ hash = "20054029e0014a38add4a1f49f3709dab64de66cb5457277a774407952e66d88"
 
 [[files]]
 file = "config/spicedcider-client-1.toml.bak"
-hash = "04c086f5c1af763d3f2a72ef8780e2b4a8d356a6274e4e4eca4b78d0b4c3fcf8"
+hash = "8ba875b033763d4809406a334de7f8fe4da3fe2358c1fe15e1bd4fd3425b822e"
 
 [[files]]
 file = "config/spicedcider-client-2.toml.bak"
-hash = "2c8d605eac499525b5b8124fccc7e69dce4613a13a7f47a1ec845cb893c4c1c0"
+hash = "04c086f5c1af763d3f2a72ef8780e2b4a8d356a6274e4e4eca4b78d0b4c3fcf8"
 
 [[files]]
 file = "config/spicedcider-client-3.toml.bak"
-hash = "1861bff2443beb08eb6e259e20c38aa2af905070a945d243ad1113a91b6d9417"
+hash = "2c8d605eac499525b5b8124fccc7e69dce4613a13a7f47a1ec845cb893c4c1c0"
 
 [[files]]
 file = "config/spicedcider-client-4.toml.bak"
@@ -4378,27 +4438,31 @@ hash = "1861bff2443beb08eb6e259e20c38aa2af905070a945d243ad1113a91b6d9417"
 
 [[files]]
 file = "config/spicedcider-client-5.toml.bak"
-hash = "e144c92dacc9421a6d4100f25bec3d6559039bbdb3f21183f7294e3cfe8f8a06"
+hash = "1861bff2443beb08eb6e259e20c38aa2af905070a945d243ad1113a91b6d9417"
 
 [[files]]
 file = "config/spicedcider-client.toml"
-hash = "8ba875b033763d4809406a334de7f8fe4da3fe2358c1fe15e1bd4fd3425b822e"
+hash = "7ef03db7836e782575b1ad7a75abfbf504d7d8c39d07ca11791eac46e6623a1b"
 
 [[files]]
 file = "config/spicedcider-common-1.toml.bak"
-hash = "96506da036fb26ce0f428e2afc2bf84dc8989e0162b268089068c65f9d8705f1"
+hash = "d4b322adc1b7bf42e2f107d8fbb3272da33d0a7aceb955fd75780cc718aee8b7"
 
 [[files]]
 file = "config/spicedcider-common-2.toml.bak"
-hash = "2ac73253bc155a12162f2a03c9d9c1e49c0b48c58a8d720110524d4c6ea0c26d"
+hash = "96506da036fb26ce0f428e2afc2bf84dc8989e0162b268089068c65f9d8705f1"
 
 [[files]]
 file = "config/spicedcider-common-3.toml.bak"
+hash = "2ac73253bc155a12162f2a03c9d9c1e49c0b48c58a8d720110524d4c6ea0c26d"
+
+[[files]]
+file = "config/spicedcider-common-4.toml.bak"
 hash = "52220941122506610c78cbd7a3eee4bf9e7e419f10361b20a21314c690abcd44"
 
 [[files]]
 file = "config/spicedcider-common.toml"
-hash = "d4b322adc1b7bf42e2f107d8fbb3272da33d0a7aceb955fd75780cc718aee8b7"
+hash = "ec2f2f155fd264a02dbeb7f383d7a43ac7d4129129037e530d1c0a4ba69e3177"
 
 [[files]]
 file = "config/spicedcider-startup-1.toml.bak"
@@ -4418,7 +4482,7 @@ hash = "5d334531175f2634363c53b0844de831a64c3c171c6b27828baaa9b1170f3798"
 
 [[files]]
 file = "config/spicedcider/spicedcider_manifest.json"
-hash = "74a62437ac29273571415e29d9cb0a88427845c0f696efa70e683303be002274"
+hash = "c141c4eb9f370f1b6f03d4990abca6be60223f506fefe26172dbc553c9572003"
 
 [[files]]
 file = "config/stacksizetweaks.json5"
@@ -4530,7 +4594,7 @@ hash = "2e5e6b293b2251a6acdc55a9e5210c6a78b7fc176b0504f042d106c9350dfca1"
 
 [[files]]
 file = "config/tmrv_plugins.json5"
-hash = "35ea0f6185a1a2abbd16a256d6a1b9072efcfe06d2e8f79bdee099bd3eb3852c"
+hash = "4c7933fbbcf7e3c60501ee3a332ffd6612331f931c343e431a697fef64bd50b2"
 
 [[files]]
 file = "config/toil_and_trouble.toml"
@@ -4638,11 +4702,15 @@ hash = "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
 
 [[files]]
 file = "config/voicechat/voicechat-client.properties"
-hash = "0330cc5341749b53ff7bf56e314f63396cb7810b07278bda8c7a09636627f266"
+hash = "bdb75b624a5d37cadd1d3e4558aae24bb12ce67cf27d832f7ede4f1bc29d7d08"
 
 [[files]]
 file = "config/voicechat/voicechat-server.properties"
-hash = "8b9f11bee503e1f01b46223142a9eb64b23b10e2f9e21c2cae24a0c478e42585"
+hash = "cf7e4d387b04e70d39b49addc41a4c1e7004b6d4f289d5770e0c233eead1a808"
+
+[[files]]
+file = "config/void_water-server.toml"
+hash = "0cb8ca221ac2327a1ad53cc9179f5868d096471228996722466c46fbf96a039b"
 
 [[files]]
 file = "config/voxy-config.json"
@@ -4698,7 +4766,7 @@ hash = "00c6e34f0adbb41db954d296fd7c55dc3412463a38038dc836626433dd7f6d92"
 
 [[files]]
 file = "config/wilderflowers.toml"
-hash = "af29e45e769262881f781e2dfb8ed549cc8ab2665c8c45cae735074cdae992fe"
+hash = "d94260a1fd2d43101b40623f6a72ee4d5aaf07db5af31eedde419397eefb5070"
 
 [[files]]
 file = "config/windswept-client.toml"
@@ -4746,7 +4814,7 @@ hash = "121b93764159be6fb7dab523b29a844e2bb78400ce8c48f52135a097e9b0006e"
 
 [[files]]
 file = "config/yosbr/options.txt"
-hash = "db2acda10a932c4b551b1486695aa691b274bbfd4785ee354e88ded96294ceb5"
+hash = "31c955f53a25319649db5a57a2c5c55c01b0c6a9253e0e091582938c59e9bd31"
 
 [[files]]
 file = "config/zeta-common.toml"
@@ -4754,7 +4822,7 @@ hash = "d985bfc68899c91aa642736400472f6ab876dedaaef4b8c31f38b52d48de633d"
 
 [[files]]
 file = "config/zfastnoise.mixin.properties"
-hash = "be1ed498da356ccd045cfc7341161be2bacb4298019738ffd6b9b9033e26d9a2"
+hash = "48068cdbfff0f549f6519c58eb2328a90c79acee040cc1ca82dd8974259ae39a"
 
 [[files]]
 file = "config/zipline.json"
@@ -4818,6 +4886,11 @@ hash = "82a03261a6006cda13232610752623abf41552203e26309f4e899de8ad87ace4"
 metafile = true
 
 [[files]]
+file = "mods/ambientsounds.pw.toml"
+hash = "f3d66527c4f82b44d9409f643332bc15f91b85f033afe147e3d8b421c0ea6d1e"
+metafile = true
+
+[[files]]
 file = "mods/amendments.pw.toml"
 hash = "c81bee190ce936bc46b98b20f3dff4a7b9689cb7ac168a1674f5378c882f304a"
 metafile = true
@@ -4843,18 +4916,8 @@ hash = "187eafde5974beee1263538b462b7b8fe2fc8948c5d413980d9796d55928580b"
 metafile = true
 
 [[files]]
-file = "mods/artsandcrafts.pw.toml"
-hash = "6d3310120df2ae7d791aafee16c7ebc6c05b71b6e88b56ebcf7f0acc392b5843"
-metafile = true
-
-[[files]]
 file = "mods/atmospheric-rain-backport.pw.toml"
 hash = "37845e3216ef522676430ac436cc189ec938fd23f1940de08929929a465ae065"
-metafile = true
-
-[[files]]
-file = "mods/auditory-continued.pw.toml"
-hash = "6bba42736ec89cf47af352b8759fbed389a2e9bd72a88320d85b5e48b62492ca"
 metafile = true
 
 [[files]]
@@ -4874,7 +4937,7 @@ metafile = true
 
 [[files]]
 file = "mods/better-clouds.pw.toml"
-hash = "c16e09206fc6eff629f1d6387950d0e15aa06986398e7a7de1070ffd5fe412a1"
+hash = "a16de88e419f7630f4f09f831c187ea44236c1d026e10e02c5bf6e042be4e820"
 metafile = true
 
 [[files]]
@@ -4883,14 +4946,13 @@ hash = "ad0b8b0b633c31c1208c6baebc12ef2b67a41910a2e356d96b537fdbef909f82"
 metafile = true
 
 [[files]]
-file = "mods/better-nether-map.pw.toml"
-hash = "168009c9e42bde0e33bd898c188f747ad6acb7a90e7d32e4e9f6e7f46fb6ef5f"
-metafile = true
-
-[[files]]
 file = "mods/better-third-person.pw.toml"
 hash = "e1f1588b18947699ddc9b4f7c5b5406c5559155b8cb52dcd0f203c07c31cd0b8"
 metafile = true
+
+[[files]]
+file = "mods/better_cloud_shadows-neoforge-1.21.1-1.0.0.jar"
+hash = "6b11c54345cacb72bfa3bc2045c4d33cee9b01b48b2b029d90793bd4b5a8412e"
 
 [[files]]
 file = "mods/better_straw_beds-neoforge-1.21.1-1.0.0.jar"
@@ -4947,11 +5009,6 @@ hash = "0d5d97c1094ee34741f345d597907af2f85b1a38bdb91836c1ea4d1f8a6bc303"
 metafile = true
 
 [[files]]
-file = "mods/brainier-bees.pw.toml"
-hash = "cc3c46250286b41f429f69ac3a8e01e1194afc951cc77101032cddaccc051f12"
-metafile = true
-
-[[files]]
 file = "mods/break-my-fall.pw.toml"
 hash = "6c0bc5a9d279fdcb69876c20e416004b785ebb48aeef3c24ecd812523d513990"
 metafile = true
@@ -4982,11 +5039,6 @@ hash = "b29065f7eb51b2fa53043366d0df737483b600c2f549d31c783fe52c4d72bfb5"
 metafile = true
 
 [[files]]
-file = "mods/capes.pw.toml"
-hash = "c899acdc322ab52800a6e305a16427297f411c1c39d97983be96e8b6a34e157c"
-metafile = true
-
-[[files]]
 file = "mods/caverns-and-chasms.pw.toml"
 hash = "574149e660cbe7f90bcde3838770bc076cfb17858583996f35cef180bc6d07e4"
 metafile = true
@@ -5009,6 +5061,11 @@ metafile = true
 [[files]]
 file = "mods/clayworks.pw.toml"
 hash = "171914c4eb938f32813bc9449ca5dc90210b33b5b389b4c9f2d718b4e34df2f1"
+metafile = true
+
+[[files]]
+file = "mods/clean-tooltips.pw.toml"
+hash = "bfae48d707113dd178b25b16620c8f4bf5a27ea82c9b1975edeb89a7f196048d"
 metafile = true
 
 [[files]]
@@ -5042,18 +5099,22 @@ hash = "88c02dc76ce2274287aad6654e0f57a77936fcaa13f3c19ece02de6d0b3431e7"
 metafile = true
 
 [[files]]
+file = "mods/continuity-3.0.0+0.0.1+1.21.1.neoforge-all.jar"
+hash = "324b943f53b7843c225426ea0f4313f6bba8d4218f0dd76b872d55bcf22aa227"
+
+[[files]]
 file = "mods/controlling.pw.toml"
 hash = "65c8086d2ec3d39acc7bd36c7a0306ccc43b602b38fa07d13291bc478ef7dfff"
 metafile = true
 
 [[files]]
 file = "mods/cooks-collection.pw.toml"
-hash = "c23bb1ceda4ddd62205f4b367e1b96de06372e83ea5a3cdd98668ccd9abab57a"
+hash = "a5c4204fd3868afdf361a32927caa187bd556521ad862bf03cfd42e7cffd78b5"
 metafile = true
 
 [[files]]
-file = "mods/coolrain.pw.toml"
-hash = "2a8390fe5190839d1206a8ac6d6fa245d821fd0c1cef5bf93ad43dab07339f5a"
+file = "mods/cool-rain-reforged.pw.toml"
+hash = "7c5d1fb47ffd309dc332ad2011e2e392b54d74dc49607872af01222a1df24186"
 metafile = true
 
 [[files]]
@@ -5073,6 +5134,11 @@ metafile = true
 [[files]]
 file = "mods/create.pw.toml"
 hash = "dcaf5f2e28db0b9a127d0167456832341045ddc9aec058c3d9fcf53f618d2404"
+metafile = true
+
+[[files]]
+file = "mods/creativecore.pw.toml"
+hash = "36ba6ade58f4c13c623743ee4b18e92a56355d3014e6c05fb6d7183d13fb9d83"
 metafile = true
 
 [[files]]
@@ -5146,18 +5212,13 @@ hash = "98e7d19017cc3cf088c71ecb6d87d61ab807f3c4b44116443b7e6246e80e7c5f"
 metafile = true
 
 [[files]]
-file = "mods/enhancedtooltips.pw.toml"
-hash = "5220a361bdc448de780e887e7f14b0a5373ac48de7564f05255aea4bd62b4ef7"
-metafile = true
-
-[[files]]
 file = "mods/entity-model-features.pw.toml"
 hash = "0ae06c97bf858f3941fd7369e34a71967e7a5c26c26b1cb7371a5be0f1842ecd"
 metafile = true
 
 [[files]]
 file = "mods/entityculling.pw.toml"
-hash = "4fbe037c1ec3570be84f68e075c3e8293b15f64dda22bca4735924705fb38236"
+hash = "9448043e083a2e45e77de4d88c628155ae174b37ea2ebfc3efe237fcdc956302"
 metafile = true
 
 [[files]]
@@ -5206,11 +5267,6 @@ hash = "28c29922378fa19f4edf1d16fffb48287a87be159a3378647073bbdebd2a2196"
 metafile = true
 
 [[files]]
-file = "mods/fabric-language-kotlin.pw.toml"
-hash = "7a7f5673b6e33eebaed00c0c453fc41d11c7474eb320c3ce8736d415fcfe2682"
-metafile = true
-
-[[files]]
 file = "mods/fancymenu.pw.toml"
 hash = "0789c9f6c10b5cddaa37eeb9388b068b168cd8c0ee1d21f0c3b78d160fc48fdd"
 metafile = true
@@ -5237,7 +5293,7 @@ metafile = true
 
 [[files]]
 file = "mods/field-guide.pw.toml"
-hash = "d806da2a72cdde11d26ca042804f6fe737f0bec97e06045c61e57fa40e4edfcb"
+hash = "831f92df8c005ff3f445daf711669557795d9f03d8d12ba87ae5e2b76a5127c0"
 metafile = true
 
 [[files]]
@@ -5261,11 +5317,6 @@ hash = "2e76c80ff830074b19c38520160b00713985e6e9df7a3ff180116e3a73bb8937"
 metafile = true
 
 [[files]]
-file = "mods/forgified-fabric-api.pw.toml"
-hash = "c490f7b680875f034af39a1556911d6edb1dcdd76a114ee6a4eca0f158cd92b2"
-metafile = true
-
-[[files]]
 file = "mods/frame-changer.pw.toml"
 hash = "9a4208ccd7c3b192fcf70dc10d61ed4854f7dd169ab093fc18d9b51af0b91aeb"
 metafile = true
@@ -5281,18 +5332,18 @@ hash = "b98c428b3eaca3332047b113673235526418fcc1d2b55e660dc4308d73b85ae5"
 metafile = true
 
 [[files]]
-file = "mods/ghast-direction.pw.toml"
-hash = "1030e4750eb41462ee174983fe3811b617a8af551286ebfdd972aefed6660e41"
-metafile = true
-
-[[files]]
 file = "mods/hearths.pw.toml"
 hash = "40b201d2061f1a0df66401984c5242a8786f24f775f9f15991a280c2a80dc715"
 metafile = true
 
 [[files]]
-file = "mods/heraldics-1.21.1-1.2.1-neoforge.jar"
-hash = "27c121bf1dcc2c95c430e9bd95672a32eb293dab92dfa32ecba27fa28b10144b"
+file = "mods/held-item-tooltips.pw.toml"
+hash = "d01e1e18bc56a20fd1b37a5716e3fa9cf78704176389865dcbac7c13d3b34770"
+metafile = true
+
+[[files]]
+file = "mods/heraldics-1.21.1-1.2.2-neoforge.jar"
+hash = "780231b3310f819af2e0051eb9005c773c929db09f690ebc8c6bb50ef821e025"
 
 [[files]]
 file = "mods/highlight.pw.toml"
@@ -5320,11 +5371,6 @@ hash = "1735178874d7706b82506f2fe2f104ec038b1b48e717e05d058768ce3aa1141e"
 metafile = true
 
 [[files]]
-file = "mods/in-control.pw.toml"
-hash = "8311cf201aa8d3c5d0c0291194f3c76d825591122b7ccf4f2fea08f6b39af526"
-metafile = true
-
-[[files]]
 file = "mods/incubation.pw.toml"
 hash = "570ab6eb7be33c305979aa1982e9410e9060d804396decf3859aade3be2ccc3a"
 metafile = true
@@ -5342,11 +5388,6 @@ metafile = true
 [[files]]
 file = "mods/jade.pw.toml"
 hash = "4de3e4a1a49e332c1ad313283e0403c4273b628d634c17a9ff0c9da3d6b67f9a"
-metafile = true
-
-[[files]]
-file = "mods/jinxedlib.pw.toml"
-hash = "3e554dc66addcfd71cb63622490742566a640ff0ed45366814aa901945bb4ebc"
 metafile = true
 
 [[files]]
@@ -5415,6 +5456,11 @@ hash = "25fc4d7bde5291ce22e5d586e13387e3b8158184245472161c2eaab93002e4ab"
 metafile = true
 
 [[files]]
+file = "mods/map-atlases-forge.pw.toml"
+hash = "914b1149de9f334985644ceae82107dc2eeb55d85bf6dda1f64d357feb33c83a"
+metafile = true
+
+[[files]]
 file = "mods/mcqoy.pw.toml"
 hash = "604b7674b96d10b2c9f03e47a91ec50b448e8193de56f36fca93b5ff0f3132f6"
 metafile = true
@@ -5471,7 +5517,7 @@ metafile = true
 
 [[files]]
 file = "mods/modest-mining.pw.toml"
-hash = "15a5e35b05baed46258a607ec32ec2db59aea6ed4c083636df83ad078eaef385"
+hash = "1d31a7793d204a957c750f7e38e4ca4eb9615059cdd7295ea734314e7e9ef8ea"
 metafile = true
 
 [[files]]
@@ -5480,12 +5526,12 @@ hash = "2dd85ada17d51daec0aeabb0a85f006b2dbea721465e144035e4ef4f56461d52"
 
 [[files]]
 file = "mods/modulation.pw.toml"
-hash = "200042e5e624a183d613298136fd4addcfe787e6eee1eba29f5bc55ff2ce6571"
+hash = "58cca3aa9a2f7d323bd0384df76e77059f632ab75d326175fcdb9fd7694c3a77"
 metafile = true
 
 [[files]]
 file = "mods/moonlight.pw.toml"
-hash = "d4b0144afd929bafee68f0e0e716f86f91e35dc063063c429f06b5f74eef5971"
+hash = "a5794d747743ac8800355f1ac570b40baaf0bb195ff57beb0c2d0176a0530b94"
 metafile = true
 
 [[files]]
@@ -5540,7 +5586,7 @@ metafile = true
 
 [[files]]
 file = "mods/not-enough-animations.pw.toml"
-hash = "e92633222b9275744ba9ae7a90781494f67933924b56ea8287c5dc7553e77e17"
+hash = "e0f1cef5482844e62c6fc3c7771fc9ef8385c47092248f76aa1fa271220b24e8"
 metafile = true
 
 [[files]]
@@ -5575,11 +5621,6 @@ metafile = true
 [[files]]
 file = "mods/packet-fixer.pw.toml"
 hash = "84cb0dcad9ac46d22adba4fb7924951affa6ac5e46027a3b25fa9a0db8d91b2b"
-metafile = true
-
-[[files]]
-file = "mods/panorama-screenshot.pw.toml"
-hash = "9a84d1c4591d393738c0322ca3367d2e82c6983b4c33662ae3f6c7858289be9c"
 metafile = true
 
 [[files]]
@@ -5629,7 +5670,7 @@ metafile = true
 
 [[files]]
 file = "mods/polytone.pw.toml"
-hash = "7e6dd3408391fb8664dd4e67a379eb09b055a02647b79cf840e04e87a751434b"
+hash = "2fabe97e86be7a64b8c4fd9d614562133d7b2ba339e6d3b1a3aad0e6b0b6975c"
 metafile = true
 
 [[files]]
@@ -5688,13 +5729,8 @@ hash = "419f2184d9129f4b7673e5e4e5257812e65e7bae7a49b0cce58e27bd66774db2"
 metafile = true
 
 [[files]]
-file = "mods/redelightmap-1.1.1+1.20.5-1.21.1-neoforge.jar"
-hash = "e960dfb63fc707f8d1cd82ff827e265f24cefab263b04bd50fa4dc38141cb20d"
-
-[[files]]
-file = "mods/redirected.pw.toml"
-hash = "b0038c775e22fa883d474eb1ef0f686cc544091844e24a8a4b5774838059e808"
-metafile = true
+file = "mods/redelightmap-1.2.0+1.20.5-1.21.1-neoforge.jar"
+hash = "36ff4f60fa1a85def1f4c780a10bc29cfb97cbe744fd876926abfd7a53fb2563"
 
 [[files]]
 file = "mods/redomesticate.pw.toml"
@@ -5723,7 +5759,7 @@ metafile = true
 
 [[files]]
 file = "mods/reliable-emi.pw.toml"
-hash = "e47b539d0cbac7ccd2f5fc208e65636bd9c918598d8cce1dcaa6e69521195df1"
+hash = "a23f2f772bda0d28fd0754ed65717f9ef60658ea492ec63e09af15954d3c14df"
 metafile = true
 
 [[files]]
@@ -5738,7 +5774,7 @@ metafile = true
 
 [[files]]
 file = "mods/reliable-remover.pw.toml"
-hash = "ac76909aa2f522e81dfda5f236b97f1316e5f8eaf3b243cf6358f014753ef7b2"
+hash = "a66b258e574fa9926392c2b89ae4b3bedb17a6b506e00789e923118869d99963"
 metafile = true
 
 [[files]]
@@ -5767,13 +5803,13 @@ hash = "5cf67fc11b96275843a7ed17e496e50e6d33c2270bf776e15e06c88176fba274"
 metafile = true
 
 [[files]]
-file = "mods/roxy.pw.toml"
-hash = "676a12102065adfd445794d57024048b4380d99a2562db900209ffb2f0ddc4c5"
+file = "mods/sage-brush.pw.toml"
+hash = "1589a7674c1d068b6fc03ea863199bd4eb7af364abeef82c88163fdf88c1580c"
 metafile = true
 
 [[files]]
-file = "mods/sage-brush.pw.toml"
-hash = "1589a7674c1d068b6fc03ea863199bd4eb7af364abeef82c88163fdf88c1580c"
+file = "mods/scalablelux.pw.toml"
+hash = "9d9330972174ff5c68779f15ecd7023b357eb2e0a5bdc99b63ca7768e90616f1"
 metafile = true
 
 [[files]]
@@ -5818,7 +5854,7 @@ metafile = true
 
 [[files]]
 file = "mods/simple-voice-chat.pw.toml"
-hash = "4bbb4ff006bf5f27179a47683b2710c92cb3314a1520e95bcd1808a6ea94ec4a"
+hash = "8045c493b0eb0196880817b529417742bb65b250805cc14f7abe5ac5f1e4d4b1"
 metafile = true
 
 [[files]]
@@ -5873,7 +5909,7 @@ metafile = true
 
 [[files]]
 file = "mods/spicedcider-1.0.0.jar"
-hash = "d6bac7a68b26a122327bd894f1962a4bcd1c59e86f3f3a27a03b8c261a57f3b9"
+hash = "8e2df269fb3ee0ced90acbde2c55fce2f938346ab2942d085e205499559a5385"
 
 [[files]]
 file = "mods/stacksizetweaks.pw.toml"
@@ -5941,14 +5977,13 @@ hash = "72e164ef7535ea4fb4a69b1ebcf98a7ec1ed78ed0d8d947dfc8bab739eaa5639"
 metafile = true
 
 [[files]]
-file = "mods/tmrv.pw.toml"
-hash = "40f7d1c072b54e11492e7774835901d4f5d757b01cac54947657695f580afd3a"
-metafile = true
-
-[[files]]
 file = "mods/tolerable-creepers.pw.toml"
 hash = "9ea9536d26d15e6035d181c48c0f32cd37f08b7cfacd9b204abcc214ae5d987e"
 metafile = true
+
+[[files]]
+file = "mods/toomanyrecipeviewers-0.9.1-dev+mc.21.1.jar"
+hash = "4a3831d2d83d958ccc3e89ab04df6fcb4d073e1b805e6a07dec432a176c4f97c"
 
 [[files]]
 file = "mods/treeliable.pw.toml"
@@ -6006,18 +6041,8 @@ hash = "ba5ac5c403ee9a350990271fb3a51ece78e8be80578203099032457576496b90"
 metafile = true
 
 [[files]]
-file = "mods/voxy-worldgen.pw.toml"
-hash = "1d597929bb8daed68ef5d3d098d6b3a8e3f8cc47940dc13647c79c449dfa79e6"
-metafile = true
-
-[[files]]
-file = "mods/voxy.pw.toml"
-hash = "1b15aa249e728fe7af88899bfa08ca4a7a629b0f440750138f74a9b36c607292"
-metafile = true
-
-[[files]]
-file = "mods/wavey-capes.pw.toml"
-hash = "ddea9e5a57fca3fff29f8a43df3fc4ba276ae25f63a3aaa3ddfeaae33381c21b"
+file = "mods/void-water.pw.toml"
+hash = "ca0b605b650a6c7fc1dcdb5ec28b4351c34de63f07ca0f83fba047d682e58183"
 metafile = true
 
 [[files]]
@@ -6041,14 +6066,13 @@ hash = "b844c10676b5911a4d2af32710d21fa22eafafcb6e1e3505fb8651b643cd99f7"
 metafile = true
 
 [[files]]
-file = "mods/world-play-time.pw.toml"
-hash = "2dc8224c90ea8cc20d8d497a16c679b0928d870c58ffe84100d8f4092184f4e4"
-metafile = true
-
-[[files]]
 file = "mods/worldgen-patches.pw.toml"
 hash = "5bba5874854a795aacd0a67f8becf1b91c150c2f42deaeb301eb8cc83f7882e6"
 metafile = true
+
+[[files]]
+file = "mods/worldplaytime-1.2.2-1.21-NEOFORGE.jar"
+hash = "6c8a98a6d9183afa4e96900dc6f91b79f6bb01ffddb19155b37081d26fa4e365"
 
 [[files]]
 file = "mods/yacl.pw.toml"
@@ -6082,7 +6106,7 @@ metafile = true
 
 [[files]]
 file = "options.txt"
-hash = "db2acda10a932c4b551b1486695aa691b274bbfd4785ee354e88ded96294ceb5"
+hash = "31c955f53a25319649db5a57a2c5c55c01b0c6a9253e0e091582938c59e9bd31"
 
 [[files]]
 file = "resourcepacks/2d-trident.pw.toml"
@@ -6201,7 +6225,7 @@ metafile = true
 
 [[files]]
 file = "resourcepacks/lily-padding.pw.toml"
-hash = "423f147435a4f63a73ea6ba012d355d63a7674965e0f3a9ea84d395a1a0f736e"
+hash = "5dc00c560f2564bc8c0584d1e07db9a39b90dbc077c6493b38e337740f8136f5"
 metafile = true
 
 [[files]]
@@ -6477,20 +6501,240 @@ file = "resourcepacks/spicedcider_resources/assets/architects_palette/textures/b
 hash = "47d0745c207d83797ce2657a2899560ac06dcfa332bc25e24aee850d76b1d705"
 
 [[files]]
-file = "resourcepacks/spicedcider_resources/assets/arts_and_crafts/models/item/bleached_bed.json"
-hash = "b66c0050b9279c385512c0b43e99b214475da19102824159e6b225dfbf1d5582"
+file = "resourcepacks/spicedcider_resources/assets/auditory/polytone/sound_events.csv"
+hash = "15ae0aca2e1f322bbd84f5c42742ab61f4b36b47c7fdf9ff80524336676da5d6"
 
 [[files]]
-file = "resourcepacks/spicedcider_resources/assets/arts_and_crafts/textures/block/bleached_wool.png"
-hash = "1652e8bb6f7120b0cd5a9158cba48ae693c0ad4e452c2dab31a982c4aadd171c"
+file = "resourcepacks/spicedcider_resources/assets/auditory/polytone/sound_types/chorus_plant.json"
+hash = "5b53a85ce27a7ced46c27bb53f321f60a30fa780bd8ec1a4db59edacfeac3c64"
 
 [[files]]
-file = "resourcepacks/spicedcider_resources/assets/arts_and_crafts/textures/item/bleached_bed.png"
-hash = "53e12cef9dbe7580689b277bec40551283135cfec44cc4cf2ee3bfeeb19e75e9"
+file = "resourcepacks/spicedcider_resources/assets/auditory/polytone/sound_types/gourd.json"
+hash = "036c6435c53a7d71ad8dab8ee4be42bc2d8fa2c0036a211298077903f9c15e6d"
 
 [[files]]
-file = "resourcepacks/spicedcider_resources/assets/arts_and_crafts/textures/item/bleached_chalk_stick.png"
-hash = "aa6a1552385806ea78514b25fb73d56bdd4f25a6c21b023468528e3f31349ceb"
+file = "resourcepacks/spicedcider_resources/assets/auditory/polytone/sound_types/ice.json"
+hash = "5438858f421d72e814d627ca873709bbcec90e44a4b009804a1dda2952870b51"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/auditory/polytone/sound_types/purpur.json"
+hash = "725d593ad161fadbeb0f912e39fcec93a224959143b298a217aab6b33ebe9bb2"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/auditory/polytone/sound_types/shulker_box.json"
+hash = "aff5a938de2c279257faded34802646977aff70761be4bf5e02bbf43fbcff21b"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/auditory/polytone/sound_types/spawner.json"
+hash = "52a30c9af5921c2e9d13f6602ee3488c06f2195b84123963af07b2d3dd03c503"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/auditory/sounds.json"
+hash = "2f5d68a466821a0fc6c636e6be138420f08dd8972e32c7df13ead887c358e3d6"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/auditory/sounds/block/chorus_plant/place1.ogg"
+hash = "794bfc6dc49b73ef91e5a26e6df40fb10559acaed59736f8f990cc33edced584"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/auditory/sounds/block/chorus_plant/place2.ogg"
+hash = "81a3bebb4560ad7f1ac842ab1d4ec1997507677cfea8411156ea51e7c04a64a6"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/auditory/sounds/block/chorus_plant/place3.ogg"
+hash = "57c522254d830d7f76a7554131924eb0fb7d844d46231806648b795193a0d1ab"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/auditory/sounds/block/chorus_plant/place4.ogg"
+hash = "52605b471591567072be57c62092481666e5e9ecbf142c97ed94ad370f865651"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/auditory/sounds/block/chorus_plant/step1.ogg"
+hash = "d160a41aa15aafae4e507b30fab673083521fa318e6c20ebff289f2b35fd62fc"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/auditory/sounds/block/chorus_plant/step2.ogg"
+hash = "4ddcaf23aec9dfb0582ff987316bf455d58ac1598be8a878c0284480424fdb58"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/auditory/sounds/block/chorus_plant/step3.ogg"
+hash = "6c9af6e6f9e65b0fcada079b5b5dc3f795990a4eb5ce272b5df0252667a3d5ee"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/auditory/sounds/block/chorus_plant/step4.ogg"
+hash = "e1701fa1ec3ab94fe59d645daed751c6e06b32bd10631a30265ea8bb6fe41cfe"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/auditory/sounds/block/chorus_plant/step5.ogg"
+hash = "2114d6a3b841139e3023a4ec3d85de977aa689cdea7b57d3a754a345b719447f"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/auditory/sounds/block/gourd/break1.ogg"
+hash = "ce1f16db48e221beeb723540299f5a16398322529b54e70aa02d9527e543563d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/auditory/sounds/block/gourd/break2.ogg"
+hash = "b0f3e4cff1e3073376eae8c7277527fb7f375aebc19abb8cbe2b3564332be9e4"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/auditory/sounds/block/gourd/break3.ogg"
+hash = "81f814de7770f792dbdafeb00cfcc3cba809fef8224bf871e21b3c7cd804e787"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/auditory/sounds/block/gourd/break4.ogg"
+hash = "6f2e4f52e64f061d087efdbe241e555849d01eb7d5f838d4d8e98bc6b7964eac"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/auditory/sounds/block/gourd/step1.ogg"
+hash = "423659318df0821b77d57cbdf7d4eec36e4cec3f83881a23d616ffd9f46b8c0e"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/auditory/sounds/block/gourd/step2.ogg"
+hash = "145bb4537210870b7a771fa120b455e75b56bebbf21aaa3f4049dbf726048ddf"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/auditory/sounds/block/gourd/step3.ogg"
+hash = "79c3edd4fa9c5fab80901349ce0f8c3cb22975966cc05b4b0d456f31719d43ad"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/auditory/sounds/block/gourd/step4.ogg"
+hash = "6f032dc02ae7f2dddc0bc365fd7bddfa0d75171ec77db99c589d4299aefe2d79"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/auditory/sounds/block/ice/break1.ogg"
+hash = "9b5b709c4da890b55cdb23683cd6006808e258580a0ce67a01dfba004e601610"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/auditory/sounds/block/ice/break2.ogg"
+hash = "f8e0e84dc5e641595b4391d3d6dadb23a0140e57c1ac77858d9df4d50c9f6bb3"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/auditory/sounds/block/ice/break3.ogg"
+hash = "195f0293352454da1d0b869374b5d8da248afe0165099c1565e45694c76a447d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/auditory/sounds/block/ice/place1.ogg"
+hash = "92305fbd379fe8818b157bb6f92523edb120cd875cc3f1696e9802c6af344839"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/auditory/sounds/block/ice/place2.ogg"
+hash = "938526c664aa1e13d5f295261b532b0e63d8a3c66a513bb290a1eab6c76bcc2c"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/auditory/sounds/block/ice/place3.ogg"
+hash = "8e405984085eba4107637785ece87a7f216111a953cc91040a4a28fddfa58683"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/auditory/sounds/block/ice/place4.ogg"
+hash = "4fe80ecc5fb83997256b6c60f6e680a45b35187f7d93a7312a4fb0f5e162d0a4"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/auditory/sounds/block/ice/step1.ogg"
+hash = "e81777b0df1bffde0387c4ef485cee9211e2d7e56ac04fd38aa80f1872b816dd"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/auditory/sounds/block/ice/step2.ogg"
+hash = "95011401925e861131881b63dfa543eba4834a6528b7cac22860411b0be25886"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/auditory/sounds/block/ice/step3.ogg"
+hash = "0936a0be57fabe3fd079f19fa3e199a9d312df720a09d7eb344fd6ba1e1a5086"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/auditory/sounds/block/ice/step4.ogg"
+hash = "0f31339455399be21f1236f59f63a73d0bdd9863465b68c7db50ab483c7a7923"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/auditory/sounds/block/ice/step5.ogg"
+hash = "dc146757bcd224f2cf7770b3fcd68f957b588b0331938ee691fc08a4763c4a13"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/auditory/sounds/block/jukebox/eject.ogg"
+hash = "2aaee2f9f7c25cae43c358fb55bcd5a4138a49dc040fe4a1f8defedec425af29"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/auditory/sounds/block/jukebox/use1.ogg"
+hash = "56661f8e3b916db6bc526f84992fee12a921fc806d579784e62c253ac4cc7943"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/auditory/sounds/block/jukebox/use2.ogg"
+hash = "141780318c8a15522bac93f682146dc232c72bbcfe479254f90bf6ba3ae13143"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/auditory/sounds/block/purpur/place1.ogg"
+hash = "1d29c59b77793f3fcb3517f7900acddd50b09c8c962d2ec8bfd4ed2266a780b1"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/auditory/sounds/block/purpur/place2.ogg"
+hash = "2f580d466a1626b078e10bd1409605986fce654fe310214981c550222a00983d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/auditory/sounds/block/purpur/place3.ogg"
+hash = "69067d21efdda864de6fdeaf79eb7e0aeddb569cd8542d798437fb7bcc40c782"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/auditory/sounds/block/purpur/place4.ogg"
+hash = "ddd2820b44f731f735906eba1ce4a425c53670f419f3db33c5cc8f97bbd78208"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/auditory/sounds/block/purpur/place5.ogg"
+hash = "3ba6b5013706502365d1c8e7a97108fcb76ca47f75ee7f4bc4e39aa360bfb16f"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/auditory/sounds/block/purpur/step1.ogg"
+hash = "3208e6fdb1383346525ff8b5b12481d4949d91957f9256d2595a839aea2cadd5"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/auditory/sounds/block/purpur/step2.ogg"
+hash = "818d0893aac224343ed83885776bbf95b8099f06c3e0b940dd7a368e7ed6360c"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/auditory/sounds/block/purpur/step3.ogg"
+hash = "31a0c26d1811c4b85d06e1d07737400758ece48a2eca77f76423b1bf50e53d49"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/auditory/sounds/block/shulker_box/break1.ogg"
+hash = "e8ab9d63ff6b179cd68d11dac8190c48418f9dbba11f1426c1358a41a97245f8"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/auditory/sounds/block/shulker_box/break2.ogg"
+hash = "c9c1a664b8f1724fe2a5ba6fb47e621c8ccf46f56c348387bf1293027efeb771"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/auditory/sounds/block/shulker_box/break3.ogg"
+hash = "3b0781658f64e4a88cd539e016ff8c458ff66fe8fef9343e6006dbafaad35d57"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/auditory/sounds/block/shulker_box/break4.ogg"
+hash = "8382a873a86236c7178c3d4ccaf8842a281fbee46822578a226575e0263a31fe"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/auditory/sounds/block/shulker_box/break5.ogg"
+hash = "df02c4b1681613a9210bb839ada22ec8e0403f57ca06d1165daa0cbb4f4daff3"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/auditory/sounds/block/shulker_box/step1.ogg"
+hash = "99b358b1d7be547761e037eda903dcd74ee0041d363405ef12c1490ae668274d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/auditory/sounds/block/shulker_box/step2.ogg"
+hash = "07bc71fb81e00b54d8da6c281b41ad65206aa952e920777225761eabbd78f0d7"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/auditory/sounds/block/shulker_box/step3.ogg"
+hash = "ab2400752af5c00019fffd9ed17c5cc8fb0bb15c467490557589a31a212f24ea"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/auditory/sounds/block/shulker_box/step4.ogg"
+hash = "4857af376af2c43619b3c3be74ff31a3b6b95f0ad390d36e9a60121999255a3a"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/auditory/sounds/block/shulker_box/step5.ogg"
+hash = "de56a8930ced88f80fd181db8ac4b8ea2276f4146a35b492c1634dbd180ffcaa"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/auditory/sounds/block/spawner/break1.ogg"
+hash = "3d3e6004b163088bb6c861385e89c3b23b3256e41dc3f9b6eb4b8bbe52a59eeb"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/blockbox/textures/block/copper_bars.png"
@@ -7243,14 +7487,6 @@ hash = "ef38b9c7e3cdb65e532153dbb6eaa8600615727db7f63c769449a8aa032ab4c2"
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/cookscollection/models/block/salted_dripstone_block.json"
 hash = "6c6b8b9f8d62027a3006861c7d0658c5484d3bcbd240d42f26fdf9cd99eb1494"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/cookscollection/models/block/salted_dripstone_block.json.orig"
-hash = "c7014cfdf370902e6ca394a056a19a9fa13aa3db43d4259d92ec8d782bd77cd7"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/cookscollection/models/block/salted_dripstone_block.json.orig.orig"
-hash = "c7014cfdf370902e6ca394a056a19a9fa13aa3db43d4259d92ec8d782bd77cd7"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/cookscollection/textures/block/oven_front.png"
@@ -10669,6 +10905,2194 @@ file = "resourcepacks/spicedcider_resources/assets/spicedcider/lang/en_us.json"
 hash = "61e6e91f625c165a4857f597a3721688568025324c9ff0ea68cdb853d7710e55"
 
 [[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/alt_glasswood_1.json"
+hash = "2c69ccf192af9e5f569bc60f42907f8522d4f22cc0e90db0fce4d6ebb09919c0"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/alt_glasswood_2.json"
+hash = "ce9c3b91c1098e445c21793b5bd210c44a74fe38eee2578bd6770dc8e7a88766"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/alt_hanging_sign.json"
+hash = "76eec9539055d0c7c3b103dd4847b6edb4e5c153b395ea3329f4543223fb4b42"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/alt_hanging_sign_2.json"
+hash = "71e98717f39a0739908baa6413b305915bfa7c38508a65a465df85dee33f0b01"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/alt_wood_1.json"
+hash = "cde37aeb37b3ccbf98d9e4612b401d181d9ef3836167f8686161ad9f8896f4fb"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/alt_wood_2.json"
+hash = "329b7257346de116eace2fb4f0493b3bd0518d78c00ad8d18a41b2228b1d4c75"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/amethyst.json"
+hash = "b0c69b90e29f09a59ed8f431f85d9ee2de86c680feac7750c050c9178642028b"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/arid_sand.json"
+hash = "14b9e3eee72d75c724c8b9c38489dc0bd23f7cb130afba88f162a2d33ed58173"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/bamboo_glasswood.json"
+hash = "cfd820712cf759e92d82a81ca8318fa6548f45c090a4b398f465799ab405f0e3"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/bamboo_hanging_sign.json"
+hash = "4529f009578c11f93f6285e221a6b6ae4e2ce740ccf806279cca22ebc1a41669"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/bamboo_wood.json"
+hash = "2c89c1a6e4376385f9e2dea1b8522cc949e90cc6e56ef0b7a5e6beb3b1dc4a10"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/basalt_stones.json"
+hash = "f22f6511ff4576175753fad541a5a7b4b21090340bd37ffd25f8ad3383796cf7"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/blackstone.json"
+hash = "c82178c8814ecc25b11376a8b150e63795ef6d563b1fb1a7a439b6adb0fe8b00"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/bone.json"
+hash = "6407edd9a2c579ae054e156c41a3cf035496dfc442b46adc82da9705835f9aca"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/bone_bricks.json"
+hash = "4b21e33a17c7fa175a8219f1592e8b76646f678d54d7fb4bd4117c427125856e"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/book.json"
+hash = "b9436c69fa386b1ba06e116e043c0ef3c3ac38e9b843aea6e2940625c035e407"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/calcite.json"
+hash = "c691b26bef16469ebc4253a3d13245328392db594afe34573d8262a7f6c32e3b"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/calcite_bricks.json"
+hash = "faac7644384859395a031af5916442b0231ee2495a27dd2e97440b8fc9e63937"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/chorus_plant.json"
+hash = "8352c4a3b21218e5e9f858c2edf7315307a3271d33963284ff9f6e879298706c"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/clay_bricks.json"
+hash = "e41e81cd96ed1001ec531bfdd09d2158341e4e5b46902ce9b57489ce476a7e83"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/clothwood.json"
+hash = "1b264ae666be7ef633d17603132a9d23ff8b2a2df1ea0ad13ea2e379d80b4692"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/cobweb.json"
+hash = "46bbd63e97f444e97e5ad3475a93893aa60ef85268f8891926cb795158a27492"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/container.json"
+hash = "da6e1003504d7b488314db3ad4547e7bac3689539fd821a017194da292b7256c"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/copper.json"
+hash = "c6f3b4dbce7018f2557625775fd4d19506ee31e4e9ea911b8cd0b06a67a00903"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/dirt.json"
+hash = "fbfd55b2355886b43551143f267d00eedee911c58a2a031dbc0766a48346d07b"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/dripstone_bricks.json"
+hash = "3804473b41402617c58175ad4c0ade1e728f9b62080893f6e921cf88d37768c4"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/flower.json"
+hash = "8915dd8fe4684ae2e38d281de7582c95fd1b078968ddf8618e6156fdf641265b"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/flower_pot.json"
+hash = "47c3b48bf22c1fabdb69a8a98cd59fabcdd2d8d83ec5c2921788dc840b8777c0"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/fungus.json"
+hash = "f2df10793311a9dc97f99be2e5b890bcaee7e32368d6e443f4561f01063a9b6e"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/glasswood.json"
+hash = "4c4456d2551bf2c2cb77165b75c9abe51898b13475b84e09f879c137fb592dfc"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/glowstone.json"
+hash = "50abb27a70864c487baa04ae8bf01b0ebefa4879645e68fcc49bb96aa1134978"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/gold_metal.json"
+hash = "95b2a346ff63ce7174454fab47cf283cb38450a52c8bb9789468d7b8bb135117"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/gourd.json"
+hash = "349a316e7f3b96971b9171d081f43b28010031ba66e13fd332ad26df80985b28"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/grassy_dirt.json"
+hash = "73d9454c231884f952e8c8e4940caf6b2135c18e7af438dbd5992b0d62e87204"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/gravel.json"
+hash = "65b4faf78874ed50b0261177b8c4f8b6c19884613b35ba310ab4269acb5a69f7"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/hanging_sign.json"
+hash = "ba3828f11bdbfd6759445bb1b138c50c2f3e885edbcebcb9c3640341f8a18091"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/heavy_metal.json"
+hash = "0f6e88ccdf76ce02ef853cacff715205af82f9284d228378bfadcf1c6f54e2e4"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/high_glowstone.json"
+hash = "40dd85cd1f90997dda05794cbf8556bcdf7cd1473e349ee85e5ac51dc5393ed5"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/high_iron.json"
+hash = "12947dba384374281cffdf1211a8b1e3c0e32e005366730a7a2c2ce57e442915"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/high_squishy.json"
+hash = "31a10f73ca7525aa02c0d9685d236a5ce28207f97133d14d35ad124e09c9dc37"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/ice.json"
+hash = "840ac7ea147bee3ab75a37bd4c93acabf4111461097501a070ee5096a9a357b3"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/iron.json"
+hash = "b0f925051981fc217c69bc909ca091159db3bfb8a0935ce0c6bbd81cb390b2e4"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/iron_glass.json"
+hash = "1abd6c66678f21a23698a187e9c9a0b46d6ac5a46953669f94d7d7af9ee7e7f6"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/leaves.json"
+hash = "abd1c2ccdf72cd81f1d0b025a9a1e6c15fbdeedb78c8d6629775f502c2d39e02"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/low_pot.json"
+hash = "e023882b7d12052a0de5235505ee0d866c53cc62f088ae78471bd335c0145ba6"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/low_squishy.json"
+hash = "78f6dad1918292ac01cb5dd7395ab378609110d15a8d4e1a6ea46a72ea843094"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/medium.json"
+hash = "50e28d52f0063b3c67c3d429c0aa4aed40d43d8441c8e22dbb345fb6b72f58a3"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/monkey_brush.json"
+hash = "03d577a1c0ecaee8acfedda295dfd69b80960315f7e6d3ecccdf78917327f618"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/nether_glasswood.json"
+hash = "22104302e9644d7a771251834f11d518ee86e41a3eb9384d507efe117e322aa4"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/nether_hanging_sign.json"
+hash = "4019f65fef5e1e3799a124fd495d6a063dc2b6dfd34b09de6373b5f3ae7b7c88"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/nether_vine.json"
+hash = "5ca3f46cd0d75da13e45325dfc7c4f98a9fe05cd1d2def82884f708a47e518f3"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/netherite.json"
+hash = "d11b7ba30c2422012757e33e058c6ec797f5a8c636764d26e1bec42731973f9e"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/netherwood.json"
+hash = "fd62766693aea937490e89122253fb2d19db948bb7fce175510f9d0465c61596"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/obsidian.json"
+hash = "9009b3fc8c5cec91945d2e548e745b91dfbc646cffdd1541fc90d587f6c68449"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/plant.json"
+hash = "12980f6a75605fc5da0d152a8bcebba58dc63ea8a20eba6906ef23b21983dae2"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/plants.json"
+hash = "b1c197687435c62fa31ff00e5ecb0b7de576f3f60db5d00c72883f53b00a457d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/pot.json"
+hash = "008579e6b24aa7adac70f482b736f6673c80b16f37634db6e450f48f48456d6d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/prismarine.json"
+hash = "2929b761a840cb68ded468f7a3139e74a5cd61684b6fecf10346da88cf943b8f"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/purpur.json"
+hash = "d46ad1ffce13a16f1594872813817e7e6255902d2454932ca11168a7cde4a600"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/raw_ore_blocks.json"
+hash = "420c31185e3d5addf6e4ad72104643ab21300c707aa667e2c520681ba5e71593"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/rubber.json"
+hash = "ddf14e0adbf8be568ae3772e525f6492288709ec81efaca38c897c70750da2e3"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/salt.json"
+hash = "38e0d6ccef8213eb4b41f2d0820ee27af84adf12022c087386d836a709e9fc3f"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/salt_bricks.json"
+hash = "27b523ff5da473ceae721a9d001904b342bec7923d725aa499a6e2450456a4d0"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/salt_shards.json"
+hash = "9890f73b35c203867d7b6a0d4f1c881653197ee38702625578a5d1f4e930a64b"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/sandstone.json"
+hash = "7a662f490db56a074ec51deaac9d3575cc300b339c02b593a9fe2738e9f7f126"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/sapling.json"
+hash = "c5b26039047ee7688d18626844a9e07a5885f77d81533657432f1593f4a73a9f"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/scaffolding.json"
+hash = "a41d2aa28cf27f77b4fd8dac694e51580c30bac634d822373641f177e870bbc1"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/shulker_box.json"
+hash = "e6d8a9749c8aa96d0040acfb5ebd33b24de598cb1650f2ff1aeffa4c6cb49309"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/small_dripleaf.json"
+hash = "2c54958903c936b2180fa55ad4428d6a3de4f7d016ff3ddcbe9db9c4e18fb72d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/small_flower.json"
+hash = "c24bd7795a145c2cb3a488ac91cc8315c2348e13526b5f871ba2b06b56171fe2"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/small_objects.json"
+hash = "87d03bdff1f666e5c99e0768796931da6828ba7722e64239da084b88ff4edee8"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/soul_sandstone.json"
+hash = "88a93765813ac546a1b93549395b896aa5a71ebdb496c52ea81947a5c6889af5"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/soul_soil.json"
+hash = "8056f555f06958e9f350cbc5e1228efb5e6167ab70cf4c17b2de3ba636b6de90"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/spawner.json"
+hash = "18bdf0f1aff4fe9bdddd7b3446ed0b28cb07c130a5a86b82cf2dc68e0e58d814"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/sponge.json"
+hash = "2426836399fc3938f5255d1112dfac8fd7c486abdfdda0f0c1c701ca58ac0702"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/squishy.json"
+hash = "091d519f5810ec2dee4c05129d03b0f30399d105a83587f7a4ebc8255a01e04b"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/sticky_wood.json"
+hash = "31cae287c0e3f9bdf6a8c4df6caa11b4cd54fe431ce5c99816fa6644e7ec257b"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/stone_bricks.json"
+hash = "982913224370b5bff5146c5d88da036bc80c224df6eee1473bd16ef0463975e5"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/stone_ore.json"
+hash = "1424bd219caa687b1e62c8ad7343e26e1d2263ef0ea12b2eb6cf04c0c8efd793"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/string_materials.json"
+hash = "3148a9116e8fec4c57daa08597d78f349f2621ed70ebb1fb6876a7746462f41c"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/terracotta.json"
+hash = "db4d6216591d6819ac456a0afbcb6461c536399ca840c4e011dfc64b3ebe429b"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/tnt.json"
+hash = "e68f5a13b3e1ef546d148cfe3a413abe09d368554ec6fc8130693d84d0be5a2d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/tuff_bricks.json"
+hash = "ee5261748a2aa387105bfdb507708f837d6a040ff102fafc68b7c1442c6fd66e"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/wet_sponge.json"
+hash = "1f6542d430003841147d5f00a54959096ca7e414431eb7622b25a4b932b55143"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/wood.json"
+hash = "4aa3c676fdf6ad98e90a800f5e6511d1cfbcc8e28bd2f0679d23686cfdd5168e"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/sound_events.csv"
+hash = "90fd893cb616ddee6692da38ddf7e8dc45f9b55af364bbc24af71e2400a65362"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds.json"
+hash = "b7abe193a0067e7fdee3b0da08b7ba58cd76deb5fb39e7bbf29488c2c1857bd4"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/alt_hanging_sign/break1.ogg"
+hash = "fb98701ff07825e001cc94ddffc0ade669b4635847d89ab9a6386fb232ea6d57"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/alt_hanging_sign/break2.ogg"
+hash = "f6cebacb1ee8ca847b4b0b215d439200e94073461ce47e1790fb184dab3b7e26"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/alt_hanging_sign/break3.ogg"
+hash = "be13a9d4eac3d3f0e98930350fa2b10ce84eb8f529f6357bf79038e832cd8baf"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/alt_hanging_sign/break4.ogg"
+hash = "07c986233c5239dad74a8db60b2f8d42f1646067d2dd37604a8edb70c556005f"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/alt_hanging_sign/hit1.ogg"
+hash = "1cc4d9f102daa985e3b3bee8f8fb0de8c6d9b33a9c9363bd657918ea9e12d153"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/alt_hanging_sign/hit2.ogg"
+hash = "9dbd21a2e4135754c23bd814e84df3bbf4f6ebb60bf9adb2392a06f5e8e3325e"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/alt_hanging_sign/hit3.ogg"
+hash = "2e608e606cd36e5dcc40acaecf4871c51077e89b65798433c0780eae45d86277"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/alt_hanging_sign/hit4.ogg"
+hash = "e1d5e9afd846f47b008dfb6290425db1b9b5eaafc1c23da2235feb17b8198bdc"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/alt_hanging_sign2/break1.ogg"
+hash = "4ea3b9d0974f28ad64688eea12f507c5e883897b8efa82acf803a69f526a6e50"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/alt_hanging_sign2/break2.ogg"
+hash = "5a1679989a4fed7b0ceff8012f4d535178ba09ba228611654439134dd1fb389c"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/alt_hanging_sign2/break3.ogg"
+hash = "5a0cc585bfef8102c83deffb613a21adf516e020d4fd7b9f573b73e7dcfe1178"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/alt_hanging_sign2/break4.ogg"
+hash = "91da9845e3168c429772cc1ef6f805a6d141e42369625eb8400220a620196aa7"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/alt_hanging_sign2/break5.ogg"
+hash = "c669569ed72b90b847fb34058271592a333b64c9e571938ce04f638256d0b682"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/alt_hanging_sign2/break6.ogg"
+hash = "e54877a649c50c9c5350b179d304815b38ec8dc5252c1a35163e903b1f483785"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/alt_hanging_sign2/hit1.ogg"
+hash = "5d667454dcf74488c0bdd9b6ea085e2828a0eea1b784dbe368a4c3503e731001"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/alt_hanging_sign2/hit2.ogg"
+hash = "40865bc24ab93296a00b1fe17d64d806c489a1ebd049cf66d770fc0120ac2098"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/alt_hanging_sign2/hit3.ogg"
+hash = "b4992aba18cc053824341cf63bede783cb991510c17a3cc229686e7de0cbfe21"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/alt_hanging_sign2/hit4.ogg"
+hash = "3772d8c588dc8960e9854039c088addae887ca521a685467b7cd4843c6a2231c"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/alt_hanging_sign2/hit5.ogg"
+hash = "6ef982e50f1f90452b8a8dbaadf8de417c44f187c982e5c2d4ee75e219a3fc0c"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/alt_hanging_sign2/hit6.ogg"
+hash = "0a02380f5c31e6588fbf13b97bcf6fcbc883670bef24a5a1c3ab123348cbc51e"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/altglasswood1/break1.ogg"
+hash = "2acb81195cd71ba348d2ec9294a36cb27afd7996667bbd01154c9c8f453071cd"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/altglasswood1/break2.ogg"
+hash = "292be922ba1b3398aefd8e93baa7c6f02196f90948fbffaafb1e2f256ddbea6b"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/altglasswood1/break3.ogg"
+hash = "ea1f846d3c74d4e7452e335bca10a85d5bb5f7972e64ef87f3e84eee22c984a6"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/altglasswood1/break4.ogg"
+hash = "db7a4c9e17cb97c108e08414c6cacbba34e829b9b62122cdd2687e4d86e9021e"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/altglasswood1/break5.ogg"
+hash = "bdf452821eeb3e8ada6d58c203abe98d1378285b60c626c6b9520beb1e3778e2"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/altglasswood1/hit1.ogg"
+hash = "d192e99bfda6ec216ff41031af0484e1c26615e7adcc437f312b1d5105cfdf75"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/altglasswood1/hit2.ogg"
+hash = "e9a047f6d936ae625efba402ef74efc8410c9f4b90983560d1a4d3ab3c6e6170"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/altglasswood1/hit3.ogg"
+hash = "b562b0b71dd8019875face3118ffa73f1dfc0691f824209f79af41cda30da887"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/altglasswood1/hit4.ogg"
+hash = "0863f2246eb8a7136f280bc4f99f4ba916084880589eda6d665d8a9dfa1c5caf"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/altglasswood1/hit5.ogg"
+hash = "9fca4ed57ac02c2290a7fd8ffca938de3b5f46081c1163f4dd326ca0728559e1"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/altglasswood1/hit6.ogg"
+hash = "3be3df4ea16f04308e6c11782bb87bb8f43f92eabbf061b9883d791aa9fbf16c"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/altglasswood1/place1.ogg"
+hash = "57becf28d593d5ac49b1dbec0baea6e2133c1a807b53457f9aea0ab807c0417d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/altglasswood1/place2.ogg"
+hash = "e4b5169085965dceb3815bb0e555bb89ca29f44e2521c6728610e931face85e7"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/altglasswood1/place3.ogg"
+hash = "a6d475891201597b7c852a7e97376142f5f9bd775623920e11935de9d8b32873"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/altglasswood1/place4.ogg"
+hash = "cc725e1240bf8bcef37fbbe3f48d63f76f740d251ca723775d3d0e2cffcbaa2d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/altglasswood1/place5.ogg"
+hash = "92ef1ef0c5cc56c83c20674b4b9b92c6aeac0eb2cd7765f3315dc58d81f65f70"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/altglasswood2/break1.ogg"
+hash = "1417c962abffa543d7a5fbbb9b60bbcc856258fcf5d263005135587a3fd38824"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/altglasswood2/break2.ogg"
+hash = "6fe96ca1abedf9d5bc560e3d5ab2dfe54f289fb80908587118804e080eabb48f"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/altglasswood2/break3.ogg"
+hash = "89e78164368bad21dc900544f61daa869ffa4371f03849e7aa99b91d42119fb5"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/altglasswood2/break4.ogg"
+hash = "5014b47d50da35d3dd2947bd5eb4df2a0d5f677352345d80645c902db2102c9d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/altglasswood2/break5.ogg"
+hash = "4898f8573f81f4a174d90ce5d5af4fcd075cc5bfff2e0d4cfd2185e88c4788be"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/altglasswood2/break6.ogg"
+hash = "4b3b0daf273da651d4d51d2882fb642ad3eb325f3c44b984ac863bf054ce3451"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/altglasswood2/hit1.ogg"
+hash = "e1dbf08f5f3b74cb114de5dc393f52cd49c6009c62021e6eaa4182296e4f082e"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/altglasswood2/hit2.ogg"
+hash = "8dc87e4a51f1a70cab945f43530711290e156ce35bf2fbde6dc21b4dec61bff2"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/altglasswood2/hit3.ogg"
+hash = "cdfdf117d5421ac43d14efdfa23c954aa658f05c98881a8adcb4022faac667a2"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/altglasswood2/hit4.ogg"
+hash = "7cedcfe31668b5be65caa2c2c94bc1d309676d01934b3c423acc46d3c02ae67c"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/altglasswood2/hit5.ogg"
+hash = "7ae3bcc56b7c688d041a07f9ca248490741c06b1285bd1181e28e7cb396614f2"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/altglasswood2/hit6.ogg"
+hash = "a9dbec3dd0880b24b2a9e06ab2712db8d2c788664abea85f00bfbc62ee9bc886"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/altglasswood2/place1.ogg"
+hash = "a06f8e060127ecc1183c00b36e6d9f9c39141c3086a9e4e6e64ccd8130ba6c90"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/altglasswood2/place2.ogg"
+hash = "efd93f6bc603a1418c8418e217474992e9855f3a4c3c9b7b3b8a7cef78785f04"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/altglasswood2/place3.ogg"
+hash = "be224683fe502f23caf92a84f6b6d86b367810b5a6a488c80365a53f6a1058c7"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/altglasswood2/place4.ogg"
+hash = "9f8ee07b822fa34a3e9824443f5b30920a4148398448108ff5fa96836c2c3fdb"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/altglasswood2/place5.ogg"
+hash = "6a5bc06b75fab56492980de4cd4e9bf0e847e514eaf40139ab1066ebce38b95c"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/altglasswood2/place6.ogg"
+hash = "4f3c3cfeb9f477e07bdbeff2ca7d9341a984eea7729fbc342c2fc2fadb5f9bae"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/altwood1/break1.ogg"
+hash = "41b4636f7e52cc4a599b2916345d73b83b38dceafedb4a30a290c714e9d1513c"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/altwood1/break2.ogg"
+hash = "836bac916a052f2728ecff47629c7178f7a05ad73b734061862147e7442f542b"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/altwood1/break3.ogg"
+hash = "d27010d9a391e898fb3996ac1c65136c78f574257e810d761b2fb63f013ffcd6"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/altwood1/break4.ogg"
+hash = "7d193fa751448fa8390a05dffbdc662cb5fdd55872c4c89ee02affcd6e194816"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/altwood1/break5.ogg"
+hash = "c91297605cad3f9de73d0724c307b7413b7e3ffe8ccaa034acabceb55a1a8385"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/altwood1/hit1.ogg"
+hash = "a4915ee6bf18159f93a1e81abedcafbfc9001aa332740e4f05d3328e182bf11b"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/altwood1/hit2.ogg"
+hash = "8d61a525ca10f3cd30298a30352110de3777e07c4c20148dd41eeb32a87b788a"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/altwood1/hit3.ogg"
+hash = "48aa513e3bb6e5c7c1283b8ed999c71d6f9600c0fdadf21b363964286fbca00d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/altwood1/hit4.ogg"
+hash = "e3384d4cbd4611c8f02871a35a91dc0e9609892cdaa640ebb931a9bb72e4b334"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/altwood1/hit5.ogg"
+hash = "00dec14a9806dfa38ebc0c4e27aad3114a5cae56d7f4e8c224c89654b7e0a807"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/altwood1/hit6.ogg"
+hash = "5a3b19e44563c69fe76e6508c0bd1d219e051553416bd3745a7c0e9c788c9226"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/altwood2/break1.ogg"
+hash = "4b0285cfdc4baf2c2ad1de3d69a694f6a4446d049719303a1124b37e6ef033d2"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/altwood2/break2.ogg"
+hash = "55432ad25c425c91e34e1d65159d5fc1657d6f4f28d39b3fb0665c44938aeb2b"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/altwood2/break3.ogg"
+hash = "11606ec8318829cedea688d4e3a197ff6a05bd5c34d026680c53abda14491921"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/altwood2/break4.ogg"
+hash = "ca8183e354a1fbad44ed96e4936fadd7091e01c46dc4cd10f418b00163dc29db"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/altwood2/break5.ogg"
+hash = "a199a842269649fcfa1975a75195dd62b0018dcabe03b1e3d80ff6a01f1f0c4d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/altwood2/break6.ogg"
+hash = "532b7b01940451ae33d925c87d913c47779e8ac9bc00fecccde15db374a5f1c9"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/altwood2/hit1.ogg"
+hash = "3826263af7c434b8957ba516b1966a1e3e6d0f611b23f8d811e70f6cc6623111"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/altwood2/hit2.ogg"
+hash = "c68ab4a131f075393c73d12db2507550883e2447e471d55d811c9b073f7460e5"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/altwood2/hit3.ogg"
+hash = "8605fb2bfb9e7dcdfa7528c8d7f39d8e0dd37d488dd51558201e4506d1795bce"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/altwood2/hit4.ogg"
+hash = "1f7cb9182e50ea614fd0b9bc036283e2927501ef6dea13a18a89d7067cca109e"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/altwood2/hit5.ogg"
+hash = "2dc6a73ec37b34c8b2badccd3b2cf022f2cd9b5df4984f5ccde771d93747a4de"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/altwood2/hit6.ogg"
+hash = "918676788c52bd4b82b8d78d3602567ef493481a6a44a8d5071c68888004cc87"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/arid_sand/break1.ogg"
+hash = "444432de5b17d2ff9cd5c0acc81b6aa4a8e83e0b281cd837ce0371d4bd1a091e"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/arid_sand/break2.ogg"
+hash = "d07af060276bb4281291ed0cbc003e229e9816ff107691228b56cd1b63b9af5a"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/arid_sand/break3.ogg"
+hash = "915a0449f2652da3d51a29cbb5fab9a7475e1b67721017c554a0489bf5c00a16"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/arid_sand/break4.ogg"
+hash = "2c9d6ef00c1b9ff6de0e0613deee3be2baae3dc018631b19b5f3094074938b86"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/arid_sand/hit1.ogg"
+hash = "367c0dac0af3c09415eae4be937aa5b26ab1186cd6ab835f7e1b1cc11ce58446"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/arid_sand/hit2.ogg"
+hash = "2e3829b3742d024a08acef757571c2985617d4653073935d2ef3046d173af66e"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/arid_sand/hit3.ogg"
+hash = "578716650d530caf7411f2c31eadaeaac45e7ecc4d89adea9caf1aa63d153970"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/arid_sand/hit4.ogg"
+hash = "e03d68e74bbed86f02517bdb64b5f94d3c5d3f2463fc932ce47fcefbd09e5ce8"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/bamboo_hanging_sign/break1.ogg"
+hash = "3867c7997276b22d00a1c8e5795b84766c7aee7be3f931107dee97f71988f601"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/bamboo_hanging_sign/break2.ogg"
+hash = "1c46cced54c57f8cfb700bcffe1bc4bb7779ef066a73d73ce8c479f11b503bc6"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/bamboo_hanging_sign/break3.ogg"
+hash = "fe8016f5f544d769bc37cf0928a00e4b7d8e1b27cbcd6522530f0f1c3f8353d8"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/bamboo_hanging_sign/break4.ogg"
+hash = "175991fe80df7169566c3c37efc1a8ebf82818c50adb777ef1b51f950f078213"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/bamboo_hanging_sign/hit1.ogg"
+hash = "51d5de72b75021e244fdd563ad8990eb27f7d8242cabf6ac9f32e77a9e735fe4"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/bamboo_hanging_sign/hit2.ogg"
+hash = "71bacfb4dd6ff81cd6e734e704b0320e49ae5c3b2aae77111b9b8a5f1b0edaa0"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/bamboo_hanging_sign/hit3.ogg"
+hash = "493b6535d8a2138276fbcbd9b2f1d2c6fb747799028dd07f15b1cfe9f02eb7cd"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/bamboo_hanging_sign/hit4.ogg"
+hash = "a66150fe56228fa7f603542ec90b149654dd9c61e13e91336ffae58ca859f059"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/bambooglasswood/break1.ogg"
+hash = "b97dc536a6f8f934e5c2cc5a19f645ec84a8bb1cbddae919d46081728137516f"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/bambooglasswood/break2.ogg"
+hash = "17412d0b2255fd9149019dbb3f53a14afb0a57056ff817470798e54fd3066801"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/bambooglasswood/break3.ogg"
+hash = "d090da163a13aad4563edde050dddd29bb1dc5e76b45de4d39d86fb5376b0f2c"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/bambooglasswood/break4.ogg"
+hash = "0ea6e8fc60a00ad9139509a3b9299f7f804253b54a34b1a6fbbe8abc244b56a2"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/bambooglasswood/break5.ogg"
+hash = "a1fea9690e5edf9f2d23e4f5031e2d4d9d5b7a24d9049613ad6e9472b26d47f0"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/bambooglasswood/hit1.ogg"
+hash = "796c59568819ff7a9ad1829e00a45f1917eff9887e075425c2c9ee61f4824323"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/bambooglasswood/hit2.ogg"
+hash = "7eccf09f4f0a08124fb2fddf377c267ec4bc56b9e58694fd7858c3af4073b556"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/bambooglasswood/hit3.ogg"
+hash = "54c1be0677fc3795540257899c0f7ef84557519914d1861226ae32ac38ca48f6"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/bambooglasswood/hit4.ogg"
+hash = "6b1d02bb8eed5d7fc333ba3dcd48ee6dc4b8a5dd3e37d67349e365c21ba2465f"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/bambooglasswood/hit5.ogg"
+hash = "e730e946efe879463a73f88c4854ec9969f9154a4099627ffa1c61401a406296"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/bambooglasswood/hit6.ogg"
+hash = "04a40d88016fa5767d79fdc0b77bf95592015ea95bcdb5aabb817a781622e0af"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/bambooglasswood/place1.ogg"
+hash = "b1938c583dfa6c713e9e4a59ef5b26ca310ef7dc98d31c23e19cfef21939fc2e"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/bambooglasswood/place2.ogg"
+hash = "b44e1f7485dad52f7c5fdb74eca4fec8320de944dd0f757778bc3d8f22893c54"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/bambooglasswood/place3.ogg"
+hash = "c641853f32238b5f70aaaf9e01bbf2c88230dffb12a7cad8921d4433c7148788"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/bambooglasswood/place4.ogg"
+hash = "014ff13c048dcade398a178a129844975181dd4859514b6d707f364bd405fb88"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/bambooglasswood/place5.ogg"
+hash = "aa793bf2fc4411765f337c91d63bdb8b1479ec692b15024c0096a0cafc5712f7"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/bamboowood/break1.ogg"
+hash = "31cb23777d40ef3bf864dc61bdfb0bc0ff1aa8ab3d3483d502c6ba4d4f8489a6"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/bamboowood/break2.ogg"
+hash = "ffcff27112ae225e209dcbda1ef7d55ff92c57a580d9f4b12e359e348777b1e0"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/bamboowood/break3.ogg"
+hash = "a26a676d02f0436f102be2259ed491c19dda03a67cca00629754f43c708be253"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/bamboowood/break4.ogg"
+hash = "63cdb75ab8e5297f1a8db00eb37c9652286c7a1a8682c64fd8e00446d3e81eb3"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/bamboowood/break5.ogg"
+hash = "3edaae642da66af7c2ab3338ffe3cf7c6d68936c0b8d4bf9a6df5f51b1e48505"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/bamboowood/hit1.ogg"
+hash = "d7ef1571ad79ff6a6bffc86873080a8db860bb5f68a60d21a8e19f872345cb52"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/bamboowood/hit2.ogg"
+hash = "99efacd9e36352eba0c7108194437809a91ecb831e5899bd3a7971e4977b8e11"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/bamboowood/hit3.ogg"
+hash = "cd011b2163f7aa857e2dec0399bf69523c040195dae62e7179c2ad69bd46ff34"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/bamboowood/hit4.ogg"
+hash = "428dbf7b0c3b77941ebb6bc79e808851b7ac2a9539f05e7f517225c6d4c31325"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/bamboowood/hit5.ogg"
+hash = "983b600c2989e82a6b1c52fdca4122e9bcf9a3145a7ec90225fa1a6a3999d442"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/bamboowood/hit6.ogg"
+hash = "8f4d3b873c479240c5aee489adb20b033ca94839cf9ed832892cdcf4a9029eac"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/blackstone/break1.ogg"
+hash = "b3436d6da8c89b214bf47e2da5d45407a7e736575f099bbc3b483c38fb3f8808"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/blackstone/break2.ogg"
+hash = "f48ec06f382c77e4f84ee6afc6363d40240bf9792f83d852b0c39a0d6775b14e"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/blackstone/break3.ogg"
+hash = "b6c857a937568cdba9604db049ec9ce38993e73dc305274fb89a0e624183f82f"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/blackstone/break4.ogg"
+hash = "4b3a522d2e4b7054fc066e8c1f08633bd5d6a9a52805608d1682ce4206fd787f"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/blackstone/hit1.ogg"
+hash = "657fab7b8028f9d4f48d634ff60321413f6ca91b520f8ceb3f68771f185f1245"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/blackstone/hit2.ogg"
+hash = "061945acdc4b1929235b69711b8b19c194573e4f6d8d143ebeaec4f474e2cbe1"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/blackstone/hit3.ogg"
+hash = "67258d42e00231a32cdc1a346292279cfeb3525522a74b05a12ba438f4eeeade"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/blackstone/hit4.ogg"
+hash = "29d95af01091f5135159653fd63d28487983f3ca512e80088b6692cccdceeec2"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/blackstone/hit5.ogg"
+hash = "b06acd1ccf84612bc601bb52f186c403d3a312f204804f463d1ad3958c15ec30"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/blackstone/hit6.ogg"
+hash = "348844e360a25a6d517cd4e008fd31255a73d18acd819b8efa6d6d4832d75e9f"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/bone_brick/break1.ogg"
+hash = "e61e75466221ca1efece1d37049a4001d7060bcb0d52ecf9c33713fc010a1cf8"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/bone_brick/break2.ogg"
+hash = "f33e4c0b6d2d86893c9898ffa6510ac2d5a3a266dabb92705c637ce8afc4a734"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/bone_brick/break3.ogg"
+hash = "72b6ee54ba6024bbfd04ce434310e12d1e0122c4e6a4e9962eb9d805c8bab41d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/bone_brick/break4.ogg"
+hash = "a0ed7e5fc2c7e58d127b1bd346c90156d199821d55f4c01217c2fa30d0536b15"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/bone_brick/break5.ogg"
+hash = "df9c309f22969d5fd812f3e2f6504f10f3655153ad88ed3c301feace6f766252"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/bone_brick/break6.ogg"
+hash = "183664f730071cc3b3e4d31d4230393a67f11686a5f92fbc6fce5931e5a534a4"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/bone_brick/hit1.ogg"
+hash = "1d73d3b3a561beb24e7c1db6766a450f6e1b5f8cda61c37e7b7ed4a54fc63944"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/bone_brick/hit2.ogg"
+hash = "36607efed7c19ab79265667b81952ea4adbbd9cd0b7dddfeb4c012273199e8c8"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/bone_brick/hit3.ogg"
+hash = "86b407e0ed78569f98cc34d487234be7586410e9ea0bc5c5bca8f069aa2be5ee"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/bone_brick/hit4.ogg"
+hash = "a835538b049d59473d98e337dab1f685730c5a318784086c45113bdeec52eb09"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/bone_brick/hit5.ogg"
+hash = "4b9982a787077692779ad30d2965afaa35461530e58365908ad35931245da213"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/book/break1.ogg"
+hash = "0337bdbf39451c5a3ebf857bffcd32d2011c61a84d554d96d64b0b8e77e52398"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/book/break2.ogg"
+hash = "09133f8cf83c625fc573008ccc02f0dbc9e0188b4f3ae0fb818ec6e8726a4598"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/book/break3.ogg"
+hash = "08cd22d51bad4b5958eb79fc0c199319eea842f4f48ba973fc3ea044604475c6"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/book/place1.ogg"
+hash = "9a3ba8fef14366391de4a0991af475bb09d89a67994174c9e064a9db1ed0598c"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/book/place2.ogg"
+hash = "1628e40e6abcd8b3e52408d851c04c700b0f673645e883f203f12d88580ab7f7"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/book/place3.ogg"
+hash = "3e5d8c83d19ca06ca616552c100d3f93cdfc512149c8c74ae6f4171069685dc8"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/book/place4.ogg"
+hash = "7b4cb318dda3bef66e8be6b60aacd9b9abee495a4aa14914fbc1f3b815a650c2"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/bookshelf/break1.ogg"
+hash = "9098b8399961a7b0585d2412230fd978e46eed26b68d05762270cfcccb8f9d09"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/bookshelf/break2.ogg"
+hash = "8073a1817a342f26cf46877069187c07e5aaec1d67eb0e97407667d77cea8131"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/bookshelf/break3.ogg"
+hash = "e0bf1b809db87e223f0451b7e6f08f7b17c476af9ece242a224d17b095762083"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/bookshelf/break4.ogg"
+hash = "1ed14b2dc739344087d07103f2f9e12e93ff718fba31aa79c97c053e3fe90b9d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/bookshelf/break5.ogg"
+hash = "5f57937add42fd0371fae1197b8400c1f2402b05856754ed7b8392a4ba18e108"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/bookshelf/break6.ogg"
+hash = "ab83cf4cded3522dfe46ac49e69b4e68261c42d7aae40eadeb5481c3aebeca17"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/bookshelf/hit1.ogg"
+hash = "23a5d95101aae1ca3a516c4b58f78d707083a0e0f9fd24f36e20c4a0659a6999"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/bookshelf/hit2.ogg"
+hash = "6b65314a5fdb7ad338dd01ab081ad3fa7c86939d0102225b97032a97343cc380"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/bookshelf/hit3.ogg"
+hash = "bb34fe0908eb419ab08eee0704a9e3d10a7d27afc450afa1bf3a5bd38fdf735e"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/bookshelf/hit4.ogg"
+hash = "4d955d0be6f9c603b21bcd1cdb0d1f81b946f7159f20a3e8d486652a2a5b45ca"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/bookshelf/hit5.ogg"
+hash = "67b75f465883eefb25eaef4e78c4b5c9f59f80e3261ce13d4032b5b036528ea0"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/brick_variant/break1.ogg"
+hash = "03443d3f5167a6fdd25022bb780beb6d09b0fcec0cd40bc9dc5d93a039109b93"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/brick_variant/break2.ogg"
+hash = "08c66a965a632a769bc2b7fd7459d0d55bce9368989317299a194327337fa00b"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/brick_variant/break3.ogg"
+hash = "37473a8bcbcadd22df4d4405d681fbd901dd6270e2802bbab02e1a2d754e8616"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/brick_variant/break4.ogg"
+hash = "528a16369b2b5b16f418ee029f5c6d6b0b5c5802987a1049172d028ab03cec1d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/brick_variant/break5.ogg"
+hash = "f4a7746290e5a9d28dfc155cf4c146cfa505d28a269a6c9d813ae9cc18bea6e1"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/brick_variant/hit1.ogg"
+hash = "9be6a0d633cf38857c218facbfeaef38527d9c19062c6e1245d4e8bae80b2b9b"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/brick_variant/hit2.ogg"
+hash = "ee226db0bb62b2cd0fb8e9bf5cc73ea058a0861bcce21846ecf844c761c02b27"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/brick_variant/hit3.ogg"
+hash = "5087f5c033c2846ef81abddd9ab5dd6eaf93c899c0187a703e73db91925468b3"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/brick_variant/hit4.ogg"
+hash = "40f7de9d3dd6fd0bb37fdf682f5f9b0ce3eb3ee763dff8a8dac6b791b475c477"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/brick_variant/hit5.ogg"
+hash = "140f9b7c9f758f722437d3a4bc9b3ca7813c299b1957f24f236e06bed7139fba"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/brick_variant/hit6.ogg"
+hash = "96369c5e3243bd3f58407ec4c3b2458ce2f115cf2114789ed5debb3e8ba79bc1"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/clothwood/break1.ogg"
+hash = "386da6e98e9174ea6d7f99315a0b6fdd7193a91819dc7efabf976045d2e8f689"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/clothwood/break2.ogg"
+hash = "97c4d89ff4ee5285d31d03beeb02a28e60975fd3a5ed8c871af9baac76fd12bd"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/clothwood/break3.ogg"
+hash = "bdac3f1c8d96cb64a7a57bd212bac164d1f58b90ee632b57daffd7af89e4163a"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/clothwood/break4.ogg"
+hash = "1ed1866e0509a607f33f89fd850e01121fba517a341f0f499abd434907a4e7ef"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/clothwood/hit1.ogg"
+hash = "13da51ff39d334200fb44fa8f09d5be9c13a00d0f7130a9791b28cdc06f1e7ff"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/clothwood/hit2.ogg"
+hash = "1056fdada5e48d8a7ab12eead391462ed4b944045d69f067c97c893dc5c995c4"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/clothwood/hit3.ogg"
+hash = "38a7d18ff5e9608739849f4e69273f740aeacd8cd8e11e78680e3cad81954601"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/clothwood/hit4.ogg"
+hash = "f8b70d90fe7802b60534dc189ef58f2e03d1f7105098858ed113d3e3f20d2e0e"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/clothwood/hit5.ogg"
+hash = "05f739d4e1d6ed083c7af0cd2d45c382cec7e822d8979492ed197c7e0086d3c4"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/clothwood/hit6.ogg"
+hash = "97eec73142fd6a2dbdbc925b28123b895ff7daa2590b8041e1e94c832208d7c1"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/cobweb/break1.ogg"
+hash = "95c2e6a13923747f8f615b122258a8ded80de0f6dd8794c4691030596acacee3"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/cobweb/break2.ogg"
+hash = "52155c9c1af8fe66322cc5379a1f876763da0cde11bd0e7e7b53fc12c4344d7e"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/cobweb/break3.ogg"
+hash = "255c764ba833fe6c19693cbd2cb426e9aa23adba3e15257230f4be8971c40577"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/cobweb/break4.ogg"
+hash = "9c89800aa5e8d0fe435739ff9480aed47c5dedef87e3ae4b19a633aad8968cc9"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/cobweb/break5.ogg"
+hash = "52015a3fa730bc1154402b9ba2da8f0237b581b7b73071fc3e4c353315b95b25"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/cobweb/hit1.ogg"
+hash = "1c5ea379ebf281158b2c3aa20c0575556f072964903505eac8c9653a70a7b510"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/cobweb/hit2.ogg"
+hash = "2aed0e2a824be4877ea946360f21c659b5a7b945ced9a9a8db32895b1e05ce53"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/cobweb/hit3.ogg"
+hash = "c79372bdbbed1d53cd86308f1bf46ce81cf915df2c8e91c7d3a7e6333f78c9c1"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/cobweb/hit4.ogg"
+hash = "f86a758a88be11ecc0e0409c187e2c40c61480f4d451af31b4421a8491d3fb66"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/cobweb/hit5.ogg"
+hash = "90d3c9343fd286001355ba50f9ffd68608203112a4a4dba6c5d40302ac5b1bea"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/cobweb/hit6.ogg"
+hash = "314d9db3e34c43bcff52495504bb25c867aeb67674c3c240dbe3ad533a4a87b2"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/forge/break1.ogg"
+hash = "1fb82f6808a13474c46c9ecb9957c24de16786ad6663783d981739c126f62936"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/forge/break2.ogg"
+hash = "37e7381182b0838744b43f97bb0b19d35f9db136bc5931203c7c32b4ee206051"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/forge/break3.ogg"
+hash = "169747e5acc741fc7be93eef8dc65b57b448d46aa40eece0c9a9f4165c9deba2"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/forge/break4.ogg"
+hash = "d29165ecf3aafa692bb8d684b4de3be158b759439cd365ac1cdfcc0cf8f2d790"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/forge/hit1.ogg"
+hash = "27cd4be654cd6829d251c513452c441f61470349758cccacb5c1b84b9489d1a7"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/forge/hit2.ogg"
+hash = "f3a71b8c986a19bf35357d3d2820d4bc7e69b2e729b3286a9332285cbeea3c22"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/forge/hit3.ogg"
+hash = "6fcbdbcb8d09acdb8b2dd063551771e88312e27a778c46f41c253bef1f797caf"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/forge/hit4.ogg"
+hash = "8cde0bc7154338a931a0a61728d78eded7dfbf86f7133faacff456f986247052"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/forge/hit5.ogg"
+hash = "5c07261dfaa3705516a5d82b412cadbf72ccfe0c942b9d197c259fe4acede77a"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/forge/hit6.ogg"
+hash = "d99650d76cc8916aa75df23c3fdf3a7a582760dc702dbb56bbc7262f96272cfc"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/glasswood/break1.ogg"
+hash = "bf5f1eb6e24b20a79a6ce10b6a0c6da7ea3e06ba1749b05f2bc9aee546b492ad"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/glasswood/break2.ogg"
+hash = "8c2a3233f61937f465d1e0f43924726cbe20f38609624dd39c4f7b9ad5119d0d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/glasswood/break3.ogg"
+hash = "980f7bc8ec0e1f01d1e1027d17c6547c8936d0bb5e00177aca1c688ed16ce78d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/glasswood/break4.ogg"
+hash = "84d6ec974ce63fb349b49e1edd81c9e3fc3466777688a3981bc831ae60fd6669"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/glasswood/hit1.ogg"
+hash = "e04d7d300c866311fba153af210cfb3f7272ed7110e8e183052d24b94d988d53"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/glasswood/hit2.ogg"
+hash = "f33137e9ddfff728e53f05a007c23200a64d3dad2c2e1f2649b1e22563aea9fd"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/glasswood/hit3.ogg"
+hash = "4ce971be4f02219975f7aa5497bc56a69242492be82ec05402e5989e72044de9"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/glasswood/hit4.ogg"
+hash = "fa563552840746803f8e6fa50184dc45ad4ab140c2e6e241adec2bf6dede792c"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/glasswood/hit5.ogg"
+hash = "b3c30a76e2842ee1e385564e451239895da6f353eca9b9d6d2c2a2c579e8b0b6"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/glasswood/hit6.ogg"
+hash = "bf6ac207bc3ee40feb10321ba87ee3b7f665da9292ce6ff2160215eee4991a81"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/glasswood/place1.ogg"
+hash = "88e9ad26045389fe6b2b36e8608f022781ae9dbea98b5204e94ae524ab50ec3f"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/glasswood/place2.ogg"
+hash = "54f9153652b68889862e5d8fef700f50ff55d83d56eddf061085f74e1e8f6713"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/glasswood/place3.ogg"
+hash = "0d33970344513d1a6b5abd7804b362d87da53c5d4fc1adbfcd693e9f9b53097e"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/glasswood/place4.ogg"
+hash = "cdaea9c3976b7d4c031bdf1d82c13074caae988f830832b71b709e0f80e05e09"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/glowstone/break1.ogg"
+hash = "0826d113ffb69cda54530cf103d4dad987f07b5d16b5130e4f7209167e5ac25d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/glowstone/break2.ogg"
+hash = "6832edb26760a3e710dad81b395ff64232e4b592eee4beb2b701c91a3bc01243"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/glowstone/break3.ogg"
+hash = "bd4e5de02cd44d5cbec6dd36e521520b5f039038b28d3d0d35ee73559af50339"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/glowstone/break4.ogg"
+hash = "5ee91cb2e61d8006174faade1633a36c5df620fc64e33b18c2803141d4296b42"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/glowstone/break5.ogg"
+hash = "5c489294c090ad178ba18390bcbe45e1f91cd2aa63bf324344f6b5ac3811ba09"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/glowstone/place1.ogg"
+hash = "ed4f6f3dbe37ac6368da029ae37de045af3bb065fdeae485191399f42c8f9fb0"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/glowstone/place2.ogg"
+hash = "698bd58d4a6a484c8e28f106c52f6de0b16988e1bff9d222f41ec2f4ed236614"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/glowstone/place3.ogg"
+hash = "806650298dae275984c6dc755b0899da6e388f2e0cfc72bf7472c7526b013f4b"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/glowstone/place4.ogg"
+hash = "6f15f4b42dc8cdaee0ced9fc7b1b6dba4e5b772905ebf1d8c932165f6a921b53"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/glowstone/place5.ogg"
+hash = "ad8b1f2a0a76befa4aa5a4d1b342be47eb06ca90390a11a3597306f3af4d9f48"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/grass_block/break1.ogg"
+hash = "e2f81406e903a621e0f600b734c6ed114facb13bc3f3abbbd121b49a7297db2f"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/grass_block/break2.ogg"
+hash = "c512de4b4e10ee2eea48d7f8f69a2de05632151df999ed3ab3e1188830bf0354"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/grass_block/break3.ogg"
+hash = "96e1d7884b53de7285f479b3650376f817208cd27f66484f2c3aff57b521954c"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/grass_block/break4.ogg"
+hash = "3556fb194524550bf7b2178c0782a947b7fc8601a302528c14027e662abf2e87"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/grass_block/hit1.ogg"
+hash = "246558af328f5917da17939f8e73515f7e8decc8bc86962909d9b8ac85c0dd4b"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/grass_block/hit2.ogg"
+hash = "eded717d429acb6eb83c4dc689e36399d4e1d25f978cfec6f1296a4f8e54091d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/grass_block/hit3.ogg"
+hash = "4a6402fb12a49ccaa97cde3e441d28377ed448494ea9cad5ff96e2272ee1b876"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/grass_block/hit4.ogg"
+hash = "bc1fe57179e9736a1d3110d106b6aa5665a8390e39199667ed461419679b4d48"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/grass_block/hit5.ogg"
+hash = "16862600ce53c085fe544a70b58b147b3763112a8c5ca497a40cf31ebb084b54"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/grass_block/hit6.ogg"
+hash = "17bf2b594028c64def76c8867f8a9b9b80c8f6fd2e0daceddae6be5b78a185ce"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/gravel/break1.ogg"
+hash = "fcdfe3641510e0eee6d11375879d9612704e82f80f9080e51f827843837e8d37"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/gravel/break2.ogg"
+hash = "2fc5cfd52f069c47b7b58fc25a078cfff1f1bbcf9886aff79936a5801f9c9287"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/gravel/break3.ogg"
+hash = "8d0c1723fd4d81e48f5c6e53026719aed8f28495a4aed41f44c1dc6aa8c67a01"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/gravel/break4.ogg"
+hash = "28943cfa57dbe33b13e6d80eb7af78739d26c5862e213c4cdbf531e2acb92571"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/gravel/break5.ogg"
+hash = "b71ffb7339cdd19189a07a0b2557032050d55fa4d283094cff87733b0495a8ee"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/gravel/break6.ogg"
+hash = "01e384803ffd45b0c6a2209a7634d39aa890546f7bc66dba3cf24db6632cf6ad"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/gravel/hit1.ogg"
+hash = "180ae7f1cca9d1ff9e67b802839e0fb2fb75aea40560ac516c09c18d16c20f6c"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/gravel/hit10.ogg"
+hash = "b46dbb119dd3a4b57bacb89e5383964c81c71dd2f27294cbef07a9181617309e"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/gravel/hit2.ogg"
+hash = "6ada144aa83c53460de0e76bda88362a1cb44ff6cc2691d7662e559ecce53e3a"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/gravel/hit3.ogg"
+hash = "2975e66c70228d73fa7fd8adbe2aa2c7bd4e61ee0372c065665d9998e7629ae0"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/gravel/hit4.ogg"
+hash = "ac7f143c77501ecbce7b48fbcc12874fbc977aa9aea084595cac0a269c80257f"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/gravel/hit5.ogg"
+hash = "a558e955aaa5f708947395b46393857f2f568d3072ff26036d7b28689f2c8c38"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/gravel/hit6.ogg"
+hash = "c6d34781365102672769bd75ea3ca78373c4435342cd791bde50533462d65c7b"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/gravel/hit7.ogg"
+hash = "e52d3cfa2efc142bddeccca8bcbd5d109f07ddee50906f751f0d578c2ec0fc59"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/gravel/hit8.ogg"
+hash = "0c032ee2e8157c11bad141e6ec61ca85ebc1063b44269c0bbe6953be51e68df1"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/gravel/hit9.ogg"
+hash = "fb7191067668988b1529df737e6d3e09f5bc85aa52cb265fcf4fd51397671948"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/hanging_sign/break1.ogg"
+hash = "4571a5cccc4d83a06721ef48e30705e8284343fa8e2d388cafd5c74ec84281df"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/hanging_sign/break2.ogg"
+hash = "283cea69aa0db9eceb6c1a79bbfbf2cf21fbef0e93df85dd6bfce1a6a6619428"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/hanging_sign/break3.ogg"
+hash = "06d2eb11e3414f0eaa1eb348ac2b7826c5a9e9570858b041059104f95bba37d8"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/hanging_sign/break4.ogg"
+hash = "a40d1ed160c79cb33a38290f6f957a1920195a8e77b27fff957946bb3e5c1d1f"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/hanging_sign/hit1.ogg"
+hash = "440288fc5d3cc5611bf986b2f6de76e33946a5619dd18d91eb3e4c23f6bff121"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/hanging_sign/hit2.ogg"
+hash = "90744905cb90ff25c5ace29d049ff5e1eb3eb504f71f46dde697441d74b8e645"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/hanging_sign/hit3.ogg"
+hash = "535d2ec98e2c032aee40f5cc13d111d7cb56192b7f15bd51e5bab5c68a434ce7"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/hanging_sign/hit4.ogg"
+hash = "673b77d27025f382761c870d4e6b04377204feee8daf5d5244fd10341e8d1a66"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/iron/break1.ogg"
+hash = "231cd8f0803ece6cb8bb910e40d86ab64b02ea6e8feaeaf61dd7b90a9670c9f6"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/iron/break2.ogg"
+hash = "e7a86572680638b6b6a5766708a8c1b402c0aa705e7413175db11ff862e74c10"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/iron/break3.ogg"
+hash = "0280cc46df47b4aa9367d29620228ca34aeed8d63c72aa9efb7e3a1ba22d652a"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/iron/break4.ogg"
+hash = "64dc190682ea4ae9bf161422014e369652d8de6d619d44387b353a0f52ebafce"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/iron/break5.ogg"
+hash = "c71f47f2cb313dca0840fbf5cfd292ea8843fc71a3878f79a9bc0145fae08505"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/iron/break6.ogg"
+hash = "9f742092df7c71f7dfe6b1e838ea38b9e6490c73fe490aff4192f945a257019a"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/iron/break7.ogg"
+hash = "1bdc63ea70ee1eb06ebe2b5ed85ce34a614fe4a692f706a362c4033d5c4baf89"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/iron/break8.ogg"
+hash = "9dceb36215d2164b497742748972ef7fbcd207bbaf840f3c07326bfb947f5230"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/iron/hit1.ogg"
+hash = "aa603353b7e89e147478180578cd55e018d1b2f475baaf2dea95cd2b69465791"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/iron/hit2.ogg"
+hash = "d94f5cbd73e45715a8ae3f48080b0ec0340e58da0f29425e05e79fd7cbcc3c36"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/iron/hit3.ogg"
+hash = "4374bb281c8defad951f8ce4a162861e5974f127c6e63fb8630b709434692c6c"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/iron/hit4.ogg"
+hash = "cd4f965ee4995238101a437733f7ef91d936f1267c3c75eebee7eb08225a2d43"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/monkey_brush/break1.ogg"
+hash = "18ecc87482cabc935b2ed44d256b4fc7467a6366dc7e58cb304842cbd3c9c231"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/monkey_brush/break2.ogg"
+hash = "7f793efce660a72cf20c106ba823d2e1351928b300d33350c5dc0cad56d37c43"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/monkey_brush/break3.ogg"
+hash = "5f1ab8542a76737b42060b4e4ad8bf697318a95235d0bf7bc699a3ee56c8548f"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/monkey_brush/break4.ogg"
+hash = "8f940afb0a22156faebf77b223aab5394274ded21c9739e5930057ca0677932c"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/monkey_brush/hit1.ogg"
+hash = "ac53772dc1326441603f0eb4cc7081b9cf6cd25fade7f0b0a6a9db4fae3a22a4"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/monkey_brush/hit2.ogg"
+hash = "13f4914c6c3edf76929cf4215a8f28b62122e57d3bd3f41792b645d1f3bf917f"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/monkey_brush/hit3.ogg"
+hash = "0522341049b2ae3ef8545f8559eaf496ef418abccd96b427fad63c869d7f150e"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/nether_hanging_sign/break1.ogg"
+hash = "eccded4bf7d41a2aa5209264db6e4dff0e5f33567a60ae5bc0c6acafe178535d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/nether_hanging_sign/break2.ogg"
+hash = "a3409e0bf9a0fb358386e25bb08a462cfd8dd790d4fc471ad813c723dade9029"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/nether_hanging_sign/break3.ogg"
+hash = "bd7608b1e8ac4f81b1bd19feff7278f181e0db0a86cec094950989821b54e4ee"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/nether_hanging_sign/break4.ogg"
+hash = "5ee67bcc92afe68c69d9612c352aec88097a2147e96a5271401d7a82d3617ce2"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/nether_hanging_sign/hit1.ogg"
+hash = "13f061923d0e15974a93c853ab6e31d57fc0248ad4d94533d8990eb276161d2c"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/nether_hanging_sign/hit2.ogg"
+hash = "3592e1a503586d030e9d30de43ae433083c9edc5651e4dd9274602cebe1582ed"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/nether_hanging_sign/hit3.ogg"
+hash = "d7a5ad83330ee35596612b8b4ed2c8c14c6d1b2bc8f74aae58af84d517b19421"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/nether_hanging_sign/hit4.ogg"
+hash = "b70b07667a5fd29e9008c6b8eb2591b18d79b63cbfdb2d0420836781d476635d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/netherglasswood/break1.ogg"
+hash = "d67a94a8dc7b3b712f9a9ddce81061205b40c650a6dc824f882ef9b1de2010a3"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/netherglasswood/break2.ogg"
+hash = "04b4cdc0626916e27d21c042f860c77308327794d778ac40694658a098c93cea"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/netherglasswood/break3.ogg"
+hash = "26dcc07ffea61e0d11ca130b7a68c744c9ddaffc6b951af3293e02d8477b4bf0"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/netherglasswood/break4.ogg"
+hash = "67527c6544b84f1955d7c11a1651638ca43563b9dac7bf5b1a3484d94dcca04a"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/netherglasswood/hit1.ogg"
+hash = "eda631fb7d7d100f109281b974b90ff2e391305299d9875c15c346d4f634cedc"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/netherglasswood/hit2.ogg"
+hash = "3c01093d7cc6ace383119e3bacd9c71477bd136b2bc541f0c0f657c64edccb18"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/netherglasswood/hit3.ogg"
+hash = "523f9240d2f61a2ac8282653128abb064f2c79644707c5751c6befe1dd7b1db1"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/netherglasswood/hit4.ogg"
+hash = "65dd4d622c33617e6db2ca23b0ab23e93836ef931381a5fb3f5e2e1b7c0ad472"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/netherglasswood/hit5.ogg"
+hash = "f58acd72773aceab009bc76cd3d29194a282d2134c2197cd8a02d7503463ac5c"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/netherglasswood/hit6.ogg"
+hash = "33a95d7a8a64ac490e0acdfe2aad02c10934e14e61901a1325b7f8e62eb2b6c9"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/netherglasswood/place1.ogg"
+hash = "55d3a8a6f2b4b9839333867accb0fc56377f4b8a0bad3e61ed49c999399cdccb"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/netherglasswood/place2.ogg"
+hash = "58574b2f8b819aa6be4cf5139b2082423dd455a2f4c4216d2d1dcc25b3fba321"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/netherglasswood/place3.ogg"
+hash = "55bfae5c22118c7b0ceeca77cf5b6ecfb32a21f61a45a9e6e9a740a39f54c54d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/netherglasswood/place4.ogg"
+hash = "c967e068204bfce5671b8425506b784934e6d1f061111171bbe605191124d242"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/netherwood/break1.ogg"
+hash = "f5ce5e980209a129bc79e846efcb2ae1ec64901367805a1a199b0906c608c3ea"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/netherwood/break2.ogg"
+hash = "bc683a1bf5791c1ecc4c547cd2fa9e3e456cc9678ef5c6daf437412413bfdb0b"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/netherwood/break3.ogg"
+hash = "86ef0fe6e68e278b77c46c023d0e37e8141a61196ffdbea95353f9a76dc4f4de"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/netherwood/break4.ogg"
+hash = "52583a41078dcee43c01d83f55b9d9bd90ab2a4ed0f1ef1fd544005141db3cc1"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/netherwood/hit1.ogg"
+hash = "96698f10caf3723fd5617c4c31219f6f6559e888a47ecf26a63b12eef5e1cef2"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/netherwood/hit2.ogg"
+hash = "c21db7983b4494c5ad84f0d6d09ad2ea71b966fdd04224e2bbb4ae89cabfd059"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/netherwood/hit3.ogg"
+hash = "fc2386d6a48e76d0f19ac7656822f0ceff99840d606538e259230a1572b59a29"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/netherwood/hit4.ogg"
+hash = "b2c6a8612d0ed1a8ce88e5ecfb52a54b15ded2cdc590f7a5e64a0f4f55ceaf41"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/netherwood/hit5.ogg"
+hash = "89477836f2fe37c7eec507928c61d80abe4fb521aa256de44705e9ed0d90a567"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/obsidian/break1.ogg"
+hash = "153b498ef7fc5e83831e45d630de78504a198228fe4ea048f26d546883432014"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/obsidian/break2.ogg"
+hash = "43c11947693d4ee5df0e55204b55ae8d1b845f864e8404f74ff70c7613c8affe"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/obsidian/break3.ogg"
+hash = "b27367c369233f8f57dd0ba8655e60b580d9c3501b655849c1a6fed918066cea"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/obsidian/break4.ogg"
+hash = "56987100b3dbc8079feb11e6b773e42afa1cc58cf731e5cc3880c80db0e0b166"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/obsidian/break5.ogg"
+hash = "f6038fa9da8ff3620157b0e64f041043426751146dcb73a2c84a8a1411bacde5"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/obsidian/break6.ogg"
+hash = "4572b5c8d750353c3e0d74c051670a716252ecbcdabc950bdff202be9cb2eea6"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/obsidian/hit1.ogg"
+hash = "335cf9e916c30549f221735bb5aa7b3598c15d21412e20625f2922d4c79628e7"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/obsidian/hit2.ogg"
+hash = "5a092971fb74b6bd92b60b85a580a5e41340273f392f12017da889e244f381b2"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/obsidian/hit3.ogg"
+hash = "77bb61d191006669de71b3cdb3b7c25bce54419cd440c3eeedb0e125d1c69a23"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/obsidian/hit4.ogg"
+hash = "6db3831bd6c21d5d6e25c971eaeed27796ca83fc70cef90c1fde9194fb78a3f1"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/obsidian/hit5.ogg"
+hash = "5ca8b4ccc18b837319d594b5acbfd51aef95568b37012af5377cfef1675f2df9"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/obsidian/hit6.ogg"
+hash = "d2f79c85afd3aa187c4832d45ef1d0f4df08ea9924fefa6ee5ded00ccf58c297"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/obsidian/place1.ogg"
+hash = "1aa03569a68135a3519c76f06e962cc7fa6c7f0527c39d6b09dd572665b41ec3"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/obsidian/place2.ogg"
+hash = "4d3fd4f8ab9882eb494005a72df9adc1267c1ff73b11c062b710fcbf9aa3e8d1"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/obsidian/place3.ogg"
+hash = "33f33dcc5a4206b5331118d944fd2dcc5f106bcfea6d70624869fb0b78bdeaea"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/obsidian/place4.ogg"
+hash = "ec15c6332a73c3d74c204ac273a5dbf7528458cab5ac36dde13c19ad5a17c4d5"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/obsidian/place5.ogg"
+hash = "28dd327e20d1f6ebff20749e95c810ee342c50b9037528036b7f1b8567eec852"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/obsidian/place6.ogg"
+hash = "9d578813b8efd8562023500a577c97f6a75badc41b4f440f66b360c247d6424a"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/pot/break1.ogg"
+hash = "d96bd8954c4b0b991a9f4da077935b7634611e90fe5468d3bd99606dfeada700"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/pot/break2.ogg"
+hash = "89af146b6a07fac7e64037e291d7137b08820fea9b796a2002d0d69cefbda815"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/pot/break3.ogg"
+hash = "afb9b88d03bedcf1eddecbe5bbb53e27bdd9fece2a5e51bc08163085fd6707aa"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/pot/break4.ogg"
+hash = "048b43b267ba7c5db082553fa518b5769c5a0ec54e4a953a9afe35dfd23907a0"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/pot/break5.ogg"
+hash = "3af4dd9f7225dd7ab32e2ca68970dace7ced6ac48b974f26d5527387dbca020c"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/pot/hit1.ogg"
+hash = "b067dbcd15d05529aa11efabcd75cac4b60922d3a8e7f8ae70a7c345b49a6c79"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/pot/hit2.ogg"
+hash = "730bb7cb5a5577a87bd2fffd1474d2edd0b141809dad8addc498fd555e964620"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/pot/hit3.ogg"
+hash = "ea088ee81049b69a424321ffd261575562dec5cf7c1d5a03163f3368979a7165"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/pot/hit4.ogg"
+hash = "c55f34959fca26ac2f0dbfda799342e5304d90f05c32688cb84752d6008a88b9"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/pot/hit5.ogg"
+hash = "2a752536ddaf6d740425520b18a0cf010851c874ba6963d4fa124e53fd166091"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/pot/place1.ogg"
+hash = "6b41a152a334891327d9ded2abec8bf22781375fce48f942885121ea5258e348"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/pot/place2.ogg"
+hash = "1a0fd290189578185b35670e425079aa4c1931b61a504906a839befc04e7d66e"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/pot/place3.ogg"
+hash = "2e647f4fff60f4369cfa21697950eb4e55a75fa04a7735dc63753183590bcbf6"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/pot/place4.ogg"
+hash = "f63f338c424a56b02487a891a0a5f2a960b00552c547c81bc0a5db96c02d556f"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/prismarine/break1.ogg"
+hash = "ee88d6fef90769d888f0c2be492f8e2c0ddbe86546d179d5eaba01dce7f367e3"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/prismarine/break2.ogg"
+hash = "de19783770dfbd148b07e9b5dfc110354cacebab2c2da4501ee61451b682c17a"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/prismarine/break3.ogg"
+hash = "6946fa20b622687eb23da2018da2771f6b871bfd2c9087fa4f399fd35cf26141"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/prismarine/break4.ogg"
+hash = "8ba4d38b8310dc38127c880d2f7b0c58f287a84a6f2734e33844bfa6d8a84e65"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/prismarine/break5.ogg"
+hash = "b2df59bc0f59ba345edfd1fb8e1b860fad040f43ca685f7a4024fb48b4c9d986"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/prismarine/hit1.ogg"
+hash = "d48637db8abaebd47f3e025c2dccc09f41e72391fe62ba9d7493a085b3584eb7"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/prismarine/hit2.ogg"
+hash = "9464c0b03d0c28d31729c0ae2cb62621cfce4ac21f785335c4319ec1a741d15e"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/prismarine/hit3.ogg"
+hash = "78cf0a41bb9c0e50eb6265360e7a331107fc9258e8f571b307d64e784c489759"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/prismarine/hit4.ogg"
+hash = "c9e053c5e452c37263c5bbc603c9d9fadb41c62bf0a728ddbad39c14f06c5bf4"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/prismarine/hit5.ogg"
+hash = "dab5f06e7b8f429edd964420dde4b0ced2010269bc5d27eef6a7ada0e0c8da10"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/prismarine/hit6.ogg"
+hash = "e2b0e0b4396f8cdce546808c8fcdc111894b30ca0f5b5bdbb709a29503f4820f"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/prismarine/place1.ogg"
+hash = "f6fe83dd251cf97cba9f077576798124010639fd52cad8492e0336ae9474f1ba"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/prismarine/place2.ogg"
+hash = "38bf90cc7003a32ffd1f58fdb0e7daa374d230be9c9543fcd1d5ef87be3a8095"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/prismarine/place3.ogg"
+hash = "754c883d7712690e0c8b00601a16424b67a093cd57c14d077b1f9f0e8ef28f67"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/prismarine/place4.ogg"
+hash = "4d8fdd1c8f2c4f2187e09ecea24f5b1e6e8465acbde589a07d1f6458660cdbaa"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/prismarine/place5.ogg"
+hash = "d5c9aa69308bd3a3e7fd0fe66bbf6c163c35033cd65dae0b0b469c2205d0af44"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/prismarine/place6.ogg"
+hash = "6c67671a806b54c7fc052a2f9a3a51d3a657462578bf43dc7b49235c05fe2bfa"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/rubber/break1.ogg"
+hash = "24207697da5324d60fa059752b3f22be725ef34ea3863f7c7cf7131d6e3f96f8"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/rubber/break2.ogg"
+hash = "c9749042f70dbdde830857745c307170b0d36f63471da42e9fb167ff3ba0bca0"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/rubber/break3.ogg"
+hash = "f9ed1549d198e072847195d54046caa55f69a67a78cd485379058996dbb3ce43"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/rubber/break4.ogg"
+hash = "bf4cc0cc6aa94e6d96ae07a696c0b7fc96f71dc95f47e57fb6393afeb7b99e34"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/rubber/hit1.ogg"
+hash = "421af3f18ead8bf37920303a6fceddcb19d0c635417a736974964b4cb0f3cf6a"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/rubber/hit2.ogg"
+hash = "ec0d2e5795732fb22c9563bb128eb1386671b143c6ef17b27e05ce8fd9278d9f"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/rubber/hit3.ogg"
+hash = "5c0071d0628c301ca77acfcd33b300a7117f7589f899dd6585763ff298f3cff1"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/rubber/hit4.ogg"
+hash = "4a4e34dd3b6aa18eddf031b6e18adccc9ba43b64139d1a30e7d8020283ee6aa5"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/rubber/step1.ogg"
+hash = "230737ff05ca0a93c800d2d400efcd0542bf316c8250ffacef0fd6e111f8ce58"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/rubber/step2.ogg"
+hash = "0b0a939dd4236dc345b724b579415dc0ead0112fda8171b44f47f12d05d2c1bb"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/rubber/step3.ogg"
+hash = "b532e233f52865df8e924e1e7a3a186721d7051034c4996603cb01d11fd3af4d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/rubber/step4.ogg"
+hash = "4575be5f037031ef508f2eacffe3bfbb961c8f8b996d5859dc3cc27f0e40c066"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/sandstone/break1.ogg"
+hash = "c009c8f3798e591207a631c57b7bb695000c7aae6ffccb94f32e2cb83cb7de25"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/sandstone/break2.ogg"
+hash = "3f49878bbe6773659855c273f3e9bbf0d19be5224487e1bde4903df6ac324de9"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/sandstone/break3.ogg"
+hash = "1989dae5de392c1f9850ce3246227fe7efb43924bef8e64e95b995c27e469f56"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/sandstone/break4.ogg"
+hash = "9ec6da2048c77eb93e2fe6a85fd46dbf99890c2eb1ae475c2d2bc93aa73cdb83"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/sandstone/break5.ogg"
+hash = "b3fa1fdbd193036ad1ed0b295bf01dcc8e8a5aff46141cdf9bdd898ad9cc56ae"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/sandstone/hit1.ogg"
+hash = "7c5faf5ba49e250f58cf92807cf02a2b74244f5ac42fc58492d19421e2f942c4"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/sandstone/hit2.ogg"
+hash = "d2ab1773c96fe56a1b44e10cc56e999ba2f4ed937d0686f82683c30438016a81"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/sandstone/hit3.ogg"
+hash = "3d368cc7f37660d08af9ebd738ace8b9b91e6d707f07a271d9f311dcf34c3271"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/sandstone/hit4.ogg"
+hash = "2b5884a2e649325b5bcf49a2df387289e90b88bc2a793470e8c3b2a7cc18afc4"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/sandstone/hit5.ogg"
+hash = "b8c27e09b9f51f5f890eb99ba91f852f25b3b6e577cdd9d93e6be694609ef741"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/sandstone/hit6.ogg"
+hash = "e9107ec42005541d5dac1446190deb7ff37760b4d12f448e67bcd3ec6f3a67e1"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/small/break1.ogg"
+hash = "cbcc7f9792b95e316aebcc2deea8e9f8864e43a63d52404279ba75b49579ed40"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/small/break2.ogg"
+hash = "aa49f0e166fa02c39581ae67802f88af4f34bd821bb1ccd88edbefdc251a29b0"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/small/break3.ogg"
+hash = "993041ccbbdf44835761c9f9d3f8e58fb930146da1ceabf86fadff41bfc16f47"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/small/break4.ogg"
+hash = "3595262036d7ee8532e165727d4b995c643eb2ae50c444f5b9439768bf39536e"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/small/break5.ogg"
+hash = "4e6f220c856b6d4d2d0a2ee1d7eb594e5633829890360b007baeb6b969338faa"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/soul_sandstone/break1.ogg"
+hash = "d618b07574c3eda7aef7f20c34469b5f0d93e2395d5590da5797220b202c1408"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/soul_sandstone/break10.ogg"
+hash = "80dd057dfb835a4008206629628326be5c993992f332fd637f33de7deb1f140a"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/soul_sandstone/break2.ogg"
+hash = "918f9298e840961d9e57d6e97d94df6df14468e8bb51ae99f5f1debf25931f7b"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/soul_sandstone/break3.ogg"
+hash = "360a179aea80a9854c6b1a8001a7319e425f64933b89c0688132648b07d2cdd0"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/soul_sandstone/break4.ogg"
+hash = "4ccfce2c86d9be43c2eed8fd402237467fc0d2c9595c52293229b791c07611f5"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/soul_sandstone/break5.ogg"
+hash = "81247785ca96890cbd62224bf1317c88bf3bfa43be9eb2d0957ac5d2523b4b1d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/soul_sandstone/break6.ogg"
+hash = "dc19d48eef438656b6469aa527a6d19796361f84ed267f820fe801d31e193d97"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/soul_sandstone/break7.ogg"
+hash = "7c7eae919e8ceed8dba3d16773203dd649d6e7d3acbc238181d40998549862ca"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/soul_sandstone/break8.ogg"
+hash = "9d0eb64c9330e877fd994f6970b4211bdd3d1e2e37ea8c2c78b2923d9d15ec3b"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/soul_sandstone/break9.ogg"
+hash = "ffc0865afe1e4b76d36b723497ce992adbe0f3e18dc24d0d30efe81c0f1150d8"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/soul_sandstone/hit1.ogg"
+hash = "e357342453df441c73846ff33a4a89aa6d2543c24c9213ba32eefab00f364d98"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/soul_sandstone/hit2.ogg"
+hash = "908e9b2c91fd629ffd15ced35ad73e435eff86bce3cb61a84299a2af66ba38d1"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/soul_sandstone/hit3.ogg"
+hash = "2c6dd624ac243023fff0187e8af43bebf5e03009af5d2f4adad01b32e889d4d6"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/soul_sandstone/hit4.ogg"
+hash = "c27adc66d3c6f83f5ec15745472b30aa104a1dbc04f304cc30d876592fa4e363"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/soul_sandstone/hit5.ogg"
+hash = "5b8c2f7a9cdb684985d0e536fe49153f894674afeb50f61cbefd07320ba92adf"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/soul_sandstone/hit6.ogg"
+hash = "d514982801e717fb6dcb405ef298148c8a1b0bd6e68d4d0af337ca8817bb984a"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/sponge/break1.ogg"
+hash = "21c193c0b005505686b8f07b0ff00ae35ae908027ffd03d9d6aeb615acd7684a"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/sponge/break2.ogg"
+hash = "85062c720f7fcf760c6791ac0478e379fea7fb3fed7a802561f001e68829e34c"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/sponge/break3.ogg"
+hash = "dd0d500e84f2ce2da5c7ef787dbc2fd3208d8ee7043d65472bb7694ead3ffcc6"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/sponge/break4.ogg"
+hash = "33ecd13217ac767c731c68d74a09975b7ba721bd30bec2483ea537b0f84f5598"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/sponge/hit1.ogg"
+hash = "e581ab2cf2e1b2d056aa335e09c566c55d739fdfed9409391bf6f6c3b05a1667"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/sponge/hit2.ogg"
+hash = "b38e73d52650882551f534a22c8990d03eeb9a10f0fcc8221be1c420d3ccc287"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/sponge/hit3.ogg"
+hash = "d662885a1d8596b52ab5ed6265271a788d12d8612f4395558d2de352fab6d167"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/sponge/hit4.ogg"
+hash = "d31e4727f8755789eec7c8800446bed20a4cfed38380f2b35c93a35f9ea3017a"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/sponge/hit5.ogg"
+hash = "1f8fdb5c2470bcc103d2853b4d552591d508f7e5f824083295726b9ee6071108"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/sponge/hit6.ogg"
+hash = "2f961997cbbaa497a3c0e662f672ed78eefbb01b63bf098d8c6b236bef18ecf1"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/squishy/break1.ogg"
+hash = "2ba820f00e56b99961da5f7b1a119d378f93c10b4bcef6e02bc983b257b11b9b"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/squishy/break2.ogg"
+hash = "3b3bf24c6e04a309bfaae209623810c641ac13754a5475cac8d2b1899e928316"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/squishy/break3.ogg"
+hash = "be75430754e53f87b14001cd43ea656009308b322951cefa21da95a8de817f5c"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/squishy/break4.ogg"
+hash = "cde335c57a1aaf8e13115ed5b275db1f53e3c25a1e87da1b8fe36d7263ebefb9"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/squishy/break5.ogg"
+hash = "b500b4a205f0d965b294e7e0b3052780e0cb227a6d7fd8891cf53b867a06b7b0"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/squishy/hit1.ogg"
+hash = "d043336867a6359e59536d000270b116b8b7a9e74c929121be519e4f3be89c01"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/squishy/hit2.ogg"
+hash = "6fdf8c6e85364d33c203411bf39332a1ad84ba34247f10dcaefaf587ceea19e5"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/squishy/hit3.ogg"
+hash = "0494c95efa973cc3e8033f6cad262daa193a04cff8ee78f0019e929467b7a7c1"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/squishy/hit4.ogg"
+hash = "5685542c44a232c687f857ca7782219354469c3631a316faeea55e2cac07f90c"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/stickywood/break1.ogg"
+hash = "ca2e0929bb1ed9f2a72a9cd490ca3676f82225d223927bbf30d684d434d3004b"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/stickywood/break2.ogg"
+hash = "e4aadaf7e3e0a8402563dca2840b0e679ad9ad4a9900a0277b897ca5b02c2627"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/stickywood/break3.ogg"
+hash = "6c217a12943ffbf0daad1e32c8549db4a7fcffaea72794998efadd07e5d973af"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/stickywood/break4.ogg"
+hash = "10c31ec6b69c7d27e22f030a23eaf71b02ee31ee3a1089b73e798b5008ea0753"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/stickywood/break5.ogg"
+hash = "3ae35580328af1a0a11ffbcbe63fd0500c0ca1dc0c728c570b525a977a6d2436"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/stickywood/hit1.ogg"
+hash = "15ac9d28517709721283af077d02745c70acd0082651b4670402e77ee914337d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/stickywood/hit2.ogg"
+hash = "26a08dda533fe0246114530e5ce031d07653624fd78ebff4e52a1e1dcb853548"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/stickywood/hit3.ogg"
+hash = "d37ef2d24a64d1af5ec3f511bc3f1e95cca1e1d2f7dfe3d0597f5119434f4ed6"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/stickywood/hit4.ogg"
+hash = "2e42f40e4b2e7a03bbadd75eba45326a922090db2a31a52e64ba8e5d0bc9bc2b"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/stickywood/hit5.ogg"
+hash = "90dbabab76ba81399eec4dcb4a223d2683ab9b911e2aa67b2d2f17a6b7142c6c"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/stickywood/hit6.ogg"
+hash = "78acfff66eeb7dc50daeeef9670163ca0cef94b62da24be2fbb653008658ca01"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/stoneore/break1.ogg"
+hash = "d7251bd4a8b9a076400dd5ad5dd75c333b511820b63432ebe06b3c60509bd7ca"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/stoneore/break2.ogg"
+hash = "86d21b6171662d6677815c807c56a2eaaf3fd94e3c7f9cf0dd412027f508ca29"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/stoneore/break3.ogg"
+hash = "d040bd71db647583f31a2563b06376ccdbf7e9660590b707c594930bfffcf78c"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/stoneore/break4.ogg"
+hash = "c7f02f6323c80daf1b39ad7d4855c0b6788c798718f0a0b8390f53363797584a"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/stoneore/hit1.ogg"
+hash = "3369e17e8ce67c20515b4ad3e93bf27cf41ec7344fe3ed67c9a2fe7a794fdcbe"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/stoneore/hit2.ogg"
+hash = "05fccda1e0cccea6a8647ae1488ee8a7023682d71f92e8f6b3e888a3e8e0ab38"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/stoneore/hit3.ogg"
+hash = "ff3ec0da78095041776da7a9f67769ccb1e878f86c580fa7508018fec17e1139"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/stoneore/hit4.ogg"
+hash = "fcbd76935350ea2e65c8df5d48ac6eeb9c354f3f7df169b3a4ce5f33890fd169"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/stoneore/hit5.ogg"
+hash = "24a224676a6c89345baba91def18b03a09fadf0462cfa40a5e0032ac216f1e4e"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/tnt/break1.ogg"
+hash = "1b5fdcd685901c96dbff2e43611ecc2b0e375b48223e4b674be107d65de24f69"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/tnt/break2.ogg"
+hash = "1568d1dcd70e06ad16d53e83c43cff58be62e1f8135645d85144d2a7917a4747"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/tnt/break3.ogg"
+hash = "ff6277f86c1eeed333f5bfd8025d29c4ae38ce0f4af51c20ee2a9cfc932763e7"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/tnt/break4.ogg"
+hash = "dcc366c85886c1b78ceb7d3087b27ccf68f0d308679ad44c15aec7fc03e11965"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/tnt/break5.ogg"
+hash = "a2c62ef6a30b708ae4f62169ca596bf900615b9f0ea15ef5c91c8c9702d9e4a4"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/tnt/break6.ogg"
+hash = "1658652d9d2aa1c50940f2357404eca0806edc285ae9d7762b5bbb81d9cb27a2"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/tnt/hit1.ogg"
+hash = "03e3de3e53ff12e7b5ca86aea0f71aef569382eda040237d42dcd8bf2abac06b"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/tnt/hit2.ogg"
+hash = "c38e80a2d27aa59f1d8f69e3c3af31b9a44627f5a1d09dde5db2eba96017d680"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/tnt/hit3.ogg"
+hash = "2d796bfe4cd9c8e689d4bdc26e698c6d52a26d6bed84ddf223849a173df12ce9"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/tnt/hit4.ogg"
+hash = "f95ae4b559783166a15b88f0332979a964fb51a5e18d85da3710ce28c15e3a58"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/tnt/hit5.ogg"
+hash = "2e8816889675d700e6770ce0b183d465dca93fa2305c2e95720a3ebf8c645875"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/wetsponge/break1.ogg"
+hash = "feb2c63176d0bd32b53f66028f8c8c05a68eefb7fb855d5a1076404227b70af0"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/wetsponge/break2.ogg"
+hash = "e09a050e698b87d4dde91bcf743346435e614f165b8d126b61c6a7280ca1bf56"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/wetsponge/break3.ogg"
+hash = "b8eac8d9d24d0663265d81fa9ac900854e1dd57aa0db8c77d85878881130e3b9"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/wetsponge/break4.ogg"
+hash = "b7d8abcca1d4e5d663bb3d1c0c40a7fdfda8256aff88627f29a3bccc59e4a30d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/wetsponge/hit1.ogg"
+hash = "11a4c3bcfc6c5c331b1d9004929f2a25e37fceee991d663440c568f9be99d567"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/wetsponge/hit2.ogg"
+hash = "87a453ebe7792291c981efd1bf38be1d847c51e9f95b495820c86837d069c20c"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/wetsponge/hit3.ogg"
+hash = "9b48b01777bd4269e7ca32aa96fea9654c0d331279061699eb12810f5bba95bc"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/wetsponge/hit4.ogg"
+hash = "d7d210c3554b07ea53c62fc2269573299a113df88c1ecafe3702df0ccf6ea600"
+
+[[files]]
 file = "resourcepacks/spicedcider_resources/assets/spicedcider/textures/gui/creative_tabs/building_icon.png"
 hash = "1cd6e6d003dafebd26878dd78e87f86b1a4604916cfe0693f3c472a09c20490c"
 
@@ -11578,7 +14002,7 @@ hash = "785420f84baaac0987e327c1d434e6faec1defc5098fab3ca50f8769da013fe8"
 
 [[files]]
 file = "resourcepacks/sunbathing-godrays.pw.toml"
-hash = "51bb01986852dcfc8e8207368354a721113d27718dd25185e5e9ff39ed8e63b8"
+hash = "4027298609ced663c511f813a533209b73fe597adad18819c2e72fabc11724f0"
 metafile = true
 
 [[files]]

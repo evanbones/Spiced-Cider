@@ -1,0 +1,21 @@
+{
+  "targets": [
+    {
+      "id": "create:ornate_iron_window",
+      "required": false
+    },
+    {
+      "id": "create:ornate_iron_window_pane",
+      "required": false
+    }
+  ],
+  "sound_type": {
+    "break_sound": "minecraft:block.glass.break",
+    "place_sound": "spicedcider:sound.iron.place",
+    "hit_sound": "spicedcider:sound.iron.hit",
+    "fall_sound": "spicedcider:sound.iron.fall",
+    "step_sound": "spicedcider:sound.iron.step",
+    "pitch": 1,
+    "volume": 1
+  }
+}

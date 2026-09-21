@@ -1,0 +1,29 @@
+{
+  "targets": [
+    {
+      "id": "spelunkery:rock_salt_brick_wall",
+      "required": false
+    },
+    {
+      "id": "spelunkery:rock_salt_brick_stairs",
+      "required": false
+    },
+    {
+      "id": "spelunkery:rock_salt_brick_slab",
+      "required": false
+    },
+    {
+      "id": "spelunkery:rock_salt_bricks",
+      "required": false
+    }
+  ],
+  "sound_type": {
+    "break_sound": "spicedcider:sound.brick_variant.break",
+    "place_sound": "spicedcider:sound.brick_variant.place",
+    "hit_sound": "spicedcider:sound.brick_variant.hit",
+    "fall_sound": "spicedcider:sound.brick_variant.fall",
+    "step_sound": "spicedcider:sound.brick_variant.step",
+    "pitch": 1.15,
+    "volume": 1
+  }
+}

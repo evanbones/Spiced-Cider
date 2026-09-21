@@ -1,0 +1,92 @@
+{
+  "targets": [
+    {
+      "id": "architects_palette:tuff_bricks",
+      "required": false
+    },
+    {
+      "id": "architects_palette:tuff_brick_slab",
+      "required": false
+    },
+    {
+      "id": "architects_palette:tuff_brick_stairs",
+      "required": false
+    },
+    {
+      "id": "architects_palette:tuff_brick_wall",
+      "required": false
+    },
+    {
+      "id": "architects_palette:tuff_pillar",
+      "required": false
+    },
+    {
+      "id": "architects_palette:chiseled_tuff",
+      "required": false
+    },
+    {
+      "id": "architects_palette:heavy_tuff_bricks",
+      "required": false
+    },
+    {
+      "id": "create:cut_tuff_bricks",
+      "required": false
+    },
+    {
+      "id": "create:cut_tuff_brick_stairs",
+      "required": false
+    },
+    {
+      "id": "create:cut_tuff_brick_slab",
+      "required": false
+    },
+    {
+      "id": "create:cut_tuff_brick_wall",
+      "required": false
+    },
+    {
+      "id": "create:small_tuff_bricks",
+      "required": false
+    },
+    {
+      "id": "create:small_tuff_brick_stairs",
+      "required": false
+    },
+    {
+      "id": "create:small_tuff_brick_slab",
+      "required": false
+    },
+    {
+      "id": "create:small_tuff_brick_wall",
+      "required": false
+    },
+    {
+      "id": "quark:tuff_bricks",
+      "required": false
+    },
+    {
+      "id": "quark:tuff_bricks_slab",
+      "required": false
+    },
+    {
+      "id": "quark:tuff_bricks_stairs",
+      "required": false
+    },
+    {
+      "id": "quark:tuff_bricks_wall",
+      "required": false
+    },
+    {
+      "id": "quark:chiseled_tuff_bricks",
+      "required": false
+    }
+  ],
+  "sound_type": {
+    "break_sound": "spicedcider:sound.brick_variant.break",
+    "place_sound": "spicedcider:sound.brick_variant.place",
+    "hit_sound": "spicedcider:sound.brick_variant.hit",
+    "fall_sound": "spicedcider:sound.brick_variant.fall",
+    "step_sound": "spicedcider:sound.brick_variant.step",
+    "volume": 1
+  }
+}

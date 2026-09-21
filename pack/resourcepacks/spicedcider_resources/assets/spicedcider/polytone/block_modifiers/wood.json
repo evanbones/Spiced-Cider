@@ -1,0 +1,30 @@
+{
+  "targets": [
+    "minecraft:ladder",
+    {
+      "id": "quark:birch_ladder",
+      "required": false
+    },
+    {
+      "id": "quark:acacia_ladder",
+      "required": false
+    },
+    {
+      "id": "everycomp:q/ecologics/coconut_ladder",
+      "required": false
+    },
+    {
+      "id": "environmental:wisteria_ladder",
+      "required": false
+    },
+    {
+      "id": "autumnity:maple_ladder",
+      "required": false
+    },
+    {
+      "id": "windswept:chestnut_ladder",
+      "required": false
+    }
+  ],
+  "sound_type": "wood"
+}

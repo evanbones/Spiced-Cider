@@ -7,6 +7,10 @@ public final class ClutterNoMoreReloadState {
     private ClutterNoMoreReloadState() {
     }
 
+    public static void reset() {
+        missedTextures = false;
+    }
+
     public static void markMissedTextures() {
         missedTextures = true;
     }

@@ -1,0 +1,122 @@
+{
+  "targets": [
+    "minecraft:target",
+    "minecraft:hay_block",
+    "minecraft:dead_bush",
+    "minecraft:glow_lichen",
+    "minecraft:tripwire",
+    {
+      "id": "farmersdelight:rice_bale",
+      "required": false
+    },
+    {
+      "id": "farmersdelight:straw_bale",
+      "required": false
+    },
+    {
+      "id": "farmersdelight:canvas_rug",
+      "required": false
+    },
+    {
+      "id": "farmersdelight:sandy_shrub",
+      "required": false
+    },
+    {
+      "id": "farmersdelight:tatami",
+      "required": false
+    },
+    {
+      "id": "farmersdelight:full_tatami_mat",
+      "required": false
+    },
+    {
+      "id": "farmersdelight:half_tatami_mat",
+      "required": false
+    },
+    {
+      "id": "supplementaries:flax_block",
+      "required": false
+    },
+    {
+      "id": "incubation:hay_nest",
+      "required": false
+    },
+    {
+      "id": "incubation:twig_nest",
+      "required": false
+    },
+    {
+      "id": "quark:cut_vine",
+      "required": false
+    },
+    {
+      "id": "farmersrespite:wither_roots_plant",
+      "required": false
+    },
+    {
+      "id": "farmersrespite:wither_roots",
+      "required": false
+    },
+    {
+      "id": "neapolitan:vanilla_pod_block",
+      "required": false
+    },
+    {
+      "id": "neapolitan:dried_vanilla_pod_block",
+      "required": false
+    },
+    {
+      "id": "environmental:tall_dead_bush",
+      "required": false
+    },
+    {
+      "id": "environmental:grass_thatch",
+      "required": false
+    },
+    {
+      "id": "environmental:grass_thatch_slab",
+      "required": false
+    },
+    {
+      "id": "environmental:grass_thatch_stairs",
+      "required": false
+    },
+    {
+      "id": "environmental:cattail_thatch",
+      "required": false
+    },
+    {
+      "id": "environmental:cattail_thatch_slab",
+      "required": false
+    },
+    {
+      "id": "environmental:cattail_thatch_stairs",
+      "required": false
+    },
+    {
+      "id": "environmental:duckweed_thatch",
+      "required": false
+    },
+    {
+      "id": "environmental:duckweed_thatch_slab",
+      "required": false
+    },
+    {
+      "id": "environmental:duckweed_thatch_stairs",
+      "required": false
+    },
+    {
+      "id": "upgrade_aquatic:beachgrass_thatch",
+      "required": false
+    },
+    {
+      "id": "upgrade_aquatic:beachgrass_thatch_slab",
+      "required": false
+    },
+    {
+      "id": "upgrade_aquatic:beachgrass_thatch_stairs",
+      "required": false
+    }
+  ],
+  "sound_type": "vine"
+}

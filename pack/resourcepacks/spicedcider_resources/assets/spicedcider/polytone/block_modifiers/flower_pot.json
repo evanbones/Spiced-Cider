@@ -1,0 +1,514 @@
+{
+  "targets": [
+    "minecraft:flower_pot",
+    "minecraft:potted_poppy",
+    "minecraft:potted_blue_orchid",
+    "minecraft:potted_allium",
+    "minecraft:potted_azure_bluet",
+    "minecraft:potted_red_tulip",
+    "minecraft:potted_orange_tulip",
+    "minecraft:potted_white_tulip",
+    "minecraft:potted_pink_tulip",
+    "minecraft:potted_oxeye_daisy",
+    "minecraft:potted_dandelion",
+    "minecraft:potted_oak_sapling",
+    "minecraft:potted_spruce_sapling",
+    "minecraft:potted_birch_sapling",
+    "minecraft:potted_jungle_sapling",
+    "minecraft:potted_acacia_sapling",
+    "minecraft:potted_dark_oak_sapling",
+    "minecraft:potted_red_mushroom",
+    "minecraft:potted_brown_mushroom",
+    "minecraft:potted_dead_bush",
+    "minecraft:potted_fern",
+    "minecraft:potted_cactus",
+    "minecraft:potted_cornflower",
+    "minecraft:potted_lily_of_the_valley",
+    "minecraft:potted_wither_rose",
+    "minecraft:potted_bamboo",
+    "minecraft:potted_crimson_fungus",
+    "minecraft:potted_warped_fungus",
+    "minecraft:potted_crimson_roots",
+    "minecraft:potted_warped_roots",
+    "minecraft:potted_azalea_bush",
+    "minecraft:potted_flowering_azalea_bush",
+    "minecraft:potted_mangrove_propagule",
+    {
+      "id": "windswept:potted_red_rose",
+      "required": false
+    },
+    {
+      "id": "windswept:potted_pink_rose",
+      "required": false
+    },
+    {
+      "id": "windswept:potted_blue_rose",
+      "required": false
+    },
+    {
+      "id": "windswept:potted_white_rose",
+      "required": false
+    },
+    {
+      "id": "windswept:potted_yellow_rose",
+      "required": false
+    },
+    {
+      "id": "windswept:potted_foxglove",
+      "required": false
+    },
+    {
+      "id": "windswept:potted_bluebells",
+      "required": false
+    },
+    {
+      "id": "windswept:potted_nightshade",
+      "required": false
+    },
+    {
+      "id": "windswept:potted_holly_sapling",
+      "required": false
+    },
+    {
+      "id": "windswept:potted_chestnut_sapling",
+      "required": false
+    },
+    {
+      "id": "windswept:potted_snowy_sprouts",
+      "required": false
+    },
+    {
+      "id": "farmersrespite:potted_tea_bush",
+      "required": false
+    },
+    {
+      "id": "farmersrespite:potted_coffee_bush",
+      "required": false
+    },
+    {
+      "id": "farmersrespite:potted_wild_tea_bush",
+      "required": false
+    },
+    {
+      "id": "farmersrespite:potted_wild_coffee_bush",
+      "required": false
+    },
+    {
+      "id": "ecologics:potted_coconut_seedling",
+      "required": false
+    },
+    {
+      "id": "ecologics:potted_walnut_sapling",
+      "required": false
+    },
+    {
+      "id": "ecologics:potted_azalea_flower",
+      "required": false
+    },
+    {
+      "id": "architects_palette:potted_twisted_sapling",
+      "required": false
+    },
+    {
+      "id": "twigs:potted_azalea_flowers",
+      "required": false
+    },
+    {
+      "id": "environmental:potted_willow_sapling",
+      "required": false
+    },
+    {
+      "id": "environmental:potted_pink_wisteria_sapling",
+      "required": false
+    },
+    {
+      "id": "environmental:potted_blue_wisteria_sapling",
+      "required": false
+    },
+    {
+      "id": "environmental:potted_purple_wisteria_sapling",
+      "required": false
+    },
+    {
+      "id": "environmental:potted_white_wisteria_sapling",
+      "required": false
+    },
+    {
+      "id": "environmental:potted_cherry_sapling",
+      "required": false
+    },
+    {
+      "id": "environmental:potted_cartwheel",
+      "required": false
+    },
+    {
+      "id": "environmental:potted_bluebell",
+      "required": false
+    },
+    {
+      "id": "environmental:potted_violet",
+      "required": false
+    },
+    {
+      "id": "environmental:potted_dianthus",
+      "required": false
+    },
+    {
+      "id": "environmental:potted_red_lotus_flower",
+      "required": false
+    },
+    {
+      "id": "environmental:potted_white_lotus_flower",
+      "required": false
+    },
+    {
+      "id": "environmental:potted_yellow_hibiscus",
+      "required": false
+    },
+    {
+      "id": "environmental:potted_orange_hibiscus",
+      "required": false
+    },
+    {
+      "id": "environmental:potted_red_hibiscus",
+      "required": false
+    },
+    {
+      "id": "environmental:potted_pink_hibiscus",
+      "required": false
+    },
+    {
+      "id": "environmental:potted_magenta_hibiscus",
+      "required": false
+    },
+    {
+      "id": "environmental:potted_purple_hibiscus",
+      "required": false
+    },
+    {
+      "id": "environmental:potted_bird_of_paradise",
+      "required": false
+    },
+    {
+      "id": "environmental:potted_pink_delphinium",
+      "required": false
+    },
+    {
+      "id": "environmental:potted_blue_delphinium",
+      "required": false
+    },
+    {
+      "id": "environmental:potted_purple_delphinium",
+      "required": false
+    },
+    {
+      "id": "environmental:potted_white_delphinium",
+      "required": false
+    },
+    {
+      "id": "environmental:potted_cattail",
+      "required": false
+    },
+    {
+      "id": "savage_and_ravage:potted_creeper_spores",
+      "required": false
+    },
+    {
+      "id": "upgrade_aquatic:potted_blue_pickerelweed",
+      "required": false
+    },
+    {
+      "id": "upgrade_aquatic:potted_purple_pickerelweed",
+      "required": false
+    },
+    {
+      "id": "upgrade_aquatic:potted_white_searocket",
+      "required": false
+    },
+    {
+      "id": "upgrade_aquatic:potted_pink_searocket",
+      "required": false
+    },
+    {
+      "id": "upgrade_aquatic:potted_river_sapling",
+      "required": false
+    },
+    {
+      "id": "endergetic:potted_poise_bush",
+      "required": false
+    },
+    {
+      "id": "endergetic:potted_tall_poise_bush",
+      "required": false
+    },
+    {
+      "id": "neapolitan:potted_vanilla_vine",
+      "required": false
+    },
+    {
+      "id": "neapolitan:potted_mint",
+      "required": false
+    },
+    {
+      "id": "neapolitan:potted_banana_frond",
+      "required": false
+    },
+    {
+      "id": "autumnity:potted_autumn_crocus",
+      "required": false
+    },
+    {
+      "id": "autumnity:potted_foul_berries",
+      "required": false
+    },
+    {
+      "id": "autumnity:potted_maple_sapling",
+      "required": false
+    },
+    {
+      "id": "autumnity:potted_yellow_maple_sapling",
+      "required": false
+    },
+    {
+      "id": "autumnity:potted_orange_maple_sapling",
+      "required": false
+    },
+    {
+      "id": "autumnity:potted_red_maple_sapling",
+      "required": false
+    },
+    {
+      "id": "buzzier_bees:potted_buttercup",
+      "required": false
+    },
+    {
+      "id": "buzzier_bees:potted_white_clover",
+      "required": false
+    },
+    {
+      "id": "buzzier_bees:potted_pink_clover",
+      "required": false
+    },
+    {
+      "id": "atmospheric:potted_rosewood_sapling",
+      "required": false
+    },
+    {
+      "id": "atmospheric:potted_morado_sapling",
+      "required": false
+    },
+    {
+      "id": "atmospheric:potted_yucca_sapling",
+      "required": false
+    },
+    {
+      "id": "atmospheric:potted_kousa_sapling",
+      "required": false
+    },
+    {
+      "id": "atmospheric:potted_aspen_sapling",
+      "required": false
+    },
+    {
+      "id": "atmospheric:potted_grimwood_sapling",
+      "required": false
+    },
+    {
+      "id": "atmospheric:potted_warm_monkey_brush",
+      "required": false
+    },
+    {
+      "id": "atmospheric:potted_hot_monkey_brush",
+      "required": false
+    },
+    {
+      "id": "atmospheric:potted_scalding_monkey_brush",
+      "required": false
+    },
+    {
+      "id": "atmospheric:potted_water_hyacinth",
+      "required": false
+    },
+    {
+      "id": "atmospheric:potted_yucca_flower",
+      "required": false
+    },
+    {
+      "id": "atmospheric:potted_barrel_cactus",
+      "required": false
+    },
+    {
+      "id": "atmospheric:potted_gilia",
+      "required": false
+    },
+    {
+      "id": "quark:potted_beetroot",
+      "required": false
+    },
+    {
+      "id": "quark:potted_berries",
+      "required": false
+    },
+    {
+      "id": "quark:potted_blue_blossom_sapling",
+      "required": false
+    },
+    {
+      "id": "quark:potted_carrot",
+      "required": false
+    },
+    {
+      "id": "quark:potted_chorus",
+      "required": false
+    },
+    {
+      "id": "quark:potted_cocoa_bean",
+      "required": false
+    },
+    {
+      "id": "quark:potted_grass",
+      "required": false
+    },
+    {
+      "id": "quark:potted_large_fern",
+      "required": false
+    },
+    {
+      "id": "quark:potted_lavender_blossom_sapling",
+      "required": false
+    },
+    {
+      "id": "quark:potted_lilac",
+      "required": false
+    },
+    {
+      "id": "quark:potted_melon",
+      "required": false
+    },
+    {
+      "id": "quark:potted_nether_sprouts",
+      "required": false
+    },
+    {
+      "id": "quark:potted_nether_wart",
+      "required": false
+    },
+    {
+      "id": "quark:potted_orange_blossom_sapling",
+      "required": false
+    },
+    {
+      "id": "quark:potted_peony",
+      "required": false
+    },
+    {
+      "id": "quark:potted_pink_blossom_sapling",
+      "required": false
+    },
+    {
+      "id": "quark:potted_potato",
+      "required": false
+    },
+    {
+      "id": "quark:potted_pumpkin",
+      "required": false
+    },
+    {
+      "id": "quark:potted_red_blossom_sapling",
+      "required": false
+    },
+    {
+      "id": "quark:potted_rose",
+      "required": false
+    },
+    {
+      "id": "quark:potted_sea_pickle",
+      "required": false
+    },
+    {
+      "id": "quark:potted_sugar_cane",
+      "required": false
+    },
+    {
+      "id": "quark:potted_sunflower",
+      "required": false
+    },
+    {
+      "id": "quark:potted_tall_grass",
+      "required": false
+    },
+    {
+      "id": "quark:potted_twisting_vines",
+      "required": false
+    },
+    {
+      "id": "quark:potted_vine",
+      "required": false
+    },
+    {
+      "id": "quark:potted_weeping_vines",
+      "required": false
+    },
+    {
+      "id": "quark:potted_wheat",
+      "required": false
+    },
+    {
+      "id": "quark:potted_yellow_blossom_sapling",
+      "required": false
+    },
+    {
+      "id": "quark:potted_ancient_sapling",
+      "required": false
+    },
+    {
+      "id": "quark:potted_cave_vines",
+      "required": false
+    },
+    {
+      "id": "quark:potted_chorus_twist",
+      "required": false
+    },
+    {
+      "id": "quark:potted_chorus_weeds",
+      "required": false
+    },
+    {
+      "id": "quark:potted_glow_lichen_growth",
+      "required": false
+    },
+    {
+      "id": "quark:potted_glow_shroom",
+      "required": false
+    },
+    {
+      "id": "supplementaries:potted_flax",
+      "required": false
+    },
+    {
+      "id": "supplementaries:hanging_flower_pot",
+      "required": false
+    },
+    {
+      "id": "mynethersdelight:potted_bullet_pepper",
+      "required": false
+    },
+    {
+      "id": "mynethersdelight:potted_powdery_cannon",
+      "required": false
+    },
+    {
+      "id": "culturaldelights:potted_avocado_sapling",
+      "required": false
+    }
+  ],
+  "sound_type": {
+    "break_sound": "spicedcider:sound.pot.place",
+    "place_sound": "spicedcider:sound.pot.place",
+    "hit_sound": "spicedcider:sound.pot.hit",
+    "fall_sound": "spicedcider:sound.pot.fall",
+    "step_sound": "spicedcider:sound.pot.step",
+    "pitch": 1.4,
+    "volume": 1
+  }
+}

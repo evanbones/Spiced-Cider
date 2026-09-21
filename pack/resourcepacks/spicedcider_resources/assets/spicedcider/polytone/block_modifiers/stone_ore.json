@@ -1,0 +1,37 @@
+{
+  "targets": [
+    "minecraft:coal_ore",
+    "minecraft:iron_ore",
+    "minecraft:copper_ore",
+    "minecraft:gold_ore",
+    "minecraft:redstone_ore",
+    "minecraft:lapis_ore",
+    "minecraft:diamond_ore",
+    "minecraft:emerald_ore",
+    {
+      "id": "oreganized:lead_ore",
+      "required": false
+    },
+    {
+      "id": "oreganized:silver_ore",
+      "required": false
+    },
+    {
+      "id": "create:zinc_ore",
+      "required": false
+    },
+    {
+      "id": "upgrade_aquatic:embedded_ammonite",
+      "required": false
+    }
+  ],
+  "sound_type": {
+    "break_sound": "spicedcider:sound.stoneore.break",
+    "place_sound": "minecraft:block.stone.place",
+    "hit_sound": "minecraft:block.stone.hit",
+    "fall_sound": "minecraft:block.stone.fall",
+    "step_sound": "spicedcider:sound.stoneore.step",
+    "pitch": 1,
+    "volume": 1
+  }
+}

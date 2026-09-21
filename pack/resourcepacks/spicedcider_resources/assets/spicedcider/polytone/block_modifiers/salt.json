@@ -1,0 +1,49 @@
+{
+  "targets": [
+    {
+      "id": "spelunkery:polished_rock_salt_wall",
+      "required": false
+    },
+    {
+      "id": "spelunkery:polished_rock_salt_stairs",
+      "required": false
+    },
+    {
+      "id": "spelunkery:polished_rock_salt_slab",
+      "required": false
+    },
+    {
+      "id": "spelunkery:polished_rock_salt",
+      "required": false
+    },
+    {
+      "id": "spelunkery:salt_lamp",
+      "required": false
+    },
+    {
+      "id": "spelunkery:rock_salt_wall",
+      "required": false
+    },
+    {
+      "id": "spelunkery:rock_salt_stairs",
+      "required": false
+    },
+    {
+      "id": "spelunkery:rock_salt_slab",
+      "required": false
+    },
+    {
+      "id": "spelunkery:rock_salt_block",
+      "required": false
+    }
+  ],
+  "sound_type": {
+    "break_sound": "minecraft:block.dripstone_block.break",
+    "place_sound": "minecraft:block.dripstone_block.place",
+    "hit_sound": "minecraft:block.dripstone_block.hit",
+    "fall_sound": "minecraft:block.dripstone_block.fall",
+    "step_sound": "minecraft:block.dripstone_block.step",
+    "pitch": 1.35,
+    "volume": 1
+  }
+}

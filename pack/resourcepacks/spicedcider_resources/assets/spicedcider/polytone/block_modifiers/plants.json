@@ -1,0 +1,77 @@
+{
+  "targets": [
+    "minecraft:grass",
+    "minecraft:tall_grass",
+    "minecraft:fern",
+    "minecraft:large_fern",
+    {
+      "id": "environmental:giant_tall_grass",
+      "required": false
+    },
+    {
+      "id": "upgrade_aquatic:beachgrass",
+      "required": false
+    },
+    {
+      "id": "upgrade_aquatic:tall_beachgrass",
+      "required": false
+    },
+    {
+      "id": "farmersdelight:wild_carrots",
+      "required": false
+    },
+    {
+      "id": "farmersdelight:wild_potatoes",
+      "required": false
+    },
+    {
+      "id": "farmersdelight:wild_beetroots",
+      "required": false
+    },
+    {
+      "id": "farmersdelight:wild_cabbages",
+      "required": false
+    },
+    {
+      "id": "farmersdelight:wild_tomatoes",
+      "required": false
+    },
+    {
+      "id": "farmersdelight:wild_onions",
+      "required": false
+    },
+    {
+      "id": "farmersdelight:wild_rice",
+      "required": false
+    },
+    {
+      "id": "supplementaries:wild_flax",
+      "required": false
+    },
+    {
+      "id": "culturaldelights:wild_corn",
+      "required": false
+    },
+    {
+      "id": "culturaldelights:wild_cucumbers",
+      "required": false
+    },
+    {
+      "id": "culturaldelights:wild_eggplants",
+      "required": false
+    },
+    {
+      "id": "farmersrespite:wild_tea_bush",
+      "required": false
+    },
+    {
+      "id": "spelunkery:tangle_roots",
+      "required": false
+    },
+    {
+      "id": "spelunkery:tangle_roots_plant",
+      "required": false
+    }
+  ],
+  "sound_type": "hanging_roots"
+}

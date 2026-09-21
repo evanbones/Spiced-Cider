@@ -1,0 +1,17 @@
+{
+  "targets": [
+    {
+      "id": "upgrade_aquatic:tooth_lantern",
+      "required": false
+    }
+  ],
+  "sound_type": {
+    "break_sound": "spicedcider:sound.glowstone.break",
+    "place_sound": "spicedcider:sound.glowstone.place",
+    "hit_sound": "minecraft:block.stone.hit",
+    "fall_sound": "minecraft:block.stone.fall",
+    "step_sound": "minecraft:block.stone.step",
+    "pitch": 1.5,
+    "volume": 1
+  }
+}

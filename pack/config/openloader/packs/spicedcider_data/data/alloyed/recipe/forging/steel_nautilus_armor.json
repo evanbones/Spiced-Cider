@@ -1,0 +1,25 @@
+{
+  "type": "modestmining:forging_shaped",
+  "key": {
+    "X": {
+      "tag": "c:ingots/steel"
+    },
+    "I": {
+      "item": "minecraft:iron_nautilus_armor"
+    }
+  },
+  "pattern": [
+    "X X",
+    " I ",
+    "X X"
+  ],
+  "result": {
+    "id": "alloyed:steel_nautilus_armor"
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "vanillabackport"
+    }
+  ]
+}

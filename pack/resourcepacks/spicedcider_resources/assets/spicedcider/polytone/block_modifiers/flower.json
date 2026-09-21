@@ -1,0 +1,71 @@
+{
+  "targets": [
+    "minecraft:azalea",
+    "minecraft:flowering_azalea",
+    "minecraft:sunflower",
+    "minecraft:lilac",
+    "minecraft:rose_bush",
+    "minecraft:peony",
+    {
+      "id": "windswept:red_rose_bush",
+      "required": false
+    },
+    {
+      "id": "windswept:pink_rose_bush",
+      "required": false
+    },
+    {
+      "id": "windswept:blue_rose_bush",
+      "required": false
+    },
+    {
+      "id": "windswept:white_rose_bush",
+      "required": false
+    },
+    {
+      "id": "windswept:yellow_rose_bush",
+      "required": false
+    },
+    {
+      "id": "windswept:wither_rose_bush",
+      "required": false
+    },
+    {
+      "id": "environmental:pink_delphinium",
+      "required": false
+    },
+    {
+      "id": "environmental:blue_delphinium",
+      "required": false
+    },
+    {
+      "id": "environmental:purple_delphinium",
+      "required": false
+    },
+    {
+      "id": "environmental:white_delphinium",
+      "required": false
+    },
+    {
+      "id": "environmental:bird_of_paradise",
+      "required": false
+    },
+    {
+      "id": "atmospheric:tall_yucca_flower",
+      "required": false
+    },
+    {
+      "id": "farmersrespite:tea_bush",
+      "required": false
+    }
+  ],
+  "sound_type": {
+    "break_sound": "minecraft:block.azalea.break",
+    "place_sound": "minecraft:block.azalea.place",
+    "hit_sound": "minecraft:block.azalea.hit",
+    "fall_sound": "minecraft:block.azalea.fall",
+    "step_sound": "minecraft:block.azalea.step",
+    "pitch": 0.9,
+    "volume": 1
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "targets": [
+    "minecraft:raw_copper_block",
+    "minecraft:raw_iron_block",
+    "minecraft:raw_gold_block",
+    "minecraft:coal_block",
+    {
+      "id": "supplementaries:flint_block",
+      "required": false
+    },
+    {
+      "id": "quark:charcoal_block",
+      "required": false
+    },
+    {
+      "id": "spelunkery:magnetite",
+      "required": false
+    },
+    {
+      "id": "oreganized:raw_lead_block",
+      "required": false
+    },
+    {
+      "id": "oreganized:raw_silver_block",
+      "required": false
+    },
+    {
+      "id": "create:raw_zinc_block",
+      "required": false
+    },
+    {
+      "id": "caverns_and_chasms:raw_silver_block",
+      "required": false
+    },
+    {
+      "id": "caverns_and_chasms:raw_tin_block",
+      "required": false
+    }
+  ],
+  "sound_type": "nether_gold_ore"
+}

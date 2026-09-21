@@ -41,3 +41,5 @@
 [compat]
 	#Restores vanilla parity for Sodium's Smooth Lighting corner blending, which stretches light further out than vanilla and causes flicker near moving dynamic light sources (e.g. LambDynamicLights). Requires Sodium.
 	sodiumLightingParityFix = true
+	#Remembers the received-chunk total in Voxy World Gen V2's debug overlay per world or server, instead of resetting it to zero every time you reconnect. Requires Voxy World Gen V2.
+	voxyWorldGenPersistStats = true

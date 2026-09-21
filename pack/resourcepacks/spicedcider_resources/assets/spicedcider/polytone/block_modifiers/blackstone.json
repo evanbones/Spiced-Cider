@@ -1,0 +1,123 @@
+{
+  "targets": [
+    "minecraft:grindstone",
+    "minecraft:blackstone_wall",
+    "minecraft:polished_blackstone_wall",
+    "minecraft:polished_blackstone_brick_wall",
+    "minecraft:blackstone",
+    "minecraft:blackstone_slab",
+    "minecraft:blackstone_stairs",
+    "minecraft:gilded_blackstone",
+    "minecraft:polished_blackstone",
+    "minecraft:polished_blackstone_slab",
+    "minecraft:polished_blackstone_stairs",
+    "minecraft:chiseled_polished_blackstone",
+    "minecraft:polished_blackstone_bricks",
+    "minecraft:polished_blackstone_brick_slab",
+    "minecraft:polished_blackstone_brick_stairs",
+    "minecraft:cracked_polished_blackstone_bricks",
+    "minecraft:polished_blackstone_button",
+    "minecraft:polished_blackstone_pressure_plate",
+    {
+      "id": "quark:blackstone_bricks",
+      "required": false
+    },
+    {
+      "id": "quark:blackstone_bricks_slab",
+      "required": false
+    },
+    {
+      "id": "quark:blackstone_bricks_stairs",
+      "required": false
+    },
+    {
+      "id": "quark:blackstone_bricks_wall",
+      "required": false
+    },
+    {
+      "id": "quark:blackstone_furnace",
+      "required": false
+    },
+    {
+      "id": "supplementaries:blackstone_tile",
+      "required": false
+    },
+    {
+      "id": "supplementaries:blackstone_tile_slab",
+      "required": false
+    },
+    {
+      "id": "supplementaries:blackstone_tile_wall",
+      "required": false
+    },
+    {
+      "id": "supplementaries:blackstone_tile_stairs",
+      "required": false
+    },
+    {
+      "id": "supplementaries:blackstone_lamp",
+      "required": false
+    },
+    {
+      "id": "twigs:blackstone_column",
+      "required": false
+    },
+    {
+      "id": "twigs:twisting_polished_blackstone_bricks",
+      "required": false
+    },
+    {
+      "id": "twigs:twisting_polished_blackstone_brick_stairs",
+      "required": false
+    },
+    {
+      "id": "twigs:twisting_polished_blackstone_brick_slab",
+      "required": false
+    },
+    {
+      "id": "twigs:twisting_polished_blackstone_brick_wall",
+      "required": false
+    },
+    {
+      "id": "twigs:weeping_polished_blackstone_bricks",
+      "required": false
+    },
+    {
+      "id": "twigs:weeping_polished_blackstone_brick_stairs",
+      "required": false
+    },
+    {
+      "id": "twigs:weeping_polished_blackstone_brick_slab",
+      "required": false
+    },
+    {
+      "id": "twigs:weeping_polished_blackstone_brick_wall",
+      "required": false
+    },
+    {
+      "id": "nethersdelight:blackstone_stove",
+      "required": false
+    },
+    {
+      "id": "nethersdelight:blackstone_blast_furnace",
+      "required": false
+    },
+    {
+      "id": "miningmaster:gem_forge",
+      "required": false
+    },
+    {
+      "id": "hnh:calcite_column",
+      "required": false
+    }
+  ],
+  "sound_type": {
+    "break_sound": "spicedcider:sound.blackstone.break",
+    "place_sound": "spicedcider:sound.blackstone.place",
+    "hit_sound": "spicedcider:sound.blackstone.hit",
+    "fall_sound": "spicedcider:sound.blackstone.fall",
+    "step_sound": "spicedcider:sound.blackstone.step",
+    "pitch": 1,
+    "volume": 1
+  }
+}

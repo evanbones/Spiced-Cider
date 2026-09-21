@@ -1,0 +1,18 @@
+{
+  "targets": [
+    "minecraft:cobweb",
+    {
+      "id": "farmersdelight:safety_net",
+      "required": false
+    }
+  ],
+  "sound_type": {
+    "break_sound": "spicedcider:sound.cobweb.break",
+    "place_sound": "spicedcider:sound.cobweb.place",
+    "hit_sound": "spicedcider:sound.cobweb.hit",
+    "fall_sound": "spicedcider:sound.cobweb.fall",
+    "step_sound": "spicedcider:sound.cobweb.step",
+    "pitch": 1,
+    "volume": 1
+  }
+}

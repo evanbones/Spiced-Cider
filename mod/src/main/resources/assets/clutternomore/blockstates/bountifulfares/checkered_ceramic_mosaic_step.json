@@ -1,0 +1,118 @@
+{
+  "variants": {
+    "facing=north,type=bottom,waterlogged=false": {
+      "uvlock": true,
+      "model": "clutternomore:block/bountifulfares/checkered_ceramic_mosaic_step"
+    },
+    "facing=north,type=bottom,waterlogged=true": {
+      "uvlock": true,
+      "model": "clutternomore:block/bountifulfares/checkered_ceramic_mosaic_step"
+    },
+    "facing=north,type=top,waterlogged=false": {
+      "uvlock": true,
+      "model": "clutternomore:block/bountifulfares/checkered_ceramic_mosaic_step_top"
+    },
+    "facing=north,type=top,waterlogged=true": {
+      "uvlock": true,
+      "model": "clutternomore:block/bountifulfares/checkered_ceramic_mosaic_step_top"
+    },
+    "facing=north,type=double,waterlogged=false": {
+      "uvlock": true,
+      "model": "clutternomore:block/bountifulfares/checkered_ceramic_mosaic_step_double"
+    },
+    "facing=north,type=double,waterlogged=true": {
+      "uvlock": true,
+      "model": "clutternomore:block/bountifulfares/checkered_ceramic_mosaic_step_double"
+    },
+    "facing=east,type=bottom,waterlogged=false": {
+      "uvlock": true,
+      "model": "clutternomore:block/bountifulfares/checkered_ceramic_mosaic_step",
+      "y": 90
+    },
+    "facing=east,type=bottom,waterlogged=true": {
+      "uvlock": true,
+      "model": "clutternomore:block/bountifulfares/checkered_ceramic_mosaic_step",
+      "y": 90
+    },
+    "facing=east,type=top,waterlogged=false": {
+      "uvlock": true,
+      "model": "clutternomore:block/bountifulfares/checkered_ceramic_mosaic_step_top",
+      "y": 90
+    },
+    "facing=east,type=top,waterlogged=true": {
+      "uvlock": true,
+      "model": "clutternomore:block/bountifulfares/checkered_ceramic_mosaic_step_top",
+      "y": 90
+    },
+    "facing=east,type=double,waterlogged=false": {
+      "uvlock": true,
+      "model": "clutternomore:block/bountifulfares/checkered_ceramic_mosaic_step_double",
+      "y": 90
+    },
+    "facing=east,type=double,waterlogged=true": {
+      "uvlock": true,
+      "model": "clutternomore:block/bountifulfares/checkered_ceramic_mosaic_step_double",
+      "y": 90
+    },
+    "facing=south,type=bottom,waterlogged=false": {
+      "uvlock": true,
+      "model": "clutternomore:block/bountifulfares/checkered_ceramic_mosaic_step",
+      "y": 180
+    },
+    "facing=south,type=bottom,waterlogged=true": {
+      "uvlock": true,
+      "model": "clutternomore:block/bountifulfares/checkered_ceramic_mosaic_step",
+      "y": 180
+    },
+    "facing=south,type=top,waterlogged=false": {
+      "uvlock": true,
+      "model": "clutternomore:block/bountifulfares/checkered_ceramic_mosaic_step_top",
+      "y": 180
+    },
+    "facing=south,type=top,waterlogged=true": {
+      "uvlock": true,
+      "model": "clutternomore:block/bountifulfares/checkered_ceramic_mosaic_step_top",
+      "y": 180
+    },
+    "facing=south,type=double,waterlogged=false": {
+      "uvlock": true,
+      "model": "clutternomore:block/bountifulfares/checkered_ceramic_mosaic_step_double",
+      "y": 180
+    },
+    "facing=south,type=double,waterlogged=true": {
+      "uvlock": true,
+      "model": "clutternomore:block/bountifulfares/checkered_ceramic_mosaic_step_double",
+      "y": 180
+    },
+    "facing=west,type=bottom,waterlogged=false": {
+      "uvlock": true,
+      "model": "clutternomore:block/bountifulfares/checkered_ceramic_mosaic_step",
+      "y": 270
+    },
+    "facing=west,type=bottom,waterlogged=true": {
+      "uvlock": true,
+      "model": "clutternomore:block/bountifulfares/checkered_ceramic_mosaic_step",
+      "y": 270
+    },
+    "facing=west,type=top,waterlogged=false": {
+      "uvlock": true,
+      "model": "clutternomore:block/bountifulfares/checkered_ceramic_mosaic_step_top",
+      "y": 270
+    },
+    "facing=west,type=top,waterlogged=true": {
+      "uvlock": true,
+      "model": "clutternomore:block/bountifulfares/checkered_ceramic_mosaic_step_top",
+      "y": 270
+    },
+    "facing=west,type=double,waterlogged=false": {
+      "uvlock": true,
+      "model": "clutternomore:block/bountifulfares/checkered_ceramic_mosaic_step_double",
+      "y": 270
+    },
+    "facing=west,type=double,waterlogged=true": {
+      "uvlock": true,
+      "model": "clutternomore:block/bountifulfares/checkered_ceramic_mosaic_step_double",
+      "y": 270
+    }
+  }
+}

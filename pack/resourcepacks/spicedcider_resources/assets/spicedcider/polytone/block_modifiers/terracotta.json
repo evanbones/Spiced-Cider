@@ -1,0 +1,46 @@
+{
+  "targets": [
+    "minecraft:terracotta",
+    "minecraft:white_terracotta",
+    "minecraft:orange_terracotta",
+    "minecraft:magenta_terracotta",
+    "minecraft:light_blue_terracotta",
+    "minecraft:yellow_terracotta",
+    "minecraft:lime_terracotta",
+    "minecraft:pink_terracotta",
+    "minecraft:gray_terracotta",
+    "minecraft:light_gray_terracotta",
+    "minecraft:cyan_terracotta",
+    "minecraft:purple_terracotta",
+    "minecraft:blue_terracotta",
+    "minecraft:brown_terracotta",
+    "minecraft:green_terracotta",
+    "minecraft:red_terracotta",
+    "minecraft:black_terracotta",
+    {
+      "id": "clayworks:terracotta_stairs",
+      "required": false
+    },
+    {
+      "id": "clayworks:terracotta_slab",
+      "required": false
+    },
+    {
+      "id": "clayworks:terracotta_wall",
+      "required": false
+    },
+    {
+      "id": "twigs:packed_silt",
+      "required": false
+    }
+  ],
+  "sound_type": {
+    "break_sound": "minecraft:block.calcite.break",
+    "place_sound": "minecraft:block.calcite.place",
+    "hit_sound": "minecraft:block.calcite.hit",
+    "step_sound": "minecraft:block.calcite.step",
+    "fall_sound": "minecraft:block.calcite.fall",
+    "pitch": 0.6,
+    "volume": 1.0
+  }
+}

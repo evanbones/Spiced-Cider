@@ -1,0 +1,56 @@
+{
+  "targets": [
+    "minecraft:prismarine_slab",
+    "minecraft:prismarine_brick_slab",
+    "minecraft:dark_prismarine_slab",
+    "minecraft:prismarine_wall",
+    "minecraft:prismarine",
+    "minecraft:prismarine_bricks",
+    "minecraft:dark_prismarine",
+    "minecraft:prismarine_stairs",
+    "minecraft:prismarine_brick_stairs",
+    "minecraft:dark_prismarine_stairs",
+    {
+      "id": "upgrade_aquatic:prismarine_rod_bundle",
+      "required": false
+    },
+    {
+      "id": "upgrade_aquatic:luminous_prismarine",
+      "required": false
+    },
+    {
+      "id": "upgrade_aquatic:luminous_prismarine_stairs",
+      "required": false
+    },
+    {
+      "id": "upgrade_aquatic:luminous_prismarine_slab",
+      "required": false
+    },
+    {
+      "id": "supplementaries:prismarine_rod",
+      "required": false
+    },
+    {
+      "id": "quark:prismarine_chest",
+      "required": false
+    },
+    {
+      "id": "quark:prismarine_trapped_chest",
+      "required": false
+    },
+    "minecraft:conduit",
+    {
+      "id": "architects_palette:ender_pearl_block",
+      "required": false
+    }
+  ],
+  "sound_type": {
+    "break_sound": "spicedcider:sound.prismarine.break",
+    "place_sound": "spicedcider:sound.prismarine.place",
+    "hit_sound": "spicedcider:sound.prismarine.hit",
+    "fall_sound": "spicedcider:sound.prismarine.fall",
+    "step_sound": "spicedcider:sound.prismarine.step",
+    "volume": 1,
+    "pitch": 1.25
+  }
+}

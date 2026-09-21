@@ -1,0 +1,465 @@
+{
+  "targets": [
+    "minecraft:crimson_planks",
+    "minecraft:crimson_slab",
+    "minecraft:crimson_stairs",
+    "minecraft:crimson_fence",
+    "minecraft:crimson_sign",
+    "minecraft:crimson_button",
+    "minecraft:crimson_pressure_plate",
+    "minecraft:crimson_door",
+    "minecraft:crimson_trapdoor",
+    "minecraft:crimson_fence_gate",
+    {
+      "id": "quark:crimson_ladder",
+      "required": false
+    },
+    {
+      "id": "supplementaries:sign_post_crimson",
+      "required": false
+    },
+    {
+      "id": "architects_palette:crimson_boards",
+      "required": false
+    },
+    {
+      "id": "architects_palette:crimson_board_slab",
+      "required": false
+    },
+    {
+      "id": "architects_palette:crimson_board_stairs",
+      "required": false
+    },
+    {
+      "id": "architects_palette:crimson_board_wall",
+      "required": false
+    },
+    {
+      "id": "architects_palette:crimson_railing",
+      "required": false
+    },
+    {
+      "id": "farmersdelight:crimson_cabinet",
+      "required": false
+    },
+    {
+      "id": "another_furniture:crimson_chair",
+      "required": false
+    },
+    {
+      "id": "another_furniture:crimson_shelf",
+      "required": false
+    },
+    {
+      "id": "another_furniture:crimson_table",
+      "required": false
+    },
+    {
+      "id": "another_furniture:crimson_bench",
+      "required": false
+    },
+    {
+      "id": "another_furniture:crimson_drawer",
+      "required": false
+    },
+    {
+      "id": "another_furniture:crimson_shutter",
+      "required": false
+    },
+    {
+      "id": "woodworks:crimson_boards",
+      "required": false
+    },
+    {
+      "id": "woodworks:crimson_beehive",
+      "required": false
+    },
+    {
+      "id": "woodworks:crimson_chest",
+      "required": false
+    },
+    {
+      "id": "woodworks:crimson_trapped_chest",
+      "required": false
+    },
+    "minecraft:warped_planks",
+    "minecraft:warped_slab",
+    "minecraft:warped_stairs",
+    "minecraft:warped_fence",
+    "minecraft:warped_sign",
+    "minecraft:warped_button",
+    "minecraft:warped_pressure_plate",
+    "minecraft:warped_door",
+    "minecraft:warped_trapdoor",
+    "minecraft:warped_fence_gate",
+    {
+      "id": "quark:warped_ladder",
+      "required": false
+    },
+    {
+      "id": "supplementaries:sign_post_warped",
+      "required": false
+    },
+    {
+      "id": "architects_palette:warped_boards",
+      "required": false
+    },
+    {
+      "id": "architects_palette:warped_board_slab",
+      "required": false
+    },
+    {
+      "id": "architects_palette:warped_board_stairs",
+      "required": false
+    },
+    {
+      "id": "architects_palette:warped_board_wall",
+      "required": false
+    },
+    {
+      "id": "architects_palette:warped_railing",
+      "required": false
+    },
+    {
+      "id": "farmersdelight:warped_cabinet",
+      "required": false
+    },
+    {
+      "id": "another_furniture:warped_chair",
+      "required": false
+    },
+    {
+      "id": "another_furniture:warped_shelf",
+      "required": false
+    },
+    {
+      "id": "another_furniture:warped_table",
+      "required": false
+    },
+    {
+      "id": "another_furniture:warped_bench",
+      "required": false
+    },
+    {
+      "id": "another_furniture:warped_drawer",
+      "required": false
+    },
+    {
+      "id": "another_furniture:warped_shutter",
+      "required": false
+    },
+    {
+      "id": "woodworks:warped_boards",
+      "required": false
+    },
+    {
+      "id": "woodworks:warped_beehive",
+      "required": false
+    },
+    {
+      "id": "woodworks:warped_chest",
+      "required": false
+    },
+    {
+      "id": "woodworks:warped_trapped_chest",
+      "required": false
+    },
+    {
+      "id": "supplementaries:architects_palette/sign_post_twisted",
+      "required": false
+    },
+    {
+      "id": "architects_palette:twisted_planks",
+      "required": false
+    },
+    {
+      "id": "architects_palette:twisted_slab",
+      "required": false
+    },
+    {
+      "id": "architects_palette:twisted_stairs",
+      "required": false
+    },
+    {
+      "id": "architects_palette:twisted_boards",
+      "required": false
+    },
+    {
+      "id": "architects_palette:twisted_board_slab",
+      "required": false
+    },
+    {
+      "id": "architects_palette:twisted_board_stairs",
+      "required": false
+    },
+    {
+      "id": "architects_palette:twisted_board_wall",
+      "required": false
+    },
+    {
+      "id": "architects_palette:twisted_fence",
+      "required": false
+    },
+    {
+      "id": "architects_palette:twisted_railing",
+      "required": false
+    },
+    {
+      "id": "architects_palette:twisted_fence_gate",
+      "required": false
+    },
+    {
+      "id": "architects_palette:twisted_door",
+      "required": false
+    },
+    {
+      "id": "architects_palette:twisted_trapdoor",
+      "required": false
+    },
+    {
+      "id": "architects_palette:twisted_button",
+      "required": false
+    },
+    {
+      "id": "architects_palette:twisted_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "everycomp:abnww/architects_palette/twisted_beehive",
+      "required": false
+    },
+    {
+      "id": "everycomp:af/architects_palette/twisted_chair",
+      "required": false
+    },
+    {
+      "id": "everycomp:af/architects_palette/twisted_table",
+      "required": false
+    },
+    {
+      "id": "everycomp:af/architects_palette/twisted_shelf",
+      "required": false
+    },
+    {
+      "id": "everycomp:af/architects_palette/twisted_drawer",
+      "required": false
+    },
+    {
+      "id": "everycomp:af/architects_palette/twisted_bench",
+      "required": false
+    },
+    {
+      "id": "everycomp:fd/architects_palette/twisted_cabinet",
+      "required": false
+    },
+    {
+      "id": "everycomp:q/architects_palette/twisted_post",
+      "required": false
+    },
+    {
+      "id": "everycomp:q/architects_palette/stripped_twisted_post",
+      "required": false
+    },
+    {
+      "id": "everycomp:q/architects_palette/twisted_ladder",
+      "required": false
+    },
+    {
+      "id": "everycomp:q/architects_palette/twisted_chest",
+      "required": false
+    },
+    {
+      "id": "everycomp:q/architects_palette/twisted_hedge",
+      "required": false
+    },
+    {
+      "id": "everycomp:af/architects_palette/twisted_shutter",
+      "required": false
+    },
+    {
+      "id": "everycomp:q/architects_palette/twisted_trapped_chest",
+      "required": false
+    },
+    {
+      "id": "everycomp:abnww/architects_palette/twisted_boards",
+      "required": false
+    },
+    {
+      "id": "modestmining:crimson_boards",
+      "required": false
+    },
+    {
+      "id": "modestmining:crimson_board_slab",
+      "required": false
+    },
+    {
+      "id": "modestmining:crimson_board_stairs",
+      "required": false
+    },
+    {
+      "id": "modestmining:crimson_board_wall",
+      "required": false
+    },
+    {
+      "id": "modestmining:warped_boards",
+      "required": false
+    },
+    {
+      "id": "modestmining:warped_board_slab",
+      "required": false
+    },
+    {
+      "id": "modestmining:warped_board_stairs",
+      "required": false
+    },
+    {
+      "id": "modestmining:warped_board_wall",
+      "required": false
+    },
+    {
+      "id": "everycomp:mm/upgrade_aquatic/river_boards",
+      "required": false
+    },
+    {
+      "id": "everycomp:mm/upgrade_aquatic/river_board_slab",
+      "required": false
+    },
+    {
+      "id": "everycomp:mm/upgrade_aquatic/river_board_stairs",
+      "required": false
+    },
+    {
+      "id": "everycomp:mm/upgrade_aquatic/river_board_wall",
+      "required": false
+    },
+    {
+      "id": "modestmining:crimson_pillar",
+      "required": false
+    },
+    {
+      "id": "modestmining:warped_pillar",
+      "required": false
+    },
+    {
+      "id": "everycomp:mm/architects_palette/twisted_pillar",
+      "required": false
+    },
+    {
+      "id": "everycomp:mm/architects_palette/carved_twisted_planks",
+      "required": false
+    },
+    {
+      "id": "modestmasonry:warped_carved_plank_wall",
+      "required": false
+    },
+    {
+      "id": "modestmasonry:warped_carved_plank_stairs",
+      "required": false
+    },
+    {
+      "id": "modestmasonry:warped_carved_plank_slab",
+      "required": false
+    },
+    {
+      "id": "modestmasonry:carved_warped_planks",
+      "required": false
+    },
+    {
+      "id": "modestmasonry:crimson_carved_plank_wall",
+      "required": false
+    },
+    {
+      "id": "modestmasonry:crimson_carved_plank_stairs",
+      "required": false
+    },
+    {
+      "id": "modestmasonry:crimson_carved_plank_slab",
+      "required": false
+    },
+    {
+      "id": "modestmasonry:carved_crimson_planks",
+      "required": false
+    },
+    {
+      "id": "everycomp:hnh/architects_palette/twisted_trim",
+      "required": false
+    },
+    {
+      "id": "hnh:warped_trim",
+      "required": false
+    },
+    {
+      "id": "hnh:crimson_trim",
+      "required": false
+    },
+    {
+      "id": "everycomp:mm/architects_palette/twisted_tile_wall",
+      "required": false
+    },
+    {
+      "id": "everycomp:mm/architects_palette/twisted_tile_slab",
+      "required": false
+    },
+    {
+      "id": "everycomp:mm/architects_palette/twisted_tile_stairs",
+      "required": false
+    },
+    {
+      "id": "everycomp:mm/architects_palette/twisted_tiles",
+      "required": false
+    },
+    {
+      "id": "modestmasonry:warped_tile_wall",
+      "required": false
+    },
+    {
+      "id": "modestmasonry:warped_tile_stairs",
+      "required": false
+    },
+    {
+      "id": "modestmasonry:warped_tile_slab",
+      "required": false
+    },
+    {
+      "id": "modestmasonry:warped_tiles",
+      "required": false
+    },
+    {
+      "id": "modestmasonry:crimson_tile_wall",
+      "required": false
+    },
+    {
+      "id": "modestmasonry:crimson_tile_stairs",
+      "required": false
+    },
+    {
+      "id": "modestmasonry:crimson_tile_slab",
+      "required": false
+    },
+    {
+      "id": "modestmasonry:crimson_tiles",
+      "required": false
+    },
+    {
+      "id": "everycomp:mm/architects_palette/twisted_carved_plank_wall",
+      "required": false
+    },
+    {
+      "id": "everycomp:mm/architects_palette/twisted_carved_plank_slab",
+      "required": false
+    },
+    {
+      "id": "everycomp:mm/architects_palette/twisted_carved_plank_stairs",
+      "required": false
+    }
+  ],
+  "sound_type": {
+    "break_sound": "spicedcider:sound.netherwood.break",
+    "place_sound": "spicedcider:sound.netherwood.place",
+    "hit_sound": "spicedcider:sound.netherwood.hit",
+    "fall_sound": "spicedcider:sound.netherwood.fall",
+    "step_sound": "spicedcider:sound.netherwood.step",
+    "pitch": 0.925,
+    "volume": 1
+  }
+}

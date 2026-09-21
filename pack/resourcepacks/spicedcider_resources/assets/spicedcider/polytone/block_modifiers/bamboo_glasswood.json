@@ -1,0 +1,29 @@
+{
+  "targets": [
+    {
+      "id": "everycomp:c/quark/bamboo_window",
+      "required": false
+    },
+    {
+      "id": "everycomp:c/quark/bamboo_window_pane",
+      "required": false
+    },
+    {
+      "id": "everycomp:c/mynethersdelight/powdery_window",
+      "required": false
+    },
+    {
+      "id": "everycomp:c/mynethersdelight/powdery_window_pane",
+      "required": false
+    }
+  ],
+  "sound_type": {
+    "break_sound": "spicedcider:sound.bambooglasswood.break",
+    "place_sound": "spicedcider:sound.bambooglasswood.place",
+    "hit_sound": "spicedcider:sound.bambooglasswood.hit",
+    "fall_sound": "spicedcider:sound.bambooglasswood.fall",
+    "step_sound": "spicedcider:sound.bambooglasswood.step",
+    "pitch": 1,
+    "volume": 1
+  }
+}

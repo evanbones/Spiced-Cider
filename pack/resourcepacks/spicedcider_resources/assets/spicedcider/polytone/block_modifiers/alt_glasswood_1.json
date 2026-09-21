@@ -1,0 +1,61 @@
+{
+  "targets": [
+    {
+      "id": "create:mangrove_window",
+      "required": false
+    },
+    {
+      "id": "create:jungle_window",
+      "required": false
+    },
+    {
+      "id": "everycomp:c/atmospheric/rosewood_window",
+      "required": false
+    },
+    {
+      "id": "everycomp:c/atmospheric/yucca_window",
+      "required": false
+    },
+    {
+      "id": "everycomp:c/environmental/willow_window",
+      "required": false
+    },
+    {
+      "id": "everycomp:c/ecologics/azalea_window",
+      "required": false
+    },
+    {
+      "id": "create:mangrove_window_pane",
+      "required": false
+    },
+    {
+      "id": "create:jungle_window_pane",
+      "required": false
+    },
+    {
+      "id": "everycomp:c/atmospheric/rosewood_window_pane",
+      "required": false
+    },
+    {
+      "id": "everycomp:c/atmospheric/yucca_window_pane",
+      "required": false
+    },
+    {
+      "id": "everycomp:c/environmental/willow_window_pane",
+      "required": false
+    },
+    {
+      "id": "everycomp:c/ecologics/azalea_window_pane",
+      "required": false
+    }
+  ],
+  "sound_type": {
+    "break_sound": "spicedcider:sound.altglasswood1.break",
+    "place_sound": "spicedcider:sound.altglasswood1.place",
+    "hit_sound": "spicedcider:sound.altglasswood1.hit",
+    "fall_sound": "spicedcider:sound.altglasswood1.fall",
+    "step_sound": "spicedcider:sound.altglasswood1.step",
+    "pitch": 1,
+    "volume": 1
+  }
+}

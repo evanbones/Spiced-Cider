@@ -56,7 +56,7 @@
 	#─────────────────────────────────────────────────────────────────────────
 	# The position of the body temperature icon relative to default
 	# ⌄ 
-	"Body Temperature Icon Offset" = [0, 0]
+	"Body Temperature Icon Offset" = [0, 8]
 	#─────────────────────────────────────────────────────────────────────────
 	# Enables the body temperature icon above the hotbar
 	# ⌄ 
@@ -64,7 +64,7 @@
 	#─────────────────────────────────────────────────────────────────────────
 	# Moves the body temperature icon to make way for the advanced readout when a thermometer is equipped
 	# ⌄ 
-	"Move Body Icon For Advanced Info" = true
+	"Move Body Icon For Advanced Info" = false
 	#─────────────────────────────────────────────────────────────────────────
 	# The position of the body temperature readout relative to default
 	# ⌄ 
@@ -72,15 +72,15 @@
 	#─────────────────────────────────────────────────────────────────────────
 	# Enables the body temperature readout above the hotbar
 	# ⌄ 
-	"Show Body Temperature Readout" = true
+	"Show Body Temperature Readout" = false
 	#─────────────────────────────────────────────────────────────────────────
 	# The position of the world temperature gauge relative to default
 	# ⌄ 
-	"World Temperature UI Offset" = [0, 0]
+	"World Temperature UI Offset" = [0, -2]
 	#─────────────────────────────────────────────────────────────────────────
 	# Enables the world temperature gauge next to the hotbar
 	# ⌄ 
-	"Show World Temperature Gauge" = true
+	"Show World Temperature Gauge" = false
 	#─────────────────────────────────────────────────────────────────────────
 	# The position of the food effects panel relative to default
 	# ⌄ 
@@ -169,7 +169,7 @@
 	#─────────────────────────────────────────────────────────────────────────
 	# The position (offset) of the config button on the screen
 	# ⌄ 
-	"Config Button Position" = [2, 0]
+	"Config Button Position" = [-26, 16]
 	#─────────────────────────────────────────────────────────────────────────
 	# Warns the player about a bug that clears armor insulation when in creative mode
 	# ⌄ 

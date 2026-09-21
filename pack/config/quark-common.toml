@@ -539,7 +539,7 @@
 	"Snow Golem Player Heads" = true
 	"Utility Recipes" = true
 	"Vexes Die With Their Masters" = true
-	"Villagers Follow Emeralds" = true
+	"Villagers Follow Emeralds" = false
 	"Zombie Villagers On Normal" = true
 
 	[tweaks.automatic_recipe_unlock]
@@ -1205,7 +1205,7 @@
 				"Cluster Size" = 64
 				#Can be a positive integer or a fractional value betweeen 0 and 1. If integer, it spawns that many clusters. If fractional, it has that chance to spawn a single cluster. Set exactly zero to not spawn at all.
 				#Allowed values: [0,)
-				"Cluster Count" = 2.0
+				"Cluster Count" = 0.0
 
 			[world.new_stone_types.limestone.oregen_upper]
 				#Allowed values: [-64,320]
@@ -1216,7 +1216,7 @@
 				"Cluster Size" = 64
 				#Can be a positive integer or a fractional value betweeen 0 and 1. If integer, it spawns that many clusters. If fractional, it has that chance to spawn a single cluster. Set exactly zero to not spawn at all.
 				#Allowed values: [0,)
-				"Cluster Count" = 0.1666666
+				"Cluster Count" = 0.0
 
 			[world.new_stone_types.jasper.dimensions]
 				"Is Blacklist" = false
@@ -1231,7 +1231,7 @@
 				"Cluster Size" = 64
 				#Can be a positive integer or a fractional value betweeen 0 and 1. If integer, it spawns that many clusters. If fractional, it has that chance to spawn a single cluster. Set exactly zero to not spawn at all.
 				#Allowed values: [0,)
-				"Cluster Count" = 2.0
+				"Cluster Count" = 0.0
 
 			[world.new_stone_types.jasper.oregen_upper]
 				#Allowed values: [-64,320]
@@ -1242,7 +1242,7 @@
 				"Cluster Size" = 64
 				#Can be a positive integer or a fractional value betweeen 0 and 1. If integer, it spawns that many clusters. If fractional, it has that chance to spawn a single cluster. Set exactly zero to not spawn at all.
 				#Allowed values: [0,)
-				"Cluster Count" = 0.1666666
+				"Cluster Count" = 0.0
 
 			[world.new_stone_types.shale.dimensions]
 				"Is Blacklist" = false
@@ -1257,7 +1257,7 @@
 				"Cluster Size" = 64
 				#Can be a positive integer or a fractional value betweeen 0 and 1. If integer, it spawns that many clusters. If fractional, it has that chance to spawn a single cluster. Set exactly zero to not spawn at all.
 				#Allowed values: [0,)
-				"Cluster Count" = 2.0
+				"Cluster Count" = 0.0
 
 			[world.new_stone_types.shale.oregen_upper]
 				#Allowed values: [-64,320]
@@ -1268,7 +1268,7 @@
 				"Cluster Size" = 64
 				#Can be a positive integer or a fractional value betweeen 0 and 1. If integer, it spawns that many clusters. If fractional, it has that chance to spawn a single cluster. Set exactly zero to not spawn at all.
 				#Allowed values: [0,)
-				"Cluster Count" = 0.1666666
+				"Cluster Count" = 0.0
 
 			[world.new_stone_types.myalite.dimensions]
 				"Is Blacklist" = false
@@ -1283,7 +1283,7 @@
 				"Cluster Size" = 64
 				#Can be a positive integer or a fractional value betweeen 0 and 1. If integer, it spawns that many clusters. If fractional, it has that chance to spawn a single cluster. Set exactly zero to not spawn at all.
 				#Allowed values: [0,)
-				"Cluster Count" = 2.0
+				"Cluster Count" = 0.0
 
 			[world.new_stone_types.myalite.oregen_upper]
 				#Allowed values: [-64,320]
@@ -1294,7 +1294,7 @@
 				"Cluster Size" = 64
 				#Can be a positive integer or a fractional value betweeen 0 and 1. If integer, it spawns that many clusters. If fractional, it has that chance to spawn a single cluster. Set exactly zero to not spawn at all.
 				#Allowed values: [0,)
-				"Cluster Count" = 0.1666666
+				"Cluster Count" = 0.0
 
 		[world.permafrost.generation_settings]
 			#Allowed values: [0,)

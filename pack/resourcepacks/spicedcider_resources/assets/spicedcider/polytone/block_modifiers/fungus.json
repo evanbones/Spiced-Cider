@@ -1,0 +1,31 @@
+{
+  "targets": [
+    "minecraft:brown_mushroom",
+    "minecraft:red_mushroom",
+    {
+      "id": "quark:glow_shroom",
+      "required": false
+    },
+    {
+      "id": "quark:glow_lichen_growth",
+      "required": false
+    },
+    {
+      "id": "architects_palette:twisted_sapling",
+      "required": false
+    },
+    {
+      "id": "farmersdelight:brown_mushroom_colony",
+      "required": false
+    },
+    {
+      "id": "farmersdelight:red_mushroom_colony",
+      "required": false
+    },
+    {
+      "id": "dolt_compat:glowshroom_colony",
+      "required": false
+    }
+  ],
+  "sound_type": "fungus"
+}

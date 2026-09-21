@@ -56,14 +56,14 @@
 		[types.wood_type.minecraft]
 			pale_oak = true
 
-		[types.wood_type.arts_and_crafts]
-			cork = false
-
 		[types.wood_type.architects_palette]
 			twisted = true
 
 		[types.wood_type.mynethersdelight]
 			powdery = true
+
+		[types.wood_type.infernalexp]
+			luminous = true
 
 		[types.leaves_type.quark]
 			ancient = false
@@ -136,9 +136,6 @@
 		[types.leaves_type.minecraft]
 			pale_oak = true
 
-		[types.leaves_type.arts_and_crafts]
-			cork = true
-
 		[types.leaves_type.architects_palette]
 			twisted = true
 
@@ -171,6 +168,9 @@
 
 		[types.lantern.architects_palette]
 			nether_brass_lantern = true
+
+		[types.lantern.infernalexp]
+			glowlight_lantern = true
 
 		[entries.wood_type.nomansland]
 			bookshelf = true

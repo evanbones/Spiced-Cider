@@ -1,0 +1,26 @@
+{
+  "targets": [
+    "minecraft:wet_sponge",
+    {
+      "id": "upgrade_aquatic:kelp_block",
+      "required": false
+    },
+    {
+      "id": "upgrade_aquatic:purple_pickerelweed_block",
+      "required": false
+    },
+    {
+      "id": "upgrade_aquatic:blue_pickerelweed_block",
+      "required": false
+    }
+  ],
+  "sound_type": {
+    "break_sound": "spicedcider:sound.wetsponge.break",
+    "place_sound": "spicedcider:sound.wetsponge.place",
+    "hit_sound": "spicedcider:sound.wetsponge.hit",
+    "fall_sound": "spicedcider:sound.wetsponge.fall",
+    "step_sound": "spicedcider:sound.wetsponge.step",
+    "pitch": 1,
+    "volume": 1
+  }
+}

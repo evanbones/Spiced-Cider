@@ -1,0 +1,35 @@
+{
+  "targets": [
+    "minecraft:repeater",
+    "minecraft:comparator",
+    {
+      "id": "quark:redstone_randomizer",
+      "required": false
+    },
+    {
+      "id": "create:pulse_repeater",
+      "required": false
+    },
+    {
+      "id": "create:pulse_extender",
+      "required": false
+    },
+    {
+      "id": "create:powered_latch",
+      "required": false
+    },
+    {
+      "id": "create:powered_toggle_latch",
+      "required": false
+    }
+  ],
+  "sound_type": {
+    "break_sound": "spicedcider:sound.iron.break",
+    "place_sound": "spicedcider:sound.iron.place",
+    "hit_sound": "spicedcider:sound.iron.hit",
+    "fall_sound": "spicedcider:sound.iron.fall",
+    "step_sound": "spicedcider:sound.iron.step",
+    "pitch": 1.35,
+    "volume": 1
+  }
+}

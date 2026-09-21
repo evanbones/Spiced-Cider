@@ -70,6 +70,8 @@
 	map_change_sound = false
 	#Automatically switches to the nearest slice when possible
 	automatic_slice_change = false
+	#Hides minimap when the F3 debug screen is open
+	hide_when_debug_screen_is_open = true
 
 [world_map]
 	#Adds a shear button to the atlas screen which allows you to cut maps
@@ -78,6 +80,7 @@
 	compass_icon = false
 	#Shows a clock icon on the map screen
 	clock_icon = false
+	#Draws a crosshair at the center of the world map view
 	crossair = false
 	#Use bigger book like texture for worldmap view. Makes the view a bit bigger. Recommended to ebe used with map scale 1 (you might want to lower lectern one too if buttons dont show)
 	alternative_texture = false
@@ -85,6 +88,7 @@
 	smooth_panning = true
 	#Makes zooming work smoothly instead of in 2 maps increments
 	smooth_zooming = true
+	#How fast scrolling zooms the world map in and out
 	# Default: 1.0
 	# Range: 0.0 ~ 10.0
 	zoom_scroll_speed = 1.0
@@ -116,6 +120,10 @@
 	compact_slices_indicator = false
 	#Allows minimap to follow player movement instead of only displaying current map
 	follow_player = true
+	#Show filter button on atlas screen, allowing you to filter map decoration by name
+	filter_button = true
+	#Sort bookmarks in atlas screen by distance from map center instead of just by id
+	sort_bookmarks = true
 
 [misc]
 	#Multiplier for all the Atlases sound float
@@ -127,12 +135,13 @@
 	in_hand_renderer = "NOT_LOCKED"
 
 [moonlight_integration]
-	#Enables moonlight compat, which allows to place map markers on map via a special pin button
+	#Enables custom map markers, which you can place on the map via a special pin button
 	enabled = true
 	#Allows tracking pins by pressing control, making them follow you on minimap
 	pin_tracking = true
 	#Show nearby mobs on minimap. Also requires matching server config
 	mob_radar = false
+	#How far around the player mobs are picked up by the radar
 	# Default: 64
 	# Range: 0 ~ 256
 	radar_radius = 64

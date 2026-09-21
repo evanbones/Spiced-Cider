@@ -1,0 +1,31 @@
+{
+  "targets": [
+    "minecraft:sponge",
+    "minecraft:dried_kelp_block",
+    {
+      "id": "quark:sugar_cane_block",
+      "required": false
+    },
+    {
+      "id": "atmospheric:aloe_bundle",
+      "required": false
+    },
+    {
+      "id": "upgrade_aquatic:boiled_purple_pickerelweed_block",
+      "required": false
+    },
+    {
+      "id": "upgrade_aquatic:boiled_blue_pickerelweed_block",
+      "required": false
+    }
+  ],
+  "sound_type": {
+    "break_sound": "spicedcider:sound.sponge.break",
+    "place_sound": "spicedcider:sound.sponge.place",
+    "hit_sound": "spicedcider:sound.sponge.hit",
+    "fall_sound": "spicedcider:sound.sponge.fall",
+    "step_sound": "spicedcider:sound.sponge.step",
+    "pitch": 1,
+    "volume": 1
+  }
+}

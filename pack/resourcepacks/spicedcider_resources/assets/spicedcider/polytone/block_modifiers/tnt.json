@@ -1,0 +1,26 @@
+{
+  "targets": [
+    "minecraft:tnt",
+    {
+      "id": "oreganized:shrapnel_bomb",
+      "required": false
+    },
+    {
+      "id": "savage_and_ravage:spore_bomb",
+      "required": false
+    },
+    {
+      "id": "quark:stick_block",
+      "required": false
+    }
+  ],
+  "sound_type": {
+    "break_sound": "spicedcider:sound.tnt.break",
+    "place_sound": "spicedcider:sound.tnt.place",
+    "hit_sound": "spicedcider:sound.tnt.hit",
+    "fall_sound": "spicedcider:sound.tnt.fall",
+    "step_sound": "spicedcider:sound.tnt.step",
+    "pitch": 1.3,
+    "volume": 1
+  }
+}

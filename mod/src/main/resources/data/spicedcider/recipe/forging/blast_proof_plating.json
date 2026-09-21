@@ -1,0 +1,30 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "tolerable_creepers"
+    }
+  ],
+  "type": "modestmining:forging",
+  "ingredients": [
+    {
+      "item": "tolerable_creepers:creeper_spores"
+    },
+    {
+      "item": "tolerable_creepers:creeper_spores"
+    },
+    {
+      "tag": "c:ingots/gold"
+    },
+    {
+      "tag": "c:ingots/gold"
+    }
+  ],
+  "fuel": {
+    "tag": "modestmining:forge_fuels_tier_1"
+  },
+  "result": {
+    "id": "spicedcider:blast_proof_plating",
+    "count": 1
+  }
+}

@@ -1,6 +1,9 @@
 {
-  "figura": {
-    "enable_target_selectors": true
+  "brainier_bees": {
+    "enable_brainier_bees": true,
+    "max_wander_radius": 22,
+    "flower_locate_range": 8,
+    "bees_avoid_ladders": true
   },
   "farmers_delight": {
     "stoves_place_unlit": true
@@ -13,9 +16,9 @@
   },
   "extended_clouds": {
     "enable_extended_clouds": true,
-    "cloud_distance_multiplier": 4.0,
     "extend_frustum": true,
-    "async_cloud_meshing": true
+    "async_cloud_meshing": true,
+    "cloud_distance_multiplier": 4.0
   },
   "passable_foliage": {
     "enable_passable_foliage": true,
@@ -46,6 +49,7 @@
     "fix_peaceful_strider_saddles": true,
     "fix_dragon_landing_in_void": true,
     "fix_cave_spider_spinning": true,
+    "fix_ghast_direction": true,
     "fix_experience_loss": true,
     "fix_spectator_firework_boost": true,
     "fix_spectator_item_use": true,
@@ -67,6 +71,7 @@
     "fix_two_by_two_saplings": true,
     "fix_horizon_line": true,
     "fix_cave_sky": true,
+    "patch_sunbathing_godrays": true,
     "better_pause_freezing": true,
     "colored_crack_particles": true,
     "ghast_charging": true,
@@ -113,12 +118,14 @@
     "bedrock_impaling": true,
     "nether_cauldron": true,
     "fire_aspect_is_flint_and_steel": false,
-    "no_chest_when_targeted": false,
+    "no_chest_when_targeted": true,
     "disable_path_creation": false,
     "disable_farmland_creation": false,
     "disable_ender_pearl_damage": true,
     "dispenser_shears_pumpkins": true,
-    "water_bottles_on_concrete": true
+    "water_bottles_on_concrete": true,
+    "leaves_support_blocks": true,
+    "monsters_leave_boats": true
   },
   "vanilla_gui": {
     "ctrl_drag_to_crafting_grid": true,
@@ -128,8 +135,10 @@
     "clear_button_x": 148,
     "clear_button_y": 162,
     "chat_markdown": true,
-    "cursor_feedback": false,
-    "slot_highlight_behind_item": true
+    "cursor_feedback": true,
+    "slot_highlight_behind_item": false,
+    "panorama_screenshot": true,
+    "panorama_resolution": 1024
   },
   "vanilla_visual": {
     "nicer_map_colors": true,

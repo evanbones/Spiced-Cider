@@ -1,0 +1,27 @@
+{
+  "targets": [
+    "#minecraft:leaves",
+    "#woodworks:leaf_piles",
+    {
+      "id": "environmental:hanging_willow_leaves",
+      "required": false
+    },
+    {
+      "id": "environmental:pink_hanging_wisteria_leaves",
+      "required": false
+    },
+    {
+      "id": "environmental:blue_hanging_wisteria_leaves",
+      "required": false
+    },
+    {
+      "id": "environmental:purple_hanging_wisteria_leaves",
+      "required": false
+    },
+    {
+      "id": "environmental:white_hanging_wisteria_leaves",
+      "required": false
+    }
+  ],
+  "sound_type": "azalea_leaves"
+}

@@ -3,67 +3,52 @@
     "engines": 0,
     "volume": 0.24723246693611145,
     "useSoundMasterSource": false,
-    "scanStepAmount": 100
+    "scanStepAmount": 100,
+    "playSoundWithOffset": true
   },
   "dimensions": {
-    "nether": 1,
-    "end": 1,
     "abyssalcraft": 1,
-    "void": 1,
-    "twilightforest": 1,
     "betweenlands": 1,
     "cave": 1,
-    "midnight": 1,
+    "end": 1,
     "galacticraft": 1,
     "galacticraft.planets": 1,
-    "surface": 1
+    "midnight": 1,
+    "nether": 1,
+    "surface": 1,
+    "twilightforest": 1,
+    "void": 1
   },
   "regions": {
-    "suspense": {
-      "overall": 0.5018450021743774,
-      "nether": 0.49815496802330017
-    },
-    "unknown": {
-      "overall": 0.49815496802330017,
-      "suspense": 0.49815496802330017
-    },
-    "dark": {
-      "overall": 0.5018450021743774,
-      "suspense": 0.5018450021743774
-    },
-    "deep": {
-      "overall": 0.5018450021743774,
-      "cave": 0.49815496802330017
-    },
-    "wind": {
-      "overall": 0.49815496802330017,
-      "wind": 0.5018450021743774
-    },
-    "underwater": {
+    "abyssalcraft_dark": {
       "overall": 1,
-      "underwater": 1,
-      "underwater-deep": 1
+      "suspense.suspense": 1
     },
-    "rain": {
+    "end_unknown": {
       "overall": 1,
-      "rain": 1
+      "suspense.suspense": 1
     },
-    "storm_close": {
+    "galacticraft_planets_wind": {
       "overall": 1,
-      "storm-close": 1,
-      "wind": 1
+      "wind.light-wind": 1
     },
-    "storm_away": {
+    "nether_suspense": {
       "overall": 1,
-      "storm-away": 1,
-      "howling-wind": 1
+      "nether": 1
     },
-    "underworld": {
-      "overall": 0.5018450021743774,
-      "underworld": 0.49815496802330017
+    "twilightforest_unknown": {
+      "overall": 1,
+      "suspense.suspense": 1
     },
-    "cave": {
-      "overall": 0.5018450021743774
+    "void_dark": {
+      "overall": 1,
+      "suspense.suspense": 1
+    },
+    "beach": {
+      "overall": 1,
+      "beach": 1,
+      "seagull": 0.2509225010871887,
+      "seagull-long": 0.24723246693611145
     },
     "cave_ambience": {
       "overall": 0.5018450021743774,
@@ -72,42 +57,40 @@
       "cave-deep": 0.49815496802330017,
       "cave-large": 0.49815496802330017
     },
+    "cave_deep-dark": {
+      "overall": 1,
+      "deep-dark": 1,
+      "water-droplets": 1
+    },
+    "cave": {
+      "overall": 0.5018450021743774
+    },
     "cave_lush": {
       "overall": 0.5018450021743774,
       "cave-lush": 0.49815496802330017,
       "frog": 0.24723246693611145
     },
-    "surface": {
-      "overall": 1
-    },
-    "sky": {
+    "cold_artic": {
       "overall": 1,
-      "light-wind": 1
+      "heavy-wind": 1
     },
-    "space": {
-      "overall": 1
-    },
-    "forest": {
+    "cold": {
       "overall": 1,
-      "bird-ambience": 0.15129151940345764,
-      "owl": 0.254612535238266
+      "wind.light-wind": 1
+    },
+    "desert": {
+      "overall": 1,
+      "cicadas-desert": 0.2509225010871887,
+      "wind.light-wind": 1
     },
     "forest_cold": {
       "overall": 1,
       "crow": 0.19557195901870728
     },
-    "taiga": {
+    "forest": {
       "overall": 1,
-      "bird-ambience-huge": 0.09963099658489227
-    },
-    "highland": {
-      "overall": 1,
-      "heavy-wind": 1,
-      "wind-in-leaves": 1
-    },
-    "mesa": {
-      "overall": 1,
-      "wind-mesa": 1
+      "bird-ambience": 0.15129151940345764,
+      "owl": 0.254612535238266
     },
     "forest_roofed": {
       "overall": 1,
@@ -119,31 +102,10 @@
       "cricket-night": 0.19926199316978455,
       "cicadas-night": 0.19926199316978455
     },
-    "plains": {
+    "highland": {
       "overall": 1,
-      "cricket": 0.095940962433815,
-      "cricket-night": 0.19557195901870728,
-      "cicadas-night": 0.19557195901870728
-    },
-    "savanna": {
-      "overall": 1,
-      "cricket": 0.09963099658489227,
-      "cicadas": 0.20295202732086182,
-      "cicadas-desert": 0.19926199316978455,
-      "cricket-warm-night": 0.19926199316978455,
-      "wolf": 0.19926199316978455,
-      "bird-warm": 0.15129151940345764
-    },
-    "desert": {
-      "overall": 1,
-      "cicadas-desert": 0.2509225010871887,
-      "light-wind": 1
-    },
-    "swamp": {
-      "overall": 1,
-      "cricket-swamp": 0.09963099658489227,
-      "cricket-warm-night": 0.20295202732086182,
-      "frog": 0.3468634784221649
+      "heavy-wind": 1,
+      "wind-in-leaves": 1
     },
     "jungle": {
       "overall": 1,
@@ -152,21 +114,113 @@
       "bird-ambience-jungle": 0.20295202732086182,
       "bird-ambience-jungle-night": 0.20295202732086182
     },
-    "cold": {
+    "mesa": {
       "overall": 1,
-      "light-wind": 0.7490774989128113
+      "wind-mesa": 1
     },
-    "beach": {
+    "mushroom_fields": {
       "overall": 1,
-      "beach": 1,
-      "seagull": 0.2509225010871887,
-      "seagull-long": 0.24723246693611145
+      "cicadas-mushroom-fields": 1,
+      "special-mushroom-fields": 1
     },
     "ocean": {
       "overall": 1,
       "ocean": 1,
-      "light-wind": 1
+      "wind.light-wind": 1
+    },
+    "ocean_deep": {
+      "overall": 1,
+      "whale": 1
+    },
+    "pale-garden": {
+      "overall": 1,
+      "pale-garden-ambience": 1,
+      "owl": 1
+    },
+    "plains": {
+      "overall": 1,
+      "cricket": 0.095940962433815,
+      "cricket-night": 0.19557195901870728,
+      "cicadas-night": 0.19557195901870728
+    },
+    "rain": {
+      "overall": 1,
+      "rain": 1
+    },
+    "savanna": {
+      "overall": 1,
+      "cricket": 0.09963099658489227,
+      "cicadas": 0.20295202732086182,
+      "cicadas-desert": 0.19926199316978455,
+      "cricket-warm-night": 0.19926199316978455,
+      "wolf": 0.19926199316978455,
+      "long-wolf": 1,
+      "bird-warm": 0.15129151940345764
+    },
+    "sky": {
+      "overall": 1,
+      "wind.light-wind": 1
+    },
+    "space": {
+      "overall": 1
+    },
+    "storm_away": {
+      "overall": 1,
+      "storm-away": 1,
+      "howling-wind": 1
+    },
+    "storm_close": {
+      "overall": 1,
+      "storm-close": 1,
+      "wind": 1
+    },
+    "surface": {
+      "overall": 1
+    },
+    "swamp": {
+      "overall": 1,
+      "cricket-swamp": 0.09963099658489227,
+      "cricket-warm-night": 0.20295202732086182,
+      "frog": 0.3468634784221649,
+      "mouring_dove": 1
+    },
+    "taiga": {
+      "overall": 1,
+      "bird-ambience-huge": 0.09963099658489227
+    },
+    "underwater": {
+      "overall": 1,
+      "underwater": 1,
+      "underwater-deep": 1
+    },
+    "underworld": {
+      "overall": 0.5018450021743774,
+      "underworld": 0.49815496802330017
+    },
+    "warden": {
+      "overall": 1,
+      "warden": 1
     }
+  },
+  "categories": {
+    "animal": {
+      "animal": 1,
+      "bird": {
+        "bird": 1,
+        "bird_day": 1,
+        "bird_night": 1
+      },
+      "cicadas": 1,
+      "cricket": {
+        "cricket": 1,
+        "cricket_day": 1,
+        "cricket_night": 1
+      }
+    },
+    "cave": 1,
+    "suspense": 1,
+    "weather": 1,
+    "wind": 1
   },
   "fade-volume": 0.005,
   "fade-pitch": 0.005,

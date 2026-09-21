@@ -3,6 +3,12 @@
 	slimeTimeDisableItemMerging = true
 	#Use Environmental's old 1.19 wisteria tree leaf generation instead of the current sparse/patchy one. Requires Environmental (obviously).
 	oldWisteriaTrees = true
+	#Stops Voxy World Gen V2 from discarding the client's pause callback when a world loads, so chunk generation actually halts while the pause menu is open instead of running until the heap is exhausted. Requires Voxy World Gen V2.
+	voxyWorldGenPauseFix = true
+	#Replaces Voxy World Gen V2's LOD catch-up pass with one that never blocks the server thread on a chunk request. Fixes the client hanging forever on Save & Quit to Title, especially alongside C2ME. Requires Voxy World Gen V2.
+	voxyWorldGenSafeCatchup = true
+	#Lets the LOD catch-up pass pull already-generated chunks back off disk so distant terrain still syncs to players who join after generation finished. Requires Voxy World Gen V2 and Safe Catch-Up.
+	voxyWorldGenSyncUnloadedChunks = true
 
 [gameplay]
 	#Beds don't explode outside the Overworld; instead they show a message and wake sleeping villagers.

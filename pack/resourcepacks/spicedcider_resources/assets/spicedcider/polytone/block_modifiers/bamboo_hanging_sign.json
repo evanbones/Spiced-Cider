@@ -1,0 +1,21 @@
+{
+  "targets": [
+    {
+      "id": "supplementaries:quark/hanging_sign_bamboo",
+      "required": false
+    },
+    {
+      "id": "supplementaries:mynethersdelight/hanging_sign_powdery",
+      "required": false
+    }
+  ],
+  "sound_type": {
+    "break_sound": "spicedcider:sound.bamboo_hanging_sign.break",
+    "place_sound": "spicedcider:sound.bamboo_hanging_sign.place",
+    "hit_sound": "spicedcider:sound.bamboo_hanging_sign.hit",
+    "fall_sound": "spicedcider:sound.bamboo_hanging_sign.fall",
+    "step_sound": "spicedcider:sound.bamboo_hanging_sign.step",
+    "pitch": 1,
+    "volume": 1
+  }
+}

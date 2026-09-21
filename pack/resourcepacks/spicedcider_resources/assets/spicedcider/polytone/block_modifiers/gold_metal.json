@@ -1,0 +1,116 @@
+{
+  "targets": [
+    "minecraft:gold_block",
+    "minecraft:light_weighted_pressure_plate",
+    "minecraft:beacon",
+    "minecraft:powered_rail",
+    "minecraft:detector_rail",
+    "minecraft:rail",
+    "minecraft:activator_rail",
+    {
+      "id": "create:track",
+      "required": false
+    },
+    {
+      "id": "create:blaze_burner",
+      "required": false
+    },
+    {
+      "id": "create:lit_blaze_burner",
+      "required": false
+    },
+    {
+      "id": "create:controller_rail",
+      "required": false
+    },
+    {
+      "id": "suppsquared:gold_plaque",
+      "required": false
+    },
+    {
+      "id": "suppsquared:metal_frame",
+      "required": false
+    },
+    {
+      "id": "suppsquared:metal_brace",
+      "required": false
+    },
+    {
+      "id": "suppsquared:metal_cross_brace",
+      "required": false
+    },
+    {
+      "id": "quark:gold_bars",
+      "required": false
+    },
+    {
+      "id": "quark:gold_button",
+      "required": false
+    },
+    {
+      "id": "supplementaries:gold_door",
+      "required": false
+    },
+    {
+      "id": "supplementaries:gold_trapdoor",
+      "required": false
+    },
+    {
+      "id": "supplementaries:gold_gate",
+      "required": false
+    },
+    {
+      "id": "supplementaries:hourglass",
+      "required": false
+    },
+    {
+      "id": "architects_palette:gold_nub",
+      "required": false
+    },
+    {
+      "id": "caverns_and_chasms:sanguine_plates",
+      "required": false
+    },
+    {
+      "id": "caverns_and_chasms:sanguine_plate_stairs",
+      "required": false
+    },
+    {
+      "id": "caverns_and_chasms:sanguine_plate_slab",
+      "required": false
+    },
+    {
+      "id": "caverns_and_chasms:spiked_rail",
+      "required": false
+    },
+    {
+      "id": "caverns_and_chasms:medium_weighted_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "caverns_and_chasms:silver_bars",
+      "required": false
+    },
+    {
+      "id": "caverns_and_chasms:silver_button",
+      "required": false
+    },
+    {
+      "id": "oreganized:silver_block",
+      "required": false
+    },
+    {
+      "id": "oreganized:electrum_block",
+      "required": false
+    }
+  ],
+  "sound_type": {
+    "break_sound": "minecraft:block.netherite_block.break",
+    "place_sound": "minecraft:block.netherite_block.place",
+    "hit_sound": "minecraft:block.netherite_block.hit",
+    "step_sound": "minecraft:block.netherite_block.step",
+    "fall_sound": "minecraft:block.netherite_block.fall",
+    "pitch": 1.6,
+    "volume": 1.0
+  }
+}

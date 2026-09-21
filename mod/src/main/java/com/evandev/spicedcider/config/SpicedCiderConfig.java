@@ -41,6 +41,10 @@ public class SpicedCiderConfig {
         return CLIENT_SPEC.isLoaded() ? value.get() : fallback;
     }
 
+    public static <T> T commonOr(ModConfigSpec.ConfigValue<T> value, T fallback) {
+        return COMMON_SPEC.isLoaded() ? value.get() : fallback;
+    }
+
     private static JsonObject loadLang() {
         try (InputStream stream = SpicedCiderConfig.class.getClassLoader().getResourceAsStream(LANG_PATH)) {
             if (stream == null) {
@@ -87,6 +91,9 @@ public class SpicedCiderConfig {
     public static class Common {
         public final ModConfigSpec.BooleanValue oldWisteriaTrees;
         public final ModConfigSpec.BooleanValue slimeTimeDisableItemMerging;
+        public final ModConfigSpec.BooleanValue voxyWorldGenPauseFix;
+        public final ModConfigSpec.BooleanValue voxyWorldGenSafeCatchup;
+        public final ModConfigSpec.BooleanValue voxyWorldGenSyncUnloadedChunks;
 
         public final ModConfigSpec.BooleanValue bedExplosionPrevention;
         public final ModConfigSpec.BooleanValue respawnAnchorExplosionPrevention;
@@ -111,6 +118,21 @@ public class SpicedCiderConfig {
                     .comment(tooltip("slimeTimeDisableItemMerging"))
                     .translation("option.spicedcider.slimeTimeDisableItemMerging")
                     .define("slimeTimeDisableItemMerging", true);
+
+            voxyWorldGenPauseFix = builder
+                    .comment(tooltip("voxyWorldGenPauseFix"))
+                    .translation("option.spicedcider.voxyWorldGenPauseFix")
+                    .define("voxyWorldGenPauseFix", true);
+
+            voxyWorldGenSafeCatchup = builder
+                    .comment(tooltip("voxyWorldGenSafeCatchup"))
+                    .translation("option.spicedcider.voxyWorldGenSafeCatchup")
+                    .define("voxyWorldGenSafeCatchup", true);
+
+            voxyWorldGenSyncUnloadedChunks = builder
+                    .comment(tooltip("voxyWorldGenSyncUnloadedChunks"))
+                    .translation("option.spicedcider.voxyWorldGenSyncUnloadedChunks")
+                    .define("voxyWorldGenSyncUnloadedChunks", true);
 
             builder.pop();
             builder.push("gameplay");
@@ -185,6 +207,7 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.DoubleValue vistaMirrorThrottleBudgetMs;
 
         public final ModConfigSpec.BooleanValue sodiumLightingParityFix;
+        public final ModConfigSpec.BooleanValue voxyWorldGenPersistStats;
 
         public Client(ModConfigSpec.Builder builder) {
             builder.push("compat");
@@ -193,6 +216,11 @@ public class SpicedCiderConfig {
                     .comment(tooltip("sodiumLightingParityFix"))
                     .translation("option.spicedcider.sodiumLightingParityFix")
                     .define("sodiumLightingParityFix", true);
+
+            voxyWorldGenPersistStats = builder
+                    .comment(tooltip("voxyWorldGenPersistStats"))
+                    .translation("option.spicedcider.voxyWorldGenPersistStats")
+                    .define("voxyWorldGenPersistStats", true);
 
             builder.pop();
             builder.push("naming");

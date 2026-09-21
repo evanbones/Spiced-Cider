@@ -1,0 +1,308 @@
+{
+  "targets": [
+    "minecraft:iron_bars",
+    "minecraft:iron_door",
+    "minecraft:iron_trapdoor",
+    "minecraft:iron_block",
+    "minecraft:hopper",
+    "minecraft:heavy_weighted_pressure_plate",
+    {
+      "id": "oreganized:lead_block",
+      "required": false
+    },
+    {
+      "id": "quark:iron_plate",
+      "required": false
+    },
+    {
+      "id": "quark:iron_plate_slab",
+      "required": false
+    },
+    {
+      "id": "quark:iron_plate_stairs",
+      "required": false
+    },
+    {
+      "id": "quark:rusty_iron_plate",
+      "required": false
+    },
+    {
+      "id": "quark:rusty_iron_plate_slab",
+      "required": false
+    },
+    {
+      "id": "quark:rusty_iron_plate_stairs",
+      "required": false
+    },
+    {
+      "id": "quark:iron_pillar",
+      "required": false
+    },
+    {
+      "id": "quark:iron_ladder",
+      "required": false
+    },
+    {
+      "id": "quark:grate",
+      "required": false
+    },
+    {
+      "id": "quark:iron_rod",
+      "required": false
+    },
+    {
+      "id": "quark:iron_button",
+      "required": false
+    },
+    {
+      "id": "supplementaries:iron_gate",
+      "required": false
+    },
+    {
+      "id": "architects_palette:iron_nub",
+      "required": false
+    },
+    "minecraft:cauldron",
+    {
+      "id": "brewinandchewin:fiery_fondue_pot",
+      "required": false
+    },
+    {
+      "id": "supplementaries:lead_door",
+      "required": false
+    },
+    {
+      "id": "supplementaries:lead_trapdoor",
+      "required": false
+    },
+    {
+      "id": "supplementaries:cage",
+      "required": false
+    },
+    {
+      "id": "alloyed:steel_door",
+      "required": false
+    },
+    {
+      "id": "alloyed:locked_steel_door",
+      "required": false
+    },
+    {
+      "id": "suppsquared:iron_plaque",
+      "required": false
+    },
+    "minecraft:water_cauldron",
+    "minecraft:lava_cauldron",
+    "minecraft:powder_snow_cauldron",
+    {
+      "id": "spelunkery:portal_cauldron",
+      "required": false
+    },
+    {
+      "id": "neapolitan:milk_cauldron",
+      "required": false
+    },
+    {
+      "id": "neapolitan:vanilla_milkshake_cauldron",
+      "required": false
+    },
+    {
+      "id": "neapolitan:chocolate_milkshake_cauldron",
+      "required": false
+    },
+    {
+      "id": "neapolitan:strawberry_milkshake_cauldron",
+      "required": false
+    },
+    {
+      "id": "neapolitan:banana_milkshake_cauldron",
+      "required": false
+    },
+    {
+      "id": "neapolitan:mint_milkshake_cauldron",
+      "required": false
+    },
+    {
+      "id": "neapolitan:adzuki_milkshake_cauldron",
+      "required": false
+    },
+    {
+      "id": "oreganized:molten_lead_cauldron",
+      "required": false
+    },
+    {
+      "id": "caverns_and_chasms:golden_bars",
+      "required": false
+    },
+    {
+      "id": "supplementaries:spring_launcher",
+      "required": false
+    },
+    {
+      "id": "supplementaries:netherite_door",
+      "required": false
+    },
+    {
+      "id": "supplementaries:netherite_trapdoor",
+      "required": false
+    },
+    {
+      "id": "supplementaries:lock_block",
+      "required": false
+    },
+    {
+      "id": "create:schematicannon",
+      "required": false
+    },
+    {
+      "id": "create:gearbox",
+      "required": false
+    },
+    {
+      "id": "create:vertical_gearbox",
+      "required": false
+    },
+    {
+      "id": "create:clutch",
+      "required": false
+    },
+    {
+      "id": "create:gearshift",
+      "required": false
+    },
+    {
+      "id": "create:encased_chain_drive",
+      "required": false
+    },
+    {
+      "id": "create:adjustable_chain_gearshift",
+      "required": false
+    },
+    {
+      "id": "create:mechanical_press",
+      "required": false
+    },
+    {
+      "id": "create:mechanical_mixer",
+      "required": false
+    },
+    {
+      "id": "create:basin",
+      "required": false
+    },
+    {
+      "id": "create:depot",
+      "required": false
+    },
+    {
+      "id": "create:weighted_ejector",
+      "required": false
+    },
+    {
+      "id": "create:chute",
+      "required": false
+    },
+    {
+      "id": "create:andesite_funnel",
+      "required": false
+    },
+    {
+      "id": "create:andesite_tunnel",
+      "required": false
+    },
+    {
+      "id": "create:mechanical_crafter",
+      "required": false
+    },
+    {
+      "id": "create:display_board",
+      "required": false
+    },
+    {
+      "id": "create:andesite_alloy_block",
+      "required": false
+    },
+    {
+      "id": "create:mechanical_piston",
+      "required": false
+    },
+    {
+      "id": "create:sticky_mechanical_piston",
+      "required": false
+    },
+    {
+      "id": "create:gantry_carriage",
+      "required": false
+    },
+    {
+      "id": "create:windmill_bearing",
+      "required": false
+    },
+    {
+      "id": "create:mechanical_bearing",
+      "required": false
+    },
+    {
+      "id": "create:rope_pulley",
+      "required": false
+    },
+    {
+      "id": "create:cart_assembler",
+      "required": false
+    },
+    {
+      "id": "create:sticker",
+      "required": false
+    },
+    {
+      "id": "create:contraption_controls",
+      "required": false
+    },
+    {
+      "id": "toms_storage:ts.storage_terminal",
+      "required": false
+    },
+    "minecraft:stonecutter",
+    "minecraft:dropper",
+    "minecraft:observer",
+    "minecraft:piston",
+    "minecraft:sticky_piston",
+    {
+      "id": "create:redstone_contact",
+      "required": false
+    },
+    {
+      "id": "create:elevator_contact",
+      "required": false
+    },
+    {
+      "id": "create:rotation_speed_controller",
+      "required": false
+    },
+    {
+      "id": "sullysmod:jade_flinger_totem",
+      "required": false
+    },
+    {
+      "id": "supplementaries:turn_table",
+      "required": false
+    },
+    {
+      "id": "supplementaries:cog_block",
+      "required": false
+    },
+    {
+      "id": "design_decor:ornate_grate",
+      "required": false
+    }
+  ],
+  "sound_type": {
+    "break_sound": "spicedcider:sound.iron.break",
+    "place_sound": "spicedcider:sound.iron.place",
+    "hit_sound": "spicedcider:sound.iron.hit",
+    "fall_sound": "spicedcider:sound.iron.fall",
+    "step_sound": "spicedcider:sound.iron.step",
+    "pitch": 1,
+    "volume": 1
+  }
+}

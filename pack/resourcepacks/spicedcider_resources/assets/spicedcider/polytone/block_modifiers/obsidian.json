@@ -1,0 +1,190 @@
+{
+  "targets": [
+    "minecraft:obsidian",
+    "minecraft:crying_obsidian",
+    "minecraft:respawn_anchor",
+    "minecraft:enchanting_table",
+    "minecraft:ender_chest",
+    {
+      "id": "quark:obsidian_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "quark:ender_watcher",
+      "required": false
+    },
+    {
+      "id": "frame_changer:obsidian_bricks",
+      "required": false
+    },
+    {
+      "id": "frame_changer:obsidian_brick_slab",
+      "required": false
+    },
+    {
+      "id": "frame_changer:obsidian_brick_stairs",
+      "required": false
+    },
+    {
+      "id": "frame_changer:obsidian_brick_wall",
+      "required": false
+    },
+    {
+      "id": "frame_changer:crying_obsidian_bricks",
+      "required": false
+    },
+    {
+      "id": "frame_changer:crying_obsidian_brick_slab",
+      "required": false
+    },
+    {
+      "id": "frame_changer:crying_obsidian_brick_stairs",
+      "required": false
+    },
+    {
+      "id": "frame_changer:crying_obsidian_brick_wall",
+      "required": false
+    },
+    {
+      "id": "frame_changer:polished_obsidian",
+      "required": false
+    },
+    {
+      "id": "frame_changer:polished_obsidian_slab",
+      "required": false
+    },
+    {
+      "id": "frame_changer:polished_obsidian_stairs",
+      "required": false
+    },
+    {
+      "id": "frame_changer:polished_obsidian_wall",
+      "required": false
+    },
+    {
+      "id": "frame_changer:crying_polished_obsidian",
+      "required": false
+    },
+    {
+      "id": "frame_changer:crying_polished_obsidian_slab",
+      "required": false
+    },
+    {
+      "id": "frame_changer:crying_polished_obsidian_stairs",
+      "required": false
+    },
+    {
+      "id": "frame_changer:crying_polished_obsidian_wall",
+      "required": false
+    },
+    {
+      "id": "frame_changer:obsidian_pillar",
+      "required": false
+    },
+    {
+      "id": "frame_changer:crying_obsidian_pillar",
+      "required": false
+    },
+    {
+      "id": "frame_changer:chiseled_obsidian",
+      "required": false
+    },
+    {
+      "id": "frame_changer:crying_chiseled_obsidian",
+      "required": false
+    },
+    {
+      "id": "architects_palette:unobtanium_block",
+      "required": false
+    },
+    {
+      "id": "architects_palette:abyssaline",
+      "required": false
+    },
+    {
+      "id": "architects_palette:abyssaline_bricks",
+      "required": false
+    },
+    {
+      "id": "architects_palette:abyssaline_brick_slab",
+      "required": false
+    },
+    {
+      "id": "architects_palette:abyssaline_tiles",
+      "required": false
+    },
+    {
+      "id": "architects_palette:abyssaline_tile_slab",
+      "required": false
+    },
+    {
+      "id": "architects_palette:chiseled_abyssaline_bricks",
+      "required": false
+    },
+    {
+      "id": "architects_palette:abyssaline_pillar",
+      "required": false
+    },
+    {
+      "id": "architects_palette:abyssaline_lamp",
+      "required": false
+    },
+    {
+      "id": "architects_palette:abyssaline_plating",
+      "required": false
+    },
+    {
+      "id": "architects_palette:hadaline",
+      "required": false
+    },
+    {
+      "id": "architects_palette:hadaline_bricks",
+      "required": false
+    },
+    {
+      "id": "architects_palette:hadaline_brick_slab",
+      "required": false
+    },
+    {
+      "id": "architects_palette:hadaline_tiles",
+      "required": false
+    },
+    {
+      "id": "architects_palette:hadaline_tile_slab",
+      "required": false
+    },
+    {
+      "id": "architects_palette:chiseled_hadaline_bricks",
+      "required": false
+    },
+    {
+      "id": "architects_palette:hadaline_pillar",
+      "required": false
+    },
+    {
+      "id": "architects_palette:hadaline_lamp",
+      "required": false
+    },
+    {
+      "id": "architects_palette:hadaline_plating",
+      "required": false
+    },
+    {
+      "id": "modestmagic:altar",
+      "required": false
+    },
+    {
+      "id": "quark:myalite_crystal",
+      "required": false
+    }
+  ],
+  "sound_type": {
+    "break_sound": "spicedcider:sound.obsidian.break",
+    "place_sound": "spicedcider:sound.obsidian.place",
+    "hit_sound": "spicedcider:sound.obsidian.hit",
+    "fall_sound": "spicedcider:sound.obsidian.fall",
+    "step_sound": "spicedcider:sound.obsidian.step",
+    "pitch": 1,
+    "volume": 1
+  }
+}
