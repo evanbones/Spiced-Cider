@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "nomansdelight:steak_with_sweet_sauce"
+    }
+  ],
+  "ingredients": [],
+  "result": {
+    "id": "minecraft:barrier"
+  }
+}

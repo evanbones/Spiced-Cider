@@ -65,6 +65,9 @@
 		[types.wood_type.infernalexp]
 			luminous = true
 
+		[types.wood_type.culturaldelights]
+			beanstalk = true
+
 		[types.leaves_type.quark]
 			ancient = false
 			blue_blossom = false
@@ -129,10 +132,6 @@
 		[types.leaves_type.newworld]
 			fir = true
 
-		[types.leaves_type.cookscollection]
-			lemon = true
-			fruiting_lemon = true
-
 		[types.leaves_type.minecraft]
 			pale_oak = true
 
@@ -142,6 +141,8 @@
 		[types.leaves_type.culturaldelights]
 			avocado = true
 			fruiting_avocado = true
+			lemon = true
+			fruiting_lemon = true
 
 		[types.lantern.bountifulfares]
 			feldspar_lantern = true

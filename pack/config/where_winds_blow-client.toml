@@ -13,7 +13,7 @@ enableWindSheen = true
 # Range: 0.0 ~ 2.0
 windSheenStrength = 1.0
 #Enables subtle Wind Waker-inspired wind streaks in the air.
-enableWindStreaks = true
+enableWindStreaks = false
 #Scales overall ambient wind streak, drifting leaf, and flower petal density.
 # Default: 1.0
 # Range: 0.0 ~ 4.0
@@ -212,15 +212,15 @@ rainWeatherSheenStrength = 1.5
 # Range: 0.0 ~ 4.0
 thunderWeatherSheenStrength = 2.0
 #Uses Where Winds Blow's atmospheric precipitation renderer. Disable this to use vanilla rain and snow.
-enableWindReactivePrecipitation = true
+enableWindReactivePrecipitation = false
 #Renders atmospheric rain while Where Winds Blow's precipitation renderer is enabled.
-enableRainEffects = true
+enableRainEffects = false
 #Lets rain lean with the shared wind simulation. Rain falls vertically when this is disabled.
-enableSlantedRain = true
+enableSlantedRain = false
 #Renders atmospheric snow while Where Winds Blow's precipitation renderer is enabled.
-enableSnowEffects = true
+enableSnowEffects = false
 #Lets snow drift and flutter with the shared wind simulation. Snow falls vertically when this is disabled.
-enableWindDrivenSnow = true
+enableWindDrivenSnow = false
 #Adds subtle, coherent color variation to responsive plant foliage without changing its model or texture.
 enableFoliageColorVariation = true
 #Scales broad color regions and smaller local variation on responsive plant foliage.
@@ -228,15 +228,15 @@ enableFoliageColorVariation = true
 # Range: 0.0 ~ 2.0
 foliageColorVariationStrength = 0.25
 #Lets leaf particles matching nearby trees and biomes drift through the air.
-enableWindLeaves = true
+enableWindLeaves = false
 #Lets rose, dandelion, and azure bluet petals ride the wind in non-snowy plains and floral biomes.
-enableWindFlowerPetals = true
+enableWindFlowerPetals = false
 #Scales how many wind-blown flower petals spawn.
 # Default: 1.0
 # Range: 0.0 ~ 4.0
 windFlowerPetalDensity = 1.0
 #Lets occasional dead bushes tumble through desert and badlands biomes, with stronger activity during rain and thunder.
-enableTumbleweeds = true
+enableTumbleweeds = false
 #Scales how often wind-blown tumbleweeds appear in desert and badlands biomes.
 # Default: 1.0
 # Range: 0.0 ~ 4.0
@@ -322,13 +322,13 @@ snowflakeSize = 1.0
 snowflakeSpeed = 1.0
 #Controls whether visibility fog is disabled, limited to blizzards, or present during all snowfall.
 #Allowed Values: DISABLED, BLIZZARDS_ONLY, ALL_SNOWFALL
-snowFogMode = "BLIZZARDS_ONLY"
+snowFogMode = "DISABLED"
 #Scales snowy-weather fog without changing snowfall or blowing snow.
 # Default: 1.0
 # Range: 0.0 ~ 2.0
 snowFogIntensity = 1.0
 #Adds wind-driven surface snow and rooftop spindrift during severe snowy weather.
-enableBlizzardEffects = true
+enableBlizzardEffects = false
 #Scales the number of falling snowflakes reached during a full blizzard.
 # Default: 1.0
 # Range: 0.0 ~ 2.0

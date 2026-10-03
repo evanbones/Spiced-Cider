@@ -15,10 +15,10 @@
     "consume_chains": true
   },
   "extended_clouds": {
-    "enable_extended_clouds": true,
+    "enable_extended_clouds": false,
     "extend_frustum": true,
     "async_cloud_meshing": true,
-    "cloud_distance_multiplier": 4.0
+    "cloud_range": 64
   },
   "passable_foliage": {
     "enable_passable_foliage": true,
@@ -69,7 +69,7 @@
     "fix_structure_save_path": true,
     "fix_structure_palette_threading": true,
     "fix_two_by_two_saplings": true,
-    "fix_horizon_line": true,
+    "improved_fog": false,
     "fix_cave_sky": true,
     "patch_sunbathing_godrays": true,
     "better_pause_freezing": true,
@@ -136,18 +136,21 @@
     "clear_button_y": 162,
     "chat_markdown": true,
     "cursor_feedback": true,
-    "slot_highlight_behind_item": false,
+    "slot_highlight_behind_item": true,
     "panorama_screenshot": true,
     "panorama_resolution": 1024
   },
   "vanilla_visual": {
-    "nicer_map_colors": true,
     "waxed_item_icon_overlay": true,
     "extra_item_icon_overlays": true,
     "better_copper_tooltips": true,
     "legible_signs": true,
     "less_annoying_fire": true,
-    "pixel_consistent_block_drops": false
+    "pixel_consistent_block_drops": false,
+    "smooth_light": true,
+    "smooth_light_fade_out_only": true,
+    "smooth_light_fade_speed": 2,
+    "nicer_map_colors": true
   },
   "vanilla_walls": {
     "walls_connect_to_fences": true,

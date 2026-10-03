@@ -1,0 +1,27 @@
+{
+  "neoforge:conditions": [
+    {
+      "modid": "create",
+      "type": "neoforge:mod_loaded"
+    },
+    {
+      "modid": "dimensional_tears",
+      "type": "neoforge:mod_loaded"
+    }
+  ],
+  "type": "create:emptying",
+  "ingredients": [
+    {
+      "item": "frame_changer:crying_obsidian_pillar"
+    }
+  ],
+  "results": [
+    {
+      "id": "frame_changer:obsidian_pillar"
+    },
+    {
+      "id": "dimensional_tears:dimensional_tears",
+      "amount": 250
+    }
+  ]
+}

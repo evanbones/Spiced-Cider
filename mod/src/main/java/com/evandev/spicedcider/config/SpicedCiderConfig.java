@@ -206,8 +206,15 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.DoubleValue vistaMirrorIdleUpdateFps;
         public final ModConfigSpec.DoubleValue vistaMirrorThrottleBudgetMs;
 
+        public final ModConfigSpec.BooleanValue voxyFogOverride;
+        public final ModConfigSpec.IntValue voxyFogStart;
+        public final ModConfigSpec.IntValue voxyFogEnd;
+        public final ModConfigSpec.IntValue voxyWeatherFogDensity;
+        public final ModConfigSpec.IntValue voxyCaveFogDensity;
+
         public final ModConfigSpec.BooleanValue sodiumLightingParityFix;
         public final ModConfigSpec.BooleanValue voxyWorldGenPersistStats;
+        public final ModConfigSpec.BooleanValue cirrusPostShaderTimeSync;
 
         public Client(ModConfigSpec.Builder builder) {
             builder.push("compat");
@@ -221,6 +228,11 @@ public class SpicedCiderConfig {
                     .comment(tooltip("voxyWorldGenPersistStats"))
                     .translation("option.spicedcider.voxyWorldGenPersistStats")
                     .define("voxyWorldGenPersistStats", true);
+
+            cirrusPostShaderTimeSync = builder
+                    .comment(tooltip("cirrusPostShaderTimeSync"))
+                    .translation("option.spicedcider.cirrusPostShaderTimeSync")
+                    .define("cirrusPostShaderTimeSync", true);
 
             builder.pop();
             builder.push("naming");
@@ -290,6 +302,34 @@ public class SpicedCiderConfig {
                     .comment(tooltip("vistaMirrorThrottleBudgetMs"))
                     .translation("option.spicedcider.vistaMirrorThrottleBudgetMs")
                     .defineInRange("vistaMirrorThrottleBudgetMs", 3.5, 0.5, 1000.0);
+
+            builder.pop();
+            builder.push("voxy");
+
+            voxyFogOverride = builder
+                    .comment(tooltip("voxyFogOverride"))
+                    .translation("option.spicedcider.voxyFogOverride")
+                    .define("voxyFogOverride", true);
+
+            voxyFogStart = builder
+                    .comment(tooltip("voxyFogStart"))
+                    .translation("option.spicedcider.voxyFogStart")
+                    .defineInRange("voxyFogStart", 10, 0, 100);
+
+            voxyFogEnd = builder
+                    .comment(tooltip("voxyFogEnd"))
+                    .translation("option.spicedcider.voxyFogEnd")
+                    .defineInRange("voxyFogEnd", 85, 1, 100);
+
+            voxyWeatherFogDensity = builder
+                    .comment(tooltip("voxyWeatherFogDensity"))
+                    .translation("option.spicedcider.voxyWeatherFogDensity")
+                    .defineInRange("voxyWeatherFogDensity", 90, 0, 100);
+
+            voxyCaveFogDensity = builder
+                    .comment(tooltip("voxyCaveFogDensity"))
+                    .translation("option.spicedcider.voxyCaveFogDensity")
+                    .defineInRange("voxyCaveFogDensity", 50, 0, 100);
 
             builder.pop();
         }

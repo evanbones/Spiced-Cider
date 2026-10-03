@@ -63,6 +63,8 @@ public class SpicedCiderConfigScreen {
                                 toggle("voxyWorldGenSyncUnloadedChunks", common.voxyWorldGenSyncUnloadedChunks))
                         .optionIf(ModList.get().isLoaded("voxyworldgenv2"),
                                 toggle("voxyWorldGenPersistStats", client.voxyWorldGenPersistStats))
+                        .optionIf(ModList.get().isLoaded("cirrus") && ModList.get().isLoaded("polytone"),
+                                toggle("cirrusPostShaderTimeSync", client.cirrusPostShaderTimeSync))
                         .build())
                 .category(ConfigCategory.createBuilder()
                         .name(Component.translatable("category.spicedcider.performance"))
@@ -88,6 +90,15 @@ public class SpicedCiderConfigScreen {
                         .option(doubleSlider("vistaMirrorMinUpdateFps", client.vistaMirrorMinUpdateFps, 0.25, 240.0, 0.25))
                         .option(doubleSlider("vistaMirrorIdleUpdateFps", client.vistaMirrorIdleUpdateFps, 0.25, 240.0, 0.25))
                         .option(doubleSlider("vistaMirrorThrottleBudgetMs", client.vistaMirrorThrottleBudgetMs, 0.5, 1000.0, 0.5))
+                        .build())
+                .categoryIf(ModList.get().isLoaded("roxy"), ConfigCategory.createBuilder()
+                        .name(Component.translatable("category.spicedcider.voxy"))
+                        .tooltip(Component.translatable("category.spicedcider.voxy.tooltip"))
+                        .option(toggle("voxyFogOverride", client.voxyFogOverride))
+                        .option(percentSlider("voxyFogStart", client.voxyFogStart, 0))
+                        .option(percentSlider("voxyFogEnd", client.voxyFogEnd, 1))
+                        .option(percentSlider("voxyWeatherFogDensity", client.voxyWeatherFogDensity, 0))
+                        .option(percentSlider("voxyCaveFogDensity", client.voxyCaveFogDensity, 0))
                         .build())
                 .build()
                 .generateScreen(parent);
@@ -119,6 +130,16 @@ public class SpicedCiderConfigScreen {
                 .description(OptionDescription.of(Component.translatable("option.spicedcider." + key + ".tooltip")))
                 .binding(value.getDefault(), value, value::set)
                 .controller(opt -> IntegerSliderControllerBuilder.create(opt).range(min, max).step(step))
+                .build();
+    }
+
+    private static Option<Integer> percentSlider(String key, ModConfigSpec.IntValue value, int min) {
+        return Option.<Integer>createBuilder()
+                .name(Component.translatable("option.spicedcider." + key))
+                .description(OptionDescription.of(Component.translatable("option.spicedcider." + key + ".tooltip")))
+                .binding(value.getDefault(), value, value::set)
+                .controller(opt -> IntegerSliderControllerBuilder.create(opt).range(min, 100).step(1)
+                        .formatValue(v -> Component.literal(v + "%")))
                 .build();
     }
 

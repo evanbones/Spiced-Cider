@@ -302,7 +302,9 @@ dependencies {
 
     // NML
     compileOnly "maven.modrinth:no-mans-land:1.5.12"
-    // runtimeOnly "maven.modrinth:biolith:7VJXS9CG"
+    runtimeOnly "maven.modrinth:no-mans-land:1.5.12"
+    runtimeOnly "maven.modrinth:biolith:EAjbdreT"
+    runtimeOnly "maven.modrinth:mixed-litter:79yyzlTc"
 
     // Sinytra
     // additionalRuntimeClasspath "org.sinytra:connector:2.0.0-beta.9+1.21.1"
@@ -310,7 +312,10 @@ dependencies {
     // compileOnly "org.sinytra:forgified-fabric-loader:2.5.68+0.18.4+1.21.1"
 
     // Sodium
-    compileOnly "net.caffeinemc:sodium-neoforge-mod:0.8.12+mc1.21.1"
+    compileOnly "net.caffeinemc:sodium-neoforge-mod:0.8.13+mc1.21.1"
+
+    // Voxy
+    compileOnly "maven.modrinth:voxy:H3w2nVdU"
 
     // Reconnectible Chains
     compileOnly "maven.modrinth:reconnectible-chains:2.2.5-1.21.1-neoforge"
@@ -341,8 +346,10 @@ dependencies {
     compileOnly "maven.modrinth:spelunkery:oLqPJYV9"
 
     // Quark
-    compileOnly "maven.modrinth:quark:4.1-481"
+    compileOnly "maven.modrinth:quark:4.1-485"
+    runtimeOnly "maven.modrinth:quark:4.1-485"
     compileOnly "maven.modrinth:zeta:1.1-40"
+    runtimeOnly "maven.modrinth:zeta:1.1-40"
 
     // Slime Time
     compileOnly "maven.modrinth:slime-time:1.2.2+1.21.1-neoforge"
