@@ -218,7 +218,7 @@ hash = "4bae7b08380558f4e00f45f9862e6cbfee07a199b5fc2123c112e965fbb65274"
 
 [[files]]
 file = "config/c2me.toml"
-hash = "a7b26861d6ac988401d60ae1477aaad8514ade511f80bcc244ee388fbae628c8"
+hash = "de4a742bb26f81010ce3790fb1183fe9f65dbcf12c0ae12192832e4ebf962a65"
 
 [[files]]
 file = "config/capes.json5"
@@ -490,7 +490,7 @@ hash = "0030656736b21f06f9f5b73078ce3ea41778f0f744c9d5da0055712a493ced85"
 
 [[files]]
 file = "config/drippyloadingscreen/early_window_reference.properties"
-hash = "505f5430d1621580901c92bd488c8d71c244573edb979be83c875074a552fd2c"
+hash = "17c615560ecaa211b80b7287d5d4e9add1e439305fe5afd91e9b2344abdf4132"
 
 [[files]]
 file = "config/drippyloadingscreen/options.txt"
@@ -650,7 +650,7 @@ hash = "09d330b29443d9579ecc014f2be2fcb31075bfe1e9f9ac4e750f271128650fe6"
 
 [[files]]
 file = "config/fabric/indigo-renderer.properties"
-hash = "88a791e0725448bee25d3c8e84f152669887b65700438295db8d47114ad0bcd9"
+hash = "4789fdff720f23fcf3b74a5175b04ed96d8e040d40352050905a7b525b2ba656"
 
 [[files]]
 file = "config/falling_snow.json"
@@ -1687,6 +1687,10 @@ hash = "1cb97673e43d86a39ee5343e67f9d4f3dfb4227b4d03c06de2cfd44f740b5c8f"
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/c/tags/item/ores/iron.json"
 hash = "2579b34a41c5659b43e7a2bf19ebfdbee4850cacbdd284656e577f93e9c3ff70"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/c/tags/item/raw_materials.json"
+hash = "69720a24918275c820b2c36b59948f54ae2ff928eee8df6baa1bed298651d1aa"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/c/tags/item/tools/igniter.json"
@@ -3922,7 +3926,7 @@ hash = "13b2b1384f949e6e409c3c3cc423ecb854df6b386d4466d424a57a887e89f3d8"
 
 [[files]]
 file = "config/packetfixer.properties"
-hash = "e4ec2502dddd7fe6529fb9c5a485257cb361cb2de4222a8d872abbd0f4e6d5a8"
+hash = "18e0c8a288869e05dcc156a8aadc216dcf198b9d3c17558c4b8111c27549c96d"
 
 [[files]]
 file = "config/particle_core_config.toml"
@@ -4078,7 +4082,7 @@ hash = "590ea074ec1c84ced8a0c60dedd7111edd69801f7441fe78654c2f6fdfb655b7"
 
 [[files]]
 file = "config/reliable_remover.json"
-hash = "60f1bd167cac8fabc34a952be110b5d5094799db7f53270a85a3879c4b46d69d"
+hash = "b179b912691afdb0c7db43579dd34b467563b98caca232c4eb92e522a56b273b"
 
 [[files]]
 file = "config/reliable_remover/hide_effects.json"
@@ -4589,6 +4593,10 @@ file = "config/sounds/world.json"
 hash = "58c699e5412278850e507c95d4e5107191a0c30f188c43985c0af2fc2045b463"
 
 [[files]]
+file = "config/spark/activity.json"
+hash = "e2aea92b5a0e43cc741fb234e3f1f528bf5135f9dfa9d7587aef110d169c1480"
+
+[[files]]
 file = "config/spark/config.json"
 hash = "992ba9f3a4a7ce3de112eb95575328956fdc3ce6781c455ebce7b23db7e7da42"
 
@@ -5002,7 +5010,7 @@ hash = "d985bfc68899c91aa642736400472f6ab876dedaaef4b8c31f38b52d48de633d"
 
 [[files]]
 file = "config/zfastnoise.mixin.properties"
-hash = "cf94f367283134a9fa59cbd3fb3715d3e328a3a3c7e3deef67ffd92293ca78be"
+hash = "17489e3cea54513fa6ca45ce8f3b9c7a23156690648a81122ab84a9ff55b559d"
 
 [[files]]
 file = "config/zipline.json"
@@ -5029,11 +5037,6 @@ metafile = true
 [[files]]
 file = "mods/abundant-delight.pw.toml"
 hash = "f701c88318b9b249fd400dc74a80de731654f5cbfacb562425530d2b6c0e61fe"
-metafile = true
-
-[[files]]
-file = "mods/achievements-optimizer.pw.toml"
-hash = "e30ba5c8e77e4e5381e4deed8f047788d04c37af5671b7e691f530901890cdaf"
 metafile = true
 
 [[files]]
@@ -5383,7 +5386,7 @@ metafile = true
 
 [[files]]
 file = "mods/emi-discovery.pw.toml"
-hash = "7ea9c3ae3a9affdf5015ee6e8c3fba5c95afa1b83c08c0f4505950ee0d088664"
+hash = "6fef6665b9c002ac907a1041de50a8d74665cb262c149270e8afaa4e4f2df57a"
 metafile = true
 
 [[files]]
@@ -5398,7 +5401,7 @@ metafile = true
 
 [[files]]
 file = "mods/entity-model-features.pw.toml"
-hash = "0ae06c97bf858f3941fd7369e34a71967e7a5c26c26b1cb7371a5be0f1842ecd"
+hash = "f22d030a054910044da1be3477955abbb2053a70288197fa35608b0036fe1e46"
 metafile = true
 
 [[files]]
@@ -5408,7 +5411,7 @@ metafile = true
 
 [[files]]
 file = "mods/entitytexturefeatures.pw.toml"
-hash = "42731772f3bde6bc35c48ff39a0b16c24edfa245c42d2ca8c8abd11f57edf4e7"
+hash = "1a518584c9e3a73366f40b3c9e6fe1b25d9dd4aab9d14e82001b337033048a08"
 metafile = true
 
 [[files]]
@@ -5478,7 +5481,7 @@ metafile = true
 
 [[files]]
 file = "mods/field-guide.pw.toml"
-hash = "0ad7104d4a52749fe89a32f04c3d39625fab6f5392f29fe1877c9c87c1f3cb24"
+hash = "4dd3c999837c547e91618deebaa78e8494f11607d9e40dede751a3a52dc43494"
 metafile = true
 
 [[files]]

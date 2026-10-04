@@ -1,10 +1,11 @@
-enabled = false
+enabled = true
+disableInCreative = true
 enableFluidDiscovery = true
 enableEffectDiscovery = true
 filterIndex = true
 displayCraftableInIndex = true
 requireWorkstationForCraftable = true
-hideEmptyRemiTabs = false
+hideEmptyRemiTabs = true
 displayWithUnknownWorkstation = false
 exemptInventoryCrafting = true
 requireCatalystsKnown = true
