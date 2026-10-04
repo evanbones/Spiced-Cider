@@ -34,7 +34,7 @@
       "name": "Suppress Spelunkery generated resources warnings",
       "enabled": true,
       "type": "MESSAGE_REGEX",
-      "pattern": "Failure adding generated resources from spelunkery:overrides/loot_table/",
+      "pattern": "Failure adding generated resources from spelunkery:overrides/(loot_table|recipe)/",
       "action": "DENY"
     },
     {
