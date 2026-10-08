@@ -346,11 +346,11 @@ hash = "ebdcd68d4fb7b455c0997c2de5fb216b093d9ffc987c5df01b44d8474f0b0c1e"
 
 [[files]]
 file = "config/coldsweat/main.toml"
-hash = "6ec31b1a628dfa555749fae93af4b53a99f865040452633f4fd2751bbf45b6dc"
+hash = "ab47a83a87d50a9a527a55b80b59fba1d7fe1d647deabdf2819fa85e2d5773e7"
 
 [[files]]
 file = "config/coldsweat/world.toml"
-hash = "d916a0d1f17eaad170adc9feb87ec670241af402c7aaa1170a86a10590fc0ec8"
+hash = "df62ac25af44e5fe9445a66b35bd2ddf3f078b80579f346f9c3593abb82439f4"
 
 [[files]]
 file = "config/combatnouveau-client.toml"
@@ -395,10 +395,6 @@ hash = "00267a602028cbb037dcb0b5f803db31bed284235ca9c1ea189ad4179311a2f4"
 [[files]]
 file = "config/convenientnametags.toml"
 hash = "7ea331b237c40523d03fc3539a312cb9e8a622ed0565a483cbf4e41c9448428c"
-
-[[files]]
-file = "config/cookscollection-common.toml"
-hash = "4502bef407cdfb04f45ac1da3516bdc52014420e80fbc44b195ff061332cd953"
 
 [[files]]
 file = "config/coolrain.json"
@@ -490,7 +486,7 @@ hash = "0030656736b21f06f9f5b73078ce3ea41778f0f744c9d5da0055712a493ced85"
 
 [[files]]
 file = "config/drippyloadingscreen/early_window_reference.properties"
-hash = "17c615560ecaa211b80b7287d5d4e9add1e439305fe5afd91e9b2344abdf4132"
+hash = "85e167d5600e67761cccf2d68b30b2864e0013330d0fb5707980786d34b55645"
 
 [[files]]
 file = "config/drippyloadingscreen/options.txt"
@@ -526,7 +522,7 @@ hash = "3577bb32e67956fc0a82bf8b4d5586ac15831fdb18eaa89cc6972060dfa2870b"
 
 [[files]]
 file = "config/emi_discovery.toml"
-hash = "402e82a8d38cc5142cd4a72a885903704f92864ace5e01cacdf905e3f4578674"
+hash = "ac873c8b78ef27672beaf45c42a97724e089cbce974ea6e750428ee51c54479e"
 
 [[files]]
 file = "config/emi_discovery/advancements/example.json.disabled"
@@ -602,7 +598,7 @@ hash = "5d796193f6afcad64b71e683eb2d69f64806b1bc7744890bc54b93f94fc8c573"
 
 [[files]]
 file = "config/everycomp-entries.toml"
-hash = "2856725255afef8f5a7acdc2ef998032a7b69572417a8508c2d9f14b634b4f60"
+hash = "75debb8ab1f37518965a2d1ff6e3f81e7a5aa400d01c379196ec990602b01a5e"
 
 [[files]]
 file = "config/everycomp-hazardous.toml"
@@ -650,7 +646,7 @@ hash = "09d330b29443d9579ecc014f2be2fcb31075bfe1e9f9ac4e750f271128650fe6"
 
 [[files]]
 file = "config/fabric/indigo-renderer.properties"
-hash = "4789fdff720f23fcf3b74a5175b04ed96d8e040d40352050905a7b525b2ba656"
+hash = "62a4741c5ab68392a0cb59e5e66a15e6c57c97f2092f569724c059d2870929cb"
 
 [[files]]
 file = "config/falling_snow.json"
@@ -1218,7 +1214,7 @@ hash = "9fe669b2f68354814b9156f038e84074b149d5bc6d7e9991530bb4d8b6f09387"
 
 [[files]]
 file = "config/modulation.json"
-hash = "bf382c476be207dde92ad9612555be257cb5a3d403b54421405eb513b1262bd6"
+hash = "c3cd824020612476362679e5bcda2bcec4d9071a58d5fb41f7349f05c5fb82b3"
 
 [[files]]
 file = "config/moonlight-client-1.toml.bak"
@@ -1739,6 +1735,10 @@ hash = "c14e7c3fd0992fd2a1cea6ab5230972888121cebd39115b107e2a544c14bfef8"
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/clutternomore/shape_map/valhelsia_structures.json"
 hash = "c131d75195d07ddd2bd8ae954d528940f356aebb0e112eab8818c507a6ab9e37"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/cold_sweat/cold_sweat/entity/temp_effects/default_player.json"
+hash = "672641549e100d7e0de3a135b505196b45047ef4d5adbf7ed37a618ff3f5d449"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/cold_sweat/recipe/compat/jeed/frigidness.json"
@@ -3721,6 +3721,10 @@ file = "config/openloader/packs/spicedcider_data/data/spicedcider/neoforge/biome
 hash = "4adce9fd16718b91039c71c821d95247583509a2cffd623b99c749b81a6552e1"
 
 [[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/neoforge/biome_modifier/remove_ua_river.json"
+hash = "93cb0a7194cab5fe4f13c80c10410348e9d90defc3c89fede45a2e3a8e408833"
+
+[[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/bb/bountifulfares/spiked_walnut_palisade.json"
 hash = "31b652085352ab7344d22a853fd6dc532b627d754912d9fa4883fd5674ee0886"
 
@@ -3763,6 +3767,10 @@ hash = "cc994e006cc599e61b0b3e14efebb7c869c490a9390fefe7c726bfed271b6565"
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/supplementaries/tags/item/sconces.json"
 hash = "a50c471a0cfd9164dc4b104083d3a190f122c0808c6a4bdf1a3de849c02468ea"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/upgrade_aquatic/worldgen/placed_feature/driftwood_river.json"
+hash = "bd2f98acff6d02a50ea7bb014d49916f36c559e5707f57b2810621429a8e41d6"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/valhelsia_structures/loot_table/chests/spawner_dungeon_dispenser.json"
@@ -3926,7 +3934,7 @@ hash = "13b2b1384f949e6e409c3c3cc423ecb854df6b386d4466d424a57a887e89f3d8"
 
 [[files]]
 file = "config/packetfixer.properties"
-hash = "18e0c8a288869e05dcc156a8aadc216dcf198b9d3c17558c4b8111c27549c96d"
+hash = "442416ca91d49e6345a3240dd7a84350a63552e6228c7bdbd3075ba5437ac449"
 
 [[files]]
 file = "config/particle_core_config.toml"
@@ -4050,7 +4058,7 @@ hash = "70eb5a3f4b94bdc8babfa43370c50ec0458410ebf62b1b1d75051bc1f90db7d8"
 
 [[files]]
 file = "config/reliable_advancements_layout.json"
-hash = "07f1bf28398f7fb4f2b1e6e23f6ede0ee2ce10ad4ee440a2d4d695e9b0dd6336"
+hash = "7bdf1a73d91ecbf4f7e51d8d17cfd757e7e802bd81bd4c81fc366c6b2a94e416"
 
 [[files]]
 file = "config/reliable_backpacks.json"
@@ -4082,7 +4090,7 @@ hash = "590ea074ec1c84ced8a0c60dedd7111edd69801f7441fe78654c2f6fdfb655b7"
 
 [[files]]
 file = "config/reliable_remover.json"
-hash = "b179b912691afdb0c7db43579dd34b467563b98caca232c4eb92e522a56b273b"
+hash = "df9c37fe3f02ec496dca0077c744bb8e58e632f53dd9ceefd4379adaf25819b0"
 
 [[files]]
 file = "config/reliable_remover/hide_effects.json"
@@ -5010,7 +5018,7 @@ hash = "d985bfc68899c91aa642736400472f6ab876dedaaef4b8c31f38b52d48de633d"
 
 [[files]]
 file = "config/zfastnoise.mixin.properties"
-hash = "17489e3cea54513fa6ca45ce8f3b9c7a23156690648a81122ab84a9ff55b559d"
+hash = "52c4c0a93f296a1733af4a2bf4f58fac40a6ef42fa7e63feab9f244f04ae89ac"
 
 [[files]]
 file = "config/zipline.json"
@@ -5120,7 +5128,7 @@ metafile = true
 
 [[files]]
 file = "mods/better-modlist.pw.toml"
-hash = "49f06ac3ac3c9324a1e100d50ff1d4e41608d6aaca22f300666fb6cf0517fd16"
+hash = "883c91c721fd8abb22647e197cb13d614074609e7712d359b8b19762a6ffdd64"
 metafile = true
 
 [[files]]
@@ -5238,7 +5246,7 @@ metafile = true
 
 [[files]]
 file = "mods/chatanimation.pw.toml"
-hash = "a65792a359ce00ef6463f03342ad064ff7efa3e80bc3c6c9b64bec769f20d43c"
+hash = "ebff92228187b268d85833a4e2f9679fb6ea102ff84791ffe71e8cc1492d56f3"
 metafile = true
 
 [[files]]
@@ -5401,7 +5409,7 @@ metafile = true
 
 [[files]]
 file = "mods/entity-model-features.pw.toml"
-hash = "f22d030a054910044da1be3477955abbb2053a70288197fa35608b0036fe1e46"
+hash = "b363434af9ce56fc7243c0db537bec2f99ecbfc618e226dbeda8835f435b887c"
 metafile = true
 
 [[files]]
@@ -5481,7 +5489,7 @@ metafile = true
 
 [[files]]
 file = "mods/field-guide.pw.toml"
-hash = "4dd3c999837c547e91618deebaa78e8494f11607d9e40dede751a3a52dc43494"
+hash = "56f0b0372ddd11e0e708a7e0bf250835a886c98c7cc1bc5d6c64e8f949a202b1"
 metafile = true
 
 [[files]]
@@ -5595,7 +5603,7 @@ metafile = true
 
 [[files]]
 file = "mods/just-enough-effect-descriptions-jeed.pw.toml"
-hash = "a8869b943932a0577eb13037e8181048467f6c5828ad9408e658c7543d4e687a"
+hash = "fe1354d34df356e42dbea734d30c44b46a4484dcd68a23045927277dafefab9d"
 metafile = true
 
 [[files]]
@@ -5720,16 +5728,16 @@ metafile = true
 
 [[files]]
 file = "mods/modest_meals-1.21.1-1.0.0-pre4.jar"
-hash = "2dd85ada17d51daec0aeabb0a85f006b2dbea721465e144035e4ef4f56461d52"
+hash = "186fceba6223ed7df325f6d3c903581d926a6ca90cd9028f53cfc16c6ec7c14c"
 
 [[files]]
 file = "mods/modulation.pw.toml"
-hash = "4605c7d5998111ec4da74f482bd34e60ef3d5c1c60cc9714a36e3929172fa12f"
+hash = "dd24bd04e8e2662013ff5c76c1c803bf8dca707c54cfc40c1b2a3893eb254af3"
 metafile = true
 
 [[files]]
 file = "mods/moonlight.pw.toml"
-hash = "dda27add4d2cfc241d52a6825e016712d704c0b9925ab2ccbf779e8493f752ed"
+hash = "8a69517eb999eacd8842d42fb2f9cdfda43fe11e70d72eabc54969b4d9e38f5a"
 metafile = true
 
 [[files]]
@@ -5833,7 +5841,7 @@ metafile = true
 
 [[files]]
 file = "mods/particle-rain.pw.toml"
-hash = "70a1250e9612f8194f88e9c14b405907d16e7b2df7742d6b4d1c42473486395e"
+hash = "ab6378b2b94efe77769ff9ce07c125eaf256664841443cb03fe34106c86681e5"
 metafile = true
 
 [[files]]
@@ -5868,7 +5876,7 @@ metafile = true
 
 [[files]]
 file = "mods/polytone.pw.toml"
-hash = "a7af695080bf24f091c87d411ca0713ee95e047b2dc0051689c4e9d178c5ba6f"
+hash = "62f683ecbba84df6a192c68615ac6b6080defcd7bdd7ffc8ec9cdeca6bec7268"
 metafile = true
 
 [[files]]
@@ -5893,7 +5901,7 @@ metafile = true
 
 [[files]]
 file = "mods/quark.pw.toml"
-hash = "44c0434a0c305ffa4a3d31911a766c27c21eeab8d907cbaf7adc23bf5b8c516e"
+hash = "6390e31a740d60ba3a66edaf86f5e2788b7d03ff18fd43580f12f665e25f73f9"
 metafile = true
 
 [[files]]
@@ -5962,12 +5970,12 @@ metafile = true
 
 [[files]]
 file = "mods/reliable-recipes.pw.toml"
-hash = "7b5e25275f2d97f50979b19a1adeafb43ea67180efd2ae08604824afe9a08709"
+hash = "2ac3bf1577037bbb475d74c24f0c66ed7bc8101a5f996ff47797112d384325cb"
 metafile = true
 
 [[files]]
 file = "mods/reliable-remover.pw.toml"
-hash = "90cc75917c9433421fc20e2148f866137435f3751e7eadcad30f87b549f2d32f"
+hash = "e4fafe4c120c2f3176c6cb77ba3c1c6c578939b6644dd0d0482d7213a3f3474d"
 metafile = true
 
 [[files]]
@@ -5997,7 +6005,7 @@ metafile = true
 
 [[files]]
 file = "mods/roxy.pw.toml"
-hash = "676a12102065adfd445794d57024048b4380d99a2562db900209ffb2f0ddc4c5"
+hash = "436decd82e30156f5b3896583d523f7c7b3a1f9d6754d914b36dea1cede1afb1"
 metafile = true
 
 [[files]]
@@ -6007,7 +6015,7 @@ metafile = true
 
 [[files]]
 file = "mods/scholar.pw.toml"
-hash = "0494bf33dd41c156edd51c50b443926a1c311548fdf74cd73ac1577b02555025"
+hash = "73fb507624ed74d3d603b873557828aeae2f29ee167b1481fca03b5625a2c77d"
 metafile = true
 
 [[files]]
@@ -6170,8 +6178,8 @@ hash = "9ea9536d26d15e6035d181c48c0f32cd37f08b7cfacd9b204abcc214ae5d987e"
 metafile = true
 
 [[files]]
-file = "mods/toomanyrecipeviewers-0.9.1-dev+mc.21.1.jar"
-hash = "4a3831d2d83d958ccc3e89ab04df6fcb4d073e1b805e6a07dec432a176c4f97c"
+file = "mods/toomanyrecipeviewers-0.9.1+mc.21.1.jar"
+hash = "5f5267e1a0a71e2ee161b92790d410b6a9cecdd04ff196267eb0686bc764fffa"
 
 [[files]]
 file = "mods/treeliable.pw.toml"

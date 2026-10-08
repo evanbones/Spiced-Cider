@@ -14,7 +14,7 @@
 	# Defines the minimum habitable temperature
 	# Default: 0.4
 	# Range: -Infinity ~ Infinity
-	"Minimum Habitable Temperature" = 0.4
+	"Minimum Habitable Temperature" = 0.0
 	#─────────────────────────────────────────────────────────────────────────
 	# Defines the maximum habitable temperature
 	# Default: 1.511111111111111
@@ -29,7 +29,7 @@
 	# Damage dealt to the player when they are too hot or too cold
 	# Default: 2.0
 	# Range: 0.0 ~ Infinity
-	"Temperature Damage" = 2.0
+	"Temperature Damage" = 1.0
 	#─────────────────────────────────────────────────────────────────────────
 	# The time between damage (in ticks) when the player is too hot or too cold
 	# Default: 40
@@ -82,10 +82,10 @@
 		"Acclimation Speed" = 0.0077
 		#─────────────────────────────────────────────────────────────────────────
 		# The offset to the player's minimum habitable temperature when they acclimate to cold (first value) or hot (second value) environments
-		"Min Acclimation Range" = [-0.46, 0.23]
+		"Min Acclimation Range" = [-0.23, 0.0]
 		#─────────────────────────────────────────────────────────────────────────
 		# The offset to the player's maximum habitable temperature when they acclimate to cold (first value) or hot (second value) environments
-		"Max Acclimation Range" = [-0.23, 0.46]
+		"Max Acclimation Range" = [0.0, 0.23]
 
 ["Grace Period"]
 	#─────────────────────────────────────────────────────────────────────────

@@ -1,0 +1,25 @@
+{
+  "entity": {
+    "entities": [
+      "minecraft:player"
+    ]
+  },
+  "effects": [
+    {
+      "effect": "cold_sweat:freeze_shiver",
+      "range": { "min": -70, "max": -100 }
+    },
+    {
+      "effect": "cold_sweat:freeze_overlay",
+      "range": { "min": -50, "max": -100 }
+    },
+    {
+      "effect": "cold_sweat:heat_vignette",
+      "range": { "min": 50, "max": 100 }
+    },
+    {
+      "effect": "cold_sweat:heat_sway",
+      "range": { "min": 70, "max": 100 }
+    }
+  ]
+}

@@ -31,7 +31,6 @@
 	# • temperature: The temperature offset to apply to the dimension
 	# • *units: The units of the temperature ("f", "c", or "mc"). Defaults to Minecraft units (mc))
 	"Dimension Temperature Offsets" = [
-	    ["minecraft:the_nether", 32, "f"],
 	    ["minecraft:the_end", -5, "f"]
 	]
 	#─────────────────────────────────────────────────────────────────────────//v
@@ -76,7 +75,7 @@
 	    ["minecraft:deep_frozen_ocean", 8, 31, "F"],
 	    ["minecraft:deep_lukewarm_ocean", 39, 70, "F"],
 	    ["minecraft:deep_ocean", 39, 70, "F"],
-	    ["minecraft:desert", 48, 115, "F"],
+	    ["minecraft:desert", 26, 118, "F"],
 	    ["minecraft:dripstone_caves", "disable"],
 	    ["minecraft:eroded_badlands", 88, 120, "F", -5],
 	    ["minecraft:flower_forest", 51, 76, "F"],
@@ -101,6 +100,12 @@
 	    ["minecraft:river", "disable"],
 	    ["minecraft:savanna", 70, 95, "F"],
 	    ["minecraft:savanna_plateau", 76, 98, "F"],
+	    ["minecraft:nether_wastes", 112, 112, "F"],
+	    ["minecraft:crimson_forest", 106, 106, "F"],
+	    ["minecraft:warped_forest", 92, 92, "F"],
+	    ["minecraft:basalt_deltas", 128, 128, "F"],
+	    ["infernalexp:glowstone_canyon", 112, 112, "F"],
+	    ["infernalexp:delta_shores", 120, 120, "F"],
 	    ["minecraft:small_end_islands", 39, 70, "F"],
 	    ["minecraft:snowy_beach", 8, 30, "F"],
 	    ["minecraft:snowy_plains", 8, 30, "F"],
@@ -221,7 +226,7 @@
 	"Sleep Check Override Blocks" = []
 	#─────────────────────────────────────────────────────────────────────────
 	# When set to true, players cannot sleep if they are cold or hot enough to die
-	"Check Sleeping Conditions" = true
+	"Check Sleeping Conditions" = false
 	#─────────────────────────────────────────────────────────────────────────
 	# Converts damage dealt by Soul Fire to cold damage (default: true)
 	# Does not affect the block's temperature
