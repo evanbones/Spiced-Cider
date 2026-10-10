@@ -450,3 +450,18 @@ publishMods {
         minecraftVersions.add(project.minecraft_version)
     }
 }
+
+def packDir = rootProject.layout.projectDirectory.dir("pack")
+
+var packwizRefresh = tasks.register("packwizRefresh", Exec) {
+    group = "spiced cider"
+    workingDir = packDir.asFile
+    commandLine packDir.file("packwiz.exe").asFile.absolutePath, "refresh"
+}
+
+tasks.register("deployToPack", Copy) {
+    group = "spiced cider"
+    from(tasks.named("jar"))
+    into(packDir.dir("mods"))
+    finalizedBy(packwizRefresh)
+}

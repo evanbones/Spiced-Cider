@@ -62,15 +62,19 @@ hash = "a8c0abba6dc195fcfdba6ef7e37982a59c9f62d167bb45132b3e9108b0e2abe1"
 
 [[files]]
 file = "config/amendments-client-1.toml.bak"
-hash = "762e09677a161d8f8b677f5a5d817b732bd69e754a68cc0af8ed95e766a9e91b"
+hash = "655bd228ac333caceb2d6678d6134fa93f09dc30dfc745291144f2065219efd8"
 
 [[files]]
 file = "config/amendments-client-2.toml.bak"
+hash = "762e09677a161d8f8b677f5a5d817b732bd69e754a68cc0af8ed95e766a9e91b"
+
+[[files]]
+file = "config/amendments-client-3.toml.bak"
 hash = "d15bd01bf6464043930c65fc6cc8106290f9ac10f68da803f589ea003dc7fbb0"
 
 [[files]]
 file = "config/amendments-client.toml"
-hash = "655bd228ac333caceb2d6678d6134fa93f09dc30dfc745291144f2065219efd8"
+hash = "5fab30f26876adc07811dabecc63dd5895964bf30ed0dcd8e17cfce4878527ef"
 
 [[files]]
 file = "config/amendments-common.toml"
@@ -486,7 +490,7 @@ hash = "0030656736b21f06f9f5b73078ce3ea41778f0f744c9d5da0055712a493ced85"
 
 [[files]]
 file = "config/drippyloadingscreen/early_window_reference.properties"
-hash = "a76c0b158c73e3917b9f74c7379351600d27901aa3e35a8df04f789d76cda5be"
+hash = "01a3f2bfbdd92e626f915d84ac265f0ca7499328ae9fe2f272b4cf89408993b5"
 
 [[files]]
 file = "config/drippyloadingscreen/options.txt"
@@ -646,7 +650,7 @@ hash = "09d330b29443d9579ecc014f2be2fcb31075bfe1e9f9ac4e750f271128650fe6"
 
 [[files]]
 file = "config/fabric/indigo-renderer.properties"
-hash = "e4d5d8c455e00f8f8b13654db3bcf78b7291504de3878154342f5599134ced7b"
+hash = "3412f282e9c92c1e8b80124f7451e24af2ff4ac742aa22a560de336e234e5a24"
 
 [[files]]
 file = "config/falling_snow.json"
@@ -4014,7 +4018,7 @@ hash = "13b2b1384f949e6e409c3c3cc423ecb854df6b386d4466d424a57a887e89f3d8"
 
 [[files]]
 file = "config/packetfixer.properties"
-hash = "5319d6abf083e96f08bf1043315c3a22cb47f6f9496395817fed098d62474b3c"
+hash = "b8d944260c8d4826a115f36314db96a914d00900eee582c208fc469d56a48872"
 
 [[files]]
 file = "config/particle_core_config.toml"
@@ -4157,12 +4161,12 @@ file = "config/reliable_recipes.json"
 hash = "cdfae1c884bc1239d76eb3b6ef868880b017fd7dc12968b24215c56540a01a25"
 
 [[files]]
-file = "config/reliable_recipes/design_doc_tweaks.json"
-hash = "8818a0802f3fd93801f97681252d8bd4fc7d09550a34df1efd8e28254dd7a240"
-
-[[files]]
 file = "config/reliable_recipes/generated_removals.json"
 hash = "60a1f1e56f87d2962eacda04a49915ed63ff400973018a79b3ec1455f2db92e5"
+
+[[files]]
+file = "config/reliable_recipes/gotta_sort_these.json"
+hash = "8818a0802f3fd93801f97681252d8bd4fc7d09550a34df1efd8e28254dd7a240"
 
 [[files]]
 file = "config/reliable_recipes/replace_input.json"
@@ -5106,7 +5110,7 @@ hash = "d985bfc68899c91aa642736400472f6ab876dedaaef4b8c31f38b52d48de633d"
 
 [[files]]
 file = "config/zfastnoise.mixin.properties"
-hash = "523ccbea576c4e85d4f2c8dbec92146d6105491f728ab3d659086f4aebbd21c0"
+hash = "8122c85cce010add014470475e8af156a2e241e8dbda9a4595b9226db00a5549"
 
 [[files]]
 file = "config/zipline.json"
@@ -5171,7 +5175,7 @@ metafile = true
 
 [[files]]
 file = "mods/amendments.pw.toml"
-hash = "c81bee190ce936bc46b98b20f3dff4a7b9689cb7ac168a1674f5378c882f304a"
+hash = "a3c9b772845b9dab436aa5ba14b9596b314006ced8fbd2a6b0286dc0c70cf220"
 metafile = true
 
 [[files]]
@@ -5207,6 +5211,11 @@ metafile = true
 [[files]]
 file = "mods/berry-good.pw.toml"
 hash = "3584f3045229968389179312c28d7f5076aa79268d53e97f31115bd6e481ff6c"
+metafile = true
+
+[[files]]
+file = "mods/better-biome-blend.pw.toml"
+hash = "a4c595c147f06581211b021f46fa1eb6c6388ddca2647c824036eacc8fd6367a"
 metafile = true
 
 [[files]]
@@ -5815,7 +5824,7 @@ metafile = true
 
 [[files]]
 file = "mods/moonlight.pw.toml"
-hash = "8a69517eb999eacd8842d42fb2f9cdfda43fe11e70d72eabc54969b4d9e38f5a"
+hash = "709bfedec583aee1370ad11210b75a454b1e3f10c0a1da7fe25abd1c28a8681d"
 metafile = true
 
 [[files]]
@@ -5954,7 +5963,7 @@ metafile = true
 
 [[files]]
 file = "mods/polytone.pw.toml"
-hash = "de262da5dd0e2ea6532c69c3b138059897335d56d67fded4fdbae14edf8a3c97"
+hash = "f54e19ec4d32f64f985900fc2da5579769937dff081167d48bec11932198b55f"
 metafile = true
 
 [[files]]
@@ -6048,7 +6057,7 @@ metafile = true
 
 [[files]]
 file = "mods/reliable-recipes.pw.toml"
-hash = "2ac3bf1577037bbb475d74c24f0c66ed7bc8101a5f996ff47797112d384325cb"
+hash = "5c2be54c4793eb8906dc7657e46a068739508e1006d554a4b664c660a74379af"
 metafile = true
 
 [[files]]
@@ -6188,7 +6197,7 @@ metafile = true
 
 [[files]]
 file = "mods/spicedcider-1.0.0.jar"
-hash = "1fb2e1fd6abcb110857a2197b14c20715617e47a61225b2e6bb45b1dc9328846"
+hash = "34fef6bf9e1887a1e27f2c80f00b51cd4f29fb74d65c70403253759905f6110b"
 
 [[files]]
 file = "mods/stacksizetweaks.pw.toml"
