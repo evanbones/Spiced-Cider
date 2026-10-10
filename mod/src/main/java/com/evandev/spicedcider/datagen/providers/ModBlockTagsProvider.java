@@ -31,7 +31,10 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                 .add(ModBlocks.CAST_IRON_BLOCK.get());
 
         this.tag(BlockTags.create(ResourceLocation.fromNamespaceAndPath("c", "storage_blocks")))
-                .add(ModBlocks.CAST_IRON_BLOCK.get());
+                .add(ModBlocks.CAST_IRON_BLOCK.get())
+                .add(ModBlocks.TALLOW_BLOCK.get());
+        this.tag(BlockTags.create(ResourceLocation.fromNamespaceAndPath("c", "storage_blocks/tallow")))
+                .add(ModBlocks.TALLOW_BLOCK.get());
         this.tag(BlockTags.create(ResourceLocation.fromNamespaceAndPath("c", "storage_blocks/cast_iron")))
                 .add(ModBlocks.CAST_IRON_BLOCK.get());
     }

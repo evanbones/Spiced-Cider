@@ -214,7 +214,6 @@ public class SpicedCiderConfig {
 
         public final ModConfigSpec.BooleanValue sodiumLightingParityFix;
         public final ModConfigSpec.BooleanValue voxyWorldGenPersistStats;
-        public final ModConfigSpec.BooleanValue cirrusPostShaderTimeSync;
 
         public Client(ModConfigSpec.Builder builder) {
             builder.push("compat");
@@ -228,11 +227,6 @@ public class SpicedCiderConfig {
                     .comment(tooltip("voxyWorldGenPersistStats"))
                     .translation("option.spicedcider.voxyWorldGenPersistStats")
                     .define("voxyWorldGenPersistStats", true);
-
-            cirrusPostShaderTimeSync = builder
-                    .comment(tooltip("cirrusPostShaderTimeSync"))
-                    .translation("option.spicedcider.cirrusPostShaderTimeSync")
-                    .define("cirrusPostShaderTimeSync", true);
 
             builder.pop();
             builder.push("naming");

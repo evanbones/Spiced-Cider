@@ -226,11 +226,11 @@
 			cut_stripped_post = true
 
 		[entries.wood_type.architects_palette]
-			board_stairs = true
+			board_stairs = false
 			railing = true
-			board_slab = true
-			boards = true
-			board_wall = true
+			board_slab = false
+			boards = false
+			board_wall = false
 
 		[entries.wood_type.shutterup]
 			shutter = true

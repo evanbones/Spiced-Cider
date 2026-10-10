@@ -1,0 +1,39 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "supplementaries"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "quark"
+    }
+  ],
+  "type": "modestmagic:summoning",
+  "base": {
+    "item": "minecraft:water_bucket"
+  },
+  "ingredients": [
+    {
+      "item": "supplementaries:soap"
+    },
+    {
+      "item": "supplementaries:soap"
+    },
+    {
+      "item": "quark:soul_bead"
+    },
+    {
+      "item": "supplementaries:soap"
+    },
+    {
+      "item": "supplementaries:soap"
+    }
+  ],
+  "consume_base": true,
+  "outcomes": [
+    {
+      "result_entity": "minecraft:sulfur_cube"
+    }
+  ]
+}

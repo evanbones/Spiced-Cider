@@ -35,6 +35,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.CAST_IRON_NUGGET.get());
         basicItem(ModItems.CAST_IRON_SHEET.get());
         withExistingParent("cast_iron_block", modLoc("block/cast_iron_block"));
+        basicItem(ModItems.TALLOW.get());
+        withExistingParent("tallow_block", modLoc("block/tallow_block"));
     }
 
     public @NotNull ItemModelBuilder handheldItem(@NotNull Item item) {

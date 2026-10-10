@@ -1,0 +1,100 @@
+[
+  {
+    "action": "remove_recipe",
+    "id": [
+      "minecraft:bone_meal",
+      "architects_palette:bone_meal",
+      "tide:bone_meal_from_fish_bone",
+      "upgrade_aquatic:bone_meal_from_thrasher_tooth",
+      "caverns_and_chasms:bone_meal_from_bone_flute"
+    ]
+  },
+  {
+    "action": "replace_input",
+    "filter": {
+      "id": "minecraft:sticky_piston"
+    },
+    "target": "minecraft:slime_ball",
+    "replacement": "minecraft:honey_bottle"
+  },
+  {
+    "action": "replace_input",
+    "filter": {
+      "id": "caverns_and_chasms:hoop"
+    },
+    "target": "#c:ingots/tin",
+    "replacement": "etcetera:rubber"
+  },
+  {
+    "action": "replace_input",
+    "filter": {
+      "id": "caverns_and_chasms:bouncer"
+    },
+    "target": "#c:storage_blocks/tin",
+    "replacement": "etcetera:rubber_block"
+  },
+  {
+    "action": "remove_from_tag",
+    "tag": "/minecraft:enchantable\\/.*/",
+    "id": [
+      "manual_labour:flint_hammer",
+      "farmersdelight:flint_knife",
+      "modestmining:flint_hatchet",
+      "modestmining:flint_spade",
+      "modestmining:flint_mattock",
+      "modestmining:flint_hoe",
+      "modestmining:flint_blade",
+      "modestmining:flint_mallet",
+      "modestmining:flint_poleaxe",
+      "modestmining:flint_tanto",
+      "modestmining:flint_bludgeon",
+      "modestmining:flint_javelin"
+    ]
+  },
+  {
+    "action": "replace_input",
+    "filter": {
+      "output": "minecraft:nether_brick"
+    },
+    "target": "minecraft:netherrack",
+    "replacement": "create:cinder_flour"
+  },
+  {
+    "action": "replace_input",
+    "filter": {
+      "id": "supplementaries:soap"
+    },
+    "target": "minecraft:porkchop",
+    "replacement": "spicedcider:tallow"
+  },
+  {
+    "action": "replace_input",
+    "filter": {
+      "output": "/.*:(.+_)?candle/"
+    },
+    "target": "minecraft:honeycomb",
+    "replacement": "#spicedcider:wax_or_tallow"
+  },
+  {
+    "action": "replace_input",
+    "filter": {
+      "id": [
+        "spelunkery:wooden_channel",
+        "spelunkery:stone_channel",
+        "culturaldelights:vat",
+        "manual_labour:ladle",
+        "caverns_and_chasms:tinplate"
+      ]
+    },
+    "target": "minecraft:honeycomb",
+    "replacement": "#spicedcider:wax_or_tallow"
+  },
+  {
+    "action": "replace_input",
+    "filter": {
+      "id": "supplementaries:fine_wood_2"
+    },
+    "target": "minecraft:resin_clump",
+    "replacement": "minecraft:honeycomb"
+  }
+]

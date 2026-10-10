@@ -148,3 +148,17 @@ type = "optional"
 versionRange = "*"
 ordering = "AFTER"
 side = "CLIENT"
+
+[[dependencies.${ mod_id }]]
+modId = "architects_palette"
+type = "optional"
+versionRange = "*"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.${ mod_id }]]
+modId = "modestmining"
+type = "optional"
+versionRange = "*"
+ordering = "AFTER"
+side = "BOTH"

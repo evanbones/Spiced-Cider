@@ -316,6 +316,9 @@ dependencies {
 
     // Voxy
     compileOnly "maven.modrinth:voxy:H3w2nVdU"
+    // Voxy World Gen V2
+    compileOnly "maven.modrinth:voxy-worldgen:PzNUZlWw"
+    runtimeOnly "maven.modrinth:voxy-worldgen:PzNUZlWw"
 
     // Reconnectible Chains
     compileOnly "maven.modrinth:reconnectible-chains:2.2.5-1.21.1-neoforge"

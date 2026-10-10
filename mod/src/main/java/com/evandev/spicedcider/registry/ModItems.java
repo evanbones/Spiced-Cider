@@ -59,4 +59,9 @@ public class ModItems {
             () -> new BlockItem(ModBlocks.CAST_IRON_BLOCK.get(), new Item.Properties()));
     public static final DeferredItem<Item> CAST_IRON_SHEET = ITEMS.register("cast_iron_sheet",
             () -> new Item(new Item.Properties()));
+
+    public static final DeferredItem<Item> TALLOW = ITEMS.register("tallow",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> TALLOW_BLOCK = ITEMS.register("tallow_block",
+            () -> new BlockItem(ModBlocks.TALLOW_BLOCK.get(), new Item.Properties()));
 }

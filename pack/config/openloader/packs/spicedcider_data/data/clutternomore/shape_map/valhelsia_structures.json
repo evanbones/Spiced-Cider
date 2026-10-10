@@ -3,21 +3,17 @@
   "add": {
     "/(?<namespace>(?!everycomp|spicedcider)[^:]+):(?<stripped>stripped_)?(?!spiked_)(?<wood>.+)_palisade/": [
       "${namespace}:${stripped}${wood}_palisade",
-      "${namespace}:${stripped}spiked_${wood}_palisade",
-      "valhelsia_structures:${stripped}${wood}_post",
-      "valhelsia_structures:cut_${stripped}${wood}_post",
-      "${namespace}:${stripped}${wood}_post",
-      "${namespace}:cut_${stripped}${wood}_post",
-      "everycomp:vs/${namespace}/${stripped}${wood}_post",
-      "everycomp:vs/${namespace}/cut_${stripped}${wood}_post"
+      "${namespace}:${stripped}spiked_${wood}_palisade"
     ],
     "/(?<prefix>everycomp|spicedcider):(?<dir>[^/]+)/(?<namespace>[^/]+)/(?<stripped>stripped_)?(?!spiked_)(?<wood>.+)_palisade/": [
       "${prefix}:${dir}/${namespace}/${stripped}${wood}_palisade",
-      "${prefix}:${dir}/${namespace}/${stripped}spiked_${wood}_palisade",
-      "valhelsia_structures:${stripped}${wood}_post",
-      "valhelsia_structures:cut_${stripped}${wood}_post",
+      "${prefix}:${dir}/${namespace}/${stripped}spiked_${wood}_palisade"
+    ],
+    "/(?<namespace>(?!everycomp)[^:]+):(?<stripped>stripped_)?(?!cut_)(?<wood>.+)_post/": [
       "${namespace}:${stripped}${wood}_post",
-      "${namespace}:cut_${stripped}${wood}_post",
+      "${namespace}:cut_${stripped}${wood}_post"
+    ],
+    "/everycomp:vs/(?<namespace>[^/]+)/(?<stripped>stripped_)?(?!cut_)(?<wood>.+)_post/": [
       "everycomp:vs/${namespace}/${stripped}${wood}_post",
       "everycomp:vs/${namespace}/cut_${stripped}${wood}_post"
     ],

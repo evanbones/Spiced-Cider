@@ -63,8 +63,6 @@ public class SpicedCiderConfigScreen {
                                 toggle("voxyWorldGenSyncUnloadedChunks", common.voxyWorldGenSyncUnloadedChunks))
                         .optionIf(ModList.get().isLoaded("voxyworldgenv2"),
                                 toggle("voxyWorldGenPersistStats", client.voxyWorldGenPersistStats))
-                        .optionIf(ModList.get().isLoaded("cirrus") && ModList.get().isLoaded("polytone"),
-                                toggle("cirrusPostShaderTimeSync", client.cirrusPostShaderTimeSync))
                         .build())
                 .category(ConfigCategory.createBuilder()
                         .name(Component.translatable("category.spicedcider.performance"))

@@ -43,8 +43,6 @@
 	sodiumLightingParityFix = true
 	#Remembers the received-chunk total in Voxy World Gen V2's debug overlay per world or server, instead of resetting it to zero every time you reconnect. Requires Voxy World Gen V2.
 	voxyWorldGenPersistStats = true
-	#Feeds Cirrus's smoothed day time into Polytone's post-process shaders, so effects that follow the sun - such as Sunbathing Godrays' rays and lens flare - sweep across the sky with Cirrus's smooth time transition instead of snapping to the new time the instant you leave a bed. Requires Cirrus and Polytone.
-	cirrusPostShaderTimeSync = true
 
 [voxy]
 	#Replaces the terrain fog with configurable start and end distances that cover Voxy's LoD terrain, plus weather and cave fog. Disable to use Roxy's own fog.

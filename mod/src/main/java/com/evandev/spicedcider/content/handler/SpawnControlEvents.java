@@ -42,7 +42,8 @@ public class SpawnControlEvents {
     private static boolean isPlayerPlaced(Entity entity) {
         if (!(entity instanceof Mob mob)) return false;
         MobSpawnType spawnType = mob.getSpawnType();
-        return spawnType == MobSpawnType.MOB_SUMMONED
+        return spawnType == null
+                || spawnType == MobSpawnType.MOB_SUMMONED
                 || spawnType == MobSpawnType.SPAWN_EGG
                 || spawnType == MobSpawnType.COMMAND;
     }

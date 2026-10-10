@@ -118,8 +118,6 @@
 	map_markers_text_scale = 1.0
 	#Rearranges the position of the slice indicator to be more compact. You will need supplementaries slice maps to use this
 	compact_slices_indicator = false
-	#Allows minimap to follow player movement instead of only displaying current map
-	follow_player = true
 	#Show filter button on atlas screen, allowing you to filter map decoration by name
 	filter_button = true
 	#Sort bookmarks in atlas screen by distance from map center instead of just by id
@@ -134,7 +132,7 @@
 	#Allowed Values: ON, NOT_LOCKED, OFF
 	in_hand_renderer = "NOT_LOCKED"
 
-[moonlight_integration]
+[markers]
 	#Enables custom map markers, which you can place on the map via a special pin button
 	enabled = true
 	#Allows tracking pins by pressing control, making them follow you on minimap
@@ -145,6 +143,10 @@
 	# Default: 64
 	# Range: 0 ~ 256
 	radar_radius = 64
+	#How far around you other players show up on atlas maps. 0 hides them
+	# Default: 128
+	# Range: 0 ~ 1024
+	player_markers_radius = 128
 	#Entities on radar will have their icon rotate
 	radar_pins_rotate = false
 	#Uses yellow markers for all mobs

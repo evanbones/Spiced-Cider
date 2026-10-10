@@ -48,6 +48,8 @@ public class ModRecipeProvider extends RecipeProvider {
         nineBlockStorageRecipes(output, RecipeCategory.MISC, ModItems.CAST_IRON_INGOT.get(), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CAST_IRON_BLOCK.get());
         nineBlockStorageRecipes(output, RecipeCategory.MISC, ModItems.CAST_IRON_NUGGET.get(), RecipeCategory.MISC, ModItems.CAST_IRON_INGOT.get(), "spicedcider:cast_iron_ingot_from_nuggets", null, "spicedcider:cast_iron_nugget_from_ingot", null);
 
+        nineBlockStorageRecipes(output, RecipeCategory.MISC, ModItems.TALLOW.get(), RecipeCategory.BUILDING_BLOCKS, ModBlocks.TALLOW_BLOCK.get());
+
         SpecialRecipeBuilder.special(RenameRecipe::new)
                 .save(output, "spicedcider:rename_item");
     }

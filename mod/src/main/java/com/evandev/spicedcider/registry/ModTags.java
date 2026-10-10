@@ -17,6 +17,7 @@ public class ModTags {
 
         public static final TagKey<Item> KEPT_WHEN_BROKEN = tag("kept_when_broken");
         public static final TagKey<Item> DESTROYED_WHEN_BROKEN = tag("destroyed_when_broken");
+        public static final TagKey<Item> WAX_OR_TALLOW = tag("wax_or_tallow");
 
         private static TagKey<Item> tag(String name) {
             return ItemTags.create(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, name));

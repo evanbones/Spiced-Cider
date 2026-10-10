@@ -5,6 +5,7 @@
   "plugin": "com.moulberry.mixinconstraints.ConstraintsMixinPlugin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "architectspalette.CageLanternLightMixin",
     "blockgrid.BlockStateOffsetMixin",
     "blockgrid.ChunkMapMixin",
     "blockgrid.ChunkSerializerMixin",
@@ -27,9 +28,12 @@
     "minecraft.FireBlockMixin",
     "minecraft.ItemStackKeeperMixin",
     "minecraft.PlayerMixin",
+    "minecraft.PottedTorchflowerLightMixin",
     "minecraft.RespawnAnchorMixin",
     "minecraft.SpiderEntityMixin",
+    "minecraft.TorchflowerLightMixin",
     "minecraft.WolfPetArmorMixin",
+    "modestmining.ShellBlockSoundMixin",
     "perf.RecipeBookMixin",
     "perf.ServerPlayerMixin",
     "perf.ServerRecipeBookMixin",
@@ -45,7 +49,10 @@
     "spelunkery.SpelunkeryMoresFixMixin",
     "tide.TideFishingRodItemMixin",
     "vanillabackport.ModSurfaceRuleDataMixin",
-    "vanillabackport.SulfurPoolCalciteMixin"
+    "vanillabackport.SulfurPoolCalciteMixin",
+    "voxyworldgen.ChunkGenerationManagerCatchupMixin",
+    "voxyworldgen.ChunkGenerationManagerPauseCheckMixin",
+    "voxyworldgen.DimensionStateAccessor"
   ],
   "client": [
     "blockgrid.AmbientParticleOffsetMixin",
@@ -87,7 +94,8 @@
     "vista.VistaSharedStateThrashMixin",
     "vista.accessor.AdaptiveUpdateSchedulerAccessor",
     "vista.accessor.GameRendererAccessor",
-    "vista.accessor.LevelRendererAccessor"
+    "vista.accessor.LevelRendererAccessor",
+    "voxyworldgen.NetworkStateStatsMixin"
   ],
   "server": [
   ],

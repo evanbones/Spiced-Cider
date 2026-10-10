@@ -15,5 +15,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
         simpleBlockWithItem(ModBlocks.CAST_IRON_BLOCK.get(), cubeAll(ModBlocks.CAST_IRON_BLOCK.get()));
+        simpleBlockWithItem(ModBlocks.TALLOW_BLOCK.get(), cubeAll(ModBlocks.TALLOW_BLOCK.get()));
     }
 }

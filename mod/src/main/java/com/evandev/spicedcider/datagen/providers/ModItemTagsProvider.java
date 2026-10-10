@@ -8,6 +8,7 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
@@ -91,7 +92,16 @@ public class ModItemTagsProvider extends ItemTagsProvider {
                 .add(ModItems.CAST_IRON_NUGGET.get());
 
         this.tag(ItemTags.create(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("c", "storage_blocks")))
-                .add(ModItems.CAST_IRON_BLOCK.get());
+                .add(ModItems.CAST_IRON_BLOCK.get())
+                .add(ModItems.TALLOW_BLOCK.get());
+        this.tag(ItemTags.create(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("c", "storage_blocks/tallow")))
+                .add(ModItems.TALLOW_BLOCK.get());
+
+        this.tag(ModTags.Items.WAX_OR_TALLOW)
+                .add(Items.HONEYCOMB)
+                .add(ModItems.TALLOW.get());
+        this.tag(ItemTags.create(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("c", "cooking_oil")))
+                .add(ModItems.TALLOW.get());
         this.tag(ItemTags.create(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("c", "storage_blocks/cast_iron")))
                 .add(ModItems.CAST_IRON_BLOCK.get());
 

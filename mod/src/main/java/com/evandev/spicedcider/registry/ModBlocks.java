@@ -17,4 +17,7 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> CAST_IRON_BLOCK = BLOCKS.register("cast_iron_block",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK)));
+
+    public static final DeferredBlock<Block> TALLOW_BLOCK = BLOCKS.register("tallow_block",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.HONEYCOMB_BLOCK)));
 }
