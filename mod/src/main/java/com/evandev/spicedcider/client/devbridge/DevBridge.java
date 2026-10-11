@@ -421,6 +421,10 @@ public final class DevBridge {
         long started = System.nanoTime();
         boolean reached = switch (condition) {
             case "world" -> waitUntil(() -> call(DevBridge::inWorld), timeoutMs);
+            case "menu" -> waitUntil(() -> call(() -> {
+                Minecraft mc = Minecraft.getInstance();
+                return mc.getOverlay() == null && mc.level == null && mc.screen instanceof TitleScreen;
+            }), timeoutMs);
             case "ticks" -> {
                 long target = FRAMES.clientTicks() + n;
                 yield waitUntil(() -> FRAMES.clientTicks() >= target, timeoutMs);
@@ -509,6 +513,7 @@ public final class DevBridge {
         if (world == null) throw new HttpError(400, "Pass ?world=<save folder name>");
         Minecraft mc = Minecraft.getInstance();
         String problem = onClient(() -> {
+            if (mc.getOverlay() != null) return "Still loading resources";
             if (mc.level != null) return "Already in a world";
             if (!mc.getLevelSource().levelExists(world)) return "No save folder named " + world;
             mc.createWorldOpenFlows().openWorld(world, () -> mc.setScreen(new TitleScreen()));

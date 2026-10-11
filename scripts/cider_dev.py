@@ -65,7 +65,7 @@ def cmd_launch(args):
     if args.world:
         show(call("POST", "/wait", {"for": "world", "timeout": args.timeout}))
     else:
-        show(call("GET", "/status"))
+        show(call("POST", "/wait", {"for": "menu", "timeout": args.timeout}))
 
 
 def cmd_bench(args):
@@ -96,6 +96,14 @@ def cmd_reset_world():
         shutil.rmtree(target)
     shutil.copytree(BENCH_TEMPLATE, target)
     print(f"Restored {target} from template.")
+
+
+def cmd_kill():
+    port = urllib.parse.urlparse(BRIDGE).port
+    script = (f"$c = Get-NetTCPConnection -LocalPort {port} -State Listen -ErrorAction SilentlyContinue; "
+              "if ($c) { Stop-Process -Id $c.OwningProcess -Force; Write-Output \"Killed $($c.OwningProcess)\" } "
+              "else { Write-Output 'No process listening on the bridge port' }")
+    subprocess.run(["powershell", "-NoProfile", "-Command", script])
 
 
 def cmd_jfr(args):
@@ -137,7 +145,7 @@ def main():
     p.add_argument("--hud", action="store_true")
 
     p = sub.add_parser("wait")
-    p.add_argument("condition", choices=["world", "ticks", "frames", "seconds", "stable"])
+    p.add_argument("condition", choices=["world", "menu", "ticks", "frames", "seconds", "stable"])
     p.add_argument("n", nargs="?", type=int, default=1)
     p.add_argument("--timeout", type=int, default=600)
 
@@ -145,6 +153,7 @@ def main():
     p.add_argument("world")
     sub.add_parser("leave")
     sub.add_parser("quit")
+    sub.add_parser("kill", help="Force-kill the game process that owns the bridge port (for a hung client)")
 
     p = sub.add_parser("bench", help="Reset frame stats, measure for N seconds, optionally under JFR")
     p.add_argument("--seconds", type=int, default=30)
@@ -186,6 +195,8 @@ def main():
             show(call("POST", "/leave"))
         case "quit":
             show(call("POST", "/quit"))
+        case "kill":
+            cmd_kill()
         case "bench":
             cmd_bench(args)
         case "jfr":
