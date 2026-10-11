@@ -2,6 +2,7 @@ package com.evandev.spicedcider.util;
 
 import it.unimi.dsi.fastutil.longs.LongOpenHashSet;
 import net.minecraft.server.packs.PackType;
+import net.neoforged.fml.loading.FMLPaths;
 
 import java.io.IOException;
 import java.io.UncheckedIOException;
@@ -10,10 +11,13 @@ import java.nio.file.Files;
 import java.nio.file.NoSuchFileException;
 import java.nio.file.NotDirectoryException;
 import java.nio.file.Path;
+import java.util.List;
 import java.util.stream.Stream;
 
 public final class PackFileIndex {
     private static final PackFileIndex UNINDEXED = new PackFileIndex(null);
+
+    private static volatile List<Path> staticFolders;
 
     private final LongOpenHashSet entries;
 
@@ -22,7 +26,22 @@ public final class PackFileIndex {
     }
 
     public static boolean indexable(Path root) {
-        return root.getFileSystem() != FileSystems.getDefault();
+        if (root.getFileSystem() != FileSystems.getDefault()) return true;
+        Path absolute = root.toAbsolutePath().normalize();
+        for (Path folder : staticFolders()) {
+            if (absolute.startsWith(folder)) return true;
+        }
+        return false;
+    }
+
+    private static List<Path> staticFolders() {
+        List<Path> folders = staticFolders;
+        if (folders == null) {
+            Path gameDir = FMLPaths.GAMEDIR.get().toAbsolutePath().normalize();
+            folders = List.of(gameDir.resolve("config").resolve("openloader"), gameDir.resolve("resourcepacks"), gameDir.resolve("saves"));
+            staticFolders = folders;
+        }
+        return folders;
     }
 
     public static PackFileIndex build(Path root, PackType type) {

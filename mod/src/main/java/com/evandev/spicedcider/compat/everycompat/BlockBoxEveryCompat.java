@@ -2,6 +2,7 @@ package com.evandev.spicedcider.compat.everycompat;
 
 import net.mehvahdjukaar.every_compat.api.SimpleEntrySet;
 import net.mehvahdjukaar.every_compat.api.SimpleModule;
+import net.mehvahdjukaar.moonlight.api.set.wood.VanillaWoodChildKeys;
 import net.mehvahdjukaar.moonlight.api.set.wood.VanillaWoodTypes;
 import net.mehvahdjukaar.moonlight.api.set.wood.WoodType;
 import net.mehvahdjukaar.moonlight.api.util.Utils;
@@ -42,6 +43,7 @@ public class BlockBoxEveryCompat extends SimpleModule {
         seats = SimpleEntrySet.builder(WoodType.class, "seat",
                         ModBlocks.OAK_SEAT, () -> VanillaWoodTypes.OAK,
                         w -> new SeatBlock(Utils.copyPropertySafe(w.planks)))
+                .requiresChildren(VanillaWoodChildKeys.PLANKS)
                 .setTabKey(tab)
                 .addTag(seatsTag, Registries.BLOCK, Registries.ITEM)
                 .addTag(axeTag, Registries.BLOCK)
@@ -54,7 +56,8 @@ public class BlockBoxEveryCompat extends SimpleModule {
 
         strippedSpikedPalisades = SimpleEntrySet.builder(WoodType.class, "palisade", "stripped_spiked",
                         ModBlocks.STRIPPED_SPIKED_OAK_PALISADE, () -> VanillaWoodTypes.OAK,
-                        w -> new SpikedPalisadeBlock(null, Utils.copyPropertySafe(w.planks)))
+                        w -> new SpikedPalisadeBlock(null, Utils.copyPropertySafe(w.planks).strength(2.0F)))
+                .requiresChildren(VanillaWoodChildKeys.LOG)
                 .setTabKey(tab)
                 .addTag(spikedPalisadesTag, Registries.BLOCK, Registries.ITEM)
                 .addTag(wallsTag, Registries.BLOCK)
@@ -70,7 +73,8 @@ public class BlockBoxEveryCompat extends SimpleModule {
                         ModBlocks.SPIKED_OAK_PALISADE, () -> VanillaWoodTypes.OAK,
                         w -> new SpikedPalisadeBlock(
                                 () -> strippedSpikedPalisades.blocks.get(w),
-                                Utils.copyPropertySafe(w.planks)))
+                                Utils.copyPropertySafe(w.planks).strength(2.0F)))
+                .requiresChildren(VanillaWoodChildKeys.LOG)
                 .setTabKey(tab)
                 .addTag(spikedPalisadesTag, Registries.BLOCK, Registries.ITEM)
                 .addTag(wallsTag, Registries.BLOCK)
@@ -87,7 +91,8 @@ public class BlockBoxEveryCompat extends SimpleModule {
                         w -> new PalisadeBlock(
                                 () -> strippedSpikedPalisades.blocks.get(w),
                                 null,
-                                Utils.copyPropertySafe(w.planks)))
+                                Utils.copyPropertySafe(w.planks).strength(2.0F)))
+                .requiresChildren(VanillaWoodChildKeys.LOG)
                 .setTabKey(tab)
                 .addTag(palisadesTag, Registries.BLOCK, Registries.ITEM)
                 .addTag(wallsTag, Registries.BLOCK)
@@ -105,7 +110,8 @@ public class BlockBoxEveryCompat extends SimpleModule {
                         w -> new PalisadeBlock(
                                 () -> spikedPalisades.blocks.get(w),
                                 () -> strippedPalisades.blocks.get(w),
-                                Utils.copyPropertySafe(w.planks)))
+                                Utils.copyPropertySafe(w.planks).strength(2.0F)))
+                .requiresChildren(VanillaWoodChildKeys.LOG)
                 .setTabKey(tab)
                 .addTag(palisadesTag, Registries.BLOCK, Registries.ITEM)
                 .addTag(wallsTag, Registries.BLOCK)

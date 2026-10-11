@@ -1,7 +1,9 @@
 {
   "enableNameTagRecipe": true,
   "spawnBabyDolphin": true,
-  "spawnBabySquid": false,
+  "spawnBabySquid": true,
+  "enableTrumpetNoteBlocks": true,
+  "enableAnimalSoundVariants": true,
   "enableArmadillo": true,
   "enableAxolotl": true,
   "enableBee": true,
@@ -36,5 +38,9 @@
   "enableZombieVillager": true,
   "enableZombifiedPiglin": true,
   "replaceAdultRabbit": true,
-  "rabbitBoundingBox": true
+  "rabbitBoundingBox": true,
+  "enableModdedMobs": false,
+  "modelBlacklist": [
+    "rottencreatures:burned"
+  ]
 }

@@ -134,7 +134,7 @@ hash = "1e3f705782a39b16437a202b2e972f270790b83ee5e189ac89c599713f5c2fc7"
 
 [[files]]
 file = "config/better_log4j_config.xml"
-hash = "761d6a6c702ac7afe8aad81b186837d861bede636a0527857b482284c7c21a67"
+hash = "8d82df17ca965e7331659681373d7ae706deb4944263c9ec87f1611b1bd2c857"
 
 [[files]]
 file = "config/better_straw_beds.json"
@@ -490,7 +490,7 @@ hash = "0030656736b21f06f9f5b73078ce3ea41778f0f744c9d5da0055712a493ced85"
 
 [[files]]
 file = "config/drippyloadingscreen/early_window_reference.properties"
-hash = "0f6a5f697c132c39a4695c8e04f91dec5ea94899e16b4f1bca2b3f495ecbcb22"
+hash = "1cbe4b8064011d809b7278ead2250815ebfe1ccce42aba8e356c6e1f9411fa8d"
 
 [[files]]
 file = "config/drippyloadingscreen/options.txt"
@@ -650,7 +650,7 @@ hash = "09d330b29443d9579ecc014f2be2fcb31075bfe1e9f9ac4e750f271128650fe6"
 
 [[files]]
 file = "config/fabric/indigo-renderer.properties"
-hash = "2ccd880e29315cce1681fdfb55d2089594f4442d205ac99e80951f678411cf3e"
+hash = "58949e98e5d31f2dbc6c8dcf0220c16586b63574dae3f921fba960bb9a667871"
 
 [[files]]
 file = "config/falling_snow.json"
@@ -882,7 +882,7 @@ hash = "9b9525f6baadc8312819ae21ad8688b20fb887e0e2bec4bceece4cbb296196b8"
 
 [[files]]
 file = "config/fml.toml"
-hash = "56793c2d4c7c2132e38f32897a1d93920cd3930f82f65aafd0b8a99a40613610"
+hash = "e7400c8f727d3cc23095c2382aa3f749b7eb43f6bb8e6103f196ceeca49ac688"
 
 [[files]]
 file = "config/fog/config.json"
@@ -1090,7 +1090,7 @@ hash = "6af411644e22ede34383135509cb96b2a636d8ed45494b28976514a95537105e"
 
 [[files]]
 file = "config/lithium.properties"
-hash = "6cf6f83720071fd1657c8e79b357caf68d40f410ae123e5f922483eb1d1d25be"
+hash = "29e96a7232363c48c87044919981b615c516461397303922c05dfeb48220b357"
 
 [[files]]
 file = "config/lithostitched.json"
@@ -3205,8 +3205,20 @@ file = "config/openloader/packs/spicedcider_data/data/minecraft/tags/block/overw
 hash = "d0c0e04a0d23d66f5693af35faa485918da8fdbb162384b931d3d4a0a50f7f69"
 
 [[files]]
+file = "config/openloader/packs/spicedcider_data/data/minecraft/tags/entity_type/fishes.json"
+hash = "4d9764cb1c3e18e61a895371077e212ff1d5c1bc05b78e803d11c40ac281e3e8"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/minecraft/tags/entity_type/illagers.json"
+hash = "0b5fcc40fa35d8056591d52cdf2d686dc42397069f88b8867debe025aeed3df5"
+
+[[files]]
 file = "config/openloader/packs/spicedcider_data/data/minecraft/tags/item/beds.json"
 hash = "fc12f4092e84213f0c18019371d9af3b9f6435eb7b097cb625ba43df61a8581f"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/minecraft/tags/item/boats.json"
+hash = "d46723f5009e9122b1222a3ddda6df42228f5fd74a058c8656798a6af7ba6f7f"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/minecraft/tags/item/buttons.json"
@@ -3423,6 +3435,10 @@ hash = "3b193414a49824009cfdfd1a746892dfb5e4f9f7264eb35216daf41ea41909c7"
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/nirvana/tags/item/burlap.json"
 hash = "68b1159da99e6a20bef24ac1b5a8fdc15cb2df85b01b5bf3be34b07f58293a50"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/nirvana/tags/item/shears.json"
+hash = "b763a2e185293e6e778575ad4117f1aff58b6e270b81d30aa5d425089b921c2f"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/nirvana/tags/item/woven_burlap.json"
@@ -4014,7 +4030,7 @@ hash = "13b2b1384f949e6e409c3c3cc423ecb854df6b386d4466d424a57a887e89f3d8"
 
 [[files]]
 file = "config/packetfixer.properties"
-hash = "19652ff23461ebc489b0168bb0aab08b5263399e049e95137b3a7451dd614cce"
+hash = "a2f871eb7a9f55fd761d99b7f11eb29660546885d9d5200d90b0427937aa6d3e"
 
 [[files]]
 file = "config/particle_core_config.toml"
@@ -4158,7 +4174,7 @@ hash = "cdfae1c884bc1239d76eb3b6ef868880b017fd7dc12968b24215c56540a01a25"
 
 [[files]]
 file = "config/reliable_recipes/generated_removals.json"
-hash = "60a1f1e56f87d2962eacda04a49915ed63ff400973018a79b3ec1455f2db92e5"
+hash = "26ae3c00f99cd352b367aa090d98da93e3f0b39966d03bed70c30fc34e638430"
 
 [[files]]
 file = "config/reliable_recipes/gotta_sort_these.json"
@@ -4178,7 +4194,7 @@ hash = "590ea074ec1c84ced8a0c60dedd7111edd69801f7441fe78654c2f6fdfb655b7"
 
 [[files]]
 file = "config/reliable_remover.json"
-hash = "5a45a05a4dfa04882bbcc46530bd3fe7d20dc51b2e954d0bef9022f5775306ed"
+hash = "a9fd70543577168eff9486c7646f7c2b1dd006a75a4e37eed68eac273d541105"
 
 [[files]]
 file = "config/reliable_remover/hide_effects.json"
@@ -4214,7 +4230,7 @@ hash = "248c738405ea81d415d06761cde8443a6db937ef0477f766570dcb9ea31f6790"
 
 [[files]]
 file = "config/reliable_replacer/swapper.json"
-hash = "cc3f31e689fd3714030198fc6b7b310e7a4708451a8cc357376944ce061ee689"
+hash = "1c8b9e1a0f1b08a5e02ca54964872f4f853c29ea11308abd25d418facce2bb7c"
 
 [[files]]
 file = "config/reliable_requiem.json"
@@ -4778,7 +4794,7 @@ hash = "5d334531175f2634363c53b0844de831a64c3c171c6b27828baaa9b1170f3798"
 
 [[files]]
 file = "config/spicedcider/spicedcider_manifest.json"
-hash = "c141c4eb9f370f1b6f03d4990abca6be60223f506fefe26172dbc553c9572003"
+hash = "e552c987010725aa7f369f057f3b1e64a57ab1382747b825605c9a46fc09f753"
 
 [[files]]
 file = "config/stacksizetweaks.json5"
@@ -5110,7 +5126,7 @@ hash = "d985bfc68899c91aa642736400472f6ab876dedaaef4b8c31f38b52d48de633d"
 
 [[files]]
 file = "config/zfastnoise.mixin.properties"
-hash = "85f759dc09ed5db8f52c21641c5415083dc2c9010f5571dd574ffdcba6219202"
+hash = "f32e6e566b164efc1d52c85a55333aa129a8d1cf7e7033d63f0cb35f4d683f70"
 
 [[files]]
 file = "config/zipline.json"
@@ -5421,7 +5437,7 @@ metafile = true
 
 [[files]]
 file = "mods/cultural-delights.pw.toml"
-hash = "2ef1d79d93f6913d0fde0b8a44a70a0bb47ca8a0fbf4b1cf276ccbe44c4dafda"
+hash = "11907a2260c038c488e0a82bd4035dd83131a8c95b9492cdffc440e2ecc5cb88"
 metafile = true
 
 [[files]]
@@ -5800,7 +5816,7 @@ metafile = true
 
 [[files]]
 file = "mods/modest-mining.pw.toml"
-hash = "1d31a7793d204a957c750f7e38e4ca4eb9615059cdd7295ea734314e7e9ef8ea"
+hash = "c071565f23e1739646884fa8afbae00baf02cb0f0ab43510dcd0ac340ad50dbf"
 metafile = true
 
 [[files]]
@@ -5883,8 +5899,9 @@ hash = "d3702e5478468ab7395819e06d1118f269457a91dd26a2fffeefe0ff40068b25"
 metafile = true
 
 [[files]]
-file = "mods/oooh_pinky-neoforge-3.1.0-1.21.1.jar"
-hash = "3fdafdd75ba1e30b4cea7a448f4e3f0660a74d95b424def3fd496b29536b1748"
+file = "mods/oooh-pinky-porty.pw.toml"
+hash = "bedbb3e23d2ebf3e35f8c4425767df4bdaa5b8895c91c17d37f57353cddf8897"
+metafile = true
 
 [[files]]
 file = "mods/open-loader.pw.toml"
@@ -6047,7 +6064,7 @@ metafile = true
 
 [[files]]
 file = "mods/reliable-recipes.pw.toml"
-hash = "5c2be54c4793eb8906dc7657e46a068739508e1006d554a4b664c660a74379af"
+hash = "c535c0d24c957afa99f76fb57b4cdd1d0cdd62ce4134219c32c0726387623c48"
 metafile = true
 
 [[files]]
@@ -6186,7 +6203,7 @@ metafile = true
 
 [[files]]
 file = "mods/spicedcider-1.0.0.jar"
-hash = "e33f5ab160e22571c167d62d34e8803640d9f0f544aefa43d7afa8350d772c82"
+hash = "0b912540b9c802d84c826002f57a49000c5b4da97fb2ab2897139e53d83e7bf7"
 
 [[files]]
 file = "mods/stacksizetweaks.pw.toml"
@@ -6240,7 +6257,7 @@ metafile = true
 
 [[files]]
 file = "mods/tiny-takeover-backport.pw.toml"
-hash = "fe8a6427c2f1ede86a4a927f77e482c9bab668292561a85e28e680614d2c99c4"
+hash = "934139b039a6605fce9491e5b82a2fc273e3b343802c41d8f6bb81809e0d5e3b"
 metafile = true
 
 [[files]]
@@ -13530,6 +13547,98 @@ hash = "0b858877cdd6a3576495aec79d45720ae0047d22f532003cbe752017424b02ec"
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/spicedcider/textures/item/infernite_cleaver_handheld.png"
 hash = "e59257546dfd76e00e6316155070db328dcbd61bec03f25f4d2a9bd50a1f464d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/supplementaries/dynamiclights/item/candle_holder_black_legacy.json"
+hash = "3100d2ead42b4460bb19c71fe02b688e2bc6b5577dcad13b503b820bc2698edd"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/supplementaries/dynamiclights/item/candle_holder_blue_legacy.json"
+hash = "3100d2ead42b4460bb19c71fe02b688e2bc6b5577dcad13b503b820bc2698edd"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/supplementaries/dynamiclights/item/candle_holder_brown_legacy.json"
+hash = "3100d2ead42b4460bb19c71fe02b688e2bc6b5577dcad13b503b820bc2698edd"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/supplementaries/dynamiclights/item/candle_holder_cupric_legacy.json"
+hash = "3100d2ead42b4460bb19c71fe02b688e2bc6b5577dcad13b503b820bc2698edd"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/supplementaries/dynamiclights/item/candle_holder_cyan_legacy.json"
+hash = "3100d2ead42b4460bb19c71fe02b688e2bc6b5577dcad13b503b820bc2698edd"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/supplementaries/dynamiclights/item/candle_holder_ender.json"
+hash = "3100d2ead42b4460bb19c71fe02b688e2bc6b5577dcad13b503b820bc2698edd"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/supplementaries/dynamiclights/item/candle_holder_ender_legacy.json"
+hash = "3100d2ead42b4460bb19c71fe02b688e2bc6b5577dcad13b503b820bc2698edd"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/supplementaries/dynamiclights/item/candle_holder_gray_legacy.json"
+hash = "3100d2ead42b4460bb19c71fe02b688e2bc6b5577dcad13b503b820bc2698edd"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/supplementaries/dynamiclights/item/candle_holder_green_legacy.json"
+hash = "3100d2ead42b4460bb19c71fe02b688e2bc6b5577dcad13b503b820bc2698edd"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/supplementaries/dynamiclights/item/candle_holder_legacy.json"
+hash = "3100d2ead42b4460bb19c71fe02b688e2bc6b5577dcad13b503b820bc2698edd"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/supplementaries/dynamiclights/item/candle_holder_light_blue_legacy.json"
+hash = "3100d2ead42b4460bb19c71fe02b688e2bc6b5577dcad13b503b820bc2698edd"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/supplementaries/dynamiclights/item/candle_holder_light_gray_legacy.json"
+hash = "3100d2ead42b4460bb19c71fe02b688e2bc6b5577dcad13b503b820bc2698edd"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/supplementaries/dynamiclights/item/candle_holder_lime_legacy.json"
+hash = "3100d2ead42b4460bb19c71fe02b688e2bc6b5577dcad13b503b820bc2698edd"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/supplementaries/dynamiclights/item/candle_holder_magenta_legacy.json"
+hash = "3100d2ead42b4460bb19c71fe02b688e2bc6b5577dcad13b503b820bc2698edd"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/supplementaries/dynamiclights/item/candle_holder_orange_legacy.json"
+hash = "3100d2ead42b4460bb19c71fe02b688e2bc6b5577dcad13b503b820bc2698edd"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/supplementaries/dynamiclights/item/candle_holder_pink_legacy.json"
+hash = "3100d2ead42b4460bb19c71fe02b688e2bc6b5577dcad13b503b820bc2698edd"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/supplementaries/dynamiclights/item/candle_holder_purple_legacy.json"
+hash = "3100d2ead42b4460bb19c71fe02b688e2bc6b5577dcad13b503b820bc2698edd"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/supplementaries/dynamiclights/item/candle_holder_red_legacy.json"
+hash = "3100d2ead42b4460bb19c71fe02b688e2bc6b5577dcad13b503b820bc2698edd"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/supplementaries/dynamiclights/item/candle_holder_soul_legacy.json"
+hash = "3100d2ead42b4460bb19c71fe02b688e2bc6b5577dcad13b503b820bc2698edd"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/supplementaries/dynamiclights/item/candle_holder_spectacle.json"
+hash = "3100d2ead42b4460bb19c71fe02b688e2bc6b5577dcad13b503b820bc2698edd"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/supplementaries/dynamiclights/item/candle_holder_spectacle_legacy.json"
+hash = "3100d2ead42b4460bb19c71fe02b688e2bc6b5577dcad13b503b820bc2698edd"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/supplementaries/dynamiclights/item/candle_holder_white_legacy.json"
+hash = "3100d2ead42b4460bb19c71fe02b688e2bc6b5577dcad13b503b820bc2698edd"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/supplementaries/dynamiclights/item/candle_holder_yellow_legacy.json"
+hash = "3100d2ead42b4460bb19c71fe02b688e2bc6b5577dcad13b503b820bc2698edd"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/supplementaries/lang/en_us.json"

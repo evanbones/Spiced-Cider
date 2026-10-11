@@ -54,7 +54,7 @@
     <Loggers>
         <Logger name="cpw.mods.modlauncher.ClassTransformer" level="WARN"/>
         <Logger level="${sys:fabric.log.level:-info}" name="net.minecraft"/>
-        <Root level="all">
+        <Root level="${sys:fabric.log.level:-info}">
             <!-- Uncomment the following line to enable `debug.log`. Disabled by default, as it is extremely verbose! -->
             <!-- <AppenderRef ref="DebugFile" level="${sys:fabric.log.debug.level:-debug}"/> -->
             <AppenderRef ref="SysOut" level="${sys:fabric.log.level:-info}"/>

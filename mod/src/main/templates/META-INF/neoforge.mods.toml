@@ -211,3 +211,10 @@ type = "optional"
 versionRange = "*"
 ordering = "AFTER"
 side = "BOTH"
+
+[[dependencies.${ mod_id }]]
+modId = "entity_model_features"
+type = "optional"
+versionRange = "*"
+ordering = "AFTER"
+side = "CLIENT"

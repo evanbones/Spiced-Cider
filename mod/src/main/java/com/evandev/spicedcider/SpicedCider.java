@@ -6,9 +6,7 @@ import com.evandev.spicedcider.compat.continuity.ContinuityLazyModelWrapping;
 import com.evandev.spicedcider.compat.everycompat.BlockBoxEveryCompatLoader;
 import com.evandev.spicedcider.compat.tide.TideCompat;
 import com.evandev.spicedcider.compat.yacl.ConfigScreenLoader;
-import com.evandev.spicedcider.config.ConfigFileHandler;
-import com.evandev.spicedcider.config.LoggerNamePatternSelector;
-import com.evandev.spicedcider.config.Reconfigurator;
+import com.evandev.spicedcider.config.LogReconfiguration;
 import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.evandev.spicedcider.namingunconvention.RandomNameGenerator;
 import com.evandev.spicedcider.networking.ChunkOffsetsPayload;
@@ -38,10 +36,6 @@ import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;
 import net.neoforged.neoforge.network.registration.PayloadRegistrar;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.apache.logging.log4j.core.config.plugins.util.PluginRegistry;
-
-import java.io.IOException;
-import java.net.URI;
 
 @Mod(SpicedCider.MOD_ID)
 @EventBusSubscriber(modid = SpicedCider.MOD_ID)
@@ -50,16 +44,7 @@ public class SpicedCider {
     public static final Logger LOGGER = LogManager.getLogger("Spiced Cider");
     public static final RandomNameGenerator RANDOM_NAME_GENERATOR = new RandomNameGenerator();
 
-    /**
-     * An arbitrary unique identifier to be passed to Log4j when loading our
-     * {@link LoggerNamePatternSelector} plugin
-     */
-    public static final long BUNDLE_ID = 54321;
-    public static ClassLoader CLASSLOADER;
-
     public SpicedCider(IEventBus modEventBus, ModContainer modContainer) {
-        CLASSLOADER = SpicedCider.class.getClassLoader();
-
         modContainer.registerConfig(ModConfig.Type.STARTUP, SpicedCiderConfig.STARTUP_SPEC);
         modContainer.registerConfig(ModConfig.Type.COMMON, SpicedCiderConfig.COMMON_SPEC);
         modContainer.registerConfig(ModConfig.Type.CLIENT, SpicedCiderConfig.CLIENT_SPEC);
@@ -94,23 +79,7 @@ public class SpicedCider {
             BlockBoxEveryCompatLoader.register(MOD_ID);
         }
 
-        LOGGER.info("Starting Log4j reconfiguration.");
-        loadPlugin();
-        URI newConfigUri = ConfigFileHandler.getOrCreateDefaultConfigFile();
-
-        try {
-            Reconfigurator.reconfigureWithUri(newConfigUri);
-        } catch (UnsupportedOperationException | IOException e) {
-            LOGGER.error("Failed to reconfigure Log4j:", e);
-        }
-        LOGGER.info("Finished Log4j reconfiguration.");
-    }
-
-    /**
-     * Prompts Log4j to scan for our {@link LoggerNamePatternSelector} plugin.
-     */
-    public static void loadPlugin() {
-        PluginRegistry.getInstance().loadFromBundle(BUNDLE_ID, CLASSLOADER);
+        LogReconfiguration.run();
     }
 
     @SubscribeEvent
