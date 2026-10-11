@@ -5,14 +5,21 @@ import com.evandev.spicedcider.client.music.DeathSoundInstance;
 import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.evandev.spicedcider.registry.ModSounds;
 import net.minecraft.client.Minecraft;
+import com.evandev.spicedcider.content.handler.ServerLeakEvents;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.client.event.ClientPlayerNetworkEvent;
 import net.neoforged.neoforge.client.event.ClientTickEvent;
 
 @EventBusSubscriber(modid = SpicedCider.MOD_ID, value = Dist.CLIENT)
 public class ClientGameEvents {
     private static boolean wasDead = false;
+
+    @SubscribeEvent
+    public static void onLoggingOut(ClientPlayerNetworkEvent.LoggingOut event) {
+        ServerLeakEvents.onClientLoggedOut();
+    }
 
     @SubscribeEvent
     public static void onClientTick(ClientTickEvent.Post event) {

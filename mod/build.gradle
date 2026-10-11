@@ -320,7 +320,17 @@ dependencies {
     compileOnly "maven.modrinth:voxy-worldgen:PzNUZlWw"
     // Big Water
     compileOnly "maven.modrinth:big-water:pjxmFC9D"
+    // Biolith
+    compileOnly "maven.modrinth:biolith:EAjbdreT"
     runtimeOnly "maven.modrinth:voxy-worldgen:PzNUZlWw"
+
+    // Leak fixes
+    compileOnly "maven.modrinth:cold-sweat:r2cD4Llq"
+    compileOnly "maven.modrinth:exposure:iBvaR6AK"
+    compileOnly "maven.modrinth:simple-voice-chat:qqNx1Yjm"
+    compileOnly "maven.modrinth:modernfix:7Jy58lnT"
+
+    compileOnly fileTree("../pack/mods") { include "continuity-*.jar" }
 
     // Reconnectible Chains
     compileOnly "maven.modrinth:reconnectible-chains:2.2.5-1.21.1-neoforge"

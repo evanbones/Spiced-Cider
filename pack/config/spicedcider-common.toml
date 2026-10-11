@@ -45,3 +45,17 @@
 [performance]
 	#Disables recipe book unlock tracking/saving/syncing entirely. Saves memory and disk I/O.
 	disableRecipeBookTracking = true
+
+[caveMaps]
+	#Maps in the Nether and other dimensions with a ceiling show the terrain at a usable height instead of the bedrock roof.
+	caveMaps = true
+	#In dimensions with a ceiling, maps show the terrain at the height where they were created. When off, the fixed height is used.
+	caveMapsUseCreationHeight = true
+	#Height maps show in dimensions with a ceiling when Use Map Creation Height is off.
+	# Default: 100
+	# Range: -64 ~ 320
+	caveMapsFixedHeight = 100
+	#Entries like minecraft:the_nether=40. Maps in these dimensions always show this height, overriding the other settings.
+	caveMapsFixedHeights = ["minecraft:the_nether=40"]
+	#Dimension ids where maps always show the height they were created at, even without a ceiling.
+	caveMapsCreationHeightDimensions = []

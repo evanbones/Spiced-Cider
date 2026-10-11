@@ -6,57 +6,73 @@
       "name": "Suppress missing data map objects for uninstalled mods",
       "enabled": true,
       "type": "MESSAGE_REGEX",
-      "pattern": "Object with ID .* specified in data map for registry .* doesn't exist",
-      "action": "DENY"
+      "pattern": "^Object with ID .* specified in data map for registry .* doesn't exist",
+      "action": "DENY",
+      "level": "ERROR"
+    },
+    {
+      "name": "Suppress Mod Menu invalid icon errors",
+      "enabled": true,
+      "type": "MESSAGE_REGEX",
+      "pattern": "^Invalid mod icon for icon source",
+      "action": "DENY",
+      "level": "ERROR"
     },
     {
       "name": "Suppress Mod Menu broken icon warnings",
       "enabled": true,
       "type": "MESSAGE_REGEX",
-      "pattern": "(Invalid mod icon for icon source|Warning! Mod .* has a broken icon)",
-      "action": "DENY"
+      "pattern": "^Warning! Mod .* has a broken icon",
+      "action": "DENY",
+      "level": "WARN"
     },
     {
       "name": "Suppress development environment refmap warnings",
       "enabled": true,
       "type": "MESSAGE_REGEX",
-      "pattern": "Reference map '.*' for .* could not be read",
-      "action": "DENY"
+      "pattern": "^Reference map '.*' for .* could not be read",
+      "action": "DENY",
+      "level": "WARN"
     },
     {
       "name": "Suppress missing accesstransformer warnings",
       "enabled": true,
       "type": "MESSAGE_REGEX",
-      "pattern": "Access transformer file META-INF/accesstransformer\\.cfg provided by mod .* does not exist",
-      "action": "DENY"
+      "pattern": "^Access transformer file META-INF/accesstransformer\\.cfg provided by mod .* does not exist",
+      "action": "DENY",
+      "level": "ERROR"
     },
     {
       "name": "Suppress Spelunkery generated resources warnings",
       "enabled": true,
       "type": "MESSAGE_REGEX",
-      "pattern": "Failure adding generated resources from spelunkery:overrides/(loot_table|recipe)/",
-      "action": "DENY"
+      "pattern": "^Failure adding generated resources from spelunkery:overrides/(loot_table|recipe)/",
+      "action": "DENY",
+      "level": "WARN"
     },
     {
       "name": "Suppress invalid path in pack warnings",
       "enabled": true,
       "type": "MESSAGE_REGEX",
-      "pattern": "Invalid path in pack: .*, ignoring",
-      "action": "DENY"
+      "pattern": "^Invalid path in pack: .*, ignoring",
+      "action": "DENY",
+      "level": "ERROR"
     },
     {
       "name": "Suppress Polytone missing grass ID warning",
       "enabled": true,
       "type": "MESSAGE_REGEX",
-      "pattern": "Found missing ID in minecraft namespace: minecraft:grass",
-      "action": "DENY"
+      "pattern": "^Found missing ID in minecraft namespace: minecraft:grass",
+      "action": "DENY",
+      "level": "ERROR"
     },
     {
       "name": "Suppress Moonlight Fabric API notice",
       "enabled": true,
       "type": "MESSAGE_REGEX",
-      "pattern": "Fabric API detected! This is not a Fabric mod",
-      "action": "DENY"
+      "pattern": "^Fabric API detected! This is not a Fabric mod",
+      "action": "DENY",
+      "level": "ERROR"
     }
   ]
 }

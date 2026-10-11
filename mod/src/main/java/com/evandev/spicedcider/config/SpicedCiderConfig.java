@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.config;
 
+import com.evandev.spicedcider.content.item.CaveMapHeights;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import net.minecraft.resources.ResourceLocation;
@@ -109,6 +110,11 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.IntValue voidWaterTrailLength;
         public final ModConfigSpec.DoubleValue voidWaterTrailDecay;
         public final ModConfigSpec.ConfigValue<List<? extends String>> voidWaterExcludedDimensions;
+        public final ModConfigSpec.BooleanValue caveMaps;
+        public final ModConfigSpec.BooleanValue caveMapsUseCreationHeight;
+        public final ModConfigSpec.IntValue caveMapsFixedHeight;
+        public final ModConfigSpec.ConfigValue<List<? extends String>> caveMapsFixedHeights;
+        public final ModConfigSpec.ConfigValue<List<? extends String>> caveMapsCreationHeightDimensions;
 
         public final ModConfigSpec.BooleanValue disableRecipeBookTracking;
 
@@ -205,6 +211,36 @@ public class SpicedCiderConfig {
                     .comment(tooltip("voidWaterExcludedDimensions"))
                     .translation("option.spicedcider.voidWaterExcludedDimensions")
                     .defineListAllowEmpty("voidWaterExcludedDimensions", List.of("minecraft:the_end"), () -> "minecraft:the_end",
+                            element -> element instanceof String id && ResourceLocation.tryParse(id) != null);
+
+            builder.pop();
+            builder.push("caveMaps");
+
+            caveMaps = builder
+                    .comment(tooltip("caveMaps"))
+                    .translation("option.spicedcider.caveMaps")
+                    .define("caveMaps", true);
+
+            caveMapsUseCreationHeight = builder
+                    .comment(tooltip("caveMapsUseCreationHeight"))
+                    .translation("option.spicedcider.caveMapsUseCreationHeight")
+                    .define("caveMapsUseCreationHeight", true);
+
+            caveMapsFixedHeight = builder
+                    .comment(tooltip("caveMapsFixedHeight"))
+                    .translation("option.spicedcider.caveMapsFixedHeight")
+                    .defineInRange("caveMapsFixedHeight", 100, -64, 320);
+
+            caveMapsFixedHeights = builder
+                    .comment(tooltip("caveMapsFixedHeights"))
+                    .translation("option.spicedcider.caveMapsFixedHeights")
+                    .defineListAllowEmpty("caveMapsFixedHeights", List.of("minecraft:the_nether=40"), () -> "minecraft:the_nether=40",
+                            element -> element instanceof String entry && CaveMapHeights.parseFixed(entry) != null);
+
+            caveMapsCreationHeightDimensions = builder
+                    .comment(tooltip("caveMapsCreationHeightDimensions"))
+                    .translation("option.spicedcider.caveMapsCreationHeightDimensions")
+                    .defineListAllowEmpty("caveMapsCreationHeightDimensions", List.of(), () -> "minecraft:the_nether",
                             element -> element instanceof String id && ResourceLocation.tryParse(id) != null);
 
             builder.pop();

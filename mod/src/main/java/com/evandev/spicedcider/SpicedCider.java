@@ -2,6 +2,7 @@ package com.evandev.spicedcider;
 
 import com.evandev.spicedcider.blockgrid.ClientOffsetCache;
 import com.evandev.spicedcider.blockgrid.SupportOffsets;
+import com.evandev.spicedcider.compat.continuity.ContinuityLazyModelWrapping;
 import com.evandev.spicedcider.compat.everycompat.BlockBoxEveryCompatLoader;
 import com.evandev.spicedcider.compat.tide.TideCompat;
 import com.evandev.spicedcider.compat.yacl.ConfigScreenLoader;
@@ -65,6 +66,9 @@ public class SpicedCider {
 
         if (FMLEnvironment.dist == Dist.CLIENT) {
             ConfigScreenLoader.register(modContainer);
+            if (ModList.get().isLoaded("continuity") && ModList.get().isLoaded("modernfix")) {
+                ContinuityLazyModelWrapping.register();
+            }
         }
 
         ModEntityTypes.ENTITY_TYPES.register(modEventBus);
@@ -78,6 +82,7 @@ public class SpicedCider {
         ModSounds.SOUNDS.register(modEventBus);
         ModParticleTypes.PARTICLE_TYPES.register(modEventBus);
         ModLootModifiers.LOOT_MODIFIER_SERIALIZERS.register(modEventBus);
+        ModDataComponents.DATA_COMPONENTS.register(modEventBus);
 
         modEventBus.addListener(this::registerPayloads);
         NeoForge.EVENT_BUS.addListener(this::onTagsUpdated);
