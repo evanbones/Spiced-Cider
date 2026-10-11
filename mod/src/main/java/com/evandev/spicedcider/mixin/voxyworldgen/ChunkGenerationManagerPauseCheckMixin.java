@@ -2,12 +2,12 @@ package com.evandev.spicedcider.mixin.voxyworldgen;
 
 import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.ethan.voxyworldgenv2.core.ChunkGenerationManager;
+import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
+import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import com.moulberry.mixinconstraints.annotations.IfModLoaded;
 import org.objectweb.asm.Opcodes;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Redirect;
 
 import java.util.function.BooleanSupplier;
 
@@ -15,10 +15,7 @@ import java.util.function.BooleanSupplier;
 @Mixin(value = ChunkGenerationManager.class, remap = false)
 public class ChunkGenerationManagerPauseCheckMixin {
 
-    @Shadow
-    private BooleanSupplier pauseCheck;
-
-    @Redirect(
+    @WrapOperation(
             method = "initialize",
             at = @At(
                     value = "FIELD",
@@ -26,9 +23,9 @@ public class ChunkGenerationManagerPauseCheckMixin {
                     opcode = Opcodes.PUTFIELD
             )
     )
-    private void spicedcider$keepRegisteredPauseCheck(ChunkGenerationManager instance, BooleanSupplier value) {
+    private void spicedcider$keepRegisteredPauseCheck(ChunkGenerationManager instance, BooleanSupplier value, Operation<Void> original) {
         if (!SpicedCiderConfig.commonOr(SpicedCiderConfig.COMMON.voxyWorldGenPauseFix, true)) {
-            this.pauseCheck = value;
+            original.call(instance, value);
         }
     }
 }

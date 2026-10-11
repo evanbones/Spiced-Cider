@@ -28,6 +28,20 @@
 	#Removes quasi-connectivity from pistons, dispensers, and droppers.
 	removeQuasiConnectivity = true
 
+[voidWater]
+	#Fluids at the bottom of the world spill into the void as fading trails you can swim in. Takes effect when a world is next loaded.
+	voidWater = true
+	#How many blocks fluid trails extend below the bottom of the world.
+	# Default: 16
+	# Range: 0 ~ 255
+	voidWaterTrailLength = 16
+	#How quickly void fluid trails fade out. Higher values fade faster.
+	# Default: 2.0
+	# Range: 0.05 ~ 16.0
+	voidWaterTrailDecay = 2.0
+	#Dimension ids where fluids never spill into the void. The End is excluded by default because its floor is a sea of Dimensional Tears.
+	voidWaterExcludedDimensions = ["minecraft:the_end"]
+
 [performance]
 	#Disables recipe book unlock tracking/saving/syncing entirely. Saves memory and disk I/O.
 	disableRecipeBookTracking = true

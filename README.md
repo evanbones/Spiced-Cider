@@ -123,6 +123,9 @@ its [Apache License 2.0](https://github.com/BigWingBeat/better_log4j_config/blob
 Randomized world names are from [Naming Unconvention](https://github.com/QinomeD/Naming-Unconvention/), used under
 its [LGPLv3 license](https://github.com/QinomeD/Naming-Unconvention/blob/master/LICENSE).
 
+Fluids spilling into the void are ported from [Void Water](https://modrinth.com/mod/void-water) by NormallyNormal, used under
+its MIT license (included in the jar at `META-INF/licenses/void_water-LICENSE.txt`).
+
 Sparks for hitting unmineable blocks ported from Valcon by [Ivqry](https://github.com/ivqrydev).
 
 Grappling Hooks are modified from [Bigger Fish](https://modrinth.com/mod/always-a-bigger-fish), created by cassiancc and

@@ -2,6 +2,7 @@ package com.evandev.spicedcider.config;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
+import net.minecraft.resources.ResourceLocation;
 import net.neoforged.neoforge.common.ModConfigSpec;
 import org.apache.commons.lang3.tuple.Pair;
 
@@ -9,6 +10,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
+import java.util.List;
 
 public class SpicedCiderConfig {
     private static final String LANG_PATH = "assets/spicedcider/lang/en_us.json";
@@ -103,6 +105,10 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.BooleanValue wolvesWearAnyArmor;
         public final ModConfigSpec.BooleanValue spiderRangedWebAttacks;
         public final ModConfigSpec.BooleanValue removeQuasiConnectivity;
+        public final ModConfigSpec.BooleanValue voidWater;
+        public final ModConfigSpec.IntValue voidWaterTrailLength;
+        public final ModConfigSpec.DoubleValue voidWaterTrailDecay;
+        public final ModConfigSpec.ConfigValue<List<? extends String>> voidWaterExcludedDimensions;
 
         public final ModConfigSpec.BooleanValue disableRecipeBookTracking;
 
@@ -176,6 +182,30 @@ public class SpicedCiderConfig {
                     .comment(tooltip("removeQuasiConnectivity"))
                     .translation("option.spicedcider.removeQuasiConnectivity")
                     .define("removeQuasiConnectivity", false);
+
+            builder.pop();
+            builder.push("voidWater");
+
+            voidWater = builder
+                    .comment(tooltip("voidWater"))
+                    .translation("option.spicedcider.voidWater")
+                    .define("voidWater", true);
+
+            voidWaterTrailLength = builder
+                    .comment(tooltip("voidWaterTrailLength"))
+                    .translation("option.spicedcider.voidWaterTrailLength")
+                    .defineInRange("voidWaterTrailLength", 16, 0, 255);
+
+            voidWaterTrailDecay = builder
+                    .comment(tooltip("voidWaterTrailDecay"))
+                    .translation("option.spicedcider.voidWaterTrailDecay")
+                    .defineInRange("voidWaterTrailDecay", 2.0, 0.05, 16.0);
+
+            voidWaterExcludedDimensions = builder
+                    .comment(tooltip("voidWaterExcludedDimensions"))
+                    .translation("option.spicedcider.voidWaterExcludedDimensions")
+                    .defineListAllowEmpty("voidWaterExcludedDimensions", List.of("minecraft:the_end"), () -> "minecraft:the_end",
+                            element -> element instanceof String id && ResourceLocation.tryParse(id) != null);
 
             builder.pop();
             builder.push("performance");

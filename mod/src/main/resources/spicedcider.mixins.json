@@ -52,11 +52,15 @@
     "tide.TideFishingRodItemMixin",
     "vanillabackport.ModSurfaceRuleDataMixin",
     "vanillabackport.SulfurPoolCalciteMixin",
+    "voidwater.EntityMixin",
+    "voidwater.LevelMixin",
+    "voidwater.ServerGamePacketListenerImplMixin",
     "voxyworldgen.ChunkGenerationManagerCatchupMixin",
     "voxyworldgen.ChunkGenerationManagerPauseCheckMixin",
     "voxyworldgen.DimensionStateAccessor"
   ],
   "client": [
+    "bigwater.LiquidBlockRendererVoxyMixin",
     "blockgrid.AmbientParticleOffsetMixin",
     "blockgrid.BlockEntityRenderOffsetMixin",
     "blockgrid.ParticleSpawnOffsetMixin",
@@ -98,6 +102,8 @@
     "vista.accessor.AdaptiveUpdateSchedulerAccessor",
     "vista.accessor.GameRendererAccessor",
     "vista.accessor.LevelRendererAccessor",
+    "voidwater.LiquidBlockRendererMixin",
+    "voidwater.SodiumFluidRendererMixin",
     "voxyworldgen.NetworkStateStatsMixin"
   ],
   "server": [

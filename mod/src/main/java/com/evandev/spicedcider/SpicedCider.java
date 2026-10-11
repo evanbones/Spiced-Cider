@@ -11,7 +11,9 @@ import com.evandev.spicedcider.config.Reconfigurator;
 import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.evandev.spicedcider.namingunconvention.RandomNameGenerator;
 import com.evandev.spicedcider.networking.ChunkOffsetsPayload;
+import com.evandev.spicedcider.networking.VoidTrailPayload;
 import com.evandev.spicedcider.registry.*;
+import com.evandev.spicedcider.voidwater.client.ClientVoidTrails;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.item.CreativeModeTab;
@@ -152,6 +154,12 @@ public class SpicedCider {
                 ChunkOffsetsPayload.TYPE,
                 ChunkOffsetsPayload.CODEC,
                 (payload, context) -> context.enqueueWork(() -> ClientOffsetCache.receive(payload.chunk(), payload.entries()))
+        );
+
+        registrar.playToClient(
+                VoidTrailPayload.TYPE,
+                VoidTrailPayload.CODEC,
+                (payload, context) -> context.enqueueWork(() -> ClientVoidTrails.receive(payload))
         );
     }
 

@@ -318,6 +318,8 @@ dependencies {
     compileOnly "maven.modrinth:voxy:H3w2nVdU"
     // Voxy World Gen V2
     compileOnly "maven.modrinth:voxy-worldgen:PzNUZlWw"
+    // Big Water
+    compileOnly "maven.modrinth:big-water:pjxmFC9D"
     runtimeOnly "maven.modrinth:voxy-worldgen:PzNUZlWw"
 
     // Reconnectible Chains
