@@ -29,6 +29,9 @@ import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.RandomSource;
 import com.mojang.serialization.JsonOps;
+import net.minecraft.core.component.DataComponents;
+import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.item.crafting.RecipeHolder;
@@ -169,7 +172,11 @@ public final class DevBridge {
         });
         routes.put("GET /drive", r -> DRIVER.describe());
         routes.put("GET /items", r -> onClient(DevBridge::items));
-        routes.put("GET /recipes", r -> onClient(() -> recipes(r.query().get("type"))));
+        routes.put("GET /itemdata", r -> onClient(DevBridge::itemData));
+        routes.put("GET /tabs", r -> onClient(DevBridge::tabContents));
+        routes.put("GET /tabcheck", r -> onClient(DevBridge::tabCheck));
+        routes.put("GET /emi", r -> DevBridge.emiIndex());
+        routes.put("GET /recipes",r -> onClient(() -> recipes(r.query().get("type"))));
         routes.put("GET /blocktexture", r -> onClient(() -> blockTexture(r.query().get("id"))));
         routes.put("POST /join", DevBridge::join);
         routes.put("POST /leave", r -> leave());
@@ -336,6 +343,153 @@ public final class DevBridge {
         }
         out.add("png", pngs);
         return out;
+    }
+
+    private static JsonObject itemData() {
+        Minecraft mc = Minecraft.getInstance();
+        if (mc.level == null) throw new IllegalStateException("Not in a world");
+        JsonArray out = new JsonArray();
+        for (Item item : BuiltInRegistries.ITEM) {
+            JsonObject entry = new JsonObject();
+            entry.addProperty("id", BuiltInRegistries.ITEM.getKey(item).toString());
+            ItemStack stack = new ItemStack(item);
+            entry.addProperty("name", stack.getHoverName().getString());
+            entry.add("itemClasses", classChain(item.getClass(), Item.class));
+            JsonArray itemTags = new JsonArray();
+            item.builtInRegistryHolder().tags().map(tag -> tag.location().toString()).sorted().forEach(itemTags::add);
+            entry.add("itemTags", itemTags);
+            if (item instanceof BlockItem blockItem) {
+                Block block = blockItem.getBlock();
+                entry.addProperty("block", BuiltInRegistries.BLOCK.getKey(block).toString());
+                entry.add("blockClasses", classChain(block.getClass(), Block.class));
+                JsonArray blockTags = new JsonArray();
+                block.builtInRegistryHolder().tags().map(tag -> tag.location().toString()).sorted().forEach(blockTags::add);
+                entry.add("blockTags", blockTags);
+                entry.addProperty("soundType", String.valueOf(block.defaultBlockState().getSoundType().getPlaceSound().getLocation()));
+                entry.addProperty("destroyTime", block.defaultDestroyTime());
+                entry.addProperty("requiresTool", block.defaultBlockState().requiresCorrectToolForDrops());
+            }
+            entry.addProperty("maxStack", stack.getMaxStackSize());
+            entry.addProperty("maxDamage", stack.getMaxDamage());
+            FoodProperties food = stack.get(DataComponents.FOOD);
+            if (food != null) {
+                entry.addProperty("nutrition", food.nutrition());
+                entry.addProperty("saturation", food.saturation());
+                entry.addProperty("alwaysEdible", food.canAlwaysEat());
+                entry.addProperty("useRemainder", food.usingConvertsTo().map(r -> BuiltInRegistries.ITEM.getKey(r.getItem()).toString()).orElse(null));
+            }
+            entry.addProperty("useAnim", stack.getUseAnimation().name());
+            JsonArray components = new JsonArray();
+            stack.getComponents().keySet().forEach(type -> components.add(String.valueOf(BuiltInRegistries.DATA_COMPONENT_TYPE.getKey(type))));
+            entry.add("components", components);
+            out.add(entry);
+        }
+        JsonObject result = new JsonObject();
+        result.add("items", out);
+        return result;
+    }
+
+    private static JsonArray classChain(Class<?> type, Class<?> stop) {
+        JsonArray chain = new JsonArray();
+        for (Class<?> c = type; c != null && c != Object.class; c = c.getSuperclass()) {
+            chain.add(c.getName());
+            if (c == stop) break;
+        }
+        return chain;
+    }
+
+    private static JsonObject tabContents() {
+        Minecraft mc = Minecraft.getInstance();
+        if (mc.level == null || mc.player == null) throw new IllegalStateException("Not in a world");
+        boolean permissions = mc.player.canUseGameMasterBlocks() && mc.options.operatorItemsTab().get();
+        CreativeModeTabs.tryRebuildTabContents(mc.level.enabledFeatures(), !permissions, mc.level.registryAccess());
+        CreativeModeTabs.tryRebuildTabContents(mc.level.enabledFeatures(), permissions, mc.level.registryAccess());
+        List<CreativeModeTab> visible = CreativeModeTabs.tabs();
+        JsonArray out = new JsonArray();
+        for (CreativeModeTab tab : BuiltInRegistries.CREATIVE_MODE_TAB) {
+            JsonObject entry = new JsonObject();
+            entry.addProperty("id", String.valueOf(BuiltInRegistries.CREATIVE_MODE_TAB.getKey(tab)));
+            entry.addProperty("name", tab.getDisplayName().getString());
+            entry.addProperty("type", tab.getType().name());
+            entry.addProperty("visibleIndex", visible.indexOf(tab));
+            entry.add("items", stackList(tab.getDisplayItems()));
+            out.add(entry);
+        }
+        JsonObject result = new JsonObject();
+        result.add("tabs", out);
+        return result;
+    }
+
+    private static JsonObject tabCheck() {
+        Minecraft mc = Minecraft.getInstance();
+        if (mc.level == null || mc.player == null) throw new IllegalStateException("Not in a world");
+        CreativeModeTab.ItemDisplayParameters params = new CreativeModeTab.ItemDisplayParameters(mc.level.enabledFeatures(), false, mc.level.registryAccess());
+        JsonObject out = new JsonObject();
+        for (CreativeModeTab tab : BuiltInRegistries.CREATIVE_MODE_TAB) {
+            String id = String.valueOf(BuiltInRegistries.CREATIVE_MODE_TAB.getKey(tab));
+            try {
+                tab.buildContents(params);
+                out.addProperty(id, "ok " + tab.getDisplayItems().size());
+            } catch (Throwable t) {
+                Throwable root = t;
+                while (root.getCause() != null) root = root.getCause();
+                out.addProperty(id, "FAIL " + root);
+            }
+        }
+        return out;
+    }
+
+    private static JsonArray stackList(java.util.Collection<ItemStack> stacks) {
+        Minecraft mc = Minecraft.getInstance();
+        var ops = mc.level.registryAccess().createSerializationContext(JsonOps.INSTANCE);
+        JsonArray items = new JsonArray();
+        for (ItemStack stack : stacks) {
+            String id = BuiltInRegistries.ITEM.getKey(stack.getItem()).toString();
+            if (stack.getComponentsPatch().isEmpty()) {
+                items.add(id);
+                continue;
+            }
+            JsonObject entry = new JsonObject();
+            entry.addProperty("item", id);
+            net.minecraft.core.component.DataComponentPatch.CODEC.encodeStart(ops, stack.getComponentsPatch()).result().ifPresent(json -> entry.add("components", json));
+            items.add(entry);
+        }
+        return items;
+    }
+
+    private static JsonObject emiIndex() throws ReflectiveOperationException {
+        Class<?> manager = Class.forName("com.evandev.remi.integration.emi.StackManager");
+        List<?> stacks = (List<?>) manager.getField("unsearchedStacks").get(null);
+        JsonArray out = new JsonArray();
+        for (Object stack : stacks) {
+            if (stack.getClass().getSimpleName().equals("EmiGroupStack")) {
+                Object group = stack.getClass().getField("group").get(stack);
+                JsonObject entry = new JsonObject();
+                entry.addProperty("group", String.valueOf(group.getClass().getMethod("getId").invoke(group)));
+                JsonArray members = new JsonArray();
+                for (Object grouped : (List<?>) stack.getClass().getField("itemsNew").get(stack)) {
+                    members.add(stackId(grouped.getClass().getField("realStack").get(grouped)));
+                }
+                entry.add("members", members);
+                out.add(entry);
+            } else {
+                out.add(stackId(stack));
+            }
+        }
+        JsonArray raw = new JsonArray();
+        for (Object stack : (List<?>) Class.forName("dev.emi.emi.registry.EmiStackList").getField("filteredStacks").get(null)) {
+            raw.add(stackId(stack));
+        }
+        JsonObject result = new JsonObject();
+        result.add("index", out);
+        result.add("raw", raw);
+        return result;
+    }
+
+    private static String stackId(Object emiStack) throws ReflectiveOperationException {
+        String id = String.valueOf(emiStack.getClass().getMethod("getId").invoke(emiStack));
+        Object patch = emiStack.getClass().getMethod("getComponentChanges").invoke(emiStack);
+        return patch instanceof net.minecraft.core.component.DataComponentPatch p && !p.isEmpty() ? id + "+" : id;
     }
 
     private static Map<Item, List<String>> tabMembership() {

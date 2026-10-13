@@ -1,0 +1,23 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "caverns_and_chasms"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "#",
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "caverns_and_chasms:polished_cylindrite"
+    }
+  },
+  "result": {
+    "id": "caverns_and_chasms:cylindrite_pillar",
+    "count": 2
+  }
+}

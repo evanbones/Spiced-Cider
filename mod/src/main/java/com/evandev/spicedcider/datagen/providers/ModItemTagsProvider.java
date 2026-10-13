@@ -73,6 +73,14 @@ public class ModItemTagsProvider extends ItemTagsProvider {
                 .add(ModItems.MISCHIEF_CHESTPLATE.get())
                 .add(ModItems.MISCHIEF_LEGGINGS.get())
                 .add(ModItems.MISCHIEF_BOOTS.get());
+        this.tag(ItemTags.HEAD_ARMOR)
+                .add(ModItems.MISCHIEF_HELMET.get());
+        this.tag(ItemTags.CHEST_ARMOR)
+                .add(ModItems.MISCHIEF_CHESTPLATE.get());
+        this.tag(ItemTags.LEG_ARMOR)
+                .add(ModItems.MISCHIEF_LEGGINGS.get());
+        this.tag(ItemTags.FOOT_ARMOR)
+                .add(ModItems.MISCHIEF_BOOTS.get());
         this.tag(ItemTags.HEAD_ARMOR_ENCHANTABLE)
                 .add(ModItems.MISCHIEF_HELMET.get());
         this.tag(ItemTags.CHEST_ARMOR_ENCHANTABLE)

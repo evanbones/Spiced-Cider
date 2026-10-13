@@ -1,0 +1,23 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "caverns_and_chasms"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "#",
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "caverns_and_chasms:cylindrite_brick_slab"
+    }
+  },
+  "result": {
+    "id": "caverns_and_chasms:chiseled_cylindrite_bricks",
+    "count": 1
+  }
+}

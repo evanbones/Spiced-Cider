@@ -1,0 +1,9 @@
+{
+  "id": "spicedcider:cakes",
+  "type": "remi:group",
+  "regex": ".*:(.+_)?cake",
+  "exclusions": [
+    "create:blaze_cake"
+  ],
+  "enabled": true
+}

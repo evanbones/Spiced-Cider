@@ -1,0 +1,21 @@
+{
+  "id": "spicedcider:mob_buckets",
+  "type": "remi:group",
+  "name": "Mob Buckets",
+  "contents": [
+    "#c:buckets/entity_water"
+  ],
+  "regexes": [
+    "tide:.*_bucket",
+    "infernalexp:.*_bucket",
+    "slime_time:.*_bucket",
+    "minecraft:(axolotl|tadpole|sulfur_cube)_bucket",
+    "quark:crab_bucket",
+    "upgrade_aquatic:.*_bucket",
+    "environmental:.*_bucket",
+    "caverns_and_chasms:.*_bucket",
+    "nomansland:.*_bucket"
+  ],
+  "priority": 1,
+  "enabled": true
+}

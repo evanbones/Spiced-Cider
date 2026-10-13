@@ -709,5 +709,25 @@
       "caverns_and_chasms:cobbled_deepslate_tile_wall"
     ],
     "replace_with": "minecraft:deepslate_tile_wall"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:spinel"
+    ],
+    "replace_with": "minecraft:amethyst_shard"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:turquoise"
+    ],
+    "replace_with": "minecraft:prismarine_crystals"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:atoning_table"
+    ]
   }
 ]

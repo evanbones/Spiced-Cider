@@ -136,5 +136,12 @@
       "nomansland:cobbled_deepslate_brick_wall"
     ],
     "replace_with": "minecraft:deepslate_brick_wall"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "nomansland:wild_mint"
+    ],
+    "replace_with": "culturaldelights:mint"
   }
 ]

@@ -163,5 +163,12 @@
       "minecraft:polished_blackstone_pressure_plate"
     ],
     "replace_with": "minecraft:stone_pressure_plate"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "minecraft:armadillo_scute"
+    ],
+    "replace_with": "nomansland:sturdy_scute"
   }
 ]

@@ -1,0 +1,12 @@
+{
+  "id": "spicedcider:heads",
+  "type": "remi:group",
+  "contents": [
+    "#minecraft:skulls"
+  ],
+  "regex": ".*:.*_head",
+  "exclusions": [
+    "nirvana:reefer_head"
+  ],
+  "enabled": true
+}

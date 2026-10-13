@@ -1,0 +1,11 @@
+{
+  "id": "spicedcider:berry_baskets",
+  "type": "remi:group",
+  "regex": ".*:.*_basket",
+  "exclusions": [
+    "farmersdelight:wooden_basket",
+    "farmersdelight:bamboo_basket",
+    "supplementaries:lunch_basket"
+  ],
+  "enabled": true
+}

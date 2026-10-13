@@ -1,0 +1,10 @@
+{
+  "id": "spicedcider:windows",
+  "type": "remi:group",
+  "regex": ".*_window",
+  "exclusions": [
+    "caverns_and_chasms:roller_window"
+  ],
+  "priority": -1,
+  "enabled": true
+}

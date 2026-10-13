@@ -1,0 +1,23 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "quark"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "#",
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "quark:permafrost_bricks_slab"
+    }
+  },
+  "result": {
+    "id": "spicedcider:chiseled_permafrost",
+    "count": 1
+  }
+}

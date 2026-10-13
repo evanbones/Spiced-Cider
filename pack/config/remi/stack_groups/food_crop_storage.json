@@ -1,0 +1,18 @@
+{
+  "id": "spicedcider:crop_storage",
+  "type": "remi:group",
+  "name": "Crates & Sacks",
+  "regexes": [
+    ".*:.*_crate",
+    ".*:.*_sack",
+    "farmersdelight:rice_bag",
+    "culturaldelights:bean_bag"
+  ],
+  "exclusions": [
+    "tide:wooden_crate",
+    "tide:obsidian_crate",
+    "tide:purpur_crate"
+  ],
+  "priority": -1,
+  "enabled": true
+}

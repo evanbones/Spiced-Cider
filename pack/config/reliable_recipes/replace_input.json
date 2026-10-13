@@ -28,5 +28,13 @@
     "action": "replace_input",
     "target": "nomansland:clover_patch",
     "replacement": "wilderflowers:clovers"
+  },
+  {
+    "action": "replace_input",
+    "filter": {
+      "id": "farmersdelight:organic_compost_from_rotten_flesh"
+    },
+    "target": "minecraft:rotten_flesh",
+    "replacement": "#spicedcider:rotting_flesh"
   }
 ]

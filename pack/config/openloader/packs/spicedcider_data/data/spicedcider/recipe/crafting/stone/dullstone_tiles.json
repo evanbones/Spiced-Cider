@@ -1,0 +1,23 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "stonezone"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "spicedcider:dullstone_bricks"
+    }
+  },
+  "result": {
+    "id": "stonezone:sw/infernalexp/dullstone_tiles",
+    "count": 4
+  }
+}

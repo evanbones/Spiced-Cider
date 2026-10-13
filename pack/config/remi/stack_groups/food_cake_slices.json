@@ -1,0 +1,13 @@
+{
+  "id": "spicedcider:cake_slices",
+  "type": "remi:group",
+  "regexes": [
+    ".*:(.+_)?cake_slice",
+    "abnormals_delight:yucca_gateau_slice"
+  ],
+  "exclusions": [
+    "farmersdelight:sweet_berry_cheesecake_slice",
+    "abundantdelight:wisp_cheesecake_slice"
+  ],
+  "enabled": true
+}

@@ -1,0 +1,13 @@
+{
+  "id": "spicedcider:pies",
+  "type": "remi:group",
+  "regexes": [
+    ".*:.*_pie",
+    ".*:.*_cheesecake",
+    "nomansland:pear_cobbler"
+  ],
+  "exclusions": [
+    "farmersdelight:shepherds_pie"
+  ],
+  "enabled": true
+}
