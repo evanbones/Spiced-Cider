@@ -38,6 +38,7 @@ public final class SupportOffsets {
     private static Set<Block> sitters = new ReferenceOpenHashSet<>();
     private static Set<Block> facingMounted = new ReferenceOpenHashSet<>();
     private static Set<Block> hangers = new ReferenceOpenHashSet<>();
+    private static boolean tagsCached;
 
     private SupportOffsets() {
     }
@@ -61,6 +62,7 @@ public final class SupportOffsets {
         sitters = tagged;
         facingMounted = mounted;
         hangers = ceilingHangers;
+        tagsCached = true;
     }
 
     public static void setRenderLookup(Function<BlockPos, Vec3> lookup) {
@@ -68,15 +70,15 @@ public final class SupportOffsets {
     }
 
     public static boolean isSitter(BlockState state) {
-        return state.is(ModTags.Blocks.SITS_ON_SLABS) || cached(sitters, state);
+        return tagsCached ? sitters.contains(state.getBlock()) : state.is(ModTags.Blocks.SITS_ON_SLABS);
     }
 
     public static boolean isFacingMounted(BlockState state) {
-        return state.is(ModTags.Blocks.MOUNTS_ON_FACING) || cached(facingMounted, state);
+        return tagsCached ? facingMounted.contains(state.getBlock()) : state.is(ModTags.Blocks.MOUNTS_ON_FACING);
     }
 
     public static boolean isHanger(BlockState state) {
-        return state.is(ModTags.Blocks.HANGS_FROM_CEILING) || cached(hangers, state);
+        return tagsCached ? hangers.contains(state.getBlock()) : state.is(ModTags.Blocks.HANGS_FROM_CEILING);
     }
 
     public static boolean mayOffset(BlockState state) {
@@ -177,10 +179,6 @@ public final class SupportOffsets {
                 .getBlockSupportShape(level, anchorPos)
                 .move(anchor.getStepX(), anchor.getStepY(), anchor.getStepZ());
         return !Shapes.joinIsNotEmpty(shifted, supportShape, BooleanOp.AND);
-    }
-
-    private static boolean cached(Set<Block> cache, BlockState state) {
-        return !cache.isEmpty() && cache.contains(state.getBlock());
     }
 
     private static double anchoredComponent(AABB box, Direction anchor) {

@@ -1,0 +1,30 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:trial_chambers",
+    "minecraft:pillager_outpost",
+    "minecraft:stronghold",
+    "minecraft:mansion",
+    "minecraft:village_plains",
+    "minecraft:village_desert",
+    "minecraft:village_savanna",
+    "minecraft:village_snowy",
+    "minecraft:village_taiga",
+    { "id": "caverns_and_chasms:vault", "required": false },
+    { "id": "explorify:dark_forest_settlement", "required": false },
+    { "id": "explorify:tavern", "required": false },
+    { "id": "supplementaries:road_sign", "required": false },
+    { "id": "supplementaries:galleon", "required": false },
+    { "id": "valhelsia_structures:big_tree", "required": false },
+    { "id": "valhelsia_structures:castle", "required": false },
+    { "id": "valhelsia_structures:castle_ruin", "required": false },
+    { "id": "valhelsia_structures:deep_spawner_room", "required": false },
+    { "id": "valhelsia_structures:desert_house", "required": false },
+    { "id": "valhelsia_structures:forge", "required": false },
+    { "id": "valhelsia_structures:player_house", "required": false },
+    { "id": "valhelsia_structures:spawner_dungeon", "required": false },
+    { "id": "valhelsia_structures:spawner_room", "required": false },
+    { "id": "valhelsia_structures:tower_ruin", "required": false },
+    { "id": "valhelsia_structures:witch_hut", "required": false }
+  ]
+}

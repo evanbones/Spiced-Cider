@@ -62,6 +62,7 @@ public final class DevBridge {
     private static final Gson GSON = new GsonBuilder().setPrettyPrinting().serializeNulls().create();
     private static final DateTimeFormatter STAMP = DateTimeFormatter.ofPattern("yyyy-MM-dd_HH.mm.ss");
     private static final FrameStats FRAMES = new FrameStats();
+    private static final GameplayDriver DRIVER = new GameplayDriver();
 
     private static HttpServer server;
     private static ExecutorService executor;
@@ -115,6 +116,11 @@ public final class DevBridge {
     }
 
     @SubscribeEvent
+    public static void onTickPre(ClientTickEvent.Pre event) {
+        if (server != null) DRIVER.onClientTick();
+    }
+
+    @SubscribeEvent
     public static void onTick(ClientTickEvent.Post event) {
         if (server != null) FRAMES.onClientTick();
     }
@@ -140,6 +146,12 @@ public final class DevBridge {
         routes.put("POST /wait", DevBridge::await);
         routes.put("POST /jfr/start", DevBridge::jfrStart);
         routes.put("POST /jfr/stop", DevBridge::jfrStop);
+        routes.put("POST /drive", DevBridge::drive);
+        routes.put("POST /drive/stop", r -> {
+            DRIVER.stop();
+            return ok();
+        });
+        routes.put("GET /drive", r -> DRIVER.describe());
         routes.put("POST /join", DevBridge::join);
         routes.put("POST /leave", r -> leave());
         routes.put("POST /quit", r -> {
@@ -506,6 +518,29 @@ public final class DevBridge {
         JsonObject result = ok();
         result.addProperty("path", out.toString());
         return result;
+    }
+
+    private static JsonElement drive(Request request) throws Exception {
+        if (!call(DevBridge::inWorld)) throw new HttpError(409, "Not in a world, or a screen is open");
+        GameplayDriver.Plan plan = new GameplayDriver.Plan(
+                flag(request, "forward"), flag(request, "back"), flag(request, "left"), flag(request, "right"),
+                flag(request, "sprint"), flag(request, "jump"), flag(request, "sneak"),
+                flag(request, "attack"), flag(request, "use"), flag(request, "fly"),
+                Float.parseFloat(request.get("yaw", "0")), Float.parseFloat(request.get("pitch", "0")),
+                request.getInt("swayTicks", 0), Float.parseFloat(request.get("sway", "0")),
+                Math.round(Double.parseDouble(request.get("seconds", "10")) * 20));
+        DRIVER.start(plan);
+        if (flag(request, "wait")) {
+            waitUntil(() -> !DRIVER.active(), plan.ticks() * 50L + 60_000L);
+        }
+        JsonObject out = ok();
+        out.add("driver", DRIVER.describe());
+        return out;
+    }
+
+    private static boolean flag(Request request, String key) {
+        String value = request.query().get(key);
+        return value != null && !value.equals("0") && !value.equalsIgnoreCase("false");
     }
 
     private static JsonElement join(Request request) throws Exception {

@@ -1,12 +1,14 @@
 package com.evandev.spicedcider.content.handler;
 
 import com.evandev.spicedcider.SpicedCider;
+import com.evandev.spicedcider.compat.cirrus.CirrusLeaks;
 import com.evandev.spicedcider.compat.coldsweat.ColdSweatLeaks;
 import com.evandev.spicedcider.compat.exposure.ExposureLeaks;
 import com.evandev.spicedcider.compat.modernfix.ModernFixLeaks;
+import com.evandev.spicedcider.compat.nomansland.NoMansLandClientLeaks;
 import com.evandev.spicedcider.compat.nomansland.NoMansLandLeaks;
 import com.evandev.spicedcider.compat.voicechat.VoiceChatLeaks;
-import com.evandev.spicedcider.util.ThreadCacheRegistry;
+import com.evandev.spicedcider.util.ClientCacheRegistry;
 import net.minecraft.server.level.ServerLevel;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModList;
@@ -18,7 +20,6 @@ public class ServerLeakEvents {
 
     @SubscribeEvent
     public static void onServerStopped(ServerStoppedEvent event) {
-        ThreadCacheRegistry.clearAll();
         ModList mods = ModList.get();
         for (ServerLevel level : event.getServer().getAllLevels()) {
             if (mods.isLoaded("nomansland")) NoMansLandLeaks.release(level);
@@ -30,6 +31,10 @@ public class ServerLeakEvents {
     }
 
     public static void onClientLoggedOut() {
-        if (ModList.get().isLoaded("cold_sweat")) ColdSweatLeaks.releaseClient();
+        ModList mods = ModList.get();
+        if (mods.isLoaded("cold_sweat")) ColdSweatLeaks.releaseClient();
+        if (mods.isLoaded("cirrus")) CirrusLeaks.releaseClient();
+        if (mods.isLoaded("nomansland")) NoMansLandClientLeaks.releaseClient();
+        ClientCacheRegistry.clearAll();
     }
 }

@@ -272,6 +272,7 @@ dependencies {
 
     compileOnly "maven.modrinth:modern-world-creation:2.0.1-1.21.1-neoforge"
     compileOnly "maven.modrinth:fancymenu:3.9.12-1.21.1-neoforge"
+    compileOnly "maven.modrinth:iceberg:IMssx9du"
     //runtimeOnly "maven.modrinth:modern-world-creation:2.0.1-1.21.1-neoforge"
     //runtimeOnly "maven.modrinth:konkrete:1.9.9-1.21-neoforge"
     runtimeOnly "maven.modrinth:emi:1.1.22+1.21.1+neoforge"
@@ -343,9 +344,12 @@ dependencies {
     runtimeOnly "maven.modrinth:blueprint:8.1.0"
     runtimeOnly "maven.modrinth:gallery:2.0.1"
 
+    // Reliable Remover
+    compileOnly "maven.modrinth:reliable-remover:tUMtmlJf"
+
     // Clutter No More
-    compileOnly "maven.modrinth:clutter-no-more:2.0.7+1.21.1-neoforge"
-    runtimeOnly "maven.modrinth:clutter-no-more:2.0.7+1.21.1-neoforge"
+    compileOnly "maven.modrinth:clutter-no-more:v3J7gqAO"
+    runtimeOnly "maven.modrinth:clutter-no-more:v3J7gqAO"
 
     // Jade
     compileOnly "maven.modrinth:jade:15.10.6+neoforge"

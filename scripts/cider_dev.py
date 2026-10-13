@@ -72,6 +72,12 @@ def attach_startup_jfr(before, deadline, settings):
     return None
 
 
+def wait_for_exit(timeout=180):
+    deadline = time.time() + timeout
+    while game_jvms() and time.time() < deadline:
+        time.sleep(1)
+
+
 def cmd_launch(args):
     started = time.time()
     jfr_pid = None
@@ -122,10 +128,73 @@ def cmd_bench(args):
     show(stats)
 
 
+PLAY_PHASES = [
+    ("idle", None, 20),
+    ("walk", {"forward": 1, "sprint": 1, "jump": 1, "swayTicks": 120, "sway": 70}, 40),
+    ("look_around", {"yaw": 6, "pitch": 10}, 15),
+    ("fly_explore", {"forward": 1, "sprint": 1, "fly": 1, "swayTicks": 400, "sway": 40}, 60),
+    ("fly_turn", {"forward": 1, "sprint": 1, "fly": 1, "yaw": 1.5}, 30),
+    ("settle", None, 20),
+]
+
+
+def summarize(stats):
+    frames = stats.get("frames", {})
+    server = stats.get("server", {})
+    client = stats.get("client", {})
+    return {k: frames.get(k) for k in ("frames", "avgFps", "p50Ms", "p99Ms", "maxMs", "onePercentLowFps", "framesOver50ms", "framesWithScreenOpen")} | {
+        "avgMspt": server.get("avgMspt"), "maxMsptLast100": server.get("maxMsptLast100"),
+        "clientChunks": client.get("loadedChunks"), "entities": client.get("entities"),
+        "heapUsedMb": stats.get("jvm", {}).get("heapUsedMb"), "gc": stats.get("jvm", {}).get("gc"),
+        "spikes": frames.get("spikes"),
+    }
+
+
+def cmd_play(args):
+    ready = call("POST", "/wait", {"for": "world", "timeout": 60})
+    if not ready.get("ok"):
+        print("A screen is open in-game; close it before playing.")
+        sys.exit(1)
+    if args.gamemode:
+        call("POST", "/command", None, f"gamemode {args.gamemode}")
+    if args.stable:
+        call("POST", "/wait", {"for": "stable", "n": args.stable})
+    if args.jfr:
+        call("POST", "/jfr/start", {"settings": args.settings})
+    report = {"start": call("GET", "/status"), "phases": []}
+    started = time.time()
+    try:
+        for name, plan, seconds in PLAY_PHASES:
+            if args.only and name not in args.only:
+                continue
+            seconds = round(seconds * args.scale)
+            call("POST", "/stats/reset")
+            phase_start = time.time() - started
+            if plan:
+                call("POST", "/drive", {**plan, "seconds": seconds, "wait": 1}, timeout=seconds + 120)
+            else:
+                call("POST", "/wait", {"for": "seconds", "n": seconds})
+            entry = {"phase": name, "startedAt": round(phase_start, 1)} | summarize(call("GET", "/stats"))
+            entry["pos"] = call("GET", "/status").get("pos")
+            report["phases"].append(entry)
+            print(f"{name:12s} fps {entry['avgFps'] or 0:6.1f}  1%low {entry['onePercentLowFps'] or 0:6.1f}  max {entry['maxMs'] or 0:7.1f}ms  >50ms {entry['framesOver50ms']}  mspt {entry['avgMspt'] or 0:5.1f}  chunks {entry['clientChunks']}", flush=True)
+    finally:
+        call("POST", "/drive/stop")
+        if args.jfr:
+            report["jfr"] = call("POST", "/jfr/stop", {"name": args.name})
+    out = INSTANCE_DIR / "devbridge" / f"play-{args.name or time.strftime('%Y%m%d-%H%M%S')}.json"
+    out.write_text(json.dumps(report, indent=2))
+    print(f"Report: {out}")
+    if args.jfr:
+        print(f"JFR: {report['jfr'].get('path')}")
+
+
 def cmd_reset_world():
     if bridge_up() and call("GET", "/status").get("world") is not None:
         print("Leave the world (or quit) before resetting it.")
         sys.exit(1)
+    if not bridge_up():
+        wait_for_exit(60)
     target = INSTANCE_DIR / "saves" / BENCH_WORLD
     if target.exists():
         shutil.rmtree(target)
@@ -199,6 +268,24 @@ def main():
     p.add_argument("--settings", default="profile")
     p.add_argument("--name")
 
+    p = sub.add_parser("drive", help="Hold movement keys / turn the camera for N seconds")
+    p.add_argument("--seconds", type=float, default=10)
+    p.add_argument("--keys", nargs="*", default=[], choices=["forward", "back", "left", "right", "sprint", "jump", "sneak", "attack", "use", "fly"])
+    p.add_argument("--yaw", type=float, default=0)
+    p.add_argument("--pitch", type=float, default=0)
+    p.add_argument("--sway-ticks", type=int, default=0)
+    p.add_argument("--sway", type=float, default=0)
+    p.add_argument("--no-wait", action="store_true")
+
+    p = sub.add_parser("play", help="Scripted gameplay session (idle, walk, look, fly into new terrain) with per-phase stats")
+    p.add_argument("--jfr", action="store_true")
+    p.add_argument("--settings", default="profile")
+    p.add_argument("--name")
+    p.add_argument("--stable", type=int, default=10)
+    p.add_argument("--scale", type=float, default=1.0)
+    p.add_argument("--gamemode", default="creative")
+    p.add_argument("--only", nargs="*")
+
     p = sub.add_parser("jfr")
     p.add_argument("action", choices=["start", "stop", "view"])
     p.add_argument("file", nargs="?")
@@ -232,12 +319,19 @@ def main():
             show(call("POST", "/leave"))
         case "quit":
             show(call("POST", "/quit"))
+            wait_for_exit()
         case "kill":
             cmd_kill()
         case "bench":
             cmd_bench(args)
         case "jfr":
             cmd_jfr(args)
+        case "drive":
+            params = {k: 1 for k in args.keys} | {"seconds": args.seconds, "yaw": args.yaw, "pitch": args.pitch,
+                      "swayTicks": args.sway_ticks, "sway": args.sway, "wait": None if args.no_wait else 1}
+            show(call("POST", "/drive", params, timeout=args.seconds + 120))
+        case "play":
+            cmd_play(args)
 
 
 if __name__ == "__main__":

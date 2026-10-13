@@ -9,6 +9,7 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.levelgen.structure.Structure;
 
 public class ModTags {
     public static class Items {
@@ -40,6 +41,10 @@ public class ModTags {
         private static TagKey<Block> tag(String namespace, String name) {
             return BlockTags.create(ResourceLocation.fromNamespaceAndPath(namespace, name));
         }
+    }
+
+    public static class Structures {
+        public static final TagKey<Structure> DISABLED = TagKey.create(Registries.STRUCTURE, ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "disabled"));
     }
 
     public static class EntityTypes {

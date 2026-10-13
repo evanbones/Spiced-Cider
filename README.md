@@ -83,7 +83,7 @@ Spiced Cider runs fine without any of these: each one only unlocks the specific 
 | Mod                                                                                                             | Feature added when installed                                                                                                   |
 |-----------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------|
 | [Caverns & Chasms](https://modrinth.com/mod/caverns-and-chasms)                                                 | Uses C&C's tin spark particles for unmineable block sparks; adds waterlogging to Refractors/Resistors                          |
-| [Clutter No More](https://modrinth.com/mod/clutter-no-more)                                                     | Fixes missing textures on waterlogged steps/vertical slabs                                                                     |
+| [Clutter No More](https://modrinth.com/mod/clutter-no-more)                                                     | Stops Clutter No More's shape badge drawing on every EMI stack                                                                 |
 | [Environmental](https://modrinth.com/mod/environmental)                                                         | Removes the green leaves from Wisteria trees                                                                                   |
 | [Hominid](https://modrinth.com/mod/hominid)                                                                     | Fixes annoying log spam                                                                                                        |
 | [Jade](https://modrinth.com/mod/jade)                                                                           | Fixes a depth-buffer rendering glitch in Jade's tooltip overlay                                                                |
@@ -123,8 +123,8 @@ its [Apache License 2.0](https://github.com/BigWingBeat/better_log4j_config/blob
 Randomized world names are from [Naming Unconvention](https://github.com/QinomeD/Naming-Unconvention/), used under
 its [LGPLv3 license](https://github.com/QinomeD/Naming-Unconvention/blob/master/LICENSE).
 
-Fluids spilling into the void are ported from [Void Water](https://modrinth.com/mod/void-water) by NormallyNormal, used under
-its MIT license (included in the jar at `META-INF/licenses/void_water-LICENSE.txt`).
+Fluids spilling into the void are ported from [Void Water](https://modrinth.com/mod/void-water) by NormallyNormal, used
+under its MIT license (included at `META-INF/licenses/void_water-LICENSE.txt`).
 
 Sparks for hitting unmineable blocks ported from Valcon by [Ivqry](https://github.com/ivqrydev).
 

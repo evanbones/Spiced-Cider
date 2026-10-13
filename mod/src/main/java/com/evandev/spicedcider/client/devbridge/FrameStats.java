@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.client.devbridge;
 
+import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 
 import java.util.Arrays;
@@ -7,7 +8,13 @@ import java.util.Arrays;
 public final class FrameStats {
     private static final int CAPACITY = 1 << 16;
 
+    private static final int SPIKE_CAPACITY = 512;
+    private static final long SPIKE_NANOS = 50_000_000L;
+
     private final long[] frameNanos = new long[CAPACITY];
+    private final long[] spikeAt = new long[SPIKE_CAPACITY];
+    private final long[] spikeNanos = new long[SPIKE_CAPACITY];
+    private int spikeCount;
     private long lastFrameStart;
     private long windowStart = System.nanoTime();
     private int count;
@@ -20,7 +27,13 @@ public final class FrameStats {
         long now = System.nanoTime();
         if (lastFrameStart != 0) {
             if (screenOpen) screenFrames++;
-            frameNanos[head] = now - lastFrameStart;
+            long frame = now - lastFrameStart;
+            frameNanos[head] = frame;
+            if (frame > SPIKE_NANOS && spikeCount < SPIKE_CAPACITY) {
+                spikeAt[spikeCount] = lastFrameStart - windowStart;
+                spikeNanos[spikeCount] = frame;
+                spikeCount++;
+            }
             head = (head + 1) & (CAPACITY - 1);
             if (count < CAPACITY) count++;
         }
@@ -44,6 +57,7 @@ public final class FrameStats {
         count = 0;
         head = 0;
         screenFrames = 0;
+        spikeCount = 0;
         lastFrameStart = 0;
         windowStart = System.nanoTime();
     }
@@ -52,8 +66,17 @@ public final class FrameStats {
         long[] sorted;
         long windowNanos;
         int withScreen;
+        JsonArray spikes = new JsonArray();
+        long epochOffset = System.currentTimeMillis() - System.nanoTime() / 1_000_000L;
         synchronized (this) {
             withScreen = screenFrames;
+            for (int i = 0; i < spikeCount; i++) {
+                JsonArray spike = new JsonArray();
+                spike.add(Math.round(spikeAt[i] / 1e6) / 1000.0);
+                spike.add(Math.round(spikeNanos[i] / 1e5) / 10.0);
+                spike.add(epochOffset + (windowStart + spikeAt[i]) / 1_000_000L);
+                spikes.add(spike);
+            }
             sorted = new long[count];
             for (int i = 0; i < count; i++) {
                 sorted[i] = frameNanos[(head - count + i) & (CAPACITY - 1)];
@@ -78,9 +101,10 @@ public final class FrameStats {
         out.addProperty("p99Ms", percentile(sorted, 0.99));
         out.addProperty("maxMs", sorted[sorted.length - 1] / 1e6);
         out.addProperty("onePercentLowFps", 1000.0 / percentile(sorted, 0.99));
-        int spikes = 0;
-        for (long n : sorted) if (n > 50_000_000L) spikes++;
-        out.addProperty("framesOver50ms", spikes);
+        int over = 0;
+        for (long n : sorted) if (n > SPIKE_NANOS) over++;
+        out.addProperty("framesOver50ms", over);
+        out.add("spikes", spikes);
         return out;
     }
 

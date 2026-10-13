@@ -5,6 +5,7 @@ import com.evandev.spicedcider.mixin.voxyworldgen.DimensionStateAccessor;
 import com.ethan.voxyworldgenv2.core.Config;
 import com.ethan.voxyworldgenv2.core.PlayerTracker;
 import com.ethan.voxyworldgenv2.mixin.ServerChunkCacheMixin;
+import com.ethan.voxyworldgenv2.network.NetworkHandler;
 import com.ethan.voxyworldgenv2.platform.Services;
 import it.unimi.dsi.fastutil.longs.LongSet;
 import net.minecraft.resources.ResourceKey;
@@ -24,8 +25,10 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.UUID;
 import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public final class VoxyWorldGenCatchup {
@@ -34,15 +37,53 @@ public final class VoxyWorldGenCatchup {
             TicketType.create("spicedcider_lod_sync", Comparator.comparingLong(ChunkPos::toLong), 200);
 
     private static final int CATCHUP_BATCH = 8;
-    private static final int MAX_PENDING_LOADS = 8;
+    private static final int MAX_PENDING_LOADS = 2;
 
     private static final AtomicInteger pendingLoads = new AtomicInteger();
+    private static final Map<UUID, Binding> bindings = new ConcurrentHashMap<>();
+    private static final Set<UUID> pendingBinds = ConcurrentHashMap.newKeySet();
+
+    private record Binding(LongSet synced, ServerLevel level, LodSyncedChunks data) {
+    }
 
     private VoxyWorldGenCatchup() {
     }
 
     public static void reset() {
         pendingLoads.set(0);
+        detachAll();
+    }
+
+    public static void detachAll() {
+        bindings.keySet().forEach(VoxyWorldGenCatchup::detach);
+        pendingBinds.clear();
+    }
+
+    public static void detach(UUID uuid) {
+        Binding binding = bindings.remove(uuid);
+        if (binding != null) binding.data().detach(uuid, binding.synced());
+    }
+
+    private static boolean bound(MinecraftServer server, UUID uuid, LongSet synced, ServerLevel level) {
+        Binding binding = bindings.get(uuid);
+        if (binding != null && binding.synced() == synced && binding.level() == level) return true;
+        if (pendingBinds.add(uuid)) server.execute(() -> bind(server, uuid, level));
+        return false;
+    }
+
+    private static void bind(MinecraftServer server, UUID uuid, ServerLevel level) {
+        try {
+            if (isWindingDown(server)) return;
+            ServerPlayer player = server.getPlayerList().getPlayer(uuid);
+            LongSet synced = PlayerTracker.getInstance().getSyncedChunks(uuid);
+            if (player == null || synced == null || player.level() != level) return;
+            detach(uuid);
+            LodSyncedChunks data = LodSyncedChunks.get(level);
+            data.attach(uuid, synced);
+            bindings.put(uuid, new Binding(synced, level, data));
+        } finally {
+            pendingBinds.remove(uuid);
+        }
     }
 
     public static void runCatchup(MinecraftServer server, Map<ResourceKey<Level>, ?> dimensionStates,
@@ -65,18 +106,23 @@ public final class VoxyWorldGenCatchup {
             if (synced == null) continue;
             if (!(player.level() instanceof ServerLevel playerLevel)) continue;
             if (!(dimensionStates.get(playerLevel.dimension()) instanceof DimensionStateAccessor state)) continue;
+            if (!bound(server, uuid, synced, playerLevel)) continue;
 
             int radius = state.isTellusActive()
                     ? Math.max(Config.DATA.generationRadius, 128)
                     : Config.DATA.generationRadius;
 
-            List<ChunkPos> batch = new ArrayList<>();
+            List<ChunkPos> found = new ArrayList<>();
             state.getDistanceGraph().collectCompletedInRange(
-                    player.chunkPosition(), radius, synced, batch, CATCHUP_BATCH);
-            if (batch.isEmpty()) {
+                    player.chunkPosition(), radius, synced, found, CATCHUP_BATCH);
+            if (found.isEmpty()) {
                 tracker.clearBackfill(uuid);
                 continue;
             }
+
+            List<ChunkPos> batch = new ArrayList<>(found.size());
+            for (ChunkPos pos : found) if (inSyncRange(player, pos)) batch.add(pos);
+            if (batch.isEmpty()) continue;
 
             for (ChunkPos pos : batch) synced.add(pos.toLong());
 
@@ -103,6 +149,7 @@ public final class VoxyWorldGenCatchup {
             LevelChunk chunk = cache.getChunkNow(pos.x, pos.z);
             if (chunk != null) {
                 Services.NETWORK.sendLODData(player, chunk);
+                keepSynced(player, pos);
             } else if (!loadFromDisk || !requestLoad(server, level, cache, uuid, pos)) {
                 unmark(uuid, pos);
             }
@@ -149,7 +196,20 @@ public final class VoxyWorldGenCatchup {
             if (!tracker.isModded(uuid)) continue;
             if (!uuid.equals(requester) && tracker.isSynced(uuid, key)) continue;
             Services.NETWORK.sendLODData(player, chunk);
+            keepSynced(player, pos);
         }
+    }
+
+    private static boolean inSyncRange(ServerPlayer player, ChunkPos pos) {
+        double dx = player.getX() - pos.getMiddleBlockX();
+        double dz = player.getZ() - pos.getMiddleBlockZ();
+        return dx * dx + dz * dz <= NetworkHandler.syncRadiusSq();
+    }
+
+    private static void keepSynced(ServerPlayer player, ChunkPos pos) {
+        if (!inSyncRange(player, pos)) return;
+        LongSet synced = PlayerTracker.getInstance().getSyncedChunks(player.getUUID());
+        if (synced != null) synced.add(pos.toLong());
     }
 
     private static boolean isWindingDown(MinecraftServer server) {
