@@ -29,7 +29,67 @@
       "supplementaries:lapis_bricks_wall",
       "supplementaries:pedestal",
       "supplementaries:upgrade_aquatic/way_sign_river",
-      "supplementaries:upgrade_aquatic/cannon_boat_river"
+      "supplementaries:upgrade_aquatic/cannon_boat_river",
+      "supplementaries:autumnity/cannon_boat_maple",
+      "supplementaries:autumnity/way_sign_maple",
+      "supplementaries:quark/cannon_boat_azalea",
+      "supplementaries:quark/way_sign_azalea"
     ]
+  },
+  {
+    "action": "remove",
+    "items": [
+      "supplementaries:stone_tile"
+    ],
+    "replace_with": "stoneworks:stone_tiles"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "supplementaries:stone_tile_stairs"
+    ],
+    "replace_with": "stoneworks:stone_tile_stairs"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "supplementaries:stone_tile_slab"
+    ],
+    "replace_with": "stoneworks:stone_tile_slab"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "supplementaries:stone_tile_wall"
+    ],
+    "replace_with": "stoneworks:stone_tile_wall"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "supplementaries:blackstone_tile"
+    ],
+    "replace_with": "stoneworks:blackstone_tiles"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "supplementaries:blackstone_tile_stairs"
+    ],
+    "replace_with": "stoneworks:blackstone_tile_stairs"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "supplementaries:blackstone_tile_slab"
+    ],
+    "replace_with": "stoneworks:blackstone_tile_slab"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "supplementaries:blackstone_tile_wall"
+    ],
+    "replace_with": "stoneworks:blackstone_tile_wall"
   }
 ]

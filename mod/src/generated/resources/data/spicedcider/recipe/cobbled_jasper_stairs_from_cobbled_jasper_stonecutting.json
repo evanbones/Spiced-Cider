@@ -1,0 +1,16 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "quark"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "spicedcider:cobbled_jasper"
+  },
+  "result": {
+    "count": 1,
+    "id": "spicedcider:cobbled_jasper_stairs"
+  }
+}

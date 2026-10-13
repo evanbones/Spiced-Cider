@@ -32,7 +32,438 @@
       "quark:polished_calcite_slab",
       "quark:deepslate_furnace",
       "quark:blackstone_furnace",
-      "quark:azalea_log"
+      "quark:azalea_log",
+      "quark:calcite_bricks_vertical_slab",
+      "quark:calcite_vertical_slab",
+      "quark:dripstone_bricks_vertical_slab",
+      "quark:dripstone_block_vertical_slab",
+      "quark:polished_dripstone_vertical_slab",
+      "quark:ancient_boat",
+      "quark:ancient_bookshelf",
+      "quark:ancient_button",
+      "quark:ancient_chest",
+      "quark:ancient_chest_boat",
+      "quark:ancient_door",
+      "quark:ancient_fence",
+      "quark:ancient_fence_gate",
+      "quark:ancient_hanging_sign",
+      "quark:ancient_hedge",
+      "quark:ancient_ladder",
+      "quark:ancient_leaf_carpet",
+      "quark:ancient_leaves",
+      "quark:ancient_log",
+      "quark:ancient_planks",
+      "quark:ancient_planks_slab",
+      "quark:ancient_planks_stairs",
+      "quark:ancient_planks_vertical_slab",
+      "quark:ancient_post",
+      "quark:ancient_pressure_plate",
+      "quark:ancient_sapling",
+      "quark:ancient_sign",
+      "quark:ancient_trapdoor",
+      "quark:ancient_wood",
+      "quark:blossom_boat",
+      "quark:blossom_bookshelf",
+      "quark:blossom_button",
+      "quark:blossom_chest",
+      "quark:blossom_chest_boat",
+      "quark:blossom_door",
+      "quark:blossom_fence",
+      "quark:blossom_fence_gate",
+      "quark:blossom_hanging_sign",
+      "quark:blossom_ladder",
+      "quark:blossom_log",
+      "quark:blossom_planks",
+      "quark:blossom_planks_slab",
+      "quark:blossom_planks_stairs",
+      "quark:blossom_planks_vertical_slab",
+      "quark:blossom_post",
+      "quark:blossom_pressure_plate",
+      "quark:blossom_sign",
+      "quark:blossom_trapdoor",
+      "quark:blossom_wood",
+      "quark:blue_blossom_hedge",
+      "quark:blue_blossom_leaf_carpet",
+      "quark:blue_blossom_leaves",
+      "quark:blue_blossom_sapling",
+      "quark:hollow_ancient_log",
+      "quark:hollow_blossom_log",
+      "quark:lavender_blossom_hedge",
+      "quark:lavender_blossom_leaf_carpet",
+      "quark:lavender_blossom_leaves",
+      "quark:lavender_blossom_sapling",
+      "quark:orange_blossom_hedge",
+      "quark:orange_blossom_leaf_carpet",
+      "quark:orange_blossom_leaves",
+      "quark:orange_blossom_sapling",
+      "quark:red_blossom_hedge",
+      "quark:red_blossom_leaf_carpet",
+      "quark:red_blossom_leaves",
+      "quark:red_blossom_sapling",
+      "quark:stripped_ancient_log",
+      "quark:stripped_ancient_post",
+      "quark:stripped_ancient_wood",
+      "quark:stripped_blossom_log",
+      "quark:stripped_blossom_post",
+      "quark:stripped_blossom_wood",
+      "quark:trapped_ancient_chest",
+      "quark:trapped_blossom_chest",
+      "quark:vertical_ancient_planks",
+      "quark:vertical_blossom_planks",
+      "quark:yellow_blossom_hedge",
+      "quark:yellow_blossom_leaf_carpet",
+      "quark:yellow_blossom_leaves",
+      "quark:yellow_blossom_sapling"
     ]
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:calcite_bricks"
+    ],
+    "replace_with": "architects_palette:calcite_bricks"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:calcite_bricks_slab"
+    ],
+    "replace_with": "architects_palette:calcite_brick_slab"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:calcite_bricks_stairs"
+    ],
+    "replace_with": "architects_palette:calcite_brick_stairs"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:calcite_bricks_wall"
+    ],
+    "replace_with": "architects_palette:calcite_brick_wall"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:chiseled_calcite_bricks"
+    ],
+    "replace_with": "architects_palette:chiseled_calcite"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:calcite_slab"
+    ],
+    "replace_with": "caverns_and_chasms:calcite_slab"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:dripstone_bricks"
+    ],
+    "replace_with": "caverns_and_chasms:dripstone_bricks"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:dripstone_bricks_slab"
+    ],
+    "replace_with": "caverns_and_chasms:dripstone_brick_slab"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:dripstone_bricks_stairs"
+    ],
+    "replace_with": "caverns_and_chasms:dripstone_brick_stairs"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:dripstone_bricks_wall"
+    ],
+    "replace_with": "caverns_and_chasms:dripstone_brick_wall"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:chiseled_dripstone_bricks"
+    ],
+    "replace_with": "caverns_and_chasms:chiseled_dripstone_bricks"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:dripstone_pillar"
+    ],
+    "replace_with": "architects_palette:dripstone_pillar"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:dripstone_block_slab"
+    ],
+    "replace_with": "caverns_and_chasms:dripstone_slab"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:dripstone_block_stairs"
+    ],
+    "replace_with": "caverns_and_chasms:dripstone_stairs"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:dripstone_block_wall"
+    ],
+    "replace_with": "caverns_and_chasms:dripstone_wall"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:polished_dripstone"
+    ],
+    "replace_with": "caverns_and_chasms:polished_dripstone"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:polished_dripstone_slab"
+    ],
+    "replace_with": "caverns_and_chasms:polished_dripstone_slab"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:polished_dripstone_stairs"
+    ],
+    "replace_with": "caverns_and_chasms:polished_dripstone_stairs"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:framed_glass"
+    ],
+    "replace_with": "create:framed_glass"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:framed_glass_pane"
+    ],
+    "replace_with": "create:framed_glass_pane"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:beetroot_crate"
+    ],
+    "replace_with": "farmersdelight:beetroot_crate"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:carrot_crate"
+    ],
+    "replace_with": "farmersdelight:carrot_crate"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:potato_crate"
+    ],
+    "replace_with": "farmersdelight:potato_crate"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:andesite_bricks"
+    ],
+    "replace_with": "stoneworks:andesite_bricks"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:andesite_bricks_wall"
+    ],
+    "replace_with": "stoneworks:andesite_brick_wall"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:andesite_bricks_slab"
+    ],
+    "replace_with": "stoneworks:andesite_brick_slab"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:andesite_bricks_stairs"
+    ],
+    "replace_with": "stoneworks:andesite_brick_stairs"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:chiseled_andesite_bricks"
+    ],
+    "replace_with": "stoneworks:chiseled_andesite"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:diorite_bricks"
+    ],
+    "replace_with": "stoneworks:diorite_bricks"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:diorite_bricks_wall"
+    ],
+    "replace_with": "stoneworks:diorite_brick_wall"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:diorite_bricks_slab"
+    ],
+    "replace_with": "stoneworks:diorite_brick_slab"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:diorite_bricks_stairs"
+    ],
+    "replace_with": "stoneworks:diorite_brick_stairs"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:chiseled_diorite_bricks"
+    ],
+    "replace_with": "stoneworks:chiseled_diorite"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:granite_bricks"
+    ],
+    "replace_with": "stoneworks:granite_bricks"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:granite_bricks_wall"
+    ],
+    "replace_with": "stoneworks:granite_brick_wall"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:granite_bricks_slab"
+    ],
+    "replace_with": "stoneworks:granite_brick_slab"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:granite_bricks_stairs"
+    ],
+    "replace_with": "stoneworks:granite_brick_stairs"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:chiseled_granite_bricks"
+    ],
+    "replace_with": "stoneworks:chiseled_granite"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:blackstone_bricks"
+    ],
+    "replace_with": "minecraft:polished_blackstone_bricks"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:blackstone_bricks_wall"
+    ],
+    "replace_with": "minecraft:polished_blackstone_brick_wall"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:blackstone_bricks_slab"
+    ],
+    "replace_with": "minecraft:polished_blackstone_brick_slab"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:blackstone_bricks_stairs"
+    ],
+    "replace_with": "minecraft:polished_blackstone_brick_stairs"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:netherrack_bricks"
+    ],
+    "replace_with": "stoneworks:netherrack_bricks"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:netherrack_bricks_wall"
+    ],
+    "replace_with": "stoneworks:netherrack_brick_wall"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:netherrack_bricks_slab"
+    ],
+    "replace_with": "stoneworks:netherrack_brick_slab"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:netherrack_bricks_stairs"
+    ],
+    "replace_with": "stoneworks:netherrack_brick_stairs"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:soul_sandstone_bricks"
+    ],
+    "replace_with": "quark:cut_soul_sandstone"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:soul_sandstone_bricks_stairs"
+    ],
+    "replace_with": "spicedcider:cut_soul_sandstone_stairs"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:soul_sandstone_bricks_slab"
+    ],
+    "replace_with": "quark:cut_soul_sandstone_slab"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:soul_sandstone_bricks_wall"
+    ],
+    "replace_with": "spicedcider:cut_soul_sandstone_wall"
   }
 ]

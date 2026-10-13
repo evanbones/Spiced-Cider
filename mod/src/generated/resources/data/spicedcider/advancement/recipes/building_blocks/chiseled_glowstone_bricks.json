@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_glowstone_brick_slab": {
+      "conditions": {
+        "items": [
+          {
+            "items": "spicedcider:glowstone_brick_slab"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "spicedcider:chiseled_glowstone_bricks"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_glowstone_brick_slab"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "spicedcider:chiseled_glowstone_bricks"
+    ]
+  }
+}

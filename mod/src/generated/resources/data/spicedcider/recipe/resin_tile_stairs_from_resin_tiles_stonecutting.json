@@ -1,0 +1,16 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "vanillabackport"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "spicedcider:resin_tiles"
+  },
+  "result": {
+    "count": 1,
+    "id": "spicedcider:resin_tile_stairs"
+  }
+}

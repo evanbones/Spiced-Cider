@@ -173,6 +173,57 @@
 		[types.lantern.infernalexp]
 			glowlight_lantern = true
 
+		[types.stone_type.architects_palette]
+			abyssaline = true
+			hadaline = true
+			myonite = true
+			esoterrack = true
+			onyx = true
+			wardstone = true
+			moonshale = true
+			nebulite = true
+
+		[types.stone_type.bountifulfares]
+			feldspar = true
+
+		[types.stone_type.caverns_and_chasms]
+			sugilite = true
+			cylindrite = true
+			cassiterite = true
+			rhyolite = true
+
+		[types.stone_type.create]
+			limestone = true
+			asurine = true
+			crimsite = true
+			ochrum = true
+			veridium = true
+			scoria = true
+			scorchia = true
+
+		[types.stone_type.infernalexp]
+			shimmer_stone = true
+			dimstone = true
+			dullstone = true
+
+		[types.stone_type.newworld]
+			loam = true
+
+		[types.stone_type.nomansland]
+			silt = true
+			siltstone = true
+
+		[types.stone_type.quark]
+			soul_sandstone = true
+			limestone = true
+			jasper = true
+			shale = true
+			myalite = true
+			permafrost = true
+
+		[types.stone_type.spelunkery]
+			nephrite = true
+
 		[entries.wood_type.nomansland]
 			bookshelf = true
 			trimmed_planks = true
@@ -248,3 +299,53 @@
 
 		[entries.leaves_type.woodworks]
 			leaf_pile = true
+
+		[entries.stone_type.create]
+			small_brick_wall = true
+			cut_wall = true
+			small_bricks = true
+			cut = true
+			polished_cut = true
+			small_brick_slab = true
+			layered = true
+			cut_brick_wall = true
+			pillar = true
+			cut_stairs = true
+			cut_brick_stairs = true
+			cut_brick_slab = true
+			polished_cut_slab = true
+			small_brick_stairs = true
+			cut_bricks = true
+			polished_cut_stairs = true
+			polished_cut_wall = true
+			cut_slab = true
+
+		[entries.stone_type.quark]
+			polished_vertical_slab = true
+			pillar = true
+			vertical_slab = true
+
+		[entries.stone_type.stoneworks]
+			tile_stairs = true
+			plate_slab = true
+			shingle_wall = true
+			paver_stairs = true
+			paver_wall = true
+			shingles = true
+			plate_wall = true
+			plates = true
+			tile_wall = true
+			cracked_tiles = true
+			shingle_stairs = true
+			pavers = true
+			tiles = true
+			tile_slab = true
+			plate_stairs = true
+			pillar = true
+			shingle_slab = true
+			paver_slab = true
+
+		[entries.mud_type.quark]
+			carved_bricks = true
+			pillar = true
+			brick_lattice = true

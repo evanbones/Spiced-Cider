@@ -1,6 +1,7 @@
 package com.evandev.spicedcider.datagen.providers;
 
 import com.evandev.spicedcider.SpicedCider;
+import com.evandev.spicedcider.registry.ModBuildingBlocks;
 import com.evandev.spicedcider.registry.ModItems;
 import com.evandev.spicedcider.registry.ModTags;
 import net.minecraft.core.HolderLookup;
@@ -104,6 +105,26 @@ public class ModItemTagsProvider extends ItemTagsProvider {
                 .add(ModItems.TALLOW.get());
         this.tag(ItemTags.create(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("c", "storage_blocks/cast_iron")))
                 .add(ModItems.CAST_IRON_BLOCK.get());
+
+        this.tag(ItemTags.STAIRS).add(ModItems.GLOWSTONE_BRICK_STAIRS.get());
+        this.tag(ItemTags.SLABS).add(ModItems.GLOWSTONE_BRICK_SLAB.get());
+        this.tag(ItemTags.WALLS).add(ModItems.GLOWSTONE_BRICK_WALL.get());
+        if (ModItems.POLISHED_GLOWSTONE_STAIRS != null) {
+            this.tag(ItemTags.STAIRS).addOptional(ModItems.POLISHED_GLOWSTONE_STAIRS.getId());
+            this.tag(ItemTags.SLABS).addOptional(ModItems.POLISHED_GLOWSTONE_SLAB.getId());
+            this.tag(ItemTags.WALLS).addOptional(ModItems.POLISHED_GLOWSTONE_WALL.getId());
+        }
+        for (ModBuildingBlocks.Def def : ModBuildingBlocks.DEFS) {
+            switch (def.kind()) {
+                case STAIRS -> this.tag(ItemTags.STAIRS).addOptional(def.location());
+                case SLAB -> this.tag(ItemTags.SLABS).addOptional(def.location());
+                case WALL -> this.tag(ItemTags.WALLS).addOptional(def.location());
+                default -> {
+                }
+            }
+        }
+        ModItems.WOOL_STAIRS.values().forEach(item -> this.tag(ItemTags.STAIRS).add(item.get()));
+        ModItems.WOOL_SLABS.values().forEach(item -> this.tag(ItemTags.SLABS).add(item.get()));
 
         this.tag(ItemTags.create(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("c", "plates")))
                 .add(ModItems.CAST_IRON_SHEET.get());

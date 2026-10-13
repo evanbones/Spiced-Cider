@@ -1,0 +1,16 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "brick_and_mortar"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "spicedcider:soul_purpur_tiles"
+  },
+  "result": {
+    "count": 2,
+    "id": "spicedcider:soul_purpur_tile_slab"
+  }
+}

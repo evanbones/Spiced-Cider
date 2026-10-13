@@ -1,253 +1,713 @@
-{
-  "action": "remove",
-  "items": [
-    "caverns_and_chasms:exposed_copper_ingot",
-    "caverns_and_chasms:weathered_copper_ingot",
-    "caverns_and_chasms:waxed_copper_ingot",
-    "caverns_and_chasms:waxed_exposed_copper_ingot",
-    "caverns_and_chasms:waxed_weathered_copper_ingot",
-    "caverns_and_chasms:oxidized_copper_ingot",
-    "caverns_and_chasms:waxed_oxidized_copper_ingot",
-    "caverns_and_chasms:copper_nugget",
-
-    "caverns_and_chasms:copper_sword",
-    "caverns_and_chasms:exposed_copper_sword",
-    "caverns_and_chasms:weathered_copper_sword",
-    "caverns_and_chasms:oxidized_copper_sword",
-    "caverns_and_chasms:waxed_copper_sword",
-    "caverns_and_chasms:waxed_exposed_copper_sword",
-    "caverns_and_chasms:waxed_weathered_copper_sword",
-    "caverns_and_chasms:waxed_oxidized_copper_sword",
-
-    "caverns_and_chasms:copper_shovel",
-    "caverns_and_chasms:exposed_copper_shovel",
-    "caverns_and_chasms:weathered_copper_shovel",
-    "caverns_and_chasms:oxidized_copper_shovel",
-    "caverns_and_chasms:waxed_copper_shovel",
-    "caverns_and_chasms:waxed_exposed_copper_shovel",
-    "caverns_and_chasms:waxed_weathered_copper_shovel",
-    "caverns_and_chasms:waxed_oxidized_copper_shovel",
-
-    "caverns_and_chasms:copper_pickaxe",
-    "caverns_and_chasms:exposed_copper_pickaxe",
-    "caverns_and_chasms:weathered_copper_pickaxe",
-    "caverns_and_chasms:oxidized_copper_pickaxe",
-    "caverns_and_chasms:waxed_copper_pickaxe",
-    "caverns_and_chasms:waxed_exposed_copper_pickaxe",
-    "caverns_and_chasms:waxed_weathered_copper_pickaxe",
-    "caverns_and_chasms:waxed_oxidized_copper_pickaxe",
-
-    "caverns_and_chasms:copper_axe",
-    "caverns_and_chasms:exposed_copper_axe",
-    "caverns_and_chasms:weathered_copper_axe",
-    "caverns_and_chasms:oxidized_copper_axe",
-    "caverns_and_chasms:waxed_copper_axe",
-    "caverns_and_chasms:waxed_exposed_copper_axe",
-    "caverns_and_chasms:waxed_weathered_copper_axe",
-    "caverns_and_chasms:waxed_oxidized_copper_axe",
-
-    "caverns_and_chasms:copper_hoe",
-    "caverns_and_chasms:exposed_copper_hoe",
-    "caverns_and_chasms:weathered_copper_hoe",
-    "caverns_and_chasms:oxidized_copper_hoe",
-    "caverns_and_chasms:waxed_copper_hoe",
-    "caverns_and_chasms:waxed_exposed_copper_hoe",
-    "caverns_and_chasms:waxed_weathered_copper_hoe",
-    "caverns_and_chasms:waxed_oxidized_copper_hoe",
-
-    "caverns_and_chasms:copper_helmet",
-    "caverns_and_chasms:exposed_copper_helmet",
-    "caverns_and_chasms:weathered_copper_helmet",
-    "caverns_and_chasms:oxidized_copper_helmet",
-    "caverns_and_chasms:waxed_copper_helmet",
-    "caverns_and_chasms:waxed_exposed_copper_helmet",
-    "caverns_and_chasms:waxed_weathered_copper_helmet",
-    "caverns_and_chasms:waxed_oxidized_copper_helmet",
-
-    "caverns_and_chasms:copper_chestplate",
-    "caverns_and_chasms:exposed_copper_chestplate",
-    "caverns_and_chasms:weathered_copper_chestplate",
-    "caverns_and_chasms:oxidized_copper_chestplate",
-    "caverns_and_chasms:waxed_copper_chestplate",
-    "caverns_and_chasms:waxed_exposed_copper_chestplate",
-    "caverns_and_chasms:waxed_weathered_copper_chestplate",
-    "caverns_and_chasms:waxed_oxidized_copper_chestplate",
-
-    "caverns_and_chasms:copper_leggings",
-    "caverns_and_chasms:exposed_copper_leggings",
-    "caverns_and_chasms:weathered_copper_leggings",
-    "caverns_and_chasms:oxidized_copper_leggings",
-    "caverns_and_chasms:waxed_copper_leggings",
-    "caverns_and_chasms:waxed_exposed_copper_leggings",
-    "caverns_and_chasms:waxed_weathered_copper_leggings",
-    "caverns_and_chasms:waxed_oxidized_copper_leggings",
-
-    "caverns_and_chasms:copper_boots",
-    "caverns_and_chasms:exposed_copper_boots",
-    "caverns_and_chasms:weathered_copper_boots",
-    "caverns_and_chasms:oxidized_copper_boots",
-    "caverns_and_chasms:waxed_copper_boots",
-    "caverns_and_chasms:waxed_exposed_copper_boots",
-    "caverns_and_chasms:waxed_weathered_copper_boots",
-    "caverns_and_chasms:waxed_oxidized_copper_boots",
-
-    "caverns_and_chasms:copper_horse_armor",
-    "caverns_and_chasms:exposed_copper_horse_armor",
-    "caverns_and_chasms:weathered_copper_horse_armor",
-    "caverns_and_chasms:oxidized_copper_horse_armor",
-    "caverns_and_chasms:waxed_copper_horse_armor",
-    "caverns_and_chasms:waxed_exposed_copper_horse_armor",
-    "caverns_and_chasms:waxed_weathered_copper_horse_armor",
-    "caverns_and_chasms:waxed_oxidized_copper_horse_armor",
-
-    "caverns_and_chasms:aegis",
-    "caverns_and_chasms:golden_bars",
-    "caverns_and_chasms:turquoise_tiles",
-    "caverns_and_chasms:turquoise_lamp",
-    "caverns_and_chasms:turquoise_pillar",
-    "caverns_and_chasms:turquoise_block",
-    "caverns_and_chasms:turquoise_ore",
-    "caverns_and_chasms:deepslate_turquoise_ore",
-    "caverns_and_chasms:grazer_spawn_egg",
-    "caverns_and_chasms:saddled_grazer_spawn_egg",
-    "caverns_and_chasms:saddled_egg",
-    "caverns_and_chasms:storage_duct",
-    "caverns_and_chasms:storage_duct_hatch",
-    "caverns_and_chasms:zirconia_lamp",
-    "caverns_and_chasms:zirconia_block",
-    "caverns_and_chasms:mossy_cobblestone_bricks",
-    "caverns_and_chasms:cobblestone_bricks",
-    "caverns_and_chasms:bejeweled_anvil",
-    "caverns_and_chasms:caviar",
-    "caverns_and_chasms:bejeweled_pearl",
-
-    "caverns_and_chasms:exposed_lightning_rod",
-    "caverns_and_chasms:weathered_lightning_rod",
-    "caverns_and_chasms:oxidized_lightning_rod",
-    "caverns_and_chasms:waxed_lightning_rod",
-    "caverns_and_chasms:waxed_exposed_lightning_rod",
-    "caverns_and_chasms:waxed_weathered_lightning_rod",
-    "caverns_and_chasms:waxed_oxidized_lightning_rod",
-
-    "caverns_and_chasms:copper_horn",
-
-    "caverns_and_chasms:charcoal_block",
-    "caverns_and_chasms:polished_calcite",
-    "caverns_and_chasms:cobbled_deepslate_bricks",
-    "caverns_and_chasms:schist_pillar",
-    "caverns_and_chasms:smooth_schist",
-    "caverns_and_chasms:schist",
-    "caverns_and_chasms:mime_spawn_egg",
-    "caverns_and_chasms:mime_head",
-    "caverns_and_chasms:tuff_bricks",
-    "caverns_and_chasms:polished_tuff",
-    "caverns_and_chasms:chiseled_tuff_bricks",
-
-    "caverns_and_chasms:golden_milk_bucket",
-    "caverns_and_chasms:golden_bucket",
-    "caverns_and_chasms:golden_water_bucket",
-    "caverns_and_chasms:golden_lava_bucket",
-    "caverns_and_chasms:golden_powder_snow_bucket",
-    "caverns_and_chasms:deepslate_spinel_ore",
-    "caverns_and_chasms:spinel_ore",
-    "caverns_and_chasms:granite_bricks",
-    "caverns_and_chasms:diorite_bricks",
-    "caverns_and_chasms:andesite_bricks",
-    "caverns_and_chasms:calcite_bricks",
-    "caverns_and_chasms:chiseled_calcite_bricks",
-    "caverns_and_chasms:rhyolite",
-    "caverns_and_chasms:polished_rhyolite",
-    "caverns_and_chasms:rhyolite_bricks",
-    "caverns_and_chasms:chiseled_rhyolite_bricks",
-    "caverns_and_chasms:magmatic_rhyolite",
-    "caverns_and_chasms:polished_magmatic_rhyolite",
-    "caverns_and_chasms:magmatic_rhyolite_bricks",
-    "caverns_and_chasms:chiseled_magmatic_rhyolite_bricks",
-    "caverns_and_chasms:dripstone_shingles",
-    "caverns_and_chasms:flooded_dripstone_shingles",
-    "caverns_and_chasms:chiseled_dripstone_shingles",
-    "caverns_and_chasms:lapis_lamp",
-    "caverns_and_chasms:lapis_bricks",
-    "caverns_and_chasms:lapis_pillar",
-    "caverns_and_chasms:emerald_lamp",
-    "caverns_and_chasms:copper_bars",
-    "caverns_and_chasms:waxed_oxidized_copper_bars",
-    "caverns_and_chasms:waxed_weathered_copper_bars",
-    "caverns_and_chasms:waxed_exposed_copper_bars",
-    "caverns_and_chasms:waxed_copper_bars",
-    "caverns_and_chasms:oxidized_copper_bars",
-    "caverns_and_chasms:weathered_copper_bars",
-    "caverns_and_chasms:exposed_copper_bars",
-    "caverns_and_chasms:abnormals_banner_pattern",
-    "caverns_and_chasms:lapis_brick_stairs",
-    "caverns_and_chasms:lapis_brick_slab",
-    "caverns_and_chasms:lapis_brick_wall",
-    "caverns_and_chasms:polished_tuff_slab",
-    "caverns_and_chasms:polished_tuff_wall",
-    "caverns_and_chasms:tuff_brick_stairs",
-    "caverns_and_chasms:tuff_brick_slab",
-    "caverns_and_chasms:tuff_brick_wall",
-    "caverns_and_chasms:polished_tuff_stairs",
-    "caverns_and_chasms:cobblestone_brick_wall",
-    "caverns_and_chasms:cobblestone_brick_slab",
-    "caverns_and_chasms:cobblestone_brick_stairs",
-    "caverns_and_chasms:mossy_cobblestone_brick_stairs",
-    "caverns_and_chasms:mossy_cobblestone_brick_slab",
-    "caverns_and_chasms:mossy_cobblestone_brick_wall",
-    "caverns_and_chasms:magmatic_rhyolite_stairs",
-    "caverns_and_chasms:polished_magmatic_rhyolite_stairs",
-    "caverns_and_chasms:magmatic_rhyolite_brick_stairs",
-    "caverns_and_chasms:magmatic_rhyolite_slab",
-    "caverns_and_chasms:polished_magmatic_rhyolite_slab",
-    "caverns_and_chasms:magmatic_rhyolite_brick_slab",
-    "caverns_and_chasms:magmatic_rhyolite_wall",
-    "caverns_and_chasms:polished_magmatic_rhyolite_wall",
-    "caverns_and_chasms:magmatic_rhyolite_brick_wall",
-    "caverns_and_chasms:granite_brick_stairs",
-    "caverns_and_chasms:diorite_brick_stairs",
-    "caverns_and_chasms:andesite_brick_stairs",
-    "caverns_and_chasms:polished_rhyolite_stairs",
-    "caverns_and_chasms:rhyolite_stairs",
-    "caverns_and_chasms:dripstone_shingle_stairs",
-    "caverns_and_chasms:smooth_schist_stairs",
-    "caverns_and_chasms:schist_stairs",
-    "caverns_and_chasms:calcite_brick_stairs",
-    "caverns_and_chasms:polished_calcite_stairs",
-    "caverns_and_chasms:rhyolite_brick_stairs",
-    "caverns_and_chasms:cobbled_deepslate_brick_stairs",
-    "caverns_and_chasms:turquoise_tile_stairs",
-    "caverns_and_chasms:andesite_brick_slab",
-    "caverns_and_chasms:diorite_brick_slab",
-    "caverns_and_chasms:cobbled_deepslate_brick_slab",
-    "caverns_and_chasms:turquoise_tile_slab",
-    "caverns_and_chasms:rhyolite_brick_slab",
-    "caverns_and_chasms:polished_rhyolite_slab",
-    "caverns_and_chasms:rhyolite_slab",
-    "caverns_and_chasms:polished_calcite_slab",
-    "caverns_and_chasms:calcite_brick_slab",
-    "caverns_and_chasms:schist_slab",
-    "caverns_and_chasms:smooth_schist_slab",
-    "caverns_and_chasms:dripstone_shingle_slab",
-    "caverns_and_chasms:granite_brick_slab",
-    "caverns_and_chasms:stone_wall",
-    "caverns_and_chasms:cave_growths",
-    "caverns_and_chasms:lurid_cave_growths",
-    "caverns_and_chasms:wispy_cave_growths",
-    "caverns_and_chasms:weird_cave_growths",
-    "caverns_and_chasms:grainy_cave_growths",
-    "caverns_and_chasms:zesty_cave_growths",
-    "caverns_and_chasms:copper_lantern",
-    "caverns_and_chasms:waxed_oxidized_copper_lantern",
-    "caverns_and_chasms:waxed_weathered_copper_lantern",
-    "caverns_and_chasms:exposed_copper_lantern",
-    "caverns_and_chasms:weathered_copper_lantern",
-    "caverns_and_chasms:oxidized_copper_lantern",
-    "caverns_and_chasms:waxed_copper_lantern",
-    "caverns_and_chasms:waxed_exposed_copper_lantern",
-    "caverns_and_chasms:spinel_block",
-    "caverns_and_chasms:spinel_bricks",
-    "caverns_and_chasms:spinel_pillar",
-    "caverns_and_chasms:spinel_lamp",
-    "caverns_and_chasms:dismantling_table"
-  ]
-}
+[
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:exposed_copper_ingot",
+      "caverns_and_chasms:weathered_copper_ingot",
+      "caverns_and_chasms:waxed_copper_ingot",
+      "caverns_and_chasms:waxed_exposed_copper_ingot",
+      "caverns_and_chasms:waxed_weathered_copper_ingot",
+      "caverns_and_chasms:oxidized_copper_ingot",
+      "caverns_and_chasms:waxed_oxidized_copper_ingot",
+      "caverns_and_chasms:copper_nugget",
+      "caverns_and_chasms:copper_sword",
+      "caverns_and_chasms:exposed_copper_sword",
+      "caverns_and_chasms:weathered_copper_sword",
+      "caverns_and_chasms:oxidized_copper_sword",
+      "caverns_and_chasms:waxed_copper_sword",
+      "caverns_and_chasms:waxed_exposed_copper_sword",
+      "caverns_and_chasms:waxed_weathered_copper_sword",
+      "caverns_and_chasms:waxed_oxidized_copper_sword",
+      "caverns_and_chasms:copper_shovel",
+      "caverns_and_chasms:exposed_copper_shovel",
+      "caverns_and_chasms:weathered_copper_shovel",
+      "caverns_and_chasms:oxidized_copper_shovel",
+      "caverns_and_chasms:waxed_copper_shovel",
+      "caverns_and_chasms:waxed_exposed_copper_shovel",
+      "caverns_and_chasms:waxed_weathered_copper_shovel",
+      "caverns_and_chasms:waxed_oxidized_copper_shovel",
+      "caverns_and_chasms:copper_pickaxe",
+      "caverns_and_chasms:exposed_copper_pickaxe",
+      "caverns_and_chasms:weathered_copper_pickaxe",
+      "caverns_and_chasms:oxidized_copper_pickaxe",
+      "caverns_and_chasms:waxed_copper_pickaxe",
+      "caverns_and_chasms:waxed_exposed_copper_pickaxe",
+      "caverns_and_chasms:waxed_weathered_copper_pickaxe",
+      "caverns_and_chasms:waxed_oxidized_copper_pickaxe",
+      "caverns_and_chasms:copper_axe",
+      "caverns_and_chasms:exposed_copper_axe",
+      "caverns_and_chasms:weathered_copper_axe",
+      "caverns_and_chasms:oxidized_copper_axe",
+      "caverns_and_chasms:waxed_copper_axe",
+      "caverns_and_chasms:waxed_exposed_copper_axe",
+      "caverns_and_chasms:waxed_weathered_copper_axe",
+      "caverns_and_chasms:waxed_oxidized_copper_axe",
+      "caverns_and_chasms:copper_hoe",
+      "caverns_and_chasms:exposed_copper_hoe",
+      "caverns_and_chasms:weathered_copper_hoe",
+      "caverns_and_chasms:oxidized_copper_hoe",
+      "caverns_and_chasms:waxed_copper_hoe",
+      "caverns_and_chasms:waxed_exposed_copper_hoe",
+      "caverns_and_chasms:waxed_weathered_copper_hoe",
+      "caverns_and_chasms:waxed_oxidized_copper_hoe",
+      "caverns_and_chasms:copper_helmet",
+      "caverns_and_chasms:exposed_copper_helmet",
+      "caverns_and_chasms:weathered_copper_helmet",
+      "caverns_and_chasms:oxidized_copper_helmet",
+      "caverns_and_chasms:waxed_copper_helmet",
+      "caverns_and_chasms:waxed_exposed_copper_helmet",
+      "caverns_and_chasms:waxed_weathered_copper_helmet",
+      "caverns_and_chasms:waxed_oxidized_copper_helmet",
+      "caverns_and_chasms:copper_chestplate",
+      "caverns_and_chasms:exposed_copper_chestplate",
+      "caverns_and_chasms:weathered_copper_chestplate",
+      "caverns_and_chasms:oxidized_copper_chestplate",
+      "caverns_and_chasms:waxed_copper_chestplate",
+      "caverns_and_chasms:waxed_exposed_copper_chestplate",
+      "caverns_and_chasms:waxed_weathered_copper_chestplate",
+      "caverns_and_chasms:waxed_oxidized_copper_chestplate",
+      "caverns_and_chasms:copper_leggings",
+      "caverns_and_chasms:exposed_copper_leggings",
+      "caverns_and_chasms:weathered_copper_leggings",
+      "caverns_and_chasms:oxidized_copper_leggings",
+      "caverns_and_chasms:waxed_copper_leggings",
+      "caverns_and_chasms:waxed_exposed_copper_leggings",
+      "caverns_and_chasms:waxed_weathered_copper_leggings",
+      "caverns_and_chasms:waxed_oxidized_copper_leggings",
+      "caverns_and_chasms:copper_boots",
+      "caverns_and_chasms:exposed_copper_boots",
+      "caverns_and_chasms:weathered_copper_boots",
+      "caverns_and_chasms:oxidized_copper_boots",
+      "caverns_and_chasms:waxed_copper_boots",
+      "caverns_and_chasms:waxed_exposed_copper_boots",
+      "caverns_and_chasms:waxed_weathered_copper_boots",
+      "caverns_and_chasms:waxed_oxidized_copper_boots",
+      "caverns_and_chasms:copper_horse_armor",
+      "caverns_and_chasms:exposed_copper_horse_armor",
+      "caverns_and_chasms:weathered_copper_horse_armor",
+      "caverns_and_chasms:oxidized_copper_horse_armor",
+      "caverns_and_chasms:waxed_copper_horse_armor",
+      "caverns_and_chasms:waxed_exposed_copper_horse_armor",
+      "caverns_and_chasms:waxed_weathered_copper_horse_armor",
+      "caverns_and_chasms:waxed_oxidized_copper_horse_armor",
+      "caverns_and_chasms:aegis",
+      "caverns_and_chasms:golden_bars",
+      "caverns_and_chasms:turquoise_tiles",
+      "caverns_and_chasms:turquoise_lamp",
+      "caverns_and_chasms:turquoise_pillar",
+      "caverns_and_chasms:turquoise_block",
+      "caverns_and_chasms:turquoise_ore",
+      "caverns_and_chasms:deepslate_turquoise_ore",
+      "caverns_and_chasms:grazer_spawn_egg",
+      "caverns_and_chasms:saddled_grazer_spawn_egg",
+      "caverns_and_chasms:saddled_egg",
+      "caverns_and_chasms:storage_duct",
+      "caverns_and_chasms:storage_duct_hatch",
+      "caverns_and_chasms:zirconia_lamp",
+      "caverns_and_chasms:zirconia_block",
+      "caverns_and_chasms:mossy_cobblestone_bricks",
+      "caverns_and_chasms:cobblestone_bricks",
+      "caverns_and_chasms:bejeweled_anvil",
+      "caverns_and_chasms:caviar",
+      "caverns_and_chasms:bejeweled_pearl",
+      "caverns_and_chasms:exposed_lightning_rod",
+      "caverns_and_chasms:weathered_lightning_rod",
+      "caverns_and_chasms:oxidized_lightning_rod",
+      "caverns_and_chasms:waxed_lightning_rod",
+      "caverns_and_chasms:waxed_exposed_lightning_rod",
+      "caverns_and_chasms:waxed_weathered_lightning_rod",
+      "caverns_and_chasms:waxed_oxidized_lightning_rod",
+      "caverns_and_chasms:copper_horn",
+      "caverns_and_chasms:charcoal_block",
+      "caverns_and_chasms:polished_calcite",
+      "caverns_and_chasms:cobbled_deepslate_bricks",
+      "caverns_and_chasms:schist_pillar",
+      "caverns_and_chasms:smooth_schist",
+      "caverns_and_chasms:schist",
+      "caverns_and_chasms:mime_spawn_egg",
+      "caverns_and_chasms:mime_head",
+      "caverns_and_chasms:tuff_bricks",
+      "caverns_and_chasms:polished_tuff",
+      "caverns_and_chasms:chiseled_tuff_bricks",
+      "caverns_and_chasms:golden_milk_bucket",
+      "caverns_and_chasms:golden_bucket",
+      "caverns_and_chasms:golden_water_bucket",
+      "caverns_and_chasms:golden_lava_bucket",
+      "caverns_and_chasms:golden_powder_snow_bucket",
+      "caverns_and_chasms:deepslate_spinel_ore",
+      "caverns_and_chasms:spinel_ore",
+      "caverns_and_chasms:granite_bricks",
+      "caverns_and_chasms:diorite_bricks",
+      "caverns_and_chasms:andesite_bricks",
+      "caverns_and_chasms:calcite_bricks",
+      "caverns_and_chasms:chiseled_calcite_bricks",
+      "caverns_and_chasms:rhyolite",
+      "caverns_and_chasms:polished_rhyolite",
+      "caverns_and_chasms:rhyolite_bricks",
+      "caverns_and_chasms:chiseled_rhyolite_bricks",
+      "caverns_and_chasms:magmatic_rhyolite",
+      "caverns_and_chasms:polished_magmatic_rhyolite",
+      "caverns_and_chasms:magmatic_rhyolite_bricks",
+      "caverns_and_chasms:chiseled_magmatic_rhyolite_bricks",
+      "caverns_and_chasms:dripstone_shingles",
+      "caverns_and_chasms:flooded_dripstone_shingles",
+      "caverns_and_chasms:chiseled_dripstone_shingles",
+      "caverns_and_chasms:lapis_lamp",
+      "caverns_and_chasms:lapis_bricks",
+      "caverns_and_chasms:lapis_pillar",
+      "caverns_and_chasms:emerald_lamp",
+      "caverns_and_chasms:copper_bars",
+      "caverns_and_chasms:waxed_oxidized_copper_bars",
+      "caverns_and_chasms:waxed_weathered_copper_bars",
+      "caverns_and_chasms:waxed_exposed_copper_bars",
+      "caverns_and_chasms:waxed_copper_bars",
+      "caverns_and_chasms:oxidized_copper_bars",
+      "caverns_and_chasms:weathered_copper_bars",
+      "caverns_and_chasms:exposed_copper_bars",
+      "caverns_and_chasms:abnormals_banner_pattern",
+      "caverns_and_chasms:lapis_brick_stairs",
+      "caverns_and_chasms:lapis_brick_slab",
+      "caverns_and_chasms:lapis_brick_wall",
+      "caverns_and_chasms:polished_tuff_slab",
+      "caverns_and_chasms:polished_tuff_wall",
+      "caverns_and_chasms:tuff_brick_stairs",
+      "caverns_and_chasms:tuff_brick_slab",
+      "caverns_and_chasms:tuff_brick_wall",
+      "caverns_and_chasms:polished_tuff_stairs",
+      "caverns_and_chasms:cobblestone_brick_wall",
+      "caverns_and_chasms:cobblestone_brick_slab",
+      "caverns_and_chasms:cobblestone_brick_stairs",
+      "caverns_and_chasms:mossy_cobblestone_brick_stairs",
+      "caverns_and_chasms:mossy_cobblestone_brick_slab",
+      "caverns_and_chasms:mossy_cobblestone_brick_wall",
+      "caverns_and_chasms:magmatic_rhyolite_stairs",
+      "caverns_and_chasms:polished_magmatic_rhyolite_stairs",
+      "caverns_and_chasms:magmatic_rhyolite_brick_stairs",
+      "caverns_and_chasms:magmatic_rhyolite_slab",
+      "caverns_and_chasms:polished_magmatic_rhyolite_slab",
+      "caverns_and_chasms:magmatic_rhyolite_brick_slab",
+      "caverns_and_chasms:magmatic_rhyolite_wall",
+      "caverns_and_chasms:polished_magmatic_rhyolite_wall",
+      "caverns_and_chasms:magmatic_rhyolite_brick_wall",
+      "caverns_and_chasms:granite_brick_stairs",
+      "caverns_and_chasms:diorite_brick_stairs",
+      "caverns_and_chasms:andesite_brick_stairs",
+      "caverns_and_chasms:polished_rhyolite_stairs",
+      "caverns_and_chasms:rhyolite_stairs",
+      "caverns_and_chasms:dripstone_shingle_stairs",
+      "caverns_and_chasms:smooth_schist_stairs",
+      "caverns_and_chasms:schist_stairs",
+      "caverns_and_chasms:calcite_brick_stairs",
+      "caverns_and_chasms:polished_calcite_stairs",
+      "caverns_and_chasms:rhyolite_brick_stairs",
+      "caverns_and_chasms:cobbled_deepslate_brick_stairs",
+      "caverns_and_chasms:turquoise_tile_stairs",
+      "caverns_and_chasms:andesite_brick_slab",
+      "caverns_and_chasms:diorite_brick_slab",
+      "caverns_and_chasms:cobbled_deepslate_brick_slab",
+      "caverns_and_chasms:turquoise_tile_slab",
+      "caverns_and_chasms:rhyolite_brick_slab",
+      "caverns_and_chasms:polished_rhyolite_slab",
+      "caverns_and_chasms:rhyolite_slab",
+      "caverns_and_chasms:polished_calcite_slab",
+      "caverns_and_chasms:calcite_brick_slab",
+      "caverns_and_chasms:schist_slab",
+      "caverns_and_chasms:smooth_schist_slab",
+      "caverns_and_chasms:dripstone_shingle_slab",
+      "caverns_and_chasms:granite_brick_slab",
+      "caverns_and_chasms:stone_wall",
+      "caverns_and_chasms:cave_growths",
+      "caverns_and_chasms:lurid_cave_growths",
+      "caverns_and_chasms:wispy_cave_growths",
+      "caverns_and_chasms:weird_cave_growths",
+      "caverns_and_chasms:grainy_cave_growths",
+      "caverns_and_chasms:zesty_cave_growths",
+      "caverns_and_chasms:copper_lantern",
+      "caverns_and_chasms:waxed_oxidized_copper_lantern",
+      "caverns_and_chasms:waxed_weathered_copper_lantern",
+      "caverns_and_chasms:exposed_copper_lantern",
+      "caverns_and_chasms:weathered_copper_lantern",
+      "caverns_and_chasms:oxidized_copper_lantern",
+      "caverns_and_chasms:waxed_copper_lantern",
+      "caverns_and_chasms:waxed_exposed_copper_lantern",
+      "caverns_and_chasms:spinel_block",
+      "caverns_and_chasms:spinel_bricks",
+      "caverns_and_chasms:spinel_pillar",
+      "caverns_and_chasms:spinel_lamp",
+      "caverns_and_chasms:dismantling_table"
+    ]
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:calcite_pillar"
+    ],
+    "replace_with": "architects_palette:calcite_pillar"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:tuff_pillar"
+    ],
+    "replace_with": "architects_palette:tuff_pillar"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:flint_block"
+    ],
+    "replace_with": "architects_palette:flint_block"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:copper_golem_spawn_egg"
+    ],
+    "replace_with": "minecraft:copper_golem_spawn_egg"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:oxidized_copper_golem"
+    ],
+    "replace_with": "minecraft:oxidized_copper_golem_statue"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:waxed_oxidized_copper_golem"
+    ],
+    "replace_with": "minecraft:waxed_oxidized_copper_golem_statue"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:cracked_dripstone_bricks"
+    ],
+    "replace_with": "caverns_and_chasms:dripstone_bricks"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:andesite_tiles"
+    ],
+    "replace_with": "stoneworks:andesite_tiles"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:andesite_tile_stairs"
+    ],
+    "replace_with": "stoneworks:andesite_tile_stairs"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:andesite_tile_slab"
+    ],
+    "replace_with": "stoneworks:andesite_tile_slab"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:andesite_tile_wall"
+    ],
+    "replace_with": "stoneworks:andesite_tile_wall"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:chiseled_polished_andesite"
+    ],
+    "replace_with": "stoneworks:chiseled_andesite"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:andesite_pillar"
+    ],
+    "replace_with": "stoneworks:andesite_pillar"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:diorite_tiles"
+    ],
+    "replace_with": "stoneworks:diorite_tiles"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:diorite_tile_stairs"
+    ],
+    "replace_with": "stoneworks:diorite_tile_stairs"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:diorite_tile_slab"
+    ],
+    "replace_with": "stoneworks:diorite_tile_slab"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:diorite_tile_wall"
+    ],
+    "replace_with": "stoneworks:diorite_tile_wall"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:chiseled_polished_diorite"
+    ],
+    "replace_with": "stoneworks:chiseled_diorite"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:diorite_pillar"
+    ],
+    "replace_with": "stoneworks:diorite_pillar"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:granite_tiles"
+    ],
+    "replace_with": "stoneworks:granite_tiles"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:granite_tile_stairs"
+    ],
+    "replace_with": "stoneworks:granite_tile_stairs"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:granite_tile_slab"
+    ],
+    "replace_with": "stoneworks:granite_tile_slab"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:granite_tile_wall"
+    ],
+    "replace_with": "stoneworks:granite_tile_wall"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:chiseled_polished_granite"
+    ],
+    "replace_with": "stoneworks:chiseled_granite"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:granite_pillar"
+    ],
+    "replace_with": "stoneworks:granite_pillar"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:smooth_tuff"
+    ],
+    "replace_with": "minecraft:polished_tuff"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:smooth_tuff_stairs"
+    ],
+    "replace_with": "minecraft:polished_tuff_stairs"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:smooth_tuff_slab"
+    ],
+    "replace_with": "minecraft:polished_tuff_slab"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:smooth_tuff_wall"
+    ],
+    "replace_with": "minecraft:polished_tuff_wall"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:tuff_tiles"
+    ],
+    "replace_with": "stoneworks:tuff_tiles"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:tuff_tile_stairs"
+    ],
+    "replace_with": "stoneworks:tuff_tile_stairs"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:tuff_tile_slab"
+    ],
+    "replace_with": "stoneworks:tuff_tile_slab"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:tuff_tile_wall"
+    ],
+    "replace_with": "stoneworks:tuff_tile_wall"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:chiseled_calcite"
+    ],
+    "replace_with": "stoneworks:chiseled_calcite"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:smooth_dripstone"
+    ],
+    "replace_with": "caverns_and_chasms:polished_dripstone"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:smooth_dripstone_stairs"
+    ],
+    "replace_with": "caverns_and_chasms:polished_dripstone_stairs"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:smooth_dripstone_slab"
+    ],
+    "replace_with": "caverns_and_chasms:polished_dripstone_slab"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:smooth_dripstone_wall"
+    ],
+    "replace_with": "caverns_and_chasms:polished_dripstone_wall"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:chiseled_dripstone_bricks"
+    ],
+    "replace_with": "architects_palette:chiseled_dripstone"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:smooth_basalt_stairs"
+    ],
+    "replace_with": "infernalexp:polished_basalt_stairs"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:smooth_basalt_slab"
+    ],
+    "replace_with": "infernalexp:polished_basalt_slab"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:smooth_basalt_wall"
+    ],
+    "replace_with": "infernalexp:polished_basalt_wall"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:basalt_bricks"
+    ],
+    "replace_with": "stoneworks:basalt_bricks"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:basalt_brick_stairs"
+    ],
+    "replace_with": "stoneworks:basalt_brick_stairs"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:basalt_brick_slab"
+    ],
+    "replace_with": "stoneworks:basalt_brick_slab"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:basalt_brick_wall"
+    ],
+    "replace_with": "stoneworks:basalt_brick_wall"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:basalt_tiles"
+    ],
+    "replace_with": "stoneworks:basalt_tiles"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:basalt_tile_stairs"
+    ],
+    "replace_with": "stoneworks:basalt_tile_stairs"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:basalt_tile_slab"
+    ],
+    "replace_with": "stoneworks:basalt_tile_slab"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:basalt_tile_wall"
+    ],
+    "replace_with": "stoneworks:basalt_tile_wall"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:chiseled_basalt_bricks"
+    ],
+    "replace_with": "stoneworks:chiseled_basalt"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:smooth_cassiterite"
+    ],
+    "replace_with": "caverns_and_chasms:polished_cassiterite"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:smooth_cassiterite_stairs"
+    ],
+    "replace_with": "caverns_and_chasms:polished_cassiterite_stairs"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:smooth_cassiterite_slab"
+    ],
+    "replace_with": "caverns_and_chasms:polished_cassiterite_slab"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:smooth_cassiterite_wall"
+    ],
+    "replace_with": "caverns_and_chasms:polished_cassiterite_wall"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:smooth_cylindrite"
+    ],
+    "replace_with": "caverns_and_chasms:polished_cylindrite"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:smooth_cylindrite_stairs"
+    ],
+    "replace_with": "caverns_and_chasms:polished_cylindrite_stairs"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:smooth_cylindrite_slab"
+    ],
+    "replace_with": "caverns_and_chasms:polished_cylindrite_slab"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:smooth_cylindrite_wall"
+    ],
+    "replace_with": "caverns_and_chasms:polished_cylindrite_wall"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:cobblestone_tiles",
+      "caverns_and_chasms:mossy_cobblestone_tiles"
+    ],
+    "replace_with": "stoneworks:stone_tiles"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:cobblestone_tile_stairs",
+      "caverns_and_chasms:mossy_cobblestone_tile_stairs"
+    ],
+    "replace_with": "stoneworks:stone_tile_stairs"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:cobblestone_tile_slab",
+      "caverns_and_chasms:mossy_cobblestone_tile_slab"
+    ],
+    "replace_with": "stoneworks:stone_tile_slab"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:cobblestone_tile_wall",
+      "caverns_and_chasms:mossy_cobblestone_tile_wall"
+    ],
+    "replace_with": "stoneworks:stone_tile_wall"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:cobbled_deepslate_tiles"
+    ],
+    "replace_with": "minecraft:deepslate_tiles"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:cobbled_deepslate_tile_stairs"
+    ],
+    "replace_with": "minecraft:deepslate_tile_stairs"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:cobbled_deepslate_tile_slab"
+    ],
+    "replace_with": "minecraft:deepslate_tile_slab"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:cobbled_deepslate_tile_wall"
+    ],
+    "replace_with": "minecraft:deepslate_tile_wall"
+  }
+]

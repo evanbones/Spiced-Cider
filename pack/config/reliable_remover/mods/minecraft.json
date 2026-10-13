@@ -93,5 +93,75 @@
     "action": "remove",
     "items": ["minecraft:painting"],
     "nbt": [".*minecraft:dennis.*"]
+  },
+  {
+    "action": "remove",
+    "items": [
+      "minecraft:cracked_deepslate_bricks"
+    ],
+    "replace_with": "minecraft:deepslate_bricks"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "minecraft:cracked_deepslate_tiles"
+    ],
+    "replace_with": "minecraft:deepslate_tiles"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "minecraft:cracked_nether_bricks"
+    ],
+    "replace_with": "minecraft:nether_bricks"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "minecraft:cracked_polished_blackstone_bricks"
+    ],
+    "replace_with": "minecraft:polished_blackstone_bricks"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "minecraft:cracked_stone_bricks"
+    ],
+    "replace_with": "minecraft:stone_bricks"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "minecraft:infested_cracked_stone_bricks"
+    ],
+    "replace_with": "minecraft:infested_stone_bricks"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "minecraft:chiseled_tuff_bricks"
+    ],
+    "replace_with": "minecraft:chiseled_tuff"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "minecraft:smooth_basalt"
+    ],
+    "replace_with": "minecraft:polished_basalt"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "minecraft:polished_blackstone_button"
+    ],
+    "replace_with": "minecraft:stone_button"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "minecraft:polished_blackstone_pressure_plate"
+    ],
+    "replace_with": "minecraft:stone_pressure_plate"
   }
 ]

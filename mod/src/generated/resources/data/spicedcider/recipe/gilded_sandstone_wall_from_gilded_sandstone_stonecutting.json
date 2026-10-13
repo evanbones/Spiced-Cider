@@ -1,0 +1,16 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "architects_palette"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "architects_palette:gilded_sandstone"
+  },
+  "result": {
+    "count": 1,
+    "id": "spicedcider:gilded_sandstone_wall"
+  }
+}

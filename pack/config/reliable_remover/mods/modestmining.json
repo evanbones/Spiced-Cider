@@ -36,5 +36,54 @@
       "modestmining:silver_nugget",
       "modestmining:raw_silver"
     ]
+  },
+  {
+    "action": "remove",
+    "items": [
+      "modestmining:rose_gold_ingot"
+    ],
+    "replace_with": "oooh_pinky:rose_gold_ingot"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "modestmining:rose_gold_nugget"
+    ],
+    "replace_with": "oooh_pinky:rose_gold_nugget"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "modestmining:rose_gold_block"
+    ],
+    "replace_with": "oooh_pinky:rose_gold_block"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "modestmining:bronze_block"
+    ],
+    "replace_with": "alloyed:bronze_block"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "modestmining:steel_block"
+    ],
+    "replace_with": "alloyed:steel_block"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "modestmining:copper_nugget"
+    ],
+    "replace_with": "minecraft:copper_nugget"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "modestmining:chisel"
+    ],
+    "replace_with": "etcetera:chisel"
   }
 ]

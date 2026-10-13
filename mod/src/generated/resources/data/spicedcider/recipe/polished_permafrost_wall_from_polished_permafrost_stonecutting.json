@@ -1,0 +1,16 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "quark"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "spicedcider:polished_permafrost"
+  },
+  "result": {
+    "count": 1,
+    "id": "spicedcider:polished_permafrost_wall"
+  }
+}

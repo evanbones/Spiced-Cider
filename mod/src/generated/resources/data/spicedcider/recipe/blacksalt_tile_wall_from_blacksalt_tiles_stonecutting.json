@@ -1,0 +1,16 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "abundant_atmosphere"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "abundant_atmosphere:blacksalt_tiles"
+  },
+  "result": {
+    "count": 1,
+    "id": "spicedcider:blacksalt_tile_wall"
+  }
+}

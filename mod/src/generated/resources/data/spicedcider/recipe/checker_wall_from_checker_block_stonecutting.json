@@ -1,0 +1,16 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "supplementaries"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "supplementaries:checker_block"
+  },
+  "result": {
+    "count": 1,
+    "id": "spicedcider:checker_wall"
+  }
+}

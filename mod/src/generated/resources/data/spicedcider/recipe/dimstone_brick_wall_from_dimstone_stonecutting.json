@@ -1,0 +1,16 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "infernalexp"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "infernalexp:dimstone"
+  },
+  "result": {
+    "count": 1,
+    "id": "spicedcider:dimstone_brick_wall"
+  }
+}

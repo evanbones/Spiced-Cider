@@ -6,12 +6,42 @@
 	#        "biomesoplenty:redwood"		COMMENT: exclude redwood from Wood Mod for any module
 	#    ]
 	#
-	blacklist = []
+	blacklist = [
+		"quark:ancient",
+		"quark:blossom",
+		"quark:azalea",
+		"environmental:willow",
+		"environmental:pine",
+		"environmental:plum",
+		"upgrade_aquatic:river",
+		"autumnity:maple"
+	]
 
 [leavestype]
 	#Exclude LeavesType from all of Modules
 	#	The example is same as WoodType's
-	blacklist = []
+	blacklist = [
+		"quark:ancient",
+		"quark:blue_blossom",
+		"quark:lavender_blossom",
+		"quark:orange_blossom",
+		"quark:yellow_blossom",
+		"quark:red_blossom",
+		"environmental:willow",
+		"environmental:pine",
+		"environmental:plum",
+		"environmental:cheerful_plum",
+		"environmental:moody_plum",
+		"environmental:wisteria",
+		"upgrade_aquatic:river",
+		"autumnity:maple",
+		"autumnity:yellow_maple",
+		"autumnity:orange_maple",
+		"autumnity:red_maple",
+		"culturaldelights:lemon",
+		"culturaldelights:fruiting_lemon",
+		"nomansland:walnut"
+	]
 
 [block]
 	#Exclude a specific WoodType/LeavesType block
@@ -24,7 +54,36 @@
 	#        ".*fir_chest",											COMMENT: .* is an RegEx, so it exclude fir_chest from any Supported-Mods & Wood-Mods
 	#    ]
 	#
-	blacklist = []
+	blacklist = [
+		".*/bountifulfares/large_walnut_boat",
+		".*/bountifulfares/walnut_furnace_boat",
+		".*/bountifulfares/chiseled_walnut_bookshelf",
+		".*/bountifulfares/walnut_beehive",
+		".*/bountifulfares/walnut_ladder",
+		".*/nomansland/apple_fruit_leaf_pile",
+		".*/nomansland/pear_fruit_leaf_pile",
+		".*/bountifulfares/walnut_railing",
+		".*/bountifulfares/walnut_window",
+		".*/bountifulfares/walnut_window_pane",
+		".*/nomansland/walnut_shelf",
+		".*/bountifulfares/trimmed_walnut_planks",
+		".*/bountifulfares/walnut_bookshelf",
+		".*/bountifulfares/trapped_walnut_chest",
+		".*/bountifulfares/walnut_chest",
+		".*/caverns_and_chasms/azalea_chest",
+		".*/caverns_and_chasms/trapped_azalea_chest",
+		".*/environmental/trapped_wisteria_chest",
+		".*/environmental/wisteria_chest",
+		".*/nomansland/hollow_walnut_log",
+		".*/upgrade_aquatic/driftwood_chest",
+		".*/upgrade_aquatic/trapped_driftwood_chest",
+		".*/nomansland/bundled_stripped_walnut_posts",
+		".*/nomansland/bundled_walnut_posts",
+		".*/nomansland/cut_stripped_walnut_post",
+		".*/nomansland/cut_walnut_post",
+		".*/nomansland/stripped_walnut_post",
+		".*/nomansland/walnut_post"
+	]
 
 [entryset]
 	#Exclude EntrySet from the module for All of WoodType or LeavesType
@@ -36,7 +95,21 @@
 	#    ]
 	#    NOTE: This excluded one entryset from all WoodTypes/LeavesTypes
 	#
-	blacklist = []
+	blacklist = [
+		"architects_palette:boards",
+		"architects_palette:board_slab",
+		"architects_palette:board_stairs",
+		"architects_palette:board_wall",
+		"quark:vertical_planks",
+		"quark:post",
+		"quark:stripped_post",
+		"quark:bookshelf",
+		"quark:ladder",
+		"quark:vertical_slab",
+		"woodworks:trapped_chest",
+		"woodworks:chest",
+		"woodworks:bookshelf"
+	]
 
 [module]
 	#Exclude Module From Wood-Good, Stone-Zone & Gems-Realm

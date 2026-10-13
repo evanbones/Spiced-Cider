@@ -18,10 +18,24 @@ import net.minecraft.client.gui.screens.TitleScreen;
 import net.minecraft.client.server.IntegratedServer;
 import net.minecraft.commands.CommandSource;
 import net.minecraft.commands.CommandSourceStack;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.client.renderer.block.model.BakedQuad;
+import net.minecraft.client.resources.model.BakedModel;
+import net.minecraft.core.Direction;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.RandomSource;
+import com.mojang.serialization.JsonOps;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.crafting.Recipe;
+import net.minecraft.world.item.crafting.RecipeHolder;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -32,6 +46,8 @@ import net.neoforged.neoforge.client.event.RenderFrameEvent;
 import net.neoforged.neoforge.event.GameShuttingDownEvent;
 
 import java.io.IOException;
+import java.io.InputStream;
+import java.util.Base64;
 import java.io.OutputStream;
 import java.lang.management.GarbageCollectorMXBean;
 import java.lang.management.ManagementFactory;
@@ -152,6 +168,9 @@ public final class DevBridge {
             return ok();
         });
         routes.put("GET /drive", r -> DRIVER.describe());
+        routes.put("GET /items", r -> onClient(DevBridge::items));
+        routes.put("GET /recipes", r -> onClient(() -> recipes(r.query().get("type"))));
+        routes.put("GET /blocktexture", r -> onClient(() -> blockTexture(r.query().get("id"))));
         routes.put("POST /join", DevBridge::join);
         routes.put("POST /leave", r -> leave());
         routes.put("POST /quit", r -> {
@@ -233,6 +252,103 @@ public final class DevBridge {
     private static boolean inWorld() {
         Minecraft mc = Minecraft.getInstance();
         return mc.level != null && mc.player != null && mc.screen == null && mc.getOverlay() == null;
+    }
+
+    private static JsonObject items() {
+        Minecraft mc = Minecraft.getInstance();
+        if (mc.level == null || mc.player == null) throw new IllegalStateException("Not in a world");
+        boolean permissions = mc.player.canUseGameMasterBlocks() && mc.options.operatorItemsTab().get();
+        Map<Item, List<String>> cachedTabs = tabMembership();
+        CreativeModeTabs.tryRebuildTabContents(mc.level.enabledFeatures(), !permissions, mc.level.registryAccess());
+        CreativeModeTabs.tryRebuildTabContents(mc.level.enabledFeatures(), permissions, mc.level.registryAccess());
+        Map<Item, List<String>> tabs = tabMembership();
+        java.util.Set<Item> searchable = new java.util.HashSet<>();
+        for (ItemStack stack : CreativeModeTabs.searchTab().getDisplayItems()) searchable.add(stack.getItem());
+        Map<?, ?> shapeParents = Map.of();
+        try {
+            shapeParents = (Map<?, ?>) Class.forName("dev.tazer.clutternomore.shape.ShapeMap").getMethod("getParentByShape").invoke(null);
+        } catch (ReflectiveOperationException | LinkageError ignored) {
+        }
+        JsonArray out = new JsonArray();
+        for (Item item : BuiltInRegistries.ITEM) {
+            JsonObject entry = new JsonObject();
+            entry.addProperty("id", BuiltInRegistries.ITEM.getKey(item).toString());
+            ItemStack stack = new ItemStack(item);
+            entry.addProperty("name", stack.getHoverName().getString());
+            entry.addProperty("key", stack.getDescriptionId());
+            entry.addProperty("search", searchable.contains(item));
+            JsonArray tabList = new JsonArray();
+            tabs.getOrDefault(item, List.of()).forEach(tabList::add);
+            entry.add("tabs", tabList);
+            entry.addProperty("inCachedTabs", cachedTabs.containsKey(item));
+            if (shapeParents.get(item) instanceof Item parent) {
+                entry.addProperty("shapeOf", BuiltInRegistries.ITEM.getKey(parent).toString());
+            }
+            out.add(entry);
+        }
+        JsonObject result = new JsonObject();
+        result.add("items", out);
+        return result;
+    }
+
+    private static JsonObject recipes(String type) {
+        IntegratedServer server = Minecraft.getInstance().getSingleplayerServer();
+        if (server == null) throw new IllegalStateException("Not in a world");
+        var ops = server.registryAccess().createSerializationContext(JsonOps.INSTANCE);
+        JsonArray list = new JsonArray();
+        for (RecipeHolder<?> holder : server.getRecipeManager().getRecipes()) {
+            String recipeType = String.valueOf(BuiltInRegistries.RECIPE_TYPE.getKey(holder.value().getType()));
+            if (type != null && !type.equals(recipeType)) continue;
+            JsonObject entry = new JsonObject();
+            entry.addProperty("id", holder.id().toString());
+            entry.addProperty("type", recipeType);
+            Recipe.CODEC.encodeStart(ops, holder.value()).result().ifPresent(json -> entry.add("recipe", json));
+            list.add(entry);
+        }
+        JsonObject out = new JsonObject();
+        out.add("recipes", list);
+        return out;
+    }
+
+    private static JsonObject blockTexture(String id) {
+        Minecraft mc = Minecraft.getInstance();
+        Block block = BuiltInRegistries.BLOCK.get(ResourceLocation.parse(id));
+        JsonObject out = new JsonObject();
+        JsonObject faces = new JsonObject();
+        BakedModel model = mc.getBlockRenderer().getBlockModel(block.defaultBlockState());
+        RandomSource random = RandomSource.create(0);
+        for (Direction direction : new Direction[]{Direction.UP, Direction.NORTH, Direction.DOWN}) {
+            List<BakedQuad> quads = model.getQuads(block.defaultBlockState(), direction, random);
+            if (!quads.isEmpty()) faces.addProperty(direction.getName(), quads.get(0).getSprite().contents().name().toString());
+        }
+        faces.addProperty("particle", model.getParticleIcon().contents().name().toString());
+        out.add("sprites", faces);
+        JsonObject pngs = new JsonObject();
+        for (Map.Entry<String, JsonElement> entry : faces.entrySet()) {
+            ResourceLocation sprite = ResourceLocation.parse(entry.getValue().getAsString());
+            ResourceLocation file = sprite.withPath(path -> "textures/" + path + ".png");
+            mc.getResourceManager().getResource(file).ifPresent(resource -> {
+                try (InputStream in = resource.open()) {
+                    pngs.addProperty(entry.getKey(), Base64.getEncoder().encodeToString(in.readAllBytes()));
+                } catch (IOException ignored) {
+                }
+            });
+        }
+        out.add("png", pngs);
+        return out;
+    }
+
+    private static Map<Item, List<String>> tabMembership() {
+        Map<Item, List<String>> tabs = new HashMap<>();
+        for (CreativeModeTab tab : CreativeModeTabs.allTabs()) {
+            if (tab.getType() != CreativeModeTab.Type.CATEGORY) continue;
+            String tabId = String.valueOf(BuiltInRegistries.CREATIVE_MODE_TAB.getKey(tab));
+            for (ItemStack stack : tab.getDisplayItems()) {
+                List<String> list = tabs.computeIfAbsent(stack.getItem(), k -> new ArrayList<>());
+                if (!list.contains(tabId)) list.add(tabId);
+            }
+        }
+        return tabs;
     }
 
     private static JsonObject status() {
@@ -338,7 +454,7 @@ public final class DevBridge {
                 commands.forEach(mc.player.connection::sendCommand);
                 return null;
             });
-            if (mc.player == null) throw new HttpError(409, "Not in a world");
+            if (mc.player == null) throw new IllegalStateException("Not in a world");
             JsonObject out = ok();
             out.addProperty("note", "Client commands report to chat only");
             return out;
@@ -569,7 +685,7 @@ public final class DevBridge {
             mc.setScreen(new TitleScreen());
             return true;
         });
-        if (!left) throw new HttpError(409, "Not in a world");
+        if (!left) throw new IllegalStateException("Not in a world");
         return ok();
     }
 }

@@ -2,6 +2,7 @@ package com.evandev.spicedcider.datagen.providers;
 
 import com.evandev.spicedcider.SpicedCider;
 import com.evandev.spicedcider.registry.ModBlocks;
+import com.evandev.spicedcider.registry.ModBuildingBlocks;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
@@ -37,5 +38,48 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                 .add(ModBlocks.TALLOW_BLOCK.get());
         this.tag(BlockTags.create(ResourceLocation.fromNamespaceAndPath("c", "storage_blocks/cast_iron")))
                 .add(ModBlocks.CAST_IRON_BLOCK.get());
+
+        this.tag(BlockTags.STAIRS).add(ModBlocks.GLOWSTONE_BRICK_STAIRS.get());
+        this.tag(BlockTags.SLABS).add(ModBlocks.GLOWSTONE_BRICK_SLAB.get());
+        this.tag(BlockTags.WALLS).add(ModBlocks.GLOWSTONE_BRICK_WALL.get());
+        this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
+                .add(ModBlocks.GLOWSTONE_BRICKS.get())
+                .add(ModBlocks.GLOWSTONE_BRICK_STAIRS.get())
+                .add(ModBlocks.GLOWSTONE_BRICK_SLAB.get())
+                .add(ModBlocks.GLOWSTONE_BRICK_WALL.get())
+                .add(ModBlocks.CHISELED_GLOWSTONE_BRICKS.get())
+                .add(ModBlocks.POLISHED_GLOWSTONE_PILLAR.get());
+
+        if (ModBlocks.POLISHED_GLOWSTONE_STAIRS != null) {
+            this.tag(BlockTags.STAIRS).addOptional(ModBlocks.POLISHED_GLOWSTONE_STAIRS.getId());
+            this.tag(BlockTags.SLABS).addOptional(ModBlocks.POLISHED_GLOWSTONE_SLAB.getId());
+            this.tag(BlockTags.WALLS).addOptional(ModBlocks.POLISHED_GLOWSTONE_WALL.getId());
+            this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
+                    .addOptional(ModBlocks.POLISHED_GLOWSTONE_STAIRS.getId())
+                    .addOptional(ModBlocks.POLISHED_GLOWSTONE_SLAB.getId())
+                    .addOptional(ModBlocks.POLISHED_GLOWSTONE_WALL.getId());
+        }
+
+        for (ModBuildingBlocks.Def def : ModBuildingBlocks.DEFS) {
+            switch (def.kind()) {
+                case STAIRS -> this.tag(BlockTags.STAIRS).addOptional(def.location());
+                case SLAB -> this.tag(BlockTags.SLABS).addOptional(def.location());
+                case WALL -> this.tag(BlockTags.WALLS).addOptional(def.location());
+                default -> {
+                }
+            }
+            this.tag(def.tool().equals("axe") ? BlockTags.MINEABLE_WITH_AXE : BlockTags.MINEABLE_WITH_PICKAXE).addOptional(def.location());
+        }
+
+        ModBlocks.WOOL_STAIRS.values().forEach(block -> {
+            this.tag(BlockTags.STAIRS).add(block.get());
+            this.tag(BlockTags.WOOL).add(block.get());
+            this.tag(BlockTags.DAMPENS_VIBRATIONS).add(block.get());
+        });
+        ModBlocks.WOOL_SLABS.values().forEach(block -> {
+            this.tag(BlockTags.SLABS).add(block.get());
+            this.tag(BlockTags.WOOL).add(block.get());
+            this.tag(BlockTags.DAMPENS_VIBRATIONS).add(block.get());
+        });
     }
 }

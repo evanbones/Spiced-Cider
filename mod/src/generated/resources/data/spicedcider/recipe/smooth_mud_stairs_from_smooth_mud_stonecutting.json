@@ -1,0 +1,16 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "environmental"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "environmental:smooth_mud"
+  },
+  "result": {
+    "count": 1,
+    "id": "spicedcider:smooth_mud_stairs"
+  }
+}

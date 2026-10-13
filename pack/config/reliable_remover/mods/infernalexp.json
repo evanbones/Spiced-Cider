@@ -1,0 +1,58 @@
+[
+  {
+    "action": "remove",
+    "items": [
+      "infernalexp:cracked_polished_basalt_bricks"
+    ],
+    "replace_with": "infernalexp:polished_basalt_bricks"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "infernalexp:polished_basalt_bricks"
+    ],
+    "replace_with": "stoneworks:basalt_bricks"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "infernalexp:polished_basalt_bricks_slab"
+    ],
+    "replace_with": "stoneworks:basalt_brick_slab"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "infernalexp:polished_basalt_bricks_stairs"
+    ],
+    "replace_with": "stoneworks:basalt_brick_stairs"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "infernalexp:polished_basalt_bricks_wall"
+    ],
+    "replace_with": "stoneworks:basalt_brick_wall"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "infernalexp:chiseled_polished_basalt"
+    ],
+    "replace_with": "stoneworks:chiseled_basalt"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "infernalexp:dullstone_button"
+    ],
+    "replace_with": "minecraft:stone_button"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "infernalexp:dullstone_pressure_plate"
+    ],
+    "replace_with": "minecraft:stone_pressure_plate"
+  }
+]

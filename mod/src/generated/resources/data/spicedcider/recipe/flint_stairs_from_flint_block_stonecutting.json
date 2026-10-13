@@ -1,0 +1,16 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "architects_palette"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "architects_palette:flint_block"
+  },
+  "result": {
+    "count": 1,
+    "id": "spicedcider:flint_stairs"
+  }
+}

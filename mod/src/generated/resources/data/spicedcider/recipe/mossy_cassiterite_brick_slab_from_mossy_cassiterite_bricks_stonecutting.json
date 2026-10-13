@@ -1,0 +1,16 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "caverns_and_chasms"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "spicedcider:mossy_cassiterite_bricks"
+  },
+  "result": {
+    "count": 2,
+    "id": "spicedcider:mossy_cassiterite_brick_slab"
+  }
+}

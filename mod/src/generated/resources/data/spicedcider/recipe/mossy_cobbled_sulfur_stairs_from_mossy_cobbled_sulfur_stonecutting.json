@@ -1,0 +1,16 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "vanillabackport"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "spicedcider:mossy_cobbled_sulfur"
+  },
+  "result": {
+    "count": 1,
+    "id": "spicedcider:mossy_cobbled_sulfur_stairs"
+  }
+}

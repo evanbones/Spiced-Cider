@@ -31,6 +31,30 @@ ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.${ mod_id }]]
+modId = "infernalexp"
+type = "optional"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.${ mod_id }]]
+modId = "bountifulfares"
+type = "optional"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.${ mod_id }]]
+modId = "brick_and_mortar"
+type = "optional"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.${ mod_id }]]
+modId = "supplementaries"
+type = "optional"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.${ mod_id }]]
 modId = "tide"
 type = "optional"
 versionRange = "[2.1,)"
@@ -216,5 +240,17 @@ side = "CLIENT"
 modId = "reliable_remover"
 type = "optional"
 versionRange = "*"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.${ mod_id }]]
+modId = "upgrade_aquatic"
+type = "optional"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.${ mod_id }]]
+modId = "abundant_atmosphere"
+type = "optional"
 ordering = "AFTER"
 side = "BOTH"

@@ -1,0 +1,16 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "stoneworks"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "stoneworks:polished_netherrack"
+  },
+  "result": {
+    "count": 1,
+    "id": "spicedcider:netherrack_tile_stairs"
+  }
+}

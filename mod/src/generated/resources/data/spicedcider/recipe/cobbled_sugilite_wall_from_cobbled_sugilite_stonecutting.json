@@ -1,0 +1,16 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "caverns_and_chasms"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "spicedcider:cobbled_sugilite"
+  },
+  "result": {
+    "count": 1,
+    "id": "spicedcider:cobbled_sugilite_wall"
+  }
+}

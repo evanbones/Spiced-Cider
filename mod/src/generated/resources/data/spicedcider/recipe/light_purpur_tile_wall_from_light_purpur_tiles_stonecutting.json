@@ -1,0 +1,16 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "brick_and_mortar"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "spicedcider:light_purpur_tiles"
+  },
+  "result": {
+    "count": 1,
+    "id": "spicedcider:light_purpur_tile_wall"
+  }
+}

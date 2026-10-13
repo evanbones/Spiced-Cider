@@ -4,7 +4,6 @@
   "shadowAlpha": 99,
   "shadowXOffset": 1,
   "shadowYOffset": 1,
-  "offsetItems": true,
   "hotbarShadows": true,
   "slotShadows": true,
   "hoverShadows": true,
@@ -20,5 +19,6 @@
     "#forge:glass_panes",
     "minecraft:beacon"
   ],
-  "transparentItems": []
+  "transparentItems": [],
+  "offsetItems": true
 }

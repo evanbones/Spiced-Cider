@@ -10,6 +10,9 @@ import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.EnumMap;
+import java.util.Map;
+
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(SpicedCider.MOD_ID);
 
@@ -64,4 +67,31 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> TALLOW_BLOCK = ITEMS.register("tallow_block",
             () -> new BlockItem(ModBlocks.TALLOW_BLOCK.get(), new Item.Properties()));
+
+    public static final DeferredItem<BlockItem> GLOWSTONE_BRICKS = ITEMS.registerSimpleBlockItem(ModBlocks.GLOWSTONE_BRICKS);
+    public static final DeferredItem<BlockItem> GLOWSTONE_BRICK_STAIRS = ITEMS.registerSimpleBlockItem(ModBlocks.GLOWSTONE_BRICK_STAIRS);
+    public static final DeferredItem<BlockItem> GLOWSTONE_BRICK_SLAB = ITEMS.registerSimpleBlockItem(ModBlocks.GLOWSTONE_BRICK_SLAB);
+    public static final DeferredItem<BlockItem> GLOWSTONE_BRICK_WALL = ITEMS.registerSimpleBlockItem(ModBlocks.GLOWSTONE_BRICK_WALL);
+    public static final DeferredItem<BlockItem> CHISELED_GLOWSTONE_BRICKS = ITEMS.registerSimpleBlockItem(ModBlocks.CHISELED_GLOWSTONE_BRICKS);
+    public static final DeferredItem<BlockItem> POLISHED_GLOWSTONE_PILLAR = ITEMS.registerSimpleBlockItem(ModBlocks.POLISHED_GLOWSTONE_PILLAR);
+
+    @Nullable
+    public static final DeferredItem<BlockItem> POLISHED_GLOWSTONE_STAIRS = ModBlocks.POLISHED_GLOWSTONE_STAIRS != null
+            ? ITEMS.registerSimpleBlockItem(ModBlocks.POLISHED_GLOWSTONE_STAIRS) : null;
+    @Nullable
+    public static final DeferredItem<BlockItem> POLISHED_GLOWSTONE_SLAB = ModBlocks.POLISHED_GLOWSTONE_SLAB != null
+            ? ITEMS.registerSimpleBlockItem(ModBlocks.POLISHED_GLOWSTONE_SLAB) : null;
+    @Nullable
+    public static final DeferredItem<BlockItem> POLISHED_GLOWSTONE_WALL = ModBlocks.POLISHED_GLOWSTONE_WALL != null
+            ? ITEMS.registerSimpleBlockItem(ModBlocks.POLISHED_GLOWSTONE_WALL) : null;
+
+    public static final Map<DyeColor, DeferredItem<BlockItem>> WOOL_STAIRS = new EnumMap<>(DyeColor.class);
+    public static final Map<DyeColor, DeferredItem<BlockItem>> WOOL_SLABS = new EnumMap<>(DyeColor.class);
+
+    static {
+        for (DyeColor color : DyeColor.values()) {
+            WOOL_STAIRS.put(color, ITEMS.registerSimpleBlockItem(ModBlocks.WOOL_STAIRS.get(color)));
+            WOOL_SLABS.put(color, ITEMS.registerSimpleBlockItem(ModBlocks.WOOL_SLABS.get(color)));
+        }
+    }
 }

@@ -321,5 +321,19 @@
       "create:zinc_ore",
       "create:netherite_diving_boots"
     ]
+  },
+  {
+    "action": "remove",
+    "items": [
+      "create:copper_nugget"
+    ],
+    "replace_with": "minecraft:copper_nugget"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "create:dough"
+    ],
+    "replace_with": "farmersdelight:wheat_dough"
   }
 ]

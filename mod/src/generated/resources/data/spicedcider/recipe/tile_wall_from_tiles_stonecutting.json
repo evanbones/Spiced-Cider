@@ -1,0 +1,16 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "blockbox"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "blockbox:tiles"
+  },
+  "result": {
+    "count": 1,
+    "id": "spicedcider:tile_wall"
+  }
+}

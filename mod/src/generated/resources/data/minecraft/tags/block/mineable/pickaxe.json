@@ -1,4 +1,5 @@
 {
+  "remove": [],
   "values": [
     "spicedcider:cast_iron_block",
     {
@@ -11,6 +12,1600 @@
     },
     {
       "id": "caverns_and_chasms:tuff_tile_slab",
+      "required": false
+    },
+    "spicedcider:glowstone_bricks",
+    "spicedcider:glowstone_brick_stairs",
+    "spicedcider:glowstone_brick_slab",
+    "spicedcider:glowstone_brick_wall",
+    "spicedcider:chiseled_glowstone_bricks",
+    "spicedcider:polished_glowstone_pillar",
+    {
+      "id": "spicedcider:polished_glowstone_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:polished_glowstone_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:polished_glowstone_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:dimstone_bricks",
+      "required": false
+    },
+    {
+      "id": "spicedcider:dimstone_brick_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:dimstone_brick_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:dimstone_brick_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:dullstone_bricks",
+      "required": false
+    },
+    {
+      "id": "spicedcider:dullstone_brick_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:dullstone_brick_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:dullstone_brick_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:polished_permafrost",
+      "required": false
+    },
+    {
+      "id": "spicedcider:polished_permafrost_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:polished_permafrost_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:polished_permafrost_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cobbled_dripstone",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cobbled_dripstone_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cobbled_dripstone_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cobbled_dripstone_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cobbled_dripstone",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cobbled_dripstone_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cobbled_dripstone_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cobbled_dripstone_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_dripstone_bricks",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_dripstone_brick_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_dripstone_brick_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_dripstone_brick_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cobbled_jasper",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cobbled_jasper_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cobbled_jasper_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cobbled_jasper_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cobbled_jasper",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cobbled_jasper_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cobbled_jasper_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cobbled_jasper_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_jasper_bricks",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_jasper_brick_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_jasper_brick_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_jasper_brick_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cobbled_limestone",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cobbled_limestone_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cobbled_limestone_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cobbled_limestone_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cobbled_limestone",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cobbled_limestone_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cobbled_limestone_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cobbled_limestone_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_limestone_bricks",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_limestone_brick_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_limestone_brick_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_limestone_brick_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cobbled_shale",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cobbled_shale_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cobbled_shale_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cobbled_shale_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cobbled_shale",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cobbled_shale_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cobbled_shale_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cobbled_shale_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_shale_bricks",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_shale_brick_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_shale_brick_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_shale_brick_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cobbled_myalite",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cobbled_myalite_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cobbled_myalite_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cobbled_myalite_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cobbled_myalite",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cobbled_myalite_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cobbled_myalite_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cobbled_myalite_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_myalite_bricks",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_myalite_brick_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_myalite_brick_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_myalite_brick_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cobbled_permafrost",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cobbled_permafrost_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cobbled_permafrost_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cobbled_permafrost_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cobbled_permafrost",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cobbled_permafrost_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cobbled_permafrost_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cobbled_permafrost_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_permafrost_bricks",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_permafrost_brick_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_permafrost_brick_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_permafrost_brick_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cobbled_cassiterite",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cobbled_cassiterite_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cobbled_cassiterite_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cobbled_cassiterite_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cobbled_cassiterite",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cobbled_cassiterite_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cobbled_cassiterite_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cobbled_cassiterite_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cassiterite_bricks",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cassiterite_brick_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cassiterite_brick_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cassiterite_brick_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cobbled_cylindrite",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cobbled_cylindrite_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cobbled_cylindrite_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cobbled_cylindrite_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cobbled_cylindrite",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cobbled_cylindrite_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cobbled_cylindrite_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cobbled_cylindrite_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cylindrite_bricks",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cylindrite_brick_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cylindrite_brick_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cylindrite_brick_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cobbled_sugilite",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cobbled_sugilite_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cobbled_sugilite_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cobbled_sugilite_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cobbled_sugilite",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cobbled_sugilite_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cobbled_sugilite_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cobbled_sugilite_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_sugilite_bricks",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_sugilite_brick_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_sugilite_brick_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_sugilite_brick_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cobbled_cinnabar",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cobbled_cinnabar_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cobbled_cinnabar_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cobbled_cinnabar_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cobbled_cinnabar",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cobbled_cinnabar_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cobbled_cinnabar_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cobbled_cinnabar_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cinnabar_bricks",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cinnabar_brick_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cinnabar_brick_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cinnabar_brick_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cobbled_sulfur",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cobbled_sulfur_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cobbled_sulfur_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cobbled_sulfur_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cobbled_sulfur",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cobbled_sulfur_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cobbled_sulfur_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cobbled_sulfur_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_sulfur_bricks",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_sulfur_brick_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_sulfur_brick_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_sulfur_brick_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cobbled_siltstone",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cobbled_siltstone_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cobbled_siltstone_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cobbled_siltstone_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cobbled_siltstone",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cobbled_siltstone_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cobbled_siltstone_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cobbled_siltstone_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_siltstone_bricks",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_siltstone_brick_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_siltstone_brick_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_siltstone_brick_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cobbled_dimstone",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cobbled_dimstone_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cobbled_dimstone_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cobbled_dimstone_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cobbled_dimstone",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cobbled_dimstone_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cobbled_dimstone_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cobbled_dimstone_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_dimstone_bricks",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_dimstone_brick_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_dimstone_brick_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_dimstone_brick_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cobbled_dullstone",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cobbled_dullstone_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cobbled_dullstone_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cobbled_dullstone_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cobbled_dullstone",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cobbled_dullstone_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cobbled_dullstone_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cobbled_dullstone_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_dullstone_bricks",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_dullstone_brick_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_dullstone_brick_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_dullstone_brick_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:chiseled_permafrost",
+      "required": false
+    },
+    {
+      "id": "spicedcider:chiseled_dimstone",
+      "required": false
+    },
+    {
+      "id": "spicedcider:chiseled_dullstone",
+      "required": false
+    },
+    {
+      "id": "spicedcider:chiseled_netherrack",
+      "required": false
+    },
+    {
+      "id": "spicedcider:chiseled_red_nether_bricks",
+      "required": false
+    },
+    {
+      "id": "spicedcider:basalt_pillar",
+      "required": false
+    },
+    {
+      "id": "spicedcider:netherrack_pillar",
+      "required": false
+    },
+    {
+      "id": "spicedcider:netherrack_tiles",
+      "required": false
+    },
+    {
+      "id": "spicedcider:netherrack_tile_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:netherrack_tile_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:netherrack_tile_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:resin_tiles",
+      "required": false
+    },
+    {
+      "id": "spicedcider:resin_tile_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:resin_tile_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:resin_tile_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:purpur_tiles",
+      "required": false
+    },
+    {
+      "id": "spicedcider:purpur_tile_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:purpur_tile_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:purpur_tile_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:bright_resin_tiles",
+      "required": false
+    },
+    {
+      "id": "spicedcider:bright_resin_tile_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:bright_resin_tile_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:bright_resin_tile_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:bright_soul_resin_tiles",
+      "required": false
+    },
+    {
+      "id": "spicedcider:bright_soul_resin_tile_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:bright_soul_resin_tile_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:bright_soul_resin_tile_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:melted_resin_tiles",
+      "required": false
+    },
+    {
+      "id": "spicedcider:melted_resin_tile_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:melted_resin_tile_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:melted_resin_tile_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:melted_soul_resin_tiles",
+      "required": false
+    },
+    {
+      "id": "spicedcider:melted_soul_resin_tile_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:melted_soul_resin_tile_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:melted_soul_resin_tile_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:smoked_resin_tiles",
+      "required": false
+    },
+    {
+      "id": "spicedcider:smoked_resin_tile_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:smoked_resin_tile_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:smoked_resin_tile_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:smoked_soul_resin_tiles",
+      "required": false
+    },
+    {
+      "id": "spicedcider:smoked_soul_resin_tile_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:smoked_soul_resin_tile_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:smoked_soul_resin_tile_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:soul_resin_tiles",
+      "required": false
+    },
+    {
+      "id": "spicedcider:soul_resin_tile_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:soul_resin_tile_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:soul_resin_tile_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:burnt_purpur_tiles",
+      "required": false
+    },
+    {
+      "id": "spicedcider:burnt_purpur_tile_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:burnt_purpur_tile_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:burnt_purpur_tile_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:burnt_soul_purpur_tiles",
+      "required": false
+    },
+    {
+      "id": "spicedcider:burnt_soul_purpur_tile_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:burnt_soul_purpur_tile_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:burnt_soul_purpur_tile_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:light_purpur_tiles",
+      "required": false
+    },
+    {
+      "id": "spicedcider:light_purpur_tile_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:light_purpur_tile_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:light_purpur_tile_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:light_soul_purpur_tiles",
+      "required": false
+    },
+    {
+      "id": "spicedcider:light_soul_purpur_tile_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:light_soul_purpur_tile_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:light_soul_purpur_tile_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:raw_purpur_tiles",
+      "required": false
+    },
+    {
+      "id": "spicedcider:raw_purpur_tile_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:raw_purpur_tile_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:raw_purpur_tile_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:raw_soul_purpur_tiles",
+      "required": false
+    },
+    {
+      "id": "spicedcider:raw_soul_purpur_tile_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:raw_soul_purpur_tile_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:raw_soul_purpur_tile_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:soul_purpur_tiles",
+      "required": false
+    },
+    {
+      "id": "spicedcider:soul_purpur_tile_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:soul_purpur_tile_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:soul_purpur_tile_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:smooth_stone_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:smooth_stone_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:netherrack_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:netherrack_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:netherrack_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:end_stone_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:end_stone_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:end_stone_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:polished_jasper_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:polished_limestone_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:polished_shale_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:polished_myalite_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:polished_siltstone_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:dimstone_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:dimstone_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:dimstone_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:dullstone_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:dullstone_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:dullstone_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:polished_dimstone_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:polished_dimstone_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:polished_dimstone_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:polished_dullstone_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:polished_dullstone_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:polished_dullstone_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:purpur_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:quartz_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:dark_prismarine_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:prismarine_brick_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:obsidian_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:obsidian_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:obsidian_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:packed_mud_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:packed_mud_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:packed_mud_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:flint_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:flint_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:flint_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:smooth_mud_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:smooth_mud_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:abyssaline_brick_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:abyssaline_brick_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:abyssaline_tile_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:abyssaline_tile_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:hadaline_brick_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:hadaline_brick_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:hadaline_tile_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:hadaline_tile_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:hazard_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:sheet_metal_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:sheet_metal_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:checker_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:checker_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cut_sandstone_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cut_sandstone_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cut_red_sandstone_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cut_red_sandstone_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cut_soul_sandstone_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cut_soul_sandstone_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:smooth_sandstone_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:smooth_red_sandstone_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:smooth_quartz_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:smooth_soul_sandstone_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:gilded_sandstone_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:polished_nebulite_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:entwine_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:oracle_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:sunmetal_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:luminous_prismarine_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:golden_brick_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:tile_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:blacksalt_tile_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:dross_tile_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:earthen_tile_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mundane_tile_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:silt_brick_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:quartz_brick_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:quartz_brick_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:quartz_brick_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:abyssaline_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:abyssaline_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:abyssaline_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:hadaline_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:hadaline_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:hadaline_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:feldspar_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:feldspar_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:feldspar_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cut_feldspar_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cut_feldspar_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cut_feldspar_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:white_concrete_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:white_concrete_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:white_concrete_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:orange_concrete_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:orange_concrete_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:orange_concrete_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:magenta_concrete_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:magenta_concrete_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:magenta_concrete_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:light_blue_concrete_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:light_blue_concrete_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:light_blue_concrete_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:yellow_concrete_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:yellow_concrete_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:yellow_concrete_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:lime_concrete_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:lime_concrete_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:lime_concrete_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:pink_concrete_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:pink_concrete_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:pink_concrete_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:gray_concrete_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:gray_concrete_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:gray_concrete_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:light_gray_concrete_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:light_gray_concrete_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:light_gray_concrete_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cyan_concrete_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cyan_concrete_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cyan_concrete_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:purple_concrete_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:purple_concrete_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:purple_concrete_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:blue_concrete_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:blue_concrete_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:blue_concrete_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:brown_concrete_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:brown_concrete_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:brown_concrete_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:green_concrete_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:green_concrete_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:green_concrete_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:red_concrete_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:red_concrete_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:red_concrete_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:black_concrete_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:black_concrete_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:black_concrete_wall",
       "required": false
     }
   ]

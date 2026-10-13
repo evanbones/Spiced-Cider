@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_glowstone_bricks": {
+      "conditions": {
+        "items": [
+          {
+            "items": "spicedcider:glowstone_bricks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "spicedcider:glowstone_brick_stairs"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_glowstone_bricks"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "spicedcider:glowstone_brick_stairs"
+    ]
+  }
+}

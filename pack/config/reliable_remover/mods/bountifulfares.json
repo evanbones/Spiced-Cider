@@ -45,5 +45,40 @@
       "bountifulfares:walnut_slab",
       "bountifulfares:gristmill"
     ]
+  },
+  {
+    "action": "remove",
+    "items": [
+      "bountifulfares:apple_pie"
+    ],
+    "replace_with": "farmersdelight:apple_pie"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "bountifulfares:fish_stew"
+    ],
+    "replace_with": "farmersdelight:fish_stew"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "bountifulfares:sweet_berry_pips"
+    ],
+    "replace_with": "berry_good:sweet_berry_pips"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "bountifulfares:flour"
+    ],
+    "replace_with": "create:wheat_flour"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "bountifulfares:cracked_ceramic_tiles"
+    ],
+    "replace_with": "bountifulfares:ceramic_tiles"
   }
 ]

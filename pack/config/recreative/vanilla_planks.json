@@ -1,0 +1,54 @@
+[
+  {
+    "action": "modify_tab",
+    "tabs": [
+      "minecraft:building_blocks"
+    ],
+    "add_items": [
+      {
+        "item": "minecraft:oak_planks",
+        "after": "minecraft:stripped_oak_log"
+      },
+      {
+        "item": "minecraft:spruce_planks",
+        "after": "minecraft:stripped_spruce_log"
+      },
+      {
+        "item": "minecraft:birch_planks",
+        "after": "minecraft:stripped_birch_log"
+      },
+      {
+        "item": "minecraft:jungle_planks",
+        "after": "minecraft:stripped_jungle_log"
+      },
+      {
+        "item": "minecraft:acacia_planks",
+        "after": "minecraft:stripped_acacia_log"
+      },
+      {
+        "item": "minecraft:dark_oak_planks",
+        "after": "minecraft:stripped_dark_oak_log"
+      },
+      {
+        "item": "minecraft:mangrove_planks",
+        "after": "minecraft:stripped_mangrove_log"
+      },
+      {
+        "item": "minecraft:cherry_planks",
+        "after": "minecraft:stripped_cherry_log"
+      },
+      {
+        "item": "minecraft:bamboo_planks",
+        "after": "minecraft:stripped_bamboo_block"
+      },
+      {
+        "item": "minecraft:crimson_planks",
+        "after": "minecraft:stripped_crimson_stem"
+      },
+      {
+        "item": "minecraft:warped_planks",
+        "after": "minecraft:stripped_warped_stem"
+      }
+    ]
+  }
+]

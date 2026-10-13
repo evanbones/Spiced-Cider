@@ -1,0 +1,16 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "upgrade_aquatic"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "upgrade_aquatic:luminous_prismarine"
+  },
+  "result": {
+    "count": 1,
+    "id": "spicedcider:luminous_prismarine_wall"
+  }
+}

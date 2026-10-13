@@ -1,0 +1,29 @@
+[
+  {
+    "action": "remove",
+    "items": [
+      "neapolitan:beanstalk_thorns"
+    ]
+  },
+  {
+    "action": "remove",
+    "items": [
+      "neapolitan:milk_bottle"
+    ],
+    "replace_with": "farmersdelight:milk_bottle"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "neapolitan:magic_beans"
+    ],
+    "replace_with": "culturaldelights:magic_beans"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "neapolitan:beanstalk"
+    ],
+    "replace_with": "culturaldelights:beanstalk"
+  }
+]

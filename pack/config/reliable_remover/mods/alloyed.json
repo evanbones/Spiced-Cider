@@ -4,5 +4,12 @@
     "items": [
       "alloyed:forge"
     ]
+  },
+  {
+    "action": "remove",
+    "items": [
+      "alloyed:bronze_casing"
+    ],
+    "replace_with": "create:andesite_casing"
   }
 ]

@@ -4,6 +4,7 @@ import com.evandev.spicedcider.blockgrid.ClientOffsetCache;
 import com.evandev.spicedcider.blockgrid.SupportOffsets;
 import com.evandev.spicedcider.compat.continuity.ContinuityLazyModelWrapping;
 import com.evandev.spicedcider.compat.everycompat.BlockBoxEveryCompatLoader;
+import com.evandev.spicedcider.compat.infernalexp.InfernalExpansionCompat;
 import com.evandev.spicedcider.compat.tide.TideCompat;
 import com.evandev.spicedcider.compat.yacl.ConfigScreenLoader;
 import com.evandev.spicedcider.config.LogReconfiguration;
@@ -17,6 +18,7 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.neoforged.api.distmarker.Dist;
@@ -58,6 +60,7 @@ public class SpicedCider {
 
         ModEntityTypes.ENTITY_TYPES.register(modEventBus);
         ModEntityTypes.ITEMS.register(modEventBus);
+        ModBuildingBlocks.register();
         ModBlocks.BLOCKS.register(modEventBus);
         ModAttachments.ATTACHMENT_TYPES.register(modEventBus);
         ModAttributes.ATTRIBUTES.register(modEventBus);
@@ -104,6 +107,27 @@ public class SpicedCider {
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.insertAfter(new ItemStack(Items.IRON_BLOCK), new ItemStack(ModItems.CAST_IRON_BLOCK.get()), vis);
             event.insertAfter(new ItemStack(Items.HONEYCOMB_BLOCK), new ItemStack(ModItems.TALLOW_BLOCK.get()), vis);
+            ModBuildingBlocks.ITEMS.values().forEach(item -> event.accept(item.get(), vis));
+            event.accept(ModItems.GLOWSTONE_BRICKS.get(), vis);
+            event.accept(ModItems.GLOWSTONE_BRICK_STAIRS.get(), vis);
+            event.accept(ModItems.GLOWSTONE_BRICK_SLAB.get(), vis);
+            event.accept(ModItems.GLOWSTONE_BRICK_WALL.get(), vis);
+            event.accept(ModItems.CHISELED_GLOWSTONE_BRICKS.get(), vis);
+            event.accept(ModItems.POLISHED_GLOWSTONE_PILLAR.get(), vis);
+        }
+        if (event.getTabKey() == CreativeModeTabs.COLORED_BLOCKS) {
+            for (DyeColor color : DyeColor.values()) {
+                ItemStack stairs = new ItemStack(ModItems.WOOL_STAIRS.get(color).get());
+                event.insertAfter(new ItemStack(ModBlocks.wool(color)), stairs, vis);
+                event.insertAfter(stairs, new ItemStack(ModItems.WOOL_SLABS.get(color).get()), vis);
+            }
+        }
+        if (ModItems.POLISHED_GLOWSTONE_STAIRS != null && event.getTabKey().location().equals(InfernalExpansionCompat.TAB)) {
+            ItemStack stairs = new ItemStack(ModItems.POLISHED_GLOWSTONE_STAIRS.get());
+            ItemStack slab = new ItemStack(ModItems.POLISHED_GLOWSTONE_SLAB.get());
+            event.insertAfter(new ItemStack(InfernalExpansionCompat.polishedGlowstone()), stairs, vis);
+            event.insertAfter(stairs, slab, vis);
+            event.insertAfter(slab, new ItemStack(ModItems.POLISHED_GLOWSTONE_WALL.get()), vis);
         }
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.insertAfter(new ItemStack(Items.GOLD_NUGGET), new ItemStack(ModItems.CAST_IRON_NUGGET.get()), vis);

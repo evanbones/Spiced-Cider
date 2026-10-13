@@ -126,7 +126,272 @@
       "architects_palette:smooth_nether_brass_vertical_slab",
       "architects_palette:onyx_vertical_slab",
       "architects_palette:moonshale_brick_vertical_slab",
-      "architects_palette:plating_vertical_slab"
+      "architects_palette:plating_vertical_slab",
+      "architects_palette:cerebral_vertical_slab",
+      "architects_palette:coal_ore_brick_vertical_slab",
+      "architects_palette:diamond_ore_brick_vertical_slab",
+      "architects_palette:emerald_ore_brick_vertical_slab",
+      "architects_palette:esoterrack_brick_vertical_slab",
+      "architects_palette:esoterrack_vertical_slab",
+      "architects_palette:gold_ore_brick_vertical_slab",
+      "architects_palette:iron_ore_brick_vertical_slab",
+      "architects_palette:lapis_ore_brick_vertical_slab",
+      "architects_palette:redstone_ore_brick_vertical_slab",
+      "architects_palette:tuff_brick_vertical_slab",
+      "architects_palette:polished_glowstone_slab",
+      "architects_palette:polished_glowstone_wall",
+      "architects_palette:runic_glowstone"
+    ]
+  },
+  {
+    "action": "remove",
+    "items": [
+      "architects_palette:dripstone_bricks"
+    ],
+    "replace_with": "caverns_and_chasms:dripstone_bricks"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "architects_palette:dripstone_brick_slab"
+    ],
+    "replace_with": "caverns_and_chasms:dripstone_brick_slab"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "architects_palette:dripstone_brick_stairs"
+    ],
+    "replace_with": "caverns_and_chasms:dripstone_brick_stairs"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "architects_palette:dripstone_brick_wall"
+    ],
+    "replace_with": "caverns_and_chasms:dripstone_brick_wall"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "architects_palette:tuff_bricks"
+    ],
+    "replace_with": "minecraft:tuff_bricks"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "architects_palette:tuff_brick_slab"
+    ],
+    "replace_with": "minecraft:tuff_brick_slab"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "architects_palette:tuff_brick_stairs"
+    ],
+    "replace_with": "minecraft:tuff_brick_stairs"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "architects_palette:tuff_brick_wall"
+    ],
+    "replace_with": "minecraft:tuff_brick_wall"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "architects_palette:chiseled_tuff"
+    ],
+    "replace_with": "minecraft:chiseled_tuff"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "architects_palette:rotten_flesh_block"
+    ],
+    "replace_with": "caverns_and_chasms:rotten_flesh_block"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "architects_palette:polished_glowstone"
+    ],
+    "replace_with": "infernalexp:polished_glowstone"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "architects_palette:cracked_algal_bricks"
+    ],
+    "replace_with": "architects_palette:algal_bricks"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "architects_palette:cracked_end_stone_bricks"
+    ],
+    "replace_with": "minecraft:end_stone_bricks"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "architects_palette:cracked_moonshale_bricks"
+    ],
+    "replace_with": "architects_palette:moonshale_bricks"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "architects_palette:cracked_olivestone_bricks"
+    ],
+    "replace_with": "architects_palette:olivestone_bricks"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "architects_palette:cracked_olivestone_tiles"
+    ],
+    "replace_with": "architects_palette:olivestone_tiles"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "architects_palette:heavy_cracked_end_stone_bricks"
+    ],
+    "replace_with": "architects_palette:heavy_end_stone_bricks"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "architects_palette:heavy_cracked_stone_bricks"
+    ],
+    "replace_with": "architects_palette:heavy_stone_bricks"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "architects_palette:tuff_pillar"
+    ],
+    "replace_with": "stoneworks:tuff_pillar"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "architects_palette:calcite_bricks",
+      "architects_palette:heavy_calcite_bricks"
+    ],
+    "replace_with": "stoneworks:calcite_bricks"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "architects_palette:calcite_brick_slab"
+    ],
+    "replace_with": "stoneworks:calcite_brick_slab"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "architects_palette:calcite_brick_stairs"
+    ],
+    "replace_with": "stoneworks:calcite_brick_stairs"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "architects_palette:calcite_brick_wall"
+    ],
+    "replace_with": "stoneworks:calcite_brick_wall"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "architects_palette:chiseled_calcite"
+    ],
+    "replace_with": "stoneworks:chiseled_calcite"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "architects_palette:calcite_pillar"
+    ],
+    "replace_with": "stoneworks:calcite_pillar"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "architects_palette:chiseled_end_stone_bricks"
+    ],
+    "replace_with": "stoneworks:chiseled_end_stone"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "architects_palette:heavy_dripstone_bricks"
+    ],
+    "replace_with": "caverns_and_chasms:dripstone_bricks"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "architects_palette:heavy_end_stone_bricks"
+    ],
+    "replace_with": "minecraft:end_stone_bricks"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "architects_palette:heavy_mossy_stone_bricks"
+    ],
+    "replace_with": "minecraft:mossy_stone_bricks"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "architects_palette:heavy_stone_bricks"
+    ],
+    "replace_with": "minecraft:stone_bricks"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "architects_palette:heavy_tuff_bricks"
+    ],
+    "replace_with": "minecraft:tuff_bricks"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "architects_palette:choral_end_stone_bricks"
+    ],
+    "replace_with": "stoneworks:mossy_end_stone_bricks"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "architects_palette:twisting_blackstone",
+      "architects_palette:weeping_blackstone"
+    ],
+    "replace_with": "minecraft:blackstone"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "architects_palette:twisting_blackstone_bricks",
+      "architects_palette:weeping_blackstone_bricks"
+    ],
+    "replace_with": "stoneworks:mossy_blackstone_bricks"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "architects_palette:entrails_vertical_slab",
+      "architects_palette:abyssaline_brick_vertical_slab",
+      "architects_palette:abyssaline_tile_vertical_slab",
+      "architects_palette:hadaline_brick_vertical_slab",
+      "architects_palette:hadaline_tile_vertical_slab"
     ]
   }
 ]

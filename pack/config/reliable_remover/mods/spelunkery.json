@@ -70,7 +70,40 @@
       "spelunkery:magnetic_compass",
       "spelunkery:raw_magnetite_nugget",
       "spelunkery:raw_magnetite",
-      "spelunkery:mineomite"
+      "spelunkery:mineomite",
+      "spelunkery:polished_rock_salt",
+      "spelunkery:polished_rock_salt_slab",
+      "spelunkery:polished_rock_salt_stairs",
+      "spelunkery:polished_rock_salt_wall",
+      "spelunkery:rock_salt_brick_slab",
+      "spelunkery:rock_salt_brick_stairs",
+      "spelunkery:rock_salt_brick_wall",
+      "spelunkery:rock_salt_bricks",
+      "spelunkery:rock_salt_slab",
+      "spelunkery:rock_salt_stairs",
+      "spelunkery:rock_salt_wall"
     ]
+  },
+  {
+    "action": "remove",
+    "items": [
+      "spelunkery:copper_nugget"
+    ],
+    "replace_with": "minecraft:copper_nugget"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "spelunkery:diamond_shard"
+    ],
+    "replace_with": "modestmining:diamond_shard"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "spelunkery:rock_salt",
+      "spelunkery:rock_salt_block"
+    ],
+    "replace_with": "culturaldelights:salt_block"
   }
 ]

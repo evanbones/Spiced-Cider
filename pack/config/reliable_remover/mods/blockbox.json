@@ -18,7 +18,86 @@
       "blockbox:andesite_brick_stairs",
       "blockbox:andesite_brick_slab",
       "blockbox:diorite_brick_slab",
-      "blockbox:granite_brick_slab"
+      "blockbox:granite_brick_slab",
+      "blockbox:cut_amethyst_slab",
+      "blockbox:cut_amethyst_stairs"
     ]
+  },
+  {
+    "action": "remove",
+    "items": [
+      "blockbox:cut_amethyst"
+    ],
+    "replace_with": "caverns_and_chasms:cut_amethyst"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "blockbox:brazier"
+    ],
+    "replace_with": "caverns_and_chasms:brazier"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "blockbox:soul_brazier"
+    ],
+    "replace_with": "caverns_and_chasms:soul_brazier"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "blockbox:polished_packed_ice"
+    ],
+    "replace_with": "architects_palette:polished_packed_ice"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "blockbox:iron_plate"
+    ],
+    "replace_with": "quark:iron_plate"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "blockbox:sandstone_bricks"
+    ],
+    "replace_with": "minecraft:cut_sandstone"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "blockbox:sandstone_brick_stairs"
+    ],
+    "replace_with": "spicedcider:cut_sandstone_stairs"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "blockbox:sandstone_brick_slab"
+    ],
+    "replace_with": "minecraft:cut_sandstone_slab"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "blockbox:red_sandstone_bricks"
+    ],
+    "replace_with": "minecraft:cut_red_sandstone"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "blockbox:red_sandstone_brick_stairs"
+    ],
+    "replace_with": "spicedcider:cut_red_sandstone_stairs"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "blockbox:red_sandstone_brick_slab"
+    ],
+    "replace_with": "minecraft:cut_red_sandstone_slab"
   }
 ]

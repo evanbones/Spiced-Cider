@@ -1,0 +1,16 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "bountifulfares"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "bountifulfares:feldspar_block"
+  },
+  "result": {
+    "count": 1,
+    "id": "spicedcider:feldspar_wall"
+  }
+}

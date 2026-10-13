@@ -8,5 +8,26 @@
       "tide:fishing_journal",
       "tide:fishy_note"
     ]
+  },
+  {
+    "action": "remove",
+    "items": [
+      "tide:pike"
+    ],
+    "replace_with": "upgrade_aquatic:pike"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "tide:pike_bucket"
+    ],
+    "replace_with": "upgrade_aquatic:pike_bucket"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "tide:pike_spawn_egg"
+    ],
+    "replace_with": "upgrade_aquatic:pike_spawn_egg"
   }
 ]
