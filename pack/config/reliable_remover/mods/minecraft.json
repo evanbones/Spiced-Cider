@@ -31,22 +31,6 @@
       "minecraft:trader_llama_spawn_egg",
       "minecraft:wandering_trader_spawn_egg",
       "minecraft:suspicious_stew",
-      "minecraft:waxed_oxidized_copper_bars",
-      "minecraft:waxed_weathered_copper_bars",
-      "minecraft:copper_bars",
-      "minecraft:exposed_copper_bars",
-      "minecraft:weathered_copper_bars",
-      "minecraft:oxidized_copper_bars",
-      "minecraft:waxed_copper_bars",
-      "minecraft:waxed_exposed_copper_bars",
-      "minecraft:waxed_weathered_copper_chain",
-      "minecraft:waxed_oxidized_copper_chain",
-      "minecraft:copper_chain",
-      "minecraft:exposed_copper_chain",
-      "minecraft:weathered_copper_chain",
-      "minecraft:oxidized_copper_chain",
-      "minecraft:waxed_copper_chain",
-      "minecraft:waxed_exposed_copper_chain",
       "minecraft:iron_boots",
       "minecraft:iron_shovel",
       "minecraft:iron_pickaxe",
@@ -85,8 +69,7 @@
       "minecraft:lapis_ore",
       "minecraft:wooden_sword",
       "minecraft:chipped_anvil",
-      "minecraft:damaged_anvil",
-      "minecraft:scaffolding"
+      "minecraft:damaged_anvil"
     ]
   },
   {
@@ -170,5 +153,61 @@
       "minecraft:armadillo_scute"
     ],
     "replace_with": "nomansland:sturdy_scute"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "minecraft:copper_bars"
+    ],
+    "replace_with": "caverns_and_chasms:copper_bars"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "minecraft:exposed_copper_bars"
+    ],
+    "replace_with": "caverns_and_chasms:exposed_copper_bars"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "minecraft:weathered_copper_bars"
+    ],
+    "replace_with": "caverns_and_chasms:weathered_copper_bars"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "minecraft:oxidized_copper_bars"
+    ],
+    "replace_with": "caverns_and_chasms:oxidized_copper_bars"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "minecraft:waxed_copper_bars"
+    ],
+    "replace_with": "caverns_and_chasms:waxed_copper_bars"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "minecraft:waxed_exposed_copper_bars"
+    ],
+    "replace_with": "caverns_and_chasms:waxed_exposed_copper_bars"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "minecraft:waxed_weathered_copper_bars"
+    ],
+    "replace_with": "caverns_and_chasms:waxed_weathered_copper_bars"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "minecraft:waxed_oxidized_copper_bars"
+    ],
+    "replace_with": "caverns_and_chasms:waxed_oxidized_copper_bars"
   }
 ]

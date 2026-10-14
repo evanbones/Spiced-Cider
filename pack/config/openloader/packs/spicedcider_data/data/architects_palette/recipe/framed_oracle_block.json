@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "x": {
+      "item": "minecraft:tuff"
+    },
+    "y": {
+      "item": "architects_palette:oracle_block"
+    }
+  },
+  "pattern": [
+    "xyx"
+  ],
+  "result": {
+    "count": 2,
+    "id": "architects_palette:framed_oracle_block"
+  }
+}

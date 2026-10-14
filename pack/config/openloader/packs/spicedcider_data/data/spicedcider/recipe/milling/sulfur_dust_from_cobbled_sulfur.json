@@ -1,0 +1,18 @@
+{
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "item": "spicedcider:cobbled_sulfur"
+    }
+  ],
+  "processing_time": 150,
+  "results": [
+    {
+      "id": "spelunkery:sulfur"
+    },
+    {
+      "id": "spelunkery:sulfur",
+      "chance": 0.25
+    }
+  ]
+}

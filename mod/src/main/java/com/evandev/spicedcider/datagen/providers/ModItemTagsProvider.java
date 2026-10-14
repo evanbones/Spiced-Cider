@@ -131,6 +131,12 @@ public class ModItemTagsProvider extends ItemTagsProvider {
                 }
             }
         }
+        if (ModItems.TWISTED_SIGN != null) {
+            this.tag(ItemTags.SIGNS).addOptional(ModItems.TWISTED_SIGN.getId());
+            this.tag(ItemTags.HANGING_SIGNS).addOptional(ModItems.TWISTED_HANGING_SIGN.getId());
+            this.tag(ItemTags.BOATS).addOptional(ModItems.TWISTED_BOAT.getId());
+            this.tag(ItemTags.CHEST_BOATS).addOptional(ModItems.TWISTED_CHEST_BOAT.getId());
+        }
         ModItems.WOOL_STAIRS.values().forEach(item -> this.tag(ItemTags.STAIRS).add(item.get()));
         ModItems.WOOL_SLABS.values().forEach(item -> this.tag(ItemTags.SLABS).add(item.get()));
 

@@ -156,14 +156,6 @@
       "caverns_and_chasms:lapis_bricks",
       "caverns_and_chasms:lapis_pillar",
       "caverns_and_chasms:emerald_lamp",
-      "caverns_and_chasms:copper_bars",
-      "caverns_and_chasms:waxed_oxidized_copper_bars",
-      "caverns_and_chasms:waxed_weathered_copper_bars",
-      "caverns_and_chasms:waxed_exposed_copper_bars",
-      "caverns_and_chasms:waxed_copper_bars",
-      "caverns_and_chasms:oxidized_copper_bars",
-      "caverns_and_chasms:weathered_copper_bars",
-      "caverns_and_chasms:exposed_copper_bars",
       "caverns_and_chasms:abnormals_banner_pattern",
       "caverns_and_chasms:lapis_brick_stairs",
       "caverns_and_chasms:lapis_brick_slab",
@@ -729,5 +721,187 @@
     "items": [
       "caverns_and_chasms:atoning_table"
     ]
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:granite_brick_wall"
+    ],
+    "replace_with": "stoneworks:granite_brick_wall"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:diorite_brick_wall"
+    ],
+    "replace_with": "stoneworks:diorite_brick_wall"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:andesite_brick_wall"
+    ],
+    "replace_with": "stoneworks:andesite_brick_wall"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:calcite_brick_wall"
+    ],
+    "replace_with": "stoneworks:calcite_brick_wall"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:polished_calcite_wall"
+    ],
+    "replace_with": "stoneworks:polished_calcite_wall"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:cobbled_deepslate_brick_wall"
+    ],
+    "replace_with": "minecraft:deepslate_brick_wall"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:dripstone_shingle_wall"
+    ],
+    "replace_with": "caverns_and_chasms:dripstone_brick_wall"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:copper_chain"
+    ],
+    "replace_with": "minecraft:copper_chain"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:toolbox"
+    ],
+    "replace_with": "create:brown_toolbox"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:exposed_copper_chain"
+    ],
+    "replace_with": "minecraft:exposed_copper_chain"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:exposed_toolbox"
+    ],
+    "replace_with": "create:brown_toolbox"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:weathered_copper_chain"
+    ],
+    "replace_with": "minecraft:weathered_copper_chain"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:weathered_toolbox"
+    ],
+    "replace_with": "create:brown_toolbox"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:oxidized_copper_chain"
+    ],
+    "replace_with": "minecraft:oxidized_copper_chain"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:oxidized_toolbox"
+    ],
+    "replace_with": "create:brown_toolbox"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:waxed_copper_chain"
+    ],
+    "replace_with": "minecraft:waxed_copper_chain"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:waxed_toolbox"
+    ],
+    "replace_with": "create:brown_toolbox"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:waxed_exposed_copper_chain"
+    ],
+    "replace_with": "minecraft:waxed_exposed_copper_chain"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:waxed_exposed_toolbox"
+    ],
+    "replace_with": "create:brown_toolbox"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:waxed_weathered_copper_chain"
+    ],
+    "replace_with": "minecraft:waxed_weathered_copper_chain"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:waxed_weathered_toolbox"
+    ],
+    "replace_with": "create:brown_toolbox"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:waxed_oxidized_copper_chain"
+    ],
+    "replace_with": "minecraft:waxed_oxidized_copper_chain"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:waxed_oxidized_toolbox"
+    ],
+    "replace_with": "create:brown_toolbox"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:tinplate",
+      "caverns_and_chasms:tinplate_block"
+    ]
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:depth_gauge"
+    ],
+    "replace_with": "spelunkery:depth_gauge"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:tuning_fork"
+    ],
+    "replace_with": "spelunkery:tuning_fork"
   }
 ]

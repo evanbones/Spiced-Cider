@@ -4,6 +4,7 @@ import com.evandev.spicedcider.SpicedCider;
 import com.evandev.spicedcider.content.item.InferniteCleaverItem;
 import com.evandev.spicedcider.content.item.FireStrikerItem;
 import com.evandev.spicedcider.content.item.MischiefArmorItem;
+import com.evandev.spicedcider.compat.architectspalette.ArchitectsPaletteCompat;
 import com.evandev.spicedcider.compat.tide.TideCompat;
 import net.minecraft.world.item.*;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -84,6 +85,23 @@ public class ModItems {
     @Nullable
     public static final DeferredItem<BlockItem> POLISHED_GLOWSTONE_WALL = ModBlocks.POLISHED_GLOWSTONE_WALL != null
             ? ITEMS.registerSimpleBlockItem(ModBlocks.POLISHED_GLOWSTONE_WALL) : null;
+
+    @Nullable
+    public static final DeferredItem<Item> TWISTED_SIGN = ModBlocks.TWISTED_SIGN != null
+            ? ITEMS.register("twisted_sign", () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.TWISTED_SIGN.get(), ModBlocks.TWISTED_WALL_SIGN.get()))
+            : null;
+    @Nullable
+    public static final DeferredItem<Item> TWISTED_HANGING_SIGN = ModBlocks.TWISTED_HANGING_SIGN != null
+            ? ITEMS.register("twisted_hanging_sign", () -> new HangingSignItem(ModBlocks.TWISTED_HANGING_SIGN.get(), ModBlocks.TWISTED_WALL_HANGING_SIGN.get(), new Item.Properties().stacksTo(16)))
+            : null;
+    @Nullable
+    public static final DeferredItem<Item> TWISTED_BOAT = ArchitectsPaletteCompat.isLoaded()
+            ? ITEMS.register("twisted_boat", () -> new BoatItem(false, ModBoatTypes.TWISTED.getValue(), new Item.Properties().stacksTo(1)))
+            : null;
+    @Nullable
+    public static final DeferredItem<Item> TWISTED_CHEST_BOAT = ArchitectsPaletteCompat.isLoaded()
+            ? ITEMS.register("twisted_chest_boat", () -> new BoatItem(true, ModBoatTypes.TWISTED.getValue(), new Item.Properties().stacksTo(1)))
+            : null;
 
     public static final Map<DyeColor, DeferredItem<BlockItem>> WOOL_STAIRS = new EnumMap<>(DyeColor.class);
     public static final Map<DyeColor, DeferredItem<BlockItem>> WOOL_SLABS = new EnumMap<>(DyeColor.class);

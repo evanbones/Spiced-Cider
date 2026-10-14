@@ -8,16 +8,17 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "pattern": [
-    "#",
-    "#"
+    " # ",
+    "# #",
+    " # "
   ],
   "key": {
     "#": {
-      "item": "caverns_and_chasms:sugilite_brick_slab"
+      "item": "caverns_and_chasms:sugilite_bricks"
     }
   },
   "result": {
     "id": "caverns_and_chasms:chiseled_sugilite_bricks",
-    "count": 1
+    "count": 4
   }
 }

@@ -2,16 +2,17 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "pattern": [
-    "#",
-    "#"
+    " # ",
+    "# #",
+    " # "
   ],
   "key": {
     "#": {
-      "item": "spicedcider:dullstone_brick_slab"
+      "item": "spicedcider:dullstone_bricks"
     }
   },
   "result": {
     "id": "spicedcider:chiseled_dullstone",
-    "count": 1
+    "count": 4
   }
 }

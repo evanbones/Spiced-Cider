@@ -1,0 +1,24 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "brick_and_mortar"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    " # ",
+    "# #",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "brick_and_mortar:burnt_purpur_bricks"
+    }
+  },
+  "result": {
+    "id": "brick_and_mortar:chiseled_burnt_purpur",
+    "count": 4
+  }
+}

@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_glowstone_brick_slab": {
+    "has_glowstone_bricks": {
       "conditions": {
         "items": [
           {
-            "items": "spicedcider:glowstone_brick_slab"
+            "items": "spicedcider:glowstone_bricks"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_glowstone_brick_slab"
+      "has_glowstone_bricks"
     ]
   ],
   "rewards": {

@@ -13,6 +13,7 @@ import com.evandev.spicedcider.registry.*;
 import com.evandev.spicedcider.resource.ResourceBaker;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.Sheets;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.packs.FilePackResources;
 import net.minecraft.server.packs.PackLocationInfo;
@@ -88,6 +89,9 @@ public class ClientModEvents {
         event.enqueueWork(() -> {
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.TEMPORARY_COBWEB.get(), RenderType.cutout());
             ClientOffsetCache.install();
+            if (ModBlocks.TWISTED_SIGN != null) {
+                Sheets.addWoodType(ModWoodTypes.TWISTED);
+            }
         });
     }
 

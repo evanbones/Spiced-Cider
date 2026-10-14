@@ -3,15 +3,16 @@
   "category": "building",
   "key": {
     "#": {
-      "item": "spicedcider:glowstone_brick_slab"
+      "item": "spicedcider:glowstone_bricks"
     }
   },
   "pattern": [
-    "#",
-    "#"
+    " # ",
+    "# #",
+    " # "
   ],
   "result": {
-    "count": 1,
+    "count": 4,
     "id": "spicedcider:chiseled_glowstone_bricks"
   }
 }

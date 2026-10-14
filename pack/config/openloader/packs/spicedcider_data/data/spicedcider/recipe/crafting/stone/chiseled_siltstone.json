@@ -8,16 +8,17 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "pattern": [
-    "#",
-    "#"
+    " # ",
+    "# #",
+    " # "
   ],
   "key": {
     "#": {
-      "item": "nomansland:siltstone_brick_slab"
+      "item": "nomansland:siltstone_bricks"
     }
   },
   "result": {
     "id": "nomansland:chiseled_siltstone",
-    "count": 1
+    "count": 4
   }
 }

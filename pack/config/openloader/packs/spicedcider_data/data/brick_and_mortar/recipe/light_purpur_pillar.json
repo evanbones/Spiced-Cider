@@ -1,0 +1,23 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "brick_and_mortar"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "#",
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "brick_and_mortar:light_purpur_block"
+    }
+  },
+  "result": {
+    "id": "brick_and_mortar:light_purpur_pillar",
+    "count": 2
+  }
+}

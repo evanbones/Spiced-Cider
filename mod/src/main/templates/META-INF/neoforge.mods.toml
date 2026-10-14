@@ -13,6 +13,8 @@ credits = "${mod_credits}"
 authors = "${mod_author}"
 description = '''${mod_description}'''
 
+enumExtensions = "META-INF/enumextensions.json"
+
 [[mixins]]
 config = "${mod_id}.mixins.json"
 
@@ -261,3 +263,10 @@ modId = "abundant_atmosphere"
 type = "optional"
 ordering = "AFTER"
 side = "BOTH"
+
+[[dependencies.${ mod_id }]]
+modId = "lodged"
+type = "optional"
+versionRange = "*"
+ordering = "AFTER"
+side = "CLIENT"

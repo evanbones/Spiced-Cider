@@ -2819,80 +2819,6 @@
   "tool": "pickaxe"
  },
  {
-  "id": "spicedcider:mossy_siltstone_bricks",
-  "kind": "CUBE",
-  "mod": "nomansland",
-  "properties": "nomansland:siltstone",
-  "parent": null,
-  "side": "spicedcider:block/mossy_siltstone_bricks",
-  "top": "spicedcider:block/mossy_siltstone_bricks",
-  "bottom": "spicedcider:block/mossy_siltstone_bricks",
-  "craft": "MOSSY",
-  "craftFrom": "nomansland:siltstone_bricks",
-  "cut": [],
-  "requires": [
-   "nomansland"
-  ],
-  "tool": "pickaxe"
- },
- {
-  "id": "spicedcider:mossy_siltstone_brick_stairs",
-  "kind": "STAIRS",
-  "mod": "nomansland",
-  "properties": "nomansland:siltstone",
-  "parent": "spicedcider:mossy_siltstone_bricks",
-  "side": "spicedcider:block/mossy_siltstone_bricks",
-  "top": "spicedcider:block/mossy_siltstone_bricks",
-  "bottom": "spicedcider:block/mossy_siltstone_bricks",
-  "craft": "SHAPE",
-  "craftFrom": "spicedcider:mossy_siltstone_bricks",
-  "cut": [
-   "spicedcider:mossy_siltstone_bricks"
-  ],
-  "requires": [
-   "nomansland"
-  ],
-  "tool": "pickaxe"
- },
- {
-  "id": "spicedcider:mossy_siltstone_brick_slab",
-  "kind": "SLAB",
-  "mod": "nomansland",
-  "properties": "nomansland:siltstone",
-  "parent": "spicedcider:mossy_siltstone_bricks",
-  "side": "spicedcider:block/mossy_siltstone_bricks",
-  "top": "spicedcider:block/mossy_siltstone_bricks",
-  "bottom": "spicedcider:block/mossy_siltstone_bricks",
-  "craft": "SHAPE",
-  "craftFrom": "spicedcider:mossy_siltstone_bricks",
-  "cut": [
-   "spicedcider:mossy_siltstone_bricks"
-  ],
-  "requires": [
-   "nomansland"
-  ],
-  "tool": "pickaxe"
- },
- {
-  "id": "spicedcider:mossy_siltstone_brick_wall",
-  "kind": "WALL",
-  "mod": "nomansland",
-  "properties": "nomansland:siltstone",
-  "parent": "spicedcider:mossy_siltstone_bricks",
-  "side": "spicedcider:block/mossy_siltstone_bricks",
-  "top": "spicedcider:block/mossy_siltstone_bricks",
-  "bottom": "spicedcider:block/mossy_siltstone_bricks",
-  "craft": "SHAPE",
-  "craftFrom": "spicedcider:mossy_siltstone_bricks",
-  "cut": [
-   "spicedcider:mossy_siltstone_bricks"
-  ],
-  "requires": [
-   "nomansland"
-  ],
-  "tool": "pickaxe"
- },
- {
   "id": "spicedcider:cobbled_dimstone",
   "kind": "CUBE",
   "mod": "infernalexp",
@@ -6250,6 +6176,25 @@
   "bottom": "nomansland:block/building/silt_bricks",
   "craft": "SHAPE",
   "craftFrom": "nomansland:silt_bricks",
+  "cut": [
+   "nomansland:silt_bricks"
+  ],
+  "requires": [
+   "nomansland"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:chiseled_silt_bricks",
+  "kind": "CUBE",
+  "mod": "nomansland",
+  "properties": "nomansland:silt_bricks",
+  "parent": null,
+  "side": "spicedcider:block/chiseled_silt_bricks",
+  "top": "spicedcider:block/chiseled_silt_bricks",
+  "bottom": "spicedcider:block/chiseled_silt_bricks",
+  "craft": "NONE",
+  "craftFrom": null,
   "cut": [
    "nomansland:silt_bricks"
   ],

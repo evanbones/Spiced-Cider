@@ -8,16 +8,17 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "pattern": [
-    "#",
-    "#"
+    " # ",
+    "# #",
+    " # "
   ],
   "key": {
     "#": {
-      "item": "quark:myalite_bricks_slab"
+      "item": "quark:myalite_bricks"
     }
   },
   "result": {
     "id": "quark:chiseled_myalite_bricks",
-    "count": 1
+    "count": 4
   }
 }

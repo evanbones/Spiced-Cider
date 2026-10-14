@@ -99,5 +99,47 @@
       "blockbox:red_sandstone_brick_slab"
     ],
     "replace_with": "minecraft:cut_red_sandstone_slab"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "blockbox:golden_door"
+    ],
+    "replace_with": "supplementaries:gold_door"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "blockbox:golden_trapdoor"
+    ],
+    "replace_with": "supplementaries:gold_trapdoor"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "blockbox:iron_plate_pillar"
+    ],
+    "replace_with": "quark:iron_pillar"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "blockbox:granite_brick_wall"
+    ],
+    "replace_with": "stoneworks:granite_brick_wall"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "blockbox:diorite_brick_wall"
+    ],
+    "replace_with": "stoneworks:diorite_brick_wall"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "blockbox:andesite_brick_wall"
+    ],
+    "replace_with": "stoneworks:andesite_brick_wall"
   }
 ]

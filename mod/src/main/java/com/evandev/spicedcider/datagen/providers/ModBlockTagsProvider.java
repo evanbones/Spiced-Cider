@@ -81,5 +81,12 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
             this.tag(BlockTags.WOOL).add(block.get());
             this.tag(BlockTags.DAMPENS_VIBRATIONS).add(block.get());
         });
+
+        if (ModBlocks.TWISTED_SIGN != null) {
+            this.tag(BlockTags.STANDING_SIGNS).addOptional(ModBlocks.TWISTED_SIGN.getId());
+            this.tag(BlockTags.WALL_SIGNS).addOptional(ModBlocks.TWISTED_WALL_SIGN.getId());
+            this.tag(BlockTags.CEILING_HANGING_SIGNS).addOptional(ModBlocks.TWISTED_HANGING_SIGN.getId());
+            this.tag(BlockTags.WALL_HANGING_SIGNS).addOptional(ModBlocks.TWISTED_WALL_HANGING_SIGN.getId());
+        }
     }
 }

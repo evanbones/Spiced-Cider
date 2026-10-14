@@ -8,16 +8,17 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "pattern": [
-    "#",
-    "#"
+    " # ",
+    "# #",
+    " # "
   ],
   "key": {
     "#": {
-      "item": "quark:shale_bricks_slab"
+      "item": "quark:shale_bricks"
     }
   },
   "result": {
     "id": "quark:chiseled_shale_bricks",
-    "count": 1
+    "count": 4
   }
 }

@@ -11,6 +11,7 @@ import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpServer;
 import jdk.jfr.Configuration;
 import jdk.jfr.Recording;
+import net.minecraft.client.CameraType;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.Screenshot;
 import net.minecraft.client.gui.screens.GenericMessageScreen;
@@ -38,6 +39,7 @@ import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -46,6 +48,9 @@ import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.loading.FMLPaths;
 import net.neoforged.neoforge.client.event.ClientTickEvent;
 import net.neoforged.neoforge.client.event.RenderFrameEvent;
+import net.neoforged.neoforge.client.event.sound.PlaySoundSourceEvent;
+import net.minecraft.client.resources.sounds.SoundInstance;
+import net.minecraft.world.item.TooltipFlag;
 import net.neoforged.neoforge.event.GameShuttingDownEvent;
 
 import java.io.IOException;
@@ -76,12 +81,14 @@ import java.util.function.Supplier;
 
 @EventBusSubscriber(modid = SpicedCider.MOD_ID, value = Dist.CLIENT)
 public final class DevBridge {
+    private static final List<JsonObject> SOUNDS = new ArrayList<>();
     private static final String PROPERTY = "spicedcider.devbridge";
     private static final int DEFAULT_PORT = 25599;
     private static final Gson GSON = new GsonBuilder().setPrettyPrinting().serializeNulls().create();
     private static final DateTimeFormatter STAMP = DateTimeFormatter.ofPattern("yyyy-MM-dd_HH.mm.ss");
     private static final FrameStats FRAMES = new FrameStats();
     private static final GameplayDriver DRIVER = new GameplayDriver();
+    private static final Aim AIM = new Aim();
 
     private static HttpServer server;
     private static ExecutorService executor;
@@ -136,12 +143,35 @@ public final class DevBridge {
 
     @SubscribeEvent
     public static void onTickPre(ClientTickEvent.Pre event) {
-        if (server != null) DRIVER.onClientTick();
+        if (server != null) {
+            DRIVER.onClientTick();
+            AIM.onClientTick();
+        }
     }
 
     @SubscribeEvent
     public static void onTick(ClientTickEvent.Post event) {
         if (server != null) FRAMES.onClientTick();
+    }
+
+    @SubscribeEvent
+    public static void onSound(PlaySoundSourceEvent event) {
+        if (server == null) return;
+        SoundInstance sound = event.getSound();
+        if (sound == null || sound.getSound() == null) return;
+        JsonObject entry = new JsonObject();
+        entry.addProperty("sound", sound.getLocation().toString());
+        entry.addProperty("source", sound.getSource().getName());
+        entry.addProperty("pitch", sound.getPitch());
+        entry.addProperty("volume", sound.getVolume());
+        entry.addProperty("x", sound.getX());
+        entry.addProperty("y", sound.getY());
+        entry.addProperty("z", sound.getZ());
+        entry.addProperty("epochMs", System.currentTimeMillis());
+        synchronized (SOUNDS) {
+            SOUNDS.add(entry);
+            if (SOUNDS.size() > 200) SOUNDS.remove(0);
+        }
     }
 
     @SubscribeEvent
@@ -171,12 +201,44 @@ public final class DevBridge {
             return ok();
         });
         routes.put("GET /drive", r -> DRIVER.describe());
+        routes.put("POST /lookat", r -> onClient(() -> AIM.lookAt(Aim.parse(r.query()), r.query().containsKey("lock"))));
+        routes.put("POST /lookat/clear", r -> {
+            AIM.clear();
+            return ok();
+        });
+        routes.put("POST /interact", DevBridge::interact);
+        routes.put("POST /camera", r -> onClient(() -> {
+            String mode = r.query().getOrDefault("mode", "first");
+            CameraType type = switch (mode) {
+                case "back" -> CameraType.THIRD_PERSON_BACK;
+                case "front" -> CameraType.THIRD_PERSON_FRONT;
+                default -> CameraType.FIRST_PERSON;
+            };
+            Minecraft.getInstance().options.setCameraType(type);
+            return ok();
+        }));
         routes.put("GET /items", r -> onClient(DevBridge::items));
         routes.put("GET /itemdata", r -> onClient(DevBridge::itemData));
         routes.put("GET /tabs", r -> onClient(DevBridge::tabContents));
         routes.put("GET /tabcheck", r -> onClient(DevBridge::tabCheck));
         routes.put("GET /emi", r -> DevBridge.emiIndex());
         routes.put("GET /recipes",r -> onClient(() -> recipes(r.query().get("type"))));
+        routes.put("GET /tooltip", r -> onClient(() -> tooltip(r.query().get("advanced") != null)));
+        routes.put("GET /sounds", r -> {
+            JsonArray out = new JsonArray();
+            synchronized (SOUNDS) {
+                SOUNDS.forEach(out::add);
+            }
+            JsonObject result = new JsonObject();
+            result.add("sounds", out);
+            return result;
+        });
+        routes.put("POST /sounds/reset", r -> {
+            synchronized (SOUNDS) {
+                SOUNDS.clear();
+            }
+            return ok();
+        });
         routes.put("GET /blocktexture", r -> onClient(() -> blockTexture(r.query().get("id"))));
         routes.put("POST /join", DevBridge::join);
         routes.put("POST /leave", r -> leave());
@@ -241,6 +303,35 @@ public final class DevBridge {
 
     private static <T> T onClient(Supplier<T> task) throws Exception {
         return Minecraft.getInstance().submit(task).get(60, TimeUnit.SECONDS);
+    }
+
+    private static JsonObject interact(Request request) throws Exception {
+        Map<String, String> query = request.query();
+        boolean sneak = query.containsKey("sneak");
+        String action = query.getOrDefault("action", "use");
+        InteractionHand hand = "off".equals(query.get("hand")) ? InteractionHand.OFF_HAND : InteractionHand.MAIN_HAND;
+        boolean air = !query.containsKey("block") && !query.containsKey("entity") && !query.containsKey("pos");
+        if (sneak) {
+            onClient(() -> {
+                Minecraft.getInstance().options.keyShift.setDown(true);
+                return null;
+            });
+            Thread.sleep(200);
+        }
+        try {
+            String result = onClient(() -> Aim.interact(air ? null : Aim.parse(query), action, hand));
+            JsonObject out = ok();
+            out.addProperty("result", result);
+            return out;
+        } finally {
+            if (sneak) {
+                Thread.sleep(150);
+                onClient(() -> {
+                    Minecraft.getInstance().options.keyShift.setDown(false);
+                    return null;
+                });
+            }
+        }
     }
 
     private static JsonObject ok() {
@@ -315,6 +406,20 @@ public final class DevBridge {
         JsonObject out = new JsonObject();
         out.add("recipes", list);
         return out;
+    }
+
+    private static JsonObject tooltip(boolean advanced) {
+        Minecraft mc = Minecraft.getInstance();
+        if (mc.level == null || mc.player == null) throw new IllegalStateException("Not in a world");
+        ItemStack stack = mc.player.getMainHandItem();
+        JsonArray lines = new JsonArray();
+        for (Component line : stack.getTooltipLines(net.minecraft.world.item.Item.TooltipContext.of(mc.level), mc.player, advanced ? TooltipFlag.ADVANCED : TooltipFlag.NORMAL)) {
+            lines.add(line.getString());
+        }
+        JsonObject result = new JsonObject();
+        result.addProperty("item", BuiltInRegistries.ITEM.getKey(stack.getItem()).toString());
+        result.add("lines", lines);
+        return result;
     }
 
     private static JsonObject blockTexture(String id) {
@@ -796,7 +901,7 @@ public final class DevBridge {
                 flag(request, "forward"), flag(request, "back"), flag(request, "left"), flag(request, "right"),
                 flag(request, "sprint"), flag(request, "jump"), flag(request, "sneak"),
                 flag(request, "attack"), flag(request, "use"), flag(request, "fly"),
-                Float.parseFloat(request.get("yaw", "0")), Float.parseFloat(request.get("pitch", "0")),
+                Float.parseFloat(request.get("yaw", "0")), Float.parseFloat(request.get("pitch", "NaN")),
                 request.getInt("swayTicks", 0), Float.parseFloat(request.get("sway", "0")),
                 Math.round(Double.parseDouble(request.get("seconds", "10")) * 20));
         DRIVER.start(plan);

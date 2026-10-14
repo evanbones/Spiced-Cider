@@ -69,6 +69,10 @@ public class SpicedCiderConfigScreen {
                                 toggle("voxyWorldGenSyncUnloadedChunks", common.voxyWorldGenSyncUnloadedChunks))
                         .optionIf(ModList.get().isLoaded("voxyworldgenv2"),
                                 toggle("voxyWorldGenPersistStats", client.voxyWorldGenPersistStats))
+                        .optionIf(ModList.get().isLoaded("lodged"),
+                                toggle("lodgedHideArrowDepth", client.lodgedHideArrowDepth))
+                        .optionIf(ModList.get().isLoaded("lodged"),
+                                toggle("lodgedHideBleedingRisk", client.lodgedHideBleedingRisk))
                         .build())
                 .category(ConfigCategory.createBuilder()
                         .name(Component.translatable("category.spicedcider.performance"))

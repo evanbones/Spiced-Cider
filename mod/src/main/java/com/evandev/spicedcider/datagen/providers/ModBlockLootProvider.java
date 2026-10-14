@@ -32,6 +32,10 @@ public class ModBlockLootProvider extends BlockLootSubProvider {
             this.add(ModBlocks.POLISHED_GLOWSTONE_SLAB.get(), this::createSlabItemTable);
             this.dropSelf(ModBlocks.POLISHED_GLOWSTONE_WALL.get());
         }
+        if (ModBlocks.TWISTED_SIGN != null) {
+            this.dropSelf(ModBlocks.TWISTED_SIGN.get());
+            this.dropSelf(ModBlocks.TWISTED_HANGING_SIGN.get());
+        }
         ModBlocks.WOOL_STAIRS.values().forEach(block -> this.dropSelf(block.get()));
         ModBlocks.WOOL_SLABS.values().forEach(block -> this.add(block.get(), this::createSlabItemTable));
     }
@@ -49,6 +53,12 @@ public class ModBlockLootProvider extends BlockLootSubProvider {
             blocks.add(ModBlocks.POLISHED_GLOWSTONE_STAIRS.get());
             blocks.add(ModBlocks.POLISHED_GLOWSTONE_SLAB.get());
             blocks.add(ModBlocks.POLISHED_GLOWSTONE_WALL.get());
+        }
+        if (ModBlocks.TWISTED_SIGN != null) {
+            blocks.add(ModBlocks.TWISTED_SIGN.get());
+            blocks.add(ModBlocks.TWISTED_WALL_SIGN.get());
+            blocks.add(ModBlocks.TWISTED_HANGING_SIGN.get());
+            blocks.add(ModBlocks.TWISTED_WALL_HANGING_SIGN.get());
         }
         ModBlocks.WOOL_STAIRS.values().forEach(block -> blocks.add(block.get()));
         ModBlocks.WOOL_SLABS.values().forEach(block -> blocks.add(block.get()));

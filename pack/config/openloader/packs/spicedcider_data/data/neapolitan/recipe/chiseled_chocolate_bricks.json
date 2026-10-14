@@ -1,0 +1,24 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "neapolitan"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    " # ",
+    "# #",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "neapolitan:chocolate_bricks"
+    }
+  },
+  "result": {
+    "id": "neapolitan:chiseled_chocolate_bricks",
+    "count": 4
+  }
+}

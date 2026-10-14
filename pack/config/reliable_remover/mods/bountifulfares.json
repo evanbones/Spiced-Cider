@@ -43,7 +43,8 @@
       "bountifulfares:grassy_dirt",
       "bountifulfares:walnut_stairs",
       "bountifulfares:walnut_slab",
-      "bountifulfares:gristmill"
+      "bountifulfares:gristmill",
+      "bountifulfares:ceramic_trapdoor"
     ]
   },
   {
@@ -80,5 +81,67 @@
       "bountifulfares:cracked_ceramic_tiles"
     ],
     "replace_with": "bountifulfares:ceramic_tiles"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "bountifulfares:ceramic_button"
+    ],
+    "replace_with": "minecraft:stone_button"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "bountifulfares:ceramic_pressure_plate"
+    ],
+    "replace_with": "minecraft:stone_pressure_plate"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "bountifulfares:ceramic_lever"
+    ],
+    "replace_with": "minecraft:lever"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "bountifulfares:ceramic_chest"
+    ],
+    "replace_with": "minecraft:chest"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "bountifulfares:ceramic_door"
+    ]
+  },
+  {
+    "action": "remove",
+    "items": [
+      "bountifulfares:wild_carrots"
+    ],
+    "replace_with": "farmersdelight:wild_carrots"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "bountifulfares:wild_potatoes"
+    ],
+    "replace_with": "farmersdelight:wild_potatoes"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "bountifulfares:wild_beetroots"
+    ],
+    "replace_with": "farmersdelight:wild_beetroots"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "bountifulfares:wild_maize"
+    ],
+    "replace_with": "culturaldelights:wild_corn"
   }
 ]

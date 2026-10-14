@@ -2,16 +2,17 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "pattern": [
-    "#",
-    "#"
+    " # ",
+    "# #",
+    " # "
   ],
   "key": {
     "#": {
-      "item": "minecraft:sulfur_brick_slab"
+      "item": "minecraft:sulfur_bricks"
     }
   },
   "result": {
     "id": "minecraft:chiseled_sulfur",
-    "count": 1
+    "count": 4
   }
 }

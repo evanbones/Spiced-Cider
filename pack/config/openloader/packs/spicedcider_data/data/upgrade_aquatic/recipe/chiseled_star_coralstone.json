@@ -1,0 +1,24 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "upgrade_aquatic"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    " # ",
+    "# #",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "upgrade_aquatic:star_coralstone"
+    }
+  },
+  "result": {
+    "id": "upgrade_aquatic:chiseled_star_coralstone",
+    "count": 4
+  }
+}

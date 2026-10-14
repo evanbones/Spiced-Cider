@@ -1,0 +1,24 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "infernalexp"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    " # ",
+    "# #",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "infernalexp:shimmer_stone_bricks"
+    }
+  },
+  "result": {
+    "id": "infernalexp:chiseled_shimmer_stone_bricks",
+    "count": 4
+  }
+}

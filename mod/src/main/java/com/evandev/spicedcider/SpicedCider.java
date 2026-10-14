@@ -13,14 +13,19 @@ import com.evandev.spicedcider.namingunconvention.RandomNameGenerator;
 import com.evandev.spicedcider.networking.ChunkOffsetsPayload;
 import com.evandev.spicedcider.networking.VoidTrailPayload;
 import com.evandev.spicedcider.registry.*;
+import com.evandev.spicedcider.util.ItemAbilityItemsCache;
 import com.evandev.spicedcider.voidwater.client.ClientVoidTrails;
+import net.minecraft.core.dispenser.BoatDispenseItemBehavior;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.vehicle.Boat;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.DispenserBlock;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -29,8 +34,10 @@ import net.neoforged.fml.ModList;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
+import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.fml.loading.FMLEnvironment;
 import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.BlockEntityTypeAddBlocksEvent;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.TagsUpdatedEvent;
 import net.neoforged.neoforge.event.entity.EntityAttributeModificationEvent;
@@ -73,6 +80,8 @@ public class SpicedCider {
         ModDataComponents.DATA_COMPONENTS.register(modEventBus);
 
         modEventBus.addListener(this::registerPayloads);
+        modEventBus.addListener(SpicedCider::addSignBlocks);
+        modEventBus.addListener(SpicedCider::commonSetup);
         NeoForge.EVENT_BUS.addListener(this::onTagsUpdated);
 
         if (SpicedCiderConfig.STARTUP.blockBoxWoodVariants.get()
@@ -83,6 +92,21 @@ public class SpicedCider {
         }
 
         LogReconfiguration.run();
+    }
+
+    private static void addSignBlocks(BlockEntityTypeAddBlocksEvent event) {
+        if (ModBlocks.TWISTED_SIGN == null) return;
+        event.modify(BlockEntityType.SIGN, ModBlocks.TWISTED_SIGN.get(), ModBlocks.TWISTED_WALL_SIGN.get());
+        event.modify(BlockEntityType.HANGING_SIGN, ModBlocks.TWISTED_HANGING_SIGN.get(), ModBlocks.TWISTED_WALL_HANGING_SIGN.get());
+    }
+
+    private static void commonSetup(FMLCommonSetupEvent event) {
+        if (ModItems.TWISTED_BOAT == null) return;
+        event.enqueueWork(() -> {
+            Boat.Type twisted = ModBoatTypes.TWISTED.getValue();
+            DispenserBlock.registerBehavior(ModItems.TWISTED_BOAT.get(), new BoatDispenseItemBehavior(twisted));
+            DispenserBlock.registerBehavior(ModItems.TWISTED_CHEST_BOAT.get(), new BoatDispenseItemBehavior(twisted, true));
+        });
     }
 
     @SubscribeEvent
@@ -103,6 +127,14 @@ public class SpicedCider {
             }
             event.insertAfter(new ItemStack(Items.FLINT_AND_STEEL), new ItemStack(ModItems.FIRE_STRIKER.get()), vis);
             event.insertAfter(new ItemStack(Items.LEAD), new ItemStack(ModItems.RUBBER_CABLE.get()), vis);
+            if (ModItems.TWISTED_BOAT != null) {
+                event.insertAfter(new ItemStack(Items.BAMBOO_CHEST_RAFT), new ItemStack(ModItems.TWISTED_BOAT.get()), vis);
+                event.insertAfter(new ItemStack(ModItems.TWISTED_BOAT.get()), new ItemStack(ModItems.TWISTED_CHEST_BOAT.get()), vis);
+            }
+        }
+        if (event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS && ModItems.TWISTED_SIGN != null) {
+            event.insertAfter(new ItemStack(Items.WARPED_HANGING_SIGN), new ItemStack(ModItems.TWISTED_SIGN.get()), vis);
+            event.insertAfter(new ItemStack(ModItems.TWISTED_SIGN.get()), new ItemStack(ModItems.TWISTED_HANGING_SIGN.get()), vis);
         }
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.insertAfter(new ItemStack(Items.IRON_BLOCK), new ItemStack(ModItems.CAST_IRON_BLOCK.get()), vis);
@@ -163,5 +195,6 @@ public class SpicedCider {
 
     private void onTagsUpdated(TagsUpdatedEvent event) {
         SupportOffsets.onTagsUpdated();
+        ItemAbilityItemsCache.clear();
     }
 }

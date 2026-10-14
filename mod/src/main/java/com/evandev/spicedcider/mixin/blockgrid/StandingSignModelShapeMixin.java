@@ -22,15 +22,15 @@ public class StandingSignModelShapeMixin {
     @Unique
     private static final double spicedcider$PIXEL_CENTER = 8.0D;
     @Unique
-    private static final double spicedcider$POST_HALF = 1.0D;
+    private static final double spicedcider$POST_HALF = 2.0D / 3.0D;
     @Unique
-    private static final double spicedcider$POST_TOP = 7.0D;
+    private static final double spicedcider$POST_TOP = 28.0D / 3.0D;
     @Unique
     private static final double spicedcider$BOARD_HALF_WIDTH = 8.0D;
     @Unique
-    private static final double spicedcider$BOARD_HALF_DEPTH = 1.0D;
+    private static final double spicedcider$BOARD_HALF_DEPTH = 2.0D / 3.0D;
     @Unique
-    private static final double spicedcider$BOARD_TOP = 16.0D;
+    private static final double spicedcider$BOARD_TOP = 52.0D / 3.0D;
 
     @Unique
     private static final VoxelShape[] spicedcider$SHAPES = spicedcider$buildShapes();

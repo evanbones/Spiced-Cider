@@ -8,16 +8,17 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "pattern": [
-    "#",
-    "#"
+    " # ",
+    "# #",
+    " # "
   ],
   "key": {
     "#": {
-      "item": "stoneworks:granite_brick_slab"
+      "item": "stoneworks:granite_bricks"
     }
   },
   "result": {
     "id": "stoneworks:chiseled_granite",
-    "count": 1
+    "count": 4
   }
 }

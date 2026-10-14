@@ -1,0 +1,19 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "minecraft:sulfur"
+    }
+  ],
+  "processing_time": 250,
+  "results": [
+    {
+      "id": "spelunkery:sulfur",
+      "count": 2
+    },
+    {
+      "id": "spelunkery:sulfur",
+      "chance": 0.5
+    }
+  ]
+}

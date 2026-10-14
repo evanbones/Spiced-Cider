@@ -8,16 +8,17 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "pattern": [
-    "#",
-    "#"
+    " # ",
+    "# #",
+    " # "
   ],
   "key": {
     "#": {
-      "item": "minecraft:end_stone_brick_slab"
+      "item": "minecraft:end_stone_bricks"
     }
   },
   "result": {
     "id": "stoneworks:chiseled_end_stone",
-    "count": 1
+    "count": 4
   }
 }

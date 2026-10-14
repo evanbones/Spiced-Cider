@@ -11,6 +11,8 @@
       "architects_palette:cerebral_tile_vertical_slab",
       "architects_palette:cerebral_tiles",
       "architects_palette:cerebral_block",
+      "architects_palette:cerebral_pillar",
+      "architects_palette:cerebral_plate",
       "architects_palette:oracle_vertical_slab",
       "architects_palette:oracle_tile_vertical_slab",
       "architects_palette:dark_oracle_brick_vertical_slab",
@@ -393,5 +395,33 @@
       "architects_palette:hadaline_brick_vertical_slab",
       "architects_palette:hadaline_tile_vertical_slab"
     ]
+  },
+  {
+    "action": "remove",
+    "items": [
+      "architects_palette:scute_block"
+    ],
+    "replace_with": "upgrade_aquatic:scute_block"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "architects_palette:basalt_tile_slab"
+    ],
+    "replace_with": "stoneworks:basalt_tile_slab"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "architects_palette:basalt_tile_stairs"
+    ],
+    "replace_with": "stoneworks:basalt_tile_stairs"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "architects_palette:basalt_tile_wall"
+    ],
+    "replace_with": "stoneworks:basalt_tile_wall"
   }
 ]

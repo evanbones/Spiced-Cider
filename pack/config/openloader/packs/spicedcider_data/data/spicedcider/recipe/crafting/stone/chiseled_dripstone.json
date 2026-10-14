@@ -12,16 +12,17 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "pattern": [
-    "#",
-    "#"
+    " # ",
+    "# #",
+    " # "
   ],
   "key": {
     "#": {
-      "item": "caverns_and_chasms:dripstone_brick_slab"
+      "item": "caverns_and_chasms:dripstone_bricks"
     }
   },
   "result": {
     "id": "architects_palette:chiseled_dripstone",
-    "count": 1
+    "count": 4
   }
 }

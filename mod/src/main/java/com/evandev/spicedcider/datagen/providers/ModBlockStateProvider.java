@@ -1,6 +1,7 @@
 package com.evandev.spicedcider.datagen.providers;
 
 import com.evandev.spicedcider.SpicedCider;
+import com.evandev.spicedcider.compat.architectspalette.ArchitectsPaletteCompat;
 import com.evandev.spicedcider.compat.infernalexp.InfernalExpansionCompat;
 import com.evandev.spicedcider.registry.ModBlocks;
 import net.minecraft.data.PackOutput;
@@ -43,6 +44,13 @@ public class ModBlockStateProvider extends BlockStateProvider {
             simpleBlockItem(ModBlocks.POLISHED_GLOWSTONE_STAIRS.get(), new ModelFile.UncheckedModelFile(modLoc("block/polished_glowstone_stairs")));
             simpleBlockItem(ModBlocks.POLISHED_GLOWSTONE_SLAB.get(), new ModelFile.UncheckedModelFile(modLoc("block/polished_glowstone_slab")));
             itemModels().wallInventory("polished_glowstone_wall", polished);
+        }
+
+        if (ModBlocks.TWISTED_SIGN != null) {
+            ResourceLocation planks = ResourceLocation.fromNamespaceAndPath(ArchitectsPaletteCompat.MOD_ID, "block/twisted_planks");
+            ResourceLocation strippedLog = ResourceLocation.fromNamespaceAndPath(ArchitectsPaletteCompat.MOD_ID, "block/stripped_twisted_log");
+            signBlock(ModBlocks.TWISTED_SIGN.get(), ModBlocks.TWISTED_WALL_SIGN.get(), planks);
+            hangingSignBlock(ModBlocks.TWISTED_HANGING_SIGN.get(), ModBlocks.TWISTED_WALL_HANGING_SIGN.get(), strippedLog);
         }
 
         for (DyeColor color : DyeColor.values()) {

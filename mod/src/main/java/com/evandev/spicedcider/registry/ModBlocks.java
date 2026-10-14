@@ -1,6 +1,7 @@
 package com.evandev.spicedcider.registry;
 
 import com.evandev.spicedcider.SpicedCider;
+import com.evandev.spicedcider.compat.architectspalette.ArchitectsPaletteCompat;
 import com.evandev.spicedcider.compat.infernalexp.InfernalExpansionCompat;
 import com.evandev.spicedcider.content.block.TemporaryCobwebBlock;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -8,11 +9,16 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.CeilingHangingSignBlock;
 import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.StairBlock;
+import net.minecraft.world.level.block.StandingSignBlock;
 import net.minecraft.world.level.block.WallBlock;
+import net.minecraft.world.level.block.WallHangingSignBlock;
+import net.minecraft.world.level.block.WallSignBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.material.MapColor;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import org.jetbrains.annotations.Nullable;
@@ -57,6 +63,27 @@ public class ModBlocks {
     @Nullable
     public static final DeferredBlock<WallBlock> POLISHED_GLOWSTONE_WALL = InfernalExpansionCompat.isLoaded()
             ? BLOCKS.register("polished_glowstone_wall", () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(InfernalExpansionCompat.polishedGlowstone()).forceSolidOn()))
+            : null;
+
+    @Nullable
+    public static final DeferredBlock<StandingSignBlock> TWISTED_SIGN = ArchitectsPaletteCompat.isLoaded()
+            ? BLOCKS.register("twisted_sign", () -> new StandingSignBlock(ModWoodTypes.TWISTED,
+            BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SIGN).mapColor(MapColor.COLOR_PURPLE)))
+            : null;
+    @Nullable
+    public static final DeferredBlock<WallSignBlock> TWISTED_WALL_SIGN = ArchitectsPaletteCompat.isLoaded()
+            ? BLOCKS.register("twisted_wall_sign", () -> new WallSignBlock(ModWoodTypes.TWISTED,
+            BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WALL_SIGN).mapColor(MapColor.COLOR_PURPLE).dropsLike(TWISTED_SIGN.get())))
+            : null;
+    @Nullable
+    public static final DeferredBlock<CeilingHangingSignBlock> TWISTED_HANGING_SIGN = ArchitectsPaletteCompat.isLoaded()
+            ? BLOCKS.register("twisted_hanging_sign", () -> new CeilingHangingSignBlock(ModWoodTypes.TWISTED,
+            BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_HANGING_SIGN).mapColor(MapColor.COLOR_PURPLE)))
+            : null;
+    @Nullable
+    public static final DeferredBlock<WallHangingSignBlock> TWISTED_WALL_HANGING_SIGN = ArchitectsPaletteCompat.isLoaded()
+            ? BLOCKS.register("twisted_wall_hanging_sign", () -> new WallHangingSignBlock(ModWoodTypes.TWISTED,
+            BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WALL_HANGING_SIGN).mapColor(MapColor.COLOR_PURPLE).dropsLike(TWISTED_HANGING_SIGN.get())))
             : null;
 
     public static final Map<DyeColor, DeferredBlock<StairBlock>> WOOL_STAIRS = new EnumMap<>(DyeColor.class);

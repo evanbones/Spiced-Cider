@@ -37,6 +37,12 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent("cast_iron_block", modLoc("block/cast_iron_block"));
         basicItem(ModItems.TALLOW.get());
         withExistingParent("tallow_block", modLoc("block/tallow_block"));
+        if (ModItems.TWISTED_SIGN != null) {
+            basicItem(ModItems.TWISTED_SIGN.get());
+            basicItem(ModItems.TWISTED_HANGING_SIGN.get());
+            basicItem(ModItems.TWISTED_BOAT.get());
+            basicItem(ModItems.TWISTED_CHEST_BOAT.get());
+        }
     }
 
     public @NotNull ItemModelBuilder handheldItem(@NotNull Item item) {

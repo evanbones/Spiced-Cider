@@ -1,0 +1,24 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "autumnity"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    " # ",
+    "# #",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "autumnity:snail_shell_bricks"
+    }
+  },
+  "result": {
+    "id": "autumnity:chiseled_snail_shell_bricks",
+    "count": 4
+  }
+}

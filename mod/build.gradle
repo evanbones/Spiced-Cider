@@ -252,7 +252,7 @@ neoForge {
 
         data {
             data()
-            programArguments.addAll '--mod', project.mod_id, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath(), '--existing-mod', 'infernalexp'
+            programArguments.addAll '--mod', project.mod_id, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath(), '--existing-mod', 'infernalexp', '--existing-mod', 'architects_palette'
         }
     }
 
@@ -336,6 +336,13 @@ dependencies {
     compileOnly "maven.modrinth:modernfix:7Jy58lnT"
 
     compileOnly fileTree("../pack/mods") { include "continuity-*.jar" }
+    compileOnly "maven.modrinth:a1llHwl4:ZyjDScTQ"
+
+    // Architect's Palette
+    runtimeOnly "maven.modrinth:architects-palette:mfYFPWxH"
+
+    // Architectury
+    compileOnly "dev.architectury:architectury-neoforge:13.0.11"
 
     // Reconnectible Chains
     compileOnly "maven.modrinth:reconnectible-chains:2.2.5-1.21.1-neoforge"
@@ -383,6 +390,9 @@ dependencies {
 
     // Bountiful Fares
     compileOnly "maven.modrinth:bountiful-fares:3EC8C1GU"
+
+    // Lodged
+    compileOnly "maven.modrinth:lodged:Ikx9eamm"
 
     // Alloyed
     runtimeOnly "maven.modrinth:create-alloyed:3.0.11+1.21.1-neoforge"

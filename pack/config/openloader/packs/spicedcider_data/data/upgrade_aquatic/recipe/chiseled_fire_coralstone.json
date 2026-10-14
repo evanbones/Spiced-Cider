@@ -1,0 +1,24 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "upgrade_aquatic"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    " # ",
+    "# #",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "upgrade_aquatic:fire_coralstone"
+    }
+  },
+  "result": {
+    "id": "upgrade_aquatic:chiseled_fire_coralstone",
+    "count": 4
+  }
+}

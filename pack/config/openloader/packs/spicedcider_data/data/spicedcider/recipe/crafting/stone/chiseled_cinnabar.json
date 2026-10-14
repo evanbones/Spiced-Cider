@@ -2,16 +2,17 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "pattern": [
-    "#",
-    "#"
+    " # ",
+    "# #",
+    " # "
   ],
   "key": {
     "#": {
-      "item": "minecraft:cinnabar_brick_slab"
+      "item": "minecraft:cinnabar_bricks"
     }
   },
   "result": {
     "id": "minecraft:chiseled_cinnabar",
-    "count": 1
+    "count": 4
   }
 }

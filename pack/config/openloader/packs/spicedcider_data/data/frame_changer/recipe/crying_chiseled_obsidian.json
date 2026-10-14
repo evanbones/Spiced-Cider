@@ -1,0 +1,24 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "frame_changer"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    " # ",
+    "# #",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "frame_changer:crying_obsidian_bricks"
+    }
+  },
+  "result": {
+    "id": "frame_changer:crying_chiseled_obsidian",
+    "count": 4
+  }
+}

@@ -2,16 +2,17 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "pattern": [
-    "#",
-    "#"
+    " # ",
+    "# #",
+    " # "
   ],
   "key": {
     "#": {
-      "item": "minecraft:polished_blackstone_brick_slab"
+      "item": "minecraft:polished_blackstone_bricks"
     }
   },
   "result": {
     "id": "minecraft:chiseled_polished_blackstone",
-    "count": 1
+    "count": 4
   }
 }

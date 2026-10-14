@@ -13,6 +13,11 @@ public class SpicedCiderMixinCanceller implements MixinCanceller {
             return true;
         }
 
+        if ("io.wispforest.owo.mixin.ext.ItemStackMixin".equals(mixinClassName)
+                || "io.wispforest.owo.mixin.ext.ComponentMapImplMixin".equals(mixinClassName)) {
+            return true;
+        }
+
         return false;
     }
 }

@@ -1,0 +1,61 @@
+[
+  {
+    "action": "remove_recipe",
+    "id": [
+      "abundant_atmosphere:wood/red_bamboo/red_bamboo_mosaic",
+      "bountifulfares:acacia_pickets",
+      "bountifulfares:bamboo_pickets",
+      "bountifulfares:birch_pickets",
+      "bountifulfares:cherry_pickets",
+      "bountifulfares:crimson_pickets",
+      "bountifulfares:dark_oak_pickets",
+      "bountifulfares:hoary_pickets",
+      "bountifulfares:jungle_pickets",
+      "bountifulfares:mangrove_pickets",
+      "bountifulfares:maple_pickets",
+      "bountifulfares:oak_pickets",
+      "bountifulfares:pine_pickets",
+      "bountifulfares:spruce_pickets",
+      "bountifulfares:walnut_pickets",
+      "bountifulfares:warped_pickets",
+      "bountifulfares:willow_pickets",
+      "create:crafting/kinetics/turntable",
+      "everycomp:bf/abundant_atmosphere/ashroot_pickets",
+      "everycomp:bf/abundant_atmosphere/gourdrot_pickets",
+      "everycomp:bf/abundant_atmosphere/red_bamboo_pickets",
+      "everycomp:bf/architects_palette/twisted_pickets",
+      "everycomp:bf/caverns_and_chasms/azalea_pickets",
+      "everycomp:bf/culturaldelights/beanstalk_pickets",
+      "everycomp:bf/environmental/wisteria_pickets",
+      "everycomp:bf/infernalexp/luminous_pickets",
+      "everycomp:bf/minecraft/pale_oak_pickets",
+      "everycomp:bf/mynethersdelight/powdery_pickets",
+      "everycomp:bf/newworld/fir_pickets",
+      "everycomp:bf/upgrade_aquatic/driftwood_pickets",
+      "horseman:copper_horn",
+      "minecraft:bamboo_mosaic",
+      "mynethersdelight:crafting/powdery_mosaic",
+      "supplementaries:stool_from_feather_block",
+      "tide:wooden_crate"
+    ]
+  },
+  {
+    "action": "replace_input",
+    "filter": {
+      "id": "bountifulfares:candied_apple"
+    },
+    "target": "#bountifulfares:sugar_ingredients",
+    "replacement": "minecraft:sugar"
+  },
+  {
+    "action": "remove_recipe",
+    "id": [
+      "caverns_and_chasms:copper_chain",
+      "caverns_and_chasms:depth_gauge",
+      "caverns_and_chasms:toolbox",
+      "caverns_and_chasms:tuning_fork",
+      "minecraft:copper_bars",
+      "supplementaries:altimeter"
+    ]
+  }
+]

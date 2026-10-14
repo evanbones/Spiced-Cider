@@ -1,14 +1,17 @@
 package com.evandev.spicedcider.datagen.providers;
 
 import com.evandev.spicedcider.SpicedCider;
+import com.evandev.spicedcider.compat.architectspalette.ArchitectsPaletteCompat;
 import com.evandev.spicedcider.compat.infernalexp.InfernalExpansionCompat;
 import com.evandev.spicedcider.compat.tide.TideCompat;
 import com.evandev.spicedcider.recipe.RenameRecipe;
 import com.evandev.spicedcider.registry.ModBlocks;
 import com.evandev.spicedcider.registry.ModItems;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Items;
@@ -66,7 +69,13 @@ public class ModRecipeProvider extends RecipeProvider {
                 .save(output);
         slab(output, RecipeCategory.BUILDING_BLOCKS, glowstoneBrickSlab, glowstoneBricks);
         wall(output, RecipeCategory.DECORATIONS, glowstoneBrickWall, glowstoneBricks);
-        chiseled(output, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_GLOWSTONE_BRICKS.get(), glowstoneBrickSlab);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_GLOWSTONE_BRICKS.get(), 4)
+                .pattern(" # ")
+                .pattern("# #")
+                .pattern(" # ")
+                .define('#', glowstoneBricks)
+                .unlockedBy(getHasName(glowstoneBricks), has(glowstoneBricks))
+                .save(output);
         stonecutting(output, RecipeCategory.BUILDING_BLOCKS, glowstoneBrickStairs, glowstoneBricks, 1);
         stonecutting(output, RecipeCategory.BUILDING_BLOCKS, glowstoneBrickSlab, glowstoneBricks, 2);
         stonecutting(output, RecipeCategory.DECORATIONS, glowstoneBrickWall, glowstoneBricks, 1);
@@ -108,6 +117,18 @@ public class ModRecipeProvider extends RecipeProvider {
                 stonecutting(infernalOutput, RecipeCategory.BUILDING_BLOCKS, slab, base, 2);
                 stonecutting(infernalOutput, RecipeCategory.DECORATIONS, wall, base, 1);
             }
+        }
+
+        if (ModItems.TWISTED_SIGN != null) {
+            RecipeOutput paletteOutput = output.withConditions(new ModLoadedCondition(ArchitectsPaletteCompat.MOD_ID));
+            Block planks = ArchitectsPaletteCompat.twistedPlanks();
+            Block strippedLog = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath(ArchitectsPaletteCompat.MOD_ID, "stripped_twisted_log"));
+            signBuilder(ModItems.TWISTED_SIGN.get(), Ingredient.of(planks))
+                    .unlockedBy(getHasName(planks), has(planks))
+                    .save(paletteOutput);
+            hangingSign(paletteOutput, ModItems.TWISTED_HANGING_SIGN.get(), strippedLog);
+            woodenBoat(paletteOutput, ModItems.TWISTED_BOAT.get(), planks);
+            chestBoat(paletteOutput, ModItems.TWISTED_CHEST_BOAT.get(), ModItems.TWISTED_BOAT.get());
         }
 
         for (DyeColor color : DyeColor.values()) {

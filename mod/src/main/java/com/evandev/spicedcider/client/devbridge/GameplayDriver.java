@@ -64,7 +64,7 @@ public final class GameplayDriver {
             player.onUpdateAbilities();
         }
         player.setYRot(player.getYRot() + yaw);
-        player.setXRot(current.pitch());
+        if (!Float.isNaN(current.pitch())) player.setXRot(current.pitch());
     }
 
     public JsonObject describe() {

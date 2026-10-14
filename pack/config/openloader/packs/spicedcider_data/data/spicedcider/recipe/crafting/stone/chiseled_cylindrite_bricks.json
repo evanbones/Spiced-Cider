@@ -8,16 +8,17 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "pattern": [
-    "#",
-    "#"
+    " # ",
+    "# #",
+    " # "
   ],
   "key": {
     "#": {
-      "item": "caverns_and_chasms:cylindrite_brick_slab"
+      "item": "caverns_and_chasms:cylindrite_bricks"
     }
   },
   "result": {
     "id": "caverns_and_chasms:chiseled_cylindrite_bricks",
-    "count": 1
+    "count": 4
   }
 }

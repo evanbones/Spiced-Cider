@@ -2,16 +2,17 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "pattern": [
-    "#",
-    "#"
+    " # ",
+    "# #",
+    " # "
   ],
   "key": {
     "#": {
-      "item": "minecraft:tuff_brick_slab"
+      "item": "minecraft:tuff_bricks"
     }
   },
   "result": {
     "id": "minecraft:chiseled_tuff",
-    "count": 1
+    "count": 4
   }
 }

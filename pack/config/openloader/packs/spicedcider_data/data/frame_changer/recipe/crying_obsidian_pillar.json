@@ -1,0 +1,23 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "frame_changer"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "#",
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "frame_changer:crying_polished_obsidian"
+    }
+  },
+  "result": {
+    "id": "frame_changer:crying_obsidian_pillar",
+    "count": 2
+  }
+}

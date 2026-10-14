@@ -20,11 +20,11 @@ import java.util.Map;
 @Mixin(WallSignBlock.class)
 public class WallSignModelShapeMixin {
     @Unique
-    private static final double spicedcider$THICKNESS = 2.0D;
+    private static final double spicedcider$THICKNESS = 5.0D / 3.0D;
     @Unique
-    private static final double spicedcider$BOTTOM = 4.0D;
+    private static final double spicedcider$BOTTOM = 13.0D / 3.0D;
     @Unique
-    private static final double spicedcider$TOP = 13.0D;
+    private static final double spicedcider$TOP = 37.0D / 3.0D;
     @Unique
     private static final double spicedcider$BLOCK = 16.0D;
 

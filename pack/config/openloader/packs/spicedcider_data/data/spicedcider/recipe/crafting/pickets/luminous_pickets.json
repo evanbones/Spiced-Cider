@@ -1,0 +1,37 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "everycomp"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "S#S"
+  ],
+  "key": {
+    "#": {
+      "ingredient": {
+        "item": "minecraft:oak_planks"
+      },
+      "block_type": "minecraft:wood_type",
+      "from": "minecraft:oak",
+      "to": "infernalexp:luminous",
+      "type": "moonlight:block_type_swap"
+    },
+    "S": {
+      "ingredient": {
+        "item": "minecraft:stick"
+      },
+      "block_type": "minecraft:wood_type",
+      "from": "minecraft:oak",
+      "to": "infernalexp:luminous",
+      "type": "moonlight:block_type_swap"
+    }
+  },
+  "result": {
+    "id": "everycomp:bf/infernalexp/luminous_pickets",
+    "count": 4
+  }
+}

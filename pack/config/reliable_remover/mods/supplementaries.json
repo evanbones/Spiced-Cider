@@ -91,5 +91,12 @@
       "supplementaries:blackstone_tile_wall"
     ],
     "replace_with": "stoneworks:blackstone_tile_wall"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "supplementaries:altimeter"
+    ],
+    "replace_with": "spelunkery:depth_gauge"
   }
 ]

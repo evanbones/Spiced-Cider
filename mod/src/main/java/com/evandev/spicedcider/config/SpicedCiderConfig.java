@@ -280,6 +280,8 @@ public class SpicedCiderConfig {
 
         public final ModConfigSpec.BooleanValue sodiumLightingParityFix;
         public final ModConfigSpec.BooleanValue voxyWorldGenPersistStats;
+        public final ModConfigSpec.BooleanValue lodgedHideArrowDepth;
+        public final ModConfigSpec.BooleanValue lodgedHideBleedingRisk;
 
         public Client(ModConfigSpec.Builder builder) {
             builder.push("compat");
@@ -293,6 +295,16 @@ public class SpicedCiderConfig {
                     .comment(tooltip("voxyWorldGenPersistStats"))
                     .translation("option.spicedcider.voxyWorldGenPersistStats")
                     .define("voxyWorldGenPersistStats", true);
+
+            lodgedHideArrowDepth = builder
+                    .comment(tooltip("lodgedHideArrowDepth"))
+                    .translation("option.spicedcider.lodgedHideArrowDepth")
+                    .define("lodgedHideArrowDepth", true);
+
+            lodgedHideBleedingRisk = builder
+                    .comment(tooltip("lodgedHideBleedingRisk"))
+                    .translation("option.spicedcider.lodgedHideBleedingRisk")
+                    .define("lodgedHideBleedingRisk", true);
 
             builder.pop();
             builder.push("naming");

@@ -8,16 +8,17 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "pattern": [
-    "#",
-    "#"
+    " # ",
+    "# #",
+    " # "
   ],
   "key": {
     "#": {
-      "item": "quark:permafrost_bricks_slab"
+      "item": "quark:permafrost_bricks"
     }
   },
   "result": {
     "id": "spicedcider:chiseled_permafrost",
-    "count": 1
+    "count": 4
   }
 }
