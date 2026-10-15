@@ -219,6 +219,17 @@ public final class DevBridge {
         routes.put("GET /tabs", r -> onClient(DevBridge::tabContents));
         routes.put("GET /tabcheck", r -> onClient(DevBridge::tabCheck));
         routes.put("GET /emi", r -> DevBridge.emiIndex());
+        routes.put("POST /reloadresources", r -> {
+            onClient(() -> Minecraft.getInstance().reloadResourcePacks()).get(5, TimeUnit.MINUTES);
+            return ok();
+        });
+        routes.put("GET /emiinfo", r -> onClient(() -> {
+            try {
+                return emiInfo();
+            } catch (ReflectiveOperationException e) {
+                throw new RuntimeException(e);
+            }
+        }));
         routes.put("GET /recipes",r -> onClient(() -> recipes(r.query().get("type"))));
         routes.put("GET /tooltip", r -> onClient(() -> tooltip(r.query().get("advanced") != null)));
         routes.put("GET /sounds", r -> {
@@ -586,6 +597,50 @@ public final class DevBridge {
         JsonObject result = new JsonObject();
         result.add("index", out);
         result.add("raw", raw);
+        return result;
+    }
+
+    private static JsonObject emiInfo() throws ReflectiveOperationException {
+        Object category = Class.forName("dev.emi.emi.api.recipe.VanillaEmiRecipeCategories").getField("INFO").get(null);
+        Object manager = Class.forName("dev.emi.emi.api.EmiApi").getMethod("getRecipeManager").invoke(null);
+        Class<?> categoryClass = Class.forName("dev.emi.emi.api.recipe.EmiRecipeCategory");
+        Class<?> recipeClass = Class.forName("dev.emi.emi.api.recipe.EmiRecipe");
+        Class<?> ingredientClass = Class.forName("dev.emi.emi.api.stack.EmiIngredient");
+        Class<?> stackClass = Class.forName("dev.emi.emi.api.stack.EmiStack");
+        List<?> recipes = (List<?>) Class.forName("dev.emi.emi.api.recipe.EmiRecipeManager").getMethod("getRecipes", categoryClass).invoke(manager, category);
+        Class<?> infoClass = Class.forName("dev.emi.emi.api.recipe.EmiInfoRecipe");
+        java.lang.reflect.Field textField = infoClass.getDeclaredField("text");
+        textField.setAccessible(true);
+        java.lang.reflect.Method getId = recipeClass.getMethod("getId");
+        java.lang.reflect.Method getInputs = recipeClass.getMethod("getInputs");
+        java.lang.reflect.Method getEmiStacks = ingredientClass.getMethod("getEmiStacks");
+        java.lang.reflect.Method stackId = stackClass.getMethod("getId");
+        JsonArray out = new JsonArray();
+        for (Object recipe : recipes) {
+            JsonObject entry = new JsonObject();
+            entry.addProperty("id", String.valueOf(getId.invoke(recipe)));
+            JsonArray stacks = new JsonArray();
+            for (Object ingredient : (List<?>) getInputs.invoke(recipe)) {
+                for (Object stack : (List<?>) getEmiStacks.invoke(ingredient)) {
+                    stacks.add(String.valueOf(stackId.invoke(stack)));
+                }
+            }
+            entry.add("stacks", stacks);
+            if (infoClass.isInstance(recipe)) {
+                StringBuilder text = new StringBuilder();
+                for (Object line : (List<?>) textField.get(recipe)) {
+                    if (!text.isEmpty()) text.append(' ');
+                    ((net.minecraft.util.FormattedCharSequence) line).accept((index, style, codePoint) -> {
+                        text.appendCodePoint(codePoint);
+                        return true;
+                    });
+                }
+                entry.addProperty("text", text.toString());
+            }
+            out.add(entry);
+        }
+        JsonObject result = new JsonObject();
+        result.add("recipes", out);
         return result;
     }
 

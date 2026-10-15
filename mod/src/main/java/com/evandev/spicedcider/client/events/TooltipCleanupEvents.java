@@ -18,7 +18,8 @@ public class TooltipCleanupEvents {
     private static final Set<String> HIDDEN_KEYS = Set.of(
             "quark.misc.repaired",
             "tooltip.bountifulfares.dyeable",
-            "item.chalk.chalk.tooltip.dyeable"
+            "item.chalk.chalk.tooltip.dyeable",
+            "tooltip.farmersdelight.placeable"
     );
 
     @SubscribeEvent(priority = EventPriority.LOWEST)

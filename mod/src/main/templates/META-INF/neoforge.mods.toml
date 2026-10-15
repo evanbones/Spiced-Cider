@@ -282,3 +282,10 @@ modId = "dimensional_tears"
 type = "optional"
 ordering = "NONE"
 side = "BOTH"
+
+[[dependencies.${ mod_id }]]
+modId = "embers_and_icicles"
+type = "optional"
+versionRange = "*"
+ordering = "AFTER"
+side = "BOTH"

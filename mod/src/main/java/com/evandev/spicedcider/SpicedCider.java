@@ -5,6 +5,7 @@ import com.evandev.spicedcider.blockgrid.SupportOffsets;
 import com.evandev.spicedcider.compat.continuity.ContinuityLazyModelWrapping;
 import com.evandev.spicedcider.compat.everycompat.BlockBoxEveryCompatLoader;
 import com.evandev.spicedcider.compat.infernalexp.InfernalExpansionCompat;
+import com.evandev.spicedcider.compat.embersandicicles.IceCubes;
 import com.evandev.spicedcider.compat.tide.TideCompat;
 import com.evandev.spicedcider.compat.yacl.ConfigScreenLoader;
 import com.evandev.spicedcider.config.LogReconfiguration;
@@ -103,6 +104,7 @@ public class SpicedCider {
 
     private static void commonSetup(FMLCommonSetupEvent event) {
         event.enqueueWork(TideCompat::registerFishingMediums);
+        event.enqueueWork(IceCubes::registerDispenserBehavior);
         if (ModItems.TWISTED_BOAT == null) return;
         event.enqueueWork(() -> {
             Boat.Type twisted = ModBoatTypes.TWISTED.getValue();

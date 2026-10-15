@@ -5,6 +5,9 @@
   "plugin": "com.evandev.spicedcider.mixin.SpicedCiderMixinPlugin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "embersandicicles.BrewingIceCubesMixin",
+    "embersandicicles.FrostbiteIceCubesMixin",
+    "embersandicicles.IceBallIceCubesMixin",
     "alloyed.SteelFishingRodMixin",
     "architectspalette.CageLanternLightMixin",
     "blockgrid.BlockStateOffsetMixin",
@@ -128,6 +131,7 @@
     "perf.ClientRecipeBookMixin",
     "perf.client.BlockModelShaperLocationCacheMixin",
     "perf.client.ModelManagerLocationCacheMixin",
+    "quark.JeiGatherHintsMixin",
     "quark.UsageTickerPartialTickMixin",
     "roxy.ClientHooksVoxyFogMixin",
     "roxy.FogRendererVoxyFogMixin",
