@@ -145,16 +145,32 @@ file = "config/betterdays-common.toml"
 hash = "5710c0819ce9d157528bf88d3cbba3acc48ef55289ba2b4954341b4819b7c561"
 
 [[files]]
+file = "config/betterdungeons-neoforge-1_21.toml"
+hash = "b03069c030f940550b4436d2f7c3dab582efa2fcc32b221ac30dbcb0617eab7f"
+
+[[files]]
 file = "config/betterf3.toml"
 hash = "239c340b28a13ffdb67d85efbabdfc28b5b4b4ee6070173f2b5fb3d674084bba"
+
+[[files]]
+file = "config/bettermineshafts-neoforge-1_21.toml"
+hash = "88a53626580c093925844e65d76dac3a0828e896893ca088ff0d7703546e0bda"
 
 [[files]]
 file = "config/betternightvision.json"
 hash = "a1fb2a4f24236df5941e5620aa0179334e2b1363514958461a9b4f3e2ad10d16"
 
 [[files]]
+file = "config/betteroceanmonuments-neoforge-1_21.toml"
+hash = "6c09d2a75810e76c719b355c3480d1dc14b135f944f4a85d2118a395efc916c5"
+
+[[files]]
 file = "config/betterthirdperson-common.toml"
 hash = "55406dc103678dc459c50fbb85bcdc7b9e7421576b4ee56e57344dd6c79cf140"
+
+[[files]]
+file = "config/betterwitchhuts-neoforge-1_21.toml"
+hash = "0fa4f192f54dc1fc4f7ac7ab8be7cba88e324fe21571777cb8a6d404f6ce49a9"
 
 [[files]]
 file = "config/bigbrain-client.toml"
@@ -458,7 +474,7 @@ hash = "0030656736b21f06f9f5b73078ce3ea41778f0f744c9d5da0055712a493ced85"
 
 [[files]]
 file = "config/drippyloadingscreen/early_window_reference.properties"
-hash = "3db9ec91e3ec474b11e933d93ef69269c8a9fdd701b07f3c52dd164db7c137bf"
+hash = "e5e778ef2662638cfa89667ac3260560be95fd306b009f4c6f5ec813f0e040c6"
 
 [[files]]
 file = "config/drippyloadingscreen/options.txt"
@@ -602,7 +618,7 @@ hash = "09d330b29443d9579ecc014f2be2fcb31075bfe1e9f9ac4e750f271128650fe6"
 
 [[files]]
 file = "config/fabric/indigo-renderer.properties"
-hash = "c252aaa431e345b15877b86eb63c1d417471d65b89f70b61aecfd88673bef6fc"
+hash = "cc3812b05583c53406939f997e7843831693de5a4900c6363c3d4912eff3ef98"
 
 [[files]]
 file = "config/falling_snow.json"
@@ -799,6 +815,10 @@ hash = "fe7cff66dd533347b67605ac990090cc0878d9738f78c0db28a290696e6ecb55"
 [[files]]
 file = "config/farmersdelight-common.toml"
 hash = "54663bc8a96e5db077e33312aba1b5a16c462f080e3b8c6fefabd4f586df9090"
+
+[[files]]
+file = "config/fastbench.cfg"
+hash = "41e28577931484abf560c87f95187dd5cef20e460b3ac6ace553f1d139d65889"
 
 [[files]]
 file = "config/fastpaintings-common.toml"
@@ -1631,6 +1651,10 @@ hash = "3ff448bb1ca8781f2c742507f4bdcf948752d335939fb493096631f2ae49251a"
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/autumnity/tags/worldgen/biome/is_autumnal.json"
 hash = "f8612cdbf74b4a3645e69d18ca0394a24117d2207fa058a6a57ac1b4e60e27c9"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/betterwitchhuts/tags/worldgen/biome/has_structure/better_witch_hut.json"
+hash = "f74d8a3ae76aac394693923b2e7f3062378c786f094a123e9d5b935da8134ac3"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/blockbox/recipe/amethyst_mosaic.json"
@@ -3653,6 +3677,30 @@ file = "config/openloader/packs/spicedcider_data/data/environmental/tags/item/du
 hash = "bafa6c01f255358022536e4a998602e103cc981e70f9913a46f52d88dd963904"
 
 [[files]]
+file = "config/openloader/packs/spicedcider_data/data/explorify/tags/worldgen/biome/has_structure/badlands_pyramid.json"
+hash = "bf30af9bd952baf26dfb805aa37a39750061886a4dc2f065b889e9c951b27eb3"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/explorify/tags/worldgen/biome/has_structure/campsite.json"
+hash = "a4720428f170a443cabbc75a45b9ca576366df596a5c1c185262bfb87ddaf7f9"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/explorify/tags/worldgen/biome/has_structure/mangrove_hut.json"
+hash = "68c73c735ddbc1a081ba14c4f9f845c1e8ddb5f5bfb2cdbd39b4d88dd2ef3b6a"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/explorify/tags/worldgen/biome/has_structure/mausoleum.json"
+hash = "f13a118996eeeaa2d87418ff04a1b32fe1feeb06ffe64cb5c53d4cab5903914f"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/explorify/tags/worldgen/biome/has_structure/ruins.json"
+hash = "a3114ff875750e236549a4a6a0c03463a4a8cebe1984f536527f8462ec5ac9ef"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/explorify/worldgen/structure_set/badlands_pyramids.json"
+hash = "872895dd8f8b5316c5494461a5fc863b666e7ab30b92cbf0655aa31e8adc7697"
+
+[[files]]
 file = "config/openloader/packs/spicedcider_data/data/exposure/recipe/album.json"
 hash = "348c5f0edc82a24add2af059f8b7e3d198be076509f84621a423c1e8631eeb5f"
 
@@ -3759,6 +3807,10 @@ hash = "c3b580772e63145f19b0bac03474723e1ac820f6ca5825df8454fdb9a32ec5a0"
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/frame_changer/tags/block/portal_frames.json"
 hash = "49d115d6cc70c82a3ba922b0bbc6717de322f019ed949788fde0474e5aaf0738"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/hearths/worldgen/structure_set/towers.json"
+hash = "0c4ad4427d212519e289af08e63046bf879407b5c87ea8883e03cd28590f0db7"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/infernalexp/recipe/chiseled_shimmer_stone_bricks_from_slabs.json"
@@ -4097,6 +4149,10 @@ file = "config/openloader/packs/spicedcider_data/data/minecraft/tags/item/wooden
 hash = "3cb52651198e03b0a9515bff0fedeb4ec6e1c30645742d69b6a4a35e1e00cf7b"
 
 [[files]]
+file = "config/openloader/packs/spicedcider_data/data/minecraft/tags/worldgen/biome/has_structure/jungle_temple.json"
+hash = "a3114ff875750e236549a4a6a0c03463a4a8cebe1984f536527f8462ec5ac9ef"
+
+[[files]]
 file = "config/openloader/packs/spicedcider_data/data/minecraft/tags/worldgen/biome/is_cave.json"
 hash = "567985e5753afe3b02c74c46651b774c17d5a7b63a6da4c3767ef2c89dd04caf"
 
@@ -4231,6 +4287,18 @@ hash = "0dd779f72f17a6b9059782749771a5471595a8bfa063075ab5f4a5a6e8f51ce2"
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/minecraft/worldgen/placed_feature/sulfur_pool.json"
 hash = "841af4406dd5aec6004f6edef3d1a8210bb1e8cef9eb7101e1b6d221ea4bd20b"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/minecraft/worldgen/structure_set/desert_pyramids.json"
+hash = "6732e331dbe17374fb0992529c2847619f326a8a1cdd1923e26fe09687b8f507"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/minecraft/worldgen/structure_set/jungle_temples.json"
+hash = "ac72bb30807e94792bdd0fbe48858139dea246bae6d275e50b14de9e9b447a5d"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/minecraft/worldgen/structure_set/nether_complexes.json"
+hash = "9c72608c4b805fe7c6122d908ecc23761fc9e3e32a54a37c0dc0df6d04d17e0e"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/modestmagic/recipe/enchantment_tablet.json"
@@ -4481,6 +4549,10 @@ file = "config/openloader/packs/spicedcider_data/data/nomansland/worldgen/config
 hash = "ce176811ec3de56d55e91877ee1469a48338a662236222218178b42df253356a"
 
 [[files]]
+file = "config/openloader/packs/spicedcider_data/data/piglinproliferation/neoforge/biome_modifier/add_alchemist.json"
+hash = "1f9d221d38c355db24617d332b9c8493f74485f7a1aacf155d988f5b08d1491f"
+
+[[files]]
 file = "config/openloader/packs/spicedcider_data/data/piglinproliferation/recipe/blackstone_fire_ring.json"
 hash = "7a487d82c8c2115aa69cb385df7cdd30eec13f7cee3cda94c08b70b24a5a6d08"
 
@@ -4710,7 +4782,7 @@ hash = "dfeafdd9bbb0be5e8429196637036556ce4b6dedd75611d28640c100d17e600a"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/neoforge/biome_modifier/remove_spelunkery_overworld.json"
-hash = "484a5f04a7183b479f9fd649bfcfd3c8e6079dc3b706f7f820e83b1483a4e5e1"
+hash = "5c6b0a8a66f3032c0c88e477b6714f99c5e181e4cd5e4732c5a27f77eecac54e"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/neoforge/biome_modifier/remove_ua_beachgrass.json"
@@ -4719,6 +4791,10 @@ hash = "4adce9fd16718b91039c71c821d95247583509a2cffd623b99c749b81a6552e1"
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/neoforge/biome_modifier/remove_ua_river.json"
 hash = "93cb0a7194cab5fe4f13c80c10410348e9d90defc3c89fede45a2e3a8e408833"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/neoforge/biome_modifier/remove_vanilla_dungeons.json"
+hash = "306266a7a6784b73e802d9e4c192523e020b61df13899ca45c1033da90caf4ab"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/cooking/tallow.json"
@@ -6034,7 +6110,7 @@ hash = "03dba1b8e6e86f2480827996029c971cef89e1936d8a45e4d746319c942fa92a"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/tags/worldgen/structure/disabled.json"
-hash = "72976f2a5f58823f6505df6394480881abd59a795d1dbe19932676738c04cc5c"
+hash = "15ddf2406eedecc89398c823a4d5888d209859b2955c5fc46714128f7861c6b6"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/supplementaries/recipe/awnings/awning.json"
@@ -6322,7 +6398,7 @@ hash = "13b2b1384f949e6e409c3c3cc423ecb854df6b386d4466d424a57a887e89f3d8"
 
 [[files]]
 file = "config/packetfixer.properties"
-hash = "2a9e0cd32a8fd7d4a0f25f288aaa74d6c32b7d0af95d23ee6aa60809af368af9"
+hash = "f60364298fd8e1c99e259c3f12daa6c742c0f13ba8f5eae0c5047c02b3aa8f04"
 
 [[files]]
 file = "config/particle_core_config.toml"
@@ -6367,6 +6443,10 @@ hash = "ed8da9d743db27d04df3154167fcd108a6bd1c42104ee334be2a991e2b04736b"
 [[files]]
 file = "config/piglinproliferation-common.toml"
 hash = "fe24c21064ee3b1c1bd0a16d51e0392f02f0665b664ec22c9c6402e623503981"
+
+[[files]]
+file = "config/placebo.cfg"
+hash = "eb7e9906d126543f03c2257ca98efa4b845d1e7479dc8b069a12b194c86debcf"
 
 [[files]]
 file = "config/ponder-client.toml"
@@ -7425,6 +7505,14 @@ file = "config/sensible_stackables.json"
 hash = "d77ca071a4d079a55188d4b6d20c28a2481fe78200e27728fa5a205d03ee64bb"
 
 [[files]]
+file = "config/servercore/config.yml"
+hash = "489bb0a51c00a6988bf52fe9e72a34b4d38501f62c779e983990f35e5fbd675a"
+
+[[files]]
+file = "config/servercore/optimizations.yml"
+hash = "63ba7034fdf1f45f1b40798d3212f8d838f7c299fbe5795075fbafe1e2265192"
+
+[[files]]
 file = "config/shadowdrop-client.toml"
 hash = "29c323202dc39807be80a37f946cd163592ceb92f1eef944f30f1322e58acffe"
 
@@ -7541,8 +7629,12 @@ file = "config/spelunkery-common.toml"
 hash = "20054029e0014a38add4a1f49f3709dab64de66cb5457277a774407952e66d88"
 
 [[files]]
-file = "config/spicedcider-client.toml"
+file = "config/spicedcider-client-1.toml.bak"
 hash = "4bd40f96bc4a5d0aea588b68cc92bf20330ae8e8c8a11453b504d5a9b54ec5a0"
+
+[[files]]
+file = "config/spicedcider-client.toml"
+hash = "73cf3699674e6db2ca3e811de9d68ad7e9d8fb982b7b0f5bcb179855cde91bcb"
 
 [[files]]
 file = "config/spicedcider-common.toml"
@@ -7858,7 +7950,7 @@ hash = "121b93764159be6fb7dab523b29a844e2bb78400ce8c48f52135a097e9b0006e"
 
 [[files]]
 file = "config/yosbr/options.txt"
-hash = "cae16a8725b77bc52bcddc8a72b098f6bff21f7786b01b191f0e55e0b8b9065b"
+hash = "a458bfc3d7087dce7db543ec0d69bd91e5243aecc668583416262b123a52aaa3"
 
 [[files]]
 file = "config/zeta-common.toml"
@@ -7866,7 +7958,7 @@ hash = "d985bfc68899c91aa642736400472f6ab876dedaaef4b8c31f38b52d48de633d"
 
 [[files]]
 file = "config/zfastnoise.mixin.properties"
-hash = "0a83bffae4390fe74d69110aaf0a0d8d21a176308ad75cb02f16a7c256541922"
+hash = "c7833933a9280832fb80a9513f112eea63f181a35f2057be5af9adc8c00c3e69"
 
 [[files]]
 file = "config/zipline.json"
@@ -8322,6 +8414,11 @@ hash = "741ad359354fce814f9e1cbff6fb0b6eea09f4bb905efef94a32be56b1f64680"
 metafile = true
 
 [[files]]
+file = "mods/fastworkbench.pw.toml"
+hash = "a72d0e28aaf0b93d674ac2ba92d9713e63cb91df21739bc7d72db5477a299f32"
+metafile = true
+
+[[files]]
 file = "mods/ferrite-core.pw.toml"
 hash = "73360e397134d238ee8fd21d33fd7f9275e9441f74f8f1b6ed92278877c0b9f1"
 metafile = true
@@ -8700,6 +8797,11 @@ hash = "9c2ab13ce8c32fc895073416cd80275f70645d88470d6c59ff2c3f2636e27bf4"
 metafile = true
 
 [[files]]
+file = "mods/placebo.pw.toml"
+hash = "d94791108548d174758d587440c656f1a56884083fa3151bf90b515126482435"
+metafile = true
+
+[[files]]
 file = "mods/platform.pw.toml"
 hash = "00887452f4c902a5f98fc42875d522e59948b60c20d887855a183c0f7235c641"
 metafile = true
@@ -8873,6 +8975,11 @@ hash = "e0f952317c108547176ca8989c4ecb81b734e642b8ebe7ddf9aae94a10c4dea2"
 metafile = true
 
 [[files]]
+file = "mods/servercore.pw.toml"
+hash = "33454564d216f62d011ac78fc0aa2a49977ac1161f10f4accb1d33a9934969df"
+metafile = true
+
+[[files]]
 file = "mods/shadow-drop.pw.toml"
 hash = "1aa1ad6e7a026be59d10bf09d82e17c93f7a1ab86f4ad08feeb503e03360a9d6"
 metafile = true
@@ -8934,7 +9041,7 @@ metafile = true
 
 [[files]]
 file = "mods/spicedcider-1.0.0.jar"
-hash = "90a35d80e35576521fbdaff771dbab895f2e236c7350ff9222f47358d5bf8ecb"
+hash = "05512526a078e883c8ccc0f94c77e744381357db60556c8f5d3889252e470cfd"
 
 [[files]]
 file = "mods/stacksizetweaks.pw.toml"
@@ -9102,6 +9209,31 @@ metafile = true
 [[files]]
 file = "mods/yosbr-neo.pw.toml"
 hash = "f093cf9ea51450d9e691d1826517179c014fe94b216a519a9c36c1984859afdc"
+metafile = true
+
+[[files]]
+file = "mods/yungs-api.pw.toml"
+hash = "dde31f05114c72cb2f58e522417487730b872e456f77fdd02c032c9235791f6c"
+metafile = true
+
+[[files]]
+file = "mods/yungs-better-dungeons.pw.toml"
+hash = "4c2830674a08ec9f10af13e4d259aa60158bd306a3996d935e678281ec0cb5fd"
+metafile = true
+
+[[files]]
+file = "mods/yungs-better-mineshafts.pw.toml"
+hash = "0cc13a86488cf89d2989edc1636fa63c7efa2fe819246d42af35113458d5ba5b"
+metafile = true
+
+[[files]]
+file = "mods/yungs-better-ocean-monuments.pw.toml"
+hash = "9492d0854c51570bf2a6bace6267262e7573b94c40d721348996617e5d99480a"
+metafile = true
+
+[[files]]
+file = "mods/yungs-better-witch-huts.pw.toml"
+hash = "e2b23d0a1bf228d37ff8c3330150c24eb19cb875e113fae543191f34ded92ff8"
 metafile = true
 
 [[files]]

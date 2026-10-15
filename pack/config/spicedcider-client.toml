@@ -43,6 +43,10 @@
 	sodiumLightingParityFix = true
 	#Remembers the received-chunk total in Voxy World Gen V2's debug overlay per world or server, instead of resetting it to zero every time you reconnect. Requires Voxy World Gen V2.
 	voxyWorldGenPersistStats = true
+	#Hides the arrow depth line (Shallow hit, Lodged, Deep lodged) from Lodged's inventory arrow tooltip. Requires Lodged.
+	lodgedHideArrowDepth = true
+	#Hides the Bleeding risk line from Lodged's inventory arrow tooltip. Requires Lodged.
+	lodgedHideBleedingRisk = true
 
 [voxy]
 	#Replaces the terrain fog with configurable start and end distances that cover Voxy's LoD terrain, plus weather and cave fog. Disable to use Roxy's own fog.

@@ -239,6 +239,7 @@ public final class DevBridge {
             }
             return ok();
         });
+        routes.put("POST /recipebench", r -> RecipeBench.run(r.getInt("rounds", 5), r.getInt("lookups", 200)));
         routes.put("GET /blocktexture", r -> onClient(() -> blockTexture(r.query().get("id"))));
         routes.put("POST /join", DevBridge::join);
         routes.put("POST /leave", r -> leave());
