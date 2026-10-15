@@ -1,0 +1,818 @@
+{
+  "sort_index": 4,
+  "icon": "fieldguide:textures/gui/icons/tropical_fish.png",
+  "contents": [
+    {
+      "type": "entry",
+      "id": "entity:minecraft/salmon",
+      "unlock": {
+        "triggers": [
+          "obtain",
+          "scan"
+        ],
+        "trigger_on": [
+          "item:minecraft/salmon",
+          "entity:minecraft/salmon"
+        ]
+      }
+    },
+    {
+      "type": "entry",
+      "id": "entity:upgrade_aquatic/pike",
+      "unlock": {
+        "triggers": [
+          "obtain",
+          "scan"
+        ],
+        "trigger_on": [
+          "item:upgrade_aquatic/pike",
+          "entity:upgrade_aquatic/pike"
+        ]
+      }
+    },
+    {
+      "type": "entry",
+      "id": "entity:upgrade_aquatic/perch",
+      "unlock": {
+        "triggers": [
+          "obtain",
+          "scan"
+        ],
+        "trigger_on": [
+          "item:upgrade_aquatic/perch",
+          "entity:upgrade_aquatic/perch"
+        ]
+      }
+    },
+    {
+      "type": "entry",
+      "id": "entity:nomansland/billhook_bass",
+      "unlock": {
+        "triggers": [
+          "obtain",
+          "scan"
+        ],
+        "trigger_on": [
+          "item:nomansland/billhook_bass",
+          "entity:nomansland/billhook_bass"
+        ]
+      }
+    },
+    {
+      "type": "entry",
+      "id": "entity:environmental/koi",
+      "unlock": {
+        "triggers": [
+          "obtain",
+          "scan"
+        ],
+        "trigger_on": [
+          "item:environmental/koi",
+          "entity:environmental/koi"
+        ]
+      }
+    },
+    {
+      "type": "entry",
+      "id": "entity:tide/rainbow_trout",
+      "unlock": {
+        "triggers": [
+          "obtain",
+          "scan"
+        ],
+        "trigger_on": [
+          "item:tide/rainbow_trout",
+          "entity:tide/rainbow_trout"
+        ]
+      }
+    },
+    {
+      "type": "entry",
+      "id": "entity:tide/brook_trout",
+      "unlock": {
+        "triggers": [
+          "obtain",
+          "scan"
+        ],
+        "trigger_on": [
+          "item:tide/brook_trout",
+          "entity:tide/brook_trout"
+        ]
+      }
+    },
+    {
+      "type": "entry",
+      "id": "entity:tide/carp",
+      "unlock": {
+        "triggers": [
+          "obtain",
+          "scan"
+        ],
+        "trigger_on": [
+          "item:tide/carp",
+          "entity:tide/carp"
+        ]
+      }
+    },
+    {
+      "type": "entry",
+      "id": "entity:tide/catfish",
+      "unlock": {
+        "triggers": [
+          "obtain",
+          "scan"
+        ],
+        "trigger_on": [
+          "item:tide/catfish",
+          "entity:tide/catfish"
+        ]
+      }
+    },
+    {
+      "type": "entry",
+      "id": "entity:tide/bluegill",
+      "unlock": {
+        "triggers": [
+          "obtain",
+          "scan"
+        ],
+        "trigger_on": [
+          "item:tide/bluegill",
+          "entity:tide/bluegill"
+        ]
+      }
+    },
+    {
+      "type": "entry",
+      "id": "entity:tide/walleye",
+      "unlock": {
+        "triggers": [
+          "obtain",
+          "scan"
+        ],
+        "trigger_on": [
+          "item:tide/walleye",
+          "entity:tide/walleye"
+        ]
+      }
+    },
+    {
+      "type": "entry",
+      "id": "entity:tide/sturgeon",
+      "unlock": {
+        "triggers": [
+          "obtain",
+          "scan"
+        ],
+        "trigger_on": [
+          "item:tide/sturgeon",
+          "entity:tide/sturgeon"
+        ]
+      }
+    },
+    {
+      "type": "entry",
+      "id": "entity:tide/arapaima",
+      "unlock": {
+        "triggers": [
+          "obtain",
+          "scan"
+        ],
+        "trigger_on": [
+          "item:tide/arapaima",
+          "entity:tide/arapaima"
+        ]
+      }
+    },
+    {
+      "type": "entry",
+      "id": "entity:tide/guppy",
+      "unlock": {
+        "triggers": [
+          "obtain",
+          "scan"
+        ],
+        "trigger_on": [
+          "item:tide/guppy",
+          "entity:tide/guppy"
+        ]
+      }
+    },
+    {
+      "type": "entry",
+      "id": "entity:tide/white_crappie",
+      "unlock": {
+        "triggers": [
+          "obtain",
+          "scan"
+        ],
+        "trigger_on": [
+          "item:tide/white_crappie",
+          "entity:tide/white_crappie"
+        ]
+      }
+    },
+    {
+      "type": "entry",
+      "id": "entity:tide/black_crappie",
+      "unlock": {
+        "triggers": [
+          "obtain",
+          "scan"
+        ],
+        "trigger_on": [
+          "item:tide/black_crappie",
+          "entity:tide/black_crappie"
+        ]
+      }
+    },
+    {
+      "type": "entry",
+      "id": "entity:tide/mooneye",
+      "unlock": {
+        "triggers": [
+          "obtain",
+          "scan"
+        ],
+        "trigger_on": [
+          "item:tide/mooneye",
+          "entity:tide/mooneye"
+        ]
+      }
+    },
+    {
+      "type": "entry",
+      "id": "entity:minecraft/cod",
+      "unlock": {
+        "triggers": [
+          "obtain",
+          "scan"
+        ],
+        "trigger_on": [
+          "item:minecraft/cod",
+          "entity:minecraft/cod"
+        ]
+      }
+    },
+    {
+      "type": "entry",
+      "id": "entity:minecraft/pufferfish",
+      "unlock": {
+        "triggers": [
+          "obtain",
+          "scan"
+        ],
+        "trigger_on": [
+          "item:minecraft/pufferfish",
+          "entity:minecraft/pufferfish"
+        ]
+      }
+    },
+    {
+      "type": "entry",
+      "id": "entity:minecraft/tropical_fish",
+      "unlock": {
+        "triggers": [
+          "obtain",
+          "scan"
+        ],
+        "trigger_on": [
+          "item:minecraft/tropical_fish",
+          "entity:minecraft/tropical_fish"
+        ]
+      }
+    },
+    {
+      "type": "entry",
+      "id": "entity:upgrade_aquatic/lionfish",
+      "unlock": {
+        "triggers": [
+          "obtain",
+          "scan"
+        ],
+        "trigger_on": [
+          "item:upgrade_aquatic/lionfish",
+          "entity:upgrade_aquatic/lionfish"
+        ]
+      }
+    },
+    {
+      "type": "entry",
+      "id": "entity:tide/anchovy",
+      "unlock": {
+        "triggers": [
+          "obtain",
+          "scan"
+        ],
+        "trigger_on": [
+          "item:tide/anchovy",
+          "entity:tide/anchovy"
+        ]
+      }
+    },
+    {
+      "type": "entry",
+      "id": "entity:tide/mackerel",
+      "unlock": {
+        "triggers": [
+          "obtain",
+          "scan"
+        ],
+        "trigger_on": [
+          "item:tide/mackerel",
+          "entity:tide/mackerel"
+        ]
+      }
+    },
+    {
+      "type": "entry",
+      "id": "entity:tide/tuna",
+      "unlock": {
+        "triggers": [
+          "obtain",
+          "scan"
+        ],
+        "trigger_on": [
+          "item:tide/tuna",
+          "entity:tide/tuna"
+        ]
+      }
+    },
+    {
+      "type": "entry",
+      "id": "entity:tide/red_snapper",
+      "unlock": {
+        "triggers": [
+          "obtain",
+          "scan"
+        ],
+        "trigger_on": [
+          "item:tide/red_snapper",
+          "entity:tide/red_snapper"
+        ]
+      }
+    },
+    {
+      "type": "entry",
+      "id": "entity:tide/flounder",
+      "unlock": {
+        "triggers": [
+          "obtain",
+          "scan"
+        ],
+        "trigger_on": [
+          "item:tide/flounder",
+          "entity:tide/flounder"
+        ]
+      }
+    },
+    {
+      "type": "entry",
+      "id": "entity:tide/snook",
+      "unlock": {
+        "triggers": [
+          "obtain",
+          "scan"
+        ],
+        "trigger_on": [
+          "item:tide/snook",
+          "entity:tide/snook"
+        ]
+      }
+    },
+    {
+      "type": "entry",
+      "id": "entity:tide/mahi_mahi",
+      "unlock": {
+        "triggers": [
+          "obtain",
+          "scan"
+        ],
+        "trigger_on": [
+          "item:tide/mahi_mahi",
+          "entity:tide/mahi_mahi"
+        ]
+      }
+    },
+    {
+      "type": "entry",
+      "id": "entity:tide/swordfish",
+      "unlock": {
+        "triggers": [
+          "obtain",
+          "scan"
+        ],
+        "trigger_on": [
+          "item:tide/swordfish",
+          "entity:tide/swordfish"
+        ]
+      }
+    },
+    {
+      "type": "entry",
+      "id": "entity:tide/sailfish",
+      "unlock": {
+        "triggers": [
+          "obtain",
+          "scan"
+        ],
+        "trigger_on": [
+          "item:tide/sailfish",
+          "entity:tide/sailfish"
+        ]
+      }
+    },
+    {
+      "type": "entry",
+      "id": "entity:tide/angelfish",
+      "unlock": {
+        "triggers": [
+          "obtain",
+          "scan"
+        ],
+        "trigger_on": [
+          "item:tide/angelfish",
+          "entity:tide/angelfish"
+        ]
+      }
+    },
+    {
+      "type": "entry",
+      "id": "entity:tide/manta_ray",
+      "unlock": {
+        "triggers": [
+          "obtain",
+          "scan"
+        ],
+        "trigger_on": [
+          "item:tide/manta_ray",
+          "entity:tide/manta_ray"
+        ]
+      }
+    },
+    {
+      "type": "entry",
+      "id": "entity:tide/great_white_shark",
+      "unlock": {
+        "triggers": [
+          "obtain",
+          "scan"
+        ],
+        "trigger_on": [
+          "item:tide/great_white_shark",
+          "entity:tide/great_white_shark"
+        ]
+      }
+    },
+    {
+      "type": "entry",
+      "id": "entity:tide/coelacanth",
+      "unlock": {
+        "triggers": [
+          "obtain",
+          "scan"
+        ],
+        "trigger_on": [
+          "item:tide/coelacanth",
+          "entity:tide/coelacanth"
+        ]
+      }
+    },
+    {
+      "type": "entry",
+      "id": "entity:caverns_and_chasms/cavefish",
+      "unlock": {
+        "triggers": [
+          "obtain",
+          "scan"
+        ],
+        "trigger_on": [
+          "item:caverns_and_chasms/cavefish",
+          "entity:caverns_and_chasms/cavefish"
+        ]
+      }
+    },
+    {
+      "type": "entry",
+      "id": "entity:tide/cave_eel",
+      "unlock": {
+        "triggers": [
+          "obtain",
+          "scan"
+        ],
+        "trigger_on": [
+          "item:tide/cave_eel",
+          "entity:tide/cave_eel"
+        ]
+      }
+    },
+    {
+      "type": "entry",
+      "id": "entity:tide/anglerfish",
+      "unlock": {
+        "triggers": [
+          "obtain",
+          "scan"
+        ],
+        "trigger_on": [
+          "item:tide/anglerfish",
+          "entity:tide/anglerfish"
+        ]
+      }
+    },
+    {
+      "type": "entry",
+      "id": "entity:tide/devils_hole_pupfish",
+      "unlock": {
+        "triggers": [
+          "obtain",
+          "scan"
+        ],
+        "trigger_on": [
+          "item:tide/devils_hole_pupfish",
+          "entity:tide/devils_hole_pupfish"
+        ]
+      }
+    },
+    {
+      "type": "entry",
+      "id": "entity:tide/deep_grouper",
+      "unlock": {
+        "triggers": [
+          "obtain",
+          "scan"
+        ],
+        "trigger_on": [
+          "item:tide/deep_grouper",
+          "entity:tide/deep_grouper"
+        ]
+      }
+    },
+    {
+      "type": "entry",
+      "id": "entity:tide/ash_perch",
+      "unlock": {
+        "triggers": [
+          "obtain",
+          "scan"
+        ],
+        "trigger_on": [
+          "item:tide/ash_perch",
+          "entity:tide/ash_perch"
+        ]
+      }
+    },
+    {
+      "type": "entry",
+      "id": "entity:tide/magma_mackerel",
+      "unlock": {
+        "triggers": [
+          "obtain",
+          "scan"
+        ],
+        "trigger_on": [
+          "item:tide/magma_mackerel",
+          "entity:tide/magma_mackerel"
+        ]
+      }
+    },
+    {
+      "type": "entry",
+      "id": "entity:tide/ember_koi",
+      "unlock": {
+        "triggers": [
+          "obtain",
+          "scan"
+        ],
+        "trigger_on": [
+          "item:tide/ember_koi",
+          "entity:tide/ember_koi"
+        ]
+      }
+    },
+    {
+      "type": "entry",
+      "id": "entity:tide/obsidian_pike",
+      "unlock": {
+        "triggers": [
+          "obtain",
+          "scan"
+        ],
+        "trigger_on": [
+          "item:tide/obsidian_pike",
+          "entity:tide/obsidian_pike"
+        ]
+      }
+    },
+    {
+      "type": "entry",
+      "id": "entity:tide/inferno_guppy",
+      "unlock": {
+        "triggers": [
+          "obtain",
+          "scan"
+        ],
+        "trigger_on": [
+          "item:tide/inferno_guppy",
+          "entity:tide/inferno_guppy"
+        ]
+      }
+    },
+    {
+      "type": "entry",
+      "id": "entity:tide/crimson_fangjaw",
+      "unlock": {
+        "triggers": [
+          "obtain",
+          "scan"
+        ],
+        "trigger_on": [
+          "item:tide/crimson_fangjaw",
+          "entity:tide/crimson_fangjaw"
+        ]
+      }
+    },
+    {
+      "type": "entry",
+      "id": "entity:tide/warped_guppy",
+      "unlock": {
+        "triggers": [
+          "obtain",
+          "scan"
+        ],
+        "trigger_on": [
+          "item:tide/warped_guppy",
+          "entity:tide/warped_guppy"
+        ]
+      }
+    },
+    {
+      "type": "entry",
+      "id": "entity:tide/soulscale",
+      "unlock": {
+        "triggers": [
+          "obtain",
+          "scan"
+        ],
+        "trigger_on": [
+          "item:tide/soulscale",
+          "entity:tide/soulscale"
+        ]
+      }
+    },
+    {
+      "type": "entry",
+      "id": "entity:tide/witherfin",
+      "unlock": {
+        "triggers": [
+          "obtain",
+          "scan"
+        ],
+        "trigger_on": [
+          "item:tide/witherfin",
+          "entity:tide/witherfin"
+        ]
+      }
+    },
+    {
+      "type": "entry",
+      "id": "entity:tide/blazing_swordfish",
+      "unlock": {
+        "triggers": [
+          "obtain",
+          "scan"
+        ],
+        "trigger_on": [
+          "item:tide/blazing_swordfish",
+          "entity:tide/blazing_swordfish"
+        ]
+      }
+    },
+    {
+      "type": "entry",
+      "id": "entity:tide/chorus_cod",
+      "unlock": {
+        "triggers": [
+          "obtain",
+          "scan"
+        ],
+        "trigger_on": [
+          "item:tide/chorus_cod",
+          "entity:tide/chorus_cod"
+        ]
+      }
+    },
+    {
+      "type": "entry",
+      "id": "entity:tide/enderfin",
+      "unlock": {
+        "triggers": [
+          "obtain",
+          "scan"
+        ],
+        "trigger_on": [
+          "item:tide/enderfin",
+          "entity:tide/enderfin"
+        ]
+      }
+    },
+    {
+      "type": "entry",
+      "id": "entity:tide/ender_glider",
+      "unlock": {
+        "triggers": [
+          "obtain",
+          "scan"
+        ],
+        "trigger_on": [
+          "item:tide/ender_glider",
+          "entity:tide/ender_glider"
+        ]
+      }
+    },
+    {
+      "type": "entry",
+      "id": "entity:tide/endergazer",
+      "unlock": {
+        "triggers": [
+          "obtain",
+          "scan"
+        ],
+        "trigger_on": [
+          "item:tide/endergazer",
+          "entity:tide/endergazer"
+        ]
+      }
+    },
+    {
+      "type": "entry",
+      "id": "entity:tide/elytrout",
+      "unlock": {
+        "triggers": [
+          "obtain",
+          "scan"
+        ],
+        "trigger_on": [
+          "item:tide/elytrout",
+          "entity:tide/elytrout"
+        ]
+      }
+    },
+    {
+      "type": "entry",
+      "id": "entity:tide/violet_carp",
+      "unlock": {
+        "triggers": [
+          "obtain",
+          "scan"
+        ],
+        "trigger_on": [
+          "item:tide/violet_carp",
+          "entity:tide/violet_carp"
+        ]
+      }
+    },
+    {
+      "type": "entry",
+      "id": "entity:tide/pale_clubfish",
+      "unlock": {
+        "triggers": [
+          "obtain",
+          "scan"
+        ],
+        "trigger_on": [
+          "item:tide/pale_clubfish",
+          "entity:tide/pale_clubfish"
+        ]
+      }
+    },
+    {
+      "type": "entry",
+      "id": "entity:tide/snatcher_squid",
+      "unlock": {
+        "triggers": [
+          "obtain",
+          "scan"
+        ],
+        "trigger_on": [
+          "item:tide/snatcher_squid",
+          "entity:tide/snatcher_squid"
+        ]
+      }
+    },
+    {
+      "type": "entry",
+      "id": "entity:tide/voidseeker",
+      "unlock": {
+        "triggers": [
+          "obtain",
+          "scan"
+        ],
+        "trigger_on": [
+          "item:tide/voidseeker",
+          "entity:tide/voidseeker"
+        ]
+      }
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 package com.evandev.spicedcider.registry;
 
 import com.evandev.spicedcider.SpicedCider;
+import com.evandev.spicedcider.content.worm.WormHunt;
 import com.mojang.serialization.Codec;
 import net.neoforged.neoforge.attachment.AttachmentType;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -16,6 +17,13 @@ public class ModAttachments {
             "web_shooting",
             () -> AttachmentType.builder(() -> false)
                     .serialize(Codec.BOOL)
+                    .build()
+    );
+
+    public static final Supplier<AttachmentType<WormHunt>> WORM_HUNT = ATTACHMENT_TYPES.register(
+            "worm_hunt",
+            () -> AttachmentType.builder(WormHunt::new)
+                    .serialize(WormHunt.CODEC, hunt -> !hunt.isIdle())
                     .build()
     );
 

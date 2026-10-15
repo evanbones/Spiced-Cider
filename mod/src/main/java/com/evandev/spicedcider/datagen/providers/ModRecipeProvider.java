@@ -20,6 +20,10 @@ import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.common.Tags;
+import net.neoforged.neoforge.common.conditions.TagEmptyCondition;
+import net.neoforged.neoforge.common.conditions.NotCondition;
+import net.minecraft.world.item.Item;
+import net.minecraft.tags.TagKey;
 import net.neoforged.neoforge.common.conditions.ModLoadedCondition;
 import org.jetbrains.annotations.NotNull;
 
@@ -39,8 +43,8 @@ public class ModRecipeProvider extends RecipeProvider {
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.GRAPPLING_HOOK.get())
                 .pattern(" C")
                 .pattern("CC")
-                .define('C', Tags.Items.INGOTS_IRON)
-                .unlockedBy("has_iron_ingot", has(Tags.Items.INGOTS_IRON))
+                .define('C', Tags.Items.INGOTS_COPPER)
+                .unlockedBy("has_copper_ingot", has(Tags.Items.INGOTS_COPPER))
                 .save(tideOutput);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.TOOLS, ModItems.STICKY_GRAPPLING_HOOK.get())
@@ -48,6 +52,33 @@ public class ModRecipeProvider extends RecipeProvider {
                 .requires(Items.SLIME_BALL)
                 .unlockedBy("has_grappling_hook", has(ModItems.GRAPPLING_HOOK.get()))
                 .save(tideOutput);
+
+        TagKey<Item> adamantiteIngots = commonTag("ingots/adamantite");
+        RecipeOutput adamantiteOutput = tideOutput.withConditions(new NotCondition(new TagEmptyCondition(adamantiteIngots.location())));
+
+        hook(tideOutput, ModItems.FLUX_HOOK.get(), Ingredient.of(Tags.Items.DUSTS_REDSTONE), commonTag("nuggets/bronze"));
+        hook(tideOutput, ModItems.GOLD_HOOK.get(), Ingredient.of(Tags.Items.INGOTS_GOLD), Tags.Items.NUGGETS_GOLD);
+        hook(tideOutput, ModItems.HEAVY_HOOK.get(), Ingredient.of(commonTag("ingots/lead")), commonTag("nuggets/steel"));
+        hook(tideOutput, ModItems.LIGHT_HOOK.get(), Ingredient.of(commonTag("ingots/rose_gold")), commonTag("nuggets/rose_gold"));
+        hook(adamantiteOutput, ModItems.ADAMANTITE_HOOK.get(), Ingredient.of(adamantiteIngots), commonTag("nuggets/adamantite"));
+        hook(tideOutput, ModItems.PRISMARITE_HOOK.get(), Ingredient.of(commonTag("ingots/prismarite")), commonTag("nuggets/prismarite"));
+        hook(tideOutput, ModItems.FEATHERLIGHT_HOOK.get(), Ingredient.of(Items.FEATHER), commonTag("nuggets/valkyrium"));
+        hook(tideOutput, ModItems.NECROMIUM_HOOK.get(), Ingredient.of(commonTag("ingots/necromium")), commonTag("nuggets/necromium"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.TOOLS, ModItems.DOUBLE_HOOK.get())
+                .requires(ModItems.LIGHT_HOOK.get())
+                .requires(ModItems.HEAVY_HOOK.get())
+                .requires(Tags.Items.GEMS_DIAMOND)
+                .unlockedBy("has_diamond", has(Tags.Items.GEMS_DIAMOND))
+                .save(tideOutput);
+
+        SmithingTransformRecipeBuilder.smithing(
+                        Ingredient.of(Tags.Items.STRINGS),
+                        Ingredient.of(BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath("alloyed", "steel_fishing_rod"))),
+                        Ingredient.of(adamantiteIngots),
+                        RecipeCategory.TOOLS, ModItems.ADAMANTITE_FISHING_ROD.get())
+                .unlocks("has_adamantite_ingot", has(adamantiteIngots))
+                .save(adamantiteOutput.withConditions(new ModLoadedCondition("alloyed")), ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "adamantite_fishing_rod_smithing"));
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.TOOLS, ModItems.FIRE_STRIKER.get())
                 .requires(Items.FLINT, 2)
@@ -58,6 +89,14 @@ public class ModRecipeProvider extends RecipeProvider {
         nineBlockStorageRecipes(output, RecipeCategory.MISC, ModItems.CAST_IRON_NUGGET.get(), RecipeCategory.MISC, ModItems.CAST_IRON_INGOT.get(), "spicedcider:cast_iron_ingot_from_nuggets", null, "spicedcider:cast_iron_nugget_from_ingot", null);
 
         nineBlockStorageRecipes(output, RecipeCategory.MISC, ModItems.TALLOW.get(), RecipeCategory.BUILDING_BLOCKS, ModBlocks.TALLOW_BLOCK.get());
+        nineBlockStorageRecipes(output, RecipeCategory.MISC, ModItems.WORM.get(), RecipeCategory.DECORATIONS, ModBlocks.WORM_CRATE.get(), "spicedcider:worm_crate", null, "spicedcider:worm_from_crate", null);
+        nineBlockStorageRecipes(output, RecipeCategory.MISC, ModItems.GOLDEN_WORM.get(), RecipeCategory.DECORATIONS, ModBlocks.GOLDEN_WORM_CRATE.get(), "spicedcider:golden_worm_crate", null, "spicedcider:golden_worm_from_crate", null);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.GOLDEN_WORM.get(), 2)
+                .requires(ModItems.WORM.get(), 2)
+                .requires(Tags.Items.INGOTS_GOLD)
+                .unlockedBy("has_worm", has(ModItems.WORM.get()))
+                .save(output);
 
         Block glowstoneBricks = ModBlocks.GLOWSTONE_BRICKS.get();
         Block glowstoneBrickStairs = ModBlocks.GLOWSTONE_BRICK_STAIRS.get();
@@ -151,5 +190,20 @@ public class ModRecipeProvider extends RecipeProvider {
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(base), category, result, count)
                 .unlockedBy(getHasName(base), has(base))
                 .save(output, SpicedCider.MOD_ID + ":" + getConversionRecipeName(result, base) + "_stonecutting");
+    }
+
+    private static TagKey<Item> commonTag(String path) {
+        return ItemTags.create(ResourceLocation.fromNamespaceAndPath("c", path));
+    }
+
+    private static void hook(RecipeOutput output, ItemLike hook, Ingredient tip, TagKey<Item> nuggets) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, hook)
+                .pattern(" T")
+                .pattern(" N")
+                .pattern("NN")
+                .define('T', tip)
+                .define('N', nuggets)
+                .unlockedBy("has_nugget", has(nuggets))
+                .save(output);
     }
 }

@@ -3,7 +3,27 @@
     "action": "remove",
     "items": [
       "farmersdelight:walnut_cabinet",
-      "farmersdelight:iron_knife"
+      "farmersdelight:iron_knife",
+      "farmersdelight:grilled_salmon",
+      "farmersdelight:cod_roll",
+      "farmersdelight:salmon_roll",
+      "farmersdelight:rice_roll_medley_block"
     ]
+  },
+  {
+    "action": "remove",
+    "items": [
+      "farmersdelight:cod_slice",
+      "farmersdelight:salmon_slice"
+    ],
+    "replace_with": "tide:fish_slice"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "farmersdelight:cooked_cod_slice",
+      "farmersdelight:cooked_salmon_slice"
+    ],
+    "replace_with": "tide:cooked_fish_slice"
   }
 ]

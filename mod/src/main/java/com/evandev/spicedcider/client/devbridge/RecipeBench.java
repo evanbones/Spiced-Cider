@@ -38,9 +38,6 @@ final class RecipeBench {
         GRIDS.put("nomatch", new String[]{"minecraft:dirt", "minecraft:gravel", "", "", "", "", "", "", ""});
     }
 
-    private RecipeBench() {
-    }
-
     static JsonObject run(int rounds, int lookups) throws Exception {
         IntegratedServer server = Minecraft.getInstance().getSingleplayerServer();
         if (server == null) throw new IllegalStateException("Not in a world");

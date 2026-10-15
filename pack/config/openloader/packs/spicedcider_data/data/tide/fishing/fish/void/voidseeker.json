@@ -1,0 +1,29 @@
+{
+  "behavior": "linear_wrap",
+  "bucket": "tide:voidseeker_bucket",
+  "conditions": [
+    {
+      "type": "tide:dimension",
+      "dimensions": [
+        "minecraft:the_end"
+      ]
+    },
+    {
+      "type": "tide:fluid",
+      "fluid": "dimensional_tears"
+    }
+  ],
+  "display_data": {
+    "entity": "tide:voidseeker",
+    "x": -0.13
+  },
+  "fish": "tide:voidseeker",
+  "selection_weight": 3.0,
+  "size": {
+    "record_high_cm": 120.0,
+    "typical_high_cm": 65.0,
+    "typical_low_cm": 40.0
+  },
+  "speed": 1.85,
+  "strength": 0.9
+}

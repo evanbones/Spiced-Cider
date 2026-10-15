@@ -2,7 +2,23 @@
   {
     "action": "remove",
     "items": [
-      "nomansdelight:orange"
+      "nomansdelight:orange",
+      "nomansdelight:billhook_bass_roll",
+      "nomansdelight:billhook_bass_with_eggs"
     ]
+  },
+  {
+    "action": "remove",
+    "items": [
+      "nomansdelight:billhook_bass_slice"
+    ],
+    "replace_with": "tide:fish_slice"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "nomansdelight:cooked_billhook_bass_slice"
+    ],
+    "replace_with": "tide:cooked_fish_slice"
   }
 ]

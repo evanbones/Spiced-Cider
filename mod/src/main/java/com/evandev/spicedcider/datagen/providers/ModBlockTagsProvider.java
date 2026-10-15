@@ -28,6 +28,17 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                 .addOptional(ResourceLocation.fromNamespaceAndPath("caverns_and_chasms", "tuff_tile_stairs"))
                 .addOptional(ResourceLocation.fromNamespaceAndPath("caverns_and_chasms", "tuff_tile_slab"));
 
+        this.tag(BlockTags.MINEABLE_WITH_SHOVEL)
+                .add(ModBlocks.WORMY_DIRT.get());
+        this.tag(BlockTags.MINEABLE_WITH_AXE)
+                .add(ModBlocks.WORM_CRATE.get())
+                .add(ModBlocks.GOLDEN_WORM_CRATE.get());
+
+        this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
+                .add(ModBlocks.DEPOSIT.get())
+                .add(ModBlocks.DEEPSLATE_DEPOSIT.get())
+                .add(ModBlocks.BLACKSTONE_DEPOSIT.get());
+
         this.tag(BlockTags.NEEDS_STONE_TOOL)
                 .add(ModBlocks.CAST_IRON_BLOCK.get());
 

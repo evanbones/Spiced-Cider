@@ -1,0 +1,27 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "tide"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "N": {
+      "tag": "c:nuggets/steel"
+    },
+    "T": {
+      "tag": "c:ingots/lead"
+    }
+  },
+  "pattern": [
+    " T",
+    " N",
+    "NN"
+  ],
+  "result": {
+    "count": 1,
+    "id": "spicedcider:heavy_hook"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "loader": "neoforge:separate_transforms",
+  "gui_light": "front",
+  "base": {
+    "parent": "minecraft:item/generated",
+    "textures": {
+      "layer0": "tide:item/bobber_icons/light_gray_bobber"
+    }
+  },
+  "perspectives": {
+    "fixed": {
+      "parent": "tide:item/bobber_3d/light_gray_bobber"
+    }
+  }
+}

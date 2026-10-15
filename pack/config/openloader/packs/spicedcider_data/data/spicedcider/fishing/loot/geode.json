@@ -1,0 +1,22 @@
+{
+  "conditions": [
+    {
+      "type": "tide:dimension",
+      "dimensions": [
+        "minecraft:overworld"
+      ]
+    },
+    {
+      "type": "tide:fluid",
+      "fluid": "water"
+    },
+    {
+      "type": "tide:depth_range",
+      "min_y": 0,
+      "max_y": 40
+    }
+  ],
+  "loot_table": "spicedcider:gameplay/fishing/geode",
+  "quality": 0.5,
+  "weight": 6.0
+}

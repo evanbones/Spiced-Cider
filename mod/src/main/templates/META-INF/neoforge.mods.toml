@@ -270,3 +270,15 @@ type = "optional"
 versionRange = "*"
 ordering = "AFTER"
 side = "CLIENT"
+
+[[dependencies.${ mod_id }]]
+modId = "alloyed"
+type = "optional"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.${ mod_id }]]
+modId = "dimensional_tears"
+type = "optional"
+ordering = "NONE"
+side = "BOTH"

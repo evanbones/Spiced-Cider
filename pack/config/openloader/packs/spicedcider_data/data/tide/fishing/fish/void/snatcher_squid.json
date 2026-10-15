@@ -1,0 +1,31 @@
+{
+  "behavior": "darts",
+  "bucket": "tide:snatcher_squid_bucket",
+  "conditions": [
+    {
+      "type": "tide:dimension",
+      "dimensions": [
+        "minecraft:the_end"
+      ]
+    },
+    {
+      "type": "tide:fluid",
+      "fluid": "dimensional_tears"
+    }
+  ],
+  "display_data": {
+    "entity": "tide:snatcher_squid",
+    "shape": "2x1",
+    "x": 0.1,
+    "z": -0.05
+  },
+  "fish": "tide:snatcher_squid",
+  "selection_weight": 6.0,
+  "size": {
+    "record_high_cm": 260.0,
+    "typical_high_cm": 170.0,
+    "typical_low_cm": 110.0
+  },
+  "speed": 1.5,
+  "strength": 0.8
+}

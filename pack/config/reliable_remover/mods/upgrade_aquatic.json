@@ -124,5 +124,14 @@
       "upgrade_aquatic:kelpy_cobblestone_tile_wall"
     ],
     "replace_with": "stoneworks:stone_tile_wall"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "upgrade_aquatic:cooked_pike",
+      "upgrade_aquatic:cooked_perch",
+      "upgrade_aquatic:cooked_lionfish"
+    ],
+    "replace_with": "tide:cooked_fish"
   }
 ]

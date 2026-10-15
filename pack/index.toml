@@ -474,7 +474,7 @@ hash = "0030656736b21f06f9f5b73078ce3ea41778f0f744c9d5da0055712a493ced85"
 
 [[files]]
 file = "config/drippyloadingscreen/early_window_reference.properties"
-hash = "e5e778ef2662638cfa89667ac3260560be95fd306b009f4c6f5ec813f0e040c6"
+hash = "72e94f29e0578eb9ccf9c0ac5d5978aae2e5e20372eb7f76565100650a762f46"
 
 [[files]]
 file = "config/drippyloadingscreen/options.txt"
@@ -618,7 +618,7 @@ hash = "09d330b29443d9579ecc014f2be2fcb31075bfe1e9f9ac4e750f271128650fe6"
 
 [[files]]
 file = "config/fabric/indigo-renderer.properties"
-hash = "cc3812b05583c53406939f997e7843831693de5a4900c6363c3d4912eff3ef98"
+hash = "b19b5c0abd417875d8e046e5c769d0a3cb77728fd71d244d6a9fcda610514335"
 
 [[files]]
 file = "config/falling_snow.json"
@@ -2097,6 +2097,10 @@ file = "config/openloader/packs/spicedcider_data/data/caverns_and_chasms/advance
 hash = "3193f557e3b883ee7dc69012e9128c8f615c90e1bd0b2644e341d42fb52e5873"
 
 [[files]]
+file = "config/openloader/packs/spicedcider_data/data/caverns_and_chasms/fishing/fish/underground/cavefish.json"
+hash = "ed0356e95fcf4eff7818930e21ac69416cad2df06af5806acfe343ed88ed83c6"
+
+[[files]]
 file = "config/openloader/packs/spicedcider_data/data/caverns_and_chasms/recipe/bejeweled_apple.json"
 hash = "fd66171a190b06f4df0ffc9172d8d17e65f00c1019abdc9bd4b4adf155569b08"
 
@@ -3481,6 +3485,14 @@ file = "config/openloader/packs/spicedcider_data/data/create/recipe/sequenced_as
 hash = "e8d512df715834be5f1d3f27d2a33ce1f3f8100a6eda7261235cae59e3720739"
 
 [[files]]
+file = "config/openloader/packs/spicedcider_data/data/culturaldelights/fishing/fish/saltwater/squid.json"
+hash = "8a7e15fa0acb527d4da37354f18e4e46b48013d5d9d8ad82d7748e82f5471b68"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/culturaldelights/fishing/fish/underground/glow_squid.json"
+hash = "19d68403c4002d064ccaea22b6382101facd1703d54aa5fe6acde6f8e61030c0"
+
+[[files]]
 file = "config/openloader/packs/spicedcider_data/data/dimensional_tears/recipe/filling/crying_obsidian.json"
 hash = "9789720f5f39d8b84c554febe5d337ecfe8f81af408c5f3e0a253673cb4dd858"
 
@@ -3491,6 +3503,10 @@ hash = "f93b63173aa8fc90422583c386aebbf1c0c824ffca76b7b7126ee5cfbb6360e8"
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/dimensional_tears/recipe/mixing/dimensional_tears.json"
 hash = "7cf31104cd4707e04271121aa6d1fe31e1aeb89a168f5714023d151a89120873"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/dimensional_tears/tags/entity_type/dimensional_tears_immune.json"
+hash = "9c527a57ab5860821a782235aa18b4fd99ff9a8d9f947e6c7723cb26aed6cc64"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/dynamiccrosshair/tags/block/always_interactable.json"
@@ -3653,6 +3669,10 @@ file = "config/openloader/packs/spicedcider_data/data/environmental/blueprint/mo
 hash = "a19c10e3165ba87213760a0595dd07224837bd163a04dbfafb8b499e5254af18"
 
 [[files]]
+file = "config/openloader/packs/spicedcider_data/data/environmental/fishing/fish/freshwater/koi.json"
+hash = "d88f09e4090b42aab0b6dc0f4eb9b6a9596099cc6316f370f91cecd932742721"
+
+[[files]]
 file = "config/openloader/packs/spicedcider_data/data/environmental/loot_table/entities/duck.json"
 hash = "26f446e01b54abfe217430be5cd4d991662df387e018b9c89060d98f4d80ea6a"
 
@@ -3739,6 +3759,10 @@ hash = "0df0ff989c611657ebcb36992bb8689aa11852e9f8a533cfc9e315f1f03b0e93"
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/fieldguide/tags/entity_type/blacklisted.json"
 hash = "238c8f1986aa81d93a96a8a1d2cda42ca751b1e7b9f58e58ee6a9a89372cb55e"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/fieldguide/tags/entity_type/blacklisted/fieldguide/animals.json"
+hash = "e3f748086f56d50dc9f98f2dce038cb7952a593300f0c6d17e5ecb10c30b1a7d"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/frame_changer/recipe/chiseled_obsidian.json"
@@ -4337,6 +4361,10 @@ file = "config/openloader/packs/spicedcider_data/data/modestmagic/recipe/summoni
 hash = "7088963071ba14b7bbd6aabcded223656dcf31a781a19bc064c679602beb1c5f"
 
 [[files]]
+file = "config/openloader/packs/spicedcider_data/data/modestmining/neoforge/biome_modifier/add_aluminium_ore.json"
+hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
+
+[[files]]
 file = "config/openloader/packs/spicedcider_data/data/mynethersdelight/loot_modifiers/add_loot_bastion_hoglin_stable.json"
 hash = "5634a4ba3a073de28881df09e2fe627cd76f08effc3e863fe22b00ac0b238885"
 
@@ -4351,6 +4379,10 @@ hash = "2352643b9c7b79b69c758c3ffa8bdba6e5bf82fbc9647fd7c64636c08229c8fe"
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/neoforge/data_maps/item/compostables.json"
 hash = "3b193414a49824009cfdfd1a746892dfb5e4f9f7264eb35216daf41ea41909c7"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/neoforge/loot_modifiers/global_loot_modifiers.json"
+hash = "64f71e5f59606cb6b9998fedfffa4933ec827223bd78d6979671a4a340259daf"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/nirvana/tags/item/burlap.json"
@@ -4371,6 +4403,10 @@ hash = "f1082dcc20a342e58677726b39dca2689bd319b1b33dbeb3e1267db06435f6d1"
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/nomansland/blueprint/structure_repaletters/maple_hut.json"
 hash = "79b6e3e7e6a5bbb1cfc563773d9d9f70d7f9bc4769189df176072c4140a61e72"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/nomansland/fishing/fish/freshwater/billhook_bass.json"
+hash = "50b786f069a304048a0db2e8dfd3bee5d8b98c9598eee16738337f659d799489"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/nomansland/loot_modifiers/fd_integration/straw_from_cattail.json"
@@ -4707,6 +4743,62 @@ hash = "deb72e92240a378976d5924739e0debb46f0ba2ce29387061bf589363de1e55f"
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/data_maps/entity_type/spawn_equipment.json"
 hash = "347b271e4bdfc73a6c6b5bd28de45f025efc191e2c01b691826eabd4c041bf5d"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/fieldguide/categories/bosses_order.json"
+hash = "70841a2ade175c9a49d0b6bde71692b665eb5859e84a57e056cf57a831b89653"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/fieldguide/categories/fish.json"
+hash = "76728ce99ba6424c1cd9affa49e5c0dd881c00651441ee97e0f8a6eb3132738d"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/fieldguide/categories/monsters_order.json"
+hash = "7e71189dc6ef22ed17d0e27c9c90c39dfe3b33f867d34a4a2c5ecb5fb25a7f55"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/fishing/loot/blackstone_geode.json"
+hash = "268d665b88932c752b5ae020719e420d22457990529b541fe8247de95626cb20"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/fishing/loot/deepslate_geode.json"
+hash = "47b86d14b9856fb56b8bdd43e4d7bd5f05b9a6547ef176fdebee8dbc371a8827"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/fishing/loot/geode.json"
+hash = "71c467512587f874fe0b88b5a999af403421efe3187af0b7aea39079a4c25980"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/loot_modifiers/geodes_nether.json"
+hash = "a60f62bf9a829464a375a4450914c61acea01d5bf9a5067a6d99d58494a920be"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/loot_modifiers/geodes_overworld.json"
+hash = "40a3e79c909b1e48c59a922f9493930c1550be61d39c753cebcd67ac79b934f8"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/loot_table/gameplay/fishing/blackstone_geode.json"
+hash = "19b5ebcbbfce8a0548ceb0bb3a206fc4f51518571b3e2e592e7b6d6a97ec4e94"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/loot_table/gameplay/fishing/deepslate_geode.json"
+hash = "c4f7ac5db3b47010c5f5846b7a8fd8cf157f8a3fc8690757295122274722ebf4"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/loot_table/gameplay/fishing/geode.json"
+hash = "e1f892ba26a27e2c06aa0f2406a62a2a96a18109ab3a84aa2e66e303b59b0ccd"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/loot_table/gameplay/fishing/perfect_catch.json"
+hash = "caefd9a3579ff1ea7ce06fef6e1a484d37935a93ddf780d0688fbf3eadf30707"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/loot_table/inject/geodes_nether.json"
+hash = "6d6a5ef10a8d8a4a09712767a934ea80cdd70590a60cac6e85fba461b779d157"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/loot_table/inject/geodes_overworld.json"
+hash = "ead67b7843e5af25403017503e1c81283ddecee55f8e5150074f2480a80c64e1"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/neoforge/biome_modifier/allay_flower_forest.json"
@@ -5465,6 +5557,230 @@ file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/crushin
 hash = "31457a3d6584e619aa7f2cc4df7a4d8a09c5b2e978ccce17389498c2ed466730"
 
 [[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/cutting/fish/caverns_and_chasms_cavefish.json"
+hash = "33bf9d1e2a27414e2f30fe8f67ede156872ca501e03129e2738fc290e6f9d7cd"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/cutting/fish/environmental_koi.json"
+hash = "5d9ee6f80f4aace10f7bfa39cb2e1ac746d2e2ed4003d01a5a6539e5983bd020"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/cutting/fish/minecraft_cod.json"
+hash = "d61612267ef98b6607338e2eb45e453690f6e5398ca8675e7f0dcd8776710c11"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/cutting/fish/minecraft_salmon.json"
+hash = "af1a88becda8f4ff126b09b8cb4ab9c3a5f2c0a5128fc6d6504169ad7a7a2eba"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/cutting/fish/nomansland_billhook_bass.json"
+hash = "6d9db6d60b03c4f94c785097ddfd00c4c0d45eeced98a3a921514afc9815310e"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/cutting/fish/tide_anchovy.json"
+hash = "c8994e017ebb7a818f7790ee1451188d0d6344ab220735d8bae06da467e5ef72"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/cutting/fish/tide_angelfish.json"
+hash = "1e4c93e28e0bc7daf39649e4427abf72ccd3845fef47fcf18b2ccc56803233d2"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/cutting/fish/tide_anglerfish.json"
+hash = "da953d9dd258cef078a5bedf43fed2f00846a63c5cb16bee07bce05b1546139b"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/cutting/fish/tide_arapaima.json"
+hash = "3cdff7139b82e4a838a0906405643a2f631ef4a0bd50c2d2e28498d55bdfb97d"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/cutting/fish/tide_ash_perch.json"
+hash = "6226d6ed4e35495c5edb581dd47b8a2b2fece8a181231169598090cfc721aed1"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/cutting/fish/tide_black_crappie.json"
+hash = "7b99c932c78f7b9a138d6c3f9698cf3ddd467ffc71d103e4d32b59e4c27df903"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/cutting/fish/tide_blazing_swordfish.json"
+hash = "44ea4ad62e103ff4cf321b64dba3f1a338ec0350a767b83f7fed4cebd0ccf482"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/cutting/fish/tide_bluegill.json"
+hash = "ea666efb05ae04ba179bda4eb33862c6d93d2ab31a3f55a9a3c50748c54c95a3"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/cutting/fish/tide_brook_trout.json"
+hash = "44bd746d2eb035a6b31deb6ffc6a3cb6da36190c1d5ec77bd49be5d7415ab8fc"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/cutting/fish/tide_carp.json"
+hash = "d23543f1820a6e4309fdda269cc9c5d1952fac7f2f0acd902ed47143bb1f59ea"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/cutting/fish/tide_catfish.json"
+hash = "523b560b2ee3731f30a25776d4bdcc63372fd88d7c4a6af706b9b0458e1e7196"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/cutting/fish/tide_cave_eel.json"
+hash = "cce757fa98af7d2c4c5ccdc0cad735cde32ca78e432fdfd88cd7deefb75c8ff2"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/cutting/fish/tide_chorus_cod.json"
+hash = "70fbf4d0f8ba533c3bf482f5a845d58fe93e74f7b613cb3086dc36b9cb6ce192"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/cutting/fish/tide_coelacanth.json"
+hash = "c3f461c8524c55624e16977df01d374b566bff37342004dcb02bd5949e334c94"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/cutting/fish/tide_cooked_fish.json"
+hash = "577764a021e44ac3bf88bd7ac94f1c1c1747e4282c014828b3ab8f576cd5f3a7"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/cutting/fish/tide_crimson_fangjaw.json"
+hash = "2a3a437417f7a879e72f04bab18a1ce60b274ad93afe4c51b55259681154b73c"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/cutting/fish/tide_deep_grouper.json"
+hash = "71f2dc5efbec4016c2a79b6d8cefa84ca5fe3c98c2d38d19cbfd0c4cad8eab97"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/cutting/fish/tide_devils_hole_pupfish.json"
+hash = "f6a3f97432c3f28c211387a1a8c8238d213566828138dd676ffcb72260f214b5"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/cutting/fish/tide_elytrout.json"
+hash = "419b75e7f66cad2dbf5d11f001de09c1ca5465416f6705efdefa8e558bb55f5c"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/cutting/fish/tide_ember_koi.json"
+hash = "70cf9f984c4f23174be0d5155d7c431529cb9f572ec1097ae075991adfd6a9c8"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/cutting/fish/tide_ender_glider.json"
+hash = "f63746933cbbf8d80093aae2de539f02332f5c8ea44ede42e30ed9ad00e8d54f"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/cutting/fish/tide_enderfin.json"
+hash = "61e07e668613a9def5a7180c126c789cbed47b33292d0a0bac283349b9187cca"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/cutting/fish/tide_endergazer.json"
+hash = "9c7f64a0f32ddd8734238f2e5728ab292135c1315d26f9881990f0dcae752602"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/cutting/fish/tide_flounder.json"
+hash = "1adb6daa0b6c018417464d2f5cfe8da9e9d7a934881d838a7000dcab24b4d088"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/cutting/fish/tide_great_white_shark.json"
+hash = "01349a0ba1b674b52de6edda18e515ca32c2dcf68839f32ba4e7e47009ecb8b0"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/cutting/fish/tide_guppy.json"
+hash = "d8d52e0b04c50db238e1f1854e2da6fea7228cb464f35427af08d37c781f786c"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/cutting/fish/tide_inferno_guppy.json"
+hash = "da27435be9ac1811243ad84c07b8aa6e1dc5c195806237eb3c89967288d26232"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/cutting/fish/tide_mackerel.json"
+hash = "6afab2eee9544235d98fd9fa3509eed7a2303db9fb3cc3737f1e65803e0151c4"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/cutting/fish/tide_magma_mackerel.json"
+hash = "3715df933874e82b1f9fb6bf0402e53a9b5699e8f7e90b09b6c6987d2f331d6f"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/cutting/fish/tide_mahi_mahi.json"
+hash = "6223231d96398c60a4bb81e85a8d620306a07796d1a19fcca58ef6770ed2366c"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/cutting/fish/tide_manta_ray.json"
+hash = "67ebd40181816bd17f997fdbf3476fb7cb5d9bd7f78883c48de4812f424d0440"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/cutting/fish/tide_mooneye.json"
+hash = "088ff131795180ec213047d5fc58a9c90df0723146000348a338698c9130fd3d"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/cutting/fish/tide_obsidian_pike.json"
+hash = "c053b812c2b9872e5aa1914481f5e68389629615363dbd4c2e700ac31b51b885"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/cutting/fish/tide_pale_clubfish.json"
+hash = "358236c9f62789f792f7aa6c81db8a2a1b379571e834440792dc48b99b5bb9b3"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/cutting/fish/tide_rainbow_trout.json"
+hash = "c17f5b7c88e717d43704d6e4366ff4ff8acdd4b20ebdff8142a34348b9c3ae8b"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/cutting/fish/tide_red_snapper.json"
+hash = "11c0f56910a014bd74bdc1633436e750c0fdfaecdc901a86c4b14c216255e4bb"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/cutting/fish/tide_sailfish.json"
+hash = "8fe90c47f97f16ccd26245c33b2b4f7e0880af154e7fcc62019d1e8a78ca6c44"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/cutting/fish/tide_snook.json"
+hash = "5c6a6e8b29bed157e6d3e046a6320c957d967acfc9912f9ca54e0ba8ae1a0a15"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/cutting/fish/tide_soulscale.json"
+hash = "a7d9d5a41d853595705b5bf7d97107edb59ca2658dfa381db14a51d7519ca8ad"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/cutting/fish/tide_sturgeon.json"
+hash = "c94cf22d1bfb1a96d3cca141dbfe6144a7f35b3708071ba8c2f20687d94be641"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/cutting/fish/tide_swordfish.json"
+hash = "b17d13b09275a65f50a83ea89ebd1eb9be7c53abeabf10cd3a1f3fb68da20bcf"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/cutting/fish/tide_tuna.json"
+hash = "6d26b32fb81c97c5c000023d3e55576c89301d0627b65be9310bd296e2588468"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/cutting/fish/tide_violet_carp.json"
+hash = "2c62d0504994c63b2aef4a0decf68310fcc55926b5be5d0fc38074a17cfd4275"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/cutting/fish/tide_voidseeker.json"
+hash = "6b15f7ca8220db99f7d79ee70da753a0bfe1d27caa63aa5ca7e2bc9eeb802d11"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/cutting/fish/tide_walleye.json"
+hash = "f0b270dfb0c1e4ee6a3adb58aa7048cce44a7094e36309e59972dbdf9f23ffe1"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/cutting/fish/tide_warped_guppy.json"
+hash = "b557a77b5270cd1420b306fdfaacd6af1788c0a63d11dbaef732bc6d9478d174"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/cutting/fish/tide_white_crappie.json"
+hash = "9c5e4c44fe1c62309b3c797f9f73ec3ea869dcd18014e134a42cfdc8c46ad19d"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/cutting/fish/tide_witherfin.json"
+hash = "309fc8f5aab488ca542bc04fa8f7db865ce6eefc11159988ab778a56a99c6c10"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/cutting/fish/upgrade_aquatic_lionfish.json"
+hash = "54a1d6d2af202361abe4b496f44792d52e2c19c55c8e0beb9336de6fda4b49ea"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/cutting/fish/upgrade_aquatic_perch.json"
+hash = "0efe9f661e25b35f119d0ef60f4be3c8f599ae4f2fdcd7a46ae3305a2dea0d43"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/cutting/fish/upgrade_aquatic_pike.json"
+hash = "3fedf30301f4f4bdb4a546029adf8a7634ace564b43f909f1a344c33b1cc8f42"
+
+[[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/milling/sulfur_dust_from_cobbled_sulfur.json"
 hash = "7d2aaf09c60422e983940ced49ceed66055156481e28179770bd0e8b419d06f8"
 
@@ -5563,6 +5879,10 @@ hash = "5844086ac2828011e82c11e167b0f7aa8af25202ce1799813e36db818c92a6bb"
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/smithing/infernite_cleaver.json"
 hash = "fc60c7da4fdd27e9ad522fc7b42db0599370bcd445c6b35269cf7c20a27efbbf"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/smithing/steel_fishing_rod.json"
+hash = "56d851b41b310cddcf280c7fe6d9119d620b5d87a9137d4ba65fc3e4b541cd9f"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/stonecutting/andesite_tiles_from_andesite_bricks.json"
@@ -6017,6 +6337,18 @@ file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/worksto
 hash = "00c99478b291eb415196481fe70cef3f7c28acdde36921c9b6e8bf5df4419673"
 
 [[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/workstone/crack_blackstone_geode.json"
+hash = "1ea099091e29b414e188c24a6c039b023dd68518d33e461d4342bced0ab433a5"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/workstone/crack_deepslate_geode.json"
+hash = "b99f667054b9a5630128ddaf7fee885eadf279d46e6c2ac672bd14f37d2c919c"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/workstone/crack_geode.json"
+hash = "8f28af43cb8e348dfe5c79861cd70364216a9dad8cdd0d1519a4f6f9a1315bba"
+
+[[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/workstone/cylindrite_to_cobbled_cylindrite.json"
 hash = "20d8540aa430f3d12e6ee7d450b552dc3c0ce05fba7f72211f1531720903bdb5"
 
@@ -6102,7 +6434,11 @@ hash = "bba97009ca2fae9fc37c5ef459f824aa614a2439c3ca831003f90abc73745384"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/tags/entity_type/deny_spawn.json"
-hash = "0daf5461233c483983487deaa48f64e2a7d23506d237ae860441c18df93719ab"
+hash = "8bc88bae50698c1d643e934543af6e10ddd86a3877e62ac9f679333b259efb1b"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/tags/entity_type/fish.json"
+hash = "08c92441903c6d1a99a81d0956cb08ede5bf5055cc62fc064adbd49724b4a0e9"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/tags/item/rotting_flesh.json"
@@ -6141,8 +6477,116 @@ file = "config/openloader/packs/spicedcider_data/data/supplementaries/tags/item/
 hash = "a50c471a0cfd9164dc4b104083d3a190f122c0808c6a4bdf1a3de849c02468ea"
 
 [[files]]
+file = "config/openloader/packs/spicedcider_data/data/tide/bait/spicedcider/golden_worm.json"
+hash = "ba5b3ace0513a06a29372b96285f349f89382e0f6d5be6ff5990047b1fee63f8"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/tide/bait/spicedcider/worm.json"
+hash = "d04819ec297a9a177a8d6bdd51cf06ca7c5cd1861c38ab489045c7134ad9da50"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/tide/fishing/fish/void/chorus_cod.json"
+hash = "15132908e250f92ad2be673bf2b6881f45c569889bc700446e9a044896840ade"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/tide/fishing/fish/void/elytrout.json"
+hash = "bb87e0e0d17c91feac06503605ead2d3e274d39b6cbd49785eb4caedaca6e23a"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/tide/fishing/fish/void/ender_glider.json"
+hash = "d3bec6e1116055aef809aeee692c8821da4782c3d5ba39d7ef9d156e301de5a9"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/tide/fishing/fish/void/enderfin.json"
+hash = "57904326eb82e12a9df789624f01bfb0803830c3355ac8519bc724a4f2473980"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/tide/fishing/fish/void/endergazer.json"
+hash = "8d2b23487d01d31e5dd6145d884289439481f8a89bd7fb0493c0715afd83340f"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/tide/fishing/fish/void/pale_clubfish.json"
+hash = "4572463feb1d32719d150708513ef4653b7b8463b088cefaf2e1321d2af3d909"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/tide/fishing/fish/void/snatcher_squid.json"
+hash = "5ddb3245fac575a16d936eb8d974683f2449ca1adfa9e7c060c2248ba8c62c38"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/tide/fishing/fish/void/violet_carp.json"
+hash = "87890605239ab5c4f25f98d77bee7eabffff2cdb80ce4ca4bf63ef6f01774cd4"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/tide/fishing/fish/void/voidseeker.json"
+hash = "f06990935e0a814d5abea1a98d40060071dce3cb2a2383b26994ecf245853e12"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/tide/recipe/bobbers/duck_bobber.json"
+hash = "f8e766766d60bfb43fd0a9e070156178c5574c2a8abf77a6d936107a63c5c049"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/tide/recipe/fiery_hook.json"
+hash = "9791f4070a77d998aab5a5bccce43149a25aa5542c26d0367d65d962fefa2c28"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/tide/recipe/iron_rod_smithing.json"
+hash = "c5691e4fa2952e3cbf530b9cb0d67c6481abf4fac7a63490947d0797727569f6"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/tide/recipe/lavaproof_hook.json"
+hash = "7e36e519f348eeaf7da7518309d3fd68b43290cee2cc3510af85a15b3cfaf21d"
+
+[[files]]
 file = "config/openloader/packs/spicedcider_data/data/tide/recipe/magnetic_bait.json"
 hash = "0f86077611826f08bcc84b637a5319f52c86bfa64c5c24a5ed473a5f654ba46f"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/tide/recipe/netherite_rod_smithing.json"
+hash = "713244a31c652f9ab95b2c7eb72b19fc3a787eabce9096bdcd4f7d27825fb589"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/tide/recipe/permafrost_hook.json"
+hash = "10e0cd22397b6c036e3261cad449135e17237122074b6dd8cb5175b8a78e7418"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/tide/recipe/twilight_hook.json"
+hash = "411e7c3f58329aecc647bd48c746f82a62502ef62fb867ebc54ea07b0e877499"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/tide/tags/item/bait_items.json"
+hash = "f422cb877a90c1f347e61cc393a60ad62735617edac228fdf7132fe06680c4ce"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/tide/tags/item/cookable/cooked_fish.json"
+hash = "2dcbf71c989df63f5768435cf65511be940461cde94b2650aec6cbc825ad9b26"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/tide/tags/item/cookable/grilled_tuna.json"
+hash = "bef4d172fc1bfb34d342e79090726c4a0c272dd404783c3ea022b992e0e0415e"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/tide/tags/item/cookable/large_cooked_fish.json"
+hash = "bef4d172fc1bfb34d342e79090726c4a0c272dd404783c3ea022b992e0e0415e"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/tide/tags/item/cookable/small_cooked_fish.json"
+hash = "bef4d172fc1bfb34d342e79090726c4a0c272dd404783c3ea022b992e0e0415e"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/tide/tags/item/fishing_rods.json"
+hash = "e36e7202f851c33dcbd53b550a9fc5eff13a02ae86f19e5ea7683a2a37cd4e44"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/upgrade_aquatic/fishing/fish/freshwater/perch.json"
+hash = "6d0f4f5ecffcf9ce0d1dbf65d42678e46f4a65f23f280fcc456a63c7445141db"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/upgrade_aquatic/fishing/fish/freshwater/pike.json"
+hash = "e178404f09ecd9862df6ff6579769895ba59413dceefb2eb2ffe8ee2ca939697"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/upgrade_aquatic/fishing/fish/saltwater/lionfish.json"
+hash = "608c70622c1f0c950e8ec83dfdb396d087dab940df7e1d2c58b4b8a6442a5a5e"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/upgrade_aquatic/recipe/beachgrass_thatch.json"
@@ -6398,7 +6842,7 @@ hash = "13b2b1384f949e6e409c3c3cc423ecb854df6b386d4466d424a57a887e89f3d8"
 
 [[files]]
 file = "config/packetfixer.properties"
-hash = "f60364298fd8e1c99e259c3f12daa6c742c0f13ba8f5eae0c5047c02b3aa8f04"
+hash = "c82b14392d866f49170d54dec9b9cd29b4ac8e90c2cec55bfbc748195930c69a"
 
 [[files]]
 file = "config/particle_core_config.toml"
@@ -6545,6 +6989,10 @@ file = "config/reliable_recipes/crafting_collisions.json"
 hash = "9be390a2082b16ea017e5682d80d19457b0c74669542fb8943c8ef40018f532a"
 
 [[files]]
+file = "config/reliable_recipes/fishing.json"
+hash = "db030be342e8c1a9c161ad079b6855409d933283695ac92407e41728a63f5b16"
+
+[[files]]
 file = "config/reliable_recipes/generated_removals.json"
 hash = "63b67b4b30771896ada499683ea45bfec5659eabd3b48b4e5ea71528b58a7cb3"
 
@@ -6586,7 +7034,7 @@ hash = "84ae247517bb1bbccb989b330a77769995969b7f2cf4a872da4d71bd05b79e32"
 
 [[files]]
 file = "config/reliable_remover/mods/abnormals_delight.json"
-hash = "48a32306c57af760a2db39714119fc6933ea9bf9ab346eac06766fd918bd8584"
+hash = "dfec99526b7344a751f8c7f3df5332dc95a7d9a3907e7e17677450fc2d8455f5"
 
 [[files]]
 file = "config/reliable_remover/mods/abundant_atmosphere.json"
@@ -6610,7 +7058,7 @@ hash = "77ff8ef2f0037109165316175ba4bbff54dd09fd0f72ea7af660f18280b68adf"
 
 [[files]]
 file = "config/reliable_remover/mods/architects_palette.json"
-hash = "8fe4e3ffc2f8f8f3b7065d859f18e17a0a841f85a4cd55f1c15fcbc9bd38835c"
+hash = "eb14f168c7990945df345d0b79217854c7fd5aba9a482514ba07e6588497355c"
 
 [[files]]
 file = "config/reliable_remover/mods/arts_and_crafts.json"
@@ -6630,7 +7078,7 @@ hash = "a9c0a48f2a22e37803c5a88fe6c78ae5a5e433b3042cd24429c77144e9a83213"
 
 [[files]]
 file = "config/reliable_remover/mods/bountifulfares.json"
-hash = "9880059f305613028554e8d4793a2c63c0e76223eaa4a2db60134eb547971955"
+hash = "76d9b1c0bd8d170efc92c15d7fe5f596481a7fe5c631559090a58a4f2181bd5f"
 
 [[files]]
 file = "config/reliable_remover/mods/buzzier_bees.json"
@@ -6682,7 +7130,7 @@ hash = "d54ef065262f47bf775c0e6c2ef4bec65683daaf8123354288e0530b13454e63"
 
 [[files]]
 file = "config/reliable_remover/mods/farmersdelight.json"
-hash = "0bbc147378b82dbefbf6c5145ba549f203eb3e8b857b21d267a6ff8a0bdbbd3b"
+hash = "ea8c1bca735785d3e9e03bea90042829c9a6c80aac8607c1e6ce1b048df274b4"
 
 [[files]]
 file = "config/reliable_remover/mods/frontiers.json"
@@ -6710,11 +7158,11 @@ hash = "f3bacd8cf657a2f9f9a084f2b757f3346a19e037d18a3f07e9d3223e3e74ec78"
 
 [[files]]
 file = "config/reliable_remover/mods/minecraft.json"
-hash = "d7744dfb8fdc608ce4d689235edd433d410db78560f8e45bf1e76871602fcf41"
+hash = "71ac98e54616b5dfab64f00c39648ceae6bc0a599b0fb9132fb867af62e43855"
 
 [[files]]
 file = "config/reliable_remover/mods/modestmining.json"
-hash = "cbe040a1e8d711614fc0793982e4f6d2dcf8a8c07dde307123cff417d2b89817"
+hash = "37b92e86f499d3491925fe96349a6113491cc805c5e779ab55497f4daabd55c6"
 
 [[files]]
 file = "config/reliable_remover/mods/modulation.json"
@@ -6746,11 +7194,11 @@ hash = "35cbbbee9094435965528b780ab95c89b951eff8c012067f7ec734b291eb0623"
 
 [[files]]
 file = "config/reliable_remover/mods/nomansdelight.json"
-hash = "bf971fab949e1030154a2d306517e3ce3a705c32525a08831c92ef99cb0502e2"
+hash = "62c32d25faafd04d97757d831c8a8d2aed8e5a5a25b798de7d88ec7a5f33f05d"
 
 [[files]]
 file = "config/reliable_remover/mods/nomansland.json"
-hash = "30cd3f7116358ea1d8f3d70142a0ea15836374459e62daa2f180a165fe9dab4b"
+hash = "460429ea50cb94e1403b6dbd724fdb839236a8fb5e0bac6f542681122fe9f007"
 
 [[files]]
 file = "config/reliable_remover/mods/quark.json"
@@ -6794,11 +7242,11 @@ hash = "02f4b3fb84cd38f9e33c1d8a706a33136e34e7d19fd2fec16070cd0f26076749"
 
 [[files]]
 file = "config/reliable_remover/mods/tide.json"
-hash = "e0da98dc5210219e6234b17fd3a5ae4b379e549c8f06c1afeca966aebda50396"
+hash = "861ec56afe2e28ad7d85390c1e7b46f06ded2a9f2708d2441985321de5ba779f"
 
 [[files]]
 file = "config/reliable_remover/mods/upgrade_aquatic.json"
-hash = "70476a50b449184637552f83819d872f2b3377ff9ab75f564adddca6beea9198"
+hash = "d4b8e49f6557c2473f84233aa1965682f05bddcea6321a30ba3032330ea1fdc6"
 
 [[files]]
 file = "config/reliable_remover/mods/valhelsia_structures.json"
@@ -7718,7 +8166,7 @@ hash = "6a6d3f77f88598206f8edeb23e48afafbcee758f69eb4f430fbeded6e76d0cfb"
 
 [[files]]
 file = "config/tide/tide_server.json"
-hash = "21637d8c2986c8e786ef18c1cf974f1406127cdf0860122174b2d12dccdee1bf"
+hash = "47e8fee1707a8dbbf69722652b3b09ab0374ed8ce40ede8b04eee810cd4f4c1d"
 
 [[files]]
 file = "config/tide_client.json5"
@@ -7958,7 +8406,7 @@ hash = "d985bfc68899c91aa642736400472f6ab876dedaaef4b8c31f38b52d48de633d"
 
 [[files]]
 file = "config/zfastnoise.mixin.properties"
-hash = "c7833933a9280832fb80a9513f112eea63f181a35f2057be5af9adc8c00c3e69"
+hash = "4aca1c62492fb73e4cb22ba096b574d3df85b6d4108177c77628c302ab3c0af3"
 
 [[files]]
 file = "config/zipline.json"
@@ -9041,7 +9489,7 @@ metafile = true
 
 [[files]]
 file = "mods/spicedcider-1.0.0.jar"
-hash = "05512526a078e883c8ccc0f94c77e744381357db60556c8f5d3889252e470cfd"
+hash = "dce3d4bb4ab38e5aaa72ca0a37bac3f77d4176127b21df1b2af360be192c15fb"
 
 [[files]]
 file = "mods/stacksizetweaks.pw.toml"
@@ -11138,7 +11586,7 @@ hash = "cdcfff9a3b697d0a58af3fcbff46a9aae0a76fbfb6b814cf74b1256621e93e69"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/etcetera/lang/en_us.json"
-hash = "bb7124ab5fca298e895e19430746e2a54ed71db6c04dc4606b4d9fcbbcaa3327"
+hash = "27d641817734844f2764b45213a3b76d9e779da4644ffcd8b4b518d29b7e50ff"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/etcetera/textures/block/redstone_wires.png"
@@ -11302,7 +11750,7 @@ hash = "47b991cde60d532382f8343a40d1c2308ac091cf6b709b05e9c5cd4ad7b5cd55"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/fieldguide/lang/en_us.json"
-hash = "1573ac938fc723f6d2f0ad39d12f91de233acde8587c203f3a890e40bb1ea7ab"
+hash = "8e244573da1e3f4915c7fe952bb8c097349a51079eef2be36eaaddc7c253a0e7"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/horseman/stack_groups/copper_horns.json"
@@ -17114,7 +17562,215 @@ hash = "d840ce2e77d8c74b23ba354402a725368660594483e24af98fdcab1ff14e3b28"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/tide/lang/en_us.json"
-hash = "1e19a76d47a4941feba4d27162e0a5f520816758b93892755d064b315b4babb0"
+hash = "27b8e0d9c2c3fb03766b393e634b7e51db4ec1cfef7269de4b86bdc92e94e459"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/models/item/amethyst_bobber.json"
+hash = "cc0ffeeccef589c0305d88b8f5abb7f2e9e8e7c0c0891273b57c7ad056353c35"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/models/item/black_bobber.json"
+hash = "31bcbc34d633ceb2bbe997032a0d4196a5ee6e715057e1380a77280ac16d1bab"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/models/item/blue_bobber.json"
+hash = "2a8fca5ffb3f484454a28ae2bbfce0385c483138050d20a25fb17a4e6ec227e5"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/models/item/bobber_3d/amethyst_bobber.json"
+hash = "404bc370aeb3ce3c2e4581ec91c06c084a9a739ae233c7bfeccfcea8cbb09dce"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/models/item/bobber_3d/black_bobber.json"
+hash = "03224a9850001828d50e7987b326cb03ffb2bc570ce482afd8a24f35f8ad254c"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/models/item/bobber_3d/blue_bobber.json"
+hash = "33a60d51fd2aa3b5c7b7e45278a10ad8599968ce596323765bff036ad0fc9e98"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/models/item/bobber_3d/brown_bobber.json"
+hash = "d86ec9b68373077e888a6e7461ad67d730760c9ab7e04c77c48498f8cf6f1885"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/models/item/bobber_3d/cyan_bobber.json"
+hash = "40ad5cdbff286f129ec4f7725db873418de48c4d28a1febf55d8a41e3e63790d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/models/item/bobber_3d/diamond_bobber.json"
+hash = "97c868859b8a38ec29b1c84780d8ba24572792b63001be8bb1c99d0894c15367"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/models/item/bobber_3d/duck_bobber.json"
+hash = "89464541507b3254d975b9fe8d6f7365d920feed2617c1da62a4e03f4508036f"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/models/item/bobber_3d/feather_bobber.json"
+hash = "0e36af59261ac5cd38672908ca1d07f375d3075772ffab2aacbbbcc760c4d09d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/models/item/bobber_3d/golden_bobber.json"
+hash = "7611ed429772acb4aedd96ea4a3d7e3f1ee8f7091e1e44d67d9c99161ccc46a2"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/models/item/bobber_3d/grassy_bobber.json"
+hash = "f66768ba53f41765ea9d9ab891d57d4d1b54e1870128d6d896e93b9ba798af17"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/models/item/bobber_3d/gray_bobber.json"
+hash = "2d3557c1e876f55f1acea9be166b502c50f6334b0f7bfb87ea7a128eae4ee345"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/models/item/bobber_3d/green_bobber.json"
+hash = "b89fe45e640b66ffe1a5e01c2546aebc1f89d27c476bbd6b4ddf7e419955da4b"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/models/item/bobber_3d/heart_bobber.json"
+hash = "8debfdec7fc5e95b9de462b5c4ef580e422c2fe995dfcb95c397a9356059f4b5"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/models/item/bobber_3d/iron_bobber.json"
+hash = "8d034bb6cc747e13f860b8736dc2278ed0b32dc5af73710516b84b1a27851c79"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/models/item/bobber_3d/light_blue_bobber.json"
+hash = "f6f6d05370eaffd5335d5dc73d8ed64b3110a94b56143341d0cd78f6597addc9"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/models/item/bobber_3d/light_gray_bobber.json"
+hash = "a112b005dc31c5fe4dda8eead68403f7c1b9e292db67a8d64fb314c18fbf8c20"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/models/item/bobber_3d/lime_bobber.json"
+hash = "7c1d5d8a12fba6a91c137b91c141ca293cec3632b7ca4cff9dfdaa4a86257f00"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/models/item/bobber_3d/magenta_bobber.json"
+hash = "8e241e7ccb8517b5852e3f62579d366185a792f0522a0b8d68e0eb3bd2832280"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/models/item/bobber_3d/nautilus_bobber.json"
+hash = "f144091579e8d8607116ccb6f1c8b4be7118d0dc5fa41f3382d9342ef1b49417"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/models/item/bobber_3d/netherite_bobber.json"
+hash = "210dae0b709db2842e4dbb237bec6412f8e70c3a0865b4534dd6aa1d3329414e"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/models/item/bobber_3d/orange_bobber.json"
+hash = "8d37d876f65eb11aec19ada544d0ccfa992d92c04374fbd2dd37eefaa7a5d5b5"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/models/item/bobber_3d/pink_bobber.json"
+hash = "ebab3810db89f3463a01692de045b8bec060ffb142f1ba0a80692ba778878270"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/models/item/bobber_3d/purple_bobber.json"
+hash = "7c0770334210048559f6830cb55ace581d550ab87169fa98ba9ec3643e2d66c5"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/models/item/bobber_3d/red_bobber.json"
+hash = "0809fa47ba66d8c2fec1cad9e0bde8a99ad21da6851fb0a436578550f55b5206"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/models/item/bobber_3d/white_bobber.json"
+hash = "efa1a51bb0438faf410037f1baccc6d15a3e188e83e1031640afdb2a7a0caa22"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/models/item/bobber_3d/yellow_bobber.json"
+hash = "d411861d6f2b7a82bd63a9b82402c3f950d27dc0b002792495c903a78c932df1"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/models/item/brown_bobber.json"
+hash = "dd8f9be60c339f3c651564a793628065777e41aa3aeebf7c1702e69d4ff7fa31"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/models/item/cyan_bobber.json"
+hash = "9f43abfbc6d1a1f01732df481751a0371e331c23bdbfc90b8d81cd228a7aad27"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/models/item/diamond_bobber.json"
+hash = "83796da7629f664c9206673579ed049ca3a8dc305eaf63063db9d3012c15cbfb"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/models/item/duck_bobber.json"
+hash = "1659b0886c141a95d34d948ee4e8d36eca655dea5563a6302bad7c981cb38e9c"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/models/item/feather_bobber.json"
+hash = "2fb5f0fa852f9cbff934fbb81f52f059d7bb3b9608adae8c716932e48bb7451a"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/models/item/golden_bobber.json"
+hash = "637adcea43f810e515993ba10adedd7fa554e8545cf4fd3a7c1c6c0735b09a2d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/models/item/grassy_bobber.json"
+hash = "1b0931dcb49b78a47e8dd093d8f89b11a044dd2048a025192023a03401422092"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/models/item/gray_bobber.json"
+hash = "a08968c29fd6780601cab0544cf6ffaedb94e889cb92a1e3b2ef821725be59ce"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/models/item/green_bobber.json"
+hash = "42a82e51fb67c8345dcaa4eb2ff820707b80d1fd780a50df3f24d8a9abdffcd9"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/models/item/heart_bobber.json"
+hash = "947774884565cfefa22937bfcc1ed70299fe86b7cb6759bcdc520e7db7eaf52c"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/models/item/iron_bobber.json"
+hash = "409be278125e0a33e5cf60b7f98871a917e89ed77c1ee5686edf2423acd0cc05"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/models/item/light_blue_bobber.json"
+hash = "78c07cac7c1bab75b8c4442376d45c738a313a720be7b5b54f35c00a1faa35bd"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/models/item/light_gray_bobber.json"
+hash = "eab507778280aa1c78f0933913b8bdf30f31f66385d9fe88c42ed1c450b3ecd6"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/models/item/lime_bobber.json"
+hash = "cc3c1a5438afb552ee9325240058b135edceed8ebe10e66cde6925c1c9c0c847"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/models/item/magenta_bobber.json"
+hash = "b52fed74fa845b42607f2d3aff6762f9ad40f802e1dc48cf1c07fb627649250f"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/models/item/nautilus_bobber.json"
+hash = "744eca82619161cce609895993fba0d8251da294a1ebd07c1cd1fd36141fd830"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/models/item/netherite_bobber.json"
+hash = "3866f5c4c4d4b52ebb52ebeb02e807a5f8c9343c08f576e064b76748fd326962"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/models/item/orange_bobber.json"
+hash = "59dbc21ca65a58d5fe8693c1214c3867feed844e6859c135616791342eaa7b4c"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/models/item/pink_bobber.json"
+hash = "32af2effcf5fc786ac49287d41bb423acdb4c6b46f9c52c36996fa0650a29e2e"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/models/item/purple_bobber.json"
+hash = "cf4ea2b713cee987be7aa563afbe6c2aa3a8912562a3322ccfa21d536c82f744"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/models/item/red_bobber.json"
+hash = "4b85636416b0c90b3993ff228c1305ae8a696bd3c39f55bbe5f960cfe7855cb1"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/models/item/white_bobber.json"
+hash = "a7ff4f8435cee224c2fd819d9157d6a8b18dc74e34af3f0f9af22da44aa96821"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/models/item/yellow_bobber.json"
+hash = "c372202d4642b3bf4b6b4598352f0dca809c9fb6f439a79050f3113b8e9be79f"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/tide/textures/block/wooden_crate.png"
@@ -17129,8 +17785,128 @@ file = "resourcepacks/spicedcider_resources/assets/tide/textures/block/wooden_cr
 hash = "42db25eec62262add99db29be968486f826058590f4b81410dc13818f18fc1d0"
 
 [[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/entity/fishing_hook/lavaproof_hook.png"
+hash = "0cfd97207269918ebe045835de17bb58a4fcb6ae725d149d36980fd5c1cf0f92"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/bobber_icons/amethyst_bobber.png"
+hash = "d90e5925151f03a0ca5c8501c66338170ebe5b9660e21eb31ee840f40355b883"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/bobber_icons/black_bobber.png"
+hash = "cc2bb7aaaeceb80a88b1d7d1a5770ddf6c9b0a047b01516dbe7ef82cfa92c4c0"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/bobber_icons/blue_bobber.png"
+hash = "b78bc4ec28c86955e6bce198f4d70d8fc5b72f60bf81a69aa0a4ec4d76512e0c"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/bobber_icons/brown_bobber.png"
+hash = "bb80af7657c251c999627505ae252da104093dc6e35fe9de151a8e7ab83e53d2"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/bobber_icons/cyan_bobber.png"
+hash = "f911bd6c34a096ae7ec175fd146543e3b8a96584f301c18613f272671d4c50fd"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/bobber_icons/diamond_bobber.png"
+hash = "0e61ccb65b084e05de79b767cb8c03a6e829eb7cf3cd56f022eae690616c1c6a"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/bobber_icons/duck_bobber.png"
+hash = "cb46787c66d48a908475d14948c5b3134b00b22b26a384e09dc7db9cf1ec01ac"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/bobber_icons/feather_bobber.png"
+hash = "105844d1ebc92e386d70b871d8b53325528d302fb599fe147ba332a2d7f243cb"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/bobber_icons/golden_bobber.png"
+hash = "346662f9d1b1523a72ffe89f51fbd9cd3787eb00093521756806b735cc041aa7"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/bobber_icons/grassy_bobber.png"
+hash = "fe8c190c20e78b4cebf6491f5c68260bdeb9ebc0f62cc1daadd8e716e23f626d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/bobber_icons/gray_bobber.png"
+hash = "740c167a0feba1bcce2f7956260d0f906ea0b1d701ce5c491a87bc8526b817c1"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/bobber_icons/green_bobber.png"
+hash = "87a19d35dd102853d4125ef7b4cd6cdc9261a46fe3c9bebfa16b1bb1aa89856a"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/bobber_icons/heart_bobber.png"
+hash = "2502218341e026a7c424f1d088fe074201ea9758a417787387001df86fc2a11d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/bobber_icons/iron_bobber.png"
+hash = "bf86aa5f245e31e7288f5fbe536fa29de23b25e0eee9e4f9e420ac9f44440e4a"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/bobber_icons/light_blue_bobber.png"
+hash = "030812478e819cd7edf09402f255aeb708c6f4070759601cbb776e52a7c1762c"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/bobber_icons/light_gray_bobber.png"
+hash = "d5c756ee40f049dea6038c62e209c3e30670e9e949b2e814eb783aa667500623"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/bobber_icons/lime_bobber.png"
+hash = "6b19be433ea4ca41680c7f8357a3116507d51c0ec20ae06cd2f2870931ed90b0"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/bobber_icons/magenta_bobber.png"
+hash = "f860258acf8fb3faf1b378a877ef38907cef330a2152c9705a15e6b82f56037b"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/bobber_icons/nautilus_bobber.png"
+hash = "e0ad443cc070fb3571bc63ce8586e46636c681ac59510e4aec46b0d32c10f83f"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/bobber_icons/netherite_bobber.png"
+hash = "60d42a8dea937d4f383a57edf17719289a0c5dfb13ca06a6275f715ff0d6273c"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/bobber_icons/orange_bobber.png"
+hash = "a20069f588951be36bc3d9854db7aef056d12c57f9b0037d372b0338b51b4fe5"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/bobber_icons/pink_bobber.png"
+hash = "6576ddc170437ea7e3f9aef450e0d12186a182ee0916df275ab8c62f2c5a6d44"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/bobber_icons/purple_bobber.png"
+hash = "28f823a090e5ec2d138031012501b55d6285fcdd64aed71da5002afdfcce3273"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/bobber_icons/red_bobber.png"
+hash = "d28edfe43ead88d4db29787266107b2a64d1aef8a054442e4b9effaa54ffd635"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/bobber_icons/white_bobber.png"
+hash = "b48592ad8cc609cfb5cfca723dab7d22ff0c0380031a87e06df93c45e6562da8"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/bobber_icons/yellow_bobber.png"
+hash = "f1125323ab5f725690ba17a8474d78ced66a3b2a8e3a25b669983758bd894b2a"
+
+[[files]]
 file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/fish_bone.png"
 hash = "49c3ec12a6cb3ac85ddc7241f6132362b2fef87fa2e940de0e423379e87e82d9"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/iron_fishing_rod.png"
+hash = "15753927596474f0c22af520f292ce6d556b6ac7efc4284a10d74c3bfe688b2a"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/iron_fishing_rod_cast.png"
+hash = "8528ba653cfd4d9903518ba100faa259fd273c9decf82bb78d251d8ba563bc64"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/lavaproof_hook.png"
+hash = "46df4e444453176ab4443fb1cd8be6610d36ab4ff0c7e6245be0e52666f43fa7"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/upgrade_aquatic/models/block/pickerelweed/cattail_bottom.png"

@@ -14,7 +14,8 @@
       "nomansland:shelf_mushroom_block",
       "nomansland:sconce_torch",
       "nomansland:sconce_soul_torch",
-      "nomansland:seashells"
+      "nomansland:seashells",
+      "nomansland:salmon_and_pesto_gnocchi"
     ]
   },
   {
@@ -157,5 +158,12 @@
       "nomansland:stripped_walnut_wood"
     ],
     "replace_with": "bountifulfares:stripped_walnut_wood"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "nomansland:cooked_billhook_bass"
+    ],
+    "replace_with": "tide:cooked_fish"
   }
 ]

@@ -1,0 +1,29 @@
+{
+  "behavior": "plateau",
+  "bucket": "tide:ender_glider_bucket",
+  "conditions": [
+    {
+      "type": "tide:dimension",
+      "dimensions": [
+        "minecraft:the_end"
+      ]
+    },
+    {
+      "type": "tide:fluid",
+      "fluid": "dimensional_tears"
+    }
+  ],
+  "display_data": {
+    "entity": "tide:ender_glider",
+    "z": -0.05
+  },
+  "fish": "tide:ender_glider",
+  "selection_weight": 35.0,
+  "size": {
+    "record_high_cm": 110.0,
+    "typical_high_cm": 70.0,
+    "typical_low_cm": 48.0
+  },
+  "speed": 1.25,
+  "strength": 0.55
+}

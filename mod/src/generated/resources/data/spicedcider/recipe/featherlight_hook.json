@@ -1,0 +1,27 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "tide"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "N": {
+      "tag": "c:nuggets/valkyrium"
+    },
+    "T": {
+      "item": "minecraft:feather"
+    }
+  },
+  "pattern": [
+    " T",
+    " N",
+    "NN"
+  ],
+  "result": {
+    "count": 1,
+    "id": "spicedcider:featherlight_hook"
+  }
+}

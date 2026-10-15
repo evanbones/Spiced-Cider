@@ -25,6 +25,11 @@ import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
+import com.evandev.spicedcider.registry.ModItems;
+import net.minecraft.world.item.FishingRodItem;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.client.renderer.item.ItemProperties;
 import net.neoforged.fml.loading.FMLPaths;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.event.RegisterClientReloadListenersEvent;
@@ -91,6 +96,14 @@ public class ClientModEvents {
             ClientOffsetCache.install();
             if (ModBlocks.TWISTED_SIGN != null) {
                 Sheets.addWoodType(ModWoodTypes.TWISTED);
+            }
+            if (ModItems.ADAMANTITE_FISHING_ROD != null) {
+                ItemProperties.register(ModItems.ADAMANTITE_FISHING_ROD.get(), ResourceLocation.withDefaultNamespace("cast"), (stack, level, entity, seed) -> {
+                    if (!(entity instanceof Player player) || player.fishing == null) return 0.0F;
+                    boolean mainHand = player.getMainHandItem() == stack;
+                    boolean offHand = player.getOffhandItem() == stack && !(player.getMainHandItem().getItem() instanceof FishingRodItem);
+                    return mainHand || offHand ? 1.0F : 0.0F;
+                });
             }
         });
     }

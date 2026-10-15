@@ -31,6 +31,30 @@ public class ModItems {
             () -> TideCompat.createHookItem(new Item.Properties(), "item.spicedcider.sticky_grappling_hook.desc"))
             : null;
 
+    @Nullable
+    public static final DeferredItem<Item> FLUX_HOOK = tideHook("flux_hook");
+    @Nullable
+    public static final DeferredItem<Item> GOLD_HOOK = tideHook("gold_hook");
+    @Nullable
+    public static final DeferredItem<Item> HEAVY_HOOK = tideHook("heavy_hook");
+    @Nullable
+    public static final DeferredItem<Item> LIGHT_HOOK = tideHook("light_hook");
+    @Nullable
+    public static final DeferredItem<Item> DOUBLE_HOOK = tideHook("double_hook");
+    @Nullable
+    public static final DeferredItem<Item> ADAMANTITE_HOOK = tideHook("adamantite_hook");
+    @Nullable
+    public static final DeferredItem<Item> PRISMARITE_HOOK = tideHook("prismarite_hook");
+    @Nullable
+    public static final DeferredItem<Item> FEATHERLIGHT_HOOK = tideHook("featherlight_hook");
+    @Nullable
+    public static final DeferredItem<Item> NECROMIUM_HOOK = tideHook("necromium_hook");
+    @Nullable
+    public static final DeferredItem<Item> ADAMANTITE_FISHING_ROD = TideCompat.isLoaded()
+            ? ITEMS.register("adamantite_fishing_rod",
+            () -> TideCompat.createFishingRod(3, 512, new Item.Properties().fireResistant()))
+            : null;
+
     public static final DeferredItem<Item> RUBBER_CABLE = ITEMS.register("rubber_cable",
             () -> new Item(new Item.Properties()));
 
@@ -68,6 +92,23 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> TALLOW_BLOCK = ITEMS.register("tallow_block",
             () -> new BlockItem(ModBlocks.TALLOW_BLOCK.get(), new Item.Properties()));
+
+    public static final DeferredItem<Item> WORM = ITEMS.register("worm",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> GOLDEN_WORM = ITEMS.register("golden_worm",
+            () -> new Item(new Item.Properties().rarity(Rarity.UNCOMMON)));
+    public static final DeferredItem<BlockItem> WORMY_DIRT = ITEMS.registerSimpleBlockItem(ModBlocks.WORMY_DIRT);
+    public static final DeferredItem<BlockItem> WORM_CRATE = ITEMS.registerSimpleBlockItem(ModBlocks.WORM_CRATE);
+    public static final DeferredItem<Item> GEODE = ITEMS.register("geode",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> DEEPSLATE_GEODE = ITEMS.register("deepslate_geode",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> BLACKSTONE_GEODE = ITEMS.register("blackstone_geode",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<BlockItem> DEPOSIT = ITEMS.registerSimpleBlockItem(ModBlocks.DEPOSIT);
+    public static final DeferredItem<BlockItem> DEEPSLATE_DEPOSIT = ITEMS.registerSimpleBlockItem(ModBlocks.DEEPSLATE_DEPOSIT);
+    public static final DeferredItem<BlockItem> BLACKSTONE_DEPOSIT = ITEMS.registerSimpleBlockItem(ModBlocks.BLACKSTONE_DEPOSIT);
+    public static final DeferredItem<BlockItem> GOLDEN_WORM_CRATE = ITEMS.registerSimpleBlockItem(ModBlocks.GOLDEN_WORM_CRATE);
 
     public static final DeferredItem<BlockItem> GLOWSTONE_BRICKS = ITEMS.registerSimpleBlockItem(ModBlocks.GLOWSTONE_BRICKS);
     public static final DeferredItem<BlockItem> GLOWSTONE_BRICK_STAIRS = ITEMS.registerSimpleBlockItem(ModBlocks.GLOWSTONE_BRICK_STAIRS);
@@ -111,5 +152,12 @@ public class ModItems {
             WOOL_STAIRS.put(color, ITEMS.registerSimpleBlockItem(ModBlocks.WOOL_STAIRS.get(color)));
             WOOL_SLABS.put(color, ITEMS.registerSimpleBlockItem(ModBlocks.WOOL_SLABS.get(color)));
         }
+    }
+
+    @Nullable
+    private static DeferredItem<Item> tideHook(String name) {
+        return TideCompat.isLoaded()
+                ? ITEMS.register(name, () -> TideCompat.createHookItem(new Item.Properties(), "item.spicedcider." + name + ".desc"))
+                : null;
     }
 }

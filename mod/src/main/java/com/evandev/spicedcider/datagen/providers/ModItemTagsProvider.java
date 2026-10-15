@@ -28,7 +28,19 @@ public class ModItemTagsProvider extends ItemTagsProvider {
     protected void addTags(HolderLookup.@NotNull Provider provider) {
         this.tag(ModTags.Items.TIDE_HOOKS)
                 .addOptional(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "grappling_hook"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "sticky_grappling_hook"));
+                .addOptional(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "sticky_grappling_hook"))
+                .addOptional(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "flux_hook"))
+                .addOptional(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "gold_hook"))
+                .addOptional(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "heavy_hook"))
+                .addOptional(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "light_hook"))
+                .addOptional(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "double_hook"))
+                .addOptional(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "adamantite_hook"))
+                .addOptional(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "prismarite_hook"))
+                .addOptional(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "featherlight_hook"))
+                .addOptional(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "necromium_hook"));
+
+        this.tag(ItemTags.create(ResourceLocation.fromNamespaceAndPath("tide", "fishing_rods")))
+                .addOptional(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "adamantite_fishing_rod"));
 
         this.tag(Tags.Items.TOOLS)
                 .add(ModItems.FIRE_STRIKER.get());

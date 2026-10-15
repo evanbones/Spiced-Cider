@@ -1,0 +1,37 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "manual_labour"
+    }
+  ],
+  "type": "manual_labour:workstone",
+  "ingredients": [
+    {
+      "item": "spicedcider:blackstone_geode"
+    },
+    {
+      "tag": "manual_labour:hammers"
+    }
+  ],
+  "results": [
+    {
+      "id": "spelunkery:raw_gold_nugget",
+      "count": 6
+    },
+    {
+      "id": "spelunkery:rough_cinnabar_shard",
+      "count": 3,
+      "chance": 0.6
+    },
+    {
+      "id": "spelunkery:rough_quartz_shard",
+      "count": 3,
+      "chance": 0.5
+    },
+    {
+      "id": "caverns_and_chasms:netherite_nugget",
+      "chance": 0.1
+    }
+  ]
+}

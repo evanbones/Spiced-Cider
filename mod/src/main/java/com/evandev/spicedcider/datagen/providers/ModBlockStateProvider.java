@@ -23,6 +23,14 @@ public class ModBlockStateProvider extends BlockStateProvider {
     protected void registerStatesAndModels() {
         simpleBlockWithItem(ModBlocks.CAST_IRON_BLOCK.get(), cubeAll(ModBlocks.CAST_IRON_BLOCK.get()));
         simpleBlockWithItem(ModBlocks.TALLOW_BLOCK.get(), cubeAll(ModBlocks.TALLOW_BLOCK.get()));
+        simpleBlockWithItem(ModBlocks.WORMY_DIRT.get(), cubeAll(ModBlocks.WORMY_DIRT.get()));
+        simpleBlockWithItem(ModBlocks.DEPOSIT.get(), cubeAll(ModBlocks.DEPOSIT.get()));
+        simpleBlockWithItem(ModBlocks.DEEPSLATE_DEPOSIT.get(), cubeAll(ModBlocks.DEEPSLATE_DEPOSIT.get()));
+        simpleBlockWithItem(ModBlocks.BLACKSTONE_DEPOSIT.get(), cubeAll(ModBlocks.BLACKSTONE_DEPOSIT.get()));
+        simpleBlockWithItem(ModBlocks.WORM_CRATE.get(), models().cubeBottomTop("worm_crate",
+                modLoc("block/worm_crate_side"), modLoc("block/worm_crate_bottom"), modLoc("block/worm_crate_top")));
+        simpleBlockWithItem(ModBlocks.GOLDEN_WORM_CRATE.get(), models().cubeBottomTop("golden_worm_crate",
+                modLoc("block/worm_crate_side"), modLoc("block/worm_crate_bottom"), modLoc("block/golden_worm_crate_top")));
 
         ResourceLocation glowstoneBricks = modLoc("block/glowstone_bricks");
         simpleBlockWithItem(ModBlocks.GLOWSTONE_BRICKS.get(), cubeAll(ModBlocks.GLOWSTONE_BRICKS.get()));

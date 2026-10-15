@@ -26,14 +26,14 @@
     "logDataErrors": false
   },
   "items": {
-    "fishItemSizes": "ALWAYS",
+    "fishItemSizes": "NEVER",
     "bucketableFishItems": "WHEN_LIVING",
-    "enableBedrockBreakingItems": true,
+    "enableBedrockBreakingItems": false,
     "pocketWatchBlacklist": []
   },
   "journal": {
     "giveJournal": false,
-    "showToasts": true
+    "showToasts": false
   },
   "minigame": {
     "doMinigame": true,

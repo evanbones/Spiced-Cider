@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "tag": "c:strings"
+  },
+  "base": {
+    "item": "minecraft:fishing_rod"
+  },
+  "addition": {
+    "tag": "c:ingots/bronze"
+  },
+  "result": {
+    "count": 1,
+    "id": "tide:iron_fishing_rod"
+  }
+}

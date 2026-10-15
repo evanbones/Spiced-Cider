@@ -1,0 +1,28 @@
+{
+  "bucket": "tide:violet_carp_bucket",
+  "conditions": [
+    {
+      "type": "tide:dimension",
+      "dimensions": [
+        "minecraft:the_end"
+      ]
+    },
+    {
+      "type": "tide:fluid",
+      "fluid": "dimensional_tears"
+    }
+  ],
+  "display_data": {
+    "entity": "tide:violet_carp",
+    "x": -0.05
+  },
+  "fish": "tide:violet_carp",
+  "selection_weight": 32.0,
+  "size": {
+    "record_high_cm": 125.0,
+    "typical_high_cm": 85.0,
+    "typical_low_cm": 60.0
+  },
+  "speed": 1.15,
+  "strength": 0.7
+}

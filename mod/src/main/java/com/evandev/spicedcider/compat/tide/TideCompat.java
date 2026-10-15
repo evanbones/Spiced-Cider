@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.compat.tide;
 
+import net.minecraft.world.item.FishingRodItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.fml.ModList;
@@ -24,6 +25,16 @@ public final class TideCompat {
 
     public static Item createHookItem(Item.Properties properties, String descriptionKey) {
         return TideBridge.createHookItem(properties, descriptionKey);
+    }
+
+    public static FishingRodItem createFishingRod(int baitSlots, double durability, Item.Properties properties) {
+        return TideBridge.createFishingRod(baitSlots, durability, properties);
+    }
+
+    public static void registerFishingMediums() {
+        if (isLoaded() && ModList.get().isLoaded("dimensional_tears")) {
+            TideBridge.registerDimensionalTearsMedium();
+        }
     }
 
     public static ItemStack getLine(ItemStack rod) {

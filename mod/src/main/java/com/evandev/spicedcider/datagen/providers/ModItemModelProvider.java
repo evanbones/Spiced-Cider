@@ -22,6 +22,23 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         basicItem(ModItems.GRAPPLING_HOOK.get());
         basicItem(ModItems.STICKY_GRAPPLING_HOOK.get());
+        basicItem(ModItems.FLUX_HOOK.get());
+        basicItem(ModItems.GOLD_HOOK.get());
+        basicItem(ModItems.HEAVY_HOOK.get());
+        basicItem(ModItems.LIGHT_HOOK.get());
+        basicItem(ModItems.DOUBLE_HOOK.get());
+        basicItem(ModItems.ADAMANTITE_HOOK.get());
+        basicItem(ModItems.PRISMARITE_HOOK.get());
+        basicItem(ModItems.FEATHERLIGHT_HOOK.get());
+        basicItem(ModItems.NECROMIUM_HOOK.get());
+        withExistingParent("adamantite_fishing_rod_cast", mcLoc("item/fishing_rod"))
+                .texture("layer0", modLoc("item/adamantite_fishing_rod_cast"));
+        withExistingParent("adamantite_fishing_rod", mcLoc("item/handheld_rod"))
+                .texture("layer0", modLoc("item/adamantite_fishing_rod"))
+                .override()
+                .predicate(mcLoc("cast"), 1.0F)
+                .model(getExistingFile(modLoc("item/adamantite_fishing_rod_cast")))
+                .end();
 
         withExistingParent("rubber_cable", "item/generated")
                 .texture("layer0", modLoc("item/cable"));
@@ -36,6 +53,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.CAST_IRON_SHEET.get());
         withExistingParent("cast_iron_block", modLoc("block/cast_iron_block"));
         basicItem(ModItems.TALLOW.get());
+        basicItem(ModItems.WORM.get());
+        basicItem(ModItems.GOLDEN_WORM.get());
+        basicItem(ModItems.GEODE.get());
+        basicItem(ModItems.DEEPSLATE_GEODE.get());
+        basicItem(ModItems.BLACKSTONE_GEODE.get());
         withExistingParent("tallow_block", modLoc("block/tallow_block"));
         if (ModItems.TWISTED_SIGN != null) {
             basicItem(ModItems.TWISTED_SIGN.get());

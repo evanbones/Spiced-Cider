@@ -1,0 +1,17 @@
+{
+  "conditions": [
+    {
+      "type": "tide:dimension",
+      "dimensions": [
+        "minecraft:the_nether"
+      ]
+    },
+    {
+      "type": "tide:fluid",
+      "fluid": "lava"
+    }
+  ],
+  "loot_table": "spicedcider:gameplay/fishing/blackstone_geode",
+  "quality": 0.5,
+  "weight": 4.0
+}

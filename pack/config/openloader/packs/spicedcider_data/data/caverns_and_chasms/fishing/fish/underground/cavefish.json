@@ -1,0 +1,36 @@
+{
+  "associated_mods": [
+    "caverns_and_chasms"
+  ],
+  "fish": "caverns_and_chasms:cavefish",
+  "bucket": "caverns_and_chasms:cavefish_bucket",
+  "conditions": [
+    {
+      "type": "tide:depth_range",
+      "max_y": 40,
+      "min_y": -64
+    },
+    {
+      "type": "tide:dimension",
+      "dimensions": [
+        "minecraft:overworld"
+      ]
+    },
+    {
+      "type": "tide:fluid",
+      "fluid": "water"
+    }
+  ],
+  "selection_weight": 60.0,
+  "size": {
+    "record_high_cm": 20.0,
+    "typical_high_cm": 12.0,
+    "typical_low_cm": 6.0
+  },
+  "speed": 1.1,
+  "strength": 0.3,
+  "display_data": {
+    "entity": "caverns_and_chasms:cavefish",
+    "y": -0.1
+  }
+}

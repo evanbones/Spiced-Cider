@@ -21,5 +21,21 @@
     "items": [
       "abnormals_delight:yucca_gateau_slice"
     ]
+  },
+  {
+    "action": "remove",
+    "items": [
+      "abnormals_delight:pike_slice",
+      "abnormals_delight:perch_slice"
+    ],
+    "replace_with": "tide:fish_slice"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "abnormals_delight:cooked_pike_slice",
+      "abnormals_delight:cooked_perch_slice"
+    ],
+    "replace_with": "tide:cooked_fish_slice"
   }
 ]

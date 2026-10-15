@@ -94,9 +94,6 @@ public final class DevBridge {
     private static ExecutorService executor;
     private static Recording recording;
 
-    private DevBridge() {
-    }
-
     private record Request(String method, String path, Map<String, String> query, String body) {
         String get(String key, String fallback) {
             return query.getOrDefault(key, fallback);

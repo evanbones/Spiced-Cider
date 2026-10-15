@@ -75,6 +75,7 @@ public class SpicedCider {
         ModItems.ITEMS.register(modEventBus);
         ModRecipeSerializers.RECIPE_SERIALIZERS.register(modEventBus);
         ModSounds.SOUNDS.register(modEventBus);
+        ModMobEffects.MOB_EFFECTS.register(modEventBus);
         ModParticleTypes.PARTICLE_TYPES.register(modEventBus);
         ModLootModifiers.LOOT_MODIFIER_SERIALIZERS.register(modEventBus);
         ModDataComponents.DATA_COMPONENTS.register(modEventBus);
@@ -101,6 +102,7 @@ public class SpicedCider {
     }
 
     private static void commonSetup(FMLCommonSetupEvent event) {
+        event.enqueueWork(TideCompat::registerFishingMediums);
         if (ModItems.TWISTED_BOAT == null) return;
         event.enqueueWork(() -> {
             Boat.Type twisted = ModBoatTypes.TWISTED.getValue();
@@ -131,6 +133,21 @@ public class SpicedCider {
                 event.insertAfter(new ItemStack(Items.BAMBOO_CHEST_RAFT), new ItemStack(ModItems.TWISTED_BOAT.get()), vis);
                 event.insertAfter(new ItemStack(ModItems.TWISTED_BOAT.get()), new ItemStack(ModItems.TWISTED_CHEST_BOAT.get()), vis);
             }
+        }
+        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.WORM.get(), vis);
+            event.accept(ModItems.GOLDEN_WORM.get(), vis);
+            event.accept(ModItems.GEODE.get(), vis);
+            event.accept(ModItems.DEEPSLATE_GEODE.get(), vis);
+            event.accept(ModItems.BLACKSTONE_GEODE.get(), vis);
+        }
+        if (event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
+            event.insertAfter(new ItemStack(Items.ROOTED_DIRT), new ItemStack(ModItems.WORMY_DIRT.get()), vis);
+            event.accept(ModItems.DEPOSIT.get(), vis);
+            event.accept(ModItems.DEEPSLATE_DEPOSIT.get(), vis);
+            event.accept(ModItems.BLACKSTONE_DEPOSIT.get(), vis);
+            event.accept(ModItems.WORM_CRATE.get(), vis);
+            event.accept(ModItems.GOLDEN_WORM_CRATE.get(), vis);
         }
         if (event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS && ModItems.TWISTED_SIGN != null) {
             event.insertAfter(new ItemStack(Items.WARPED_HANGING_SIGN), new ItemStack(ModItems.TWISTED_SIGN.get()), vis);

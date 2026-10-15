@@ -209,5 +209,13 @@
       "minecraft:waxed_oxidized_copper_bars"
     ],
     "replace_with": "caverns_and_chasms:waxed_oxidized_copper_bars"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "minecraft:cooked_cod",
+      "minecraft:cooked_salmon"
+    ],
+    "replace_with": "tide:cooked_fish"
   }
 ]

@@ -38,6 +38,24 @@ public class ModBlocks {
     public static final DeferredBlock<Block> TALLOW_BLOCK = BLOCKS.register("tallow_block",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.HONEYCOMB_BLOCK)));
 
+    public static final DeferredBlock<Block> WORMY_DIRT = BLOCKS.register("wormy_dirt",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DIRT)));
+
+    public static final DeferredBlock<Block> DEPOSIT = BLOCKS.register("deposit",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).strength(3.0F).requiresCorrectToolForDrops()));
+
+    public static final DeferredBlock<Block> DEEPSLATE_DEPOSIT = BLOCKS.register("deepslate_deposit",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE).strength(4.5F, 3.0F).requiresCorrectToolForDrops()));
+
+    public static final DeferredBlock<Block> BLACKSTONE_DEPOSIT = BLOCKS.register("blackstone_deposit",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACKSTONE).strength(3.0F, 6.0F).requiresCorrectToolForDrops()));
+
+    public static final DeferredBlock<Block> WORM_CRATE = BLOCKS.register("worm_crate",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BARREL)));
+
+    public static final DeferredBlock<Block> GOLDEN_WORM_CRATE = BLOCKS.register("golden_worm_crate",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BARREL)));
+
     public static final DeferredBlock<Block> GLOWSTONE_BRICKS = BLOCKS.register("glowstone_bricks",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GLOWSTONE)));
     public static final DeferredBlock<StairBlock> GLOWSTONE_BRICK_STAIRS = BLOCKS.register("glowstone_brick_stairs",
