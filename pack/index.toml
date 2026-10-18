@@ -486,7 +486,7 @@ hash = "0030656736b21f06f9f5b73078ce3ea41778f0f744c9d5da0055712a493ced85"
 
 [[files]]
 file = "config/drippyloadingscreen/early_window_reference.properties"
-hash = "713d2b44783bc902ec6a71da2eae58a9f4947d091d85a638d2c7a40625ddafd4"
+hash = "a33e40c67ffecfdbf720ba1768a9dcb166d9f1f376cfd60503c58af979f04582"
 
 [[files]]
 file = "config/drippyloadingscreen/options.txt"
@@ -654,7 +654,7 @@ hash = "09d330b29443d9579ecc014f2be2fcb31075bfe1e9f9ac4e750f271128650fe6"
 
 [[files]]
 file = "config/fabric/indigo-renderer.properties"
-hash = "aae1fcac857f3d76240cd5ac61d1cc9aa7d52601a439fb12f6ce72718c35f083"
+hash = "3d40d7d7c66db948d731b38d647db028b1af91d335eaebb7fb133fc5f70c9d4b"
 
 [[files]]
 file = "config/falling_snow.json"
@@ -7338,7 +7338,7 @@ hash = "13b2b1384f949e6e409c3c3cc423ecb854df6b386d4466d424a57a887e89f3d8"
 
 [[files]]
 file = "config/packetfixer.properties"
-hash = "ef81e5a533cda76a24d089abde544fdf50c79c780f053e163b69b609deefef9c"
+hash = "265804762e72212610537c99985acdc9402b423e853c872b1aba872b745640a6"
 
 [[files]]
 file = "config/particle_core_config.toml"
@@ -10642,7 +10642,7 @@ hash = "d985bfc68899c91aa642736400472f6ab876dedaaef4b8c31f38b52d48de633d"
 
 [[files]]
 file = "config/zfastnoise.mixin.properties"
-hash = "2222d0520b6858e2a66529358077c4c36efd9478bfbbc8fe7d228b0bf29d671c"
+hash = "9c0861f6d7a8d2317db6b60203aa5217e567e0170815de22e7c8b1f6da373f90"
 
 [[files]]
 file = "config/zipline.json"
@@ -20271,6 +20271,38 @@ file = "resourcepacks/spicedcider_resources/assets/tide/textures/entity/fishing_
 hash = "0cfd97207269918ebe045835de17bb58a4fcb6ae725d149d36980fd5c1cf0f92"
 
 [[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/anchovy_bucket.png"
+hash = "0e99dab6f4424757242beac3d5d852e125183b0b6a591f2d7c14b857fc52f2c7"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/angelfish_bucket.png"
+hash = "dbb736c0eb8dcac3f6f3929a126bb6f8bc01db7044a31e8b3406b087d308fc01"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/anglerfish_bucket.png"
+hash = "598b24a2ba65249f5d701d0f8903edc32281e6d2c5ac0eab3122704608c53e13"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/arapaima_bucket.png"
+hash = "fccf415d4a41c78e9c12fc21af03b164286fa6d4138a2ec9f3e25cda1a0e0fda"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/ash_perch_bucket.png"
+hash = "8331c4612fbfa33cd63b26bcbaf69f23170375ef405354295008b79eaad10117"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/black_crappie_bucket.png"
+hash = "d30fce148723afb6e87cc143aef1177f3c18b4688b2462e2c5b2e6132f55e7fb"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/blazing_swordfish_bucket.png"
+hash = "77f2341ad4ba65f51a7aadd369e05c8e15dce0eaab2cad861b0ca1e015911ae0"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/bluegill_bucket.png"
+hash = "391fde9f56ed0d8e26c63376c792981a1fe293d26748a5a64c6dee38b3003f0f"
+
+[[files]]
 file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/bobber_icons/amethyst_bobber.png"
 hash = "d90e5925151f03a0ca5c8501c66338170ebe5b9660e21eb31ee840f40355b883"
 
@@ -20375,8 +20407,80 @@ file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/bobber_ico
 hash = "f1125323ab5f725690ba17a8474d78ced66a3b2a8e3a25b669983758bd894b2a"
 
 [[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/brook_trout_bucket.png"
+hash = "d5b1ebc2ee56117d6fa4dcc99334056a1a2ce0c8459baaae65f4bd4a7673e065"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/carp_bucket.png"
+hash = "f66d84c092070986416b0660641ed1e1a0610b8975e5c2a4fb358e9b85742760"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/catfish_bucket.png"
+hash = "93354dbf209b9a51a729434acb00b2a0e1878207e2dc110162fcca1991da38d5"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/cave_eel_bucket.png"
+hash = "e0cf29aaad1a159a46a1a310fbd2503983a8303f719631d1e2ec3a7a78e8ae01"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/chorus_cod_bucket.png"
+hash = "2f26b79906dca08bc28e1f00b5f9773739bca906123c1b68782af7cb7bcc95ef"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/coelacanth_bucket.png"
+hash = "c7a3997d748cedb63e5f167c7948c94613459c37bacd032f05dd0443ccffa250"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/crimson_fangjaw_bucket.png"
+hash = "908aa11c93d32fdb53df914137a84fde137eeb6445cf79fe3499018c0aaf6827"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/deep_grouper_bucket.png"
+hash = "33aa3be8537257f2e1bba71a1a8f7241a4a2893fe74ed7f1b11df4830448b6bc"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/devils_hole_pupfish_bucket.png"
+hash = "9e0e6bbcc88ed1515bffc1dbe71a2ccfdb4f15820dfd1addee0281ef7e77b8d5"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/elytrout_bucket.png"
+hash = "27dea39fb1638e98c2cd45f312ee93e2c6ed965f500d54911c3ad68cc5a6ef52"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/ember_koi_bucket.png"
+hash = "a37769a3e3da25180e765eac66b44f02c0e5a3dd752037fe6115bbd34fc41f48"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/ender_glider_bucket.png"
+hash = "8bea88e64e2a38b24b28abe7d3e08b5e9120ccfa1c11d6d94d6224ae0e85c283"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/enderfin_bucket.png"
+hash = "225bff1c88f26a2d98317ec2015a8b3765dff279058d1326f8894f1eae225d81"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/endergazer_bucket.png"
+hash = "dc9a102c3965b3c300172967d03cf7474a4795af82614d8cf3eabab2f94d6799"
+
+[[files]]
 file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/fish_bone.png"
 hash = "49c3ec12a6cb3ac85ddc7241f6132362b2fef87fa2e940de0e423379e87e82d9"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/flounder_bucket.png"
+hash = "8e2fd53ed8ce5dba008c2da89aefbf1fd53f89d18d7467763c36f5b49ad9803a"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/great_white_shark_bucket.png"
+hash = "3517803daeaa66ed0bfbb8bbbbbcd568f9fedd0f3dd219d431c00e71ba89407a"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/guppy_bucket.png"
+hash = "5afd2d5ef186b1f4f481ccce67638bc71e665ec4f82a779594670f2a647290c2"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/inferno_guppy_bucket.png"
+hash = "46bb56a86e6af04a73d913cf44ffeed1fc670884888c60b9e03f36460642e67f"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/iron_fishing_rod.png"
@@ -20389,6 +20493,94 @@ hash = "8528ba653cfd4d9903518ba100faa259fd273c9decf82bb78d251d8ba563bc64"
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/lavaproof_hook.png"
 hash = "46df4e444453176ab4443fb1cd8be6610d36ab4ff0c7e6245be0e52666f43fa7"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/mackerel_bucket.png"
+hash = "036803038b064ed7a95ddb1de9d59eeb0fe9344f075f081488211336343baf5e"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/magma_mackerel_bucket.png"
+hash = "f862746e5e254a013aad6307a97bc463532ef1a3a0a8a585f41ba45292d256c9"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/mahi_mahi_bucket.png"
+hash = "b99adab871fffcce3c352891e32edb52a00d609314ea50a6df5df38af175c92c"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/manta_ray_bucket.png"
+hash = "65aa6bbd04e1ce87a38fc6970d660a14cb48a4fea9986b0d797b359d26136524"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/mooneye_bucket.png"
+hash = "0f9b65f43b0a832ffad84b2e5ef34f2aa267c78e250edb2cb02e71be357d7e8c"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/obsidian_pike_bucket.png"
+hash = "8ce596c8b532547ad63c52f03522cc7f88764f310f431d520ceb9042fb922a36"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/pale_clubfish_bucket.png"
+hash = "5cda5fc0e6b284df15d68891433465f8c8b89c18f02a12710e2b6a644aa91ffa"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/rainbow_trout_bucket.png"
+hash = "405686477c2826488b38ba308f2aeaa40cd11d8310ae5b371b612081e16316ae"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/red_snapper_bucket.png"
+hash = "09fe1da98f714feeb69ff92efa8c884fe249f9fe1e71440780bfe180d5515d81"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/sailfish_bucket.png"
+hash = "92e676a183d1d787628588d8b25815a97fa15076d5534fc4f43909da41fd1d54"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/snatcher_squid_bucket.png"
+hash = "a471252d6b98a86ccf7016418bdca5162b59e2d5fe8fcc3c394b7bc94378fdac"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/snook_bucket.png"
+hash = "7a3f2eb5e4b07f0d12e04b04484e3e7d99cd506de4ef5483799166a8109c3e11"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/soulscale_bucket.png"
+hash = "6ebc93539140574681a25665d468bf5be9105ca9a53011453f76b8b5e6862e8e"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/sturgeon_bucket.png"
+hash = "31f2c8dbb1516094fb3b91fae74f87738b81042e1760bc691161ae1533d2bfc0"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/swordfish_bucket.png"
+hash = "4f3d97ee01ba8376723dbb2eedbdb129f50de445cc44ee4b729866c55cfcf6f1"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/tuna_bucket.png"
+hash = "c5d09a50e44686f2a8320917148648ef005d7eb55258dfabf3ce28ea3d7d93f5"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/violet_carp_bucket.png"
+hash = "dba43006e8e78fa743c1b5eec552546cfd6972063098cfa2b0f6f91a45884ed8"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/voidseeker_bucket.png"
+hash = "095471b1affceee2b912027955a5a138962cfac810dbbf6d96557a1acef9039b"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/walleye_bucket.png"
+hash = "a58033d2c44e35a28b8d62121089fe81bfd4058bd553f9518ad35267145d83ad"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/warped_guppy_bucket.png"
+hash = "52e61ff44bd42f51dfc7a8b4c8ecce1e31f16ae81538cdda7451c32e226ff497"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/white_crappie_bucket.png"
+hash = "26fd77459558e755874b4795c952feff8721ece418ea29b870d0bde207b87acd"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/tide/textures/item/witherfin_bucket.png"
+hash = "897ba63cdf3f624e78af172a53a13876a71421007e98b15a7999782182ac6f49"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/tolerable_creepers/lang/en_us.json"
