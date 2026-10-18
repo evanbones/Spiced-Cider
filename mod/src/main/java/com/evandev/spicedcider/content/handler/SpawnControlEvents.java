@@ -37,7 +37,7 @@ public class SpawnControlEvents {
         Holder<EntityType<?>> type = entity.getType().builtInRegistryHolder();
 
         if (type.is(ModTags.EntityTypes.DENY_SPAWN)
-                || (type.is(ModTags.EntityTypes.DENY_NATURAL_SPAWN) && !isPlayerPlaced(entity))) {
+                || (type.is(ModTags.EntityTypes.DENY_NATURAL_SPAWN) && isNaturalSpawn(entity))) {
             event.setCanceled(true);
             return;
         }
@@ -60,13 +60,11 @@ public class SpawnControlEvents {
         return Monster.checkMonsterSpawnRules(type, level, spawnType, pos, random);
     }
 
-    private static boolean isPlayerPlaced(Entity entity) {
+    private static boolean isNaturalSpawn(Entity entity) {
         if (!(entity instanceof Mob mob)) return false;
         MobSpawnType spawnType = mob.getSpawnType();
-        return spawnType == null
-                || spawnType == MobSpawnType.MOB_SUMMONED
-                || spawnType == MobSpawnType.SPAWN_EGG
-                || spawnType == MobSpawnType.COMMAND;
+        return spawnType == MobSpawnType.NATURAL
+                || spawnType == MobSpawnType.CHUNK_GENERATION;
     }
 
     private static void applySpawnEquipment(Entity entity, Holder<EntityType<?>> type) {

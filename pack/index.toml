@@ -334,11 +334,11 @@ hash = "ba113e5910eb54f230affbbf638aee153b3d3b0d4d920f6df44d309b57fdc36a"
 
 [[files]]
 file = "config/coldsweat/entity.toml"
-hash = "d89103adf4c1474b62843e1fcad6665b2fab4c8dff7a7d0d6c6e9a449259abf1"
+hash = "5e35d5cc919775f54be5a55017a1a5b89e8b9ca9aa07a9d16249fdb3bf1da13c"
 
 [[files]]
 file = "config/coldsweat/item.toml"
-hash = "ebdcd68d4fb7b455c0997c2de5fb216b093d9ffc987c5df01b44d8474f0b0c1e"
+hash = "0110635be995f6c3b30186b2c73d72944f7cf4ebea781599f2c800f4ba5887aa"
 
 [[files]]
 file = "config/coldsweat/main.toml"
@@ -486,7 +486,7 @@ hash = "0030656736b21f06f9f5b73078ce3ea41778f0f744c9d5da0055712a493ced85"
 
 [[files]]
 file = "config/drippyloadingscreen/early_window_reference.properties"
-hash = "a1abcc71b34b90c2475ae3f20f9d0782a3bbe562ba3f4f844954e18fd315596b"
+hash = "713d2b44783bc902ec6a71da2eae58a9f4947d091d85a638d2c7a40625ddafd4"
 
 [[files]]
 file = "config/drippyloadingscreen/options.txt"
@@ -654,7 +654,7 @@ hash = "09d330b29443d9579ecc014f2be2fcb31075bfe1e9f9ac4e750f271128650fe6"
 
 [[files]]
 file = "config/fabric/indigo-renderer.properties"
-hash = "c3054b18a2658002f11256c9207436443ac93d74d93dfb9dbdd222ab0620f7c1"
+hash = "aae1fcac857f3d76240cd5ac61d1cc9aa7d52601a439fb12f6ce72718c35f083"
 
 [[files]]
 file = "config/falling_snow.json"
@@ -6902,7 +6902,7 @@ hash = "bba97009ca2fae9fc37c5ef459f824aa614a2439c3ca831003f90abc73745384"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/tags/entity_type/deny_spawn.json"
-hash = "e12cbbaaca964628f38d216f6af31f092562fad0ce3b915a34f4fb96549bc2bd"
+hash = "56a8d730a7d9e21c5c65f63c777bae9c3fd488f840975721e6f02275a3d7eb86"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/tags/entity_type/fieldguide_unobtainable.json"
@@ -7338,7 +7338,7 @@ hash = "13b2b1384f949e6e409c3c3cc423ecb854df6b386d4466d424a57a887e89f3d8"
 
 [[files]]
 file = "config/packetfixer.properties"
-hash = "27ebe2ebe0cfa21dee19a4a1ca5f0191a0fb8765bfcc5c8284380a616ec3c106"
+hash = "ef81e5a533cda76a24d089abde544fdf50c79c780f053e163b69b609deefef9c"
 
 [[files]]
 file = "config/particle_core_config.toml"
@@ -7434,7 +7434,7 @@ hash = "2edbf62b60165a7ebbea68d5babc9b1991c73ece3e00c57832d6e99529ed69ef"
 
 [[files]]
 file = "config/recreative/tab_layout.json"
-hash = "e4f6f93cce44de95471de16eab03b6a8757e0be9b15ed122f6438cf4d9b9bff4"
+hash = "809302e706be8e65affd1a914586fe18396de713122208a67fe5ab6dc064f4b2"
 
 [[files]]
 file = "config/recreative/tab_order.json"
@@ -9266,7 +9266,7 @@ hash = "e683c39ff9067bfadbcc6ebb3ab6473aa202b98b8a886e3a6d2f5d1b575b800d"
 
 [[files]]
 file = "config/reliable_remover/mods/blockbox.json"
-hash = "af8863633b4bcbec5bc6fef781ae60dea2e302e67b0a93d0c05423d1ac09f239"
+hash = "2dcb9b956e08d81b5660e033931bb22e9ae0ba4b5807223180f130242708fad2"
 
 [[files]]
 file = "config/reliable_remover/mods/bountifulfares.json"
@@ -9289,8 +9289,12 @@ file = "config/reliable_remover/mods/clutternomore.json"
 hash = "5fdbe5c265b75d308763ff9022c063b0d39e96abb22db27287dd9038e0d48580"
 
 [[files]]
+file = "config/reliable_remover/mods/cold_sweat.json"
+hash = "2a4767c310afa437b5919734fd1c6d22c4b0e2adbf35e87781c208808606881f"
+
+[[files]]
 file = "config/reliable_remover/mods/create.json"
-hash = "571dc43a85c759162d432b6eeff55a89346681aaa8d1cae6bfb7941ce36ab66f"
+hash = "b11c9d859efff252ef953dc4e547246f83ddbabb1c50b6376e6925855d5fa7d0"
 
 [[files]]
 file = "config/reliable_remover/mods/culturaldelights.json"
@@ -9398,7 +9402,7 @@ hash = "460429ea50cb94e1403b6dbd724fdb839236a8fb5e0bac6f542681122fe9f007"
 
 [[files]]
 file = "config/reliable_remover/mods/quark.json"
-hash = "952c550783524d44484c29eee04b96cc46c3768ffc920f83a4504865ffe83c48"
+hash = "431953a0c4a7cb736334424a0441d05a86fb6786c706997d7d10c0a645c0706e"
 
 [[files]]
 file = "config/reliable_remover/mods/reliable_requiem.json"
@@ -10638,7 +10642,7 @@ hash = "d985bfc68899c91aa642736400472f6ab876dedaaef4b8c31f38b52d48de633d"
 
 [[files]]
 file = "config/zfastnoise.mixin.properties"
-hash = "2580f466634e31f9e7bf232fc7be86141651b35b24ebd3bee3670b24abd7534f"
+hash = "2222d0520b6858e2a66529358077c4c36efd9478bfbbc8fe7d228b0bf29d671c"
 
 [[files]]
 file = "config/zipline.json"
@@ -11730,7 +11734,7 @@ metafile = true
 
 [[files]]
 file = "mods/spicedcider-1.0.0.jar"
-hash = "2c8202997bc908468083232a5172ff82dea544b2054576b1ac407b598e7baed4"
+hash = "43e72cc792d91743e28e61cf24f47a28cf380e5376bc50467176dd7464ff2651"
 
 [[files]]
 file = "mods/stacksizetweaks.pw.toml"
@@ -13875,6 +13879,10 @@ file = "resourcepacks/spicedcider_resources/assets/emi/category/properties/recip
 hash = "9094b09700f9910db7450611e2ffade78443f08554febb157da66ed3c3a37902"
 
 [[files]]
+file = "resourcepacks/spicedcider_resources/assets/emi/index/stacks/cold_sweat.json"
+hash = "8aa317af3ffedcfc0fbe89fce1df9f00225aadb7eff44ea0eda10360105d498c"
+
+[[files]]
 file = "resourcepacks/spicedcider_resources/assets/emi/lang/en_us.json"
 hash = "a51da9f6a264139cf43a3a73cc8bbe3c5c6b32c031f67c3e48b92008dd383b37"
 
@@ -15851,6 +15859,10 @@ file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/struc
 hash = "d803db9dce8c0382af7638aaef4d1fba30932ae27dbbad5968314de96e884308"
 
 [[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/sulfur_cube_bucket.png"
+hash = "f6a665c2448ffe910df9386d4de99df87debd60b4fcdc6466d34f774a2648038"
+
+[[files]]
 file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/tipped_arrow_base.png"
 hash = "aec19e529600c02ed1dce475303a95bf2684733df886efd910d4260a8c75355f"
 
@@ -15929,6 +15941,10 @@ hash = "6a1ccfb0da8e51f4bebb3e70a2f1492413a2bce5ec1447c140156d5767bc5065"
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/models/armor/turtle_layer_1.png"
 hash = "763c8a3b66e24a62c7d677a581c7abf2ea8a6af3a1d60dd73b48af442c46079f"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/particle/sulfur_cube_goo.png"
+hash = "7c454436897cc796f05db655c23c896235c2661d0ba88dbf42cb7c317f7f07aa"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/minersdelight/textures/block/copper_pot.png"

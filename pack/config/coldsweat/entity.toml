@@ -89,12 +89,7 @@
 	# • biome_id: The ID of the biome, e.g. "minecraft:jungle"
 	# • weight: The likelihood for the entity to spawn compared to other entities, higher values mean more common spawns
 	# ⌄ 
-	"Chameleon Spawn Biomes" = [
-	    ["minecraft:bamboo_jungle", 80],
-	    ["minecraft:jungle", 80],
-	    ["minecraft:sparse_jungle", 35],
-	    ["minecraft:desert", 1]
-	]
+	"Chameleon Spawn Biomes" = []
 	#─────────────────────────────────────────────────────────────────────────//v
 	# Defines the biomes that Chameleons can spawn in
 	# └── Format: [["biome_id", weight], [...], etc]
