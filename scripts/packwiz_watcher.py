@@ -112,6 +112,22 @@ def get_packwiz_state(packwiz_dir, ext):
                 print(f"Error reading {f}: {e}")
     return state
 
+def normalize_side(match):
+    side = match.group(2).lower()
+    return f'side = "{"both" if side == "server" else side}"'
+
+def fix_side(target, version_id):
+    """Lowercases side (unsup matches it case-sensitively) and turns "server" into "both" so server-only mods still reach clients (integrated server)."""
+    for pw_file in get_packwiz_state(target["packwiz_dir"], target["ext"]):
+        if pw_file['version_id'] != version_id or pw_file['path'].suffix != '.toml':
+            continue
+        content = pw_file['path'].read_text(encoding='utf-8')
+        fixed = re.sub(r'^side\s*=\s*(["\'])(.*?)\1', normalize_side, content, flags=re.MULTILINE)
+        if fixed != content:
+            pw_file['path'].write_text(fixed, encoding='utf-8')
+            subprocess.run(["packwiz", "refresh"], cwd=PACK_DIR, shell=True, stdout=subprocess.DEVNULL)
+            print(f"    -> Fixed side in {pw_file['path'].name}")
+
 def sync_loop():
     print("Starting sync loop. Watching for changes in Prism Launcher...")
     
@@ -176,6 +192,7 @@ def sync_loop():
                         dl_url = f"https://modrinth.com/mod/{p_cache['project_id']}/version/{p_cache['version_id']}"
                         print(f"    Found on Modrinth! Importing: {dl_url}")
                         subprocess.run(["packwiz", "modrinth", "add", dl_url], cwd=PACK_DIR, shell=True)
+                        fix_side(target, p_cache['version_id'])
                     else:
                         print(f"    Not found on Modrinth. Adding as local override...")
                         file_path = prism_files[p_filename]
