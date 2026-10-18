@@ -1,0 +1,32 @@
+{
+  "parent": "spicedcider:industry/steel_casing",
+  "display": {
+    "icon": {
+      "id": "create:precision_mechanism"
+    },
+    "title": {
+      "text": "Complex Curiosities"
+    },
+    "description": {
+      "text": "Assemble a Precision Mechanism"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "0": {
+      "conditions": {
+        "items": [
+          {
+            "items": "create:precision_mechanism"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ]
+  ]
+}

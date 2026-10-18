@@ -1,0 +1,36 @@
+{
+  "parent": "spicedcider:husbandry/worm",
+  "display": {
+    "icon": {
+      "id": "tide:bait"
+    },
+    "title": {
+      "text": "Oldest Trick in the Book"
+    },
+    "description": {
+      "text": "Get some fish Bait"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "bait": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "tide:bait",
+              "tide:lucky_bait",
+              "tide:magnetic_bait"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "bait"
+    ]
+  ]
+}

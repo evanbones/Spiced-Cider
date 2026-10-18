@@ -1,0 +1,33 @@
+{
+  "parent": "spicedcider:nether/glowstone_canyon",
+  "display": {
+    "icon": {
+      "id": "infernalexp:blindsight_tongue"
+    },
+    "title": {
+      "text": "Deer in Headlights"
+    },
+    "description": {
+      "text": "Kill a Blindsight while glowing with Luminous"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "kill_blindsight_luminous": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "infernalexp:blindsight",
+          "effects": {
+            "infernalexp:luminous": {}
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "kill_blindsight_luminous"
+    ]
+  ]
+}

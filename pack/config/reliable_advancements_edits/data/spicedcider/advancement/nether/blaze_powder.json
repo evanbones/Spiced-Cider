@@ -1,0 +1,32 @@
+{
+  "parent": "spicedcider:nether/blaze_rod",
+  "display": {
+    "icon": {
+      "id": "minecraft:blaze_powder"
+    },
+    "title": {
+      "text": "Hot Stuff"
+    },
+    "description": {
+      "text": "Crush a Blaze Rod into Blaze Powder, the secret to Steel back home"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "has_blaze_powder": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:blaze_powder"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_blaze_powder"
+    ]
+  ]
+}

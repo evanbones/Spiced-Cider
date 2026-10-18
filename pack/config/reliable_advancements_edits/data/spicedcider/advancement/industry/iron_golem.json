@@ -1,0 +1,41 @@
+{
+  "parent": "spicedcider:industry/copper_golem",
+  "display": {
+    "icon": {
+      "id": "minecraft:iron_block"
+    },
+    "title": {
+      "text": "Autobots, Roll Out!"
+    },
+    "description": {
+      "text": "Summon an Iron Golem at an Altar"
+    },
+    "frame": "goal"
+  },
+  "criteria": {
+    "summoned_iron_golem": {
+      "trigger": "minecraft:summoned_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:iron_golem"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "summoned_iron_golem"
+    ]
+  ],
+  "rewards": {
+    "loot": [
+      "spicedcider:advancement/industry_iron_golem"
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "parent": "nomansland:main/meet_friend_moon",
+  "display": {
+    "icon": {
+      "id": "minecraft:totem_of_undying"
+    },
+    "title": {
+      "text": "Friend of my Friend"
+    },
+    "description": {
+      "text": "Find some company for the Friend Moon"
+    },
+    "frame": "challenge",
+    "hidden": true
+  },
+  "criteria": {
+    "buddy_ascension": {
+      "trigger": "nomansland:buddy_ascension"
+    }
+  },
+  "requirements": [
+    [
+      "buddy_ascension"
+    ]
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "parent": "spicedcider:adventure/creeper_spores",
+  "display": {
+    "icon": {
+      "id": "spicedcider:mischief_chestplate"
+    },
+    "title": {
+      "text": "Mischief Managed"
+    },
+    "description": {
+      "text": "Wear a full set of Mischief armor and laugh off explosions"
+    },
+    "frame": "goal"
+  },
+  "criteria": {
+    "has_mischief_helmet": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "spicedcider:mischief_helmet"
+          }
+        ]
+      }
+    },
+    "has_mischief_chestplate": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "spicedcider:mischief_chestplate"
+          }
+        ]
+      }
+    },
+    "has_mischief_leggings": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "spicedcider:mischief_leggings"
+          }
+        ]
+      }
+    },
+    "has_mischief_boots": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "spicedcider:mischief_boots"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_mischief_helmet"
+    ],
+    [
+      "has_mischief_chestplate"
+    ],
+    [
+      "has_mischief_leggings"
+    ],
+    [
+      "has_mischief_boots"
+    ]
+  ],
+  "rewards": {
+    "loot": [
+      "spicedcider:advancement/adventure_mischief_armor"
+    ]
+  }
+}

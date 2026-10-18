@@ -9,6 +9,8 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.Tags;
@@ -17,6 +19,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.concurrent.CompletableFuture;
+import java.util.stream.Stream;
 
 public class ModItemTagsProvider extends ItemTagsProvider {
 
@@ -142,6 +145,9 @@ public class ModItemTagsProvider extends ItemTagsProvider {
                 default -> {
                 }
             }
+            if ("brick_and_mortar".equals(def.mod())) {
+                this.tag(masonryTag(def.location().getPath())).addOptional(def.location());
+            }
         }
         if (ModItems.TWISTED_SIGN != null) {
             this.tag(ItemTags.SIGNS).addOptional(ModItems.TWISTED_SIGN.getId());
@@ -156,5 +162,14 @@ public class ModItemTagsProvider extends ItemTagsProvider {
                 .add(ModItems.CAST_IRON_SHEET.get());
         this.tag(ItemTags.create(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("c", "plates/cast_iron")))
                 .add(ModItems.CAST_IRON_SHEET.get());
+    }
+
+    private static TagKey<Item> masonryTag(String path) {
+        String family = Stream.of("resin", "purpur", "algal", "ash", "nether")
+                .filter(path::contains)
+                .findFirst()
+                .orElseThrow(() -> new IllegalStateException("No Brick and Mortar masonry family for " + path));
+        String soul = path.contains("soul_") ? "soul_" : "";
+        return ItemTags.create(ResourceLocation.fromNamespaceAndPath("brick_and_mortar", soul + family + "_masonry"));
     }
 }

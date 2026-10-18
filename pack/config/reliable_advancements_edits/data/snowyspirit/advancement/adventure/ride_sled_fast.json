@@ -1,0 +1,25 @@
+{
+  "parent": "spicedcider:adventure/backpack",
+  "display": {
+    "icon": {
+      "id": "snowyspirit:sled_oak"
+    },
+    "title": {
+      "text": "It's All Downhill From Here"
+    },
+    "description": {
+      "text": "Ride a Sled down a snowy slope"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "unlock": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "unlock"
+    ]
+  ]
+}

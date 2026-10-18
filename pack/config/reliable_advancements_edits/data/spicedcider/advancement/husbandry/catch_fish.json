@@ -1,0 +1,36 @@
+{
+  "parent": "spicedcider:husbandry/fishing_rod",
+  "display": {
+    "icon": {
+      "id": "minecraft:cod"
+    },
+    "title": {
+      "text": "Fishy Business"
+    },
+    "description": {
+      "text": "Reel in a fish by keeping the bobber in the green zone"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "hooked": {
+      "trigger": "minecraft:fishing_rod_hooked"
+    },
+    "fish": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "#minecraft:fishes"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "hooked",
+      "fish"
+    ]
+  ]
+}

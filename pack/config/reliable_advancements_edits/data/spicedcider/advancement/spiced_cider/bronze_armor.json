@@ -1,0 +1,80 @@
+{
+  "parent": "spicedcider:spiced_cider/bronze_tools",
+  "parents": [
+    "spicedcider:spiced_cider/bronze_tools",
+    "spicedcider:spiced_cider/copper_armor"
+  ],
+  "display": {
+    "icon": {
+      "id": "modestmining:bronze_chestplate"
+    },
+    "title": {
+      "text": "Podium Finish"
+    },
+    "description": {
+      "text": "Forge a full set of Bronze armor"
+    },
+    "frame": "goal"
+  },
+  "criteria": {
+    "has_bronze_helmet": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "modestmining:bronze_helmet"
+          }
+        ]
+      }
+    },
+    "has_bronze_chestplate": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "modestmining:bronze_chestplate"
+          }
+        ]
+      }
+    },
+    "has_bronze_leggings": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "modestmining:bronze_leggings"
+          }
+        ]
+      }
+    },
+    "has_bronze_boots": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "modestmining:bronze_boots"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_bronze_helmet"
+    ],
+    [
+      "has_bronze_chestplate"
+    ],
+    [
+      "has_bronze_leggings"
+    ],
+    [
+      "has_bronze_boots"
+    ]
+  ],
+  "rewards": {
+    "loot": [
+      "spicedcider:advancement/spiced_cider_bronze_armor"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "spicedcider:adventure/root",
+  "display": {
+    "icon": {
+      "id": "minecraft:spyglass"
+    },
+    "title": {
+      "text": "Is It a Bird?"
+    },
+    "description": {
+      "text": "Craft a Spyglass and look at something far away"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "has_spyglass": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:spyglass"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_spyglass"
+    ]
+  ]
+}

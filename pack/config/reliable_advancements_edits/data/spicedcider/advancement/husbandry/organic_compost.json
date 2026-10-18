@@ -1,0 +1,37 @@
+{
+  "parent": "spicedcider:husbandry/bone_meal",
+  "display": {
+    "icon": {
+      "id": "farmersdelight:organic_compost"
+    },
+    "title": {
+      "text": "Advanced Composting"
+    },
+    "description": {
+      "text": "Place Organic Compost where sun, water and mushrooms can speed it up"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "placed_organic_compost": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": "farmersdelight:organic_compost"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "placed_organic_compost"
+    ]
+  ]
+}

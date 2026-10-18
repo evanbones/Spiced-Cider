@@ -1,0 +1,32 @@
+{
+  "parent": "spicedcider:spiced_cider/flint_hatchet",
+  "display": {
+    "icon": {
+      "id": "minecraft:oak_log"
+    },
+    "title": {
+      "text": "Knock on Wood"
+    },
+    "description": {
+      "text": "Chop a Log with your Flint Hatchet, since fists won't cut it"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "has_logs": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "#minecraft:logs"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_logs"
+    ]
+  ]
+}

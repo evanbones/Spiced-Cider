@@ -1,0 +1,13 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "0": {
+      "trigger": "create:stressometer_maxed_builtin"
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ]
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "parent": "spicedcider:adventure/insulate_armor",
+  "display": {
+    "icon": {
+      "id": "cold_sweat:goat_fur_chestplate"
+    },
+    "title": {
+      "text": "Snow Problem"
+    },
+    "description": {
+      "text": "Wear a full set of Goat Fur clothing"
+    },
+    "frame": "goal"
+  },
+  "criteria": {
+    "has_goat_fur_helmet": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "cold_sweat:goat_fur_helmet"
+          }
+        ]
+      }
+    },
+    "has_goat_fur_chestplate": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "cold_sweat:goat_fur_chestplate"
+          }
+        ]
+      }
+    },
+    "has_goat_fur_leggings": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "cold_sweat:goat_fur_leggings"
+          }
+        ]
+      }
+    },
+    "has_goat_fur_boots": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "cold_sweat:goat_fur_boots"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_goat_fur_helmet"
+    ],
+    [
+      "has_goat_fur_chestplate"
+    ],
+    [
+      "has_goat_fur_leggings"
+    ],
+    [
+      "has_goat_fur_boots"
+    ]
+  ],
+  "rewards": {
+    "loot": [
+      "spicedcider:advancement/adventure_goat_fur"
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "parent": "spicedcider:husbandry/trellis",
+  "display": {
+    "icon": {
+      "id": "farmersdelight:tomato"
+    },
+    "title": {
+      "text": "Tall-mato"
+    },
+    "description": {
+      "text": "Hang some Rope above a Tomato plant to help it grow taller"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "harvest_ropelogged_tomato": {
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": "farmersdelight:tomatoes_on_rope",
+                "state": {
+                  "age": "0"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:default_block_use"
+    }
+  },
+  "requirements": [
+    [
+      "harvest_ropelogged_tomato"
+    ]
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "parent": "spicedcider:industry/windmill",
+  "display": {
+    "icon": {
+      "id": "create:windmill_bearing"
+    },
+    "title": {
+      "text": "A Strong Breeze"
+    },
+    "description": {
+      "text": "Assemble a windmill of maximum strength"
+    },
+    "frame": "challenge"
+  },
+  "criteria": {
+    "0": {
+      "trigger": "create:windmill_maxed_builtin"
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ]
+  ],
+  "rewards": {
+    "loot": [
+      "spicedcider:advancement/industry_windmill_maxed"
+    ]
+  }
+}

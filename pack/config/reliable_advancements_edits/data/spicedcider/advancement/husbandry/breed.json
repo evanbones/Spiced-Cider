@@ -1,0 +1,25 @@
+{
+  "parent": "spicedcider:husbandry/root",
+  "display": {
+    "icon": {
+      "id": "minecraft:wheat"
+    },
+    "title": {
+      "text": "The Parrots and the Bats"
+    },
+    "description": {
+      "text": "Breed two animals together"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "bred": {
+      "trigger": "minecraft:bred_animals"
+    }
+  },
+  "requirements": [
+    [
+      "bred"
+    ]
+  ]
+}

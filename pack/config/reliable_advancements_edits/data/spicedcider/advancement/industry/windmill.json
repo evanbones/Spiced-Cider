@@ -1,0 +1,25 @@
+{
+  "parent": "spicedcider:industry/water_wheel",
+  "display": {
+    "icon": {
+      "id": "create:windmill_bearing"
+    },
+    "title": {
+      "text": "A Mild Breeze"
+    },
+    "description": {
+      "text": "Assemble a windmill and use it to generate torque"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "0": {
+      "trigger": "create:windmill_builtin"
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ]
+  ]
+}

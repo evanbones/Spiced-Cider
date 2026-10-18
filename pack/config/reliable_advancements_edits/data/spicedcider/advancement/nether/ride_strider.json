@@ -1,0 +1,41 @@
+{
+  "parent": "spicedcider:nether/warped_forest",
+  "display": {
+    "icon": {
+      "id": "minecraft:warped_fungus_on_a_stick"
+    },
+    "title": {
+      "text": "This Boat Has Legs"
+    },
+    "description": {
+      "text": "Ride a Strider with a Warped Fungus on a Stick"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "used_warped_fungus_on_a_stick": {
+      "conditions": {
+        "item": {
+          "items": "minecraft:warped_fungus_on_a_stick"
+        },
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "vehicle": {
+                "type": "minecraft:strider"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:item_durability_changed"
+    }
+  },
+  "requirements": [
+    [
+      "used_warped_fungus_on_a_stick"
+    ]
+  ]
+}

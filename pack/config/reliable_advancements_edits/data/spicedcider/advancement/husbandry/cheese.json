@@ -1,0 +1,30 @@
+{
+  "parent": "spicedcider:husbandry/vat",
+  "display": {
+    "icon": {
+      "id": "culturaldelights:cheese_wedge"
+    },
+    "title": {
+      "text": "The Cheese Touch"
+    },
+    "description": {
+      "text": "Eat some Cheese to shrug off most of your effects for a while"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "cheesy": {
+      "trigger": "minecraft:effects_changed",
+      "conditions": {
+        "effects": {
+          "culturaldelights:cheesy": {}
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "cheesy"
+    ]
+  ]
+}

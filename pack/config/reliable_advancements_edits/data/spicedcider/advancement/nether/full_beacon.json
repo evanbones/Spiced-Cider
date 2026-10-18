@@ -1,0 +1,35 @@
+{
+  "parent": "spicedcider:nether/beacon",
+  "display": {
+    "icon": {
+      "id": "minecraft:beacon"
+    },
+    "title": {
+      "text": "Beaconator"
+    },
+    "description": {
+      "text": "Bring a Beacon to full power"
+    },
+    "frame": "challenge"
+  },
+  "criteria": {
+    "full_beacon": {
+      "trigger": "minecraft:construct_beacon",
+      "conditions": {
+        "level": {
+          "min": 4
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "full_beacon"
+    ]
+  ],
+  "rewards": {
+    "loot": [
+      "spicedcider:advancement/nether_full_beacon"
+    ]
+  }
+}

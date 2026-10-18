@@ -1,0 +1,25 @@
+{
+  "parent": "spicedcider:industry/dynamite",
+  "display": {
+    "icon": {
+      "id": "minecraft:raw_iron"
+    },
+    "title": {
+      "text": "Gets the Job Done"
+    },
+    "description": {
+      "text": "Mine ore with an explosion instead of a Pickaxe"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "mine_ore_with_explosive": {
+      "trigger": "nomansland:mine_ore_with_explosive"
+    }
+  },
+  "requirements": [
+    [
+      "mine_ore_with_explosive"
+    ]
+  ]
+}

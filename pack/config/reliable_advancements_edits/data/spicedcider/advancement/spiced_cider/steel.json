@@ -1,0 +1,41 @@
+{
+  "parent": "spicedcider:spiced_cider/forge",
+  "parents": [
+    "spicedcider:spiced_cider/forge",
+    "spicedcider:spiced_cider/bronze"
+  ],
+  "display": {
+    "icon": {
+      "id": "alloyed:steel_ingot"
+    },
+    "title": {
+      "text": "Man of Steel"
+    },
+    "description": {
+      "text": "Forge Steel with a Fire Charge made from the Nether's Blaze Powder"
+    },
+    "frame": "goal"
+  },
+  "criteria": {
+    "has_steel_ingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "alloyed:steel_ingot"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_steel_ingot"
+    ]
+  ],
+  "rewards": {
+    "loot": [
+      "spicedcider:advancement/spiced_cider_steel"
+    ]
+  }
+}

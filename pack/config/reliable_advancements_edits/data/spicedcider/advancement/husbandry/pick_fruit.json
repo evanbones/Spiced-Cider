@@ -1,0 +1,25 @@
+{
+  "parent": "spicedcider:husbandry/plant_seed",
+  "display": {
+    "icon": {
+      "id": "bountifulfares:apple_sapling"
+    },
+    "title": {
+      "text": "Green Thumb"
+    },
+    "description": {
+      "text": "Pick a ripe fruit off a fruit tree"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "pick_fruit": {
+      "trigger": "bountifulfares:pick_fruit"
+    }
+  },
+  "requirements": [
+    [
+      "pick_fruit"
+    ]
+  ]
+}

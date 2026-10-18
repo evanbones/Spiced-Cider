@@ -1,0 +1,25 @@
+{
+  "parent": "spicedcider:industry/bronze_casing",
+  "display": {
+    "icon": {
+      "id": "create:mechanical_saw"
+    },
+    "title": {
+      "text": "Workshop's Most Feared"
+    },
+    "description": {
+      "text": "Use an upright Mechanical Saw to process materials"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "0": {
+      "trigger": "create:saw_processing_builtin"
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ]
+  ]
+}

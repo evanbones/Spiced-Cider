@@ -1,0 +1,76 @@
+{
+  "parent": "spicedcider:nether/necromium",
+  "display": {
+    "icon": {
+      "id": "caverns_and_chasms:necromium_chestplate"
+    },
+    "title": {
+      "text": "Cover Me in Curses"
+    },
+    "description": {
+      "text": "Wear a full set of Necromium armor"
+    },
+    "frame": "challenge"
+  },
+  "criteria": {
+    "has_necromium_helmet": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "caverns_and_chasms:necromium_helmet"
+          }
+        ]
+      }
+    },
+    "has_necromium_chestplate": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "caverns_and_chasms:necromium_chestplate"
+          }
+        ]
+      }
+    },
+    "has_necromium_leggings": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "caverns_and_chasms:necromium_leggings"
+          }
+        ]
+      }
+    },
+    "has_necromium_boots": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "caverns_and_chasms:necromium_boots"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_necromium_helmet"
+    ],
+    [
+      "has_necromium_chestplate"
+    ],
+    [
+      "has_necromium_leggings"
+    ],
+    [
+      "has_necromium_boots"
+    ]
+  ],
+  "rewards": {
+    "loot": [
+      "spicedcider:advancement/nether_necromium_armor"
+    ]
+  }
+}

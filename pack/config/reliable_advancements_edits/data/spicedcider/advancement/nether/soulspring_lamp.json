@@ -1,0 +1,34 @@
+{
+  "parent": "spicedcider:nether/soul_sand_valley",
+  "display": {
+    "icon": {
+      "id": "cold_sweat:soulspring_lamp"
+    },
+    "title": {
+      "text": "Soul of the Sea"
+    },
+    "description": {
+      "text": "Craft a Soulspring Lamp to keep the Nether's heat at bay"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cold_sweat:soulspring_lamp"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "requirement"
+    ]
+  ]
+}

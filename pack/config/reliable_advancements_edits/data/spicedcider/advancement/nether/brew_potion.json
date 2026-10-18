@@ -1,0 +1,25 @@
+{
+  "parent": "spicedcider:nether/brewing_stand",
+  "display": {
+    "icon": {
+      "id": "minecraft:potion"
+    },
+    "title": {
+      "text": "Toil and Trouble"
+    },
+    "description": {
+      "text": "Brew a Potion"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "potion": {
+      "trigger": "minecraft:brewed_potion"
+    }
+  },
+  "requirements": [
+    [
+      "potion"
+    ]
+  ]
+}

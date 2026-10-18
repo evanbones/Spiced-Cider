@@ -1,0 +1,32 @@
+{
+  "parent": "spicedcider:spiced_cider/flint",
+  "display": {
+    "icon": {
+      "id": "farmersdelight:flint_knife"
+    },
+    "title": {
+      "text": "Knife to Meet You"
+    },
+    "description": {
+      "text": "Make a Flint Knife and cut some Grass for Straw"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "has_flint_knife": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "farmersdelight:flint_knife"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_flint_knife"
+    ]
+  ]
+}

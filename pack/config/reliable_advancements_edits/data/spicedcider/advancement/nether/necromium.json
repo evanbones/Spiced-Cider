@@ -1,0 +1,37 @@
+{
+  "parent": "spicedcider:nether/ancient_scrap",
+  "display": {
+    "icon": {
+      "id": "caverns_and_chasms:necromium_ingot"
+    },
+    "title": {
+      "text": "Death Metal"
+    },
+    "description": {
+      "text": "Combine Ancient Scrap with Silver into a Necromium Ingot"
+    },
+    "frame": "goal"
+  },
+  "criteria": {
+    "has_necromium_ingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "caverns_and_chasms:necromium_ingot"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_necromium_ingot"
+    ]
+  ],
+  "rewards": {
+    "loot": [
+      "spicedcider:advancement/nether_necromium"
+    ]
+  }
+}

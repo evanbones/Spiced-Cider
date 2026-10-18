@@ -1,0 +1,38 @@
+{
+  "parent": "spicedcider:nether/warped_forest",
+  "display": {
+    "icon": {
+      "id": "minecraft:soul_soil"
+    },
+    "title": {
+      "text": "Soul Searching"
+    },
+    "description": {
+      "text": "Wander into a Soul Sand Valley and mind the Wraiths"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "visited_soul_sand_valley": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "biomes": "minecraft:soul_sand_valley"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "visited_soul_sand_valley"
+    ]
+  ]
+}

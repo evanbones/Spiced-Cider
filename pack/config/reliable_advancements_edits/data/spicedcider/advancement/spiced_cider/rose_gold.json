@@ -1,0 +1,36 @@
+{
+  "parent": "spicedcider:spiced_cider/gold",
+  "parents": [
+    "spicedcider:spiced_cider/gold",
+    "spicedcider:spiced_cider/forge"
+  ],
+  "display": {
+    "icon": {
+      "id": "oooh_pinky:rose_gold_ingot"
+    },
+    "title": {
+      "text": "Rose-Tinted"
+    },
+    "description": {
+      "text": "Alloy Copper and Gold into Rose Gold"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "has_rose_gold_ingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "oooh_pinky:rose_gold_ingot"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_rose_gold_ingot"
+    ]
+  ]
+}

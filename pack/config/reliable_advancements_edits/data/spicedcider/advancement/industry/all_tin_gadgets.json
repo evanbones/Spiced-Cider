@@ -1,0 +1,128 @@
+{
+  "parent": "spicedcider:industry/tin_gadget",
+  "display": {
+    "icon": {
+      "id": "caverns_and_chasms:roller_door"
+    },
+    "title": {
+      "text": "Tin Man"
+    },
+    "description": {
+      "text": "Build every Tin gadget"
+    },
+    "frame": "goal"
+  },
+  "criteria": {
+    "has_tin_bulb": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "caverns_and_chasms:tin_bulb"
+          }
+        ]
+      }
+    },
+    "has_resistor": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "caverns_and_chasms:resistor"
+          }
+        ]
+      }
+    },
+    "has_dimmer": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "caverns_and_chasms:dimmer"
+          }
+        ]
+      }
+    },
+    "has_winch": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "caverns_and_chasms:winch"
+          }
+        ]
+      }
+    },
+    "has_roller_door": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "caverns_and_chasms:roller_door"
+          }
+        ]
+      }
+    },
+    "has_scatterer": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "caverns_and_chasms:scatterer"
+          }
+        ]
+      }
+    },
+    "has_splurter": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "caverns_and_chasms:splurter"
+          }
+        ]
+      }
+    },
+    "has_refractor": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "caverns_and_chasms:refractor"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_tin_bulb"
+    ],
+    [
+      "has_resistor"
+    ],
+    [
+      "has_dimmer"
+    ],
+    [
+      "has_winch"
+    ],
+    [
+      "has_roller_door"
+    ],
+    [
+      "has_scatterer"
+    ],
+    [
+      "has_splurter"
+    ],
+    [
+      "has_refractor"
+    ]
+  ],
+  "rewards": {
+    "loot": [
+      "spicedcider:advancement/industry_all_tin_gadgets"
+    ]
+  }
+}

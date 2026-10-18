@@ -1,0 +1,25 @@
+{
+  "parent": "spicedcider:husbandry/plant_seed",
+  "display": {
+    "icon": {
+      "id": "bountifulfares:trellis"
+    },
+    "title": {
+      "text": "Trellising It"
+    },
+    "description": {
+      "text": "Plant a climbing crop or flower on a Trellis"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "plant_on_trellis": {
+      "trigger": "bountifulfares:plant_on_trellis"
+    }
+  },
+  "requirements": [
+    [
+      "plant_on_trellis"
+    ]
+  ]
+}

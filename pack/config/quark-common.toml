@@ -1908,7 +1908,7 @@
 		"Magnetic Whitelist" = ["minecraft:chipped_anvil", "minecraft:damaged_anvil", "minecraft:iron_horse_armor", "minecraft:chainmail_helmet", "minecraft:chainmail_boots", "minecraft:chainmail_leggings", "minecraft:chainmail_chestplate", "#minecraft:cauldrons"]
 		#Block/Item IDs to force-disable magnetism on, regardless of their crafting recipe
 		"Magnetic Blacklist" = ["minecraft:tripwire_hook", "minecraft:map", "#minecraft:all_hanging_signs", "#minecraft:hanging_signs"]
-		"Use Pre End Recipe" = false
+		"Use Pre End Recipe" = true
 		#When true magnets will never push something that pistons cant push. Disable to have further control. This allows iron rods to break obsidian for example
 		"Use Piston Logic" = true
 		#Allows magnets to push and pull entities in the 'affected_by_magnets' tag (edit it with datapack). Turning off can reduce lag

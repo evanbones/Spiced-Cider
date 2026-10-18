@@ -1,0 +1,32 @@
+{
+  "parent": "spicedcider:industry/wrench_goggles",
+  "display": {
+    "icon": {
+      "id": "create:andesite_casing"
+    },
+    "title": {
+      "text": "The Bronze Age"
+    },
+    "description": {
+      "text": "Apply Bronze to a stripped log to make Bronze Casing"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "has_andesite_casing": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "create:andesite_casing"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_andesite_casing"
+    ]
+  ]
+}

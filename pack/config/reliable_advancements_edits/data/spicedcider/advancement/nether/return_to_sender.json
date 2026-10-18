@@ -1,0 +1,52 @@
+{
+  "parent": "spicedcider:nether/kill_ghast",
+  "display": {
+    "icon": {
+      "id": "minecraft:fire_charge"
+    },
+    "title": {
+      "text": "Return to Sender"
+    },
+    "description": {
+      "text": "Destroy a Ghast with a fireball"
+    },
+    "frame": "challenge"
+  },
+  "criteria": {
+    "killed_ghast": {
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:ghast"
+            }
+          }
+        ],
+        "killing_blow": {
+          "direct_entity": {
+            "type": "minecraft:fireball"
+          },
+          "tags": [
+            {
+              "expected": true,
+              "id": "minecraft:is_projectile"
+            }
+          ]
+        }
+      },
+      "trigger": "minecraft:player_killed_entity"
+    }
+  },
+  "requirements": [
+    [
+      "killed_ghast"
+    ]
+  ],
+  "rewards": {
+    "loot": [
+      "spicedcider:advancement/nether_return_to_sender"
+    ]
+  }
+}

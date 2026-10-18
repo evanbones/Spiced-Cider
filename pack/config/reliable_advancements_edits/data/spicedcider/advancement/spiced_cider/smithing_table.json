@@ -1,0 +1,37 @@
+{
+  "parent": "spicedcider:spiced_cider/cast_iron",
+  "display": {
+    "icon": {
+      "id": "minecraft:smithing_table"
+    },
+    "title": {
+      "text": "Forging Ahead"
+    },
+    "description": {
+      "text": "Build a Smithing Table out of Cast Iron"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "placed_smithing_table": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": "minecraft:smithing_table"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "placed_smithing_table"
+    ]
+  ]
+}

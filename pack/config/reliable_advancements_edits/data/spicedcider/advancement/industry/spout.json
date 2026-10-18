@@ -1,0 +1,25 @@
+{
+  "parent": "spicedcider:industry/mechanical_pump",
+  "display": {
+    "icon": {
+      "id": "create:spout"
+    },
+    "title": {
+      "text": "Sploosh"
+    },
+    "description": {
+      "text": "Watch a Spout fill an item with fluid"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "0": {
+      "trigger": "create:spout_builtin"
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ]
+  ]
+}

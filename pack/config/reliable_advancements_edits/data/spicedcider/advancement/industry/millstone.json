@@ -1,0 +1,37 @@
+{
+  "parent": "spicedcider:industry/bronze_casing",
+  "display": {
+    "icon": {
+      "id": "manual_labour:millstone"
+    },
+    "title": {
+      "text": "Daily Grind"
+    },
+    "description": {
+      "text": "Place a Millstone to grind without the wrist strain"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "placed_millstone": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": "manual_labour:millstone"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "placed_millstone"
+    ]
+  ]
+}

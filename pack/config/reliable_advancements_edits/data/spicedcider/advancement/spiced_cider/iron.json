@@ -1,0 +1,32 @@
+{
+  "parent": "spicedcider:spiced_cider/copper_pickaxe",
+  "display": {
+    "icon": {
+      "id": "minecraft:iron_ingot"
+    },
+    "title": {
+      "text": "Pumping Iron"
+    },
+    "description": {
+      "text": "Mine Iron Ore with a Copper Pickaxe and smelt an Iron Ingot"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "has_iron_ingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:iron_ingot"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_iron_ingot"
+    ]
+  ]
+}

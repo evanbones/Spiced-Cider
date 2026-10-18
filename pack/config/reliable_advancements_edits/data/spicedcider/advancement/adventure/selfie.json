@@ -1,0 +1,37 @@
+{
+  "parent": "spicedcider:adventure/exposure",
+  "display": {
+    "icon": {
+      "id": "exposure:camera"
+    },
+    "title": {
+      "text": "Was That a Spotlight? On Me?"
+    },
+    "description": {
+      "text": "Take a selfie"
+    },
+    "frame": "task",
+    "hidden": true
+  },
+  "criteria": {
+    "take_selfie": {
+      "conditions": {
+        "frame": {
+          "extra_data": "{selfie:1b}",
+          "entities_in_frame_count": 1,
+          "entities_in_frame": [
+            {
+              "type": "minecraft:player"
+            }
+          ]
+        }
+      },
+      "trigger": "exposure:frame_exposed"
+    }
+  },
+  "requirements": [
+    [
+      "take_selfie"
+    ]
+  ]
+}

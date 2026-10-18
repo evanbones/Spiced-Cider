@@ -1,0 +1,189 @@
+{
+  "parent": "spicedcider:husbandry/first_meal",
+  "display": {
+    "icon": {
+      "id": "modest_meals:ramen"
+    },
+    "title": {
+      "text": "Master Chef"
+    },
+    "description": {
+      "text": "Eat every kind of Modest Meal, from Soup to Ice Cream"
+    },
+    "frame": "challenge"
+  },
+  "criteria": {
+    "ate_soup": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "modest_meals:soup"
+        }
+      }
+    },
+    "ate_ramen": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "modest_meals:ramen"
+        }
+      }
+    },
+    "ate_pasta": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "modest_meals:pasta"
+        }
+      }
+    },
+    "ate_salad": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "modest_meals:salad"
+        }
+      }
+    },
+    "ate_curry": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "modest_meals:curry"
+        }
+      }
+    },
+    "ate_porridge": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "modest_meals:porridge"
+        }
+      }
+    },
+    "ate_drink": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "modest_meals:drink"
+        }
+      }
+    },
+    "ate_jam": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "modest_meals:jam"
+        }
+      }
+    },
+    "ate_sandwich": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "modest_meals:sandwich"
+        }
+      }
+    },
+    "ate_wrap": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "modest_meals:wrap"
+        }
+      }
+    },
+    "ate_pizza": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "modest_meals:pizza"
+        }
+      }
+    },
+    "ate_sushi": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "modest_meals:sushi"
+        }
+      }
+    },
+    "ate_skewer": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "modest_meals:skewer"
+        }
+      }
+    },
+    "ate_mochi": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "modest_meals:mochi"
+        }
+      }
+    },
+    "ate_ice_cream": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "modest_meals:ice_cream"
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "ate_soup"
+    ],
+    [
+      "ate_ramen"
+    ],
+    [
+      "ate_pasta"
+    ],
+    [
+      "ate_salad"
+    ],
+    [
+      "ate_curry"
+    ],
+    [
+      "ate_porridge"
+    ],
+    [
+      "ate_drink"
+    ],
+    [
+      "ate_jam"
+    ],
+    [
+      "ate_sandwich"
+    ],
+    [
+      "ate_wrap"
+    ],
+    [
+      "ate_pizza"
+    ],
+    [
+      "ate_sushi"
+    ],
+    [
+      "ate_skewer"
+    ],
+    [
+      "ate_mochi"
+    ],
+    [
+      "ate_ice_cream"
+    ]
+  ],
+  "rewards": {
+    "loot": [
+      "spicedcider:advancement/husbandry_master_chef"
+    ]
+  }
+}

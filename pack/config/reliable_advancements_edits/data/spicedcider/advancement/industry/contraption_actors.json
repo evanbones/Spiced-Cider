@@ -1,0 +1,25 @@
+{
+  "parent": "spicedcider:industry/saw",
+  "display": {
+    "icon": {
+      "id": "create:mechanical_bearing"
+    },
+    "title": {
+      "text": "Moving with Purpose"
+    },
+    "description": {
+      "text": "Build a moving contraption with a saw or other tool on board"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "0": {
+      "trigger": "create:contraption_actors_builtin"
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ]
+  ]
+}

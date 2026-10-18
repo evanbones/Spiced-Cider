@@ -1,0 +1,40 @@
+{
+  "parent": "spicedcider:industry/spring_water",
+  "display": {
+    "icon": {
+      "id": "spelunkery:sluice_grate"
+    },
+    "title": {
+      "text": "Panning for Gold"
+    },
+    "description": {
+      "text": "Run Spring Water through a Sluice Grate to sift out nuggets and minerals"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "sluice": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": [
+                  "spelunkery:wooden_sluice",
+                  "spelunkery:stone_sluice"
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "sluice"
+    ]
+  ]
+}

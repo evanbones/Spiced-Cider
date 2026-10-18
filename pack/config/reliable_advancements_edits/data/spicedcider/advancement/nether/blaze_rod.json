@@ -1,0 +1,32 @@
+{
+  "parent": "spicedcider:nether/fortress",
+  "display": {
+    "icon": {
+      "id": "minecraft:blaze_rod"
+    },
+    "title": {
+      "text": "Into Fire"
+    },
+    "description": {
+      "text": "Relieve a Blaze of its rod"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "has_blaze_rod": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:blaze_rod"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_blaze_rod"
+    ]
+  ]
+}

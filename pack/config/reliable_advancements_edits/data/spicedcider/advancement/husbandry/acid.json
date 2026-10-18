@@ -1,0 +1,35 @@
+{
+  "parent": "spicedcider:husbandry/pickle",
+  "display": {
+    "icon": {
+      "id": "culturaldelights:acid"
+    },
+    "title": {
+      "text": "I Cry Acid"
+    },
+    "description": {
+      "text": "Brew an all-ages-appropriate glass of pure battery acid in the Vat"
+    },
+    "frame": "task",
+    "hidden": true
+  },
+  "criteria": {
+    "acid": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "culturaldelights:acid"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "acid"
+    ]
+  ]
+}

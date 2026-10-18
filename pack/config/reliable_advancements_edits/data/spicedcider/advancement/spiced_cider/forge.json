@@ -1,0 +1,42 @@
+{
+  "parent": "spicedcider:spiced_cider/iron",
+  "display": {
+    "icon": {
+      "id": "modestmining:forge"
+    },
+    "title": {
+      "text": "More of a Fabric Person"
+    },
+    "description": {
+      "text": "Build a Forge to alloy metals and hammer out better gear"
+    },
+    "frame": "goal"
+  },
+  "criteria": {
+    "placed_forge": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": "modestmining:forge"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "placed_forge"
+    ]
+  ],
+  "rewards": {
+    "loot": [
+      "spicedcider:advancement/spiced_cider_forge"
+    ]
+  }
+}

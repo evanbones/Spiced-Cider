@@ -319,7 +319,12 @@
       "create:zinc_block",
       "create:deepslate_zinc_ore",
       "create:zinc_ore",
-      "create:netherite_diving_boots"
+      "create:netherite_diving_boots",
+      "create:andesite_bars",
+      "create:andesite_ladder",
+      "create:copper_door",
+      "create:brass_door",
+      "create:andesite_door"
     ]
   },
   {
@@ -335,5 +340,109 @@
       "create:dough"
     ],
     "replace_with": "farmersdelight:wheat_dough"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "create:brass_ingot",
+      "#c:ingots/brass"
+    ],
+    "replace_with": "alloyed:steel_ingot"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "create:brass_nugget",
+      "#c:nuggets/brass"
+    ],
+    "replace_with": "alloyed:steel_nugget"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "create:brass_sheet",
+      "#c:plates/brass"
+    ],
+    "replace_with": "alloyed:steel_sheet"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "create:brass_block",
+      "#c:storage_blocks/brass"
+    ],
+    "replace_with": "alloyed:steel_block"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "create:brass_casing"
+    ],
+    "replace_with": "alloyed:steel_casing"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "create:brass_encased_shaft"
+    ],
+    "replace_with": "alloyed:steel_encased_shaft"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "create:brass_encased_cogwheel"
+    ],
+    "replace_with": "alloyed:steel_encased_cogwheel"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "create:brass_encased_large_cogwheel"
+    ],
+    "replace_with": "alloyed:steel_encased_large_cogwheel"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "create:brass_ladder"
+    ],
+    "replace_with": "alloyed:steel_ladder"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "create:brass_bars"
+    ],
+    "replace_with": "alloyed:steel_bars"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "create:brass_scaffolding"
+    ],
+    "replace_with": "alloyed:steel_scaffolding"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "create:zinc_ingot",
+      "#c:ingots/zinc"
+    ],
+    "replace_with": "caverns_and_chasms:tin_ingot"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "create:zinc_nugget",
+      "#c:nuggets/zinc"
+    ],
+    "replace_with": "caverns_and_chasms:tin_nugget"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "create:bar_of_chocolate"
+    ],
+    "replace_with": "neapolitan:chocolate_bar"
   }
 ]

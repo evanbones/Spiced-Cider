@@ -12,7 +12,7 @@
 			strawberry_cake = true
 			banana_cake = true
 			mint_cake = true
-			adzuki_cake = true
+			adzuki_cake = false
 
 		[types.wood_type.abundant_atmosphere]
 			red_bamboo = true
@@ -167,11 +167,11 @@
 			brass_lantern = true
 			crimson_lantern = true
 
-		[types.lantern.architects_palette]
-			nether_brass_lantern = true
-
 		[types.lantern.infernalexp]
 			glowlight_lantern = true
+
+		[types.lantern.architects_palette]
+			nether_brass_lantern = true
 
 		[types.stone_type.architects_palette]
 			abyssaline = true
@@ -182,6 +182,7 @@
 			wardstone = true
 			moonshale = true
 			nebulite = true
+			oracle = true
 
 		[types.stone_type.bountifulfares]
 			feldspar = true
@@ -205,6 +206,7 @@
 			shimmer_stone = true
 			dimstone = true
 			dullstone = true
+			glowstone = true
 
 		[types.stone_type.newworld]
 			loam = true
@@ -223,6 +225,12 @@
 
 		[types.stone_type.spelunkery]
 			nephrite = true
+
+		[types.stone_type.neapolitan]
+			chocolate = true
+
+		[types.stone_type.upgrade_aquatic]
+			tooth = true
 
 		[entries.wood_type.nomansland]
 			bookshelf = true
@@ -319,6 +327,18 @@
 			polished_cut_stairs = true
 			polished_cut_wall = true
 			cut_slab = true
+			table_cloth = true
+			scaffolding = true
+			alloy = true
+			encased_large_cogwheel = true
+			ladder = true
+			encased_shaft = true
+			belt_funnel = true
+			door = true
+			encased_cogwheel = true
+			bars = true
+			funnel = true
+			casing = true
 
 		[entries.stone_type.quark]
 			polished_vertical_slab = true

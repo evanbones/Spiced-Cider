@@ -1,0 +1,25 @@
+{
+  "parent": "spicedcider:industry/steam_engine",
+  "display": {
+    "icon": {
+      "id": "create:steam_whistle"
+    },
+    "title": {
+      "text": "Voice of an Angel"
+    },
+    "description": {
+      "text": "Toot a Steam Whistle"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "0": {
+      "trigger": "create:steam_whistle_builtin"
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ]
+  ]
+}

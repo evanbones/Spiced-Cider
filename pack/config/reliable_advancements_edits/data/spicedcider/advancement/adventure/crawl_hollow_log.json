@@ -1,0 +1,25 @@
+{
+  "criteria": {
+    "crawl_in_hollow_log": {
+      "trigger": "quark:hollow_log_crawl"
+    }
+  },
+  "requirements": [
+    [
+      "crawl_in_hollow_log"
+    ]
+  ],
+  "parent": "spicedcider:adventure/backpack",
+  "display": {
+    "hidden": true,
+    "icon": {
+      "id": "quark:hollow_oak_log"
+    },
+    "title": "Crawling in My Bark",
+    "description": "Crawl inside a Hollow Log",
+    "frame": "task"
+  },
+  "parents": [
+    "spicedcider:adventure/backpack"
+  ]
+}

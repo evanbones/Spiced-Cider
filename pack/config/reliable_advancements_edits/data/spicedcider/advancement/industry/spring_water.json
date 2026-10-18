@@ -1,0 +1,32 @@
+{
+  "parent": "spicedcider:industry/root",
+  "display": {
+    "icon": {
+      "id": "spelunkery:spring_water_bucket"
+    },
+    "title": {
+      "text": "Spring Cleaning"
+    },
+    "description": {
+      "text": "Scoop up a Bucket of Spring Water from a mountain spring"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "has_spring_water_bucket": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "spelunkery:spring_water_bucket"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_spring_water_bucket"
+    ]
+  ]
+}

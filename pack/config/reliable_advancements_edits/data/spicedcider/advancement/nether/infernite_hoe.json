@@ -1,0 +1,33 @@
+{
+  "parent": "spicedcider:nether/infernite",
+  "display": {
+    "icon": {
+      "id": "minecraft:netherite_hoe"
+    },
+    "title": {
+      "text": "Serious Dedication"
+    },
+    "description": {
+      "text": "Use an Infernite Ingot to upgrade a Hoe, and then reevaluate your life choices"
+    },
+    "frame": "task",
+    "hidden": true
+  },
+  "criteria": {
+    "has_netherite_hoe": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:netherite_hoe"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_netherite_hoe"
+    ]
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "parent": "spicedcider:industry/millstone",
+  "display": {
+    "icon": {
+      "id": "create:crushing_wheel"
+    },
+    "title": {
+      "text": "Wheels of Destruction"
+    },
+    "description": {
+      "text": "Place and power a set of Crushing Wheels"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "0": {
+      "trigger": "create:crushing_wheel_builtin"
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ]
+  ]
+}

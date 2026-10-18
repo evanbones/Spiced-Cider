@@ -1,0 +1,25 @@
+{
+  "parent": "spicedcider:industry/belt",
+  "display": {
+    "icon": {
+      "id": "create:chute"
+    },
+    "title": {
+      "text": "Vertical Logistics"
+    },
+    "description": {
+      "text": "Move some items down a Chute"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "0": {
+      "trigger": "create:chute_builtin"
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ]
+  ]
+}

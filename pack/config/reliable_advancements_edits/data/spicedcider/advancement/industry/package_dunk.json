@@ -1,0 +1,26 @@
+{
+  "parent": "spicedcider:industry/packager",
+  "display": {
+    "icon": {
+      "id": "create:cardboard_block"
+    },
+    "title": {
+      "text": "Nothing but Net"
+    },
+    "description": {
+      "text": "Throw a package straight into a Chute"
+    },
+    "frame": "task",
+    "hidden": true
+  },
+  "criteria": {
+    "0": {
+      "trigger": "create:package_chute_throw_builtin"
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ]
+  ]
+}

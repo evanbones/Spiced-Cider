@@ -1,0 +1,34 @@
+{
+  "parent": "spicedcider:husbandry/fermentation_vessel",
+  "parents": [
+    "spicedcider:husbandry/fermentation_vessel",
+    "spicedcider:husbandry/vat"
+  ],
+  "display": {
+    "icon": {
+      "id": "culturaldelights:apple_cider"
+    },
+    "title": {
+      "text": "Drink Responsibly"
+    },
+    "description": {
+      "text": "Get Intoxicated from a fermented drink"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "intoxication": {
+      "trigger": "minecraft:effects_changed",
+      "conditions": {
+        "effects": {
+          "culturaldelights:intoxication": {}
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "intoxication"
+    ]
+  ]
+}

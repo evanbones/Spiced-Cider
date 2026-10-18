@@ -1,0 +1,38 @@
+{
+  "parent": "spicedcider:adventure/lush_caves",
+  "display": {
+    "icon": {
+      "id": "minecraft:pointed_dripstone"
+    },
+    "title": {
+      "text": "Dripped Out"
+    },
+    "description": {
+      "text": "Find a Dripstone Cave"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "visited_dripstone_caves": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "biomes": "minecraft:dripstone_caves"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "visited_dripstone_caves"
+    ]
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "spicedcider:nether/bastion",
+  "display": {
+    "icon": {
+      "id": "piglinproliferation:buckler"
+    },
+    "title": {
+      "text": "Chargin' Targe"
+    },
+    "description": {
+      "text": "Take a Buckler from a Bastion chest or a Piglin Brute"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "has_buckler": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "piglinproliferation:buckler"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_buckler"
+    ]
+  ]
+}

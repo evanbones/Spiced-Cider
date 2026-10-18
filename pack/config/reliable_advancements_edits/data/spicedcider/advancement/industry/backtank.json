@@ -1,0 +1,25 @@
+{
+  "parent": "spicedcider:industry/mechanical_pump",
+  "display": {
+    "icon": {
+      "id": "create:copper_backtank"
+    },
+    "title": {
+      "text": "Pressure to Go"
+    },
+    "description": {
+      "text": "Fill a Copper Backtank with air pressure"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "0": {
+      "trigger": "create:backtank_builtin"
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ]
+  ]
+}

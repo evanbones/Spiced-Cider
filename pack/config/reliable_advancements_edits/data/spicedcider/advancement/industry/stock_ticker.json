@@ -1,0 +1,25 @@
+{
+  "parent": "spicedcider:industry/packager",
+  "display": {
+    "icon": {
+      "id": "create:stock_ticker"
+    },
+    "title": {
+      "text": "Order Up!"
+    },
+    "description": {
+      "text": "Put a mob to work at your Stock Ticker and place your first order"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "0": {
+      "trigger": "create:stock_ticker_builtin"
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ]
+  ]
+}

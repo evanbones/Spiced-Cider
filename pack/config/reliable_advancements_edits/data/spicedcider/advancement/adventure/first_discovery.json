@@ -1,0 +1,25 @@
+{
+  "parent": "spicedcider:adventure/field_guide",
+  "display": {
+    "icon": {
+      "id": "fieldguide:page"
+    },
+    "title": {
+      "text": "Aha!"
+    },
+    "description": {
+      "text": "Scan a creature with your Field Guide"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "unlock": {
+      "trigger": "fieldguide:entry_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "unlock"
+    ]
+  ]
+}

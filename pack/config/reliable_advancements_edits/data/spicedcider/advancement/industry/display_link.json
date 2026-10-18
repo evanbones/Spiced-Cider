@@ -1,0 +1,25 @@
+{
+  "parent": "spicedcider:industry/steel_casing",
+  "display": {
+    "icon": {
+      "id": "create:display_link"
+    },
+    "title": {
+      "text": "Big Data"
+    },
+    "description": {
+      "text": "Show off some information with a Display Link"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "0": {
+      "trigger": "create:display_link_builtin"
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ]
+  ]
+}

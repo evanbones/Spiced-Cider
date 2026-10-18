@@ -1,0 +1,26 @@
+{
+  "parent": "spicedcider:husbandry/tame",
+  "display": {
+    "icon": {
+      "id": "horseman:copper_horn"
+    },
+    "title": {
+      "text": "Honk If You Like Horses"
+    },
+    "description": {
+      "text": "Summon your horse with a Copper Horn"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "summon_horse": {
+      "conditions": {},
+      "trigger": "horseman:horse_summoned"
+    }
+  },
+  "requirements": [
+    [
+      "summon_horse"
+    ]
+  ]
+}

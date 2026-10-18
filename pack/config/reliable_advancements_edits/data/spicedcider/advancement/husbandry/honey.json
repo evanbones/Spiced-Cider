@@ -1,0 +1,32 @@
+{
+  "parent": "spicedcider:husbandry/campfire",
+  "display": {
+    "icon": {
+      "id": "minecraft:honey_bottle"
+    },
+    "title": {
+      "text": "Sweet Talker"
+    },
+    "description": {
+      "text": "Collect a bottle of Honey from a hive"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "has_honey_bottle": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:honey_bottle"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_honey_bottle"
+    ]
+  ]
+}

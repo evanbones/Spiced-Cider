@@ -1,0 +1,26 @@
+{
+  "parent": "spicedcider:industry/funnel",
+  "display": {
+    "icon": {
+      "id": "create:andesite_funnel"
+    },
+    "title": {
+      "text": "The Parrots and the Flaps"
+    },
+    "description": {
+      "text": "Make two belt-mounted Funnels kiss"
+    },
+    "frame": "task",
+    "hidden": true
+  },
+  "criteria": {
+    "0": {
+      "trigger": "create:belt_funnel_kiss_builtin"
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ]
+  ]
+}

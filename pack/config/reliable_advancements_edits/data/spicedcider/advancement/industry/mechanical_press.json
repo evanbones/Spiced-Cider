@@ -1,0 +1,25 @@
+{
+  "parent": "spicedcider:industry/bronze_casing",
+  "display": {
+    "icon": {
+      "id": "create:mechanical_press"
+    },
+    "title": {
+      "text": "Bonk!"
+    },
+    "description": {
+      "text": "Press some sheets in a Mechanical Press"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "0": {
+      "trigger": "create:mechanical_press_builtin"
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ]
+  ]
+}

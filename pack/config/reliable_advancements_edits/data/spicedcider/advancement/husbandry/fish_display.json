@@ -1,0 +1,37 @@
+{
+  "parent": "spicedcider:husbandry/catch_fish",
+  "display": {
+    "icon": {
+      "id": "tide:fish_display"
+    },
+    "title": {
+      "text": "Bragging Rights"
+    },
+    "description": {
+      "text": "Mount a fish on a Fish Display"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "placed_fish_display": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": "tide:fish_display"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "placed_fish_display"
+    ]
+  ]
+}

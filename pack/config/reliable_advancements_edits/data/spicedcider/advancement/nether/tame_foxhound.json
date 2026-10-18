@@ -1,0 +1,30 @@
+{
+  "parent": "spicedcider:nether/enter_nether",
+  "display": {
+    "icon": {
+      "id": "minecraft:coal"
+    },
+    "title": {
+      "text": "Playing with Fire"
+    },
+    "description": {
+      "text": "Tame a Foxhound by feeding it Coal while fire resistant"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "tame_foxhound": {
+      "conditions": {
+        "entity": {
+          "type": "quark:foxhound"
+        }
+      },
+      "trigger": "minecraft:tame_animal"
+    }
+  },
+  "requirements": [
+    [
+      "tame_foxhound"
+    ]
+  ]
+}

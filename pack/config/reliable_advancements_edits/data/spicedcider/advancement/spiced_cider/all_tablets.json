@@ -1,0 +1,253 @@
+{
+  "parent": "spicedcider:spiced_cider/enchanted_tablet",
+  "display": {
+    "icon": {
+      "id": "modestmagic:enchantment_tablet_everlasting"
+    },
+    "title": {
+      "text": "Power Trip"
+    },
+    "description": {
+      "text": "Collect every kind of Enchanted Tablet"
+    },
+    "frame": "challenge"
+  },
+  "criteria": {
+    "has_enchantment_tablet_light": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "modestmagic:enchantment_tablet_light"
+          }
+        ]
+      }
+    },
+    "has_enchantment_tablet_puncturing": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "modestmagic:enchantment_tablet_puncturing"
+          }
+        ]
+      }
+    },
+    "has_enchantment_tablet_cyclic": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "modestmagic:enchantment_tablet_cyclic"
+          }
+        ]
+      }
+    },
+    "has_enchantment_tablet_swift": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "modestmagic:enchantment_tablet_swift"
+          }
+        ]
+      }
+    },
+    "has_enchantment_tablet_everlasting": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "modestmagic:enchantment_tablet_everlasting"
+          }
+        ]
+      }
+    },
+    "has_enchantment_tablet_infested": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "modestmagic:enchantment_tablet_infested"
+          }
+        ]
+      }
+    },
+    "has_enchantment_tablet_fiery": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "modestmagic:enchantment_tablet_fiery"
+          }
+        ]
+      }
+    },
+    "has_enchantment_tablet_lucky": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "modestmagic:enchantment_tablet_lucky"
+          }
+        ]
+      }
+    },
+    "has_enchantment_tablet_aquatic": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "modestmagic:enchantment_tablet_aquatic"
+          }
+        ]
+      }
+    },
+    "has_enchantment_tablet_heavy": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "modestmagic:enchantment_tablet_heavy"
+          }
+        ]
+      }
+    },
+    "has_enchantment_tablet_enduring": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "modestmagic:enchantment_tablet_enduring"
+          }
+        ]
+      }
+    },
+    "has_enchantment_tablet_secure": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "modestmagic:enchantment_tablet_secure"
+          }
+        ]
+      }
+    },
+    "has_enchantment_tablet_haunted": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "modestmagic:enchantment_tablet_haunted"
+          }
+        ]
+      }
+    },
+    "has_enchantment_tablet_serrated": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "modestmagic:enchantment_tablet_serrated"
+          }
+        ]
+      }
+    },
+    "has_enchantment_tablet_glacial": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "modestmagic:enchantment_tablet_glacial"
+          }
+        ]
+      }
+    },
+    "has_enchantment_tablet_hallowed": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "modestmagic:enchantment_tablet_hallowed"
+          }
+        ]
+      }
+    },
+    "has_enchantment_tablet_recollection": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "modestmagic:enchantment_tablet_recollection"
+          }
+        ]
+      }
+    },
+    "has_enchantment_tablet_flinging": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "modestmagic:enchantment_tablet_flinging"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_enchantment_tablet_light"
+    ],
+    [
+      "has_enchantment_tablet_puncturing"
+    ],
+    [
+      "has_enchantment_tablet_cyclic"
+    ],
+    [
+      "has_enchantment_tablet_swift"
+    ],
+    [
+      "has_enchantment_tablet_everlasting"
+    ],
+    [
+      "has_enchantment_tablet_infested"
+    ],
+    [
+      "has_enchantment_tablet_fiery"
+    ],
+    [
+      "has_enchantment_tablet_lucky"
+    ],
+    [
+      "has_enchantment_tablet_aquatic"
+    ],
+    [
+      "has_enchantment_tablet_heavy"
+    ],
+    [
+      "has_enchantment_tablet_enduring"
+    ],
+    [
+      "has_enchantment_tablet_secure"
+    ],
+    [
+      "has_enchantment_tablet_haunted"
+    ],
+    [
+      "has_enchantment_tablet_serrated"
+    ],
+    [
+      "has_enchantment_tablet_glacial"
+    ],
+    [
+      "has_enchantment_tablet_hallowed"
+    ],
+    [
+      "has_enchantment_tablet_recollection"
+    ],
+    [
+      "has_enchantment_tablet_flinging"
+    ]
+  ]
+}

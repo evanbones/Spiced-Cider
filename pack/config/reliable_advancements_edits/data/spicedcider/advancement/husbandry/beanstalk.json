@@ -1,0 +1,30 @@
+{
+  "parent": "spicedcider:husbandry/tall_tomato",
+  "display": {
+    "icon": {
+      "id": "culturaldelights:beanstalk"
+    },
+    "title": {
+      "text": "Fee-Fi-Fo-Fum"
+    },
+    "description": {
+      "text": "Grow a Beanstalk all the way to the build height limit"
+    },
+    "frame": "challenge"
+  },
+  "criteria": {
+    "grow_beanstalk_to_height_limit": {
+      "trigger": "culturaldelights:grow_beanstalk_to_height_limit"
+    }
+  },
+  "requirements": [
+    [
+      "grow_beanstalk_to_height_limit"
+    ]
+  ],
+  "rewards": {
+    "loot": [
+      "spicedcider:advancement/husbandry_beanstalk"
+    ]
+  }
+}

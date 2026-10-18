@@ -1,0 +1,32 @@
+{
+  "parent": "spicedcider:adventure/backpack",
+  "display": {
+    "icon": {
+      "id": "spicedcider:grappling_hook"
+    },
+    "title": {
+      "text": "Get Over Here!"
+    },
+    "description": {
+      "text": "Craft a Grappling Hook"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "has_grappling_hook": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "spicedcider:grappling_hook"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_grappling_hook"
+    ]
+  ]
+}

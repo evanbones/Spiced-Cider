@@ -1,19 +1,15 @@
 	[snowy_season.snow_season_start]
-		#Month from which villagers will start placing wreaths, presents and throwing snowballs
 		# Default: 12
 		# Range: 1 ~ 12
 		month = 12
-		#Day from which villagers will start placing wreaths, presents and throwing snowballs
 		# Default: 20
 		# Range: 1 ~ 31
 		day = 20
 
 	[snowy_season.snow_season_end]
-		#Month from which villagers will start removing placed wreaths
 		# Default: 1
 		# Range: 1 ~ 12
 		month = 1
-		#Day from which villagers will start removing placed wreaths
 		# Default: 30
 		# Range: 1 ~ 31
 		day = 30

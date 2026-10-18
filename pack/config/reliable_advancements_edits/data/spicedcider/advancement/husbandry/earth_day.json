@@ -1,0 +1,40 @@
+{
+  "parent": "spicedcider:husbandry/muddy_pig",
+  "display": {
+    "icon": {
+      "id": "minecraft:poppy"
+    },
+    "title": {
+      "text": "Earth Day"
+    },
+    "description": {
+      "text": "Plant a decoration on a muddy Pig"
+    },
+    "frame": "task",
+    "hidden": true
+  },
+  "criteria": {
+    "plant_on_muddy_pig": {
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:pig"
+            }
+          }
+        ],
+        "item": {
+          "items": "#environmental:muddy_pig_decorations"
+        }
+      },
+      "trigger": "minecraft:player_interacted_with_entity"
+    }
+  },
+  "requirements": [
+    [
+      "plant_on_muddy_pig"
+    ]
+  ]
+}

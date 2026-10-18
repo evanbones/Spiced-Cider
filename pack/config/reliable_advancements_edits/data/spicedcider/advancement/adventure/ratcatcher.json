@@ -1,0 +1,25 @@
+{
+  "parent": "spicedcider:adventure/bone_flute",
+  "display": {
+    "icon": {
+      "id": "caverns_and_chasms:bone_flute"
+    },
+    "title": {
+      "text": "Ratcatcher"
+    },
+    "description": {
+      "text": "Play the Bone Flute to send your Rats after something"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "kill_with_rat": {
+      "trigger": "caverns_and_chasms:rat_killed_entity"
+    }
+  },
+  "requirements": [
+    [
+      "kill_with_rat"
+    ]
+  ]
+}

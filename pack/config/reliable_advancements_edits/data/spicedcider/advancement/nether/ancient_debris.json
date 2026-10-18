@@ -1,0 +1,32 @@
+{
+  "parent": "spicedcider:nether/enter_nether",
+  "display": {
+    "icon": {
+      "id": "minecraft:ancient_debris"
+    },
+    "title": {
+      "text": "Hidden in the Depths"
+    },
+    "description": {
+      "text": "Mine Ancient Debris with a diamond-tier Pickaxe"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "has_ancient_debris": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:ancient_debris"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_ancient_debris"
+    ]
+  ]
+}

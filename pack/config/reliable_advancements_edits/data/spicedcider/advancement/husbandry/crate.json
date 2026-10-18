@@ -1,0 +1,25 @@
+{
+  "parent": "spicedcider:husbandry/catch_fish",
+  "display": {
+    "icon": {
+      "id": "tide:wooden_crate"
+    },
+    "title": {
+      "text": "That's No Fish!"
+    },
+    "description": {
+      "text": "Reel in a crate while fishing"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "pull_crate": {
+      "trigger": "tide:pull_crate"
+    }
+  },
+  "requirements": [
+    [
+      "pull_crate"
+    ]
+  ]
+}

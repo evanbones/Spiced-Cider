@@ -1,0 +1,37 @@
+{
+  "parent": "spicedcider:spiced_cider/log",
+  "display": {
+    "icon": {
+      "id": "manual_labour:workstone"
+    },
+    "title": {
+      "text": "Rock Solid Foundations"
+    },
+    "description": {
+      "text": "Carve a Workstone out of Logs for your hammers to work on"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "placed_workstone": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": "manual_labour:workstone"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "placed_workstone"
+    ]
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "criteria": {
+    "ruined_portal": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "predicate": {
+              "location": {
+                "structures": "#minecraft:ruined_portal"
+              }
+            },
+            "entity": "this",
+            "condition": "minecraft:entity_properties"
+          }
+        ]
+      }
+    },
+    "entered_the_nether": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "minecraft:the_nether"
+      }
+    },
+    "portal_stuff": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "dimensional_tears:dimensional_tears_bottle",
+              "minecraft:crying_obsidian",
+              "minecraft:obsidian"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "ruined_portal",
+      "portal_stuff",
+      "entered_the_nether"
+    ]
+  ],
+  "display": {
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": true,
+    "icon": {
+      "id": "minecraft:blaze_powder"
+    },
+    "title": "The Nether",
+    "description": "Bottle up whatever is crying in that broken old portal",
+    "background": "minecraft:textures/gui/advancements/backgrounds/nether.png",
+    "frame": "task"
+  }
+}

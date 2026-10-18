@@ -1,0 +1,34 @@
+{
+  "parent": "spicedcider:adventure/chalk",
+  "display": {
+    "icon": {
+      "id": "minecraft:glow_ink_sac"
+    },
+    "title": {
+      "text": "A Guiding Star"
+    },
+    "description": {
+      "text": "Make a Chalk mark glow in the dark"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "make_glowing": {
+      "conditions": {
+        "location": {
+          "light": {
+            "light": {
+              "max": 7
+            }
+          }
+        }
+      },
+      "trigger": "chalk:mark_glowing"
+    }
+  },
+  "requirements": [
+    [
+      "make_glowing"
+    ]
+  ]
+}

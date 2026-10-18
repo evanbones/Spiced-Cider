@@ -1,0 +1,32 @@
+{
+  "parent": "spicedcider:nether/ancient_debris",
+  "display": {
+    "icon": {
+      "id": "minecraft:netherite_scrap"
+    },
+    "title": {
+      "text": "Ancient History"
+    },
+    "description": {
+      "text": "Smelt Ancient Debris into Ancient Scrap"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "has_netherite_scrap": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:netherite_scrap"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_netherite_scrap"
+    ]
+  ]
+}

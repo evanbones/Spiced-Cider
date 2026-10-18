@@ -1,0 +1,245 @@
+{
+  "parent": "spicedcider:husbandry/breed",
+  "display": {
+    "icon": {
+      "id": "minecraft:golden_carrot"
+    },
+    "title": {
+      "text": "Two by Two"
+    },
+    "description": {
+      "text": "Breed every farm and family animal"
+    },
+    "frame": "challenge"
+  },
+  "criteria": {
+    "bred_cow": {
+      "trigger": "minecraft:bred_animals",
+      "conditions": {
+        "parent": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:cow"
+            }
+          }
+        ]
+      }
+    },
+    "bred_sheep": {
+      "trigger": "minecraft:bred_animals",
+      "conditions": {
+        "parent": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:sheep"
+            }
+          }
+        ]
+      }
+    },
+    "bred_pig": {
+      "trigger": "minecraft:bred_animals",
+      "conditions": {
+        "parent": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:pig"
+            }
+          }
+        ]
+      }
+    },
+    "bred_chicken": {
+      "trigger": "minecraft:bred_animals",
+      "conditions": {
+        "parent": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:chicken"
+            }
+          }
+        ]
+      }
+    },
+    "bred_rabbit": {
+      "trigger": "minecraft:bred_animals",
+      "conditions": {
+        "parent": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:rabbit"
+            }
+          }
+        ]
+      }
+    },
+    "bred_goat": {
+      "trigger": "minecraft:bred_animals",
+      "conditions": {
+        "parent": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:goat"
+            }
+          }
+        ]
+      }
+    },
+    "bred_horse": {
+      "trigger": "minecraft:bred_animals",
+      "conditions": {
+        "parent": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:horse"
+            }
+          }
+        ]
+      }
+    },
+    "bred_wolf": {
+      "trigger": "minecraft:bred_animals",
+      "conditions": {
+        "parent": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:wolf"
+            }
+          }
+        ]
+      }
+    },
+    "bred_cat": {
+      "trigger": "minecraft:bred_animals",
+      "conditions": {
+        "parent": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:cat"
+            }
+          }
+        ]
+      }
+    },
+    "bred_fox": {
+      "trigger": "minecraft:bred_animals",
+      "conditions": {
+        "parent": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:fox"
+            }
+          }
+        ]
+      }
+    },
+    "bred_bee": {
+      "trigger": "minecraft:bred_animals",
+      "conditions": {
+        "parent": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:bee"
+            }
+          }
+        ]
+      }
+    },
+    "bred_turtle": {
+      "trigger": "minecraft:bred_animals",
+      "conditions": {
+        "parent": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:turtle"
+            }
+          }
+        ]
+      }
+    },
+    "bred_frog": {
+      "trigger": "minecraft:bred_animals",
+      "conditions": {
+        "parent": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:frog"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "bred_cow"
+    ],
+    [
+      "bred_sheep"
+    ],
+    [
+      "bred_pig"
+    ],
+    [
+      "bred_chicken"
+    ],
+    [
+      "bred_rabbit"
+    ],
+    [
+      "bred_goat"
+    ],
+    [
+      "bred_horse"
+    ],
+    [
+      "bred_wolf"
+    ],
+    [
+      "bred_cat"
+    ],
+    [
+      "bred_fox"
+    ],
+    [
+      "bred_bee"
+    ],
+    [
+      "bred_turtle"
+    ],
+    [
+      "bred_frog"
+    ]
+  ],
+  "rewards": {
+    "loot": [
+      "spicedcider:advancement/husbandry_breed_all"
+    ]
+  }
+}

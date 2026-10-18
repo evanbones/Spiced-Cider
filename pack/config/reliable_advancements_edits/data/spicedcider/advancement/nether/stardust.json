@@ -1,0 +1,32 @@
+{
+  "parent": "spicedcider:nether/kill_wither",
+  "display": {
+    "icon": {
+      "id": "modestmagic:stardust"
+    },
+    "title": {
+      "text": "Stardust Crusader"
+    },
+    "description": {
+      "text": "Grind a Nether Star into Stardust for the most powerful Tablets"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "has_stardust": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "modestmagic:stardust"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_stardust"
+    ]
+  ]
+}

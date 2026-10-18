@@ -1,0 +1,32 @@
+{
+  "parent": "spicedcider:spiced_cider/copper_pickaxe",
+  "display": {
+    "icon": {
+      "id": "minecraft:gold_ingot"
+    },
+    "title": {
+      "text": "Fool's Errand"
+    },
+    "description": {
+      "text": "Get a Gold Ingot, though Nether gold is easier to mine"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "has_gold_ingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:gold_ingot"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_gold_ingot"
+    ]
+  ]
+}

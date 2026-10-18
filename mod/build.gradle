@@ -273,6 +273,7 @@ dependencies {
     compileOnly "maven.modrinth:modern-world-creation:2.0.1-1.21.1-neoforge"
     compileOnly "maven.modrinth:fancymenu:3.9.12-1.21.1-neoforge"
     compileOnly "maven.modrinth:iceberg:IMssx9du"
+    compileOnly "maven.modrinth:reliable-advancements:J5weQWAm"
     //runtimeOnly "maven.modrinth:modern-world-creation:2.0.1-1.21.1-neoforge"
     //runtimeOnly "maven.modrinth:konkrete:1.9.9-1.21-neoforge"
     runtimeOnly "maven.modrinth:emi:1.1.22+1.21.1+neoforge"
@@ -288,6 +289,7 @@ dependencies {
 
     // Infernal Expansion
     runtimeOnly "maven.modrinth:infernal-expansion-redux:qqR1sJJx"
+    compileOnly "maven.modrinth:lithostitched:sPmtDq1X"
     runtimeOnly "maven.modrinth:lithostitched:sPmtDq1X"
 
     // Farmer's Delight
@@ -309,6 +311,7 @@ dependencies {
     compileOnly "maven.modrinth:no-mans-land:1.5.12"
     runtimeOnly "maven.modrinth:no-mans-land:1.5.12"
     runtimeOnly "maven.modrinth:biolith:EAjbdreT"
+    compileOnly "maven.modrinth:mixed-litter:79yyzlTc"
     runtimeOnly "maven.modrinth:mixed-litter:79yyzlTc"
 
     // Sinytra
@@ -330,7 +333,7 @@ dependencies {
     runtimeOnly "maven.modrinth:voxy-worldgen:PzNUZlWw"
 
     // Leak fixes
-    compileOnly "maven.modrinth:cold-sweat:r2cD4Llq"
+    compileOnly "maven.modrinth:cold-sweat:UGoodVYD"
     compileOnly "maven.modrinth:exposure:iBvaR6AK"
     compileOnly "maven.modrinth:simple-voice-chat:qqNx1Yjm"
     compileOnly "maven.modrinth:modernfix:7Jy58lnT"

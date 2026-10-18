@@ -1,0 +1,32 @@
+{
+  "parent": "spicedcider:nether/soul_sand_valley",
+  "display": {
+    "icon": {
+      "id": "quark:soul_bead"
+    },
+    "title": {
+      "text": "I'm Soul'd"
+    },
+    "description": {
+      "text": "Take a Soul Bead from a Wraith in a Soul Sand Valley"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "has_soul_bead": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "quark:soul_bead"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_soul_bead"
+    ]
+  ]
+}

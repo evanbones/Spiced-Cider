@@ -1,0 +1,37 @@
+{
+  "parent": "spicedcider:nether/ancient_scrap",
+  "display": {
+    "icon": {
+      "id": "minecraft:netherite_ingot"
+    },
+    "title": {
+      "text": "Heat of the Moment"
+    },
+    "description": {
+      "text": "Combine Ancient Scrap with Gold into an Infernite Ingot"
+    },
+    "frame": "goal"
+  },
+  "criteria": {
+    "has_netherite_ingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:netherite_ingot"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_netherite_ingot"
+    ]
+  ],
+  "rewards": {
+    "loot": [
+      "spicedcider:advancement/nether_infernite"
+    ]
+  }
+}

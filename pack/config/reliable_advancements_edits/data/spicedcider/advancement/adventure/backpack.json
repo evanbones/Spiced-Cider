@@ -1,0 +1,32 @@
+{
+  "parent": "spicedcider:adventure/root",
+  "display": {
+    "icon": {
+      "id": "reliable_backpacks:backpack"
+    },
+    "title": {
+      "text": "Pack Mule"
+    },
+    "description": {
+      "text": "Stitch together a Backpack and give up your chestplate for more loot"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "has_backpack": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "reliable_backpacks:backpack"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_backpack"
+    ]
+  ]
+}

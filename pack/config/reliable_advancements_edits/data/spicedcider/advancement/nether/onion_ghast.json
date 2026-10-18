@@ -1,0 +1,25 @@
+{
+  "criteria": {
+    "onion_ghast": {
+      "trigger": "onion_onion:onion_ghast"
+    }
+  },
+  "requirements": [
+    [
+      "onion_ghast"
+    ]
+  ],
+  "parent": "spicedcider:nether/kill_ghast",
+  "display": {
+    "hidden": true,
+    "icon": {
+      "id": "farmersdelight:onion"
+    },
+    "title": "Cry Me a River",
+    "description": "Make a Ghast shed a tear by chopping Onions nearby",
+    "frame": "task"
+  },
+  "parents": [
+    "spicedcider:nether/kill_ghast"
+  ]
+}

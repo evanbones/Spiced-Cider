@@ -1,0 +1,33 @@
+{
+  "parent": "spicedcider:nether/light_portal",
+  "display": {
+    "icon": {
+      "id": "minecraft:netherrack"
+    },
+    "title": {
+      "text": "The Floor Is Lava"
+    },
+    "description": {
+      "text": "Step through a portal into the Nether"
+    },
+    "frame": "goal"
+  },
+  "criteria": {
+    "entered_the_nether": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "minecraft:the_nether"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "entered_the_nether"
+    ]
+  ],
+  "rewards": {
+    "loot": [
+      "spicedcider:advancement/nether_enter_nether"
+    ]
+  }
+}

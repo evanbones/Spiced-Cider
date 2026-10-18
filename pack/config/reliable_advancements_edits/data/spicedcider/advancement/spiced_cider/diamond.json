@@ -1,0 +1,35 @@
+{
+  "parent": "spicedcider:spiced_cider/steel_pickaxe",
+  "display": {
+    "icon": {
+      "id": "minecraft:diamond"
+    },
+    "title": {
+      "text": "Diamonds!"
+    },
+    "description": {
+      "text": "Mine a Diamond with a Steel Pickaxe"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "diamond": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:diamond",
+              "spelunkery:rough_diamond"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "diamond"
+    ]
+  ]
+}

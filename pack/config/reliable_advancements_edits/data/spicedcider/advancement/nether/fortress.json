@@ -1,0 +1,38 @@
+{
+  "parent": "spicedcider:nether/enter_nether",
+  "display": {
+    "icon": {
+      "id": "minecraft:nether_bricks"
+    },
+    "title": {
+      "text": "A Terrible Fortress"
+    },
+    "description": {
+      "text": "Break your way into a Nether Fortress"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "found_fortress": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structures": "minecraft:fortress"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "found_fortress"
+    ]
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "parent": "spicedcider:nether/soul_sand_valley",
+  "display": {
+    "icon": {
+      "id": "minecraft:ghast_tear"
+    },
+    "title": {
+      "text": "Ghast Busters"
+    },
+    "description": {
+      "text": "Bring down a Ghast"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "killed_ghast": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:ghast"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "killed_ghast"
+    ]
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "parent": "spicedcider:husbandry/root",
+  "display": {
+    "icon": {
+      "id": "minecraft:campfire"
+    },
+    "title": {
+      "text": "Bonfire Lit"
+    },
+    "description": {
+      "text": "Light a cold Campfire with a Fire Striker"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "lit_campfire": {
+      "trigger": "minecraft:item_used_on_block",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": "#minecraft:campfires"
+              }
+            }
+          },
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "items": "spicedcider:fire_striker"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "lit_campfire"
+    ]
+  ]
+}

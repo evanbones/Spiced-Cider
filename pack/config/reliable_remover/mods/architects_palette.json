@@ -145,7 +145,15 @@
       "architects_palette:runic_glowstone",
       "architects_palette:heliodor_rod",
       "architects_palette:ekanite_rod",
-      "architects_palette:monazite_rod"
+      "architects_palette:monazite_rod",
+      "architects_palette:nether_brass_nugget",
+      "architects_palette:nether_brass_ingot",
+      "architects_palette:cut_nether_brass",
+      "architects_palette:nether_brass_blend",
+      "architects_palette:nether_brass_pillar",
+      "architects_palette:nether_brass_block",
+      "architects_palette:nether_brass_chain",
+      "architects_palette:smooth_nether_brass"
     ]
   },
   {
@@ -245,20 +253,6 @@
       "architects_palette:cracked_moonshale_bricks"
     ],
     "replace_with": "architects_palette:moonshale_bricks"
-  },
-  {
-    "action": "remove",
-    "items": [
-      "architects_palette:cracked_olivestone_bricks"
-    ],
-    "replace_with": "architects_palette:olivestone_bricks"
-  },
-  {
-    "action": "remove",
-    "items": [
-      "architects_palette:cracked_olivestone_tiles"
-    ],
-    "replace_with": "architects_palette:olivestone_tiles"
   },
   {
     "action": "remove",
@@ -426,5 +420,70 @@
       "architects_palette:basalt_tile_wall"
     ],
     "replace_with": "stoneworks:basalt_tile_wall"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "architects_palette:cracked_olivestone_bricks",
+      "architects_palette:cracked_olivestone_tiles",
+      "architects_palette:nether_brass_torch",
+      "architects_palette:myonite",
+      "architects_palette:myonite_slab",
+      "architects_palette:myonite_stairs",
+      "architects_palette:myonite_wall",
+      "architects_palette:myonite_bricks",
+      "architects_palette:myonite_brick_slab",
+      "architects_palette:myonite_brick_stairs",
+      "architects_palette:myonite_brick_wall",
+      "architects_palette:mushy_myonite_bricks",
+      "architects_palette:mushy_myonite_brick_slab",
+      "architects_palette:mushy_myonite_brick_stairs",
+      "architects_palette:mushy_myonite_brick_wall",
+      "architects_palette:olivestone_bricks",
+      "architects_palette:olivestone_brick_slab",
+      "architects_palette:olivestone_brick_stairs",
+      "architects_palette:olivestone_brick_wall",
+      "architects_palette:olivestone_tiles",
+      "architects_palette:olivestone_tile_slab",
+      "architects_palette:olivestone_tile_stairs",
+      "architects_palette:olivestone_tile_wall",
+      "architects_palette:olivestone_pillar",
+      "architects_palette:chiseled_olivestone",
+      "architects_palette:illuminated_olivestone",
+      "architects_palette:warpstone",
+      "architects_palette:warpstone_slab",
+      "architects_palette:warpstone_stairs",
+      "architects_palette:warpstone_wall",
+      "architects_palette:nether_brass_lantern",
+      "architects_palette:ancient_plating",
+      "architects_palette:ancient_plating_slab",
+      "architects_palette:ancient_plating_stairs",
+      "architects_palette:ancient_plating_wall",
+      "architects_palette:sheet_metal_block",
+      "architects_palette:sheet_metal_wall",
+      "architects_palette:framed_oracle_block"
+    ]
+  },
+  {
+    "action": "remove",
+    "items": [
+      "architects_palette:sunmetal_brick"
+    ],
+    "replace_with": "alloyed:bronze_ingot"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "architects_palette:sunmetal_pillar"
+    ],
+    "replace_with": "alloyed:bronze_pillar"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "architects_palette:sunmetal_blend",
+      "architects_palette:wardstone_blend",
+      "architects_palette:wardstone_brick"
+    ]
   }
 ]

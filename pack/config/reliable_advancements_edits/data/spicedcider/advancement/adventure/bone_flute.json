@@ -1,0 +1,32 @@
+{
+  "parent": "spicedcider:adventure/kill_a_monster",
+  "display": {
+    "icon": {
+      "id": "caverns_and_chasms:bone_flute"
+    },
+    "title": {
+      "text": "Pied Piper"
+    },
+    "description": {
+      "text": "Tame Rats with a Block of Rotten Flesh and take their Bone Flute"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "has_bone_flute": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "caverns_and_chasms:bone_flute"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_bone_flute"
+    ]
+  ]
+}

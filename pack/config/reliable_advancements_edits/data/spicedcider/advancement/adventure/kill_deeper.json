@@ -1,0 +1,36 @@
+{
+  "parent": "spicedcider:adventure/kill_creeper",
+  "display": {
+    "icon": {
+      "id": "minecraft:creeper_head"
+    },
+    "title": {
+      "text": "We Need to Go, Deeper!"
+    },
+    "description": {
+      "text": "Kill a Deeper, the cave Creeper that very much can break blocks"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "killed_deeper": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "caverns_and_chasms:deeper"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "killed_deeper"
+    ]
+  ]
+}

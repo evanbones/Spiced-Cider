@@ -1,0 +1,26 @@
+{
+  "parent": "spicedcider:industry/hand_crank",
+  "display": {
+    "icon": {
+      "id": "create:hand_crank"
+    },
+    "title": {
+      "text": "Workout Session"
+    },
+    "description": {
+      "text": "Crank a Hand Crank until you're completely exhausted"
+    },
+    "frame": "task",
+    "hidden": true
+  },
+  "criteria": {
+    "0": {
+      "trigger": "create:hand_crank_000_builtin"
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ]
+  ]
+}

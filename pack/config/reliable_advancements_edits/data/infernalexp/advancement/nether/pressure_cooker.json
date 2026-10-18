@@ -1,0 +1,25 @@
+{
+  "parent": "spicedcider:nether/basalt_deltas",
+  "display": {
+    "icon": {
+      "id": "minecraft:redstone"
+    },
+    "title": {
+      "text": "Pressure Cooker"
+    },
+    "description": {
+      "text": "Set off a Volatile Geyser with Flux"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "activate_geyser": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "activate_geyser"
+    ]
+  ]
+}

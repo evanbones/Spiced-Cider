@@ -1,0 +1,32 @@
+{
+  "parent": "spicedcider:husbandry/angling_table",
+  "display": {
+    "icon": {
+      "id": "tide:iron_fishing_rod"
+    },
+    "title": {
+      "text": "Rod Upgrade"
+    },
+    "description": {
+      "text": "Upgrade to a Bronze Fishing Rod"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "has_iron_fishing_rod": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "tide:iron_fishing_rod"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_iron_fishing_rod"
+    ]
+  ]
+}

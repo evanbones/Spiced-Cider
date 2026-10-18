@@ -1,0 +1,32 @@
+{
+  "parent": "spicedcider:adventure/root",
+  "display": {
+    "icon": {
+      "id": "cold_sweat:thermometer"
+    },
+    "title": {
+      "text": "Hot or Not"
+    },
+    "description": {
+      "text": "Craft a Thermometer to see just how uncomfortable you are"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "has_thermometer": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "cold_sweat:thermometer"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_thermometer"
+    ]
+  ]
+}

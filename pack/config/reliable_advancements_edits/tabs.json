@@ -1,734 +1,2669 @@
 {
   "version": 1,
   "tabs": {
-    "bountifulfares:bountiful_fares": {
-      "background": "minecraft:textures/block/farmland_moist.png",
-      "index": 5,
-      "deleted": true,
+    "spicedcider:spiced_cider/root": {
+      "title": "Spiced Cider",
+      "icon": "culturaldelights:apple_cider",
+      "background": "minecraft:textures/block/dirt.png",
+      "index": 0,
+      "background_rules": "[{\"texture\": \"minecraft:textures/block/dirt.png\", \"max_y\": 3}, {\"texture\": \"minecraft:textures/block/stone.png\", \"min_y\": 4, \"max_y\": 12}, {\"texture\": \"minecraft:textures/block/deepslate.png\", \"min_y\": 13}]",
       "roots": [
-        "bountifulfares:bountiful_fares"
+        "spicedcider:spiced_cider/root"
       ],
       "positions": {
-        "bountifulfares:bountiful_fares": [
+        "spicedcider:spiced_cider/root": [
           0,
-          182
+          128
         ],
-        "bountifulfares:plant_on_trellis": [
-          32,
-          324
+        "spicedcider:spiced_cider/log": [
+          126,
+          113
         ],
-        "bountifulfares:obtain_sun_hat": [
-          32,
+        "spicedcider:spiced_cider/crafting_table": [
+          168,
+          113
+        ],
+        "spicedcider:spiced_cider/workstone": [
+          168,
+          143
+        ],
+        "spicedcider:spiced_cider/flint": [
+          42,
+          128
+        ],
+        "spicedcider:spiced_cider/flint_mattock": [
+          210,
+          55
+        ],
+        "spicedcider:spiced_cider/flint_kit": [
+          252,
+          0
+        ],
+        "spicedcider:spiced_cider/flint_hammer": [
+          210,
+          141
+        ],
+        "spicedcider:spiced_cider/geode": [
+          252,
+          141
+        ],
+        "spicedcider:spiced_cider/fire_striker": [
+          84,
+          173
+        ],
+        "spicedcider:spiced_cider/cobblestone": [
+          252,
+          111
+        ],
+        "spicedcider:spiced_cider/furnace": [
+          294,
+          111
+        ],
+        "spicedcider:spiced_cider/copper": [
+          336,
+          111
+        ],
+        "spicedcider:spiced_cider/copper_pickaxe": [
+          378,
+          81
+        ],
+        "spicedcider:spiced_cider/copper_armor": [
+          378,
+          111
+        ],
+        "spicedcider:spiced_cider/tuning_fork": [
+          378,
+          141
+        ],
+        "spicedcider:spiced_cider/iron": [
+          420,
+          26
+        ],
+        "spicedcider:spiced_cider/tin": [
+          420,
+          56
+        ],
+        "spicedcider:spiced_cider/lead": [
+          420,
+          86
+        ],
+        "spicedcider:spiced_cider/bucket": [
+          462,
+          0
+        ],
+        "spicedcider:spiced_cider/forge": [
+          462,
+          52
+        ],
+        "spicedcider:spiced_cider/cast_iron": [
+          504,
+          15
+        ],
+        "spicedcider:spiced_cider/smithing_table": [
+          546,
+          0
+        ],
+        "spicedcider:spiced_cider/anvil": [
+          546,
+          30
+        ],
+        "spicedcider:spiced_cider/bronze": [
+          504,
+          60
+        ],
+        "spicedcider:spiced_cider/bronze_tools": [
+          546,
+          60
+        ],
+        "spicedcider:spiced_cider/bronze_armor": [
+          588,
+          60
+        ],
+        "spicedcider:spiced_cider/steel": [
+          546,
+          105
+        ],
+        "spicedcider:spiced_cider/steel_pickaxe": [
+          588,
+          90
+        ],
+        "spicedcider:spiced_cider/steel_armor": [
+          630,
+          38
+        ],
+        "spicedcider:spiced_cider/flint_and_steel": [
+          588,
+          120
+        ],
+        "spicedcider:spiced_cider/diamond": [
+          630,
+          75
+        ],
+        "spicedcider:spiced_cider/coke": [
+          504,
+          90
+        ],
+        "spicedcider:spiced_cider/diamond_pickaxe": [
+          672,
+          52
+        ],
+        "spicedcider:spiced_cider/diamond_armor": [
+          714,
+          38
+        ],
+        "spicedcider:spiced_cider/gold": [
+          420,
+          135
+        ],
+        "spicedcider:spiced_cider/rose_gold": [
+          504,
+          135
+        ],
+        "spicedcider:spiced_cider/rose_gold_pickaxe": [
+          546,
+          135
+        ],
+        "spicedcider:spiced_cider/silver": [
+          630,
+          142
+        ],
+        "spicedcider:spiced_cider/silver_tools": [
+          672,
+          128
+        ],
+        "spicedcider:spiced_cider/electrum": [
+          672,
+          158
+        ],
+        "spicedcider:spiced_cider/pearl": [
+          672,
+          98
+        ],
+        "spicedcider:spiced_cider/prismarite": [
+          714,
+          98
+        ],
+        "spicedcider:spiced_cider/meteorite": [
+          714,
+          68
+        ],
+        "spicedcider:spiced_cider/valkyrium": [
+          756,
+          68
+        ],
+        "spicedcider:spiced_cider/altar": [
+          588,
+          0
+        ],
+        "spicedcider:spiced_cider/enchantment_tablet": [
+          630,
+          0
+        ],
+        "spicedcider:spiced_cider/enchanted_tablet": [
+          672,
+          0
+        ],
+        "spicedcider:spiced_cider/all_tablets": [
+          714,
+          0
+        ],
+        "spicedcider:spiced_cider/all_metals": [
+          798,
+          68
+        ],
+        "spicedcider:spiced_cider/flint_hatchet": [
+          84,
+          113
+        ],
+        "spicedcider:spiced_cider/flint_knife": [
+          84,
+          143
+        ]
+      }
+    },
+    "spicedcider:adventure/root": {
+      "title": "Adventure",
+      "icon": "minecraft:spyglass",
+      "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+      "index": 1,
+      "roots": [
+        "spicedcider:adventure/root"
+      ],
+      "positions": {
+        "spicedcider:adventure/spyglass": [
+          0,
+          90
+        ],
+        "spicedcider:adventure/exposure": [
+          42,
+          90
+        ],
+        "spicedcider:adventure/print_photo": [
+          84,
+          90
+        ],
+        "spicedcider:adventure/wildlife_archivist": [
+          126,
+          90
+        ],
+        "spicedcider:adventure/selfie": [
+          84,
+          120
+        ],
+        "spicedcider:adventure/photo_spider_jockey": [
+          84,
+          60
+        ],
+        "spicedcider:adventure/field_guide": [
+          42,
+          30
+        ],
+        "spicedcider:adventure/first_discovery": [
+          84,
+          30
+        ],
+        "spicedcider:adventure/animal_expert": [
+          126,
+          30
+        ],
+        "spicedcider:adventure/monster_expert": [
+          126,
+          60
+        ],
+        "spicedcider:adventure/atlas": [
+          42,
+          0
+        ],
+        "spicedcider:adventure/mushroom_fields": [
+          84,
+          0
+        ],
+        "spicedcider:adventure/kill_a_monster": [
+          252,
+          60
+        ],
+        "spicedcider:adventure/kill_creeper": [
+          294,
+          60
+        ],
+        "spicedcider:adventure/creeper_spores": [
+          336,
+          60
+        ],
+        "spicedcider:adventure/mischief_armor": [
+          378,
+          60
+        ],
+        "spicedcider:adventure/kill_deeper": [
+          336,
+          90
+        ],
+        "spicedcider:adventure/forgotten_hat": [
+          378,
+          90
+        ],
+        "spicedcider:adventure/die": [
+          294,
+          90
+        ],
+        "spicedcider:adventure/sniper_duel": [
+          294,
+          120
+        ],
+        "spicedcider:adventure/shield": [
+          294,
+          30
+        ],
+        "spicedcider:adventure/diamond_shield": [
+          336,
+          30
+        ],
+        "spicedcider:adventure/bone_flute": [
+          294,
+          150
+        ],
+        "spicedcider:adventure/ratcatcher": [
+          336,
+          150
+        ],
+        "spicedcider:adventure/peeper": [
+          294,
+          0
+        ],
+        "spicedcider:adventure/dungeon": [
+          504,
+          60
+        ],
+        "spicedcider:adventure/temple": [
+          546,
+          60
+        ],
+        "nomansland:main/find_alchemist_ruins": [
+          588,
+          60
+        ],
+        "nomansland:main/dream_friend_moon": [
+          630,
+          60
+        ],
+        "nomansland:main/meet_friend_moon": [
+          672,
+          60
+        ],
+        "nomansland:main/buddy_ascension": [
+          714,
+          60
+        ],
+        "nomansland:main/collect_ancient_tools": [
+          630,
+          90
+        ],
+        "spicedcider:adventure/buried_treasure": [
+          588,
+          90
+        ],
+        "spicedcider:adventure/sherd": [
+          588,
+          120
+        ],
+        "spicedcider:adventure/template_fragment": [
+          630,
+          120
+        ],
+        "spicedcider:adventure/ancient_mattock": [
+          672,
+          120
+        ],
+        "spicedcider:adventure/ocean_monument": [
+          588,
+          30
+        ],
+        "spicedcider:adventure/kill_elder_guardian": [
+          630,
+          30
+        ],
+        "spicedcider:adventure/kill_great_thrasher": [
+          672,
+          30
+        ],
+        "spicedcider:adventure/all_dungeons": [
+          546,
+          90
+        ],
+        "spicedcider:adventure/backpack": [
+          0,
           270
         ],
-        "bountifulfares:obtain_spongekin_seeds": [
-          32,
-          243
+        "spicedcider:adventure/glider": [
+          42,
+          270
         ],
-        "bountifulfares:place_gristmill": [
-          32,
-          182
+        "spicedcider:adventure/when_pigs_fly": [
+          84,
+          270
         ],
-        "bountifulfares:obtain_tiffin": [
-          32,
-          13
+        "spicedcider:adventure/grappling_hook": [
+          42,
+          300
         ],
-        "bountifulfares:obtain_flour": [
-          64,
-          202
+        "spicedcider:adventure/sticky_grappling_hook": [
+          84,
+          300
         ],
-        "bountifulfares:throw_flour_as_cover": [
-          96,
-          216
+        "snowyspirit:adventure/ride_sled_fast": [
+          42,
+          240
         ],
-        "bountifulfares:place_all_baked_goods": [
-          96,
-          189
+        "snowyspirit:adventure/sled_with_wolf": [
+          84,
+          240
         ],
-        "bountifulfares:obtain_feldspar": [
-          64,
-          162
+        "spicedcider:adventure/crawl_hollow_log": [
+          42,
+          330
         ],
-        "bountifulfares:make_first_food": [
-          32,
-          351
+        "spicedcider:adventure/thermometer": [
+          210,
+          270
         ],
-        "bountifulfares:obtain_ceramic_clay": [
-          96,
-          162
+        "spicedcider:adventure/extreme_temps": [
+          252,
+          270
         ],
-        "bountifulfares:obtain_fermentation_vessel": [
-          128,
-          155
+        "spicedcider:adventure/insulate_armor": [
+          294,
+          270
         ],
-        "bountifulfares:pick_fruit": [
-          32,
-          94
+        "spicedcider:adventure/goat_fur": [
+          336,
+          270
         ],
-        "bountifulfares:obtain_walnut": [
-          32,
-          297
+        "spicedcider:adventure/desperate_measures": [
+          294,
+          300
         ],
-        "bountifulfares:obtain_golden_apple_sapling": [
-          64,
-          81
+        "spicedcider:adventure/waterskin": [
+          252,
+          300
         ],
-        "bountifulfares:obtain_lemon_block": [
-          64,
-          108
+        "spicedcider:adventure/tame_chameleon": [
+          252,
+          330
         ],
-        "bountifulfares:fill_tiffin": [
-          64,
-          27
+        "cold_sweat:chameleon_find_biome": [
+          294,
+          330
         ],
-        "bountifulfares:eat_all_food": [
-          64,
-          378
+        "spicedcider:adventure/deepslate": [
+          462,
+          330
         ],
-        "bountifulfares:craft_food_in_tiffin": [
-          64,
-          0
+        "spicedcider:adventure/lush_caves": [
+          504,
+          330
         ],
-        "bountifulfares:obtain_artisan_brush": [
-          128,
-          195
+        "spicedcider:adventure/dripstone_caves": [
+          546,
+          330
         ],
-        "bountifulfares:feed_wolf_mulch": [
-          64,
-          297
+        "spicedcider:adventure/deep_dark": [
+          588,
+          330
         ],
-        "bountifulfares:eat_all_bad_foods": [
-          64,
-          324
+        "spicedcider:adventure/ancient_city": [
+          630,
+          330
         ],
-        "bountifulfares:obtain_all_fruit": [
-          64,
-          135
+        "spicedcider:adventure/kill_warden": [
+          672,
+          330
         ],
-        "bountifulfares:eat_ancient_fruit": [
-          64,
-          54
+        "spicedcider:adventure/mine_toretoise": [
+          588,
+          360
         ],
-        "bountifulfares:obtain_tea_blends": [
-          128,
-          128
+        "spicedcider:adventure/chalk": [
+          504,
+          240
         ],
-        "bountifulfares:eat_citrus_essence": [
-          160,
-          155
+        "spicedcider:adventure/guiding_star": [
+          546,
+          240
         ],
-        "bountifulfares:obtain_spongekin": [
-          64,
-          243
+        "spicedcider:adventure/alone_in_the_darkness": [
+          588,
+          240
         ],
-        "bountifulfares:eat_all_candy": [
-          64,
-          351
+        "spicedcider:adventure/consumed_by_the_light": [
+          588,
+          270
         ],
-        "bountifulfares:dye_leather_armor_on_armor_stand": [
-          160,
-          182
+        "spicedcider:adventure/paint_the_grass": [
+          546,
+          270
         ],
-        "bountifulfares:obtain_golden_apple": [
-          96,
-          81
+        "spicedcider:adventure/this_way": [
+          546,
+          300
         ],
-        "bountifulfares:place_all_tea_candles": [
-          160,
-          128
+        "spicedcider:adventure/depth_gauge": [
+          504,
+          360
         ],
-        "bountifulfares:acidify_effect_2_levels": [
-          192,
-          155
+        "spicedcider:adventure/glowstick": [
+          546,
+          360
         ],
-        "bountifulfares:obtain_prismarine_blossom": [
-          96,
-          243
-        ],
-        "bountifulfares:dye_ceramic_block": [
-          160,
-          209
+        "spicedcider:adventure/root": [
+          336,
+          210
         ]
       }
     },
-    "fieldguide:root": {
-      "background": "minecraft:textures/block/oak_log.png",
-      "index": 5,
-      "deleted": true,
+    "spicedcider:husbandry/root": {
+      "title": "Husbandry",
+      "icon": "minecraft:wheat",
+      "background": "minecraft:textures/gui/advancements/backgrounds/husbandry.png",
+      "index": 2,
       "roots": [
-        "fieldguide:root"
+        "spicedcider:husbandry/root"
       ],
       "positions": {
-        "fieldguide:root": [
-          -2,
-          95
-        ],
-        "fieldguide:first_discovery": [
-          32,
-          94
-        ],
-        "fieldguide:mushroom_collector": [
-          64,
-          81
-        ],
-        "fieldguide:let_him_cook": [
-          64,
-          135
-        ],
-        "fieldguide:animal_expert": [
-          64,
-          108
-        ],
-        "fieldguide:quick_review": [
-          64,
-          0
-        ],
-        "fieldguide:monster_hunter": [
-          64,
-          189
-        ],
-        "fieldguide:invisible_scan": [
-          64,
-          54
-        ],
-        "fieldguide:gem_alert": [
-          64,
-          162
-        ],
-        "fieldguide:enderman_scan": [
-          64,
-          27
-        ]
-      }
-    },
-    "hominid:adventure/hematoma": {
-      "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
-      "index": 5,
-      "deleted": true,
-      "roots": [
-        "hominid:adventure/hematoma"
-      ],
-      "positions": {
-        "hominid:adventure/hematoma": [
+        "spicedcider:husbandry/campfire": [
           0,
+          210
+        ],
+        "spicedcider:husbandry/cooking_pot": [
+          42,
+          210
+        ],
+        "spicedcider:husbandry/vat": [
+          84,
+          210
+        ],
+        "spicedcider:husbandry/fermentation_vessel": [
+          126,
+          210
+        ],
+        "spicedcider:husbandry/intoxication": [
+          168,
+          210
+        ],
+        "spicedcider:husbandry/max_intoxication": [
+          210,
+          210
+        ],
+        "spicedcider:husbandry/pickle": [
+          126,
+          240
+        ],
+        "spicedcider:husbandry/acid": [
+          168,
+          240
+        ],
+        "spicedcider:husbandry/cheese": [
+          126,
+          180
+        ],
+        "spicedcider:husbandry/salt_farm": [
+          126,
+          270
+        ],
+        "spicedcider:husbandry/first_meal": [
+          84,
+          120
+        ],
+        "spicedcider:husbandry/feast": [
+          126,
+          120
+        ],
+        "spicedcider:husbandry/pizza": [
+          126,
+          150
+        ],
+        "spicedcider:husbandry/master_chef": [
+          126,
+          90
+        ],
+        "spicedcider:husbandry/tallow": [
+          84,
+          300
+        ],
+        "spicedcider:husbandry/soap": [
+          126,
+          300
+        ],
+        "supplementaries:husbandry/soap": [
+          168,
+          300
+        ],
+        "spicedcider:husbandry/honey": [
+          42,
+          60
+        ],
+        "spicedcider:husbandry/wax_on": [
+          84,
+          60
+        ],
+        "spicedcider:husbandry/wax_off": [
+          126,
+          60
+        ],
+        "spicedcider:husbandry/skillet": [
+          42,
+          240
+        ],
+        "spicedcider:husbandry/cutting_board": [
+          42,
+          270
+        ],
+        "spicedcider:husbandry/breed": [
+          336,
+          30
+        ],
+        "spicedcider:husbandry/muddy_pig": [
+          378,
+          30
+        ],
+        "spicedcider:husbandry/truffle_shuffle": [
+          420,
+          30
+        ],
+        "spicedcider:husbandry/find_truffle": [
+          462,
+          30
+        ],
+        "spicedcider:husbandry/earth_day": [
+          420,
+          60
+        ],
+        "spicedcider:husbandry/breed_all": [
+          378,
+          60
+        ],
+        "spicedcider:husbandry/yak_pants": [
+          378,
+          90
+        ],
+        "spicedcider:husbandry/snail_diet": [
+          378,
           0
+        ],
+        "spicedcider:husbandry/tame": [
+          378,
+          120
+        ],
+        "spicedcider:husbandry/copper_horn": [
+          420,
+          120
+        ],
+        "spicedcider:husbandry/slabfish_backpack": [
+          420,
+          150
+        ],
+        "snowyspirit:husbandry/eat_gingerbread_golem": [
+          420,
+          90
+        ],
+        "spicedcider:husbandry/pat_potato": [
+          420,
+          180
+        ],
+        "spicedcider:husbandry/hoe": [
+          588,
+          60
+        ],
+        "spicedcider:husbandry/plant_seed": [
+          630,
+          60
+        ],
+        "spicedcider:husbandry/bone_meal": [
+          672,
+          60
+        ],
+        "spicedcider:husbandry/organic_compost": [
+          714,
+          60
+        ],
+        "spicedcider:husbandry/rich_soil": [
+          756,
+          60
+        ],
+        "spicedcider:husbandry/mushroom_colony": [
+          798,
+          60
+        ],
+        "spicedcider:husbandry/wild_crops": [
+          672,
+          90
+        ],
+        "spicedcider:husbandry/plant_rice": [
+          714,
+          90
+        ],
+        "spicedcider:husbandry/crop_rotation": [
+          714,
+          120
+        ],
+        "spicedcider:husbandry/trellis": [
+          672,
+          30
+        ],
+        "spicedcider:husbandry/tall_tomato": [
+          714,
+          30
+        ],
+        "spicedcider:husbandry/beanstalk": [
+          756,
+          30
+        ],
+        "spicedcider:husbandry/pick_fruit": [
+          672,
+          120
+        ],
+        "spicedcider:husbandry/fishing_rod": [
+          336,
+          330
+        ],
+        "spicedcider:husbandry/catch_fish": [
+          378,
+          330
+        ],
+        "spicedcider:husbandry/angling_table": [
+          420,
+          330
+        ],
+        "spicedcider:husbandry/bronze_rod": [
+          462,
+          330
+        ],
+        "spicedcider:husbandry/steel_rod": [
+          504,
+          330
+        ],
+        "spicedcider:husbandry/crate": [
+          420,
+          360
+        ],
+        "spicedcider:husbandry/fillet": [
+          420,
+          300
+        ],
+        "spicedcider:husbandry/fish_display": [
+          420,
+          390
+        ],
+        "spicedcider:husbandry/worm": [
+          378,
+          270
+        ],
+        "spicedcider:husbandry/bait": [
+          420,
+          270
+        ],
+        "spicedcider:husbandry/straw": [
+          630,
+          330
+        ],
+        "spicedcider:husbandry/straw_bed": [
+          672,
+          330
+        ],
+        "spicedcider:husbandry/home_is_where_the_bed_is": [
+          714,
+          330
+        ],
+        "spicedcider:husbandry/hearth": [
+          756,
+          330
+        ],
+        "spicedcider:husbandry/smokestack": [
+          798,
+          330
+        ],
+        "spicedcider:husbandry/root": [
+          546,
+          180
         ]
       }
     },
-    "architects_palette:main/root": {
-      "background": "architects_palette:textures/block/myonite_bricks.png",
-      "index": 5,
-      "deleted": true,
+    "spicedcider:industry/root": {
+      "title": "Industry",
+      "icon": "create:goggles",
+      "background": "minecraft:textures/block/polished_andesite.png",
+      "index": 3,
       "roots": [
-        "architects_palette:main/root"
-      ]
+        "spicedcider:industry/root"
+      ],
+      "positions": {
+        "spicedcider:industry/wrench_goggles": [
+          0,
+          420
+        ],
+        "spicedcider:industry/bronze_casing": [
+          42,
+          420
+        ],
+        "spicedcider:industry/mechanical_press": [
+          84,
+          420
+        ],
+        "spicedcider:industry/mechanical_mixer": [
+          126,
+          420
+        ],
+        "spicedcider:industry/blaze_burner": [
+          168,
+          420
+        ],
+        "spicedcider:industry/steam_engine": [
+          210,
+          420
+        ],
+        "spicedcider:industry/steam_whistle": [
+          252,
+          420
+        ],
+        "spicedcider:industry/pipe_organ": [
+          294,
+          420
+        ],
+        "spicedcider:industry/steam_engine_maxed": [
+          252,
+          450
+        ],
+        "spicedcider:industry/compacting": [
+          126,
+          450
+        ],
+        "spicedcider:industry/millstone": [
+          84,
+          480
+        ],
+        "spicedcider:industry/crushing_wheel": [
+          126,
+          480
+        ],
+        "spicedcider:industry/crushing_maxed": [
+          168,
+          480
+        ],
+        "spicedcider:industry/saw": [
+          84,
+          390
+        ],
+        "spicedcider:industry/contraption_actors": [
+          126,
+          390
+        ],
+        "spicedcider:industry/super_glue": [
+          168,
+          390
+        ],
+        "spicedcider:industry/belt": [
+          84,
+          510
+        ],
+        "spicedcider:industry/funnel": [
+          126,
+          510
+        ],
+        "spicedcider:industry/funnel_kiss": [
+          168,
+          510
+        ],
+        "spicedcider:industry/chute": [
+          126,
+          540
+        ],
+        "spicedcider:industry/mechanical_pump": [
+          84,
+          300
+        ],
+        "spicedcider:industry/spout": [
+          126,
+          300
+        ],
+        "spicedcider:industry/drain": [
+          168,
+          300
+        ],
+        "spicedcider:industry/cross_streams": [
+          126,
+          330
+        ],
+        "spicedcider:industry/hose_pulley": [
+          126,
+          270
+        ],
+        "spicedcider:industry/backtank": [
+          126,
+          360
+        ],
+        "spicedcider:industry/diving_suit": [
+          168,
+          360
+        ],
+        "spicedcider:industry/steel_casing": [
+          84,
+          120
+        ],
+        "spicedcider:industry/precision_mechanism": [
+          126,
+          120
+        ],
+        "spicedcider:industry/clockwork_bearing": [
+          168,
+          120
+        ],
+        "spicedcider:industry/cuckoo_clock": [
+          210,
+          120
+        ],
+        "spicedcider:industry/mechanical_crafter": [
+          168,
+          150
+        ],
+        "spicedcider:industry/mechanical_arm": [
+          168,
+          90
+        ],
+        "spicedcider:industry/deployer": [
+          126,
+          180
+        ],
+        "spicedcider:industry/fist_bump": [
+          168,
+          180
+        ],
+        "spicedcider:industry/display_link": [
+          126,
+          90
+        ],
+        "spicedcider:industry/packager": [
+          126,
+          240
+        ],
+        "spicedcider:industry/stock_ticker": [
+          168,
+          240
+        ],
+        "spicedcider:industry/package_dunk": [
+          168,
+          270
+        ],
+        "spicedcider:industry/cardboard_armor": [
+          168,
+          210
+        ],
+        "spicedcider:industry/hand_crank": [
+          42,
+          30
+        ],
+        "spicedcider:industry/water_wheel": [
+          84,
+          30
+        ],
+        "spicedcider:industry/windmill": [
+          126,
+          30
+        ],
+        "spicedcider:industry/windmill_maxed": [
+          168,
+          30
+        ],
+        "spicedcider:industry/lava_wheel": [
+          126,
+          60
+        ],
+        "spicedcider:industry/shifting_gears": [
+          84,
+          0
+        ],
+        "spicedcider:industry/stressometer": [
+          126,
+          0
+        ],
+        "spicedcider:industry/hand_crank_exhausted": [
+          84,
+          60
+        ],
+        "spicedcider:industry/spring_water": [
+          420,
+          0
+        ],
+        "spicedcider:industry/sluice": [
+          462,
+          0
+        ],
+        "spicedcider:industry/niter": [
+          504,
+          0
+        ],
+        "spicedcider:industry/dynamite": [
+          546,
+          0
+        ],
+        "spicedcider:industry/explode_ore": [
+          588,
+          0
+        ],
+        "spicedcider:industry/blast_miner": [
+          630,
+          0
+        ],
+        "spicedcider:industry/item_magnet": [
+          504,
+          30
+        ],
+        "spicedcider:industry/copper_chest": [
+          420,
+          150
+        ],
+        "spicedcider:industry/copper_golem": [
+          462,
+          150
+        ],
+        "spicedcider:industry/control_golem": [
+          504,
+          150
+        ],
+        "spicedcider:industry/copper_golem_statue": [
+          504,
+          180
+        ],
+        "spicedcider:industry/iron_golem": [
+          504,
+          120
+        ],
+        "spicedcider:industry/snow_golem": [
+          504,
+          210
+        ],
+        "spicedcider:industry/flux": [
+          420,
+          330
+        ],
+        "spicedcider:industry/piston": [
+          462,
+          330
+        ],
+        "spicedcider:industry/sticky_piston": [
+          504,
+          330
+        ],
+        "spicedcider:industry/observer": [
+          504,
+          360
+        ],
+        "spicedcider:industry/comparator": [
+          462,
+          360
+        ],
+        "spicedcider:industry/hopper": [
+          462,
+          390
+        ],
+        "spicedcider:industry/tin_gadget": [
+          462,
+          300
+        ],
+        "spicedcider:industry/all_tin_gadgets": [
+          504,
+          300
+        ],
+        "spicedcider:industry/tune_note_block": [
+          420,
+          510
+        ],
+        "spicedcider:industry/tune_a_fish": [
+          462,
+          510
+        ],
+        "spicedcider:industry/bronze_instrument": [
+          462,
+          540
+        ],
+        "spicedcider:industry/jukebox_in_meadows": [
+          462,
+          480
+        ],
+        "spicedcider:industry/root": [
+          294,
+          270
+        ]
+      }
     },
-    "tide:root": {
-      "background": "tide:textures/gui/advancements/backgrounds/prismarine.png",
-      "index": 5,
-      "deleted": true,
+    "spicedcider:nether/root": {
+      "title": "The Nether",
+      "icon": "minecraft:blaze_powder",
+      "background": "minecraft:textures/gui/advancements/backgrounds/nether.png",
+      "index": 4,
       "roots": [
-        "tide:root"
-      ]
+        "spicedcider:nether/root"
+      ],
+      "positions": {
+        "spicedcider:nether/root": [
+          0,
+          180
+        ],
+        "spicedcider:nether/ruined_portal": [
+          42,
+          180
+        ],
+        "spicedcider:nether/dimensional_tears": [
+          84,
+          180
+        ],
+        "spicedcider:nether/light_portal": [
+          126,
+          180
+        ],
+        "spicedcider:nether/enter_nether": [
+          168,
+          180
+        ],
+        "spicedcider:nether/crimson_forest": [
+          210,
+          180
+        ],
+        "spicedcider:nether/warped_forest": [
+          252,
+          180
+        ],
+        "spicedcider:nether/soul_sand_valley": [
+          294,
+          180
+        ],
+        "spicedcider:nether/basalt_deltas": [
+          336,
+          180
+        ],
+        "spicedcider:nether/glowstone_canyon": [
+          378,
+          180
+        ],
+        "spicedcider:nether/glowstone": [
+          420,
+          180
+        ],
+        "spicedcider:nether/respawn_anchor": [
+          462,
+          180
+        ],
+        "spicedcider:nether/tears_bucket": [
+          504,
+          180
+        ],
+        "spicedcider:nether/deer_in_headlights": [
+          420,
+          210
+        ],
+        "spicedcider:nether/explore_nether": [
+          420,
+          150
+        ],
+        "infernalexp:husbandry/magma_mia": [
+          378,
+          240
+        ],
+        "spicedcider:nether/hot_pocket": [
+          420,
+          240
+        ],
+        "infernalexp:nether/pressure_cooker": [
+          378,
+          150
+        ],
+        "spicedcider:nether/kill_ghast": [
+          336,
+          270
+        ],
+        "spicedcider:nether/return_to_sender": [
+          378,
+          270
+        ],
+        "spicedcider:nether/onion_ghast": [
+          378,
+          300
+        ],
+        "spicedcider:nether/soul_bead": [
+          336,
+          120
+        ],
+        "spicedcider:nether/living_bubble": [
+          378,
+          120
+        ],
+        "spicedcider:nether/soulspring_lamp": [
+          336,
+          330
+        ],
+        "spicedcider:nether/lava_sea": [
+          378,
+          330
+        ],
+        "spicedcider:nether/ride_strider": [
+          294,
+          90
+        ],
+        "spicedcider:nether/fish_in_lava": [
+          336,
+          90
+        ],
+        "spicedcider:nether/hoglin_armor": [
+          252,
+          210
+        ],
+        "spicedcider:nether/hoglin_trophy": [
+          294,
+          210
+        ],
+        "spicedcider:nether/nether_dust": [
+          210,
+          150
+        ],
+        "spicedcider:nether/fast_travel": [
+          210,
+          210
+        ],
+        "spicedcider:nether/fortress": [
+          210,
+          0
+        ],
+        "spicedcider:nether/wither_skull": [
+          252,
+          0
+        ],
+        "spicedcider:nether/summon_wither": [
+          294,
+          0
+        ],
+        "spicedcider:nether/kill_wither": [
+          336,
+          0
+        ],
+        "spicedcider:nether/beacon": [
+          378,
+          0
+        ],
+        "spicedcider:nether/full_beacon": [
+          420,
+          0
+        ],
+        "spicedcider:nether/stardust": [
+          378,
+          30
+        ],
+        "spicedcider:nether/blaze_rod": [
+          252,
+          30
+        ],
+        "spicedcider:nether/brewing_stand": [
+          294,
+          30
+        ],
+        "spicedcider:nether/brew_potion": [
+          336,
+          30
+        ],
+        "spicedcider:nether/blaze_powder": [
+          294,
+          60
+        ],
+        "spicedcider:nether/bastion": [
+          210,
+          240
+        ],
+        "spicedcider:nether/distract_piglin": [
+          252,
+          240
+        ],
+        "spicedcider:nether/travelers_compass": [
+          294,
+          240
+        ],
+        "spicedcider:nether/fire_ring": [
+          294,
+          270
+        ],
+        "spicedcider:nether/buckler": [
+          252,
+          270
+        ],
+        "supplementaries:nether/goblet": [
+          252,
+          300
+        ],
+        "spicedcider:nether/tame_foxhound": [
+          210,
+          270
+        ],
+        "spicedcider:nether/ancient_debris": [
+          210,
+          450
+        ],
+        "spicedcider:nether/ancient_scrap": [
+          252,
+          450
+        ],
+        "spicedcider:nether/infernite": [
+          294,
+          390
+        ],
+        "spicedcider:nether/infernite_armor": [
+          336,
+          360
+        ],
+        "spicedcider:nether/infernite_cleaver": [
+          336,
+          390
+        ],
+        "spicedcider:nether/infernite_hoe": [
+          336,
+          420
+        ],
+        "spicedcider:nether/ancient_hoes": [
+          378,
+          450
+        ],
+        "spicedcider:nether/necromium": [
+          294,
+          480
+        ],
+        "spicedcider:nether/necromium_armor": [
+          336,
+          510
+        ],
+        "spicedcider:nether/rift_home": [
+          126,
+          150
+        ]
+      }
     }
   },
   "deleted_advancements": {
-    "hominid:adventure/hematoma": {
-      "owner": "reliable_advancements:standalone",
-      "tab": "hominid:adventure/hematoma",
-      "title": "{\"translate\":\"advancements.adventure.hematoma.title\"}",
-      "icon": "hominid:music_disc_hematoma"
+    "abundant_atmosphere:husbandry/collect_chromatic_froglight": {
+      "owner": "reliable_advancements:standalone"
     },
-    "architects_palette:main/root": {
-      "owner": "architects_palette:main/root",
-      "tab": "architects_palette:main/root",
-      "title": "{\"translate\":\"architects_palette.advancement.root\"}",
-      "icon": "architects_palette:chiseled_abyssaline_bricks"
+    "abundant_atmosphere:husbandry/leash_frog_end": {
+      "owner": "reliable_advancements:standalone"
     },
-    "architects_palette:main/buy_pipe": {
-      "owner": "architects_palette:main/root",
-      "tab": "architects_palette:main/root",
-      "title": "{\"translate\":\"architects_palette.advancement.buy_pipe\"}",
-      "icon": "architects_palette:pipe"
+    "alloyed:bronze_ingot": {
+      "owner": "reliable_advancements:standalone"
     },
-    "architects_palette:main/buy_entrails": {
-      "owner": "architects_palette:main/root",
-      "tab": "architects_palette:main/root",
-      "title": "{\"translate\":\"architects_palette.advancement.buy_entrails\"}",
-      "icon": "architects_palette:entrails"
+    "alloyed:bronze_instruments": {
+      "owner": "reliable_advancements:standalone"
     },
-    "architects_palette:main/place_entrails": {
-      "owner": "architects_palette:main/root",
-      "tab": "architects_palette:main/root",
-      "title": "{\"translate\":\"architects_palette.advancement.place_entrails\"}",
-      "icon": "architects_palette:entrails"
+    "alloyed:forge": {
+      "owner": "reliable_advancements:standalone"
     },
-    "architects_palette:main/find_warpstone": {
-      "owner": "architects_palette:main/root",
-      "tab": "architects_palette:main/root",
-      "title": "{\"translate\":\"architects_palette.advancement.find_warpstone\"}",
-      "icon": "architects_palette:warpstone"
-    },
-    "architects_palette:main/buy_plating": {
-      "owner": "architects_palette:main/root",
-      "tab": "architects_palette:main/root",
-      "title": "{\"translate\":\"architects_palette.advancement.buy_plating\"}",
-      "icon": "architects_palette:plating_block"
-    },
-    "architects_palette:main/buy_spool": {
-      "owner": "architects_palette:main/root",
-      "tab": "architects_palette:main/root",
-      "title": "{\"translate\":\"architects_palette.advancement.buy_spool\"}",
-      "icon": "architects_palette:spool"
-    },
-    "architects_palette:main/buy_fish_block": {
-      "owner": "architects_palette:main/root",
-      "tab": "architects_palette:main/root",
-      "title": "{\"translate\":\"architects_palette.advancement.buy_fish_block\"}",
-      "icon": "architects_palette:cod_log"
-    },
-    "architects_palette:main/find_twisted_sapling": {
-      "owner": "architects_palette:main/root",
-      "tab": "architects_palette:main/root",
-      "title": "{\"translate\":\"architects_palette.advancement.find_twisted_sapling\"}",
-      "icon": "architects_palette:twisted_sapling"
-    },
-    "architects_palette:main/totem_carving": {
-      "owner": "architects_palette:main/root",
-      "tab": "architects_palette:main/root",
-      "title": "{\"translate\":\"architects_palette.advancement.totem_carving\"}",
-      "icon": "architects_palette:placid_acacia_totem"
+    "alloyed:steel_ingot": {
+      "owner": "reliable_advancements:standalone"
     },
     "architects_palette:main/buy_celestial_stone": {
-      "owner": "architects_palette:main/root",
-      "tab": "architects_palette:main/root",
-      "title": "{\"translate\":\"architects_palette.advancement.buy_celestial_stone\"}",
-      "icon": "architects_palette:sunstone"
+      "owner": "reliable_advancements:standalone"
     },
-    "bountifulfares:bountiful_fares": {
-      "owner": "bountifulfares:bountiful_fares",
-      "tab": "bountifulfares:bountiful_fares",
-      "title": "{\"translate\":\"advancement.bountifulfares.bountiful_fares\"}",
-      "icon": "bountifulfares:passion_fruit"
+    "architects_palette:main/buy_entrails": {
+      "owner": "reliable_advancements:standalone"
     },
-    "bountifulfares:make_first_food": {
-      "owner": "bountifulfares:bountiful_fares",
-      "tab": "bountifulfares:bountiful_fares",
-      "title": "{\"translate\":\"advancement.bountifulfares.make_first_food\"}",
-      "icon": "bountifulfares:leek_stew"
+    "architects_palette:main/buy_fish_block": {
+      "owner": "reliable_advancements:standalone"
     },
-    "bountifulfares:pick_fruit": {
-      "owner": "bountifulfares:bountiful_fares",
-      "tab": "bountifulfares:bountiful_fares",
-      "title": "{\"translate\":\"advancement.bountifulfares.pick_fruit\"}",
-      "icon": "minecraft:apple"
+    "architects_palette:main/buy_pipe": {
+      "owner": "reliable_advancements:standalone"
     },
-    "bountifulfares:obtain_walnut": {
-      "owner": "bountifulfares:bountiful_fares",
-      "tab": "bountifulfares:bountiful_fares",
-      "title": "{\"translate\":\"advancement.bountifulfares.obtain_walnut\"}",
-      "icon": "bountifulfares:walnut"
+    "architects_palette:main/buy_plating": {
+      "owner": "reliable_advancements:standalone"
     },
-    "bountifulfares:plant_on_trellis": {
-      "owner": "bountifulfares:bountiful_fares",
-      "tab": "bountifulfares:bountiful_fares",
-      "title": "{\"translate\":\"advancement.bountifulfares.plant_on_trellis\"}",
-      "icon": "bountifulfares:trellis"
+    "architects_palette:main/buy_spool": {
+      "owner": "reliable_advancements:standalone"
     },
-    "bountifulfares:obtain_golden_apple_sapling": {
-      "owner": "bountifulfares:bountiful_fares",
-      "tab": "bountifulfares:bountiful_fares",
-      "title": "{\"translate\":\"advancement.bountifulfares.obtain_golden_apple_sapling\"}",
-      "icon": "bountifulfares:golden_apple_sapling"
+    "architects_palette:main/find_twisted_sapling": {
+      "owner": "reliable_advancements:standalone"
     },
-    "bountifulfares:obtain_lemon_block": {
-      "owner": "bountifulfares:bountiful_fares",
-      "tab": "bountifulfares:bountiful_fares",
-      "title": "{\"translate\":\"advancement.bountifulfares.how_easy\"}",
-      "icon": "bountifulfares:lemon"
+    "architects_palette:main/find_warpstone": {
+      "owner": "reliable_advancements:standalone"
     },
-    "bountifulfares:eat_all_food": {
-      "owner": "bountifulfares:bountiful_fares",
-      "tab": "bountifulfares:bountiful_fares",
-      "title": "{\"translate\":\"advancement.bountifulfares.eat_all_food\"}",
-      "icon": "bountifulfares:crusted_beef"
+    "architects_palette:main/place_entrails": {
+      "owner": "reliable_advancements:standalone"
     },
-    "bountifulfares:feed_wolf_mulch": {
-      "owner": "bountifulfares:bountiful_fares",
-      "tab": "bountifulfares:bountiful_fares",
-      "title": "{\"translate\":\"advancement.bountifulfares.feed_wolf_mulch\"}",
-      "icon": "bountifulfares:walnut_mulch"
+    "architects_palette:main/root": {
+      "owner": "reliable_advancements:standalone"
     },
-    "bountifulfares:eat_all_bad_foods": {
-      "owner": "bountifulfares:bountiful_fares",
-      "tab": "bountifulfares:bountiful_fares",
-      "title": "{\"translate\":\"advancement.bountifulfares.eat_all_bad_foods\"}",
-      "icon": "minecraft:chicken"
+    "architects_palette:main/totem_carving": {
+      "owner": "reliable_advancements:standalone"
     },
-    "bountifulfares:obtain_all_fruit": {
-      "owner": "bountifulfares:bountiful_fares",
-      "tab": "bountifulfares:bountiful_fares",
-      "title": "{\"translate\":\"advancement.bountifulfares.obtain_all_fruit\"}",
-      "icon": "bountifulfares:plum"
+    "autumnity:husbandry/cure_foul_taste": {
+      "owner": "reliable_advancements:standalone"
     },
-    "bountifulfares:eat_ancient_fruit": {
-      "owner": "bountifulfares:bountiful_fares",
-      "tab": "bountifulfares:bountiful_fares",
-      "title": "{\"translate\":\"advancement.bountifulfares.eat_ancient_fruit\"}",
-      "icon": "bountifulfares:hoary_apple"
+    "autumnity:husbandry/fungivore_diet": {
+      "owner": "reliable_advancements:standalone"
     },
-    "bountifulfares:obtain_sun_hat": {
-      "owner": "bountifulfares:bountiful_fares",
-      "tab": "bountifulfares:bountiful_fares",
-      "title": "{\"translate\":\"advancement.bountifulfares.obtain_sun_hat\"}",
-      "icon": "bountifulfares:sun_hat"
+    "autumnity:husbandry/sneaky_protection": {
+      "owner": "reliable_advancements:standalone"
     },
-    "bountifulfares:obtain_spongekin_seeds": {
-      "owner": "bountifulfares:bountiful_fares",
-      "tab": "bountifulfares:bountiful_fares",
-      "title": "{\"translate\":\"advancement.bountifulfares.obtain_spongekin_seeds\"}",
-      "icon": "bountifulfares:spongekin_seeds"
+    "betterdungeons:all_dungeons": {
+      "owner": "reliable_advancements:standalone"
     },
-    "bountifulfares:place_gristmill": {
-      "owner": "bountifulfares:bountiful_fares",
-      "tab": "bountifulfares:bountiful_fares",
-      "title": "{\"translate\":\"advancement.bountifulfares.place_gristmill\"}",
-      "icon": "bountifulfares:gristmill"
+    "betterdungeons:root": {
+      "owner": "reliable_advancements:standalone"
     },
-    "bountifulfares:obtain_tiffin": {
-      "owner": "bountifulfares:bountiful_fares",
-      "tab": "bountifulfares:bountiful_fares",
-      "title": "{\"translate\":\"advancement.bountifulfares.obtain_tiffin\"}",
-      "icon": "bountifulfares:shulker_tiffin"
+    "betterdungeons:skeleton_dungeon": {
+      "owner": "reliable_advancements:standalone"
     },
-    "bountifulfares:obtain_flour": {
-      "owner": "bountifulfares:bountiful_fares",
-      "tab": "bountifulfares:bountiful_fares",
-      "title": "{\"translate\":\"advancement.bountifulfares.obtain_flour\"}",
-      "icon": "bountifulfares:flour"
+    "betterdungeons:small_dungeon": {
+      "owner": "reliable_advancements:standalone"
     },
-    "bountifulfares:throw_flour_as_cover": {
-      "owner": "bountifulfares:bountiful_fares",
-      "tab": "bountifulfares:bountiful_fares",
-      "title": "{\"translate\":\"advancement.bountifulfares.throw_flour_as_cover\"}",
-      "icon": "bountifulfares:flour"
+    "betterdungeons:small_nether_dungeon": {
+      "owner": "reliable_advancements:standalone"
     },
-    "bountifulfares:place_all_baked_goods": {
-      "owner": "bountifulfares:bountiful_fares",
-      "tab": "bountifulfares:bountiful_fares",
-      "title": "{\"translate\":\"advancement.bountifulfares.place_all_baked_goods\"}",
-      "icon": "bountifulfares:artisan_bread"
+    "betterdungeons:spider_dungeon": {
+      "owner": "reliable_advancements:standalone"
     },
-    "bountifulfares:eat_all_candy": {
-      "owner": "bountifulfares:bountiful_fares",
-      "tab": "bountifulfares:bountiful_fares",
-      "title": "{\"translate\":\"advancement.bountifulfares.eat_all_candy\"}",
-      "icon": "bountifulfares:candy"
-    },
-    "bountifulfares:obtain_golden_apple": {
-      "owner": "bountifulfares:bountiful_fares",
-      "tab": "bountifulfares:bountiful_fares",
-      "title": "{\"translate\":\"advancement.bountifulfares.obtain_golden_apple\"}",
-      "icon": "minecraft:golden_apple"
-    },
-    "bountifulfares:obtain_feldspar": {
-      "owner": "bountifulfares:bountiful_fares",
-      "tab": "bountifulfares:bountiful_fares",
-      "title": "{\"translate\":\"advancement.bountifulfares.obtain_feldspar\"}",
-      "icon": "bountifulfares:feldspar"
-    },
-    "bountifulfares:obtain_ceramic_clay": {
-      "owner": "bountifulfares:bountiful_fares",
-      "tab": "bountifulfares:bountiful_fares",
-      "title": "{\"translate\":\"advancement.bountifulfares.obtain_ceramic_clay\"}",
-      "icon": "bountifulfares:ceramic_clay"
-    },
-    "bountifulfares:obtain_fermentation_vessel": {
-      "owner": "bountifulfares:bountiful_fares",
-      "tab": "bountifulfares:bountiful_fares",
-      "title": "{\"translate\":\"advancement.bountifulfares.obtain_fermentation_vessel\"}",
-      "icon": "bountifulfares:fermentation_vessel"
-    },
-    "bountifulfares:fill_tiffin": {
-      "owner": "bountifulfares:bountiful_fares",
-      "tab": "bountifulfares:bountiful_fares",
-      "title": "{\"translate\":\"advancement.bountifulfares.fill_tiffin\"}",
-      "icon": "bountifulfares:purple_shulker_tiffin"
-    },
-    "bountifulfares:craft_food_in_tiffin": {
-      "owner": "bountifulfares:bountiful_fares",
-      "tab": "bountifulfares:bountiful_fares",
-      "title": "{\"translate\":\"advancement.bountifulfares.craft_food_in_tiffin\"}",
-      "icon": "bountifulfares:white_shulker_tiffin"
-    },
-    "bountifulfares:obtain_artisan_brush": {
-      "owner": "bountifulfares:bountiful_fares",
-      "tab": "bountifulfares:bountiful_fares",
-      "title": "{\"translate\":\"advancement.bountifulfares.obtain_artisan_brush\"}",
-      "icon": "bountifulfares:artisan_brush"
-    },
-    "bountifulfares:obtain_tea_blends": {
-      "owner": "bountifulfares:bountiful_fares",
-      "tab": "bountifulfares:bountiful_fares",
-      "title": "{\"translate\":\"advancement.bountifulfares.obtain_tea_blends\"}",
-      "icon": "bountifulfares:tea_leaves"
-    },
-    "bountifulfares:eat_citrus_essence": {
-      "owner": "bountifulfares:bountiful_fares",
-      "tab": "bountifulfares:bountiful_fares",
-      "title": "{\"translate\":\"advancement.bountifulfares.eat_citrus_essence\"}",
-      "icon": "bountifulfares:citrus_essence"
-    },
-    "bountifulfares:obtain_spongekin": {
-      "owner": "bountifulfares:bountiful_fares",
-      "tab": "bountifulfares:bountiful_fares",
-      "title": "{\"translate\":\"advancement.bountifulfares.obtain_spongekin\"}",
-      "icon": "bountifulfares:spongekin"
-    },
-    "bountifulfares:dye_leather_armor_on_armor_stand": {
-      "owner": "bountifulfares:bountiful_fares",
-      "tab": "bountifulfares:bountiful_fares",
-      "title": "{\"translate\":\"advancement.bountifulfares.dye_leather_armor_on_armor_stand\"}",
-      "icon": "minecraft:leather_leggings"
-    },
-    "bountifulfares:place_all_tea_candles": {
-      "owner": "bountifulfares:bountiful_fares",
-      "tab": "bountifulfares:bountiful_fares",
-      "title": "{\"translate\":\"advancement.bountifulfares.place_all_tea_candles\"}",
-      "icon": "bountifulfares:green_tea_candle"
+    "betterdungeons:zombie_dungeon": {
+      "owner": "reliable_advancements:standalone"
     },
     "bountifulfares:acidify_effect_2_levels": {
-      "owner": "bountifulfares:bountiful_fares",
-      "tab": "bountifulfares:bountiful_fares",
-      "title": "{\"translate\":\"advancement.bountifulfares.acidify_effect_2_levels\"}",
-      "icon": "minecraft:potion"
+      "owner": "reliable_advancements:standalone"
     },
-    "bountifulfares:obtain_prismarine_blossom": {
-      "owner": "bountifulfares:bountiful_fares",
-      "tab": "bountifulfares:bountiful_fares",
-      "title": "{\"translate\":\"advancement.bountifulfares.obtain_prismarine_blossom\"}",
-      "icon": "bountifulfares:prismarine_blossom"
+    "bountifulfares:bountiful_fares": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "bountifulfares:craft_food_in_tiffin": {
+      "owner": "reliable_advancements:standalone"
     },
     "bountifulfares:dye_ceramic_block": {
-      "owner": "bountifulfares:bountiful_fares",
-      "tab": "bountifulfares:bountiful_fares",
-      "title": "{\"translate\":\"advancement.bountifulfares.dye_ceramic_block\"}",
-      "icon": "bountifulfares:ceramic_tiles"
+      "owner": "reliable_advancements:standalone"
     },
-    "fieldguide:root": {
-      "owner": "fieldguide:root",
-      "tab": "fieldguide:root",
-      "title": "{\"translate\":\"advancements.fieldguide.root.title\"}",
-      "icon": "minecraft:spyglass"
+    "bountifulfares:dye_leather_armor_on_armor_stand": {
+      "owner": "reliable_advancements:standalone"
     },
-    "fieldguide:first_discovery": {
-      "owner": "fieldguide:root",
-      "tab": "fieldguide:root",
-      "title": "{\"translate\":\"advancements.fieldguide.first_discovery.title\"}",
-      "icon": "minecraft:spyglass"
+    "bountifulfares:eat_all_bad_foods": {
+      "owner": "reliable_advancements:standalone"
     },
-    "fieldguide:mushroom_collector": {
-      "owner": "fieldguide:root",
-      "tab": "fieldguide:root",
-      "title": "{\"translate\":\"advancements.fieldguide.mushroom_collector.title\"}",
-      "icon": "minecraft:red_mushroom"
+    "bountifulfares:eat_all_candy": {
+      "owner": "reliable_advancements:standalone"
     },
-    "fieldguide:let_him_cook": {
-      "owner": "fieldguide:root",
-      "tab": "fieldguide:root",
-      "title": "{\"translate\":\"advancements.fieldguide.let_him_cook.title\"}",
-      "icon": "minecraft:flint_and_steel"
+    "bountifulfares:eat_all_food": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "bountifulfares:eat_ancient_fruit": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "bountifulfares:eat_citrus_essence": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "bountifulfares:feed_wolf_mulch": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "bountifulfares:fill_tiffin": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "bountifulfares:make_first_food": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "bountifulfares:obtain_all_fruit": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "bountifulfares:obtain_artisan_brush": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "bountifulfares:obtain_ceramic_clay": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "bountifulfares:obtain_feldspar": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "bountifulfares:obtain_fermentation_vessel": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "bountifulfares:obtain_flour": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "bountifulfares:obtain_golden_apple": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "bountifulfares:obtain_golden_apple_sapling": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "bountifulfares:obtain_lemon_block": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "bountifulfares:obtain_prismarine_blossom": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "bountifulfares:obtain_spongekin": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "bountifulfares:obtain_spongekin_seeds": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "bountifulfares:obtain_sun_hat": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "bountifulfares:obtain_tea_blends": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "bountifulfares:obtain_tiffin": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "bountifulfares:obtain_walnut": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "bountifulfares:pick_fruit": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "bountifulfares:place_all_baked_goods": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "bountifulfares:place_all_tea_candles": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "bountifulfares:place_gristmill": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "bountifulfares:plant_on_trellis": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "bountifulfares:throw_flour_as_cover": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "buzzier_bees:adventure/four_leaf_clover": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "buzzier_bees:husbandry/use_glazed_porkchop": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "buzzier_bees:husbandry/use_honey_apple": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "buzzier_bees:husbandry/use_honey_bread": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "caverns_and_chasms:adventure/atone_item": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "caverns_and_chasms:adventure/bejeweled_anvil_repair": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "caverns_and_chasms:adventure/break_item_atoning": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "caverns_and_chasms:adventure/copy_music_disc": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "caverns_and_chasms:adventure/dismantle_item": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "caverns_and_chasms:adventure/dont_move": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "caverns_and_chasms:adventure/find_monolith": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "caverns_and_chasms:adventure/half_court": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "caverns_and_chasms:adventure/hatch_saddled_grazer": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "caverns_and_chasms:adventure/kill_bat_with_vampirism": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "caverns_and_chasms:adventure/open_large_storage_duct": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "caverns_and_chasms:adventure/repair_pants_with_zirconia": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "caverns_and_chasms:adventure/repair_with_zirconia": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "caverns_and_chasms:adventure/ricochet_bullseye": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "caverns_and_chasms:adventure/ricochet_hit": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "caverns_and_chasms:adventure/ricochet_hit_yourself": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "caverns_and_chasms:adventure/smelt_copper": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "caverns_and_chasms:adventure/summon_copper_golem": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "caverns_and_chasms:adventure/thunderstruck": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "caverns_and_chasms:adventure/tune_a_fish": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "caverns_and_chasms:adventure/use_tuning_fork": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "caverns_and_chasms:husbandry/kill_guardian_with_rat": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "caverns_and_chasms:husbandry/kill_with_rat": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "caverns_and_chasms:husbandry/obtain_ancient_hoes": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "caverns_and_chasms:husbandry/obtain_bone_flute": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "caverns_and_chasms:husbandry/obtain_turquoise": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "caverns_and_chasms:husbandry/use_unicorn_horn": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "caverns_and_chasms:nether/equip_monocle": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "caverns_and_chasms:nether/necromium_armor": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "caverns_and_chasms:nether/ride_boat_with_deeper": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "chalk:adventure/alone_in_the_darkness": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "chalk:adventure/consumed_by_the_light": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "chalk:adventure/guiding_star": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "chalk:adventure/home_is_where_the_bed_is": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "chalk:adventure/paint_the_grass": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "chalk:adventure/this_way": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "chalk:adventure/vandalism": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "cold_sweat:desperate_measures": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "cold_sweat:extreme_temps": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "cold_sweat:fuel_soul_lamp": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "cold_sweat:full_insulation": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "cold_sweat:get_soul_lamp": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "cold_sweat:huddle_close": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "cold_sweat:insulate_armor": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "cold_sweat:lava_sea": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "cold_sweat:root": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "cold_sweat:tame_chameleon": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "cold_sweat:use_hearth": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "cold_sweat:use_smokestack": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "culturaldelights:main/acid": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "culturaldelights:main/beanstalk": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "culturaldelights:main/cheesy": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "culturaldelights:main/intoxication": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "culturaldelights:main/max_intoxication": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "culturaldelights:main/pickle": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "culturaldelights:main/salt": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "culturaldelights:main/vat": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "environmental:husbandry/backpack_slabfish": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "environmental:husbandry/feed_deer_flower": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "environmental:husbandry/find_truffle": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "environmental:husbandry/place_koi_in_village": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "environmental:husbandry/plant_on_muddy_pig": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "environmental:husbandry/saddle_pig": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "environmental:husbandry/shear_cattail": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "environmental:husbandry/shear_yak_with_pants": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "environmental:husbandry/tame_all_slabfish": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "environmental:husbandry/throw_mud_at_pig": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "environmental:husbandry/truffle_shuffle": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "environmental:husbandry/when_pigs_fly": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "etcetera:adventure/obtain_trader_armor": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "etcetera:adventure/water_gear": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "etcetera:husbandry/obtain_cotton_armor": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "etcetera:husbandry/obtain_squid_lamp": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "etcetera:husbandry/plant_cotton": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "etcetera:nether/obtain_bismuth": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "exposure:adventure/complex_composite_compound": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "exposure:adventure/exposed_paparazzi": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "exposure:adventure/exposure": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "exposure:adventure/family_portrait": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "exposure:adventure/lights_up": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "exposure:adventure/moment_in_time": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "exposure:adventure/photos_of_spider_man": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "exposure:adventure/piercing_gaze": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "exposure:adventure/splitting_the_photon": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "exposure:adventure/spooky_silly_skeletons": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "exposure:adventure/spotlight": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "exposure:adventure/unforeseen_consequences": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "exposure:adventure/void": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "exposure:adventure/wildlife_archivist": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "exposure_polaroid:adventure/instant_classic": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "farmersdelight:main/craft_knife": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "farmersdelight:main/eat_nourishing_food": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "farmersdelight:main/get_fd_seed": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "farmersdelight:main/get_ham": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "farmersdelight:main/get_mushroom_colony": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "farmersdelight:main/get_rich_soil": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "farmersdelight:main/harvest_ropelogged_tomato": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "farmersdelight:main/harvest_straw": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "farmersdelight:main/hit_raider_with_rotten_tomato": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "farmersdelight:main/master_chef": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "farmersdelight:main/obtain_netherite_knife": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "farmersdelight:main/place_campfire": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "farmersdelight:main/place_cooking_pot": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "farmersdelight:main/place_feast": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "farmersdelight:main/place_organic_compost": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "farmersdelight:main/place_skillet": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "farmersdelight:main/plant_all_crops": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "farmersdelight:main/plant_rice": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "farmersdelight:main/root": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "farmersdelight:main/use_cutting_board": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "farmersdelight:main/use_skillet": {
+      "owner": "reliable_advancements:standalone"
     },
     "fieldguide:animal_expert": {
-      "owner": "fieldguide:root",
-      "tab": "fieldguide:root",
-      "title": "{\"translate\":\"advancements.fieldguide.animal_expert.title\"}",
-      "icon": "minecraft:pig_spawn_egg"
-    },
-    "fieldguide:quick_review": {
-      "owner": "fieldguide:root",
-      "tab": "fieldguide:root",
-      "title": "{\"translate\":\"advancements.fieldguide.quick_review.title\"}",
-      "icon": "minecraft:diamond_sword"
-    },
-    "fieldguide:monster_hunter": {
-      "owner": "fieldguide:root",
-      "tab": "fieldguide:root",
-      "title": "{\"translate\":\"advancements.fieldguide.monster_hunter.title\"}",
-      "icon": "minecraft:zombie_head"
-    },
-    "fieldguide:invisible_scan": {
-      "owner": "fieldguide:root",
-      "tab": "fieldguide:root",
-      "title": "{\"translate\":\"advancements.fieldguide.invisible_scan.title\"}",
-      "icon": "minecraft:potion"
-    },
-    "fieldguide:gem_alert": {
-      "owner": "fieldguide:root",
-      "tab": "fieldguide:root",
-      "title": "{\"translate\":\"advancements.fieldguide.gem_alert.title\"}",
-      "icon": "minecraft:diamond"
+      "owner": "reliable_advancements:standalone"
     },
     "fieldguide:enderman_scan": {
-      "owner": "fieldguide:root",
-      "tab": "fieldguide:root",
-      "title": "{\"translate\":\"advancements.fieldguide.enderman_scan.title\"}",
-      "icon": "minecraft:ender_pearl"
+      "owner": "reliable_advancements:standalone"
     },
-    "tide:root": {
-      "owner": "tide:root",
-      "tab": "tide:root",
-      "title": "{\"translate\":\"advancements.tide.root.title\"}",
-      "icon": "tide:angelfish"
+    "fieldguide:first_discovery": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "fieldguide:gem_alert": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "fieldguide:invisible_scan": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "fieldguide:let_him_cook": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "fieldguide:monster_hunter": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "fieldguide:mushroom_collector": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "fieldguide:quick_review": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "fieldguide:root": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "horseman:husbandry/summon_horse": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "infernalexp:husbandry/freeze_punk": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "infernalexp:husbandry/hot_pocket": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "infernalexp:nether/deer_in_headlights": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:adventure/adventuring_time": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:adventure/arbalistic": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:adventure/avoid_vibration": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:adventure/blowback": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:adventure/brush_armadillo": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:adventure/bullseye": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:adventure/craft_decorated_pot_using_only_sherds": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:adventure/crafters_crafting_crafters": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:adventure/fall_from_world_height": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:adventure/heart_transplanter": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:adventure/hero_of_the_village": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:adventure/honey_block_slide": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:adventure/kill_a_mob": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:adventure/kill_all_mobs": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:adventure/kill_mob_near_sculk_catalyst": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:adventure/lighten_up": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:adventure/lightning_rod_with_villager_no_fire": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:adventure/minecraft_trials_edition": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:adventure/ol_betsy": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:adventure/overoverkill": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:adventure/play_jukebox_in_meadows": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:adventure/read_power_of_chiseled_bookshelf": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:adventure/revaulting": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:adventure/root": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:adventure/salvage_sherd": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:adventure/shoot_arrow": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:adventure/sleep_in_bed": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:adventure/sniper_duel": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:adventure/spyglass_at_dragon": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:adventure/spyglass_at_ghast": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:adventure/spyglass_at_parrot": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:adventure/summon_iron_golem": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:adventure/throw_trident": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:adventure/totem_of_undying": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:adventure/trade": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:adventure/trade_at_world_height": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:adventure/trim_with_all_exclusive_armor_patterns": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:adventure/trim_with_any_armor_pattern": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:adventure/two_birds_one_arrow": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:adventure/under_lock_and_key": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:adventure/very_very_frightening": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:adventure/voluntary_exile": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:adventure/walk_on_powder_snow_with_leather_boots": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:adventure/who_needs_rockets": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:adventure/whos_the_pillager_now": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:end/dragon_breath": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:end/dragon_egg": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:end/elytra": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:end/enter_end_gateway": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:end/find_end_city": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:end/kill_dragon": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:end/levitate": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:end/respawn_dragon": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:end/root": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:husbandry/allay_deliver_cake_to_note_block": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:husbandry/allay_deliver_item_to_player": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:husbandry/axolotl_in_a_bucket": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:husbandry/balanced_diet": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:husbandry/bred_all_animals": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:husbandry/breed_an_animal": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:husbandry/complete_catalogue": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:husbandry/feed_snifflet": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:husbandry/fishy_business": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:husbandry/froglights": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:husbandry/kill_axolotl_target": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:husbandry/leash_all_frog_variants": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:husbandry/make_a_sign_glow": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:husbandry/obtain_netherite_hoe": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:husbandry/obtain_sniffer_egg": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:husbandry/place_dried_ghast_in_water": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:husbandry/plant_any_sniffer_seed": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:husbandry/remove_wolf_armor": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:husbandry/repair_wolf_armor": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:husbandry/ride_a_boat_with_a_goat": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:husbandry/root": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:husbandry/safely_harvest_honey": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:husbandry/silk_touch_nest": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:husbandry/tactical_fishing": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:husbandry/tadpole_in_a_bucket": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:husbandry/tame_an_animal": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:husbandry/uh_oh": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:husbandry/wax_off": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:husbandry/wax_on": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:husbandry/whole_pack": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:nether/all_effects": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:nether/all_potions": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:nether/brew_potion": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:nether/charge_respawn_anchor": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:nether/create_beacon": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:nether/create_full_beacon": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:nether/distract_piglin": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:nether/explore_nether": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:nether/fast_travel": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:nether/find_bastion": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:nether/find_fortress": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:nether/get_wither_skull": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:nether/loot_bastion": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:nether/netherite_armor": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:nether/obtain_ancient_debris": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:nether/obtain_blaze_rod": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:nether/obtain_crying_obsidian": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:nether/return_to_sender": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:nether/ride_strider": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:nether/ride_strider_in_overworld_lava": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:nether/root": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:nether/summon_wither": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:nether/uneasy_alliance": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:nether/use_lodestone": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:story/cure_zombie_villager": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:story/deflect_arrow": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:story/enchant_item": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:story/enter_the_end": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:story/enter_the_nether": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:story/follow_ender_eye": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:story/form_obsidian": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:story/iron_tools": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:story/lava_bucket": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:story/mine_diamond": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:story/mine_stone": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:story/obtain_armor": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:story/root": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:story/shiny_gear": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:story/smelt_iron": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "minecraft:story/upgrade_tools": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "neapolitan:adventure/chimpanzee_attack": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "neapolitan:husbandry/creeper_heal": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "neapolitan:husbandry/harvest_white_strawberries": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "neapolitan:husbandry/place_all_chocolate_blocks": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "neapolitan:husbandry/prevent_harmful_effect": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "neapolitan:husbandry/vanilla_poison": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "newworld:adventure/collect_ancient_mattock": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "newworld:adventure/collect_template_fragment": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "nomansland:main/explode_ore": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "nomansland:main/find_ancient_city": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "nomansland:main/ignite_flammable_enemy": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "nomansland:main/kill_anchored_mob": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "nomansland:main/tree_juice": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "nomansland:main/when_pigs_fly": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "onion_onion:main/onion_ghast": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "onion_onion:main/onion_ninja": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "piglinproliferation:nether/add_effect_to_fire_ring": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "piglinproliferation:nether/obtain_buckler": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "piglinproliferation:nether/obtain_travelers_compass": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "quark:content/ancient_apple_overlevel": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "quark:content/apply_color_rune": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "quark:content/crab_in_a_bucket": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "quark:content/crawl_in_hollow_log": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "quark:content/foxhound_speed_up_furnace": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "quark:content/get_all_blossom_saplings": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "quark:content/get_all_corundum": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "quark:content/get_bottled_cloud": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "quark:content/get_diamond_heart": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "quark:content/get_forgotten_hat": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "quark:content/get_own_head": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "quark:content/influence": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "quark:content/instamine_deepslate": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "quark:content/make_stoneling": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "quark:content/mine_fed_toretoise": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "quark:content/mine_toretoise": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "quark:content/overlevel_enchant": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "quark:content/pat_potato": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "quark:content/pathfinder_map_center": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "quark:content/poison_baby": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "quark:content/redirect_beacon": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "quark:content/retreive_flamerang": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "quark:content/shiba_help": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "quark:content/tame_foxhound": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "quark:content/tatami_gaeshi": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "quark:content/throw_parrot_egg": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "quark:content/throw_pickarang": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "quark:content/use_viaduct": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "quark:content/watcher_center": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "quark:content/wear_full_rainbow": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "shieldexp:get_diamond_shield": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "shieldexp:get_netherite_shield": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "sootychimneys:adventure/just_dont_breathe_it_in": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "spelunkery:spelunkery/carved_nephrite": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "spelunkery:spelunkery/coal_lump": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "spelunkery:spelunkery/compression_blast_miner": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "spelunkery:spelunkery/depth_gauge": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "spelunkery:spelunkery/diamond_grindstone": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "spelunkery:spelunkery/echo_fork": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "spelunkery:spelunkery/every_ore": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "spelunkery:spelunkery/feed_slime": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "spelunkery:spelunkery/glowstick": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "spelunkery:spelunkery/grindstone": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "spelunkery:spelunkery/item_magnet": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "spelunkery:spelunkery/magnetic_compass": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "spelunkery:spelunkery/magnetite": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "spelunkery:spelunkery/nephrite_chunk": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "spelunkery:spelunkery/obsidian_chisel": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "spelunkery:spelunkery/raw_nuggets": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "spelunkery:spelunkery/rock_salt": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "spelunkery:spelunkery/rough_diamond": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "spelunkery:spelunkery/rough_gem": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "spelunkery:spelunkery/soulbound": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "spelunkery:spelunkery/summon_slime": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "spelunkery:spelunkery/true_north": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "spelunkery:spelunkery/wooden_rail": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "supplementaries:adventure/globe": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "supplementaries:adventure/road_sign": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "supplementaries:husbandry/angry_birds": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "supplementaries:husbandry/sus_stew": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "supplementaries:husbandry/turn_table": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "supplementaries:husbandry/wrench": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "supplementaries:story/unenchanter": {
+      "owner": "reliable_advancements:standalone"
     },
     "tide:all_fishing_rods": {
-      "owner": "tide:root",
-      "tab": "tide:root",
-      "title": "{\"translate\":\"advancements.tide.all_fishing_rods.title\"}",
-      "icon": "tide:crystal_fishing_rod"
-    },
-    "tide:get_bait": {
-      "owner": "tide:root",
-      "tab": "tide:root",
-      "title": "{\"translate\":\"advancements.tide.get_bait.title\"}",
-      "icon": "tide:bait"
-    },
-    "tide:journal_halfway_completed": {
-      "owner": "tide:root",
-      "tab": "tide:root",
-      "title": "{\"translate\":\"advancements.tide.journal_halfway_completed.title\"}",
-      "icon": "tide:fishy_note"
-    },
-    "tide:pull_crate": {
-      "owner": "tide:root",
-      "tab": "tide:root",
-      "title": "{\"translate\":\"advancements.tide.pull_crate.title\"}",
-      "icon": "tide:wooden_crate"
+      "owner": "reliable_advancements:standalone"
     },
     "tide:catch_legendary": {
-      "owner": "tide:root",
-      "tab": "tide:root",
-      "title": "{\"translate\":\"advancements.tide.catch_legendary.title\"}",
-      "icon": "tide:shooting_starfish"
-    },
-    "tide:fish_in_lava": {
-      "owner": "tide:root",
-      "tab": "tide:root",
-      "title": "{\"translate\":\"advancements.tide.fish_in_lava.title\"}",
-      "icon": "tide:lavaproof_hook"
-    },
-    "tide:journal_completed": {
-      "owner": "tide:root",
-      "tab": "tide:root",
-      "title": "{\"translate\":\"advancements.tide.journal_completed.title\"}",
-      "icon": "tide:fishing_journal"
-    },
-    "tide:freeze_coelacanth": {
-      "owner": "tide:root",
-      "tab": "tide:root",
-      "title": "{\"translate\":\"advancements.tide.freeze_coelacanth.title\"}",
-      "icon": "tide:coelacanth"
+      "owner": "reliable_advancements:standalone"
     },
     "tide:catch_midas_with_midas_rod": {
-      "owner": "tide:root",
-      "tab": "tide:root",
-      "title": "{\"translate\":\"advancements.tide.catch_midas_with_midas_rod.title\"}",
-      "icon": "tide:midas_fish"
+      "owner": "reliable_advancements:standalone"
     },
-    "tide:release_pupfish": {
-      "owner": "tide:root",
-      "tab": "tide:root",
-      "title": "{\"translate\":\"advancements.tide.release_pupfish.title\"}",
-      "icon": "tide:devils_hole_pupfish"
+    "tide:fish_in_lava": {
+      "owner": "reliable_advancements:standalone"
     },
     "tide:fish_in_void": {
-      "owner": "tide:root",
-      "tab": "tide:root",
-      "title": "{\"translate\":\"advancements.tide.fish_in_void.title\"}",
-      "icon": "tide:void_hook"
+      "owner": "reliable_advancements:standalone"
+    },
+    "tide:freeze_coelacanth": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "tide:get_bait": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "tide:journal_completed": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "tide:journal_halfway_completed": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "tide:pull_crate": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "tide:release_pupfish": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "tide:root": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "upgrade_aquatic:adventure/collect_all_pike": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "upgrade_aquatic:adventure/kill_great_thrasher": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "upgrade_aquatic:adventure/sleep_underwater": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "upgrade_aquatic:adventure/tooth_fairy": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "upgrade_aquatic:adventure/unethical_dentistry": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "upgrade_aquatic:husbandry/eat_pickerelweed": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "upgrade_aquatic:nether/sleepless_slave": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "upgrade_aquatic:nether/vibe_check": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "vista:husbandry/absolute_cinema": {
+      "owner": "reliable_advancements:standalone"
+    },
+    "spicedcider:adventure/mine_toretoise": {
+      "owner": "reliable_advancements:standalone",
+      "tab": "spicedcider:adventure/root",
+      "title": "\"Mine Turtle!\"",
+      "icon": "minecraft:raw_iron"
     }
   },
   "derived_presentation": {
-    "architects_palette:main/root": {
-      "title": "Architect\u0027s Palette",
-      "icon": "architects_palette:chiseled_abyssaline_bricks",
-      "background": "architects_palette:textures/block/myonite_bricks.png"
-    },
-    "fieldguide:root": {
-      "title": "Field Guide",
-      "icon": "minecraft:spyglass",
-      "background": "minecraft:textures/block/oak_log.png"
-    },
-    "tide:root": {
-      "title": "Tide",
-      "icon": "tide:angelfish",
-      "background": "tide:textures/gui/advancements/backgrounds/prismarine.png"
-    },
-    "bountifulfares:bountiful_fares": {
-      "title": "Bountiful Fares",
-      "icon": "bountifulfares:passion_fruit",
-      "background": "minecraft:textures/block/farmland_moist.png"
-    },
-    "hominid:adventure/hematoma": {
-      "title": "Dracula Flow",
-      "icon": "hominid:music_disc_hematoma"
-    },
     "minecraft:story/root": {
       "title": "Minecraft",
       "icon": "minecraft:grass_block",
       "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
-    },
-    "farmersdelight:main/root": {
-      "title": "Farmer\u0027s Delight",
-      "icon": "farmersdelight:cooking_pot",
-      "background": "minecraft:textures/block/bricks.png"
-    },
-    "create:root": {
-      "title": "Welcome to Create",
-      "icon": "create:brass_hand",
-      "background": "create:textures/gui/advancements.png"
-    },
-    "minecraft:end/root": {
-      "title": "The End",
-      "icon": "minecraft:end_stone",
-      "background": "minecraft:textures/gui/advancements/backgrounds/end.png"
-    },
-    "minecraft:nether/root": {
-      "title": "Nether",
-      "icon": "minecraft:red_nether_bricks",
-      "background": "minecraft:textures/gui/advancements/backgrounds/nether.png"
-    },
-    "minecraft:husbandry/root": {
-      "title": "Husbandry",
-      "icon": "minecraft:hay_block",
-      "background": "minecraft:textures/gui/advancements/backgrounds/husbandry.png"
     },
     "minecraft:adventure/root": {
       "title": "Adventure",
       "icon": "minecraft:map",
       "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png"
     },
-    "caverns_and_chasms:adventure/dismantle_item": {
-      "title": "Not An Uncrafting Table",
-      "icon": "caverns_and_chasms:dismantling_table"
+    "minecraft:husbandry/root": {
+      "title": "Husbandry",
+      "icon": "minecraft:hay_block",
+      "background": "minecraft:textures/gui/advancements/backgrounds/husbandry.png"
     },
-    "frostiful:adventure/root": {
-      "title": "Frostiful",
-      "icon": "frostiful:frost_wand",
-      "background": "frostiful:textures/block/brittle_ice/cracked_0.png"
+    "minecraft:nether/root": {
+      "title": "Nether",
+      "icon": "minecraft:red_nether_bricks",
+      "background": "minecraft:textures/gui/advancements/backgrounds/nether.png"
     },
-    "hominid:adventure/fossilised": {
-      "title": "Return the Slab",
-      "icon": "hominid:remains_armor_trim_smithing_template"
-    },
-    "minecraft:adventure/trim_with_all_exclusive_armor_patterns": {
-      "title": "Smithing with Style",
-      "icon": "minecraft:silence_armor_trim_smithing_template"
+    "betterdungeons:root": {
+      "title": "YUNG\u0027s Better Dungeons",
+      "icon": "minecraft:mossy_stone_bricks",
+      "background": "minecraft:textures/block/stone_bricks.png"
     },
     "cold_sweat:root": {
       "title": "Cold Sweat",
       "icon": "cold_sweat:thermometer",
       "background": "minecraft:textures/block/smooth_basalt.png"
+    },
+    "create:root": {
+      "title": "Welcome to Create",
+      "icon": "create:brass_hand",
+      "background": "create:textures/gui/advancements.png"
+    },
+    "farmersdelight:main/root": {
+      "title": "Farmer\u0027s Delight",
+      "icon": "farmersdelight:cooking_pot",
+      "background": "minecraft:textures/block/bricks.png"
+    },
+    "spicedcider:spiced_cider/copper": {
+      "title": "Copper? I Hardly Know \u0027er!",
+      "icon": "minecraft:copper_ingot"
+    },
+    "spicedcider:adventure/kill_elder_guardian": {
+      "title": "The Elder Scrolls",
+      "icon": "minecraft:prismarine_shard"
+    },
+    "spicedcider:adventure/kill_warden": {
+      "title": "Sound of Silence",
+      "icon": "minecraft:sculk_shrieker"
+    },
+    "spicedcider:adventure/monster_expert": {
+      "title": "The Witcher",
+      "icon": "minecraft:zombie_head"
+    },
+    "spicedcider:spiced_cider/bronze_armor": {
+      "title": "Podium Finish",
+      "icon": "modestmining:bronze_chestplate"
     }
   }
 }

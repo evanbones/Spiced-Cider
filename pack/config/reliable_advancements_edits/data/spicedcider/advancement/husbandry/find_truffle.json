@@ -1,0 +1,37 @@
+{
+  "parent": "spicedcider:husbandry/truffle_shuffle",
+  "display": {
+    "icon": {
+      "id": "environmental:buried_truffle"
+    },
+    "title": {
+      "text": "Toil and Truffle"
+    },
+    "description": {
+      "text": "Dig up a Buried Truffle"
+    },
+    "frame": "goal"
+  },
+  "criteria": {
+    "find_truffle": {
+      "conditions": {
+        "items": [
+          {
+            "items": "environmental:truffle"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "find_truffle"
+    ]
+  ],
+  "rewards": {
+    "loot": [
+      "spicedcider:advancement/husbandry_find_truffle"
+    ]
+  }
+}

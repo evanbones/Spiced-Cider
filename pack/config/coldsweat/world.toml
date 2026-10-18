@@ -45,25 +45,27 @@
 [Biomes]
 	#─────────────────────────────────────────────────────────────────────────//v
 	# Applies an offset to the temperature of a biome
-	# ├── Format: [["biome_id", lowTemp, highTemp, *units, *waterTemp], [...], etc]
+	# ├── Format: [["biome_id", lowTemp, highTemp, *units, *waterTemp, *freezingPoint], [...], etc]
 	# └── [* = optional]
 	# • biome_id: The ID of the biome (e.g. "minecraft:desert")
 	# • lowTemp: The temperature offset at midnight
 	# • highTemp: The temperature offset at noon
 	# • *units: The units of the temperature ("f", "c", or "mc"). Defaults to Minecraft units (mc))
 	# • *waterTemp: Offsets the temperature of water in the biome
+	# • *freezingPoint: Offsets the temperature at which water freezes in the biome
 	"Biome Temperature Offsets" = []
 	#─────────────────────────────────────────────────────────────────────────//v
 	# Defines the temperature of a biome, overriding the biome's default temperature
-	# ├── Format: [["biome_id", lowTemp, highTemp, *units, *waterTemp], [...], etc]
+	# ├── Format: [["biome_id", lowTemp, highTemp, *units, *waterTemp, *freezingPoint], [...], etc]
 	# └── [* = optional]
 	# • biome_id: The ID of the biome (e.g. "minecraft:desert")
 	# • lowTemp: The temperature of the biome at midnight
 	# • highTemp: The temperature of the biome at noon
 	# • *units: The units of the temperature ("f", "c", or "mc"). Defaults to Minecraft units (mc))
 	# • *waterTemp: The temperature of water in the biome
+	# • *freezingPoint: The temperature at which water freezes in the biome
 	"Biome Temperatures" = [
-	    ["minecraft:badlands", 84, 120, "F", -5],
+	    ["minecraft:badlands", 84, 120, "F", 90.0],
 	    ["minecraft:bamboo_jungle", 76, 87, "F"],
 	    ["minecraft:beach", 52, 84, "F"],
 	    ["minecraft:birch_forest", 47, 77, "F"],
@@ -77,7 +79,7 @@
 	    ["minecraft:deep_ocean", 39, 70, "F"],
 	    ["minecraft:desert", 26, 118, "F"],
 	    ["minecraft:dripstone_caves", "disable"],
-	    ["minecraft:eroded_badlands", 88, 120, "F", -5],
+	    ["minecraft:eroded_badlands", 88, 120, "F", 90.0],
 	    ["minecraft:flower_forest", 51, 76, "F"],
 	    ["minecraft:forest", 51, 76, "F"],
 	    ["minecraft:frozen_ocean", 15, 31, "F"],
@@ -116,15 +118,15 @@
 	    ["minecraft:stony_peaks", 60, 94, "F"],
 	    ["minecraft:stony_shore", 50, 64, "F"],
 	    ["minecraft:sunflower_plains", 52, 84, "F"],
-	    ["minecraft:swamp", 72, 84, "F", 5],
+	    ["minecraft:swamp", 72, 84, "F", 78.0],
 	    ["minecraft:taiga", 44, 62, "F"],
-	    ["minecraft:warm_ocean", 67, 76, "F", 10],
+	    ["minecraft:warm_ocean", 67, 76, "F", 82.0],
 	    ["minecraft:windswept_forest", 48, 66, "F"],
 	    ["minecraft:windswept_gravelly_hills", 24, 58, "F"],
 	    ["minecraft:windswept_hills", 24, 58, "F"],
 	    ["minecraft:windswept_savanna", 67, 90, "F"],
-	    ["minecraft:wooded_badlands", 80, 108, "F", -5],
-	    ["environmental:marsh", 60, 80, "F", -5]
+	    ["minecraft:wooded_badlands", 80, 108, "F", 90.0],
+	    ["environmental:marsh", 60, 80, "F", 78.0]
 	]
 
 [Blocks]
@@ -192,7 +194,7 @@
 	# └── Format: [temperature, *units]
 	"Default Water Temperature" = [-10, "f"]
 	#─────────────────────────────────────────────────────────────────────────
-	# The maximum soak level a player can reach from rain alone (0.0 - 1.0)
+	# The maximum temperature effect of rain soaking on the player, in MC units
 	# Default: 0.2
 	# Range: 0.0 ~ Infinity
 	"Max Rain Soak" = 0.2

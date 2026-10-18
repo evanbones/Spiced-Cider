@@ -1,0 +1,32 @@
+{
+  "parent": "spicedcider:industry/mechanical_mixer",
+  "display": {
+    "icon": {
+      "id": "create:blaze_burner"
+    },
+    "title": {
+      "text": "Sentient Fireplace"
+    },
+    "description": {
+      "text": "Trap a Blaze in a Blaze Burner, where it seems happy enough"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "0": {
+      "conditions": {
+        "items": [
+          {
+            "items": "create:blaze_burner"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ]
+  ]
+}

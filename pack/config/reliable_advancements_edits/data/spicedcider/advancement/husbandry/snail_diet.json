@@ -1,0 +1,104 @@
+{
+  "parent": "spicedcider:husbandry/breed",
+  "display": {
+    "icon": {
+      "id": "autumnity:snail_shell_piece"
+    },
+    "title": {
+      "text": "A Fungivore Diet"
+    },
+    "description": {
+      "text": "Feed a Snail every type of mushroom and fungus"
+    },
+    "frame": "challenge"
+  },
+  "criteria": {
+    "red_mushroom": {
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "autumnity:snail"
+            }
+          }
+        ],
+        "item": {
+          "items": "minecraft:red_mushroom"
+        }
+      },
+      "trigger": "minecraft:player_interacted_with_entity"
+    },
+    "brown_mushroom": {
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "autumnity:snail"
+            }
+          }
+        ],
+        "item": {
+          "items": "minecraft:brown_mushroom"
+        }
+      },
+      "trigger": "minecraft:player_interacted_with_entity"
+    },
+    "crimson_fungus": {
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "autumnity:snail"
+            }
+          }
+        ],
+        "item": {
+          "items": "minecraft:crimson_fungus"
+        }
+      },
+      "trigger": "minecraft:player_interacted_with_entity"
+    },
+    "warped_fungus": {
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "autumnity:snail"
+            }
+          }
+        ],
+        "item": {
+          "items": "minecraft:warped_fungus"
+        }
+      },
+      "trigger": "minecraft:player_interacted_with_entity"
+    }
+  },
+  "requirements": [
+    [
+      "red_mushroom"
+    ],
+    [
+      "brown_mushroom"
+    ],
+    [
+      "crimson_fungus"
+    ],
+    [
+      "warped_fungus"
+    ]
+  ],
+  "rewards": {
+    "loot": [
+      "spicedcider:advancement/husbandry_snail_diet"
+    ]
+  }
+}

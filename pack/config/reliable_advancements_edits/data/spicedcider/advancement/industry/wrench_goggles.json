@@ -1,0 +1,45 @@
+{
+  "parent": "spicedcider:industry/root",
+  "display": {
+    "icon": {
+      "id": "create:goggles"
+    },
+    "title": {
+      "text": "Kitted Out"
+    },
+    "description": {
+      "text": "Get yourself an Engineer's Wrench and some Goggles"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "0": {
+      "conditions": {
+        "items": [
+          {
+            "items": "create:wrench"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "1": {
+      "conditions": {
+        "items": [
+          {
+            "items": "create:goggles"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ],
+    [
+      "1"
+    ]
+  ]
+}

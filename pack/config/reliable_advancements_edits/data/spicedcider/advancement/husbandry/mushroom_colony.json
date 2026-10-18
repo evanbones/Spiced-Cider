@@ -1,0 +1,43 @@
+{
+  "parent": "spicedcider:husbandry/rich_soil",
+  "display": {
+    "icon": {
+      "id": "farmersdelight:red_mushroom_colony"
+    },
+    "title": {
+      "text": "Fungus Among Us"
+    },
+    "description": {
+      "text": "Grow a Mushroom Colony on Rich Soil and harvest it with Shears"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "brown_mushroom_colony": {
+      "conditions": {
+        "items": [
+          {
+            "items": "farmersdelight:brown_mushroom_colony"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "red_mushroom_colony": {
+      "conditions": {
+        "items": [
+          {
+            "items": "farmersdelight:red_mushroom_colony"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "brown_mushroom_colony",
+      "red_mushroom_colony"
+    ]
+  ]
+}

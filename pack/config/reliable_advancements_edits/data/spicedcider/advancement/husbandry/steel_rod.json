@@ -1,0 +1,37 @@
+{
+  "parent": "spicedcider:husbandry/bronze_rod",
+  "display": {
+    "icon": {
+      "id": "alloyed:steel_fishing_rod"
+    },
+    "title": {
+      "text": "Reel Steel"
+    },
+    "description": {
+      "text": "Upgrade to a Steel Fishing Rod"
+    },
+    "frame": "goal"
+  },
+  "criteria": {
+    "has_steel_fishing_rod": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "alloyed:steel_fishing_rod"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_steel_fishing_rod"
+    ]
+  ],
+  "rewards": {
+    "loot": [
+      "spicedcider:advancement/husbandry_steel_rod"
+    ]
+  }
+}

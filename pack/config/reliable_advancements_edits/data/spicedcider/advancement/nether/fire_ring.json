@@ -1,0 +1,25 @@
+{
+  "parent": "spicedcider:nether/distract_piglin",
+  "display": {
+    "icon": {
+      "id": "piglinproliferation:stone_fire_ring"
+    },
+    "title": {
+      "text": "Aromatherapy"
+    },
+    "description": {
+      "text": "Use a Potion on a Fire Ring to spread its effect through the air"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "add_effect": {
+      "trigger": "piglinproliferation:add_effect_to_fire_ring"
+    }
+  },
+  "requirements": [
+    [
+      "add_effect"
+    ]
+  ]
+}

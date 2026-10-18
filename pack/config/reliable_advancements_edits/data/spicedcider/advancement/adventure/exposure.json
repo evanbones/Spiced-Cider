@@ -1,0 +1,26 @@
+{
+  "parent": "spicedcider:adventure/spyglass",
+  "display": {
+    "icon": {
+      "id": "exposure:camera"
+    },
+    "title": {
+      "text": "Exposure"
+    },
+    "description": {
+      "text": "Load a Camera with Film and take a photo"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "expose_frame": {
+      "conditions": {},
+      "trigger": "exposure:frame_exposed"
+    }
+  },
+  "requirements": [
+    [
+      "expose_frame"
+    ]
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "parent": "spicedcider:industry/crushing_wheel",
+  "display": {
+    "icon": {
+      "id": "create:crushing_wheel"
+    },
+    "title": {
+      "text": "Crushing It"
+    },
+    "description": {
+      "text": "Run a pair of Crushing Wheels at maximum speed"
+    },
+    "frame": "task",
+    "hidden": true
+  },
+  "criteria": {
+    "0": {
+      "trigger": "create:crusher_maxed_0000_builtin"
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ]
+  ]
+}

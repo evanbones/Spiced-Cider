@@ -1,0 +1,28 @@
+{
+  "parent": "spicedcider:adventure/temple",
+  "display": {
+    "icon": {
+      "id": "minecraft:map"
+    },
+    "title": {
+      "text": "X Marks the Spot"
+    },
+    "description": {
+      "text": "Dig up a Buried Treasure chest"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "buried_treasure": {
+      "trigger": "minecraft:player_generates_container_loot",
+      "conditions": {
+        "loot_table": "minecraft:chests/buried_treasure"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "buried_treasure"
+    ]
+  ]
+}

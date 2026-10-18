@@ -1,0 +1,41 @@
+{
+  "parent": "spicedcider:nether/soul_bead",
+  "display": {
+    "icon": {
+      "id": "minecraft:sulfur_cube_bucket"
+    },
+    "title": {
+      "text": "Bubble Trouble"
+    },
+    "description": {
+      "text": "Summon a Living Bubble at an Altar with a Water Bucket, Soap and a Soul Bead"
+    },
+    "frame": "goal"
+  },
+  "criteria": {
+    "summoned_sulfur_cube": {
+      "trigger": "minecraft:summoned_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:sulfur_cube"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "summoned_sulfur_cube"
+    ]
+  ],
+  "rewards": {
+    "loot": [
+      "spicedcider:advancement/nether_living_bubble"
+    ]
+  }
+}

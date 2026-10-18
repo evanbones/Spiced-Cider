@@ -1,0 +1,32 @@
+{
+  "parent": "spicedcider:nether/glowstone_canyon",
+  "display": {
+    "icon": {
+      "id": "minecraft:glowstone_dust"
+    },
+    "title": {
+      "text": "Glow Up"
+    },
+    "description": {
+      "text": "Collect some Glowstone Dust"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "has_glowstone_dust": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:glowstone_dust"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_glowstone_dust"
+    ]
+  ]
+}

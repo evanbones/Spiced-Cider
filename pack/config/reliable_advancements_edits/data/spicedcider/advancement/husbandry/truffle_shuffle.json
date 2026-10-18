@@ -1,0 +1,39 @@
+{
+  "parent": "spicedcider:husbandry/muddy_pig",
+  "display": {
+    "icon": {
+      "id": "environmental:truffle"
+    },
+    "title": {
+      "text": "Truffle Shuffle"
+    },
+    "description": {
+      "text": "Feed a Pig a Golden Carrot and follow it to a Buried Truffle"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "truffle_shuffle": {
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:pig"
+            }
+          }
+        ],
+        "item": {
+          "items": "minecraft:golden_carrot"
+        }
+      },
+      "trigger": "minecraft:player_interacted_with_entity"
+    }
+  },
+  "requirements": [
+    [
+      "truffle_shuffle"
+    ]
+  ]
+}

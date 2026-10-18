@@ -1,0 +1,37 @@
+{
+  "parent": "spicedcider:industry/flux",
+  "display": {
+    "icon": {
+      "id": "minecraft:hopper"
+    },
+    "title": {
+      "text": "Hop to It"
+    },
+    "description": {
+      "text": "Build a Hopper out of Cast Iron"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "placed_hopper": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": "minecraft:hopper"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "placed_hopper"
+    ]
+  ]
+}

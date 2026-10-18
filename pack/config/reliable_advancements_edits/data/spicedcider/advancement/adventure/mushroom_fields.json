@@ -1,0 +1,39 @@
+{
+  "parent": "spicedcider:adventure/atlas",
+  "display": {
+    "icon": {
+      "id": "minecraft:red_mushroom_block"
+    },
+    "title": {
+      "text": "Mushroom Kingdom"
+    },
+    "description": {
+      "text": "Find a Mushroom Fields island, where nothing hostile spawns"
+    },
+    "frame": "task",
+    "hidden": true
+  },
+  "criteria": {
+    "visited_mushroom_fields": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "biomes": "minecraft:mushroom_fields"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "visited_mushroom_fields"
+    ]
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "spicedcider:adventure/spyglass",
+  "display": {
+    "icon": {
+      "id": "map_atlases:atlas"
+    },
+    "title": {
+      "text": "Atlas Shrugged"
+    },
+    "description": {
+      "text": "Bind your maps together into an Atlas"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "has_atlas": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "map_atlases:atlas"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_atlas"
+    ]
+  ]
+}

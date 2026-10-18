@@ -1,0 +1,26 @@
+{
+  "parent": "spicedcider:husbandry/tame",
+  "display": {
+    "icon": {
+      "id": "quark:tiny_potato"
+    },
+    "title": {
+      "text": "Potato, Potato"
+    },
+    "description": {
+      "text": "Pet a Tiny Potato"
+    },
+    "frame": "task",
+    "hidden": true
+  },
+  "criteria": {
+    "pat_potato": {
+      "trigger": "quark:pat_potato"
+    }
+  },
+  "requirements": [
+    [
+      "pat_potato"
+    ]
+  ]
+}

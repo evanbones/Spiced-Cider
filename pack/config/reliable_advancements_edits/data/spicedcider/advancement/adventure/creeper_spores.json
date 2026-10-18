@@ -1,0 +1,32 @@
+{
+  "parent": "spicedcider:adventure/kill_creeper",
+  "display": {
+    "icon": {
+      "id": "tolerable_creepers:creeper_spores"
+    },
+    "title": {
+      "text": "Spore Loser"
+    },
+    "description": {
+      "text": "Pick up some Creeper Spores"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "has_creeper_spores": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "tolerable_creepers:creeper_spores"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_creeper_spores"
+    ]
+  ]
+}

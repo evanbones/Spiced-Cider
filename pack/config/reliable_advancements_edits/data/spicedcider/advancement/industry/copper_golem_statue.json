@@ -1,0 +1,41 @@
+{
+  "parent": "spicedcider:industry/copper_golem",
+  "display": {
+    "icon": {
+      "id": "minecraft:oxidized_copper_golem_statue"
+    },
+    "title": {
+      "text": "Statuesque"
+    },
+    "description": {
+      "text": "Let a Copper Golem oxidize into a statue, then pick it up"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "statue": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:copper_golem_statue",
+              "minecraft:exposed_copper_golem_statue",
+              "minecraft:weathered_copper_golem_statue",
+              "minecraft:oxidized_copper_golem_statue",
+              "minecraft:waxed_copper_golem_statue",
+              "minecraft:waxed_exposed_copper_golem_statue",
+              "minecraft:waxed_weathered_copper_golem_statue",
+              "minecraft:waxed_oxidized_copper_golem_statue"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "statue"
+    ]
+  ]
+}

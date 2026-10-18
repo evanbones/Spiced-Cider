@@ -1,0 +1,223 @@
+{
+  "parent": "spicedcider:spiced_cider/valkyrium",
+  "parents": [
+    "spicedcider:spiced_cider/valkyrium",
+    "spicedcider:spiced_cider/prismarite"
+  ],
+  "display": {
+    "icon": {
+      "id": "minecraft:netherite_ingot"
+    },
+    "title": {
+      "text": "Heavy Metal"
+    },
+    "description": {
+      "text": "Collect an ingot of every metal"
+    },
+    "frame": "challenge"
+  },
+  "criteria": {
+    "has_copper_ingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:copper_ingot"
+          }
+        ]
+      }
+    },
+    "has_iron_ingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:iron_ingot"
+          }
+        ]
+      }
+    },
+    "has_gold_ingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:gold_ingot"
+          }
+        ]
+      }
+    },
+    "has_tin_ingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "caverns_and_chasms:tin_ingot"
+          }
+        ]
+      }
+    },
+    "has_lead_ingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "modestmining:lead_ingot"
+          }
+        ]
+      }
+    },
+    "has_bronze_ingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "alloyed:bronze_ingot"
+          }
+        ]
+      }
+    },
+    "has_cast_iron_ingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "spicedcider:cast_iron_ingot"
+          }
+        ]
+      }
+    },
+    "has_steel_ingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "alloyed:steel_ingot"
+          }
+        ]
+      }
+    },
+    "has_rose_gold_ingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "oooh_pinky:rose_gold_ingot"
+          }
+        ]
+      }
+    },
+    "has_silver_ingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "caverns_and_chasms:silver_ingot"
+          }
+        ]
+      }
+    },
+    "has_electrum_ingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "modestmining:electrum_ingot"
+          }
+        ]
+      }
+    },
+    "has_netherite_ingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:netherite_ingot"
+          }
+        ]
+      }
+    },
+    "has_necromium_ingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "caverns_and_chasms:necromium_ingot"
+          }
+        ]
+      }
+    },
+    "has_prismarite_ingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "modestmining:prismarite_ingot"
+          }
+        ]
+      }
+    },
+    "has_valkyrium_ingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "modestmining:valkyrium_ingot"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_copper_ingot"
+    ],
+    [
+      "has_iron_ingot"
+    ],
+    [
+      "has_gold_ingot"
+    ],
+    [
+      "has_tin_ingot"
+    ],
+    [
+      "has_lead_ingot"
+    ],
+    [
+      "has_bronze_ingot"
+    ],
+    [
+      "has_cast_iron_ingot"
+    ],
+    [
+      "has_steel_ingot"
+    ],
+    [
+      "has_rose_gold_ingot"
+    ],
+    [
+      "has_silver_ingot"
+    ],
+    [
+      "has_electrum_ingot"
+    ],
+    [
+      "has_netherite_ingot"
+    ],
+    [
+      "has_necromium_ingot"
+    ],
+    [
+      "has_prismarite_ingot"
+    ],
+    [
+      "has_valkyrium_ingot"
+    ]
+  ],
+  "rewards": {
+    "loot": [
+      "spicedcider:advancement/spiced_cider_all_metals"
+    ]
+  }
+}

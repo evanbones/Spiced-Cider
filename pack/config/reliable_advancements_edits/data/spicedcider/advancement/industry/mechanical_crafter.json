@@ -1,0 +1,25 @@
+{
+  "parent": "spicedcider:industry/precision_mechanism",
+  "display": {
+    "icon": {
+      "id": "create:mechanical_crafter"
+    },
+    "title": {
+      "text": "Automated Assembly"
+    },
+    "description": {
+      "text": "Place and power some Mechanical Crafters"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "0": {
+      "trigger": "create:mechanical_crafter_builtin"
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ]
+  ]
+}

@@ -107,6 +107,7 @@ public class SpicedCiderConfigScreen {
                         .option(percentSlider("voxyFogEnd", client.voxyFogEnd, 1))
                         .option(percentSlider("voxyWeatherFogDensity", client.voxyWeatherFogDensity, 0))
                         .option(percentSlider("voxyCaveFogDensity", client.voxyCaveFogDensity, 0))
+                        .option(toggle("voxyFadeIn", client.voxyFadeIn))
                         .build())
                 .build()
                 .generateScreen(parent);

@@ -1,0 +1,76 @@
+{
+  "parent": "spicedcider:nether/infernite",
+  "display": {
+    "icon": {
+      "id": "minecraft:netherite_chestplate"
+    },
+    "title": {
+      "text": "Cover Me in Debris"
+    },
+    "description": {
+      "text": "Wear a full set of Infernite armor"
+    },
+    "frame": "challenge"
+  },
+  "criteria": {
+    "has_netherite_helmet": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:netherite_helmet"
+          }
+        ]
+      }
+    },
+    "has_netherite_chestplate": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:netherite_chestplate"
+          }
+        ]
+      }
+    },
+    "has_netherite_leggings": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:netherite_leggings"
+          }
+        ]
+      }
+    },
+    "has_netherite_boots": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:netherite_boots"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_netherite_helmet"
+    ],
+    [
+      "has_netherite_chestplate"
+    ],
+    [
+      "has_netherite_leggings"
+    ],
+    [
+      "has_netherite_boots"
+    ]
+  ],
+  "rewards": {
+    "loot": [
+      "spicedcider:advancement/nether_infernite_armor"
+    ]
+  }
+}

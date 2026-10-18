@@ -1,0 +1,31 @@
+{
+  "criteria": {
+    "has_flint": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:flint"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_flint"
+    ]
+  ],
+  "parent": "spicedcider:spiced_cider/root",
+  "display": {
+    "icon": {
+      "id": "minecraft:flint"
+    },
+    "title": "Flintstones",
+    "description": "Find Flint in Pebbles or Gravel",
+    "frame": "task"
+  },
+  "parents": [
+    "spicedcider:spiced_cider/root"
+  ]
+}

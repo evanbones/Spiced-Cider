@@ -1,0 +1,71 @@
+{
+  "parent": "spicedcider:spiced_cider/copper",
+  "display": {
+    "icon": {
+      "id": "minecraft:copper_chestplate"
+    },
+    "title": {
+      "text": "Ea-Nasir Approved"
+    },
+    "description": {
+      "text": "Wear a full set of Copper armor of the finest quality"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "has_copper_helmet": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:copper_helmet"
+          }
+        ]
+      }
+    },
+    "has_copper_chestplate": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:copper_chestplate"
+          }
+        ]
+      }
+    },
+    "has_copper_leggings": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:copper_leggings"
+          }
+        ]
+      }
+    },
+    "has_copper_boots": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:copper_boots"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_copper_helmet"
+    ],
+    [
+      "has_copper_chestplate"
+    ],
+    [
+      "has_copper_leggings"
+    ],
+    [
+      "has_copper_boots"
+    ]
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "parent": "spicedcider:adventure/dungeon",
+  "display": {
+    "icon": {
+      "id": "minecraft:chiseled_sandstone"
+    },
+    "title": {
+      "text": "Temple Run"
+    },
+    "description": {
+      "text": "Stumble upon a Desert, Badlands or Jungle Pyramid"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "found_desert_pyramid": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structures": "minecraft:desert_pyramid"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "found_jungle_pyramid": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structures": "minecraft:jungle_pyramid"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "found_badlands_pyramid": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structures": "explorify:badlands_pyramid"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "found_desert_pyramid",
+      "found_jungle_pyramid",
+      "found_badlands_pyramid"
+    ]
+  ]
+}

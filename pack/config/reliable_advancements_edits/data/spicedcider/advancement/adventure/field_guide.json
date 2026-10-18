@@ -1,0 +1,32 @@
+{
+  "parent": "spicedcider:adventure/spyglass",
+  "display": {
+    "icon": {
+      "id": "fieldguide:field_guide"
+    },
+    "title": {
+      "text": "Field Work"
+    },
+    "description": {
+      "text": "Bind a Spyglass to a Book to make a Field Guide"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "has_field_guide": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "fieldguide:field_guide"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_field_guide"
+    ]
+  ]
+}

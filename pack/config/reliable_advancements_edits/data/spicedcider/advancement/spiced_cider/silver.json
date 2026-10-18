@@ -1,0 +1,32 @@
+{
+  "parent": "spicedcider:spiced_cider/steel_pickaxe",
+  "display": {
+    "icon": {
+      "id": "caverns_and_chasms:silver_ingot"
+    },
+    "title": {
+      "text": "Silver Lining"
+    },
+    "description": {
+      "text": "Smelt a Silver Ingot"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "has_silver_ingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "caverns_and_chasms:silver_ingot"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_silver_ingot"
+    ]
+  ]
+}

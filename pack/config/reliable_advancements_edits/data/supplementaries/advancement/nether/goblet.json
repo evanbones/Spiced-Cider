@@ -1,0 +1,25 @@
+{
+  "parent": "spicedcider:nether/bastion",
+  "display": {
+    "icon": {
+      "id": "supplementaries:goblet"
+    },
+    "title": {
+      "text": "Consume the Concoction Chalice"
+    },
+    "description": {
+      "text": "Drink from a Goblet"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "unlock": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "unlock"
+    ]
+  ]
+}

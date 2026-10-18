@@ -1,0 +1,25 @@
+{
+  "parent": "spicedcider:industry/mechanical_pump",
+  "display": {
+    "icon": {
+      "id": "create:hose_pulley"
+    },
+    "title": {
+      "text": "Industrial Spillage"
+    },
+    "description": {
+      "text": "Lower a Hose Pulley and watch it drain or fill a body of fluid"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "0": {
+      "trigger": "create:hose_pulley_builtin"
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ]
+  ]
+}

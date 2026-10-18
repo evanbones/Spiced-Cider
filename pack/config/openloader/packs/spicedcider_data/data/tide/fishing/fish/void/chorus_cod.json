@@ -3,12 +3,6 @@
   "bucket": "tide:chorus_cod_bucket",
   "conditions": [
     {
-      "type": "tide:dimension",
-      "dimensions": [
-        "minecraft:the_end"
-      ]
-    },
-    {
       "type": "tide:fluid",
       "fluid": "dimensional_tears"
     }

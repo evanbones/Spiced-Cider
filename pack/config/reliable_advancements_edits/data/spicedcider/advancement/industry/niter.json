@@ -1,0 +1,32 @@
+{
+  "parent": "spicedcider:industry/sluice",
+  "display": {
+    "icon": {
+      "id": "spelunkery:saltpeter"
+    },
+    "title": {
+      "text": "Salt of the Earth"
+    },
+    "description": {
+      "text": "Sift Niter out of Spring Water, the key to Gunpowder"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "has_saltpeter": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "spelunkery:saltpeter"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_saltpeter"
+    ]
+  ]
+}

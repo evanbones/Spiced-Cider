@@ -1,0 +1,33 @@
+{
+  "parent": "spicedcider:husbandry/intoxication",
+  "display": {
+    "icon": {
+      "id": "culturaldelights:apple_cider"
+    },
+    "title": {
+      "text": "Completely Smashed"
+    },
+    "description": {
+      "text": "Reach the maximum level of Intoxication, against all advice"
+    },
+    "frame": "challenge",
+    "hidden": true
+  },
+  "criteria": {
+    "max_intoxication": {
+      "trigger": "minecraft:effects_changed",
+      "conditions": {
+        "effects": {
+          "culturaldelights:intoxication": {
+            "amplifier": 9
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "max_intoxication"
+    ]
+  ]
+}

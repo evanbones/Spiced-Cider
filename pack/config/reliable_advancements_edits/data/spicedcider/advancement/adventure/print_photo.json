@@ -1,0 +1,32 @@
+{
+  "parent": "spicedcider:adventure/exposure",
+  "display": {
+    "icon": {
+      "id": "exposure:lightroom"
+    },
+    "title": {
+      "text": "A Moment in Time"
+    },
+    "description": {
+      "text": "Develop your Film and print a Photograph in a Lightroom"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "print_photograph": {
+      "conditions": {
+        "item": {
+          "items": [
+            "exposure:photograph"
+          ]
+        }
+      },
+      "trigger": "exposure:frame_printed"
+    }
+  },
+  "requirements": [
+    [
+      "print_photograph"
+    ]
+  ]
+}

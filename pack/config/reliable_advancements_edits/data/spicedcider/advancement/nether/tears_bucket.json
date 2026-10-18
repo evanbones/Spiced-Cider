@@ -1,0 +1,37 @@
+{
+  "parent": "spicedcider:nether/respawn_anchor",
+  "display": {
+    "icon": {
+      "id": "dimensional_tears:dimensional_tears_bucket"
+    },
+    "title": {
+      "text": "Bucket of Tears"
+    },
+    "description": {
+      "text": "Fill a Cauldron with Dimensional Tears and scoop up a Bucket"
+    },
+    "frame": "goal"
+  },
+  "criteria": {
+    "has_dimensional_tears_bucket": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "dimensional_tears:dimensional_tears_bucket"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_dimensional_tears_bucket"
+    ]
+  ],
+  "rewards": {
+    "loot": [
+      "spicedcider:advancement/nether_tears_bucket"
+    ]
+  }
+}

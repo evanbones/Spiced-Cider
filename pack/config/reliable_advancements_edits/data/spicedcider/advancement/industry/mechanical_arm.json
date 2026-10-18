@@ -1,0 +1,30 @@
+{
+  "parent": "spicedcider:industry/precision_mechanism",
+  "display": {
+    "icon": {
+      "id": "create:mechanical_arm"
+    },
+    "title": {
+      "text": "Busy Hands"
+    },
+    "description": {
+      "text": "Watch a Mechanical Arm move its first item"
+    },
+    "frame": "goal"
+  },
+  "criteria": {
+    "0": {
+      "trigger": "create:mechanical_arm_builtin"
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ]
+  ],
+  "rewards": {
+    "loot": [
+      "spicedcider:advancement/industry_mechanical_arm"
+    ]
+  }
+}

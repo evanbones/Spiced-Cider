@@ -1,0 +1,32 @@
+{
+  "parent": "spicedcider:spiced_cider/forge",
+  "display": {
+    "icon": {
+      "id": "spicedcider:cast_iron_ingot"
+    },
+    "title": {
+      "text": "Cast Away"
+    },
+    "description": {
+      "text": "Forge Iron and Coal into Cast Iron, the workhorse metal"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "has_cast_iron_ingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "spicedcider:cast_iron_ingot"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_cast_iron_ingot"
+    ]
+  ]
+}

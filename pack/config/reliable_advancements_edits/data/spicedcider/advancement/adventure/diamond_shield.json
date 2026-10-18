@@ -1,0 +1,32 @@
+{
+  "parent": "spicedcider:adventure/shield",
+  "display": {
+    "icon": {
+      "id": "shieldexp:diamond_shield"
+    },
+    "title": {
+      "text": "Diamond is Unbreakable"
+    },
+    "description": {
+      "text": "Craft a Diamond Shield"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "has_diamond_shield": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "shieldexp:diamond_shield"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_diamond_shield"
+    ]
+  ]
+}

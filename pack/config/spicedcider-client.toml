@@ -67,3 +67,5 @@
 	# Default: 50
 	# Range: 0 ~ 100
 	voxyCaveFogDensity = 50
+	#Fades newly loaded or generated Voxy LoD terrain in from the fog colour, like Chunks Fade In does for normal chunks.
+	voxyFadeIn = true

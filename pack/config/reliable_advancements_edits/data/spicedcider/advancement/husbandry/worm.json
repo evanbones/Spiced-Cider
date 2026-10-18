@@ -1,0 +1,35 @@
+{
+  "parent": "spicedcider:husbandry/fishing_rod",
+  "display": {
+    "icon": {
+      "id": "spicedcider:worm"
+    },
+    "title": {
+      "text": "Early Bird Special"
+    },
+    "description": {
+      "text": "Find a Worm, a treat for Chickens and fish alike"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "worm": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "spicedcider:worm",
+              "spicedcider:golden_worm"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "worm"
+    ]
+  ]
+}

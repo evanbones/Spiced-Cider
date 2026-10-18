@@ -1,0 +1,63 @@
+{
+  "parent": "nomansland:main/find_alchemist_ruins",
+  "display": {
+    "icon": {
+      "id": "nomansland:ancient_bronze_mask"
+    },
+    "title": {
+      "text": "Sticks and Rope"
+    },
+    "description": {
+      "text": "Collect the ancient bronze Mask, Chisel and Ritual Pick from the old ruins"
+    },
+    "frame": "goal"
+  },
+  "criteria": {
+    "has_ancient_bronze_mask": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "nomansland:ancient_bronze_mask"
+          }
+        ]
+      }
+    },
+    "has_ancient_bronze_chisel": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "nomansland:ancient_bronze_chisel"
+          }
+        ]
+      }
+    },
+    "has_ritual_pick": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "nomansland:ritual_pick"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_ancient_bronze_mask"
+    ],
+    [
+      "has_ancient_bronze_chisel"
+    ],
+    [
+      "has_ritual_pick"
+    ]
+  ],
+  "rewards": {
+    "loot": [
+      "spicedcider:advancement/main_collect_ancient_tools"
+    ]
+  }
+}

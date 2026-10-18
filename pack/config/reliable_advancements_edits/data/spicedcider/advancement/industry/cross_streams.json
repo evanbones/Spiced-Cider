@@ -1,0 +1,26 @@
+{
+  "parent": "spicedcider:industry/mechanical_pump",
+  "display": {
+    "icon": {
+      "id": "create:fluid_pipe"
+    },
+    "title": {
+      "text": "Don't Cross the Streams!"
+    },
+    "description": {
+      "text": "Watch two fluids meet in your pipe network"
+    },
+    "frame": "task",
+    "hidden": true
+  },
+  "criteria": {
+    "0": {
+      "trigger": "create:cross_streams_builtin"
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ]
+  ]
+}

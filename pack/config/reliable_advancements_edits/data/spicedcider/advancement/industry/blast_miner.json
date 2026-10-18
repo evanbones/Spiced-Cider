@@ -1,0 +1,37 @@
+{
+  "parent": "spicedcider:industry/explode_ore",
+  "display": {
+    "icon": {
+      "id": "spelunkery:compression_blast_miner"
+    },
+    "title": {
+      "text": "So Anyway, I Started Blastin'"
+    },
+    "description": {
+      "text": "Build a Compression Blast Miner"
+    },
+    "frame": "goal"
+  },
+  "criteria": {
+    "has_compression_blast_miner": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "spelunkery:compression_blast_miner"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_compression_blast_miner"
+    ]
+  ],
+  "rewards": {
+    "loot": [
+      "spicedcider:advancement/industry_blast_miner"
+    ]
+  }
+}

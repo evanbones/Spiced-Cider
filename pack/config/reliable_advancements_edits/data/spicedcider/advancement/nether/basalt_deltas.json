@@ -1,0 +1,55 @@
+{
+  "parent": "spicedcider:nether/soul_sand_valley",
+  "display": {
+    "icon": {
+      "id": "minecraft:basalt"
+    },
+    "title": {
+      "text": "Deltarune"
+    },
+    "description": {
+      "text": "Explore the Basalt Deltas"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "visited_basalt_deltas": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "biomes": "minecraft:basalt_deltas"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "visited_delta_shores": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "biomes": "infernalexp:delta_shores"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "visited_basalt_deltas",
+      "visited_delta_shores"
+    ]
+  ]
+}

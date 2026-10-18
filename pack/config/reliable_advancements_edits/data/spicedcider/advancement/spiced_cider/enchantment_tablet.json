@@ -1,0 +1,36 @@
+{
+  "parent": "spicedcider:spiced_cider/altar",
+  "parents": [
+    "spicedcider:spiced_cider/altar",
+    "spicedcider:spiced_cider/rose_gold"
+  ],
+  "display": {
+    "icon": {
+      "id": "modestmagic:enchantment_tablet"
+    },
+    "title": {
+      "text": "Tablet Computing"
+    },
+    "description": {
+      "text": "Forge Rose Gold and Amethyst into blank Enchantment Tablets"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "has_enchantment_tablet": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "modestmagic:enchantment_tablet"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_enchantment_tablet"
+    ]
+  ]
+}

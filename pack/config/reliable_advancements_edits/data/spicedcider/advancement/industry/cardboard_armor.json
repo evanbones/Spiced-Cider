@@ -1,0 +1,26 @@
+{
+  "parent": "spicedcider:industry/packager",
+  "display": {
+    "icon": {
+      "id": "create:cardboard_helmet"
+    },
+    "title": {
+      "text": "Full Stealth"
+    },
+    "description": {
+      "text": "Sneak around in a full suit of Cardboard Armor"
+    },
+    "frame": "task",
+    "hidden": true
+  },
+  "criteria": {
+    "0": {
+      "trigger": "create:cardboard_armor_builtin"
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ]
+  ]
+}

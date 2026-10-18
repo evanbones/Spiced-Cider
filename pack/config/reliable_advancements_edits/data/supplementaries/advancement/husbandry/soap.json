@@ -1,0 +1,33 @@
+{
+  "parent": "spicedcider:husbandry/soap",
+  "display": {
+    "icon": {
+      "id": "supplementaries:soap"
+    },
+    "title": {
+      "text": "Tide Pod Challenge"
+    },
+    "description": {
+      "text": "Eat a bar of Soap. Don't try this at home"
+    },
+    "frame": "task",
+    "hidden": true
+  },
+  "criteria": {
+    "stew": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "supplementaries:soap"
+          ]
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "stew"
+    ]
+  ]
+}

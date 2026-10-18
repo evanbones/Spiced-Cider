@@ -1,0 +1,54 @@
+{
+  "parent": "spicedcider:adventure/guiding_star",
+  "display": {
+    "icon": {
+      "id": "minecraft:white_dye"
+    },
+    "title": {
+      "text": "Consumed by the Light"
+    },
+    "description": {
+      "text": "Draw with white Chalk on a white block in bright light"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "draw_white": {
+      "conditions": {
+        "location": {
+          "light": {
+            "light": {
+              "min": 11
+            }
+          }
+        },
+        "mark": {
+          "color": {
+            "blue": {
+              "min": 200
+            },
+            "green": {
+              "min": 200
+            },
+            "red": {
+              "min": 200
+            }
+          }
+        },
+        "surface_color": {
+          "colors": [
+            36,
+            8,
+            14
+          ]
+        }
+      },
+      "trigger": "chalk:mark_drawn"
+    }
+  },
+  "requirements": [
+    [
+      "draw_white"
+    ]
+  ]
+}

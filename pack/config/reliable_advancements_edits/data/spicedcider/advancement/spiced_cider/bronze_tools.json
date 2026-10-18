@@ -1,0 +1,32 @@
+{
+  "parent": "spicedcider:spiced_cider/bronze",
+  "display": {
+    "icon": {
+      "id": "modestmining:bronze_pickaxe"
+    },
+    "title": {
+      "text": "Ding Ding Ding"
+    },
+    "description": {
+      "text": "Forge a Bronze Pickaxe that rings when you tap it"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "has_bronze_pickaxe": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "modestmining:bronze_pickaxe"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_bronze_pickaxe"
+    ]
+  ]
+}

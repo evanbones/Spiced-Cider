@@ -1,0 +1,30 @@
+{
+  "parent": "spicedcider:husbandry/vat",
+  "display": {
+    "icon": {
+      "id": "culturaldelights:salt_block"
+    },
+    "title": {
+      "text": "Why So Salty?!"
+    },
+    "description": {
+      "text": "Set up a renewable Salt Spike farm with Water, Rock Salt and Pointed Dripstone"
+    },
+    "frame": "goal"
+  },
+  "criteria": {
+    "grow_salt_spike": {
+      "trigger": "culturaldelights:grow_salt_spike"
+    }
+  },
+  "requirements": [
+    [
+      "grow_salt_spike"
+    ]
+  ],
+  "rewards": {
+    "loot": [
+      "spicedcider:advancement/husbandry_salt_farm"
+    ]
+  }
+}

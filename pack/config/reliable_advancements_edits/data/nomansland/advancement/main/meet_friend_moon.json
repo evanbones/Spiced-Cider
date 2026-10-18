@@ -1,0 +1,30 @@
+{
+  "parent": "nomansland:main/dream_friend_moon",
+  "display": {
+    "icon": {
+      "id": "minecraft:clock"
+    },
+    "title": {
+      "text": "Friendship"
+    },
+    "description": {
+      "text": "Meet the Friend Moon"
+    },
+    "frame": "goal"
+  },
+  "criteria": {
+    "meet_friend_moon_trigger": {
+      "trigger": "nomansland:meet_friend_moon_trigger"
+    }
+  },
+  "requirements": [
+    [
+      "meet_friend_moon_trigger"
+    ]
+  ],
+  "rewards": {
+    "loot": [
+      "spicedcider:advancement/main_meet_friend_moon"
+    ]
+  }
+}

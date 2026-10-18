@@ -1,0 +1,37 @@
+{
+  "parent": "spicedcider:spiced_cider/cobblestone",
+  "display": {
+    "icon": {
+      "id": "minecraft:furnace"
+    },
+    "title": {
+      "text": "Hot Topic"
+    },
+    "description": {
+      "text": "Pack eight Cobblestone around Coal or Charcoal to build a Furnace"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "placed_furnace": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": "minecraft:furnace"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "placed_furnace"
+    ]
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "parent": "spicedcider:spiced_cider/steel_pickaxe",
+  "parents": [
+    "spicedcider:spiced_cider/steel_pickaxe",
+    "spicedcider:spiced_cider/bronze_armor"
+  ],
+  "display": {
+    "icon": {
+      "id": "alloyed:steel_chestplate"
+    },
+    "title": {
+      "text": "Iron Man (Technically)"
+    },
+    "description": {
+      "text": "Forge a full set of Steel armor"
+    },
+    "frame": "goal"
+  },
+  "criteria": {
+    "has_steel_helmet": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "alloyed:steel_helmet"
+          }
+        ]
+      }
+    },
+    "has_steel_chestplate": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "alloyed:steel_chestplate"
+          }
+        ]
+      }
+    },
+    "has_steel_leggings": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "alloyed:steel_leggings"
+          }
+        ]
+      }
+    },
+    "has_steel_boots": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "alloyed:steel_boots"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_steel_helmet"
+    ],
+    [
+      "has_steel_chestplate"
+    ],
+    [
+      "has_steel_leggings"
+    ],
+    [
+      "has_steel_boots"
+    ]
+  ],
+  "rewards": {
+    "loot": [
+      "spicedcider:advancement/spiced_cider_steel_armor"
+    ]
+  }
+}

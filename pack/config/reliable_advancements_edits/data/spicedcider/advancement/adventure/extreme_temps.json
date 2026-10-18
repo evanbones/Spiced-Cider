@@ -1,0 +1,36 @@
+{
+  "parent": "spicedcider:adventure/thermometer",
+  "display": {
+    "icon": {
+      "id": "minecraft:blue_ice"
+    },
+    "title": {
+      "text": "Inhospitable"
+    },
+    "description": {
+      "text": "Find a place far too hot or cold to survive"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "cold_sweat:temperature_changed",
+      "conditions": {
+        "temperature": [
+          {
+            "trait": "world",
+            "range": {
+              "below": "min_habitable",
+              "above": "max_habitable"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "requirement"
+    ]
+  ]
+}

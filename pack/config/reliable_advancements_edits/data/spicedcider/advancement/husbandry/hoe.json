@@ -1,0 +1,32 @@
+{
+  "parent": "spicedcider:husbandry/root",
+  "display": {
+    "icon": {
+      "id": "modestmining:flint_hoe"
+    },
+    "title": {
+      "text": "Reap What You Sow"
+    },
+    "description": {
+      "text": "Craft a Hoe, even a Flint one"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "has_hoes": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "#minecraft:hoes"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_hoes"
+    ]
+  ]
+}

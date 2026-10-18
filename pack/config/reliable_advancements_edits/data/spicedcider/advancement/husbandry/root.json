@@ -1,0 +1,60 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:wheat"
+    },
+    "title": {
+      "text": "Husbandry"
+    },
+    "description": {
+      "text": "The world is full of friends and food, and food heals"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/husbandry.png"
+  },
+  "criteria": {
+    "seeds": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "#c:seeds"
+          }
+        ]
+      }
+    },
+    "farm_things": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:fishing_rod",
+              "farmersdelight:straw",
+              "minecraft:wheat",
+              "minecraft:carrot",
+              "minecraft:potato"
+            ]
+          }
+        ]
+      }
+    },
+    "tamed": {
+      "trigger": "minecraft:tame_animal"
+    },
+    "bred": {
+      "trigger": "minecraft:bred_animals"
+    }
+  },
+  "requirements": [
+    [
+      "seeds",
+      "farm_things",
+      "tamed",
+      "bred"
+    ]
+  ]
+}

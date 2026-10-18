@@ -1,0 +1,41 @@
+{
+  "parent": "spicedcider:spiced_cider/meteorite",
+  "parents": [
+    "spicedcider:spiced_cider/meteorite",
+    "spicedcider:spiced_cider/silver"
+  ],
+  "display": {
+    "icon": {
+      "id": "modestmining:valkyrium_ingot"
+    },
+    "title": {
+      "text": "Ride of the Valkyries"
+    },
+    "description": {
+      "text": "Forge Valkyrium and upgrade Diamond gear with it"
+    },
+    "frame": "goal"
+  },
+  "criteria": {
+    "has_valkyrium_ingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "modestmining:valkyrium_ingot"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_valkyrium_ingot"
+    ]
+  ],
+  "rewards": {
+    "loot": [
+      "spicedcider:advancement/spiced_cider_valkyrium"
+    ]
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "parent": "spicedcider:industry/piston",
+  "display": {
+    "icon": {
+      "id": "minecraft:observer"
+    },
+    "title": {
+      "text": "I See What You Did There"
+    },
+    "description": {
+      "text": "Place an Observer, which is always watching"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "placed_observer": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": "minecraft:observer"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "placed_observer"
+    ]
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "parent": "spicedcider:industry/spout",
+  "display": {
+    "icon": {
+      "id": "create:item_drain"
+    },
+    "title": {
+      "text": "Tumble Draining"
+    },
+    "description": {
+      "text": "Watch an Item Drain empty a fluid-filled item"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "0": {
+      "trigger": "create:drain_builtin"
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ]
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "parent": "spicedcider:adventure/tame_chameleon",
+  "display": {
+    "icon": {
+      "id": "minecraft:compass"
+    },
+    "title": {
+      "text": "Follow the Leader"
+    },
+    "description": {
+      "text": "Follow a Chameleon's tail to a new biome"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "requirement"
+    ]
+  ]
+}

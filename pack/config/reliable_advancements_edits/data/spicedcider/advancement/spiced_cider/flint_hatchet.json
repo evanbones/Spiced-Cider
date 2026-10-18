@@ -1,0 +1,32 @@
+{
+  "parent": "spicedcider:spiced_cider/flint",
+  "display": {
+    "icon": {
+      "id": "modestmining:flint_hatchet"
+    },
+    "title": {
+      "text": "Hatchet Job"
+    },
+    "description": {
+      "text": "Knap a Flint Hatchet with a Stick shaken from the leaves"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "has_flint_hatchet": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "modestmining:flint_hatchet"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_flint_hatchet"
+    ]
+  ]
+}

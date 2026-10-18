@@ -1,0 +1,48 @@
+{
+  "parent": "spicedcider:adventure/chalk",
+  "display": {
+    "icon": {
+      "id": "chalk:chalk"
+    },
+    "title": {
+      "text": "This Way!"
+    },
+    "description": {
+      "text": "Draw with Chalk in a mineshaft, Fortress or other maze of a structure"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "draw_in_mineshaft": {
+      "conditions": {
+        "location": {
+          "structures": "minecraft:mineshaft"
+        }
+      },
+      "trigger": "chalk:mark_drawn"
+    },
+    "draw_in_mineshaft_mesa": {
+      "conditions": {
+        "location": {
+          "structures": "minecraft:mineshaft_mesa"
+        }
+      },
+      "trigger": "chalk:mark_drawn"
+    },
+    "draw_in_fortress": {
+      "conditions": {
+        "location": {
+          "structures": "minecraft:fortress"
+        }
+      },
+      "trigger": "chalk:mark_drawn"
+    }
+  },
+  "requirements": [
+    [
+      "draw_in_mineshaft",
+      "draw_in_mineshaft_mesa",
+      "draw_in_fortress"
+    ]
+  ]
+}

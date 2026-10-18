@@ -1,0 +1,25 @@
+{
+  "parent": "spicedcider:industry/bronze_casing",
+  "display": {
+    "icon": {
+      "id": "create:belt_connector"
+    },
+    "title": {
+      "text": "Rubber Band"
+    },
+    "description": {
+      "text": "Connect two Shafts with a rubber Mechanical Belt"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "0": {
+      "trigger": "create:belt_builtin"
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ]
+  ]
+}

@@ -36,5 +36,13 @@
     },
     "target": "minecraft:rotten_flesh",
     "replacement": "#spicedcider:rotting_flesh"
+  },
+  {
+    "action": "replace_input",
+    "filter": {
+      "id": "create:crafting/kinetics/belt_connector"
+    },
+    "target": "minecraft:dried_kelp",
+    "replacement": "etcetera:rubber"
   }
 ]

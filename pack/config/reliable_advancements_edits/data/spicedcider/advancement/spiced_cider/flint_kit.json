@@ -1,0 +1,128 @@
+{
+  "parent": "spicedcider:spiced_cider/flint_mattock",
+  "display": {
+    "icon": {
+      "id": "modestmining:flint_javelin"
+    },
+    "title": {
+      "text": "Flint Fashion Week"
+    },
+    "description": {
+      "text": "Craft every Flint tool"
+    },
+    "frame": "goal"
+  },
+  "criteria": {
+    "has_flint_mattock": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "modestmining:flint_mattock"
+          }
+        ]
+      }
+    },
+    "has_flint_hatchet": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "modestmining:flint_hatchet"
+          }
+        ]
+      }
+    },
+    "has_flint_spade": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "modestmining:flint_spade"
+          }
+        ]
+      }
+    },
+    "has_flint_hoe": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "modestmining:flint_hoe"
+          }
+        ]
+      }
+    },
+    "has_flint_blade": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "modestmining:flint_blade"
+          }
+        ]
+      }
+    },
+    "has_flint_knife": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "farmersdelight:flint_knife"
+          }
+        ]
+      }
+    },
+    "has_flint_hammer": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "manual_labour:flint_hammer"
+          }
+        ]
+      }
+    },
+    "has_flint_javelin": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "modestmining:flint_javelin"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_flint_mattock"
+    ],
+    [
+      "has_flint_hatchet"
+    ],
+    [
+      "has_flint_spade"
+    ],
+    [
+      "has_flint_hoe"
+    ],
+    [
+      "has_flint_blade"
+    ],
+    [
+      "has_flint_knife"
+    ],
+    [
+      "has_flint_hammer"
+    ],
+    [
+      "has_flint_javelin"
+    ]
+  ],
+  "rewards": {
+    "loot": [
+      "spicedcider:advancement/spiced_cider_flint_kit"
+    ]
+  }
+}

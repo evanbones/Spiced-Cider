@@ -1,0 +1,37 @@
+{
+  "parent": "spicedcider:spiced_cider/silver",
+  "parents": [
+    "spicedcider:spiced_cider/silver",
+    "spicedcider:spiced_cider/gold"
+  ],
+  "display": {
+    "icon": {
+      "id": "modestmining:electrum_ingot"
+    },
+    "title": {
+      "text": "Shocking Discovery"
+    },
+    "description": {
+      "text": "Forge Gold and Silver into Electrum and hold on to it for now"
+    },
+    "frame": "task",
+    "hidden": true
+  },
+  "criteria": {
+    "has_electrum_ingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "modestmining:electrum_ingot"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_electrum_ingot"
+    ]
+  ]
+}

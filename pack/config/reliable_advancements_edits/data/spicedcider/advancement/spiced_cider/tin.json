@@ -1,0 +1,32 @@
+{
+  "parent": "spicedcider:spiced_cider/copper_pickaxe",
+  "display": {
+    "icon": {
+      "id": "caverns_and_chasms:tin_ingot"
+    },
+    "title": {
+      "text": "Tin Foil Hat"
+    },
+    "description": {
+      "text": "Smelt a Tin Ingot for Bronze, not for blocking mind rays"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "has_tin_ingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "caverns_and_chasms:tin_ingot"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_tin_ingot"
+    ]
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "parent": "spicedcider:industry/tune_note_block",
+  "display": {
+    "icon": {
+      "id": "minecraft:cod"
+    },
+    "title": {
+      "text": "...But You Can't Tuna Fish!"
+    },
+    "description": {
+      "text": "Smack a fish with a Tuning Fork"
+    },
+    "frame": "task",
+    "hidden": true
+  },
+  "criteria": {
+    "attack_fish": {
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "#c:fishes"
+            }
+          }
+        ],
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "equipment": {
+                "mainhand": {
+                  "items": "spelunkery:tuning_fork"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:player_hurt_entity"
+    }
+  },
+  "requirements": [
+    [
+      "attack_fish"
+    ]
+  ]
+}

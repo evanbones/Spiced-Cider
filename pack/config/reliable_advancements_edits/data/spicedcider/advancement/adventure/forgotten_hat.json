@@ -1,0 +1,37 @@
+{
+  "parent": "spicedcider:adventure/kill_deeper",
+  "display": {
+    "icon": {
+      "id": "quark:forgotten_hat"
+    },
+    "title": {
+      "text": "This Belongs in a Museum"
+    },
+    "description": {
+      "text": "Take the hat off a Forgotten deep underground"
+    },
+    "frame": "goal"
+  },
+  "criteria": {
+    "has_forgotten_hat": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "quark:forgotten_hat"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_forgotten_hat"
+    ]
+  ],
+  "rewards": {
+    "loot": [
+      "spicedcider:advancement/adventure_forgotten_hat"
+    ]
+  }
+}

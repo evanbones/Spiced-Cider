@@ -1,0 +1,32 @@
+{
+  "parent": "spicedcider:husbandry/first_meal",
+  "display": {
+    "icon": {
+      "id": "modest_meals:pizza"
+    },
+    "title": {
+      "text": "Pizza Time"
+    },
+    "description": {
+      "text": "Make a Pizza with whatever toppings you believe in"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "has_pizza": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "modest_meals:pizza"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_pizza"
+    ]
+  ]
+}

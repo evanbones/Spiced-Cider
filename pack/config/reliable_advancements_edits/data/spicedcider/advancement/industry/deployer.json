@@ -1,0 +1,25 @@
+{
+  "parent": "spicedcider:industry/steel_casing",
+  "display": {
+    "icon": {
+      "id": "create:deployer"
+    },
+    "title": {
+      "text": "Artificial Intelligence"
+    },
+    "description": {
+      "text": "Place and power a Deployer, the perfect reflection of yourself"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "0": {
+      "trigger": "create:deployer_builtin"
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ]
+  ]
+}

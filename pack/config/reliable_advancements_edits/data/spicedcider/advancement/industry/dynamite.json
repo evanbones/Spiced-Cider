@@ -1,0 +1,32 @@
+{
+  "parent": "spicedcider:industry/niter",
+  "display": {
+    "icon": {
+      "id": "minecraft:tnt"
+    },
+    "title": {
+      "text": "Dynamite!"
+    },
+    "description": {
+      "text": "Pack Gunpowder and Sand into a stick of Dynamite"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "has_tnt": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:tnt"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_tnt"
+    ]
+  ]
+}

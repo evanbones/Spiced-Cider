@@ -1,0 +1,26 @@
+{
+  "parent": "spicedcider:husbandry/tame",
+  "display": {
+    "icon": {
+      "id": "snowyspirit:gingerbread_cookie"
+    },
+    "title": {
+      "text": "You're a Monster!"
+    },
+    "description": {
+      "text": "Take a bite out of a Gingerbread Golem"
+    },
+    "frame": "task",
+    "hidden": true
+  },
+  "criteria": {
+    "unlock": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "unlock"
+    ]
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "parent": "spicedcider:adventure/chalk",
+  "display": {
+    "icon": {
+      "id": "minecraft:green_dye"
+    },
+    "title": {
+      "text": "Paint the Grass"
+    },
+    "description": {
+      "text": "Draw with green Chalk on grass or dirt"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "draw_green": {
+      "conditions": {
+        "mark": {
+          "color": {
+            "brightness": {
+              "min": 0.4
+            },
+            "hue": {
+              "max": 0.35,
+              "min": 0.2
+            },
+            "saturation": {
+              "min": 0.4
+            }
+          }
+        },
+        "surface": {
+          "blocks": "#minecraft:dirt"
+        }
+      },
+      "trigger": "chalk:mark_drawn"
+    }
+  },
+  "requirements": [
+    [
+      "draw_green"
+    ]
+  ]
+}

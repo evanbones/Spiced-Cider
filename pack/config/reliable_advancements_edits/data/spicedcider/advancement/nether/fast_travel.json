@@ -1,0 +1,37 @@
+{
+  "parent": "spicedcider:nether/enter_nether",
+  "display": {
+    "icon": {
+      "id": "minecraft:map"
+    },
+    "title": {
+      "text": "Subspace Bubble"
+    },
+    "description": {
+      "text": "Use the Nether to travel 7 km in the Overworld"
+    },
+    "frame": "challenge"
+  },
+  "criteria": {
+    "travelled": {
+      "conditions": {
+        "distance": {
+          "horizontal": {
+            "min": 7000.0
+          }
+        }
+      },
+      "trigger": "minecraft:nether_travel"
+    }
+  },
+  "requirements": [
+    [
+      "travelled"
+    ]
+  ],
+  "rewards": {
+    "loot": [
+      "spicedcider:advancement/nether_fast_travel"
+    ]
+  }
+}

@@ -1,0 +1,299 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:spyglass"
+    },
+    "title": {
+      "text": "Adventure"
+    },
+    "description": {
+      "text": "Exploration, combat and everything that wants to bite you"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png"
+  },
+  "criteria": {
+    "killed_anything": {
+      "trigger": "minecraft:player_killed_entity"
+    },
+    "explorer_tools": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:spyglass",
+              "minecraft:compass",
+              "minecraft:map",
+              "chalk:chalk"
+            ]
+          }
+        ]
+      }
+    },
+    "mineshaft": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structures": "minecraft:mineshaft"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "mineshaft_2": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structures": "minecraft:mineshaft_mesa"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "mineshaft_3": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structures": "bettermineshafts:mineshaft_acacia"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "mineshaft_4": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structures": "bettermineshafts:mineshaft_desert"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "mineshaft_5": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structures": "bettermineshafts:mineshaft_dripstone"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "mineshaft_6": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structures": "bettermineshafts:mineshaft_ice"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "mineshaft_7": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structures": "bettermineshafts:mineshaft_jungle"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "mineshaft_8": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structures": "bettermineshafts:mineshaft_lush"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "mineshaft_9": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structures": "bettermineshafts:mineshaft_mesa"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "mineshaft_10": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structures": "bettermineshafts:mineshaft_mushroom"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "mineshaft_11": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structures": "bettermineshafts:mineshaft_oak"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "mineshaft_12": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structures": "bettermineshafts:mineshaft_overgrown"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "mineshaft_13": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structures": "bettermineshafts:mineshaft_red_desert"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "mineshaft_14": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structures": "bettermineshafts:mineshaft_spruce"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "mineshaft_15": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structures": "bettermineshafts:mineshaft_spruce_snowy"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "killed_anything",
+      "explorer_tools",
+      "mineshaft",
+      "mineshaft_2",
+      "mineshaft_3",
+      "mineshaft_4",
+      "mineshaft_5",
+      "mineshaft_6",
+      "mineshaft_7",
+      "mineshaft_8",
+      "mineshaft_9",
+      "mineshaft_10",
+      "mineshaft_11",
+      "mineshaft_12",
+      "mineshaft_13",
+      "mineshaft_14",
+      "mineshaft_15"
+    ]
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "spicedcider:nether/ruined_portal",
+  "display": {
+    "icon": {
+      "id": "dimensional_tears:dimensional_tears_bottle"
+    },
+    "title": {
+      "text": "Tears of the Kingdom"
+    },
+    "description": {
+      "text": "Loot a bottle of Dimensional Tears from a Ruined Portal's chest"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "has_dimensional_tears_bottle": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "dimensional_tears:dimensional_tears_bottle"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_dimensional_tears_bottle"
+    ]
+  ]
+}

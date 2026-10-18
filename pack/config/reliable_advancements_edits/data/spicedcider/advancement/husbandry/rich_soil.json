@@ -1,0 +1,32 @@
+{
+  "parent": "spicedcider:husbandry/organic_compost",
+  "display": {
+    "icon": {
+      "id": "farmersdelight:rich_soil"
+    },
+    "title": {
+      "text": "Plant Food"
+    },
+    "description": {
+      "text": "Wait for Organic Compost to decay into Rich Soil"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "has_rich_soil": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "farmersdelight:rich_soil"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_rich_soil"
+    ]
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "parent": "spicedcider:nether/wither_skull",
+  "display": {
+    "icon": {
+      "id": "minecraft:soul_sand"
+    },
+    "title": {
+      "text": "Withering Heights"
+    },
+    "description": {
+      "text": "Summon the Wither with Soul Sand and three skulls, or at an Altar"
+    },
+    "frame": "goal"
+  },
+  "criteria": {
+    "summoned_wither": {
+      "trigger": "minecraft:summoned_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:wither"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "summoned_wither"
+    ]
+  ]
+}

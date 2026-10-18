@@ -1,0 +1,32 @@
+{
+  "parent": "spicedcider:adventure/temple",
+  "display": {
+    "icon": {
+      "id": "minecraft:brush"
+    },
+    "title": {
+      "text": "Sherd Nerd"
+    },
+    "description": {
+      "text": "Brush Suspicious Sand or Gravel to find a Pottery Sherd"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "has_decorated_pot_sherds": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "#minecraft:decorated_pot_sherds"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_decorated_pot_sherds"
+    ]
+  ]
+}

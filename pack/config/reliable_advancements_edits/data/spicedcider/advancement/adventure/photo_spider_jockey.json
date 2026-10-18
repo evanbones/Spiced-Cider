@@ -1,0 +1,40 @@
+{
+  "parent": "spicedcider:adventure/exposure",
+  "display": {
+    "icon": {
+      "id": "minecraft:spider_eye"
+    },
+    "title": {
+      "text": "I Need Photos of Spider... Man?"
+    },
+    "description": {
+      "text": "Photograph a Spider Jockey"
+    },
+    "frame": "goal"
+  },
+  "criteria": {
+    "photograph_spider_man": {
+      "conditions": {
+        "entities_in_frame": [
+          {
+            "type": "minecraft:skeleton",
+            "vehicle": {
+              "type": "minecraft:spider"
+            }
+          }
+        ]
+      },
+      "trigger": "exposure:frame_exposed"
+    }
+  },
+  "requirements": [
+    [
+      "photograph_spider_man"
+    ]
+  ],
+  "rewards": {
+    "loot": [
+      "spicedcider:advancement/adventure_photo_spider_jockey"
+    ]
+  }
+}

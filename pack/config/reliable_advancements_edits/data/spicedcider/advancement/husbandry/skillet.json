@@ -1,0 +1,32 @@
+{
+  "parent": "spicedcider:husbandry/campfire",
+  "display": {
+    "icon": {
+      "id": "farmersdelight:skillet"
+    },
+    "title": {
+      "text": "Sizzling Hot!"
+    },
+    "description": {
+      "text": "Cook in a Skillet with food in your other hand, near some heat"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "has_skillet": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "farmersdelight:skillet"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_skillet"
+    ]
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "parent": "spicedcider:adventure/kill_a_monster",
+  "display": {
+    "icon": {
+      "id": "minecraft:shield"
+    },
+    "title": {
+      "text": "En Garde!"
+    },
+    "description": {
+      "text": "Craft a Shield and stand your ground"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "shield": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:shield",
+              "shieldexp:wooden_shield",
+              "shieldexp:golden_shield",
+              "shieldexp:iron_shield",
+              "shieldexp:diamond_shield",
+              "shieldexp:netherite_shield"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "shield"
+    ]
+  ]
+}

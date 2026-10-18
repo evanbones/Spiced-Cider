@@ -1,0 +1,41 @@
+{
+  "parent": "spicedcider:spiced_cider/forge",
+  "parents": [
+    "spicedcider:spiced_cider/forge",
+    "spicedcider:spiced_cider/tin"
+  ],
+  "display": {
+    "icon": {
+      "id": "alloyed:bronze_ingot"
+    },
+    "title": {
+      "text": "Third Place"
+    },
+    "description": {
+      "text": "Forge Copper and Tin into Bronze, the next best thing to gold"
+    },
+    "frame": "goal"
+  },
+  "criteria": {
+    "has_bronze_ingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "alloyed:bronze_ingot"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_bronze_ingot"
+    ]
+  ],
+  "rewards": {
+    "loot": [
+      "spicedcider:advancement/spiced_cider_bronze"
+    ]
+  }
+}

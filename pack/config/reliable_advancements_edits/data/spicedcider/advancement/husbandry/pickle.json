@@ -1,0 +1,34 @@
+{
+  "parent": "spicedcider:husbandry/vat",
+  "display": {
+    "icon": {
+      "id": "culturaldelights:pickle"
+    },
+    "title": {
+      "text": "The Funniest Thing"
+    },
+    "description": {
+      "text": "Pickle a Cucumber in the Vat"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "pickle": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "culturaldelights:pickle"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "pickle"
+    ]
+  ]
+}

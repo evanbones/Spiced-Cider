@@ -1,0 +1,25 @@
+{
+  "parent": "spicedcider:industry/steel_casing",
+  "display": {
+    "icon": {
+      "id": "create:packager"
+    },
+    "title": {
+      "text": "Post Production"
+    },
+    "description": {
+      "text": "Package up items from an inventory with a Packager"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "0": {
+      "trigger": "create:packager_builtin"
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ]
+  ]
+}

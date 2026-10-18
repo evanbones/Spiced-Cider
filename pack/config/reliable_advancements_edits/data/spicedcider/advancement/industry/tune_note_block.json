@@ -1,0 +1,25 @@
+{
+  "parent": "spicedcider:industry/root",
+  "display": {
+    "icon": {
+      "id": "spelunkery:tuning_fork"
+    },
+    "title": {
+      "text": "You Can Tune a Piano..."
+    },
+    "description": {
+      "text": "Sneak-tap a Note Block with a Tuning Fork, then tap another to copy it"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "use_tuning_fork": {
+      "trigger": "caverns_and_chasms:use_tuning_fork"
+    }
+  },
+  "requirements": [
+    [
+      "use_tuning_fork"
+    ]
+  ]
+}

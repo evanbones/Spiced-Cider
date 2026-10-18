@@ -1,0 +1,32 @@
+{
+  "parent": "spicedcider:spiced_cider/crafting_table",
+  "display": {
+    "icon": {
+      "id": "modestmining:flint_mattock"
+    },
+    "title": {
+      "text": "Stone Age, Minus the Stone"
+    },
+    "description": {
+      "text": "Make a Flint Mattock, the Pickaxe's older cousin"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "has_flint_mattock": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "modestmining:flint_mattock"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_flint_mattock"
+    ]
+  ]
+}

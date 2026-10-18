@@ -1,0 +1,25 @@
+{
+  "parent": "spicedcider:industry/bronze_casing",
+  "display": {
+    "icon": {
+      "id": "create:mechanical_pump"
+    },
+    "title": {
+      "text": "Under Pressure"
+    },
+    "description": {
+      "text": "Place and power a Mechanical Pump"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "0": {
+      "trigger": "create:mechanical_pump_0_builtin"
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ]
+  ]
+}

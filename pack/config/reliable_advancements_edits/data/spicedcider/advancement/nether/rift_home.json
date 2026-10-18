@@ -1,0 +1,30 @@
+{
+  "parent": "spicedcider:nether/dimensional_tears",
+  "display": {
+    "icon": {
+      "id": "dimensional_tears:dimensional_tears_bottle"
+    },
+    "title": {
+      "text": "No Place Like Home"
+    },
+    "description": {
+      "text": "Drink Dimensional Tears to rift back to your spawn point"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "effect_rifting": {
+      "trigger": "minecraft:effects_changed",
+      "conditions": {
+        "effects": {
+          "dimensional_tears:rifting": {}
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "effect_rifting"
+    ]
+  ]
+}

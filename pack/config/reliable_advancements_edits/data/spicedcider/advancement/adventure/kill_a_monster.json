@@ -1,0 +1,246 @@
+{
+  "parent": "spicedcider:adventure/root",
+  "display": {
+    "icon": {
+      "id": "modestmining:bronze_sword"
+    },
+    "title": {
+      "text": "Monster Hunter"
+    },
+    "description": {
+      "text": "Kill any hostile monster"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "killed_zombie": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:zombie"
+            }
+          }
+        ]
+      }
+    },
+    "killed_husk": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:husk"
+            }
+          }
+        ]
+      }
+    },
+    "killed_drowned": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:drowned"
+            }
+          }
+        ]
+      }
+    },
+    "killed_skeleton": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:skeleton"
+            }
+          }
+        ]
+      }
+    },
+    "killed_stray": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:stray"
+            }
+          }
+        ]
+      }
+    },
+    "killed_spider": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:spider"
+            }
+          }
+        ]
+      }
+    },
+    "killed_cave_spider": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:cave_spider"
+            }
+          }
+        ]
+      }
+    },
+    "killed_creeper": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:creeper"
+            }
+          }
+        ]
+      }
+    },
+    "killed_witch": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:witch"
+            }
+          }
+        ]
+      }
+    },
+    "killed_slime": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:slime"
+            }
+          }
+        ]
+      }
+    },
+    "killed_enderman": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:enderman"
+            }
+          }
+        ]
+      }
+    },
+    "killed_silverfish": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:silverfish"
+            }
+          }
+        ]
+      }
+    },
+    "killed_bogged": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:bogged"
+            }
+          }
+        ]
+      }
+    },
+    "killed_forgotten": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "quark:forgotten"
+            }
+          }
+        ]
+      }
+    },
+    "killed_deeper": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "caverns_and_chasms:deeper"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "killed_zombie",
+      "killed_husk",
+      "killed_drowned",
+      "killed_skeleton",
+      "killed_stray",
+      "killed_spider",
+      "killed_cave_spider",
+      "killed_creeper",
+      "killed_witch",
+      "killed_slime",
+      "killed_enderman",
+      "killed_silverfish",
+      "killed_bogged",
+      "killed_forgotten",
+      "killed_deeper"
+    ]
+  ]
+}

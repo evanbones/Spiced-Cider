@@ -1,0 +1,38 @@
+{
+  "parent": "spicedcider:nether/crimson_forest",
+  "display": {
+    "icon": {
+      "id": "minecraft:warped_nylium"
+    },
+    "title": {
+      "text": "Warped Perspective"
+    },
+    "description": {
+      "text": "Find a Warped Forest, strangely calm for the Nether"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "visited_warped_forest": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "biomes": "minecraft:warped_forest"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "visited_warped_forest"
+    ]
+  ]
+}

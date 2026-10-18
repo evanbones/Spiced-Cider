@@ -1,0 +1,25 @@
+{
+  "parent": "spicedcider:industry/precision_mechanism",
+  "display": {
+    "icon": {
+      "id": "create:clockwork_bearing"
+    },
+    "title": {
+      "text": "Contraption o'Clock"
+    },
+    "description": {
+      "text": "Assemble a structure on a Clockwork Bearing"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "0": {
+      "trigger": "create:clockwork_bearing_builtin"
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ]
+  ]
+}

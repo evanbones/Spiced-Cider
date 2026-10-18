@@ -99,5 +99,46 @@
     "items": [
       "modestmining:silver_dust"
     ]
+  },
+  {
+    "action": "remove",
+    "items": [
+      "modestmining:compact_amethyst_block"
+    ]
+  },
+  {
+    "action": "remove",
+    "items": [
+      "modestmining:copper_dust"
+    ],
+    "replace_with": "create:crushed_raw_copper"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "modestmining:iron_dust"
+    ],
+    "replace_with": "create:crushed_raw_iron"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "modestmining:gold_dust"
+    ],
+    "replace_with": "create:crushed_raw_gold"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "modestmining:lead_dust"
+    ],
+    "replace_with": "create:crushed_raw_lead"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "modestmining:debris_dust",
+      "modestmining:meteoric_dust"
+    ]
   }
 ]

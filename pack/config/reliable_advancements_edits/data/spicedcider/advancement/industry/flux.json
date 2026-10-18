@@ -1,0 +1,32 @@
+{
+  "parent": "spicedcider:industry/root",
+  "display": {
+    "icon": {
+      "id": "minecraft:redstone"
+    },
+    "title": {
+      "text": "Flux Capacitor"
+    },
+    "description": {
+      "text": "Mine Flux Ore with a Steel Pickaxe"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "has_redstone": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:redstone"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_redstone"
+    ]
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "parent": "snowyspirit:adventure/ride_sled_fast",
+  "display": {
+    "icon": {
+      "id": "minecraft:chest"
+    },
+    "title": {
+      "text": "The Wolf of Haul Street"
+    },
+    "description": {
+      "text": "Have a Wolf pull your Sled with a Chest on board"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "unlock": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "unlock"
+    ]
+  ]
+}

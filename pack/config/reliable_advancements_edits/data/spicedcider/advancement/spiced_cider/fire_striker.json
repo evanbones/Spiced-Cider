@@ -1,0 +1,32 @@
+{
+  "parent": "spicedcider:spiced_cider/flint",
+  "display": {
+    "icon": {
+      "id": "spicedcider:fire_striker"
+    },
+    "title": {
+      "text": "Spark Joy"
+    },
+    "description": {
+      "text": "Knock two Flint together into a Fire Striker"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "has_fire_striker": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "spicedcider:fire_striker"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_fire_striker"
+    ]
+  ]
+}

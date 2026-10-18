@@ -3,7 +3,6 @@ package com.evandev.spicedcider.compat.coldsweat;
 import com.evandev.spicedcider.mixin.leaks.ColdSweatAnimationManagerAccessor;
 import com.evandev.spicedcider.mixin.leaks.ColdSweatEntityHelperAccessor;
 import com.evandev.spicedcider.mixin.leaks.ColdSweatWorldHelperAccessor;
-import com.momosoftworks.coldsweat.client.event.HandleSoulLampAnim;
 import com.momosoftworks.coldsweat.client.renderer.animation.AnimationManager;
 import com.momosoftworks.coldsweat.common.capability.handler.EntityTempManager;
 import com.momosoftworks.coldsweat.common.capability.handler.ShearableFurManager;
@@ -29,7 +28,5 @@ public final class ColdSweatLeaks {
         ShearableFurManager.CAP_CACHE.clearClient();
         AnimationManager.ANIMATION_TIMERS.clear();
         ColdSweatAnimationManagerAccessor.spicedcider$animationStates().clear();
-        HandleSoulLampAnim.RIGHT_ARM_ROTATIONS.clear();
-        HandleSoulLampAnim.LEFT_ARM_ROTATIONS.clear();
     }
 }

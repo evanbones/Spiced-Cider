@@ -1,0 +1,25 @@
+{
+  "parent": "spicedcider:industry/shifting_gears",
+  "display": {
+    "icon": {
+      "id": "create:stressometer"
+    },
+    "title": {
+      "text": "Stress for Nerds"
+    },
+    "description": {
+      "text": "Get an exact readout from a Stressometer while wearing Goggles"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "0": {
+      "trigger": "create:stressometer_builtin"
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ]
+  ]
+}

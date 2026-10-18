@@ -1,0 +1,50 @@
+{
+  "parent": "spicedcider:nether/necromium",
+  "parents": [
+    "spicedcider:nether/necromium",
+    "spicedcider:nether/infernite_hoe"
+  ],
+  "display": {
+    "icon": {
+      "id": "caverns_and_chasms:necromium_hoe"
+    },
+    "title": {
+      "text": "Dangerous Determination"
+    },
+    "description": {
+      "text": "Upgrade one Hoe with Infernite and another with Necromium. Why?"
+    },
+    "frame": "task",
+    "hidden": true
+  },
+  "criteria": {
+    "has_netherite_hoe": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:netherite_hoe"
+          }
+        ]
+      }
+    },
+    "has_necromium_hoe": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "caverns_and_chasms:necromium_hoe"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_netherite_hoe"
+    ],
+    [
+      "has_necromium_hoe"
+    ]
+  ]
+}

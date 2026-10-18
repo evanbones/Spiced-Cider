@@ -1,0 +1,41 @@
+{
+  "parent": "spicedcider:spiced_cider/diamond",
+  "parents": [
+    "spicedcider:spiced_cider/diamond",
+    "spicedcider:spiced_cider/coke"
+  ],
+  "display": {
+    "icon": {
+      "id": "minecraft:diamond_pickaxe"
+    },
+    "title": {
+      "text": "Forged in Fire"
+    },
+    "description": {
+      "text": "Forge a Diamond Pickaxe over Coke or Blaze Powder"
+    },
+    "frame": "goal"
+  },
+  "criteria": {
+    "has_diamond_pickaxe": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:diamond_pickaxe"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_diamond_pickaxe"
+    ]
+  ],
+  "rewards": {
+    "loot": [
+      "spicedcider:advancement/spiced_cider_diamond_pickaxe"
+    ]
+  }
+}

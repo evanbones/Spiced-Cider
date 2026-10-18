@@ -1,0 +1,25 @@
+{
+  "parent": "nomansland:main/find_alchemist_ruins",
+  "display": {
+    "icon": {
+      "id": "minecraft:white_bed"
+    },
+    "title": {
+      "text": "First Contact"
+    },
+    "description": {
+      "text": "Dream of a cosmic presence"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "dream_friend_moon_trigger": {
+      "trigger": "nomansland:dream_friend_moon_trigger"
+    }
+  },
+  "requirements": [
+    [
+      "dream_friend_moon_trigger"
+    ]
+  ]
+}

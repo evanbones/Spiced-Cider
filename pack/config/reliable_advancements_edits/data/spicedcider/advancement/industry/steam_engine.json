@@ -1,0 +1,30 @@
+{
+  "parent": "spicedcider:industry/blaze_burner",
+  "display": {
+    "icon": {
+      "id": "create:steam_engine"
+    },
+    "title": {
+      "text": "The Powerhouse"
+    },
+    "description": {
+      "text": "Use a Steam Engine to generate torque"
+    },
+    "frame": "goal"
+  },
+  "criteria": {
+    "0": {
+      "trigger": "create:steam_engine_builtin"
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ]
+  ],
+  "rewards": {
+    "loot": [
+      "spicedcider:advancement/industry_steam_engine"
+    ]
+  }
+}

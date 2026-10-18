@@ -1,0 +1,30 @@
+{
+  "parent": "spicedcider:nether/ride_strider",
+  "display": {
+    "icon": {
+      "id": "tide:netherite_fishing_rod"
+    },
+    "title": {
+      "text": "Hot Rod"
+    },
+    "description": {
+      "text": "Fish in lava with an Infernite Fishing Rod"
+    },
+    "frame": "goal"
+  },
+  "criteria": {
+    "fish_in_lava": {
+      "trigger": "tide:fish_in_lava"
+    }
+  },
+  "requirements": [
+    [
+      "fish_in_lava"
+    ]
+  ],
+  "rewards": {
+    "loot": [
+      "spicedcider:advancement/nether_fish_in_lava"
+    ]
+  }
+}

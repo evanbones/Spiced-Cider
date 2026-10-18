@@ -1,0 +1,33 @@
+{
+  "parent": "spicedcider:adventure/first_discovery",
+  "display": {
+    "icon": {
+      "id": "minecraft:zombie_head"
+    },
+    "title": {
+      "text": "The Witcher"
+    },
+    "description": {
+      "text": "Complete the Monsters category of your Field Guide"
+    },
+    "frame": "challenge"
+  },
+  "criteria": {
+    "complete": {
+      "trigger": "fieldguide:category_completed",
+      "conditions": {
+        "category": "fieldguide:monsters"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "complete"
+    ]
+  ],
+  "rewards": {
+    "loot": [
+      "spicedcider:advancement/adventure_monster_expert"
+    ]
+  }
+}

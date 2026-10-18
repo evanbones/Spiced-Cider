@@ -1,0 +1,35 @@
+{
+  "parent": "spicedcider:spiced_cider/diamond_pickaxe",
+  "display": {
+    "icon": {
+      "id": "modestmining:meteorite"
+    },
+    "title": {
+      "text": "Shooting Star"
+    },
+    "description": {
+      "text": "Mine a Meteorite in open, rocky places with a diamond-tier Pickaxe"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "meteor": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "modestmining:meteorite",
+              "modestmining:meteoric_scrap"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "meteor"
+    ]
+  ]
+}

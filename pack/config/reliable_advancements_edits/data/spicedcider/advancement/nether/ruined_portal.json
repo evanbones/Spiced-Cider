@@ -1,0 +1,38 @@
+{
+  "parent": "spicedcider:nether/root",
+  "display": {
+    "icon": {
+      "id": "minecraft:crying_obsidian"
+    },
+    "title": {
+      "text": "Fixer Upper"
+    },
+    "description": {
+      "text": "Find a Ruined Portal that fire won't light"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "ruined_portal": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structures": "#minecraft:ruined_portal"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "ruined_portal"
+    ]
+  ]
+}

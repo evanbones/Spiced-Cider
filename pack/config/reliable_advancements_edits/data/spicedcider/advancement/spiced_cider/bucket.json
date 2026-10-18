@@ -1,0 +1,32 @@
+{
+  "parent": "spicedcider:spiced_cider/iron",
+  "display": {
+    "icon": {
+      "id": "minecraft:bucket"
+    },
+    "title": {
+      "text": "Bucket List"
+    },
+    "description": {
+      "text": "Bend Iron into a Bucket for water, lava, fish and milk"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "has_bucket": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:bucket"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_bucket"
+    ]
+  ]
+}

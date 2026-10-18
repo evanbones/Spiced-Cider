@@ -1,0 +1,32 @@
+{
+  "parent": "spicedcider:adventure/depth_gauge",
+  "display": {
+    "icon": {
+      "id": "spelunkery:glowstick"
+    },
+    "title": {
+      "text": "Everywhere You Glow"
+    },
+    "description": {
+      "text": "Craft a Glowstick to throw, drop or wave at a rave"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "glowstick": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "#spelunkery:glowsticks"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "glowstick"
+    ]
+  ]
+}

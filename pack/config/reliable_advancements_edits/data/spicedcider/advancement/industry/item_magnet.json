@@ -1,0 +1,32 @@
+{
+  "parent": "spicedcider:industry/sluice",
+  "display": {
+    "icon": {
+      "id": "spelunkery:item_magnet"
+    },
+    "title": {
+      "text": "Strange Attractor"
+    },
+    "description": {
+      "text": "Craft an Item Magnet"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "has_item_magnet": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "spelunkery:item_magnet"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_item_magnet"
+    ]
+  ]
+}

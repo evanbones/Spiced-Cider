@@ -1,0 +1,25 @@
+{
+  "parent": "spicedcider:industry/hand_crank",
+  "display": {
+    "icon": {
+      "id": "create:water_wheel"
+    },
+    "title": {
+      "text": "Harnessed Hydraulics"
+    },
+    "description": {
+      "text": "Place a Water Wheel and use it to generate torque"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "0": {
+      "trigger": "create:water_wheel_builtin"
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ]
+  ]
+}

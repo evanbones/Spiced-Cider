@@ -86,6 +86,26 @@
       {
         "name": "music/game/creative/moog_city",
         "stream": true
+      },
+      {
+        "name": "music/game/ebb",
+        "stream": true
+      },
+      {
+        "name": "music/game/home",
+        "stream": true
+      },
+      {
+        "name": "music/game/memories",
+        "stream": true
+      },
+      {
+        "name": "music/game/nightly",
+        "stream": true
+      },
+      {
+        "name": "music/game/shores",
+        "stream": true
       }
     ]
   },
@@ -246,6 +266,26 @@
         "name": "music/game/creative/taswell",
         "stream": true,
         "weight": 2
+      },
+      {
+        "name": "music/game/ebb",
+        "stream": true
+      },
+      {
+        "name": "music/game/home",
+        "stream": true
+      },
+      {
+        "name": "music/game/memories",
+        "stream": true
+      },
+      {
+        "name": "music/game/nightly",
+        "stream": true
+      },
+      {
+        "name": "music/game/shores",
+        "stream": true
       }
     ]
   },
@@ -453,7 +493,7 @@
         "stream": true
       },
       {
-        "name": "music/game/key",
+        "name": "music/game/key_door",
         "stream": true
       },
       {
@@ -465,7 +505,7 @@
         "stream": true
       },
       {
-        "name": "music/game/oxygene",
+        "name": "music/game/oxygene_equinoxe",
         "stream": true
       },
       {
@@ -474,6 +514,10 @@
       },
       {
         "name": "music/game/wet_hands",
+        "stream": true
+      },
+      {
+        "name": "music/game/memories",
         "stream": true
       }
     ]
@@ -490,7 +534,7 @@
         "stream": true
       },
       {
-        "name": "music/game/key",
+        "name": "music/game/key_door",
         "stream": true
       },
       {
@@ -498,11 +542,19 @@
         "stream": true
       },
       {
-        "name": "music/game/oxygene",
+        "name": "music/game/oxygene_equinoxe",
         "stream": true
       },
       {
         "name": "music/game/subwoofer_lullaby",
+        "stream": true
+      },
+      {
+        "name": "music/game/memories",
+        "stream": true
+      },
+      {
+        "name": "music/game/shores",
         "stream": true
       }
     ]
@@ -511,7 +563,7 @@
     "replace": true,
     "sounds": [
       {
-        "name": "music/game/clark",
+        "name": "music/game/clark_chris",
         "stream": true
       },
       {
@@ -527,7 +579,7 @@
         "stream": true
       },
       {
-        "name": "music/game/key",
+        "name": "music/game/key_door",
         "stream": true
       },
       {
@@ -543,7 +595,7 @@
         "stream": true
       },
       {
-        "name": "music/game/oxygene",
+        "name": "music/game/oxygene_equinoxe",
         "stream": true
       },
       {
@@ -557,6 +609,14 @@
       {
         "name": "music/game/wet_hands",
         "stream": true
+      },
+      {
+        "name": "music/game/memories",
+        "stream": true
+      },
+      {
+        "name": "music/game/shores",
+        "stream": true
       }
     ]
   },
@@ -569,6 +629,10 @@
       },
       {
         "name": "music/game/caves/norway",
+        "stream": true
+      },
+      {
+        "name": "music/game/caves/trapdoor",
         "stream": true
       },
       {
@@ -638,6 +702,115 @@
         "name": "music/game/water/shuniji",
         "stream": true,
         "volume": 0.4
+      },
+      {
+        "name": "music/game/ebb",
+        "stream": true
+      },
+      {
+        "name": "music/game/nightly",
+        "stream": true
+      },
+      {
+        "name": "music/game/shores",
+        "stream": true
+      }
+    ]
+  },
+  "music.overworld.sulfur_caves": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "music/game/caves/dead_mice",
+        "stream": true
+      },
+      {
+        "name": "music/game/caves/norway",
+        "stream": true
+      },
+      {
+        "name": "music/game/caves/trapdoor",
+        "stream": true
+      },
+      {
+        "name": "music/game/clark_chris",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/sweden",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/subwoofer_lullaby",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/living_mice",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/haggstrom",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/danny",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/key_door",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/oxygene_equinoxe",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/dry_hands",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/wet_hands",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/mice_on_venus",
+        "stream": true,
+        "weight": 2
+      },
+      {
+        "name": "music/game/creative/aria_math",
+        "stream": true
+      },
+      {
+        "name": "music/game/creative/dreiton",
+        "stream": true
+      },
+      {
+        "name": "music/game/water/shuniji",
+        "stream": true,
+        "volume": 0.4
+      },
+      {
+        "name": "music/game/ebb",
+        "stream": true
+      },
+      {
+        "name": "music/game/nightly",
+        "stream": true
+      },
+      {
+        "name": "music/game/shores",
+        "stream": true
       }
     ]
   },
@@ -645,7 +818,7 @@
     "replace": true,
     "sounds": [
       {
-        "name": "music/game/clark",
+        "name": "music/game/clark_chris",
         "stream": true
       },
       {
@@ -654,6 +827,18 @@
       },
       {
         "name": "music/game/sweden",
+        "stream": true
+      },
+      {
+        "name": "music/game/home",
+        "stream": true
+      },
+      {
+        "name": "music/game/memories",
+        "stream": true
+      },
+      {
+        "name": "music/game/nightly",
         "stream": true
       }
     ]
@@ -674,7 +859,7 @@
         "stream": true
       },
       {
-        "name": "music/game/key",
+        "name": "music/game/key_door",
         "stream": true
       },
       {
@@ -686,7 +871,7 @@
         "stream": true
       },
       {
-        "name": "music/game/oxygene",
+        "name": "music/game/oxygene_equinoxe",
         "stream": true
       },
       {
@@ -695,6 +880,10 @@
       },
       {
         "name": "music/game/wet_hands",
+        "stream": true
+      },
+      {
+        "name": "music/game/home",
         "stream": true
       }
     ]
@@ -711,7 +900,7 @@
         "stream": true
       },
       {
-        "name": "music/game/key",
+        "name": "music/game/key_door",
         "stream": true
       },
       {
@@ -719,11 +908,15 @@
         "stream": true
       },
       {
-        "name": "music/game/oxygene",
+        "name": "music/game/oxygene_equinoxe",
         "stream": true
       },
       {
         "name": "music/game/subwoofer_lullaby",
+        "stream": true
+      },
+      {
+        "name": "music/game/memories",
         "stream": true
       }
     ]
@@ -811,6 +1004,18 @@
         "name": "music/game/dalarna",
         "stream": true,
         "weight": 2
+      },
+      {
+        "name": "music/game/ebb",
+        "stream": true
+      },
+      {
+        "name": "music/game/home",
+        "stream": true
+      },
+      {
+        "name": "music/game/nightly",
+        "stream": true
       }
     ]
   },
@@ -868,6 +1073,10 @@
       {
         "name": "music/game/creative/biome_fest",
         "stream": true
+      },
+      {
+        "name": "music/game/shores",
+        "stream": true
       }
     ]
   },
@@ -887,7 +1096,7 @@
         "stream": true
       },
       {
-        "name": "music/game/key",
+        "name": "music/game/key_door",
         "stream": true
       },
       {
@@ -899,7 +1108,7 @@
         "stream": true
       },
       {
-        "name": "music/game/oxygene",
+        "name": "music/game/oxygene_equinoxe",
         "stream": true
       },
       {
@@ -908,6 +1117,10 @@
       },
       {
         "name": "music/game/wet_hands",
+        "stream": true
+      },
+      {
+        "name": "music/game/home",
         "stream": true
       }
     ]
@@ -995,6 +1208,14 @@
         "name": "music/game/dalarna",
         "stream": true,
         "weight": 2
+      },
+      {
+        "name": "music/game/ebb",
+        "stream": true
+      },
+      {
+        "name": "music/game/nightly",
+        "stream": true
       }
     ]
   },
@@ -1141,6 +1362,10 @@
         "stream": true,
         "volume": 0.4,
         "weight": 2
+      },
+      {
+        "name": "music/game/shores",
+        "stream": true
       }
     ]
   },
@@ -1214,6 +1439,10 @@
         "name": "music/game/mice_on_venus",
         "stream": true,
         "weight": 2
+      },
+      {
+        "name": "music/game/home",
+        "stream": true
       }
     ]
   },
@@ -1293,18 +1522,18 @@
         "stream": true
       },
       {
-        "name": "music/game/oxygene_equinoxe",
-        "stream": true,
-        "weight": 2
-      },
-      {
         "name": "music/game/dalarna",
         "stream": true,
         "weight": 3
+      },
+      {
+        "name": "music/game/shores",
+        "stream": true
       }
     ]
   },
   "music.overworld.sparse_jungle": {
+    "replace": true,
     "sounds": [
       {
         "name": "music/game/danny",
@@ -1319,7 +1548,7 @@
         "stream": true
       },
       {
-        "name": "music/game/key",
+        "name": "music/game/key_door",
         "stream": true
       },
       {
@@ -1331,7 +1560,7 @@
         "stream": true
       },
       {
-        "name": "music/game/oxygene",
+        "name": "music/game/oxygene_equinoxe",
         "stream": true
       },
       {
@@ -1340,6 +1569,10 @@
       },
       {
         "name": "music/game/wet_hands",
+        "stream": true
+      },
+      {
+        "name": "music/game/home",
         "stream": true
       }
     ]
@@ -1381,6 +1614,10 @@
         "stream": true,
         "volume": 0.6,
         "weight": 3
+      },
+      {
+        "name": "music/game/nightly",
+        "stream": true
       }
     ]
   },
@@ -1435,6 +1672,10 @@
         "name": "music/game/key_door",
         "stream": true,
         "weight": 3
+      },
+      {
+        "name": "music/game/nightly",
+        "stream": true
       }
     ]
   },
@@ -1503,6 +1744,10 @@
       },
       {
         "name": "music/game/creative/dreiton",
+        "stream": true
+      },
+      {
+        "name": "music/game/ebb",
         "stream": true
       }
     ]

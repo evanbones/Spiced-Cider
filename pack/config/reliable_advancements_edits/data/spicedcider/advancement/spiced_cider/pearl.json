@@ -1,0 +1,32 @@
+{
+  "parent": "spicedcider:spiced_cider/diamond",
+  "display": {
+    "icon": {
+      "id": "modestmining:pearl"
+    },
+    "title": {
+      "text": "Pearl Jam"
+    },
+    "description": {
+      "text": "Break open a Clam from a cold ocean with a Chisel to find a Pearl"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "has_pearl": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "modestmining:pearl"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_pearl"
+    ]
+  ]
+}

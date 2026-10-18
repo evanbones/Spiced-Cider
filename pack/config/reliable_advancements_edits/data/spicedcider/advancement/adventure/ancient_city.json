@@ -1,0 +1,43 @@
+{
+  "parent": "spicedcider:adventure/deep_dark",
+  "display": {
+    "icon": {
+      "id": "minecraft:sculk_catalyst"
+    },
+    "title": {
+      "text": "Blue Hum"
+    },
+    "description": {
+      "text": "Find an Ancient City in the Deep Dark"
+    },
+    "frame": "goal"
+  },
+  "criteria": {
+    "found_ancient_city": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structures": "minecraft:ancient_city"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "found_ancient_city"
+    ]
+  ],
+  "rewards": {
+    "loot": [
+      "spicedcider:advancement/adventure_ancient_city"
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "parent": "spicedcider:industry/mechanical_press",
+  "display": {
+    "icon": {
+      "id": "create:basin"
+    },
+    "title": {
+      "text": "Compactification"
+    },
+    "description": {
+      "text": "Use a Mechanical Press and a Basin to squash many items into fewer"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "0": {
+      "trigger": "create:compacting_builtin"
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ]
+  ]
+}

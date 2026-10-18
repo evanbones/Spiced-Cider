@@ -1,0 +1,39 @@
+{
+  "parent": "spicedcider:industry/copper_golem",
+  "display": {
+    "icon": {
+      "id": "spelunkery:tuning_fork"
+    },
+    "title": {
+      "text": "Excellent Conductor"
+    },
+    "description": {
+      "text": "Tap a Copper Golem with a Tuning Fork to take control of it"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "fork_golem": {
+      "trigger": "minecraft:player_interacted_with_entity",
+      "conditions": {
+        "item": {
+          "items": "spelunkery:tuning_fork"
+        },
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:copper_golem"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "fork_golem"
+    ]
+  ]
+}

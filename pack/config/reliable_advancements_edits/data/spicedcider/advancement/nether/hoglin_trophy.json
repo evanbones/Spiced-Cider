@@ -1,0 +1,37 @@
+{
+  "parent": "spicedcider:nether/hoglin_armor",
+  "display": {
+    "icon": {
+      "id": "mynethersdelight:hoglin_trophy"
+    },
+    "title": {
+      "text": "Hoglin Season"
+    },
+    "description": {
+      "text": "Hang up a Hoglin Trophy somewhere tasteful"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "placed_hoglin_trophy": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": "mynethersdelight:hoglin_trophy"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "placed_hoglin_trophy"
+    ]
+  ]
+}

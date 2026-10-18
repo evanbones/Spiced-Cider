@@ -1,0 +1,19 @@
+﻿{
+    "type":  "create:milling",
+    "ingredients":  [
+                        {
+                            "item":  "minecraft:raw_copper"
+                        }
+                    ],
+    "processing_time":  200,
+    "results":  [
+                    {
+                        "id":  "create:crushed_raw_copper",
+                        "count":  1
+                    },
+                    {
+                        "id":  "create:crushed_raw_copper",
+                        "chance":  0.5
+                    }
+                ]
+}

@@ -1,0 +1,38 @@
+{
+  "parent": "spicedcider:nether/basalt_deltas",
+  "display": {
+    "icon": {
+      "id": "minecraft:glowstone"
+    },
+    "title": {
+      "text": "Shine On"
+    },
+    "description": {
+      "text": "Find a Glowstone Canyon and bring sunglasses"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "visited_glowstone_canyon": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "biomes": "infernalexp:glowstone_canyon"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "visited_glowstone_canyon"
+    ]
+  ]
+}

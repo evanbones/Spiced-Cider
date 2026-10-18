@@ -1,0 +1,37 @@
+{
+  "parent": "spicedcider:husbandry/catch_fish",
+  "display": {
+    "icon": {
+      "id": "tide:angling_table"
+    },
+    "title": {
+      "text": "Tackle Box"
+    },
+    "description": {
+      "text": "Build an Angling Table to fit your rod with bobbers, hooks and lines"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "placed_angling_table": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": "tide:angling_table"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "placed_angling_table"
+    ]
+  ]
+}

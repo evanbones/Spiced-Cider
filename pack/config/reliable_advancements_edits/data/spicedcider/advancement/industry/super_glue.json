@@ -1,0 +1,25 @@
+{
+  "parent": "spicedcider:industry/contraption_actors",
+  "display": {
+    "icon": {
+      "id": "create:super_glue"
+    },
+    "title": {
+      "text": "Area of Connect"
+    },
+    "description": {
+      "text": "Glue some blocks together with a Glue Brush"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "0": {
+      "trigger": "create:super_glue_builtin"
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ]
+  ]
+}

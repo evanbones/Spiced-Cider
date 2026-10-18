@@ -1,0 +1,42 @@
+{
+  "parent": "spicedcider:spiced_cider/smithing_table",
+  "display": {
+    "icon": {
+      "id": "modestmagic:altar"
+    },
+    "title": {
+      "text": "Where the Magic Happens"
+    },
+    "description": {
+      "text": "Build an Altar and surround it with Pedestals"
+    },
+    "frame": "goal"
+  },
+  "criteria": {
+    "placed_altar": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": "modestmagic:altar"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "placed_altar"
+    ]
+  ],
+  "rewards": {
+    "loot": [
+      "spicedcider:advancement/spiced_cider_altar"
+    ]
+  }
+}

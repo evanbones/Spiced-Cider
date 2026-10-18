@@ -1,0 +1,41 @@
+{
+  "parent": "spicedcider:spiced_cider/pearl",
+  "parents": [
+    "spicedcider:spiced_cider/pearl",
+    "spicedcider:spiced_cider/diamond_pickaxe"
+  ],
+  "display": {
+    "icon": {
+      "id": "modestmining:prismarite_ingot"
+    },
+    "title": {
+      "text": "Under the Sea"
+    },
+    "description": {
+      "text": "Forge Prismarite and upgrade Diamond gear with it"
+    },
+    "frame": "goal"
+  },
+  "criteria": {
+    "has_prismarite_ingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "modestmining:prismarite_ingot"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_prismarite_ingot"
+    ]
+  ],
+  "rewards": {
+    "loot": [
+      "spicedcider:advancement/spiced_cider_prismarite"
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "parent": "spicedcider:spiced_cider/furnace",
+  "parents": [
+    "spicedcider:spiced_cider/furnace",
+    "spicedcider:spiced_cider/flint_mattock"
+  ],
+  "display": {
+    "icon": {
+      "id": "minecraft:copper_ingot"
+    },
+    "title": {
+      "text": "Copper? I Hardly Know 'er!"
+    },
+    "description": {
+      "text": "Mine Copper Ore with your Flint Mattock and smelt a Copper Ingot"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "has_copper_ingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:copper_ingot"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_copper_ingot"
+    ]
+  ]
+}

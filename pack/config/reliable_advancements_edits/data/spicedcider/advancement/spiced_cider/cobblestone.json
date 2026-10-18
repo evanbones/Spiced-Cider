@@ -1,0 +1,35 @@
+{
+  "parent": "spicedcider:spiced_cider/flint_mattock",
+  "display": {
+    "icon": {
+      "id": "minecraft:cobblestone"
+    },
+    "title": {
+      "text": "Rock Bottom"
+    },
+    "description": {
+      "text": "Mine Cobblestone with your new Flint Mattock"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "cobble": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:cobblestone",
+              "minecraft:cobbled_deepslate"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "cobble"
+    ]
+  ]
+}

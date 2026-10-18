@@ -1,0 +1,32 @@
+{
+  "parent": "spicedcider:adventure/deepslate",
+  "display": {
+    "icon": {
+      "id": "spelunkery:depth_gauge"
+    },
+    "title": {
+      "text": "That's Deep, Bro"
+    },
+    "description": {
+      "text": "Craft a Depth Gauge to see just how lost you are"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "has_depth_gauge": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "spelunkery:depth_gauge"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_depth_gauge"
+    ]
+  ]
+}

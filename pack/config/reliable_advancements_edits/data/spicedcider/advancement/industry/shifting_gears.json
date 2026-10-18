@@ -1,0 +1,25 @@
+{
+  "parent": "spicedcider:industry/hand_crank",
+  "display": {
+    "icon": {
+      "id": "create:large_cogwheel"
+    },
+    "title": {
+      "text": "Shifting Gears"
+    },
+    "description": {
+      "text": "Connect a Large Cogwheel to a small one to change your machine's speed"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "0": {
+      "trigger": "create:shifting_gears_builtin"
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ]
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "spicedcider:husbandry/cooking_pot",
+  "display": {
+    "icon": {
+      "id": "spicedcider:tallow"
+    },
+    "title": {
+      "text": "Rendered Speechless"
+    },
+    "description": {
+      "text": "Render Pork or Beef into Tallow in a Cooking Pot"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "has_tallow": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "spicedcider:tallow"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_tallow"
+    ]
+  ]
+}

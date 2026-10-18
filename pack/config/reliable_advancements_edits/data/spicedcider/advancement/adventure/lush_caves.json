@@ -1,0 +1,38 @@
+{
+  "parent": "spicedcider:adventure/deepslate",
+  "display": {
+    "icon": {
+      "id": "minecraft:flowering_azalea"
+    },
+    "title": {
+      "text": "Buried Forest"
+    },
+    "description": {
+      "text": "Find a Lush Cave"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "visited_lush_caves": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "biomes": "minecraft:lush_caves"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "visited_lush_caves"
+    ]
+  ]
+}

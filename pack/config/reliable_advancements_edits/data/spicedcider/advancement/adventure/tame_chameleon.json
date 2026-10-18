@@ -1,0 +1,36 @@
+{
+  "parent": "spicedcider:adventure/thermometer",
+  "display": {
+    "icon": {
+      "id": "cold_sweat:chameleon_molt"
+    },
+    "title": {
+      "text": "The Great Leon"
+    },
+    "description": {
+      "text": "Tame a Chameleon, the explorer's favorite hat"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:thrown_item_picked_up_by_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "cold_sweat:chameleon"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "requirement"
+    ]
+  ]
+}

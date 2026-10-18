@@ -1,0 +1,32 @@
+{
+  "parent": "spicedcider:nether/enter_nether",
+  "display": {
+    "icon": {
+      "id": "create:cinder_flour"
+    },
+    "title": {
+      "text": "Dust to Dust"
+    },
+    "description": {
+      "text": "Crush Netherrack into Nether Dust for Nether Bricks"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "has_cinder_flour": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "create:cinder_flour"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_cinder_flour"
+    ]
+  ]
+}

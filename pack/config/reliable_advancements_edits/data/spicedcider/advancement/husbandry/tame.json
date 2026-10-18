@@ -1,0 +1,25 @@
+{
+  "parent": "spicedcider:husbandry/breed",
+  "display": {
+    "icon": {
+      "id": "minecraft:bone"
+    },
+    "title": {
+      "text": "Best Friends Forever"
+    },
+    "description": {
+      "text": "Tame an animal"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "tamed": {
+      "trigger": "minecraft:tame_animal"
+    }
+  },
+  "requirements": [
+    [
+      "tamed"
+    ]
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "parent": "spicedcider:nether/dimensional_tears",
+  "display": {
+    "icon": {
+      "id": "minecraft:obsidian"
+    },
+    "title": {
+      "text": "Light My Fire"
+    },
+    "description": {
+      "text": "Light a portal with Dimensional Tears, since fire won't do"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "tears_on_frame": {
+      "trigger": "minecraft:item_used_on_block",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": "#frame_changer:portal_frames"
+              }
+            }
+          },
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "items": "dimensional_tears:dimensional_tears_bottle"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "tears_on_frame"
+    ]
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "spicedcider:husbandry/vat",
+  "display": {
+    "icon": {
+      "id": "bountifulfares:fermentation_vessel"
+    },
+    "title": {
+      "text": "Fermentation Station"
+    },
+    "description": {
+      "text": "Craft a Fermentation Vessel and fill it with water and something to ferment"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "has_fermentation_vessel": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "bountifulfares:fermentation_vessel"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_fermentation_vessel"
+    ]
+  ]
+}

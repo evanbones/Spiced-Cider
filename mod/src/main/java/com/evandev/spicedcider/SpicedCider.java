@@ -10,6 +10,7 @@ import com.evandev.spicedcider.compat.tide.TideCompat;
 import com.evandev.spicedcider.compat.yacl.ConfigScreenLoader;
 import com.evandev.spicedcider.config.LogReconfiguration;
 import com.evandev.spicedcider.config.SpicedCiderConfig;
+import com.evandev.spicedcider.content.handler.SpawnControlEvents;
 import com.evandev.spicedcider.namingunconvention.RandomNameGenerator;
 import com.evandev.spicedcider.networking.ChunkOffsetsPayload;
 import com.evandev.spicedcider.networking.VoidTrailPayload;
@@ -84,6 +85,7 @@ public class SpicedCider {
         modEventBus.addListener(this::registerPayloads);
         modEventBus.addListener(SpicedCider::addSignBlocks);
         modEventBus.addListener(SpicedCider::commonSetup);
+        modEventBus.addListener(SpawnControlEvents::registerSpawnPlacements);
         NeoForge.EVENT_BUS.addListener(this::onTagsUpdated);
 
         if (SpicedCiderConfig.STARTUP.blockBoxWoodVariants.get()

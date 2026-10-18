@@ -1,0 +1,52 @@
+{
+  "parent": "spicedcider:husbandry/breed",
+  "display": {
+    "icon": {
+      "id": "environmental:yak_pants"
+    },
+    "title": {
+      "text": "Yakety Sax"
+    },
+    "description": {
+      "text": "Shear a Yak while wearing Yak Pants so it doesn't get mad"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "shear_yak_with_pants": {
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "environmental:yak"
+            }
+          }
+        ],
+        "item": {
+          "items": "#c:tools/shear"
+        },
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "equipment": {
+                "legs": {
+                  "items": "environmental:yak_pants"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:player_interacted_with_entity"
+    }
+  },
+  "requirements": [
+    [
+      "shear_yak_with_pants"
+    ]
+  ]
+}

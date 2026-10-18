@@ -1,0 +1,25 @@
+{
+  "parent": "spicedcider:industry/clockwork_bearing",
+  "display": {
+    "icon": {
+      "id": "create:cuckoo_clock"
+    },
+    "title": {
+      "text": "Is It Time?"
+    },
+    "description": {
+      "text": "Hear your Cuckoo Clock announce bedtime"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "0": {
+      "trigger": "create:cuckoo_clock_builtin"
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ]
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "spicedcider:adventure/grappling_hook",
+  "display": {
+    "icon": {
+      "id": "spicedcider:sticky_grappling_hook"
+    },
+    "title": {
+      "text": "With Great Power"
+    },
+    "description": {
+      "text": "Make your Grappling Hook sticky"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "has_sticky_grappling_hook": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "spicedcider:sticky_grappling_hook"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_sticky_grappling_hook"
+    ]
+  ]
+}

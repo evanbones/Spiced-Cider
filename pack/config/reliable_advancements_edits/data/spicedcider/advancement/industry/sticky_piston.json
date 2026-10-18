@@ -1,0 +1,32 @@
+{
+  "parent": "spicedcider:industry/piston",
+  "display": {
+    "icon": {
+      "id": "minecraft:sticky_piston"
+    },
+    "title": {
+      "text": "Stick Around"
+    },
+    "description": {
+      "text": "Glue some Honey onto a Piston to make it sticky"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "has_sticky_piston": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:sticky_piston"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_sticky_piston"
+    ]
+  ]
+}

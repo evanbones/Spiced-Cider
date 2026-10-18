@@ -1,0 +1,40 @@
+{
+  "parent": "spicedcider:industry/flux",
+  "display": {
+    "icon": {
+      "id": "caverns_and_chasms:tin_bulb"
+    },
+    "title": {
+      "text": "Tinkering Around"
+    },
+    "description": {
+      "text": "Build a Tin gadget, like a Tin Bulb, Winch or Roller Door"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "tin_gadget": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "caverns_and_chasms:tin_bulb",
+              "caverns_and_chasms:resistor",
+              "caverns_and_chasms:dimmer",
+              "caverns_and_chasms:winch",
+              "caverns_and_chasms:roller_door",
+              "caverns_and_chasms:scatterer",
+              "caverns_and_chasms:splurter"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "tin_gadget"
+    ]
+  ]
+}

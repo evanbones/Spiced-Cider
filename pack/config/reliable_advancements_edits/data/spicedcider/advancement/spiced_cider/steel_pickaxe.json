@@ -1,0 +1,32 @@
+{
+  "parent": "spicedcider:spiced_cider/steel",
+  "display": {
+    "icon": {
+      "id": "alloyed:steel_pickaxe"
+    },
+    "title": {
+      "text": "Steel Yourself"
+    },
+    "description": {
+      "text": "Forge a Steel Pickaxe to mine Diamonds, Gold and Flux"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "has_steel_pickaxe": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "alloyed:steel_pickaxe"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_steel_pickaxe"
+    ]
+  ]
+}

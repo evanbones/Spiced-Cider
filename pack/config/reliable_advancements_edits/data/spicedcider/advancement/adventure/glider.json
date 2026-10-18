@@ -1,0 +1,37 @@
+{
+  "parent": "spicedcider:adventure/backpack",
+  "display": {
+    "icon": {
+      "id": "reliable_gliders:glider"
+    },
+    "title": {
+      "text": "Free Bird"
+    },
+    "description": {
+      "text": "Craft a Glider and jump off something tall"
+    },
+    "frame": "goal"
+  },
+  "criteria": {
+    "has_glider": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "reliable_gliders:glider"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_glider"
+    ]
+  ],
+  "rewards": {
+    "loot": [
+      "spicedcider:advancement/adventure_glider"
+    ]
+  }
+}

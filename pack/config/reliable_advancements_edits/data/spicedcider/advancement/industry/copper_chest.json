@@ -1,0 +1,46 @@
+{
+  "parent": "spicedcider:industry/root",
+  "display": {
+    "icon": {
+      "id": "minecraft:copper_chest"
+    },
+    "title": {
+      "text": "Chest Day"
+    },
+    "description": {
+      "text": "Build a Copper Chest for your Copper Golems to sort"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "copper_chest": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": [
+                  "minecraft:copper_chest",
+                  "minecraft:exposed_copper_chest",
+                  "minecraft:weathered_copper_chest",
+                  "minecraft:oxidized_copper_chest",
+                  "minecraft:waxed_copper_chest",
+                  "minecraft:waxed_exposed_copper_chest",
+                  "minecraft:waxed_weathered_copper_chest",
+                  "minecraft:waxed_oxidized_copper_chest"
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "copper_chest"
+    ]
+  ]
+}

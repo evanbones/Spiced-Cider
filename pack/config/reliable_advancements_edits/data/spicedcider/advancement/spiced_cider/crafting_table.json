@@ -1,0 +1,36 @@
+{
+  "parent": "spicedcider:spiced_cider/log",
+  "parents": [
+    "spicedcider:spiced_cider/log",
+    "spicedcider:spiced_cider/flint_knife"
+  ],
+  "display": {
+    "icon": {
+      "id": "minecraft:crafting_table"
+    },
+    "title": {
+      "text": "Table Manners"
+    },
+    "description": {
+      "text": "Weave Straw into Canvas and stretch it over some Planks"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "has_crafting_table": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:crafting_table"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_crafting_table"
+    ]
+  ]
+}

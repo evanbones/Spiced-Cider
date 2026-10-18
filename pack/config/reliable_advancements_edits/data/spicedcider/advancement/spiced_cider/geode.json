@@ -1,0 +1,36 @@
+{
+  "parent": "spicedcider:spiced_cider/flint_hammer",
+  "display": {
+    "icon": {
+      "id": "spicedcider:geode"
+    },
+    "title": {
+      "text": "Crack Open a Cold One"
+    },
+    "description": {
+      "text": "Find a Geode and crack it open on a Workstone"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "geode": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "spicedcider:geode",
+              "spicedcider:deepslate_geode",
+              "spicedcider:blackstone_geode"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "geode"
+    ]
+  ]
+}

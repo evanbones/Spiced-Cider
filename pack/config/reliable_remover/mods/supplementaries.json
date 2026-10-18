@@ -98,5 +98,17 @@
       "supplementaries:altimeter"
     ],
     "replace_with": "spelunkery:depth_gauge"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "supplementaries:plunderer_spawn_egg"
+    ]
+  },
+  {
+    "action": "remove",
+    "items": [
+      "supplementaries:sconce_nether_brass"
+    ]
   }
 ]

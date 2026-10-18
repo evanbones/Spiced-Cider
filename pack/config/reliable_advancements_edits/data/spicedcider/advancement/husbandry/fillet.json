@@ -1,0 +1,32 @@
+{
+  "parent": "spicedcider:husbandry/catch_fish",
+  "display": {
+    "icon": {
+      "id": "tide:cooked_fish_slice"
+    },
+    "title": {
+      "text": "Fillet-O-Fish"
+    },
+    "description": {
+      "text": "Slice a fish on a Cutting Board and cook the Fillet"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "has_cooked_fish_slice": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "tide:cooked_fish_slice"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_cooked_fish_slice"
+    ]
+  ]
+}

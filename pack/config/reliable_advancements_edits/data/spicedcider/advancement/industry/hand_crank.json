@@ -1,0 +1,32 @@
+{
+  "parent": "spicedcider:industry/wrench_goggles",
+  "display": {
+    "icon": {
+      "id": "create:hand_crank"
+    },
+    "title": {
+      "text": "Elbow Grease"
+    },
+    "description": {
+      "text": "Turn a Hand Crank to power something by hand"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "has_hand_crank": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "create:hand_crank"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_hand_crank"
+    ]
+  ]
+}

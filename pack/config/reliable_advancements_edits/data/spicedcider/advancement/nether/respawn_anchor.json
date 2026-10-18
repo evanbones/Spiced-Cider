@@ -1,0 +1,37 @@
+{
+  "parent": "spicedcider:nether/glowstone",
+  "display": {
+    "icon": {
+      "id": "minecraft:respawn_anchor"
+    },
+    "title": {
+      "text": "Anchors Aweigh"
+    },
+    "description": {
+      "text": "Charge a Respawn Anchor"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "placed_respawn_anchor": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": "minecraft:respawn_anchor"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "placed_respawn_anchor"
+    ]
+  ]
+}

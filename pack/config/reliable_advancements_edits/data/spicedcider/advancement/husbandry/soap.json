@@ -1,0 +1,32 @@
+{
+  "parent": "spicedcider:husbandry/tallow",
+  "display": {
+    "icon": {
+      "id": "supplementaries:soap"
+    },
+    "title": {
+      "text": "Squeaky Clean"
+    },
+    "description": {
+      "text": "Make a bar of Soap with Tallow"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "has_soap": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "supplementaries:soap"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_soap"
+    ]
+  ]
+}

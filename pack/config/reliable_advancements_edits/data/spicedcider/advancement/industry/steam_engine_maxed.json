@@ -1,0 +1,30 @@
+{
+  "parent": "spicedcider:industry/steam_engine",
+  "display": {
+    "icon": {
+      "id": "create:steam_engine"
+    },
+    "title": {
+      "text": "Full Steam"
+    },
+    "description": {
+      "text": "Run a boiler at the maximum power level"
+    },
+    "frame": "challenge"
+  },
+  "criteria": {
+    "0": {
+      "trigger": "create:steam_engine_maxed_builtin"
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ]
+  ],
+  "rewards": {
+    "loot": [
+      "spicedcider:advancement/industry_steam_engine_maxed"
+    ]
+  }
+}

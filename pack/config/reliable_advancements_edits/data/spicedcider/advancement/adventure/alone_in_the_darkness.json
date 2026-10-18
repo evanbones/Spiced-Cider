@@ -1,0 +1,52 @@
+{
+  "parent": "spicedcider:adventure/guiding_star",
+  "display": {
+    "icon": {
+      "id": "minecraft:black_dye"
+    },
+    "title": {
+      "text": "Alone in the Darkness"
+    },
+    "description": {
+      "text": "Draw with black Chalk on a black block in the dark"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "draw_black": {
+      "conditions": {
+        "location": {
+          "light": {
+            "light": {
+              "max": 7
+            }
+          }
+        },
+        "mark": {
+          "color": {
+            "blue": {
+              "max": 50
+            },
+            "green": {
+              "max": 50
+            },
+            "red": {
+              "max": 50
+            }
+          }
+        },
+        "surface_color": {
+          "colors": [
+            29
+          ]
+        }
+      },
+      "trigger": "chalk:mark_drawn"
+    }
+  },
+  "requirements": [
+    [
+      "draw_black"
+    ]
+  ]
+}

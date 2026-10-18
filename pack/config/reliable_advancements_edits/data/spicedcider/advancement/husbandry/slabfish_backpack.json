@@ -1,0 +1,25 @@
+{
+  "parent": "spicedcider:husbandry/tame",
+  "display": {
+    "icon": {
+      "id": "environmental:slabfish_bucket"
+    },
+    "title": {
+      "text": "First Day of School"
+    },
+    "description": {
+      "text": "Give a tamed Slabfish a backpack"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "backpack_slabfish": {
+      "trigger": "environmental:backpack_slabfish"
+    }
+  },
+  "requirements": [
+    [
+      "backpack_slabfish"
+    ]
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "parent": "spicedcider:husbandry/campfire",
+  "display": {
+    "icon": {
+      "id": "farmersdelight:cooking_pot"
+    },
+    "title": {
+      "text": "Dinner's Served!"
+    },
+    "description": {
+      "text": "Place a Cooking Pot over some heat and start making meals"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "placed_cooking_pot": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": "farmersdelight:cooking_pot"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "placed_cooking_pot"
+    ]
+  ]
+}

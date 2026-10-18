@@ -1,0 +1,32 @@
+{
+  "parent": "spicedcider:industry/flux",
+  "display": {
+    "icon": {
+      "id": "minecraft:comparator"
+    },
+    "title": {
+      "text": "Comparatively Speaking"
+    },
+    "description": {
+      "text": "Craft a Flux Comparator"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "has_comparator": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:comparator"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_comparator"
+    ]
+  ]
+}

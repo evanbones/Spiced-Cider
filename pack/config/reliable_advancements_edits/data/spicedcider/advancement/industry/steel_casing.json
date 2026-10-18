@@ -1,0 +1,37 @@
+{
+  "parent": "spicedcider:industry/bronze_casing",
+  "display": {
+    "icon": {
+      "id": "alloyed:steel_casing"
+    },
+    "title": {
+      "text": "The Steel Age"
+    },
+    "description": {
+      "text": "Apply Steel to a stripped log to make Steel Casing"
+    },
+    "frame": "goal"
+  },
+  "criteria": {
+    "has_steel_casing": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "alloyed:steel_casing"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_steel_casing"
+    ]
+  ],
+  "rewards": {
+    "loot": [
+      "spicedcider:advancement/industry_steel_casing"
+    ]
+  }
+}

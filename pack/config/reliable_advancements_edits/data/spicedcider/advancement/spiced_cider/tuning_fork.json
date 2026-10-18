@@ -1,0 +1,32 @@
+{
+  "parent": "spicedcider:spiced_cider/copper",
+  "display": {
+    "icon": {
+      "id": "spelunkery:tuning_fork"
+    },
+    "title": {
+      "text": "Good Vibrations"
+    },
+    "description": {
+      "text": "Craft a Tuning Fork that hums toward Budding Amethyst"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "has_tuning_fork": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "spelunkery:tuning_fork"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_tuning_fork"
+    ]
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "parent": "spicedcider:spiced_cider/diamond_pickaxe",
+  "parents": [
+    "spicedcider:spiced_cider/diamond_pickaxe",
+    "spicedcider:spiced_cider/steel_armor"
+  ],
+  "display": {
+    "icon": {
+      "id": "minecraft:diamond_chestplate"
+    },
+    "title": {
+      "text": "Cover Me with Diamonds"
+    },
+    "description": {
+      "text": "Forge a full set of Diamond armor, very shiny and very expensive"
+    },
+    "frame": "goal"
+  },
+  "criteria": {
+    "has_diamond_helmet": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:diamond_helmet"
+          }
+        ]
+      }
+    },
+    "has_diamond_chestplate": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:diamond_chestplate"
+          }
+        ]
+      }
+    },
+    "has_diamond_leggings": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:diamond_leggings"
+          }
+        ]
+      }
+    },
+    "has_diamond_boots": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:diamond_boots"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_diamond_helmet"
+    ],
+    [
+      "has_diamond_chestplate"
+    ],
+    [
+      "has_diamond_leggings"
+    ],
+    [
+      "has_diamond_boots"
+    ]
+  ],
+  "rewards": {
+    "loot": [
+      "spicedcider:advancement/spiced_cider_diamond_armor"
+    ]
+  }
+}

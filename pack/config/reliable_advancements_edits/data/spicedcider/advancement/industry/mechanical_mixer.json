@@ -1,0 +1,25 @@
+{
+  "parent": "spicedcider:industry/mechanical_press",
+  "display": {
+    "icon": {
+      "id": "create:mechanical_mixer"
+    },
+    "title": {
+      "text": "Mixing It Up"
+    },
+    "description": {
+      "text": "Combine ingredients in a Mechanical Mixer"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "0": {
+      "trigger": "create:mechanical_mixer_builtin"
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ]
+  ]
+}

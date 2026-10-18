@@ -1,0 +1,23 @@
+{
+  "criteria": {
+    "tick": {
+      "trigger": "minecraft:tick"
+    }
+  },
+  "requirements": [
+    [
+      "tick"
+    ]
+  ],
+  "display": {
+    "show_toast": false,
+    "announce_to_chat": false,
+    "icon": {
+      "id": "culturaldelights:apple_cider"
+    },
+    "title": "Spiced Cider",
+    "description": "The heart and story of the game",
+    "background": "minecraft:textures/block/dirt.png",
+    "frame": "task"
+  }
+}

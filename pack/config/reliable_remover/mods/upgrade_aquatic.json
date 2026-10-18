@@ -133,5 +133,14 @@
       "upgrade_aquatic:cooked_lionfish"
     ],
     "replace_with": "tide:cooked_fish"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "upgrade_aquatic:flare_spawn_egg",
+      "upgrade_aquatic:goose_spawn_egg",
+      "upgrade_aquatic:jellyfish_spawn_egg",
+      "upgrade_aquatic:jellyfish_bucket"
+    ]
   }
 ]

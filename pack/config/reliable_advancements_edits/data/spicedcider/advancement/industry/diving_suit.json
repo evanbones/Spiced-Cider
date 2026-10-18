@@ -1,0 +1,25 @@
+{
+  "parent": "spicedcider:industry/backtank",
+  "display": {
+    "icon": {
+      "id": "create:copper_diving_helmet"
+    },
+    "title": {
+      "text": "Ready for the Depths"
+    },
+    "description": {
+      "text": "Put on a Diving Helmet and a Copper Backtank and jump into water"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "0": {
+      "trigger": "create:diving_suit_builtin"
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ]
+  ]
+}

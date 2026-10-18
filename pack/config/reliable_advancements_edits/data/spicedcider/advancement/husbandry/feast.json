@@ -1,0 +1,98 @@
+{
+  "parent": "spicedcider:husbandry/first_meal",
+  "display": {
+    "icon": {
+      "id": "farmersdelight:roast_chicken_block"
+    },
+    "title": {
+      "text": "A Glorious Feast"
+    },
+    "description": {
+      "text": "Place down a feast big enough to share"
+    },
+    "frame": "goal"
+  },
+  "criteria": {
+    "roast_chicken": {
+      "conditions": {
+        "location": [
+          {
+            "block": "farmersdelight:roast_chicken_block",
+            "condition": "minecraft:block_state_property"
+          }
+        ]
+      },
+      "trigger": "minecraft:placed_block"
+    },
+    "stuffed_pumpkin": {
+      "conditions": {
+        "location": [
+          {
+            "block": "farmersdelight:stuffed_pumpkin_block",
+            "condition": "minecraft:block_state_property"
+          }
+        ]
+      },
+      "trigger": "minecraft:placed_block"
+    },
+    "honey_glazed_ham": {
+      "conditions": {
+        "location": [
+          {
+            "block": "farmersdelight:honey_glazed_ham_block",
+            "condition": "minecraft:block_state_property"
+          }
+        ]
+      },
+      "trigger": "minecraft:placed_block"
+    },
+    "shepherds_pie": {
+      "conditions": {
+        "location": [
+          {
+            "block": "farmersdelight:shepherds_pie_block",
+            "condition": "minecraft:block_state_property"
+          }
+        ]
+      },
+      "trigger": "minecraft:placed_block"
+    },
+    "gleaming_salad": {
+      "conditions": {
+        "location": [
+          {
+            "block": "farmersdelight:gleaming_salad_block",
+            "condition": "minecraft:block_state_property"
+          }
+        ]
+      },
+      "trigger": "minecraft:placed_block"
+    },
+    "rice_roll_medley": {
+      "conditions": {
+        "location": [
+          {
+            "block": "farmersdelight:rice_roll_medley_block",
+            "condition": "minecraft:block_state_property"
+          }
+        ]
+      },
+      "trigger": "minecraft:placed_block"
+    }
+  },
+  "requirements": [
+    [
+      "roast_chicken",
+      "stuffed_pumpkin",
+      "honey_glazed_ham",
+      "shepherds_pie",
+      "gleaming_salad",
+      "rice_roll_medley"
+    ]
+  ],
+  "rewards": {
+    "loot": [
+      "spicedcider:advancement/husbandry_feast"
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "parent": "spicedcider:industry/deployer",
+  "display": {
+    "icon": {
+      "id": "create:deployer"
+    },
+    "title": {
+      "text": "Pound It, Bro!"
+    },
+    "description": {
+      "text": "Make two Deployers fist-bump"
+    },
+    "frame": "task",
+    "hidden": true
+  },
+  "criteria": {
+    "0": {
+      "trigger": "create:fist_bump_builtin"
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ]
+  ]
+}

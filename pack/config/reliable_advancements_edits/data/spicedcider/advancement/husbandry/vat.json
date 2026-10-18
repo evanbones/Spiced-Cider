@@ -1,0 +1,37 @@
+{
+  "parent": "spicedcider:husbandry/cooking_pot",
+  "display": {
+    "icon": {
+      "id": "culturaldelights:vat"
+    },
+    "title": {
+      "text": "The Key Is Proper Aging"
+    },
+    "description": {
+      "text": "Build a Vat and leave something to age in it"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "placed_vat": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": "culturaldelights:vat"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "placed_vat"
+    ]
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "parent": "spicedcider:spiced_cider/forge",
+  "display": {
+    "icon": {
+      "id": "modestmining:coke"
+    },
+    "title": {
+      "text": "Fuel to the Fire"
+    },
+    "description": {
+      "text": "Forge Coal and Netherrack into Coke, the hottest fuel around"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "coke": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "modestmining:coke",
+              "modestmining:coke_block"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "coke"
+    ]
+  ]
+}

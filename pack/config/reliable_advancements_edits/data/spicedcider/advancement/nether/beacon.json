@@ -1,0 +1,30 @@
+{
+  "parent": "spicedcider:nether/kill_wither",
+  "display": {
+    "icon": {
+      "id": "minecraft:beacon"
+    },
+    "title": {
+      "text": "Bring Home the Beacon"
+    },
+    "description": {
+      "text": "Construct a Beacon and power it with a pyramid of metal blocks"
+    },
+    "frame": "goal"
+  },
+  "criteria": {
+    "beacon": {
+      "trigger": "minecraft:construct_beacon",
+      "conditions": {
+        "level": {
+          "min": 1
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "beacon"
+    ]
+  ]
+}

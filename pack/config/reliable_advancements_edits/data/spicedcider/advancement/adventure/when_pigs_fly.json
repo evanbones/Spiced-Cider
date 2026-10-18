@@ -1,0 +1,39 @@
+{
+  "parent": "spicedcider:adventure/glider",
+  "display": {
+    "icon": {
+      "id": "minecraft:saddle"
+    },
+    "title": {
+      "text": "When Pigs Fly"
+    },
+    "description": {
+      "text": "Ride a Pig off a 40 block drop and land without it taking damage"
+    },
+    "frame": "challenge",
+    "hidden": true
+  },
+  "criteria": {
+    "fall_with_pig": {
+      "conditions": {
+        "distance": {
+          "y": {
+            "min": 40
+          }
+        },
+        "player": {
+          "vehicle": {
+            "type": "minecraft:pig",
+            "nbt": "{Health: 10.0f}"
+          }
+        }
+      },
+      "trigger": "minecraft:fall_from_height"
+    }
+  },
+  "requirements": [
+    [
+      "fall_with_pig"
+    ]
+  ]
+}

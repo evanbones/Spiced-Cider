@@ -1,0 +1,32 @@
+{
+  "parent": "spicedcider:industry/tune_note_block",
+  "display": {
+    "icon": {
+      "id": "alloyed:bronze_bell"
+    },
+    "title": {
+      "text": "Metallic Music"
+    },
+    "description": {
+      "text": "Craft a Bronze instrument and start composing"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "has_bronze_ingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#alloyed:bronze_instruments"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_bronze_ingot"
+    ]
+  ]
+}

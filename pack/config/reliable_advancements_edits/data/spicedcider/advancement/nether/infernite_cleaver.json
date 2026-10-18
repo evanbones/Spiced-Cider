@@ -1,0 +1,32 @@
+{
+  "parent": "spicedcider:nether/infernite",
+  "display": {
+    "icon": {
+      "id": "spicedcider:infernite_cleaver"
+    },
+    "title": {
+      "text": "Head Hunter"
+    },
+    "description": {
+      "text": "Upgrade a Cleaver with Infernite and start collecting heads"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "has_infernite_cleaver": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "spicedcider:infernite_cleaver"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_infernite_cleaver"
+    ]
+  ]
+}

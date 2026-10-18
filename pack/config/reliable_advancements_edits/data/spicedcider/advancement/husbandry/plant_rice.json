@@ -1,0 +1,33 @@
+{
+  "parent": "spicedcider:husbandry/wild_crops",
+  "display": {
+    "icon": {
+      "id": "farmersdelight:rice"
+    },
+    "title": {
+      "text": "Dipping Your Roots"
+    },
+    "description": {
+      "text": "Plant Rice in a shallow puddle of water"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "plant_rice": {
+      "conditions": {
+        "location": [
+          {
+            "block": "farmersdelight:rice",
+            "condition": "minecraft:block_state_property"
+          }
+        ]
+      },
+      "trigger": "minecraft:placed_block"
+    }
+  },
+  "requirements": [
+    [
+      "plant_rice"
+    ]
+  ]
+}
