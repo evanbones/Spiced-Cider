@@ -8,7 +8,7 @@
       "text": "Master Chef"
     },
     "description": {
-      "text": "Eat every kind of Modest Meal, from Soup to Ice Cream"
+      "text": "Eat every kind of meal, from Soup to Ice Cream"
     },
     "frame": "challenge"
   },
@@ -109,22 +109,6 @@
         }
       }
     },
-    "ate_skewer": {
-      "trigger": "minecraft:consume_item",
-      "conditions": {
-        "item": {
-          "items": "modest_meals:skewer"
-        }
-      }
-    },
-    "ate_mochi": {
-      "trigger": "minecraft:consume_item",
-      "conditions": {
-        "item": {
-          "items": "modest_meals:mochi"
-        }
-      }
-    },
     "ate_ice_cream": {
       "trigger": "minecraft:consume_item",
       "conditions": {
@@ -170,12 +154,6 @@
     ],
     [
       "ate_sushi"
-    ],
-    [
-      "ate_skewer"
-    ],
-    [
-      "ate_mochi"
     ],
     [
       "ate_ice_cream"
