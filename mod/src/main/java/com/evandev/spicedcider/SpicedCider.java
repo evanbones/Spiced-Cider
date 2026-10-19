@@ -26,7 +26,9 @@ import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.DispenserBlock;
+import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
@@ -71,6 +73,9 @@ public class SpicedCider {
         ModEntityTypes.ITEMS.register(modEventBus);
         ModBuildingBlocks.register();
         ModBlocks.BLOCKS.register(modEventBus);
+        ModTreeFeatures.TRUNK_PLACERS.register(modEventBus);
+        ModTreeFeatures.TREE_DECORATORS.register(modEventBus);
+        ModTreeFeatures.FEATURES.register(modEventBus);
         ModAttachments.ATTACHMENT_TYPES.register(modEventBus);
         ModAttributes.ATTRIBUTES.register(modEventBus);
         ModArmorMaterials.ARMOR_MATERIALS.register(modEventBus);
@@ -107,6 +112,7 @@ public class SpicedCider {
     private static void commonSetup(FMLCommonSetupEvent event) {
         event.enqueueWork(TideCompat::registerFishingMediums);
         event.enqueueWork(IceCubes::registerDispenserBehavior);
+        event.enqueueWork(() -> ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.GLOAMWOOD_SAPLING.getId(), ModBlocks.POTTED_GLOAMWOOD_SAPLING));
         if (ModItems.TWISTED_BOAT == null) return;
         event.enqueueWork(() -> {
             Boat.Type twisted = ModBoatTypes.TWISTED.getValue();
@@ -147,6 +153,7 @@ public class SpicedCider {
         }
         if (event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
             event.insertAfter(new ItemStack(Items.ROOTED_DIRT), new ItemStack(ModItems.WORMY_DIRT.get()), vis);
+            event.insertAfter(new ItemStack(Items.FLOWERING_AZALEA), new ItemStack(ModItems.GLOAMWOOD_SAPLING.get()), vis);
             event.accept(ModItems.DEPOSIT.get(), vis);
             event.accept(ModItems.DEEPSLATE_DEPOSIT.get(), vis);
             event.accept(ModItems.BLACKSTONE_DEPOSIT.get(), vis);

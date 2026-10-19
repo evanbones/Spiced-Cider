@@ -110,13 +110,6 @@
       "caverns_and_chasms:bejeweled_anvil",
       "caverns_and_chasms:caviar",
       "caverns_and_chasms:bejeweled_pearl",
-      "caverns_and_chasms:exposed_lightning_rod",
-      "caverns_and_chasms:weathered_lightning_rod",
-      "caverns_and_chasms:oxidized_lightning_rod",
-      "caverns_and_chasms:waxed_lightning_rod",
-      "caverns_and_chasms:waxed_exposed_lightning_rod",
-      "caverns_and_chasms:waxed_weathered_lightning_rod",
-      "caverns_and_chasms:waxed_oxidized_lightning_rod",
       "caverns_and_chasms:copper_horn",
       "caverns_and_chasms:charcoal_block",
       "caverns_and_chasms:polished_calcite",
@@ -224,7 +217,9 @@
       "caverns_and_chasms:spinel_bricks",
       "caverns_and_chasms:spinel_pillar",
       "caverns_and_chasms:spinel_lamp",
-      "caverns_and_chasms:dismantling_table"
+      "caverns_and_chasms:dismantling_table",
+      "caverns_and_chasms:peeper_head",
+      "caverns_and_chasms:peeper_spawn_egg"
     ]
   },
   {
@@ -240,13 +235,6 @@
       "caverns_and_chasms:tuff_pillar"
     ],
     "replace_with": "architects_palette:tuff_pillar"
-  },
-  {
-    "action": "remove",
-    "items": [
-      "caverns_and_chasms:flint_block"
-    ],
-    "replace_with": "architects_palette:flint_block"
   },
   {
     "action": "remove",
@@ -499,27 +487,6 @@
       "caverns_and_chasms:chiseled_dripstone_bricks"
     ],
     "replace_with": "architects_palette:chiseled_dripstone"
-  },
-  {
-    "action": "remove",
-    "items": [
-      "caverns_and_chasms:smooth_basalt_stairs"
-    ],
-    "replace_with": "infernalexp:polished_basalt_stairs"
-  },
-  {
-    "action": "remove",
-    "items": [
-      "caverns_and_chasms:smooth_basalt_slab"
-    ],
-    "replace_with": "infernalexp:polished_basalt_slab"
-  },
-  {
-    "action": "remove",
-    "items": [
-      "caverns_and_chasms:smooth_basalt_wall"
-    ],
-    "replace_with": "infernalexp:polished_basalt_wall"
   },
   {
     "action": "remove",
@@ -975,5 +942,54 @@
       "caverns_and_chasms:impact_potion",
       "caverns_and_chasms:trail_potion"
     ]
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:exposed_lightning_rod"
+    ],
+    "replace_with": "minecraft:exposed_lightning_rod"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:weathered_lightning_rod"
+    ],
+    "replace_with": "minecraft:weathered_lightning_rod"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:oxidized_lightning_rod"
+    ],
+    "replace_with": "minecraft:oxidized_lightning_rod"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:waxed_lightning_rod"
+    ],
+    "replace_with": "minecraft:waxed_lightning_rod"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:waxed_exposed_lightning_rod"
+    ],
+    "replace_with": "minecraft:waxed_exposed_lightning_rod"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:waxed_weathered_lightning_rod"
+    ],
+    "replace_with": "minecraft:waxed_weathered_lightning_rod"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:waxed_oxidized_lightning_rod"
+    ],
+    "replace_with": "minecraft:waxed_oxidized_lightning_rod"
   }
 ]

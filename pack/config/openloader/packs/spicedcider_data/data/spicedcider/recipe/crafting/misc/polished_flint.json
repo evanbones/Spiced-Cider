@@ -1,0 +1,27 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "caverns_and_chasms"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "architects_palette"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "caverns_and_chasms:flint_block"
+    }
+  },
+  "result": {
+    "id": "architects_palette:flint_block",
+    "count": 4
+  }
+}

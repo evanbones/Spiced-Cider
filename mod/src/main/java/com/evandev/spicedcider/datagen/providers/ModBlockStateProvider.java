@@ -32,6 +32,12 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlockWithItem(ModBlocks.GOLDEN_WORM_CRATE.get(), models().cubeBottomTop("golden_worm_crate",
                 modLoc("block/worm_crate_side"), modLoc("block/worm_crate_bottom"), modLoc("block/golden_worm_crate_top")));
 
+        ResourceLocation gloamwoodSapling = modLoc("block/gloamwood_sapling");
+        simpleBlock(ModBlocks.GLOAMWOOD_SAPLING.get(), models().cross("gloamwood_sapling", gloamwoodSapling).renderType("cutout"));
+        simpleBlock(ModBlocks.POTTED_GLOAMWOOD_SAPLING.get(), models().withExistingParent("potted_gloamwood_sapling", mcLoc("block/flower_pot_cross"))
+                .texture("plant", gloamwoodSapling).renderType("cutout"));
+        itemModels().withExistingParent("gloamwood_sapling", mcLoc("item/generated")).texture("layer0", gloamwoodSapling);
+
         ResourceLocation glowstoneBricks = modLoc("block/glowstone_bricks");
         simpleBlockWithItem(ModBlocks.GLOWSTONE_BRICKS.get(), cubeAll(ModBlocks.GLOWSTONE_BRICKS.get()));
         simpleBlockWithItem(ModBlocks.CHISELED_GLOWSTONE_BRICKS.get(), cubeAll(ModBlocks.CHISELED_GLOWSTONE_BRICKS.get()));

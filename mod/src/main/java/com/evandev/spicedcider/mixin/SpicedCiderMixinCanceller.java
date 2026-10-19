@@ -1,10 +1,21 @@
 package com.evandev.spicedcider.mixin;
 
 import com.bawnorton.mixinsquared.api.MixinCanceller;
+import net.neoforged.fml.loading.LoadingModList;
 
 import java.util.List;
+import java.util.Set;
 
 public class SpicedCiderMixinCanceller implements MixinCanceller {
+
+    private static final Set<String> VANILLA_BACKPORT_MUSIC_MIXINS = Set.of(
+            "com.blackgear.vanillabackport.core.mixin.client.music_toast.MusicManagerMixin",
+            "com.blackgear.vanillabackport.core.mixin.client.music_toast.PauseScreenMixin",
+            "com.blackgear.vanillabackport.core.mixin.client.music_toast.ToastComponentMixin",
+            "com.blackgear.vanillabackport.core.mixin.client.music_frequency.MusicManagerMixin",
+            "com.blackgear.vanillabackport.core.mixin.client.music_on_pause.MinecraftMixin",
+            "com.blackgear.vanillabackport.core.mixin.client.game_options.SoundOptionsScreenMixin"
+    );
 
     @Override
     public boolean shouldCancel(List<String> targetClassNames, String mixinClassName) {
@@ -16,6 +27,10 @@ public class SpicedCiderMixinCanceller implements MixinCanceller {
         if ("io.wispforest.owo.mixin.ext.ItemStackMixin".equals(mixinClassName)
                 || "io.wispforest.owo.mixin.ext.ComponentMapImplMixin".equals(mixinClassName)) {
             return true;
+        }
+
+        if (VANILLA_BACKPORT_MUSIC_MIXINS.contains(mixinClassName)) {
+            return LoadingModList.get().getModFileById("music_tweaks") != null;
         }
 
         return false;

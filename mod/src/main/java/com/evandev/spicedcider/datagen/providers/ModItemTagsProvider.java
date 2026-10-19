@@ -42,6 +42,8 @@ public class ModItemTagsProvider extends ItemTagsProvider {
                 .addOptional(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "featherlight_hook"))
                 .addOptional(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "necromium_hook"));
 
+        this.tag(ItemTags.SAPLINGS).add(ModItems.GLOAMWOOD_SAPLING.get());
+
         this.tag(ItemTags.create(ResourceLocation.fromNamespaceAndPath("tide", "fishing_rods")))
                 .addOptional(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "adamantite_fishing_rod"));
 

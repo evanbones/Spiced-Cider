@@ -228,7 +228,34 @@
       "quark:waxed_weathered_cut_copper_vertical_slab",
       "quark:weathered_cut_copper_vertical_slab",
       "quark:white_shingles_vertical_slab",
-      "quark:yellow_shingles_vertical_slab"
+      "quark:yellow_shingles_vertical_slab",
+      "quark:vertical_azalea_planks",
+      "quark:azalea_post",
+      "quark:stripped_azalea_post",
+      "quark:oak_post",
+      "quark:stripped_oak_post",
+      "quark:spruce_post",
+      "quark:stripped_spruce_post",
+      "quark:birch_post",
+      "quark:stripped_birch_post",
+      "quark:jungle_post",
+      "quark:stripped_jungle_post",
+      "quark:acacia_post",
+      "quark:stripped_acacia_post",
+      "quark:dark_oak_post",
+      "quark:stripped_dark_oak_post",
+      "quark:crimson_post",
+      "quark:stripped_cherry_post",
+      "quark:cherry_post",
+      "quark:stripped_bamboo_post",
+      "quark:bamboo_post",
+      "quark:stripped_mangrove_post",
+      "quark:mangrove_post",
+      "quark:stripped_warped_post",
+      "quark:warped_post",
+      "quark:stripped_crimson_post",
+      "quark:stripped_azalea_log",
+      "quark:trapped_azalea_chest"
     ]
   },
   {
@@ -750,5 +777,75 @@
       "quark:magenta_shard",
       "quark:pink_shard"
     ]
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:oak_leaf_carpet"
+    ],
+    "replace_with": "woodworks:oak_leaf_pile"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:spruce_leaf_carpet"
+    ],
+    "replace_with": "woodworks:spruce_leaf_pile"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:birch_leaf_carpet"
+    ],
+    "replace_with": "woodworks:birch_leaf_pile"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:jungle_leaf_carpet"
+    ],
+    "replace_with": "woodworks:jungle_leaf_pile"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:acacia_leaf_carpet"
+    ],
+    "replace_with": "woodworks:acacia_leaf_pile"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:dark_oak_leaf_carpet"
+    ],
+    "replace_with": "woodworks:dark_oak_leaf_pile"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:mangrove_leaf_carpet"
+    ],
+    "replace_with": "woodworks:mangrove_leaf_pile"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:cherry_leaf_carpet"
+    ],
+    "replace_with": "woodworks:cherry_leaf_pile"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:azalea_leaf_carpet"
+    ],
+    "replace_with": "woodworks:azalea_leaf_pile"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:flowering_azalea_leaf_carpet"
+    ],
+    "replace_with": "woodworks:flowering_azalea_leaf_pile"
   }
 ]

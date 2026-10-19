@@ -1,0 +1,5 @@
+{
+  "expression": "max(0, min(1, g.value('spicedcider_pale_garden_fade') + (player.biome() == 'minecraft:pale_garden' ? 0.04 : -0.04)))",
+  "update_interval": 1,
+  "default_value": 0
+}

@@ -17,12 +17,16 @@ import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.ServerLevelAccessor;
+import net.minecraft.world.level.biome.MobSpawnSettings;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.neoforged.bus.api.EventPriority;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.EntityJoinLevelEvent;
 import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
+import net.neoforged.neoforge.event.level.LevelEvent;
+
+import java.util.List;
 
 @EventBusSubscriber(modid = SpicedCider.MOD_ID)
 public class SpawnControlEvents {
@@ -37,13 +41,26 @@ public class SpawnControlEvents {
         Holder<EntityType<?>> type = entity.getType().builtInRegistryHolder();
 
         if (type.is(ModTags.EntityTypes.DENY_SPAWN)
-                || (type.is(ModTags.EntityTypes.DENY_NATURAL_SPAWN) && isNaturalSpawn(entity))) {
+                || (type.is(ModTags.EntityTypes.DENY_NATURAL_SPAWN) && isNaturalSpawn(entity))
+                || (isNaturalSpawn(entity) && !type.is(ModTags.EntityTypes.ALLOWED_IN_RESTRICTED_BIOMES)
+                && event.getLevel().getBiome(entity.blockPosition()).is(ModTags.Biomes.RESTRICTED_SPAWNS))) {
             event.setCanceled(true);
             return;
         }
 
         if (!event.loadedFromDisk()) {
             applySpawnEquipment(entity, type);
+        }
+    }
+
+    @SubscribeEvent
+    public static void onPotentialSpawns(LevelEvent.PotentialSpawns event) {
+        if (!event.getLevel().getBiome(event.getPos()).is(ModTags.Biomes.RESTRICTED_SPAWNS)) return;
+
+        for (MobSpawnSettings.SpawnerData data : List.copyOf(event.getSpawnerDataList())) {
+            if (!data.type.builtInRegistryHolder().is(ModTags.EntityTypes.ALLOWED_IN_RESTRICTED_BIOMES)) {
+                event.removeSpawnerData(data);
+            }
         }
     }
 

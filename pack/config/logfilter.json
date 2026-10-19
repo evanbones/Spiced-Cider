@@ -73,6 +73,22 @@
       "pattern": "^Fabric API detected! This is not a Fabric mod",
       "action": "DENY",
       "level": "ERROR"
+    },
+    {
+      "name": "Suppress Every Compat sawmill recipes for removed wood items",
+      "enabled": true,
+      "type": "MESSAGE_REGEX",
+      "pattern": "^\\[sawmill recipe\\] .*: Value must be within range \\[1;1000000000\\]: 0; Item must not be minecraft:air.*",
+      "action": "DENY",
+      "level": "ERROR"
+    },
+    {
+      "name": "Suppress Every Compat sawmill summary for removed wood items",
+      "enabled": true,
+      "type": "MESSAGE_REGEX",
+      "pattern": "^\\[sawmill recipe\\] \\d+ additional failures with the same cause \\(IllegalStateException: Value must be within range \\[1;1000000000\\]: 0; Item must not be minecraft:air\\).*",
+      "action": "DENY",
+      "level": "WARN"
     }
   ]
 }

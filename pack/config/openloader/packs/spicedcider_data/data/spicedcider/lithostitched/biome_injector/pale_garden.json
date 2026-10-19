@@ -1,0 +1,12 @@
+{
+  "type": "lithostitched:replace_partially",
+  "dimension": "minecraft:overworld",
+  "targets": "minecraft:lush_caves",
+  "replacement": "minecraft:pale_garden",
+  "parameters": {
+    "humidity": [
+      0.76,
+      10.0
+    ]
+  }
+}

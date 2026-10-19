@@ -1,0 +1,28 @@
+{
+  "type": "lithostitched:replace_partially",
+  "dimension": "minecraft:overworld",
+  "targets": "minecraft:desert",
+  "replacement": "clifftree:oasis",
+  "parameters": {
+    "temperature": [
+      0.55,
+      1
+    ],
+    "humidity": [
+      -1,
+      -0.35
+    ],
+    "continentalness": [
+      0.03,
+      1
+    ],
+    "erosion": [
+      0.05,
+      0.42
+    ],
+    "weirdness": [
+      0.05,
+      1
+    ]
+  }
+}

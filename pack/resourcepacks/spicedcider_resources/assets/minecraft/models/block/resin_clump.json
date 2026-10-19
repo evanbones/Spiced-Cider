@@ -1,0 +1,47 @@
+{
+  "ambientocclusion": false,
+  "textures": {
+    "particle": "block/resin_clump",
+    "texture": "block/resin_clump"
+  },
+  "elements": [
+    {
+      "from": [
+        0,
+        0,
+        0.1
+      ],
+      "to": [
+        16,
+        16,
+        0.1
+      ],
+      "shade": false,
+      "neoforge_data": {
+        "block_light": 15,
+        "sky_light": 15,
+        "ambient_occlusion": false
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            16,
+            0,
+            0,
+            16
+          ],
+          "texture": "#texture"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#texture"
+        }
+      }
+    }
+  ]
+}

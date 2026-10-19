@@ -1,0 +1,76 @@
+{
+  "type": "minecraft:tree",
+  "config": {
+    "decorators": [
+      {
+        "type": "minecraft:pale_moss",
+        "ground_probability": 0.0,
+        "leaves_probability": 0.15,
+        "trunk_probability": 0.4
+      },
+      {
+        "type": "spicedcider:trunk_creaking_heart",
+        "probability": 1.0
+      }
+    ],
+    "dirt_provider": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "minecraft:dirt"
+      }
+    },
+    "foliage_placer": {
+      "type": "minecraft:random_spread_foliage_placer",
+      "foliage_height": 3,
+      "leaf_placement_attempts": 50,
+      "offset": 0,
+      "radius": 3
+    },
+    "foliage_provider": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "minecraft:pale_oak_leaves",
+        "Properties": {
+          "distance": "7",
+          "persistent": "false",
+          "waterlogged": "false"
+        }
+      }
+    },
+    "force_dirt": false,
+    "ignore_vines": true,
+    "minimum_size": {
+      "type": "minecraft:two_layers_feature_size",
+      "limit": 1,
+      "lower_size": 0,
+      "upper_size": 0,
+      "min_clipped_height": 5
+    },
+    "trunk_placer": {
+      "type": "spicedcider:spindly_trunk_placer",
+      "base_height": 12,
+      "height_rand_a": 5,
+      "height_rand_b": 4,
+      "branch_count": {
+        "type": "minecraft:uniform",
+        "min_inclusive": 1,
+        "max_inclusive": 3
+      },
+      "branch_length": {
+        "type": "minecraft:uniform",
+        "min_inclusive": 1,
+        "max_inclusive": 2
+      },
+      "min_height_for_branches": 5
+    },
+    "trunk_provider": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "minecraft:pale_oak_log",
+        "Properties": {
+          "axis": "y"
+        }
+      }
+    }
+  }
+}

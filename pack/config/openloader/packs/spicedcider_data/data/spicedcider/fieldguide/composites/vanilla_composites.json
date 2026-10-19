@@ -1,0 +1,35 @@
+{
+  "values": [
+    {
+      "id": "minecraft:azalea_leaves",
+      "replace": true,
+      "render": [
+        "0,1,0|caverns_and_chasms:azalea_log[axis=y]",
+        "0,2,0|caverns_and_chasms:azalea_log[axis=y]",
+        "0,3,0|caverns_and_chasms:azalea_log[axis=y]",
+        "0,4,0|caverns_and_chasms:azalea_log[axis=y]",
+        "0,5,0|caverns_and_chasms:azalea_log[axis=y]",
+        "0,6,0|caverns_and_chasms:azalea_log[axis=y]",
+        "0,7,0|caverns_and_chasms:azalea_log[axis=y]",
+        "1,1,0|caverns_and_chasms:azalea_log[axis=x]",
+        "0,1,-1|caverns_and_chasms:azalea_log[axis=z]",
+        "-1,7,0|caverns_and_chasms:azalea_log[axis=x]",
+        "0,7,1|caverns_and_chasms:azalea_log[axis=z]",
+        "1,3,0|minecraft:azalea_leaves[persistent=true]",
+        "1,4,0|minecraft:flowering_azalea_leaves[persistent=true]",
+        "0,4,-1|minecraft:azalea_leaves[persistent=true]",
+        "-1,5,0|minecraft:azalea_leaves[persistent=true]",
+        "0,5,1|minecraft:flowering_azalea_leaves[persistent=true]",
+        "0,6,-1|minecraft:azalea_leaves[persistent=true]",
+        "1,7,1|minecraft:hanging_roots",
+        "-1,7,-1|minecraft:hanging_roots",
+        "1,7,-1|minecraft:hanging_roots"
+      ],
+      "components": [
+        "caverns_and_chasms:azalea_log",
+        "minecraft:azalea_leaves",
+        "minecraft:flowering_azalea_leaves"
+      ]
+    }
+  ]
+}

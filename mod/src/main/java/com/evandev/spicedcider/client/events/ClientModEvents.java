@@ -21,7 +21,11 @@ import net.minecraft.server.packs.PackSelectionConfig;
 import net.minecraft.server.packs.PackType;
 import net.minecraft.server.packs.repository.Pack;
 import net.minecraft.server.packs.repository.PackSource;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.neoforged.api.distmarker.Dist;
+import net.neoforged.bus.api.EventPriority;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
@@ -32,6 +36,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.neoforged.fml.loading.FMLPaths;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
+import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
 import net.neoforged.neoforge.client.event.RegisterClientReloadListenersEvent;
 import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
 import net.neoforged.neoforge.client.extensions.common.IClientItemExtensions;
@@ -81,6 +86,14 @@ public class ClientModEvents {
                 ModItems.MISCHIEF_CHESTPLATE.get(),
                 ModItems.MISCHIEF_LEGGINGS.get(),
                 ModItems.MISCHIEF_BOOTS.get());
+    }
+
+    @SubscribeEvent(priority = EventPriority.LOWEST)
+    public static void registerItemColors(RegisterColorHandlersEvent.Item event) {
+        Item livingBubbleEgg = BuiltInRegistries.ITEM.get(ResourceLocation.withDefaultNamespace("sulfur_cube_spawn_egg"));
+        if (livingBubbleEgg != Items.AIR) {
+            event.register((stack, tintIndex) -> tintIndex == 0 ? 0xFFEFCFF2 : 0xFFC09FC3, livingBubbleEgg);
+        }
     }
 
     @SubscribeEvent

@@ -1,47 +1,22 @@
 {
-  "parent": "spicedcider:adventure/extreme_temps",
-  "display": {
-    "icon": {
-      "id": "minecraft:flint_and_steel"
-    },
-    "title": {
-      "text": "Desperate Measures"
-    },
-    "description": {
-      "text": "Set yourself on fire to keep from freezing to death"
-    },
-    "frame": "task",
-    "hidden": true
-  },
   "criteria": {
     "freezing_on_fire": {
       "trigger": "cold_sweat:temperature_changed",
       "conditions": {
-        "temperature": [
-          {
-            "trait": "world",
-            "range": {
-              "below": "min_habitable"
-            }
-          }
-        ],
         "player": [
           {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
             "predicate": {
               "flags": {
                 "is_on_fire": true
               }
             },
-            "location": {
-              "block": {
-                "blocks": [
-                  "minecraft:fire",
-                  "minecraft:lava"
-                ]
-              }
-            }
+            "entity": "this",
+            "condition": "minecraft:entity_properties"
+          }
+        ],
+        "temperature": [
+          {
+            "trait": "world"
           }
         ]
       }
@@ -51,5 +26,18 @@
     [
       "freezing_on_fire"
     ]
+  ],
+  "display": {
+    "hidden": true,
+    "icon": {
+      "id": "minecraft:flint_and_steel",
+      "count": 1
+    },
+    "title": "Desperate Measures",
+    "description": "Set yourself on fire to keep from freezing to death"
+  },
+  "parent": "spicedcider:adventure/thermometer",
+  "parents": [
+    "spicedcider:adventure/thermometer"
   ]
 }

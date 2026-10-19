@@ -98,6 +98,7 @@ public class ModItems {
     public static final DeferredItem<Item> GOLDEN_WORM = ITEMS.register("golden_worm",
             () -> new Item(new Item.Properties().rarity(Rarity.UNCOMMON)));
     public static final DeferredItem<BlockItem> WORMY_DIRT = ITEMS.registerSimpleBlockItem(ModBlocks.WORMY_DIRT);
+    public static final DeferredItem<BlockItem> GLOAMWOOD_SAPLING = ITEMS.registerSimpleBlockItem(ModBlocks.GLOAMWOOD_SAPLING);
     public static final DeferredItem<BlockItem> WORM_CRATE = ITEMS.registerSimpleBlockItem(ModBlocks.WORM_CRATE);
     public static final DeferredItem<Item> GEODE = ITEMS.register("geode",
             () -> new Item(new Item.Properties()));

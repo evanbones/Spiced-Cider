@@ -1,0 +1,93 @@
+{
+  "parent": "block/block",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "particle": "#side"
+  },
+  "elements": [
+    {
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        16,
+        16,
+        16
+      ],
+      "faces": {
+        "down": {
+          "texture": "#end",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "#end",
+          "cullface": "up",
+          "rotation": 180
+        },
+        "north": {
+          "texture": "#side",
+          "cullface": "north"
+        },
+        "south": {
+          "texture": "#side",
+          "cullface": "south"
+        },
+        "west": {
+          "texture": "#side",
+          "cullface": "west"
+        },
+        "east": {
+          "texture": "#side",
+          "cullface": "east"
+        }
+      }
+    },
+    {
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        16,
+        16,
+        16
+      ],
+      "shade": false,
+      "neoforge_data": {
+        "block_light": 15,
+        "sky_light": 15,
+        "ambient_occlusion": false
+      },
+      "faces": {
+        "down": {
+          "texture": "#end_glow",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "#end_glow",
+          "cullface": "up",
+          "rotation": 180
+        },
+        "north": {
+          "texture": "#side_glow",
+          "cullface": "north"
+        },
+        "south": {
+          "texture": "#side_glow",
+          "cullface": "south"
+        },
+        "west": {
+          "texture": "#side_glow",
+          "cullface": "west"
+        },
+        "east": {
+          "texture": "#side_glow",
+          "cullface": "east"
+        }
+      }
+    }
+  ]
+}

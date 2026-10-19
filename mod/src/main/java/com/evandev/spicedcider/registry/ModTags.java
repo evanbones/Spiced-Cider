@@ -8,6 +8,7 @@ import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.levelgen.structure.Structure;
 
@@ -49,10 +50,15 @@ public class ModTags {
         public static final TagKey<Structure> DISABLED = TagKey.create(Registries.STRUCTURE, ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "disabled"));
     }
 
+    public static class Biomes {
+        public static final TagKey<Biome> RESTRICTED_SPAWNS = TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "restricted_spawns"));
+    }
+
     public static class EntityTypes {
         public static final TagKey<EntityType<?>> DENY_SPAWN = tag("deny_spawn");
         public static final TagKey<EntityType<?>> DENY_NATURAL_SPAWN = tag("deny_natural_spawn");
         public static final TagKey<EntityType<?>> WORM_SEEKERS = tag("worm_seekers");
+        public static final TagKey<EntityType<?>> ALLOWED_IN_RESTRICTED_BIOMES = tag("allowed_in_restricted_biomes");
 
         private static TagKey<EntityType<?>> tag(String name) {
             return TagKey.create(Registries.ENTITY_TYPE, ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, name));

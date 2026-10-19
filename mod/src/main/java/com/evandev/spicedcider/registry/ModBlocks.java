@@ -10,13 +10,16 @@ import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.CeilingHangingSignBlock;
+import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraft.world.level.block.RotatedPillarBlock;
+import net.minecraft.world.level.block.SaplingBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.StandingSignBlock;
 import net.minecraft.world.level.block.WallBlock;
 import net.minecraft.world.level.block.WallHangingSignBlock;
 import net.minecraft.world.level.block.WallSignBlock;
+import net.minecraft.world.level.block.grower.TreeGrower;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
 import net.neoforged.neoforge.registries.DeferredBlock;
@@ -25,6 +28,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.EnumMap;
 import java.util.Map;
+import java.util.Optional;
 
 public class ModBlocks {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(SpicedCider.MOD_ID);
@@ -55,6 +59,12 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> GOLDEN_WORM_CRATE = BLOCKS.register("golden_worm_crate",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BARREL)));
+
+    public static final DeferredBlock<SaplingBlock> GLOAMWOOD_SAPLING = BLOCKS.register("gloamwood_sapling",
+            () -> new SaplingBlock(new TreeGrower("gloamwood", Optional.empty(), Optional.of(ModTreeFeatures.GLOAMWOOD), Optional.empty()),
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING).mapColor(MapColor.PLANT)));
+    public static final DeferredBlock<FlowerPotBlock> POTTED_GLOAMWOOD_SAPLING = BLOCKS.register("potted_gloamwood_sapling",
+            () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, GLOAMWOOD_SAPLING, BlockBehaviour.Properties.ofFullCopy(Blocks.POTTED_OAK_SAPLING)));
 
     public static final DeferredBlock<Block> GLOWSTONE_BRICKS = BLOCKS.register("glowstone_bricks",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GLOWSTONE)));

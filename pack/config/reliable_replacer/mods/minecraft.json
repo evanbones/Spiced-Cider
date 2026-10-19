@@ -67,12 +67,6 @@
   },
   {
     "inputs": [
-      "minecraft:smooth_basalt"
-    ],
-    "output": "minecraft:polished_basalt"
-  },
-  {
-    "inputs": [
       "minecraft:polished_blackstone_button"
     ],
     "output": "minecraft:stone_button"
@@ -82,5 +76,11 @@
       "minecraft:polished_blackstone_pressure_plate"
     ],
     "output": "minecraft:stone_pressure_plate"
+  },
+  {
+    "inputs": [
+      "minecraft:straw_bed"
+    ],
+    "output": "nomansland:straw_bed"
   }
 ]

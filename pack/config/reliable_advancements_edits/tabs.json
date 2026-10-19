@@ -326,10 +326,6 @@
           336,
           150
         ],
-        "spicedcider:adventure/peeper": [
-          294,
-          0
-        ],
         "spicedcider:adventure/dungeon": [
           504,
           60
@@ -423,7 +419,7 @@
           330
         ],
         "spicedcider:adventure/thermometer": [
-          210,
+          212,
           270
         ],
         "spicedcider:adventure/extreme_temps": [
@@ -431,7 +427,7 @@
           270
         ],
         "spicedcider:adventure/insulate_armor": [
-          294,
+          293,
           270
         ],
         "spicedcider:adventure/goat_fur": [
@@ -439,8 +435,8 @@
           270
         ],
         "spicedcider:adventure/desperate_measures": [
-          294,
-          300
+          255,
+          270
         ],
         "spicedcider:adventure/waterskin": [
           252,
@@ -517,6 +513,10 @@
         "spicedcider:adventure/root": [
           336,
           210
+        ],
+        "spicedcider:adventure/spear_many_mobs": [
+          294,
+          182
         ]
       }
     },
@@ -1991,6 +1991,9 @@
     "minecraft:adventure/salvage_sherd": {
       "owner": "reliable_advancements:standalone"
     },
+    "minecraft:adventure/spear_many_mobs": {
+      "owner": "reliable_advancements:standalone"
+    },
     "minecraft:adventure/shoot_arrow": {
       "owner": "reliable_advancements:standalone"
     },
@@ -2602,6 +2605,36 @@
       "tab": "spicedcider:adventure/root",
       "title": "\"Mine Turtle!\"",
       "icon": "minecraft:raw_iron"
+    },
+    "spicedcider:adventure/extreme_temps": {
+      "owner": "reliable_advancements:standalone",
+      "tab": "spicedcider:adventure/root",
+      "title": "\"Inhospitable\"",
+      "icon": "minecraft:blue_ice"
+    },
+    "spicedcider:adventure/waterskin": {
+      "owner": "reliable_advancements:standalone",
+      "tab": "spicedcider:adventure/root",
+      "title": "\"Stay Hydrated\"",
+      "icon": "cold_sweat:waterskin"
+    },
+    "spicedcider:adventure/tame_chameleon": {
+      "owner": "reliable_advancements:standalone",
+      "tab": "spicedcider:adventure/root",
+      "title": "\"The Great Leon\"",
+      "icon": "cold_sweat:chameleon_molt"
+    },
+    "cold_sweat:chameleon_find_biome": {
+      "owner": "reliable_advancements:standalone",
+      "tab": "spicedcider:adventure/root",
+      "title": "\"Follow the Leader\"",
+      "icon": "minecraft:compass"
+    },
+    "spicedcider:adventure/peeper": {
+      "owner": "reliable_advancements:standalone",
+      "tab": "spicedcider:adventure/root",
+      "title": "\"Don't. Look. Away.\"",
+      "icon": "caverns_and_chasms:peeper_head"
     }
   },
   "derived_presentation": {

@@ -1,0 +1,137 @@
+{
+  "music.overworld.caves": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "nomansland:music/drifter",
+        "stream": true
+      },
+      {
+        "name": "music/game/oxygene_equinoxe",
+        "stream": true
+      },
+      {
+        "name": "music/game/key_door",
+        "stream": true
+      },
+      {
+        "name": "music/game/minecraft",
+        "stream": true
+      },
+      {
+        "name": "music/game/mice_on_venus",
+        "stream": true
+      },
+      {
+        "name": "music/game/dry_hands",
+        "stream": true
+      },
+      {
+        "name": "music/game/ebb",
+        "stream": true
+      },
+      {
+        "name": "music/game/nightly",
+        "stream": true
+      },
+      {
+        "name": "music/game/shores",
+        "stream": true
+      }
+    ]
+  },
+  "music.overworld.cave_depths": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "nomansland:music/drifter",
+        "stream": true,
+        "weight": 15
+      },
+      {
+        "name": "music/game/oxygene_equinoxe",
+        "stream": true,
+        "weight": 5
+      },
+      {
+        "name": "music/game/key_door",
+        "stream": true,
+        "weight": 5
+      },
+      {
+        "name": "music/game/minecraft",
+        "stream": true,
+        "weight": 3
+      },
+      {
+        "name": "music/game/mice_on_venus",
+        "stream": true,
+        "weight": 5
+      },
+      {
+        "name": "music/game/dry_hands",
+        "stream": true,
+        "weight": 5
+      }
+    ]
+  },
+  "music.overworld.mushroom_biome": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "nomansland:music/anachronistic",
+        "stream": true,
+        "volume": 0.7,
+        "weight": 15
+      },
+      {
+        "name": "music/game/minecraft",
+        "stream": true
+      },
+      {
+        "name": "music/game/clark_chris",
+        "stream": true
+      },
+      {
+        "name": "music/game/sweden",
+        "stream": true
+      },
+      {
+        "name": "music/game/subwoofer_lullaby",
+        "stream": true
+      },
+      {
+        "name": "music/game/living_mice",
+        "stream": true
+      },
+      {
+        "name": "music/game/haggstrom",
+        "stream": true
+      },
+      {
+        "name": "music/game/danny",
+        "stream": true
+      },
+      {
+        "name": "music/game/oxygene_equinoxe",
+        "stream": true
+      },
+      {
+        "name": "music/game/dry_hands",
+        "stream": true
+      },
+      {
+        "name": "music/game/wet_hands",
+        "stream": true
+      },
+      {
+        "name": "music/game/mice_on_venus",
+        "stream": true
+      },
+      {
+        "name": "music/game/key_door",
+        "stream": true
+      }
+    ]
+  }
+}

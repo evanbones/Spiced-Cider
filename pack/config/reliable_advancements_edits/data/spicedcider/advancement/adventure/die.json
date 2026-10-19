@@ -1,18 +1,4 @@
 {
-  "parent": "spicedcider:adventure/kill_a_monster",
-  "display": {
-    "icon": {
-      "id": "minecraft:skeleton_skull"
-    },
-    "title": {
-      "text": "Skill Issue"
-    },
-    "description": {
-      "text": "Die, then go back for everything but your armor"
-    },
-    "frame": "task",
-    "hidden": true
-  },
   "criteria": {
     "died": {
       "trigger": "minecraft:entity_killed_player"
@@ -22,5 +8,18 @@
     [
       "died"
     ]
+  ],
+  "parent": "spicedcider:adventure/kill_a_monster",
+  "display": {
+    "hidden": true,
+    "icon": {
+      "id": "minecraft:skeleton_skull"
+    },
+    "title": "Skill Issue",
+    "description": "Die",
+    "frame": "task"
+  },
+  "parents": [
+    "spicedcider:adventure/kill_a_monster"
   ]
 }

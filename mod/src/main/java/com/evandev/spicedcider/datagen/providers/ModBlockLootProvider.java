@@ -42,6 +42,8 @@ public class ModBlockLootProvider extends BlockLootSubProvider {
         this.add(ModBlocks.DEPOSIT.get(), block -> this.createDepositTable(block, ModItems.GEODE.get()));
         this.add(ModBlocks.DEEPSLATE_DEPOSIT.get(), block -> this.createDepositTable(block, ModItems.DEEPSLATE_GEODE.get()));
         this.add(ModBlocks.BLACKSTONE_DEPOSIT.get(), block -> this.createDepositTable(block, ModItems.BLACKSTONE_GEODE.get()));
+        this.dropSelf(ModBlocks.GLOAMWOOD_SAPLING.get());
+        this.dropPottedContents(ModBlocks.POTTED_GLOAMWOOD_SAPLING.get());
         this.dropSelf(ModBlocks.GLOWSTONE_BRICKS.get());
         this.dropSelf(ModBlocks.GLOWSTONE_BRICK_STAIRS.get());
         this.add(ModBlocks.GLOWSTONE_BRICK_SLAB.get(), this::createSlabItemTable);
@@ -94,6 +96,8 @@ public class ModBlockLootProvider extends BlockLootSubProvider {
         blocks.add(ModBlocks.BLACKSTONE_DEPOSIT.get());
         blocks.add(ModBlocks.WORM_CRATE.get());
         blocks.add(ModBlocks.GOLDEN_WORM_CRATE.get());
+        blocks.add(ModBlocks.GLOAMWOOD_SAPLING.get());
+        blocks.add(ModBlocks.POTTED_GLOAMWOOD_SAPLING.get());
         blocks.add(ModBlocks.GLOWSTONE_BRICKS.get());
         blocks.add(ModBlocks.GLOWSTONE_BRICK_STAIRS.get());
         blocks.add(ModBlocks.GLOWSTONE_BRICK_SLAB.get());

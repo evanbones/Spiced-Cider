@@ -259,24 +259,6 @@
   },
   {
     "inputs": [
-      "caverns_and_chasms:smooth_basalt_stairs"
-    ],
-    "output": "infernalexp:polished_basalt_stairs"
-  },
-  {
-    "inputs": [
-      "caverns_and_chasms:smooth_basalt_slab"
-    ],
-    "output": "infernalexp:polished_basalt_slab"
-  },
-  {
-    "inputs": [
-      "caverns_and_chasms:smooth_basalt_wall"
-    ],
-    "output": "infernalexp:polished_basalt_wall"
-  },
-  {
-    "inputs": [
       "caverns_and_chasms:basalt_bricks"
     ],
     "output": "stoneworks:basalt_bricks"
@@ -412,5 +394,11 @@
       "nomansland:meeting_point",
       "nomansland:menhir"
     ]
+  },
+  {
+    "inputs": [
+      "caverns_and_chasms:toolbox"
+    ],
+    "output": "create:brown_toolbox"
   }
 ]

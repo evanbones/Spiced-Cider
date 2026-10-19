@@ -50,6 +50,9 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         this.tag(BlockTags.create(ResourceLocation.fromNamespaceAndPath("c", "storage_blocks/cast_iron")))
                 .add(ModBlocks.CAST_IRON_BLOCK.get());
 
+        this.tag(BlockTags.SAPLINGS).add(ModBlocks.GLOAMWOOD_SAPLING.get());
+        this.tag(BlockTags.FLOWER_POTS).add(ModBlocks.POTTED_GLOAMWOOD_SAPLING.get());
+
         this.tag(BlockTags.STAIRS).add(ModBlocks.GLOWSTONE_BRICK_STAIRS.get());
         this.tag(BlockTags.SLABS).add(ModBlocks.GLOWSTONE_BRICK_SLAB.get());
         this.tag(BlockTags.WALLS).add(ModBlocks.GLOWSTONE_BRICK_WALL.get());

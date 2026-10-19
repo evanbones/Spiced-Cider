@@ -55,6 +55,7 @@
 
 		[types.wood_type.minecraft]
 			pale_oak = true
+			poplar = true
 
 		[types.wood_type.architects_palette]
 			twisted = true
@@ -134,6 +135,9 @@
 
 		[types.leaves_type.minecraft]
 			pale_oak = true
+			red_poplar = true
+			orange_poplar = true
+			yellow_poplar = true
 
 		[types.leaves_type.architects_palette]
 			twisted = true
@@ -250,7 +254,7 @@
 		[entries.wood_type.farmersdelight]
 			cabinet = true
 
-		[entries.wood_type.copperagebackport]
+		[entries.wood_type.vanillabackport]
 			shelf = true
 
 		[entries.wood_type.bountifulfares]

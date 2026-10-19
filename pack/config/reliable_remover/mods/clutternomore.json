@@ -61,5 +61,19 @@
       "clutternomore:architects_palette/vertical_warpstone_slab",
       "clutternomore:architects_palette/warpstone_step"
     ]
+  },
+  {
+    "action": "remove",
+    "items": [
+      "clutternomore:stonezone/vertical_sw/minecraft/resin_tile_slab"
+    ],
+    "replace_with": "clutternomore:spicedcider/vertical_resin_tile_slab"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "clutternomore:stonezone/sw/minecraft/resin_tile_step"
+    ],
+    "replace_with": "clutternomore:spicedcider/resin_tile_step"
   }
 ]

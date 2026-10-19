@@ -1,0 +1,8 @@
+{
+  "activation_condition": "g.value('spicedcider_pale_garden_fade') > 0",
+  "post_chain": "spicedcider:pale_garden",
+  "expression_uniforms": {
+    "Strength": "g.value('spicedcider_pale_garden_fade')"
+  },
+  "use_depth_buffer": true
+}

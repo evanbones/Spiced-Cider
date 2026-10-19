@@ -1,28 +1,15 @@
 {
-  "parent": "spicedcider:adventure/kill_a_monster",
-  "display": {
-    "icon": {
-      "id": "minecraft:creeper_head"
-    },
-    "title": {
-      "text": "Tolerable"
-    },
-    "description": {
-      "text": "Kill a Creeper, which only leaves spores behind up here"
-    },
-    "frame": "task"
-  },
   "criteria": {
     "killed_creeper": {
       "trigger": "minecraft:player_killed_entity",
       "conditions": {
         "entity": [
           {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
             "predicate": {
               "type": "minecraft:creeper"
-            }
+            },
+            "entity": "this",
+            "condition": "minecraft:entity_properties"
           }
         ]
       }
@@ -32,5 +19,17 @@
     [
       "killed_creeper"
     ]
+  ],
+  "parent": "spicedcider:adventure/kill_a_monster",
+  "display": {
+    "icon": {
+      "id": "minecraft:creeper_head"
+    },
+    "title": "Tolerable",
+    "description": "Kill a Creeper, which leaves spores behind when it explodes",
+    "frame": "task"
+  },
+  "parents": [
+    "spicedcider:adventure/kill_a_monster"
   ]
 }

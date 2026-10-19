@@ -29,5 +29,40 @@
       "stonezone:sw/infernalexp/shimmer_stone_tile_wall",
       "stonezone:sw/infernalexp/shimmer_stone_tiles"
     ]
+  },
+  {
+    "action": "remove",
+    "items": [
+      "stonezone:sw/infernalexp/glowstone_pillar"
+    ],
+    "replace_with": "spicedcider:polished_glowstone_pillar"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "stonezone:sw/minecraft/resin_tiles"
+    ],
+    "replace_with": "spicedcider:resin_tiles"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "stonezone:sw/minecraft/resin_tile_stairs"
+    ],
+    "replace_with": "spicedcider:resin_tile_stairs"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "stonezone:sw/minecraft/resin_tile_slab"
+    ],
+    "replace_with": "spicedcider:resin_tile_slab"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "stonezone:sw/minecraft/resin_tile_wall"
+    ],
+    "replace_with": "spicedcider:resin_tile_wall"
   }
 ]

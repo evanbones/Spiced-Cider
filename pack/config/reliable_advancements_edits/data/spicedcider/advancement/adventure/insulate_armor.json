@@ -1,17 +1,4 @@
 {
-  "parent": "spicedcider:adventure/extreme_temps",
-  "display": {
-    "icon": {
-      "id": "cold_sweat:sewing_table"
-    },
-    "title": {
-      "text": "Lining Up"
-    },
-    "description": {
-      "text": "Insulate a piece of armor at a Sewing Table"
-    },
-    "frame": "task"
-  },
   "criteria": {
     "requirement": {
       "trigger": "cold_sweat:armor_insulated"
@@ -21,5 +8,17 @@
     [
       "requirement"
     ]
+  ],
+  "display": {
+    "icon": {
+      "id": "cold_sweat:sewing_table",
+      "count": 1
+    },
+    "title": "Lining Up",
+    "description": "Insulate a piece of armor at a Sewing Table"
+  },
+  "parent": "spicedcider:adventure/desperate_measures",
+  "parents": [
+    "spicedcider:adventure/desperate_measures"
   ]
 }

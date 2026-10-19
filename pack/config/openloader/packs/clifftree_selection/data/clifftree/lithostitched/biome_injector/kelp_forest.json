@@ -1,0 +1,15 @@
+{
+  "type": "lithostitched:replace_partially",
+  "dimension": "minecraft:overworld",
+  "targets": [
+    "minecraft:ocean",
+    "minecraft:cold_ocean"
+  ],
+  "replacement": "clifftree:kelp_forest",
+  "parameters": {
+    "erosion": [
+      0.575,
+      10.0
+    ]
+  }
+}

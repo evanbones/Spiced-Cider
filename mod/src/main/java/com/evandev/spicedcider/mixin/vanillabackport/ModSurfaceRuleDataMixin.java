@@ -1,14 +1,15 @@
 package com.evandev.spicedcider.mixin.vanillabackport;
 
-import com.blackgear.vanillabackport.common.registries.ModBiomes;
-import com.blackgear.vanillabackport.common.registries.ModBlocks;
-import com.blackgear.vanillabackport.common.registries.ModNoises;
-import com.blackgear.vanillabackport.common.worldgen.ModSurfaceRuleData;
-import com.blackgear.vanillabackport.common.worldgen.surface.SpatialNoiseThresholdConditionSource;
+import com.blackgear.vanillabackport.common.registries.worldgen.ModBiomes;
+import com.blackgear.vanillabackport.common.registries.blocks.ModBlocks;
+import com.blackgear.vanillabackport.common.registries.worldgen.ModNoises;
+import com.blackgear.vanillabackport.common.worldgen.surface.ModSurfaceRuleData;
+import com.blackgear.vanillabackport.common.level.worldgen.surface.SpatialNoiseThresholdConditionSource;
 import com.moulberry.mixinconstraints.annotations.IfModLoaded;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.SurfaceRules;
+import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.synth.NormalNoise;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;
@@ -28,13 +29,24 @@ public class ModSurfaceRuleDataMixin {
     public static SurfaceRules.RuleSource makeRules() {
         SurfaceRules.RuleSource sulfur = SurfaceRules.state(ModBlocks.SULFUR.get().defaultBlockState());
         SurfaceRules.RuleSource tuff = SurfaceRules.state(Blocks.TUFF.defaultBlockState());
+        SurfaceRules.RuleSource bedrock = SurfaceRules.ifTrue(
+                SurfaceRules.verticalGradient("bedrock", VerticalAnchor.bottom(), VerticalAnchor.aboveBottom(5)),
+                SurfaceRules.state(Blocks.BEDROCK.defaultBlockState())
+        );
 
-        return SurfaceRules.ifTrue(
-                SurfaceRules.isBiome(ModBiomes.SULFUR_CAVES),
-                SurfaceRules.sequence(
-                        SurfaceRules.ifTrue(cider$noiseCondition3d(ModNoises.SULFUR_CAVE_GRADIENT, -0.48D, -0.4D), tuff),
-                        SurfaceRules.ifTrue(cider$noiseCondition3d(ModNoises.SULFUR_CAVE_GRADIENT, 0.4D, 0.48D), tuff),
-                        sulfur
+        return SurfaceRules.sequence(
+                SurfaceRules.ifTrue(
+                        SurfaceRules.isBiome(ModBiomes.DAPPLED_FOREST),
+                        SurfaceRules.ifTrue(SurfaceRules.noiseCondition(ModNoises.SMALL_PATCH, 1.2F), SurfaceRules.state(Blocks.COARSE_DIRT.defaultBlockState()))
+                ),
+                SurfaceRules.ifTrue(
+                        SurfaceRules.isBiome(ModBiomes.SULFUR_CAVES),
+                        SurfaceRules.sequence(
+                                bedrock,
+                                SurfaceRules.ifTrue(cider$noiseCondition3d(ModNoises.SULFUR_CAVE_GRADIENT, -0.48D, -0.4D), tuff),
+                                SurfaceRules.ifTrue(cider$noiseCondition3d(ModNoises.SULFUR_CAVE_GRADIENT, 0.4D, 0.48D), tuff),
+                                sulfur
+                        )
                 )
         );
     }
