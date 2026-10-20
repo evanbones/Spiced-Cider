@@ -1,0 +1,40 @@
+{
+  "priority": 50,
+  "condition": {
+    "type": "blueprint:biome",
+    "biomes": "nomansland:bayou"
+  },
+  "repaletter": [
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:jungle_planks",
+      "replaces_with": "nomansland:willow_planks"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:jungle_fence",
+      "replaces_with": "nomansland:willow_fence"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:jungle_slab",
+      "replaces_with": "nomansland:willow_slab"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:jungle_trapdoor",
+      "replaces_with": "nomansland:willow_trapdoor"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:stripped_jungle_log",
+      "replaces_with": "nomansland:stripped_willow_log"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:ladder",
+      "replaces_with": "everycomp:abnww/nomansland/willow_ladder"
+    }
+  ],
+  "structures": "bettermineshafts:mineshaft_jungle"
+}

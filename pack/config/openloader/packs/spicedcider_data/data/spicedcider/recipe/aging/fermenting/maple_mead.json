@@ -1,0 +1,32 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "culturaldelights"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "nomansland"
+    }
+  ],
+  "type": "culturaldelights:aging",
+  "cooktime": 200,
+  "ingredients": [
+    {
+      "tag": "c:buckets/water"
+    },
+    {
+      "item": "nomansland:maple_syrup_bottle"
+    },
+    {
+      "item": "minecraft:brown_mushroom"
+    }
+  ],
+  "container": {
+    "item": "minecraft:glass_bottle"
+  },
+  "result": {
+    "id": "nomansland:maple_mead_bottle",
+    "count": 1
+  }
+}

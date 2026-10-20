@@ -1,0 +1,20 @@
+{
+  "priority": 50,
+  "condition": {
+    "type": "blueprint:biome",
+    "biomes": "nomansland:dark_taiga"
+  },
+  "repaletter": [
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:chest",
+      "replaces_with": "everycomp:q/nomansland/pine_chest"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:trapped_chest",
+      "replaces_with": "everycomp:q/nomansland/trapped_pine_chest"
+    }
+  ],
+  "structures": "bettermineshafts:mineshaft_spruce"
+}

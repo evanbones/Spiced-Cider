@@ -6821,5 +6821,65 @@
   ],
   "requires": [],
   "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:polished_amethyst_stairs",
+  "kind": "STAIRS",
+  "mod": "blockbox",
+  "properties": "blockbox:polished_amethyst",
+  "parent": "blockbox:polished_amethyst",
+  "side": "blockbox:block/polished_amethyst",
+  "top": "blockbox:block/polished_amethyst",
+  "bottom": "blockbox:block/polished_amethyst",
+  "craft": "SHAPE",
+  "craftFrom": "blockbox:polished_amethyst",
+  "cut": [
+   "blockbox:polished_amethyst",
+   "minecraft:amethyst_block"
+  ],
+  "requires": [
+   "blockbox"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:polished_amethyst_slab",
+  "kind": "SLAB",
+  "mod": "blockbox",
+  "properties": "blockbox:polished_amethyst",
+  "parent": "blockbox:polished_amethyst",
+  "side": "blockbox:block/polished_amethyst",
+  "top": "blockbox:block/polished_amethyst",
+  "bottom": "blockbox:block/polished_amethyst",
+  "craft": "SHAPE",
+  "craftFrom": "blockbox:polished_amethyst",
+  "cut": [
+   "blockbox:polished_amethyst",
+   "minecraft:amethyst_block"
+  ],
+  "requires": [
+   "blockbox"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:polished_amethyst_wall",
+  "kind": "WALL",
+  "mod": "blockbox",
+  "properties": "blockbox:polished_amethyst",
+  "parent": "blockbox:polished_amethyst",
+  "side": "blockbox:block/polished_amethyst",
+  "top": "blockbox:block/polished_amethyst",
+  "bottom": "blockbox:block/polished_amethyst",
+  "craft": "SHAPE",
+  "craftFrom": "blockbox:polished_amethyst",
+  "cut": [
+   "blockbox:polished_amethyst",
+   "minecraft:amethyst_block"
+  ],
+  "requires": [
+   "blockbox"
+  ],
+  "tool": "pickaxe"
  }
 ]

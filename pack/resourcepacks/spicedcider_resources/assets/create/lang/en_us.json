@@ -12,16 +12,13 @@
   "entity.create.super_glue": "Glue",
   "item.create.super_glue": "Glue Brush",
   "block.create.andesite_casing": "Bronze Casing",
-
   "item.create.wrench": "Engineer's Wrench",
   "block.create.jungle_window": "Kapok Window",
   "block.create.jungle_window_pane": "Kapok Window Pane",
-
   "block.create.redstone_contact": "Flux Contact",
   "block.create.redstone_link": "Flux Link",
   "block.create.redstone_requester": "Flux Requester",
   "item.create.linked_controller.tooltip.condition3": "R-Click on Flux Link Receiver",
-
   "item.create.cinder_flour": "Nether Dust",
   "block.create.netherite_backtank": "Infernite Backtank",
   "item.create.netherite_backtank": "Infernite Backtank",
@@ -216,9 +213,9 @@
   "lore.create.blaze_cake": "A treat for Blaze Burners that superheats them for a while.",
   "lore.create.blaze_cake_base": "An unfinished Blaze Cake. Fill it with Lava using a Spout to finish it.",
   "lore.create.minecart_coupling": "Chains two Minecarts together so they move as one.",
-  "lore.create.filter": "A filter that matches against a list of items or other filters. Used in the filter slots of Create's machines.",
-  "lore.create.attribute_filter": "A filter that matches items by their attributes or categories. Used in the filter slots of Create's machines.",
-  "lore.create.package_filter": "A filter that matches Packages by their address. Used in the filter slots of Create's machines.",
+  "lore.create.filter": "A filter that matches against a list of items or other filters. Used in the filter slots of machines.",
+  "lore.create.attribute_filter": "A filter that matches items by their attributes or categories. Used in the filter slots of machines.",
+  "lore.create.package_filter": "A filter that matches Packages by their address. Used in the filter slots of machines.",
   "lore.create.wrench": "A tool for rotating and picking up kinetic components. Sneak-use to pick a component up instantly.",
   "lore.create.schematic_table": "Writes saved Schematics onto an Empty Schematic so they can be built with a Schematicannon.",
   "lore.create.schematic_and_quill": "A tool for selecting an area of the world and saving it as a Schematic.",
@@ -275,5 +272,8 @@
   "lore.create.sail_frame": "A frame that acts as a sail on a Windmill Bearing.",
   "lore.create.white_sail": "A sail that catches the wind on a Windmill Bearing. Each sail adds more power.",
   "lore.create.elevator_contact": "Marks a floor for an Elevator Pulley, and gives a Flux signal when the lift arrives.",
-  "lore.create.cart_assembler": "A rail that turns blocks attached to a Minecart into a moving contraption."
+  "lore.create.cart_assembler": "A rail that turns blocks attached to a Minecart into a moving contraption.",
+  "item.create.schematic_and_quill": "Schematic and Quill",
+  "create.recipe.fan_haunting": "Haunting",
+  "create.recipe.fan_haunting.fan": "Soul Fire or a Soul Campfire"
 }

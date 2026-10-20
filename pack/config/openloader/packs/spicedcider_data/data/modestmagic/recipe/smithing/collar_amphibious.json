@@ -1,0 +1,18 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "redomesticate"
+    }
+  ],
+  "type": "modestmagic:tablet_smithing",
+  "template": {
+    "item": "modestmagic:enchantment_tablet_aquatic"
+  },
+  "base": {
+    "item": "redomesticate:collar_tag"
+  },
+  "enchantments": [
+    "redomesticate:amphibious"
+  ]
+}

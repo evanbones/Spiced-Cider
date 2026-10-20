@@ -1,0 +1,73 @@
+{
+  "priority": 50,
+  "condition": {
+    "type": "blueprint:biome",
+    "biomes": "minecraft:crimson_forest"
+  },
+  "repaletter": [
+    {
+      "type": "blueprint:weighted",
+      "replaces_block": "minecraft:nether_bricks",
+      "replaces_with": [
+        {
+          "data": "minecraft:red_nether_bricks",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "type": "blueprint:weighted",
+      "replaces_block": "minecraft:cracked_nether_bricks",
+      "replaces_with": [
+        {
+          "data": "minecraft:red_nether_bricks",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:nether_brick_stairs",
+      "replaces_with": "minecraft:red_nether_brick_stairs"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:nether_brick_slab",
+      "replaces_with": "minecraft:red_nether_brick_slab"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:nether_brick_wall",
+      "replaces_with": "minecraft:red_nether_brick_wall"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:chiseled_nether_bricks",
+      "replaces_with": "spicedcider:chiseled_red_nether_bricks"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:red_nether_bricks",
+      "replaces_with": "minecraft:nether_bricks"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:red_nether_brick_stairs",
+      "replaces_with": "minecraft:nether_brick_stairs"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:red_nether_brick_slab",
+      "replaces_with": "minecraft:nether_brick_slab"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:red_nether_brick_wall",
+      "replaces_with": "minecraft:nether_brick_wall"
+    }
+  ],
+  "structures": [
+    "minecraft:fortress",
+    "betterdungeons:small_nether_dungeon"
+  ]
+}

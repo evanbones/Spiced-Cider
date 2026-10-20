@@ -112,5 +112,33 @@
     "items": [
       "environmental:music_disc_leaving_home"
     ]
+  },
+  {
+    "action": "remove",
+    "items": [
+      "environmental:dirt_path"
+    ],
+    "replace_with": "nomansland:dirt_path"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "environmental:mycelium_path"
+    ],
+    "replace_with": "nomansland:mycelium_path"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "environmental:podzol_path"
+    ],
+    "replace_with": "nomansland:podzol_path"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "environmental:mycelium_sprouts"
+    ],
+    "replace_with": "nomansland:mycelium_sprouts"
   }
 ]

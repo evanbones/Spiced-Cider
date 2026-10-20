@@ -33,5 +33,19 @@
       "woodworks:mangrove_chest",
       "woodworks:birch_chest"
     ]
+  },
+  {
+    "action": "remove",
+    "items": [
+      "woodworks:bamboo_closet"
+    ],
+    "replace_with": "quark:bamboo_chest"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "woodworks:trapped_bamboo_closet"
+    ],
+    "replace_with": "quark:trapped_bamboo_chest"
   }
 ]

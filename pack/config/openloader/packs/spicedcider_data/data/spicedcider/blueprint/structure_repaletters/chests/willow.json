@@ -1,0 +1,31 @@
+{
+  "priority": 90,
+  "condition": {
+    "type": "blueprint:biome",
+    "biomes": [
+      "nomansland:bayou",
+      "nomansland:bog",
+      "nomansland:dark_swamp"
+    ]
+  },
+  "repaletter": [
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:chest",
+      "replaces_with": "everycomp:q/nomansland/willow_chest"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:trapped_chest",
+      "replaces_with": "everycomp:q/nomansland/trapped_willow_chest"
+    }
+  ],
+  "structures": [
+    "betterdungeons:skeleton_dungeon",
+    "betterdungeons:small_dungeon",
+    "betterdungeons:zombie_dungeon",
+    "explorify:mausoleum",
+    "explorify:ruins",
+    "nomansland:small_dungeon"
+  ]
+}

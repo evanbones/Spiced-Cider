@@ -31,7 +31,7 @@ public class PetArmorEvents {
                 .toList();
 
         for (Item item : needsDurability) {
-            int durability = PetArmorDurability.bodyDurabilityFor(((AnimalArmorItem) item).getMaterial());
+            int durability = PetArmorDurability.bodyDurabilityFor(item, ((AnimalArmorItem) item).getMaterial());
             event.modify(item, builder -> builder
                     .set(DataComponents.MAX_STACK_SIZE, 1)
                     .set(DataComponents.MAX_DAMAGE, durability)

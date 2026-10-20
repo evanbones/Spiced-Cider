@@ -485,5 +485,42 @@
       "architects_palette:wardstone_blend",
       "architects_palette:wardstone_brick"
     ]
+  },
+  {
+    "action": "remove",
+    "items": [
+      "architects_palette:charcoal_block"
+    ],
+    "replace_with": "quark:charcoal_block"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "architects_palette:tread_plate"
+    ],
+    "replace_with": "blockbox:iron_tread_plate"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "architects_palette:tread_plate_slab"
+    ],
+    "replace_with": "blockbox:iron_tread_plate_slab"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "architects_palette:tread_plate_stairs"
+    ],
+    "replace_with": "blockbox:iron_tread_plate_stairs"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "architects_palette:tread_plate_vertical_slab",
+      "architects_palette:tread_plate_wall",
+      "clutternomore:architects_palette/tread_plate_step",
+      "clutternomore:architects_palette/vertical_tread_plate_slab"
+    ]
   }
 ]

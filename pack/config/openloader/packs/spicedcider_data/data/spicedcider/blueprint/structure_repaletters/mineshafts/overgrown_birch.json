@@ -1,0 +1,48 @@
+{
+  "priority": 50,
+  "condition": {
+    "type": "blueprint:biome",
+    "biomes": [
+      "minecraft:birch_forest",
+      "minecraft:old_growth_birch_forest"
+    ]
+  },
+  "repaletter": [
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:spruce_planks",
+      "replaces_with": "minecraft:birch_planks"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:spruce_fence",
+      "replaces_with": "minecraft:birch_fence"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:spruce_slab",
+      "replaces_with": "minecraft:birch_slab"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:spruce_leaves",
+      "replaces_with": "minecraft:birch_leaves"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:oak_log",
+      "replaces_with": "minecraft:birch_log"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:oak_trapdoor",
+      "replaces_with": "minecraft:birch_trapdoor"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:ladder",
+      "replaces_with": "woodworks:birch_ladder"
+    }
+  ],
+  "structures": "bettermineshafts:mineshaft_overgrown"
+}

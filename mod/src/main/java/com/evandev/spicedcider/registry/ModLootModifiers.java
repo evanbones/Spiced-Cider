@@ -2,6 +2,7 @@ package com.evandev.spicedcider.registry;
 
 import com.evandev.spicedcider.SpicedCider;
 import com.evandev.spicedcider.content.loot.BonusBlockDropLootModifier;
+import com.evandev.spicedcider.content.loot.ReplaceLootLootModifier;
 import com.evandev.spicedcider.content.loot.CleaverSkullDropLootModifier;
 import com.mojang.serialization.MapCodec;
 import net.neoforged.neoforge.common.loot.IGlobalLootModifier;
@@ -18,4 +19,6 @@ public class ModLootModifiers {
 
     public static final DeferredHolder<MapCodec<? extends IGlobalLootModifier>, MapCodec<BonusBlockDropLootModifier>> BONUS_BLOCK_DROP =
             LOOT_MODIFIER_SERIALIZERS.register("bonus_block_drop", () -> BonusBlockDropLootModifier.CODEC);
+    public static final DeferredHolder<MapCodec<? extends IGlobalLootModifier>, MapCodec<ReplaceLootLootModifier>> REPLACE_LOOT =
+            LOOT_MODIFIER_SERIALIZERS.register("replace_loot", () -> ReplaceLootLootModifier.CODEC);
 }

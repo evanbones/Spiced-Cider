@@ -1,0 +1,27 @@
+{
+  "priority": 90,
+  "condition": {
+    "type": "blueprint:biome",
+    "biomes": "minecraft:lush_caves"
+  },
+  "repaletter": [
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:chest",
+      "replaces_with": "caverns_and_chasms:azalea_chest"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:trapped_chest",
+      "replaces_with": "caverns_and_chasms:trapped_azalea_chest"
+    }
+  ],
+  "structures": [
+    "betterdungeons:skeleton_dungeon",
+    "betterdungeons:small_dungeon",
+    "betterdungeons:zombie_dungeon",
+    "explorify:mausoleum",
+    "explorify:ruins",
+    "nomansland:small_dungeon"
+  ]
+}

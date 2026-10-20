@@ -1,0 +1,26 @@
+{
+  "condition": {
+    "type": "blueprint:biome",
+    "biomes": "#minecraft:is_jungle"
+  },
+  "repaletter": [
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:chest",
+      "replaces_with": "quark:jungle_chest"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:trapped_chest",
+      "replaces_with": "quark:trapped_jungle_chest"
+    }
+  ],
+  "structures": [
+    "betterdungeons:skeleton_dungeon",
+    "betterdungeons:small_dungeon",
+    "betterdungeons:zombie_dungeon",
+    "explorify:mausoleum",
+    "explorify:ruins",
+    "nomansland:small_dungeon"
+  ]
+}

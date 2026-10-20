@@ -1,0 +1,21 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "spelunkery"
+    }
+  ],
+  "type": "modestmining:milling",
+  "category": "blocks",
+  "ingredients": [
+    {
+      "item": "minecraft:deepslate"
+    }
+  ],
+  "results": [
+    {
+      "id": "spelunkery:deepslate_pebble",
+      "count": 4
+    }
+  ]
+}

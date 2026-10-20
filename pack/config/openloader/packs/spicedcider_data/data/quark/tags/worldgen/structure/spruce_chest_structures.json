@@ -1,0 +1,43 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:shipwreck",
+    "minecraft:shipwreck_beached",
+    {
+      "id": "bettermineshafts:mineshaft_ice",
+      "required": false
+    },
+    {
+      "id": "bettermineshafts:mineshaft_spruce_snowy",
+      "required": false
+    },
+    {
+      "id": "minecraft:abandoned_camp_old_growth_pine_taiga",
+      "required": false
+    },
+    {
+      "id": "minecraft:abandoned_camp_old_growth_spruce_taiga",
+      "required": false
+    },
+    {
+      "id": "minecraft:abandoned_camp_snowy_taiga",
+      "required": false
+    },
+    {
+      "id": "minecraft:abandoned_camp_taiga",
+      "required": false
+    },
+    {
+      "id": "minecraft:abandoned_camp_windswept_forest",
+      "required": false
+    },
+    {
+      "id": "newworld:buried_bunker",
+      "required": false
+    },
+    {
+      "id": "nomansland:deep_well",
+      "required": false
+    }
+  ]
+}

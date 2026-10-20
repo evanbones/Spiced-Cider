@@ -1,0 +1,38 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "culturaldelights"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "bountifulfares"
+    }
+  ],
+  "type": "culturaldelights:aging",
+  "cooktime": 200,
+  "ingredients": [
+    {
+      "tag": "c:buckets/water"
+    },
+    {
+      "item": "bountifulfares:hoary_apple"
+    },
+    {
+      "item": "bountifulfares:hoary_apple"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "minecraft:brown_mushroom"
+    }
+  ],
+  "container": {
+    "item": "spicedcider:ceramic_mug"
+  },
+  "result": {
+    "id": "bountifulfares:hoary_cider_jar",
+    "count": 1
+  }
+}

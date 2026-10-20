@@ -1,0 +1,14 @@
+{
+  "type": "lithostitched:replace_partially",
+  "dimension": "minecraft:overworld",
+  "targets": [
+    "minecraft:plains",
+    "minecraft:sunflower_plains",
+    "nomansland:prairie"
+  ],
+  "replacement": "minecraft:meadow",
+  "parameters": {
+    "erosion": [-10.0, -0.3],
+    "continentalness": [0.1, 10.0]
+  }
+}

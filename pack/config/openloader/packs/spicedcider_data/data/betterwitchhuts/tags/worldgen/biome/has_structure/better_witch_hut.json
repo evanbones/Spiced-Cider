@@ -1,6 +1,14 @@
 {
   "replace": true,
   "values": [
-    "minecraft:swamp"
+    "minecraft:swamp",
+    {
+      "id": "nomansland:bog",
+      "required": false
+    },
+    {
+      "id": "nomansland:dark_swamp",
+      "required": false
+    }
   ]
 }

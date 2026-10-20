@@ -1,0 +1,16 @@
+{
+  "priority": 1000,
+  "repaletter": [
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:chest",
+      "replaces_with": "environmental:wisteria_chest"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:trapped_chest",
+      "replaces_with": "environmental:trapped_wisteria_chest"
+    }
+  ],
+  "structures": "bettermineshafts:mineshaft_mushroom"
+}

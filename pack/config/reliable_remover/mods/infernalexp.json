@@ -54,5 +54,12 @@
       "infernalexp:dullstone_pressure_plate"
     ],
     "replace_with": "minecraft:stone_pressure_plate"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "infernalexp:magma_cube_bucket"
+    ],
+    "replace_with": "slime_time:magma_cube_bucket"
   }
 ]

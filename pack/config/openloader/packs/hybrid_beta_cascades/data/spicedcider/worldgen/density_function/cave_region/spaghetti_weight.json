@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:flat_cache",
+  "argument": {
+    "type": "minecraft:add",
+    "argument1": {
+      "type": "minecraft:mul",
+      "argument1": -0.5,
+      "argument2": "spicedcider:cave_region/cheese_weight"
+    },
+    "argument2": {
+      "type": "minecraft:mul",
+      "argument1": 0.866,
+      "argument2": "spicedcider:cave_region/axis_b"
+    }
+  }
+}

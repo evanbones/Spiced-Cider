@@ -1,0 +1,65 @@
+{
+  "repaletter": [
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:cobblestone",
+      "replaces_with": "stoneworks:cobbled_tuff"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:cobblestone_stairs",
+      "replaces_with": "stoneworks:cobbled_tuff_stairs"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:cobblestone_slab",
+      "replaces_with": "stoneworks:cobbled_tuff_slab"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:mossy_cobblestone",
+      "replaces_with": "stoneworks:mossy_cobbled_tuff"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:mossy_cobblestone_stairs",
+      "replaces_with": "stoneworks:mossy_cobbled_tuff_stairs"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:mossy_cobblestone_slab",
+      "replaces_with": "stoneworks:mossy_cobbled_tuff_slab"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:smooth_stone",
+      "replaces_with": "minecraft:polished_tuff"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:smooth_stone_slab",
+      "replaces_with": "minecraft:polished_tuff_slab"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:polished_andesite",
+      "replaces_with": "minecraft:tuff_bricks"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:polished_andesite_stairs",
+      "replaces_with": "minecraft:tuff_brick_stairs"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:polished_andesite_slab",
+      "replaces_with": "minecraft:tuff_brick_slab"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:stone_stairs",
+      "replaces_with": "minecraft:tuff_stairs"
+    }
+  ],
+  "structures": "betterdungeons:zombie_dungeon"
+}

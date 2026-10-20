@@ -276,6 +276,7 @@ dependencies {
     compileOnly "maven.modrinth:reliable-advancements:J5weQWAm"
     //runtimeOnly "maven.modrinth:modern-world-creation:2.0.1-1.21.1-neoforge"
     //runtimeOnly "maven.modrinth:konkrete:1.9.9-1.21-neoforge"
+    compileOnly "maven.modrinth:emi:1.1.22+1.21.1+neoforge"
     runtimeOnly "maven.modrinth:emi:1.1.22+1.21.1+neoforge"
 
     // YACL
@@ -463,7 +464,7 @@ idea {
 }
 
 publishMods {
-    file = tasks.named("jar").get().archiveFile
+    file = rootProject.layout.projectDirectory.file("bootstrap/build/libs/${mod_id}-${version}.jar")
     changelog = rootProject.file("CHANGELOG-LATEST.md").exists() ? rootProject.file("CHANGELOG-LATEST.md").text : ""
     type = STABLE
     version = "${project.version} - ${project.minecraft_version}"
@@ -491,9 +492,13 @@ var packwizRefresh = tasks.register("packwizRefresh", Exec) {
     commandLine packDir.file("packwiz.exe").asFile.absolutePath, "refresh"
 }
 
+tasks.matching { it.name.startsWith("publish") && it.name != "publishToMavenLocal" }.configureEach {
+    dependsOn(":bootstrap:jar")
+}
+
 tasks.register("deployToPack", Copy) {
     group = "spiced cider"
-    from(tasks.named("jar"))
+    from(project(":bootstrap").tasks.named("jar"))
     into(packDir.dir("mods"))
     finalizedBy(packwizRefresh)
 }

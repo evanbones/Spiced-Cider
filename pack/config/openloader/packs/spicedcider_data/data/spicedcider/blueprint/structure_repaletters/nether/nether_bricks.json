@@ -1,0 +1,36 @@
+{
+  "repaletter": [
+    {
+      "type": "blueprint:weighted",
+      "replaces_block": "minecraft:nether_bricks",
+      "replaces_with": [
+        {
+          "data": "minecraft:nether_bricks",
+          "weight": 4
+        },
+        {
+          "data": "brick_and_mortar:charred_nether_bricks",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "type": "blueprint:weighted",
+      "replaces_block": "minecraft:cracked_nether_bricks",
+      "replaces_with": [
+        {
+          "data": "minecraft:nether_bricks",
+          "weight": 4
+        },
+        {
+          "data": "brick_and_mortar:charred_nether_bricks",
+          "weight": 1
+        }
+      ]
+    }
+  ],
+  "structures": [
+    "minecraft:fortress",
+    "betterdungeons:small_nether_dungeon"
+  ]
+}

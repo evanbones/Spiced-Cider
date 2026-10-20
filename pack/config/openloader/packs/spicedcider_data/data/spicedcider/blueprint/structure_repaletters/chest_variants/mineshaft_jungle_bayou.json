@@ -1,0 +1,20 @@
+{
+  "priority": 50,
+  "condition": {
+    "type": "blueprint:biome",
+    "biomes": "nomansland:bayou"
+  },
+  "repaletter": [
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:chest",
+      "replaces_with": "everycomp:q/nomansland/willow_chest"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:trapped_chest",
+      "replaces_with": "everycomp:q/nomansland/trapped_willow_chest"
+    }
+  ],
+  "structures": "bettermineshafts:mineshaft_jungle"
+}

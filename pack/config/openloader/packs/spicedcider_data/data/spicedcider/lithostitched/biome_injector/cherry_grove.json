@@ -1,0 +1,15 @@
+{
+  "type": "lithostitched:replace_partially",
+  "dimension": "minecraft:overworld",
+  "targets": [
+    "minecraft:forest",
+    "minecraft:flower_forest",
+    "minecraft:birch_forest",
+    "minecraft:old_growth_birch_forest"
+  ],
+  "replacement": "minecraft:cherry_grove",
+  "parameters": {
+    "erosion": [-10.0, -0.3],
+    "continentalness": [0.2, 10.0]
+  }
+}

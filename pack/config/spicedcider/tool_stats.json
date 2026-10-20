@@ -1,0 +1,235 @@
+{
+  "tools": {
+    "flint": {
+      "durability": 150,
+      "speed": 3.5,
+      "items": [
+        "modestmining:flint_.+",
+        "farmersdelight:flint_knife",
+        "manual_labour:flint_hammer",
+        "minecraft:flint_and_steel"
+      ]
+    },
+    "gold": {
+      "durability": 150,
+      "speed": 20.0,
+      "items": [
+        "minecraft:golden_(sword|shovel|pickaxe|axe|hoe|spear)",
+        "farmersdelight:golden_knife",
+        "manual_labour:golden_hammer",
+        "modestmining:golden_.+"
+      ]
+    },
+    "copper": {
+      "durability": 350,
+      "speed": 5.0,
+      "items": [
+        "minecraft:copper_(sword|shovel|pickaxe|axe|hoe|spear)",
+        "minecraft:shears",
+        "abnormals_delight:(waxed_)?((exposed|weathered|oxidized)_)?copper_knife",
+        "caverns_and_chasms:(waxed_)?((exposed|weathered|oxidized)_)?copper_(sword|shovel|pickaxe|axe|hoe)",
+        "manual_labour:(waxed_)?((exposed|weathered|oxidized)_)?copper_hammer"
+      ]
+    },
+    "silver": {
+      "durability": 250,
+      "speed": 12.0,
+      "items": [
+        "caverns_and_chasms:silver_(sword|shovel|pickaxe|axe|hoe)",
+        "abnormals_delight:silver_knife",
+        "manual_labour:silver_hammer"
+      ]
+    },
+    "bronze": {
+      "durability": 700,
+      "speed": 6.5,
+      "items": [
+        "modestmining:bronze_(sword|shovel|pickaxe|axe|hoe|knife|javelin|hammer)"
+      ]
+    },
+    "rose_gold": {
+      "durability": 1000,
+      "speed": 14.0,
+      "items": [
+        "oooh_pinky:rose_gold_(sword|shovel|pickaxe|axe|hoe|knife)"
+      ]
+    },
+    "steel": {
+      "durability": 3000,
+      "speed": 6.5,
+      "items": [
+        "alloyed:steel_(sword|shovel|pickaxe|axe|hoe|knife|spear)",
+        "modestmining:steel_(sword|shovel|pickaxe|axe|hoe|knife|javelin|hammer)",
+        "?spicedcider:steel_hammer"
+      ]
+    },
+    "diamond": {
+      "durability": 2200,
+      "speed": 8.0,
+      "items": [
+        "minecraft:diamond_(sword|shovel|pickaxe|axe|hoe|spear)",
+        "farmersdelight:diamond_knife",
+        "manual_labour:diamond_hammer",
+        "modestmining:diamond_(javelin|hammer)"
+      ]
+    },
+    "electrum": {
+      "durability": 4000,
+      "speed": 24.0,
+      "items": [
+        "spicedcider:electrum_(sword|shovel|pickaxe|axe|hoe|spear|knife|hammer|javelin)"
+      ]
+    },
+    "necromium": {
+      "durability": 6000,
+      "speed": 14.0,
+      "items": [
+        "caverns_and_chasms:necromium_(sword|shovel|pickaxe|axe|hoe)",
+        "abnormals_delight:necromium_knife",
+        "manual_labour:necromium_hammer"
+      ]
+    },
+    "infernite": {
+      "durability": 8000,
+      "speed": 10.0,
+      "items": [
+        "minecraft:netherite_(sword|shovel|pickaxe|axe|hoe|spear)",
+        "farmersdelight:netherite_knife",
+        "manual_labour:netherite_hammer",
+        "modestmining:netherite_(javelin|hammer)",
+        "spicedcider:infernite_cleaver"
+      ]
+    },
+    "prismarite": {
+      "durability": 4000,
+      "speed": 12.0,
+      "items": [
+        "modestmining:prismarite_(sword|shovel|pickaxe|axe|hoe|knife|javelin|hammer)"
+      ]
+    },
+    "valkyrium": {
+      "durability": 6000,
+      "speed": 16.0,
+      "items": [
+        "modestmining:valkyrium_(sword|shovel|pickaxe|axe|hoe|knife|javelin|hammer)"
+      ]
+    }
+  },
+  "armor": {
+    "leather": {
+      "durability": 125,
+      "items": ["minecraft:leather_.+"]
+    },
+    "gold": {
+      "durability": 150,
+      "items": ["minecraft:golden_.+"]
+    },
+    "copper": {
+      "durability": 250,
+      "items": [
+        "minecraft:copper_.+",
+        "caverns_and_chasms:(waxed_)?((exposed|weathered|oxidized)_)?copper_.+"
+      ]
+    },
+    "silver": {
+      "durability": 250,
+      "items": ["caverns_and_chasms:silver_.+"]
+    },
+    "bronze": {
+      "durability": 500,
+      "items": ["modestmining:bronze_.+"]
+    },
+    "mischief": {
+      "durability": 500,
+      "items": ["spicedcider:mischief_.+"]
+    },
+    "rose_gold": {
+      "durability": 625,
+      "items": ["oooh_pinky:rose_gold_.+"]
+    },
+    "diamond": {
+      "durability": 800,
+      "items": ["minecraft:diamond_.+"]
+    },
+    "steel": {
+      "durability": 850,
+      "items": ["alloyed:steel_.+", "modestmining:steel_.+"]
+    },
+    "sanguine": {
+      "durability": 1000,
+      "items": ["caverns_and_chasms:sanguine_.+"]
+    },
+    "electrum": {
+      "durability": 1125,
+      "items": ["spicedcider:electrum_.+"]
+    },
+    "necromium": {
+      "durability": 1425,
+      "items": ["caverns_and_chasms:necromium_.+"]
+    },
+    "prismarite": {
+      "durability": 1425,
+      "items": ["modestmining:prismarite_.+"]
+    },
+    "infernite": {
+      "durability": 1750,
+      "items": [
+        "minecraft:netherite_.+",
+        "caverns_and_chasms:netherite_horse_armor",
+        "create:netherite_diving_(helmet|boots)"
+      ]
+    },
+    "valkyrium": {
+      "durability": 1750,
+      "items": ["modestmining:valkyrium_.+"]
+    },
+    "turtle": {
+      "durability": 650,
+      "items": ["minecraft:turtle_helmet"]
+    },
+    "snail": {
+      "durability": 800,
+      "items": ["autumnity:snail_shell_chestplate"]
+    },
+    "copper_diving": {
+      "durability": 250,
+      "items": ["create:copper_diving_helmet", "create:copper_diving_boots"]
+    },
+    "goat_fur": {
+      "durability": 125,
+      "items": ["cold_sweat:goat_fur_.+"]
+    },
+    "hoglin": {
+      "durability": 200,
+      "items": ["cold_sweat:hoglin_.+"]
+    }
+  },
+  "items": {
+    "shieldexp:wooden_shield": {"durability": 125},
+    "shieldexp:golden_shield": {"durability": 250},
+    "minecraft:shield": {"durability": 500},
+    "shieldexp:iron_shield": {"durability": 1000},
+    "?spicedcider:steel_shield": {"durability": 1500},
+    "shieldexp:diamond_shield": {"durability": 1500},
+    "shieldexp:netherite_shield": {"durability": 2000},
+    "alloyed:steel_shears": {"durability": 2200},
+    "minecraft:fishing_rod": {"durability": 250},
+    "tide:stone_fishing_rod": {"durability": 300},
+    "tide:golden_fishing_rod": {"durability": 450},
+    "tide:iron_fishing_rod": {"durability": 900},
+    "tide:crystal_fishing_rod": {"durability": 1200},
+    "tide:prismarine_fishing_rod": {"durability": 1500},
+    "alloyed:steel_fishing_rod": {"durability": 2200},
+    "tide:diamond_fishing_rod": {"durability": 2200},
+    "tide:netherite_fishing_rod": {"durability": 4000},
+    "minecraft:bow": {"durability": 350},
+    "supplementaries:slingshot": {"durability": 450},
+    "minecraft:crossbow": {"durability": 900},
+    "minecraft:trident": {"durability": 1500},
+    "farmersdelight:skillet": {"durability": 600},
+    "create:wrench": {"durability": 600},
+    "minecraft:carrot_on_a_stick": {"durability": 250},
+    "minecraft:warped_fungus_on_a_stick": {"durability": 250},
+    "redomesticate:feather_on_a_stick": {"durability": 250}
+  }
+}

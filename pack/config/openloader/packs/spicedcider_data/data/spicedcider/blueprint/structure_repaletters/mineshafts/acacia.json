@@ -1,0 +1,35 @@
+{
+  "repaletter": [
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:stone_bricks",
+      "replaces_with": "minecraft:bricks"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:mossy_stone_bricks",
+      "replaces_with": "brick_and_mortar:brick_tiles"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:cracked_stone_bricks",
+      "replaces_with": "brick_and_mortar:brick_tiles"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:stone_brick_wall",
+      "replaces_with": "minecraft:brick_wall"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:stone_brick_slab",
+      "replaces_with": "minecraft:brick_slab"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:ladder",
+      "replaces_with": "woodworks:acacia_ladder"
+    }
+  ],
+  "structures": "bettermineshafts:mineshaft_acacia"
+}

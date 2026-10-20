@@ -1,0 +1,20 @@
+{
+  "repaletter": [
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:trapped_chest",
+      "replaces_with": "quark:trapped_birch_chest"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:ladder",
+      "replaces_with": "woodworks:birch_ladder"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:jungle_trapdoor",
+      "replaces_with": "minecraft:birch_trapdoor"
+    }
+  ],
+  "structures": "explorify:desert_shrine"
+}

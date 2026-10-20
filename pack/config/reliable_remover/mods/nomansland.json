@@ -163,5 +163,19 @@
       "nomansland:cooked_billhook_bass"
     ],
     "replace_with": "tide:cooked_fish"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "nomansland:apple_crate"
+    ],
+    "replace_with": "bountifulfares:apple_block"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "nomansland:autumn_crocus"
+    ],
+    "replace_with": "autumnity:autumn_crocus"
   }
 ]

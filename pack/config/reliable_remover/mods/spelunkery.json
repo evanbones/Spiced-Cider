@@ -112,5 +112,19 @@
       "spelunkery:raw_zinc_nugget"
     ],
     "replace_with": "spelunkery:raw_tin_nugget"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "spelunkery:coal_lump"
+    ],
+    "replace_with": "modestmining:coal_chunk"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "spelunkery:charcoal_lump"
+    ],
+    "replace_with": "modestmining:charcoal_chunk"
   }
 ]

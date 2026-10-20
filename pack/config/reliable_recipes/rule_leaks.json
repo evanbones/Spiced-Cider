@@ -1,0 +1,32 @@
+[
+  {
+    "action": "remove_recipe",
+    "id": [
+      "create:milling/andesite",
+      "create:milling/granite",
+      "farmersdelight:salvaging/deepslate",
+      "farmersdelight:salvaging/stone",
+      "modestmining:milling/toolsarmour/stone_javelin",
+      "nomansland:honey_apple",
+      "quark:tweaks/smelting/bone_meal_utility",
+      "spelunkery:bone_meal",
+      "spelunkery:coal_ore_blasting",
+      "spelunkery:coal_ore_smelting",
+      "spelunkery:copper_ore_blasting",
+      "spelunkery:copper_ore_smelting",
+      "spelunkery:diamond_ore_blasting",
+      "spelunkery:diamond_ore_smelting",
+      "spelunkery:gold_ore_blasting",
+      "spelunkery:gold_ore_smelting",
+      "spelunkery:iron_ore_blasting",
+      "spelunkery:iron_ore_smelting",
+      "spelunkery:redstone_ore_blasting",
+      "spelunkery:redstone_ore_smelting"
+    ]
+  },
+  {
+    "action": "remove_from_tag",
+    "tag": "spelunkery:smeltable_foods",
+    "id": "minecraft:rotten_flesh"
+  }
+]

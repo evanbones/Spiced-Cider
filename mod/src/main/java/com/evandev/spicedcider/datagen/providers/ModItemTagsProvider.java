@@ -4,6 +4,7 @@ import com.evandev.spicedcider.SpicedCider;
 import com.evandev.spicedcider.registry.ModBuildingBlocks;
 import com.evandev.spicedcider.registry.ModItems;
 import com.evandev.spicedcider.registry.ModTags;
+import com.evandev.spicedcider.registry.ModTierItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
@@ -18,6 +19,7 @@ import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.stream.Stream;
 
@@ -164,6 +166,73 @@ public class ModItemTagsProvider extends ItemTagsProvider {
                 .add(ModItems.CAST_IRON_SHEET.get());
         this.tag(ItemTags.create(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("c", "plates/cast_iron")))
                 .add(ModItems.CAST_IRON_SHEET.get());
+
+        addTierItemTags();
+    }
+
+    private void addTierItemTags() {
+        Item steelHammer = ModTierItems.STEEL_HAMMER.get();
+        Item electrumHammer = ModTierItems.ELECTRUM_HAMMER.get();
+        Item pickaxe = ModTierItems.ELECTRUM_PICKAXE.get();
+        Item knife = ModTierItems.ELECTRUM_KNIFE.get();
+        Item lance = ModTierItems.ELECTRUM_LANCE.get();
+        Item steelShield = ModTierItems.STEEL_SHIELD.get();
+        Item electrumShield = ModTierItems.ELECTRUM_SHIELD.get();
+        Item helmet = ModTierItems.ELECTRUM_HELMET.get();
+        Item chestplate = ModTierItems.ELECTRUM_CHESTPLATE.get();
+        Item leggings = ModTierItems.ELECTRUM_LEGGINGS.get();
+        Item boots = ModTierItems.ELECTRUM_BOOTS.get();
+
+        for (TagKey<Item> tag : List.of(externalTag("manual_labour", "hammers"), externalTag("c", "tools/hammer"),
+                ItemTags.CLUSTER_MAX_HARVESTABLES, ItemTags.MINING_ENCHANTABLE, ItemTags.MINING_LOOT_ENCHANTABLE)) {
+            this.tag(tag).add(steelHammer, electrumHammer);
+        }
+        this.tag(Tags.Items.MINING_TOOL_TOOLS).add(steelHammer, electrumHammer, pickaxe);
+        this.tag(Tags.Items.TOOLS).add(steelHammer, electrumHammer, knife);
+
+        this.tag(ItemTags.PICKAXES).add(pickaxe);
+        this.tag(ItemTags.AXES).add(ModTierItems.ELECTRUM_AXE.get());
+        this.tag(ItemTags.SHOVELS).add(ModTierItems.ELECTRUM_SHOVEL.get());
+        this.tag(ItemTags.HOES).add(ModTierItems.ELECTRUM_HOE.get());
+        this.tag(ItemTags.CLUSTER_MAX_HARVESTABLES).add(pickaxe);
+
+        this.tag(externalTag("farmersdelight", "tools/knives")).add(knife);
+        this.tag(externalTag("c", "tools/knife")).add(knife);
+
+        this.tag(externalTag("minecraft", "spears")).add(lance);
+        this.tag(externalTag("minecraft", "lunge_enchantable")).add(lance);
+        this.tag(Tags.Items.TOOLS_SPEAR).add(lance);
+        this.tag(Tags.Items.MELEE_WEAPON_TOOLS).add(lance);
+        for (TagKey<Item> tag : List.of(ItemTags.SWORD_ENCHANTABLE, ItemTags.SHARP_WEAPON_ENCHANTABLE,
+                ItemTags.WEAPON_ENCHANTABLE, ItemTags.FIRE_ASPECT_ENCHANTABLE)) {
+            this.tag(tag).add(lance);
+        }
+
+        this.tag(Tags.Items.TOOLS_SHIELD).add(steelShield, electrumShield);
+
+        this.tag(ItemTags.DURABILITY_ENCHANTABLE).add(steelHammer, electrumHammer, knife, lance, steelShield, electrumShield,
+                helmet, chestplate, leggings, boots);
+        this.tag(ItemTags.VANISHING_ENCHANTABLE).add(helmet, chestplate, leggings, boots);
+
+        this.tag(Tags.Items.ARMORS).add(helmet, chestplate, leggings, boots);
+        this.tag(ItemTags.ARMOR_ENCHANTABLE).add(helmet, chestplate, leggings, boots);
+        this.tag(ItemTags.EQUIPPABLE_ENCHANTABLE).add(helmet, chestplate, leggings, boots);
+        this.tag(ItemTags.HEAD_ARMOR).add(helmet);
+        this.tag(ItemTags.CHEST_ARMOR).add(chestplate);
+        this.tag(ItemTags.LEG_ARMOR).add(leggings);
+        this.tag(ItemTags.FOOT_ARMOR).add(boots);
+        this.tag(ItemTags.HEAD_ARMOR_ENCHANTABLE).add(helmet);
+        this.tag(ItemTags.CHEST_ARMOR_ENCHANTABLE).add(chestplate);
+        this.tag(ItemTags.LEG_ARMOR_ENCHANTABLE).add(leggings);
+        this.tag(ItemTags.FOOT_ARMOR_ENCHANTABLE).add(boots);
+
+        ModTierItems.ITEMS.getEntries().stream()
+                .filter(holder -> holder.getId().getPath().startsWith("electrum_"))
+                .forEach(holder -> this.tag(ItemTags.PIGLIN_LOVED).add(holder.get()));
+    }
+
+    private static TagKey<Item> externalTag(String namespace, String path) {
+        return ItemTags.create(ResourceLocation.fromNamespaceAndPath(namespace, path));
     }
 
     private static TagKey<Item> masonryTag(String path) {

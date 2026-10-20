@@ -1,0 +1,50 @@
+{
+  "repaletter": [
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:stone_bricks",
+      "replaces_with": "clayworks:terracotta_bricks"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:mossy_stone_bricks",
+      "replaces_with": "clayworks:brown_terracotta_bricks"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:cracked_stone_bricks",
+      "replaces_with": "clayworks:orange_terracotta_bricks"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:cobblestone",
+      "replaces_with": "minecraft:terracotta"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:cobblestone_stairs",
+      "replaces_with": "clayworks:terracotta_brick_stairs"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:cobblestone_slab",
+      "replaces_with": "clayworks:terracotta_brick_slab"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:cobblestone_wall",
+      "replaces_with": "clayworks:terracotta_brick_wall"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:stone_slab",
+      "replaces_with": "clayworks:terracotta_brick_slab"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:ladder",
+      "replaces_with": "woodworks:dark_oak_ladder"
+    }
+  ],
+  "structures": "bettermineshafts:mineshaft_mesa"
+}

@@ -1,0 +1,30 @@
+{
+  "priority": 90,
+  "condition": {
+    "type": "blueprint:biome",
+    "biomes": [
+      "minecraft:bamboo_jungle",
+      "abundant_atmosphere:eroded_bamboo_jungle"
+    ]
+  },
+  "repaletter": [
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:chest",
+      "replaces_with": "quark:bamboo_chest"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:trapped_chest",
+      "replaces_with": "quark:trapped_bamboo_chest"
+    }
+  ],
+  "structures": [
+    "betterdungeons:skeleton_dungeon",
+    "betterdungeons:small_dungeon",
+    "betterdungeons:zombie_dungeon",
+    "explorify:mausoleum",
+    "explorify:ruins",
+    "nomansland:small_dungeon"
+  ]
+}

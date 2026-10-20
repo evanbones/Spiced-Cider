@@ -1,0 +1,40 @@
+{
+  "priority": 50,
+  "condition": {
+    "type": "blueprint:biome",
+    "biomes": "nomansland:dark_taiga"
+  },
+  "repaletter": [
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:spruce_planks",
+      "replaces_with": "nomansland:pine_planks"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:spruce_fence",
+      "replaces_with": "nomansland:pine_fence"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:spruce_slab",
+      "replaces_with": "nomansland:pine_slab"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:spruce_trapdoor",
+      "replaces_with": "nomansland:pine_trapdoor"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:stripped_spruce_log",
+      "replaces_with": "nomansland:stripped_pine_log"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:ladder",
+      "replaces_with": "everycomp:abnww/nomansland/pine_ladder"
+    }
+  ],
+  "structures": "bettermineshafts:mineshaft_spruce"
+}

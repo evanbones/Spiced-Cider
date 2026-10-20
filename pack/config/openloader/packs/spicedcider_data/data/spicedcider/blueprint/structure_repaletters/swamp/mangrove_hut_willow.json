@@ -1,0 +1,54 @@
+{
+  "priority": 50,
+  "condition": {
+    "type": "blueprint:biome",
+    "biomes": [
+      "nomansland:bayou",
+      "nomansland:bog",
+      "nomansland:dark_swamp"
+    ]
+  },
+  "repaletter": [
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:mangrove_log",
+      "replaces_with": "nomansland:willow_log"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:stripped_mangrove_log",
+      "replaces_with": "nomansland:stripped_willow_log"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:mangrove_planks",
+      "replaces_with": "nomansland:willow_planks"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:mangrove_stairs",
+      "replaces_with": "nomansland:willow_stairs"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:mangrove_slab",
+      "replaces_with": "nomansland:willow_slab"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:mangrove_fence",
+      "replaces_with": "nomansland:willow_fence"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:mangrove_fence_gate",
+      "replaces_with": "nomansland:willow_fence_gate"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:ladder",
+      "replaces_with": "everycomp:abnww/nomansland/willow_ladder"
+    }
+  ],
+  "structures": "explorify:mangrove_hut"
+}

@@ -1,0 +1,48 @@
+{
+  "priority": 50,
+  "condition": {
+    "type": "blueprint:biome",
+    "biomes": [
+      "nomansland:bog",
+      "nomansland:dark_swamp"
+    ]
+  },
+  "repaletter": [
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:oak_log",
+      "replaces_with": "nomansland:willow_log"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:oak_planks",
+      "replaces_with": "nomansland:willow_planks"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:oak_fence",
+      "replaces_with": "nomansland:willow_fence"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:oak_stairs",
+      "replaces_with": "nomansland:willow_stairs"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:oak_slab",
+      "replaces_with": "nomansland:willow_slab"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:ladder",
+      "replaces_with": "everycomp:abnww/nomansland/willow_ladder"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:chest",
+      "replaces_with": "everycomp:q/nomansland/willow_chest"
+    }
+  ],
+  "structures": "betterwitchhuts:witch_hut"
+}

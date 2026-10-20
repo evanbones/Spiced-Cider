@@ -5,5 +5,34 @@
       "/everycomp:abnww\\/(caverns_and_chasms\\/azalea|environmental\\/wisteria|upgrade_aquatic\\/driftwood|quark\\/azalea)_.*_sawing/",
       "everycomp:abnww/bountifulfares/walnut_boards_from_walnut_logs_sawing"
     ]
+  },
+  {
+    "action": "replace_input",
+    "filter": {
+      "id": "/woodworks:jungle_.*_from_jungle_logs_sawing/"
+    },
+    "target": "minecraft:jungle_log",
+    "replacement": [
+      "minecraft:jungle_log",
+      "culturaldelights:avocado_log"
+    ]
+  },
+  {
+    "action": "add_recipe",
+    "id": "spicedcider:cutting/avocado_log_to_stripped_jungle_log",
+    "recipe": {
+      "type": "create:cutting",
+      "ingredients": [
+        {
+          "item": "culturaldelights:avocado_log"
+        }
+      ],
+      "results": [
+        {
+          "id": "minecraft:stripped_jungle_log"
+        }
+      ],
+      "processing_time": 50
+    }
   }
 ]

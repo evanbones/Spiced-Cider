@@ -44,5 +44,201 @@
     },
     "target": "minecraft:dried_kelp",
     "replacement": "etcetera:rubber"
+  },
+  {
+    "action": "replace_input",
+    "filter": {
+      "id": "/suppsquared:candle_holders\\/gold_candle_holder.*/"
+    },
+    "target": "#c:ingots/gold",
+    "replacement": "#c:ingots/bronze"
+  },
+  {
+    "action": "replace_input",
+    "filter": {
+      "id": "caverns_and_chasms:barometer"
+    },
+    "target": "minecraft:redstone",
+    "replacement": "minecraft:glass_bottle"
+  },
+  {
+    "action": "replace_input",
+    "filter": {
+      "id": "/incubation:fried_egg.*/"
+    },
+    "target": "#c:eggs",
+    "replacement": [
+      "minecraft:egg",
+      "environmental:duck_egg",
+      "autumnity:turkey_egg"
+    ]
+  },
+  {
+    "action": "replace_input",
+    "filter": {
+      "id": "farmersdelight:cutting/tag_dough"
+    },
+    "target": "#c:foods/dough",
+    "replacement": "#c:foods/dough/wheat"
+  },
+  {
+    "action": "replace_input",
+    "filter": {
+      "id": "create:crafting/kinetics/rope_pulley"
+    },
+    "target": "#minecraft:wool",
+    "replacement": "farmersdelight:rope"
+  },
+  {
+    "action": "replace_input",
+    "filter": {
+      "id": "create:crafting/kinetics/sticky_mechanical_piston"
+    },
+    "target": "#c:slimeballs",
+    "replacement": "minecraft:honey_bottle"
+  },
+  {
+    "action": "replace_input",
+    "filter": {
+      "id": "minecraft:heavy_weighted_pressure_plate"
+    },
+    "target": "#c:ingots/iron",
+    "replacement": "#c:ingots/lead"
+  },
+  {
+    "action": "replace_input",
+    "filter": {
+      "id": "create:crafting/appliances/copper_diving_boots"
+    },
+    "target": "alloyed:bronze_ingot",
+    "replacement": "#c:ingots/lead"
+  },
+  {
+    "action": "replace_input",
+    "filter": {
+      "id": "nomansland:tap"
+    },
+    "target": "minecraft:iron_ingot",
+    "replacement": "#c:ingots/cast_iron"
+  },
+  {
+    "action": "replace_input",
+    "filter": {
+      "id": "nomansland:tap"
+    },
+    "target": "minecraft:iron_nugget",
+    "replacement": "#c:nuggets/cast_iron"
+  },
+  {
+    "action": "replace_input",
+    "filter": {
+      "id": "/create:crafting/kinetics/(hose|elevator)_pulley/"
+    },
+    "target": "minecraft:dried_kelp_block",
+    "replacement": "etcetera:rubber_block"
+  },
+  {
+    "action": "replace_input",
+    "filter": {
+      "id": "/create:crafting/(kinetics/spout|logistics/(andesite|brass)_(funnel|tunnel))/"
+    },
+    "target": "minecraft:dried_kelp",
+    "replacement": "etcetera:rubber"
+  },
+  {
+    "action": "replace_input",
+    "filter": {
+      "id": "supplementaries:slingshot"
+    },
+    "target": "#c:slime_balls",
+    "replacement": "etcetera:rubber"
+  },
+  {
+    "action": "replace_input",
+    "filter": {
+      "id": "/farmersdelight:(skillet|cooking_pot|stove)/"
+    },
+    "target": "#c:ingots/iron",
+    "replacement": "#c:ingots/cast_iron"
+  },
+  {
+    "action": "replace_input",
+    "filter": {
+      "id": "create:crafting/kinetics/mechanical_saw"
+    },
+    "target": "#c:plates/iron",
+    "replacement": "#c:plates/steel"
+  },
+  {
+    "action": "replace_input",
+    "filter": {
+      "id": "create:crafting/kinetics/mechanical_saw"
+    },
+    "target": "#c:ingots/iron",
+    "replacement": "#c:ingots/steel"
+  },
+  {
+    "action": "replace_input",
+    "filter": {
+      "id": "create:crafting/kinetics/super_glue"
+    },
+    "target": "#c:slime_balls",
+    "replacement": "minecraft:resin_clump"
+  },
+  {
+    "action": "replace_input",
+    "filter": {
+      "id": "/tide:bobbers\\/.*/"
+    },
+    "target": "#c:slime_balls",
+    "replacement": "etcetera:rubber"
+  },
+  {
+    "action": "replace_input",
+    "filter": {
+      "id": "modestmagic:infusing/totem_of_undying"
+    },
+    "target": "minecraft:experience_bottle",
+    "replacement": "reliable_requiem:crystal_heart"
+  },
+  {
+    "action": "replace_input",
+    "filter": {
+      "id": "supplementaries:cannon"
+    },
+    "target": "#c:ingots/iron",
+    "replacement": "#c:ingots/lead"
+  },
+  {
+    "action": "replace_input",
+    "filter": {
+      "id": "create:crafting/kinetics/rope_pulley"
+    },
+    "target": "#c:plates/iron",
+    "replacement": "#c:ingots/lead"
+  },
+  {
+    "action": "replace_input",
+    "filter": {
+      "id": "create:crafting/kinetics/weighted_ejector"
+    },
+    "target": "#c:plates/gold",
+    "replacement": "#c:ingots/lead"
+  },
+  {
+    "action": "replace_input",
+    "filter": {
+      "id": "suppsquared:heavy_key"
+    },
+    "target": "minecraft:netherite_scrap",
+    "replacement": "#c:ingots/lead"
+  },
+  {
+    "action": "replace_input",
+    "filter": {
+      "id": "modestmagic:infusing/enchantment_tablet_heavy"
+    },
+    "target": "minecraft:iron_ingot",
+    "replacement": "#c:ingots/lead"
   }
 ]

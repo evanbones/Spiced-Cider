@@ -106,9 +106,10 @@
     ]
   },
   {
-    "action": "remove",
-    "items": ["minecraft:painting"],
-    "nbt": [".*minecraft:dennis.*"]
+    "action": "remove_painting",
+    "paintings": [
+      "minecraft:dennis"
+    ]
   },
   {
     "action": "remove",
@@ -282,5 +283,14 @@
       "minecraft:straw_bed"
     ],
     "replace_with": "nomansland:straw_bed"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "minecraft:copper_spear",
+      "minecraft:golden_spear",
+      "minecraft:diamond_spear",
+      "minecraft:netherite_spear"
+    ]
   }
 ]

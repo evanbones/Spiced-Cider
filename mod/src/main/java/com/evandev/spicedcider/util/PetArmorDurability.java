@@ -18,8 +18,10 @@ public final class PetArmorDurability {
     private PetArmorDurability() {
     }
 
-    public static int bodyDurabilityFor(Holder<ArmorMaterial> material) {
-        return ArmorItem.Type.BODY.getDurability(factorFor(material));
+    public static int bodyDurabilityFor(Item item, Holder<ArmorMaterial> material) {
+        return ToolStats.get().lookup(item)
+                .map(ToolStats.Stats::durability)
+                .orElseGet(() -> ArmorItem.Type.BODY.getDurability(factorFor(material)));
     }
 
     public static int factorFor(Holder<ArmorMaterial> material) {
@@ -41,7 +43,9 @@ public final class PetArmorDurability {
         for (Item item : BuiltInRegistries.ITEM) {
             if (!(item instanceof ArmorItem armor)) continue;
 
-            int maxDamage = item.components().getOrDefault(DataComponents.MAX_DAMAGE, 0);
+            int maxDamage = ToolStats.get().lookup(item)
+                    .map(ToolStats.Stats::durability)
+                    .orElseGet(() -> item.components().getOrDefault(DataComponents.MAX_DAMAGE, 0));
             if (maxDamage <= 0) continue;
 
             int base = armor.getType().getDurability(1);

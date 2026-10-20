@@ -1,0 +1,16 @@
+{
+  "priority": 1000,
+  "repaletter": [
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:chest",
+      "replaces_with": "quark:jungle_chest"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:trapped_chest",
+      "replaces_with": "quark:trapped_jungle_chest"
+    }
+  ],
+  "structures": "bettermineshafts:mineshaft_jungle"
+}

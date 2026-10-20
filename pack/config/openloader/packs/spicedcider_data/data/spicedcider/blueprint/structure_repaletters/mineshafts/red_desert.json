@@ -1,0 +1,45 @@
+{
+  "repaletter": [
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:stone_bricks",
+      "replaces_with": "minecraft:cut_red_sandstone"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:cracked_stone_bricks",
+      "replaces_with": "minecraft:smooth_red_sandstone"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:cobblestone",
+      "replaces_with": "minecraft:red_sandstone"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:cobblestone_stairs",
+      "replaces_with": "minecraft:red_sandstone_stairs"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:cobblestone_slab",
+      "replaces_with": "minecraft:red_sandstone_slab"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:cobblestone_wall",
+      "replaces_with": "minecraft:red_sandstone_wall"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:stone_slab",
+      "replaces_with": "minecraft:smooth_red_sandstone_slab"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:ladder",
+      "replaces_with": "woodworks:dark_oak_ladder"
+    }
+  ],
+  "structures": "bettermineshafts:mineshaft_red_desert"
+}

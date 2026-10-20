@@ -1,0 +1,17 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "reliable_requiem"
+    }
+  ],
+  "conditions": [
+    {
+      "type": "tide:fluid",
+      "fluid": "water"
+    }
+  ],
+  "loot_table": "spicedcider:gameplay/fishing/crystal_shard",
+  "quality": 1.0,
+  "weight": 0.5
+}

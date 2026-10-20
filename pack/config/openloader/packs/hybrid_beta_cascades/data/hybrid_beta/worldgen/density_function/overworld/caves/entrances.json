@@ -27,7 +27,11 @@
       },
       "argument2": {
         "type": "minecraft:add",
-        "argument1": "hybrid_beta:overworld/rivers_extra_density",
+        "argument1": {
+          "type": "minecraft:add",
+          "argument1": "hybrid_beta:overworld/rivers_extra_density",
+          "argument2": "spicedcider:cave_region/spaghetti_bias"
+        },
         "argument2": {
           "type": "minecraft:add",
           "argument1": "minecraft:overworld/caves/spaghetti_roughness_function",

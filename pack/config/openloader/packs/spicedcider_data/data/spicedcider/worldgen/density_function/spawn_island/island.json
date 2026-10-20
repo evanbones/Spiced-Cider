@@ -1,0 +1,33 @@
+{
+  "type": "add",
+  "argument1": {
+    "type": "minecraft:mul",
+    "argument1": 0.25,
+    "argument2": {
+      "type": "minecraft:add",
+      "argument1": {
+        "type": "minecraft:add",
+        "argument1": "spicedcider:spawn_island/ring1_sync",
+        "argument2": "spicedcider:spawn_island/ring2_sync"
+      },
+      "argument2": {
+        "type": "minecraft:add",
+        "argument1": "spicedcider:spawn_island/ring3_sync",
+        "argument2": "spicedcider:spawn_island/ring4_sync"
+      }
+    }
+  },
+  "argument2": {
+    "type": "mul",
+    "argument1": 0.06,
+    "argument2": {
+      "argument": {
+        "xz_scale": 1,
+        "y_scale": 0.0,
+        "noise": "spicedcider:spawn_island/noise",
+        "type": "minecraft:noise"
+      },
+      "type": "minecraft:flat_cache"
+    }
+  }
+}

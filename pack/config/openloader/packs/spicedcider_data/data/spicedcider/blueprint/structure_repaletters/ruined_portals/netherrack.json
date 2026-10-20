@@ -1,0 +1,23 @@
+{
+  "repaletter": [
+    {
+      "type": "blueprint:weighted",
+      "replaces_block": "minecraft:netherrack",
+      "replaces_with": [
+        {
+          "data": "minecraft:netherrack",
+          "weight": 6
+        },
+        {
+          "data": "stoneworks:netherrack_bricks",
+          "weight": 2
+        },
+        {
+          "data": "stoneworks:polished_netherrack",
+          "weight": 1
+        }
+      ]
+    }
+  ],
+  "structures": "#minecraft:ruined_portal"
+}

@@ -1,0 +1,35 @@
+{
+  "condition": {
+    "type": "blueprint:or",
+    "biomes": [
+      {
+        "type": "blueprint:biome",
+        "biomes": "#minecraft:is_badlands"
+      },
+      {
+        "type": "blueprint:biome",
+        "biomes": "minecraft:dark_forest"
+      }
+    ]
+  },
+  "repaletter": [
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:chest",
+      "replaces_with": "quark:dark_oak_chest"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:trapped_chest",
+      "replaces_with": "quark:trapped_dark_oak_chest"
+    }
+  ],
+  "structures": [
+    "betterdungeons:skeleton_dungeon",
+    "betterdungeons:small_dungeon",
+    "betterdungeons:zombie_dungeon",
+    "explorify:mausoleum",
+    "explorify:ruins",
+    "nomansland:small_dungeon"
+  ]
+}

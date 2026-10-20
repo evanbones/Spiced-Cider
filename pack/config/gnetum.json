@@ -1,0 +1,350 @@
+{
+  "enabled": {
+    "value": "ON"
+  },
+  "showHudFps": {
+    "value": "ON"
+  },
+  "downscale": {
+    "value": "OFF"
+  },
+  "numberOfPasses": 3,
+  "maxFps": 60,
+  "screenMaxFps": 20,
+  "mapVanillaElements": {
+    "immersiveoverlays:moon": {
+      "enabled": {
+        "value": "AUTO"
+      },
+      "pass": 3
+    },
+    "minecraft:spectator_tooltip": {
+      "enabled": {
+        "value": "AUTO"
+      },
+      "pass": 2
+    },
+    "immersiveoverlays:wind": {
+      "enabled": {
+        "value": "AUTO"
+      },
+      "pass": 3
+    },
+    "create:toolbox": {
+      "enabled": {
+        "value": "AUTO"
+      },
+      "pass": 1
+    },
+    "minecraft:subtitle_overlay": {
+      "enabled": {
+        "value": "AUTO"
+      },
+      "pass": 3
+    },
+    "modest_meals:stamina_text": {
+      "enabled": {
+        "value": "AUTO"
+      },
+      "pass": 3
+    },
+    "minecraft:jump_meter": {
+      "enabled": {
+        "value": "AUTO"
+      },
+      "pass": 2
+    },
+    "immersiveoverlays:temperature": {
+      "enabled": {
+        "value": "AUTO"
+      },
+      "pass": 3
+    },
+    "supplementaries:selectable_container_item": {
+      "enabled": {
+        "value": "AUTO"
+      },
+      "pass": 1
+    },
+    "caverns_and_chasms:monocle": {
+      "enabled": {
+        "value": "AUTO"
+      },
+      "pass": 1
+    },
+    "cold_sweat:world_temp": {
+      "enabled": {
+        "value": "AUTO"
+      },
+      "pass": 1
+    },
+    "usefulspyglass:hud_base": {
+      "enabled": {
+        "value": "AUTO"
+      },
+      "pass": 3
+    },
+    "minecraft:scoreboard_sidebar": {
+      "enabled": {
+        "value": "AUTO"
+      },
+      "pass": 3
+    },
+    "minecraft:hotbar": {
+      "enabled": {
+        "value": "AUTO"
+      },
+      "pass": 1
+    },
+    "minecraft:debug_overlay": {
+      "enabled": {
+        "value": "AUTO"
+      },
+      "pass": 3
+    },
+    "gnetum:minecraft_hand": {
+      "enabled": {
+        "value": "AUTO"
+      },
+      "pass": 1
+    },
+    "immersiveoverlays:compass": {
+      "enabled": {
+        "value": "AUTO"
+      },
+      "pass": 3
+    },
+    "vista:viewfinder": {
+      "enabled": {
+        "value": "AUTO"
+      },
+      "pass": 1
+    },
+    "minecraft:experience_bar": {
+      "enabled": {
+        "value": "AUTO"
+      },
+      "pass": 2
+    },
+    "minecraft:saving_indicator": {
+      "enabled": {
+        "value": "AUTO"
+      },
+      "pass": 3
+    },
+    "nomansland:dialogue": {
+      "enabled": {
+        "value": "AUTO"
+      },
+      "pass": 3
+    },
+    "minecraft:title": {
+      "enabled": {
+        "value": "AUTO"
+      },
+      "pass": 3
+    },
+    "create:value_settings": {
+      "enabled": {
+        "value": "AUTO"
+      },
+      "pass": 1
+    },
+    "minecraft:selected_item_name": {
+      "enabled": {
+        "value": "AUTO"
+      },
+      "pass": 2
+    },
+    "voxyworldgenv2:debug_overlay": {
+      "enabled": {
+        "value": "AUTO"
+      },
+      "pass": 3
+    },
+    "map_atlases:atlas": {
+      "enabled": {
+        "value": "AUTO"
+      },
+      "pass": 3
+    },
+    "minecraft:overlay_message": {
+      "enabled": {
+        "value": "AUTO"
+      },
+      "pass": 3
+    },
+    "immersiveoverlays:speed": {
+      "enabled": {
+        "value": "AUTO"
+      },
+      "pass": 3
+    },
+    "create:schematic": {
+      "enabled": {
+        "value": "AUTO"
+      },
+      "pass": 1
+    },
+    "create:blueprint": {
+      "enabled": {
+        "value": "AUTO"
+      },
+      "pass": 1
+    },
+    "cold_sweat:vague_temp": {
+      "enabled": {
+        "value": "AUTO"
+      },
+      "pass": 1
+    },
+    "create:track_placement": {
+      "enabled": {
+        "value": "AUTO"
+      },
+      "pass": 1
+    },
+    "minecraft:sleep_overlay": {
+      "enabled": {
+        "value": "AUTO"
+      },
+      "pass": 3
+    },
+    "minecraft:experience_level": {
+      "enabled": {
+        "value": "AUTO"
+      },
+      "pass": 2
+    },
+    "upgrade_aquatic:insomnia": {
+      "enabled": {
+        "value": "AUTO"
+      },
+      "pass": 1
+    },
+    "caverns_and_chasms:monocle_head": {
+      "enabled": {
+        "value": "AUTO"
+      },
+      "pass": 1
+    },
+    "minecraft:boss_overlay": {
+      "enabled": {
+        "value": "AUTO"
+      },
+      "pass": 3
+    },
+    "cold_sweat:food_effects": {
+      "enabled": {
+        "value": "AUTO"
+      },
+      "pass": 1
+    },
+    "create:linked_controller": {
+      "enabled": {
+        "value": "AUTO"
+      },
+      "pass": 1
+    },
+    "gnetum:status_bar": {
+      "enabled": {
+        "value": "AUTO"
+      },
+      "pass": 2
+    },
+    "cold_sweat:body_temp": {
+      "enabled": {
+        "value": "AUTO"
+      },
+      "pass": 1
+    },
+    "minecraft:effects": {
+      "enabled": {
+        "value": "AUTO"
+      },
+      "pass": 3
+    },
+    "nomansland:dream_overlay": {
+      "enabled": {
+        "value": "AUTO"
+      },
+      "pass": 3
+    },
+    "immersiveoverlays:biome": {
+      "enabled": {
+        "value": "AUTO"
+      },
+      "pass": 3
+    },
+    "immersiveoverlays:clock": {
+      "enabled": {
+        "value": "AUTO"
+      },
+      "pass": 3
+    },
+    "supplementaries:slimed": {
+      "enabled": {
+        "value": "AUTO"
+      },
+      "pass": 1
+    },
+    "minecraft:tab_list": {
+      "enabled": {
+        "value": "AUTO"
+      },
+      "pass": 3
+    },
+    "create:goggle_info": {
+      "enabled": {
+        "value": "AUTO"
+      },
+      "pass": 1
+    },
+    "minecraft:chat": {
+      "enabled": {
+        "value": "AUTO"
+      },
+      "pass": 3
+    }
+  },
+  "mapModdedElementsPre": {
+    "cold_sweat": {
+      "enabled": {
+        "value": "AUTO"
+      },
+      "pass": 1
+    }
+  },
+  "mapModdedElementsPost": {
+    "gnetum_unknown": {
+      "enabled": {
+        "value": "AUTO"
+      },
+      "pass": 3
+    },
+    "clutternomore": {
+      "enabled": {
+        "value": "AUTO"
+      },
+      "pass": 3
+    },
+    "lodged": {
+      "enabled": {
+        "value": "AUTO"
+      },
+      "pass": 3
+    },
+    "jade": {
+      "enabled": {
+        "value": "AUTO"
+      },
+      "pass": 3
+    },
+    "creativecore": {
+      "enabled": {
+        "value": "AUTO"
+      },
+      "pass": 3
+    }
+  }
+}

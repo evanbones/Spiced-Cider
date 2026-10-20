@@ -50,8 +50,30 @@
       "bountifulfares:lapisberry_wine_bottle",
       "bountifulfares:lapisberry_seeds",
       "bountifulfares:lapisberries",
-      "bountifulfares:lapisberry_tart"
+      "bountifulfares:lapisberry_tart",
+      "bountifulfares:fermentation_vessel"
     ]
+  },
+  {
+    "action": "remove",
+    "items": [
+      "bountifulfares:apple_cider_jar"
+    ],
+    "replace_with": "culturaldelights:apple_cider"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "bountifulfares:mead_bottle"
+    ],
+    "replace_with": "culturaldelights:mead"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "bountifulfares:jar"
+    ],
+    "replace_with": "spicedcider:ceramic_mug"
   },
   {
     "action": "remove",
@@ -149,5 +171,40 @@
       "bountifulfares:wild_maize"
     ],
     "replace_with": "culturaldelights:wild_corn"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "bountifulfares:cooked_egg"
+    ],
+    "replace_with": "farmersdelight:fried_egg"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "bountifulfares:maize"
+    ],
+    "replace_with": "culturaldelights:corn_cob"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "bountifulfares:maize_seeds"
+    ],
+    "replace_with": "culturaldelights:corn_kernels"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "bountifulfares:popped_maize"
+    ],
+    "replace_with": "culturaldelights:popcorn"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "bountifulfares:strange_candy",
+      "bountifulfares:stuffed_hoary_apple"
+    ]
   }
 ]

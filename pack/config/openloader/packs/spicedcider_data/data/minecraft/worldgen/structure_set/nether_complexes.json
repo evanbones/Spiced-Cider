@@ -2,12 +2,16 @@
   "placement": {
     "type": "minecraft:random_spread",
     "salt": 30084232,
-    "spacing": 22,
-    "separation": 4
+    "spacing": 24,
+    "separation": 8
   },
   "structures": [
     {
       "structure": "minecraft:fortress",
+      "weight": 4
+    },
+    {
+      "structure": "spicedcider:molten_fortress",
       "weight": 4
     },
     {

@@ -1,0 +1,70 @@
+{
+  "repaletter": [
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:oak_planks",
+      "replaces_with": "caverns_and_chasms:azalea_planks"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:oak_fence",
+      "replaces_with": "caverns_and_chasms:azalea_fence"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:oak_slab",
+      "replaces_with": "caverns_and_chasms:azalea_slab"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:oak_trapdoor",
+      "replaces_with": "caverns_and_chasms:azalea_trapdoor"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:stripped_oak_log",
+      "replaces_with": "caverns_and_chasms:stripped_azalea_log"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:ladder",
+      "replaces_with": "caverns_and_chasms:azalea_ladder"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:stone_bricks",
+      "replaces_with": "minecraft:mossy_stone_bricks"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:cracked_stone_bricks",
+      "replaces_with": "minecraft:mossy_stone_bricks"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:cobblestone",
+      "replaces_with": "minecraft:mossy_cobblestone"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:cobblestone_stairs",
+      "replaces_with": "minecraft:mossy_cobblestone_stairs"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:cobblestone_slab",
+      "replaces_with": "minecraft:mossy_cobblestone_slab"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:cobblestone_wall",
+      "replaces_with": "minecraft:mossy_cobblestone_wall"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:stone_slab",
+      "replaces_with": "minecraft:mossy_stone_brick_slab"
+    }
+  ],
+  "structures": "bettermineshafts:mineshaft_lush"
+}

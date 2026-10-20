@@ -1,0 +1,23 @@
+{
+  "priority": 50,
+  "condition": {
+    "type": "blueprint:biome",
+    "biomes": [
+      "minecraft:birch_forest",
+      "minecraft:old_growth_birch_forest"
+    ]
+  },
+  "repaletter": [
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:chest",
+      "replaces_with": "quark:birch_chest"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:trapped_chest",
+      "replaces_with": "quark:trapped_birch_chest"
+    }
+  ],
+  "structures": "bettermineshafts:mineshaft_overgrown"
+}

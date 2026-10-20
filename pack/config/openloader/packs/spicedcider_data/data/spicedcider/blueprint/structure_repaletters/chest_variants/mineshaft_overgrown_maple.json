@@ -1,0 +1,24 @@
+{
+  "priority": 50,
+  "condition": {
+    "type": "blueprint:biome",
+    "biomes": [
+      "nomansland:maple_forest",
+      "nomansland:maple_grove",
+      "nomansland:autumnal_forest"
+    ]
+  },
+  "repaletter": [
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:chest",
+      "replaces_with": "everycomp:q/nomansland/maple_chest"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:trapped_chest",
+      "replaces_with": "everycomp:q/nomansland/trapped_maple_chest"
+    }
+  ],
+  "structures": "bettermineshafts:mineshaft_overgrown"
+}

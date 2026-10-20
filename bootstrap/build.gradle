@@ -1,0 +1,47 @@
+plugins {
+    id 'java'
+}
+
+evaluationDependsOn(":mod")
+
+group = mod_group_id
+version = mod_version
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+
+repositories {
+    mavenCentral()
+    maven {
+        name = "NeoForged"
+        url = "https://maven.neoforged.net/releases"
+    }
+}
+
+dependencies {
+    compileOnly("net.neoforged.fancymodloader:loader:4.0.45") { transitive = false }
+    compileOnly("cpw.mods:securejarhandler:3.0.8") { transitive = false }
+    compileOnly "net.java.dev.jna:jna:5.14.0"
+}
+
+def modJar = project(":mod").tasks.named("jar")
+def modId = mod_id
+def bundledName = "${mod_id}-${mod_version}-mod.jar"
+
+jar {
+    archiveFileName = "${modId}-${mod_version}.jar"
+    into("META-INF/jarjar") {
+        from(modJar)
+        rename { bundledName }
+    }
+    from(modJar.map { zipTree(it.archiveFile) }) {
+        include "META-INF/neoforge.mods.toml", "${modId}.png", "pack.mcmeta"
+    }
+    manifest {
+        attributes(
+                "FMLModType": "LIBRARY",
+                "Implementation-Title": mod_name,
+                "Implementation-Version": project.version,
+                "Automatic-Module-Name": "${modId}.bootstrap"
+        )
+    }
+}

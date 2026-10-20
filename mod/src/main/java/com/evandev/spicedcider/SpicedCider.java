@@ -80,12 +80,16 @@ public class SpicedCider {
         ModAttributes.ATTRIBUTES.register(modEventBus);
         ModArmorMaterials.ARMOR_MATERIALS.register(modEventBus);
         ModItems.ITEMS.register(modEventBus);
+        ModDrinkware.register(modEventBus);
+        ModTierItems.register(modEventBus);
         ModRecipeSerializers.RECIPE_SERIALIZERS.register(modEventBus);
         ModSounds.SOUNDS.register(modEventBus);
         ModMobEffects.MOB_EFFECTS.register(modEventBus);
         ModParticleTypes.PARTICLE_TYPES.register(modEventBus);
         ModLootModifiers.LOOT_MODIFIER_SERIALIZERS.register(modEventBus);
         ModDataComponents.DATA_COMPONENTS.register(modEventBus);
+        ModFluidTypes.FLUID_TYPES.register(modEventBus);
+        ModFluids.FLUIDS.register(modEventBus);
 
         modEventBus.addListener(this::registerPayloads);
         modEventBus.addListener(SpicedCider::addSignBlocks);
