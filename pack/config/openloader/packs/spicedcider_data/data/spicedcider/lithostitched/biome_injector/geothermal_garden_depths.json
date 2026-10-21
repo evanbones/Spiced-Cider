@@ -1,0 +1,24 @@
+{
+  "type": "lithostitched:replace_partially",
+  "dimension": "minecraft:overworld",
+  "targets": "nomansland:cave_depths",
+  "replacement": "abundant_atmosphere:geothermal_garden",
+  "parameters": {
+    "temperature": [
+      0.0,
+      10.0
+    ],
+    "humidity": [
+      -10.0,
+      0.1
+    ],
+    "continentalness": [
+      0.15,
+      10.0
+    ],
+    "spicedcider:y": [
+      -4096.0,
+      -32.0
+    ]
+  }
+}

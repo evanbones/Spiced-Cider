@@ -93,6 +93,11 @@ public class ModItems {
     public static final DeferredItem<Item> TALLOW_BLOCK = ITEMS.register("tallow_block",
             () -> new BlockItem(ModBlocks.TALLOW_BLOCK.get(), new Item.Properties()));
 
+    public static final DeferredItem<Item> LATEX_BUCKET = ITEMS.register("latex_bucket",
+            () -> new BucketItem(ModFluids.LATEX.get(), new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1)));
+    public static final DeferredItem<Item> LATEX_BOTTLE = ITEMS.register("latex_bottle",
+            () -> new Item(new Item.Properties().craftRemainder(Items.GLASS_BOTTLE).stacksTo(16)));
+
     public static final DeferredItem<Item> WORM = ITEMS.register("worm",
             () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> GOLDEN_WORM = ITEMS.register("golden_worm",

@@ -3,6 +3,7 @@ package com.evandev.spicedcider.registry;
 import com.evandev.spicedcider.SpicedCider;
 import com.evandev.spicedcider.compat.architectspalette.ArchitectsPaletteCompat;
 import com.evandev.spicedcider.compat.infernalexp.InfernalExpansionCompat;
+import com.evandev.spicedcider.content.block.LatexCauldronBlock;
 import com.evandev.spicedcider.content.block.TemporaryCobwebBlock;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
@@ -11,6 +12,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.CeilingHangingSignBlock;
 import net.minecraft.world.level.block.FlowerPotBlock;
+import net.minecraft.world.level.block.LiquidBlock;
 import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.SaplingBlock;
 import net.minecraft.world.level.block.SlabBlock;
@@ -41,6 +43,12 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> TALLOW_BLOCK = BLOCKS.register("tallow_block",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.HONEYCOMB_BLOCK)));
+
+    public static final DeferredBlock<LiquidBlock> LATEX = BLOCKS.register("latex",
+            () -> new LiquidBlock(ModFluids.LATEX.get(), BlockBehaviour.Properties.ofFullCopy(Blocks.WATER).mapColor(MapColor.COLOR_LIGHT_GRAY)));
+
+    public static final DeferredBlock<Block> LATEX_CAULDRON = BLOCKS.register("latex_cauldron",
+            () -> new LatexCauldronBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.CAULDRON)));
 
     public static final DeferredBlock<Block> WORMY_DIRT = BLOCKS.register("wormy_dirt",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DIRT)));

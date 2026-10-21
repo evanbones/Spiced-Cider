@@ -994,6 +994,680 @@
     {
       "id": "supplementaries:notice_board",
       "required": false
+    },
+    {
+      "id": "blockbox:dark_oak_palisade",
+      "required": false
+    },
+    {
+      "id": "blockbox:dark_oak_seat",
+      "required": false
+    },
+    {
+      "id": "blockbox:spiked_dark_oak_palisade",
+      "required": false
+    },
+    {
+      "id": "blockbox:spiked_spruce_palisade",
+      "required": false
+    },
+    {
+      "id": "blockbox:spruce_palisade",
+      "required": false
+    },
+    {
+      "id": "blockbox:spruce_seat",
+      "required": false
+    },
+    {
+      "id": "blockbox:stripped_dark_oak_palisade",
+      "required": false
+    },
+    {
+      "id": "blockbox:stripped_spiked_dark_oak_palisade",
+      "required": false
+    },
+    {
+      "id": "blockbox:stripped_spiked_spruce_palisade",
+      "required": false
+    },
+    {
+      "id": "blockbox:stripped_spruce_palisade",
+      "required": false
+    },
+    {
+      "id": "bountifulfares:stripped_walnut_log",
+      "required": false
+    },
+    {
+      "id": "bountifulfares:stripped_walnut_wood",
+      "required": false
+    },
+    {
+      "id": "bountifulfares:walnut_log",
+      "required": false
+    },
+    {
+      "id": "bountifulfares:walnut_wood",
+      "required": false
+    },
+    {
+      "id": "clutternomore:dark_oak_step",
+      "required": false
+    },
+    {
+      "id": "clutternomore:newworld/fir_step",
+      "required": false
+    },
+    {
+      "id": "clutternomore:newworld/vertical_fir_slab",
+      "required": false
+    },
+    {
+      "id": "clutternomore:nomansland/pine_step",
+      "required": false
+    },
+    {
+      "id": "clutternomore:nomansland/vertical_pine_slab",
+      "required": false
+    },
+    {
+      "id": "clutternomore:nomansland/vertical_walnut_slab",
+      "required": false
+    },
+    {
+      "id": "clutternomore:nomansland/walnut_step",
+      "required": false
+    },
+    {
+      "id": "clutternomore:spruce_step",
+      "required": false
+    },
+    {
+      "id": "clutternomore:upgrade_aquatic/driftwood_step",
+      "required": false
+    },
+    {
+      "id": "clutternomore:upgrade_aquatic/vertical_driftwood_slab",
+      "required": false
+    },
+    {
+      "id": "clutternomore:vertical_dark_oak_slab",
+      "required": false
+    },
+    {
+      "id": "clutternomore:vertical_spruce_slab",
+      "required": false
+    },
+    {
+      "id": "everycomp:abnww/newworld/fir_beehive",
+      "required": false
+    },
+    {
+      "id": "everycomp:abnww/newworld/fir_boards",
+      "required": false
+    },
+    {
+      "id": "everycomp:abnww/nomansland/pine_beehive",
+      "required": false
+    },
+    {
+      "id": "everycomp:abnww/nomansland/pine_boards",
+      "required": false
+    },
+    {
+      "id": "everycomp:abnww/nomansland/walnut_beehive",
+      "required": false
+    },
+    {
+      "id": "everycomp:abnww/nomansland/walnut_boards",
+      "required": false
+    },
+    {
+      "id": "everycomp:ap/newworld/fir_railing",
+      "required": false
+    },
+    {
+      "id": "everycomp:ap/nomansland/pine_railing",
+      "required": false
+    },
+    {
+      "id": "everycomp:ap/nomansland/walnut_railing",
+      "required": false
+    },
+    {
+      "id": "everycomp:nml/upgrade_aquatic/trimmed_driftwood_planks",
+      "required": false
+    },
+    {
+      "id": "everycomp:q/bountifulfares/hollow_walnut_log",
+      "required": false
+    },
+    {
+      "id": "everycomp:q/newworld/fir_chest",
+      "required": false
+    },
+    {
+      "id": "everycomp:q/newworld/hollow_fir_log",
+      "required": false
+    },
+    {
+      "id": "everycomp:q/newworld/trapped_fir_chest",
+      "required": false
+    },
+    {
+      "id": "everycomp:q/nomansland/hollow_pine_log",
+      "required": false
+    },
+    {
+      "id": "everycomp:q/nomansland/pine_chest",
+      "required": false
+    },
+    {
+      "id": "everycomp:q/nomansland/trapped_pine_chest",
+      "required": false
+    },
+    {
+      "id": "everycomp:q/nomansland/trapped_walnut_chest",
+      "required": false
+    },
+    {
+      "id": "everycomp:q/nomansland/walnut_chest",
+      "required": false
+    },
+    {
+      "id": "everycomp:vs/bountifulfares/bundled_stripped_walnut_posts",
+      "required": false
+    },
+    {
+      "id": "everycomp:vs/bountifulfares/bundled_walnut_posts",
+      "required": false
+    },
+    {
+      "id": "everycomp:vs/bountifulfares/cut_stripped_walnut_post",
+      "required": false
+    },
+    {
+      "id": "everycomp:vs/bountifulfares/cut_walnut_post",
+      "required": false
+    },
+    {
+      "id": "everycomp:vs/bountifulfares/stripped_walnut_post",
+      "required": false
+    },
+    {
+      "id": "everycomp:vs/bountifulfares/walnut_post",
+      "required": false
+    },
+    {
+      "id": "everycomp:vs/newworld/bundled_fir_posts",
+      "required": false
+    },
+    {
+      "id": "everycomp:vs/newworld/bundled_stripped_fir_posts",
+      "required": false
+    },
+    {
+      "id": "everycomp:vs/newworld/cut_fir_post",
+      "required": false
+    },
+    {
+      "id": "everycomp:vs/newworld/cut_stripped_fir_post",
+      "required": false
+    },
+    {
+      "id": "everycomp:vs/newworld/fir_post",
+      "required": false
+    },
+    {
+      "id": "everycomp:vs/newworld/stripped_fir_post",
+      "required": false
+    },
+    {
+      "id": "everycomp:vs/nomansland/bundled_pine_posts",
+      "required": false
+    },
+    {
+      "id": "everycomp:vs/nomansland/bundled_stripped_pine_posts",
+      "required": false
+    },
+    {
+      "id": "everycomp:vs/nomansland/cut_pine_post",
+      "required": false
+    },
+    {
+      "id": "everycomp:vs/nomansland/cut_stripped_pine_post",
+      "required": false
+    },
+    {
+      "id": "everycomp:vs/nomansland/pine_post",
+      "required": false
+    },
+    {
+      "id": "everycomp:vs/nomansland/stripped_pine_post",
+      "required": false
+    },
+    {
+      "id": "everycomp:vs/upgrade_aquatic/bundled_driftwood_posts",
+      "required": false
+    },
+    {
+      "id": "everycomp:vs/upgrade_aquatic/bundled_stripped_driftwood_posts",
+      "required": false
+    },
+    {
+      "id": "everycomp:vs/upgrade_aquatic/cut_driftwood_post",
+      "required": false
+    },
+    {
+      "id": "everycomp:vs/upgrade_aquatic/cut_stripped_driftwood_post",
+      "required": false
+    },
+    {
+      "id": "everycomp:vs/upgrade_aquatic/driftwood_post",
+      "required": false
+    },
+    {
+      "id": "everycomp:vs/upgrade_aquatic/stripped_driftwood_post",
+      "required": false
+    },
+    "minecraft:dark_oak_wall_sign",
+    "minecraft:spruce_wall_sign",
+    {
+      "id": "newworld:fir_button",
+      "required": false
+    },
+    {
+      "id": "newworld:fir_cabinet",
+      "required": false
+    },
+    {
+      "id": "newworld:fir_door",
+      "required": false
+    },
+    {
+      "id": "newworld:fir_fence",
+      "required": false
+    },
+    {
+      "id": "newworld:fir_fence_gate",
+      "required": false
+    },
+    {
+      "id": "newworld:fir_log",
+      "required": false
+    },
+    {
+      "id": "newworld:fir_palisade",
+      "required": false
+    },
+    {
+      "id": "newworld:fir_planks",
+      "required": false
+    },
+    {
+      "id": "newworld:fir_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "newworld:fir_seat",
+      "required": false
+    },
+    {
+      "id": "newworld:fir_sign",
+      "required": false
+    },
+    {
+      "id": "newworld:fir_slab",
+      "required": false
+    },
+    {
+      "id": "newworld:fir_stairs",
+      "required": false
+    },
+    {
+      "id": "newworld:fir_trapdoor",
+      "required": false
+    },
+    {
+      "id": "newworld:fir_wall_sign",
+      "required": false
+    },
+    {
+      "id": "newworld:fir_wood",
+      "required": false
+    },
+    {
+      "id": "newworld:spiked_fir_palisade",
+      "required": false
+    },
+    {
+      "id": "newworld:stripped_fir_log",
+      "required": false
+    },
+    {
+      "id": "newworld:stripped_fir_palisade",
+      "required": false
+    },
+    {
+      "id": "newworld:stripped_fir_wood",
+      "required": false
+    },
+    {
+      "id": "newworld:stripped_spiked_fir_palisade",
+      "required": false
+    },
+    {
+      "id": "newworld:trimmed_fir_planks",
+      "required": false
+    },
+    {
+      "id": "nomansland:pine_button",
+      "required": false
+    },
+    {
+      "id": "nomansland:pine_cabinet",
+      "required": false
+    },
+    {
+      "id": "nomansland:pine_door",
+      "required": false
+    },
+    {
+      "id": "nomansland:pine_fence",
+      "required": false
+    },
+    {
+      "id": "nomansland:pine_fence_gate",
+      "required": false
+    },
+    {
+      "id": "nomansland:pine_log",
+      "required": false
+    },
+    {
+      "id": "nomansland:pine_palisade",
+      "required": false
+    },
+    {
+      "id": "nomansland:pine_planks",
+      "required": false
+    },
+    {
+      "id": "nomansland:pine_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "nomansland:pine_seat",
+      "required": false
+    },
+    {
+      "id": "nomansland:pine_sign",
+      "required": false
+    },
+    {
+      "id": "nomansland:pine_slab",
+      "required": false
+    },
+    {
+      "id": "nomansland:pine_stairs",
+      "required": false
+    },
+    {
+      "id": "nomansland:pine_trapdoor",
+      "required": false
+    },
+    {
+      "id": "nomansland:pine_wall_sign",
+      "required": false
+    },
+    {
+      "id": "nomansland:pine_wood",
+      "required": false
+    },
+    {
+      "id": "nomansland:spiked_pine_palisade",
+      "required": false
+    },
+    {
+      "id": "nomansland:spiked_walnut_palisade",
+      "required": false
+    },
+    {
+      "id": "nomansland:stripped_pine_log",
+      "required": false
+    },
+    {
+      "id": "nomansland:stripped_pine_palisade",
+      "required": false
+    },
+    {
+      "id": "nomansland:stripped_pine_wood",
+      "required": false
+    },
+    {
+      "id": "nomansland:stripped_spiked_pine_palisade",
+      "required": false
+    },
+    {
+      "id": "nomansland:stripped_spiked_walnut_palisade",
+      "required": false
+    },
+    {
+      "id": "nomansland:stripped_walnut_palisade",
+      "required": false
+    },
+    {
+      "id": "nomansland:trimmed_dark_oak_planks",
+      "required": false
+    },
+    {
+      "id": "nomansland:trimmed_pine_planks",
+      "required": false
+    },
+    {
+      "id": "nomansland:trimmed_spruce_planks",
+      "required": false
+    },
+    {
+      "id": "nomansland:trimmed_walnut_planks",
+      "required": false
+    },
+    {
+      "id": "nomansland:walnut_button",
+      "required": false
+    },
+    {
+      "id": "nomansland:walnut_cabinet",
+      "required": false
+    },
+    {
+      "id": "nomansland:walnut_door",
+      "required": false
+    },
+    {
+      "id": "nomansland:walnut_fence",
+      "required": false
+    },
+    {
+      "id": "nomansland:walnut_fence_gate",
+      "required": false
+    },
+    {
+      "id": "nomansland:walnut_palisade",
+      "required": false
+    },
+    {
+      "id": "nomansland:walnut_planks",
+      "required": false
+    },
+    {
+      "id": "nomansland:walnut_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "nomansland:walnut_seat",
+      "required": false
+    },
+    {
+      "id": "nomansland:walnut_sign",
+      "required": false
+    },
+    {
+      "id": "nomansland:walnut_slab",
+      "required": false
+    },
+    {
+      "id": "nomansland:walnut_stairs",
+      "required": false
+    },
+    {
+      "id": "nomansland:walnut_trapdoor",
+      "required": false
+    },
+    {
+      "id": "nomansland:walnut_wall_sign",
+      "required": false
+    },
+    {
+      "id": "quark:dark_oak_chest",
+      "required": false
+    },
+    {
+      "id": "quark:spruce_chest",
+      "required": false
+    },
+    {
+      "id": "quark:trapped_dark_oak_chest",
+      "required": false
+    },
+    {
+      "id": "quark:trapped_spruce_chest",
+      "required": false
+    },
+    {
+      "id": "shutterup:dark_oak_shutter",
+      "required": false
+    },
+    {
+      "id": "shutterup:shutterup/newworld/fir_shutter",
+      "required": false
+    },
+    {
+      "id": "shutterup:shutterup/nomansland/pine_shutter",
+      "required": false
+    },
+    {
+      "id": "shutterup:shutterup/nomansland/walnut_shutter",
+      "required": false
+    },
+    {
+      "id": "shutterup:shutterup/upgrade_aquatic/driftwood_shutter",
+      "required": false
+    },
+    {
+      "id": "shutterup:spruce_shutter",
+      "required": false
+    },
+    {
+      "id": "spicedcider:bb/upgrade_aquatic/driftwood_palisade",
+      "required": false
+    },
+    {
+      "id": "spicedcider:bb/upgrade_aquatic/driftwood_seat",
+      "required": false
+    },
+    {
+      "id": "spicedcider:bb/upgrade_aquatic/spiked_driftwood_palisade",
+      "required": false
+    },
+    {
+      "id": "spicedcider:bb/upgrade_aquatic/stripped_driftwood_palisade",
+      "required": false
+    },
+    {
+      "id": "spicedcider:bb/upgrade_aquatic/stripped_spiked_driftwood_palisade",
+      "required": false
+    },
+    {
+      "id": "suppsquared:item_shelf_dark_oak",
+      "required": false
+    },
+    {
+      "id": "suppsquared:item_shelf_spruce",
+      "required": false
+    },
+    {
+      "id": "suppsquared:newworld/item_shelf_fir",
+      "required": false
+    },
+    {
+      "id": "suppsquared:nomansland/item_shelf_pine",
+      "required": false
+    },
+    {
+      "id": "suppsquared:nomansland/item_shelf_walnut",
+      "required": false
+    },
+    {
+      "id": "suppsquared:upgrade_aquatic/item_shelf_driftwood",
+      "required": false
+    },
+    {
+      "id": "upgrade_aquatic:driftwood_wall_sign",
+      "required": false
+    },
+    {
+      "id": "upgrade_aquatic:trapped_driftwood_chest",
+      "required": false
+    },
+    {
+      "id": "valhelsia_structures:bundled_dark_oak_posts",
+      "required": false
+    },
+    {
+      "id": "valhelsia_structures:bundled_spruce_posts",
+      "required": false
+    },
+    {
+      "id": "valhelsia_structures:bundled_stripped_dark_oak_posts",
+      "required": false
+    },
+    {
+      "id": "valhelsia_structures:bundled_stripped_spruce_posts",
+      "required": false
+    },
+    {
+      "id": "valhelsia_structures:cut_dark_oak_post",
+      "required": false
+    },
+    {
+      "id": "valhelsia_structures:cut_spruce_post",
+      "required": false
+    },
+    {
+      "id": "valhelsia_structures:cut_stripped_dark_oak_post",
+      "required": false
+    },
+    {
+      "id": "valhelsia_structures:cut_stripped_spruce_post",
+      "required": false
+    },
+    {
+      "id": "valhelsia_structures:dark_oak_post",
+      "required": false
+    },
+    {
+      "id": "valhelsia_structures:spruce_post",
+      "required": false
+    },
+    {
+      "id": "valhelsia_structures:stripped_dark_oak_post",
+      "required": false
+    },
+    {
+      "id": "valhelsia_structures:stripped_spruce_post",
+      "required": false
     }
   ],
   "sound_type": {

@@ -1,0 +1,19 @@
+{
+  "type": "lithostitched:replace_partially",
+  "dimension": "minecraft:overworld",
+  "targets": [
+    "nomansland:caves",
+    "nomansland:cave_depths"
+  ],
+  "replacement": "minecraft:dripstone_caves",
+  "parameters": {
+    "continentalness": [
+      0.3,
+      10.0
+    ],
+    "spicedcider:y": [
+      -28.0,
+      4096.0
+    ]
+  }
+}

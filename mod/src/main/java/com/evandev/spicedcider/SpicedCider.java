@@ -10,6 +10,7 @@ import com.evandev.spicedcider.compat.tide.TideCompat;
 import com.evandev.spicedcider.compat.yacl.ConfigScreenLoader;
 import com.evandev.spicedcider.config.LogReconfiguration;
 import com.evandev.spicedcider.config.SpicedCiderConfig;
+import com.evandev.spicedcider.content.block.LatexCauldronBlock;
 import com.evandev.spicedcider.content.handler.SpawnControlEvents;
 import com.evandev.spicedcider.namingunconvention.RandomNameGenerator;
 import com.evandev.spicedcider.networking.ChunkOffsetsPayload;
@@ -76,6 +77,7 @@ public class SpicedCider {
         ModTreeFeatures.TRUNK_PLACERS.register(modEventBus);
         ModTreeFeatures.TREE_DECORATORS.register(modEventBus);
         ModTreeFeatures.FEATURES.register(modEventBus);
+        ModTreeFeatures.PLACEMENT_MODIFIERS.register(modEventBus);
         ModAttachments.ATTACHMENT_TYPES.register(modEventBus);
         ModAttributes.ATTRIBUTES.register(modEventBus);
         ModArmorMaterials.ARMOR_MATERIALS.register(modEventBus);
@@ -116,6 +118,7 @@ public class SpicedCider {
     private static void commonSetup(FMLCommonSetupEvent event) {
         event.enqueueWork(TideCompat::registerFishingMediums);
         event.enqueueWork(IceCubes::registerDispenserBehavior);
+        event.enqueueWork(LatexCauldronBlock::registerInteractions);
         event.enqueueWork(() -> ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.GLOAMWOOD_SAPLING.getId(), ModBlocks.POTTED_GLOAMWOOD_SAPLING));
         if (ModItems.TWISTED_BOAT == null) return;
         event.enqueueWork(() -> {
@@ -154,6 +157,10 @@ public class SpicedCider {
             event.accept(ModItems.GEODE.get(), vis);
             event.accept(ModItems.DEEPSLATE_GEODE.get(), vis);
             event.accept(ModItems.BLACKSTONE_GEODE.get(), vis);
+            event.accept(ModItems.LATEX_BOTTLE.get(), vis);
+        }
+        if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
+            event.insertAfter(new ItemStack(Items.MILK_BUCKET), new ItemStack(ModItems.LATEX_BUCKET.get()), vis);
         }
         if (event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
             event.insertAfter(new ItemStack(Items.ROOTED_DIRT), new ItemStack(ModItems.WORMY_DIRT.get()), vis);

@@ -1,0 +1,15 @@
+{
+  "type": "lithostitched:replace_partially",
+  "dimension": "minecraft:overworld",
+  "targets": [
+    "nomansland:caves",
+    "nomansland:cave_depths"
+  ],
+  "replacement": "spicedcider:ooze_caves",
+  "parameters": {
+    "spicedcider:ooze_caves_selector": [
+      0.52,
+      10.0
+    ]
+  }
+}

@@ -28,4 +28,13 @@ public class ModFluidTypes {
                     .canDrown(true)
                     .sound(SoundActions.BUCKET_FILL, SoundEvents.BUCKET_FILL)
                     .sound(SoundActions.BUCKET_EMPTY, SoundEvents.BUCKET_EMPTY)));
+
+    public static final DeferredHolder<FluidType, FluidType> LATEX = FLUID_TYPES.register("latex",
+            () -> new FluidType(FluidType.Properties.create()
+                    .density(1100)
+                    .viscosity(4000)
+                    .canSwim(false)
+                    .canDrown(true)
+                    .sound(SoundActions.BUCKET_FILL, SoundEvents.BUCKET_FILL)
+                    .sound(SoundActions.BUCKET_EMPTY, SoundEvents.BUCKET_EMPTY)));
 }

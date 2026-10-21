@@ -1,0 +1,26 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "etcetera"
+    }
+  ],
+  "source": {
+    "block": "minecraft:jungle_log",
+    "properties": {
+      "axis": "y"
+    },
+    "tree": {}
+  },
+  "output": {
+    "cauldron": "spicedcider:latex_cauldron"
+  },
+  "interval": {
+    "type": "minecraft:uniform",
+    "min_inclusive": 18000,
+    "max_inclusive": 36000
+  },
+  "particle": {
+    "type": "etcetera:dripping_rubber"
+  }
+}

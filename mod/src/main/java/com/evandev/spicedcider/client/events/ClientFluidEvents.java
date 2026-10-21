@@ -16,6 +16,7 @@ public class ClientFluidEvents {
     public static void registerFluidExtensions(RegisterClientExtensionsEvent event) {
         event.registerFluidType(textured("resin"), ModFluidTypes.RESIN.get());
         event.registerFluidType(textured("maple_syrup"), ModFluidTypes.MAPLE_SYRUP.get());
+        event.registerFluidType(textured("latex"), ModFluidTypes.LATEX.get());
     }
 
     private static IClientFluidTypeExtensions textured(String name) {

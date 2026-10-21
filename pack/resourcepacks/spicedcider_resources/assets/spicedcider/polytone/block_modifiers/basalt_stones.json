@@ -166,6 +166,782 @@
     {
       "id": "create:cut_andesite_wall",
       "required": false
+    },
+    {
+      "id": "caverns_and_chasms:polished_andesite_wall",
+      "required": false
+    },
+    {
+      "id": "caverns_and_chasms:polished_diorite_wall",
+      "required": false
+    },
+    {
+      "id": "caverns_and_chasms:polished_granite_wall",
+      "required": false
+    },
+    {
+      "id": "caverns_and_chasms:smooth_basalt_slab",
+      "required": false
+    },
+    {
+      "id": "caverns_and_chasms:smooth_basalt_stairs",
+      "required": false
+    },
+    {
+      "id": "caverns_and_chasms:smooth_basalt_wall",
+      "required": false
+    },
+    {
+      "id": "clutternomore:andesite_step",
+      "required": false
+    },
+    {
+      "id": "clutternomore:caverns_and_chasms/smooth_basalt_step",
+      "required": false
+    },
+    {
+      "id": "clutternomore:caverns_and_chasms/vertical_smooth_basalt_slab",
+      "required": false
+    },
+    {
+      "id": "clutternomore:diorite_step",
+      "required": false
+    },
+    {
+      "id": "clutternomore:granite_step",
+      "required": false
+    },
+    {
+      "id": "clutternomore:infernalexp/polished_basalt_step",
+      "required": false
+    },
+    {
+      "id": "clutternomore:infernalexp/vertical_polished_basalt_slab",
+      "required": false
+    },
+    {
+      "id": "clutternomore:polished_andesite_step",
+      "required": false
+    },
+    {
+      "id": "clutternomore:polished_diorite_step",
+      "required": false
+    },
+    {
+      "id": "clutternomore:polished_granite_step",
+      "required": false
+    },
+    {
+      "id": "clutternomore:quark/jasper_step",
+      "required": false
+    },
+    {
+      "id": "clutternomore:quark/limestone_step",
+      "required": false
+    },
+    {
+      "id": "clutternomore:quark/permafrost_step",
+      "required": false
+    },
+    {
+      "id": "clutternomore:quark/polished_jasper_step",
+      "required": false
+    },
+    {
+      "id": "clutternomore:quark/polished_limestone_step",
+      "required": false
+    },
+    {
+      "id": "clutternomore:quark/polished_shale_step",
+      "required": false
+    },
+    {
+      "id": "clutternomore:quark/shale_step",
+      "required": false
+    },
+    {
+      "id": "clutternomore:quark/vertical_jasper_slab",
+      "required": false
+    },
+    {
+      "id": "clutternomore:quark/vertical_limestone_slab",
+      "required": false
+    },
+    {
+      "id": "clutternomore:quark/vertical_permafrost_slab",
+      "required": false
+    },
+    {
+      "id": "clutternomore:quark/vertical_polished_jasper_slab",
+      "required": false
+    },
+    {
+      "id": "clutternomore:quark/vertical_polished_limestone_slab",
+      "required": false
+    },
+    {
+      "id": "clutternomore:quark/vertical_polished_shale_slab",
+      "required": false
+    },
+    {
+      "id": "clutternomore:quark/vertical_shale_slab",
+      "required": false
+    },
+    {
+      "id": "clutternomore:spicedcider/cobbled_jasper_step",
+      "required": false
+    },
+    {
+      "id": "clutternomore:spicedcider/cobbled_limestone_step",
+      "required": false
+    },
+    {
+      "id": "clutternomore:spicedcider/cobbled_permafrost_step",
+      "required": false
+    },
+    {
+      "id": "clutternomore:spicedcider/cobbled_shale_step",
+      "required": false
+    },
+    {
+      "id": "clutternomore:spicedcider/mossy_cobbled_jasper_step",
+      "required": false
+    },
+    {
+      "id": "clutternomore:spicedcider/mossy_cobbled_limestone_step",
+      "required": false
+    },
+    {
+      "id": "clutternomore:spicedcider/mossy_cobbled_permafrost_step",
+      "required": false
+    },
+    {
+      "id": "clutternomore:spicedcider/mossy_cobbled_shale_step",
+      "required": false
+    },
+    {
+      "id": "clutternomore:spicedcider/polished_permafrost_step",
+      "required": false
+    },
+    {
+      "id": "clutternomore:spicedcider/vertical_cobbled_jasper_slab",
+      "required": false
+    },
+    {
+      "id": "clutternomore:spicedcider/vertical_cobbled_limestone_slab",
+      "required": false
+    },
+    {
+      "id": "clutternomore:spicedcider/vertical_cobbled_permafrost_slab",
+      "required": false
+    },
+    {
+      "id": "clutternomore:spicedcider/vertical_cobbled_shale_slab",
+      "required": false
+    },
+    {
+      "id": "clutternomore:spicedcider/vertical_mossy_cobbled_jasper_slab",
+      "required": false
+    },
+    {
+      "id": "clutternomore:spicedcider/vertical_mossy_cobbled_limestone_slab",
+      "required": false
+    },
+    {
+      "id": "clutternomore:spicedcider/vertical_mossy_cobbled_permafrost_slab",
+      "required": false
+    },
+    {
+      "id": "clutternomore:spicedcider/vertical_mossy_cobbled_shale_slab",
+      "required": false
+    },
+    {
+      "id": "clutternomore:spicedcider/vertical_polished_permafrost_slab",
+      "required": false
+    },
+    {
+      "id": "clutternomore:stoneworks/andesite_tile_step",
+      "required": false
+    },
+    {
+      "id": "clutternomore:stoneworks/cobbled_andesite_step",
+      "required": false
+    },
+    {
+      "id": "clutternomore:stoneworks/cobbled_diorite_step",
+      "required": false
+    },
+    {
+      "id": "clutternomore:stoneworks/cobbled_granite_step",
+      "required": false
+    },
+    {
+      "id": "clutternomore:stoneworks/diorite_tile_step",
+      "required": false
+    },
+    {
+      "id": "clutternomore:stoneworks/granite_tile_step",
+      "required": false
+    },
+    {
+      "id": "clutternomore:stoneworks/mossy_cobbled_andesite_step",
+      "required": false
+    },
+    {
+      "id": "clutternomore:stoneworks/mossy_cobbled_diorite_step",
+      "required": false
+    },
+    {
+      "id": "clutternomore:stoneworks/mossy_cobbled_granite_step",
+      "required": false
+    },
+    {
+      "id": "clutternomore:stoneworks/vertical_andesite_tile_slab",
+      "required": false
+    },
+    {
+      "id": "clutternomore:stoneworks/vertical_cobbled_andesite_slab",
+      "required": false
+    },
+    {
+      "id": "clutternomore:stoneworks/vertical_cobbled_diorite_slab",
+      "required": false
+    },
+    {
+      "id": "clutternomore:stoneworks/vertical_cobbled_granite_slab",
+      "required": false
+    },
+    {
+      "id": "clutternomore:stoneworks/vertical_diorite_tile_slab",
+      "required": false
+    },
+    {
+      "id": "clutternomore:stoneworks/vertical_granite_tile_slab",
+      "required": false
+    },
+    {
+      "id": "clutternomore:stoneworks/vertical_mossy_cobbled_andesite_slab",
+      "required": false
+    },
+    {
+      "id": "clutternomore:stoneworks/vertical_mossy_cobbled_diorite_slab",
+      "required": false
+    },
+    {
+      "id": "clutternomore:stoneworks/vertical_mossy_cobbled_granite_slab",
+      "required": false
+    },
+    {
+      "id": "clutternomore:stonezone/sw/quark/jasper_tile_step",
+      "required": false
+    },
+    {
+      "id": "clutternomore:stonezone/sw/quark/limestone_tile_step",
+      "required": false
+    },
+    {
+      "id": "clutternomore:stonezone/sw/quark/permafrost_tile_step",
+      "required": false
+    },
+    {
+      "id": "clutternomore:stonezone/sw/quark/shale_tile_step",
+      "required": false
+    },
+    {
+      "id": "clutternomore:stonezone/vertical_sw/quark/jasper_tile_slab",
+      "required": false
+    },
+    {
+      "id": "clutternomore:stonezone/vertical_sw/quark/limestone_tile_slab",
+      "required": false
+    },
+    {
+      "id": "clutternomore:stonezone/vertical_sw/quark/permafrost_tile_slab",
+      "required": false
+    },
+    {
+      "id": "clutternomore:stonezone/vertical_sw/quark/shale_tile_slab",
+      "required": false
+    },
+    {
+      "id": "clutternomore:vertical_andesite_slab",
+      "required": false
+    },
+    {
+      "id": "clutternomore:vertical_diorite_slab",
+      "required": false
+    },
+    {
+      "id": "clutternomore:vertical_granite_slab",
+      "required": false
+    },
+    {
+      "id": "clutternomore:vertical_polished_andesite_slab",
+      "required": false
+    },
+    {
+      "id": "clutternomore:vertical_polished_diorite_slab",
+      "required": false
+    },
+    {
+      "id": "clutternomore:vertical_polished_granite_slab",
+      "required": false
+    },
+    {
+      "id": "infernalexp:polished_basalt_slab",
+      "required": false
+    },
+    {
+      "id": "infernalexp:polished_basalt_stairs",
+      "required": false
+    },
+    {
+      "id": "infernalexp:polished_basalt_wall",
+      "required": false
+    },
+    {
+      "id": "quark:jasper_pillar",
+      "required": false
+    },
+    {
+      "id": "quark:limestone_pillar",
+      "required": false
+    },
+    {
+      "id": "quark:polished_jasper",
+      "required": false
+    },
+    {
+      "id": "quark:polished_jasper_slab",
+      "required": false
+    },
+    {
+      "id": "quark:polished_jasper_stairs",
+      "required": false
+    },
+    {
+      "id": "quark:polished_limestone",
+      "required": false
+    },
+    {
+      "id": "quark:polished_limestone_slab",
+      "required": false
+    },
+    {
+      "id": "quark:polished_limestone_stairs",
+      "required": false
+    },
+    {
+      "id": "quark:polished_shale",
+      "required": false
+    },
+    {
+      "id": "quark:polished_shale_slab",
+      "required": false
+    },
+    {
+      "id": "quark:polished_shale_stairs",
+      "required": false
+    },
+    {
+      "id": "quark:shale_pillar",
+      "required": false
+    },
+    {
+      "id": "spicedcider:chiseled_permafrost",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cobbled_jasper",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cobbled_jasper_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cobbled_jasper_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cobbled_jasper_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cobbled_limestone",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cobbled_limestone_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cobbled_limestone_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cobbled_limestone_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cobbled_permafrost",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cobbled_permafrost_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cobbled_permafrost_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cobbled_permafrost_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cobbled_shale",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cobbled_shale_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cobbled_shale_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cobbled_shale_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cobbled_jasper",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cobbled_jasper_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cobbled_jasper_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cobbled_jasper_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cobbled_limestone",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cobbled_limestone_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cobbled_limestone_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cobbled_limestone_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cobbled_permafrost",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cobbled_permafrost_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cobbled_permafrost_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cobbled_permafrost_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cobbled_shale",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cobbled_shale_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cobbled_shale_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:mossy_cobbled_shale_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:polished_jasper_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:polished_limestone_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:polished_permafrost",
+      "required": false
+    },
+    {
+      "id": "spicedcider:polished_permafrost_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:polished_permafrost_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:polished_permafrost_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:polished_shale_wall",
+      "required": false
+    },
+    {
+      "id": "stoneworks:andesite_pillar",
+      "required": false
+    },
+    {
+      "id": "stoneworks:andesite_tile_slab",
+      "required": false
+    },
+    {
+      "id": "stoneworks:andesite_tile_stairs",
+      "required": false
+    },
+    {
+      "id": "stoneworks:andesite_tile_wall",
+      "required": false
+    },
+    {
+      "id": "stoneworks:andesite_tiles",
+      "required": false
+    },
+    {
+      "id": "stoneworks:chiseled_andesite",
+      "required": false
+    },
+    {
+      "id": "stoneworks:chiseled_diorite",
+      "required": false
+    },
+    {
+      "id": "stoneworks:chiseled_granite",
+      "required": false
+    },
+    {
+      "id": "stoneworks:cobbled_andesite",
+      "required": false
+    },
+    {
+      "id": "stoneworks:cobbled_andesite_slab",
+      "required": false
+    },
+    {
+      "id": "stoneworks:cobbled_andesite_stairs",
+      "required": false
+    },
+    {
+      "id": "stoneworks:cobbled_andesite_wall",
+      "required": false
+    },
+    {
+      "id": "stoneworks:cobbled_diorite",
+      "required": false
+    },
+    {
+      "id": "stoneworks:cobbled_diorite_slab",
+      "required": false
+    },
+    {
+      "id": "stoneworks:cobbled_diorite_stairs",
+      "required": false
+    },
+    {
+      "id": "stoneworks:cobbled_diorite_wall",
+      "required": false
+    },
+    {
+      "id": "stoneworks:cobbled_granite",
+      "required": false
+    },
+    {
+      "id": "stoneworks:cobbled_granite_slab",
+      "required": false
+    },
+    {
+      "id": "stoneworks:cobbled_granite_stairs",
+      "required": false
+    },
+    {
+      "id": "stoneworks:cobbled_granite_wall",
+      "required": false
+    },
+    {
+      "id": "stoneworks:diorite_pillar",
+      "required": false
+    },
+    {
+      "id": "stoneworks:diorite_tile_slab",
+      "required": false
+    },
+    {
+      "id": "stoneworks:diorite_tile_stairs",
+      "required": false
+    },
+    {
+      "id": "stoneworks:diorite_tile_wall",
+      "required": false
+    },
+    {
+      "id": "stoneworks:diorite_tiles",
+      "required": false
+    },
+    {
+      "id": "stoneworks:granite_pillar",
+      "required": false
+    },
+    {
+      "id": "stoneworks:granite_tile_slab",
+      "required": false
+    },
+    {
+      "id": "stoneworks:granite_tile_stairs",
+      "required": false
+    },
+    {
+      "id": "stoneworks:granite_tile_wall",
+      "required": false
+    },
+    {
+      "id": "stoneworks:granite_tiles",
+      "required": false
+    },
+    {
+      "id": "stoneworks:mossy_cobbled_andesite",
+      "required": false
+    },
+    {
+      "id": "stoneworks:mossy_cobbled_andesite_slab",
+      "required": false
+    },
+    {
+      "id": "stoneworks:mossy_cobbled_andesite_stairs",
+      "required": false
+    },
+    {
+      "id": "stoneworks:mossy_cobbled_andesite_wall",
+      "required": false
+    },
+    {
+      "id": "stoneworks:mossy_cobbled_diorite",
+      "required": false
+    },
+    {
+      "id": "stoneworks:mossy_cobbled_diorite_slab",
+      "required": false
+    },
+    {
+      "id": "stoneworks:mossy_cobbled_diorite_stairs",
+      "required": false
+    },
+    {
+      "id": "stoneworks:mossy_cobbled_diorite_wall",
+      "required": false
+    },
+    {
+      "id": "stoneworks:mossy_cobbled_granite",
+      "required": false
+    },
+    {
+      "id": "stoneworks:mossy_cobbled_granite_slab",
+      "required": false
+    },
+    {
+      "id": "stoneworks:mossy_cobbled_granite_stairs",
+      "required": false
+    },
+    {
+      "id": "stoneworks:mossy_cobbled_granite_wall",
+      "required": false
+    },
+    {
+      "id": "stonezone:sw/quark/jasper_tile_slab",
+      "required": false
+    },
+    {
+      "id": "stonezone:sw/quark/jasper_tile_stairs",
+      "required": false
+    },
+    {
+      "id": "stonezone:sw/quark/jasper_tile_wall",
+      "required": false
+    },
+    {
+      "id": "stonezone:sw/quark/jasper_tiles",
+      "required": false
+    },
+    {
+      "id": "stonezone:sw/quark/limestone_tile_slab",
+      "required": false
+    },
+    {
+      "id": "stonezone:sw/quark/limestone_tile_stairs",
+      "required": false
+    },
+    {
+      "id": "stonezone:sw/quark/limestone_tile_wall",
+      "required": false
+    },
+    {
+      "id": "stonezone:sw/quark/limestone_tiles",
+      "required": false
+    },
+    {
+      "id": "stonezone:sw/quark/permafrost_pillar",
+      "required": false
+    },
+    {
+      "id": "stonezone:sw/quark/permafrost_tile_slab",
+      "required": false
+    },
+    {
+      "id": "stonezone:sw/quark/permafrost_tile_stairs",
+      "required": false
+    },
+    {
+      "id": "stonezone:sw/quark/permafrost_tile_wall",
+      "required": false
+    },
+    {
+      "id": "stonezone:sw/quark/permafrost_tiles",
+      "required": false
+    },
+    {
+      "id": "stonezone:sw/quark/shale_tile_slab",
+      "required": false
+    },
+    {
+      "id": "stonezone:sw/quark/shale_tile_stairs",
+      "required": false
+    },
+    {
+      "id": "stonezone:sw/quark/shale_tile_wall",
+      "required": false
+    },
+    {
+      "id": "stonezone:sw/quark/shale_tiles",
+      "required": false
     }
   ],
   "sound_type": "basalt"

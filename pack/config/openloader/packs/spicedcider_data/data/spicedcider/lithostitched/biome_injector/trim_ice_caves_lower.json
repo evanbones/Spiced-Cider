@@ -1,0 +1,16 @@
+{
+  "type": "lithostitched:replace_partially",
+  "dimension": "minecraft:overworld",
+  "targets": "embers_and_icicles:ice_caves",
+  "replacement": "nomansland:cave_depths",
+  "parameters": {
+    "continentalness": [
+      -0.19,
+      10.0
+    ],
+    "spicedcider:y": [
+      -4096.0,
+      -1.0
+    ]
+  }
+}
