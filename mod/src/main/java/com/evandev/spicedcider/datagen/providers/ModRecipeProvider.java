@@ -7,6 +7,7 @@ import com.evandev.spicedcider.compat.tide.TideCompat;
 import com.evandev.spicedcider.recipe.RenameRecipe;
 import com.evandev.spicedcider.registry.ModBlocks;
 import com.evandev.spicedcider.registry.ModItems;
+import com.evandev.spicedcider.registry.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
@@ -14,6 +15,7 @@ import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
@@ -180,6 +182,19 @@ public class ModRecipeProvider extends RecipeProvider {
                     .group("wool_slab")
                     .unlockedBy(getHasName(wool), has(wool))
                     .save(output);
+        }
+
+        for (DyeColor color : DyeColor.values()) {
+            Item balloon = ModItems.BALLOONS.get(color).get();
+            Ingredient others = Ingredient.of(ModItems.BALLOONS.entrySet().stream()
+                    .filter(entry -> entry.getKey() != color)
+                    .map(entry -> new ItemStack(entry.getValue().get())));
+            ShapelessRecipeBuilder.shapeless(RecipeCategory.TOOLS, balloon)
+                    .requires(color.getTag())
+                    .requires(others)
+                    .group("balloon_dye")
+                    .unlockedBy("has_balloon", has(ModTags.Items.BALLOONS))
+                    .save(output, ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "dye_" + color.getName() + "_balloon"));
         }
 
         SpecialRecipeBuilder.special(RenameRecipe::new)

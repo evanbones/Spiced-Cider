@@ -21,6 +21,7 @@ public class ModTags {
         public static final TagKey<Item> DESTROYED_WHEN_BROKEN = tag("destroyed_when_broken");
         public static final TagKey<Item> WAX_OR_TALLOW = tag("wax_or_tallow");
         public static final TagKey<Item> WORM_SEEKER_ITEMS = tag("worm_seeker_items");
+        public static final TagKey<Item> BALLOONS = tag("balloons");
 
         private static TagKey<Item> tag(String name) {
             return ItemTags.create(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, name));
@@ -59,6 +60,7 @@ public class ModTags {
         public static final TagKey<EntityType<?>> DENY_NATURAL_SPAWN = tag("deny_natural_spawn");
         public static final TagKey<EntityType<?>> WORM_SEEKERS = tag("worm_seekers");
         public static final TagKey<EntityType<?>> ALLOWED_IN_RESTRICTED_BIOMES = tag("allowed_in_restricted_biomes");
+        public static final TagKey<EntityType<?>> BALLOON_UNATTACHABLE = tag("balloon_unattachable");
 
         private static TagKey<EntityType<?>> tag(String name) {
             return TagKey.create(Registries.ENTITY_TYPE, ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, name));

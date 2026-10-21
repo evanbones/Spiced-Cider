@@ -11,6 +11,7 @@ import com.evandev.spicedcider.compat.yacl.ConfigScreenLoader;
 import com.evandev.spicedcider.config.LogReconfiguration;
 import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.evandev.spicedcider.content.block.LatexCauldronBlock;
+import com.evandev.spicedcider.content.item.BalloonItem;
 import com.evandev.spicedcider.content.handler.SpawnControlEvents;
 import com.evandev.spicedcider.namingunconvention.RandomNameGenerator;
 import com.evandev.spicedcider.networking.ChunkOffsetsPayload;
@@ -51,12 +52,18 @@ import net.neoforged.neoforge.network.registration.PayloadRegistrar;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.util.List;
+
 @Mod(SpicedCider.MOD_ID)
 @EventBusSubscriber(modid = SpicedCider.MOD_ID)
 public class SpicedCider {
     public static final String MOD_ID = "spicedcider";
     public static final Logger LOGGER = LogManager.getLogger("Spiced Cider");
     public static final RandomNameGenerator RANDOM_NAME_GENERATOR = new RandomNameGenerator();
+    private static final List<DyeColor> BALLOON_ORDER = List.of(
+            DyeColor.WHITE, DyeColor.LIGHT_GRAY, DyeColor.GRAY, DyeColor.BLACK, DyeColor.BROWN, DyeColor.RED,
+            DyeColor.ORANGE, DyeColor.YELLOW, DyeColor.LIME, DyeColor.GREEN, DyeColor.CYAN, DyeColor.LIGHT_BLUE,
+            DyeColor.BLUE, DyeColor.PURPLE, DyeColor.MAGENTA, DyeColor.PINK);
 
     public SpicedCider(IEventBus modEventBus, ModContainer modContainer) {
         modContainer.registerConfig(ModConfig.Type.STARTUP, SpicedCiderConfig.STARTUP_SPEC);
@@ -119,6 +126,7 @@ public class SpicedCider {
         event.enqueueWork(TideCompat::registerFishingMediums);
         event.enqueueWork(IceCubes::registerDispenserBehavior);
         event.enqueueWork(LatexCauldronBlock::registerInteractions);
+        event.enqueueWork(() -> ModItems.BALLOONS.values().forEach(balloon -> DispenserBlock.registerBehavior(balloon.get(), new BalloonItem.DispenseBehavior())));
         event.enqueueWork(() -> ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.GLOAMWOOD_SAPLING.getId(), ModBlocks.POTTED_GLOAMWOOD_SAPLING));
         if (ModItems.TWISTED_BOAT == null) return;
         event.enqueueWork(() -> {
@@ -146,6 +154,12 @@ public class SpicedCider {
             }
             event.insertAfter(new ItemStack(Items.FLINT_AND_STEEL), new ItemStack(ModItems.FIRE_STRIKER.get()), vis);
             event.insertAfter(new ItemStack(Items.LEAD), new ItemStack(ModItems.RUBBER_CABLE.get()), vis);
+            ItemStack previous = new ItemStack(ModItems.RUBBER_CABLE.get());
+            for (DyeColor color : BALLOON_ORDER) {
+                ItemStack balloon = new ItemStack(ModItems.BALLOONS.get(color).get());
+                event.insertAfter(previous, balloon, vis);
+                previous = balloon;
+            }
             if (ModItems.TWISTED_BOAT != null) {
                 event.insertAfter(new ItemStack(Items.BAMBOO_CHEST_RAFT), new ItemStack(ModItems.TWISTED_BOAT.get()), vis);
                 event.insertAfter(new ItemStack(ModItems.TWISTED_BOAT.get()), new ItemStack(ModItems.TWISTED_CHEST_BOAT.get()), vis);

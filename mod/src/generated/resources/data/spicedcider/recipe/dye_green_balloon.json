@@ -1,0 +1,61 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "group": "balloon_dye",
+  "ingredients": [
+    {
+      "tag": "c:dyes/green"
+    },
+    [
+      {
+        "item": "spicedcider:white_balloon"
+      },
+      {
+        "item": "spicedcider:orange_balloon"
+      },
+      {
+        "item": "spicedcider:magenta_balloon"
+      },
+      {
+        "item": "spicedcider:light_blue_balloon"
+      },
+      {
+        "item": "spicedcider:yellow_balloon"
+      },
+      {
+        "item": "spicedcider:lime_balloon"
+      },
+      {
+        "item": "spicedcider:pink_balloon"
+      },
+      {
+        "item": "spicedcider:gray_balloon"
+      },
+      {
+        "item": "spicedcider:light_gray_balloon"
+      },
+      {
+        "item": "spicedcider:cyan_balloon"
+      },
+      {
+        "item": "spicedcider:purple_balloon"
+      },
+      {
+        "item": "spicedcider:blue_balloon"
+      },
+      {
+        "item": "spicedcider:brown_balloon"
+      },
+      {
+        "item": "spicedcider:red_balloon"
+      },
+      {
+        "item": "spicedcider:black_balloon"
+      }
+    ]
+  ],
+  "result": {
+    "count": 1,
+    "id": "spicedcider:green_balloon"
+  }
+}

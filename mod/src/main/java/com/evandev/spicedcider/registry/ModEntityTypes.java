@@ -3,6 +3,7 @@ package com.evandev.spicedcider.registry;
 import com.evandev.spicedcider.SpicedCider;
 import com.evandev.spicedcider.entities.projectiles.CobwebProjectileEntity;
 import com.evandev.spicedcider.compat.tide.TideCompat;
+import com.evandev.spicedcider.entities.balloon.BalloonEntity;
 import com.evandev.spicedcider.entities.projectiles.GrapplingHookEntity;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
@@ -30,6 +31,15 @@ public class ModEntityTypes {
                     .clientTrackingRange(4)
                     .updateInterval(10)
                     .build(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "cobweb_projectile").toString())
+    );
+
+    public static final DeferredHolder<EntityType<?>, EntityType<BalloonEntity>> BALLOON = registerEntityWithoutEgg("balloon", () ->
+            EntityType.Builder.<BalloonEntity>of(BalloonEntity::new, MobCategory.MISC)
+                    .sized(0.5F, 0.625F)
+                    .fireImmune()
+                    .clientTrackingRange(10)
+                    .updateInterval(3)
+                    .build(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "balloon").toString())
     );
 
     @Nullable

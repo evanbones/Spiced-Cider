@@ -8,4 +8,7 @@ public class ModModelLayers {
     public static final ModelLayerLocation COBWEB_PROJECTILE = new ModelLayerLocation(
             ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "cobweb_projectile"), "main"
     );
+    public static final ModelLayerLocation BALLOON = new ModelLayerLocation(
+            ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "balloon"), "main"
+    );
 }

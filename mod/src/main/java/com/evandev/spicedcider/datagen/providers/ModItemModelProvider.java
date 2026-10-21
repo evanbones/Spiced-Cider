@@ -43,6 +43,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent("rubber_cable", "item/generated")
                 .texture("layer0", modLoc("item/cable"));
 
+        ModItems.BALLOONS.values().forEach(balloon -> basicItem(balloon.get()));
         basicItem(ModItems.BLAST_PROOF_PLATING.get());
         basicItem(ModItems.MISCHIEF_HELMET.get());
         basicItem(ModItems.MISCHIEF_CHESTPLATE.get());

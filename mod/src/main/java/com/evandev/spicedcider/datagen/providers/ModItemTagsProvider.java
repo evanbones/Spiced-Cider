@@ -161,6 +161,11 @@ public class ModItemTagsProvider extends ItemTagsProvider {
         }
         ModItems.WOOL_STAIRS.values().forEach(item -> this.tag(ItemTags.STAIRS).add(item.get()));
         ModItems.WOOL_SLABS.values().forEach(item -> this.tag(ItemTags.SLABS).add(item.get()));
+        ModItems.BALLOONS.forEach((color, item) -> {
+            this.tag(ModTags.Items.BALLOONS).add(item.get());
+            this.tag(Tags.Items.DYED).add(item.get());
+            this.tag(color.getDyedTag()).add(item.get());
+        });
 
         this.tag(ItemTags.create(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("c", "plates")))
                 .add(ModItems.CAST_IRON_SHEET.get());

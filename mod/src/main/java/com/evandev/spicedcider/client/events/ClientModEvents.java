@@ -6,6 +6,7 @@ import com.evandev.spicedcider.client.models.armor.MischiefArmorModel;
 import com.evandev.spicedcider.client.models.projectile.CobwebProjectileModel;
 import com.evandev.spicedcider.client.particle.CleaverSweepParticle;
 import com.evandev.spicedcider.client.resource.BrokenTextureReloadListener;
+import com.evandev.spicedcider.client.renderer.balloon.BalloonRenderer;
 import com.evandev.spicedcider.client.renderer.projectiles.CobwebProjectileRenderer;
 import com.evandev.spicedcider.client.renderer.projectiles.GrapplingHookRenderer;
 import com.evandev.spicedcider.compat.tide.TideCompat;
@@ -53,6 +54,7 @@ public class ClientModEvents {
     @SubscribeEvent
     public static void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
         event.registerEntityRenderer(ModEntityTypes.COBWEB_PROJECTILE.get(), CobwebProjectileRenderer::new);
+        event.registerEntityRenderer(ModEntityTypes.BALLOON.get(), BalloonRenderer::new);
         if (TideCompat.isLoaded()) {
             event.registerEntityRenderer(ModEntityTypes.GRAPPLING_HOOK.get(), GrapplingHookRenderer::new);
         }
@@ -61,6 +63,7 @@ public class ClientModEvents {
     @SubscribeEvent
     public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
         event.registerLayerDefinition(ModModelLayers.COBWEB_PROJECTILE, CobwebProjectileModel::createBodyLayer);
+        event.registerLayerDefinition(ModModelLayers.BALLOON, BalloonRenderer::createBodyLayer);
     }
 
     @SubscribeEvent

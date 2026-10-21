@@ -1,6 +1,7 @@
 package com.evandev.spicedcider.registry;
 
 import com.evandev.spicedcider.SpicedCider;
+import com.evandev.spicedcider.content.item.BalloonItem;
 import com.evandev.spicedcider.content.item.InferniteCleaverItem;
 import com.evandev.spicedcider.content.item.FireStrikerItem;
 import com.evandev.spicedcider.content.item.MischiefArmorItem;
@@ -152,11 +153,14 @@ public class ModItems {
 
     public static final Map<DyeColor, DeferredItem<BlockItem>> WOOL_STAIRS = new EnumMap<>(DyeColor.class);
     public static final Map<DyeColor, DeferredItem<BlockItem>> WOOL_SLABS = new EnumMap<>(DyeColor.class);
+    public static final Map<DyeColor, DeferredItem<Item>> BALLOONS = new EnumMap<>(DyeColor.class);
 
     static {
         for (DyeColor color : DyeColor.values()) {
             WOOL_STAIRS.put(color, ITEMS.registerSimpleBlockItem(ModBlocks.WOOL_STAIRS.get(color)));
             WOOL_SLABS.put(color, ITEMS.registerSimpleBlockItem(ModBlocks.WOOL_SLABS.get(color)));
+            BALLOONS.put(color, ITEMS.register(color.getName() + "_balloon",
+                    () -> new BalloonItem(color, new Item.Properties().stacksTo(16))));
         }
     }
 

@@ -64,5 +64,26 @@
       "spicedcider:entity/player/grappling_hook/tighten3",
       "spicedcider:entity/player/grappling_hook/tighten4"
     ]
+  },
+  "entity.balloon.tie": {
+    "category": "player",
+    "subtitle": "subtitles.spicedcider.entity.balloon.tie",
+    "sounds": [
+      "spicedcider:entity/balloon/tie1",
+      "spicedcider:entity/balloon/tie2",
+      "spicedcider:entity/balloon/tie3",
+      "spicedcider:entity/balloon/tie4"
+    ]
+  },
+  "entity.balloon.pop": {
+    "category": "neutral",
+    "subtitle": "subtitles.spicedcider.entity.balloon.pop",
+    "sounds": [
+      "spicedcider:entity/balloon/pop1",
+      "spicedcider:entity/balloon/pop2",
+      "spicedcider:entity/balloon/pop3",
+      "spicedcider:entity/balloon/pop4",
+      "spicedcider:entity/balloon/pop5"
+    ]
   }
 }

@@ -2,6 +2,7 @@ package com.evandev.spicedcider.registry;
 
 import com.evandev.spicedcider.SpicedCider;
 import com.evandev.spicedcider.content.worm.WormHunt;
+import com.evandev.spicedcider.entities.balloon.BalloonTethers;
 import com.mojang.serialization.Codec;
 import net.neoforged.neoforge.attachment.AttachmentType;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -30,5 +31,12 @@ public class ModAttachments {
     public static final Supplier<AttachmentType<Boolean>> NO_KNOCKBACK = ATTACHMENT_TYPES.register(
             "no_knockback",
             () -> AttachmentType.builder(() -> false).build()
+    );
+
+    public static final Supplier<AttachmentType<BalloonTethers>> BALLOONS = ATTACHMENT_TYPES.register(
+            "balloons",
+            () -> AttachmentType.builder(BalloonTethers::new)
+                    .serialize(BalloonTethers.SERIALIZER)
+                    .build()
     );
 }
