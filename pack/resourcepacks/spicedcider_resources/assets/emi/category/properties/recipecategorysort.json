@@ -115,5 +115,17 @@
   },
   "emi:tag": {
     "order": 39
+  },
+  "remi:item_tags": {
+    "order": 10000
+  },
+  "remi:block_tags": {
+    "order": 10001
+  },
+  "remi:fluid_tags": {
+    "order": 10002
+  },
+  "remi:entity_type_tags": {
+    "order": 10003
   }
 }
