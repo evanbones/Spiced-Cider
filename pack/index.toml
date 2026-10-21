@@ -73,12 +73,20 @@ file = "config/ambientsounds-client.json"
 hash = "a8c0abba6dc195fcfdba6ef7e37982a59c9f62d167bb45132b3e9108b0e2abe1"
 
 [[files]]
-file = "config/amendments-client.toml"
+file = "config/amendments-client-1.toml.bak"
 hash = "5fab30f26876adc07811dabecc63dd5895964bf30ed0dcd8e17cfce4878527ef"
 
 [[files]]
-file = "config/amendments-common.toml"
+file = "config/amendments-client.toml"
+hash = "15ab8b99195308891d3d13dcf91eb2e2ffe530d557057172474300ed03bb643f"
+
+[[files]]
+file = "config/amendments-common-1.toml.bak"
 hash = "88a7589f5f621ab65ccf7445b1553206390ae7e89a99d04e129fdd195bb40feb"
+
+[[files]]
+file = "config/amendments-common.toml"
+hash = "952595e26ecbbfa8efb0be88fbd4a6463ab0d0652429a8c9f8cff8d66a8fd8f2"
 
 [[files]]
 file = "config/apeeling-common.toml"
@@ -486,7 +494,7 @@ hash = "0030656736b21f06f9f5b73078ce3ea41778f0f744c9d5da0055712a493ced85"
 
 [[files]]
 file = "config/drippyloadingscreen/early_window_reference.properties"
-hash = "4006aaec63bf4f55209feadead37295cdc6442ebbf878b5db3756eecff78246b"
+hash = "5656a0568ce788a1a62365fb3806c9d3554e5fa48a106f326a1a6f94402dfd0b"
 
 [[files]]
 file = "config/drippyloadingscreen/options.txt"
@@ -658,7 +666,7 @@ hash = "09d330b29443d9579ecc014f2be2fcb31075bfe1e9f9ac4e750f271128650fe6"
 
 [[files]]
 file = "config/fabric/indigo-renderer.properties"
-hash = "89cb6e4b85d798f6655956f65c92d536f84e9fd00468fd54f3caaf8efcae78d7"
+hash = "40bc1111e5b391aeef9f08136014d98147f984c2eb2692913c042111fec2e906"
 
 [[files]]
 file = "config/falling_snow.json"
@@ -5373,20 +5381,48 @@ file = "config/openloader/packs/spicedcider_data/data/minecraft/tags/item/stone_
 hash = "4693d23fb9ac1ec1f27fcac981ed59a7420859efdc689bba4c13ae0d53dfcc5d"
 
 [[files]]
+file = "config/openloader/packs/spicedcider_data/data/minecraft/tags/item/sulfur_cube_archetype/bouncy.json"
+hash = "e2cf26a43fb7a58520510f8f9a546c5b792c2905f55879c99d1798075186372e"
+
+[[files]]
 file = "config/openloader/packs/spicedcider_data/data/minecraft/tags/item/sulfur_cube_archetype/explosive.json"
-hash = "6eaa83a901af78cd41379394dc678433529b8441752668e65fe4398c2aaf45b1"
+hash = "26926f47559fa48a323578b3f59fb5f178d5ac09e15b20b8b141db9aa9f841b8"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/minecraft/tags/item/sulfur_cube_archetype/fast_flat.json"
-hash = "e2f726c90e61eb05ea6fcdeedecf8232c48d2387a2448aa31f14dc71bed099e3"
+hash = "495d36aa71b7a7e6d6b52935951edd7303287219db7aaa63fa6c1f2525da4825"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/minecraft/tags/item/sulfur_cube_archetype/fast_sliding.json"
+hash = "c92fd03a54d7bb0284b4a423b71304f4f2e3fb48aa0f982c8955f4709e5be1ed"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/minecraft/tags/item/sulfur_cube_archetype/high_resistance.json"
+hash = "dbddecce3fdd35248e1c83fb0cbb234c019a1a7b73f8307a03bb9e1ecd5cb8e2"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/minecraft/tags/item/sulfur_cube_archetype/light.json"
+hash = "1784404e6125a4e4790a2feb38317cf7445b0f23d09b8f7f03707b0e97a489f2"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/minecraft/tags/item/sulfur_cube_archetype/regular.json"
-hash = "9ebb1137c417dbf1160d9beb642fe40ce081cd90df136895fc0f6d6820411ed5"
+hash = "d79f6ed6d702369a46213d036218c8b1072367c19e1401c78d1efbd72d1114bf"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/minecraft/tags/item/sulfur_cube_archetype/slow_bouncy.json"
-hash = "07d248d6dd7679931521161f9075ad352c4c2b1a20da66fa7718b9ae7d20984b"
+hash = "7a77c9a60bc82e6610b4c92cbb8cf0ddcb4f72747ae3bb823fc8fd553ee88403"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/minecraft/tags/item/sulfur_cube_archetype/slow_flat.json"
+hash = "ea6d61dd0e0222e649330c22a317e860da2b67018ed2891e08f3c7901e003b8f"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/minecraft/tags/item/sulfur_cube_archetype/slow_sliding.json"
+hash = "feafb71ee97e0bb8864cd9369138cfd02179825d3d0e7a44b53ae804286b7653"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/minecraft/tags/item/sulfur_cube_archetype/sticky.json"
+hash = "eb7c3522904efa99ce9db61159b91cd9cb1655c7bfd3c0e95609765062143ff4"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/minecraft/tags/item/tall_flowers.json"
@@ -9278,7 +9314,7 @@ hash = "13b2b1384f949e6e409c3c3cc423ecb854df6b386d4466d424a57a887e89f3d8"
 
 [[files]]
 file = "config/packetfixer.properties"
-hash = "c3a642bd0088896aa3ed37ecbd1db0f9f903ea523c5bdb01333b698d3092b269"
+hash = "354fb1c6bcb8364fe675e567732264b0cd3eec044e078a8c3322e10e33bd88d5"
 
 [[files]]
 file = "config/particle_core_config.toml"
@@ -12610,7 +12646,7 @@ hash = "d985bfc68899c91aa642736400472f6ab876dedaaef4b8c31f38b52d48de633d"
 
 [[files]]
 file = "config/zfastnoise.mixin.properties"
-hash = "6636643caa6ae5a0f99e7cc93ba1ee267f0e6be7de1f55f71ca77f0c4fdc3d7a"
+hash = "a5b26cf88f76b0a701df4e48ab397c1d0c66d9f417b9f47c7e8a4051f32fdbc0"
 
 [[files]]
 file = "config/zipline.json"
@@ -12675,7 +12711,7 @@ metafile = true
 
 [[files]]
 file = "mods/amendments.pw.toml"
-hash = "a3c9b772845b9dab436aa5ba14b9596b314006ced8fbd2a6b0286dc0c70cf220"
+hash = "27bf52b4265eda868c46a325f3a86cec1db5ff24ffb808aed671972d51883792"
 metafile = true
 
 [[files]]
@@ -13692,7 +13728,7 @@ metafile = true
 
 [[files]]
 file = "mods/spicedcider-1.0.0.jar"
-hash = "5a49b6201223a2e40cbc30c8b3686fe2ea71702b14b92c6f75d39fcaf9e2ef6c"
+hash = "0b4b3d9d49cb97f67183895a080d2119556c54d8b2a74c6a81c1ca726aee2a8e"
 
 [[files]]
 file = "mods/stacksizetweaks.pw.toml"
@@ -15859,11 +15895,15 @@ hash = "8aa317af3ffedcfc0fbe89fce1df9f00225aadb7eff44ea0eda10360105d498c"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/emi/lang/en_us.json"
-hash = "0a2e4810ff3ab9ee1c1814bcd47e879c0d45bf8e2a6d6c450de46ce0aee7f69b"
+hash = "670107873db21783a9e7214b2891504bf19490ba2c0ff6abf86090e10db0b3a2"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/emi/recipe/filters/hidden_milling_categories.json"
 hash = "33e63579e8dbe2c2736065f3da4ae7b4d0b5a6653ede4efa98b9261169631182"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/emi/tag/exclusions/non_user_facing.json"
+hash = "4256ce4c4ef068967eacfa34fd1638368f4f42b3024965f3c35d93adb26b20e6"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/emi/tag/exclusions/tagexclusions.json"
@@ -21523,11 +21563,11 @@ hash = "d7d210c3554b07ea53c62fc2269573299a113df88c1ecafe3702df0ccf6ea600"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/spicedcider/textures/gui/creative_tabs/building_icon.png"
-hash = "1cd6e6d003dafebd26878dd78e87f86b1a4604916cfe0693f3c472a09c20490c"
+hash = "c485a3860e4b6b2dc30824e037a6d4dc448a5ee7e664c1deb22a080b36b49a1a"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/spicedcider/textures/gui/creative_tabs/colored_icon.png"
-hash = "1cd6e6d003dafebd26878dd78e87f86b1a4604916cfe0693f3c472a09c20490c"
+hash = "4a71c1096e213b99bbf2e4096e0a5b2d3eb4fbb0c2c28a3e019bec50a2253971"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/spicedcider/textures/gui/creative_tabs/combat_icon.png"
@@ -21538,12 +21578,8 @@ file = "resourcepacks/spicedcider_resources/assets/spicedcider/textures/gui/crea
 hash = "765d78c9ab04cb7a10930e0a0889e4f171a013b0f0874ac952175e36837afd19"
 
 [[files]]
-file = "resourcepacks/spicedcider_resources/assets/spicedcider/textures/gui/creative_tabs/food_icon_old.png"
-hash = "de67a7b7b59b997beb476626367db5d56a23c86d5b028856c50cc600a9ae5d96"
-
-[[files]]
 file = "resourcepacks/spicedcider_resources/assets/spicedcider/textures/gui/creative_tabs/functional_icon.png"
-hash = "9c399bc639838fcb17099616672588b661ccff4561a8c4213db720be39c899dd"
+hash = "c5c27ffc2b9b87a9bb311333b0693bde05c9ddc1db727aa642a38bb50367a893"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/spicedcider/textures/gui/creative_tabs/hotbar_icon.png"
@@ -21563,11 +21599,11 @@ hash = "38c6bb2a7fe9dd661029f489b1826329a83695a5da80b4de62b2efcd03ce0596"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/spicedcider/textures/gui/creative_tabs/mechanical_icon.png"
-hash = "9e4b923f031dcd30fe74f115df53c2e00770bfea4a48dbc13f08ae0523d07882"
+hash = "c90e63cf9f61814320db2fc7d369ad3a484e4920a38f47a55cde6a0347aa8286"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/spicedcider/textures/gui/creative_tabs/natural_icon.png"
-hash = "44030f054e9258dfc2b8824bf82f70b1c293ab276f4dfd55121a170d2bd3ce99"
+hash = "91ae0ea630176d3734275d3260f01a9e686ad469790d5c42b2fc4645292714e4"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/spicedcider/textures/gui/creative_tabs/search_icon.png"
