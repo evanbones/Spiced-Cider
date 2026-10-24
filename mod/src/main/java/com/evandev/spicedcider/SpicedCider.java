@@ -1,7 +1,5 @@
 package com.evandev.spicedcider;
 
-import com.evandev.spicedcider.blockgrid.ClientOffsetCache;
-import com.evandev.spicedcider.blockgrid.SupportOffsets;
 import com.evandev.spicedcider.compat.continuity.ContinuityLazyModelWrapping;
 import com.evandev.spicedcider.compat.everycompat.BlockBoxEveryCompatLoader;
 import com.evandev.spicedcider.compat.infernalexp.InfernalExpansionCompat;
@@ -14,7 +12,6 @@ import com.evandev.spicedcider.content.block.LatexCauldronBlock;
 import com.evandev.spicedcider.content.item.BalloonItem;
 import com.evandev.spicedcider.content.handler.SpawnControlEvents;
 import com.evandev.spicedcider.namingunconvention.RandomNameGenerator;
-import com.evandev.spicedcider.networking.ChunkOffsetsPayload;
 import com.evandev.spicedcider.networking.VoidTrailPayload;
 import com.evandev.spicedcider.registry.*;
 import com.evandev.spicedcider.util.ItemAbilityItemsCache;
@@ -234,12 +231,6 @@ public class SpicedCider {
         PayloadRegistrar registrar = event.registrar(MOD_ID);
 
         registrar.playToClient(
-                ChunkOffsetsPayload.TYPE,
-                ChunkOffsetsPayload.CODEC,
-                (payload, context) -> context.enqueueWork(() -> ClientOffsetCache.receive(payload.chunk(), payload.entries()))
-        );
-
-        registrar.playToClient(
                 VoidTrailPayload.TYPE,
                 VoidTrailPayload.CODEC,
                 (payload, context) -> context.enqueueWork(() -> ClientVoidTrails.receive(payload))
@@ -247,7 +238,6 @@ public class SpicedCider {
     }
 
     private void onTagsUpdated(TagsUpdatedEvent event) {
-        SupportOffsets.onTagsUpdated();
         ItemAbilityItemsCache.clear();
     }
 }

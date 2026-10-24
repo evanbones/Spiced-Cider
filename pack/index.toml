@@ -494,7 +494,7 @@ hash = "0030656736b21f06f9f5b73078ce3ea41778f0f744c9d5da0055712a493ced85"
 
 [[files]]
 file = "config/drippyloadingscreen/early_window_reference.properties"
-hash = "5e9933e3ea3a1c59b3457bf1e5e75c8b4bcf7f6b19d585af5c23c95f81d55b83"
+hash = "32ced2e6ff5480d538b2e2c96382ed06b5db222b63d2e871adf1f2f69d8f9110"
 
 [[files]]
 file = "config/drippyloadingscreen/options.txt"
@@ -666,7 +666,7 @@ hash = "09d330b29443d9579ecc014f2be2fcb31075bfe1e9f9ac4e750f271128650fe6"
 
 [[files]]
 file = "config/fabric/indigo-renderer.properties"
-hash = "87a0796ae9fea4024d6e821ef537f41db5d18841086457eebbf65be598ac2cef"
+hash = "aac6b18915750c926803368a17bfccb3537218a91bc6ef93e364494c9147153d"
 
 [[files]]
 file = "config/falling_snow.json"
@@ -1323,6 +1323,10 @@ hash = "804a6ac8ecdd21bf40d1b91ad050891f284a580cddc703c2553f3e28824c2a68"
 [[files]]
 file = "config/obe.json"
 hash = "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+
+[[files]]
+file = "config/offgrid/common.toml"
+hash = "28fbe676e8bba42225e3f36e5c34b1d27235167584933898353de508c7940106"
 
 [[files]]
 file = "config/onion_onion-common.toml"
@@ -6041,6 +6045,14 @@ file = "config/openloader/packs/spicedcider_data/data/nomansland/worldgen/templa
 hash = "9a7c81315b83a6060ac344b83e492d2ffb8661d48e7bdb455ea2f28a2f0502b9"
 
 [[files]]
+file = "config/openloader/packs/spicedcider_data/data/offgrid/tags/block/can_offset.json"
+hash = "c763dc2b183b0f5e91509d6dd0176a26882f3a9a5b6a01ace92491f6aa5def94"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/offgrid/tags/block/can_overlay.json"
+hash = "eae6999243bb0e5211ddb73f891a2e5d5ff6dfcd088ca9cdf671e92d884a0a10"
+
+[[files]]
 file = "config/openloader/packs/spicedcider_data/data/piglinproliferation/neoforge/biome_modifier/add_alchemist.json"
 hash = "1f9d221d38c355db24617d332b9c8493f74485f7a1aacf155d988f5b08d1491f"
 
@@ -8697,10 +8709,6 @@ file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/worksto
 hash = "58a80fa6f0fbf9a2208ecaa4d83577a0691b716959f0ca86dc9ed1e8989c9480"
 
 [[files]]
-file = "config/openloader/packs/spicedcider_data/data/spicedcider/tags/block/sits_on_slabs.json"
-hash = "79668f8f64cad5dc8a5f30618a2130d03cdaece8810d38615abd03661f59c69d"
-
-[[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/tags/entity_type/allowed_in_restricted_biomes.json"
 hash = "0c615d27d6e7932dab70603593b0d4b2098f06e605c17c7e8549a677ec84ef94"
 
@@ -9338,7 +9346,7 @@ hash = "13b2b1384f949e6e409c3c3cc423ecb854df6b386d4466d424a57a887e89f3d8"
 
 [[files]]
 file = "config/packetfixer.properties"
-hash = "ea8859add075101c2da92669c629a3af220e01ee3912f6249f7750265b5950fd"
+hash = "a8c1f80a62ee50f2254f95f425c9490124fba15c886c8967ea70b99ddba5651a"
 
 [[files]]
 file = "config/particle_core_config.toml"
@@ -12562,11 +12570,11 @@ hash = "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
 
 [[files]]
 file = "config/voicechat/voicechat-client.properties"
-hash = "2453cfedf6816503e0e41f4cec7bc443992bf5e1553a8c2785c6c29143b39b2a"
+hash = "9929e16c858d796646e27b38b5bfdc485b9d1a4bf8f53af19d450203c2a8448a"
 
 [[files]]
 file = "config/voicechat/voicechat-server.properties"
-hash = "cf7e4d387b04e70d39b49addc41a4c1e7004b6d4f289d5770e0c233eead1a808"
+hash = "c250a877f2be7a68038a60be4be5ccc284c95fc90bdb0dd31c08de5e5e8051d8"
 
 [[files]]
 file = "config/void_water-server.toml"
@@ -12674,7 +12682,7 @@ hash = "d985bfc68899c91aa642736400472f6ab876dedaaef4b8c31f38b52d48de633d"
 
 [[files]]
 file = "config/zfastnoise.mixin.properties"
-hash = "4e41d1852be84f9767286e5f34c75ab0cfd3c6a6946d7fea57ce78d29cf4082c"
+hash = "d609d446092df344c1a2ef1ae9e15cdae604625408d13f723da387203d379417"
 
 [[files]]
 file = "config/zipline.json"
@@ -13145,7 +13153,7 @@ metafile = true
 
 [[files]]
 file = "mods/field-guide.pw.toml"
-hash = "3ab63cd71acc98d7778f97e927b3befc264538e2cda99b27e6fd8ca2fea1712a"
+hash = "3b2534a3bca9f41505609ae21417f1c281de8d4c6dd4557b62e33e2a17b21387"
 metafile = true
 
 [[files]]
@@ -13324,7 +13332,7 @@ metafile = true
 
 [[files]]
 file = "mods/milky-way.pw.toml"
-hash = "4d526c53dfa7ab6f0370e301b58ce0bea21bf8b6eb18447e5f1120b7c825e9ca"
+hash = "004f6b2f9225ad286cb32d83e7263d8f2061ca878fdc01f8413f7a8e53de5038"
 metafile = true
 
 [[files]]
@@ -13447,6 +13455,11 @@ hash = "4c4e5fc0fa208a9e9d566e4e5459e8a407da547775f96c5c5128908400c1fb02"
 metafile = true
 
 [[files]]
+file = "mods/offgrid.pw.toml"
+hash = "752c03a536372792782d080dc99914c98c178ed4e68464a76d5582de0050dcc6"
+metafile = true
+
+[[files]]
 file = "mods/onion-onion.pw.toml"
 hash = "d3702e5478468ab7395819e06d1118f269457a91dd26a2fffeefe0ff40068b25"
 metafile = true
@@ -13518,12 +13531,12 @@ metafile = true
 
 [[files]]
 file = "mods/platform.pw.toml"
-hash = "3c65a8f21aaef8027725c78919c9df619487cff48e9a3b46c05bf301ad451ca7"
+hash = "9aebf60a4a9bdc08f706430670fde8fad835188cd984645aff540e6c9556236f"
 metafile = true
 
 [[files]]
 file = "mods/polytone.pw.toml"
-hash = "e11504484e971c47e4a97a86213fafa45149baaa0e75e3913b03523a894fc878"
+hash = "3501c17aff0b6cf42104a025a124c58ea1d5d48c6ea96c7228f0a86d975d620c"
 metafile = true
 
 [[files]]
@@ -13538,7 +13551,7 @@ metafile = true
 
 [[files]]
 file = "mods/puzzles-lib.pw.toml"
-hash = "0a04f1d0b86262c6dfdbd14e0493d7f4786f24054a95a07ff7b41a7870bb258d"
+hash = "2e0b31d4a3d4298045b368558ce7fe191a13bccb02a4524ca748598a9dcf4ca5"
 metafile = true
 
 [[files]]
@@ -13607,7 +13620,7 @@ metafile = true
 
 [[files]]
 file = "mods/reliable-emi.pw.toml"
-hash = "68b229732543ce7d65af4ae0d144ea469d89fd4aa3b7d65c43d294dc7618ee88"
+hash = "0735c318565a6b5da5b12f837f60faf1120a7e77b2ae53307eb262227fc03642"
 metafile = true
 
 [[files]]
@@ -13711,7 +13724,7 @@ metafile = true
 
 [[files]]
 file = "mods/simple-voice-chat.pw.toml"
-hash = "8045c493b0eb0196880817b529417742bb65b250805cc14f7abe5ac5f1e4d4b1"
+hash = "44db699e3dee8a6d4a787281bd5f3f1a87f88fcf5babf8fa11cb5d9582d43ebe"
 metafile = true
 
 [[files]]
@@ -13756,7 +13769,7 @@ metafile = true
 
 [[files]]
 file = "mods/spicedcider-1.0.0.jar"
-hash = "8dfa255df99722188e5d4af3a454f76ed7da7658321e953dc935f954f521efcd"
+hash = "f1e114ff199bae33032fc1054f37577498f1e3e779ca2915e5ec530fe43b9240"
 
 [[files]]
 file = "mods/stacksizetweaks.pw.toml"
@@ -13874,7 +13887,7 @@ metafile = true
 
 [[files]]
 file = "mods/vanillabackport.pw.toml"
-hash = "bbc4f79f62d0c9fc9d006ef25251b0f5687a8921f46a0799fa7e959c9bdd36c7"
+hash = "9b18f1c0e25ac587b3b3433d379d6f78b745cc9215f746b4a2162013d1764257"
 metafile = true
 
 [[files]]
@@ -13899,7 +13912,7 @@ metafile = true
 
 [[files]]
 file = "mods/whole-cloth.pw.toml"
-hash = "090572750313cb926e673339ab078d2c13b0f5958e36634e40e52f55e408f638"
+hash = "b0e67ef151fec51d1b4d2c22d5f1c2c7c7ded99e84504cab3af82b5e1c165472"
 metafile = true
 
 [[files]]
@@ -13978,7 +13991,7 @@ metafile = true
 
 [[files]]
 file = "mods/zombieimprovements.pw.toml"
-hash = "a23e8af3f529623440436cdbeaa711cc22d99ccee257910555c9a40ad73c7649"
+hash = "fb9f603c45ba04f6b29b4148e26d9f85b6dd0e9f719df21a8dd8b3d9cf7bda9a"
 metafile = true
 
 [[files]]
@@ -15979,7 +15992,7 @@ hash = "33e63579e8dbe2c2736065f3da4ae7b4d0b5a6653ede4efa98b9261169631182"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/emi/tag/exclusions/non_user_facing.json"
-hash = "4256ce4c4ef068967eacfa34fd1638368f4f42b3024965f3c35d93adb26b20e6"
+hash = "fcfb25913a7ce94fd7eb30b1a6eab3e01ef3094f780f03721e602f78eb63ea7b"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/emi/tag/exclusions/tagexclusions.json"

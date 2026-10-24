@@ -1,4 +1,4 @@
-package com.evandev.spicedcider.mixin.blockgrid;
+package com.evandev.spicedcider.mixin.minecraft;
 
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import net.minecraft.core.BlockPos;

@@ -33,8 +33,6 @@ public class ModTags {
     }
 
     public static class Blocks {
-        public static final TagKey<Block> SITS_ON_SLABS = tag("sits_on_slabs");
-        public static final TagKey<Block> MOUNTS_ON_FACING = tag("mounts_on_facing");
         public static final TagKey<Block> HANGS_FROM_CEILING = tag("hangs_from_ceiling");
         public static final TagKey<Block> NEEDS_AXE_TO_HARVEST = tag("needs_axe_to_harvest");
 

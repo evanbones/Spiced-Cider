@@ -11,28 +11,33 @@ import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.CubeListBuilder;
 import net.minecraft.client.model.geom.builders.LayerDefinition;
 import net.minecraft.client.model.geom.builders.MeshDefinition;
+import net.minecraft.client.renderer.LightTexture;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.EntityRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.texture.OverlayTexture;
+import net.minecraft.core.BlockPos;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.Mth;
 import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LightLayer;
 import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.NotNull;
+import org.joml.Matrix4f;
 import org.joml.Quaternionf;
-import org.joml.Vector3f;
 
 import java.util.EnumMap;
 import java.util.Map;
 
 public class BalloonRenderer extends EntityRenderer<BalloonEntity> {
     private static final Map<DyeColor, ResourceLocation> TEXTURES = new EnumMap<>(DyeColor.class);
-    private static final float STRING_HALF_WIDTH = 1.0F / 32.0F;
-    private static final float STRING_U0 = 11.0F / 32.0F;
-    private static final float STRING_U1 = 12.0F / 32.0F;
-    private static final float STRING_V0 = 16.0F / 32.0F;
-    private static final float STRING_V1 = 1.0F;
+    private static final float STRING_WIDTH = 0.025F;
+    private static final int STRING_SEGMENTS = 24;
+    private static final float STRING_RED = 0.85F;
+    private static final float STRING_GREEN = 0.85F;
+    private static final float STRING_BLUE = 0.82F;
 
     static {
         for (DyeColor color : DyeColor.values()) {
@@ -68,10 +73,10 @@ public class BalloonRenderer extends EntityRenderer<BalloonEntity> {
             anchor = knot.add(Math.sin(time * 0.1 + phase) * 0.15, -1.2, Math.cos(time * 0.1 + phase) * 0.15);
         }
 
-        VertexConsumer consumer = buffers.getBuffer(RenderType.entityCutoutNoCull(this.getTextureLocation(entity)));
         poseStack.pushPose();
         poseStack.translate(knot.x - origin.x, knot.y - origin.y, knot.z - origin.z);
-        renderString(poseStack, consumer, anchor.subtract(knot), packedLight);
+        renderString(poseStack, buffers, entity.level(), knot, anchor);
+        VertexConsumer consumer = buffers.getBuffer(RenderType.entityCutoutNoCull(this.getTextureLocation(entity)));
 
         Vec3 up = knot.subtract(anchor).normalize();
         poseStack.mulPose(new Quaternionf().rotationTo(0.0F, 1.0F, 0.0F, (float) up.x, (float) up.y, (float) up.z));
@@ -84,39 +89,42 @@ public class BalloonRenderer extends EntityRenderer<BalloonEntity> {
         super.render(entity, entityYaw, partialTick, poseStack, buffers, packedLight);
     }
 
-    private static void renderString(PoseStack poseStack, VertexConsumer consumer, Vec3 span, int light) {
-        Vector3f end = new Vector3f((float) span.x, (float) span.y, (float) span.z);
-        float length = end.length();
-        if (length < 1.0E-4F) return;
-        Vector3f dir = new Vector3f(end).div(length);
-        Vector3f reference = Math.abs(dir.y) < 0.99F ? new Vector3f(0.0F, 1.0F, 0.0F) : new Vector3f(1.0F, 0.0F, 0.0F);
-        Vector3f side = dir.cross(reference, new Vector3f()).normalize(STRING_HALF_WIDTH);
-        Vector3f across = dir.cross(side, new Vector3f()).normalize(STRING_HALF_WIDTH);
-        Vector3f[] corners = {
-                new Vector3f(side).add(across),
-                new Vector3f(side).sub(across),
-                new Vector3f(side).negate().sub(across),
-                new Vector3f(side).negate().add(across)
-        };
-        PoseStack.Pose pose = poseStack.last();
-        for (int i = 0; i < 4; i++) {
-            Vector3f a = corners[i];
-            Vector3f b = corners[(i + 1) % 4];
-            Vector3f normal = new Vector3f(a).add(b).normalize();
-            vertex(consumer, pose, a, STRING_U0, STRING_V0, normal, light);
-            vertex(consumer, pose, b, STRING_U1, STRING_V0, normal, light);
-            vertex(consumer, pose, new Vector3f(b).add(end), STRING_U1, STRING_V1, normal, light);
-            vertex(consumer, pose, new Vector3f(a).add(end), STRING_U0, STRING_V1, normal, light);
+    private static void renderString(PoseStack poseStack, MultiBufferSource buffers, Level level, Vec3 knot, Vec3 anchor) {
+        float dx = (float) (anchor.x - knot.x);
+        float dy = (float) (anchor.y - knot.y);
+        float dz = (float) (anchor.z - knot.z);
+        float horizontal = Mth.sqrt(dx * dx + dz * dz);
+        float sideX = horizontal < 1.0E-4F ? 0.0F : dz / horizontal * STRING_WIDTH / 2.0F;
+        float sideZ = horizontal < 1.0E-4F ? STRING_WIDTH / 2.0F : dx / horizontal * STRING_WIDTH / 2.0F;
+        BlockPos knotPos = BlockPos.containing(knot);
+        BlockPos anchorPos = BlockPos.containing(anchor);
+        int knotBlock = level.getBrightness(LightLayer.BLOCK, knotPos);
+        int anchorBlock = level.getBrightness(LightLayer.BLOCK, anchorPos);
+        int knotSky = level.getBrightness(LightLayer.SKY, knotPos);
+        int anchorSky = level.getBrightness(LightLayer.SKY, anchorPos);
+        VertexConsumer consumer = buffers.getBuffer(RenderType.leash());
+        Matrix4f pose = poseStack.last().pose();
+        for (int i = 0; i <= STRING_SEGMENTS; i++) {
+            addVertexPair(consumer, pose, dx, dy, dz, knotBlock, anchorBlock, knotSky, anchorSky, STRING_WIDTH, STRING_WIDTH, sideX, sideZ, i, false);
+        }
+        for (int i = STRING_SEGMENTS; i >= 0; i--) {
+            addVertexPair(consumer, pose, dx, dy, dz, knotBlock, anchorBlock, knotSky, anchorSky, STRING_WIDTH, 0.0F, sideX, sideZ, i, true);
         }
     }
 
-    private static void vertex(VertexConsumer consumer, PoseStack.Pose pose, Vector3f pos, float u, float v, Vector3f normal, int light) {
-        consumer.addVertex(pose, pos.x, pos.y, pos.z)
-                .setColor(-1)
-                .setUv(u, v)
-                .setOverlay(OverlayTexture.NO_OVERLAY)
-                .setLight(light)
-                .setNormal(pose, normal.x, normal.y, normal.z);
+    private static void addVertexPair(VertexConsumer consumer, Matrix4f pose, float x, float y, float z, int knotBlock, int anchorBlock,
+                                      int knotSky, int anchorSky, float yOffset, float dy, float sideX, float sideZ, int index, boolean reverse) {
+        float t = (float) index / STRING_SEGMENTS;
+        int light = LightTexture.pack((int) Mth.lerp(t, knotBlock, anchorBlock), (int) Mth.lerp(t, knotSky, anchorSky));
+        float shade = index % 2 == (reverse ? 1 : 0) ? 0.7F : 1.0F;
+        float r = STRING_RED * shade;
+        float g = STRING_GREEN * shade;
+        float b = STRING_BLUE * shade;
+        float px = x * t;
+        float py = y > 0.0F ? y * t * t : y - y * (1.0F - t) * (1.0F - t);
+        float pz = z * t;
+        consumer.addVertex(pose, px - sideX, py + dy, pz + sideZ).setColor(r, g, b, 1.0F).setLight(light);
+        consumer.addVertex(pose, px + sideX, py + yOffset - dy, pz - sideZ).setColor(r, g, b, 1.0F).setLight(light);
     }
 
     @Override

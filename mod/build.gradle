@@ -365,6 +365,9 @@ dependencies {
     compileOnly "maven.modrinth:clutter-no-more:v3J7gqAO"
     runtimeOnly "maven.modrinth:clutter-no-more:v3J7gqAO"
 
+    // Offgrid
+    compileOnly "maven.modrinth:offgrid:DRaJGnQ7"
+
     // Jade
     compileOnly "maven.modrinth:jade:15.10.6+neoforge"
 
