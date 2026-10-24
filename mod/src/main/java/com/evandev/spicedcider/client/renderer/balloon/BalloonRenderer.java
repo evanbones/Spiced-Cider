@@ -105,26 +105,22 @@ public class BalloonRenderer extends EntityRenderer<BalloonEntity> {
         VertexConsumer consumer = buffers.getBuffer(RenderType.leash());
         Matrix4f pose = poseStack.last().pose();
         for (int i = 0; i <= STRING_SEGMENTS; i++) {
-            addVertexPair(consumer, pose, dx, dy, dz, knotBlock, anchorBlock, knotSky, anchorSky, STRING_WIDTH, STRING_WIDTH, sideX, sideZ, i, false);
+            addVertexPair(consumer, pose, dx, dy, dz, knotBlock, anchorBlock, knotSky, anchorSky, STRING_WIDTH, STRING_WIDTH, sideX, sideZ, i);
         }
         for (int i = STRING_SEGMENTS; i >= 0; i--) {
-            addVertexPair(consumer, pose, dx, dy, dz, knotBlock, anchorBlock, knotSky, anchorSky, STRING_WIDTH, 0.0F, sideX, sideZ, i, true);
+            addVertexPair(consumer, pose, dx, dy, dz, knotBlock, anchorBlock, knotSky, anchorSky, STRING_WIDTH, 0.0F, sideX, sideZ, i);
         }
     }
 
     private static void addVertexPair(VertexConsumer consumer, Matrix4f pose, float x, float y, float z, int knotBlock, int anchorBlock,
-                                      int knotSky, int anchorSky, float yOffset, float dy, float sideX, float sideZ, int index, boolean reverse) {
+                                      int knotSky, int anchorSky, float yOffset, float dy, float sideX, float sideZ, int index) {
         float t = (float) index / STRING_SEGMENTS;
         int light = LightTexture.pack((int) Mth.lerp(t, knotBlock, anchorBlock), (int) Mth.lerp(t, knotSky, anchorSky));
-        float shade = index % 2 == (reverse ? 1 : 0) ? 0.7F : 1.0F;
-        float r = STRING_RED * shade;
-        float g = STRING_GREEN * shade;
-        float b = STRING_BLUE * shade;
         float px = x * t;
         float py = y > 0.0F ? y * t * t : y - y * (1.0F - t) * (1.0F - t);
         float pz = z * t;
-        consumer.addVertex(pose, px - sideX, py + dy, pz + sideZ).setColor(r, g, b, 1.0F).setLight(light);
-        consumer.addVertex(pose, px + sideX, py + yOffset - dy, pz - sideZ).setColor(r, g, b, 1.0F).setLight(light);
+        consumer.addVertex(pose, px - sideX, py + dy, pz + sideZ).setColor(STRING_RED, STRING_GREEN, STRING_BLUE, 1.0F).setLight(light);
+        consumer.addVertex(pose, px + sideX, py + yOffset - dy, pz - sideZ).setColor(STRING_RED, STRING_GREEN, STRING_BLUE, 1.0F).setLight(light);
     }
 
     @Override

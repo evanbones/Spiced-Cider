@@ -10,11 +10,11 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 
 @IfModLoaded("embers_and_icicles")
-@Mixin(targets = "cc.cassian.effects.neoforge.NeoForgeEntrypoint", remap = false)
+@Mixin(targets = "cc.cassian.effects.util.BrewingMix", remap = false)
 public class BrewingIceCubesMixin {
 
     @WrapOperation(
-            method = "register(Lnet/neoforged/neoforge/event/brewing/RegisterBrewingRecipesEvent;)V",
+            method = "addMixes",
             at = @At(
                     value = "FIELD",
                     target = "Lcc/cassian/effects/registry/ModItems;ICE_BALL:Lnet/minecraft/world/item/Item;",

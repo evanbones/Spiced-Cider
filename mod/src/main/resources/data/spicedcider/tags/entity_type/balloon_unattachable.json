@@ -3,10 +3,41 @@
   "values": [
     "#c:bosses",
     "minecraft:armor_stand",
+    "minecraft:elder_guardian",
     "minecraft:ender_dragon",
     "minecraft:ghast",
+    "minecraft:giant",
     "minecraft:phantom",
     "minecraft:shulker",
-    "minecraft:wither"
+    "minecraft:warden",
+    "minecraft:wither",
+    {
+      "id": "minecraft:creaking",
+      "required": false
+    },
+    {
+      "id": "minecraft:happy_ghast",
+      "required": false
+    },
+    {
+      "id": "minecraft:mannequin",
+      "required": false
+    },
+    {
+      "id": "quark:forgotten",
+      "required": false
+    },
+    {
+      "id": "supplementaries:hat_stand",
+      "required": false
+    },
+    {
+      "id": "upgrade_aquatic:flare",
+      "required": false
+    },
+    {
+      "id": "upgrade_aquatic:great_thrasher",
+      "required": false
+    }
   ]
 }

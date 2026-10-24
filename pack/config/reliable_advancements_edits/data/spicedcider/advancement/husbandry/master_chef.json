@@ -97,15 +97,18 @@
       "trigger": "minecraft:consume_item",
       "conditions": {
         "item": {
-          "items": "modest_meals:pizza"
+          "items": "modest_meals:pizza_slice"
         }
       }
     },
-    "ate_sushi": {
+    "ate_roll": {
       "trigger": "minecraft:consume_item",
       "conditions": {
         "item": {
-          "items": "modest_meals:sushi"
+          "items": [
+            "modest_meals:roll",
+            "modest_meals:roll_slice"
+          ]
         }
       }
     },
@@ -153,7 +156,7 @@
       "ate_pizza"
     ],
     [
-      "ate_sushi"
+      "ate_roll"
     ],
     [
       "ate_ice_cream"

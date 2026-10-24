@@ -494,7 +494,7 @@ hash = "0030656736b21f06f9f5b73078ce3ea41778f0f744c9d5da0055712a493ced85"
 
 [[files]]
 file = "config/drippyloadingscreen/early_window_reference.properties"
-hash = "32ced2e6ff5480d538b2e2c96382ed06b5db222b63d2e871adf1f2f69d8f9110"
+hash = "47c9c912534c87fb85a67a204697ab9b83311c86c6252f23018b3cff6d109ced"
 
 [[files]]
 file = "config/drippyloadingscreen/options.txt"
@@ -538,7 +538,7 @@ hash = "819a18aa3a6b8754908d837443ef166b6c20a48c7348991c1f53b9605a41f08e"
 
 [[files]]
 file = "config/embers_and_icicles.toml"
-hash = "816f093fe2136ab85a430a4aa62977cfc2d470a2ffad1d8ae733574af928b1c9"
+hash = "ea3215d97a59702baefacb449f4be503a184cfdb7a8712e0d2992536fc54b7d0"
 
 [[files]]
 file = "config/emi.css"
@@ -666,7 +666,7 @@ hash = "09d330b29443d9579ecc014f2be2fcb31075bfe1e9f9ac4e750f271128650fe6"
 
 [[files]]
 file = "config/fabric/indigo-renderer.properties"
-hash = "aac6b18915750c926803368a17bfccb3537218a91bc6ef93e364494c9147153d"
+hash = "d5004ffde5ad96845fe074beead7fc39230b1980ce1723fad88d98c1b3ae3ab4"
 
 [[files]]
 file = "config/falling_snow.json"
@@ -2397,10 +2397,6 @@ file = "config/openloader/packs/spicedcider_data/data/architects_palette/recipe/
 hash = "e5763b133595f311e68267dfe9f0810143e65765a030b9478cab1df76bc2d14c"
 
 [[files]]
-file = "config/openloader/packs/spicedcider_data/data/architects_palette/recipe/chiseled_packed_ice.json"
-hash = "1ead88d821065fb3a8a53376dbc59d365f42bb48f486da9fa60a81dd35392d00"
-
-[[files]]
 file = "config/openloader/packs/spicedcider_data/data/architects_palette/recipe/chiseled_sunmetal_block.json"
 hash = "7b9703dd1eb845ae920bbfcf3f9707fbff55c7d3c2330d45e101f166fec54261"
 
@@ -2751,6 +2747,10 @@ hash = "bb5297458c6539877ec619425bdff18ac252dadd74d10b953a81d9dd29bb72f6"
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/c/tags/item/drinks/water.json"
 hash = "f4bf2b3246cedeba64d9a77c053a5d80151ec98208933315272ca95302e5ad8f"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/c/tags/item/eggs.json"
+hash = "2a627194f4f1b87dd277282f88c02e3f57998371754c7a9a9961363f8c98c649"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/c/tags/item/enchantables.json"
@@ -4661,6 +4661,10 @@ file = "config/openloader/packs/spicedcider_data/data/easyshulkerboxes/item_cont
 hash = "4fb7cbacc7847ff3e9065063a53e0e543c0e096eed51756ccb8ae42867a4bf1c"
 
 [[files]]
+file = "config/openloader/packs/spicedcider_data/data/embers_and_icicles/recipe/chiseled_packed_ice.json"
+hash = "085c9edd8f5d114c52074bbab43ec64eee872066a129889ffabb52192f2227d1"
+
+[[files]]
 file = "config/openloader/packs/spicedcider_data/data/embers_and_icicles/tags/item/frostbite_preferred_weapons.json"
 hash = "760a4997d30aa9a071338eabdee7c99f553526c620d812ace36f6b90de44b7ae"
 
@@ -5414,7 +5418,7 @@ hash = "495d36aa71b7a7e6d6b52935951edd7303287219db7aaa63fa6c1f2525da4825"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/minecraft/tags/item/sulfur_cube_archetype/fast_sliding.json"
-hash = "c92fd03a54d7bb0284b4a423b71304f4f2e3fb48aa0f982c8955f4709e5be1ed"
+hash = "dbd0b78ed97c83ef44a5f07e936ab793baca9c6527a28226ef813e1bf2710058"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/minecraft/tags/item/sulfur_cube_archetype/high_resistance.json"
@@ -5669,12 +5673,20 @@ file = "config/openloader/packs/spicedcider_data/data/minecraft/worldgen/structu
 hash = "01e9d0bbe186fd3024b4113c26da4020023309d4c6aa5082304050adccb3b6ae"
 
 [[files]]
-file = "config/openloader/packs/spicedcider_data/data/modest_meals/modest_meals/meal_types/drink.json"
-hash = "3a703269848beb7bbaa3d9302d6dd94cc45214c3f478966b6f53f6370d080742"
+file = "config/openloader/packs/spicedcider_data/data/modest_meals/tags/item/dessert_ingredients.json"
+hash = "ae15f8f21615bb07794f297fdebb0041484a2ee0200e5d83ceb4dd69c4b058ae"
 
 [[files]]
-file = "config/openloader/packs/spicedcider_data/data/modest_meals/modest_meals/meal_types/ice_cream.json"
-hash = "bb24e940966e060f3ecf1d70a0181ab29de735b8366b0abdfddb213e77809059"
+file = "config/openloader/packs/spicedcider_data/data/modest_meals/tags/item/not_for_jam.json"
+hash = "abde1bfaec231bc314d469b7bd897b0d0d99f4fffa21adfab4d1296d88082caf"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/modest_meals/tags/item/roll_fillings.json"
+hash = "43c673693dd60f0e950ff88a9754d76fb3687da30146b4c13b9c8b6dc16ffc7e"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/modest_meals/tags/item/sweets.json"
+hash = "0d9c3afd039b39b97315509adcaa8a6d5e5911246dccae3a5300512ac7000199"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/modestmagic/recipe/enchantment_tablet.json"
@@ -6474,7 +6486,7 @@ hash = "8c4d00ef11817f33fad45876dd60c4464d3481e8e8943f2f8e3b4420d0956483"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/blueprint/structure_repaletters/mineshafts/ice.json"
-hash = "159a40d3162556150341f2710e39b0518ab80c05196b49363d23596dc6f4970f"
+hash = "d29a0b9ba47ccf05c0bcb8ba197d3a9e2e1c68009d4258a4d29b787ebc8f5652"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/blueprint/structure_repaletters/mineshafts/jungle.json"
@@ -7021,8 +7033,16 @@ file = "config/openloader/packs/spicedcider_data/data/spicedcider/loot_table/inj
 hash = "bee2a2d77d4eabdc2d20a4f5de29500ecefe2c0e418b6f62ebce6e7216b56468"
 
 [[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/modest_meals/ingredients/fish.json"
+hash = "c27e840a78711a5e469ad171d83c6eab79dd488cf918baf4917de58632731ec2"
+
+[[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/modest_meals/meal_ingredients/cd_mint.json"
 hash = "546a89960aa43e36aa6b2fe09728985a15a1fe30928b19ad3bb4535ea3423ecd"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/modest_meals/meal_ingredients/pizza_toppings.json"
+hash = "fdf186d7a66f24eda2a8e62be6c571e8d876a447f616ebd854dbde6af6a61b72"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/neoforge/biome_modifier/allay_flower_forest.json"
@@ -9346,7 +9366,7 @@ hash = "13b2b1384f949e6e409c3c3cc423ecb854df6b386d4466d424a57a887e89f3d8"
 
 [[files]]
 file = "config/packetfixer.properties"
-hash = "a8c1f80a62ee50f2254f95f425c9490124fba15c886c8967ea70b99ddba5651a"
+hash = "75c01fa30d1d00565a48c6092fa69f4f6742808d26bb13ad7e0c79c4f71d28fb"
 
 [[files]]
 file = "config/particle_core_config.toml"
@@ -9438,7 +9458,7 @@ hash = "2edbf62b60165a7ebbea68d5babc9b1991c73ece3e00c57832d6e99529ed69ef"
 
 [[files]]
 file = "config/recreative/tab_layout.json"
-hash = "75fb68b8c1ac419f3785eed116803a24813a9a47a410e43b2282768e6d12dd9f"
+hash = "0407a5207f1985514b12f5643faf8d0727a88e588a9f7503519d29c1f6408ccd"
 
 [[files]]
 file = "config/recreative/tab_order.json"
@@ -10238,7 +10258,7 @@ hash = "0ef6d5e4e830194235678c69d7a7c7b5883c711c532b6003f560fe4a6823e87a"
 
 [[files]]
 file = "config/reliable_advancements_edits/data/spicedcider/advancement/husbandry/first_meal.json"
-hash = "0723c57c84eed8e95b03280626bc7865533d1aa506c42c557ddc99cb341392ad"
+hash = "f1a4d5ca99db4dbd557125419318beef31b84e0354e4b83a592235e19de164fd"
 
 [[files]]
 file = "config/reliable_advancements_edits/data/spicedcider/advancement/husbandry/fish_display.json"
@@ -10270,7 +10290,7 @@ hash = "ef5bf325a19309e5e46c34dac8254ecae630e2f9289ed6836439dbbae084a77d"
 
 [[files]]
 file = "config/reliable_advancements_edits/data/spicedcider/advancement/husbandry/master_chef.json"
-hash = "9a6582253ac55f749e1efce300acbadc018d8a432e73158d07220894ab1df1b7"
+hash = "452f10c70b3ebb03a3270c47b005433af90341f39fc1638ec66efed78d895b4f"
 
 [[files]]
 file = "config/reliable_advancements_edits/data/spicedcider/advancement/husbandry/max_intoxication.json"
@@ -11138,7 +11158,7 @@ hash = "400f5879985ffb784f88fdf883faa9178142e85c28c1dddf9a0fc1ec37deb3e2"
 
 [[files]]
 file = "config/reliable_advancements_edits/tabs.json"
-hash = "fc14f069eb840d3a2a1d128b46b385d7b68384df8edef4de11bbee1b07b6af2f"
+hash = "6b333a94941007e564c941e74984ac6c82749f9a554f18a33284642b40aa1a7a"
 
 [[files]]
 file = "config/reliable_advancements_layout.json"
@@ -11182,7 +11202,7 @@ hash = "db030be342e8c1a9c161ad079b6855409d933283695ac92407e41728a63f5b16"
 
 [[files]]
 file = "config/reliable_recipes/generated_removals.json"
-hash = "69900b47f1b34afee5aa74045505678a5954344497a41b360357274c8da0a822"
+hash = "b3d800d45a7b7eeb135664f5ed9058d345161124c57b3b494c10c75c6dda31fc"
 
 [[files]]
 file = "config/reliable_recipes/gotta_sort_these.json"
@@ -11194,7 +11214,7 @@ hash = "c87502746bb155391fdc5bfe36e18590faf10236daf723877d331e12433f30c5"
 
 [[files]]
 file = "config/reliable_recipes/rule_leaks.json"
-hash = "fa38d42c85d255909a6e8ad5977e818fc85ae3b6b6f0d67891f6899a69684796"
+hash = "9f16e675ecdbcc59d32a89b349cefb9bb752fb6e2e443f12902185cecd0ad05f"
 
 [[files]]
 file = "config/reliable_recipes/sawmill.json"
@@ -11238,7 +11258,7 @@ hash = "353f10747292665b640f25600d671abeae3730b2b8032e47b260d9208813a9ca"
 
 [[files]]
 file = "config/reliable_remover/mods/abundantdelight.json"
-hash = "ecccb8ce7420a071a716fb96187333e5e7ad3e431fc64334ad7c04d83fc87cdc"
+hash = "8f1793284fcec2140e639853be1866900540bb66fb64fceaeff327277f82b0e9"
 
 [[files]]
 file = "config/reliable_remover/mods/adaptedmobs.json"
@@ -11254,7 +11274,7 @@ hash = "77ff8ef2f0037109165316175ba4bbff54dd09fd0f72ea7af660f18280b68adf"
 
 [[files]]
 file = "config/reliable_remover/mods/architects_palette.json"
-hash = "ea0da33164681787685e7670cd6a1d37846c12736e95ecee1f80419d93799730"
+hash = "11f65f6b49e8432590bb5fb504a9d2384e5de80468c0c24040ef878544a22826"
 
 [[files]]
 file = "config/reliable_remover/mods/arts_and_crafts.json"
@@ -11270,7 +11290,7 @@ hash = "e683c39ff9067bfadbcc6ebb3ab6473aa202b98b8a886e3a6d2f5d1b575b800d"
 
 [[files]]
 file = "config/reliable_remover/mods/blockbox.json"
-hash = "2dcb9b956e08d81b5660e033931bb22e9ae0ba4b5807223180f130242708fad2"
+hash = "9bb42fd28220430102d95cf6abbe1e9b48b816e40f7c552be9225f7b6b4e32de"
 
 [[files]]
 file = "config/reliable_remover/mods/bountifulfares.json"
@@ -11673,6 +11693,10 @@ file = "config/remi/stack_groups/c_chests_wooden.json"
 hash = "8643e1e02cd605e656d52e6fe5fd73ce318393e60334ff8fd366a567dc1043e5"
 
 [[files]]
+file = "config/remi/stack_groups/c_eggs.json"
+hash = "0c653857938e9313950f8627f78fbf5242fc366396d583adc54350b7f85015f4"
+
+[[files]]
 file = "config/remi/stack_groups/c_fence_gates.json"
 hash = "93763cc43756cf3e5359228de8716790b558e0ca705c0e2b75b3b5695f458fbe"
 
@@ -11891,6 +11915,10 @@ hash = "be84343e36b2124ab325da8f37158c2e072fc17e00713b811484d66200d314ed"
 [[files]]
 file = "config/remi/stack_groups/minecraft_bundles.json"
 hash = "c2f7ba66cacd9f2db1d2be2ac46ccb9865697e577123ae3a7b0640af413eb8e2"
+
+[[files]]
+file = "config/remi/stack_groups/minecraft_cushions.json"
+hash = "12466aec3ab76b64fa6bdfe5bc816c64eb733887a9e53a16f934c2d34e3cb5b8"
 
 [[files]]
 file = "config/remi/stack_groups/minecraft_harnesses.json"
@@ -12682,7 +12710,7 @@ hash = "d985bfc68899c91aa642736400472f6ab876dedaaef4b8c31f38b52d48de633d"
 
 [[files]]
 file = "config/zfastnoise.mixin.properties"
-hash = "d609d446092df344c1a2ef1ae9e15cdae604625408d13f723da387203d379417"
+hash = "5359049789e622ef2a08faca65843c6400698e2b092982605334c9540364f7d0"
 
 [[files]]
 file = "config/zipline.json"
@@ -13049,7 +13077,7 @@ metafile = true
 
 [[files]]
 file = "mods/embers_and_icicles-1.0.2+1.21.1-neoforge.jar"
-hash = "fa235e8ec4ac1e78a641a78b89245ff5b4188009d8ff91323dbb0e8cbc92fb9b"
+hash = "2375bd4dd24a063560463fc495b528b00dd0a1e71db8dc60b7224003f398650b"
 
 [[files]]
 file = "mods/emi-discovery.pw.toml"
@@ -13382,7 +13410,7 @@ metafile = true
 
 [[files]]
 file = "mods/modest_meals-1.21.1-1.0.0-pre5.jar"
-hash = "6d7d58caeac6637022dcc834a185441162ebbc72d05ade3442d30a6475116ccc"
+hash = "0c001c7af54cda441bf68ebb7ac8052d9e508496d16b6ab68ab7c8515b0498a3"
 
 [[files]]
 file = "mods/modulation.pw.toml"
@@ -13769,7 +13797,7 @@ metafile = true
 
 [[files]]
 file = "mods/spicedcider-1.0.0.jar"
-hash = "f1e114ff199bae33032fc1054f37577498f1e3e779ca2915e5ec530fe43b9240"
+hash = "ef7f3b8797b2fe788b528fd5f27e4bb071f8b483bef01c256d76f0314ae2d0d6"
 
 [[files]]
 file = "mods/stacksizetweaks.pw.toml"

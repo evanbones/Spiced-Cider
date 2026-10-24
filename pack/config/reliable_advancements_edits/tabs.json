@@ -1340,6 +1340,14 @@
           150
         ]
       }
+    },
+    "minecraft:adventure/root": {
+      "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+      "index": 1,
+      "roots": [
+        "minecraft:adventure/root",
+        "embers_and_icicles:adventure/what_goes_around_comes_around"
+      ]
     }
   },
   "deleted_advancements": {
@@ -2633,7 +2641,7 @@
     "spicedcider:adventure/peeper": {
       "owner": "reliable_advancements:standalone",
       "tab": "spicedcider:adventure/root",
-      "title": "\"Don't. Look. Away.\"",
+      "title": "\"Don\u0027t. Look. Away.\"",
       "icon": "caverns_and_chasms:peeper_head"
     }
   },
