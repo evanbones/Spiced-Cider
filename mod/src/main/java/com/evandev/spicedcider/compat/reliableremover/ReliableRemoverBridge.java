@@ -6,9 +6,6 @@ import net.minecraft.world.item.ItemStack;
 
 final class ReliableRemoverBridge {
 
-    private ReliableRemoverBridge() {
-    }
-
     static boolean isRemoved(Item item) {
         return ReliableRemoverAPI.isLootBlocked(new ItemStack(item));
     }

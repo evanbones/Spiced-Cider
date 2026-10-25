@@ -69,7 +69,7 @@ public class BrokenToolModelSwap {
             try (Stream<Path> files = Files.walk(dir)) {
                 files.filter(p -> p.getFileName().toString().endsWith(".json")).forEach(p -> {
                     Path relative = dir.relativize(p);
-                    if (relative.getNameCount() != 2) return; // should be <namespace>/<path>.json
+                    if (relative.getNameCount() != 2) return;
 
                     String namespace = relative.getName(0).toString();
                     String fileName = relative.getName(1).toString();

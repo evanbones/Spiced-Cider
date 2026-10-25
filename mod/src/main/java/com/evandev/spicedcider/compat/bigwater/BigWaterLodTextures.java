@@ -13,9 +13,6 @@ public final class BigWaterLodTextures {
     private record Remap(TextureAtlasSprite still, TextureAtlasSprite flow, float scale) {
     }
 
-    private BigWaterLodTextures() {
-    }
-
     public static TextureAtlasSprite[] begin(BlockAndTintGetter level, FluidState fluid, TextureAtlasSprite[] sprites) {
         ACTIVE.remove();
         if (!level.getClass().getName().startsWith("me.cortex.voxy.")) return sprites;

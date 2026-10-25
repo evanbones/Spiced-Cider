@@ -28,7 +28,9 @@ import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.EventPriority;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.fml.ModList;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
+import com.evandev.spicedcider.compat.controlify.ControlifySettings;
 import com.evandev.spicedcider.registry.ModItems;
 import net.minecraft.world.item.FishingRodItem;
 import net.minecraft.world.entity.player.Player;
@@ -106,6 +108,9 @@ public class ClientModEvents {
 
     @SubscribeEvent
     public static void onClientSetup(FMLClientSetupEvent event) {
+        if (ModList.get().isLoaded("controlify")) {
+            ControlifySettings.register();
+        }
         event.enqueueWork(() -> {
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.TEMPORARY_COBWEB.get(), RenderType.cutout());
             if (ModBlocks.TWISTED_SIGN != null) {

@@ -26,9 +26,6 @@ public final class TuningForkNotes {
     private static final ResourceKey<Item> FORK_KEY = ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath("spelunkery", "tuning_fork"));
     private static final ResourceLocation VIBRATE = ResourceLocation.fromNamespaceAndPath("caverns_and_chasms", "item.tuning_fork.vibrate");
 
-    private TuningForkNotes() {
-    }
-
     public static Integer get(ItemStack stack) {
         return stack.get(ModDataComponents.FORK_NOTE.get());
     }

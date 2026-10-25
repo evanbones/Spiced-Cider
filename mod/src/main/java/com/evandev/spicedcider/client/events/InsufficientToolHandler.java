@@ -13,9 +13,6 @@ public final class InsufficientToolHandler {
 
     private static final Map<UUID, Long> lastAttemptTime = new HashMap<>();
 
-    private InsufficientToolHandler() {
-    }
-
     public static boolean requiresStrongerTool(Player player, BlockState state, ItemStack held) {
         if (!state.requiresCorrectToolForDrops()) return false;
 

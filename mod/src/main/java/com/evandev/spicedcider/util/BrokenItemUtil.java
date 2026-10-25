@@ -7,9 +7,6 @@ import net.minecraft.world.item.ItemStack;
 
 public final class BrokenItemUtil {
 
-    private BrokenItemUtil() {
-    }
-
     public static boolean isBroken(ItemStack stack) {
         if (!SpicedCiderConfig.COMMON.keepBrokenItems.get()) return false;
 

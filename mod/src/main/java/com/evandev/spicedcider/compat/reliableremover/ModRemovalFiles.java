@@ -19,9 +19,6 @@ import java.util.List;
 public final class ModRemovalFiles {
     private static final Gson GSON = new GsonBuilder().setPrettyPrinting().disableHtmlEscaping().create();
 
-    private ModRemovalFiles() {
-    }
-
     public static boolean add(String itemId) throws IOException {
         Path file = fileFor(itemId);
         JsonPrimitive entry = new JsonPrimitive(itemId);

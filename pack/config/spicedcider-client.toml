@@ -13,6 +13,8 @@
 	windowTitleFormat = "Minecraft - Spiced Cider %v"
 	#Restore classic style loading/progress screen when loading worlds, saving worlds, or changing dimensions.
 	oldProgressScreen = true
+	#Replace the vanilla Options screen with Spiced Cider's single settings screen (sidebar pages, curated options).
+	customOptionsScreen = true
 
 [vista]
 	#Applies performance fixes to Vista's mirror/TV reflection rendering (better culling, better shared-states, re-render throttling). Requires Vista (obviously).

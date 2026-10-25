@@ -19,9 +19,6 @@ public final class PetArmorUtil {
 
     private static final float REPAIR_FRACTION = 0.125F;
 
-    private PetArmorUtil() {
-    }
-
     public static boolean isPetArmor(ItemStack stack) {
         return stack.getItem() instanceof AnimalArmorItem;
     }

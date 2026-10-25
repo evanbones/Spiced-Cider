@@ -12,9 +12,6 @@ public final class ArchitectsPaletteCompat {
 
     private static Boolean loaded;
 
-    private ArchitectsPaletteCompat() {
-    }
-
     public static boolean isLoaded() {
         if (loaded == null) {
             loaded = ModList.get().isLoaded(MOD_ID);

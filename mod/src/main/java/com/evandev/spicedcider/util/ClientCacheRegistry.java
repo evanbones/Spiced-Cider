@@ -9,9 +9,6 @@ import java.util.Map;
 public final class ClientCacheRegistry {
     private static final List<WeakReference<Object>> CACHES = new ArrayList<>();
 
-    private ClientCacheRegistry() {
-    }
-
     public static void track(Collection<?> collection) {
         add(collection);
     }

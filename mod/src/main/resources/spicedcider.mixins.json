@@ -109,6 +109,7 @@
     "voxyworldgen.PlayerTrackerSyncedMixin"
   ],
   "client": [
+    "controlify.SettingsScreenSnapMixin",
     "create.FanHauntingCategoryDisplayMixin",
     "emi.EmiRegistryHauntingMixin",
     "bigwater.LiquidBlockRendererVoxyMixin",
@@ -132,6 +133,10 @@
     "minecraft.client.LevelLoadingScreenMixin",
     "minecraft.client.MainLogConfigMixin",
     "minecraft.client.MinecraftClientMixin",
+    "minecraft.client.OptionInstanceAccessor",
+    "minecraft.client.OptionsNameCaptureMixin",
+    "minecraft.client.OptionsScreenAccessor",
+    "minecraft.client.PackAccessor",
     "minecraft.client.PostPassMixin",
     "minecraft.client.ProgressScreenAccessor",
     "minecraft.client.ReceivingLevelScreenMixin",
@@ -142,7 +147,6 @@
     "moonlight.TextureCacheThreadSafetyMixin",
     "namingunconvention.ModernWorldCreationGameTabMixin",
     "namingunconvention.WorldCreationUiStateMixin",
-    "nomansland.DialogueRendererDeltaMixin",
     "perf.ClientRecipeBookMixin",
     "perf.client.BlockModelShaperLocationCacheMixin",
     "perf.client.ModelManagerLocationCacheMixin",

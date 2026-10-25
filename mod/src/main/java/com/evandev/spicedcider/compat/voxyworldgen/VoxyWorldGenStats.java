@@ -21,9 +21,6 @@ public final class VoxyWorldGenStats {
 
     private static Path sessionPath;
 
-    private VoxyWorldGenStats() {
-    }
-
     public static long load() {
         sessionPath = resolvePath();
         if (sessionPath == null || !Files.isRegularFile(sessionPath)) return 0L;

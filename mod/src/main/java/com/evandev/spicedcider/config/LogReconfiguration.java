@@ -10,9 +10,6 @@ public final class LogReconfiguration {
     public static final Logger LOGGER = LogManager.getLogger("Spiced Cider");
     private static final long BUNDLE_ID = 54321;
 
-    private LogReconfiguration() {
-    }
-
     public static void run() {
         LOGGER.debug("Starting Log4j reconfiguration.");
         PluginRegistry.getInstance().loadFromBundle(BUNDLE_ID, LogReconfiguration.class.getClassLoader());

@@ -88,6 +88,7 @@ public class SpicedCiderConfigScreen {
                         .option(toggle("customWindowTitle", client.customWindowTitle))
                         .option(stringField("windowTitleFormat", client.windowTitleFormat))
                         .option(toggle("oldProgressScreen", client.oldProgressScreen))
+                        .option(toggle("customOptionsScreen", client.customOptionsScreen))
                         .build())
                 .categoryIf(ModList.get().isLoaded("vista"), ConfigCategory.createBuilder()
                         .name(Component.translatable("category.spicedcider.vista"))

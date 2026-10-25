@@ -26,9 +26,6 @@ public final class IceCubes {
 
     private static Boolean active;
 
-    private IceCubes() {
-    }
-
     public static boolean isActive() {
         if (active == null) {
             active = ModList.get().isLoaded("embers_and_icicles") && ModList.get().isLoaded("neapolitan");

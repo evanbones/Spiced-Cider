@@ -12,9 +12,6 @@ import java.util.concurrent.ConcurrentHashMap;
 public final class ItemAbilityItemsCache {
     private static final Map<ItemAbility, List<Item>> ITEMS = new ConcurrentHashMap<>();
 
-    private ItemAbilityItemsCache() {
-    }
-
     public static List<Item> items(ItemAbility ability) {
         return ITEMS.computeIfAbsent(ability, a -> BuiltInRegistries.ITEM.stream()
                 .filter(item -> new ItemStack(item).canPerformAction(a))

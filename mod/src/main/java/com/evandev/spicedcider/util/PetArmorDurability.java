@@ -15,9 +15,6 @@ public final class PetArmorDurability {
     private static final int MIN_FACTOR = 4;
     private static Map<ArmorMaterial, Integer> factors;
 
-    private PetArmorDurability() {
-    }
-
     public static int bodyDurabilityFor(Item item, Holder<ArmorMaterial> material) {
         return ToolStats.get().lookup(item)
                 .map(ToolStats.Stats::durability)

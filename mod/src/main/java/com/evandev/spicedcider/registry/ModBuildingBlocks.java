@@ -53,9 +53,6 @@ public final class ModBuildingBlocks {
     public static final Map<String, DeferredBlock<Block>> BLOCKS = new LinkedHashMap<>();
     public static final Map<String, DeferredItem<BlockItem>> ITEMS = new LinkedHashMap<>();
 
-    private ModBuildingBlocks() {
-    }
-
     private static List<Def> load() {
         try (InputStream in = ModBuildingBlocks.class.getResourceAsStream("/spicedcider/building_blocks.json")) {
             return new Gson().fromJson(new InputStreamReader(in, StandardCharsets.UTF_8), new TypeToken<List<Def>>() {

@@ -13,9 +13,6 @@ public final class TideCompat {
 
     private static Boolean loaded;
 
-    private TideCompat() {
-    }
-
     public static boolean isLoaded() {
         if (loaded == null) {
             loaded = ModList.get().isLoaded(MOD_ID);

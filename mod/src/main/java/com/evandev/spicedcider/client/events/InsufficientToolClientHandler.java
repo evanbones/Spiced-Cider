@@ -25,9 +25,6 @@ import net.neoforged.neoforge.client.event.InputEvent;
 @EventBusSubscriber(modid = SpicedCider.MOD_ID, value = Dist.CLIENT)
 public final class InsufficientToolClientHandler {
 
-    private InsufficientToolClientHandler() {
-    }
-
     @SubscribeEvent
     public static void onInteractionKeyMapping(InputEvent.InteractionKeyMappingTriggered event) {
         if (!SpicedCiderConfig.CLIENT.unmineableBlockSparks.get()) return;

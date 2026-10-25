@@ -46,9 +46,6 @@ public final class VoxyWorldGenCatchup {
     private record Binding(LongSet synced, ServerLevel level, LodSyncedChunks data) {
     }
 
-    private VoxyWorldGenCatchup() {
-    }
-
     public static void reset() {
         pendingLoads.set(0);
         detachAll();

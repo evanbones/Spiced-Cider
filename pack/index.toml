@@ -338,7 +338,7 @@ hash = "8d2c5d6339c0624879db943d7b46772a486f99cb4c1b8f62329486be9f549770"
 
 [[files]]
 file = "config/coldsweat/client.toml"
-hash = "128e10d6a9333c6da55be543a3ff256e526494f6f640e7d8ee1aa991a3fbb554"
+hash = "ddf0ad5cb7bb57c5c3936fa7ee6a6c6c661b8fcccd0c16b13fd5db4ce291d1b9"
 
 [[files]]
 file = "config/coldsweat/disabled_mods.txt"
@@ -403,6 +403,10 @@ hash = "2960bccd52230cb571c760ba9122ec1f4b21b5079f977700d4ac03f1518aef6d"
 [[files]]
 file = "config/continuity.json"
 hash = "00267a602028cbb037dcb0b5f803db31bed284235ca9c1ea189ad4179311a2f4"
+
+[[files]]
+file = "config/controlify.json"
+hash = "c49b65dc9ac363a77e55426850d0fe2bf7f527bac171de9aa36d7977799bbb19"
 
 [[files]]
 file = "config/convenientnametags.toml"
@@ -494,7 +498,7 @@ hash = "0030656736b21f06f9f5b73078ce3ea41778f0f744c9d5da0055712a493ced85"
 
 [[files]]
 file = "config/drippyloadingscreen/early_window_reference.properties"
-hash = "47c9c912534c87fb85a67a204697ab9b83311c86c6252f23018b3cff6d109ced"
+hash = "bed01a98303ae8675abc3744aacc7f01827328e93bbded3617ee4cbf7449a784"
 
 [[files]]
 file = "config/drippyloadingscreen/options.txt"
@@ -666,7 +670,7 @@ hash = "09d330b29443d9579ecc014f2be2fcb31075bfe1e9f9ac4e750f271128650fe6"
 
 [[files]]
 file = "config/fabric/indigo-renderer.properties"
-hash = "d5004ffde5ad96845fe074beead7fc39230b1980ce1723fad88d98c1b3ae3ab4"
+hash = "cc55b0d2f0aa082178b74d180ff27d901be865879eedd599d4eb6836e957b282"
 
 [[files]]
 file = "config/falling_snow.json"
@@ -754,7 +758,7 @@ hash = "e6c2348fd2f7f600ae1a9fa0b364c41307f5bee6ebe92fa7ddd5a0adced09b2c"
 
 [[files]]
 file = "config/fancymenu/assets/title_splashes.txt"
-hash = "98d5eed0de024013d2f4b3af01be2927ed1180d2db70bc14803cc5d97869d9f0"
+hash = "9c42dbb4909de6546e910e2908a74d41058fdfe3dd62fb11601ecea5e7a52511"
 
 [[files]]
 file = "config/fancymenu/assets/window_icon.icns"
@@ -799,10 +803,6 @@ hash = "68d71838fd7512a4dcc4c58726d1318c0d30b3020a45e1940ccf956aa56024bc"
 [[files]]
 file = "config/fancymenu/customization/inventory_screen_layout.txt"
 hash = "90dfc47c53e15f151a1ecfacba6b5dcce8a968fe5772f19fee9807c62939707e"
-
-[[files]]
-file = "config/fancymenu/customization/options_screen_layout.txt"
-hash = "c8404ca1d81470b9725fbe584b7a9501d81ccc4fc0c8142d7e4c725fdf45b911"
 
 [[files]]
 file = "config/fancymenu/customization/pause_screen_layout.txt"
@@ -959,10 +959,6 @@ hash = "1a0d15c7d351933cf7737b8596c7ae553fa8acbfad6ccb2551823695d7b9de31"
 [[files]]
 file = "config/helditemtooltips-client.toml"
 hash = "2719dc065ecf8a4f1e586ae5c6a311f22011ed1d6b613cdefd580c6521d06949"
-
-[[files]]
-file = "config/heraldics-common.toml"
-hash = "55b845b006a392fd021d54164bb2a1f1c735ca881571b966057c7c7c684cb12f"
 
 [[files]]
 file = "config/high_noon-client.toml"
@@ -5434,7 +5430,7 @@ hash = "d79f6ed6d702369a46213d036218c8b1072367c19e1401c78d1efbd72d1114bf"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/minecraft/tags/item/sulfur_cube_archetype/slow_bouncy.json"
-hash = "7a77c9a60bc82e6610b4c92cbb8cf0ddcb4f72747ae3bb823fc8fd553ee88403"
+hash = "93533910e44b59c828c24b6a4c495065445b33749d74fd5bf44bbfa600c762e4"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/minecraft/tags/item/sulfur_cube_archetype/slow_flat.json"
@@ -9366,7 +9362,7 @@ hash = "13b2b1384f949e6e409c3c3cc423ecb854df6b386d4466d424a57a887e89f3d8"
 
 [[files]]
 file = "config/packetfixer.properties"
-hash = "75c01fa30d1d00565a48c6092fa69f4f6742808d26bb13ad7e0c79c4f71d28fb"
+hash = "daeee349ebfbca3d711ef52438499e839e8d953ed09205bd7b50b978d650a54e"
 
 [[files]]
 file = "config/particle_core_config.toml"
@@ -9450,7 +9446,7 @@ hash = "9ace957af029565c0af5007e6e4839fbc869525db123bb8f67fb651cb6f1fecb"
 
 [[files]]
 file = "config/recreative/remove_tabs.json"
-hash = "250fdc13e753ad47baef23290488eb77aadda6007228a8889a74c9453cd60466"
+hash = "9044f2a2b4da3c5e19dcb197ec38767e635fe4aef6b95092c550790d228c41d7"
 
 [[files]]
 file = "config/recreative/tab_icons.json"
@@ -9458,7 +9454,7 @@ hash = "2edbf62b60165a7ebbea68d5babc9b1991c73ece3e00c57832d6e99529ed69ef"
 
 [[files]]
 file = "config/recreative/tab_layout.json"
-hash = "0407a5207f1985514b12f5643faf8d0727a88e588a9f7503519d29c1f6408ccd"
+hash = "4ff9fdd39331f3ab11c4f981b7abe4049f99b802697a283b0cf65f3165285f40"
 
 [[files]]
 file = "config/recreative/tab_order.json"
@@ -11361,10 +11357,6 @@ file = "config/reliable_remover/mods/frontiers.json"
 hash = "a8d66005166db4aa8dd52d05acf93f7a061a4151ecb63e91e88005a7e70c11b8"
 
 [[files]]
-file = "config/reliable_remover/mods/heraldics.json"
-hash = "5f5344ae72ffdb54cddec006c2ec7fa259b52bf1c6cc9c80a786e7730aefedb0"
-
-[[files]]
 file = "config/reliable_remover/mods/incubation.json"
 hash = "e00133c0e52c4066e9e0c49201379883f115349aa5c680270840dd8d6f9f14af"
 
@@ -11562,7 +11554,7 @@ hash = "01e7332713691cc624250ac8564ab36b4ed6f523172e5deaf772b5d49316a06f"
 
 [[files]]
 file = "config/remi/remi.json"
-hash = "952bd80265707ba39b7fbc96f2e696aa5b24e7a049513cd46b1629fb81e6e1ac"
+hash = "50e76a55e338090589962ca96523d24c24f4158e315d8da6e1dfa7f0a7586b5a"
 
 [[files]]
 file = "config/remi/stack_groups/armor_boots.json"
@@ -12170,7 +12162,7 @@ hash = "1c970fc0cc8a3989889a43fdc6c40c89cabf81ffac2405f92c6abf489a410674"
 
 [[files]]
 file = "config/resourcepackoverrides.json"
-hash = "0d345d96267a4c7d5598cb963a6807e784e0d8a097439d7ec078db7b149a911d"
+hash = "8ac0c330ff86c5465cd63292b8774aa93105e8dbb9198613a196089ccc2de61b"
 
 [[files]]
 file = "config/roxy-fog.json"
@@ -12362,15 +12354,19 @@ hash = "20054029e0014a38add4a1f49f3709dab64de66cb5457277a774407952e66d88"
 
 [[files]]
 file = "config/spicedcider-client-1.toml.bak"
-hash = "73cf3699674e6db2ca3e811de9d68ad7e9d8fb982b7b0f5bcb179855cde91bcb"
+hash = "74b0991bca601a745179e843daf929ebac46046ba70934edef80dabad03f00c4"
 
 [[files]]
 file = "config/spicedcider-client-2.toml.bak"
+hash = "73cf3699674e6db2ca3e811de9d68ad7e9d8fb982b7b0f5bcb179855cde91bcb"
+
+[[files]]
+file = "config/spicedcider-client-3.toml.bak"
 hash = "4bd40f96bc4a5d0aea588b68cc92bf20330ae8e8c8a11453b504d5a9b54ec5a0"
 
 [[files]]
 file = "config/spicedcider-client.toml"
-hash = "74b0991bca601a745179e843daf929ebac46046ba70934edef80dabad03f00c4"
+hash = "21dfaf66e73bc34876ca099f8269f9dd5059b3374b9620cc39bc4c67ae2293d5"
 
 [[files]]
 file = "config/spicedcider-common.toml"
@@ -12598,11 +12594,11 @@ hash = "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
 
 [[files]]
 file = "config/voicechat/voicechat-client.properties"
-hash = "9929e16c858d796646e27b38b5bfdc485b9d1a4bf8f53af19d450203c2a8448a"
+hash = "d82498e4004c36b1e552ad67cefa537cddf97403939afcc1b2a36235a4413f59"
 
 [[files]]
 file = "config/voicechat/voicechat-server.properties"
-hash = "c250a877f2be7a68038a60be4be5ccc284c95fc90bdb0dd31c08de5e5e8051d8"
+hash = "e7b6b839259bf65f227fae9150d876a4722f2027abdda784622a8eb821eca7b8"
 
 [[files]]
 file = "config/void_water-server.toml"
@@ -12702,7 +12698,7 @@ hash = "121b93764159be6fb7dab523b29a844e2bb78400ce8c48f52135a097e9b0006e"
 
 [[files]]
 file = "config/yosbr/options.txt"
-hash = "a458bfc3d7087dce7db543ec0d69bd91e5243aecc668583416262b123a52aaa3"
+hash = "65b8ac53c73d2471c5e6a11c3a04361b7ed3d16c6179252dc4c87d2e61181144"
 
 [[files]]
 file = "config/zeta-common.toml"
@@ -12710,7 +12706,7 @@ hash = "d985bfc68899c91aa642736400472f6ab876dedaaef4b8c31f38b52d48de633d"
 
 [[files]]
 file = "config/zfastnoise.mixin.properties"
-hash = "5359049789e622ef2a08faca65843c6400698e2b092982605334c9540364f7d0"
+hash = "0376a0fdd7c47f5c23cba44343dbc561c73f49f54413752abb196cf8930ab451"
 
 [[files]]
 file = "config/zipline.json"
@@ -12996,8 +12992,8 @@ file = "mods/continuity-3.0.0+0.0.1+1.21.1.neoforge-all.jar"
 hash = "324b943f53b7843c225426ea0f4313f6bba8d4218f0dd76b872d55bcf22aa227"
 
 [[files]]
-file = "mods/controlling.pw.toml"
-hash = "65c8086d2ec3d39acc7bd36c7a0306ccc43b602b38fa07d13291bc478ef7dfff"
+file = "mods/controlify.pw.toml"
+hash = "2b61d5100f1db31c7928ba7de237c5f863926c49a4bf53fcce27bf0371ec0575"
 metafile = true
 
 [[files]]
@@ -13181,7 +13177,7 @@ metafile = true
 
 [[files]]
 file = "mods/field-guide.pw.toml"
-hash = "3b2534a3bca9f41505609ae21417f1c281de8d4c6dd4557b62e33e2a17b21387"
+hash = "80534bf156adf5f4d3a396fb62d8395603312d94a7b91527daa48559a3664729"
 metafile = true
 
 [[files]]
@@ -13228,10 +13224,6 @@ metafile = true
 file = "mods/held-item-tooltips.pw.toml"
 hash = "d01e1e18bc56a20fd1b37a5716e3fa9cf78704176389865dcbac7c13d3b34770"
 metafile = true
-
-[[files]]
-file = "mods/heraldics-1.21.1-1.2.2-neoforge.jar"
-hash = "780231b3310f819af2e0051eb9005c773c929db09f690ebc8c6bb50ef821e025"
 
 [[files]]
 file = "mods/highlight.pw.toml"
@@ -13395,7 +13387,7 @@ metafile = true
 
 [[files]]
 file = "mods/modernfix.pw.toml"
-hash = "d10fbef1555f5277563b9cbf7683811ac0f38c1af41646e6ce5c3aaa2149425d"
+hash = "ef65836e005bd42a0f40df30a94eba1ad7ee5ed3194b11eafbeadc64edb44252"
 metafile = true
 
 [[files]]
@@ -13469,7 +13461,7 @@ metafile = true
 
 [[files]]
 file = "mods/no-mans-land.pw.toml"
-hash = "85a4b164512c9cc34ddc501394b1a747a4ec79cefb60166a9680a5389015c53b"
+hash = "d5cef080d071a3e9dcc3514417fd8eedbaa1da5c79a28a0989b2beaa7164835f"
 metafile = true
 
 [[files]]
@@ -13484,7 +13476,7 @@ metafile = true
 
 [[files]]
 file = "mods/offgrid.pw.toml"
-hash = "752c03a536372792782d080dc99914c98c178ed4e68464a76d5582de0050dcc6"
+hash = "0e9a384641ad9fcdcb9c1e3da897b9fca6ac4e4ebbac1332d047f4bcc8640682"
 metafile = true
 
 [[files]]
@@ -13564,7 +13556,7 @@ metafile = true
 
 [[files]]
 file = "mods/polytone.pw.toml"
-hash = "3501c17aff0b6cf42104a025a124c58ea1d5d48c6ea96c7228f0a86d975d620c"
+hash = "29914d94d11003d03891c86eafbb178ba5c3f91c2833f8cca2c2f9e00d50de2f"
 metafile = true
 
 [[files]]
@@ -13627,11 +13619,6 @@ hash = "a171e4464fe8da5b988d64f73a25ac2579d1437f85182bdaf49d6a3fa4ecd45b"
 metafile = true
 
 [[files]]
-file = "mods/reeses-sodium-options.pw.toml"
-hash = "8690379014fbba53059759936c7deb4d62aabc7a2006da3d45929dc582b119b7"
-metafile = true
-
-[[files]]
 file = "mods/refield.pw.toml"
 hash = "567b2c8935a4b4e4908a776e606e4f8482dd61889662f600f10e95291d9e092e"
 metafile = true
@@ -13648,7 +13635,7 @@ metafile = true
 
 [[files]]
 file = "mods/reliable-emi.pw.toml"
-hash = "0735c318565a6b5da5b12f837f60faf1120a7e77b2ae53307eb262227fc03642"
+hash = "67f8e69f9f0e3f1f9b1acbcfa6f4a87f1042347a32cdb8d7a892641001764a48"
 metafile = true
 
 [[files]]
@@ -13658,12 +13645,12 @@ metafile = true
 
 [[files]]
 file = "mods/reliable-recipes.pw.toml"
-hash = "c9a60264c17e69e7be41a47d2c90822e51113aaeef76909d641c17ab383455d1"
+hash = "408b279deac23b3c8e735e0c06016d8cec9b261a270bec37f465ead2da62b425"
 metafile = true
 
 [[files]]
 file = "mods/reliable-remover.pw.toml"
-hash = "1663ee965f254cfc94effeb7daa275c262daa78069df522a8819d2409ec2a5f6"
+hash = "d55322154260233ff4e58fe613f2186ca3cf1773e53568b5504dbf56d23c5e1a"
 metafile = true
 
 [[files]]
@@ -13752,7 +13739,7 @@ metafile = true
 
 [[files]]
 file = "mods/simple-voice-chat.pw.toml"
-hash = "44db699e3dee8a6d4a787281bd5f3f1a87f88fcf5babf8fa11cb5d9582d43ebe"
+hash = "852ba399cf42709a5a22cf946e6a20c0d5e77d2990d98478e3e826a69154ff24"
 metafile = true
 
 [[files]]
@@ -13797,7 +13784,7 @@ metafile = true
 
 [[files]]
 file = "mods/spicedcider-1.0.0.jar"
-hash = "ef7f3b8797b2fe788b528fd5f27e4bb071f8b483bef01c256d76f0314ae2d0d6"
+hash = "82fd239824de8c19a36bb805b8ad31f15bd90ae26b178f3e73a9c8cc7c88ee3d"
 
 [[files]]
 file = "mods/stacksizetweaks.pw.toml"
@@ -13856,7 +13843,7 @@ metafile = true
 
 [[files]]
 file = "mods/tiny-takeover-backport.pw.toml"
-hash = "34d79d644913f4df62a68f4a5de24ae6016da45cb11dda5d7d251d7083262166"
+hash = "8cb6c8aae1844c6114a6280fc8c9f7834842a1b023214f1e210e5c591d0e1c4e"
 metafile = true
 
 [[files]]
@@ -14160,6 +14147,11 @@ metafile = true
 [[files]]
 file = "resourcepacks/peeves.pw.toml"
 hash = "3075155c30dc514370cc158d44fa6a493da2b948305eff520004769ba58c40e4"
+metafile = true
+
+[[files]]
+file = "resourcepacks/polylight.pw.toml"
+hash = "ff0c78c7994a14981deb7caeb3d7d91527e6e77febe2267f3036727c25eb1260"
 metafile = true
 
 [[files]]
@@ -16497,10 +16489,6 @@ hash = "5f753da160d8515fbcf066e83695a533ed4696dd964e8821cdb3e8e8ea07e561"
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/frame_changer/lang/en_us.json"
 hash = "08edada34c6e2020037f7b8a22c485ba3b941161ee66409a0c78781f91763e9a"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/heraldics/lang/en_us.json"
-hash = "24ce8197fbf22d8dbf12b7e007a8b7cbcf75e1680e380b95bf0b59755861e0a6"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/horseman/stack_groups/copper_horns.json"
@@ -19948,7 +19936,7 @@ hash = "9a7ab82cdc0f3a679b44129f90099a262d235cbbb3b10d4ab0297536e089e3c1"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/iron.json"
-hash = "536dc379e05342d6f2dae8b34ec959b16b614b09ec7d3c4c301a17b90785261b"
+hash = "cca1d54b906024ecb54e4391f8cef6a5a07ddc5f161890b0e3c92b6a7c87f27e"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/iron_glass.json"
@@ -20040,7 +20028,7 @@ hash = "1722ee5d48fc34f8b2c79495cc1fd1d88c305c62891c370424763eb0955b9ad7"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/sandstone.json"
-hash = "7c5dce0c87e3114edc543117a5cdb51481f76b7181f292953b4023ddfc9f8a61"
+hash = "ed10e0365f377bd4dd4b3c0050a9b313d444ba4faa6f7c053789c73e386af67a"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/sapling.json"

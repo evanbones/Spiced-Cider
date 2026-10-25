@@ -8,9 +8,6 @@ import com.momosoftworks.coldsweat.common.capability.handler.EntityTempManager;
 import com.momosoftworks.coldsweat.common.capability.handler.ShearableFurManager;
 
 public final class ColdSweatLeaks {
-    private ColdSweatLeaks() {
-    }
-
     public static void releaseServer() {
         EntityTempManager.CAP_CACHE.clearServer();
         ShearableFurManager.CAP_CACHE.clearServer();

@@ -13,9 +13,6 @@ public final class InfernalExpansionCompat {
 
     private static Boolean loaded;
 
-    private InfernalExpansionCompat() {
-    }
-
     public static boolean isLoaded() {
         if (loaded == null) {
             loaded = ModList.get().isLoaded(MOD_ID);

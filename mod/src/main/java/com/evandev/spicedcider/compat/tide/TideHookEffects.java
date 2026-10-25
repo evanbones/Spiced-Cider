@@ -32,9 +32,6 @@ public final class TideHookEffects {
     private static final int LURE_DURATION = 1200;
     private static final float PERFECT_TREASURE_CHANCE = 0.25f;
 
-    private TideHookEffects() {
-    }
-
     public static boolean uses(@Nullable TideFishingHook hook, @Nullable DeferredItem<Item> item) {
         return hook != null && item != null && hook.getHook().is(item.get());
     }

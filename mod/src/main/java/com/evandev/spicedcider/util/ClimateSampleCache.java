@@ -13,9 +13,6 @@ public final class ClimateSampleCache {
     private int z;
     private Climate.TargetPoint point;
 
-    private ClimateSampleCache() {
-    }
-
     public static ClimateSampleCache get() {
         return LAST.get();
     }

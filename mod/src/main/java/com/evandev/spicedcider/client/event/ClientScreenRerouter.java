@@ -1,12 +1,15 @@
 package com.evandev.spicedcider.client.event;
 
 import com.evandev.spicedcider.SpicedCider;
+import com.evandev.spicedcider.client.options.SettingsScreen;
 import com.evandev.spicedcider.client.progress.OldLoadingScreen;
 import com.evandev.spicedcider.client.progress.OldProgressScreen;
 import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.evandev.spicedcider.mixin.minecraft.client.LevelLoadingScreenAccessor;
+import com.evandev.spicedcider.mixin.minecraft.client.OptionsScreenAccessor;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.*;
+import net.minecraft.client.gui.screens.options.OptionsScreen;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.progress.StoringChunkProgressListener;
 import net.neoforged.api.distmarker.Dist;
@@ -19,10 +22,15 @@ public class ClientScreenRerouter {
 
     @SubscribeEvent
     public static void onScreenOpening(ScreenEvent.Opening event) {
-        if (!SpicedCiderConfig.CLIENT.oldProgressScreen.get()) return;
-
         Screen screen = event.getScreen();
         if (screen == null) return;
+
+        if (screen.getClass() == OptionsScreen.class && SpicedCiderConfig.CLIENT.customOptionsScreen.get()) {
+            event.setNewScreen(new SettingsScreen(((OptionsScreenAccessor) screen).spicedcider$lastScreen()));
+            return;
+        }
+
+        if (!SpicedCiderConfig.CLIENT.oldProgressScreen.get()) return;
 
         if (screen instanceof ProgressScreen progressScreen && !(screen instanceof OldProgressScreen)) {
             event.setNewScreen(new OldProgressScreen(progressScreen));

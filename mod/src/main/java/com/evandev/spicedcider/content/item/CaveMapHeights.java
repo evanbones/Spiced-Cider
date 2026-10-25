@@ -14,9 +14,6 @@ import net.minecraft.world.level.saveddata.maps.MapItemSavedData;
 public final class CaveMapHeights {
     public static final int TERRAIN = Integer.MIN_VALUE;
 
-    private CaveMapHeights() {
-    }
-
     public record FixedHeight(String dimension, int height) {
     }
 

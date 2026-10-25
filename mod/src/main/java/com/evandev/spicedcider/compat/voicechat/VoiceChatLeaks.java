@@ -8,9 +8,6 @@ import de.maxhenkel.voicechat.net.NetManager;
 import java.util.List;
 
 public final class VoiceChatLeaks {
-    private VoiceChatLeaks() {
-    }
-
     public static void release() {
         NetManager net = CommonCompatibilityManager.INSTANCE.getNetManager();
         List<Channel<?>> channels = List.of(

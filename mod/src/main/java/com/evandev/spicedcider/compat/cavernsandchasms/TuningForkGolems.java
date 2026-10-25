@@ -19,9 +19,6 @@ public final class TuningForkGolems {
 
     private static Boolean loaded;
 
-    private TuningForkGolems() {
-    }
-
     public static boolean isLoaded() {
         if (loaded == null) {
             loaded = ModList.get().isLoaded("caverns_and_chasms");

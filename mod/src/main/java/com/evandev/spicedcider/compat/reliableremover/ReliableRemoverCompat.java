@@ -7,9 +7,6 @@ public final class ReliableRemoverCompat {
 
     private static Boolean loaded;
 
-    private ReliableRemoverCompat() {
-    }
-
     public static boolean isLoaded() {
         if (loaded == null) {
             loaded = ModList.get().isLoaded("reliable_remover");

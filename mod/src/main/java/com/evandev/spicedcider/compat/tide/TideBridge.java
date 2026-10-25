@@ -11,9 +11,6 @@ import net.minecraft.world.item.ItemStack;
 
 final class TideBridge {
 
-    private TideBridge() {
-    }
-
     static Item createHookItem(Item.Properties properties, String descriptionKey) {
         return new FishingHookItem(properties, descriptionKey);
     }

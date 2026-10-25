@@ -13,9 +13,6 @@ import java.util.concurrent.ConcurrentHashMap;
 public final class ModelLocationCache {
     private static volatile Map<BlockState, ModelResourceLocation> active;
 
-    private ModelLocationCache() {
-    }
-
     public static void begin() {
         active = null;
         Map<BlockState, ModelResourceLocation> cache = new ConcurrentHashMap<>(1 << 18);

@@ -34,9 +34,6 @@ public final class VoxyFog {
     private static long lastNanos;
     private static WeakReference<ClientLevel> lastLevel = new WeakReference<>(null);
 
-    private VoxyFog() {
-    }
-
     public static void prepare(Camera camera, FogRenderer.FogMode mode, float farPlaneDistance, boolean thickFog, float partialTick) {
         if (mode != FogRenderer.FogMode.FOG_TERRAIN) return;
         pending = false;

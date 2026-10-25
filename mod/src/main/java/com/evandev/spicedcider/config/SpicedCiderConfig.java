@@ -264,6 +264,7 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.BooleanValue customWindowTitle;
         public final ModConfigSpec.ConfigValue<String> windowTitleFormat;
         public final ModConfigSpec.BooleanValue oldProgressScreen;
+        public final ModConfigSpec.BooleanValue customOptionsScreen;
 
         public final ModConfigSpec.BooleanValue vistaMirrorPerfFixes;
         public final ModConfigSpec.IntValue vistaMirrorReflectionDistance;
@@ -342,6 +343,11 @@ public class SpicedCiderConfig {
                     .comment(tooltip("oldProgressScreen"))
                     .translation("option.spicedcider.oldProgressScreen")
                     .define("oldProgressScreen", true);
+
+            customOptionsScreen = builder
+                    .comment(tooltip("customOptionsScreen"))
+                    .translation("option.spicedcider.customOptionsScreen")
+                    .define("customOptionsScreen", true);
 
             builder.pop();
             builder.push("vista");

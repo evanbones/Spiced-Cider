@@ -1,5 +1,6 @@
 version:3955
 ao:true
+betterBiomeBlendRadius:14
 biomeBlendRadius:2
 enableVsync:false
 entityDistanceScaling:1.0
@@ -48,7 +49,7 @@ mouseSensitivity:0.5
 damageTiltStrength:1.0
 highContrast:false
 narratorHotkey:true
-resourcePacks:["vanilla","fabric","mod_resources","mod/fabric_api,forgified_fabric_api","mod/fabric_api,","forgified_fabric_api","moonlight:merged_pack","file/sunbathing-v1.11.zip","scholar:colored_books","scholar:chiseled_bookshelf_colored_books","scholar:chiseled_bookshelf_colored_books_abnww_compat","hominid:hominid_retextures","mod/brushstrokes:overrides","modest_meals_baisylia_hud","mod/slime_time:resourcepacks/colourful_slimes","mod/flamyflames:flamyflames","highlight:highlight_extended","mod/bigwater:resourcepacks/rekindled","mod/wilderflowers:resourcepacks/wildflowers","spicedcider_global_jit","file/spicedcider_resources"]
+resourcePacks:["vanilla","fabric","mod_resources","mod/fabric_api,forgified_fabric_api","mod/fabric_api,","forgified_fabric_api","moonlight:merged_pack","file/sunbathing-v1.11.zip","file/colored_lights-v1.6.zip","scholar:colored_books","scholar:chiseled_bookshelf_colored_books","scholar:chiseled_bookshelf_colored_books_abnww_compat","hominid:hominid_retextures","mod/brushstrokes:overrides","modest_meals_baisylia_hud","mod/slime_time:resourcepacks/colourful_slimes","mod/flamyflames:flamyflames","highlight:highlight_extended","mod/bigwater:resourcepacks/rekindled","mod/wilderflowers:resourcepacks/wildflowers","spicedcider_global_jit","file/spicedcider_resources"]
 incompatibleResourcePacks:[]
 lastServer:
 lang:en_us
@@ -102,15 +103,15 @@ key_key.chat:key.keyboard.t
 key_key.playerlist:key.keyboard.tab
 key_key.pickItem:key.mouse.middle
 key_key.command:key.keyboard.slash
-key_key.socialInteractions:key.keyboard.p
+key_key.socialInteractions:key.keyboard.unknown
 key_key.screenshot:key.keyboard.f2
 key_key.togglePerspective:key.keyboard.f5
 key_key.smoothCamera:key.keyboard.unknown
 key_key.fullscreen:key.keyboard.f11
 key_key.spectatorOutlines:key.keyboard.unknown
 key_key.swapOffhand:key.keyboard.f
-key_key.saveToolbarActivator:key.keyboard.c
-key_key.loadToolbarActivator:key.keyboard.x
+key_key.saveToolbarActivator:key.keyboard.unknown
+key_key.loadToolbarActivator:key.keyboard.unknown
 key_key.advancements:key.keyboard.l
 key_key.hotbar.1:key.keyboard.1
 key_key.hotbar.2:key.keyboard.2
@@ -141,10 +142,10 @@ key_key.nostalgic_tweaks.next_song:key.keyboard.unknown
 key_key.nostalgic_tweaks.toggle_weather:key.keyboard.unknown
 key_Take Panorama Screenshot:key.keyboard.f4
 key_auditory.sound_reload_key:key.keyboard.unknown
-key_key.picturemode.open:key.keyboard.m
+key_key.picturemode.open:key.keyboard.p
 key_key.configured.open_mod_list:key.keyboard.unknown
 key_key.personality.crawl:key.keyboard.c
-key_key.personality.sit:key.keyboard.z
+key_key.personality.sit:key.keyboard.y
 key_key.jade.config:key.keyboard.keypad.0
 key_key.jade.show_overlay:key.keyboard.keypad.1
 key_key.jade.toggle_liquid:key.keyboard.keypad.2
@@ -158,6 +159,15 @@ key_key.screenshot_viewer.open_screenshots_screen:key.keyboard.unknown
 key_key.presencefootsteps.settings:key.keyboard.f10
 key_key.presencefootsteps.toggle:key.keyboard.unknown
 key_key.entityculling.toggle:key.keyboard.unknown
+key_key.lodged.remove_shield_arrow:key.keyboard.unknown
+key_key.dungeonconfig.open:key.keyboard.unknown
+key_key.hide_icons:key.keyboard.unknown
+key_key.disable_voice_chat:key.keyboard.unknown
+key_key.mute_microphone:key.keyboard.n
+key_key.map_atlases.place_pin:key.keyboard.u
+key_supplementaries.keybind.quiver:key.keyboard.x
+key_key.lodged.use_bandage:key.keyboard.h
+key_create.keyinfo.toolbelt:key.keyboard.i
 soundCategory_master:1.0
 soundCategory_music:0.7007042253521126
 soundCategory_record:1.0
