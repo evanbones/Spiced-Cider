@@ -5,12 +5,10 @@ import com.moulberry.mixinconstraints.annotations.IfModLoaded;
 import me.cortex.voxy.client.core.rendering.building.BuiltSection;
 import me.cortex.voxy.common.util.MemoryBuffer;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Pseudo;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-@Pseudo
 @IfModLoaded("roxy")
 @Mixin(targets = "me.cortex.voxy.client.core.rendering.section.geometry.BasicAsyncGeometryManager", remap = false)
 public class VoxyGeometryFadeMixin {

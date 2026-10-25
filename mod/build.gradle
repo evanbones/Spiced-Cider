@@ -323,6 +323,12 @@ dependencies {
     // Sodium
     compileOnly "net.caffeinemc:sodium-neoforge-mod:0.8.13+mc1.21.1"
 
+    // LambDynamicLights
+    compileOnly("dev.lambdaurora.lambdynamiclights:lambdynamiclights-runtime:4.8.11+1.21.1") {
+        transitive = false
+        attributes { attribute(mappingsAttribute, "mojmap") }
+    }
+
     // Mini Music Tweaks
     compileOnly "maven.modrinth:eiONV3dI:vUk3iT2o"
 

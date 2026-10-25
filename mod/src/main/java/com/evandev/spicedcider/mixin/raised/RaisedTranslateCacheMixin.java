@@ -5,9 +5,7 @@ import com.llamalad7.mixinextras.injector.wrapmethod.WrapMethod;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.moulberry.mixinconstraints.annotations.IfModLoaded;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Pseudo;
 
-@Pseudo
 @IfModLoaded("raised")
 @Mixin(targets = "dev.yurisuika.raised.util.Translate", remap = false)
 public class RaisedTranslateCacheMixin {

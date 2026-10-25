@@ -4,11 +4,9 @@ import com.evandev.spicedcider.weather.client.CloudCoverClient;
 import com.moulberry.mixinconstraints.annotations.IfModLoaded;
 import net.minecraft.resources.ResourceLocation;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Pseudo;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.ModifyArg;
 
-@Pseudo
 @IfModLoaded("cirrus")
 @Mixin(targets = "com.jvn.cirrus.client.CirrusCloudRenderer", remap = false)
 public class CirrusCloudCoverTextureMixin {

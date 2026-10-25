@@ -102,7 +102,7 @@ hash = "6c19539e05905c97a444a612dd2b597001244355cc9a59c25b3079cd4665731a"
 
 [[files]]
 file = "config/asyncparticles/asyncparticles-mixin.properties"
-hash = "f89dc2406b74aac99cecd4e27cd1ad259caba866baa099988f7ba86e2336b739"
+hash = "c1f1cb9d8597b571bd163bb7a5deb0cd63a935e8e02a0705b50683202476354f"
 
 [[files]]
 file = "config/asyncparticles/asyncparticles.json"
@@ -239,10 +239,6 @@ hash = "7f44eb710866f1d6a88d9db1cfea5c6409a11e350fb3c8902a5fb010711ea102"
 [[files]]
 file = "config/brick_and_mortar.json"
 hash = "6ba25b17d218c13aecd7773fb0dd9f01783997854cc7123891e526e82490662e"
-
-[[files]]
-file = "config/brute_force_culling.json"
-hash = "9c52a14cfeb30a4ff94e4f62534754b74c7db1fe1449ce0538eaa42ff9e9b394"
 
 [[files]]
 file = "config/buzzier_bees-common.toml"
@@ -502,7 +498,7 @@ hash = "0030656736b21f06f9f5b73078ce3ea41778f0f744c9d5da0055712a493ced85"
 
 [[files]]
 file = "config/drippyloadingscreen/early_window_reference.properties"
-hash = "75a64c5e52eaa4e5be07b456ce3bb5c33dc579134dbc280a84e430a7ecdd1d1b"
+hash = "7ed4f6f322660eeb69aec9964a79ecb314dd573ceb29141775c8a3643681780d"
 
 [[files]]
 file = "config/drippyloadingscreen/options.txt"
@@ -674,7 +670,7 @@ hash = "09d330b29443d9579ecc014f2be2fcb31075bfe1e9f9ac4e750f271128650fe6"
 
 [[files]]
 file = "config/fabric/indigo-renderer.properties"
-hash = "696ddcbb2362d083ccd78ee5f3bb660392166277f986dd3056f19f8d1644c4dc"
+hash = "6bbb1a9936f32176163c3cfebc0e7a6574f2bf4fc8755eb10dfd9e3aa54c5436"
 
 [[files]]
 file = "config/falling_snow.json"
@@ -762,7 +758,7 @@ hash = "e6c2348fd2f7f600ae1a9fa0b364c41307f5bee6ebe92fa7ddd5a0adced09b2c"
 
 [[files]]
 file = "config/fancymenu/assets/title_splashes.txt"
-hash = "9c42dbb4909de6546e910e2908a74d41058fdfe3dd62fb11601ecea5e7a52511"
+hash = "43f0f62aee026ae0d0c2890440bbf9e4a546268ee47a2a161f969a422719fb6a"
 
 [[files]]
 file = "config/fancymenu/assets/window_icon.icns"
@@ -907,10 +903,6 @@ hash = "da51211c3bfafad2b38de559651a7fa379779d41b93333d497128dc705d71e16"
 [[files]]
 file = "config/figura.json"
 hash = "01799a038644f4def7bd069dfb5771e9b0d06dde7c09bb8627cea9ca3911a105"
-
-[[files]]
-file = "config/flerovium.json"
-hash = "e236ec86219100c4d003a5eb9b76f9445fd8c8af064d4c12b9b368bbfbfe3745"
 
 [[files]]
 file = "config/flywheel-client.toml"
@@ -2859,6 +2851,10 @@ hash = "40c6c2594b81675c19536f202a063988fe4e61551964c6d4d6668389dc083863"
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/c/tags/item/glass_panes.json"
 hash = "656bd95fce3a851721c417198fa43dc0c10ed543d92a286edd4bdbcf5b97f04e"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/c/tags/item/glass_panes/colorless.json"
+hash = "cba30b8225f4511315ec72cb9463ab8cb22fc2e17d76fb748e07736dced7c552"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/c/tags/item/hidden_from_recipe_viewers.json"
@@ -9366,7 +9362,7 @@ hash = "13b2b1384f949e6e409c3c3cc423ecb854df6b386d4466d424a57a887e89f3d8"
 
 [[files]]
 file = "config/packetfixer.properties"
-hash = "4ab707d0d848af7ca4aab5c7559eddaf690885928aa019dae0c66ff9054d01ff"
+hash = "034bf0c37690d2e372b7b79af76558920dff60690b42057635cd8c7da9382134"
 
 [[files]]
 file = "config/particle_core_config.toml"
@@ -12710,7 +12706,7 @@ hash = "d985bfc68899c91aa642736400472f6ab876dedaaef4b8c31f38b52d48de633d"
 
 [[files]]
 file = "config/zfastnoise.mixin.properties"
-hash = "68dcc19f4d84d5b15b8617ef83126c9d841adb5d3214bfdf730368792debfdaf"
+hash = "89aa7a8b2c32a43d2ce5f1c5b36ebfe61c2413844359b0e995473ddb154da7e5"
 
 [[files]]
 file = "config/zipline.json"
@@ -13560,7 +13556,7 @@ metafile = true
 
 [[files]]
 file = "mods/platform.pw.toml"
-hash = "9aebf60a4a9bdc08f706430670fde8fad835188cd984645aff540e6c9556236f"
+hash = "a76b6068b10171b1fc244d5cb0a9dfbd0694b33e25c62eeeb5726c73d297cd3d"
 metafile = true
 
 [[files]]
@@ -13654,7 +13650,7 @@ metafile = true
 
 [[files]]
 file = "mods/reliable-recipes.pw.toml"
-hash = "408b279deac23b3c8e735e0c06016d8cec9b261a270bec37f465ead2da62b425"
+hash = "e473c109dedd56f922862a6bb5bf05e09339cf580967c9bfb0daafc61c289c3e"
 metafile = true
 
 [[files]]
@@ -13793,7 +13789,7 @@ metafile = true
 
 [[files]]
 file = "mods/spicedcider-1.0.0.jar"
-hash = "61144553aac1c82630f2aeb05d0238339e24beff998868c4cd81e721b5722110"
+hash = "9e1ee726466600055900698b90a00019d4574fed2b196e682ca80f925c1da5dd"
 
 [[files]]
 file = "mods/stacksizetweaks.pw.toml"
@@ -13911,7 +13907,7 @@ metafile = true
 
 [[files]]
 file = "mods/vanillabackport.pw.toml"
-hash = "9b18f1c0e25ac587b3b3433d379d6f78b745cc9215f746b4a2162013d1764257"
+hash = "0ea8ab3c8eebc336062f5e2da28c50f460fdc555913a9a66e4f27972c3a5e1ef"
 metafile = true
 
 [[files]]

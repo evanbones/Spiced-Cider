@@ -4,13 +4,11 @@ import com.evandev.spicedcider.compat.voxy.VoxyFadeIn;
 import com.moulberry.mixinconstraints.annotations.IfModLoaded;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Pseudo;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-@Pseudo
 @IfModLoaded("chunksfadein")
 @Mixin(targets = "com.koteinik.chunksfadein.core.Fader", remap = false)
 public abstract class FaderVoxyLodMixin {

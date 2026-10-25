@@ -8,7 +8,6 @@ import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.resources.ResourceLocation;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Pseudo;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 
@@ -17,7 +16,6 @@ import java.util.LinkedHashSet;
 import java.util.Map;
 import java.util.Set;
 
-@Pseudo
 @IfModLoaded("vanillabackport")
 @Mixin(targets = "com.blackgear.vanillabackport.core.neoforge.emissive.EmissiveModelHandler", remap = false)
 public class EmissiveModelHandlerMixin {

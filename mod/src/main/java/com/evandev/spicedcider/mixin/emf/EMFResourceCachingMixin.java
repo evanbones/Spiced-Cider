@@ -8,14 +8,12 @@ import net.minecraft.server.packs.resources.Resource;
 import net.minecraft.server.packs.resources.ResourceManager;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Pseudo;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 
 import java.util.Map;
 import java.util.Optional;
 
-@Pseudo
 @IfModLoaded("entity_model_features")
 @Mixin(targets = "traben.entity_model_features.utils.EMFResourceCaching", remap = false)
 public class EMFResourceCachingMixin {
