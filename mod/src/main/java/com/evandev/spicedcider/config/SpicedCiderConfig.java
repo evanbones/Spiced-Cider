@@ -273,12 +273,14 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.DoubleValue vistaMirrorIdleUpdateFps;
         public final ModConfigSpec.DoubleValue vistaMirrorThrottleBudgetMs;
 
+        public final ModConfigSpec.IntValue cloudCoverFadeSeconds;
+        public final ModConfigSpec.IntValue cloudCoverCommandFadeSeconds;
+
         public final ModConfigSpec.BooleanValue voxyFogOverride;
         public final ModConfigSpec.IntValue voxyFogStart;
         public final ModConfigSpec.IntValue voxyFogEnd;
         public final ModConfigSpec.IntValue voxyWeatherFogDensity;
         public final ModConfigSpec.IntValue voxyCaveFogDensity;
-        public final ModConfigSpec.BooleanValue voxyFadeIn;
 
         public final ModConfigSpec.BooleanValue sodiumLightingParityFix;
         public final ModConfigSpec.BooleanValue voxyWorldGenPersistStats;
@@ -383,6 +385,19 @@ public class SpicedCiderConfig {
                     .defineInRange("vistaMirrorThrottleBudgetMs", 3.5, 0.5, 1000.0);
 
             builder.pop();
+            builder.push("weather");
+
+            cloudCoverFadeSeconds = builder
+                    .comment(tooltip("cloudCoverFadeSeconds"))
+                    .translation("option.spicedcider.cloudCoverFadeSeconds")
+                    .defineInRange("cloudCoverFadeSeconds", 40, 1, 300);
+
+            cloudCoverCommandFadeSeconds = builder
+                    .comment(tooltip("cloudCoverCommandFadeSeconds"))
+                    .translation("option.spicedcider.cloudCoverCommandFadeSeconds")
+                    .defineInRange("cloudCoverCommandFadeSeconds", 5, 0, 60);
+
+            builder.pop();
             builder.push("voxy");
 
             voxyFogOverride = builder
@@ -409,11 +424,6 @@ public class SpicedCiderConfig {
                     .comment(tooltip("voxyCaveFogDensity"))
                     .translation("option.spicedcider.voxyCaveFogDensity")
                     .defineInRange("voxyCaveFogDensity", 50, 0, 100);
-
-            voxyFadeIn = builder
-                    .comment(tooltip("voxyFadeIn"))
-                    .translation("option.spicedcider.voxyFadeIn")
-                    .define("voxyFadeIn", true);
 
             builder.pop();
         }

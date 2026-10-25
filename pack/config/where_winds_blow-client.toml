@@ -13,7 +13,7 @@ enableWindSheen = true
 # Range: 0.0 ~ 2.0
 windSheenStrength = 1.0
 #Enables subtle Wind Waker-inspired wind streaks in the air.
-enableWindStreaks = false
+enableWindStreaks = true
 #Scales overall ambient wind streak, drifting leaf, and flower petal density.
 # Default: 1.0
 # Range: 0.0 ~ 4.0
@@ -37,7 +37,7 @@ windLeafOpacity = 1.0
 #Sets the maximum wind streak line thickness in pixels. Each streak has a soft halo and a finer bright core.
 # Default: 2.25
 # Range: 1.0 ~ 4.0
-windStreakThickness = 3.0
+windStreakThickness = 2.25
 #Sets the fixed or prevailing wind direction in compass degrees clockwise from north. 0 is north, 90 is east, 180 is south, and 270 is west.
 # Default: 125.0
 # Range: 0.0 ~ 360.0
@@ -68,7 +68,7 @@ maximumDirectionHoldTime = 360.0
 # Range: 0.0 ~ 180.0
 maximumOrdinaryDirectionChange = 38.0
 #Allows smooth calm periods that reduce the shared wind strength.
-enableWindLulls = true
+enableWindLulls = false
 #Scales how often calm periods occur. Zero disables them even when the toggle is on.
 # Default: 1.0
 # Range: 0.0 ~ 2.0
@@ -78,7 +78,7 @@ windLullFrequency = 1.0
 # Range: 0.0 ~ 1.0
 windLullStrength = 0.3
 #Enables a bounded set of travelling gust bands shared by wind-reactive effects.
-enableGustFronts = true
+enableGustFronts = false
 #Scales how often travelling gust fronts form.
 # Default: 1.0
 # Range: 0.0 ~ 3.0
@@ -114,7 +114,7 @@ altitudeWindInfluence = 0.5
 #Applies reloadable biome-specific wind strength, gust, turbulence, and altitude multipliers.
 enableBiomeWindProfiles = true
 #Lets campfire smoke drift, curl, and merge into larger wind-shaped plumes.
-enableWindSmoke = true
+enableWindSmoke = false
 #Scales how strongly campfire smoke follows the wind and plume turbulence.
 # Default: 3.0
 # Range: 0.0 ~ 4.0
@@ -126,7 +126,7 @@ enableWindLanternSway = true
 # Range: 0.0 ~ 2.0
 windLanternSwayStrength = 1.0
 #Lets hanging signs sway back and forth with the wind.
-enableWindHangingSignSway = true
+enableWindHangingSignSway = false
 #Scales how strongly hanging signs sway with the wind.
 # Default: 1.0
 # Range: 0.0 ~ 2.0
@@ -262,7 +262,7 @@ enableDesertStormEffects = false
 #Scales the amount of airborne dust during ordinary rainy desert weather.
 # Default: 1.0
 # Range: 0.0 ~ 2.0
-sandDustAmount = 1.0
+sandDustAmount = 0.0
 #Scales the size of blowing dust particles during ordinary rainy desert weather.
 # Default: 1.0
 # Range: 0.25 ~ 3.0
@@ -277,7 +277,7 @@ sandstormFogMode = "DISABLED"
 #Scales desert-storm visibility fog without changing blowing dust.
 # Default: 1.0
 # Range: 0.0 ~ 2.0
-sandstormFogIntensity = 1.0
+sandstormFogIntensity = 0.75
 #Sets the airborne dust amount reached during a full sandstorm.
 # Default: 1.0
 # Range: 0.0 ~ 2.0

@@ -296,3 +296,31 @@ type = "optional"
 versionRange = "*"
 ordering = "AFTER"
 side = "BOTH"
+
+[[dependencies.${ mod_id }]]
+modId = "scalablelux"
+type = "optional"
+versionRange = "*"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.${ mod_id }]]
+modId = "polytone"
+type = "optional"
+versionRange = "*"
+ordering = "AFTER"
+side = "CLIENT"
+
+[[dependencies.${ mod_id }]]
+modId = "livingwind"
+type = "optional"
+versionRange = "*"
+ordering = "AFTER"
+side = "CLIENT"
+
+[[dependencies.${ mod_id }]]
+modId = "where_winds_blow"
+type = "optional"
+versionRange = "*"
+ordering = "AFTER"
+side = "BOTH"

@@ -95,5 +95,13 @@
     },
     "target": "minecraft:resin_clump",
     "replacement": "minecraft:honeycomb"
+  },
+  {
+    "action": "remove_from_tag",
+    "tag": "minecraft:mineable/pickaxe",
+    "id": [
+      "create:shaft",
+      "create:powered_shaft"
+    ]
   }
 ]

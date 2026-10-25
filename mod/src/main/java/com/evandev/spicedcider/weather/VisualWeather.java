@@ -2,10 +2,11 @@ package com.evandev.spicedcider.weather;
 
 public final class VisualWeather {
     private static int depth;
+    private static Thread scopeThread;
     private static float overcastRain;
 
     public static void enter() {
-        depth++;
+        if (depth++ == 0) scopeThread = Thread.currentThread();
     }
 
     public static void exit() {
@@ -13,7 +14,7 @@ public final class VisualWeather {
     }
 
     public static float rainLevel(float rain) {
-        return depth > 0 ? overcast(rain) : rain;
+        return depth > 0 && Thread.currentThread() == scopeThread ? overcast(rain) : rain;
     }
 
     public static float overcast(float rain) {

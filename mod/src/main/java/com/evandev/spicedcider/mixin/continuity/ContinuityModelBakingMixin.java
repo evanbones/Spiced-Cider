@@ -12,6 +12,7 @@ import org.spongepowered.asm.mixin.Mixin;
 @IfModLoaded("modernfix")
 @Mixin(value = ContinuityClientModEvents.class, remap = false)
 public class ContinuityModelBakingMixin {
+
     @WrapMethod(method = "onModifyBakingResult")
     private static void spicedcider$wrapLazily(ModelEvent.ModifyBakingResult event, Operation<Void> original) {
         if (!ContinuityLazyModelWrapping.bakesLazily(event.getModelBakery())) original.call(event);

@@ -51,6 +51,8 @@ public class ModItemTagsProvider extends ItemTagsProvider {
 
         this.tag(Tags.Items.TOOLS)
                 .add(ModItems.FIRE_STRIKER.get());
+        this.tag(ItemTags.CREEPER_IGNITERS)
+                .add(ModItems.FIRE_STRIKER.get());
 
         this.tag(Tags.Items.TOOLS)
                 .add(ModItems.INFERNITE_CLEAVER.get());

@@ -37,13 +37,13 @@ public class CloudCoverData extends SavedData {
 
         if (data.isRaining() || cycle && !commanded && ticksUntilRain(data) <= RAIN_LEAD_TICKS) {
             stormy = true;
-            change(level, CloudCover.CLOUDY, ticksLeft);
+            change(level, CloudCover.CLOUDY, ticksLeft, false);
             return;
         }
         if (stormy) {
             stormy = false;
             commanded = false;
-            change(level, CloudCover.PARTLY_CLOUDY, CloudCover.PARTLY_CLOUDY.sampleDuration(level.random));
+            change(level, CloudCover.PARTLY_CLOUDY, CloudCover.PARTLY_CLOUDY.sampleDuration(level.random), false);
             return;
         }
         if (!cycle) return;
@@ -51,7 +51,7 @@ public class CloudCoverData extends SavedData {
         if (--ticksLeft <= 0) {
             commanded = false;
             CloudCover next = cover.next(level.random);
-            change(level, next, next.sampleDuration(level.random));
+            change(level, next, next.sampleDuration(level.random), false);
         }
         setDirty();
     }
@@ -59,15 +59,19 @@ public class CloudCoverData extends SavedData {
     public void command(ServerLevel level, CloudCover cover, int duration) {
         commanded = true;
         stormy = false;
-        change(level, cover, duration);
+        change(level, cover, duration, true);
     }
 
-    private void change(ServerLevel level, CloudCover next, int duration) {
+    public void fastFade() {
+        PacketDistributor.sendToAllPlayers(new CloudCoverPayload(cover, true));
+    }
+
+    private void change(ServerLevel level, CloudCover next, int duration, boolean fast) {
         ticksLeft = duration;
         setDirty();
-        if (next == cover) return;
+        if (next == cover && !fast) return;
         cover = next;
-        PacketDistributor.sendToAllPlayers(new CloudCoverPayload(cover));
+        PacketDistributor.sendToAllPlayers(new CloudCoverPayload(cover, fast));
     }
 
     private static int ticksUntilRain(ServerLevelData data) {

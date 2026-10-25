@@ -29,6 +29,10 @@ public class SpicedCiderMixinCanceller implements MixinCanceller {
             return true;
         }
 
+        if ("com.jvn.wherewindsblow.mixin.client.compat.snowrealmagic.SnowRealMagicVariantModelMixin".equals(mixinClassName)) {
+            return true;
+        }
+
         if (VANILLA_BACKPORT_MUSIC_MIXINS.contains(mixinClassName)) {
             return LoadingModList.get().getModFileById("music_tweaks") != null;
         }

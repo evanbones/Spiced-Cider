@@ -1,6 +1,8 @@
 package com.evandev.spicedcider;
 
 import com.evandev.spicedcider.compat.continuity.ContinuityLazyModelWrapping;
+import com.evandev.spicedcider.compat.voxy.VoxyFog;
+import com.evandev.spicedcider.compat.wherewindsblow.WhereWindsBlowLazyModelWrapping;
 import com.evandev.spicedcider.compat.everycompat.BlockBoxEveryCompatLoader;
 import com.evandev.spicedcider.compat.infernalexp.InfernalExpansionCompat;
 import com.evandev.spicedcider.compat.embersandicicles.IceCubes;
@@ -13,6 +15,7 @@ import com.evandev.spicedcider.content.item.BalloonItem;
 import com.evandev.spicedcider.content.handler.SpawnControlEvents;
 import com.evandev.spicedcider.namingunconvention.RandomNameGenerator;
 import com.evandev.spicedcider.networking.CloudCoverPayload;
+import com.evandev.spicedcider.networking.GenerationEdgePayload;
 import com.evandev.spicedcider.networking.VoidTrailPayload;
 import com.evandev.spicedcider.registry.*;
 import com.evandev.spicedcider.util.ItemAbilityItemsCache;
@@ -73,6 +76,9 @@ public class SpicedCider {
             ConfigScreenLoader.register(modContainer);
             if (ModList.get().isLoaded("continuity") && ModList.get().isLoaded("modernfix")) {
                 ContinuityLazyModelWrapping.register();
+            }
+            if (ModList.get().isLoaded("where_winds_blow") && ModList.get().isLoaded("modernfix")) {
+                WhereWindsBlowLazyModelWrapping.register();
             }
         }
 
@@ -240,7 +246,12 @@ public class SpicedCider {
         registrar.playToClient(
                 CloudCoverPayload.TYPE,
                 CloudCoverPayload.CODEC,
-                (payload, context) -> context.enqueueWork(() -> CloudCoverClient.receive(payload.cover()))
+                (payload, context) -> context.enqueueWork(() -> CloudCoverClient.receive(payload.cover(), payload.fast()))
+        );
+        registrar.playToClient(
+                GenerationEdgePayload.TYPE,
+                GenerationEdgePayload.CODEC,
+                (payload, context) -> context.enqueueWork(() -> VoxyFog.receiveEdge(payload.distance()))
         );
     }
 

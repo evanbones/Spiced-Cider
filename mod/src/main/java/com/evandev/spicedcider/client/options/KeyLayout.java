@@ -26,7 +26,6 @@ public final class KeyLayout {
             "quark.keybind.back",
             "quark.keybind.narrator_readout",
             "quark.keybind.narrator_full_readout",
-            "chunksfadein.keybinds.toggleMod",
             "key.modulation.panorama_screenshot",
             "key.clickthrough.toggle",
             "create.keyinfo.shift_modifier",

@@ -1,6 +1,7 @@
 package com.evandev.spicedcider.weather.client;
 
 import com.evandev.spicedcider.SpicedCider;
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.evandev.spicedcider.weather.CloudCover;
 import com.evandev.spicedcider.weather.VisualWeather;
 import com.mojang.blaze3d.platform.NativeImage;
@@ -18,6 +19,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.ClientPlayerNetworkEvent;
 import net.neoforged.neoforge.client.event.ClientTickEvent;
 import net.neoforged.neoforge.client.event.RegisterClientReloadListenersEvent;
+import net.neoforged.neoforge.client.event.RenderFrameEvent;
 import org.jetbrains.annotations.NotNull;
 
 import java.io.IOException;
@@ -31,7 +33,7 @@ public final class CloudCoverClient {
     private static final ResourceLocation MOSTLY_CLEAR_SOURCE = ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "textures/environment/clouds_mostly_clear.png");
     private static final ResourceLocation CLOUDY_SOURCE = ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "textures/environment/clouds_cloudy.png");
     private static final float OVERCAST_RAIN = 0.8F;
-    private static final float TRANSITION_TICKS = 800.0F;
+    private static final int FAST_WINDOW_TICKS = 100;
 
     private static CloudCover received = CloudCover.PARTLY_CLOUDY;
     private static boolean snap = true;
@@ -51,9 +53,13 @@ public final class CloudCoverClient {
     private static float progress = 1.0F;
     private static float composedAmount = -1.0F;
     private static long version;
+    private static int ticks;
+    private static int fastUntil;
+    private static float transitionTicks = 800.0F;
 
-    public static void receive(CloudCover cover) {
+    public static void receive(CloudCover cover, boolean fast) {
         received = cover;
+        if (fast) fastUntil = ticks + FAST_WINDOW_TICKS;
         if (awaitingSync) {
             awaitingSync = false;
             loginCover = cover;
@@ -83,6 +89,7 @@ public final class CloudCoverClient {
         Minecraft minecraft = Minecraft.getInstance();
         ClientLevel level = minecraft.level;
         if (level == null || !loadSources(minecraft.getResourceManager())) return;
+        ticks++;
 
         CloudCover wanted = level.getLevelData().isRaining() ? CloudCover.CLOUDY : received;
         if (texture == null) {
@@ -105,19 +112,20 @@ public final class CloudCoverClient {
             System.arraycopy(composed, 0, from, 0, composed.length);
             fromOvercast = overcast();
             target = wanted;
-            progress = 0.0F;
+            transitionTicks = fadeSeconds(ticks < fastUntil) * 20.0F;
+            progress = transitionTicks <= 0.0F ? 1.0F : 0.0F;
             composedAmount = -1.0F;
         }
 
         if (!minecraft.isPaused() && progress < 1.0F) {
-            progress = Math.min(1.0F, progress + 1.0F / TRANSITION_TICKS);
+            progress = Math.min(1.0F, progress + 1.0F / transitionTicks);
         }
         float amount = eased();
         if (amount != composedAmount) {
             composedAmount = amount;
             compose(amount);
         }
-        VisualWeather.setOvercastRain(OVERCAST_RAIN * overcast());
+        VisualWeather.setOvercastRain(OVERCAST_RAIN * overcast(progress));
     }
 
     @SubscribeEvent
@@ -146,12 +154,33 @@ public final class CloudCoverClient {
         });
     }
 
+    private static float fadeSeconds(boolean fast) {
+        if (!SpicedCiderConfig.CLIENT_SPEC.isLoaded()) return fast ? 5.0F : 40.0F;
+        return fast ? SpicedCiderConfig.CLIENT.cloudCoverCommandFadeSeconds.get() : SpicedCiderConfig.CLIENT.cloudCoverFadeSeconds.get();
+    }
+
+    @SubscribeEvent
+    public static void onRenderFrame(RenderFrameEvent.Pre event) {
+        Minecraft minecraft = Minecraft.getInstance();
+        if (target == null || minecraft.level == null || progress >= 1.0F || minecraft.isPaused()) return;
+        float partial = event.getPartialTick().getGameTimeDeltaPartialTick(false);
+        VisualWeather.setOvercastRain(OVERCAST_RAIN * overcast(Math.min(1.0F, progress + partial / transitionTicks)));
+    }
+
     private static float overcast() {
-        return Mth.lerp(eased(), fromOvercast, target.overcast());
+        return overcast(progress);
+    }
+
+    private static float overcast(float at) {
+        return Mth.lerp(eased(at), fromOvercast, target.overcast());
     }
 
     private static float eased() {
-        return progress * progress * (3.0F - 2.0F * progress);
+        return eased(progress);
+    }
+
+    private static float eased(float at) {
+        return at * at * (3.0F - 2.0F * at);
     }
 
     private static void compose(float amount) {

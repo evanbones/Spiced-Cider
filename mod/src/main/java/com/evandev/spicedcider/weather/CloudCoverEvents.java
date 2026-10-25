@@ -33,7 +33,7 @@ public class CloudCoverEvents {
     public static void onLoggedIn(PlayerEvent.PlayerLoggedInEvent event) {
         if (event.getEntity() instanceof ServerPlayer player) {
             CloudCover cover = CloudCoverData.get(player.server.overworld()).cover();
-            PacketDistributor.sendToPlayer(player, new CloudCoverPayload(cover));
+            PacketDistributor.sendToPlayer(player, new CloudCoverPayload(cover, false));
         }
     }
 

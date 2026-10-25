@@ -69,5 +69,13 @@
 	# Default: 50
 	# Range: 0 ~ 100
 	voxyCaveFogDensity = 50
-	#Fades newly loaded or generated Voxy LoD terrain in from the fog colour, like Chunks Fade In does for normal chunks.
-	voxyFadeIn = true
+
+[weather]
+	#How many seconds clouds take to fade between cloud cover states when the weather changes naturally.
+	# Default: 40
+	# Range: 1 ~ 300
+	cloudCoverFadeSeconds = 40
+	#How many seconds clouds take to fade when the weather is changed with /weather. 0 switches instantly.
+	# Default: 5
+	# Range: 0 ~ 60
+	cloudCoverCommandFadeSeconds = 5

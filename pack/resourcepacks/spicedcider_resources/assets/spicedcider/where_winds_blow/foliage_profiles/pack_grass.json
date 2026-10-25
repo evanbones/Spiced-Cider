@@ -1,0 +1,17 @@
+{
+  "type": "grass",
+  "priority": 60,
+  "interactive": true,
+  "sway_start_height_multiplier": 0.25,
+  "sway_strength_multiplier": 1.15,
+  "interaction_strength_multiplier": 1.15,
+  "blocks": [
+    "abundant_atmosphere:cave_sprouts",
+    "abundant_atmosphere:short_cave_sprouts",
+    "abundant_atmosphere:rust_moss_sprouts",
+    "newworld:moss_sprouts",
+    "minecraft:warped_roots",
+    "minecraft:crimson_roots",
+    "minecraft:nether_sprouts"
+  ]
+}

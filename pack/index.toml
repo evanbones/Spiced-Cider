@@ -74,19 +74,27 @@ hash = "a8c0abba6dc195fcfdba6ef7e37982a59c9f62d167bb45132b3e9108b0e2abe1"
 
 [[files]]
 file = "config/amendments-client-1.toml.bak"
+hash = "15ab8b99195308891d3d13dcf91eb2e2ffe530d557057172474300ed03bb643f"
+
+[[files]]
+file = "config/amendments-client-2.toml.bak"
 hash = "5fab30f26876adc07811dabecc63dd5895964bf30ed0dcd8e17cfce4878527ef"
 
 [[files]]
 file = "config/amendments-client.toml"
-hash = "15ab8b99195308891d3d13dcf91eb2e2ffe530d557057172474300ed03bb643f"
+hash = "f54a23961483e439ecd4e4fd01bddaf11fff82a06af8e8afad430456de41f4de"
 
 [[files]]
 file = "config/amendments-common-1.toml.bak"
+hash = "952595e26ecbbfa8efb0be88fbd4a6463ab0d0652429a8c9f8cff8d66a8fd8f2"
+
+[[files]]
+file = "config/amendments-common-2.toml.bak"
 hash = "88a7589f5f621ab65ccf7445b1553206390ae7e89a99d04e129fdd195bb40feb"
 
 [[files]]
 file = "config/amendments-common.toml"
-hash = "952595e26ecbbfa8efb0be88fbd4a6463ab0d0652429a8c9f8cff8d66a8fd8f2"
+hash = "59692f8ceb1df631144bee3f472836f096de3af005040d128ec53bc7a2dbeb5a"
 
 [[files]]
 file = "config/apeeling-common.toml"
@@ -102,7 +110,7 @@ hash = "6c19539e05905c97a444a612dd2b597001244355cc9a59c25b3079cd4665731a"
 
 [[files]]
 file = "config/asyncparticles/asyncparticles-mixin.properties"
-hash = "c1f1cb9d8597b571bd163bb7a5deb0cd63a935e8e02a0705b50683202476354f"
+hash = "43c4956ac42e1526f176e3962cbc5b0c4fa5f0a915cf83a47ddda4da5c7efaba"
 
 [[files]]
 file = "config/asyncparticles/asyncparticles.json"
@@ -246,7 +254,7 @@ hash = "4bae7b08380558f4e00f45f9862e6cbfee07a199b5fc2123c112e965fbb65274"
 
 [[files]]
 file = "config/c2me.toml"
-hash = "0cae64238e1cea75915e26b71397bae766a73bf7c2fe746b47025b331a174a8e"
+hash = "fbdc33cab2fd7f0bf8c50623f71988a48b1ed71be03d6e44295bb1cf6f477527"
 
 [[files]]
 file = "config/capes.json5"
@@ -287,10 +295,6 @@ hash = "e198750061411cf7fca624e38b894ca104ca2cf2c2940da0409ce4240dcc2503"
 [[files]]
 file = "config/chatanimation.json"
 hash = "de5bb1061dcd48c3378f6849658940a465c3e094e5d6c342c5f73ea984da2a8b"
-
-[[files]]
-file = "config/chunksfadein.properties"
-hash = "df134a1b00fef46eefc251243bae276ed33543c5b800293730c390876a600f78"
 
 [[files]]
 file = "config/cirrus-client.json"
@@ -498,7 +502,7 @@ hash = "0030656736b21f06f9f5b73078ce3ea41778f0f744c9d5da0055712a493ced85"
 
 [[files]]
 file = "config/drippyloadingscreen/early_window_reference.properties"
-hash = "7ed4f6f322660eeb69aec9964a79ecb314dd573ceb29141775c8a3643681780d"
+hash = "6d5ef09f660ecb61475b0e79091a8ab877018847d6891a780a5754ec85eac2a2"
 
 [[files]]
 file = "config/drippyloadingscreen/options.txt"
@@ -670,7 +674,7 @@ hash = "09d330b29443d9579ecc014f2be2fcb31075bfe1e9f9ac4e750f271128650fe6"
 
 [[files]]
 file = "config/fabric/indigo-renderer.properties"
-hash = "6bbb1a9936f32176163c3cfebc0e7a6574f2bf4fc8755eb10dfd9e3aa54c5436"
+hash = "b2cb4633612b3ab96f5faaed410dd26b3eaa1d2b604ccf4274afe62516c94147"
 
 [[files]]
 file = "config/falling_snow.json"
@@ -758,7 +762,7 @@ hash = "e6c2348fd2f7f600ae1a9fa0b364c41307f5bee6ebe92fa7ddd5a0adced09b2c"
 
 [[files]]
 file = "config/fancymenu/assets/title_splashes.txt"
-hash = "43f0f62aee026ae0d0c2890440bbf9e4a546268ee47a2a161f969a422719fb6a"
+hash = "91ae7c05fd10e1bf9361215fbed37d37d2d78f82b02b13ea942e5c9a6c2af5e7"
 
 [[files]]
 file = "config/fancymenu/assets/window_icon.icns"
@@ -1117,6 +1121,14 @@ file = "config/lithostitched.json"
 hash = "ce8ab190281862b0554c92043c2bf8af106fbe4116bcd6dab433f6506781dbc0"
 
 [[files]]
+file = "config/livingwind-client.toml"
+hash = "2b0c29c00380883a952f2d062dcc3674784c86ffc9663a9f9d671a0ebf8d90d0"
+
+[[files]]
+file = "config/livingwind-common.toml"
+hash = "65ff0bcc95662568d0ff8b681290d9f478acb308d619571946bc38674a6cc3ab"
+
+[[files]]
 file = "config/lmft.json"
 hash = "7564aee7b7bf3477b71532d3fda3223c5455182d6b516850887184c4412e8c3d"
 
@@ -1222,11 +1234,11 @@ hash = "c28e2ad74fcae6ec7d2fa28341c0c732d8d11c455df77677a7c70d16052ba8cf"
 
 [[files]]
 file = "config/modulation.json"
-hash = "86315cfff496ecee873c3ae78a10d5dd13dd500993fa49a69f09bff3e37cbe15"
+hash = "8781715ba1b5bd4ba3cfa7fa197890186025719151dadfba485b51e65c7a6229"
 
 [[files]]
 file = "config/moonlight-client.toml"
-hash = "a1a6103b689aa57a26b20fb90ab6c558d58ff06f9f634c837db6c7adb30acfaa"
+hash = "2ad47e51d8d5d2edf386a748a6693ee1f71ef7e114ee9021a492833383c885d6"
 
 [[files]]
 file = "config/moonlight-common.toml"
@@ -1314,7 +1326,7 @@ hash = "804a6ac8ecdd21bf40d1b91ad050891f284a580cddc703c2553f3e28824c2a68"
 
 [[files]]
 file = "config/obe.json"
-hash = "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+hash = "2d0161eb53db3ff4cfb5f184109e8efc1aac4f39976ad85b370b0c476a1aa1c0"
 
 [[files]]
 file = "config/offgrid/common.toml"
@@ -3289,8 +3301,16 @@ file = "config/openloader/packs/spicedcider_data/data/create/recipe/crafting/app
 hash = "f87a36f527a1087d84a860efeb01b7060bb317623882cf13c4f82b69934cbbe5"
 
 [[files]]
+file = "config/openloader/packs/spicedcider_data/data/create/recipe/crafting/curiosities/peculiar_bell.json"
+hash = "7ab741f6f925dc19daa5a920e27154fcf7e0145b55f860cac0f2b0f8122373ad"
+
+[[files]]
 file = "config/openloader/packs/spicedcider_data/data/create/recipe/crafting/kinetics/chute.json"
 hash = "c2173e17798091707885835e38021f1a211d77a5ce7a7716263db7b3f806e2f6"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/create/recipe/crafting/kinetics/shaft.json"
+hash = "89fa787c8b2e26e23321b78c8d384971161b511c562c56d8f741eddad7ed32fd"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/create/recipe/crushing/aluminum_ore.json"
@@ -4734,7 +4754,7 @@ hash = "ba8ac1be065b17f59997623e8151557b75b54af78cebb0e96d636f990030d9ce"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/etcetera/recipe/handbell.json"
-hash = "5ef0cc41a4d4c2f61bd28b4760114f8e48b54f4408113e32c14a95650150e0c8"
+hash = "fd61882540900641200078a885508a364ba986efd118c9748858b5dfa731978f"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/etcetera/recipe/item_label.json"
@@ -4921,6 +4941,14 @@ file = "config/openloader/packs/spicedcider_data/data/infernalexp/worldgen/struc
 hash = "b71e91a5f21b0f635846e0e35b2f60dbfdad434ad92f339abf4582d00f6e9cf8"
 
 [[files]]
+file = "config/openloader/packs/spicedcider_data/data/livingwind/recipe/redstone_wind_vane.json"
+hash = "f6be6cc13ccd78098b31bb88cdc1a10b2d008afc2a0c8eedf7b30b674cbde94a"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/livingwind/recipe/redstone_windmill.json"
+hash = "fbc803a30ea941fa8ce0f15422edb46878bb47f41b6bfd2f273f3516b8975f74"
+
+[[files]]
 file = "config/openloader/packs/spicedcider_data/data/manual_labour/recipe/ladle.json"
 hash = "cfccbb0161763d516cfc599d534f1122a583b0db372cdc5a3278809e32af1f91"
 
@@ -5003,6 +5031,10 @@ hash = "24a06ebf010530d2669a1fd76d8fa9ed0bd097ddaa4ef2aa01c298099f66d347"
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/minecraft/recipe/hopper.json"
 hash = "c8de2d5ccc349022fd041ed65fdd037777ab62929db36ccf522c4fb984cca03d"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/minecraft/recipe/map.json"
+hash = "d9e746404dec64e3a4fa3181e16017858824f68cde783dc95c14d847fd413d8b"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/minecraft/recipe/minecart.json"
@@ -5150,7 +5182,7 @@ hash = "df01de14e886e534bf545cb7283dca552bdaccbe2038421cdadbdcc693545fdd"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/minecraft/tags/block/mineable/axe.json"
-hash = "a0e63a841786724fcfebd76902fb07139bcbe44d91e574182ed86c4d76e512a7"
+hash = "f5021f1173bc20682594719f3a9073b3c5ab9bdc8f08721bb6fa5be5c448e0a4"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/minecraft/tags/block/mineable/pickaxe.json"
@@ -5906,7 +5938,7 @@ hash = "e601918e6f2bd9ee4acea8bbe581cd6c3a89a4baecfc1d65e9c02efd1c507699"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/nomansland/recipe/building/straw_bed.json"
-hash = "0dddf531310a0f6f073d4ea6ff6b9d950bb43869cc5e6e6e242206b0552e244a"
+hash = "ae33789931c70d1f01172de449d0d0f500df8e09fa27d99843a67a2d6e22350d"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/nomansland/recipe/building/thatch_from_dried_grass.json"
@@ -6166,19 +6198,23 @@ hash = "2f121563ba02283a600e51c680e6dfa57d06de2d62b8b0cd72442738013d6266"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/quark/tags/worldgen/structure/birch_chest_structures.json"
-hash = "1033d8f6bf93106ea528ca1561f7e754edc6173a95b94847148afac7668395f3"
+hash = "cf42dc02dbfb3d7390294ea6e7bf1f71cf9407d4455d8b3ea918706d12e167df"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/quark/tags/worldgen/structure/cherry_chest_structures.json"
 hash = "2870a7166597e088f20649943fde9c7d84b3d620a7bcbb6c24659a3422b46179"
 
 [[files]]
+file = "config/openloader/packs/spicedcider_data/data/quark/tags/worldgen/structure/crimson_chest_structures.json"
+hash = "d547d0fc04a535ed190bc5cdf1fe6fef7fcd01e9e2fe0113746eb51b90cfaf3b"
+
+[[files]]
 file = "config/openloader/packs/spicedcider_data/data/quark/tags/worldgen/structure/dark_oak_chest_structures.json"
-hash = "2becc04aeb7450add9be8e9741c0bc95cc8f22c16530e3d83ed7856a7370061f"
+hash = "0109c570fa0032935faa44694cfa715b48652a78bc24ac099a79ea8d66d17e67"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/quark/tags/worldgen/structure/jungle_chest_structures.json"
-hash = "61b4a242ff9776bbab15e2baa8d2acfcc810114d02db61370c5e11a989bc8483"
+hash = "5bd033c4ca23be714016e331de242e605b29cca2bde31ad18935c9cc7a9fc8c8"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/quark/tags/worldgen/structure/nether_brick_chest_structures.json"
@@ -6186,11 +6222,15 @@ hash = "8bfe0d540f35495f7757b58488b40158a1bf369c08a42e541be6dc93858b1379"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/quark/tags/worldgen/structure/oak_chest_structures.json"
-hash = "5c9731fea8b283b0edcf7e692434d61edf6cecd3f3c578f907d4d8984e523b6c"
+hash = "c11f7c962f2ab70474f76268f52b0c090bb92d9ab852136522678fd81fb94d29"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/quark/tags/worldgen/structure/prismarine_chest_structures.json"
 hash = "0c61f0a2898b09a0e9550a1d24b70335fce85cab6d5979138caeae0670fe7712"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/quark/tags/worldgen/structure/purpur_chest_structures.json"
+hash = "e500659a401417fe71031475b9bea2e898ff002eb33ee82bc4d9edabe30b5537"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/quark/tags/worldgen/structure/soul_bead_target.json"
@@ -6198,7 +6238,11 @@ hash = "d51cb87c831bc9b18f1bb99a52571002d469706d04bc1d6c4730c9d172b42336"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/quark/tags/worldgen/structure/spruce_chest_structures.json"
-hash = "720ec049aeaf597c7fa364fce98fd17a2ed5db441929fafcee288d189df7ff69"
+hash = "d85379f83cea177142e3fb9b9aad03f0158d3e7a63daec080df13cbd8b54cc84"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/quark/tags/worldgen/structure/warped_chest_structures.json"
+hash = "8cc19a05a7f99acb0db9807fe85bf85c463814c00b0c6e88b4cadccb8227dfcd"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/reliable_gliders/recipe/glider.json"
@@ -9362,7 +9406,7 @@ hash = "13b2b1384f949e6e409c3c3cc423ecb854df6b386d4466d424a57a887e89f3d8"
 
 [[files]]
 file = "config/packetfixer.properties"
-hash = "034bf0c37690d2e372b7b79af76558920dff60690b42057635cd8c7da9382134"
+hash = "159657c21f076db899b5a89c433a3c257fe61da3e7b5a13e9e3bca48da90875c"
 
 [[files]]
 file = "config/particle_core_config.toml"
@@ -9378,7 +9422,7 @@ hash = "10f75ef386c1ecb715cb6e1bf98c4804f834b5d266af95ee112b9a4866ad4631"
 
 [[files]]
 file = "config/particlerain/particles.json"
-hash = "b6259f4689f529ea7e4262d43f618ac6913598d8c08f5bf07280ffb7cfbf5e4a"
+hash = "c9a43d4b0550aac595a400662161757488a7a9dfbaa6c117c706e5cd1bef2512"
 
 [[files]]
 file = "config/particular-common.toml"
@@ -11202,7 +11246,7 @@ hash = "b3d800d45a7b7eeb135664f5ed9058d345161124c57b3b494c10c75c6dda31fc"
 
 [[files]]
 file = "config/reliable_recipes/gotta_sort_these.json"
-hash = "c2a798b28a2165ae972e90c28bbe9d2c103ec7f0b7344b286e2dff429ce25687"
+hash = "f8a5680b451ea859ee2cc985fd7868ff7a365da2a3043cdc249a9647832ae277"
 
 [[files]]
 file = "config/reliable_recipes/replace_input.json"
@@ -11365,6 +11409,10 @@ file = "config/reliable_remover/mods/infernalexp.json"
 hash = "21ae15a13399c40d9b100795c8ec9c0264b44574c7d8561a16c069493f32dcd7"
 
 [[files]]
+file = "config/reliable_remover/mods/livingwind.json"
+hash = "745be4b7defbf392ef45e6eab7b3f09c811661928b664cdd3814997a3d49fe48"
+
+[[files]]
 file = "config/reliable_remover/mods/lodged.json"
 hash = "0fd2d7a86bf5f3032281c4152a853809a840458dc66b8a255089a4370e0212fd"
 
@@ -11374,7 +11422,7 @@ hash = "59e8634fdfb9b54564529316f9a2700a06f035550ee4fa299462e27936227c7f"
 
 [[files]]
 file = "config/reliable_remover/mods/minecraft.json"
-hash = "2d69783cd43b30b971afec9a51a251ecd19ac9e92d331c6eb38313963328864b"
+hash = "97f1bd6303cdf1b9aa07171c3d71f8ba3eaed6161fcc55b8196c6f882bfd7d10"
 
 [[files]]
 file = "config/reliable_remover/mods/modestmining.json"
@@ -11458,7 +11506,7 @@ hash = "2bfa3941eddda74d5c1b423037717bb4844beb2748f859b7649d50aa12d86d8f"
 
 [[files]]
 file = "config/reliable_remover/mods/supplementaries.json"
-hash = "dd22a0b943ceae7c933c2ddadc757c4fcbb65f5bf7f3ce207d4c030433e431ab"
+hash = "31449c1bb235a13236eaf53e3f8c8f6b649a019d0886004c46272d647cafbdbd"
 
 [[files]]
 file = "config/reliable_remover/mods/suppsquared.json"
@@ -11479,6 +11527,10 @@ hash = "b66df7962799047b15385aa0fc940a8f674241c58aec2022316675f1b1f9dc17"
 [[files]]
 file = "config/reliable_remover/mods/vista.json"
 hash = "0c5c5f62d3fbb4353af3cd450875c7291413d47a3beb675e94321def08df3868"
+
+[[files]]
+file = "config/reliable_remover/mods/where_winds_blow.json"
+hash = "bbebf44228e8929149f80255f848fa11dda8dca19580bac125c5c7f97210307c"
 
 [[files]]
 file = "config/reliable_remover/mods/woodworks.json"
@@ -11905,6 +11957,10 @@ file = "config/remi/stack_groups/heads.json"
 hash = "be84343e36b2124ab325da8f37158c2e072fc17e00713b811484d66200d314ed"
 
 [[files]]
+file = "config/remi/stack_groups/lanterns.json"
+hash = "67cebecff7a78b023b5c1a5a93300c2aec62d367ff8205bbdae523311878ebdd"
+
+[[files]]
 file = "config/remi/stack_groups/minecraft_bundles.json"
 hash = "c2f7ba66cacd9f2db1d2be2ac46ccb9865697e577123ae3a7b0640af413eb8e2"
 
@@ -12233,10 +12289,6 @@ file = "config/servercore/optimizations.yml"
 hash = "63ba7034fdf1f45f1b40798d3212f8d838f7c299fbe5795075fbafe1e2265192"
 
 [[files]]
-file = "config/shadowdrop-client.toml"
-hash = "29c323202dc39807be80a37f946cd163592ceb92f1eef944f30f1322e58acffe"
-
-[[files]]
 file = "config/shadowdrop.json"
 hash = "6d267b6d22a769884cbb0964c9e343a257f8637a9c81c03151d6ff0abfe27234"
 
@@ -12354,19 +12406,23 @@ hash = "20054029e0014a38add4a1f49f3709dab64de66cb5457277a774407952e66d88"
 
 [[files]]
 file = "config/spicedcider-client-1.toml.bak"
-hash = "74b0991bca601a745179e843daf929ebac46046ba70934edef80dabad03f00c4"
+hash = "5925a193ed7319bac9c707898260addf20f7fb7da23614ca1b6206ffc4b2da19"
 
 [[files]]
 file = "config/spicedcider-client-2.toml.bak"
-hash = "73cf3699674e6db2ca3e811de9d68ad7e9d8fb982b7b0f5bcb179855cde91bcb"
+hash = "74b0991bca601a745179e843daf929ebac46046ba70934edef80dabad03f00c4"
 
 [[files]]
 file = "config/spicedcider-client-3.toml.bak"
+hash = "73cf3699674e6db2ca3e811de9d68ad7e9d8fb982b7b0f5bcb179855cde91bcb"
+
+[[files]]
+file = "config/spicedcider-client-4.toml.bak"
 hash = "4bd40f96bc4a5d0aea588b68cc92bf20330ae8e8c8a11453b504d5a9b54ec5a0"
 
 [[files]]
 file = "config/spicedcider-client.toml"
-hash = "21dfaf66e73bc34876ca099f8269f9dd5059b3374b9620cc39bc4c67ae2293d5"
+hash = "1bac6570038ebef114b7c606e2e3aae30cab907f25db2abdc5b619ead657486c"
 
 [[files]]
 file = "config/spicedcider-common.toml"
@@ -12638,7 +12694,7 @@ hash = "8ba8caf036bac59033157842f7812cf3eca3434a02d2e7e59648214fe42c48fc"
 
 [[files]]
 file = "config/where_winds_blow-client.toml"
-hash = "298ccbf8ad3610f73842af1458a62b51302aeb5e73cff4b3b9b57ca9f60315e8"
+hash = "e9d2c0f76d07a4f82126d8ebcfe5bd7d873bef2f4878b32095152731adc5b776"
 
 [[files]]
 file = "config/where_winds_blow-common.toml"
@@ -12706,7 +12762,7 @@ hash = "d985bfc68899c91aa642736400472f6ab876dedaaef4b8c31f38b52d48de633d"
 
 [[files]]
 file = "config/zfastnoise.mixin.properties"
-hash = "89aa7a8b2c32a43d2ce5f1c5b36ebfe61c2413844359b0e995473ddb154da7e5"
+hash = "2ffe0b06e726114226c957365ab9631ae32ce14bd5d6c1af9a51b55c8c7e0c66"
 
 [[files]]
 file = "config/zipline.json"
@@ -12719,6 +12775,10 @@ hash = "a6129541e6767b3d7207befbf8203669c3b52e927b9d2b18f105e384a70af685"
 [[files]]
 file = "icon.png"
 hash = "079f5c8948d6ef6cbdf083e3f1029a562605f487be96f3728eeff588efadfde3"
+
+[[files]]
+file = "mods/LivingWind-NeoForge-1.21.1-v1.3.2.jar"
+hash = "4a154c6203ad42bfdad3804db3f53fef200486dee3200db9cf08e0621090e935"
 
 [[files]]
 file = "mods/abnormals-delight.pw.toml"
@@ -12771,7 +12831,7 @@ metafile = true
 
 [[files]]
 file = "mods/amendments.pw.toml"
-hash = "27bf52b4265eda868c46a325f3a86cec1db5ff24ffb808aed671972d51883792"
+hash = "8ae41d3a92b5eb712cbb0d8acfd9fa86a49fee510d3d029a592044bc5b959214"
 metafile = true
 
 [[files]]
@@ -12859,7 +12919,7 @@ metafile = true
 
 [[files]]
 file = "mods/big-brain.pw.toml"
-hash = "ee41e43ba1d67ed14e0cd649a82f84a06f20b4b878a62b4577895c44b057abfe"
+hash = "cdf00cb0eae1bca732849fbfcd43b65ce134d0af3c368257e97c440754ab0147"
 metafile = true
 
 [[files]]
@@ -12940,11 +13000,6 @@ metafile = true
 [[files]]
 file = "mods/chatanimation.pw.toml"
 hash = "fcfacd2acbc4c9d3e62406ff7d212412324dd7767a0fd2ff4f58c91ac51c8850"
-metafile = true
-
-[[files]]
-file = "mods/chunks-fade-in.pw.toml"
-hash = "9575467d028ab1fdc03c957b8932e3d6d45693a151061cc956ea827226d22bde"
 metafile = true
 
 [[files]]
@@ -13561,7 +13616,7 @@ metafile = true
 
 [[files]]
 file = "mods/polytone.pw.toml"
-hash = "29914d94d11003d03891c86eafbb178ba5c3f91c2833f8cca2c2f9e00d50de2f"
+hash = "0bd2c04284e7e002ee68ba7109284fce150ef7672593a6d6126f47ab0a06c6ee"
 metafile = true
 
 [[files]]
@@ -13650,7 +13705,7 @@ metafile = true
 
 [[files]]
 file = "mods/reliable-recipes.pw.toml"
-hash = "e473c109dedd56f922862a6bb5bf05e09339cf580967c9bfb0daafc61c289c3e"
+hash = "2e6827fc1cef6837bda3a621da32a6e794584cc1e7ad73581453e03f9df60c10"
 metafile = true
 
 [[files]]
@@ -13789,7 +13844,7 @@ metafile = true
 
 [[files]]
 file = "mods/spicedcider-1.0.0.jar"
-hash = "9e1ee726466600055900698b90a00019d4574fed2b196e682ca80f925c1da5dd"
+hash = "5fa940aef10c6dd2fedd0480492795f1b06e1b3636cdadbd327abb6cbe43bb24"
 
 [[files]]
 file = "mods/stacksizetweaks.pw.toml"
@@ -13928,6 +13983,11 @@ metafile = true
 [[files]]
 file = "mods/wavey-capes.pw.toml"
 hash = "215ae0d445df462bd276febe9a4cf7cdd0342ff055d7570fa93d6c87c30c0a3e"
+metafile = true
+
+[[files]]
+file = "mods/where-winds-blow.pw.toml"
+hash = "3076b4a06b0da48e20b4698adc0f0d786a98f699955d929c49a2830cc3ceb9db"
 metafile = true
 
 [[files]]
@@ -14369,11 +14429,11 @@ hash = "9ccc5d8c32a9c3872d14ddff4d04b2ec036982ba470227950a13816fcba21016"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/alloyed/textures/item/steel_axe.png"
-hash = "583d984701e0821e7092a6945698c969aa5f92e54281c41d63a4ecd0e911ba2c"
+hash = "3b7ae867efdc981d23f055654c2a540b14f5531692ad91558cf89226979c70e2"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/alloyed/textures/item/steel_hoe.png"
-hash = "fc33f1842471f3a46f78f3bb6252494a52b2d66c4dd62a126d37c4a897ef8c25"
+hash = "74741251eaa21856b38165fa0d8df77afa4f455291b41135148e1fb48d686231"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/alloyed/textures/item/steel_ingot.png"
@@ -14381,7 +14441,7 @@ hash = "528836f708d361ffdd0aef7d7c4c60e244763680d8825c5d0a23a786ba467a78"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/alloyed/textures/item/steel_knife.png"
-hash = "8945040ba29482b09471734bdf5a498506eba34d66b2bd06eeb81439c9d9cf21"
+hash = "441f9c7607ca3b61b38f5e0f409d5ef38457c114d428fa0e348ee8687f14e294"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/alloyed/textures/item/steel_nugget.png"
@@ -14389,11 +14449,11 @@ hash = "c552cb0f9ef9c818b1aadf8ed326b13a0bb566e463a5ccf4202cf561031d4759"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/alloyed/textures/item/steel_pickaxe.png"
-hash = "07e5409df08bba386396a17b5b5bffc46e6391c558a2f85e3b730eb0f48c16e5"
+hash = "c33e64d49d2929311ac2bc47ac486836d8cf43ec369ae6c1aabb91fc01710433"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/alloyed/textures/item/steel_shears.png"
-hash = "86e645c7954203ffdeeadc9fc7f28d4d8c0b3208e26cf91780cb7e40b3dc0e91"
+hash = "b7ae229295bcc3c1cd64d30da52bb2d02991d9e89e51f78c2cafb4b2e78edd7a"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/alloyed/textures/item/steel_sheet.png"
@@ -14401,11 +14461,11 @@ hash = "fae1dd88ceea896fcdadeafdb6e93c261876dd229e78107b1e34be5f2107c2d7"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/alloyed/textures/item/steel_shovel.png"
-hash = "2ab058dcfee67e8537436e5e1b0ee143cebf89e4b87f6c76f43810880c621fa1"
+hash = "23599c8d04471c6981bfc41d0ec47e9b9323ec1c1633dedf1d2415f6d4c928de"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/alloyed/textures/item/steel_sword.png"
-hash = "aaa706499fa2bb04ba0e0cad3601e24e3463209dc0dba76322f52df88ee6f55b"
+hash = "1273a36c6daab3c36a763cfa9c98f5cc800dd7ec9860fab1f2606e20795be3a2"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/amendments/lang/en_us.json"
@@ -14704,6 +14764,10 @@ file = "resourcepacks/spicedcider_resources/assets/blockbox/lang/en_us.json"
 hash = "0446af08549e9e12240e6b4160641b7324143323e6ca9e504f2b44ab4ddd86ab"
 
 [[files]]
+file = "resourcepacks/spicedcider_resources/assets/blockbox/models/item/rough_glass_pane.json"
+hash = "7b5ad67b79db7e6f158e27378a5a561ed9e80c3fbe07870ef217316c4b0d390e"
+
+[[files]]
 file = "resourcepacks/spicedcider_resources/assets/blockbox/textures/block/copper_bars.png"
 hash = "e2f00fe1ab9f8d759c92eef02b58fdcf10b322ad39e4c387140130da91f8eaa4"
 
@@ -14758,6 +14822,14 @@ hash = "b828573dff00aebbfdf5898f91b42b5d99658855cf72cca8010d272a00726f65"
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/bountifulfares/models/block/pear_fruit.png"
 hash = "77ae2a329ed160d3eacf38fb0390b58673edd0b4df3e595b25802a70788b2601"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/bountifulfares/models/block/tinged_glass.json"
+hash = "8eccdd6b2c5bf8a3dbc3cff3365fb364847c437e26c61582b73d4a8346cec102"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/bountifulfares/models/item/tinged_glass.json"
+hash = "0656d5de4892a5e93fefec48ba479818e355cb02db69ac1587b4f620849f865f"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/bountifulfares/structure/apple.nbt"
@@ -15120,12 +15192,120 @@ file = "resourcepacks/spicedcider_resources/assets/caverns_and_chasms/lang/en_us
 hash = "d817c2f694fc8b26c9d353836396fc00b4c81b72dcb015c47ecd317c25c1eee1"
 
 [[files]]
+file = "resourcepacks/spicedcider_resources/assets/caverns_and_chasms/models/block/float_glass.json"
+hash = "265e9b5acbf2e8315502e50e60145d1c27edf6d4b624fb0cad953a5c308dbe74"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/caverns_and_chasms/models/block/float_glass_pane_noside.json"
+hash = "b5bbe7ead8cb153a114f8775ece0fac1b3d3f68c8f4d80c2777f47156971ece6"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/caverns_and_chasms/models/block/float_glass_pane_noside_alt.json"
+hash = "4e8999f8c746f0f8419a0c276fa4f444ec73521d1a12602dc8976a31023c8225"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/caverns_and_chasms/models/block/float_glass_pane_post.json"
+hash = "bc628e9119eeb9f063081f4aa829271d679a5970a259fac878d164c1c4f26522"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/caverns_and_chasms/models/block/float_glass_pane_side.json"
+hash = "9098ffb29401e52f1f515ceed3bab4c99703c5a514ff5e970b29f7bee8c41e9e"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/caverns_and_chasms/models/block/float_glass_pane_side_alt.json"
+hash = "664947f2a8e27d0d0e88999fd6d3dc1318642958098df9bf1ec580c6dbf2cd3c"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/caverns_and_chasms/models/block/frosted_glass.json"
+hash = "cc7a797f82ad3a20f2ad8f8e91a53f84ace227b167ecae0e0eeb995880963141"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/caverns_and_chasms/models/block/frosted_glass_pane_noside.json"
+hash = "7fada70566337eb5b4b4652c92bcda42db95eb3a25d2e630f72fab6eb84edd72"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/caverns_and_chasms/models/block/frosted_glass_pane_noside_alt.json"
+hash = "3860ee8335929f0b3697eda233cc220ce07c6245e660419d98a7427c60ba0343"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/caverns_and_chasms/models/block/frosted_glass_pane_post.json"
+hash = "3894fb080abb1954e2451228bf38f0dba01cb32d0cc014f6db6bb65b2031b6c6"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/caverns_and_chasms/models/block/frosted_glass_pane_side.json"
+hash = "23372370aad6e6b3f8bc06d954561c201deba3d292a284d00b23464585f0a3d5"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/caverns_and_chasms/models/block/frosted_glass_pane_side_alt.json"
+hash = "a1f140da0fc824749e98c0e99d6fb0d0679ca074ed06aa55f6d599a9414c394d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/caverns_and_chasms/models/block/ornate_glass.json"
+hash = "31c2a0a32db86f0dcf17435fbeed64cc77b97c14ab9c06a7181d4764337c757e"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/caverns_and_chasms/models/block/ornate_glass_pane_noside.json"
+hash = "64b73583396c38ce1b030adb6a4e200912cd3c9ea38d32bac44184b438a68fb1"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/caverns_and_chasms/models/block/ornate_glass_pane_noside_alt.json"
+hash = "be5a0161a76daabe5349666509a45179f027566fe730d17647171c9eb868dea3"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/caverns_and_chasms/models/block/ornate_glass_pane_post.json"
+hash = "ca6ff156ce67f9636a57a1a7a558bd556274c1dc64c40a74b9981c74d54b9c94"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/caverns_and_chasms/models/block/ornate_glass_pane_side.json"
+hash = "71df34a78099f0869f50aa015ba927137ac2a9351b84eb80b40e073098e44bc4"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/caverns_and_chasms/models/block/ornate_glass_pane_side_alt.json"
+hash = "0b806f361bf19b2f8a90482f9e19e4f302303bf3aafc1fe54fcfd46a21daf00b"
+
+[[files]]
 file = "resourcepacks/spicedcider_resources/assets/caverns_and_chasms/models/item/cupric_torch.json"
 hash = "f642bd8e70b429abd5a48772790600eef16812d28f8137e45d8c30e7564ea1f7"
 
 [[files]]
+file = "resourcepacks/spicedcider_resources/assets/caverns_and_chasms/models/item/float_glass.json"
+hash = "249eb7c41bff916a5e4c9ad0463f523d138684dfd246c324dad1dbbcb6b09edf"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/caverns_and_chasms/models/item/float_glass_pane.json"
+hash = "0bd90864bef6a2b979664f35fd6f59b666ccc12315a3bb44bfe342f44ff43762"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/caverns_and_chasms/models/item/frosted_glass.json"
+hash = "621a327371952f5f018e87ffc23d9f19708f1c93dd1a099f6311a91245759ab5"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/caverns_and_chasms/models/item/frosted_glass_pane.json"
+hash = "a0683866dd9d2db62010aa673f7608bd2cc01b45772f3bb07106a0defbd68891"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/caverns_and_chasms/models/item/ornate_glass.json"
+hash = "c900950813edb523eb85c5a0e1b43b804147e98dbc9187c64b4c94baf210a5ce"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/caverns_and_chasms/models/item/ornate_glass_pane.json"
+hash = "a255a2136351d75e5f9c78cd73eb2b1a5850e86356d7dc13a475feaac964fafe"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/caverns_and_chasms/models/item/refractor.json"
+hash = "a131ffc7ea596f01715fe0316dfb093f6966772689c722d8c2b3294f0f109c5c"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/caverns_and_chasms/models/item/resistor.json"
+hash = "965c1563e9dbe27bbbe3cd35c493f00aab22607f2d788c530f6922ab14462b71"
+
+[[files]]
 file = "resourcepacks/spicedcider_resources/assets/caverns_and_chasms/models/item/tin_bars.json"
 hash = "3f83df9221b936f19591335a8efa0fab6a8596dbbe008e96dfd09d0b5a3a8f6f"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/caverns_and_chasms/textures/block/bouncer.png"
+hash = "aa87b079fd535908def2c29e2d5f15c8e8392af9ddb111281be2dfa340b89dee"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/caverns_and_chasms/textures/block/cobblestone_tiles.png"
@@ -15269,7 +15449,7 @@ hash = "fb5296de9584584637deeb5ce2510db1d3d05cd8d6838bd7b174a12d28631236"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/caverns_and_chasms/textures/item/silver_ingot.png"
-hash = "94e2ac09f02361e58f24f93d23e11e95f33a4bfb7032ec18d92a3db95bebb141"
+hash = "5e6d78a602f7674f7cbb35174b832470f1e9de59318df44ffdc94da35e7140e8"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/caverns_and_chasms/textures/item/silver_pickaxe.png"
@@ -15516,6 +15696,890 @@ file = "resourcepacks/spicedcider_resources/assets/clayworks/lang/en_us.json"
 hash = "2bdea560889c686c06ba597ad5dd6d95b25b3ba490af13ee01f1e58080698a46"
 
 [[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/black_stained_glass_door_bottom_left.json"
+hash = "e378822dde607e84d075ddea0e1656493ce02a4d55ad6705f08b09d2423babc2"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/black_stained_glass_door_bottom_left_open.json"
+hash = "7d3df65291b256f0c62339f9e94ed287634c2f11e02bf97ca095a999d6e9cb9b"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/black_stained_glass_door_bottom_right.json"
+hash = "ce6efe9b623693333cff2a08e60be2141b5f9d8b84d971f04cb947a440adde71"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/black_stained_glass_door_bottom_right_open.json"
+hash = "e7df1e8e552af92f1040dbbd367ee845e3ae2983e456c2e1280a6cbbe1c12f82"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/black_stained_glass_door_top_left.json"
+hash = "48997044b21784f07722fafc14e8b9e650697bc2f35ff821ce3c9dcf6075a89a"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/black_stained_glass_door_top_left_open.json"
+hash = "b405b42e171398039e93717ab48096e19375f35e439b669b4832892868fcefee"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/black_stained_glass_door_top_right.json"
+hash = "79e3a040be65c9e8866322b8369e4ba76faa08e03ca6a22cd3da58c51e5e8e77"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/black_stained_glass_door_top_right_open.json"
+hash = "c1aa92a90bab06e6cd578b52b9b2ca97670909d462ad262c820dcab3fec71280"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/black_stained_glass_trapdoor_bottom.json"
+hash = "bf1d8525961802d79584d3a5a28d43ae1b3e7afece7b94f2b187d7601ad4b480"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/black_stained_glass_trapdoor_open.json"
+hash = "82f27e2ada2a836834020845c20ca83302dcd0d8b334049a361255c254232d35"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/black_stained_glass_trapdoor_top.json"
+hash = "7456599e43dfeec52ec970e30d54240ce84ed6afb8552135e56003253f61ed5f"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/blue_stained_glass_door_bottom_left.json"
+hash = "382059e323b2b71c0b7d3968190288e357dad46e4577624c451b0c30c68fc15e"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/blue_stained_glass_door_bottom_left_open.json"
+hash = "7f46f1c979cdba94448084e223a41871a6e8713cd6c04902b55bab7374cf0468"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/blue_stained_glass_door_bottom_right.json"
+hash = "878f2a9ee36e5ec3b2a8c42c444b3f8104124714a515ee428409948aceb66444"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/blue_stained_glass_door_bottom_right_open.json"
+hash = "ecc9b0e1764046686cf2a9c2a1cfd235e85ef8c49be5d955a56be5724df938c7"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/blue_stained_glass_door_top_left.json"
+hash = "1d9dea619bfee16567a6402d458be6d09f04d1104d5822eda1b8a1e6c6b6d75f"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/blue_stained_glass_door_top_left_open.json"
+hash = "afcbc4d44f91ad9d16cfab2ae196230dae1c12f04c6d4738e80b7a83998029ce"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/blue_stained_glass_door_top_right.json"
+hash = "8b2f1970721e1adf1bd8bd64afdb588cf59d24592257ae7a4d888050f791e6a4"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/blue_stained_glass_door_top_right_open.json"
+hash = "98464f29333adcf03cc9daf40a8ebdb647dfe515b14d99eb9fa69d442e400084"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/blue_stained_glass_trapdoor_bottom.json"
+hash = "21928b02cda075922c929cb83b10b89b66df530130748ec019afc414b919d338"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/blue_stained_glass_trapdoor_open.json"
+hash = "5055887c1a5838206c43c59cf6e28929d1adbdb85aa716fd180476d2f1821bec"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/blue_stained_glass_trapdoor_top.json"
+hash = "0517d01346c33a393547e72d09d24b495ffeadf8fd74489d0a8003a45c52c095"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/brown_stained_glass_door_bottom_left.json"
+hash = "2fbb5f02da58bf6ade22bf5fd2278609d4c71a97a03453044f207c5ab70dc726"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/brown_stained_glass_door_bottom_left_open.json"
+hash = "1a94762a8f20227671e1b61bd6ab5c45345219f4368cd24e9d80b10054c124e5"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/brown_stained_glass_door_bottom_right.json"
+hash = "97c6cb76790960172e4d2e6668dca065074e0ca7aa3d9220dab021f39bd161b7"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/brown_stained_glass_door_bottom_right_open.json"
+hash = "0ac3eaab19bb93ff398cc78c2768415957768e2577f929e3c8e1459f7f337f49"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/brown_stained_glass_door_top_left.json"
+hash = "30f0cd6dbcd5bc8f8637b854ed5da29d90b2b827e4ff354e6a64b420da1283b5"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/brown_stained_glass_door_top_left_open.json"
+hash = "a0eacb1d8d2d76e2ac914ca3728e89784265b9d0373dc2436d1100505a1a3115"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/brown_stained_glass_door_top_right.json"
+hash = "0b2878970f3c804a47183a268efaec92365b31e0e2c90dbb8c40d60cec0d6e7c"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/brown_stained_glass_door_top_right_open.json"
+hash = "1f814b6d961a0e805ed4430de1652cbbb5d6231cb9859eb8313f2366139972e7"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/brown_stained_glass_trapdoor_bottom.json"
+hash = "1e2beae648019c2e66f5f97233316c6f0c43b54b414c0ef88cccce22004b4c4b"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/brown_stained_glass_trapdoor_open.json"
+hash = "67c761b247833f28337711f83775aee7f0d035a2f18344ed5b97b5d082a6226a"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/brown_stained_glass_trapdoor_top.json"
+hash = "e9357c13a8365f0c2c3174c29f72c7e3523e176980ee9834240b0551460a1e60"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/cyan_stained_glass_door_bottom_left.json"
+hash = "e6708174574847b5690842aa2872e9fee8f79d874205f2ba1ae0f238cc18d4c3"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/cyan_stained_glass_door_bottom_left_open.json"
+hash = "17d33408f622cdc7fbfa7d4f0158e0cf7b9145499ce9fdc6f92be6f1f02f8838"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/cyan_stained_glass_door_bottom_right.json"
+hash = "b6c7acfc8fcdafa3b57339078aa4ea5910a8991c87fe274eb62138bb436d2fc5"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/cyan_stained_glass_door_bottom_right_open.json"
+hash = "73db51bcd86ac9c32d87cc670a96a4e0cf252e4671ef102338e0a8e764b4a0bf"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/cyan_stained_glass_door_top_left.json"
+hash = "7a571a0772f901b68536b1605119ded20372fe2219f1ef0f0ae94c90c5a258f7"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/cyan_stained_glass_door_top_left_open.json"
+hash = "2615a42b230c47b5efa884e803648d6e2ebd5f6e5318a42315d2bb8ffb941212"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/cyan_stained_glass_door_top_right.json"
+hash = "7e772db7b4aa921e6cc56d16362110ced429598934fe112a7d67810265d4d2c1"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/cyan_stained_glass_door_top_right_open.json"
+hash = "8c139c5e2554359276b5d5651d14d5816bbe2e9abeba0efc2ea8182b8a947f7f"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/cyan_stained_glass_trapdoor_bottom.json"
+hash = "2df1fd677cf834aebc26440954a1adcfbb5c7d8aa3ed6480b475ac0459d081bf"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/cyan_stained_glass_trapdoor_open.json"
+hash = "4be9293b2c4eaf507d9803dbc1472f07170b62349bdab22510cea65e7d0a4847"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/cyan_stained_glass_trapdoor_top.json"
+hash = "505c4932d7c4e4ae21150b604b39c4523793990aac56293fa4a38f0b289417f5"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/glass_door_bottom_left.json"
+hash = "7b21ba62f0a22e6903289b3c73d794b2c1f188eab69839aabd20312f5a0fc915"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/glass_door_bottom_left_open.json"
+hash = "310c314d01f1b4cc83d2bb3b01bc39ba4772b31c41e4e4a06c06bbcf9916087f"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/glass_door_bottom_right.json"
+hash = "ec76ae70dde998b6fedb47625c835a52648f06fc872bc2c61d201fe1fdac807c"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/glass_door_bottom_right_open.json"
+hash = "fb843215735c016b3b3d6942ca7f4d127c280bbab06234941ecf4655796fbdd9"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/glass_door_top_left.json"
+hash = "d3e2d71b1321208d6a035559b2ab04d2c6216d872709d0354c5cda18e8e168d0"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/glass_door_top_left_open.json"
+hash = "27a20fdcd7de4761cd62e8eb94824aaa918ee0f722ab6c79d9846112f0cddae3"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/glass_door_top_right.json"
+hash = "9729839a0ecd788337035037596dcdcf69ea1e4ffaf5cc8a98bc2273683e7e3f"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/glass_door_top_right_open.json"
+hash = "14e873d18001cc1bb181c8260b6d8fc6640bfbe28251d9b3674bd8d2313fb65e"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/glass_trapdoor_bottom.json"
+hash = "c82026a3534dda849e46bf612b458728e417b18c4a67851aed08577517d01885"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/glass_trapdoor_open.json"
+hash = "9eeea6611a7c3438c623a6e0a92f18e0e720709ce4874951541c3c9026ea3a7f"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/glass_trapdoor_top.json"
+hash = "0a978cb353d733347455e2de55e21fcdf05ed8423e5330019f78312c4b27abe0"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/gray_stained_glass_door_bottom_left.json"
+hash = "9f781bdb4ae246a0df32bf0582d3cc7bdc65a44ad97431a51d979617e5182308"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/gray_stained_glass_door_bottom_left_open.json"
+hash = "175a020b2bd1af0c9bd945e896acb90cb8b21f48255522fe3acf3e2462a8c106"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/gray_stained_glass_door_bottom_right.json"
+hash = "3b236a2dd2c9a94d4bedcb32ad1341360d5ac5c01be6d6ecaefebbfb0a3ff867"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/gray_stained_glass_door_bottom_right_open.json"
+hash = "3613705f1719949c9467d83d547799f7d678dd8e70b6777744ef95900cff70c7"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/gray_stained_glass_door_top_left.json"
+hash = "123f70389b40da4dc386e7b9aa6ae2317f417e1e3f08a17ad747ced4838f5523"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/gray_stained_glass_door_top_left_open.json"
+hash = "463fe5d250b989b8c6238bd1dd3f920c16015a0ae47fdcc57b099100ba4bbeb2"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/gray_stained_glass_door_top_right.json"
+hash = "5325189783fc68c5c1026f8acab2d60b2c903801cd8d5088f8b2f3b7bb7bb9e2"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/gray_stained_glass_door_top_right_open.json"
+hash = "1fdc88ba40c39b8454aa461d567aebe67794ca275a3d6e47a3c60935d6536438"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/gray_stained_glass_trapdoor_bottom.json"
+hash = "1be847b3e7c9e500f4e30cc455b850d4f0eb039f280a0c2ead4164a1d96273b7"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/gray_stained_glass_trapdoor_open.json"
+hash = "6057267a910b4ffe41d9432357b45292b9f17cec3c57d9787c9c2a61a05a60a6"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/gray_stained_glass_trapdoor_top.json"
+hash = "36cad90c11e72d5b3bed83754649907ad6c2b93c63e54101350bf3f41dd3628b"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/green_stained_glass_door_bottom_left.json"
+hash = "ed647272ffa0a5537aedecef15084e2d2e7e11987c2cd70af596724ca9ae8ba9"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/green_stained_glass_door_bottom_left_open.json"
+hash = "b2bd8e4dd9446b059e4bbe9667708a56699a5f90ee8200439b173f4ab8e9a7e3"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/green_stained_glass_door_bottom_right.json"
+hash = "7e8dbad7e8cfdc7a3c3e334cb7a59099da8368b1983f9543821ea618b6c8d60e"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/green_stained_glass_door_bottom_right_open.json"
+hash = "1a42531a59e4f7579587a3d52b9156f3cd4960b73cf0db592031990a06ec3100"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/green_stained_glass_door_top_left.json"
+hash = "582873679310217b5e2b288439b0ffef9b36d68cbf3096159a56c9774f29d61a"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/green_stained_glass_door_top_left_open.json"
+hash = "c3d4aa4b9e9661af13a2daedd855c8d48cb4f7dd7c03ad5056a4e4b63073c228"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/green_stained_glass_door_top_right.json"
+hash = "b8ea536c32c2511735afdba4a351024067e83cb4798c67dc37e630705bc7c17b"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/green_stained_glass_door_top_right_open.json"
+hash = "6ea0b59659353525c1b3ecdb13b589859df6ca559e611ac23fcd810f6e5fbc1a"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/green_stained_glass_trapdoor_bottom.json"
+hash = "d8b4d7dca01051e8bc14a3435c34ad06955264062f6fa1df89cffd672f3b9f61"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/green_stained_glass_trapdoor_open.json"
+hash = "cfff286b58d952c40c5925b3bd91dbb83c55076757c2379ffb6d252445ba7218"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/green_stained_glass_trapdoor_top.json"
+hash = "2e342a48abcec2c927d2565bf1b7e42616e37cf6a7a8fc84968bb26f449e0593"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/light_blue_stained_glass_door_bottom_left.json"
+hash = "574a45284a209221e7c08b48c6f4d8c78af30ca641da8a9650a548010d6b67ed"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/light_blue_stained_glass_door_bottom_left_open.json"
+hash = "297a0e60e10942e603856b5232d69969bd90840ab9cd1e9e3ee87534ed460283"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/light_blue_stained_glass_door_bottom_right.json"
+hash = "f8527abaca0397afb2e5e8ca3ead787991891b9712e2443a8a8f8b488d66ed44"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/light_blue_stained_glass_door_bottom_right_open.json"
+hash = "a9c5d3ec852a52f10ed9452f73758cd9a2d4fa79d31e583e097b20adcac22aa0"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/light_blue_stained_glass_door_top_left.json"
+hash = "b2f29b0edd42038444e6ae8fdecdb021161d0a8a9857233a093c6657f9b86f13"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/light_blue_stained_glass_door_top_left_open.json"
+hash = "5e498897eead44718e0ea9c4de7cd42394e3651c3b73cb625a8075786ed4e0b6"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/light_blue_stained_glass_door_top_right.json"
+hash = "7dc23ae37a34cd88409880cb261ddd6476b641fda57cd8c54c7a8a6bc9a2466f"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/light_blue_stained_glass_door_top_right_open.json"
+hash = "cd8b7d35cdd2e8de77704cf57c8462c8e4960d14fe43aa513944b8764edcb847"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/light_blue_stained_glass_trapdoor_bottom.json"
+hash = "30fc29df08b037cca768271d9b5d0b368dc5ef52a2bafee0900ed71b872568a1"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/light_blue_stained_glass_trapdoor_open.json"
+hash = "001aa2490c063d8a4da6de36d1cbd95235377b03b681a76ca199910880972e6a"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/light_blue_stained_glass_trapdoor_top.json"
+hash = "165ac9cb59b13176f75dd9e09ee090167c06e32239b14120db3705928d2465bd"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/light_gray_stained_glass_door_bottom_left.json"
+hash = "146bbcf83f9ffdf397d899f33e410b198866f7b607ed428a885d04ae0e8f0117"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/light_gray_stained_glass_door_bottom_left_open.json"
+hash = "94a61df57cf1731d5d7f22cfc6a3869375708543b68da81c2aae2743636fd7c9"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/light_gray_stained_glass_door_bottom_right.json"
+hash = "b425a318ab3aad3a4247e08642f35e5a9fb5aaaf4082b4cd4ecd6b53c1076af2"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/light_gray_stained_glass_door_bottom_right_open.json"
+hash = "7f04672d17e3626313ac4d41abff7dafef2ea4398738dad24b6261f79534f9d4"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/light_gray_stained_glass_door_top_left.json"
+hash = "03000ebd12778270f06e2a4a68b851cbf18be6fb0eb50faa0eabd490f9baaaed"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/light_gray_stained_glass_door_top_left_open.json"
+hash = "e85e603d4cc73a9deae2d8cc536f0ccad793ec03da72ff9b49f99f2a399dbf31"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/light_gray_stained_glass_door_top_right.json"
+hash = "36085f62b0beee92c914406b4a7abbf7c048e12da570c3a02d1d30ca28c63296"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/light_gray_stained_glass_door_top_right_open.json"
+hash = "cd162099024022ee76a9f543919aceab1e281fe5c75eacbffa78324f1e295895"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/light_gray_stained_glass_trapdoor_bottom.json"
+hash = "f50ff20e3f7e34c41f8d9eb6dda77d289d9cd85735b320c7e8c0689f6d18c3fd"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/light_gray_stained_glass_trapdoor_open.json"
+hash = "f66252484fa3fcf66d5dc7b014d655cf5c40acddae5252dbcf81a409c45b042b"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/light_gray_stained_glass_trapdoor_top.json"
+hash = "a0c07b355678d026b8ee17c38c99b90df73467a30cd08e67d82647f449754e5d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/lime_stained_glass_door_bottom_left.json"
+hash = "6dd33f83349592d4c917cbe69c77bf14b4185b08640861b39ff70746eb059978"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/lime_stained_glass_door_bottom_left_open.json"
+hash = "55f53d580ff1d8b75b52e7706403db9ee4ad3b2f48a690fd0e4ef508d4b9dbaa"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/lime_stained_glass_door_bottom_right.json"
+hash = "4a6b10642a905295783dde5f9c4ed0ee4e5512bafd6793eb8b8755db5ec5e7f9"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/lime_stained_glass_door_bottom_right_open.json"
+hash = "9bac9ca87afa5a3c225a3c153b371c623f4930bf959a065080b0fcda925785fa"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/lime_stained_glass_door_top_left.json"
+hash = "ecaccb44c69543ad678323e4851e2bdd666c7e9914c3d12a5ef5d84b2e174dbe"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/lime_stained_glass_door_top_left_open.json"
+hash = "81124e51ed2ae0661ec785f778e28210a574bedae18956410c7648a88e752eca"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/lime_stained_glass_door_top_right.json"
+hash = "008b38217357d7dbbb2a532a98f4f39db050733c38788e8c043a15f737cc58a9"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/lime_stained_glass_door_top_right_open.json"
+hash = "ed0a305a774fad020b88edfb526bcec8c9f9192e0f0afcbb375635414081781d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/lime_stained_glass_trapdoor_bottom.json"
+hash = "c67363eb100e3b03155f60c902224bfde0f3ddda8e883988a7e6d97befffa2dc"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/lime_stained_glass_trapdoor_open.json"
+hash = "f0fa48d66e66b992eb5622eb127e9d46638e451f766885115069a03143c80534"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/lime_stained_glass_trapdoor_top.json"
+hash = "7020dc76080a16aead42fa7d7e40f3f1fdf14323b7ea9c99a7aa7b865ec608dc"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/magenta_stained_glass_door_bottom_left.json"
+hash = "629269852d8d4c9ecdff760ea9e9bfcf2af0a3033018446ac78d5bc833964842"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/magenta_stained_glass_door_bottom_left_open.json"
+hash = "a3160161649c551c762a18665fd3ae69f4eddeac3a3455e21d3031d2a4e7af8a"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/magenta_stained_glass_door_bottom_right.json"
+hash = "0ac86388d38ec6e12534dfb629c63fe94d79e8e9b6768cd2411c02075fed2816"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/magenta_stained_glass_door_bottom_right_open.json"
+hash = "38c9ccd76bd7dd78eaf6f7e3bffda3c54f86b98359997355f61f04881054b3cb"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/magenta_stained_glass_door_top_left.json"
+hash = "2f0041d21e179d71ee665c751f5b44f5e9fb3583d611fe03911af041dc1f9392"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/magenta_stained_glass_door_top_left_open.json"
+hash = "cddff25635052261e5c3a3a4b85fc0a2fb6daf264cfa2249d0c581ae8ed7903b"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/magenta_stained_glass_door_top_right.json"
+hash = "168d9719857c83d9d949af599a1825cde4b738627fc33f7e70ce4a9c8166d2e8"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/magenta_stained_glass_door_top_right_open.json"
+hash = "da1fdc475d034b44089ddb4933b472415205f4da2bd36a7b89dba1516285d74d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/magenta_stained_glass_trapdoor_bottom.json"
+hash = "c55582d82e9b64bd843eb8e843b1aa8b102947fe75f0204e23a7dfeeda75bae1"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/magenta_stained_glass_trapdoor_open.json"
+hash = "5fb66651522299c31b0f79e90cc875e0bba341a7eedc62f1393e1d245b5473f1"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/magenta_stained_glass_trapdoor_top.json"
+hash = "c3eb95a8d6d10d211d9e7a357fe9fa97a0352a70a6f4d8e9922954e6d64a2eae"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/orange_stained_glass_door_bottom_left.json"
+hash = "a3576939c36d414885b76e92acfdc4effb8e56ac3ec99dc4a21298f9230c3a76"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/orange_stained_glass_door_bottom_left_open.json"
+hash = "9d01e6680d99141715c617fe020b007f38dc8851e6426138a1095f40522ba3ef"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/orange_stained_glass_door_bottom_right.json"
+hash = "3fa283595362210f7395708d70ffe9207f9e94a3d0015339848effbb820db8ae"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/orange_stained_glass_door_bottom_right_open.json"
+hash = "7544496cec7a57830abff24a3bed9769bcc45c3ecd3087d32e433c2aefc7a0cc"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/orange_stained_glass_door_top_left.json"
+hash = "5f76648d355930b6449717215ca7dada17a6c16fe04b2708e47668aeca1f667d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/orange_stained_glass_door_top_left_open.json"
+hash = "6db3d6ed6a678bf96571c233c16483f6d6deb39ae6768f5b31c023a121e889c6"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/orange_stained_glass_door_top_right.json"
+hash = "49594638dfef20efaebdd165f78c82950eb5deda1575de04a4592128ff1427d9"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/orange_stained_glass_door_top_right_open.json"
+hash = "a61c957a53ffcd67975841d6ce474f331122a934827819ad172508209e398cb6"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/orange_stained_glass_trapdoor_bottom.json"
+hash = "d14e95475fd529066a9c86abfc0d4d0d8263a2aeb5dd455c48e0f519f878e469"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/orange_stained_glass_trapdoor_open.json"
+hash = "c6ca502639519ca5178f82c32abeb65ecc4a2edb1295bd50eb3c9203906b8edd"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/orange_stained_glass_trapdoor_top.json"
+hash = "5bb2821c8b5c5cdba1c4597f633aeeed913e620a7d73854828a51613e98121b3"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/pink_stained_glass_door_bottom_left.json"
+hash = "7a8a83c3d89357de46ff52f00812b351bd58cd7efd55c38354e6335a47f4d98f"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/pink_stained_glass_door_bottom_left_open.json"
+hash = "cd30ea30dfad848e4b1cd231060c0be88678d560aebf2524f469f13649495a25"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/pink_stained_glass_door_bottom_right.json"
+hash = "b49f10e9c7017ee48260a3ac4899c364108d256e8eeada8176af4d6268c0ec90"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/pink_stained_glass_door_bottom_right_open.json"
+hash = "e3a6507ff55f52abd7ec94f3511cce91161fa1efcd65ad4ef6620a844a205c2c"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/pink_stained_glass_door_top_left.json"
+hash = "d22f767b92a427f8d832df08dd309329bbf099e7db4bf8e43c09cf794730c07f"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/pink_stained_glass_door_top_left_open.json"
+hash = "9cb7ca4a82bd2a42a34cd23b5cdb0fd679d30896f55b80d89b9f8acfbc848385"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/pink_stained_glass_door_top_right.json"
+hash = "070adc45fccabd3dd0b52f0049108a551ace16006acff3dd6b747d7563ea3007"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/pink_stained_glass_door_top_right_open.json"
+hash = "4a6b0ced5b4963f37ea36e3c6e0a63b693d79953b1348eaf1f6aa96281d94cda"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/pink_stained_glass_trapdoor_bottom.json"
+hash = "b321aaab96f84c5909b57bf8dd0c286738fd9f652e6d77aa68102ac87097d993"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/pink_stained_glass_trapdoor_open.json"
+hash = "bf32da47283744c30303b81363d2749059e8a315f0b632f12be7a604b76c007d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/pink_stained_glass_trapdoor_top.json"
+hash = "41961468b185fe913d53e3e60beca3fe911992d8ef29de928450dbcc93d8d676"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/purple_stained_glass_door_bottom_left.json"
+hash = "39b481570e02154456e89aadcf44c17cfff061aef07473aafa6a9c88a5054c2b"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/purple_stained_glass_door_bottom_left_open.json"
+hash = "32c2d268159a3113e9ef4483a869049942563b152f4e5214f64e62ccdb7353cd"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/purple_stained_glass_door_bottom_right.json"
+hash = "59d4ff45fe756ad0a41cfd807472ab1b1c69f505eac7c6158c7033d32a59fbe0"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/purple_stained_glass_door_bottom_right_open.json"
+hash = "38f2c786465cb6806b25a356227400cc074faf42c97125852e8df27d6cd76bda"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/purple_stained_glass_door_top_left.json"
+hash = "bd7805c7e7b590f7a7a133e735177d1196abaafcd28ef2274fcff7bcf4e4ec47"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/purple_stained_glass_door_top_left_open.json"
+hash = "4745847cecd83fa3f589482698c19ae92d3016800a6b76fe2fcc098614f17a88"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/purple_stained_glass_door_top_right.json"
+hash = "6218b19120cc68921d760c570309da4537142280eb78178f38242443ec236513"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/purple_stained_glass_door_top_right_open.json"
+hash = "22e05d543523e24623245049325d7165900c287400db365eee5d861349625fef"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/purple_stained_glass_trapdoor_bottom.json"
+hash = "232783a740f7960f9f961358c840dcdf993ce5e634282cd7cea7da5862437482"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/purple_stained_glass_trapdoor_open.json"
+hash = "c52980ea919d8346a5d7eaca32cd3964e95db82001f68112f30678250810dd52"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/purple_stained_glass_trapdoor_top.json"
+hash = "09258f1157decaa0870867cc5184bb020999e13c078173952e1ee7596986224f"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/red_stained_glass_door_bottom_left.json"
+hash = "3fef2c6438b91676bfb8468dc7c2b2c7a8acdd8d8ccf50b4e0cd297fbc0f083c"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/red_stained_glass_door_bottom_left_open.json"
+hash = "4d1cd48e6aacc6a388ec7ae795b24780b295b0997a8953c813e8d640c7c3b3cd"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/red_stained_glass_door_bottom_right.json"
+hash = "8ee37e21cf132b1441e48c7dfb2df0332a81b7cb73afba9762ea0adb05c6413f"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/red_stained_glass_door_bottom_right_open.json"
+hash = "d8d10de2069ed5c83d3d378a5b1de9c3cc26ece7096088afd5fd8ece622090d5"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/red_stained_glass_door_top_left.json"
+hash = "0554178b18b7b34983ed18aa064ed52488ab0a76fa3e9bddc96d7025c963f1b2"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/red_stained_glass_door_top_left_open.json"
+hash = "978738bacaad711383407ac375c1e437df7107e19dee475ad2338aedf0759ad6"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/red_stained_glass_door_top_right.json"
+hash = "d6b31388cedcdd4fee466d64acbd483bf34631b4fa6fd04c67e0b6b42aaddff8"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/red_stained_glass_door_top_right_open.json"
+hash = "5642012124dfc64df6394a72a7c4045f2215a167d0df35b0f164559d3e54cbd2"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/red_stained_glass_trapdoor_bottom.json"
+hash = "8c68c855888ca436c08cd941c64568f5ca9662024753ae17238a9a90ebbff92a"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/red_stained_glass_trapdoor_open.json"
+hash = "a7f73744f5375bab73ad86b87f57d460c28835376fb5fd27ac13991469365566"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/red_stained_glass_trapdoor_top.json"
+hash = "ddfdc4f75396efb60c18bcd29f23e4bbb5c23aa2b940d90617449e5ea0c59cd7"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/white_stained_glass_door_bottom_left.json"
+hash = "0603c9da7189585604bf2b3c061adde2c1747d3c806bfb368a707036c48858de"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/white_stained_glass_door_bottom_left_open.json"
+hash = "be80ef62c1ca4dad498afeb13ad7976874f0aed1f8b7519bb2bf13d9d682c837"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/white_stained_glass_door_bottom_right.json"
+hash = "1c057444543bdd4797b9af28a8f55bd1611eb8823914f7f91e0f7b664b976629"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/white_stained_glass_door_bottom_right_open.json"
+hash = "4c3aa77eb97021fbd217a1e5e69f313348ade028b01b823f22ec3f1a912a51eb"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/white_stained_glass_door_top_left.json"
+hash = "0f22f92cdd3fba22a48b114476edccd3185bd4c5e3528582e77353c2f1c78325"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/white_stained_glass_door_top_left_open.json"
+hash = "a7473a01bd902f7deba82cc7ca67aa6c88cd6b481dd42abdc2401481b27a8f7b"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/white_stained_glass_door_top_right.json"
+hash = "5b60fc84b43b93a39983559a9d3b77e292a2e0ba1aee1524216cfad20748a136"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/white_stained_glass_door_top_right_open.json"
+hash = "1883307ebc0d9e1ddcfc89d4682c2607fe9f23a8deb5c8ec4970ccb0b92a1ece"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/white_stained_glass_trapdoor_bottom.json"
+hash = "eef8a81e90118e52f6b37b1fc225e73abf1edb4679fbac899f264f4e01f2e231"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/white_stained_glass_trapdoor_open.json"
+hash = "dd617d5eb57fb42c43a207a0e59bea02a76f0c0b2f24f4267e6c1aaab9d93b70"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/white_stained_glass_trapdoor_top.json"
+hash = "97111d392545609ee6ec11d096837bbb3f44faaebaa76cf4c7c6520fc765194d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/yellow_stained_glass_door_bottom_left.json"
+hash = "bfaae4414330ca81a9b3069a0c32fcbb21aa06f65efdf958dd58fcf78eaa44c8"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/yellow_stained_glass_door_bottom_left_open.json"
+hash = "c6ea6d99e5adafcf2bcd9180e8e47acc69f0f6e71ff31c0f39b683c79ccb4d97"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/yellow_stained_glass_door_bottom_right.json"
+hash = "b4972105179f110dda07575368050ce6ea643a8f350e93c380253c163b3cb65f"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/yellow_stained_glass_door_bottom_right_open.json"
+hash = "cb3a8c8a6cd06e6ebc857d1145262170a4addccddb9bd86639822e7e04d6fe4e"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/yellow_stained_glass_door_top_left.json"
+hash = "7815d49d59237d074938e9b552a1015eeca5917968cdc65bf9f816a5b0ee617a"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/yellow_stained_glass_door_top_left_open.json"
+hash = "ec991fe948e5effd0f7bfe26b5a639f9ea90ca6ab62dd972ec61118c0419abb8"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/yellow_stained_glass_door_top_right.json"
+hash = "ec5445cce31cecdd804bf50daad430eda5ddf156fd970d520aa1bd119dc7a451"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/yellow_stained_glass_door_top_right_open.json"
+hash = "7da1e51b2a059f9501a8e63be3c016fdec272c68d66a40428ec6a0d30994ace0"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/yellow_stained_glass_trapdoor_bottom.json"
+hash = "da07de8b6321ce20837606f3b9279af404f045dc5cc729cbde83307adf7cf571"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/yellow_stained_glass_trapdoor_open.json"
+hash = "12f660370a402c74ec55dd3a8d142bc324f1bfd1643979a4052e5e2fddb52281"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/block/yellow_stained_glass_trapdoor_top.json"
+hash = "6f993021b36be78daa2c05ea85520d3a89ea9e79d0c9295cd163e552dd858211"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/item/black_stained_glass_door.json"
+hash = "6fb509ac21dd463d87861f6484c08313b02a74486250dceb9ea4215c918851e7"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/item/black_stained_glass_trapdoor.json"
+hash = "3d6fac0da1a71d3982630ab1d5a370c307825338cde38f00dfadb25a0fb5b11b"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/item/blue_stained_glass_door.json"
+hash = "8a40fc36819036309b1ef6db0cf9c4a81e753123bfbb1c22481cbd8e74c3a04e"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/item/blue_stained_glass_trapdoor.json"
+hash = "ea5f5640ed1d8887716f6a0628cf1899348c238b38a2d326761fb4a7bd0ddb30"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/item/brown_stained_glass_door.json"
+hash = "2542c4fad3cbec3fcce7367b07ba09c780862e358c428f73520a092b0879cdf4"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/item/brown_stained_glass_trapdoor.json"
+hash = "cd0f5fd4cdb9abae70ed9ea4bff2f5970aed88d0c7b45748ecfc48df74540445"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/item/cyan_stained_glass_door.json"
+hash = "dc59bab9e38f52e890dae2b60c325bc9bf4a99f8f930de9f65e488c26cf1da1a"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/item/cyan_stained_glass_trapdoor.json"
+hash = "58306ecbfa980a39f90b9d6a733c51de90f646045804e107c8bc38904103f271"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/item/glass_door.json"
+hash = "01091831088a376ee197477aa1ba55acf38b241158bb4fc85ad7f9dd190eae57"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/item/glass_trapdoor.json"
+hash = "4aa3c142c7d0e7bcc3766b60a77bb9b57f1067601d9067c4cbc836cdcf09a6b0"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/item/gray_stained_glass_door.json"
+hash = "afec59299b52dbd25304c51d8b49a69071c9dd39ada161d46978abf896e9ce68"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/item/gray_stained_glass_trapdoor.json"
+hash = "a698ad90b6a632d6567e3e80934063f20a0cbca6f294cc8cc33aa1aa5b542bb1"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/item/green_stained_glass_door.json"
+hash = "7da0d59c72449ac399a2823f4a1c9427737084b6ed624cc49883cd9a9f947bd9"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/item/green_stained_glass_trapdoor.json"
+hash = "f686c2c43f1f3b1a6d36d8876c789e8f4bc110059b53affae85060fefd47033d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/item/light_blue_stained_glass_door.json"
+hash = "f9be7562e9349ee1b39a12b2d809a4bc64273c14ac57413a8f3a4e9f253e7e9a"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/item/light_blue_stained_glass_trapdoor.json"
+hash = "d5c723976e673fe25419a88372ce9c17ccbfe72d80a69834bd99703d592c93f5"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/item/light_gray_stained_glass_door.json"
+hash = "72b099104e0fcad08f88c6706aae30f42b61a8fe2ea286918ccb67ce047b7d2f"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/item/light_gray_stained_glass_trapdoor.json"
+hash = "07fe323e99e4ef2e7b8b67a30b6840da1e80f053717464d4496a68df9ecc4918"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/item/lime_stained_glass_door.json"
+hash = "1631e82e6f1e18cf803e22694537ace24b5d25d569439a9cbca6929d122fe4cf"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/item/lime_stained_glass_trapdoor.json"
+hash = "819ff52c76851bac2e5e0259cf9bfefbc076b169cc64b204d39b0defbc5da9ad"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/item/magenta_stained_glass_door.json"
+hash = "01510a5d0dc8bc8d2dcbca6396f793a67d3325e24edf35eb193bbfe9338d8c28"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/item/magenta_stained_glass_trapdoor.json"
+hash = "008b4e8f4fad00d6da11621c61983629ae3d370ebc93c75f0403e25a62936c8e"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/item/orange_stained_glass_door.json"
+hash = "a1ebc4a0614a6c79739a3b7adecafd92afd284389df9f53881f5a0d42f6f0bb1"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/item/orange_stained_glass_trapdoor.json"
+hash = "91a21f2a49c666d5f106e2fae27075c763f058465cec90f6ad3a5665c338faa5"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/item/pink_stained_glass_door.json"
+hash = "1428e398d32f2af4a819a8d081577d26c7b7998cd4977ffa344183f53478bf73"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/item/pink_stained_glass_trapdoor.json"
+hash = "7389a19eaeb9360a94eb941dce98f193f58096800d31f2ac1604743da3c21f45"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/item/purple_stained_glass_door.json"
+hash = "bced613c5a39ecbf0565b588842eed0c05f41c5bee416a429439d0d28209e6fe"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/item/purple_stained_glass_trapdoor.json"
+hash = "cb861eb0e28b9c79e3fbb84db462da7260cc227396c36231a53e01e73178f82e"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/item/red_stained_glass_door.json"
+hash = "8e05eff8f4bbd419695b53fe17650ee10ff1a073e4c22018371d1b1d2cf8b1ee"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/item/red_stained_glass_trapdoor.json"
+hash = "535a20ac628f82868f1b8583a91faa685a8333317e4a889ac5d1a1ddb5a4d2d5"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/item/white_stained_glass_door.json"
+hash = "be1b2ae7dd6953f3d581b18caec4b51260e33bce95de80a7d9b0b3e10a5a3fb9"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/item/white_stained_glass_trapdoor.json"
+hash = "01b0a50da2da7acdd1f6745676a15f76e32b359505ea98ac5f5051b2a645ff9f"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/item/yellow_stained_glass_door.json"
+hash = "47917d36b65e3def74feb221dc59881522a8f28081f3c53f1d57deeac069b401"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/clayworks/models/item/yellow_stained_glass_trapdoor.json"
+hash = "4157c140fb4ef61dbb2e3f89852ae628a00a9654e774639a9ac9eb593d35bb3b"
+
+[[files]]
 file = "resourcepacks/spicedcider_resources/assets/clayworks/textures/block/chiseled_bricks.png"
 hash = "fd75df5dbd509e3671bae0a8c5cb0148b243568dedd0a98be26043682721480a"
 
@@ -15560,8 +16624,12 @@ file = "resourcepacks/spicedcider_resources/assets/connectiblechains/textures/en
 hash = "ef38b9c7e3cdb65e532153dbb6eaa8600615727db7f63c769449a8aa032ab4c2"
 
 [[files]]
+file = "resourcepacks/spicedcider_resources/assets/cosycritters/textures/particle/moth_0.png"
+hash = "6eea3966df5b02bea54a7dcb5a7a35a1b1732d0f5200688b4021d055dfbd85ce"
+
+[[files]]
 file = "resourcepacks/spicedcider_resources/assets/create/lang/en_us.json"
-hash = "04e36c5960f12500a270341e732ebd73b6126d30fae1a43b8437da517025265a"
+hash = "8a8b6d3024cc654a253ece5ee029450cb08bed0773f9efe5209a7008a945120d"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/create/models/block/depot/block.json"
@@ -15592,8 +16660,16 @@ file = "resourcepacks/spicedcider_resources/assets/create/models/block/mechanica
 hash = "d26220d88f15ead7861a2a96f13d85f75ad5accf1b13767d96fcddae1176bc2a"
 
 [[files]]
+file = "resourcepacks/spicedcider_resources/assets/create/models/item/framed_glass_pane.json"
+hash = "1bc7c851f8fef2f647276ae4e3e60204daa8e11620c281527e4ba859c9ccd6d6"
+
+[[files]]
 file = "resourcepacks/spicedcider_resources/assets/create/models/item/hand_crank.json"
 hash = "34439b93f722969bff991d9c04ce71da22db57b8d48cf4e60c92ebfa21bc7969"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/create/models/item/horizontal_framed_glass_pane.json"
+hash = "a05c269d01c92a410f27539b1b88bbe55730fff6f31493e51ffb9269c44407cd"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/create/models/item/super_glue.json"
@@ -15606,6 +16682,14 @@ hash = "1e08431e4a47af68a3457fb9f6a898905db42e20be683b7c540c783fb0990250"
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/create/models/item/super_glue/super_glue_use.json"
 hash = "ba2769e62b946102f56b845f044ee65535acdc6e4c60c25cc1fe0e8cfd0451a9"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/create/models/item/tiled_glass_pane.json"
+hash = "f51017cb96c1756b15aefbdc6c814af69d5b863e04691a8b066d3e482126751f"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/create/models/item/vertical_framed_glass_pane.json"
+hash = "90f43492a56cb9c24e0832f23546eeb62cf16174637c265d2bb9f73dfc5fa027"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/create/textures/block/adjustable_chain_gearshift.png"
@@ -15686,18 +16770,6 @@ hash = "fc10b075dc5e3630e40043451b249f126fea396683d81aec5cd53ac2573f9dfb"
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/create/textures/block/depot_side.png"
 hash = "2bf1b06403cec920ae87a76ccc69e57d5bfb59df0700f0f6dc248cb242d3e50d"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/create/textures/block/depot_side.png.orig"
-hash = "84aadb59397cbf5940ef04f57a2472313de4236d3d29cceb81703f2d9911209d"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/create/textures/block/depot_side.png.orig.orig"
-hash = "84aadb59397cbf5940ef04f57a2472313de4236d3d29cceb81703f2d9911209d"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/create/textures/block/depot_side.png.orig.orig.orig"
-hash = "84aadb59397cbf5940ef04f57a2472313de4236d3d29cceb81703f2d9911209d"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/create/textures/block/depot_top.png"
@@ -15784,18 +16856,6 @@ file = "resourcepacks/spicedcider_resources/assets/create/textures/block/mechani
 hash = "82847ff80ab27460e365335b0ec681f90281e84fb88f63ca0d6e2176fd4aee01"
 
 [[files]]
-file = "resourcepacks/spicedcider_resources/assets/create/textures/block/mechanical_press_bottom.png.orig"
-hash = "628ca461a38e2ed5c11e5056525da1b3d5bd0d92684825999cb2659eea4eb235"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/create/textures/block/mechanical_press_bottom.png.orig.orig"
-hash = "628ca461a38e2ed5c11e5056525da1b3d5bd0d92684825999cb2659eea4eb235"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/create/textures/block/mechanical_press_bottom.png.orig.orig.orig"
-hash = "628ca461a38e2ed5c11e5056525da1b3d5bd0d92684825999cb2659eea4eb235"
-
-[[files]]
 file = "resourcepacks/spicedcider_resources/assets/create/textures/block/mechanical_press_head.png"
 hash = "4458840c67529a9c4df59d62f2c03d5ef0a6a9ad35a2297d674fade0e4ed77a0"
 
@@ -15808,32 +16868,8 @@ file = "resourcepacks/spicedcider_resources/assets/create/textures/block/mechani
 hash = "eefe4185612a4b76297083e7674c88d8af199bf3eaa31398e0d83a099de0155d"
 
 [[files]]
-file = "resourcepacks/spicedcider_resources/assets/create/textures/block/mechanical_press_side.png.orig"
-hash = "e47d424929561a30331e59ec8ee75fa98558a285d2b002382c9125f74f6bff55"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/create/textures/block/mechanical_press_side.png.orig.orig"
-hash = "e47d424929561a30331e59ec8ee75fa98558a285d2b002382c9125f74f6bff55"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/create/textures/block/mechanical_press_side.png.orig.orig.orig"
-hash = "e47d424929561a30331e59ec8ee75fa98558a285d2b002382c9125f74f6bff55"
-
-[[files]]
 file = "resourcepacks/spicedcider_resources/assets/create/textures/block/mechanical_press_top.png"
 hash = "109064608e49082e3dddaac0bf8afd8f1b50bdf09a1b93ae5a7de2f9a3f65b0c"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/create/textures/block/mechanical_press_top.png.orig"
-hash = "5e7190b8636c3a926015433685c244fdb509a6d9a0c279a9da72900ca9bb84ef"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/create/textures/block/mechanical_press_top.png.orig.orig"
-hash = "5e7190b8636c3a926015433685c244fdb509a6d9a0c279a9da72900ca9bb84ef"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/create/textures/block/mechanical_press_top.png.orig.orig.orig"
-hash = "5e7190b8636c3a926015433685c244fdb509a6d9a0c279a9da72900ca9bb84ef"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/create/textures/block/mixer_base_side.png"
@@ -16017,7 +17053,7 @@ hash = "33e63579e8dbe2c2736065f3da4ae7b4d0b5a6653ede4efa98b9261169631182"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/emi/tag/exclusions/non_user_facing.json"
-hash = "fcfb25913a7ce94fd7eb30b1a6eab3e01ef3094f780f03721e602f78eb63ea7b"
+hash = "038afbdb9a089305d75c74a388b2be4608921e8401af4a50eb8f402c89f1f939"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/emi/tag/exclusions/tagexclusions.json"
@@ -16308,6 +17344,10 @@ file = "resourcepacks/spicedcider_resources/assets/etcetera/lang/en_us.json"
 hash = "adc3d085d7bfef973ecb150348a2426e1230982320886385e4e12dba56f16474"
 
 [[files]]
+file = "resourcepacks/spicedcider_resources/assets/etcetera/models/item/iridescent_glass_pane.json"
+hash = "ec80ea750c8c2f57005cd2e98b582579e686f7245ec56ca5dbb024a92591f60f"
+
+[[files]]
 file = "resourcepacks/spicedcider_resources/assets/etcetera/models/item/painting/calamity.json"
 hash = "acc0c3911f374238ab6252b8c54f3651c79d01fa037fd9a3f97c8359bd29267f"
 
@@ -16516,6 +17556,10 @@ file = "resourcepacks/spicedcider_resources/assets/infernalexp/lang/en_us.json"
 hash = "91b488801c46bbfe7f6249d73ce7f364d63fc332006a2b47692276fd1895fae0"
 
 [[files]]
+file = "resourcepacks/spicedcider_resources/assets/infernalexp/models/item/glowlight_glass_pane.json"
+hash = "081c8d2ba5f9b932fd8961bb3a9e119615afab955f66f35a044ffb5dfe8941a3"
+
+[[files]]
 file = "resourcepacks/spicedcider_resources/assets/infernalexp/models/item/glowlight_lantern.json"
 hash = "fd0df092f1d7120c1d7010123e94dd36c35775807d4442992fe6e40331d2aea7"
 
@@ -16530,6 +17574,10 @@ hash = "45eaf40241da8c3468da49ce3b35b5d77c05d38716e200d9cb090f16ca7f2e42"
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/infernalexp/models/item/painting/the_fallen_ones.json"
 hash = "c1cca211fd826b7de0593dc9163f30022b8d966ad57f81fa362c798c5eaaf3e4"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/infernalexp/models/item/quartz_glass_pane.json"
+hash = "886ca65a2725fd88f9d4822d5bb23f4e984ea43006cc393f6736f10029bce362"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/infernalexp/textures/block/buried_bone1.png"
@@ -16590,6 +17638,26 @@ hash = "c65fdc692503204760c1ab900c4db8f5068e6fe4ca250482580ffba8557b2324"
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/lambdynlights/dynamiclights/item/campfire.json"
 hash = "4452baf651762f2e889e0dbb2a4f22935e41889654f64ad745c33d65ba4e83d1"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/livingwind/lang/en_us.json"
+hash = "a68694a55da5e763af77f25beadbab10b65f95ae6a2d7c4042de887977b8fff0"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/livingwind/models/item/redstone_wind_vane.json"
+hash = "cb2b19001c9f47fa0e531a14c8c44c4fbe15c9484f1bf71c7e62859b4398252f"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/livingwind/models/item/redstone_windmill.json"
+hash = "00ea21b87ac1bd93623e81a2ab6ef62718eb7c63ab444efdf43134bce32693c7"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/livingwind/textures/item/weather_vane.png"
+hash = "cd08bae666ce9911f2c28feb71a86da13a3aac97a910f6244160a583de46d95e"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/livingwind/textures/item/windmill.png"
+hash = "70443c07590c04a66bb3fb1750b85339ba8c1951af7aab541f8fd159254661c8"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/lodestone/shaders/core/shapes/scrolling_texture.json"
@@ -16721,14 +17789,6 @@ hash = "77f930dee7635f2f99856baaae615699d68ed894a48107d8ce2c509c35be90dc"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/minecraft/models/item/brown_mushroom.json"
-hash = "18eaa08298c753157070a85e6006677a91b449b7e153ed0f3a8d1695f17a436e"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/models/item/brown_mushroom.json.orig"
-hash = "18eaa08298c753157070a85e6006677a91b449b7e153ed0f3a8d1695f17a436e"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/minecraft/models/item/brown_mushroom.json.orig.orig"
 hash = "18eaa08298c753157070a85e6006677a91b449b7e153ed0f3a8d1695f17a436e"
 
 [[files]]
@@ -17001,7 +18061,7 @@ hash = "2bb297847f5c9f2b44efcb0262f4e36edb2f35d053719809cdd78b5e2e5879d7"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/block/bricks.png"
-hash = "7ab4f3aedb3be5961b9e3e3b6355e0b537fa52907154263e48d1aa13bd8797a1"
+hash = "5a09585fac3e720d1e49045610e719a14c857fbd0d67c649a2473e4a5ab6c3d4"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/block/candle.png"
@@ -18540,6 +19600,14 @@ file = "resourcepacks/spicedcider_resources/assets/modestmining/lang/en_us.json"
 hash = "e13a69192b437959451d566e18cd771b56ddced956a0ea83bdd1104d1d9b7564"
 
 [[files]]
+file = "resourcepacks/spicedcider_resources/assets/modestmining/textures/block/meteorite.png"
+hash = "8cfbcd46d752c239ee9227d9c469dc66705952b379224ddf29ad3c6b789c5948"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/modestmining/textures/block/meteorite.png.mcmeta"
+hash = "192e42ad520e124a3b9656ad962761ff8a9c88fd022c9cdabf7afa0b3900e569"
+
+[[files]]
 file = "resourcepacks/spicedcider_resources/assets/modestmining/textures/item/lead_ingot.png"
 hash = "1ba9da4df0c279982fdffc87f162805ed66428740aa19efc59f74623eafc2c81"
 
@@ -18550,10 +19618,6 @@ hash = "b9fde3b267f370891fd250403a06655316ddb059984f76fd6a3441cb6ace1f06"
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/modestmining/textures/item/overrides/bronze_axe.png"
 hash = "56473137bdaeb1b17ab7bb61864c2e69cbdce60b78e69979d241e92f5cef6fab"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/modestmining/textures/item/overrides/bronze_axe.png.orig"
-hash = "904bc3f1816e7b1047e15372305f17c9fcffac879022470ee36caec0402d5ba4"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/modestmining/textures/item/overrides/bronze_hammer.png"
@@ -18568,24 +19632,12 @@ file = "resourcepacks/spicedcider_resources/assets/modestmining/textures/item/ov
 hash = "6bf78210097141b77288256fce69aca518538b7514ff44fd6be371114d047792"
 
 [[files]]
-file = "resourcepacks/spicedcider_resources/assets/modestmining/textures/item/overrides/bronze_pickaxe.png.orig"
-hash = "b27c2e35eeeb44610b0293a40acccfb02603fb3de81bc10e78203b045292254d"
-
-[[files]]
 file = "resourcepacks/spicedcider_resources/assets/modestmining/textures/item/overrides/bronze_shovel.png"
 hash = "770b5a81bcaa8851aede5f7bb7433bd2b45e8d007d0e21338dd39d85e6419b4f"
 
 [[files]]
-file = "resourcepacks/spicedcider_resources/assets/modestmining/textures/item/overrides/bronze_shovel.png.orig"
-hash = "f66504fcf1fa4f28a97b36f10f2d1e205ffa2fac83a8354c0c2ded1de78f3af6"
-
-[[files]]
 file = "resourcepacks/spicedcider_resources/assets/modestmining/textures/item/overrides/bronze_sword.png"
 hash = "a441815675441a186c4f9f9d3074094370b45747e21da84f0d792934223cade4"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/modestmining/textures/item/overrides/bronze_sword.png.orig"
-hash = "7f7ad5fc6a691f405c799d4337efb6c83ecc8c38117e16c76ce0e2d2c2830a7a"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/modulation/textures/gui/clear_button_tab.png"
@@ -18829,7 +19881,7 @@ hash = "f0b4d32e5dc0113ec273581c09f720f489b6bf8be90f5d4891665f39721ced1e"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/nomansland/lang/en_us.json"
-hash = "b85b2a6246e4757f3ace26c25dddecc7c1841a9e39ab5c48d1e4aeff5e924a46"
+hash = "badf2bebe004910b91607e4c64cdc1e5403c62193b6c58928766755d62912916"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/nomansland/models/block/building/wooden_scaffolding_stable.json"
@@ -18917,7 +19969,7 @@ hash = "f5803c87155f98ffe924522f2abaed1e19abb6bf4164fa112342978a6db203af"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/nomansland/textures/block/building/wooden_scaffolding_side.png"
-hash = "63076c6ac56bdd5e472b92e6ea129e3764581efc30d78b5cb03a1ea1f3fb4967"
+hash = "1667bea398e4a990a6e83d086170e1bffc898c87d009454243c4290b8f33c964"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/nomansland/textures/block/building/wooden_scaffolding_top.png"
@@ -18954,10 +20006,6 @@ hash = "f94b01e45c4e90dd0614b4e9b800aee200776331283dffcd88d50a2db3be1185"
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/nomansland/textures/block/pine/pine_leaves_akt_.png"
 hash = "9a2894df7143065b8379436771c3c9fb63ab5512fa64a490123033c4717dff4b"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/nomansland/textures/block/pine/pine_leaves_original.png"
-hash = "f2a41aeb0b2145c18ee7bdb8c8c04ae96788ed780e28675f2f84abe3faa2d58c"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/nomansland/textures/block/pine/pine_log.png"
@@ -19109,7 +20157,7 @@ hash = "fd185cf74da51b207dfde5c64f021fae491d0af80d7ccd6165de84460da9fe7e"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/piglin_set/all_gold_tools.png"
-hash = "640c4a33dab4e970d762f0447b720a796a2dd0a46bab5a117a534892738267f6"
+hash = "f88133c364ba80a832b43939e4ebe39587817c92e927551da2b2d005dfa63d1a"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/piglin_set/golden_axe.png"
@@ -19134,6 +20182,38 @@ hash = "f7ef93ebbdc4afe3ded5b0c4ed62bbab655b3de4f341d4e967d0d5675a46f2ae"
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/quark/lang/en_us.json"
 hash = "1629acdff12e6d596f106752058e5621ad0c77253a7d84be82192f07659c0b00"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/quark/models/block/dirty_glass.json"
+hash = "1b22b672a6284eba52c62cf23a014b70386b99323e69a270062470014e6f4bc4"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/quark/models/block/dirty_glass_pane_noside.json"
+hash = "36bcb73870a4e43d5559854afaa8f68705d5c25a8b8e13432c444c7cb7a7f4f6"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/quark/models/block/dirty_glass_pane_noside_alt.json"
+hash = "d89abef69cc16df9e6b6b9c8158f5f5877e30a005caabd9b76aac3736de1981e"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/quark/models/block/dirty_glass_pane_post.json"
+hash = "1d8bbfdc8d6c8f83eed620bc26cc3654318fdf6192aac92abecefc4bc43d31f7"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/quark/models/block/dirty_glass_pane_side.json"
+hash = "64610c23a6b10ed712cfeabf15631a90b225be0618d186b78469b8e80db21e5f"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/quark/models/block/dirty_glass_pane_side_alt.json"
+hash = "d09603bd41b28e28c1967d14e652a2c629e5e099330bd0fe385cb2e29efee8c8"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/quark/models/item/dirty_glass.json"
+hash = "0e46fa3cb5d0789905ca90b211bef4001669aaad1ce9b63c4f9f2e19e720bcb7"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/quark/models/item/dirty_glass_pane.json"
+hash = "328f509913543e5dddb339fc9d4f167d514a62ff034478168805ee2d8d580616"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/quark/textures/block/bamboo_ladder.png"
@@ -19221,11 +20301,11 @@ hash = "1df26cdd072c546b3af4195ca6d1553693625dc29fe70bf8f592a74636c44f1f"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/quark/textures/block/stick_block.png"
-hash = "8f5d0a6205ad60fade77f0b1fe5a6ddb1859ce5004082658f0e7a752ccf75f72"
+hash = "b9d36400d674c9eb236836037b8303cb5f771402c112dec84717099a49f442d5"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/quark/textures/block/stick_block_top.png"
-hash = "9a1661392e2c39e298da67daacdc037ccc694370dd9426a231c9801363f9dc53"
+hash = "d8ab42cd042652b1173f7623db0b8b26addca5f5b992c4c3d78d293649c591fc"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/quark/textures/block/white_shingles.png"
@@ -20113,7 +21193,7 @@ hash = "e232a0a4b78fd2b99ebcb1889fbf5c77216e576fa071fa4dd87553929e914155"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/wood.json"
-hash = "6ec2faa5dd293a5abfeefef044fd4b33ab29761de8f5c607dc4fdd35b70187e8"
+hash = "4c66546343b72f969e446e40359ddd7c2b721c7e18153f4758b3c1f033cb1500"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/global_expressions/pale_garden_fade.json"
@@ -21984,6 +23064,10 @@ file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/block/wets
 hash = "d7d210c3554b07ea53c62fc2269573299a113df88c1ecafe3702df0ccf6ea600"
 
 [[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/textures/environment/clouds_mostly_clear.png"
+hash = "79fd5dace3d5b4448369d837b35e94be39adac52f67b8da325def5e54b7d428b"
+
+[[files]]
 file = "resourcepacks/spicedcider_resources/assets/spicedcider/textures/gui/creative_tabs/building_icon.png"
 hash = "82ea09223aa4442146b43bc61fb8c9ee2b77489237e440de6ef5eb5a97d90de3"
 
@@ -22054,6 +23138,42 @@ hash = "29264c0e6d693f49881796c111cac011acf27e14c949309076f22a04f58a25ba"
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/spicedcider/textures/item/latex_bucket.png"
 hash = "75d556f85922dad4ec364a2953e8650933c2ea640959a960180f0afba231b5b0"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/where_winds_blow/foliage_profiles/pack_cattails.json"
+hash = "87fdda238c7fabfcd70ee961a976599154dfdd8e529f06dd4fd9292a601aba7c"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/where_winds_blow/foliage_profiles/pack_crops.json"
+hash = "850153ce7c61df4f18aaef0f8a08ed62d7fff81d935b8b7dfb41ddfe8c6b3746"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/where_winds_blow/foliage_profiles/pack_flowerbeds.json"
+hash = "0255c84037bd4a4b930130f8e73a0e6d826b4dd7953d980717d6cc83f93a1bfd"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/where_winds_blow/foliage_profiles/pack_foliage.json"
+hash = "32349404156e994f76646124991b6a0e6789ab9f839e001156e38448a923cbbb"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/where_winds_blow/foliage_profiles/pack_grass.json"
+hash = "1fcd8a89c792c5722904eeaa4868ecb5caa78d01f257d5fd83331df94307e5fa"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/where_winds_blow/foliage_profiles/pack_hanging_roots.json"
+hash = "9b14778e0540d3751db1e426d2a4897a57aae3238f62308b393fa6bc538b40ba"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/where_winds_blow/foliage_profiles/pack_hanging_vines.json"
+hash = "70ef88627b05e7ea38e5c3cbedea1f82c3986528152c992693d4f76818013fc9"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/where_winds_blow/foliage_profiles/pack_rigid_columns.json"
+hash = "2189d840d5b869bb141b7774c94addd01aeed8818181d75e17abeb259effe0e4"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/where_winds_blow/foliage_profiles/pack_tall_foliage.json"
+hash = "27fdd2f1fc2fce6b910f7cc78bb445c850f865155674ea33d794eb0515c0010c"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/stoneworks/lang/en_us.json"
@@ -22758,14 +23878,6 @@ hash = "b98ef5eec7e7897fe58eaa24a0b56c02371a5267bb2bb8e76470e6f91990b849"
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/suppsquared/textures/block/metal_frame.png"
 hash = "c501eb3a5e996da9ee7d9ce01c985c90fedd2767da05b3970977e4792bae89a5"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/suppsquared/textures/block/metal_frame.png.orig"
-hash = "d840ce2e77d8c74b23ba354402a725368660594483e24af98fdcab1ff14e3b28"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/suppsquared/textures/block/metal_frame.png.orig.orig"
-hash = "d840ce2e77d8c74b23ba354402a725368660594483e24af98fdcab1ff14e3b28"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/tide/lang/en_us.json"

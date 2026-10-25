@@ -352,6 +352,11 @@ dependencies {
     compileOnly "maven.modrinth:modernfix:7Jy58lnT"
 
     compileOnly fileTree("../pack/mods") { include "continuity-*.jar" }
+    compileOnly fileTree("../pack/mods") { include "LivingWind-*.jar" }
+    compileOnly "maven.modrinth:where-winds-blow:gAxCACfZ"
+    compileOnly "maven.modrinth:amendments:FofnjBi7"
+    compileOnly "maven.modrinth:AtOSAunf:n43MuIdq"
+    compileOnly "maven.modrinth:ItRzabx0:2gdYSVNY"
 
     // Architect's Palette
     runtimeOnly "maven.modrinth:architects-palette:mfYFPWxH"
@@ -378,7 +383,10 @@ dependencies {
     runtimeOnly "maven.modrinth:clutternomore:k1ees6do"
 
     // Offgrid
-    compileOnly "maven.modrinth:offgrid:DRaJGnQ7"
+    compileOnly "maven.modrinth:offgrid:uujLuKlN"
+
+    // Polytone
+    compileOnly "maven.modrinth:polytone:TC5ah7E6"
 
     // Jade
     compileOnly "maven.modrinth:jade:15.10.6+neoforge"

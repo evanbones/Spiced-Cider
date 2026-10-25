@@ -1,0 +1,294 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "p0_torch": "block/redstone_torch_off",
+    "particle": "caverns_and_chasms:block/resistor",
+    "p0_top": "caverns_and_chasms:block/resistor",
+    "p0_bottom": "caverns_and_chasms:block/resistor_bottom",
+    "p0_cage": "caverns_and_chasms:block/resistor_cage",
+    "p0_side": "caverns_and_chasms:block/resistor_side",
+    "p1_button": "caverns_and_chasms:block/resistor_button"
+  },
+  "elements": [
+    {
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        16,
+        2,
+        16
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            14,
+            16,
+            16
+          ],
+          "texture": "#p0_side",
+          "cullface": "north"
+        },
+        "east": {
+          "uv": [
+            0,
+            14,
+            16,
+            16
+          ],
+          "texture": "#p0_side",
+          "cullface": "east"
+        },
+        "south": {
+          "uv": [
+            0,
+            14,
+            16,
+            16
+          ],
+          "texture": "#p0_side",
+          "cullface": "south"
+        },
+        "west": {
+          "uv": [
+            0,
+            14,
+            16,
+            16
+          ],
+          "texture": "#p0_side",
+          "cullface": "west"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#p0_top"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#p0_bottom"
+        }
+      }
+    },
+    {
+      "from": [
+        6,
+        2,
+        2
+      ],
+      "to": [
+        10,
+        11,
+        12
+      ],
+      "rotation": {
+        "angle": 0,
+        "axis": "y",
+        "origin": [
+          4,
+          2,
+          10
+        ]
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            10,
+            4,
+            14,
+            13
+          ],
+          "texture": "#p0_cage"
+        },
+        "east": {
+          "uv": [
+            0,
+            4,
+            10,
+            13
+          ],
+          "texture": "#p0_cage"
+        },
+        "south": {
+          "uv": [
+            10,
+            4,
+            14,
+            13
+          ],
+          "texture": "#p0_cage"
+        },
+        "west": {
+          "uv": [
+            0,
+            4,
+            10,
+            13
+          ],
+          "texture": "#p0_cage"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            10,
+            4
+          ],
+          "rotation": 90,
+          "texture": "#p0_cage"
+        }
+      }
+    },
+    {
+      "from": [
+        7,
+        2,
+        11
+      ],
+      "to": [
+        9,
+        4,
+        15
+      ],
+      "rotation": {
+        "angle": 0,
+        "axis": "y",
+        "origin": [
+          7,
+          2,
+          13
+        ]
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            7,
+            9,
+            9,
+            11
+          ],
+          "texture": "#p0_torch"
+        },
+        "east": {
+          "uv": [
+            7,
+            6,
+            9,
+            10
+          ],
+          "rotation": 270,
+          "texture": "#p0_torch"
+        },
+        "south": {
+          "uv": [
+            7,
+            6,
+            9,
+            8
+          ],
+          "rotation": 180,
+          "texture": "#p0_torch"
+        },
+        "west": {
+          "uv": [
+            7,
+            6,
+            9,
+            10
+          ],
+          "rotation": 90,
+          "texture": "#p0_torch"
+        },
+        "up": {
+          "uv": [
+            9,
+            10,
+            7,
+            6
+          ],
+          "texture": "#p0_torch"
+        }
+      }
+    },
+    {
+      "from": [
+        1.5,
+        2,
+        14
+      ],
+      "to": [
+        3.5,
+        4,
+        15
+      ],
+      "rotation": {
+        "angle": 0,
+        "axis": "y",
+        "origin": [
+          1,
+          2,
+          14
+        ]
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            10,
+            2,
+            12,
+            4
+          ],
+          "texture": "#p1_button"
+        },
+        "east": {
+          "uv": [
+            10,
+            2,
+            11,
+            4
+          ],
+          "texture": "#p1_button"
+        },
+        "south": {
+          "uv": [
+            12,
+            2,
+            10,
+            4
+          ],
+          "texture": "#p1_button"
+        },
+        "west": {
+          "uv": [
+            11,
+            2,
+            12,
+            4
+          ],
+          "texture": "#p1_button"
+        },
+        "up": {
+          "uv": [
+            12,
+            2,
+            10,
+            3
+          ],
+          "texture": "#p1_button"
+        }
+      }
+    }
+  ]
+}
