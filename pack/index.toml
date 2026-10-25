@@ -102,11 +102,11 @@ hash = "6c19539e05905c97a444a612dd2b597001244355cc9a59c25b3079cd4665731a"
 
 [[files]]
 file = "config/asyncparticles/asyncparticles-mixin.properties"
-hash = "5f1dab53015c54208b2d9a7be3e5c59aa952d82ed9de7a3ca8523c6356e889c8"
+hash = "f89dc2406b74aac99cecd4e27cd1ad259caba866baa099988f7ba86e2336b739"
 
 [[files]]
 file = "config/asyncparticles/asyncparticles.json"
-hash = "458fe9902272a6cd8da63955d2d8a71a7e6f275c37d405746bc33dc0787e4b6e"
+hash = "d90a8613ecd0aebd7fd8b20166c065767227e0c4e0a605a0b044f89c76cf2e5f"
 
 [[files]]
 file = "config/atmospheric-common.toml"
@@ -239,6 +239,10 @@ hash = "7f44eb710866f1d6a88d9db1cfea5c6409a11e350fb3c8902a5fb010711ea102"
 [[files]]
 file = "config/brick_and_mortar.json"
 hash = "6ba25b17d218c13aecd7773fb0dd9f01783997854cc7123891e526e82490662e"
+
+[[files]]
+file = "config/brute_force_culling.json"
+hash = "9c52a14cfeb30a4ff94e4f62534754b74c7db1fe1449ce0538eaa42ff9e9b394"
 
 [[files]]
 file = "config/buzzier_bees-common.toml"
@@ -498,7 +502,7 @@ hash = "0030656736b21f06f9f5b73078ce3ea41778f0f744c9d5da0055712a493ced85"
 
 [[files]]
 file = "config/drippyloadingscreen/early_window_reference.properties"
-hash = "9a43336a85f0972e550657ad0c279a6ccd126ed37d250a74b37a2be7216ad63d"
+hash = "75a64c5e52eaa4e5be07b456ce3bb5c33dc579134dbc280a84e430a7ecdd1d1b"
 
 [[files]]
 file = "config/drippyloadingscreen/options.txt"
@@ -670,7 +674,7 @@ hash = "09d330b29443d9579ecc014f2be2fcb31075bfe1e9f9ac4e750f271128650fe6"
 
 [[files]]
 file = "config/fabric/indigo-renderer.properties"
-hash = "305c7dac547e43b05fd9f8aa75a2a353e3f641b9a8ddd51f2246ba56fb0f5d63"
+hash = "696ddcbb2362d083ccd78ee5f3bb660392166277f986dd3056f19f8d1644c4dc"
 
 [[files]]
 file = "config/falling_snow.json"
@@ -906,7 +910,7 @@ hash = "01799a038644f4def7bd069dfb5771e9b0d06dde7c09bb8627cea9ca3911a105"
 
 [[files]]
 file = "config/flerovium.json"
-hash = "566a6c273c8d4854691a6829f20c433215e8a1b8f8fa01fd2ee394d5a54c9a24"
+hash = "e236ec86219100c4d003a5eb9b76f9445fd8c8af064d4c12b9b368bbfbfe3745"
 
 [[files]]
 file = "config/flywheel-client.toml"
@@ -9362,7 +9366,7 @@ hash = "13b2b1384f949e6e409c3c3cc423ecb854df6b386d4466d424a57a887e89f3d8"
 
 [[files]]
 file = "config/packetfixer.properties"
-hash = "34f2a41c8a772034e4d4603e8b7e8ae9b270155034bc1c916d5c22c413c77891"
+hash = "4ab707d0d848af7ca4aab5c7559eddaf690885928aa019dae0c66ff9054d01ff"
 
 [[files]]
 file = "config/particle_core_config.toml"
@@ -12706,7 +12710,7 @@ hash = "d985bfc68899c91aa642736400472f6ab876dedaaef4b8c31f38b52d48de633d"
 
 [[files]]
 file = "config/zfastnoise.mixin.properties"
-hash = "4bc6cac64248e319e3d6d9b51f99698d390b420ee3a4284a7e745b1044d9d96b"
+hash = "68dcc19f4d84d5b15b8617ef83126c9d841adb5d3214bfdf730368792debfdaf"
 
 [[files]]
 file = "config/zipline.json"
@@ -12792,6 +12796,11 @@ metafile = true
 [[files]]
 file = "mods/architectury-api.pw.toml"
 hash = "187eafde5974beee1263538b462b7b8fe2fc8948c5d413980d9796d55928580b"
+metafile = true
+
+[[files]]
+file = "mods/asyncparticles.pw.toml"
+hash = "0159f715f2245a23d4688c4be1c2c432317ab4897ce5ccede6b2976e7ab4721d"
 metafile = true
 
 [[files]]
@@ -14176,7 +14185,7 @@ metafile = true
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/abnormals_delight/lang/en_us.json"
-hash = "0034f44b9767eaffe7afe2ad48bb08f652d63b84098c819898ddfa8b25161fb1"
+hash = "afd04017e988012bb12602534464fa27039931f5bff4092339810924c0b260f9"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/abundant_atmosphere/lang/en_us.json"
@@ -16392,7 +16401,7 @@ hash = "654ef43330ed1eb91b15f3b707062940a96416080c07199ca814b8070d5ab63a"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/farmersdelight/lang/en_us.json"
-hash = "e5447b70bd29d37128b7741d6caa2800047d52646cf7f54fb8edf97bab8c7ec0"
+hash = "d9f0ce8be6a9305fb58a62a3e00b285765b563c1ca6d1ba0c62bc9b013fbc207"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/farmersdelight/models/block/pie_slice1.json"
@@ -18608,7 +18617,7 @@ hash = "d7f54ed962e1c2363bf18e077b29398e21881a37ed68d1a8c717cdd3f50b8f36"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/neapolitan/lang/en_us.json"
-hash = "fa7c32ffe9d7ecad3ca186661006897a9eb8e33b9768e2ed403897359c15c76a"
+hash = "1f0a28361bebe97b21b4fe1b9ae9298e42d0c13052b849b663151dfd294f72b4"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/neapolitan/models/item/adzuki_milkshake.json"
