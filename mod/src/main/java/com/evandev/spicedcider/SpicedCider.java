@@ -12,10 +12,12 @@ import com.evandev.spicedcider.content.block.LatexCauldronBlock;
 import com.evandev.spicedcider.content.item.BalloonItem;
 import com.evandev.spicedcider.content.handler.SpawnControlEvents;
 import com.evandev.spicedcider.namingunconvention.RandomNameGenerator;
+import com.evandev.spicedcider.networking.CloudCoverPayload;
 import com.evandev.spicedcider.networking.VoidTrailPayload;
 import com.evandev.spicedcider.registry.*;
 import com.evandev.spicedcider.util.ItemAbilityItemsCache;
 import com.evandev.spicedcider.voidwater.client.ClientVoidTrails;
+import com.evandev.spicedcider.weather.client.CloudCoverClient;
 import net.minecraft.core.dispenser.BoatDispenseItemBehavior;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -234,6 +236,11 @@ public class SpicedCider {
                 VoidTrailPayload.TYPE,
                 VoidTrailPayload.CODEC,
                 (payload, context) -> context.enqueueWork(() -> ClientVoidTrails.receive(payload))
+        );
+        registrar.playToClient(
+                CloudCoverPayload.TYPE,
+                CloudCoverPayload.CODEC,
+                (payload, context) -> context.enqueueWork(() -> CloudCoverClient.receive(payload.cover()))
         );
     }
 

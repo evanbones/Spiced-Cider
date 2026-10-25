@@ -2,6 +2,7 @@ package com.evandev.spicedcider.compat.voxy;
 
 import com.evandev.spicedcider.SpicedCider;
 import com.evandev.spicedcider.config.SpicedCiderConfig;
+import com.evandev.spicedcider.weather.VisualWeather;
 import com.mojang.blaze3d.shaders.FogShape;
 import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.client.Camera;
@@ -104,6 +105,7 @@ public final class VoxyFog {
             if (level.getBiome(pos).value().hasPrecipitation()) {
                 weatherTarget = 0.5F * level.getRainLevel(partialTick) + 0.5F * level.getThunderLevel(partialTick);
             }
+            weatherTarget = Math.max(weatherTarget, 0.5F * VisualWeather.overcastRain());
         }
 
         long now = System.nanoTime();

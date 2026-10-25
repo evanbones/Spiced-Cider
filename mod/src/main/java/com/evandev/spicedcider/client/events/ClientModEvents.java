@@ -11,6 +11,7 @@ import com.evandev.spicedcider.client.renderer.projectiles.GrapplingHookRenderer
 import com.evandev.spicedcider.compat.tide.TideCompat;
 import com.evandev.spicedcider.registry.*;
 import com.evandev.spicedcider.resource.ResourceBaker;
+import com.evandev.spicedcider.weather.client.CloudCoverClient;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.Sheets;
@@ -104,6 +105,7 @@ public class ClientModEvents {
     public static void registerClientReloadListeners(RegisterClientReloadListenersEvent event) {
         event.registerReloadListener(SpicedCider.RANDOM_NAME_GENERATOR);
         event.registerReloadListener(new BrokenTextureReloadListener());
+        CloudCoverClient.registerReloadListener(event);
     }
 
     @SubscribeEvent
