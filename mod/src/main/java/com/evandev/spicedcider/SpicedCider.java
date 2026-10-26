@@ -16,6 +16,10 @@ import com.evandev.spicedcider.content.handler.SpawnControlEvents;
 import com.evandev.spicedcider.namingunconvention.RandomNameGenerator;
 import com.evandev.spicedcider.networking.CloudCoverPayload;
 import com.evandev.spicedcider.networking.GenerationEdgePayload;
+import com.evandev.spicedcider.networking.LodChunkPayload;
+import com.evandev.spicedcider.networking.LodHelloPayload;
+import com.evandev.spicedcider.lodgen.LodGen;
+import com.evandev.spicedcider.lodgen.client.LodClient;
 import com.evandev.spicedcider.networking.VoidTrailPayload;
 import com.evandev.spicedcider.registry.*;
 import com.evandev.spicedcider.util.ItemAbilityItemsCache;
@@ -28,6 +32,7 @@ import net.minecraft.world.entity.vehicle.Boat;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.DyeColor;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Blocks;
@@ -252,6 +257,16 @@ public class SpicedCider {
                 GenerationEdgePayload.TYPE,
                 GenerationEdgePayload.CODEC,
                 (payload, context) -> context.enqueueWork(() -> VoxyFog.receiveEdge(payload.distance()))
+        );
+        registrar.playToClient(
+                LodChunkPayload.TYPE,
+                LodChunkPayload.CODEC,
+                (payload, context) -> context.enqueueWork(() -> LodClient.receive(payload))
+        );
+        registrar.playToServer(
+                LodHelloPayload.TYPE,
+                LodHelloPayload.CODEC,
+                (payload, context) -> context.enqueueWork(() -> LodGen.hello((ServerPlayer) context.player(), payload.radius()))
         );
     }
 

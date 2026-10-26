@@ -1,0 +1,29 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "abundant_atmosphere"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "###",
+    "# #",
+    "###"
+  ],
+  "key": {
+    "#": [
+      {
+        "item": "abundant_atmosphere:red_bamboo_planks"
+      },
+      {
+        "item": "abundant_atmosphere:trimmed_red_bamboo_planks"
+      }
+    ]
+  },
+  "result": {
+    "id": "everycomp:q/abundant_atmosphere/red_bamboo_chest",
+    "count": 1
+  }
+}

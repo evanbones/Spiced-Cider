@@ -1,0 +1,102 @@
+[F3-Backport]
+	#Enable the mod?
+	#(true/false)
+	#Default is true.
+	enable_mod = true
+	#The scale of the debug (F3) screen
+	#Set to -1 to follow the current Minecraft Gui Scale setting
+	#Set to 0 for the Minecraft 'auto' setting
+	# Default: 2
+	# Range: -1 ~ 5
+	debug_gui_scale = 2
+
+	[F3-Backport.Priority]
+		#Enable the Game Version entry?
+		#(true/false)
+		#Default is true.
+		enable_game_version = true
+		#Enable the FPS entry
+		#(true/false)
+		#Default is true.
+		enable_fps = true
+
+	[F3-Backport.Position]
+		#Enable the Player Position entry?
+		#(true/false)
+		#Default is true.
+		enable_player_position = false
+		#Enable the Player Speed entry?
+		#(true/false)
+		#Default is false.
+		enable_player_speed = false
+		#Enable the Player Section Position entry?
+		#(true/false)
+		#Default is true.
+		enable_player_section_position = true
+		#Enable the Biome entry?
+		#(true/false)
+		#Default is true.
+		enable_biome = false
+
+	[F3-Backport.Memory]
+		#Enable the Memory entry?
+		#(true/false)
+		#Default is true.
+		enable_memory = true
+		#Enable the Detailed Memory entry?
+		#(true/false)
+		#Default is false.
+		enable_detailed_memory = false
+
+	[F3-Backport.System_Specs]
+		#Enable the System Specs entry?
+		#(true/false)
+		#Default is true.
+		enable_system_specs = true
+
+	[F3-Backport.Performance_Impactors]
+		#Enable the Simple Performance Impactors entry?
+		#(true/false)
+		#Default is true.
+		enable_simple_perf_impactors = true
+
+	[F3-Backport.Light]
+		enable_light = false
+
+	[F3-Backport.Heightmap]
+		#Enable the Heightmap entry?
+		#(true/false)
+		#Default is false.
+		enable_heightmap = false
+
+	[F3-Backport.Spawn_Counts]
+		#Enable the Spawn Counts entry?
+		#(true/false)
+		#Default is false.
+		enable_spawn_counts = false
+
+	[F3-Backport.Misc]
+		#Enable the Gpu Utilization entry?
+		#(true/false)
+		#Default is true.
+		enable_gpu_utilization = true
+		#Enable the Day Count entry?
+		#(true/false)
+		#Default is false.
+		enable_day_count = false
+		#Enable the Entity Render Stats entry?
+		#(true/false)
+		#Default is false.
+		enable_entity_render_stats = false
+		#Enable the Local Difficulty entry?
+		#(true/false)
+		#Default is false.
+		enable_local_difficulty = false
+		#Enable the Sound Mood entry?
+		#(true/false)
+		#Default is false.
+		enable_sound_mood = false
+		#Enable the TPS entry?
+		#(true/false)
+		#Default is true.
+		enable_tps = true

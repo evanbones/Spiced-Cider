@@ -1,0 +1,52 @@
+[
+  {
+    "action": "remove_recipe",
+    "id": [
+      "quark:building/crafting/chests/mixed_chest",
+      "quark:building/crafting/chests/mixed_chest_wood",
+      "quark:building/crafting/chest_revert",
+      "quark:building/crafting/trapped_chest_revert",
+      "quark:building/crafting/chests/vanilla_trapped_chest",
+      "woodworks:trapped_chest",
+      "woodworks:bamboo_closet",
+      "quark:building/crafting/chests/oak_chest",
+      "quark:building/crafting/chests/spruce_chest",
+      "quark:building/crafting/chests/birch_chest",
+      "quark:building/crafting/chests/jungle_chest",
+      "quark:building/crafting/chests/acacia_chest",
+      "quark:building/crafting/chests/dark_oak_chest",
+      "quark:building/crafting/chests/mangrove_chest",
+      "quark:building/crafting/chests/cherry_chest",
+      "quark:building/crafting/chests/bamboo_chest",
+      "quark:building/crafting/chests/crimson_chest",
+      "quark:building/crafting/chests/warped_chest",
+      "everycomp:q/nomansland/maple_chest",
+      "everycomp:q/nomansland/pine_chest",
+      "everycomp:q/nomansland/walnut_chest",
+      "everycomp:q/nomansland/willow_chest",
+      "everycomp:q/abundant_atmosphere/ashroot_chest",
+      "everycomp:q/abundant_atmosphere/gourdrot_chest",
+      "everycomp:q/abundant_atmosphere/red_bamboo_chest",
+      "everycomp:q/newworld/fir_chest",
+      "everycomp:q/architects_palette/twisted_chest",
+      "everycomp:q/bountifulfares/hoary_chest",
+      "everycomp:q/culturaldelights/beanstalk_chest",
+      "everycomp:q/infernalexp/luminous_chest",
+      "everycomp:q/minecraft/pale_oak_chest",
+      "everycomp:q/mynethersdelight/powdery_chest",
+      "caverns_and_chasms:azalea_chest",
+      "environmental:wisteria_chest",
+      "upgrade_aquatic:driftwood_chest"
+    ]
+  },
+  {
+    "action": "replace_input",
+    "target": "minecraft:chest",
+    "replacement": "#c:chests/wooden"
+  },
+  {
+    "action": "replace_input",
+    "target": "minecraft:trapped_chest",
+    "replacement": "#c:chests/trapped"
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "###",
+    "# #",
+    "###"
+  ],
+  "key": {
+    "#": [
+      {
+        "item": "minecraft:bamboo_planks"
+      },
+      {
+        "item": "nomansland:trimmed_bamboo_planks"
+      }
+    ]
+  },
+  "result": {
+    "id": "quark:bamboo_chest",
+    "count": 1
+  }
+}

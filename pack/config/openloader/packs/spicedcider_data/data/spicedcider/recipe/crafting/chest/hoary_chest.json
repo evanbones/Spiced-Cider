@@ -1,0 +1,29 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "bountifulfares"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "###",
+    "# #",
+    "###"
+  ],
+  "key": {
+    "#": [
+      {
+        "item": "bountifulfares:hoary_planks"
+      },
+      {
+        "item": "everycomp:nml/bountifulfares/trimmed_hoary_planks"
+      }
+    ]
+  },
+  "result": {
+    "id": "everycomp:q/bountifulfares/hoary_chest",
+    "count": 1
+  }
+}

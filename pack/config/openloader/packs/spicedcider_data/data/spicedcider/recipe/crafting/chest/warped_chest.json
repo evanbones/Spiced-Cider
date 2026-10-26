@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "###",
+    "# #",
+    "###"
+  ],
+  "key": {
+    "#": [
+      {
+        "item": "minecraft:warped_planks"
+      },
+      {
+        "item": "nomansland:trimmed_warped_planks"
+      }
+    ]
+  },
+  "result": {
+    "id": "quark:warped_chest",
+    "count": 1
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "###",
+    "# #",
+    "###"
+  ],
+  "key": {
+    "#": [
+      {
+        "item": "minecraft:jungle_planks"
+      },
+      {
+        "item": "nomansland:trimmed_jungle_planks"
+      }
+    ]
+  },
+  "result": {
+    "id": "quark:jungle_chest",
+    "count": 1
+  }
+}

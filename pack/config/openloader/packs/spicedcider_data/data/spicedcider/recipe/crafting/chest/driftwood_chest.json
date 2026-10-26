@@ -1,0 +1,29 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "upgrade_aquatic"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "###",
+    "# #",
+    "###"
+  ],
+  "key": {
+    "#": [
+      {
+        "item": "upgrade_aquatic:driftwood_planks"
+      },
+      {
+        "item": "everycomp:nml/upgrade_aquatic/trimmed_driftwood_planks"
+      }
+    ]
+  },
+  "result": {
+    "id": "upgrade_aquatic:driftwood_chest",
+    "count": 1
+  }
+}

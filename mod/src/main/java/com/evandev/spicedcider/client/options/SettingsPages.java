@@ -16,6 +16,8 @@ import com.evandev.spicedcider.compat.controlify.ControlifySettings;
 import com.evandev.spicedcider.compat.lambdynlights.DynamicLightsSetting;
 import com.evandev.spicedcider.compat.musictweaks.MusicTweaksSettings;
 import com.evandev.spicedcider.compat.sodium.SodiumSetting;
+import com.evandev.spicedcider.compat.voxy.VoxyIngest;
+import com.evandev.spicedcider.lodgen.client.LodSettings;
 import net.minecraft.Util;
 import net.minecraft.client.KeyMapping;
 import net.minecraft.client.Minecraft;
@@ -47,6 +49,7 @@ import java.util.Objects;
 public final class SettingsPages {
 
     private static final Minecraft MC = Minecraft.getInstance();
+    private static final int VOXY_DEFAULT_DISTANCE = 32;
 
     public static List<SettingsPage> create() {
         return List.of(
@@ -147,7 +150,9 @@ public final class SettingsPages {
                 sodium("sodium:general.simulation_distance", o.simulationDistance()),
                 sodium("sodium:quality.entity_distance", o.entityDistanceScaling()),
                 named(sodiumOnly("voxy:enabled"), "spicedcider.options.lod_terrain"),
-                named(sodiumOnly("voxy:render_distance"), "spicedcider.options.lod_distance")));
+                named(sodiumOnly("voxy:render_distance", VOXY_DEFAULT_DISTANCE), "spicedcider.options.lod_distance"),
+                VoxyIngest.available() ? LodSettings.generate() : null,
+                VoxyIngest.available() ? LodSettings.threads() : null));
         add(entries, category(screen, "quality",
                 sodium("sodium:quality.graphics", o.graphicsMode()),
                 sodium("sodium:quality.ao", o.ambientOcclusion()),

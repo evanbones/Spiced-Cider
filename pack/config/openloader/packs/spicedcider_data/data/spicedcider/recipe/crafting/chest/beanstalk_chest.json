@@ -1,0 +1,29 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "culturaldelights"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "###",
+    "# #",
+    "###"
+  ],
+  "key": {
+    "#": [
+      {
+        "item": "culturaldelights:beanstalk_planks"
+      },
+      {
+        "item": "everycomp:nml/culturaldelights/trimmed_beanstalk_planks"
+      }
+    ]
+  },
+  "result": {
+    "id": "everycomp:q/culturaldelights/beanstalk_chest",
+    "count": 1
+  }
+}

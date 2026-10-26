@@ -1,0 +1,29 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "caverns_and_chasms"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "###",
+    "# #",
+    "###"
+  ],
+  "key": {
+    "#": [
+      {
+        "item": "caverns_and_chasms:azalea_log"
+      },
+      {
+        "item": "caverns_and_chasms:stripped_azalea_log"
+      }
+    ]
+  },
+  "result": {
+    "id": "caverns_and_chasms:azalea_chest",
+    "count": 4
+  }
+}

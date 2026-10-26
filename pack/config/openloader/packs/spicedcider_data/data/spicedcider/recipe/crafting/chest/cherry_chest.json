@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "###",
+    "# #",
+    "###"
+  ],
+  "key": {
+    "#": [
+      {
+        "item": "minecraft:cherry_planks"
+      },
+      {
+        "item": "nomansland:trimmed_cherry_planks"
+      }
+    ]
+  },
+  "result": {
+    "id": "quark:cherry_chest",
+    "count": 1
+  }
+}

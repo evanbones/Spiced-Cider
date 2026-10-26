@@ -3,12 +3,6 @@
 	slimeTimeDisableItemMerging = true
 	#Use Environmental's old 1.19 wisteria tree leaf generation instead of the current sparse/patchy one. Requires Environmental (obviously).
 	oldWisteriaTrees = true
-	#Stops Voxy World Gen V2 from discarding the client's pause callback when a world loads, so chunk generation actually halts while the pause menu is open instead of running until the heap is exhausted. Requires Voxy World Gen V2.
-	voxyWorldGenPauseFix = true
-	#Replaces Voxy World Gen V2's LOD catch-up pass with one that never blocks the server thread on a chunk request. Fixes the client hanging forever on Save & Quit to Title, especially alongside C2ME. Requires Voxy World Gen V2.
-	voxyWorldGenSafeCatchup = true
-	#Lets the LOD catch-up pass pull already-generated chunks back off disk so distant terrain still syncs to players who join after generation finished. Requires Voxy World Gen V2 and Safe Catch-Up.
-	voxyWorldGenSyncUnloadedChunks = true
 
 [gameplay]
 	#Beds don't explode outside the Overworld; instead they show a message and wake sleeping villagers.
@@ -59,3 +53,19 @@
 	caveMapsFixedHeights = ["minecraft:the_nether=40"]
 	#Dimension ids where maps always show the height they were created at, even without a ceiling.
 	caveMapsCreationHeightDimensions = []
+
+[lod]
+	#Generates terrain beyond your render distance in the background so Voxy can show it, out to your Distant Terrain Range. The chunks are never saved, so the world folder doesn't grow.
+	lodGeneration = true
+	#Server-side cap, in chunks, on how far LoD terrain is generated around each player. Each player's own Voxy LoD render distance is used up to this limit.
+	# Default: 128
+	# Range: 8 ~ 512
+	lodGenerationMaxRadius = 128
+	#Worker threads used to generate LoD terrain. 0 picks automatically: an eighth of your CPU threads, between 1 and 4. More is faster but costs frame rate while terrain is generating. Requires rejoining the world.
+	# Default: 0
+	# Range: 0 ~ 16
+	lodGenerationThreads = 0
+	#Chunks per second sent to each player on a server. Singleplayer hands chunks to Voxy directly and ignores this.
+	# Default: 100
+	# Range: 10 ~ 2000
+	lodGenerationSendRate = 100

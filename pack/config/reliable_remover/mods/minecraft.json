@@ -293,5 +293,19 @@
       "minecraft:diamond_spear",
       "minecraft:netherite_spear"
     ]
+  },
+  {
+    "action": "remove",
+    "items": [
+      "minecraft:chest"
+    ],
+    "replace_with": "quark:oak_chest"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "minecraft:trapped_chest"
+    ],
+    "replace_with": "quark:trapped_oak_chest"
   }
 ]

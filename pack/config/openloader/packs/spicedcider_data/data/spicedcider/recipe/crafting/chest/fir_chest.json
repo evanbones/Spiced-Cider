@@ -1,0 +1,29 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "newworld"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "###",
+    "# #",
+    "###"
+  ],
+  "key": {
+    "#": [
+      {
+        "item": "newworld:fir_planks"
+      },
+      {
+        "item": "newworld:trimmed_fir_planks"
+      }
+    ]
+  },
+  "result": {
+    "id": "everycomp:q/newworld/fir_chest",
+    "count": 1
+  }
+}

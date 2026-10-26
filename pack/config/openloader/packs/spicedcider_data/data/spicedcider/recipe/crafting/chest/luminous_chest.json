@@ -1,0 +1,29 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "infernalexp"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "###",
+    "# #",
+    "###"
+  ],
+  "key": {
+    "#": [
+      {
+        "item": "infernalexp:luminous_planks"
+      },
+      {
+        "item": "everycomp:nml/infernalexp/trimmed_luminous_planks"
+      }
+    ]
+  },
+  "result": {
+    "id": "everycomp:q/infernalexp/luminous_chest",
+    "count": 1
+  }
+}

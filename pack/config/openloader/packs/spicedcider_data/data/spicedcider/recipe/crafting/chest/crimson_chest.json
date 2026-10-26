@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "###",
+    "# #",
+    "###"
+  ],
+  "key": {
+    "#": [
+      {
+        "item": "minecraft:crimson_planks"
+      },
+      {
+        "item": "nomansland:trimmed_crimson_planks"
+      }
+    ]
+  },
+  "result": {
+    "id": "quark:crimson_chest",
+    "count": 1
+  }
+}

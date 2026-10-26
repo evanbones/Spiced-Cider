@@ -94,9 +94,6 @@ public class SpicedCiderConfig {
     public static class Common {
         public final ModConfigSpec.BooleanValue oldWisteriaTrees;
         public final ModConfigSpec.BooleanValue slimeTimeDisableItemMerging;
-        public final ModConfigSpec.BooleanValue voxyWorldGenPauseFix;
-        public final ModConfigSpec.BooleanValue voxyWorldGenSafeCatchup;
-        public final ModConfigSpec.BooleanValue voxyWorldGenSyncUnloadedChunks;
 
         public final ModConfigSpec.BooleanValue bedExplosionPrevention;
         public final ModConfigSpec.BooleanValue respawnAnchorExplosionPrevention;
@@ -117,6 +114,10 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.ConfigValue<List<? extends String>> caveMapsCreationHeightDimensions;
 
         public final ModConfigSpec.BooleanValue disableRecipeBookTracking;
+        public final ModConfigSpec.BooleanValue lodGeneration;
+        public final ModConfigSpec.IntValue lodGenerationMaxRadius;
+        public final ModConfigSpec.IntValue lodGenerationThreads;
+        public final ModConfigSpec.IntValue lodGenerationSendRate;
 
         public Common(ModConfigSpec.Builder builder) {
             builder.push("compat");
@@ -130,21 +131,6 @@ public class SpicedCiderConfig {
                     .comment(tooltip("slimeTimeDisableItemMerging"))
                     .translation("option.spicedcider.slimeTimeDisableItemMerging")
                     .define("slimeTimeDisableItemMerging", true);
-
-            voxyWorldGenPauseFix = builder
-                    .comment(tooltip("voxyWorldGenPauseFix"))
-                    .translation("option.spicedcider.voxyWorldGenPauseFix")
-                    .define("voxyWorldGenPauseFix", true);
-
-            voxyWorldGenSafeCatchup = builder
-                    .comment(tooltip("voxyWorldGenSafeCatchup"))
-                    .translation("option.spicedcider.voxyWorldGenSafeCatchup")
-                    .define("voxyWorldGenSafeCatchup", true);
-
-            voxyWorldGenSyncUnloadedChunks = builder
-                    .comment(tooltip("voxyWorldGenSyncUnloadedChunks"))
-                    .translation("option.spicedcider.voxyWorldGenSyncUnloadedChunks")
-                    .define("voxyWorldGenSyncUnloadedChunks", true);
 
             builder.pop();
             builder.push("gameplay");
@@ -252,6 +238,29 @@ public class SpicedCiderConfig {
                     .define("disableRecipeBookTracking", true);
 
             builder.pop();
+            builder.push("lod");
+
+            lodGeneration = builder
+                    .comment(tooltip("lodGeneration"))
+                    .translation("option.spicedcider.lodGeneration")
+                    .define("lodGeneration", true);
+
+            lodGenerationMaxRadius = builder
+                    .comment(tooltip("lodGenerationMaxRadius"))
+                    .translation("option.spicedcider.lodGenerationMaxRadius")
+                    .defineInRange("lodGenerationMaxRadius", 128, 8, 512);
+
+            lodGenerationThreads = builder
+                    .comment(tooltip("lodGenerationThreads"))
+                    .translation("option.spicedcider.lodGenerationThreads")
+                    .defineInRange("lodGenerationThreads", 0, 0, 16);
+
+            lodGenerationSendRate = builder
+                    .comment(tooltip("lodGenerationSendRate"))
+                    .translation("option.spicedcider.lodGenerationSendRate")
+                    .defineInRange("lodGenerationSendRate", 100, 10, 2000);
+
+            builder.pop();
         }
     }
 
@@ -283,7 +292,6 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.IntValue voxyCaveFogDensity;
 
         public final ModConfigSpec.BooleanValue sodiumLightingParityFix;
-        public final ModConfigSpec.BooleanValue voxyWorldGenPersistStats;
         public final ModConfigSpec.BooleanValue lodgedHideArrowDepth;
         public final ModConfigSpec.BooleanValue lodgedHideBleedingRisk;
 
@@ -294,11 +302,6 @@ public class SpicedCiderConfig {
                     .comment(tooltip("sodiumLightingParityFix"))
                     .translation("option.spicedcider.sodiumLightingParityFix")
                     .define("sodiumLightingParityFix", true);
-
-            voxyWorldGenPersistStats = builder
-                    .comment(tooltip("voxyWorldGenPersistStats"))
-                    .translation("option.spicedcider.voxyWorldGenPersistStats")
-                    .define("voxyWorldGenPersistStats", true);
 
             lodgedHideArrowDepth = builder
                     .comment(tooltip("lodgedHideArrowDepth"))

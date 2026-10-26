@@ -61,14 +61,6 @@ public class SpicedCiderConfigScreen {
                                 toggle("sodiumLightingParityFix", client.sodiumLightingParityFix))
                         .optionIf(ModList.get().isLoaded("slime_time"),
                                 toggle("slimeTimeDisableItemMerging", common.slimeTimeDisableItemMerging))
-                        .optionIf(ModList.get().isLoaded("voxyworldgenv2"),
-                                toggle("voxyWorldGenPauseFix", common.voxyWorldGenPauseFix))
-                        .optionIf(ModList.get().isLoaded("voxyworldgenv2"),
-                                toggle("voxyWorldGenSafeCatchup", common.voxyWorldGenSafeCatchup))
-                        .optionIf(ModList.get().isLoaded("voxyworldgenv2"),
-                                toggle("voxyWorldGenSyncUnloadedChunks", common.voxyWorldGenSyncUnloadedChunks))
-                        .optionIf(ModList.get().isLoaded("voxyworldgenv2"),
-                                toggle("voxyWorldGenPersistStats", client.voxyWorldGenPersistStats))
                         .optionIf(ModList.get().isLoaded("lodged"),
                                 toggle("lodgedHideArrowDepth", client.lodgedHideArrowDepth))
                         .optionIf(ModList.get().isLoaded("lodged"),

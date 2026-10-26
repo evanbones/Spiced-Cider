@@ -1,0 +1,29 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "mynethersdelight"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "###",
+    "# #",
+    "###"
+  ],
+  "key": {
+    "#": [
+      {
+        "item": "mynethersdelight:powdery_planks"
+      },
+      {
+        "item": "everycomp:nml/mynethersdelight/trimmed_powdery_planks"
+      }
+    ]
+  },
+  "result": {
+    "id": "everycomp:q/mynethersdelight/powdery_chest",
+    "count": 1
+  }
+}

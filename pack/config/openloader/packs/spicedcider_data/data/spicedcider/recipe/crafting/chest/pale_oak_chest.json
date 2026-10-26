@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "###",
+    "# #",
+    "###"
+  ],
+  "key": {
+    "#": [
+      {
+        "item": "minecraft:pale_oak_planks"
+      },
+      {
+        "item": "everycomp:nml/minecraft/trimmed_pale_oak_planks"
+      }
+    ]
+  },
+  "result": {
+    "id": "everycomp:q/minecraft/pale_oak_chest",
+    "count": 1
+  }
+}

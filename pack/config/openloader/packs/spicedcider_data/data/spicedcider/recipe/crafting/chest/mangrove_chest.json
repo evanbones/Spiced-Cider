@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "###",
+    "# #",
+    "###"
+  ],
+  "key": {
+    "#": [
+      {
+        "item": "minecraft:mangrove_planks"
+      },
+      {
+        "item": "nomansland:trimmed_mangrove_planks"
+      }
+    ]
+  },
+  "result": {
+    "id": "quark:mangrove_chest",
+    "count": 1
+  }
+}
