@@ -352,6 +352,8 @@ dependencies {
     compileOnly fileTree("../pack/mods") { include "continuity-*.jar" }
     compileOnly fileTree("../pack/mods") { include "LivingWind-*.jar" }
     compileOnly fileTree("../pack/mods") { include "f3backport-*.jar" }
+    compileOnly("fuzs.iteminteractions:iteminteractions-neoforge:21.1.4") { transitive = false }
+    compileOnly("fuzs.puzzleslib:puzzleslib-neoforge:21.1.65") { transitive = false }
     compileOnly "maven.modrinth:where-winds-blow:gAxCACfZ"
     compileOnly "maven.modrinth:amendments:FofnjBi7"
     compileOnly "maven.modrinth:AtOSAunf:n43MuIdq"
@@ -364,7 +366,7 @@ dependencies {
     compileOnly "dev.architectury:architectury-neoforge:13.0.11"
 
     // Reconnectible Chains
-    compileOnly "maven.modrinth:reconnectible-chains:2.2.5-1.21.1-neoforge"
+    compileOnly "maven.modrinth:reconnectible-chains:e4yVoAvP"
 
     // Abnormals
     compileOnly "maven.modrinth:environmental:5.0.1"
@@ -373,6 +375,9 @@ dependencies {
     compileOnly "maven.modrinth:blueprint:8.1.0"
     runtimeOnly "maven.modrinth:blueprint:8.1.0"
     runtimeOnly "maven.modrinth:gallery:2.0.1"
+
+    // Reliable Backpacks
+    compileOnly "maven.modrinth:reliable-backpacks:HRVysOMj"
 
     // Reliable Remover
     compileOnly "maven.modrinth:reliable-remover:tUMtmlJf"

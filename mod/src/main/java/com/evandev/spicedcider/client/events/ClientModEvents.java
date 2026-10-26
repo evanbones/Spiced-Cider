@@ -5,7 +5,10 @@ import com.evandev.spicedcider.client.models.armor.MischiefArmorModel;
 import com.evandev.spicedcider.client.models.projectile.CobwebProjectileModel;
 import com.evandev.spicedcider.client.particle.CleaverSweepParticle;
 import com.evandev.spicedcider.client.resource.BrokenTextureReloadListener;
+import com.evandev.spicedcider.client.music.PocketJukeboxClient;
+import com.evandev.spicedcider.client.renderer.PocketJukeboxTooltipRenderer;
 import com.evandev.spicedcider.client.renderer.balloon.BalloonRenderer;
+import com.evandev.spicedcider.content.item.PocketJukeboxTooltip;
 import com.evandev.spicedcider.client.renderer.projectiles.CobwebProjectileRenderer;
 import com.evandev.spicedcider.client.renderer.projectiles.GrapplingHookRenderer;
 import com.evandev.spicedcider.compat.tide.TideCompat;
@@ -13,6 +16,7 @@ import com.evandev.spicedcider.registry.*;
 import com.evandev.spicedcider.resource.ResourceBaker;
 import com.evandev.spicedcider.weather.client.CloudCoverClient;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.neoforged.neoforge.client.event.RegisterClientTooltipComponentFactoriesEvent;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.Sheets;
 import net.minecraft.network.chat.Component;
@@ -53,6 +57,7 @@ import java.util.Optional;
 
 @EventBusSubscriber(modid = SpicedCider.MOD_ID, value = Dist.CLIENT)
 public class ClientModEvents {
+    private static final ResourceLocation PLAYING = ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "playing");
 
     @SubscribeEvent
     public static void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
@@ -110,6 +115,11 @@ public class ClientModEvents {
     }
 
     @SubscribeEvent
+    public static void registerTooltipComponents(RegisterClientTooltipComponentFactoriesEvent event) {
+        event.register(PocketJukeboxTooltip.class, PocketJukeboxTooltipRenderer::new);
+    }
+
+    @SubscribeEvent
     public static void onClientSetup(FMLClientSetupEvent event) {
         if (ModList.get().isLoaded("controlify")) {
             ControlifySettings.register();
@@ -122,6 +132,8 @@ public class ClientModEvents {
             if (ModBlocks.TWISTED_SIGN != null) {
                 Sheets.addWoodType(ModWoodTypes.TWISTED);
             }
+            ItemProperties.register(ModItems.POCKET_JUKEBOX.get(), PLAYING, PocketJukeboxClient::playingProperty);
+            ModItems.POCKET_JUKEBOXES.values().forEach(item -> ItemProperties.register(item.get(), PLAYING, PocketJukeboxClient::playingProperty));
             if (ModItems.ADAMANTITE_FISHING_ROD != null) {
                 ItemProperties.register(ModItems.ADAMANTITE_FISHING_ROD.get(), ResourceLocation.withDefaultNamespace("cast"), (stack, level, entity, seed) -> {
                     if (!(entity instanceof Player player) || player.fishing == null) return 0.0F;

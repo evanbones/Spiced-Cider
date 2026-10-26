@@ -1,0 +1,30 @@
+{
+  "parent": "spicedcider:industry/spout",
+  "display": {
+    "icon": {
+      "id": "create:sweet_roll"
+    },
+    "title": {
+      "text": "Balanced Diet"
+    },
+    "description": {
+      "text": "Fill Chocolate Strawberries, a Honeyed Apple and a Sweet Roll from one Spout"
+    },
+    "frame": "goal"
+  },
+  "criteria": {
+    "0": {
+      "trigger": "create:foods_builtin"
+    }
+  },
+  "requirements": [
+    [
+      "0"
+    ]
+  ],
+  "rewards": {
+    "loot": [
+      "spicedcider:advancement/industry_balanced_diet"
+    ]
+  }
+}

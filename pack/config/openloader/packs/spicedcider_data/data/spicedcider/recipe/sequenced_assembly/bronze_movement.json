@@ -1,0 +1,88 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    }
+  ],
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "tag": "c:plates/bronze"
+  },
+  "loops": 3,
+  "results": [
+    {
+      "chance": 120.0,
+      "id": "spicedcider:bronze_movement"
+    },
+    {
+      "chance": 8.0,
+      "id": "alloyed:bronze_sheet"
+    },
+    {
+      "chance": 5.0,
+      "id": "create:cogwheel"
+    },
+    {
+      "chance": 3.0,
+      "id": "alloyed:bronze_nugget"
+    },
+    {
+      "chance": 2.0,
+      "id": "create:shaft"
+    }
+  ],
+  "sequence": [
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "spicedcider:incomplete_bronze_movement"
+        },
+        {
+          "item": "create:cogwheel"
+        }
+      ],
+      "results": [
+        {
+          "id": "spicedcider:incomplete_bronze_movement"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "spicedcider:incomplete_bronze_movement"
+        },
+        {
+          "item": "create:large_cogwheel"
+        }
+      ],
+      "results": [
+        {
+          "id": "spicedcider:incomplete_bronze_movement"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "spicedcider:incomplete_bronze_movement"
+        },
+        {
+          "tag": "c:nuggets/bronze"
+        }
+      ],
+      "results": [
+        {
+          "id": "spicedcider:incomplete_bronze_movement"
+        }
+      ]
+    }
+  ],
+  "transitional_item": {
+    "id": "spicedcider:incomplete_bronze_movement"
+  }
+}

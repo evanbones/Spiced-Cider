@@ -1,0 +1,97 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "item": "create:cinder_flour"
+  },
+  "loops": 1,
+  "results": [
+    {
+      "id": "create:blaze_cake",
+      "count": 2
+    }
+  ],
+  "sequence": [
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "spicedcider:incomplete_blaze_cake"
+        },
+        {
+          "item": "minecraft:sugar"
+        }
+      ],
+      "results": [
+        {
+          "id": "spicedcider:incomplete_blaze_cake"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "spicedcider:incomplete_blaze_cake"
+        },
+        {
+          "tag": "c:eggs"
+        }
+      ],
+      "results": [
+        {
+          "id": "spicedcider:incomplete_blaze_cake"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "spicedcider:incomplete_blaze_cake"
+        },
+        {
+          "item": "modestmining:coke"
+        }
+      ],
+      "results": [
+        {
+          "id": "spicedcider:incomplete_blaze_cake"
+        }
+      ]
+    },
+    {
+      "type": "create:filling",
+      "ingredients": [
+        {
+          "item": "spicedcider:incomplete_blaze_cake"
+        },
+        {
+          "type": "neoforge:single",
+          "fluid": "minecraft:lava",
+          "amount": 250
+        }
+      ],
+      "results": [
+        {
+          "id": "spicedcider:incomplete_blaze_cake"
+        }
+      ]
+    },
+    {
+      "type": "create:pressing",
+      "ingredients": [
+        {
+          "item": "spicedcider:incomplete_blaze_cake"
+        }
+      ],
+      "results": [
+        {
+          "id": "spicedcider:incomplete_blaze_cake"
+        }
+      ]
+    }
+  ],
+  "transitional_item": {
+    "id": "spicedcider:incomplete_blaze_cake"
+  }
+}

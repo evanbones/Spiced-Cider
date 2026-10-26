@@ -5,6 +5,7 @@ import com.evandev.spicedcider.content.item.BalloonItem;
 import com.evandev.spicedcider.content.item.InferniteCleaverItem;
 import com.evandev.spicedcider.content.item.FireStrikerItem;
 import com.evandev.spicedcider.content.item.MischiefArmorItem;
+import com.evandev.spicedcider.content.item.PocketJukeboxItem;
 import com.evandev.spicedcider.compat.architectspalette.ArchitectsPaletteCompat;
 import com.evandev.spicedcider.compat.tide.TideCompat;
 import net.minecraft.world.item.*;
@@ -154,9 +155,17 @@ public class ModItems {
     public static final Map<DyeColor, DeferredItem<BlockItem>> WOOL_STAIRS = new EnumMap<>(DyeColor.class);
     public static final Map<DyeColor, DeferredItem<BlockItem>> WOOL_SLABS = new EnumMap<>(DyeColor.class);
     public static final Map<DyeColor, DeferredItem<Item>> BALLOONS = new EnumMap<>(DyeColor.class);
+    public static final DeferredItem<Item> BRONZE_MOVEMENT = ITEMS.registerSimpleItem("bronze_movement");
+    public static final DeferredItem<Item> INCOMPLETE_BLAZE_CAKE = ITEMS.registerSimpleItem("incomplete_blaze_cake", new Item.Properties().stacksTo(1));
+    public static final DeferredItem<Item> INCOMPLETE_BRONZE_MOVEMENT = ITEMS.registerSimpleItem("incomplete_bronze_movement", new Item.Properties().stacksTo(1));
+    public static final DeferredItem<Item> POCKET_JUKEBOX = ITEMS.register("pocket_jukebox",
+            () -> new PocketJukeboxItem(new Item.Properties().stacksTo(1)));
+    public static final Map<DyeColor, DeferredItem<Item>> POCKET_JUKEBOXES = new EnumMap<>(DyeColor.class);
 
     static {
         for (DyeColor color : DyeColor.values()) {
+            POCKET_JUKEBOXES.put(color, ITEMS.register(color.getName() + "_pocket_jukebox",
+                    () -> new PocketJukeboxItem(new Item.Properties().stacksTo(1))));
             WOOL_STAIRS.put(color, ITEMS.registerSimpleBlockItem(ModBlocks.WOOL_STAIRS.get(color)));
             WOOL_SLABS.put(color, ITEMS.registerSimpleBlockItem(ModBlocks.WOOL_SLABS.get(color)));
             BALLOONS.put(color, ITEMS.register(color.getName() + "_balloon",

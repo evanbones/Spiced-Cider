@@ -6,6 +6,7 @@ import com.evandev.spicedcider.compat.wherewindsblow.WhereWindsBlowLazyModelWrap
 import com.evandev.spicedcider.compat.everycompat.BlockBoxEveryCompatLoader;
 import com.evandev.spicedcider.compat.infernalexp.InfernalExpansionCompat;
 import com.evandev.spicedcider.compat.embersandicicles.IceCubes;
+import com.evandev.spicedcider.compat.iteminteractions.ItemInteractionsCompat;
 import com.evandev.spicedcider.compat.tide.TideCompat;
 import com.evandev.spicedcider.compat.yacl.ConfigScreenLoader;
 import com.evandev.spicedcider.config.LogReconfiguration;
@@ -107,6 +108,7 @@ public class SpicedCider {
         ModParticleTypes.PARTICLE_TYPES.register(modEventBus);
         ModLootModifiers.LOOT_MODIFIER_SERIALIZERS.register(modEventBus);
         ModDataComponents.DATA_COMPONENTS.register(modEventBus);
+        if (ModList.get().isLoaded("iteminteractions")) ItemInteractionsCompat.register(modEventBus);
         ModFluidTypes.FLUID_TYPES.register(modEventBus);
         ModFluids.FLUIDS.register(modEventBus);
 
@@ -169,6 +171,12 @@ public class SpicedCider {
                 ItemStack balloon = new ItemStack(ModItems.BALLOONS.get(color).get());
                 event.insertAfter(previous, balloon, vis);
                 previous = balloon;
+            }
+            ItemStack jukebox = new ItemStack(ModItems.POCKET_JUKEBOX.get());
+            event.insertBefore(new ItemStack(Items.MUSIC_DISC_13), jukebox, vis);
+            for (DyeColor color : BALLOON_ORDER) {
+                ItemStack dyed = new ItemStack(ModItems.POCKET_JUKEBOXES.get(color).get());
+                event.insertBefore(new ItemStack(Items.MUSIC_DISC_13), dyed, vis);
             }
             if (ModItems.TWISTED_BOAT != null) {
                 event.insertAfter(new ItemStack(Items.BAMBOO_CHEST_RAFT), new ItemStack(ModItems.TWISTED_BOAT.get()), vis);

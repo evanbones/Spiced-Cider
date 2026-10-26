@@ -1,0 +1,18 @@
+{
+  "type": "create:filling",
+  "ingredients": [
+    {
+      "tag": "c:foods/strawberry"
+    },
+    {
+      "type": "neoforge:single",
+      "fluid": "create:chocolate",
+      "amount": 250
+    }
+  ],
+  "results": [
+    {
+      "id": "neapolitan:chocolate_strawberries"
+    }
+  ]
+}

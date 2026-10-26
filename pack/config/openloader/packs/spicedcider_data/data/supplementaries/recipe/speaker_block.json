@@ -10,13 +10,16 @@
   "pattern": [
     "000",
     "010",
-    "000"
+    "020"
   ],
   "key": {
     "0": {
       "tag": "minecraft:planks"
     },
     "1": {
+      "item": "spicedcider:bronze_movement"
+    },
+    "2": {
       "tag": "c:ingots/bronze"
     }
   },

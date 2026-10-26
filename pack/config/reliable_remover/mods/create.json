@@ -450,5 +450,78 @@
     "items": [
       "create:propeller"
     ]
+  },
+  {
+    "action": "remove",
+    "items": [
+      "create:netherite_backtank"
+    ]
+  },
+  {
+    "action": "remove",
+    "items": [
+      "create:turntable"
+    ]
+  },
+  {
+    "action": "remove",
+    "items": [
+      "create:red_sand_paper"
+    ],
+    "replace_with": "create:sand_paper"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "create:analog_lever",
+      "create:whisk",
+      "create:brass_hand",
+      "create:blaze_cake_base"
+    ]
+  },
+  {
+    "action": "remove",
+    "items": [
+      "create:incomplete_track",
+      "create:unprocessed_obsidian_sheet",
+      "create:white_postbox",
+      "create:orange_postbox",
+      "create:magenta_postbox",
+      "create:light_blue_postbox",
+      "create:yellow_postbox",
+      "create:lime_postbox",
+      "create:pink_postbox",
+      "create:gray_postbox",
+      "create:light_gray_postbox",
+      "create:cyan_postbox",
+      "create:purple_postbox",
+      "create:blue_postbox",
+      "create:brown_postbox",
+      "create:green_postbox",
+      "create:red_postbox",
+      "create:black_postbox",
+      "create:minecart_contraption",
+      "create:furnace_minecart_contraption",
+      "create:chest_minecart_contraption",
+      "create:chromatic_compound",
+      "create:shadow_steel",
+      "create:refined_radiance",
+      "create:shadow_steel_casing",
+      "create:refined_radiance_casing"
+    ]
+  },
+  {
+    "action": "remove",
+    "items": [
+      "create:honeyed_apple"
+    ],
+    "replace_with": "nomansland:honeyed_apple"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "create:chocolate_glazed_berries"
+    ],
+    "replace_with": "neapolitan:chocolate_strawberries"
   }
 ]

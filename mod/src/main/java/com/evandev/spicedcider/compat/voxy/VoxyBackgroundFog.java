@@ -8,7 +8,7 @@ public final class VoxyBackgroundFog {
     private static final boolean MODULATION = ModList.get().isLoaded("modulation");
     private static final int FLAG_LOCATION = 20;
     private static final String FOG_MIX = "colour.rgb = mix(colour.rgb, fogColour.rgb, fogLerp*fogColour.a);";
-    private static final String VERSION = "#version 450 core";
+    private static final String VERSION = "#version";
     private static final String DECLARATIONS = """
 
             layout(binding = 9) uniform sampler2D spicedciderSky;
@@ -36,7 +36,9 @@ public final class VoxyBackgroundFog {
     public static String patchShader(String source) {
         if (!MODULATION || source == null || !source.startsWith(VERSION) || !source.contains(FOG_MIX)) return source;
         patched = true;
-        return VERSION + DECLARATIONS + source.substring(VERSION.length()).replace(FOG_MIX, BACKGROUND_MIX);
+        int firstLine = source.indexOf('\n');
+        String declarations = source.contains("local_size_x") ? DECLARATIONS.replace("ivec2(gl_FragCoord.xy)", "ivec2(gl_GlobalInvocationID.xy)") : DECLARATIONS;
+        return source.substring(0, firstLine) + declarations + source.substring(firstLine).replace(FOG_MIX, BACKGROUND_MIX);
     }
 
     public static void bind() {

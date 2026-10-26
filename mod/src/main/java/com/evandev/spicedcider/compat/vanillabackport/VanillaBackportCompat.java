@@ -22,6 +22,10 @@ public final class VanillaBackportCompat {
         return loaded;
     }
 
+    public static boolean modernLeashes() {
+        return isLoaded() && VanillaBackportBridge.modernLeashes();
+    }
+
     public static Item createLance(Tier tier, ResourceLocation reachId, Item.Properties properties) {
         if (isLoaded()) {
             return VanillaBackportBridge.createLance(tier, properties);

@@ -1,0 +1,14 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "spicedcider:item/gray_pocket_jukebox"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "spicedcider:playing": 1
+      },
+      "model": "spicedcider:item/gray_pocket_jukebox_open"
+    }
+  ]
+}

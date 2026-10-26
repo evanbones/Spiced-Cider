@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "N": {
+      "tag": "c:nuggets/bronze"
+    },
+    "M": {
+      "item": "spicedcider:bronze_movement"
+    },
+    "L": {
+      "tag": "c:leathers"
+    }
+  },
+  "pattern": [
+    "NMN",
+    "NLN",
+    "NNN"
+  ],
+  "result": {
+    "id": "spicedcider:pocket_jukebox",
+    "count": 1
+  }
+}
