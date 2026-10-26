@@ -41,7 +41,8 @@ public final class KeyLayout {
             "key.toggleCarriedItemTooltips",
             "key.map_atlases.increase_slice",
             "key.map_atlases.decrease_slice",
-            "key.lodged.remove_shield_arrow"
+            "key.lodged.remove_shield_arrow",
+            "key.f3backport.debug.debugOptions"
     );
 
     private static final List<Set<String>> SHARED = List.of(

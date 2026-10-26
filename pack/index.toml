@@ -101,10 +101,6 @@ file = "config/asynclocator.toml"
 hash = "6c19539e05905c97a444a612dd2b597001244355cc9a59c25b3079cd4665731a"
 
 [[files]]
-file = "config/asyncparticles/asyncparticles-mixin.properties"
-hash = "58b3b91318e62131501a9426127ff980c48538b2f448f0ecc56ae62daccb0ee7"
-
-[[files]]
 file = "config/asyncparticles/asyncparticles.json"
 hash = "d90a8613ecd0aebd7fd8b20166c065767227e0c4e0a605a0b044f89c76cf2e5f"
 
@@ -461,10 +457,6 @@ file = "config/dimensional_tears-common.toml"
 hash = "0030656736b21f06f9f5b73078ce3ea41778f0f744c9d5da0055712a493ced85"
 
 [[files]]
-file = "config/drippyloadingscreen/early_window_reference.properties"
-hash = "058b1d0ad3cfdd8ea8ad0849c9471b7f80caa3505ae669f5b1a3e8c916f14ceb"
-
-[[files]]
 file = "config/drippyloadingscreen/options.txt"
 hash = "0a689ebcc6eef4ae09e381a90039ebc44a2f7303da90cd721167a13eb35a3e2f"
 
@@ -629,8 +621,8 @@ file = "config/exposure_polaroid-server.toml"
 hash = "09d330b29443d9579ecc014f2be2fcb31075bfe1e9f9ac4e750f271128650fe6"
 
 [[files]]
-file = "config/fabric/indigo-renderer.properties"
-hash = "240e2b800c92af01046047e8e6e73dc33a32c627ca28eb2330a3ef73edbd8b2a"
+file = "config/f3-backport-client.toml"
+hash = "617bcf10d4721b4f99b3ce239ad1ee1568b09cfcfad490195b0109bae0f24974"
 
 [[files]]
 file = "config/falling_snow.json"
@@ -9473,10 +9465,6 @@ file = "config/packdev_toolkit.json"
 hash = "13b2b1384f949e6e409c3c3cc423ecb854df6b386d4466d424a57a887e89f3d8"
 
 [[files]]
-file = "config/packetfixer.properties"
-hash = "7baed29e747aa9177998a99dfd5c6362c90f3d6b0b69f3321fa085ef4c4dcd89"
-
-[[files]]
 file = "config/particle_core_config.toml"
 hash = "df58bc14bc15f015d25cdf96ea15d54bba59fc68de346231e12f6defaf62aba9"
 
@@ -12490,27 +12478,27 @@ hash = "b7c7dc4f8617797ec15afc416b864cec2bc7014d0c29eba149d24aef4585b0df"
 
 [[files]]
 file = "config/spicedcider-common-1.toml.bak"
-hash = "9b16db7df45f3c66719cfe32d9059e82ca94221f268ec1c54b5c1c1bc1c766e6"
+hash = "86699ecd43200662f6e99b7dafe429b98f5963ba2ba92839bbe607cf843c48f8"
 
 [[files]]
 file = "config/spicedcider-common-2.toml.bak"
-hash = "720f0604a27c07c34b369f7f687a86750fe43aedffc6963790b2e7f83e6a7543"
-
-[[files]]
-file = "config/spicedcider-common-3.toml.bak"
-hash = "7dcfe7a5f748ac01b15d379472340f634890583f9788e277446a3c1ca519be5c"
-
-[[files]]
-file = "config/spicedcider-common-4.toml.bak"
 hash = "9b16db7df45f3c66719cfe32d9059e82ca94221f268ec1c54b5c1c1bc1c766e6"
 
 [[files]]
+file = "config/spicedcider-common-3.toml.bak"
+hash = "720f0604a27c07c34b369f7f687a86750fe43aedffc6963790b2e7f83e6a7543"
+
+[[files]]
+file = "config/spicedcider-common-4.toml.bak"
+hash = "7dcfe7a5f748ac01b15d379472340f634890583f9788e277446a3c1ca519be5c"
+
+[[files]]
 file = "config/spicedcider-common-5.toml.bak"
-hash = "1b2788fb08ea6bef42714344620172c8177deb130649ca12cb5ceb91d16689a3"
+hash = "9b16db7df45f3c66719cfe32d9059e82ca94221f268ec1c54b5c1c1bc1c766e6"
 
 [[files]]
 file = "config/spicedcider-common.toml"
-hash = "86699ecd43200662f6e99b7dafe429b98f5963ba2ba92839bbe607cf843c48f8"
+hash = "16c7c9a0950daa7af1869d43cb04d367ba308504d82fafe64337cacce969e964"
 
 [[files]]
 file = "config/spicedcider-startup.toml"
@@ -12745,10 +12733,6 @@ file = "config/void_water-server.toml"
 hash = "0cb8ca221ac2327a1ad53cc9179f5868d096471228996722466c46fbf96a039b"
 
 [[files]]
-file = "config/voxy-config.json.orig"
-hash = "e0186cae0df540f0cdbf7d3554c424a23076c2bc21fec20abb6d153b544395bd"
-
-[[files]]
 file = "config/wakes-client.toml"
 hash = "3ab0f121e74ed9c09c47867c335752f0e801f550e3e24591f30724daf35e0015"
 
@@ -12837,6 +12821,10 @@ file = "config/yosbr/config/ambientsounds-client.json"
 hash = "a8c0abba6dc195fcfdba6ef7e37982a59c9f62d167bb45132b3e9108b0e2abe1"
 
 [[files]]
+file = "config/yosbr/config/asyncparticles/asyncparticles-mixin.properties"
+hash = "2f5b67ff72e5d9ca90dfeec061c833de520a2d417cb88c3733754133947b9a7b"
+
+[[files]]
 file = "config/yosbr/config/chat_heads.json5"
 hash = "e198750061411cf7fca624e38b894ca104ca2cf2c2940da0409ce4240dcc2503"
 
@@ -12895,10 +12883,6 @@ hash = "65b8ac53c73d2471c5e6a11c3a04361b7ed3d16c6179252dc4c87d2e61181144"
 [[files]]
 file = "config/zeta-common.toml"
 hash = "d985bfc68899c91aa642736400472f6ab876dedaaef4b8c31f38b52d48de633d"
-
-[[files]]
-file = "config/zfastnoise.mixin.properties"
-hash = "07117b81f8194815be7bf2c4f3a811cea51118cc81a6582eb619553917226785"
 
 [[files]]
 file = "config/zipline.json"
@@ -13557,7 +13541,7 @@ metafile = true
 
 [[files]]
 file = "mods/mini-music-tweaks.pw.toml"
-hash = "4ca69062f0091cecec15571d6b44cbd50bd5e50c5153861a8168066cd7894543"
+hash = "03bdec1c3a0c28212c11ee289838aaddf4175e0d281f7ca2c11821bb10ce7c0a"
 metafile = true
 
 [[files]]
@@ -13979,7 +13963,7 @@ metafile = true
 
 [[files]]
 file = "mods/spicedcider-1.0.0.jar"
-hash = "d56da314c6cf15f70b4e816d24eb7104d3e108033007f24e6bf8460eaaff7f47"
+hash = "130a12952b6940c4acb3542dbecd973154427ebf6cf8d7374a5df883a4246198"
 
 [[files]]
 file = "mods/stacksizetweaks.pw.toml"
@@ -19772,6 +19756,10 @@ hash = "a441815675441a186c4f9f9d3074094370b45747e21da84f0d792934223cade4"
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/modulation/textures/gui/clear_button_tab.png"
 hash = "68a0aed6f78b9aa3af175316915f8f90bfeb2a93579655c3df005b8d83a8c8ae"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/music_tweaks/lang/en_us.json"
+hash = "b5eea5c2025996bd9e4b7362f96a9658af565f4049ad4c6ef920297cd71418ee"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/music_tweaks/musics.json"

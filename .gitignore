@@ -36,6 +36,7 @@ mod/run/*
 /mod/run/*
 /run
 *.toml.bak
+*.orig
 spark/tmp
 spark/tmp-client
 ciderpacks/
@@ -67,3 +68,5 @@ pack/config/jade/jade.json
 pack/config/chat_heads.json5
 pack/config/dynamiccrosshair.json5
 pack/config/map_atlases-client.toml
+pack/config/asyncparticles/asyncparticles-mixin.properties
+pack/config/drippyloadingscreen/early_window_reference.properties

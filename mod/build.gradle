@@ -307,6 +307,7 @@ dependencies {
     // Supplementaries
     compileOnly "maven.modrinth:supplementaries:FPL7hXrE"
     compileOnly "maven.modrinth:snowy-spirit:1.21.1-3.1.7"
+    compileOnly "maven.modrinth:iJNje1E8:XXjs6tNa"
 
     // NML
     compileOnly "maven.modrinth:no-mans-land:1.6.3"
@@ -330,7 +331,7 @@ dependencies {
     }
 
     // Mini Music Tweaks
-    compileOnly "maven.modrinth:eiONV3dI:vUk3iT2o"
+    compileOnly "maven.modrinth:eiONV3dI:qR5bIYKu"
 
     // Controlify
     compileOnly "maven.modrinth:controlify:RqsNKKLK"
@@ -350,6 +351,7 @@ dependencies {
 
     compileOnly fileTree("../pack/mods") { include "continuity-*.jar" }
     compileOnly fileTree("../pack/mods") { include "LivingWind-*.jar" }
+    compileOnly fileTree("../pack/mods") { include "f3backport-*.jar" }
     compileOnly "maven.modrinth:where-winds-blow:gAxCACfZ"
     compileOnly "maven.modrinth:amendments:FofnjBi7"
     compileOnly "maven.modrinth:AtOSAunf:n43MuIdq"

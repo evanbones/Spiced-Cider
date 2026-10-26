@@ -55,13 +55,13 @@
 	caveMapsCreationHeightDimensions = []
 
 [lod]
-	#Generates terrain beyond your render distance in the background so Voxy can show it, out to your Distant Terrain Range. The chunks are never saved, so the world folder doesn't grow.
+	#Generates terrain beyond your render distance in the background so it can be drawn in the distance, out to your Distant Terrain Range. The chunks are never saved, so the world folder doesn't grow.
 	lodGeneration = true
 	#Server-side cap, in chunks, on how far LoD terrain is generated around each player. Each player's own Voxy LoD render distance is used up to this limit.
 	# Default: 128
 	# Range: 8 ~ 512
 	lodGenerationMaxRadius = 128
-	#Worker threads used to generate LoD terrain. 0 picks automatically: an eighth of your CPU threads, between 1 and 4. More is faster but costs frame rate while terrain is generating. Requires rejoining the world.
+	#Worker threads used to generate distant terrain. 0 picks automatically: an eighth of your CPU threads, between 1 and 4. More is faster but costs frame rate while terrain is generating. Requires rejoining the world.
 	# Default: 0
 	# Range: 0 ~ 16
 	lodGenerationThreads = 0

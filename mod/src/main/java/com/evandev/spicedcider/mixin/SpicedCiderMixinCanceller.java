@@ -12,7 +12,6 @@ public class SpicedCiderMixinCanceller implements MixinCanceller {
             "com.blackgear.vanillabackport.core.mixin.client.music_toast.MusicManagerMixin",
             "com.blackgear.vanillabackport.core.mixin.client.music_toast.PauseScreenMixin",
             "com.blackgear.vanillabackport.core.mixin.client.music_toast.ToastComponentMixin",
-            "com.blackgear.vanillabackport.core.mixin.client.music_frequency.MusicManagerMixin",
             "com.blackgear.vanillabackport.core.mixin.client.music_on_pause.MinecraftMixin",
             "com.blackgear.vanillabackport.core.mixin.client.game_options.SoundOptionsScreenMixin"
     );
