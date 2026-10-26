@@ -218,13 +218,6 @@ public class SpicedCider {
             event.accept(ModItems.CHISELED_GLOWSTONE_BRICKS.get(), vis);
             event.accept(ModItems.POLISHED_GLOWSTONE_PILLAR.get(), vis);
         }
-        if (event.getTabKey() == CreativeModeTabs.COLORED_BLOCKS) {
-            for (DyeColor color : DyeColor.values()) {
-                ItemStack stairs = new ItemStack(ModItems.WOOL_STAIRS.get(color).get());
-                event.insertAfter(new ItemStack(ModBlocks.wool(color)), stairs, vis);
-                event.insertAfter(stairs, new ItemStack(ModItems.WOOL_SLABS.get(color).get()), vis);
-            }
-        }
         if (ModItems.POLISHED_GLOWSTONE_STAIRS != null && event.getTabKey().location().equals(InfernalExpansionCompat.TAB)) {
             ItemStack stairs = new ItemStack(ModItems.POLISHED_GLOWSTONE_STAIRS.get());
             ItemStack slab = new ItemStack(ModItems.POLISHED_GLOWSTONE_SLAB.get());

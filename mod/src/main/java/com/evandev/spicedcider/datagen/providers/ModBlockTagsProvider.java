@@ -88,16 +88,6 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
             this.tag(def.tool().equals("axe") ? BlockTags.MINEABLE_WITH_AXE : BlockTags.MINEABLE_WITH_PICKAXE).addOptional(def.location());
         }
 
-        ModBlocks.WOOL_STAIRS.values().forEach(block -> {
-            this.tag(BlockTags.STAIRS).add(block.get());
-            this.tag(BlockTags.WOOL).add(block.get());
-            this.tag(BlockTags.DAMPENS_VIBRATIONS).add(block.get());
-        });
-        ModBlocks.WOOL_SLABS.values().forEach(block -> {
-            this.tag(BlockTags.SLABS).add(block.get());
-            this.tag(BlockTags.WOOL).add(block.get());
-            this.tag(BlockTags.DAMPENS_VIBRATIONS).add(block.get());
-        });
 
         if (ModBlocks.TWISTED_SIGN != null) {
             this.tag(BlockTags.STANDING_SIGNS).addOptional(ModBlocks.TWISTED_SIGN.getId());

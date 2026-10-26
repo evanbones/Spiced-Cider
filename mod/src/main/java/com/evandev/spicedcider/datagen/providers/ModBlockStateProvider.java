@@ -6,9 +6,6 @@ import com.evandev.spicedcider.compat.infernalexp.InfernalExpansionCompat;
 import com.evandev.spicedcider.registry.ModBlocks;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.DyeColor;
-import net.minecraft.world.level.block.SlabBlock;
-import net.minecraft.world.level.block.StairBlock;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
 import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
@@ -65,16 +62,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
             ResourceLocation strippedLog = ResourceLocation.fromNamespaceAndPath(ArchitectsPaletteCompat.MOD_ID, "block/stripped_twisted_log");
             signBlock(ModBlocks.TWISTED_SIGN.get(), ModBlocks.TWISTED_WALL_SIGN.get(), planks);
             hangingSignBlock(ModBlocks.TWISTED_HANGING_SIGN.get(), ModBlocks.TWISTED_WALL_HANGING_SIGN.get(), strippedLog);
-        }
-
-        for (DyeColor color : DyeColor.values()) {
-            ResourceLocation wool = mcLoc("block/" + color.getName() + "_wool");
-            StairBlock stairs = ModBlocks.WOOL_STAIRS.get(color).get();
-            SlabBlock slab = ModBlocks.WOOL_SLABS.get(color).get();
-            stairsBlock(stairs, wool);
-            slabBlock(slab, wool, wool);
-            simpleBlockItem(stairs, new ModelFile.UncheckedModelFile(modLoc("block/" + color.getName() + "_wool_stairs")));
-            simpleBlockItem(slab, new ModelFile.UncheckedModelFile(modLoc("block/" + color.getName() + "_wool_slab")));
         }
     }
 }

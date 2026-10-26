@@ -173,18 +173,6 @@ public class ModRecipeProvider extends RecipeProvider {
         }
 
         for (DyeColor color : DyeColor.values()) {
-            Block wool = ModBlocks.wool(color);
-            stairBuilder(ModBlocks.WOOL_STAIRS.get(color).get(), Ingredient.of(wool))
-                    .group("wool_stairs")
-                    .unlockedBy(getHasName(wool), has(wool))
-                    .save(output);
-            slabBuilder(RecipeCategory.BUILDING_BLOCKS, ModBlocks.WOOL_SLABS.get(color).get(), Ingredient.of(wool))
-                    .group("wool_slab")
-                    .unlockedBy(getHasName(wool), has(wool))
-                    .save(output);
-        }
-
-        for (DyeColor color : DyeColor.values()) {
             Item balloon = ModItems.BALLOONS.get(color).get();
             Ingredient others = Ingredient.of(ModItems.BALLOONS.entrySet().stream()
                     .filter(entry -> entry.getKey() != color)

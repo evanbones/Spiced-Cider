@@ -5,9 +5,6 @@ import com.evandev.spicedcider.compat.architectspalette.ArchitectsPaletteCompat;
 import com.evandev.spicedcider.compat.infernalexp.InfernalExpansionCompat;
 import com.evandev.spicedcider.content.block.LatexCauldronBlock;
 import com.evandev.spicedcider.content.block.TemporaryCobwebBlock;
-import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.CeilingHangingSignBlock;
@@ -28,8 +25,6 @@ import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.EnumMap;
-import java.util.Map;
 import java.util.Optional;
 
 public class ModBlocks {
@@ -122,19 +117,4 @@ public class ModBlocks {
             BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WALL_HANGING_SIGN).mapColor(MapColor.COLOR_PURPLE).dropsLike(TWISTED_HANGING_SIGN.get())))
             : null;
 
-    public static final Map<DyeColor, DeferredBlock<StairBlock>> WOOL_STAIRS = new EnumMap<>(DyeColor.class);
-    public static final Map<DyeColor, DeferredBlock<SlabBlock>> WOOL_SLABS = new EnumMap<>(DyeColor.class);
-
-    static {
-        for (DyeColor color : DyeColor.values()) {
-            WOOL_STAIRS.put(color, BLOCKS.register(color.getName() + "_wool_stairs",
-                    () -> new StairBlock(wool(color).defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(wool(color)))));
-            WOOL_SLABS.put(color, BLOCKS.register(color.getName() + "_wool_slab",
-                    () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(wool(color)))));
-        }
-    }
-
-    public static Block wool(DyeColor color) {
-        return BuiltInRegistries.BLOCK.get(ResourceLocation.withDefaultNamespace(color.getName() + "_wool"));
-    }
 }

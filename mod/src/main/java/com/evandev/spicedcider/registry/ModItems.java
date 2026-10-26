@@ -152,8 +152,6 @@ public class ModItems {
             ? ITEMS.register("twisted_chest_boat", () -> new BoatItem(true, ModBoatTypes.TWISTED.getValue(), new Item.Properties().stacksTo(1)))
             : null;
 
-    public static final Map<DyeColor, DeferredItem<BlockItem>> WOOL_STAIRS = new EnumMap<>(DyeColor.class);
-    public static final Map<DyeColor, DeferredItem<BlockItem>> WOOL_SLABS = new EnumMap<>(DyeColor.class);
     public static final Map<DyeColor, DeferredItem<Item>> BALLOONS = new EnumMap<>(DyeColor.class);
     public static final DeferredItem<Item> BRONZE_MOVEMENT = ITEMS.registerSimpleItem("bronze_movement");
     public static final DeferredItem<Item> INCOMPLETE_BLAZE_CAKE = ITEMS.registerSimpleItem("incomplete_blaze_cake", new Item.Properties().stacksTo(1));
@@ -166,8 +164,6 @@ public class ModItems {
         for (DyeColor color : DyeColor.values()) {
             POCKET_JUKEBOXES.put(color, ITEMS.register(color.getName() + "_pocket_jukebox",
                     () -> new PocketJukeboxItem(new Item.Properties().stacksTo(1))));
-            WOOL_STAIRS.put(color, ITEMS.registerSimpleBlockItem(ModBlocks.WOOL_STAIRS.get(color)));
-            WOOL_SLABS.put(color, ITEMS.registerSimpleBlockItem(ModBlocks.WOOL_SLABS.get(color)));
             BALLOONS.put(color, ITEMS.register(color.getName() + "_balloon",
                     () -> new BalloonItem(color, new Item.Properties().stacksTo(16))));
         }

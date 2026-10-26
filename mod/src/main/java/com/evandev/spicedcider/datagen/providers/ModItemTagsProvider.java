@@ -161,8 +161,6 @@ public class ModItemTagsProvider extends ItemTagsProvider {
             this.tag(ItemTags.BOATS).addOptional(ModItems.TWISTED_BOAT.getId());
             this.tag(ItemTags.CHEST_BOATS).addOptional(ModItems.TWISTED_CHEST_BOAT.getId());
         }
-        ModItems.WOOL_STAIRS.values().forEach(item -> this.tag(ItemTags.STAIRS).add(item.get()));
-        ModItems.WOOL_SLABS.values().forEach(item -> this.tag(ItemTags.SLABS).add(item.get()));
         ModItems.BALLOONS.forEach((color, item) -> {
             this.tag(ModTags.Items.BALLOONS).add(item.get());
             this.tag(Tags.Items.DYED).add(item.get());

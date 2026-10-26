@@ -59,8 +59,6 @@ public class ModBlockLootProvider extends BlockLootSubProvider {
             this.dropSelf(ModBlocks.TWISTED_SIGN.get());
             this.dropSelf(ModBlocks.TWISTED_HANGING_SIGN.get());
         }
-        ModBlocks.WOOL_STAIRS.values().forEach(block -> this.dropSelf(block.get()));
-        ModBlocks.WOOL_SLABS.values().forEach(block -> this.add(block.get(), this::createSlabItemTable));
     }
 
     private LootTable.Builder createDepositTable(Block block, Item geode) {
@@ -115,8 +113,6 @@ public class ModBlockLootProvider extends BlockLootSubProvider {
             blocks.add(ModBlocks.TWISTED_HANGING_SIGN.get());
             blocks.add(ModBlocks.TWISTED_WALL_HANGING_SIGN.get());
         }
-        ModBlocks.WOOL_STAIRS.values().forEach(block -> blocks.add(block.get()));
-        ModBlocks.WOOL_SLABS.values().forEach(block -> blocks.add(block.get()));
         return blocks;
     }
 }
