@@ -10,6 +10,8 @@ import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
 import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
+import java.util.List;
+
 public class ModBlockStateProvider extends BlockStateProvider {
 
     public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
@@ -34,6 +36,19 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlock(ModBlocks.POTTED_GLOAMWOOD_SAPLING.get(), models().withExistingParent("potted_gloamwood_sapling", mcLoc("block/flower_pot_cross"))
                 .texture("plant", gloamwoodSapling).renderType("cutout"));
         itemModels().withExistingParent("gloamwood_sapling", mcLoc("item/generated")).texture("layer0", gloamwoodSapling);
+
+        ResourceLocation cacaoSapling = modLoc("block/cacao_sapling");
+        simpleBlock(ModBlocks.CACAO_SAPLING.get(), models().cross("cacao_sapling", cacaoSapling).renderType("cutout"));
+        simpleBlock(ModBlocks.POTTED_CACAO_SAPLING.get(), models().withExistingParent("potted_cacao_sapling", mcLoc("block/flower_pot_cross"))
+                .texture("plant", cacaoSapling).renderType("cutout"));
+        itemModels().withExistingParent("cacao_sapling", mcLoc("item/generated")).texture("layer0", cacaoSapling);
+
+        simpleBlockWithItem(ModBlocks.DEEPSILT.get(), cubeAll(ModBlocks.DEEPSILT.get()));
+        simpleBlockWithItem(ModBlocks.POLISHED_DRIED_DEEPSILT.get(), cubeAll(ModBlocks.POLISHED_DRIED_DEEPSILT.get()));
+        for (var block : List.of(ModBlocks.DRIED_DEEPSILT, ModBlocks.CUT_DRIED_DEEPSILT, ModBlocks.CHISELED_DRIED_DEEPSILT)) {
+            simpleBlockWithItem(block.get(), models().cubeBottomTop(block.getId().getPath(), modLoc("block/" + block.getId().getPath()),
+                    modLoc("block/dried_deepsilt_bottom"), modLoc("block/dried_deepsilt_top")));
+        }
 
         ResourceLocation glowstoneBricks = modLoc("block/glowstone_bricks");
         simpleBlockWithItem(ModBlocks.GLOWSTONE_BRICKS.get(), cubeAll(ModBlocks.GLOWSTONE_BRICKS.get()));

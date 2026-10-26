@@ -1,0 +1,108 @@
+{
+  "type": "minecraft:tree",
+  "config": {
+    "decorators": [
+      {
+        "type": "minecraft:attached_to_leaves",
+        "probability": 0.3,
+        "exclusion_radius_xz": 1,
+        "exclusion_radius_y": 0,
+        "required_empty_blocks": 1,
+        "directions": [
+          "down"
+        ],
+        "block_provider": {
+          "type": "minecraft:weighted_state_provider",
+          "entries": [
+            {
+              "weight": 2,
+              "data": {
+                "Name": "spicedcider:cacao_pod",
+                "Properties": {
+                  "age": "0"
+                }
+              }
+            },
+            {
+              "weight": 2,
+              "data": {
+                "Name": "spicedcider:cacao_pod",
+                "Properties": {
+                  "age": "1"
+                }
+              }
+            },
+            {
+              "weight": 3,
+              "data": {
+                "Name": "spicedcider:cacao_pod",
+                "Properties": {
+                  "age": "2"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "spicedcider:connect_logs"
+      }
+    ],
+    "dirt_provider": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "minecraft:dirt"
+      }
+    },
+    "foliage_placer": {
+      "type": "minecraft:blob_foliage_placer",
+      "radius": 2,
+      "offset": 1,
+      "height": 2
+    },
+    "foliage_provider": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "spicedcider:cacao_leaves",
+        "Properties": {
+          "distance": "7",
+          "persistent": "false",
+          "waterlogged": "false"
+        }
+      }
+    },
+    "force_dirt": false,
+    "ignore_vines": true,
+    "minimum_size": {
+      "type": "minecraft:two_layers_feature_size",
+      "limit": 1,
+      "lower_size": 0,
+      "upper_size": 2
+    },
+    "trunk_placer": {
+      "type": "spicedcider:cacao_trunk_placer",
+      "base_height": 3,
+      "height_rand_a": 2,
+      "height_rand_b": 0,
+      "branch_count": {
+        "type": "minecraft:uniform",
+        "min_inclusive": 2,
+        "max_inclusive": 4
+      },
+      "branch_length": {
+        "type": "minecraft:uniform",
+        "min_inclusive": 1,
+        "max_inclusive": 3
+      }
+    },
+    "trunk_provider": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "spicedcider:cacao_log",
+        "Properties": {
+          "axis": "y"
+        }
+      }
+    }
+  }
+}

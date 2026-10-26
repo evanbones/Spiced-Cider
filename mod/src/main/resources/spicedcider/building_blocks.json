@@ -6881,5 +6881,263 @@
    "blockbox"
   ],
   "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:achromarine_stairs",
+  "kind": "STAIRS",
+  "mod": null,
+  "properties": "spicedcider:achromarine",
+  "parent": "spicedcider:achromarine",
+  "side": "spicedcider:block/achromarine",
+  "top": "spicedcider:block/achromarine",
+  "bottom": "spicedcider:block/achromarine",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:achromarine",
+  "cut": [
+   "spicedcider:achromarine"
+  ],
+  "requires": [],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:achromarine_slab",
+  "kind": "SLAB",
+  "mod": null,
+  "properties": "spicedcider:achromarine",
+  "parent": "spicedcider:achromarine",
+  "side": "spicedcider:block/achromarine",
+  "top": "spicedcider:block/achromarine",
+  "bottom": "spicedcider:block/achromarine",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:achromarine",
+  "cut": [
+   "spicedcider:achromarine"
+  ],
+  "requires": [],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:achromarine_wall",
+  "kind": "WALL",
+  "mod": null,
+  "properties": "spicedcider:achromarine",
+  "parent": "spicedcider:achromarine",
+  "side": "spicedcider:block/achromarine",
+  "top": "spicedcider:block/achromarine",
+  "bottom": "spicedcider:block/achromarine",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:achromarine",
+  "cut": [
+   "spicedcider:achromarine"
+  ],
+  "requires": [],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:chromarine_stairs",
+  "kind": "STAIRS",
+  "mod": null,
+  "properties": "spicedcider:chromarine",
+  "parent": "spicedcider:chromarine",
+  "side": "spicedcider:block/chromarine",
+  "top": "spicedcider:block/chromarine",
+  "bottom": "spicedcider:block/chromarine",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:chromarine",
+  "cut": [
+   "spicedcider:chromarine"
+  ],
+  "requires": [],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:chromarine_slab",
+  "kind": "SLAB",
+  "mod": null,
+  "properties": "spicedcider:chromarine",
+  "parent": "spicedcider:chromarine",
+  "side": "spicedcider:block/chromarine",
+  "top": "spicedcider:block/chromarine",
+  "bottom": "spicedcider:block/chromarine",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:chromarine",
+  "cut": [
+   "spicedcider:chromarine"
+  ],
+  "requires": [],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:chromarine_wall",
+  "kind": "WALL",
+  "mod": null,
+  "properties": "spicedcider:chromarine",
+  "parent": "spicedcider:chromarine",
+  "side": "spicedcider:block/chromarine",
+  "top": "spicedcider:block/chromarine",
+  "bottom": "spicedcider:block/chromarine",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:chromarine",
+  "cut": [
+   "spicedcider:chromarine"
+  ],
+  "requires": [],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:dried_deepsilt_stairs",
+  "kind": "STAIRS",
+  "mod": null,
+  "properties": "spicedcider:dried_deepsilt",
+  "parent": "spicedcider:dried_deepsilt",
+  "side": "spicedcider:block/dried_deepsilt",
+  "top": "spicedcider:block/dried_deepsilt_top",
+  "bottom": "spicedcider:block/dried_deepsilt_bottom",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:dried_deepsilt",
+  "cut": [
+   "spicedcider:dried_deepsilt"
+  ],
+  "requires": [],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:dried_deepsilt_slab",
+  "kind": "SLAB",
+  "mod": null,
+  "properties": "spicedcider:dried_deepsilt",
+  "parent": "spicedcider:dried_deepsilt",
+  "side": "spicedcider:block/dried_deepsilt",
+  "top": "spicedcider:block/dried_deepsilt_top",
+  "bottom": "spicedcider:block/dried_deepsilt_bottom",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:dried_deepsilt",
+  "cut": [
+   "spicedcider:dried_deepsilt"
+  ],
+  "requires": [],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:dried_deepsilt_wall",
+  "kind": "WALL",
+  "mod": null,
+  "properties": "spicedcider:dried_deepsilt",
+  "parent": "spicedcider:dried_deepsilt",
+  "side": "spicedcider:block/dried_deepsilt",
+  "top": "spicedcider:block/dried_deepsilt_top",
+  "bottom": "spicedcider:block/dried_deepsilt_bottom",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:dried_deepsilt",
+  "cut": [
+   "spicedcider:dried_deepsilt"
+  ],
+  "requires": [],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cut_dried_deepsilt_stairs",
+  "kind": "STAIRS",
+  "mod": null,
+  "properties": "spicedcider:cut_dried_deepsilt",
+  "parent": "spicedcider:cut_dried_deepsilt",
+  "side": "spicedcider:block/cut_dried_deepsilt",
+  "top": "spicedcider:block/dried_deepsilt_top",
+  "bottom": "spicedcider:block/dried_deepsilt_bottom",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:cut_dried_deepsilt",
+  "cut": [
+   "spicedcider:cut_dried_deepsilt",
+   "spicedcider:dried_deepsilt"
+  ],
+  "requires": [],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cut_dried_deepsilt_slab",
+  "kind": "SLAB",
+  "mod": null,
+  "properties": "spicedcider:cut_dried_deepsilt",
+  "parent": "spicedcider:cut_dried_deepsilt",
+  "side": "spicedcider:block/cut_dried_deepsilt",
+  "top": "spicedcider:block/dried_deepsilt_top",
+  "bottom": "spicedcider:block/dried_deepsilt_bottom",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:cut_dried_deepsilt",
+  "cut": [
+   "spicedcider:cut_dried_deepsilt",
+   "spicedcider:dried_deepsilt"
+  ],
+  "requires": [],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cut_dried_deepsilt_wall",
+  "kind": "WALL",
+  "mod": null,
+  "properties": "spicedcider:cut_dried_deepsilt",
+  "parent": "spicedcider:cut_dried_deepsilt",
+  "side": "spicedcider:block/cut_dried_deepsilt",
+  "top": "spicedcider:block/dried_deepsilt_top",
+  "bottom": "spicedcider:block/dried_deepsilt_bottom",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:cut_dried_deepsilt",
+  "cut": [
+   "spicedcider:cut_dried_deepsilt",
+   "spicedcider:dried_deepsilt"
+  ],
+  "requires": [],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:polished_dried_deepsilt_stairs",
+  "kind": "STAIRS",
+  "mod": null,
+  "properties": "spicedcider:polished_dried_deepsilt",
+  "parent": "spicedcider:polished_dried_deepsilt",
+  "side": "spicedcider:block/polished_dried_deepsilt",
+  "top": "spicedcider:block/polished_dried_deepsilt",
+  "bottom": "spicedcider:block/polished_dried_deepsilt",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:polished_dried_deepsilt",
+  "cut": [
+   "spicedcider:polished_dried_deepsilt"
+  ],
+  "requires": [],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:polished_dried_deepsilt_slab",
+  "kind": "SLAB",
+  "mod": null,
+  "properties": "spicedcider:polished_dried_deepsilt",
+  "parent": "spicedcider:polished_dried_deepsilt",
+  "side": "spicedcider:block/polished_dried_deepsilt",
+  "top": "spicedcider:block/polished_dried_deepsilt",
+  "bottom": "spicedcider:block/polished_dried_deepsilt",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:polished_dried_deepsilt",
+  "cut": [
+   "spicedcider:polished_dried_deepsilt"
+  ],
+  "requires": [],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:polished_dried_deepsilt_wall",
+  "kind": "WALL",
+  "mod": null,
+  "properties": "spicedcider:polished_dried_deepsilt",
+  "parent": "spicedcider:polished_dried_deepsilt",
+  "side": "spicedcider:block/polished_dried_deepsilt",
+  "top": "spicedcider:block/polished_dried_deepsilt",
+  "bottom": "spicedcider:block/polished_dried_deepsilt",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:polished_dried_deepsilt",
+  "cut": [
+   "spicedcider:polished_dried_deepsilt"
+  ],
+  "requires": [],
+  "tool": "pickaxe"
  }
 ]

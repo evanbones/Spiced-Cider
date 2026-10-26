@@ -1,0 +1,20 @@
+{
+  "multipart": [
+    {
+      "when": { "part": "middle" },
+      "apply": { "model": "spicedcider:block/tubeworm_middle" }
+    },
+    {
+      "when": { "part": "top", "sheared": "true" },
+      "apply": { "model": "spicedcider:block/dead_tubeworm" }
+    },
+    {
+      "when": { "part": "top", "sheared": "false", "hiding": "true" },
+      "apply": { "model": "spicedcider:block/tubeworm_hiding" }
+    },
+    {
+      "when": { "part": "top", "sheared": "false", "hiding": "false" },
+      "apply": { "model": "spicedcider:block/tubeworm" }
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "type": "lithostitched:wrap_density_function",
+  "target_function": "minecraft:overworld/offset",
+  "wrapper_function": {
+    "type": "minecraft:flat_cache",
+    "argument": {
+      "type": "minecraft:cache_2d",
+      "argument": {
+        "type": "minecraft:add",
+        "argument1": {
+          "type": "lithostitched:original_marker"
+        },
+        "argument2": {
+          "type": "minecraft:mul",
+          "argument1": "spicedcider:abyss/strength",
+          "argument2": {
+            "type": "minecraft:add",
+            "argument1": -1.28,
+            "argument2": {
+              "type": "minecraft:mul",
+              "argument1": -1.0,
+              "argument2": {
+                "type": "lithostitched:original_marker"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

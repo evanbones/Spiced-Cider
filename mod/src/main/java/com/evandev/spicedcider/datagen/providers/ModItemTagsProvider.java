@@ -45,6 +45,15 @@ public class ModItemTagsProvider extends ItemTagsProvider {
                 .addOptional(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "necromium_hook"));
 
         this.tag(ItemTags.SAPLINGS).add(ModItems.GLOAMWOOD_SAPLING.get());
+        this.tag(ItemTags.SAPLINGS).add(ModItems.CACAO_SAPLING.get());
+        this.tag(ItemTags.LEAVES).add(ModItems.CACAO_LEAVES.get());
+        this.tag(ModTags.Items.CACAO_LOGS).add(ModItems.CACAO_LOG.get(), ModItems.CACAO_WOOD.get(), ModItems.STRIPPED_CACAO_LOG.get(), ModItems.STRIPPED_CACAO_WOOD.get());
+        this.tag(ItemTags.LOGS_THAT_BURN).addTag(ModTags.Items.CACAO_LOGS);
+        this.tag(ItemTags.create(ResourceLocation.fromNamespaceAndPath("bountifulfares", "fruit_logs"))).addTag(ModTags.Items.CACAO_LOGS);
+        this.tag(ItemTags.FLOWERS).add(ModItems.CACAO_LEAVES.get());
+        this.tag(Tags.Items.STRIPPED_LOGS).add(ModItems.STRIPPED_CACAO_LOG.get());
+        this.tag(Tags.Items.STRIPPED_WOODS).add(ModItems.STRIPPED_CACAO_WOOD.get());
+        this.tag(ItemTags.SAND).add(ModItems.DEEPSILT.get());
 
         this.tag(ItemTags.create(ResourceLocation.fromNamespaceAndPath("tide", "fishing_rods")))
                 .addOptional(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "adamantite_fishing_rod"));

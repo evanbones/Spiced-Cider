@@ -61,6 +61,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.util.List;
+import java.util.stream.Stream;
 
 @Mod(SpicedCider.MOD_ID)
 @EventBusSubscriber(modid = SpicedCider.MOD_ID)
@@ -92,6 +93,7 @@ public class SpicedCider {
         ModEntityTypes.ITEMS.register(modEventBus);
         ModBuildingBlocks.register();
         ModBlocks.BLOCKS.register(modEventBus);
+        ModBlockEntities.BLOCK_ENTITIES.register(modEventBus);
         ModTreeFeatures.TRUNK_PLACERS.register(modEventBus);
         ModTreeFeatures.TREE_DECORATORS.register(modEventBus);
         ModTreeFeatures.FEATURES.register(modEventBus);
@@ -140,6 +142,7 @@ public class SpicedCider {
         event.enqueueWork(LatexCauldronBlock::registerInteractions);
         event.enqueueWork(() -> ModItems.BALLOONS.values().forEach(balloon -> DispenserBlock.registerBehavior(balloon.get(), new BalloonItem.DispenseBehavior())));
         event.enqueueWork(() -> ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.GLOAMWOOD_SAPLING.getId(), ModBlocks.POTTED_GLOAMWOOD_SAPLING));
+        event.enqueueWork(() -> ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.CACAO_SAPLING.getId(), ModBlocks.POTTED_CACAO_SAPLING));
         if (ModItems.TWISTED_BOAT == null) return;
         event.enqueueWork(() -> {
             Boat.Type twisted = ModBoatTypes.TWISTED.getValue();
@@ -202,6 +205,13 @@ public class SpicedCider {
             event.accept(ModItems.BLACKSTONE_DEPOSIT.get(), vis);
             event.accept(ModItems.WORM_CRATE.get(), vis);
             event.accept(ModItems.GOLDEN_WORM_CRATE.get(), vis);
+            Stream.of(ModItems.CACAO_LOG, ModItems.CACAO_WOOD, ModItems.STRIPPED_CACAO_LOG, ModItems.STRIPPED_CACAO_WOOD).forEach(item -> event.accept(item.get(), vis));
+            event.accept(ModItems.CACAO_LEAVES.get(), vis);
+            event.accept(ModItems.CACAO_SAPLING.get(), vis);
+            Stream.of(ModItems.DEEPSILT, ModItems.ALGAE, ModItems.ALGAL_SAND, ModItems.ALGAL_GRAVEL, ModItems.CHROMARINE, ModItems.ACHROMARINE, ModItems.SULFIDE,
+                    ModItems.SULFIDE_VENT, ModItems.CALCITE_VENT, ModItems.TUBEWORM, ModItems.BUDDING_PRISMARINE, ModItems.SMALL_PRISMARINE_BUD,
+                    ModItems.MEDIUM_PRISMARINE_BUD, ModItems.LARGE_PRISMARINE_BUD, ModItems.PRISMARINE_CLUSTER, ModItems.CHROMATIC_BRAMBLE,
+                    ModItems.TALL_CHROMATIC_BRAMBLE, ModItems.ACHROMATIC_BRAMBLE, ModItems.TALL_ACHROMATIC_BRAMBLE).forEach(item -> event.accept(item.get(), vis));
         }
         if (event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS && ModItems.TWISTED_SIGN != null) {
             event.insertAfter(new ItemStack(Items.WARPED_HANGING_SIGN), new ItemStack(ModItems.TWISTED_SIGN.get()), vis);
@@ -210,6 +220,7 @@ public class SpicedCider {
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.insertAfter(new ItemStack(Items.IRON_BLOCK), new ItemStack(ModItems.CAST_IRON_BLOCK.get()), vis);
             event.insertAfter(new ItemStack(Items.HONEYCOMB_BLOCK), new ItemStack(ModItems.TALLOW_BLOCK.get()), vis);
+            Stream.of(ModItems.DRIED_DEEPSILT, ModItems.CUT_DRIED_DEEPSILT, ModItems.POLISHED_DRIED_DEEPSILT, ModItems.CHISELED_DRIED_DEEPSILT).forEach(item -> event.accept(item.get(), vis));
             ModBuildingBlocks.ITEMS.values().forEach(item -> event.accept(item.get(), vis));
             event.accept(ModItems.GLOWSTONE_BRICKS.get(), vis);
             event.accept(ModItems.GLOWSTONE_BRICK_STAIRS.get(), vis);

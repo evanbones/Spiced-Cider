@@ -118,6 +118,36 @@ public class ModItems {
     public static final DeferredItem<BlockItem> BLACKSTONE_DEPOSIT = ITEMS.registerSimpleBlockItem(ModBlocks.BLACKSTONE_DEPOSIT);
     public static final DeferredItem<BlockItem> GOLDEN_WORM_CRATE = ITEMS.registerSimpleBlockItem(ModBlocks.GOLDEN_WORM_CRATE);
 
+    public static final DeferredItem<BlockItem> CACAO_LOG = ITEMS.registerSimpleBlockItem(ModBlocks.CACAO_LOG);
+    public static final DeferredItem<BlockItem> CACAO_WOOD = ITEMS.registerSimpleBlockItem(ModBlocks.CACAO_WOOD);
+    public static final DeferredItem<BlockItem> STRIPPED_CACAO_LOG = ITEMS.registerSimpleBlockItem(ModBlocks.STRIPPED_CACAO_LOG);
+    public static final DeferredItem<BlockItem> STRIPPED_CACAO_WOOD = ITEMS.registerSimpleBlockItem(ModBlocks.STRIPPED_CACAO_WOOD);
+    public static final DeferredItem<BlockItem> CACAO_LEAVES = ITEMS.registerSimpleBlockItem(ModBlocks.CACAO_LEAVES);
+    public static final DeferredItem<BlockItem> CACAO_SAPLING = ITEMS.registerSimpleBlockItem(ModBlocks.CACAO_SAPLING);
+    public static final DeferredItem<BlockItem> DEEPSILT = ITEMS.registerSimpleBlockItem(ModBlocks.DEEPSILT);
+    public static final DeferredItem<BlockItem> DRIED_DEEPSILT = ITEMS.registerSimpleBlockItem(ModBlocks.DRIED_DEEPSILT);
+    public static final DeferredItem<BlockItem> CUT_DRIED_DEEPSILT = ITEMS.registerSimpleBlockItem(ModBlocks.CUT_DRIED_DEEPSILT);
+    public static final DeferredItem<BlockItem> POLISHED_DRIED_DEEPSILT = ITEMS.registerSimpleBlockItem(ModBlocks.POLISHED_DRIED_DEEPSILT);
+    public static final DeferredItem<BlockItem> CHISELED_DRIED_DEEPSILT = ITEMS.registerSimpleBlockItem(ModBlocks.CHISELED_DRIED_DEEPSILT);
+    public static final DeferredItem<BlockItem> ALGAE = ITEMS.registerSimpleBlockItem(ModBlocks.ALGAE);
+    public static final DeferredItem<BlockItem> ALGAL_SAND = ITEMS.registerSimpleBlockItem(ModBlocks.ALGAL_SAND);
+    public static final DeferredItem<BlockItem> ALGAL_GRAVEL = ITEMS.registerSimpleBlockItem(ModBlocks.ALGAL_GRAVEL);
+    public static final DeferredItem<BlockItem> ACHROMARINE = ITEMS.registerSimpleBlockItem(ModBlocks.ACHROMARINE);
+    public static final DeferredItem<BlockItem> CHROMARINE = ITEMS.registerSimpleBlockItem(ModBlocks.CHROMARINE);
+    public static final DeferredItem<BlockItem> BUDDING_PRISMARINE = ITEMS.registerSimpleBlockItem(ModBlocks.BUDDING_PRISMARINE);
+    public static final DeferredItem<BlockItem> SMALL_PRISMARINE_BUD = ITEMS.registerSimpleBlockItem(ModBlocks.SMALL_PRISMARINE_BUD);
+    public static final DeferredItem<BlockItem> MEDIUM_PRISMARINE_BUD = ITEMS.registerSimpleBlockItem(ModBlocks.MEDIUM_PRISMARINE_BUD);
+    public static final DeferredItem<BlockItem> LARGE_PRISMARINE_BUD = ITEMS.registerSimpleBlockItem(ModBlocks.LARGE_PRISMARINE_BUD);
+    public static final DeferredItem<BlockItem> PRISMARINE_CLUSTER = ITEMS.registerSimpleBlockItem(ModBlocks.PRISMARINE_CLUSTER);
+    public static final DeferredItem<BlockItem> SULFIDE = ITEMS.registerSimpleBlockItem(ModBlocks.SULFIDE);
+    public static final DeferredItem<BlockItem> SULFIDE_VENT = ITEMS.registerSimpleBlockItem(ModBlocks.SULFIDE_VENT);
+    public static final DeferredItem<BlockItem> CALCITE_VENT = ITEMS.registerSimpleBlockItem(ModBlocks.CALCITE_VENT);
+    public static final DeferredItem<BlockItem> TUBEWORM = ITEMS.registerSimpleBlockItem(ModBlocks.TUBEWORM);
+    public static final DeferredItem<BlockItem> CHROMATIC_BRAMBLE = ITEMS.registerSimpleBlockItem(ModBlocks.CHROMATIC_BRAMBLE);
+    public static final DeferredItem<BlockItem> TALL_CHROMATIC_BRAMBLE = ITEMS.registerSimpleBlockItem(ModBlocks.TALL_CHROMATIC_BRAMBLE);
+    public static final DeferredItem<BlockItem> ACHROMATIC_BRAMBLE = ITEMS.registerSimpleBlockItem(ModBlocks.ACHROMATIC_BRAMBLE);
+    public static final DeferredItem<BlockItem> TALL_ACHROMATIC_BRAMBLE = ITEMS.registerSimpleBlockItem(ModBlocks.TALL_ACHROMATIC_BRAMBLE);
+
     public static final DeferredItem<BlockItem> GLOWSTONE_BRICKS = ITEMS.registerSimpleBlockItem(ModBlocks.GLOWSTONE_BRICKS);
     public static final DeferredItem<BlockItem> GLOWSTONE_BRICK_STAIRS = ITEMS.registerSimpleBlockItem(ModBlocks.GLOWSTONE_BRICK_STAIRS);
     public static final DeferredItem<BlockItem> GLOWSTONE_BRICK_SLAB = ITEMS.registerSimpleBlockItem(ModBlocks.GLOWSTONE_BRICK_SLAB);

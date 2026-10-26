@@ -22,6 +22,7 @@ public class ModTags {
         public static final TagKey<Item> WAX_OR_TALLOW = tag("wax_or_tallow");
         public static final TagKey<Item> WORM_SEEKER_ITEMS = tag("worm_seeker_items");
         public static final TagKey<Item> BALLOONS = tag("balloons");
+        public static final TagKey<Item> CACAO_LOGS = tag("cacao_logs");
 
         private static TagKey<Item> tag(String name) {
             return ItemTags.create(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, name));
@@ -35,6 +36,7 @@ public class ModTags {
     public static class Blocks {
         public static final TagKey<Block> HANGS_FROM_CEILING = tag("hangs_from_ceiling");
         public static final TagKey<Block> NEEDS_AXE_TO_HARVEST = tag("needs_axe_to_harvest");
+        public static final TagKey<Block> CACAO_LOGS = tag("cacao_logs");
 
         private static TagKey<Block> tag(String name) {
             return BlockTags.create(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, name));
@@ -47,6 +49,7 @@ public class ModTags {
 
     public static class Structures {
         public static final TagKey<Structure> DISABLED = TagKey.create(Registries.STRUCTURE, ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "disabled"));
+        public static final TagKey<Structure> AVOIDS_OCEAN = TagKey.create(Registries.STRUCTURE, ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "avoids_ocean"));
     }
 
     public static class Biomes {

@@ -1,0 +1,29 @@
+{
+  "type": "spicedcider:underwater_plant",
+  "config": {
+    "to_place": {
+      "type": "minecraft:weighted_state_provider",
+      "entries": [
+        {
+          "weight": 3,
+          "data": {
+            "Name": "spicedcider:chromatic_bramble",
+            "Properties": {
+              "waterlogged": "true"
+            }
+          }
+        },
+        {
+          "weight": 1,
+          "data": {
+            "Name": "spicedcider:tall_chromatic_bramble",
+            "Properties": {
+              "half": "lower",
+              "waterlogged": "true"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

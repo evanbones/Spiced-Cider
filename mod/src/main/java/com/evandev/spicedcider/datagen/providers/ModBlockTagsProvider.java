@@ -3,10 +3,12 @@ package com.evandev.spicedcider.datagen.providers;
 import com.evandev.spicedcider.SpicedCider;
 import com.evandev.spicedcider.registry.ModBlocks;
 import com.evandev.spicedcider.registry.ModBuildingBlocks;
+import com.evandev.spicedcider.registry.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
+import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.data.BlockTagsProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.NotNull;
@@ -54,7 +56,31 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                 .add(ModBlocks.CAST_IRON_BLOCK.get());
 
         this.tag(BlockTags.SAPLINGS).add(ModBlocks.GLOAMWOOD_SAPLING.get());
+        this.tag(BlockTags.SAPLINGS).add(ModBlocks.CACAO_SAPLING.get());
+        this.tag(BlockTags.FLOWER_POTS).add(ModBlocks.POTTED_CACAO_SAPLING.get());
+        this.tag(BlockTags.LEAVES).add(ModBlocks.CACAO_LEAVES.get());
+        this.tag(ModTags.Blocks.CACAO_LOGS).add(ModBlocks.CACAO_LOG.get(), ModBlocks.CACAO_WOOD.get(), ModBlocks.STRIPPED_CACAO_LOG.get(), ModBlocks.STRIPPED_CACAO_WOOD.get());
+        this.tag(BlockTags.LOGS_THAT_BURN).addTag(ModTags.Blocks.CACAO_LOGS);
+        this.tag(BlockTags.FLOWERS).add(ModBlocks.CACAO_LEAVES.get());
+        this.tag(Tags.Blocks.STRIPPED_LOGS).add(ModBlocks.STRIPPED_CACAO_LOG.get());
+        this.tag(Tags.Blocks.STRIPPED_WOODS).add(ModBlocks.STRIPPED_CACAO_WOOD.get());
+        this.tag(BlockTags.MINEABLE_WITH_AXE).addTag(ModTags.Blocks.CACAO_LOGS);
+        this.tag(BlockTags.MINEABLE_WITH_HOE).add(ModBlocks.CACAO_LEAVES.get());
+        this.tag(BlockTags.MINEABLE_WITH_AXE).add(ModBlocks.CACAO_POD.get());
         this.tag(BlockTags.FLOWER_POTS).add(ModBlocks.POTTED_GLOAMWOOD_SAPLING.get());
+
+        this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
+                .add(ModBlocks.ACHROMARINE.get(), ModBlocks.CHROMARINE.get(), ModBlocks.BUDDING_PRISMARINE.get(), ModBlocks.SMALL_PRISMARINE_BUD.get(),
+                        ModBlocks.MEDIUM_PRISMARINE_BUD.get(), ModBlocks.LARGE_PRISMARINE_BUD.get(), ModBlocks.PRISMARINE_CLUSTER.get(), ModBlocks.SULFIDE.get(),
+                        ModBlocks.SULFIDE_VENT.get(), ModBlocks.CALCITE_VENT.get(), ModBlocks.TUBEWORM.get());
+        this.tag(BlockTags.MINEABLE_WITH_SHOVEL).add(ModBlocks.ALGAL_SAND.get(), ModBlocks.ALGAL_GRAVEL.get(), ModBlocks.DEEPSILT.get());
+        this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(ModBlocks.DRIED_DEEPSILT.get(), ModBlocks.CUT_DRIED_DEEPSILT.get(), ModBlocks.POLISHED_DRIED_DEEPSILT.get(),
+                ModBlocks.CHISELED_DRIED_DEEPSILT.get());
+        this.tag(BlockTags.MINEABLE_WITH_HOE).add(ModBlocks.ALGAE.get());
+        this.tag(BlockTags.SAND).add(ModBlocks.ALGAL_SAND.get(), ModBlocks.DEEPSILT.get());
+        this.tag(BlockTags.DIRT).add(ModBlocks.ALGAE.get());
+        this.tag(BlockTags.REPLACEABLE).add(ModBlocks.CHROMATIC_BRAMBLE.get(), ModBlocks.ACHROMATIC_BRAMBLE.get(), ModBlocks.TALL_CHROMATIC_BRAMBLE.get(), ModBlocks.TALL_ACHROMATIC_BRAMBLE.get());
+        this.tag(BlockTags.CRYSTAL_SOUND_BLOCKS).add(ModBlocks.BUDDING_PRISMARINE.get());
 
         this.tag(BlockTags.STAIRS).add(ModBlocks.GLOWSTONE_BRICK_STAIRS.get());
         this.tag(BlockTags.SLABS).add(ModBlocks.GLOWSTONE_BRICK_SLAB.get());

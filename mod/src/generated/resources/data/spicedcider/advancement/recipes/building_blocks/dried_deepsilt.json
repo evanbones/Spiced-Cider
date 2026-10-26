@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_deepsilt": {
+      "conditions": {
+        "items": [
+          {
+            "items": "spicedcider:deepsilt"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "spicedcider:dried_deepsilt"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_deepsilt"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "spicedcider:dried_deepsilt"
+    ]
+  }
+}

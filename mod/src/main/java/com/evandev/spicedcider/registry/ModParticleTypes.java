@@ -12,4 +12,8 @@ public class ModParticleTypes {
 
     public static final DeferredHolder<ParticleType<?>, SimpleParticleType> CLEAVER_SWEEP = PARTICLE_TYPES.register("cleaver_sweep",
             () -> new SimpleParticleType(true));
+    public static final DeferredHolder<ParticleType<?>, SimpleParticleType> WHITE_VENT_SMOKE = PARTICLE_TYPES.register("white_vent_smoke",
+            () -> new SimpleParticleType(true));
+    public static final DeferredHolder<ParticleType<?>, SimpleParticleType> BLACK_VENT_SMOKE = PARTICLE_TYPES.register("black_vent_smoke",
+            () -> new SimpleParticleType(true));
 }

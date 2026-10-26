@@ -4,17 +4,21 @@ import com.evandev.spicedcider.SpicedCider;
 import com.evandev.spicedcider.client.models.armor.MischiefArmorModel;
 import com.evandev.spicedcider.client.models.projectile.CobwebProjectileModel;
 import com.evandev.spicedcider.client.particle.CleaverSweepParticle;
+import com.evandev.spicedcider.client.particle.VentSmokeParticle;
 import com.evandev.spicedcider.client.resource.BrokenTextureReloadListener;
 import com.evandev.spicedcider.client.music.PocketJukeboxClient;
 import com.evandev.spicedcider.client.renderer.PocketJukeboxTooltipRenderer;
 import com.evandev.spicedcider.client.renderer.balloon.BalloonRenderer;
+import com.evandev.spicedcider.content.block.CacaoLogBlock;
 import com.evandev.spicedcider.content.item.PocketJukeboxTooltip;
 import com.evandev.spicedcider.client.renderer.projectiles.CobwebProjectileRenderer;
 import com.evandev.spicedcider.client.renderer.projectiles.GrapplingHookRenderer;
 import com.evandev.spicedcider.compat.tide.TideCompat;
+import com.evandev.spicedcider.content.block.TubewormBlock;
 import com.evandev.spicedcider.registry.*;
 import com.evandev.spicedcider.resource.ResourceBaker;
 import com.evandev.spicedcider.weather.client.CloudCoverClient;
+import net.minecraft.client.renderer.BiomeColors;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.neoforged.neoforge.client.event.RegisterClientTooltipComponentFactoriesEvent;
 import net.minecraft.client.renderer.RenderType;
@@ -29,6 +33,8 @@ import net.minecraft.server.packs.repository.PackSource;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.level.FoliageColor;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.EventPriority;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -54,6 +60,7 @@ import net.neoforged.neoforge.event.AddPackFindersEvent;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Optional;
+import java.util.stream.Stream;
 
 @EventBusSubscriber(modid = SpicedCider.MOD_ID, value = Dist.CLIENT)
 public class ClientModEvents {
@@ -77,6 +84,8 @@ public class ClientModEvents {
     @SubscribeEvent
     public static void registerParticleProviders(RegisterParticleProvidersEvent event) {
         event.registerSpriteSet(ModParticleTypes.CLEAVER_SWEEP.get(), CleaverSweepParticle.Factory::new);
+        event.registerSpriteSet(ModParticleTypes.WHITE_VENT_SMOKE.get(), sprites -> new VentSmokeParticle.Provider(sprites, 0.92F));
+        event.registerSpriteSet(ModParticleTypes.BLACK_VENT_SMOKE.get(), sprites -> new VentSmokeParticle.Provider(sprites, 0.1F));
     }
 
     @SubscribeEvent
@@ -99,12 +108,43 @@ public class ClientModEvents {
                 ModItems.MISCHIEF_BOOTS.get());
     }
 
+    @SubscribeEvent
+    public static void registerBlockColors(RegisterColorHandlersEvent.Block event) {
+        event.register((state, level, pos, tintIndex) -> tintIndex == 0 ? tubewormColor(state.getValue(TubewormBlock.COLOR)) : -1, ModBlocks.TUBEWORM.get());
+        event.register((state, level, pos, tintIndex) -> level != null && pos != null ? BiomeColors.getAverageFoliageColor(level, pos) : FoliageColor.getDefaultColor(), ModBlocks.CACAO_LEAVES.get());
+        event.register((state, level, pos, tintIndex) -> !state.getValue(CacaoLogBlock.LEAFY) ? -1
+                        : level != null && pos != null ? BiomeColors.getAverageFoliageColor(level, pos) : FoliageColor.getDefaultColor(),
+                ModBlocks.CACAO_LOG.get(), ModBlocks.CACAO_WOOD.get(), ModBlocks.STRIPPED_CACAO_LOG.get(), ModBlocks.STRIPPED_CACAO_WOOD.get());
+    }
+
+    private static int tubewormColor(DyeColor color) {
+        return switch (color) {
+            case BLACK -> 0x2f2332;
+            case GRAY -> 0x62636e;
+            case LIGHT_GRAY -> 0x9fb2b1;
+            case WHITE -> 0xe1e5e5;
+            case PINK -> 0xff87c5;
+            case MAGENTA -> 0xee61e6;
+            case PURPLE -> 0x8d4ad0;
+            case BLUE -> 0x5163ee;
+            case LIGHT_BLUE -> 0x6aadff;
+            case CYAN -> 0x4ad3e3;
+            case GREEN -> 0x409f42;
+            case LIME -> 0x50ff52;
+            case YELLOW -> 0xfbd734;
+            case ORANGE -> 0xff930b;
+            case RED -> 0xb82f35;
+            case BROWN -> 0x9c5b39;
+        };
+    }
+
     @SubscribeEvent(priority = EventPriority.LOWEST)
     public static void registerItemColors(RegisterColorHandlersEvent.Item event) {
         Item livingBubbleEgg = BuiltInRegistries.ITEM.get(ResourceLocation.withDefaultNamespace("sulfur_cube_spawn_egg"));
         if (livingBubbleEgg != Items.AIR) {
             event.register((stack, tintIndex) -> tintIndex == 0 ? 0xFFEFCFF2 : 0xFFC09FC3, livingBubbleEgg);
         }
+        event.register((stack, tintIndex) -> tintIndex == 0 ? FoliageColor.getDefaultColor() : -1, ModItems.CACAO_LEAVES.get());
     }
 
     @SubscribeEvent
@@ -129,6 +169,12 @@ public class ClientModEvents {
         }
         event.enqueueWork(() -> {
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.TEMPORARY_COBWEB.get(), RenderType.cutout());
+            Stream.of(ModBlocks.CACAO_SAPLING, ModBlocks.POTTED_CACAO_SAPLING, ModBlocks.CACAO_POD).forEach(block -> ItemBlockRenderTypes.setRenderLayer(block.get(), RenderType.cutout()));
+            Stream.of(ModBlocks.CACAO_LEAVES, ModBlocks.CACAO_LOG, ModBlocks.CACAO_WOOD, ModBlocks.STRIPPED_CACAO_LOG, ModBlocks.STRIPPED_CACAO_WOOD)
+                    .forEach(block -> ItemBlockRenderTypes.setRenderLayer(block.get(), RenderType.cutoutMipped()));
+            Stream.of(ModBlocks.SMALL_PRISMARINE_BUD, ModBlocks.MEDIUM_PRISMARINE_BUD, ModBlocks.LARGE_PRISMARINE_BUD, ModBlocks.PRISMARINE_CLUSTER,
+                    ModBlocks.SULFIDE_VENT, ModBlocks.CALCITE_VENT, ModBlocks.TUBEWORM, ModBlocks.CHROMATIC_BRAMBLE, ModBlocks.TALL_CHROMATIC_BRAMBLE,
+                    ModBlocks.ACHROMATIC_BRAMBLE, ModBlocks.TALL_ACHROMATIC_BRAMBLE).forEach(block -> ItemBlockRenderTypes.setRenderLayer(block.get(), RenderType.cutout()));
             if (ModBlocks.TWISTED_SIGN != null) {
                 Sheets.addWoodType(ModWoodTypes.TWISTED);
             }

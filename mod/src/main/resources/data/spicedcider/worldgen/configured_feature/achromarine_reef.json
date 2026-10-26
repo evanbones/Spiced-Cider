@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:disk",
+  "config": {
+    "state_provider": {
+      "fallback": {
+        "type": "minecraft:simple_state_provider",
+        "state": {
+          "Name": "spicedcider:achromarine"
+        }
+      },
+      "rules": []
+    },
+    "target": {
+      "type": "minecraft:matching_blocks",
+      "blocks": [
+        "minecraft:sand",
+        "minecraft:gravel",
+        "minecraft:clay",
+        "minecraft:dirt",
+        "spicedcider:algal_sand",
+        "spicedcider:algal_gravel"
+      ]
+    },
+    "radius": {
+      "type": "minecraft:uniform",
+      "min_inclusive": 2,
+      "max_inclusive": 4
+    },
+    "half_height": 2
+  }
+}

@@ -100,6 +100,36 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_worm", has(ModItems.WORM.get()))
                 .save(output);
 
+        woodFromLogs(output, ModBlocks.CACAO_WOOD.get(), ModBlocks.CACAO_LOG.get());
+        woodFromLogs(output, ModBlocks.STRIPPED_CACAO_WOOD.get(), ModBlocks.STRIPPED_CACAO_LOG.get());
+
+        Block deepsilt = ModBlocks.DEEPSILT.get();
+        Block driedDeepsilt = ModBlocks.DRIED_DEEPSILT.get();
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, driedDeepsilt)
+                .pattern("##")
+                .pattern("##")
+                .define('#', deepsilt)
+                .unlockedBy(getHasName(deepsilt), has(deepsilt))
+                .save(output);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_DRIED_DEEPSILT.get(), 4)
+                .pattern("##")
+                .pattern("##")
+                .define('#', driedDeepsilt)
+                .unlockedBy(getHasName(driedDeepsilt), has(driedDeepsilt))
+                .save(output);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_DRIED_DEEPSILT.get(), 4)
+                .pattern(" # ")
+                .pattern("# #")
+                .pattern(" # ")
+                .define('#', driedDeepsilt)
+                .unlockedBy(getHasName(driedDeepsilt), has(driedDeepsilt))
+                .save(output);
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(driedDeepsilt), RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_DRIED_DEEPSILT.get(), 0.1F, 200)
+                .unlockedBy(getHasName(driedDeepsilt), has(driedDeepsilt))
+                .save(output);
+        stonecutting(output, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_DRIED_DEEPSILT.get(), driedDeepsilt, 1);
+        stonecutting(output, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_DRIED_DEEPSILT.get(), driedDeepsilt, 1);
+
         Block glowstoneBricks = ModBlocks.GLOWSTONE_BRICKS.get();
         Block glowstoneBrickStairs = ModBlocks.GLOWSTONE_BRICK_STAIRS.get();
         Block glowstoneBrickSlab = ModBlocks.GLOWSTONE_BRICK_SLAB.get();

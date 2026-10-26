@@ -3,16 +3,29 @@ package com.evandev.spicedcider.registry;
 import com.evandev.spicedcider.SpicedCider;
 import com.evandev.spicedcider.compat.architectspalette.ArchitectsPaletteCompat;
 import com.evandev.spicedcider.compat.infernalexp.InfernalExpansionCompat;
+import com.evandev.spicedcider.content.block.AlgalBlock;
+import com.evandev.spicedcider.content.block.BuddingPrismarineBlock;
+import com.evandev.spicedcider.content.block.CacaoLeavesBlock;
+import com.evandev.spicedcider.content.block.CacaoLogBlock;
+import com.evandev.spicedcider.content.block.CacaoPodBlock;
 import com.evandev.spicedcider.content.block.LatexCauldronBlock;
+import com.evandev.spicedcider.content.block.PrismarineClusterBlock;
+import com.evandev.spicedcider.content.block.TallUnderwaterBrambleBlock;
 import com.evandev.spicedcider.content.block.TemporaryCobwebBlock;
+import com.evandev.spicedcider.content.block.TubewormBlock;
+import com.evandev.spicedcider.content.block.UnderwaterBrambleBlock;
+import com.evandev.spicedcider.content.block.VentBlock;
+import net.minecraft.util.ColorRGBA;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.CeilingHangingSignBlock;
+import net.minecraft.world.level.block.ColoredFallingBlock;
 import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraft.world.level.block.LiquidBlock;
 import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.SaplingBlock;
 import net.minecraft.world.level.block.SlabBlock;
+import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.StandingSignBlock;
 import net.minecraft.world.level.block.WallBlock;
@@ -69,6 +82,71 @@ public class ModBlocks {
     public static final DeferredBlock<FlowerPotBlock> POTTED_GLOAMWOOD_SAPLING = BLOCKS.register("potted_gloamwood_sapling",
             () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, GLOAMWOOD_SAPLING, BlockBehaviour.Properties.ofFullCopy(Blocks.POTTED_OAK_SAPLING)));
 
+    public static final DeferredBlock<Block> STRIPPED_CACAO_LOG = BLOCKS.register("stripped_cacao_log",
+            () -> new CacaoLogBlock(() -> null, cacaoLogProperties(MapColor.COLOR_PINK)));
+    public static final DeferredBlock<Block> STRIPPED_CACAO_WOOD = BLOCKS.register("stripped_cacao_wood",
+            () -> new CacaoLogBlock(() -> null, cacaoLogProperties(MapColor.COLOR_PINK)));
+    public static final DeferredBlock<Block> CACAO_LOG = BLOCKS.register("cacao_log",
+            () -> new CacaoLogBlock(STRIPPED_CACAO_LOG, cacaoLogProperties(MapColor.TERRACOTTA_BROWN)));
+    public static final DeferredBlock<Block> CACAO_WOOD = BLOCKS.register("cacao_wood",
+            () -> new CacaoLogBlock(STRIPPED_CACAO_WOOD, cacaoLogProperties(MapColor.TERRACOTTA_BROWN)));
+    public static final DeferredBlock<Block> CACAO_LEAVES = BLOCKS.register("cacao_leaves",
+            () -> new CacaoLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.JUNGLE_LEAVES)));
+    public static final DeferredBlock<Block> CACAO_POD = BLOCKS.register("cacao_pod",
+            () -> new CacaoPodBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COCOA)));
+    public static final DeferredBlock<SaplingBlock> CACAO_SAPLING = BLOCKS.register("cacao_sapling",
+            () -> new SaplingBlock(new TreeGrower("cacao", Optional.empty(), Optional.of(ModTreeFeatures.CACAO), Optional.empty()),
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.JUNGLE_SAPLING)));
+    public static final DeferredBlock<FlowerPotBlock> POTTED_CACAO_SAPLING = BLOCKS.register("potted_cacao_sapling",
+            () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, CACAO_SAPLING, BlockBehaviour.Properties.ofFullCopy(Blocks.POTTED_JUNGLE_SAPLING)));
+
+    public static final DeferredBlock<Block> DEEPSILT = BLOCKS.register("deepsilt",
+            () -> new ColoredFallingBlock(new ColorRGBA(0x3a3a3a), BlockBehaviour.Properties.ofFullCopy(Blocks.SAND).mapColor(MapColor.COLOR_BLACK).sound(ModSounds.SILT)));
+    public static final DeferredBlock<Block> DRIED_DEEPSILT = BLOCKS.register("dried_deepsilt", () -> new Block(driedDeepsiltProperties()));
+    public static final DeferredBlock<Block> CUT_DRIED_DEEPSILT = BLOCKS.register("cut_dried_deepsilt", () -> new Block(driedDeepsiltProperties()));
+    public static final DeferredBlock<Block> POLISHED_DRIED_DEEPSILT = BLOCKS.register("polished_dried_deepsilt", () -> new Block(driedDeepsiltProperties()));
+    public static final DeferredBlock<Block> CHISELED_DRIED_DEEPSILT = BLOCKS.register("chiseled_dried_deepsilt", () -> new Block(driedDeepsiltProperties()));
+
+    public static final DeferredBlock<Block> ALGAE = BLOCKS.register("algae",
+            () -> new AlgalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MOSS_BLOCK).mapColor(MapColor.COLOR_GREEN).sound(ModSounds.ALGAE), Blocks.DIRT));
+    public static final DeferredBlock<Block> ALGAL_SAND = BLOCKS.register("algal_sand",
+            () -> new AlgalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SAND).mapColor(MapColor.COLOR_LIGHT_GREEN).sound(ModSounds.ALGAL_SAND), Blocks.SAND));
+    public static final DeferredBlock<Block> ALGAL_GRAVEL = BLOCKS.register("algal_gravel",
+            () -> new AlgalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GRAVEL).mapColor(MapColor.COLOR_LIGHT_GREEN).sound(ModSounds.ALGAL_GRAVEL), Blocks.GRAVEL));
+
+    public static final DeferredBlock<Block> ACHROMARINE = BLOCKS.register("achromarine",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PRISMARINE)));
+    public static final DeferredBlock<Block> CHROMARINE = BLOCKS.register("chromarine",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PRISMARINE).sound(ModSounds.CHROMARINE)));
+    public static final DeferredBlock<Block> BUDDING_PRISMARINE = BLOCKS.register("budding_prismarine",
+            () -> new BuddingPrismarineBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BUDDING_AMETHYST).mapColor(MapColor.COLOR_CYAN).sound(SoundType.STONE).randomTicks()));
+    public static final DeferredBlock<Block> SMALL_PRISMARINE_BUD = BLOCKS.register("small_prismarine_bud",
+            () -> new PrismarineClusterBlock(3, 4, BlockBehaviour.Properties.ofFullCopy(Blocks.SMALL_AMETHYST_BUD).mapColor(MapColor.COLOR_CYAN).sound(ModSounds.PRISMARINE_CLUSTER).lightLevel(state -> 0)));
+    public static final DeferredBlock<Block> MEDIUM_PRISMARINE_BUD = BLOCKS.register("medium_prismarine_bud",
+            () -> new PrismarineClusterBlock(4, 3, BlockBehaviour.Properties.ofFullCopy(Blocks.MEDIUM_AMETHYST_BUD).mapColor(MapColor.COLOR_CYAN).sound(ModSounds.PRISMARINE_CLUSTER).lightLevel(state -> 0)));
+    public static final DeferredBlock<Block> LARGE_PRISMARINE_BUD = BLOCKS.register("large_prismarine_bud",
+            () -> new PrismarineClusterBlock(5, 3, BlockBehaviour.Properties.ofFullCopy(Blocks.LARGE_AMETHYST_BUD).mapColor(MapColor.COLOR_CYAN).sound(ModSounds.PRISMARINE_CLUSTER).lightLevel(state -> 0)));
+    public static final DeferredBlock<Block> PRISMARINE_CLUSTER = BLOCKS.register("prismarine_cluster",
+            () -> new PrismarineClusterBlock(7, 3, BlockBehaviour.Properties.ofFullCopy(Blocks.AMETHYST_CLUSTER).mapColor(MapColor.COLOR_CYAN).sound(ModSounds.PRISMARINE_CLUSTER).lightLevel(state -> 0)));
+
+    public static final DeferredBlock<Block> SULFIDE = BLOCKS.register("sulfide",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CALCITE).mapColor(MapColor.TERRACOTTA_BLACK)));
+    public static final DeferredBlock<Block> SULFIDE_VENT = BLOCKS.register("sulfide_vent",
+            () -> new VentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CALCITE).mapColor(MapColor.TERRACOTTA_BLACK).noOcclusion(), ModParticleTypes.BLACK_VENT_SMOKE));
+    public static final DeferredBlock<Block> CALCITE_VENT = BLOCKS.register("calcite_vent",
+            () -> new VentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CALCITE).noOcclusion(), ModParticleTypes.WHITE_VENT_SMOKE));
+    public static final DeferredBlock<Block> TUBEWORM = BLOCKS.register("tubeworm",
+            () -> new TubewormBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.TUBE_CORAL_BLOCK).mapColor(MapColor.COLOR_RED).noOcclusion().strength(0.5F).sound(SoundType.CORAL_BLOCK)));
+
+    public static final DeferredBlock<Block> CHROMATIC_BRAMBLE = BLOCKS.register("chromatic_bramble",
+            () -> new UnderwaterBrambleBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DEAD_BUSH).mapColor(MapColor.COLOR_PURPLE).sound(SoundType.WET_GRASS)));
+    public static final DeferredBlock<Block> TALL_CHROMATIC_BRAMBLE = BLOCKS.register("tall_chromatic_bramble",
+            () -> new TallUnderwaterBrambleBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.TALL_GRASS).mapColor(MapColor.COLOR_PURPLE).sound(SoundType.WET_GRASS)));
+    public static final DeferredBlock<Block> ACHROMATIC_BRAMBLE = BLOCKS.register("achromatic_bramble",
+            () -> new UnderwaterBrambleBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DEAD_BUSH).mapColor(MapColor.COLOR_LIGHT_GRAY).sound(SoundType.WET_GRASS)));
+    public static final DeferredBlock<Block> TALL_ACHROMATIC_BRAMBLE = BLOCKS.register("tall_achromatic_bramble",
+            () -> new TallUnderwaterBrambleBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.TALL_GRASS).mapColor(MapColor.COLOR_LIGHT_GRAY).sound(SoundType.WET_GRASS)));
+
     public static final DeferredBlock<Block> GLOWSTONE_BRICKS = BLOCKS.register("glowstone_bricks",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GLOWSTONE)));
     public static final DeferredBlock<StairBlock> GLOWSTONE_BRICK_STAIRS = BLOCKS.register("glowstone_brick_stairs",
@@ -117,4 +195,12 @@ public class ModBlocks {
             BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WALL_HANGING_SIGN).mapColor(MapColor.COLOR_PURPLE).dropsLike(TWISTED_HANGING_SIGN.get())))
             : null;
 
+    private static BlockBehaviour.Properties cacaoLogProperties(MapColor color) {
+        return BlockBehaviour.Properties.ofFullCopy(Blocks.JUNGLE_LOG).mapColor(color).noOcclusion().isSuffocating((state, level, pos) -> false)
+                .isViewBlocking((state, level, pos) -> false);
+    }
+
+    private static BlockBehaviour.Properties driedDeepsiltProperties() {
+        return BlockBehaviour.Properties.ofFullCopy(Blocks.SANDSTONE).mapColor(MapColor.COLOR_BLACK).sound(ModSounds.DRIED_SILT);
+    }
 }
