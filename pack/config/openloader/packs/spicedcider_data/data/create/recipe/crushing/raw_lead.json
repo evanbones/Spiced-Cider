@@ -1,13 +1,4 @@
 {
-  "neoforge:conditions": [
-    {
-      "type": "neoforge:not",
-      "value": {
-        "type": "neoforge:tag_empty",
-        "tag": "c:raw_materials/lead"
-      }
-    }
-  ],
   "type": "create:crushing",
   "ingredients": [
     {
@@ -18,6 +9,10 @@
   "results": [
     {
       "id": "create:crushed_raw_lead"
+    },
+    {
+      "id": "create:crushed_raw_lead",
+      "chance": 0.75
     }
   ]
 }

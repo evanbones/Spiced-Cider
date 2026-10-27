@@ -1,0 +1,18 @@
+{
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "tag": "c:raw_materials/tin"
+    }
+  ],
+  "processing_time": 200,
+  "results": [
+    {
+      "id": "create:crushed_raw_tin"
+    },
+    {
+      "id": "create:crushed_raw_tin",
+      "chance": 0.25
+    }
+  ]
+}

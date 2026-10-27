@@ -66,27 +66,35 @@ hash = "872fe00296b85fff55abf7c6d99caa08102feeae78e561e13d1c44a3108e3a2b"
 
 [[files]]
 file = "config/amendments-client-1.toml.bak"
-hash = "15ab8b99195308891d3d13dcf91eb2e2ffe530d557057172474300ed03bb643f"
+hash = "f54a23961483e439ecd4e4fd01bddaf11fff82a06af8e8afad430456de41f4de"
 
 [[files]]
 file = "config/amendments-client-2.toml.bak"
+hash = "15ab8b99195308891d3d13dcf91eb2e2ffe530d557057172474300ed03bb643f"
+
+[[files]]
+file = "config/amendments-client-3.toml.bak"
 hash = "5fab30f26876adc07811dabecc63dd5895964bf30ed0dcd8e17cfce4878527ef"
 
 [[files]]
 file = "config/amendments-client.toml"
-hash = "f54a23961483e439ecd4e4fd01bddaf11fff82a06af8e8afad430456de41f4de"
+hash = "623cf7338171f079cfaa68b2ef8d6805b1ba06f1dd302e052739c0e0eae22d7e"
 
 [[files]]
 file = "config/amendments-common-1.toml.bak"
-hash = "952595e26ecbbfa8efb0be88fbd4a6463ab0d0652429a8c9f8cff8d66a8fd8f2"
+hash = "59692f8ceb1df631144bee3f472836f096de3af005040d128ec53bc7a2dbeb5a"
 
 [[files]]
 file = "config/amendments-common-2.toml.bak"
+hash = "952595e26ecbbfa8efb0be88fbd4a6463ab0d0652429a8c9f8cff8d66a8fd8f2"
+
+[[files]]
+file = "config/amendments-common-3.toml.bak"
 hash = "88a7589f5f621ab65ccf7445b1553206390ae7e89a99d04e129fdd195bb40feb"
 
 [[files]]
 file = "config/amendments-common.toml"
-hash = "59692f8ceb1df631144bee3f472836f096de3af005040d128ec53bc7a2dbeb5a"
+hash = "38e3a7a2e54f20f9954b78bcbd283ddcc4f184cd3310b330fa8bfe5179c199f4"
 
 [[files]]
 file = "config/apeeling-common.toml"
@@ -1270,7 +1278,7 @@ hash = "2d0161eb53db3ff4cfb5f184109e8efc1aac4f39976ad85b370b0c476a1aa1c0"
 
 [[files]]
 file = "config/offgrid/common.toml"
-hash = "28fbe676e8bba42225e3f36e5c34b1d27235167584933898353de508c7940106"
+hash = "4deab078490ef8cb525d18d534c30bef3990291e0f3a497b504925f9112549b3"
 
 [[files]]
 file = "config/onion_onion-common.toml"
@@ -3341,22 +3349,6 @@ file = "config/openloader/packs/spicedcider_data/data/create/recipe/crushing/lea
 hash = "d0e48946a2fdc8fc5ccc7c7a654f022bc107ba00b1e72f6c942a4620622fec5c"
 
 [[files]]
-file = "config/openloader/packs/spicedcider_data/data/create/recipe/crushing/nickel_ore.json"
-hash = "2fcde53e88852e7b0ec73965709d9a1750827d580bf1aaabb585fac6834e9bec"
-
-[[files]]
-file = "config/openloader/packs/spicedcider_data/data/create/recipe/crushing/osmium_ore.json"
-hash = "b882dfd856854982851fa567bf4b4c0148509077072cb9253716cecf961ab441"
-
-[[files]]
-file = "config/openloader/packs/spicedcider_data/data/create/recipe/crushing/platinum_ore.json"
-hash = "59abd78b52a676757ea4845b6e9766fddc56ecc85b3a08fe5ee054f40ae1d559"
-
-[[files]]
-file = "config/openloader/packs/spicedcider_data/data/create/recipe/crushing/quicksilver_ore.json"
-hash = "9afec2f885c419811d0352df3021da3303632d28d892af60ae9b3772fac97085"
-
-[[files]]
 file = "config/openloader/packs/spicedcider_data/data/create/recipe/crushing/raw_aluminum.json"
 hash = "8723fe55174097dc83aecf7d8538f165af0df5c30d7e89194322efaddb915309"
 
@@ -3397,38 +3389,6 @@ file = "config/openloader/packs/spicedcider_data/data/create/recipe/crushing/raw
 hash = "9e63924e3edd1daa9219987386398c11b1250d4d16f11112d85dd2bff2831775"
 
 [[files]]
-file = "config/openloader/packs/spicedcider_data/data/create/recipe/crushing/raw_nickel.json"
-hash = "35567f8020d1335afadc3087946ed468248dbf2f3e82bf96f6459a12b130a7ee"
-
-[[files]]
-file = "config/openloader/packs/spicedcider_data/data/create/recipe/crushing/raw_nickel_block.json"
-hash = "9a37542c07e0271fede536681d37a7947c2db56d7c309ab99715907ac78df3bd"
-
-[[files]]
-file = "config/openloader/packs/spicedcider_data/data/create/recipe/crushing/raw_osmium.json"
-hash = "2aef87b2bb7dd0eda55a958b2e8383c16140f3e6754fd1fc860cda024cf1364b"
-
-[[files]]
-file = "config/openloader/packs/spicedcider_data/data/create/recipe/crushing/raw_osmium_block.json"
-hash = "977660ae96295421763137981b199b4e298b55d3952d7e1b7d3b222c3bbbfa12"
-
-[[files]]
-file = "config/openloader/packs/spicedcider_data/data/create/recipe/crushing/raw_platinum.json"
-hash = "f76977ffd8feaf0697ac69cf5ab3a58e23de70d5ba58656eb57b8aa406320a64"
-
-[[files]]
-file = "config/openloader/packs/spicedcider_data/data/create/recipe/crushing/raw_platinum_block.json"
-hash = "c3e32754ca20604ffe0b9ae02c27814886c1fc54825101713ec0d0846da42b32"
-
-[[files]]
-file = "config/openloader/packs/spicedcider_data/data/create/recipe/crushing/raw_quicksilver.json"
-hash = "f358f5f626286e24af2ca9472f10e8061bda28b2c4ec13d41df5a5775355ed08"
-
-[[files]]
-file = "config/openloader/packs/spicedcider_data/data/create/recipe/crushing/raw_quicksilver_block.json"
-hash = "8e579be640767e9265b544cfd282a8cb7eeb7cf95317842f823845de163fb9bd"
-
-[[files]]
 file = "config/openloader/packs/spicedcider_data/data/create/recipe/crushing/raw_silver.json"
 hash = "0e62c328aa1ce410b5a4989a32c36bb09ff97d8df7d9cb220890d72927c0a4bd"
 
@@ -3445,24 +3405,12 @@ file = "config/openloader/packs/spicedcider_data/data/create/recipe/crushing/raw
 hash = "16ae7ce9b687706b119bfa4a639fab6684890ef6bc6dad22817c1f026d0ad167"
 
 [[files]]
-file = "config/openloader/packs/spicedcider_data/data/create/recipe/crushing/raw_uranium.json"
-hash = "8284fe30b81764195579b18c5ad7c1611968da388c39cf8c92b129d8d6475976"
-
-[[files]]
-file = "config/openloader/packs/spicedcider_data/data/create/recipe/crushing/raw_uranium_block.json"
-hash = "0feb932ef260e100fe838c398e8ba780653c6bf18bdc552e345203fc5febe946"
-
-[[files]]
 file = "config/openloader/packs/spicedcider_data/data/create/recipe/crushing/silver_ore.json"
 hash = "5a626825c90328690debfcc50831943cfcb6768662fb1cfbf6045f27c2fd9155"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/create/recipe/crushing/tin_ore.json"
 hash = "d275efa2923db51d22d45a2961bb4a8789c4f83abb3ee0b246dd1dc8e10f9500"
-
-[[files]]
-file = "config/openloader/packs/spicedcider_data/data/create/recipe/crushing/uranium_ore.json"
-hash = "1e184ab5943331c6f516980054b3596b0d46fa51e74fd4bdf5444501dc4331f8"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/create/recipe/filling/blaze_cake.json"
@@ -11646,7 +11594,7 @@ hash = "b5615ecf8cb89abfac117e877cb1ae4415cf9589d2bdaf3c8408ea7654d625f7"
 
 [[files]]
 file = "config/reliable_remover/mods/create.json"
-hash = "67b4e3b8bf12055722ec1b73c30b4fe30e9c92e49736fa6907b7203fb65f094b"
+hash = "a622aa5a938c2eb471be41ffa6e4e1cdb6d3f61d115369d7488c6a41bbee9b4c"
 
 [[files]]
 file = "config/reliable_remover/mods/culturaldelights.json"
@@ -13231,7 +13179,7 @@ metafile = true
 
 [[files]]
 file = "mods/amendments.pw.toml"
-hash = "8ae41d3a92b5eb712cbb0d8acfd9fa86a49fee510d3d029a592044bc5b959214"
+hash = "dd5bc213fca1181448f7b459075fff96df2839b0d4c46a301a66cd43383f5901"
 metafile = true
 
 [[files]]
@@ -13374,7 +13322,7 @@ metafile = true
 
 [[files]]
 file = "mods/c2me-neoforge.pw.toml"
-hash = "6b5ca6ccbffb900ed868de62c9c13a09b38ffed36b00e51ceaab5468b6941041"
+hash = "97c1ad521ac48aaf6c07a54339dc94ba400df670ec5d98f3d81d14bd728586e4"
 metafile = true
 
 [[files]]
@@ -13538,7 +13486,7 @@ metafile = true
 
 [[files]]
 file = "mods/embers_and_icicles-1.0.2+1.21.1-neoforge.jar"
-hash = "2375bd4dd24a063560463fc495b528b00dd0a1e71db8dc60b7224003f398650b"
+hash = "325a5d6a856be230cf950e1bbb35840d6e28757855dd164e53296840c8c6fe9f"
 
 [[files]]
 file = "mods/emi-discovery.pw.toml"
@@ -13945,7 +13893,7 @@ metafile = true
 
 [[files]]
 file = "mods/offgrid.pw.toml"
-hash = "0e9a384641ad9fcdcb9c1e3da897b9fca6ac4e4ebbac1332d047f4bcc8640682"
+hash = "cef63211474aeaeec9ae6e3f5d0bb895df1bb2604396cf7123e830f964897aa8"
 metafile = true
 
 [[files]]
@@ -14025,7 +13973,7 @@ metafile = true
 
 [[files]]
 file = "mods/polytone.pw.toml"
-hash = "0bd2c04284e7e002ee68ba7109284fce150ef7672593a6d6126f47ab0a06c6ee"
+hash = "6b6dfd13bcd0676529c9f4145b06bc38c5b2df2993c568e1b5b6c65fd8b84dc3"
 metafile = true
 
 [[files]]
@@ -14253,7 +14201,7 @@ metafile = true
 
 [[files]]
 file = "mods/spicedcider-1.0.0.jar"
-hash = "942cb8737ca3b0d413feb330b42e0935437a94520eabae7326cd26e9049592ac"
+hash = "2f58113a80193b51e66122a085bfc4a58ee1d367b9c83fdc5ea5c0365d0db6f3"
 
 [[files]]
 file = "mods/stacksizetweaks.pw.toml"

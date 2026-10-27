@@ -18,7 +18,7 @@ import org.spongepowered.asm.mixin.injection.Coerce;
 @Mixin(value = Placement.class, remap = false)
 public class PlacementProbeMoonlightMixin {
 
-    @WrapOperation(method = "lambda$decide$2", at = @At(value = "INVOKE", target = "Ldev/tazer/offgrid/mixin/access/BlockItemAccessor;offgrid$getPlacementState(Lnet/minecraft/world/item/context/BlockPlaceContext;)Lnet/minecraft/world/level/block/state/BlockState;"))
+    @WrapOperation(method = "lambda$decide$3", at = @At(value = "INVOKE", target = "Ldev/tazer/offgrid/mixin/access/BlockItemAccessor;offgrid$getPlacementState(Lnet/minecraft/world/item/context/BlockPlaceContext;)Lnet/minecraft/world/level/block/state/BlockState;"))
     private static BlockState spicedcider$probeMoonlightPlacement(@Coerce Object item, BlockPlaceContext context, Operation<BlockState> original) {
         BlockState state = original.call(item, context);
         if (state != null) {

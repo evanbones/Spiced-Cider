@@ -1,19 +1,18 @@
-﻿{
-    "type":  "create:milling",
-    "ingredients":  [
-                        {
-                            "item":  "modestmining:raw_lead"
-                        }
-                    ],
-    "processing_time":  200,
-    "results":  [
-                    {
-                        "id":  "create:crushed_raw_lead",
-                        "count":  1
-                    },
-                    {
-                        "id":  "create:crushed_raw_lead",
-                        "chance":  0.5
-                    }
-                ]
+{
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "tag": "c:raw_materials/lead"
+    }
+  ],
+  "processing_time": 200,
+  "results": [
+    {
+      "id": "create:crushed_raw_lead"
+    },
+    {
+      "id": "create:crushed_raw_lead",
+      "chance": 0.25
+    }
+  ]
 }

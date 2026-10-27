@@ -1,13 +1,4 @@
 {
-  "neoforge:conditions": [
-    {
-      "type": "neoforge:not",
-      "value": {
-        "type": "neoforge:tag_empty",
-        "tag": "c:storage_blocks/raw_tin"
-      }
-    }
-  ],
   "type": "create:crushing",
   "ingredients": [
     {
@@ -17,8 +8,13 @@
   "processing_time": 400,
   "results": [
     {
+      "id": "create:crushed_raw_tin",
+      "count": 9
+    },
+    {
+      "id": "create:crushed_raw_tin",
       "count": 9,
-      "id": "create:crushed_raw_tin"
+      "chance": 0.75
     }
   ]
 }
