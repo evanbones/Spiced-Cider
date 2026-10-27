@@ -1,0 +1,9 @@
+{
+  "id": "spicedcider:copper_blocks",
+  "type": "remi:group",
+  "name": "Copper Blocks",
+  "regexes": [
+    "minecraft:(waxed_)?((exposed|weathered|oxidized)_)?copper(_block)?"
+  ],
+  "enabled": true
+}

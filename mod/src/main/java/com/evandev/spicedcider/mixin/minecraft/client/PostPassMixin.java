@@ -1,6 +1,7 @@
 package com.evandev.spicedcider.mixin.minecraft.client;
 
 import com.evandev.spicedcider.client.events.PaleGardenPost;
+import com.evandev.spicedcider.client.nether.NetherHeatHaze;
 import net.minecraft.client.renderer.EffectInstance;
 import net.minecraft.client.renderer.PostPass;
 import org.spongepowered.asm.mixin.Final;
@@ -17,9 +18,11 @@ public abstract class PostPassMixin {
     private EffectInstance effect;
 
     @Inject(method = "process", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/renderer/EffectInstance;apply()V"))
-    private void spicedcider$paleGardenUniforms(float partialTicks, CallbackInfo ci) {
+    private void spicedcider$applyEffectUniforms(float partialTicks, CallbackInfo ci) {
         if (PaleGardenPost.EFFECT.equals(this.effect.getName())) {
             PaleGardenPost.applyUniforms(this.effect);
+        } else if (NetherHeatHaze.EFFECT.equals(this.effect.getName())) {
+            NetherHeatHaze.applyUniforms(this.effect);
         }
     }
 }

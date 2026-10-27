@@ -16,6 +16,8 @@ import com.evandev.spicedcider.compat.controlify.ControlifySettings;
 import com.evandev.spicedcider.compat.lambdynlights.DynamicLightsSetting;
 import com.evandev.spicedcider.compat.musictweaks.MusicTweaksSettings;
 import com.evandev.spicedcider.compat.sodium.SodiumSetting;
+import com.evandev.spicedcider.client.nether.NetherSettings;
+import com.evandev.spicedcider.compat.voxy.VoxyFogSettings;
 import com.evandev.spicedcider.compat.voxy.VoxyIngest;
 import com.evandev.spicedcider.lodgen.client.LodSettings;
 import net.minecraft.Util;
@@ -152,7 +154,9 @@ public final class SettingsPages {
                 named(sodiumOnly("voxy:enabled"), "spicedcider.options.lod_terrain"),
                 named(sodiumOnly("voxy:render_distance", VOXY_DEFAULT_DISTANCE), "spicedcider.options.lod_distance"),
                 VoxyIngest.available() ? LodSettings.generate() : null,
-                VoxyIngest.available() ? LodSettings.threads() : null));
+                VoxyIngest.available() ? LodSettings.threads() : null,
+                ModList.get().isLoaded("roxy") ? VoxyFogSettings.start() : null,
+                ModList.get().isLoaded("roxy") ? VoxyFogSettings.end() : null));
         add(entries, category(screen, "quality",
                 sodium("sodium:quality.graphics", o.graphicsMode()),
                 sodium("sodium:quality.ao", o.ambientOcclusion()),
@@ -223,6 +227,8 @@ public final class SettingsPages {
         add(entries, category(screen, "motion",
                 sodium("sodium:general.view_bobbing", o.bobView()),
                 vanilla(o.screenEffectScale()),
+                NetherSettings.heatHaze(),
+                NetherSettings.mist(),
                 vanilla(o.fovEffectScale()),
                 vanilla(o.darknessEffectScale()),
                 vanilla(o.damageTiltStrength()),

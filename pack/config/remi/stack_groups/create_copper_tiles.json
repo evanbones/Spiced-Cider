@@ -1,0 +1,9 @@
+{
+  "id": "spicedcider:create_copper_tiles",
+  "type": "remi:group",
+  "name": "Copper Tiles",
+  "regexes": [
+    "create:(waxed_)?((exposed|weathered|oxidized)_)?copper_tiles"
+  ],
+  "enabled": true
+}

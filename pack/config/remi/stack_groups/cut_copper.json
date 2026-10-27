@@ -1,0 +1,9 @@
+{
+  "id": "spicedcider:cut_copper",
+  "type": "remi:group",
+  "name": "Cut Copper",
+  "regexes": [
+    "minecraft:(waxed_)?((exposed|weathered|oxidized)_)?cut_copper"
+  ],
+  "enabled": true
+}

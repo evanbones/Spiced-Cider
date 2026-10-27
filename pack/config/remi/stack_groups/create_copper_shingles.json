@@ -1,0 +1,9 @@
+{
+  "id": "spicedcider:create_copper_shingles",
+  "type": "remi:group",
+  "name": "Copper Shingles",
+  "regexes": [
+    "create:(waxed_)?((exposed|weathered|oxidized)_)?copper_shingles"
+  ],
+  "enabled": true
+}

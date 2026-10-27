@@ -4,6 +4,7 @@
     "items": [
       "minecraft:music_disc_lava_chicken",
       "minecraft:bell",
+      "minecraft:fletching_table",
       "minecraft:music_disc_tears",
       "minecraft:elytra",
       "minecraft:phantom_membrane",
@@ -307,5 +308,12 @@
       "minecraft:trapped_chest"
     ],
     "replace_with": "quark:trapped_oak_chest"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "minecraft:iron_horse_armor"
+    ],
+    "replace_with": "spicedcider:bronze_horse_armor"
   }
 ]

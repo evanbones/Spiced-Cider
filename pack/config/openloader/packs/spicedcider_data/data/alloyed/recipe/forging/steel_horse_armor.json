@@ -1,16 +1,15 @@
 {
   "type": "modestmining:forging_shaped",
+  "category": "equipment",
+  "cooktime": 144,
   "key": {
     "X": {
       "tag": "c:ingots/steel"
-    },
-    "I": {
-      "item": "minecraft:iron_horse_armor"
     }
   },
   "pattern": [
     "X X",
-    " I ",
+    "XXX",
     "X X"
   ],
   "result": {

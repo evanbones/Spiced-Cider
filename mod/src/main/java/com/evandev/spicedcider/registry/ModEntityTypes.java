@@ -5,6 +5,7 @@ import com.evandev.spicedcider.entities.projectiles.CobwebProjectileEntity;
 import com.evandev.spicedcider.compat.tide.TideCompat;
 import com.evandev.spicedcider.entities.balloon.BalloonEntity;
 import com.evandev.spicedcider.entities.projectiles.GrapplingHookEntity;
+import com.evandev.spicedcider.entities.sputter.SputterEntity;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.Entity;
@@ -40,6 +41,15 @@ public class ModEntityTypes {
                     .clientTrackingRange(10)
                     .updateInterval(3)
                     .build(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "balloon").toString())
+    );
+
+    public static final DeferredHolder<EntityType<?>, EntityType<SputterEntity>> SPUTTER = registerEntity("sputter", () ->
+            EntityType.Builder.<SputterEntity>of(SputterEntity::new, MobCategory.MISC)
+                    .sized(0.75F, 0.9375F)
+                    .eyeHeight(0.609375F)
+                    .clientTrackingRange(8)
+                    .build(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "sputter").toString()),
+            0x8C6239, 0xE38A1D
     );
 
     @Nullable

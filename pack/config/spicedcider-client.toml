@@ -52,8 +52,8 @@
 	#Replaces the terrain fog with configurable start and end distances that cover Voxy's LoD terrain, plus weather and cave fog. Disable to use Roxy's own fog.
 	voxyFogOverride = true
 	#Distance where the fog begins, as a percentage of the Voxy LoD render distance (or the normal render distance if Voxy is not rendering).
-	# Default: 10
-	# Range: 0 ~ 100
+	# Default: 0
+	# Range: -50 ~ 100
 	voxyFogStart = 0
 	#Distance where the fog becomes fully opaque, as a percentage of the Voxy LoD render distance (or the normal render distance if Voxy is not rendering).
 	# Default: 85
@@ -67,6 +67,10 @@
 	# Default: 50
 	# Range: 0 ~ 100
 	voxyCaveFogDensity = 50
+	#How much closer the fog gets in the Nether's hazy air. 0% matches the Overworld.
+	# Default: 50
+	# Range: 0 ~ 100
+	voxyNetherFogDensity = 50
 
 [weather]
 	#How many seconds clouds take to fade between cloud cover states when the weather changes naturally.
@@ -77,3 +81,13 @@
 	# Default: 5
 	# Range: 0 ~ 60
 	cloudCoverCommandFadeSeconds = 5
+
+[nether]
+	#Distant terrain in the Nether shimmers in the heat, more strongly and closer up near lava. Also scaled by the Distortion Effects accessibility option.
+	netherHeatHaze = true
+	#Faint drifting mist in the Nether air, tinted by the biome. Follows the Particles setting.
+	netherMist = true
+	#How strongly dark areas of the Nether take on the colour of the biome's air. 0% keeps the vanilla shadows.
+	# Default: 60
+	# Range: 0 ~ 100
+	netherAmbientTint = 60

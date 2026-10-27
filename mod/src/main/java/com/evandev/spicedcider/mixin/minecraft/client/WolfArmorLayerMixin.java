@@ -1,6 +1,7 @@
 package com.evandev.spicedcider.mixin.minecraft.client;
 
 import com.evandev.spicedcider.SpicedCider;
+import com.evandev.spicedcider.client.renderer.CopperPatina;
 import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
@@ -59,7 +60,7 @@ public class WolfArmorLayerMixin {
             String path = armorItem.getTexture().getPath();
             String rawFileName = path.substring(path.lastIndexOf('/') + 1);
             String cleanFileName = rawFileName.replace("horse_armor_", "");
-            ResourceLocation texture = ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "textures/entity/wolf/armor/" + cleanFileName);
+            ResourceLocation texture = CopperPatina.texture(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "textures/entity/wolf/armor/" + cleanFileName), stack);
 
             int renderColor = -1;
 

@@ -290,6 +290,10 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.IntValue voxyFogEnd;
         public final ModConfigSpec.IntValue voxyWeatherFogDensity;
         public final ModConfigSpec.IntValue voxyCaveFogDensity;
+        public final ModConfigSpec.IntValue voxyNetherFogDensity;
+        public final ModConfigSpec.BooleanValue netherHeatHaze;
+        public final ModConfigSpec.BooleanValue netherMist;
+        public final ModConfigSpec.IntValue netherAmbientTint;
 
         public final ModConfigSpec.BooleanValue sodiumLightingParityFix;
         public final ModConfigSpec.BooleanValue lodgedHideArrowDepth;
@@ -411,7 +415,7 @@ public class SpicedCiderConfig {
             voxyFogStart = builder
                     .comment(tooltip("voxyFogStart"))
                     .translation("option.spicedcider.voxyFogStart")
-                    .defineInRange("voxyFogStart", 10, 0, 100);
+                    .defineInRange("voxyFogStart", 0, -100, 100);
 
             voxyFogEnd = builder
                     .comment(tooltip("voxyFogEnd"))
@@ -427,6 +431,29 @@ public class SpicedCiderConfig {
                     .comment(tooltip("voxyCaveFogDensity"))
                     .translation("option.spicedcider.voxyCaveFogDensity")
                     .defineInRange("voxyCaveFogDensity", 50, 0, 100);
+
+            voxyNetherFogDensity = builder
+                    .comment(tooltip("voxyNetherFogDensity"))
+                    .translation("option.spicedcider.voxyNetherFogDensity")
+                    .defineInRange("voxyNetherFogDensity", 50, 0, 100);
+
+            builder.pop();
+            builder.push("nether");
+
+            netherHeatHaze = builder
+                    .comment(tooltip("netherHeatHaze"))
+                    .translation("option.spicedcider.netherHeatHaze")
+                    .define("netherHeatHaze", true);
+
+            netherMist = builder
+                    .comment(tooltip("netherMist"))
+                    .translation("option.spicedcider.netherMist")
+                    .define("netherMist", true);
+
+            netherAmbientTint = builder
+                    .comment(tooltip("netherAmbientTint"))
+                    .translation("option.spicedcider.netherAmbientTint")
+                    .defineInRange("netherAmbientTint", 60, 0, 100);
 
             builder.pop();
         }

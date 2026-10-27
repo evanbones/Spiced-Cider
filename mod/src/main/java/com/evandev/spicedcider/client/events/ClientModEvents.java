@@ -3,12 +3,17 @@ package com.evandev.spicedcider.client.events;
 import com.evandev.spicedcider.SpicedCider;
 import com.evandev.spicedcider.client.models.armor.MischiefArmorModel;
 import com.evandev.spicedcider.client.models.projectile.CobwebProjectileModel;
+import com.evandev.spicedcider.client.nether.NetherFogBanks;
+import com.evandev.spicedcider.client.nether.NetherHeatHaze;
 import com.evandev.spicedcider.client.particle.CleaverSweepParticle;
 import com.evandev.spicedcider.client.particle.VentSmokeParticle;
 import com.evandev.spicedcider.client.resource.BrokenTextureReloadListener;
 import com.evandev.spicedcider.client.music.PocketJukeboxClient;
 import com.evandev.spicedcider.client.renderer.PocketJukeboxTooltipRenderer;
 import com.evandev.spicedcider.client.renderer.balloon.BalloonRenderer;
+import com.evandev.spicedcider.client.models.sputter.SputterArrowfulModel;
+import com.evandev.spicedcider.client.models.sputter.SputterModel;
+import com.evandev.spicedcider.client.renderer.sputter.SputterRenderer;
 import com.evandev.spicedcider.content.block.CacaoLogBlock;
 import com.evandev.spicedcider.content.item.PocketJukeboxTooltip;
 import com.evandev.spicedcider.client.renderer.projectiles.CobwebProjectileRenderer;
@@ -52,6 +57,7 @@ import net.neoforged.fml.loading.FMLPaths;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
 import net.neoforged.neoforge.client.event.RegisterClientReloadListenersEvent;
+import net.neoforged.neoforge.client.event.RegisterShadersEvent;
 import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
 import net.neoforged.neoforge.client.extensions.common.IClientItemExtensions;
 import net.neoforged.neoforge.client.extensions.common.RegisterClientExtensionsEvent;
@@ -62,6 +68,8 @@ import java.nio.file.Path;
 import java.util.Optional;
 import java.util.stream.Stream;
 
+import java.io.IOException;
+
 @EventBusSubscriber(modid = SpicedCider.MOD_ID, value = Dist.CLIENT)
 public class ClientModEvents {
     private static final ResourceLocation PLAYING = ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "playing");
@@ -70,6 +78,7 @@ public class ClientModEvents {
     public static void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
         event.registerEntityRenderer(ModEntityTypes.COBWEB_PROJECTILE.get(), CobwebProjectileRenderer::new);
         event.registerEntityRenderer(ModEntityTypes.BALLOON.get(), BalloonRenderer::new);
+        event.registerEntityRenderer(ModEntityTypes.SPUTTER.get(), SputterRenderer::new);
         if (TideCompat.isLoaded()) {
             event.registerEntityRenderer(ModEntityTypes.GRAPPLING_HOOK.get(), GrapplingHookRenderer::new);
         }
@@ -79,6 +88,8 @@ public class ClientModEvents {
     public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
         event.registerLayerDefinition(ModModelLayers.COBWEB_PROJECTILE, CobwebProjectileModel::createBodyLayer);
         event.registerLayerDefinition(ModModelLayers.BALLOON, BalloonRenderer::createBodyLayer);
+        event.registerLayerDefinition(ModModelLayers.SPUTTER, SputterModel::createBodyLayer);
+        event.registerLayerDefinition(ModModelLayers.SPUTTER_ARROWFUL, SputterArrowfulModel::createBodyLayer);
     }
 
     @SubscribeEvent
@@ -148,10 +159,16 @@ public class ClientModEvents {
     }
 
     @SubscribeEvent
+    public static void registerShaders(RegisterShadersEvent event) throws IOException {
+        NetherFogBanks.registerShader(event);
+    }
+
+    @SubscribeEvent
     public static void registerClientReloadListeners(RegisterClientReloadListenersEvent event) {
         event.registerReloadListener(SpicedCider.RANDOM_NAME_GENERATOR);
         event.registerReloadListener(new BrokenTextureReloadListener());
         CloudCoverClient.registerReloadListener(event);
+        NetherHeatHaze.registerReloadListener(event);
     }
 
     @SubscribeEvent

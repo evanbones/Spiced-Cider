@@ -1,0 +1,26 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "abnormals_delight:item/copper_knife"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "damage": 0.25
+      },
+      "model": "abnormals_delight:item/exposed_copper_knife"
+    },
+    {
+      "predicate": {
+        "damage": 0.5
+      },
+      "model": "abnormals_delight:item/weathered_copper_knife"
+    },
+    {
+      "predicate": {
+        "damage": 0.75
+      },
+      "model": "abnormals_delight:item/oxidized_copper_knife"
+    }
+  ]
+}

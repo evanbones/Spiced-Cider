@@ -36,10 +36,12 @@ public final class VoxyFog {
     private static final float DUST_FOG_END = 96.0F;
     private static final float DUST_FOG_START = 4.0F;
     private static final float DUST_GLOW = 1.3F;
+    private static final float HAZE_LEAD = 0.25F;
 
     private static boolean pending;
     private static float fogStart;
     private static float fogEnd;
+    private static boolean haze;
     private static float underground;
     private static float weather;
     private static float dust;
@@ -63,12 +65,14 @@ public final class VoxyFog {
 
         SpicedCiderConfig.Client config = SpicedCiderConfig.CLIENT;
         if (!SpicedCiderConfig.CLIENT_SPEC.isLoaded() || !config.voxyFogOverride.get()) return;
-        if (thickFog || camera.getFluidInCamera() != FogType.NONE) return;
+        if (camera.getFluidInCamera() != FogType.NONE) return;
         if (camera.getEntity() instanceof LivingEntity entity
                 && (entity.hasEffect(MobEffects.BLINDNESS) || entity.hasEffect(MobEffects.DARKNESS))) return;
 
-        ClientLevel level = Minecraft.getInstance().level;
+        Minecraft minecraft = Minecraft.getInstance();
+        ClientLevel level = minecraft.level;
         if (level == null) return;
+        if (thickFog && minecraft.gui.getBossOverlay().shouldCreateWorldFog()) return;
 
         float distance = VoxyBridge.lodDistance();
         if (distance <= 0) distance = farPlaneDistance;
@@ -86,6 +90,12 @@ public final class VoxyFog {
         start *= weatherMultiplier;
         end *= weatherMultiplier;
 
+        if (thickFog) {
+            float hazeMultiplier = 1.0F - config.voxyNetherFogDensity.get() / 100.0F;
+            start *= hazeMultiplier;
+            end *= hazeMultiplier;
+        }
+
         if (dust > 0.0F) {
             end = Mth.lerp(dust, end, Math.min(end, DUST_FOG_END));
             start = Mth.lerp(dust, start, Math.min(start, DUST_FOG_START));
@@ -100,7 +110,8 @@ public final class VoxyFog {
         }
 
         fogEnd = Math.max(end, 16.0F);
-        fogStart = Math.max(0.0F, Math.min(start, fogEnd - 8.0F));
+        haze = thickFog;
+        fogStart = Math.max(-fogEnd * 2.0F, Math.min(start, fogEnd - 8.0F));
         pending = true;
     }
 
@@ -144,10 +155,16 @@ public final class VoxyFog {
     public static boolean capture(ViewportEvent.RenderFog event, boolean canceled) {
         if (!pending || event.getMode() != FogRenderer.FogMode.FOG_TERRAIN) return canceled;
         fogEnd = Math.max(event.getFarPlaneDistance(), 16.0F);
-        fogStart = Math.max(0.0F, Math.min(event.getNearPlaneDistance(), fogEnd - 8.0F));
+        fogStart = clampStart(event.getNearPlaneDistance());
         event.setNearPlaneDistance(fogStart);
         event.setFarPlaneDistance(fogEnd);
         return true;
+    }
+
+    private static float clampStart(float start) {
+        float clamped = Math.min(start, fogEnd - 8.0F);
+        float lead = haze ? fogEnd * HAZE_LEAD : 0.0F;
+        return Math.max(-fogEnd * 2.0F, clamped - lead);
     }
 
     private static void updateEdge(float seconds) {

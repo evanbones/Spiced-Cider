@@ -452,20 +452,6 @@
     },
     {
       "type": "entry",
-      "id": "entity:tide/great_white_shark",
-      "unlock": {
-        "triggers": [
-          "obtain",
-          "scan"
-        ],
-        "trigger_on": [
-          "item:tide/great_white_shark",
-          "entity:tide/great_white_shark"
-        ]
-      }
-    },
-    {
-      "type": "entry",
       "id": "entity:tide/coelacanth",
       "unlock": {
         "triggers": [

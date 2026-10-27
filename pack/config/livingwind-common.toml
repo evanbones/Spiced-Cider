@@ -93,7 +93,7 @@
 [dimensions]
 	#DISABLED = no wind; REDUCED_GUSTY = weaker background, more pronounced gusts; NORMAL = unmodified simulation.
 	#Allowed Values: DISABLED, REDUCED_GUSTY, NORMAL
-	netherWindMode = "REDUCED_GUSTY"
+	netherWindMode = "DISABLED"
 	#DISABLED = no wind; VERY_WEAK = faint air with very gradual directional shifts; NORMAL = unmodified simulation.
 	#Allowed Values: DISABLED, VERY_WEAK, NORMAL
 	endWindMode = "DISABLED"

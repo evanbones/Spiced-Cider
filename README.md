@@ -232,7 +232,12 @@ its [LGPLv3 license](https://github.com/QinomeD/Naming-Unconvention/blob/master/
 Fluids spilling into the void are ported from [Void Water](https://modrinth.com/mod/void-water) by NormallyNormal, used
 under its MIT license (included at `META-INF/licenses/void_water-LICENSE.txt`).
 
+Sputters are ported from [Nock Enough Arrows](https://www.curseforge.com/minecraft/mc-mods/nock-enough-arrows) by
+itayfeder, used under its MIT license (included at `META-INF/licenses/nock_enough_arrows-LICENSE.txt`).
+
 Sparks for hitting unmineable blocks ported from Valcon by [Ivqry](https://github.com/ivqrydev).
+
+Nether effects are inspired by Jaden's Nether Expansion.
 
 Grappling Hooks are modified from [Bigger Fish](https://modrinth.com/mod/always-a-bigger-fish), created by Cassian and
 implemented by Kobber (originally ported from Raspberry Core).

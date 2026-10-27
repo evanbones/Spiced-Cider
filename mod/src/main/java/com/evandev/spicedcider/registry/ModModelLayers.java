@@ -11,4 +11,10 @@ public class ModModelLayers {
     public static final ModelLayerLocation BALLOON = new ModelLayerLocation(
             ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "balloon"), "main"
     );
+    public static final ModelLayerLocation SPUTTER = new ModelLayerLocation(
+            ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "sputter"), "main"
+    );
+    public static final ModelLayerLocation SPUTTER_ARROWFUL = new ModelLayerLocation(
+            ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "sputter"), "arrowful"
+    );
 }
