@@ -97,6 +97,7 @@ public class SpicedCiderConfigScreen {
                         .tooltip(Component.translatable("category.spicedcider.weather.tooltip"))
                         .option(intSlider("cloudCoverFadeSeconds", client.cloudCoverFadeSeconds, 1, 300, 1))
                         .option(intSlider("cloudCoverCommandFadeSeconds", client.cloudCoverCommandFadeSeconds, 0, 60, 1))
+                        .option(toggle("sunDogs", client.sunDogs))
                         .build())
                 .categoryIf(ModList.get().isLoaded("roxy"), ConfigCategory.createBuilder()
                         .name(Component.translatable("category.spicedcider.voxy"))

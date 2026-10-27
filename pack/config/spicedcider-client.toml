@@ -53,7 +53,7 @@
 	voxyFogOverride = true
 	#Distance where the fog begins, as a percentage of the Voxy LoD render distance (or the normal render distance if Voxy is not rendering).
 	# Default: 0
-	# Range: -50 ~ 100
+	# Range: -100 ~ 100
 	voxyFogStart = 0
 	#Distance where the fog becomes fully opaque, as a percentage of the Voxy LoD render distance (or the normal render distance if Voxy is not rendering).
 	# Default: 85
@@ -81,6 +81,8 @@
 	# Default: 5
 	# Range: 0 ~ 60
 	cloudCoverCommandFadeSeconds = 5
+	#Show the rare halos of light that sometimes form on either side of the sun.
+	sunDogs = true
 
 [nether]
 	#Distant terrain in the Nether shimmers in the heat, more strongly and closer up near lava. Also scaled by the Distortion Effects accessibility option.

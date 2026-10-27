@@ -18,6 +18,11 @@
 	#values between 0 and 1 reduce response. Particular leaves default to 2.5x and SkyLands clouds to 0.25x.
 	#Built-in mod defaults still apply to older configs; an explicit entry here overrides them.
 	responseMultipliers = ["particular:oak_leaf=2.5", "particular:birch_leaf=2.5", "particular:spruce_leaf=2.5", "particular:jungle_leaf=2.5", "particular:acacia_leaf=2.5", "particular:dark_oak_leaf=2.5", "particular:azalea_leaf=2.5", "particular:mangrove_leaf=2.5", "particular:white_oak_leaf=2.5", "particular:white_spruce_leaf=2.5", "particular:maple_leaf=2.5", "particular:brimwood_leaf=2.5", "particular:ru_baobab_leaf=2.5", "particular:kapok_leaf=2.5", "particular:eucalyptus_leaf=2.5", "particular:redwood_leaf=2.5", "particular:magnolia_leaf=2.5", "particular:ru_palm_leaf=2.5", "particular:larch_leaf=2.5", "particular:golden_larch_leaf=2.5", "particular:socotra_leaf=2.5", "particular:bamboo_leaf=2.5", "particular:willow_leaf=2.5", "particular:ru_cypress_leaf=2.5", "particular:ww_baobab_leaf=2.5", "particular:ww_cypress_leaf=2.5", "particular:ww_palm_leaf=2.5", "flying_stuff:cloud=0.25", "flying_stuff:cloud_smoke=0.25", "flying_stuff:cloud_smoke_1=0.25", "flying_stuff:cloud_barrier_2=0.25", "flying_stuff:cloud_barrier_3=0.25"]
+	#Optional built-in blacklist exclusions explicitly unlocked by the user in the particle filter editor.
+	#Empty by default. The ordinary built-in protection stays active unless a user opts out.
+	builtinBlacklistExceptions = []
+	#Internal one-time upgrade marker for earlier Streams Reflowing 0.3x defaults.
+	streamsReflowingDefaultsMigrated = true
 
 #Tiny world particles emitted by exposed blocks when wind is present.
 [ambientParticles]
@@ -229,6 +234,28 @@
 		#Steer Supplementaries wind vanes using Living Wind's synchronized wind direction and local shelter. The original Supplementaries redstone behavior is unchanged.
 		windVane = true
 
+	#Chimes 2.1.1 optional wind-driven animation and ambient chime sounds.
+	[compatibility.chimes]
+		#Make Chimes sway with Living Wind and vary ambient chiming frequency. Interaction sounds and tied chimes stay managed by Chimes.
+		enabled = false
+		#Multiplier for Chimes swaying in the local wind. 0 disables wind sway while retaining native interaction animations.
+		# Default: 1.0
+		# Range: 0.0 ~ 5.0
+		animationWindMultiplier = 1.0
+		#Strength of local wind's effect on random ambient Chimes sounds. 0 preserves their original ambient sound frequency.
+		# Default: 1.0
+		# Range: 0.0 ~ 3.0
+		soundWindMultiplier = 1.0
+
+	#Optional Windblown GPU foliage wind bridge (above-water plants only).
+	[compatibility.windblown]
+		#Use Living Wind's direction and intensity for Windblown foliage. Underwater plants retain Windblown's independent current.
+		enabled = true
+		#Intensity multiplier; Windblown's own wind strength slider still applies.
+		# Default: 1.0
+		# Range: 0.0 ~ 5.0
+		windMultiplier = 1.0
+
 #Client-side wind ambience. Uses the final altitude/shelter-adjusted wind strength.
 [windAudio]
 	#Play Living Wind's wind ambience. Disable to silence all its wind sounds.
@@ -266,6 +293,8 @@
 	indoorAudioAttenuation = 0.1
 	#Reduce shelter block probes per tick; updates around particles may take a little longer.
 	shelterLowCost = false
+	#Account for moving Sable/Aeronautics roofs and walls when fading wind audio around the player. Only checks nearby sub-levels every five active client ticks; requires Sable.
+	sableSublevelShelter = true
 
 #Developer/testing readouts.
 [debug]

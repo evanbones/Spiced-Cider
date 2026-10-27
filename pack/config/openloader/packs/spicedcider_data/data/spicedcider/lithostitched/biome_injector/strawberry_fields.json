@@ -1,0 +1,12 @@
+{
+  "type": "lithostitched:replace_partially",
+  "dimension": "minecraft:overworld",
+  "targets": "minecraft:plains",
+  "replacement": "neapolitan:strawberry_fields",
+  "parameters": {
+    "temperature": [-0.15, 0.2],
+    "humidity": [-0.35, -0.1],
+    "weirdness": [0.05, 10.0],
+    "spicedcider:strawberry_fields_selector": [0.18, 10.0]
+  }
+}

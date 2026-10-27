@@ -284,6 +284,7 @@ public class SpicedCiderConfig {
 
         public final ModConfigSpec.IntValue cloudCoverFadeSeconds;
         public final ModConfigSpec.IntValue cloudCoverCommandFadeSeconds;
+        public final ModConfigSpec.BooleanValue sunDogs;
 
         public final ModConfigSpec.BooleanValue voxyFogOverride;
         public final ModConfigSpec.IntValue voxyFogStart;
@@ -403,6 +404,11 @@ public class SpicedCiderConfig {
                     .comment(tooltip("cloudCoverCommandFadeSeconds"))
                     .translation("option.spicedcider.cloudCoverCommandFadeSeconds")
                     .defineInRange("cloudCoverCommandFadeSeconds", 5, 0, 60);
+
+            sunDogs = builder
+                    .comment(tooltip("sunDogs"))
+                    .translation("option.spicedcider.sunDogs")
+                    .define("sunDogs", true);
 
             builder.pop();
             builder.push("voxy");

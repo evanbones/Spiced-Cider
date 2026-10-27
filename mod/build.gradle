@@ -43,6 +43,18 @@ repositories {
     exclusiveContent {
         forRepository {
             maven {
+                name = "CreateMod"
+                url = "https://maven.createmod.net"
+            }
+        }
+        filter {
+            includeGroup "net.createmod.ponder"
+        }
+    }
+
+    exclusiveContent {
+        forRepository {
+            maven {
                 name = "Gegy"
                 url = "https://maven.gegy.dev"
             }
@@ -306,7 +318,7 @@ dependencies {
     runtimeOnly "maven.modrinth:moonlight:yYx5Qs1i"
 
     // Supplementaries
-    compileOnly "maven.modrinth:supplementaries:FPL7hXrE"
+    compileOnly "maven.modrinth:supplementaries:rWq0ko29"
     compileOnly "maven.modrinth:snowy-spirit:1.21.1-3.1.7"
     compileOnly "maven.modrinth:iJNje1E8:XXjs6tNa"
 
@@ -321,6 +333,9 @@ dependencies {
     // additionalRuntimeClasspath "org.sinytra:connector:2.0.0-beta.9+1.21.1"
     // runtimeOnly "org.sinytra.forgified-fabric-api:forgified-fabric-api:0.116.7+2.2.4+1.21.1"
     // compileOnly "org.sinytra:forgified-fabric-loader:2.5.68+0.18.4+1.21.1"
+
+    // Cirrus
+    compileOnly "maven.modrinth:SJDzFJH7:gQSzD7br"
 
     // Sodium
     compileOnly "net.caffeinemc:sodium-neoforge-mod:0.8.13+mc1.21.1"
@@ -427,6 +442,11 @@ dependencies {
 
     // Alloyed
     runtimeOnly "maven.modrinth:create-alloyed:3.0.11+1.21.1-neoforge"
+
+    // Ponder
+    compileOnly("net.createmod.ponder:ponder-neoforge:1.0.82+mc1.21.1") {
+        transitive = false
+    }
 
     compileOnly "com.moulberry:mixinconstraints:1.1.0"
     jarJar(implementation("com.moulberry:mixinconstraints")) {

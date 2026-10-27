@@ -1,6 +1,7 @@
 package com.evandev.spicedcider.registry;
 
 import com.evandev.spicedcider.SpicedCider;
+import com.evandev.spicedcider.content.item.MapInABottleItem;
 import com.evandev.spicedcider.content.item.BalloonItem;
 import com.evandev.spicedcider.content.item.InferniteCleaverItem;
 import com.evandev.spicedcider.content.item.FireStrikerItem;
@@ -107,6 +108,8 @@ public class ModItems {
     public static final DeferredItem<BlockItem> WORMY_DIRT = ITEMS.registerSimpleBlockItem(ModBlocks.WORMY_DIRT);
     public static final DeferredItem<BlockItem> GLOAMWOOD_SAPLING = ITEMS.registerSimpleBlockItem(ModBlocks.GLOAMWOOD_SAPLING);
     public static final DeferredItem<BlockItem> WORM_CRATE = ITEMS.registerSimpleBlockItem(ModBlocks.WORM_CRATE);
+    public static final DeferredItem<Item> MAP_IN_A_BOTTLE = ITEMS.register("map_in_a_bottle",
+            () -> new MapInABottleItem(new Item.Properties().stacksTo(16).rarity(Rarity.UNCOMMON)));
     public static final DeferredItem<Item> GEODE = ITEMS.register("geode",
             () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> DEEPSLATE_GEODE = ITEMS.register("deepslate_geode",

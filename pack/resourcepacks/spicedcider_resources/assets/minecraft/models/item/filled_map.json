@@ -1,0 +1,116 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "minecraft:item/filled_map"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "spicedcider:map_icon": 1
+      },
+      "model": "spicedcider:item/explorer_map/unknown_map"
+    },
+    {
+      "predicate": {
+        "spicedcider:map_icon": 2
+      },
+      "model": "spicedcider:item/explorer_map/buried_treasure_map"
+    },
+    {
+      "predicate": {
+        "spicedcider:map_icon": 3
+      },
+      "model": "spicedcider:item/explorer_map/ocean_monument_map"
+    },
+    {
+      "predicate": {
+        "spicedcider:map_icon": 4
+      },
+      "model": "spicedcider:item/explorer_map/woodland_mansion_map"
+    },
+    {
+      "predicate": {
+        "spicedcider:map_icon": 5
+      },
+      "model": "spicedcider:item/explorer_map/buried_trial_chambers_map"
+    },
+    {
+      "predicate": {
+        "spicedcider:map_icon": 6
+      },
+      "model": "spicedcider:item/explorer_map/jungle_pyramid_map"
+    },
+    {
+      "predicate": {
+        "spicedcider:map_icon": 7
+      },
+      "model": "spicedcider:item/explorer_map/swamp_hut_map"
+    },
+    {
+      "predicate": {
+        "spicedcider:map_icon": 8
+      },
+      "model": "spicedcider:item/explorer_map/desert_pyramid_map"
+    },
+    {
+      "predicate": {
+        "spicedcider:map_icon": 9
+      },
+      "model": "spicedcider:item/explorer_map/buried_ancient_city_map"
+    },
+    {
+      "predicate": {
+        "spicedcider:map_icon": 10
+      },
+      "model": "spicedcider:item/explorer_map/buried_mineshaft_map"
+    },
+    {
+      "predicate": {
+        "spicedcider:map_icon": 11
+      },
+      "model": "spicedcider:item/explorer_map/warm_ocean_ruins_map"
+    },
+    {
+      "predicate": {
+        "spicedcider:map_icon": 12
+      },
+      "model": "spicedcider:item/explorer_map/abandoned_camp_map"
+    },
+    {
+      "predicate": {
+        "spicedcider:map_icon": 13
+      },
+      "model": "spicedcider:item/explorer_map/plains_village_map"
+    },
+    {
+      "predicate": {
+        "spicedcider:map_icon": 14
+      },
+      "model": "spicedcider:item/explorer_map/desert_village_map"
+    },
+    {
+      "predicate": {
+        "spicedcider:map_icon": 15
+      },
+      "model": "spicedcider:item/explorer_map/savanna_village_map"
+    },
+    {
+      "predicate": {
+        "spicedcider:map_icon": 16
+      },
+      "model": "spicedcider:item/explorer_map/snowy_village_map"
+    },
+    {
+      "predicate": {
+        "spicedcider:map_icon": 17
+      },
+      "model": "spicedcider:item/explorer_map/taiga_village_map"
+    },
+    {
+      "predicate": {
+        "supplementaries:antique_ink": 1
+      },
+      "model": "minecraft:item/antique_map"
+    }
+  ]
+}

@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.client.events;
 
+import com.evandev.spicedcider.client.MapIconProperty;
 import com.evandev.spicedcider.SpicedCider;
 import com.evandev.spicedcider.client.models.armor.MischiefArmorModel;
 import com.evandev.spicedcider.client.models.projectile.CobwebProjectileModel;
@@ -18,6 +19,7 @@ import com.evandev.spicedcider.content.block.CacaoLogBlock;
 import com.evandev.spicedcider.content.item.PocketJukeboxTooltip;
 import com.evandev.spicedcider.client.renderer.projectiles.CobwebProjectileRenderer;
 import com.evandev.spicedcider.client.renderer.projectiles.GrapplingHookRenderer;
+import com.evandev.spicedcider.compat.ponder.PonderCompat;
 import com.evandev.spicedcider.compat.tide.TideCompat;
 import com.evandev.spicedcider.content.block.TubewormBlock;
 import com.evandev.spicedcider.registry.*;
@@ -73,6 +75,7 @@ import java.io.IOException;
 @EventBusSubscriber(modid = SpicedCider.MOD_ID, value = Dist.CLIENT)
 public class ClientModEvents {
     private static final ResourceLocation PLAYING = ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "playing");
+    private static final ResourceLocation MAP_ICON = ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "map_icon");
 
     @SubscribeEvent
     public static void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
@@ -184,6 +187,7 @@ public class ClientModEvents {
         if (ModList.get().isLoaded("f3backport")) {
             LodDebugEntry.register();
         }
+        PonderCompat.register();
         event.enqueueWork(() -> {
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.TEMPORARY_COBWEB.get(), RenderType.cutout());
             Stream.of(ModBlocks.CACAO_SAPLING, ModBlocks.POTTED_CACAO_SAPLING, ModBlocks.CACAO_POD).forEach(block -> ItemBlockRenderTypes.setRenderLayer(block.get(), RenderType.cutout()));
@@ -197,6 +201,7 @@ public class ClientModEvents {
             }
             ItemProperties.register(ModItems.POCKET_JUKEBOX.get(), PLAYING, PocketJukeboxClient::playingProperty);
             ModItems.POCKET_JUKEBOXES.values().forEach(item -> ItemProperties.register(item.get(), PLAYING, PocketJukeboxClient::playingProperty));
+            ItemProperties.register(Items.FILLED_MAP, MAP_ICON, MapIconProperty::get);
             if (ModItems.ADAMANTITE_FISHING_ROD != null) {
                 ItemProperties.register(ModItems.ADAMANTITE_FISHING_ROD.get(), ResourceLocation.withDefaultNamespace("cast"), (stack, level, entity, seed) -> {
                     if (!(entity instanceof Player player) || player.fishing == null) return 0.0F;

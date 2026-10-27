@@ -198,6 +198,7 @@ public class SpicedCider {
             event.accept(ModItems.LATEX_BOTTLE.get(), vis);
         }
         if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
+            event.insertAfter(new ItemStack(Items.MAP), new ItemStack(ModItems.MAP_IN_A_BOTTLE.get()), vis);
             event.insertAfter(new ItemStack(Items.MILK_BUCKET), new ItemStack(ModItems.LATEX_BUCKET.get()), vis);
         }
         if (event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {

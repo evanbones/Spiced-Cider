@@ -16,6 +16,8 @@ public class SpicedCiderMixinCanceller implements MixinCanceller {
             "com.blackgear.vanillabackport.core.mixin.client.game_options.SoundOptionsScreenMixin"
     );
 
+    private static final String LIVING_WIND_CHIMES_MIXINS = "com.macatmovie.livingwind.mixin.Chimes";
+
     @Override
     public boolean shouldCancel(List<String> targetClassNames, String mixinClassName) {
 
@@ -29,6 +31,10 @@ public class SpicedCiderMixinCanceller implements MixinCanceller {
         }
 
         if ("com.jvn.wherewindsblow.mixin.client.compat.snowrealmagic.SnowRealMagicVariantModelMixin".equals(mixinClassName)) {
+            return true;
+        }
+
+        if (mixinClassName.startsWith(LIVING_WIND_CHIMES_MIXINS)) {
             return true;
         }
 

@@ -12,9 +12,11 @@ import com.evandev.spicedcider.client.options.setting.CycleSetting;
 import com.evandev.spicedcider.client.options.setting.GuiScaleSetting;
 import com.evandev.spicedcider.client.options.setting.Setting;
 import com.evandev.spicedcider.client.options.setting.VanillaSetting;
+import com.evandev.spicedcider.compat.cirrus.CirrusSettings;
 import com.evandev.spicedcider.compat.controlify.ControlifySettings;
 import com.evandev.spicedcider.compat.lambdynlights.DynamicLightsSetting;
 import com.evandev.spicedcider.compat.musictweaks.MusicTweaksSettings;
+import com.evandev.spicedcider.compat.nomansland.NoMansLandSettings;
 import com.evandev.spicedcider.compat.sodium.SodiumSetting;
 import com.evandev.spicedcider.client.nether.NetherSettings;
 import com.evandev.spicedcider.compat.voxy.VoxyFogSettings;
@@ -141,23 +143,21 @@ public final class SettingsPages {
     private static List<Entry> video(SettingsScreen screen) {
         Options o = options();
         List<Entry> entries = new ArrayList<>();
+        boolean cirrus = ModList.get().isLoaded("cirrus");
         add(entries, category(screen, "display",
                 sodium("sodium:general.fullscreen", o.fullscreen()),
                 sodium("sodium:general.fullscreen_resolution", null),
                 sodium("sodium:general.vsync", o.enableVsync()),
                 sodium("sodium:general.framerate_limit", o.framerateLimit()),
-                sodium("sodium:general.gamma", o.gamma())));
-        add(entries, category(screen, "distance",
+                sodium("sodium:general.gamma", o.gamma()),
                 sodium("sodium:general.render_distance", o.renderDistance()),
                 sodium("sodium:general.simulation_distance", o.simulationDistance()),
                 sodium("sodium:quality.entity_distance", o.entityDistanceScaling()),
                 named(sodiumOnly("voxy:enabled"), "spicedcider.options.lod_terrain"),
                 named(sodiumOnly("voxy:render_distance", VOXY_DEFAULT_DISTANCE), "spicedcider.options.lod_distance"),
-                VoxyIngest.available() ? LodSettings.generate() : null,
-                VoxyIngest.available() ? LodSettings.threads() : null,
                 ModList.get().isLoaded("roxy") ? VoxyFogSettings.start() : null,
                 ModList.get().isLoaded("roxy") ? VoxyFogSettings.end() : null));
-        add(entries, category(screen, "quality",
+        add(entries, category(screen, "visuals",
                 sodium("sodium:quality.graphics", o.graphicsMode()),
                 sodium("sodium:quality.ao", o.ambientOcclusion()),
                 sodium("sodium:quality.clouds", o.cloudStatus()),
@@ -168,9 +168,26 @@ public final class SettingsPages {
                         ? named(sodiumOnly("betterbiomeblend:biome_blend_radius", PackDefaults.raw("betterBiomeBlendRadius").map(Integer::valueOf).orElse(null)), "options.biomeBlendRadius")
                         : sodium("sodium:quality.biome_blend", o.biomeBlendRadius()),
                 sodium("sodium:quality.entity_shadows", o.entityShadows()),
-                sodium("sodium:quality.vignette", null),
                 ModList.get().isLoaded("lambdynlights") ? optional(DynamicLightsSetting.create()) : null,
-                sodium("sodium:quality.mipmap_levels", o.mipmapLevels())));
+                sodium("sodium:quality.mipmap_levels", o.mipmapLevels()),
+                cirrus ? CirrusSettings.customStars() : null,
+                cirrus ? CirrusSettings.shootingStars() : null,
+                cirrus ? CirrusSettings.aurora() : null,
+                ModList.get().isLoaded("nomansland") ? NoMansLandSettings.sunDogs() : null,
+                NetherSettings.mist()));
+        add(entries, category(screen, "post_processing",
+                NetherSettings.heatHaze(),
+                NetherSettings.ambientTint(),
+                sodium("sodium:quality.vignette", null)));
+        add(entries, category(screen, "performance",
+                VoxyIngest.available() ? LodSettings.generate() : null,
+                VoxyIngest.available() ? LodSettings.threads() : null,
+                optional(sodiumOnly("sodium:performance.chunk_update_threads")),
+                optional(sodiumOnly("sodium:performance.always_defer_chunk_updates")),
+                optional(sodiumOnly("sodium:performance.animate_only_visible_textures")),
+                optional(sodiumOnly("sodium:performance.use_entity_culling")),
+                optional(sodiumOnly("sodium:performance.use_fog_occlusion")),
+                optional(sodiumOnly("sodium:performance.use_block_face_culling"))));
         return entries;
     }
 
@@ -227,8 +244,7 @@ public final class SettingsPages {
         add(entries, category(screen, "motion",
                 sodium("sodium:general.view_bobbing", o.bobView()),
                 vanilla(o.screenEffectScale()),
-                NetherSettings.heatHaze(),
-                NetherSettings.mist(),
+                ModList.get().isLoaded("nomansland") ? NoMansLandSettings.invertedBellBlur() : null,
                 vanilla(o.fovEffectScale()),
                 vanilla(o.darknessEffectScale()),
                 vanilla(o.damageTiltStrength()),

@@ -1,0 +1,28 @@
+{
+  "conditions": [
+    {
+      "type": "tide:dimension",
+      "dimensions": [
+        "minecraft:overworld"
+      ]
+    },
+    {
+      "type": "tide:fluid",
+      "fluid": "water"
+    },
+    {
+      "type": "tide:saltwater"
+    },
+    {
+      "type": "tide:open_water",
+      "in_open_water": true
+    },
+    {
+      "type": "tide:above",
+      "y": 40
+    }
+  ],
+  "loot_table": "spicedcider:gameplay/fishing/map_in_a_bottle",
+  "quality": 2.0,
+  "weight": 1.5
+}
