@@ -1,0 +1,20 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "spelunkery:cinnabar"
+    }
+  ],
+  "processing_time": 250,
+  "results": [
+    {
+      "id": "minecraft:redstone",
+      "count": 2
+    },
+    {
+      "id": "minecraft:redstone",
+      "count": 2,
+      "chance": 0.5
+    }
+  ]
+}

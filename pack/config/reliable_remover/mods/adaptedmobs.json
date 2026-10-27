@@ -1,6 +1,21 @@
 [
   {
     "action": "remove_creative",
-    "effects": ["adaptedmobs:support_speed", "adaptedmobs:support_slowness", "adaptedmobs:support_strength", "adaptedmobs:support_weakness"]
+    "effects": [
+      "adaptedmobs:support_speed",
+      "adaptedmobs:support_slowness",
+      "adaptedmobs:support_strength",
+      "adaptedmobs:support_weakness"
+    ]
+  },
+  {
+    "action": "remove",
+    "items": [
+      "adaptedmobs:festive_creeper_spawn_egg",
+      "adaptedmobs:festive_creepie_spawn_egg",
+      "adaptedmobs:festive_spore_barrel",
+      "adaptedmobs:festive_creeper_head",
+      "adaptedmobs:festive_creeper_spores"
+    ]
   }
 ]

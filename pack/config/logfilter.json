@@ -86,7 +86,7 @@
       "name": "Suppress Every Compat sawmill summary for removed wood items",
       "enabled": true,
       "type": "MESSAGE_REGEX",
-      "pattern": "^\\[sawmill recipe\\] \\d+ additional failures with the same cause \\(IllegalStateException: Value must be within range \\[1;1000000000\\]: 0; Item must not be minecraft:air\\).*",
+      "pattern": "^\\[sawmill recipe\\] \\d+ additional failures with the same cause (\\(See below\\):\\s*)?\\(IllegalStateException: Value must be within range \\[1;1000000000\\]: 0; Item must not be minecraft:air\\)",
       "action": "DENY",
       "level": "WARN"
     },
@@ -105,6 +105,150 @@
       "pattern": "^Found an item that was in parent tab but not in search tab",
       "action": "DENY",
       "level": "WARN"
+    },
+    {
+      "name": "Suppress vanilla IDE breakpoint reminders",
+      "enabled": true,
+      "type": "MESSAGE_REGEX",
+      "pattern": "^Did you remember to set a breakpoint here\\?$",
+      "action": "DENY",
+      "level": "WARN"
+    },
+    {
+      "name": "Suppress Mixin optional target class probes",
+      "enabled": true,
+      "type": "MESSAGE_REGEX",
+      "pattern": "^Error loading class: \\S+ \\(java\\.lang\\.ClassNotFoundException: ",
+      "action": "DENY",
+      "level": "WARN"
+    },
+    {
+      "name": "Suppress MixinSquared cancellation notices",
+      "enabled": true,
+      "type": "MESSAGE_REGEX",
+      "pattern": "^Cancelled mixin (method )?\\S+",
+      "action": "DENY",
+      "level": "WARN"
+    },
+    {
+      "name": "Suppress EMI mixin taint report",
+      "enabled": true,
+      "type": "MESSAGE_REGEX",
+      "pattern": "^\\[EMI\\] (The following EMI classes have mixins applied to them|\\S+ is tainted by)",
+      "action": "DENY",
+      "level": "WARN"
+    },
+    {
+      "name": "Suppress TMRV duplicate JEI category notices",
+      "enabled": true,
+      "type": "MESSAGE_REGEX",
+      "pattern": "^JEI category with ID `[^`]+` already exists in EMI!$",
+      "action": "DENY",
+      "level": "WARN"
+    },
+    {
+      "name": "Suppress Every Compat conditional registration banners",
+      "enabled": true,
+      "type": "MESSAGE_REGEX",
+      "pattern": "You are using conditional registration via",
+      "action": "DENY",
+      "level": "WARN"
+    },
+    {
+      "name": "Suppress mod shader missing uniform warnings",
+      "enabled": true,
+      "type": "MESSAGE_REGEX",
+      "pattern": "^Shader \\S+ could not find (uniform|sampler) named \\S+ in the specified shader program\\.$",
+      "action": "DENY",
+      "level": "WARN"
+    },
+    {
+      "name": "Suppress Sodium vertex consumer notices",
+      "enabled": true,
+      "type": "MESSAGE_REGEX",
+      "pattern": "^Class \\S+ does not support optimized vertex writing code paths",
+      "action": "DENY",
+      "level": "WARN"
+    },
+    {
+      "name": "Suppress NeoForge assets URL schema warnings",
+      "enabled": true,
+      "type": "MESSAGE_REGEX",
+      "pattern": "^Assets URL '.*' uses unexpected schema$",
+      "action": "DENY",
+      "level": "WARN"
+    },
+    {
+      "name": "Suppress Biolith fake test level warnings",
+      "enabled": true,
+      "type": "MESSAGE_REGEX",
+      "pattern": "^More than one Overworld dimension world created; cowardly ignoring 'minecraft:server_\\w+_test_level'",
+      "action": "DENY",
+      "level": "WARN"
+    },
+    {
+      "name": "Suppress invalid path in datapack warnings",
+      "enabled": true,
+      "type": "MESSAGE_REGEX",
+      "pattern": "^Invalid path in datapack: .*, ignoring$",
+      "action": "DENY",
+      "level": "WARN"
+    },
+    {
+      "name": "Suppress Redomesticate non-living renderer notices",
+      "enabled": true,
+      "type": "MESSAGE_REGEX",
+      "pattern": "^Could not apply pet overlays layer to \\S+\\. Renderer is not a LivingEntityRenderer\\.$",
+      "action": "DENY",
+      "level": "WARN"
+    },
+    {
+      "name": "Suppress legacy Forge attributes in LoD entity data",
+      "enabled": true,
+      "type": "MESSAGE_REGEX",
+      "pattern": "^Ignoring unknown attribute 'forge:",
+      "action": "DENY",
+      "level": "WARN"
+    },
+    {
+      "name": "Suppress Zeta module construction lines",
+      "enabled": true,
+      "type": "MESSAGE_REGEX",
+      "pattern": "^Constructing module .*\\.\\.\\.$",
+      "action": "DENY",
+      "level": "INFO"
+    },
+    {
+      "name": "Suppress Raised layer registration lines",
+      "enabled": true,
+      "type": "MESSAGE_REGEX",
+      "pattern": "^Registering Raised layer '",
+      "action": "DENY",
+      "level": "INFO"
+    },
+    {
+      "name": "Suppress Quark compost registration lines",
+      "enabled": true,
+      "type": "MESSAGE_REGEX",
+      "pattern": "^added \\[.*\\] to CompostManager with chance ",
+      "action": "DENY",
+      "level": "INFO"
+    },
+    {
+      "name": "Suppress Konkrete library credits",
+      "enabled": true,
+      "type": "MESSAGE_REGEX",
+      "pattern": "^(-{20,}|\\s+|KONKRETE SHIPS AND USES THE FOLLOWING LIBRARIES:|.+ Copyright © .+|.+ is licensed under Apache-2\\.0.*)$",
+      "action": "DENY",
+      "level": "INFO"
+    },
+    {
+      "name": "Suppress leftover STDOUT test prints",
+      "enabled": true,
+      "type": "MESSAGE_REGEX",
+      "pattern": "^(\\[STDOUT\\]: )?TEST2?$",
+      "action": "DENY",
+      "level": "INFO"
     }
   ]
 }

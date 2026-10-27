@@ -1,0 +1,19 @@
+{
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "item": "minecraft:compass"
+    }
+  ],
+  "processing_time": 200,
+  "results": [
+    {
+      "id": "minecraft:iron_nugget",
+      "count": 8
+    },
+    {
+      "id": "spelunkery:cinnabar_shard",
+      "count": 2
+    }
+  ]
+}

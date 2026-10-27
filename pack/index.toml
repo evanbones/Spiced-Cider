@@ -1090,7 +1090,7 @@ hash = "dc466afe3c4b5afc4cec765d3da1a2254fd99c8e2674cd3d2955a2361c1c25fa"
 
 [[files]]
 file = "config/logfilter.json"
-hash = "5cce26ba081306c8e0e926f01191e06ed21832dc79f33645a788d6df0145cfe6"
+hash = "447c4bccfd76ccf6a747eb122de25c992ce31b09e1dda93c42a56ed75d9b9357"
 
 [[files]]
 file = "config/lucis-server.toml"
@@ -2574,7 +2574,7 @@ hash = "78cc74b905d168c4d3aa3803658e04655d977758d59675f3c04ef84336ba9bf6"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/c/tags/block/cobblestones.json"
-hash = "a0d351b8d3270e5aedaa2c7205386a1e112fbcbc0c46c64f30a2cd31e29b215f"
+hash = "b47ce7d61f82a921e06a87ccdb6275018e131c47eca74b6d1f2ff0427f31776b"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/c/tags/block/fence_gates.json"
@@ -2666,7 +2666,7 @@ hash = "78cc74b905d168c4d3aa3803658e04655d977758d59675f3c04ef84336ba9bf6"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/c/tags/item/cobblestones.json"
-hash = "a0d351b8d3270e5aedaa2c7205386a1e112fbcbc0c46c64f30a2cd31e29b215f"
+hash = "b47ce7d61f82a921e06a87ccdb6275018e131c47eca74b6d1f2ff0427f31776b"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/c/tags/item/drinks.json"
@@ -3271,6 +3271,10 @@ hash = "fd1632c97e22de0790c05529f189200404413a500ee10c3587c6f3a1ad274443"
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/create/recipe/crafting/kinetics/mechanical_mixer.json"
 hash = "63b0ec6aed9bd51d9d158cfee6d83f46c116aa22796d7417579300128721af91"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/create/recipe/crafting/kinetics/rose_quartz_lamp.json"
+hash = "54700628a9f22c565ca0ac26a698c9e8f87d58e061837048ccb1b15d6c143379"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/create/recipe/crafting/kinetics/shaft.json"
@@ -5462,7 +5466,7 @@ hash = "d79f6ed6d702369a46213d036218c8b1072367c19e1401c78d1efbd72d1114bf"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/minecraft/tags/item/sulfur_cube_archetype/slow_bouncy.json"
-hash = "93533910e44b59c828c24b6a4c495065445b33749d74fd5bf44bbfa600c762e4"
+hash = "1934cbccf7a27563550c1148add7887fef1e1f66c6310da084433dc68442d523"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/minecraft/tags/item/sulfur_cube_archetype/slow_flat.json"
@@ -6250,7 +6254,7 @@ hash = "c11f7c962f2ab70474f76268f52b0c090bb92d9ab852136522678fd81fb94d29"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/quark/tags/worldgen/structure/prismarine_chest_structures.json"
-hash = "f8836997310433975b96f0f0e714f017412061fc2c3d6051cd4371ffb2e0b428"
+hash = "963361abcc3512faeb87e816d0cac73814938ff5fbc023a57c99b754039b2ef1"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/quark/tags/worldgen/structure/purpur_chest_structures.json"
@@ -6262,7 +6266,7 @@ hash = "d51cb87c831bc9b18f1bb99a52571002d469706d04bc1d6c4730c9d172b42336"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/quark/tags/worldgen/structure/spruce_chest_structures.json"
-hash = "d85379f83cea177142e3fb9b9aad03f0158d3e7a63daec080df13cbd8b54cc84"
+hash = "f8931991810259e15e159bf351416bf5684fe7704604f051652894d1c848ccbe"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/quark/tags/worldgen/structure/warped_chest_structures.json"
@@ -6835,10 +6839,6 @@ hash = "7fe9c6087886d586609573ec6f1912854b114755615e51d5154a3f56672869e6"
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/loot_table/advancement/adventure_ancient_city.json"
 hash = "20a8c7cc59a26ed8f9903059392a32d1d31d822c46a1b1e126c2d2215e2c70b6"
-
-[[files]]
-file = "config/openloader/packs/spicedcider_data/data/spicedcider/loot_table/advancement/adventure_ancient_mattock.json"
-hash = "eb808954b1cd53b61644182afb7dd5135373bc9fa9b314aa0583aa85fb7bf205"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/loot_table/advancement/adventure_animal_expert.json"
@@ -8081,6 +8081,70 @@ file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/crushed
 hash = "e64a481e94d93ec7985a47425ad115e47cc3cd39326fe6bb003045739c8e99c0"
 
 [[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/crushing/flux_dust_from_flux_gem.json"
+hash = "e2da4e0604544ac6bcd27146b0fb65a8b0d86b9612a1252cafb24e4007283444"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/crushing/stone_ores/andesite.json"
+hash = "ea26bf112d7fa8c2cfd04f2924bd6d5d0e9094429889db82f386d56745e40dfa"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/crushing/stone_ores/blackstone.json"
+hash = "de1dec3c92e5d6f1086a0bce5190bb5d8449a3b86fcca9cc5c30fe28c1ffc245"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/crushing/stone_ores/cinnabar.json"
+hash = "59e44c03c2e2903e55adcfebfd57e3f3b0c2a1c4c4720ba061d6fa04ab779f0f"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/crushing/stone_ores/cobbled_andesite.json"
+hash = "1425dd272828eeaf1993cb879b97afaab02fcf839a6d22cd6bb44950761a3d04"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/crushing/stone_ores/cobbled_blackstone.json"
+hash = "6edc67de4e5e757b76f736157f95ec2009bcdb3e981a1cdd139c92e3de05d9ab"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/crushing/stone_ores/cobbled_dimstone.json"
+hash = "2c54f6eb731274884931c83be23aa4c4e89cb292fd5658a14e69c7562595a821"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/crushing/stone_ores/cobbled_granite.json"
+hash = "c1b289a56f864eefe44979519a85a273937f0dca84e37c150eb861260adf9ba4"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/crushing/stone_ores/cobbled_jasper.json"
+hash = "1ed4f7531d9569eb5baadb68773dba7f3a2096a051061dab509cb61d8cd59b4a"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/crushing/stone_ores/cobbled_limestone.json"
+hash = "8c0cadd44589c77cd3d2431ab89a67b3900aa488efb835bc2d23f8ca7c979997"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/crushing/stone_ores/cobbled_shale.json"
+hash = "a6846db08b101096123ca6d60a2fe3d8584fb2281636433b295a22497a49b3ed"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/crushing/stone_ores/dimstone.json"
+hash = "143cccd7b92860c6ccc64866b17473ad9ccc4ba1433a361ca83ac88d70a10163"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/crushing/stone_ores/granite.json"
+hash = "3dba2656c38c5a938748c9d78401f9d37a1a3fc4be9fce888b70917be0f9cb76"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/crushing/stone_ores/jasper.json"
+hash = "9b425caa211e346cd11976313029d6b9a40529aad196d0e24f141c0f97038f6e"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/crushing/stone_ores/limestone.json"
+hash = "5c7212a0b3eb903bff868d667ad516ca0acf4cf9db58509a7ec7d72bd6b58119"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/crushing/stone_ores/shale.json"
+hash = "11647c760c4d269c902b67f4cb03c22b19f2b61e108cfe2789c2d36b4c836915"
+
+[[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/crushing/sulfur_dust_from_cobbled_sulfur.json"
 hash = "d018055578a4d9c340dab45ab626e250d14a66d92f00e160515023ac160efecf"
 
@@ -8319,6 +8383,18 @@ hash = "a8e1f21817bc3d41c93152dc041abe55e19f1bb4f886e19bfbf64741b8c5df9b"
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/filling/latex_bottle.json"
 hash = "6e5601178168bfe42a2e3f6da4327e88626b76fbb395fb65834401f6064eac2b"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/milling/flux_dust_from_flux_gem.json"
+hash = "ce0c11a058b5c55c9db5a103fe5000f721b314e16df9a8b7cefa2582abd6dea4"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/milling/recycle_compass.json"
+hash = "5c16271e075f9f3975c0942fb3c65ad71ab3602462403306b74eda3efdf0c65c"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/milling/recycle_depth_gauge.json"
+hash = "aa792442809d704437913b30651d365d7c223e48ffe5970192004f0077e3b24d"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/milling/sulfur_dust_from_cobbled_sulfur.json"
@@ -8781,10 +8857,6 @@ file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/worksto
 hash = "23f997de3de9765767041066d7e2fa2882b31dcfe884ba249334789ea479ec5e"
 
 [[files]]
-file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/workstone/cinnabar_to_cobbled_cinnabar.json"
-hash = "5ce5a5166ff2fef941f8f31de88d0ebf1f275cbd8d6b9991da008ab6a7760edc"
-
-[[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/workstone/cobbled_andesite_to_gravel.json"
 hash = "741ab1b1d5b6b0704de16592166cdbe9df4a467e10486b3019bdbe8c8f822753"
 
@@ -8799,10 +8871,6 @@ hash = "85858c83b8fac14b86baf909e0431cca8e7ddd831c650a38b182e3f394d91804"
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/workstone/cobbled_calcite_to_bone_meal.json"
 hash = "6ca61cecf64c5a4d5c44c3b9d97f299aaffa32f8ff8b5995a46523eb3f18b279"
-
-[[files]]
-file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/workstone/cobbled_cinnabar_to_gravel.json"
-hash = "4316d300bc9ce74e23fa38d2732fe97b6e693c1f8f43dc72ca3f409733d80b55"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/workstone/cobbled_dimstone_to_gravel.json"
@@ -8905,6 +8973,10 @@ file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/worksto
 hash = "20ecaf5b30f9b1b315aa0be827fdb7c44081f67d58eedd5808748d02f883d977"
 
 [[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/workstone/flux_dust_from_flux_gem.json"
+hash = "495a5097926af100a510e1bfcce2bddcbd8b89184e7d051e5a0a4d3c91111f9c"
+
+[[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/workstone/granite_to_cobbled_granite.json"
 hash = "1b5070419ba2dc867754b30aafcee388fabea98fcc1f404a0e2eb2536249ddb4"
 
@@ -8962,7 +9034,7 @@ hash = "bba97009ca2fae9fc37c5ef459f824aa614a2439c3ca831003f90abc73745384"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/tags/entity_type/deny_spawn.json"
-hash = "7493fea0c84b979771d98c875c30e261542853ff1a1a7b2a68f3744aa4adfba5"
+hash = "5e7e0d9594cb9569af09321282ac975c48ac897f0c5178d99f5355cc31bf8434"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/tags/entity_type/fieldguide_unobtainable.json"
@@ -9746,7 +9818,7 @@ hash = "2edbf62b60165a7ebbea68d5babc9b1991c73ece3e00c57832d6e99529ed69ef"
 
 [[files]]
 file = "config/recreative/tab_layout.json"
-hash = "506257ce307499e9e9dc6c6db150aae47d9c3367cbd3fdfdc97760d2c42860ac"
+hash = "98200eb82b602b1be41bedd98c56b357bed8f207cfc9f035fd70085b94d83338"
 
 [[files]]
 file = "config/recreative/tab_order.json"
@@ -10229,10 +10301,6 @@ file = "config/reliable_advancements_edits/data/spicedcider/advancement/adventur
 hash = "16cff66f116a38537441a33ae10a493cf1f3a2467a3556d825b25e089ecdf20d"
 
 [[files]]
-file = "config/reliable_advancements_edits/data/spicedcider/advancement/adventure/ancient_mattock.json"
-hash = "8f9af637d84f402a5e39a90adfd40b10afae26bcf4b4dbf3bd9874bbf69cc916"
-
-[[files]]
 file = "config/reliable_advancements_edits/data/spicedcider/advancement/adventure/animal_expert.json"
 hash = "1caef7a2fe0e609f90b01f12622caa911d889fb3f46115b5d334b5ea65ee212b"
 
@@ -10431,10 +10499,6 @@ hash = "3f186193185c6273977cbcc177ef2e134bba5c5c3ef4b6989be84eae39f6192b"
 [[files]]
 file = "config/reliable_advancements_edits/data/spicedcider/advancement/adventure/sticky_grappling_hook.json"
 hash = "cbf05cab602cd5e48e9efc000d065d34cb0c1146f1e877e163d94b9d7700b774"
-
-[[files]]
-file = "config/reliable_advancements_edits/data/spicedcider/advancement/adventure/template_fragment.json"
-hash = "4f4fff78db0c42cfb8a8ec26e5b2b35bf57473d72b157c2d6923897a7c21c3df"
 
 [[files]]
 file = "config/reliable_advancements_edits/data/spicedcider/advancement/adventure/temple.json"
@@ -11426,7 +11490,7 @@ hash = "400f5879985ffb784f88fdf883faa9178142e85c28c1dddf9a0fc1ec37deb3e2"
 
 [[files]]
 file = "config/reliable_advancements_edits/tabs.json"
-hash = "4eb76549926b0b94f907523e06c1cd27b66f14fd5abffdf147ce7460d9adc188"
+hash = "9050a551acefe22b88c12d00cd494a7898190a7da9980704b990e9b87dffd494"
 
 [[files]]
 file = "config/reliable_advancements_layout.json"
@@ -11478,7 +11542,7 @@ hash = "db030be342e8c1a9c161ad079b6855409d933283695ac92407e41728a63f5b16"
 
 [[files]]
 file = "config/reliable_recipes/generated_removals.json"
-hash = "d04bb16915918eb5d17bd7f6f826569df6fe88f51c8f23d7456950179a071ee4"
+hash = "464c41ede7d420fc8b0c4efe94a5c1c99f96904b189ef2e6756dcb55d5a527b0"
 
 [[files]]
 file = "config/reliable_recipes/gotta_sort_these.json"
@@ -11486,7 +11550,7 @@ hash = "f8a5680b451ea859ee2cc985fd7868ff7a365da2a3043cdc249a9647832ae277"
 
 [[files]]
 file = "config/reliable_recipes/replace_input.json"
-hash = "c87502746bb155391fdc5bfe36e18590faf10236daf723877d331e12433f30c5"
+hash = "e3c46c0df46047b8f36db79e011120aacf5def9067d8cea3dd804d67d2b28978"
 
 [[files]]
 file = "config/reliable_recipes/rule_leaks.json"
@@ -11538,7 +11602,7 @@ hash = "8f1793284fcec2140e639853be1866900540bb66fb64fceaeff327277f82b0e9"
 
 [[files]]
 file = "config/reliable_remover/mods/adaptedmobs.json"
-hash = "b3115c9f2a72f2a9615b31781f5b2b24f4a6bd8e363e1d70590f2476bf5689cd"
+hash = "a64cedbfe9a4d294a812fa4863bb3f7d76cb0f26811e2947b644b2c06d644036"
 
 [[files]]
 file = "config/reliable_remover/mods/alloyed.json"
@@ -11658,7 +11722,7 @@ hash = "59e8634fdfb9b54564529316f9a2700a06f035550ee4fa299462e27936227c7f"
 
 [[files]]
 file = "config/reliable_remover/mods/minecraft.json"
-hash = "d5c3ce92e9cc34ed68eccbfb5381c601ee11a2fdb02223f7d5408803a1aa24b3"
+hash = "c44278d05c7210e376c0a2208b0dadc276646a92e1ba132101693115e61353c6"
 
 [[files]]
 file = "config/reliable_remover/mods/modestmining.json"
@@ -11687,6 +11751,10 @@ hash = "076ef85ad1f19be6b44ebf4e847cdc5578800415f5dcf58744d5edbb8bcdd75c"
 [[files]]
 file = "config/reliable_remover/mods/netherexp.json"
 hash = "0de877f9523a7cf4843d2084befab7c8357d967212863026d1bd797d2e771f97"
+
+[[files]]
+file = "config/reliable_remover/mods/newworld.json"
+hash = "41327e0dccf8f16fabda2f0f123929184295689d563fa868f0ff41ad92d5a1a6"
 
 [[files]]
 file = "config/reliable_remover/mods/nirvana.json"
@@ -11730,7 +11798,7 @@ hash = "0ceebe75c50d4a4ad96d490fa35f65d3b331e8483566a6f786f33c084ede3569"
 
 [[files]]
 file = "config/reliable_remover/mods/spelunkery.json"
-hash = "8901309d66c523d6fa60b70f37ffac784f01416b27b960e2f740b5ba7ecc8f65"
+hash = "38597c0f447723eccdbc4227861bb14f5be2ed8c43a2e9266dd0fff171923947"
 
 [[files]]
 file = "config/reliable_remover/mods/spicedcider.json"
@@ -11742,7 +11810,7 @@ hash = "0bd6060d958dae33eb1c1dd201d8dbc6539cfd317bfc398ae5c4d8e54cb2c481"
 
 [[files]]
 file = "config/reliable_remover/mods/stonezone.json"
-hash = "2bfa3941eddda74d5c1b423037717bb4844beb2748f859b7649d50aa12d86d8f"
+hash = "0757835339bb6e0aa6303b6b2c89833e929c9426506fef08c4cea899304ee32e"
 
 [[files]]
 file = "config/reliable_remover/mods/supplementaries.json"
@@ -14197,7 +14265,7 @@ metafile = true
 
 [[files]]
 file = "mods/spicedcider-1.0.0.jar"
-hash = "685aa8b861d812830127d7a21816765c8fbe5ab45c53a2350975e196b52c4fb9"
+hash = "9ceed913efb17faaddd35034dcdeca6ca02cbcec770354c465eb88d80d81571e"
 
 [[files]]
 file = "mods/stacksizetweaks.pw.toml"
@@ -17721,7 +17789,7 @@ hash = "f18793b9d45b7209c40135475ef64c1e164bbddbbdb39602fe22417ff14e6ad5"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/emi/lang/en_us.json"
-hash = "670107873db21783a9e7214b2891504bf19490ba2c0ff6abf86090e10db0b3a2"
+hash = "1189fc29c0eac0c6a74631d62c2dddaebe69c288d8c75aeddc4b07c7e467d9a2"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/emi/recipe/filters/hidden_milling_categories.json"
@@ -18401,7 +18469,7 @@ hash = "37a89b8b897de55cb662047194fbf7e2b09cc68f8f3ed5f73bf962ca1a7d5c8d"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/item_descriptions/lang/en_us.json"
-hash = "2d0db86c216969721ba19cffec6d1ec36f1c18000a0e8aa127eb17bbfc5ff3aa"
+hash = "7cbca2bf66cfe964562021e2f4a3142d3740458e1109e37f46a2f0f3b3db4a29"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/jade/textures/gui/sprites/progress_base.png"
@@ -21645,7 +21713,7 @@ hash = "54ce9ce8797299f378a361ef1a49c25500721b81c49ee472d70727ea586bf1f3"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/newworld/lang/en_us.json"
-hash = "839ddc4849183f119982dd9a6ab97c8d4ca5524fd607a2b7b523a7c26b88057b"
+hash = "f78a51041a8fd4a4f2f2ac8b8de1fed57329d28741fe2cdecec1a8e53bef620c"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/newworld/structure/fir.nbt"
@@ -22701,7 +22769,7 @@ hash = "670882716a0791233b99900802687ced96de4254bf5042b33224c42856b85838"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/spelunkery/lang/en_us.json"
-hash = "19daa4dfb1716975465b4c78b04313d39bdcd9473ed31810806b5ab2e341bda1"
+hash = "a4b92f9708da2e26d04545cf43ad42403acef6a874e005c10ccfe0e5606a9ac6"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/spelunkery/textures/block/wooden_rail.png"
@@ -22753,7 +22821,7 @@ hash = "71341002dcc43dd8e4b8ac10e4ad84c6901b3b134037379ded7e18200558064a"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/spicedcider/lang/en_us.json"
-hash = "003763347aa402c243205d5a586877052065023ad047585c9744d5bc264c35b2"
+hash = "c6f897ef3e712ed92d33e392277d5c0179f3c0f8a9e0747cd413d0e1c265fc62"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/spicedcider/models/block/glowing_column.json"
@@ -22830,6 +22898,1194 @@ hash = "a92f776b1f45298b04153784d289552c2e5cfb6609cb26f10b5b869030b54fed"
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/spicedcider/models/item/explorer_map/woodland_mansion_map.json"
 hash = "146b49f7197baeb6b068fb2dd096001585ddc171314824f1b0699b4772bbc67b"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/blockbox/rough_glass/0.png"
+hash = "809abdf215a0532da305362ff3581f796f06f8f5728f76865f734b38706bf425"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/blockbox/rough_glass/1.png"
+hash = "3897b3049906819f9f08fd70238281013231a22bd6fa4408c599ae465c9981f3"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/blockbox/rough_glass/2.png"
+hash = "204319e665005d0f60c856ce35603dc204ff50da80396cabcfe3b111ada8cd25"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/blockbox/rough_glass/3.png"
+hash = "2504b76d290ac59439c505910430bebe3685236fa92763bbf7ea387627cdfdc0"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/blockbox/rough_glass/4.png"
+hash = "587f87cdc3bc2ff4303c1b57e89fc7283bb9517371759b12ebdee6c23980e9b1"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/blockbox/rough_glass/glass.properties"
+hash = "98c906a28ae9ca8ac6e91cf333f9314eec75cade808152643550fed62b3f83fc"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/blockbox/rough_glass/glass_pane.properties"
+hash = "d20b9d491e897a80e104dfa9d43df35d1abfae26e5637f07a69313627aa49eb7"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/bountifulfares/tinged_glass/0.png"
+hash = "d17f42b8ced4b5b52e78fde61c722d9e5951e871dec7cce86f268fdc3480d8fc"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/bountifulfares/tinged_glass/1.png"
+hash = "d8780750fb6bd5dd36a6cee2b13b9fedc5e2faea879371218fbdee0c7c1ef0bb"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/bountifulfares/tinged_glass/2.png"
+hash = "eb737052fa0b72ff4c68e7ed5f776a4b638b8be4f63dfae1fa8e42123e94857d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/bountifulfares/tinged_glass/3.png"
+hash = "13ced01745477acb4c96fdb5e11407b5783644886662fcdc735fcc9f3beb5374"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/bountifulfares/tinged_glass/4.png"
+hash = "50c065472fe5d67d3aebcb9e1a867270db6156207950ce1f59f736014b15fa14"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/bountifulfares/tinged_glass/glass.properties"
+hash = "16b5a6ad6f31c7ada0bfb39b132d9bf9a4cf2607fa8c403c2b3b786a9341e455"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/caverns_and_chasms/float_glass/0.png"
+hash = "837a61c99f545766d6b6d9eb93f6c3e500e1e31473c0b2a1fc6cf86b823a6871"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/caverns_and_chasms/float_glass/1.png"
+hash = "232c2eac760eae604f9dd43352c0b272396b7cfaf220081b54583b6d0cbc2320"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/caverns_and_chasms/float_glass/2.png"
+hash = "dea004ccd1b71e07e6c014988468603d953c590238c9bc7dbc9f584c2a91bf69"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/caverns_and_chasms/float_glass/3.png"
+hash = "73e3fac5e8e74501f81f64c2357550777e8f0ae431e788c030b0864f9f968a7e"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/caverns_and_chasms/float_glass/4.png"
+hash = "c6a6fb5ad00015eda7c03072c0a660ce4dc2fee5dbcdd8ef6364fa537a2e8fea"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/caverns_and_chasms/float_glass/glass.properties"
+hash = "0745d0019a6939560d75fcd3d5427aacad382c7a5f9e5d9f454b3e7ba3f832d5"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/caverns_and_chasms/float_glass/glass_pane.properties"
+hash = "3212d27acef3a89612dbd705612a7ee9f8875ee1eca1e2853b416ecfde6c04e1"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/caverns_and_chasms/frosted_glass/0.png"
+hash = "1a8a2f3e73adcb114d35cb4f88125e8c3b32e4af5a1be4789be83fc68b5469ea"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/caverns_and_chasms/frosted_glass/1.png"
+hash = "a7ad48d03cafc813c264f7a28f14c542702f7172b8e686a20fcd7303d08e9149"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/caverns_and_chasms/frosted_glass/2.png"
+hash = "0b20ab82b8615cb8b85ba78576c191501376c2f3ac3b3a53675b1541070f965c"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/caverns_and_chasms/frosted_glass/3.png"
+hash = "581d4a8a55e4a4cbb7867622b455fac64e3f04bd77642cd5f8eb26a5f63b31c0"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/caverns_and_chasms/frosted_glass/4.png"
+hash = "fc1b59060bb6ca08172895e5f3a4a1a467bf9597938663a149667f5014050f46"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/caverns_and_chasms/frosted_glass/glass.properties"
+hash = "cd6becaabd4444a2c5d55419f44736cf5c0f0dab55eeda8345632899c5d51d46"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/caverns_and_chasms/frosted_glass/glass_pane.properties"
+hash = "8051f60ebd2c1b203c2cc246417825003a5055824b070f7f4a4a66121e2b916c"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/etcetera/iridescent_glass/0.png"
+hash = "c99cec8c485c95c892187519735c3713e1894612063953699bc160f4574bf757"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/etcetera/iridescent_glass/0.png.mcmeta"
+hash = "b6e289230e12f68baf7e18153d49e10059cc1e6d1578039aef80b71ef2ef61fa"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/etcetera/iridescent_glass/1.png"
+hash = "77a6b90651f35909b3f936ae3ec85e8d924c30000cb1615fcf2d2fe07050d2f9"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/etcetera/iridescent_glass/1.png.mcmeta"
+hash = "b6e289230e12f68baf7e18153d49e10059cc1e6d1578039aef80b71ef2ef61fa"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/etcetera/iridescent_glass/2.png"
+hash = "f5c52d18132bc34ea21e28998cf9db618d79c9f4598844ae9b25475a062f1a9d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/etcetera/iridescent_glass/2.png.mcmeta"
+hash = "b6e289230e12f68baf7e18153d49e10059cc1e6d1578039aef80b71ef2ef61fa"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/etcetera/iridescent_glass/3.png"
+hash = "74a4b49aea57f1d9cb556177d3aecd330891d0d426f574c990d650b721735636"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/etcetera/iridescent_glass/3.png.mcmeta"
+hash = "b6e289230e12f68baf7e18153d49e10059cc1e6d1578039aef80b71ef2ef61fa"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/etcetera/iridescent_glass/4.png"
+hash = "5d3a4ff0ceb5ab2b28e44cd7bbfedc9aa88a6c71df6ad13b2f813d04980e40fc"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/etcetera/iridescent_glass/4.png.mcmeta"
+hash = "b6e289230e12f68baf7e18153d49e10059cc1e6d1578039aef80b71ef2ef61fa"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/etcetera/iridescent_glass/glass.properties"
+hash = "1f9b2c55b93215605c58d658eb5d07390d2a875ad0c5139227814defbf8f8c9d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/etcetera/iridescent_glass/glass_pane.properties"
+hash = "9df01d0c01254d5061b7d37e965c335fcefd4568d64ba17cb8cd0e77f6e5982b"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/infernalexp/glowlight_glass/0.png"
+hash = "6f1df8915e9f3153e92c339632a56b78b21b11399149e8498967f4d04e1c894c"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/infernalexp/glowlight_glass/1.png"
+hash = "a2d730a9a6e7b38deb113b343b1bd7397e3680f253152dc086e11e25a7060f81"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/infernalexp/glowlight_glass/2.png"
+hash = "032f2ac61383fd25f8e444e4d7d73ea8b616e9343357adb09790824a1e3e7a6d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/infernalexp/glowlight_glass/3.png"
+hash = "3c88ce752b62e358d5fca471c5529566b6c806c11f6e063463f15b3b79c5b381"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/infernalexp/glowlight_glass/4.png"
+hash = "0744ea05f1974abec01e539e90b68a94dc06d12129c9715039ff9dbddce0e835"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/infernalexp/glowlight_glass/glass.properties"
+hash = "6ba6e6f3749ceb17b66ce3997aaa1d2126b540d63cf4ce169836e25f40cfcd83"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/infernalexp/glowlight_glass/glass_pane.properties"
+hash = "f330e5973c894748c777e52ba708ecb61a69ab0f4a3ad5958285affb524ec6f3"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/infernalexp/quartz_glass/0.png"
+hash = "00cb7fdd82f1f27e695a0720c82f604fb688dbfc110ac634bf971092dd2db529"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/infernalexp/quartz_glass/1.png"
+hash = "5e32e09e5b608225923628f84c46f4702c4f15bff9f78e3cc631e51e68acab01"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/infernalexp/quartz_glass/2.png"
+hash = "82587dffe51209ee079da4de21253b96ce007dffd00feec89cd8113ce224af20"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/infernalexp/quartz_glass/3.png"
+hash = "83f8845430d12106e70ce73f6c34bb9f019c86337881f86c7c2d5b35f6d57dc6"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/infernalexp/quartz_glass/4.png"
+hash = "d6c2c70b1d9946dc04867e359a70274b8ac42f20325953c65dc3eba3fc0a622e"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/infernalexp/quartz_glass/glass.properties"
+hash = "91c66e6ef25dd138b972d4dded36f5382805cc9dd14d395c8ac6d9971c0da371"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/infernalexp/quartz_glass/glass_pane.properties"
+hash = "72ba0f4d20264afebc3402f15cb13f659f7111b6ba24964ee5b180f2d8478419"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/black_stained_glass/0.png"
+hash = "4721bfeefa2be03282e0e94ceb3b1265af8f9f22cb85403bea04cb4225a8da63"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/black_stained_glass/1.png"
+hash = "d8f3fd02f35901c9b4f492ef391f54e69b2349820160d8da752ec03d80460323"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/black_stained_glass/2.png"
+hash = "b99304c9d27e0b8251e29b745e82549ac7c48b88f715787582cf5679b754028f"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/black_stained_glass/3.png"
+hash = "e07695622bbff830b362e4f020af505b1f57e13b7c2c5728caf522a97491aa29"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/black_stained_glass/4.png"
+hash = "24edb61630fb9ca77cfcc461189e792b0edc2509fe57d1e19f0c589646bf7f69"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/black_stained_glass/glass.properties"
+hash = "b3180b6ea6a019369dd650e89c1483468ac7323cddfe65d8d3aaa0556413f6d1"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/black_stained_glass/glass_pane.properties"
+hash = "73bc7bea9c820b8b24ca8ce304eb58a7087b22dcb94cd251ec54ba99ba39d27e"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/blue_stained_glass/0.png"
+hash = "0abe673013a35c17e7ac7a7d47da731676d558190d566100f7c517624c996478"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/blue_stained_glass/1.png"
+hash = "b1b5919b91081189c54a64cda07b5b0a2935172cccd22244dc944c59319ad852"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/blue_stained_glass/2.png"
+hash = "0172470f78d8e549552f8692a47e9c3c7f0f67b66d5e82246dcc65fea31c308c"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/blue_stained_glass/3.png"
+hash = "67bb34699f110086488a010d5aea2a0fbace216aa9d4aa432ca21f16b735d08a"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/blue_stained_glass/4.png"
+hash = "19d3ce4c16e9ff75d50c5371f7407ea1c2fb05f528906b19115175a2c941ec48"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/blue_stained_glass/glass.properties"
+hash = "7bc6040d172125b5d2332347f91a8d578d6bad612278f2391d2e4e7f0592cb75"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/blue_stained_glass/glass_pane.properties"
+hash = "9a4bbe3ee86f26b5b6cc63ba9cfee1f6fb7a79ee82070e922302379e59fade8b"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/brown_stained_glass/0.png"
+hash = "70965d2988c0177fb8d2681b9b1d72e9c4d3aa489527d278ed070f027a5f7833"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/brown_stained_glass/1.png"
+hash = "0d5283861e68a60f829a6e90e0a2489330ce33ffe380f7434dec52245421483d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/brown_stained_glass/2.png"
+hash = "7a277be47be4eb5fbcd1acff6d2f899c9bc82eea60871b9cf52326e58a519d22"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/brown_stained_glass/3.png"
+hash = "34686bc60f56062d4c4b1cab828d5680494fa3d206ca1fc348cff407233e4a95"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/brown_stained_glass/4.png"
+hash = "015bf94975ee3aa1bd9f9d3c884b4a25ce5a513ad968ac21250030f3acfbb221"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/brown_stained_glass/glass.properties"
+hash = "fe782fd68862ee21ce2dcbe003e24360dce5732f248edfd479406c3eaa6bfcc6"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/brown_stained_glass/glass_pane.properties"
+hash = "7290389df6a8a2aca565ad858df7b0a707d5791906d99ba6e7036132a804b327"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/cyan_stained_glass/0.png"
+hash = "0224b8371454b837b520b897b01531c73a52db0ca736d3b758f7178d8094ba63"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/cyan_stained_glass/1.png"
+hash = "4b22ea830199a7755baeaf5a83b0b60cf3ae3a237c654913bd14462eeadf9115"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/cyan_stained_glass/2.png"
+hash = "e2019b2f55d1dc1a5b89b006b8bf1a673a86e102bd0a0fd03ed4756a71772a8c"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/cyan_stained_glass/3.png"
+hash = "2777c5ef8c6343d9eed85051c094de18fbe9f84f8be4c12e5c27ce623cdac3ab"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/cyan_stained_glass/4.png"
+hash = "c8073acc361c05de98bc6e0eb845fb72d09c9e029f686a4029c92380a0cf993b"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/cyan_stained_glass/glass.properties"
+hash = "ed2791cfb32accc0b2e23da8ab699cabceb4ec721842c98833043eed63846961"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/cyan_stained_glass/glass_pane.properties"
+hash = "cd2ce31f08650a4bc3c284b5a8e9df02826da1fd728be90e81ca6f31159f3980"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/glass/0.png"
+hash = "63704778e6ace3af6e603d7bcecafd185eadc71b760022747d72e2dd7b4f809d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/glass/1.png"
+hash = "3f97aeec6fac6fb1cc8e38ebc8cc361a4a486a5110efa3c4e9a5b8149d314221"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/glass/2.png"
+hash = "71e12bb2a9abd2a80f8bea43ae8b48fd5f644e82ee675114ab5496791e92a087"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/glass/3.png"
+hash = "6fbf188af15cac9997c0d459e617b2046f2c2e4e93f6997b85cb595ac87919ae"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/glass/4.png"
+hash = "81e9ed2a2d143f10ae1921ab291ae4b4e1b3cd07e4e5e10b45b51baaf9d640bb"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/glass/glass.properties"
+hash = "e0eb09c4d6999f507a7f4660fa33c05968eb65ab1b9a501b6146d54e5c7204d0"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/glass/glass_pane.properties"
+hash = "7b1bef51af85eb411d0e4ea5a7e5cae4286199b001bbc5f36f0bbe4322da515d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/gray_stained_glass/0.png"
+hash = "9b30d31a335f0d92b63f2fd3b617a16873bceb85e0bb8d54c9008ed5dde7ab32"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/gray_stained_glass/1.png"
+hash = "ad5211aa7807ec997c9b032baadca75646b5c2ccb3f60f43418a344df5fadbe2"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/gray_stained_glass/2.png"
+hash = "7c9b052712bfda05cbd1a202f0c36d211ed54e6f7ef12c987ada0abfca4af9c5"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/gray_stained_glass/3.png"
+hash = "d54b774290880a40d5b94c570fe79f1e2c2074882a7ad31763c94216bd7929c0"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/gray_stained_glass/4.png"
+hash = "c5512e17c8d9f7f6534fe2a0900df75092c48b036e0f01df22cd882b7a377350"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/gray_stained_glass/glass.properties"
+hash = "feff2974aaba0c7a5a51ee8838563a95f25fb52f4e966713babdea081a6dea05"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/gray_stained_glass/glass_pane.properties"
+hash = "20eb9bcdcf09fab656ece444d3e73e5f1df897b5fa1a151464096b59a97d4411"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/green_stained_glass/0.png"
+hash = "382b5e6af66b2067eae2952cf54932b0ae20fa19140e8342b4260fa81e3049d5"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/green_stained_glass/1.png"
+hash = "db8b358d55c7201d1e368754e568d8c9857a6539b59a57d8b722e1cfbc558093"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/green_stained_glass/2.png"
+hash = "2691da30f50011676319d2d426f57881911c765d5f1ac770f5e56b4c47584187"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/green_stained_glass/3.png"
+hash = "6f7149d805d95360ed5f91a1e9ccdcfc89b5bc791cf7794afcc0e9bd582d23b5"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/green_stained_glass/4.png"
+hash = "be30dd62e504860bec9cac0c160e53ae87f874e750bb0bd37ee6e956ef5010ce"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/green_stained_glass/glass.properties"
+hash = "e56edaf964f93c15827ce501ccb1ebd4bca2ac638ecb171c61d32198a7e9a904"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/green_stained_glass/glass_pane.properties"
+hash = "32dd751536cd8d63eaa424ecafd75b55f8549f807e797e649f9aa67d2750ae56"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/light_blue_stained_glass/0.png"
+hash = "2cad0409998e3905e895ea4718c03776cd348c73e1bee47301d1f116d453c5e8"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/light_blue_stained_glass/1.png"
+hash = "28b80c23f004c8e6ffd7b33cfb3dbba4d0fe63e0e74d87e03880cea59bed6e53"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/light_blue_stained_glass/2.png"
+hash = "15548f30ecdc90fb57e3d7d0798266deaf2a81f80be3bf5668139dc95c4d15ca"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/light_blue_stained_glass/3.png"
+hash = "897275d21ef5bf8857c54a8807a1f836a67ef9f81a089785f4818a99eef93f17"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/light_blue_stained_glass/4.png"
+hash = "6a1cb4bfdc78520c08e4857edfa01f21abf78c59ce24268543671de821ac3eb8"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/light_blue_stained_glass/glass.properties"
+hash = "526339a6e61e77ef03f62e86545ad135ddeb1cd9c41bc8524d15ac2ac645d23f"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/light_blue_stained_glass/glass_pane.properties"
+hash = "f0d6e7d8174196986de285c08f7a7606859dbfbaa9941d5fe796fdb2e4930656"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/light_gray_stained_glass/0.png"
+hash = "43cabb0b39a657642e729f64b82a2ce314bdee6de240e08b00a700488eb0d102"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/light_gray_stained_glass/1.png"
+hash = "60fdb34828cd6b19ec44bae4a104b9848e4e001adb3efa635c50d6d7583e2b41"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/light_gray_stained_glass/2.png"
+hash = "9d2ef2823f2fe276e6785d92239eb51f97340dc44239a26f06400681bff61927"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/light_gray_stained_glass/3.png"
+hash = "aaeb0899c517238099ac1e6ac01a11e3b9f0e48a3a50406be821b300121f2dab"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/light_gray_stained_glass/4.png"
+hash = "2c58e9ed94a6241ad28eeb101ddb0190a04e4e62b4f11b9d45aefaf8a86c542d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/light_gray_stained_glass/glass.properties"
+hash = "96e1494843585ec9bb28503d1cd085b505250e52e070d359950a227906f894a6"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/light_gray_stained_glass/glass_pane.properties"
+hash = "4b69fe2376660b65f5383f67a6681b6db1c00bcc602da1f0146aafd5c7904b20"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/lime_stained_glass/0.png"
+hash = "e350fa0b0c5c3b94d7b613c1b29de5584731082063d2779a516d918829f55136"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/lime_stained_glass/1.png"
+hash = "6d889363b46eb38f78d1558882c9003836db30ec270df8fdb10e7c4f45a42f97"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/lime_stained_glass/2.png"
+hash = "1d533e5f02286d20ddc9424632415490c6a588eeecccdd26c5f14af053ac82dc"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/lime_stained_glass/3.png"
+hash = "4691c19d631def793263f6431de834a637642b0d4917970be537abc63bcb1730"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/lime_stained_glass/4.png"
+hash = "6dfa3c051dac10e1b0d81f0215e3b47eb9634919c600a36a6f13791a6bfd5ccc"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/lime_stained_glass/glass.properties"
+hash = "3e7ca8fe8c22c1756ccb915d9c1207aa6399ae1f4a25ea4f9532ffc863bbec48"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/lime_stained_glass/glass_pane.properties"
+hash = "2c288c6560aca37cef0f02be9579bab2ab5dc0bef90af878fc738d7a49cf9b0b"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/magenta_stained_glass/0.png"
+hash = "0811760f64c970f4445c5ce724c0add55c3f84194d43f72ee6a2c3cc4e4bfdaa"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/magenta_stained_glass/1.png"
+hash = "3c8fb8486623c3581021d99c233a11e4d6655688bfb402354a0bf6f895523d01"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/magenta_stained_glass/2.png"
+hash = "e413734ac92d67c4c5add3cbcf8de3e88e02073167c72659837a16d4ccda2c88"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/magenta_stained_glass/3.png"
+hash = "66d465f7da889d3a9ad0ec7bf37a65ae22776cdb81ba294194afd0116b2b6b78"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/magenta_stained_glass/4.png"
+hash = "e20fec108ec0a6525461860e899edf7fbfcd5cc431326952b3390e32fd3c9929"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/magenta_stained_glass/glass.properties"
+hash = "270559821751ae77bf24985eafab7d17df7a4429e6f02e6f0ccdc831abc53f9a"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/magenta_stained_glass/glass_pane.properties"
+hash = "87e4d94c1d94af4229df6d2baf38155b92d40af2eb54e54ca7b20dbae60866ec"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/orange_stained_glass/0.png"
+hash = "f667a2023d2c0b623afcff7b5acea5a5622d8f3c72b33cddd59fa03cb50e0519"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/orange_stained_glass/1.png"
+hash = "bfce0f8704c13989729b4943bef94d669d22db66cf0d00ff2c414b3d4b0a3bd6"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/orange_stained_glass/2.png"
+hash = "83a7f95cd443c9530e88cab866cbdf8d8b5ea29e544bd8cc2507cd0422bf6c05"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/orange_stained_glass/3.png"
+hash = "ff865b87aeb3399d2f7e3772646895dbc1bb78e5f8ff906bc87c720b3a02d010"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/orange_stained_glass/4.png"
+hash = "f3bf79db59a69bb578ac543c6609bdf30f869e00669120973f0c91d3f8ec0ecd"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/orange_stained_glass/glass.properties"
+hash = "34d8eec0beb362f097de4f7d583b0dd7ccbc62c660535f57c7a7d80b4f5b4335"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/orange_stained_glass/glass_pane.properties"
+hash = "2d5ff21e8b8bcbee54fb0cebba45184f115577459fdd2981c6714f6c8ada327e"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/pink_stained_glass/0.png"
+hash = "4890d6ffcda6d3454bb7362763fbfe102b4aaeb59a37c1363b924d174ad0060d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/pink_stained_glass/1.png"
+hash = "2226ca5f431f999994adcd16abc21de251eb351a7f31515333b7c36e37366aa9"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/pink_stained_glass/2.png"
+hash = "ae61e28fd74c1f2a8e6ebf0ccb6881b3e6cc9d17a41614447af5970e285ecb0a"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/pink_stained_glass/3.png"
+hash = "a4f21e87f43b46ad3d7b185942cb4ec614e6bfebf357b7dac7672146eb281bce"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/pink_stained_glass/4.png"
+hash = "52515b5d2a1fc8af8024dbd2e56b05578fb03b609aa7204eb087f7ef79e11891"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/pink_stained_glass/glass.properties"
+hash = "96c39d6c05b4d980bc3d5b090f32c00e51b2a5ee6d036f0d8a815151b6554aa8"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/pink_stained_glass/glass_pane.properties"
+hash = "5edb815349266f2544a2d1d4c8612acabeb80214dfffe89c1ee475de29ceb01c"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/purple_stained_glass/0.png"
+hash = "6ba915d1bae79c635a64e4798d0be6122d689372e9fbdfb3c0381dcb6df33b59"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/purple_stained_glass/1.png"
+hash = "21c7d6cf4978c5836b37510e2101a01c91fc14813c7f32bbcf6281c8204f49b5"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/purple_stained_glass/2.png"
+hash = "fda2e6eb7c3fb0fd4b020f248f896ee789b9c9a50bab83bae29ee6e8c5411a76"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/purple_stained_glass/3.png"
+hash = "ddc233cd0189d8ada886de3eb0ac171924d88a5631bcb2b1300c66418c6cb9f3"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/purple_stained_glass/4.png"
+hash = "96a862578db4e3d381d1a2b3c1dd195a082f248c51c4e1c5e68a2e2e0fb077e0"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/purple_stained_glass/glass.properties"
+hash = "6ab8bfcdf4656ed1a7720bd51500122977424bd96e12953c5f5fef8dc4f31eed"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/purple_stained_glass/glass_pane.properties"
+hash = "6fb7531b0ae464373cb64a2f3b7ba9142921693a59425b81384b21d1cc28491e"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/red_stained_glass/0.png"
+hash = "8fd709665436d49ef16cb7163c8141ab516c92bfd119b70b1c43549c1cb80f39"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/red_stained_glass/1.png"
+hash = "d80b927789df2bcfa53b842eca666d252a9abc233e25b2a296c4139edbd40b5f"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/red_stained_glass/2.png"
+hash = "ee300ae25732336ce8a7d8e07ddaefb1087bb1027e5689a7c6523457f63d28cf"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/red_stained_glass/3.png"
+hash = "ce9daafb8adc072529d4fad73f463065f7985108ef79ed7d88dc97933b5e4869"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/red_stained_glass/4.png"
+hash = "07a427bdeef53e945fc3070c1c0f1f98ae2ba6987e78cfc7b9459220cbaad0a4"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/red_stained_glass/glass.properties"
+hash = "0c8d7e65491a50e4f30ad62e241953984528ecea21e84aa8aee6e0330b0b048e"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/red_stained_glass/glass_pane.properties"
+hash = "075ce6b69cdb8bc1566c1018a05c8602fd4d46b1d125b8aa7dcead1e879e56d2"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/tinted_glass/0.png"
+hash = "c7d287bc21f7f068d69123d95b351db7759471379ee6c94909386a4db3c5beb8"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/tinted_glass/1.png"
+hash = "81424c15316e5b0b3923becf180cbffa607bfa5296bbf60b78f4d44492b88b67"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/tinted_glass/2.png"
+hash = "ae34313820b030e3dc2ba4d8ac218bf2909443051683d45939b4e46edec3ffd3"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/tinted_glass/3.png"
+hash = "f78a7d2d20e82fd3e4d7e10ff803608557011b4c790cb13305d47803b7e72d9b"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/tinted_glass/4.png"
+hash = "ed5c329eca68c99762ba7da847a3b6625c8b76c15f48edfb9d5d723a9965a766"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/tinted_glass/glass.properties"
+hash = "f27ad8813fdfdfbfa5aa04deadd072aee61b089b7ce9466932a45bf93b7160b4"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/white_stained_glass/0.png"
+hash = "e05e1ddbebf8692d800346ba2f8642a34325c06a120ef537fd630627ce3f22c7"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/white_stained_glass/1.png"
+hash = "cb91a2b70096f9fa6232e3d99ae22bed294967d3365b07347dd6d84a9d21be1f"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/white_stained_glass/2.png"
+hash = "a47d76c8c52601040e264450a2c04d2df3c622fdb5a8f544c55d50d01c6aca28"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/white_stained_glass/3.png"
+hash = "8951fb6914777c730f98a85186da063a23dee336ca593ff900bb55a4d27d4835"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/white_stained_glass/4.png"
+hash = "70c2acb74783d492191eba68a6a0a1c733a7243f53d4769f1ef7d102ca288551"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/white_stained_glass/glass.properties"
+hash = "06b8f870b50e2e2685fe9b69c1c2f586c60225f575571d686853f87ddc4ab2bb"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/white_stained_glass/glass_pane.properties"
+hash = "06bfdc409210096a83d37715035bb9132039e01973883232c4da1e90c0349ee7"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/yellow_stained_glass/0.png"
+hash = "6b2e3c32e0960438550e72030fad4503e9ef70cf92a6f13839cc5f36639448ce"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/yellow_stained_glass/1.png"
+hash = "1f31252c5ac0e5a72e5a46302878e5b9fa2f8658ebd21e5ff8302bf95a28b011"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/yellow_stained_glass/2.png"
+hash = "ada8150cd5c24fee08a5f0850278a4a97ba68f5186cb9d0376604897f4cec613"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/yellow_stained_glass/3.png"
+hash = "93097fa86404950cb69cd6f5bdaaaeff2c0e3fde205c8ad97c798db1e85021eb"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/yellow_stained_glass/4.png"
+hash = "91b6a9189b565dfb7718e74bb30e684960b5e6f5fbcb766dc023734a17262478"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/yellow_stained_glass/glass.properties"
+hash = "27d96500604892cb7f17b1ccf6f9ba3bee0be1322020d16c5debecc44d6fd1e0"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/minecraft/yellow_stained_glass/glass_pane.properties"
+hash = "dc796cd1f2c204a1c8f69d81bbf2078a770e41673ad7c1f149ed586c74c56a0e"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/black_framed_glass/0.png"
+hash = "8d78a9a63cf5c13ac698a2527e072098ed5e2fab16ba70e218b1403f27e37396"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/black_framed_glass/1.png"
+hash = "4b56532e13452ed8ce55ac72c1957ef0cdb2cf72e45b01866359f4476472280d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/black_framed_glass/2.png"
+hash = "7311eb4418684e343e5b3f303df8c8de9b84c5cbd20903a8ddf72732db424774"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/black_framed_glass/3.png"
+hash = "60f2c2eddc8b30931699a6d47e35616e23ab1832b87a060809cfa86a7dde0479"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/black_framed_glass/4.png"
+hash = "3658a0e3e0934984bdccacf8dc6f3ef97e80cacb96f815b9d73df30952f1cf16"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/black_framed_glass/glass.properties"
+hash = "651c1a6541d40f306769fa5fe5093d1ffdf80e0fc3ca830c00d22edfaba10ae5"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/black_framed_glass/glass_pane.properties"
+hash = "07679d98e0b48d8b2bb76ac0025e4639cd5098b57052cf9c9be91032505ccd7c"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/blue_framed_glass/0.png"
+hash = "4294569160f11cfcdc21c70dc53a50c70b0580f3c7c90d92d45b778df6667516"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/blue_framed_glass/1.png"
+hash = "ac6dc860b4712867aa73067d7ddc40c3b4549f8339fc12a72eaec340a31f7cbe"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/blue_framed_glass/2.png"
+hash = "8c61a6ae6223b9508aa62383b45b235999091040b39a14f401498b4e1282edd4"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/blue_framed_glass/3.png"
+hash = "f3b7b009c956ddbe174ce779754d4ce30552d1943061432057b89086e84e9c29"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/blue_framed_glass/4.png"
+hash = "ff13edd609c0dc39e0e78e20e639b9db8d5d0260fd29b001a989d4ec301f3c2b"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/blue_framed_glass/glass.properties"
+hash = "bbd34b04492de9067a90ccde71478adf9df42d5d490d895176a72fa9c5777873"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/blue_framed_glass/glass_pane.properties"
+hash = "3a8ab7bff37764e8a3b9b701753ebd7745ffb8850840d43538440eff8a81f78b"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/brown_framed_glass/0.png"
+hash = "8bf7b1c903c7c24d2436b5640ce7d29549c7990365abb1e7a6de794182dc6417"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/brown_framed_glass/1.png"
+hash = "a37cc5394b6e8b6782b4eb52c8a75920df1ae67f46e5bd68d1b5a1e6c88d34c1"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/brown_framed_glass/2.png"
+hash = "9d510f17535736e84780843d306631097346c186b5163462fc76f02df175f0e3"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/brown_framed_glass/3.png"
+hash = "862fc26edf84b8783cbf1d779e0cb193b63349648580b0f798d5a850a5f8e267"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/brown_framed_glass/4.png"
+hash = "d67e4e964720517a69ddc6280677ca7bc30330ce942990998e74fa09f2035111"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/brown_framed_glass/glass.properties"
+hash = "e9d79e2eb2e7c8162520c1c10479fd3f9aaf627f145d48f1cc30045370f09375"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/brown_framed_glass/glass_pane.properties"
+hash = "4e916abdbdb42d6212b67b8236db66d8540facf8d21df684907c34bc00fc64cb"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/cyan_framed_glass/0.png"
+hash = "9674095965186c9480e9d7730af2304fff45bb9be84024170ad3b844c9357958"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/cyan_framed_glass/1.png"
+hash = "de312bde8ead56fdfa006565ed833846669e09656e779e1f53904ecc5e3c3dcf"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/cyan_framed_glass/2.png"
+hash = "32fde4c5859f8f0795c629ef334ff6b076511ba7cddce52076c9b885b5d828dd"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/cyan_framed_glass/3.png"
+hash = "5e828ee0af3cc2d1bc31b8ee3c06025394f5de036535bf3d38d060459389cc2c"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/cyan_framed_glass/4.png"
+hash = "4d306c5339b4195b18bc2424e2afae62992ac41132376b618e07ceae2dd0616d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/cyan_framed_glass/glass.properties"
+hash = "c800c700b4e2a6338dc699e04c07e6386c07c9d92bea5f674eef7c3c50afff9c"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/cyan_framed_glass/glass_pane.properties"
+hash = "d8e24dfb78d34bea3370f899c906da1cbd50ac8b60dee4bb3254bb55df8d336e"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/dirty_glass/0.png"
+hash = "61ae67ada0ad79264b6a67ba8167ec84cb46fe19b66e4242c71b2a8e510e45c8"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/dirty_glass/1.png"
+hash = "42623adca1bb10357a2a19f0fcd3a95fc586b9fd31979a14e899a3d1f9229776"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/dirty_glass/2.png"
+hash = "230b57aff693f25ad4b567f89c701a2ee82b046838a99db00a3db8d9b29221fc"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/dirty_glass/3.png"
+hash = "e72e92ccd948b8bdaad26ac2fb53a27c449ffe375e7af92a7aa8df10b6977d47"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/dirty_glass/4.png"
+hash = "e61e48410b9e2efb73d6b86a2b7ffd7b99754377d4c16c226e22301fe12c1b55"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/dirty_glass/glass.properties"
+hash = "c7d92fc23873542697c4bc8248142d54e58629abcbb1a5adcaa9587a330e0c86"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/dirty_glass/glass_pane.properties"
+hash = "77e3facf2eb3f1ba1a70d219c7514df4f5816734577b8cff36d5a899516867dd"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/gray_framed_glass/0.png"
+hash = "ca3c12e95bb26979b04698c0084cb6a908f548f54d7686e346001b957d7e5d0d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/gray_framed_glass/1.png"
+hash = "c320be4a831c0127708f6ffbccdb186e735a9b844e56c1e497f013772a42eacf"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/gray_framed_glass/2.png"
+hash = "d994d3e1d3fd23a335c3093d550f908f2cc82d505f3ba4ec8217feb3d7f03655"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/gray_framed_glass/3.png"
+hash = "78d44a36f695a7676baf5ea9b977052c6a3cf9e398e75be6832f0627c20a9664"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/gray_framed_glass/4.png"
+hash = "6149f1fe2cb94fa7066b1d3fee5d16deda87e48d4f722ef3a9bbbec24212210e"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/gray_framed_glass/glass.properties"
+hash = "ff32daa01460abf1e5110b55596835b792e82d5554e801db9985036a4be942b3"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/gray_framed_glass/glass_pane.properties"
+hash = "7193c31a72e709f6a15db9f92e60f894069e90f0d8b8540da0df316cecbe7f4d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/green_framed_glass/0.png"
+hash = "9b30be25bb5ced7fefe98a0be5ad5db9258f16228583d12b96dbfcbc7169f06a"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/green_framed_glass/1.png"
+hash = "85205bde78f9b4deb5e00ec553fb37d953455b0712ba3ef645a036939f434297"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/green_framed_glass/2.png"
+hash = "655182433e44ff9d44bdae746deb3f1b9c0e2c0b2d9ec22681d7faf3be25c682"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/green_framed_glass/3.png"
+hash = "9d7b6253eca019a0caa4a93cecf5f99d00d3322754134752208260e25ab1eec8"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/green_framed_glass/4.png"
+hash = "b2c75dc8c3930bf58dab5af3e91da913768fd370635aa78600ef15bb66661971"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/green_framed_glass/glass.properties"
+hash = "b0330c240f3d14d843027ee7a97218d0f0812ec48d133c456585ec2b38ed4ab2"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/green_framed_glass/glass_pane.properties"
+hash = "50877a03a926003302b8a4fa4aa634f37d31e179ddeef2c4d66e10ff705c77d3"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/light_blue_framed_glass/0.png"
+hash = "e2b2ae4ea867e92b0299d68d6a61a2f573577525a8ae23debac1c858d3580ee3"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/light_blue_framed_glass/1.png"
+hash = "e0ae86da2725ea8497136a8b0921ec7cd3d4b0a2548ca51f1d86d3110191bfb0"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/light_blue_framed_glass/2.png"
+hash = "e424a33d697da854456373b204512a2659214b19c94df4f6e85a6b13b465fea4"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/light_blue_framed_glass/3.png"
+hash = "30d340f1b5d6bf92f2121be97003d90a17d07409ee82ebb4040c369509b14c76"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/light_blue_framed_glass/4.png"
+hash = "2a0adbdeea4672bbc4a391d8134aa0a6126da59641da712f839a85cbc14bd73d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/light_blue_framed_glass/glass.properties"
+hash = "3702a81255c7f8b57c811564b358bd2b5fab44769f0944f7055d5e8947ac34b4"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/light_blue_framed_glass/glass_pane.properties"
+hash = "3dc4d8c1ed74f7e29cf69345c1739a524f9e5ec5b21b15d85cb76d6d80e08751"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/light_gray_framed_glass/0.png"
+hash = "5aaa3a8f10bd12d25bd66d5c6a9bd37b0bb021de2648468afcf5415a2d5999dd"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/light_gray_framed_glass/1.png"
+hash = "ec8ccf69ed21e749f01bedebee3187a65791c1bcc65a75e7d98a7d9ac1280926"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/light_gray_framed_glass/2.png"
+hash = "278b3eb603e8ac0288ffe9b6a3487dde45baefbb9d9004d88ca6b8d286d84e94"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/light_gray_framed_glass/3.png"
+hash = "73a6628f3ea34f6563d363d0fe86505c366513306743248d4523ae7318f7ee97"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/light_gray_framed_glass/4.png"
+hash = "eeaa24a824cdcc160c74b2f52d94f8ff759aae245c837b66428aecbeffe0af8f"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/light_gray_framed_glass/glass.properties"
+hash = "6e2feb995e316b43398d811f944d52faecf6a0cc967510d8243f2224c92eb573"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/light_gray_framed_glass/glass_pane.properties"
+hash = "1e2df3eb580a2a358f6a43be5bfdd436912d0d7e15e6bb55440af69047efd91c"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/lime_framed_glass/0.png"
+hash = "cd3970b9ca247fad29ef41d4558929f26926ee24483aeb2b9841896606c115a6"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/lime_framed_glass/1.png"
+hash = "aa7c7f8db295fa67f35d07f60eda8e74cfbcab87b36e990932823d3339e2dd26"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/lime_framed_glass/2.png"
+hash = "ab7811b8c015a582366a93ee75096583435b2f0110b738280714a6376311c433"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/lime_framed_glass/3.png"
+hash = "8f92f10be7c509bad9f665d00d6df26842d3f4f810f8da8ab5ec62aacbab4880"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/lime_framed_glass/4.png"
+hash = "899a80c5f47d955baf2c184cfec9410f52fe6617015868d2e613c7f089a13b6c"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/lime_framed_glass/glass.properties"
+hash = "c09e9cd70f71c7ab053fc1298d33c5d58422017784a7ec1b87838e87471499d9"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/lime_framed_glass/glass_pane.properties"
+hash = "649122f877fb2739877b7227ee885d51bfbf282226fce035bd751295fb5f450c"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/magenta_framed_glass/0.png"
+hash = "1cd2ecbb1c53479417399299dc8298787ab049d03c49546d11510dcada5b62a5"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/magenta_framed_glass/1.png"
+hash = "7c1ab4868f9a376160e4219a381739f38c5802bec137b8aae0577aac649a1b69"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/magenta_framed_glass/2.png"
+hash = "c0c4a854b975b14905bc4398222628ef8c37262b133f4ad25ff24e3e704aee87"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/magenta_framed_glass/3.png"
+hash = "e0f3fea4d158a30014eb4b39b62e5accabc6d548afefc927e16027ab6e0df52f"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/magenta_framed_glass/4.png"
+hash = "42076e14be2c6048d581f13484901904c15a588d8afbb50f4018b7a85bf0f981"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/magenta_framed_glass/glass.properties"
+hash = "5c6976f979839165748b61cae97e5325dbe10c50736156099f9d63405b3ba69b"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/magenta_framed_glass/glass_pane.properties"
+hash = "d75cd14a071ea0eaab24f705948db3e7c50e6d1d9f8d70ca6119eeb12084e0fe"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/orange_framed_glass/0.png"
+hash = "2088adfc9f8bacd3ac0c892d03e305042b40e30179f84112895a2836285a1938"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/orange_framed_glass/1.png"
+hash = "749f26e7266f1017366d6b08a124537f92d251bab6ae8ba7567403d32b5f66b1"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/orange_framed_glass/2.png"
+hash = "3f7fcfb8a2158af0b4d6464c06f371c847799cdd091926ba50f96ce142c18e43"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/orange_framed_glass/3.png"
+hash = "c2e1f476af0b5ee055a8f8860ba1267851717693325ca7a1f9de1cf36eb4ffc0"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/orange_framed_glass/4.png"
+hash = "8d203f6b02f76f1e7146a28901a7a3be38db2d720795827d81b217ecb775f879"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/orange_framed_glass/glass.properties"
+hash = "df6918696211ab76f3e14b044e26a49e1276b379304b0c8c376fe947f45d9e26"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/orange_framed_glass/glass_pane.properties"
+hash = "62d41d588dea10d4385ca7690e6b5d5a069b61d8bff0004edaccc20c691fb7f1"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/pink_framed_glass/0.png"
+hash = "4405c2515bf649bc97c9b321823dd6f29ae9b9dabdbe8f279237d471860d6ce3"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/pink_framed_glass/1.png"
+hash = "390461342faeef76240d41885c70857c49c3b66f764e829e7b09343ed5dd0a7f"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/pink_framed_glass/2.png"
+hash = "61d7572edb3f1434e29519ffb4d55a0f0f247191b368cf0eeb7a344ffef63e20"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/pink_framed_glass/3.png"
+hash = "f6dc72550104ee370d363f326a164d63710d0bbe9602cf5c02465b7c3f2afe77"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/pink_framed_glass/4.png"
+hash = "0033a0da313352622e2e9a80391be5d676f807efcd6539c67ea8abdd6589fdb3"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/pink_framed_glass/glass.properties"
+hash = "25c3a2697ee03e30d602ab252af2c846dfcea7f34ef8c065bec32892bd2354e6"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/pink_framed_glass/glass_pane.properties"
+hash = "bc9e08a2b1d88ed61b6a15700f10f7098ef4327a86cbf432003f27adc04b8c8b"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/purple_framed_glass/0.png"
+hash = "2e1509a5fa344ab4225ead32a9fa4fc49c28ea4688f563661fbcc793fe64e220"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/purple_framed_glass/1.png"
+hash = "6a1d3a7604911fb658fe5ecd32fa8e2b9c5219473b24570be828ea44b3665d6b"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/purple_framed_glass/2.png"
+hash = "bef60c9b556cd6b6e60e7fe3bf17a8132b5f1d60fb50f7ed429b4db3c58329e6"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/purple_framed_glass/3.png"
+hash = "518a7714adc351665598948c6e920ea67cb063691250dce0eac9ae49e44e451f"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/purple_framed_glass/4.png"
+hash = "7bc959c95728b02c4ce1334b0f3df5e9498ca05dd513c98567e28f1c248a7b50"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/purple_framed_glass/glass.properties"
+hash = "da41086b2fb40b71e665c9a968e6786515abcb2828bd664934275e4c5d8e3f33"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/purple_framed_glass/glass_pane.properties"
+hash = "851f70720ec9df0b68a694aafdd5ac76cc5dc5f3152db608cdbcb51f52401a2d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/red_framed_glass/0.png"
+hash = "83f7a681e684c1f2760cdad3b3d9de589cd711acea5f24b9f4bc9a74206cb9a0"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/red_framed_glass/1.png"
+hash = "81343ee393fa209ad2e899982d1d89720475f6e449731260074b0d80ffbf2692"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/red_framed_glass/2.png"
+hash = "1aabf4d42abc976bc2635c4bde5acfd7ff56814bc93cce80540cba58ab92feb3"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/red_framed_glass/3.png"
+hash = "9f78a53b3a0aad8c9d425b4bd9fae11ad4468e4a3bfdab9d84652fe6a0eb0e85"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/red_framed_glass/4.png"
+hash = "6bff237d094ce1a4eb65bb4b4f4e76fdd73a03c9f9165f38ae2c544b7a6cb757"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/red_framed_glass/glass.properties"
+hash = "8b2dbf23a662758181f66174cc73e09b6eb642795420ad830a2aee69f2eff2da"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/red_framed_glass/glass_pane.properties"
+hash = "f77e7a88f4c97e7ef54fdd2c17ecc22cb33eff98f8bee4a3d52a9c12a08df180"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/white_framed_glass/0.png"
+hash = "c44bd1a5988ac00f843b33b8e28c8200eb610f3810071e638006b217f0da1cf3"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/white_framed_glass/1.png"
+hash = "75ca254c24e6c3943498672ddd43d394ab9c95416f3a9b2e33fd8509523dc952"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/white_framed_glass/2.png"
+hash = "d1fb12cfb514546ccee2e79a62cd567a3cf82bec5a33ed3dc424d63799894b02"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/white_framed_glass/3.png"
+hash = "8ed60ae2c9fd259da05e07ce90471d0c4ac521f888da7985a0b26d76fac59c01"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/white_framed_glass/4.png"
+hash = "b8aac8662e7a3c8414809345a9bdc7cc49cfa240fb3e587be347d23e5c64868c"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/white_framed_glass/glass.properties"
+hash = "73b9dfbe47735b7829421bebea6cbf3d1f7e1ff8960ee52deb5420c1ff04544d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/white_framed_glass/glass_pane.properties"
+hash = "a7392e3a45a5fc65a8c6f17b61ec58d1eb1a882d77863015834dd0f104ca28f8"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/yellow_framed_glass/0.png"
+hash = "28c1e387c947d4a45fe588c2d86afceb3c976e1a5b4d0ad5a8c91b27d1cda8c3"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/yellow_framed_glass/1.png"
+hash = "e03ce3835363bec158cf3e7ac2b33a7f8e740933ecc60a3e79ac9111baa1b25d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/yellow_framed_glass/2.png"
+hash = "1e214f1842cf637488262ad2dc0dfeb3cf9a1f010273496349145152ac36576f"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/yellow_framed_glass/3.png"
+hash = "cd21015314f11f157ef6f13acad54e194a35cfaf55ec9ad12725e676a42d7e0d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/yellow_framed_glass/4.png"
+hash = "afccbb9b90f00427a0722df48ba5deba13f267fcf19c9cd3c3b81c406577e545"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/yellow_framed_glass/glass.properties"
+hash = "eb37bf1918d524e89737b84e440a87067dc4c481069dee55fa9c413a68fa6d9b"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/quark/yellow_framed_glass/glass_pane.properties"
+hash = "eef7031b39b88cd4732f50bfcdb44875a628dfbf45ddf12f4cbd1628dff691ba"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/alt_glasswood_1.json"

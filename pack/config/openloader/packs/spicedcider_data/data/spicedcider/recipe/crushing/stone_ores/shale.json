@@ -1,0 +1,19 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "quark:shale"
+    }
+  ],
+  "processing_time": 250,
+  "results": [
+    {
+      "id": "create:crushed_raw_silver",
+      "chance": 0.2
+    },
+    {
+      "id": "caverns_and_chasms:silver_nugget",
+      "chance": 0.2
+    }
+  ]
+}

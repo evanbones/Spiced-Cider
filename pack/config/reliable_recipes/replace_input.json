@@ -64,6 +64,14 @@
   {
     "action": "replace_input",
     "filter": {
+      "id": "minecraft:compass"
+    },
+    "target": "minecraft:redstone",
+    "replacement": "spelunkery:cinnabar"
+  },
+  {
+    "action": "replace_input",
+    "filter": {
       "id": "/incubation:fried_egg.*/"
     },
     "target": "#c:eggs",

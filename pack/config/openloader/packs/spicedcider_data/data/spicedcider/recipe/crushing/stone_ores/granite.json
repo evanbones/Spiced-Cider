@@ -1,0 +1,19 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "minecraft:granite"
+    }
+  ],
+  "processing_time": 250,
+  "results": [
+    {
+      "id": "create:crushed_raw_tin",
+      "chance": 0.3
+    },
+    {
+      "id": "caverns_and_chasms:tin_nugget",
+      "chance": 0.3
+    }
+  ]
+}

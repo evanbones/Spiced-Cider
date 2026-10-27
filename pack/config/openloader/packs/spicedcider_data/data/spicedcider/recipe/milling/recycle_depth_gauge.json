@@ -1,0 +1,25 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "caverns_and_chasms"
+    }
+  ],
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "item": "caverns_and_chasms:depth_gauge"
+    }
+  ],
+  "processing_time": 200,
+  "results": [
+    {
+      "id": "caverns_and_chasms:silver_nugget",
+      "count": 8
+    },
+    {
+      "id": "spelunkery:cinnabar_shard",
+      "count": 2
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "minecraft:cinnabar"
+    }
+  ],
+  "processing_time": 250,
+  "results": [
+    {
+      "id": "spelunkery:rough_cinnabar_shard",
+      "chance": 0.4
+    },
+    {
+      "id": "minecraft:redstone",
+      "chance": 0.4
+    }
+  ]
+}

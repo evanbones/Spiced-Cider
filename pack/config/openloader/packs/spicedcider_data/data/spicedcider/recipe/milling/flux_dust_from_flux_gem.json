@@ -1,0 +1,19 @@
+{
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "item": "spelunkery:cinnabar"
+    }
+  ],
+  "processing_time": 150,
+  "results": [
+    {
+      "id": "minecraft:redstone",
+      "count": 2
+    },
+    {
+      "id": "minecraft:redstone",
+      "chance": 0.25
+    }
+  ]
+}
