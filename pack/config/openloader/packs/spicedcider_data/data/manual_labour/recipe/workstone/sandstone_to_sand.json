@@ -1,0 +1,25 @@
+{
+  "type": "manual_labour:workstone",
+  "ingredients": [
+    [
+      {
+        "item": "minecraft:sandstone"
+      },
+      {
+        "item": "minecraft:cut_sandstone"
+      },
+      {
+        "item": "minecraft:smooth_sandstone"
+      }
+    ],
+    {
+      "tag": "manual_labour:hammers"
+    }
+  ],
+  "results": [
+    {
+      "id": "minecraft:sand",
+      "count": 2
+    }
+  ]
+}

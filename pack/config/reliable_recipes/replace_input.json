@@ -248,5 +248,69 @@
     },
     "target": "minecraft:iron_ingot",
     "replacement": "#c:ingots/lead"
+  },
+  {
+    "action": "replace_input",
+    "filter": {
+      "id": "nomansland:wood/pine/cutting/pine_trapdoor"
+    },
+    "target": "nomansland:pine_hanging_sign",
+    "replacement": "nomansland:pine_trapdoor"
+  },
+  {
+    "action": "replace_input",
+    "filter": {
+      "id": "nomansland:wood/maple/cutting/maple_trapdoor"
+    },
+    "target": "nomansland:maple_hanging_sign",
+    "replacement": "nomansland:maple_trapdoor"
+  },
+  {
+    "action": "replace_input",
+    "filter": {
+      "id": "nomansland:wood/walnut/cutting/walnut_trapdoor"
+    },
+    "target": "nomansland:walnut_hanging_sign",
+    "replacement": "nomansland:walnut_trapdoor"
+  },
+  {
+    "action": "replace_input",
+    "filter": {
+      "id": "nomansland:wood/willow/cutting/willow_trapdoor"
+    },
+    "target": "nomansland:willow_hanging_sign",
+    "replacement": "nomansland:willow_trapdoor"
+  },
+  {
+    "action": "replace_input",
+    "filter": {
+      "id": "nomansland:wood/walnut/cutting/walnut_sign"
+    },
+    "target": "nomansland:walnut_door",
+    "replacement": "nomansland:walnut_sign"
+  },
+  {
+    "action": "replace_input",
+    "filter": {
+      "id": "nomansland:wood/willow/cutting/willow_sign"
+    },
+    "target": "nomansland:willow_door",
+    "replacement": "nomansland:willow_sign"
+  },
+  {
+    "action": "replace_input",
+    "filter": {
+      "id": "valhelsia_structures:stripped_mangrove_post"
+    },
+    "target": "minecraft:mangrove_log",
+    "replacement": "minecraft:stripped_mangrove_log"
+  },
+  {
+    "action": "replace_input",
+    "filter": {
+      "id": "culturaldelights:buttered_toast"
+    },
+    "target": "#c:foods/bread",
+    "replacement": "#spicedcider:toastable_bread"
   }
 ]

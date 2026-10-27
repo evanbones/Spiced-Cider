@@ -7,6 +7,7 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:map",
+          "weight": 3,
           "functions": [
             {
               "function": "minecraft:exploration_map",
@@ -20,6 +21,174 @@
               "target": "item_name",
               "name": {
                 "translate": "filled_map.buried_treasure"
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:map",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:exploration_map",
+              "destination": "minecraft:on_ocean_explorer_maps",
+              "decoration": "minecraft:monument",
+              "zoom": 1,
+              "skip_existing_chunks": false
+            },
+            {
+              "function": "minecraft:set_name",
+              "target": "item_name",
+              "name": {
+                "translate": "filled_map.monument"
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:map",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "minecraft:exploration_map",
+              "destination": "minecraft:on_ocean_ruin_warm_maps",
+              "decoration": "minecraft:ocean_ruin_warm",
+              "zoom": 1,
+              "skip_existing_chunks": false
+            },
+            {
+              "function": "minecraft:set_name",
+              "target": "item_name",
+              "name": {
+                "translate": "filled_map.spicedcider.ocean_ruin_warm"
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:map",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:exploration_map",
+              "destination": "spicedcider:on_jungle_temple_maps",
+              "decoration": "minecraft:jungle_temple",
+              "zoom": 1,
+              "skip_existing_chunks": false
+            },
+            {
+              "function": "minecraft:set_name",
+              "target": "item_name",
+              "name": {
+                "translate": "filled_map.explorer_jungle"
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:map",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:exploration_map",
+              "destination": "spicedcider:on_swamp_hut_maps",
+              "decoration": "minecraft:swamp_hut",
+              "zoom": 1,
+              "skip_existing_chunks": false
+            },
+            {
+              "function": "minecraft:set_name",
+              "target": "item_name",
+              "name": {
+                "translate": "filled_map.explorer_swamp"
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:map",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:exploration_map",
+              "destination": "minecraft:on_desert_pyramid_maps",
+              "decoration": "minecraft:desert_pyramid",
+              "zoom": 1,
+              "skip_existing_chunks": false
+            },
+            {
+              "function": "minecraft:set_name",
+              "target": "item_name",
+              "name": {
+                "translate": "filled_map.spicedcider.desert_pyramid"
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:map",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:exploration_map",
+              "destination": "minecraft:on_ancient_city_maps",
+              "decoration": "minecraft:ancient_city",
+              "zoom": 1,
+              "skip_existing_chunks": false
+            },
+            {
+              "function": "minecraft:set_name",
+              "target": "item_name",
+              "name": {
+                "translate": "filled_map.spicedcider.ancient_city"
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:map",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:exploration_map",
+              "destination": "spicedcider:on_mineshaft_maps",
+              "decoration": "minecraft:mineshaft",
+              "zoom": 1,
+              "skip_existing_chunks": false
+            },
+            {
+              "function": "minecraft:set_name",
+              "target": "item_name",
+              "name": {
+                "translate": "filled_map.spicedcider.mineshaft"
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:map",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:exploration_map",
+              "destination": "spicedcider:on_abandoned_camp_maps",
+              "decoration": "minecraft:abandoned_camp",
+              "zoom": 1,
+              "skip_existing_chunks": false
+            },
+            {
+              "function": "minecraft:set_name",
+              "target": "item_name",
+              "name": {
+                "translate": "filled_map.spicedcider.abandoned_camp"
               }
             }
           ]

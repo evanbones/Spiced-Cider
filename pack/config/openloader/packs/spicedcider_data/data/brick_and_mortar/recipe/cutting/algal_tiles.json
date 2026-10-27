@@ -1,0 +1,25 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "brick_and_mortar:algal_tiles"
+    }
+  ],
+  "tool": [
+    {
+      "type": "farmersdelight:item_ability",
+      "action": "pickaxe_dig"
+    },
+    {
+      "tag": "minecraft:pickaxes"
+    }
+  ],
+  "result": [
+    {
+      "item": {
+        "id": "architects_palette:algal_brick",
+        "count": 1
+      }
+    }
+  ]
+}
