@@ -53,6 +53,25 @@ public class ModItemTagsProvider extends ItemTagsProvider {
         this.tag(ItemTags.FLOWERS).add(ModItems.CACAO_LEAVES.get());
         this.tag(Tags.Items.STRIPPED_LOGS).add(ModItems.STRIPPED_CACAO_LOG.get());
         this.tag(Tags.Items.STRIPPED_WOODS).add(ModItems.STRIPPED_CACAO_WOOD.get());
+        this.tag(ItemTags.LEAVES).add(ModItems.FLOWERING_CACAO_LEAVES.get());
+        this.tag(ItemTags.FLOWERS).add(ModItems.FLOWERING_CACAO_LEAVES.get());
+
+        this.tag(ItemTags.SAPLINGS).add(ModItems.PEAR_SAPLING.get());
+        this.tag(ItemTags.LEAVES).add(ModItems.PEAR_LEAVES.get(), ModItems.FLOWERING_PEAR_LEAVES.get());
+        this.tag(ItemTags.FLOWERS).add(ModItems.FLOWERING_PEAR_LEAVES.get());
+        this.tag(ModTags.Items.PEAR_LOGS).add(ModItems.PEAR_LOG.get(), ModItems.PEAR_WOOD.get(), ModItems.STRIPPED_PEAR_LOG.get(), ModItems.STRIPPED_PEAR_WOOD.get());
+        this.tag(ItemTags.LOGS_THAT_BURN).addTag(ModTags.Items.PEAR_LOGS);
+        this.tag(ItemTags.create(ResourceLocation.fromNamespaceAndPath("bountifulfares", "fruit_logs"))).addTag(ModTags.Items.PEAR_LOGS);
+        this.tag(Tags.Items.STRIPPED_LOGS).add(ModItems.STRIPPED_PEAR_LOG.get());
+        this.tag(Tags.Items.STRIPPED_WOODS).add(ModItems.STRIPPED_PEAR_WOOD.get());
+
+        this.tag(ItemTags.LEAVES).add(ModItems.FLOWERING_AVOCADO_LEAVES.get());
+        this.tag(ItemTags.FLOWERS).add(ModItems.FLOWERING_AVOCADO_LEAVES.get());
+        this.tag(ModTags.Items.AVOCADO_LOGS).add(ModItems.AVOCADO_LOG.get(), ModItems.AVOCADO_WOOD.get(), ModItems.STRIPPED_AVOCADO_LOG.get(), ModItems.STRIPPED_AVOCADO_WOOD.get());
+        this.tag(ItemTags.LOGS_THAT_BURN).addTag(ModTags.Items.AVOCADO_LOGS);
+        this.tag(ItemTags.create(ResourceLocation.fromNamespaceAndPath("bountifulfares", "fruit_logs"))).addTag(ModTags.Items.AVOCADO_LOGS);
+        this.tag(Tags.Items.STRIPPED_LOGS).add(ModItems.STRIPPED_AVOCADO_LOG.get());
+        this.tag(Tags.Items.STRIPPED_WOODS).add(ModItems.STRIPPED_AVOCADO_WOOD.get());
         this.tag(ItemTags.SAND).add(ModItems.DEEPSILT.get());
 
         this.tag(ItemTags.create(ResourceLocation.fromNamespaceAndPath("tide", "fishing_rods")))

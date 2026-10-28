@@ -5,9 +5,10 @@ import com.evandev.spicedcider.compat.architectspalette.ArchitectsPaletteCompat;
 import com.evandev.spicedcider.compat.infernalexp.InfernalExpansionCompat;
 import com.evandev.spicedcider.content.block.AlgalBlock;
 import com.evandev.spicedcider.content.block.BuddingPrismarineBlock;
-import com.evandev.spicedcider.content.block.CacaoLeavesBlock;
-import com.evandev.spicedcider.content.block.CacaoLogBlock;
 import com.evandev.spicedcider.content.block.CacaoPodBlock;
+import com.evandev.spicedcider.content.block.FruitLeavesBlock;
+import com.evandev.spicedcider.content.block.FruitLogBlock;
+import com.evandev.spicedcider.content.block.HangingFruitBlock;
 import com.evandev.spicedcider.content.block.LatexCauldronBlock;
 import com.evandev.spicedcider.content.block.PrismarineClusterBlock;
 import com.evandev.spicedcider.content.block.TallUnderwaterBrambleBlock;
@@ -15,12 +16,14 @@ import com.evandev.spicedcider.content.block.TemporaryCobwebBlock;
 import com.evandev.spicedcider.content.block.TubewormBlock;
 import com.evandev.spicedcider.content.block.UnderwaterBrambleBlock;
 import com.evandev.spicedcider.content.block.VentBlock;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.ColorRGBA;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.CeilingHangingSignBlock;
 import net.minecraft.world.level.block.ColoredFallingBlock;
 import net.minecraft.world.level.block.FlowerPotBlock;
+import net.minecraft.world.level.block.LeavesBlock;
 import net.minecraft.world.level.block.LiquidBlock;
 import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.SaplingBlock;
@@ -83,15 +86,17 @@ public class ModBlocks {
             () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, GLOAMWOOD_SAPLING, BlockBehaviour.Properties.ofFullCopy(Blocks.POTTED_OAK_SAPLING)));
 
     public static final DeferredBlock<Block> STRIPPED_CACAO_LOG = BLOCKS.register("stripped_cacao_log",
-            () -> new CacaoLogBlock(() -> null, cacaoLogProperties(MapColor.COLOR_PINK)));
+            () -> new FruitLogBlock(() -> null, fruitLogProperties(MapColor.COLOR_PINK)));
     public static final DeferredBlock<Block> STRIPPED_CACAO_WOOD = BLOCKS.register("stripped_cacao_wood",
-            () -> new CacaoLogBlock(() -> null, cacaoLogProperties(MapColor.COLOR_PINK)));
+            () -> new FruitLogBlock(() -> null, fruitLogProperties(MapColor.COLOR_PINK)));
     public static final DeferredBlock<Block> CACAO_LOG = BLOCKS.register("cacao_log",
-            () -> new CacaoLogBlock(STRIPPED_CACAO_LOG, cacaoLogProperties(MapColor.TERRACOTTA_BROWN)));
+            () -> new FruitLogBlock(STRIPPED_CACAO_LOG, fruitLogProperties(MapColor.TERRACOTTA_BROWN)));
     public static final DeferredBlock<Block> CACAO_WOOD = BLOCKS.register("cacao_wood",
-            () -> new CacaoLogBlock(STRIPPED_CACAO_WOOD, cacaoLogProperties(MapColor.TERRACOTTA_BROWN)));
+            () -> new FruitLogBlock(STRIPPED_CACAO_WOOD, fruitLogProperties(MapColor.TERRACOTTA_BROWN)));
     public static final DeferredBlock<Block> CACAO_LEAVES = BLOCKS.register("cacao_leaves",
-            () -> new CacaoLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.JUNGLE_LEAVES)));
+            () -> new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.JUNGLE_LEAVES)));
+    public static final DeferredBlock<Block> FLOWERING_CACAO_LEAVES = BLOCKS.register("flowering_cacao_leaves",
+            () -> new FruitLeavesBlock(ModBlocks.CACAO_POD, BlockBehaviour.Properties.ofFullCopy(Blocks.JUNGLE_LEAVES)));
     public static final DeferredBlock<Block> CACAO_POD = BLOCKS.register("cacao_pod",
             () -> new CacaoPodBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COCOA)));
     public static final DeferredBlock<SaplingBlock> CACAO_SAPLING = BLOCKS.register("cacao_sapling",
@@ -99,6 +104,40 @@ public class ModBlocks {
                     BlockBehaviour.Properties.ofFullCopy(Blocks.JUNGLE_SAPLING)));
     public static final DeferredBlock<FlowerPotBlock> POTTED_CACAO_SAPLING = BLOCKS.register("potted_cacao_sapling",
             () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, CACAO_SAPLING, BlockBehaviour.Properties.ofFullCopy(Blocks.POTTED_JUNGLE_SAPLING)));
+
+    public static final DeferredBlock<Block> STRIPPED_PEAR_LOG = BLOCKS.register("stripped_pear_log",
+            () -> new FruitLogBlock(() -> null, fruitLogProperties(MapColor.TERRACOTTA_PINK)));
+    public static final DeferredBlock<Block> STRIPPED_PEAR_WOOD = BLOCKS.register("stripped_pear_wood",
+            () -> new FruitLogBlock(() -> null, fruitLogProperties(MapColor.TERRACOTTA_PINK)));
+    public static final DeferredBlock<Block> PEAR_LOG = BLOCKS.register("pear_log",
+            () -> new FruitLogBlock(STRIPPED_PEAR_LOG, fruitLogProperties(MapColor.TERRACOTTA_GRAY)));
+    public static final DeferredBlock<Block> PEAR_WOOD = BLOCKS.register("pear_wood",
+            () -> new FruitLogBlock(STRIPPED_PEAR_WOOD, fruitLogProperties(MapColor.TERRACOTTA_GRAY)));
+    public static final DeferredBlock<Block> PEAR_LEAVES = BLOCKS.register("pear_leaves",
+            () -> new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)));
+    public static final DeferredBlock<Block> FLOWERING_PEAR_LEAVES = BLOCKS.register("flowering_pear_leaves",
+            () -> new FruitLeavesBlock(ModBlocks.HANGING_PEAR, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)));
+    public static final DeferredBlock<Block> HANGING_PEAR = BLOCKS.register("hanging_pear",
+            () -> new HangingFruitBlock(ModTags.Blocks.PEAR_LEAVES, ResourceLocation.fromNamespaceAndPath("nomansland", "pear"), BlockBehaviour.Properties.ofFullCopy(Blocks.SWEET_BERRY_BUSH).mapColor(MapColor.PLANT).sound(SoundType.AZALEA)));
+    public static final DeferredBlock<SaplingBlock> PEAR_SAPLING = BLOCKS.register("pear_sapling",
+            () -> new SaplingBlock(new TreeGrower("pear", Optional.empty(), Optional.of(ModTreeFeatures.PEAR), Optional.empty()),
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
+    public static final DeferredBlock<FlowerPotBlock> POTTED_PEAR_SAPLING = BLOCKS.register("potted_pear_sapling",
+            () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, PEAR_SAPLING, BlockBehaviour.Properties.ofFullCopy(Blocks.POTTED_OAK_SAPLING)));
+
+    public static final DeferredBlock<Block> STRIPPED_AVOCADO_LOG = BLOCKS.register("stripped_avocado_log",
+            () -> new FruitLogBlock(() -> null, fruitLogProperties(MapColor.TERRACOTTA_ORANGE)));
+    public static final DeferredBlock<Block> STRIPPED_AVOCADO_WOOD = BLOCKS.register("stripped_avocado_wood",
+            () -> new FruitLogBlock(() -> null, fruitLogProperties(MapColor.TERRACOTTA_ORANGE)));
+    public static final DeferredBlock<Block> AVOCADO_LOG = BLOCKS.register("avocado_log",
+            () -> new FruitLogBlock(STRIPPED_AVOCADO_LOG, fruitLogProperties(MapColor.PODZOL)));
+    public static final DeferredBlock<Block> AVOCADO_WOOD = BLOCKS.register("avocado_wood",
+            () -> new FruitLogBlock(STRIPPED_AVOCADO_WOOD, fruitLogProperties(MapColor.PODZOL)));
+    public static final DeferredBlock<Block> FLOWERING_AVOCADO_LEAVES = BLOCKS.register("flowering_avocado_leaves",
+            () -> new FruitLeavesBlock(ModBlocks.HANGING_AVOCADO, BlockBehaviour.Properties.ofFullCopy(Blocks.JUNGLE_LEAVES)));
+    public static final DeferredBlock<Block> HANGING_AVOCADO = BLOCKS.register("hanging_avocado",
+            () -> new HangingFruitBlock(ModTags.Blocks.AVOCADO_LEAVES, ResourceLocation.fromNamespaceAndPath("culturaldelights", "avocado"),
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.SWEET_BERRY_BUSH).mapColor(MapColor.PLANT).sound(SoundType.AZALEA)));
 
     public static final DeferredBlock<Block> DEEPSILT = BLOCKS.register("deepsilt",
             () -> new ColoredFallingBlock(new ColorRGBA(0x3a3a3a), BlockBehaviour.Properties.ofFullCopy(Blocks.SAND).mapColor(MapColor.COLOR_BLACK).sound(ModSounds.SILT)));
@@ -195,7 +234,7 @@ public class ModBlocks {
             BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WALL_HANGING_SIGN).mapColor(MapColor.COLOR_PURPLE).dropsLike(TWISTED_HANGING_SIGN.get())))
             : null;
 
-    private static BlockBehaviour.Properties cacaoLogProperties(MapColor color) {
+    private static BlockBehaviour.Properties fruitLogProperties(MapColor color) {
         return BlockBehaviour.Properties.ofFullCopy(Blocks.JUNGLE_LOG).mapColor(color).noOcclusion().isSuffocating((state, level, pos) -> false)
                 .isViewBlocking((state, level, pos) -> false);
     }

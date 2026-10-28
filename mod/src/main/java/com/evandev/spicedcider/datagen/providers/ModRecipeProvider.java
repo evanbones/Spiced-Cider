@@ -102,6 +102,10 @@ public class ModRecipeProvider extends RecipeProvider {
 
         woodFromLogs(output, ModBlocks.CACAO_WOOD.get(), ModBlocks.CACAO_LOG.get());
         woodFromLogs(output, ModBlocks.STRIPPED_CACAO_WOOD.get(), ModBlocks.STRIPPED_CACAO_LOG.get());
+        woodFromLogs(output, ModBlocks.PEAR_WOOD.get(), ModBlocks.PEAR_LOG.get());
+        woodFromLogs(output, ModBlocks.STRIPPED_PEAR_WOOD.get(), ModBlocks.STRIPPED_PEAR_LOG.get());
+        woodFromLogs(output, ModBlocks.AVOCADO_WOOD.get(), ModBlocks.AVOCADO_LOG.get());
+        woodFromLogs(output, ModBlocks.STRIPPED_AVOCADO_WOOD.get(), ModBlocks.STRIPPED_AVOCADO_LOG.get());
 
         Block deepsilt = ModBlocks.DEEPSILT.get();
         Block driedDeepsilt = ModBlocks.DRIED_DEEPSILT.get();

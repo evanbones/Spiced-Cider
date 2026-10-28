@@ -43,6 +43,12 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 .texture("plant", cacaoSapling).renderType("cutout"));
         itemModels().withExistingParent("cacao_sapling", mcLoc("item/generated")).texture("layer0", cacaoSapling);
 
+        ResourceLocation pearSapling = modLoc("block/pear_sapling");
+        simpleBlock(ModBlocks.PEAR_SAPLING.get(), models().cross("pear_sapling", pearSapling).renderType("cutout"));
+        simpleBlock(ModBlocks.POTTED_PEAR_SAPLING.get(), models().withExistingParent("potted_pear_sapling", mcLoc("block/flower_pot_cross"))
+                .texture("plant", pearSapling).renderType("cutout"));
+        itemModels().withExistingParent("pear_sapling", mcLoc("item/generated")).texture("layer0", pearSapling);
+
         simpleBlockWithItem(ModBlocks.DEEPSILT.get(), cubeAll(ModBlocks.DEEPSILT.get()));
         simpleBlockWithItem(ModBlocks.POLISHED_DRIED_DEEPSILT.get(), cubeAll(ModBlocks.POLISHED_DRIED_DEEPSILT.get()));
         for (var block : List.of(ModBlocks.DRIED_DEEPSILT, ModBlocks.CUT_DRIED_DEEPSILT, ModBlocks.CHISELED_DRIED_DEEPSILT)) {

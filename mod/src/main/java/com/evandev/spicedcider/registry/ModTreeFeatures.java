@@ -57,6 +57,7 @@ public class ModTreeFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> GLOAMWOOD = key("gloamwood");
     public static final ResourceKey<ConfiguredFeature<?, ?>> GLOOMWOOD = key("gloomwood");
     public static final ResourceKey<ConfiguredFeature<?, ?>> CACAO = key("cacao");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> PEAR = key("pear");
 
     private static ResourceKey<ConfiguredFeature<?, ?>> key(String name) {
         return ResourceKey.create(Registries.CONFIGURED_FEATURE, ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, name));

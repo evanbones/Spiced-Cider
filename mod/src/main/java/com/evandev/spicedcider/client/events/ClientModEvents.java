@@ -15,7 +15,7 @@ import com.evandev.spicedcider.client.renderer.balloon.BalloonRenderer;
 import com.evandev.spicedcider.client.models.sputter.SputterArrowfulModel;
 import com.evandev.spicedcider.client.models.sputter.SputterModel;
 import com.evandev.spicedcider.client.renderer.sputter.SputterRenderer;
-import com.evandev.spicedcider.content.block.CacaoLogBlock;
+import com.evandev.spicedcider.content.block.FruitLogBlock;
 import com.evandev.spicedcider.content.item.PocketJukeboxTooltip;
 import com.evandev.spicedcider.client.renderer.projectiles.CobwebProjectileRenderer;
 import com.evandev.spicedcider.client.renderer.projectiles.GrapplingHookRenderer;
@@ -125,10 +125,12 @@ public class ClientModEvents {
     @SubscribeEvent
     public static void registerBlockColors(RegisterColorHandlersEvent.Block event) {
         event.register((state, level, pos, tintIndex) -> tintIndex == 0 ? tubewormColor(state.getValue(TubewormBlock.COLOR)) : -1, ModBlocks.TUBEWORM.get());
-        event.register((state, level, pos, tintIndex) -> level != null && pos != null ? BiomeColors.getAverageFoliageColor(level, pos) : FoliageColor.getDefaultColor(), ModBlocks.CACAO_LEAVES.get());
-        event.register((state, level, pos, tintIndex) -> !state.getValue(CacaoLogBlock.LEAFY) ? -1
+        event.register((state, level, pos, tintIndex) -> level != null && pos != null ? BiomeColors.getAverageFoliageColor(level, pos) : FoliageColor.getDefaultColor(),
+                ModBlocks.CACAO_LEAVES.get(), ModBlocks.FLOWERING_CACAO_LEAVES.get(), ModBlocks.PEAR_LEAVES.get(), ModBlocks.FLOWERING_PEAR_LEAVES.get());
+        event.register((state, level, pos, tintIndex) -> !state.getValue(FruitLogBlock.LEAFY) ? -1
                         : level != null && pos != null ? BiomeColors.getAverageFoliageColor(level, pos) : FoliageColor.getDefaultColor(),
-                ModBlocks.CACAO_LOG.get(), ModBlocks.CACAO_WOOD.get(), ModBlocks.STRIPPED_CACAO_LOG.get(), ModBlocks.STRIPPED_CACAO_WOOD.get());
+                ModBlocks.CACAO_LOG.get(), ModBlocks.CACAO_WOOD.get(), ModBlocks.STRIPPED_CACAO_LOG.get(), ModBlocks.STRIPPED_CACAO_WOOD.get(),
+                ModBlocks.PEAR_LOG.get(), ModBlocks.PEAR_WOOD.get(), ModBlocks.STRIPPED_PEAR_LOG.get(), ModBlocks.STRIPPED_PEAR_WOOD.get());
     }
 
     private static int tubewormColor(DyeColor color) {
@@ -158,7 +160,8 @@ public class ClientModEvents {
         if (livingBubbleEgg != Items.AIR) {
             event.register((stack, tintIndex) -> tintIndex == 0 ? 0xFFEFCFF2 : 0xFFC09FC3, livingBubbleEgg);
         }
-        event.register((stack, tintIndex) -> tintIndex == 0 ? FoliageColor.getDefaultColor() : -1, ModItems.CACAO_LEAVES.get());
+        event.register((stack, tintIndex) -> tintIndex == 0 ? FoliageColor.getDefaultColor() : -1, ModItems.CACAO_LEAVES.get(), ModItems.FLOWERING_CACAO_LEAVES.get(),
+                ModItems.PEAR_LEAVES.get(), ModItems.FLOWERING_PEAR_LEAVES.get());
     }
 
     @SubscribeEvent
@@ -190,8 +193,12 @@ public class ClientModEvents {
         PonderCompat.register();
         event.enqueueWork(() -> {
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.TEMPORARY_COBWEB.get(), RenderType.cutout());
-            Stream.of(ModBlocks.CACAO_SAPLING, ModBlocks.POTTED_CACAO_SAPLING, ModBlocks.CACAO_POD).forEach(block -> ItemBlockRenderTypes.setRenderLayer(block.get(), RenderType.cutout()));
-            Stream.of(ModBlocks.CACAO_LEAVES, ModBlocks.CACAO_LOG, ModBlocks.CACAO_WOOD, ModBlocks.STRIPPED_CACAO_LOG, ModBlocks.STRIPPED_CACAO_WOOD)
+            Stream.of(ModBlocks.CACAO_SAPLING, ModBlocks.POTTED_CACAO_SAPLING, ModBlocks.CACAO_POD, ModBlocks.PEAR_SAPLING, ModBlocks.POTTED_PEAR_SAPLING,
+                    ModBlocks.HANGING_PEAR, ModBlocks.HANGING_AVOCADO).forEach(block -> ItemBlockRenderTypes.setRenderLayer(block.get(), RenderType.cutout()));
+            Stream.of(ModBlocks.CACAO_LEAVES, ModBlocks.FLOWERING_CACAO_LEAVES, ModBlocks.CACAO_LOG, ModBlocks.CACAO_WOOD, ModBlocks.STRIPPED_CACAO_LOG,
+                            ModBlocks.STRIPPED_CACAO_WOOD, ModBlocks.PEAR_LEAVES, ModBlocks.FLOWERING_PEAR_LEAVES, ModBlocks.PEAR_LOG, ModBlocks.PEAR_WOOD,
+                            ModBlocks.STRIPPED_PEAR_LOG, ModBlocks.STRIPPED_PEAR_WOOD, ModBlocks.FLOWERING_AVOCADO_LEAVES, ModBlocks.AVOCADO_LOG,
+                            ModBlocks.AVOCADO_WOOD, ModBlocks.STRIPPED_AVOCADO_LOG, ModBlocks.STRIPPED_AVOCADO_WOOD)
                     .forEach(block -> ItemBlockRenderTypes.setRenderLayer(block.get(), RenderType.cutoutMipped()));
             Stream.of(ModBlocks.SMALL_PRISMARINE_BUD, ModBlocks.MEDIUM_PRISMARINE_BUD, ModBlocks.LARGE_PRISMARINE_BUD, ModBlocks.PRISMARINE_CLUSTER,
                     ModBlocks.SULFIDE_VENT, ModBlocks.CALCITE_VENT, ModBlocks.TUBEWORM, ModBlocks.CHROMATIC_BRAMBLE, ModBlocks.TALL_CHROMATIC_BRAMBLE,

@@ -32,8 +32,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Supplier;
 
-public class CacaoLogBlock extends RotatedPillarBlock implements SimpleWaterloggedBlock {
-    public static final MapCodec<CacaoLogBlock> CODEC = simpleCodec(properties -> new CacaoLogBlock(() -> null, properties));
+public class FruitLogBlock extends RotatedPillarBlock implements SimpleWaterloggedBlock {
+    public static final MapCodec<FruitLogBlock> CODEC = simpleCodec(properties -> new FruitLogBlock(() -> null, properties));
     public static final BooleanProperty LEAFY = BooleanProperty.create("leafy");
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
     private static final VoxelShape CORE = Block.box(4, 4, 4, 12, 12, 12);
@@ -48,7 +48,7 @@ public class CacaoLogBlock extends RotatedPillarBlock implements SimpleWaterlogg
     private final Supplier<? extends Block> stripped;
     private final Map<BlockState, VoxelShape> shapes = new HashMap<>();
 
-    public CacaoLogBlock(Supplier<? extends Block> stripped, Properties properties) {
+    public FruitLogBlock(Supplier<? extends Block> stripped, Properties properties) {
         super(properties);
         this.stripped = stripped;
         BlockState state = this.stateDefinition.any().setValue(AXIS, Direction.Axis.Y).setValue(LEAFY, false).setValue(WATERLOGGED, false);
@@ -97,8 +97,8 @@ public class CacaoLogBlock extends RotatedPillarBlock implements SimpleWaterlogg
         int leaves = 0;
         for (Direction direction : Direction.values()) {
             BlockState neighbor = level.getBlockState(pos.relative(direction));
-            state = state.setValue(PipeBlock.PROPERTY_BY_DIRECTION.get(direction), neighbor.getBlock() instanceof CacaoLogBlock);
-            if (neighbor.is(BlockTags.LEAVES) || neighbor.getBlock() instanceof CacaoLogBlock && neighbor.getValue(LEAFY)) leaves++;
+            state = state.setValue(PipeBlock.PROPERTY_BY_DIRECTION.get(direction), neighbor.getBlock() instanceof FruitLogBlock);
+            if (neighbor.is(BlockTags.LEAVES) || neighbor.getBlock() instanceof FruitLogBlock && neighbor.getValue(LEAFY)) leaves++;
         }
         return state.setValue(LEAFY, leaves > 2);
     }

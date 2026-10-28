@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.content.block;
 
+import com.evandev.spicedcider.registry.ModTags;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -66,7 +67,7 @@ public class CacaoPodBlock extends Block implements BonemealableBlock {
 
     @Override
     protected boolean canSurvive(@NotNull BlockState state, LevelReader level, BlockPos pos) {
-        return level.getBlockState(pos.above()).getBlock() instanceof CacaoLeavesBlock;
+        return level.getBlockState(pos.above()).is(ModTags.Blocks.CACAO_LEAVES);
     }
 
     @Override

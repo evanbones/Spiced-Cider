@@ -22,5 +22,26 @@
       "culturaldelights:lemon_crate"
     ],
     "replace_with": "bountifulfares:lemon_block"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "culturaldelights:avocado_log"
+    ],
+    "replace_with": "spicedcider:avocado_log"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "culturaldelights:avocado_wood"
+    ],
+    "replace_with": "spicedcider:avocado_wood"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "culturaldelights:fruiting_avocado_leaves"
+    ],
+    "replace_with": "spicedcider:flowering_avocado_leaves"
   }
 ]

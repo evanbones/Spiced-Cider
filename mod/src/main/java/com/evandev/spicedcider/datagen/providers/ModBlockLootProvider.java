@@ -55,13 +55,20 @@ public class ModBlockLootProvider extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.CACAO_SAPLING.get());
         this.dropPottedContents(ModBlocks.POTTED_CACAO_SAPLING.get());
         this.add(ModBlocks.CACAO_LEAVES.get(), block -> this.createLeavesDrops(block, ModBlocks.CACAO_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+        this.add(ModBlocks.FLOWERING_CACAO_LEAVES.get(), block -> this.createLeavesDrops(block, ModBlocks.CACAO_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+        this.dropSelf(ModBlocks.PEAR_SAPLING.get());
+        this.dropPottedContents(ModBlocks.POTTED_PEAR_SAPLING.get());
+        this.add(ModBlocks.PEAR_LEAVES.get(), block -> this.createLeavesDrops(block, ModBlocks.PEAR_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+        this.add(ModBlocks.FLOWERING_PEAR_LEAVES.get(), block -> this.createLeavesDrops(block, ModBlocks.PEAR_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
         this.add(ModBlocks.CACAO_POD.get(), block -> LootTable.lootTable().withPool(LootPool.lootPool()
                 .add(this.applyExplosionDecay(block, LootItem.lootTableItem(Items.COCOA_BEANS)
                         .apply(SetItemCountFunction.setCount(ConstantValue.exactly(3.0F))
                                 .when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(block)
                                         .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(CacaoPodBlock.AGE, CacaoPodBlock.MAX_AGE))))))));
-        Stream.of(ModBlocks.CACAO_LOG, ModBlocks.CACAO_WOOD, ModBlocks.STRIPPED_CACAO_LOG, ModBlocks.STRIPPED_CACAO_WOOD, ModBlocks.DEEPSILT, ModBlocks.DRIED_DEEPSILT,
-                ModBlocks.CUT_DRIED_DEEPSILT, ModBlocks.POLISHED_DRIED_DEEPSILT, ModBlocks.CHISELED_DRIED_DEEPSILT).forEach(block -> this.dropSelf(block.get()));
+        Stream.of(ModBlocks.CACAO_LOG, ModBlocks.CACAO_WOOD, ModBlocks.STRIPPED_CACAO_LOG, ModBlocks.STRIPPED_CACAO_WOOD, ModBlocks.PEAR_LOG, ModBlocks.PEAR_WOOD,
+                ModBlocks.STRIPPED_PEAR_LOG, ModBlocks.STRIPPED_PEAR_WOOD, ModBlocks.AVOCADO_LOG, ModBlocks.AVOCADO_WOOD, ModBlocks.STRIPPED_AVOCADO_LOG,
+                ModBlocks.STRIPPED_AVOCADO_WOOD, ModBlocks.DEEPSILT, ModBlocks.DRIED_DEEPSILT, ModBlocks.CUT_DRIED_DEEPSILT, ModBlocks.POLISHED_DRIED_DEEPSILT,
+                ModBlocks.CHISELED_DRIED_DEEPSILT).forEach(block -> this.dropSelf(block.get()));
         this.dropSelf(ModBlocks.ALGAE.get());
         this.dropSelf(ModBlocks.ALGAL_SAND.get());
         this.dropSelf(ModBlocks.ALGAL_GRAVEL.get());
@@ -133,9 +140,12 @@ public class ModBlockLootProvider extends BlockLootSubProvider {
         blocks.add(ModBlocks.GOLDEN_WORM_CRATE.get());
         blocks.add(ModBlocks.GLOAMWOOD_SAPLING.get());
         blocks.add(ModBlocks.POTTED_GLOAMWOOD_SAPLING.get());
-        Stream.of(ModBlocks.CACAO_LOG, ModBlocks.CACAO_WOOD, ModBlocks.STRIPPED_CACAO_LOG, ModBlocks.STRIPPED_CACAO_WOOD, ModBlocks.DEEPSILT, ModBlocks.DRIED_DEEPSILT,
-                ModBlocks.CUT_DRIED_DEEPSILT, ModBlocks.POLISHED_DRIED_DEEPSILT, ModBlocks.CHISELED_DRIED_DEEPSILT).forEach(block -> blocks.add(block.get()));
-        Stream.of(ModBlocks.CACAO_LEAVES, ModBlocks.CACAO_POD, ModBlocks.CACAO_SAPLING, ModBlocks.POTTED_CACAO_SAPLING).forEach(block -> blocks.add(block.get()));
+        Stream.of(ModBlocks.CACAO_LOG, ModBlocks.CACAO_WOOD, ModBlocks.STRIPPED_CACAO_LOG, ModBlocks.STRIPPED_CACAO_WOOD, ModBlocks.PEAR_LOG, ModBlocks.PEAR_WOOD,
+                ModBlocks.STRIPPED_PEAR_LOG, ModBlocks.STRIPPED_PEAR_WOOD, ModBlocks.AVOCADO_LOG, ModBlocks.AVOCADO_WOOD, ModBlocks.STRIPPED_AVOCADO_LOG,
+                ModBlocks.STRIPPED_AVOCADO_WOOD, ModBlocks.DEEPSILT, ModBlocks.DRIED_DEEPSILT, ModBlocks.CUT_DRIED_DEEPSILT, ModBlocks.POLISHED_DRIED_DEEPSILT,
+                ModBlocks.CHISELED_DRIED_DEEPSILT).forEach(block -> blocks.add(block.get()));
+        Stream.of(ModBlocks.CACAO_LEAVES, ModBlocks.FLOWERING_CACAO_LEAVES, ModBlocks.CACAO_POD, ModBlocks.CACAO_SAPLING, ModBlocks.POTTED_CACAO_SAPLING,
+                ModBlocks.PEAR_LEAVES, ModBlocks.FLOWERING_PEAR_LEAVES, ModBlocks.PEAR_SAPLING, ModBlocks.POTTED_PEAR_SAPLING).forEach(block -> blocks.add(block.get()));
         Stream.of(ModBlocks.ALGAE, ModBlocks.ALGAL_SAND, ModBlocks.ALGAL_GRAVEL, ModBlocks.ACHROMARINE, ModBlocks.CHROMARINE, ModBlocks.BUDDING_PRISMARINE,
                 ModBlocks.SMALL_PRISMARINE_BUD, ModBlocks.MEDIUM_PRISMARINE_BUD, ModBlocks.LARGE_PRISMARINE_BUD, ModBlocks.PRISMARINE_CLUSTER, ModBlocks.SULFIDE,
                 ModBlocks.SULFIDE_VENT, ModBlocks.CALCITE_VENT, ModBlocks.TUBEWORM, ModBlocks.CHROMATIC_BRAMBLE, ModBlocks.ACHROMATIC_BRAMBLE,

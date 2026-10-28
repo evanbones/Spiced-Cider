@@ -146,6 +146,7 @@ public class SpicedCider {
         event.enqueueWork(() -> ModItems.BALLOONS.values().forEach(balloon -> DispenserBlock.registerBehavior(balloon.get(), new BalloonItem.DispenseBehavior())));
         event.enqueueWork(() -> ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.GLOAMWOOD_SAPLING.getId(), ModBlocks.POTTED_GLOAMWOOD_SAPLING));
         event.enqueueWork(() -> ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.CACAO_SAPLING.getId(), ModBlocks.POTTED_CACAO_SAPLING));
+        event.enqueueWork(() -> ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.PEAR_SAPLING.getId(), ModBlocks.POTTED_PEAR_SAPLING));
         if (ModItems.TWISTED_BOAT == null) return;
         event.enqueueWork(() -> {
             Boat.Type twisted = ModBoatTypes.TWISTED.getValue();
@@ -211,7 +212,12 @@ public class SpicedCider {
             event.accept(ModItems.GOLDEN_WORM_CRATE.get(), vis);
             Stream.of(ModItems.CACAO_LOG, ModItems.CACAO_WOOD, ModItems.STRIPPED_CACAO_LOG, ModItems.STRIPPED_CACAO_WOOD).forEach(item -> event.accept(item.get(), vis));
             event.accept(ModItems.CACAO_LEAVES.get(), vis);
+            event.accept(ModItems.FLOWERING_CACAO_LEAVES.get(), vis);
             event.accept(ModItems.CACAO_SAPLING.get(), vis);
+            Stream.of(ModItems.PEAR_LOG, ModItems.PEAR_WOOD, ModItems.STRIPPED_PEAR_LOG, ModItems.STRIPPED_PEAR_WOOD, ModItems.PEAR_LEAVES,
+                    ModItems.FLOWERING_PEAR_LEAVES, ModItems.PEAR_SAPLING).forEach(item -> event.accept(item.get(), vis));
+            Stream.of(ModItems.AVOCADO_LOG, ModItems.AVOCADO_WOOD, ModItems.STRIPPED_AVOCADO_LOG, ModItems.STRIPPED_AVOCADO_WOOD,
+                    ModItems.FLOWERING_AVOCADO_LEAVES).forEach(item -> event.accept(item.get(), vis));
             Stream.of(ModItems.DEEPSILT, ModItems.ALGAE, ModItems.ALGAL_SAND, ModItems.ALGAL_GRAVEL, ModItems.CHROMARINE, ModItems.ACHROMARINE, ModItems.SULFIDE,
                     ModItems.SULFIDE_VENT, ModItems.CALCITE_VENT, ModItems.TUBEWORM, ModItems.BUDDING_PRISMARINE, ModItems.SMALL_PRISMARINE_BUD,
                     ModItems.MEDIUM_PRISMARINE_BUD, ModItems.LARGE_PRISMARINE_BUD, ModItems.PRISMARINE_CLUSTER, ModItems.CHROMATIC_BRAMBLE,

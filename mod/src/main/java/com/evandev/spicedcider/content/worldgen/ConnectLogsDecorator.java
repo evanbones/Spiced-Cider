@@ -1,6 +1,6 @@
 package com.evandev.spicedcider.content.worldgen;
 
-import com.evandev.spicedcider.content.block.CacaoLogBlock;
+import com.evandev.spicedcider.content.block.FruitLogBlock;
 import com.evandev.spicedcider.registry.ModTreeFeatures;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
@@ -33,14 +33,14 @@ public class ConnectLogsDecorator extends TreeDecorator {
                 return true;
             });
             BlockState state = found[0];
-            if (state == null || !(state.getBlock() instanceof CacaoLogBlock)) continue;
+            if (state == null || !(state.getBlock() instanceof FruitLogBlock)) continue;
             int leafCount = 0;
             for (Direction direction : Direction.values()) {
                 BlockPos neighbor = pos.relative(direction);
                 state = state.setValue(PipeBlock.PROPERTY_BY_DIRECTION.get(direction), logs.contains(neighbor));
                 if (leaves.contains(neighbor)) leafCount++;
             }
-            context.setBlock(pos, state.setValue(CacaoLogBlock.LEAFY, leafCount > 2));
+            context.setBlock(pos, state.setValue(FruitLogBlock.LEAFY, leafCount > 2));
         }
     }
 }

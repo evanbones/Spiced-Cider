@@ -93,10 +93,17 @@
 [dimensions]
 	#DISABLED = no wind; REDUCED_GUSTY = weaker background, more pronounced gusts; NORMAL = unmodified simulation.
 	#Allowed Values: DISABLED, REDUCED_GUSTY, NORMAL
-	netherWindMode = "DISABLED"
+	netherWindMode = "REDUCED_GUSTY"
 	#DISABLED = no wind; VERY_WEAK = faint air with very gradual directional shifts; NORMAL = unmodified simulation.
 	#Allowed Values: DISABLED, VERY_WEAK, NORMAL
 	endWindMode = "DISABLED"
+	#Dimension IDs with Living Wind completely disabled (e.g. modid:dimension). Overrides Nether/End settings and forced wind commands.
+	dimensionBlacklist = []
+	#Dimension modes as modid:dimension=MODE. Valid modes: NORMAL, REDUCED_GUSTY, VERY_WEAK, DISABLED. Entries override the legacy blacklist and vanilla mode values.
+	dimensionModes = []
+	#Wind behavior of dimensions not explicitly listed (vanilla Nether and End retain their previous modes until overridden).
+	#Allowed Values: NORMAL, REDUCED_GUSTY, VERY_WEAK, DISABLED
+	defaultDimensionMode = "NORMAL"
 
 #Optional Create windmill bearing compatibility. Uses real kinetic RPM and stress capacity, not visual-only animation.
 [createWindmills]

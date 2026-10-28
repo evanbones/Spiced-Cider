@@ -28,9 +28,10 @@
       "id": "culturaldelights:avocado_sapling",
       "structure_nbt": "culturaldelights:avocado",
       "components": [
-        "culturaldelights:avocado_log",
+        "spicedcider:avocado_log",
         "culturaldelights:avocado_leaves",
-        "culturaldelights:fruiting_avocado_leaves",
+        "spicedcider:flowering_avocado_leaves",
+        "spicedcider:hanging_avocado",
         "culturaldelights:avocado_pit"
       ]
     },
@@ -81,7 +82,18 @@
       "components": [
         "spicedcider:cacao_log",
         "spicedcider:cacao_leaves",
+        "spicedcider:flowering_cacao_leaves",
         "spicedcider:cacao_pod"
+      ]
+    },
+    {
+      "id": "spicedcider:pear_sapling",
+      "structure_nbt": "spicedcider:pear",
+      "components": [
+        "spicedcider:pear_log",
+        "spicedcider:pear_leaves",
+        "spicedcider:flowering_pear_leaves",
+        "spicedcider:hanging_pear"
       ]
     },
     {
@@ -150,8 +162,7 @@
       "components": [
         "minecraft:oak_log",
         "nomansland:autumnal_oak_leaves",
-        "nomansland:pear_fruit_leaves",
-        "nomansland:pear"
+        "nomansland:pear_fruit_leaves"
       ]
     },
     {

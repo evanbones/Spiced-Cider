@@ -67,6 +67,33 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         this.tag(BlockTags.MINEABLE_WITH_AXE).addTag(ModTags.Blocks.CACAO_LOGS);
         this.tag(BlockTags.MINEABLE_WITH_HOE).add(ModBlocks.CACAO_LEAVES.get());
         this.tag(BlockTags.MINEABLE_WITH_AXE).add(ModBlocks.CACAO_POD.get());
+        this.tag(BlockTags.LEAVES).add(ModBlocks.FLOWERING_CACAO_LEAVES.get());
+        this.tag(BlockTags.FLOWERS).add(ModBlocks.FLOWERING_CACAO_LEAVES.get());
+        this.tag(BlockTags.MINEABLE_WITH_HOE).add(ModBlocks.FLOWERING_CACAO_LEAVES.get());
+        this.tag(ModTags.Blocks.CACAO_LEAVES).add(ModBlocks.CACAO_LEAVES.get(), ModBlocks.FLOWERING_CACAO_LEAVES.get());
+
+        this.tag(BlockTags.SAPLINGS).add(ModBlocks.PEAR_SAPLING.get());
+        this.tag(BlockTags.FLOWER_POTS).add(ModBlocks.POTTED_PEAR_SAPLING.get());
+        this.tag(ModTags.Blocks.PEAR_LEAVES).add(ModBlocks.PEAR_LEAVES.get(), ModBlocks.FLOWERING_PEAR_LEAVES.get());
+        this.tag(BlockTags.LEAVES).addTag(ModTags.Blocks.PEAR_LEAVES);
+        this.tag(BlockTags.MINEABLE_WITH_HOE).addTag(ModTags.Blocks.PEAR_LEAVES);
+        this.tag(BlockTags.FLOWERS).add(ModBlocks.FLOWERING_PEAR_LEAVES.get());
+        this.tag(ModTags.Blocks.PEAR_LOGS).add(ModBlocks.PEAR_LOG.get(), ModBlocks.PEAR_WOOD.get(), ModBlocks.STRIPPED_PEAR_LOG.get(), ModBlocks.STRIPPED_PEAR_WOOD.get());
+        this.tag(BlockTags.LOGS_THAT_BURN).addTag(ModTags.Blocks.PEAR_LOGS);
+        this.tag(BlockTags.MINEABLE_WITH_AXE).addTag(ModTags.Blocks.PEAR_LOGS);
+        this.tag(Tags.Blocks.STRIPPED_LOGS).add(ModBlocks.STRIPPED_PEAR_LOG.get());
+        this.tag(Tags.Blocks.STRIPPED_WOODS).add(ModBlocks.STRIPPED_PEAR_WOOD.get());
+
+        this.tag(ModTags.Blocks.AVOCADO_LEAVES).add(ModBlocks.FLOWERING_AVOCADO_LEAVES.get())
+                .addOptional(ResourceLocation.fromNamespaceAndPath("culturaldelights", "avocado_leaves"));
+        this.tag(BlockTags.LEAVES).add(ModBlocks.FLOWERING_AVOCADO_LEAVES.get());
+        this.tag(BlockTags.MINEABLE_WITH_HOE).add(ModBlocks.FLOWERING_AVOCADO_LEAVES.get());
+        this.tag(BlockTags.FLOWERS).add(ModBlocks.FLOWERING_AVOCADO_LEAVES.get());
+        this.tag(ModTags.Blocks.AVOCADO_LOGS).add(ModBlocks.AVOCADO_LOG.get(), ModBlocks.AVOCADO_WOOD.get(), ModBlocks.STRIPPED_AVOCADO_LOG.get(), ModBlocks.STRIPPED_AVOCADO_WOOD.get());
+        this.tag(BlockTags.LOGS_THAT_BURN).addTag(ModTags.Blocks.AVOCADO_LOGS);
+        this.tag(BlockTags.MINEABLE_WITH_AXE).addTag(ModTags.Blocks.AVOCADO_LOGS);
+        this.tag(Tags.Blocks.STRIPPED_LOGS).add(ModBlocks.STRIPPED_AVOCADO_LOG.get());
+        this.tag(Tags.Blocks.STRIPPED_WOODS).add(ModBlocks.STRIPPED_AVOCADO_WOOD.get());
         this.tag(BlockTags.FLOWER_POTS).add(ModBlocks.POTTED_GLOAMWOOD_SAPLING.get());
 
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
