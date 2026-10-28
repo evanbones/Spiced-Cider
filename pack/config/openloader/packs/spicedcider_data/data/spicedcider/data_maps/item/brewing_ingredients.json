@@ -116,7 +116,7 @@
       "seconds": 150,
       "potency": 7
     },
-    "cold_sweat:hoglin_hide": {
+    "mynethersdelight:hoglin_hide": {
       "value": {
         "potion": "minecraft:fire_resistance",
         "seconds": 300,
@@ -427,22 +427,6 @@
         "potion": "embers_and_icicles:freezing",
         "seconds": 450,
         "potency": 21
-      },
-      "required": false
-    },
-    "cold_sweat:goat_fur": {
-      "value": {
-        "potion": "cold_sweat:ice_resistance",
-        "seconds": 150,
-        "potency": 7
-      },
-      "required": false
-    },
-    "environmental:yak_hair": {
-      "value": {
-        "potion": "cold_sweat:ice_resistance",
-        "seconds": 300,
-        "potency": 14
       },
       "required": false
     },

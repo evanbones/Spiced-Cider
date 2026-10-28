@@ -410,38 +410,6 @@
           42,
           330
         ],
-        "spicedcider:adventure/thermometer": [
-          212,
-          270
-        ],
-        "spicedcider:adventure/extreme_temps": [
-          252,
-          270
-        ],
-        "spicedcider:adventure/insulate_armor": [
-          293,
-          270
-        ],
-        "spicedcider:adventure/goat_fur": [
-          336,
-          270
-        ],
-        "spicedcider:adventure/desperate_measures": [
-          255,
-          270
-        ],
-        "spicedcider:adventure/waterskin": [
-          252,
-          300
-        ],
-        "spicedcider:adventure/tame_chameleon": [
-          252,
-          330
-        ],
-        "cold_sweat:chameleon_find_biome": [
-          294,
-          330
-        ],
         "spicedcider:adventure/deepslate": [
           462,
           330
@@ -759,14 +727,6 @@
         ],
         "spicedcider:husbandry/home_is_where_the_bed_is": [
           714,
-          330
-        ],
-        "spicedcider:husbandry/hearth": [
-          756,
-          330
-        ],
-        "spicedcider:husbandry/smokestack": [
-          798,
           330
         ],
         "spicedcider:husbandry/root": [
@@ -1179,14 +1139,6 @@
           378,
           120
         ],
-        "spicedcider:nether/soulspring_lamp": [
-          336,
-          330
-        ],
-        "spicedcider:nether/lava_sea": [
-          378,
-          330
-        ],
         "spicedcider:nether/ride_strider": [
           294,
           90
@@ -1195,12 +1147,8 @@
           336,
           90
         ],
-        "spicedcider:nether/hoglin_armor": [
-          252,
-          210
-        ],
         "spicedcider:nether/hoglin_trophy": [
-          294,
+          252,
           210
         ],
         "spicedcider:nether/nether_dust": [
@@ -1622,42 +1570,6 @@
       "owner": "reliable_advancements:standalone"
     },
     "chalk:adventure/vandalism": {
-      "owner": "reliable_advancements:standalone"
-    },
-    "cold_sweat:desperate_measures": {
-      "owner": "reliable_advancements:standalone"
-    },
-    "cold_sweat:extreme_temps": {
-      "owner": "reliable_advancements:standalone"
-    },
-    "cold_sweat:fuel_soul_lamp": {
-      "owner": "reliable_advancements:standalone"
-    },
-    "cold_sweat:full_insulation": {
-      "owner": "reliable_advancements:standalone"
-    },
-    "cold_sweat:get_soul_lamp": {
-      "owner": "reliable_advancements:standalone"
-    },
-    "cold_sweat:huddle_close": {
-      "owner": "reliable_advancements:standalone"
-    },
-    "cold_sweat:insulate_armor": {
-      "owner": "reliable_advancements:standalone"
-    },
-    "cold_sweat:lava_sea": {
-      "owner": "reliable_advancements:standalone"
-    },
-    "cold_sweat:root": {
-      "owner": "reliable_advancements:standalone"
-    },
-    "cold_sweat:tame_chameleon": {
-      "owner": "reliable_advancements:standalone"
-    },
-    "cold_sweat:use_hearth": {
-      "owner": "reliable_advancements:standalone"
-    },
-    "cold_sweat:use_smokestack": {
       "owner": "reliable_advancements:standalone"
     },
     "culturaldelights:main/acid": {
@@ -2581,30 +2493,6 @@
       "title": "\"Mine Turtle!\"",
       "icon": "minecraft:raw_iron"
     },
-    "spicedcider:adventure/extreme_temps": {
-      "owner": "reliable_advancements:standalone",
-      "tab": "spicedcider:adventure/root",
-      "title": "\"Inhospitable\"",
-      "icon": "minecraft:blue_ice"
-    },
-    "spicedcider:adventure/waterskin": {
-      "owner": "reliable_advancements:standalone",
-      "tab": "spicedcider:adventure/root",
-      "title": "\"Stay Hydrated\"",
-      "icon": "cold_sweat:waterskin"
-    },
-    "spicedcider:adventure/tame_chameleon": {
-      "owner": "reliable_advancements:standalone",
-      "tab": "spicedcider:adventure/root",
-      "title": "\"The Great Leon\"",
-      "icon": "cold_sweat:chameleon_molt"
-    },
-    "cold_sweat:chameleon_find_biome": {
-      "owner": "reliable_advancements:standalone",
-      "tab": "spicedcider:adventure/root",
-      "title": "\"Follow the Leader\"",
-      "icon": "minecraft:compass"
-    },
     "spicedcider:adventure/peeper": {
       "owner": "reliable_advancements:standalone",
       "tab": "spicedcider:adventure/root",
@@ -2637,11 +2525,6 @@
       "title": "YUNG\u0027s Better Dungeons",
       "icon": "minecraft:mossy_stone_bricks",
       "background": "minecraft:textures/block/stone_bricks.png"
-    },
-    "cold_sweat:root": {
-      "title": "Cold Sweat",
-      "icon": "cold_sweat:thermometer",
-      "background": "minecraft:textures/block/smooth_basalt.png"
     },
     "create:root": {
       "title": "Welcome to Create",

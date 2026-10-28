@@ -15,6 +15,7 @@ final class LodNode {
     volatile boolean failed;
     boolean running;
     boolean runningFeatures;
+    boolean runningStarts;
     int refs;
     int needBiomes;
     int needCarvers;

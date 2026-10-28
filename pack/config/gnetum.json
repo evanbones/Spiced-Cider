@@ -72,12 +72,6 @@
       },
       "pass": 1
     },
-    "cold_sweat:world_temp": {
-      "enabled": {
-        "value": "AUTO"
-      },
-      "pass": 1
-    },
     "usefulspyglass:hud_base": {
       "enabled": {
         "value": "AUTO"
@@ -192,12 +186,6 @@
       },
       "pass": 1
     },
-    "cold_sweat:vague_temp": {
-      "enabled": {
-        "value": "AUTO"
-      },
-      "pass": 1
-    },
     "create:track_placement": {
       "enabled": {
         "value": "AUTO"
@@ -234,12 +222,6 @@
       },
       "pass": 3
     },
-    "cold_sweat:food_effects": {
-      "enabled": {
-        "value": "AUTO"
-      },
-      "pass": 1
-    },
     "create:linked_controller": {
       "enabled": {
         "value": "AUTO"
@@ -251,12 +233,6 @@
         "value": "AUTO"
       },
       "pass": 2
-    },
-    "cold_sweat:body_temp": {
-      "enabled": {
-        "value": "AUTO"
-      },
-      "pass": 1
     },
     "minecraft:effects": {
       "enabled": {
@@ -307,14 +283,7 @@
       "pass": 3
     }
   },
-  "mapModdedElementsPre": {
-    "cold_sweat": {
-      "enabled": {
-        "value": "AUTO"
-      },
-      "pass": 1
-    }
-  },
+  "mapModdedElementsPre": {},
   "mapModdedElementsPost": {
     "gnetum_unknown": {
       "enabled": {

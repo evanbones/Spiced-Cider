@@ -19,7 +19,7 @@ public class CauldronBrewing {
     public static final int MAX_INGREDIENTS = 5;
     public static final int TIER_TWO = 30;
     public static final int TIER_THREE = 45;
-    public static final int TAINTED_COLOR = 0x1E1A1C;
+    public static final int TAINTED_COLOR = 0x6B6A4A;
     public static final int CLEAR_COLOR = 0xC6E4F7;
 
     @Nullable

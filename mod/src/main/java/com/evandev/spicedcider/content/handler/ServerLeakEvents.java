@@ -2,7 +2,6 @@ package com.evandev.spicedcider.content.handler;
 
 import com.evandev.spicedcider.SpicedCider;
 import com.evandev.spicedcider.compat.cirrus.CirrusLeaks;
-import com.evandev.spicedcider.compat.coldsweat.ColdSweatLeaks;
 import com.evandev.spicedcider.compat.exposure.ExposureLeaks;
 import com.evandev.spicedcider.compat.modernfix.ModernFixLeaks;
 import com.evandev.spicedcider.compat.nomansland.NoMansLandClientLeaks;
@@ -27,12 +26,10 @@ public class ServerLeakEvents {
         }
         if (mods.isLoaded("exposure")) ExposureLeaks.release();
         if (mods.isLoaded("voicechat")) VoiceChatLeaks.release();
-        if (mods.isLoaded("cold_sweat")) ColdSweatLeaks.releaseServer();
     }
 
     public static void onClientLoggedOut() {
         ModList mods = ModList.get();
-        if (mods.isLoaded("cold_sweat")) ColdSweatLeaks.releaseClient();
         if (mods.isLoaded("cirrus")) CirrusLeaks.releaseClient();
         if (mods.isLoaded("nomansland")) NoMansLandClientLeaks.releaseClient();
         ClientCacheRegistry.clearAll();

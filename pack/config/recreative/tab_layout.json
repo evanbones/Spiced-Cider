@@ -3660,7 +3660,6 @@
       "minecraft:cartography_table",
       "minecraft:smithing_table",
       "clayworks:pottery_table",
-      "cold_sweat:sewing_table",
       "tide:angling_table",
       "create:schematic_table",
       "minecraft:stonecutter",
@@ -5193,11 +5192,6 @@
       "exposure:glass_photograph_frame",
       "exposure:lightroom",
       "redomesticate:drum",
-      "cold_sweat:thermolith",
-      "cold_sweat:hearth",
-      "cold_sweat:boiler",
-      "cold_sweat:icebox",
-      "cold_sweat:smokestack",
       "farmersdelight:stove",
       "mynethersdelight:nether_bricks_stove",
       "farmersdelight:cooking_pot",
@@ -6652,14 +6646,6 @@
         "item": "nomansland:bandage",
         "components": {
           "minecraft:potion_contents": {
-            "potion": "cold_sweat:ice_resistance"
-          }
-        }
-      },
-      {
-        "item": "nomansland:bandage",
-        "components": {
-          "minecraft:potion_contents": {
             "potion": "upgrade_aquatic:repellence"
           }
         }
@@ -7143,8 +7129,6 @@
       "exposure:aged_photograph",
       "exposure:stacked_photographs",
       "exposure:album",
-      "cold_sweat:soulspring_lamp",
-      "cold_sweat:thermometer",
       "create:linked_controller",
       "create:clipboard",
       "create:goggles",
@@ -7203,16 +7187,8 @@
       "create:cardboard_leggings",
       "create:cardboard_boots",
       "alloyed:steel_helmet",
-      "cold_sweat:hoglin_helmet",
-      "cold_sweat:goat_fur_helmet",
       "create:copper_diving_helmet",
       "create:copper_diving_boots",
-      "cold_sweat:goat_fur_chestplate",
-      "cold_sweat:goat_fur_leggings",
-      "cold_sweat:goat_fur_boots",
-      "cold_sweat:hoglin_chestplate",
-      "cold_sweat:hoglin_leggings",
-      "cold_sweat:hoglin_boots",
       "alloyed:steel_chestplate",
       "alloyed:steel_leggings",
       "alloyed:steel_boots",
@@ -7636,14 +7612,6 @@
         "components": {
           "minecraft:potion_contents": {
             "potion": "infernalexp:warped"
-          }
-        }
-      },
-      {
-        "item": "minecraft:tipped_arrow",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "cold_sweat:ice_resistance"
           }
         }
       },
@@ -8118,7 +8086,6 @@
       "abundantdelight:red_bamboo_stir_fry",
       "abundantdelight:stuffed_gourdnut",
       "nomansland:candied_pear",
-      "cold_sweat:soul_sprout",
       "modest_meals:pasta",
       "modest_meals:salad",
       "modest_meals:curry",
@@ -8492,7 +8459,6 @@
       "minecraft:leather",
       "modestmining:flesh",
       "minecraft:rabbit_hide",
-      "cold_sweat:hoglin_hide",
       "minecraft:honeycomb",
       "spicedcider:tallow",
       "minecraft:resin_clump",
@@ -8687,7 +8653,6 @@
       "infernalexp:dullrocks",
       "infernalexp:glowsilk_string",
       "infernalexp:glowcoke",
-      "cold_sweat:goat_fur",
       "farmersdelight:straw",
       "farmersdelight:canvas",
       "farmersdelight:tree_bark",

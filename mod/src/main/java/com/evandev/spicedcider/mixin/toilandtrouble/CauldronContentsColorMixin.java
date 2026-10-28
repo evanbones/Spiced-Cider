@@ -14,6 +14,9 @@ public class CauldronContentsColorMixin {
     @ModifyReturnValue(method = "getColor", at = @At("RETURN"))
     private int spicedcider$clearColor(int color) {
         CauldronContents contents = (CauldronContents) (Object) this;
+        if (CauldronBrewing.isTainted(contents.potion())) {
+            return CauldronBrewing.TAINTED_COLOR;
+        }
         if (contents.customColor().isEmpty() && contents.customEffects().isEmpty() && CauldronBrewing.isClear(contents.potion())) {
             return CauldronBrewing.CLEAR_COLOR;
         }

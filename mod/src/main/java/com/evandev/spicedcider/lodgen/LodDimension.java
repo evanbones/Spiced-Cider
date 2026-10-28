@@ -1,6 +1,7 @@
 package com.evandev.spicedcider.lodgen;
 
 import com.evandev.spicedcider.SpicedCider;
+import com.evandev.spicedcider.mixin.minecraft.ChunkAccessLodAccessor;
 import it.unimi.dsi.fastutil.longs.Long2ObjectOpenHashMap;
 import it.unimi.dsi.fastutil.longs.LongArrayFIFOQueue;
 import it.unimi.dsi.fastutil.longs.LongIterator;
@@ -127,7 +128,7 @@ final class LodDimension {
             LodNode node = nodes.computeIfAbsent(pos, key -> new LodNode(ChunkPos.getX(key), ChunkPos.getZ(key),
                     new ProtoChunk(new ChunkPos(key), UpgradeData.EMPTY, level, biomes, null)));
             node.refs++;
-            if (!node.failed && node.status().isBefore(ChunkStatus.STRUCTURE_STARTS)) plan.startsPending++;
+            if (!node.failed && (node.status().isBefore(ChunkStatus.STRUCTURE_STARTS) || node.runningStarts)) plan.startsPending.add(pos);
             candidates.add(pos);
         }
         for (long pos : plan.biomes) nodes.get(pos).needBiomes++;
@@ -138,7 +139,7 @@ final class LodDimension {
         for (long pos : new LongOpenHashSet(wanted)) {
             if (failedNear(ChunkPos.getX(pos), ChunkPos.getZ(pos))) giveUp(plan, pos);
         }
-        if (plan.startsPending == 0 && plans.contains(plan)) unlock(plan);
+        if (plan.startsPending.isEmpty() && plans.contains(plan)) unlock(plan);
     }
 
     private void unlock(Plan plan) {
@@ -186,6 +187,7 @@ final class LodDimension {
     private void startStep(LodNode node, ChunkStatus status) {
         node.running = true;
         node.runningFeatures = status == ChunkStatus.FEATURES;
+        node.runningStarts = status == ChunkStatus.STRUCTURE_STARTS;
         scheduler.submit(() -> {
             try {
                 apply(node, status);
@@ -200,6 +202,7 @@ final class LodDimension {
     private void stepDone(LodNode node, ChunkStatus status, boolean ok) {
         node.running = false;
         node.runningFeatures = false;
+        node.runningStarts = false;
         if (!ok) {
             fail(node, status);
         } else if (status == ChunkStatus.STRUCTURE_STARTS) {
@@ -210,7 +213,7 @@ final class LodDimension {
 
     private void startsDone(long pos) {
         for (Plan plan : new ArrayList<>(plans)) {
-            if (!plan.unlocked && plan.starts.contains(pos) && --plan.startsPending == 0) unlock(plan);
+            if (!plan.unlocked && plan.startsPending.remove(pos) && plan.startsPending.isEmpty()) unlock(plan);
         }
     }
 
@@ -311,6 +314,7 @@ final class LodDimension {
         ChunkAccess result = step.apply(context, cache, node.chunk).join();
         LodStats.add(status.getIndex(), System.nanoTime() - start, 1);
         if (result instanceof ProtoChunk proto && proto != node.chunk) node.chunk = proto;
+        if (status == ChunkStatus.CARVERS) ((ChunkAccessLodAccessor) node.chunk).spicedcider$setNoiseChunk(null);
     }
 
     private GenerationChunkHolder holder(int x, int z) {
@@ -419,7 +423,7 @@ final class LodDimension {
         final LongSet terrain;
         final LongSet biomes;
         final LongSet starts;
-        int startsPending;
+        final LongSet startsPending = new LongOpenHashSet();
         boolean unlocked;
 
         Plan(LongSet wanted) {

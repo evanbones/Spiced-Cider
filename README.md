@@ -202,7 +202,7 @@ Spiced Cider runs fine without any of these: each one only unlocks the specific 
 | [Vista](https://modrinth.com/mod/vista)                                                                                                                | Performance fixes for Vista's mirror/TV reflections (configurable)                                                                                      |
 | [Where Winds Blow](https://modrinth.com/mod/where-winds-blow)                                                                                          | Uses Living Wind; bonemeal no longer makes overgrown grass                                                                                              |
 | [YUNG's Better Mineshafts](https://modrinth.com/mod/yungs-better-mineshafts)                                                                           | Some spawners spawn Dust Bunnies (with Spelunkery)                                                                                                      |
-| [AllTheLeaks](https://modrinth.com/mod/alltheleaks), AmbientSounds, Biolith, Cold Sweat, Exposure, Picture Mode, Presence Footsteps, Simple Voice Chat | Fixes memory leaks that kept the old world loaded after leaving                                                                                         |
+| [AllTheLeaks](https://modrinth.com/mod/alltheleaks), AmbientSounds, Biolith, Exposure, Picture Mode, Presence Footsteps, Simple Voice Chat | Fixes memory leaks that kept the old world loaded after leaving                                                                                         |
 
 ## Modifying the Core Mod
 
