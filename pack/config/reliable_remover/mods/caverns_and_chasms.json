@@ -219,7 +219,8 @@
       "caverns_and_chasms:spinel_lamp",
       "caverns_and_chasms:dismantling_table",
       "caverns_and_chasms:peeper_head",
-      "caverns_and_chasms:peeper_spawn_egg"
+      "caverns_and_chasms:peeper_spawn_egg",
+      "caverns_and_chasms:packing_container"
     ]
   },
   {
@@ -998,5 +999,17 @@
       "caverns_and_chasms:netherite_horse_armor"
     ],
     "replace_with": "minecraft:netherite_horse_armor"
+  },
+  {
+    "action": "remove_potion",
+    "effects": [
+      "caverns_and_chasms:subtle",
+      "caverns_and_chasms:long_subtle",
+      "caverns_and_chasms:long_rewind",
+      "caverns_and_chasms:blindness",
+      "caverns_and_chasms:long_blindness",
+      "caverns_and_chasms:long_revenant",
+      "caverns_and_chasms:strong_revenant"
+    ]
   }
 ]

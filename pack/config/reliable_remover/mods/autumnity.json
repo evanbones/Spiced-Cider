@@ -59,5 +59,11 @@
       "autumnity:sap_bottle"
     ],
     "replace_with": "nomansland:maple_syrup_bottle"
+  },
+  {
+    "action": "remove_potion",
+    "effects": [
+      "autumnity:extension"
+    ]
   }
 ]

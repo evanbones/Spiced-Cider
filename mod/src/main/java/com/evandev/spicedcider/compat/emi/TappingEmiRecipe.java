@@ -23,11 +23,9 @@ import net.minecraft.core.Direction;
 import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.RotatedPillarBlock;
@@ -46,25 +44,19 @@ public class TappingEmiRecipe extends BasicEmiRecipe {
     private static final ResourceLocation TAP_ID = ResourceLocation.fromNamespaceAndPath("nomansland", "tap");
     private static final int WIDTH = 134;
     private static final int SCENE_HEIGHT = 58;
-    private static final int LINE_HEIGHT = 10;
 
     private final List<BlockState> sources;
     private final boolean tree;
     private final BlockState receiver;
     private final IntegerProperty receiverLevel;
-    private final List<Line> lines;
-
-    private record Line(Component text, List<Component> tooltip) {
-    }
 
     private TappingEmiRecipe(EmiRecipeCategory category, ResourceLocation id, List<BlockState> sources, boolean tree,
-                             EmiStack output, BlockState receiver, List<Line> lines) {
-        super(category, id, WIDTH, SCENE_HEIGHT + lines.size() * LINE_HEIGHT);
+                             EmiStack output, BlockState receiver) {
+        super(category, id, WIDTH, SCENE_HEIGHT);
         this.sources = sources;
         this.tree = tree;
         this.receiver = receiver;
         this.receiverLevel = receiver != null && receiver.getBlock().getStateDefinition().getProperty("level") instanceof IntegerProperty level ? level : null;
-        this.lines = lines;
         this.inputs = List.of(EmiIngredient.of(sources.stream().map(state -> EmiStack.of(state.getBlock())).distinct().toList()));
         this.outputs = List.of(output);
     }
@@ -109,7 +101,7 @@ public class TappingEmiRecipe extends BasicEmiRecipe {
 
             ResourceLocation key = entry.getKey().location();
             ResourceLocation id = ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "/tapping/" + key.getNamespace() + "/" + key.getPath());
-            registry.addRecipe(new TappingEmiRecipe(category, id, sources, interaction.source().tree().isPresent(), output, receiver, lines(interaction)));
+            registry.addRecipe(new TappingEmiRecipe(category, id, sources, interaction.source().tree().isPresent(), output, receiver));
         }
     }
 
@@ -126,56 +118,12 @@ public class TappingEmiRecipe extends BasicEmiRecipe {
         return states;
     }
 
-    private static List<Line> lines(TapInteraction interaction) {
-        List<Line> lines = new ArrayList<>();
-        lines.add(new Line(Component.translatable("emi.spicedcider.tapping.interval", range(interaction.interval().getMinValue(), interaction.interval().getMaxValue())), List.of()));
-        interaction.source().tree().ifPresent(tree -> lines.add(new Line(Component.translatable("emi.spicedcider.tapping.tree"),
-                List.of(Component.translatable("emi.spicedcider.tapping.tree.tooltip", tree.minHeight(), tree.minLeaves())))));
-        if (!interaction.consume().isEmpty()) {
-            lines.add(new Line(Component.translatable("emi.spicedcider.tapping.consumes"), List.of()));
-        }
-        TapInteraction.Conditions conditions = interaction.conditions();
-        if (conditions.time() != TapInteraction.TimeOfDay.ANY) {
-            lines.add(new Line(Component.translatable("emi.spicedcider.tapping.time." + conditions.time().getSerializedName()), List.of()));
-        }
-        if (conditions.weather() != TapInteraction.Weather.ANY) {
-            lines.add(new Line(Component.translatable("emi.spicedcider.tapping.weather." + conditions.weather().getSerializedName()), List.of()));
-        }
-        conditions.biomes().ifPresent(biomes -> {
-            List<Component> names = new ArrayList<>();
-            for (Holder<Biome> biome : biomes) {
-                biome.unwrapKey().ifPresent(key -> names.add(Component.translatable(key.location().toLanguageKey("biome"))));
-            }
-            lines.add(new Line(Component.translatable("emi.spicedcider.tapping.biomes"), names));
-        });
-        return lines;
-    }
-
-    private static Component range(int minTicks, int maxTicks) {
-        boolean minutes = minTicks >= 1200;
-        int divisor = minutes ? 1200 : 20;
-        String unit = minutes ? "emi.spicedcider.tapping.minutes" : "emi.spicedcider.tapping.seconds";
-        int min = Math.max(1, Math.round(minTicks / (float) divisor));
-        int max = Math.max(1, Math.round(maxTicks / (float) divisor));
-        return Component.translatable(unit, min == max ? String.valueOf(min) : min + "–" + max);
-    }
-
     @Override
     public void addWidgets(WidgetHolder widgets) {
         int slotY = 20;
         widgets.addSlot(inputs.getFirst(), 4, slotY);
         widgets.addSlot(outputs.getFirst(), WIDTH - 22, slotY).recipeContext(this);
         widgets.addDrawable(26, 0, WIDTH - 52, SCENE_HEIGHT, (graphics, mouseX, mouseY, delta) -> drawScene(graphics));
-        for (int i = 0; i < lines.size(); i++) {
-            Line line = lines.get(i);
-            int width = Minecraft.getInstance().font.width(line.text());
-            int x = (WIDTH - width) / 2;
-            int y = SCENE_HEIGHT + i * LINE_HEIGHT;
-            widgets.addText(line.text(), x, y, 0xFF404040, false);
-            if (!line.tooltip().isEmpty()) {
-                widgets.addTooltipText(line.tooltip(), x, y, width, LINE_HEIGHT - 1);
-            }
-        }
     }
 
     private void drawScene(GuiGraphics graphics) {

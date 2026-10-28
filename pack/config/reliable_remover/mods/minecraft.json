@@ -5,6 +5,9 @@
       "minecraft:music_disc_lava_chicken",
       "minecraft:bell",
       "minecraft:fletching_table",
+      "minecraft:brewing_stand",
+      "minecraft:spider_eye",
+      "minecraft:fermented_spider_eye",
       "minecraft:music_disc_tears",
       "minecraft:elytra",
       "minecraft:phantom_membrane",
@@ -109,7 +112,8 @@
       "minecraft:cinnabar",
       "minecraft:polished_cinnabar",
       "minecraft:cinnabar_bricks",
-      "minecraft:chiseled_cinnabar"
+      "minecraft:chiseled_cinnabar",
+      "minecraft:chiseled_resin_bricks"
     ]
   },
   {
@@ -320,5 +324,34 @@
       "minecraft:iron_horse_armor"
     ],
     "replace_with": "spicedcider:bronze_horse_armor"
+  },
+  {
+    "action": "remove_potion",
+    "effects": [
+      "minecraft:mundane",
+      "minecraft:thick",
+      "minecraft:long_night_vision",
+      "minecraft:long_invisibility",
+      "minecraft:long_leaping",
+      "minecraft:strong_leaping",
+      "minecraft:long_fire_resistance",
+      "minecraft:long_swiftness",
+      "minecraft:strong_swiftness",
+      "minecraft:long_slowness",
+      "minecraft:strong_slowness",
+      "minecraft:long_turtle_master",
+      "minecraft:strong_turtle_master",
+      "minecraft:long_water_breathing",
+      "minecraft:strong_healing",
+      "minecraft:strong_harming",
+      "minecraft:long_poison",
+      "minecraft:strong_poison",
+      "minecraft:long_regeneration",
+      "minecraft:strong_regeneration",
+      "minecraft:long_strength",
+      "minecraft:strong_strength",
+      "minecraft:long_weakness",
+      "minecraft:long_slow_falling"
+    ]
   }
 ]

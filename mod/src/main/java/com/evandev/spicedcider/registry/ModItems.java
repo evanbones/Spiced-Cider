@@ -1,8 +1,5 @@
 package com.evandev.spicedcider.registry;
 
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.core.registries.BuiltInRegistries;
-import net.neoforged.fml.ModList;
 import com.evandev.spicedcider.SpicedCider;
 import com.evandev.spicedcider.content.item.MapInABottleItem;
 import com.evandev.spicedcider.content.item.BalloonItem;
@@ -12,6 +9,9 @@ import com.evandev.spicedcider.content.item.MischiefArmorItem;
 import com.evandev.spicedcider.content.item.PocketJukeboxItem;
 import com.evandev.spicedcider.compat.architectspalette.ArchitectsPaletteCompat;
 import com.evandev.spicedcider.compat.tide.TideCompat;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.*;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -105,12 +105,8 @@ public class ModItems {
             () -> new BucketItem(ModFluids.RESIN.get(), new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1)));
     public static final DeferredItem<Item> MAPLE_SYRUP_BUCKET = ITEMS.register("maple_syrup_bucket",
             () -> new BucketItem(ModFluids.MAPLE_SYRUP.get(), new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1)));
-    @Nullable
-    public static final DeferredItem<Item> RESIN_OIL_BUCKET = ModList.get().isLoaded("nomansland")
-            ? ITEMS.register("resin_oil_bucket", () -> new BucketItem(
-            BuiltInRegistries.FLUID.get(ResourceLocation.fromNamespaceAndPath("nomansland", "resin_oil")),
-            new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1)))
-            : null;
+    public static final DeferredItem<Item> RESIN_OIL_BUCKET = ITEMS.register("resin_oil_bucket",
+            () -> new BucketItem(ModFluids.RESIN_OIL.get(), new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1)));
     public static final DeferredItem<Item> LATEX_BOTTLE = ITEMS.register("latex_bottle",
             () -> new Item(new Item.Properties().craftRemainder(Items.GLASS_BOTTLE).stacksTo(16)));
 
@@ -133,6 +129,12 @@ public class ModItems {
     public static final DeferredItem<BlockItem> DEEPSLATE_DEPOSIT = ITEMS.registerSimpleBlockItem(ModBlocks.DEEPSLATE_DEPOSIT);
     public static final DeferredItem<BlockItem> BLACKSTONE_DEPOSIT = ITEMS.registerSimpleBlockItem(ModBlocks.BLACKSTONE_DEPOSIT);
     public static final DeferredItem<BlockItem> GOLDEN_WORM_CRATE = ITEMS.registerSimpleBlockItem(ModBlocks.GOLDEN_WORM_CRATE);
+    @Nullable
+    public static final DeferredItem<BlockItem> ORANGE_CRATE = ModBlocks.ORANGE_CRATE != null ? ITEMS.registerSimpleBlockItem(ModBlocks.ORANGE_CRATE) : null;
+    @Nullable
+    public static final DeferredItem<BlockItem> PLUM_CRATE = ModBlocks.PLUM_CRATE != null ? ITEMS.registerSimpleBlockItem(ModBlocks.PLUM_CRATE) : null;
+    @Nullable
+    public static final DeferredItem<BlockItem> HOARY_APPLE_CRATE = ModBlocks.HOARY_APPLE_CRATE != null ? ITEMS.registerSimpleBlockItem(ModBlocks.HOARY_APPLE_CRATE) : null;
 
     public static final DeferredItem<BlockItem> CACAO_LOG = ITEMS.registerSimpleBlockItem(ModBlocks.CACAO_LOG);
     public static final DeferredItem<BlockItem> CACAO_WOOD = ITEMS.registerSimpleBlockItem(ModBlocks.CACAO_WOOD);
@@ -218,6 +220,8 @@ public class ModItems {
     public static final DeferredItem<Item> POCKET_JUKEBOX = ITEMS.register("pocket_jukebox",
             () -> new PocketJukeboxItem(new Item.Properties().stacksTo(1)));
     public static final Map<DyeColor, DeferredItem<Item>> POCKET_JUKEBOXES = new EnumMap<>(DyeColor.class);
+    public static final DeferredItem<Item> MUSIC_DISC_JYNWEYTHEK = ITEMS.registerSimpleItem("music_disc_jynweythek",
+            new Item.Properties().stacksTo(1).rarity(Rarity.RARE).jukeboxPlayable(ResourceKey.create(Registries.JUKEBOX_SONG, ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "jynweythek"))));
 
     static {
         for (DyeColor color : DyeColor.values()) {

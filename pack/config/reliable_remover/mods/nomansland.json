@@ -167,15 +167,15 @@
   {
     "action": "remove",
     "items": [
-      "nomansland:apple_crate"
-    ],
-    "replace_with": "bountifulfares:apple_block"
-  },
-  {
-    "action": "remove",
-    "items": [
       "nomansland:autumn_crocus"
     ],
     "replace_with": "autumnity:autumn_crocus"
+  },
+  {
+    "action": "remove_potion",
+    "effects": [
+      "nomansland:stasis",
+      "nomansland:long_stasis"
+    ]
   }
 ]

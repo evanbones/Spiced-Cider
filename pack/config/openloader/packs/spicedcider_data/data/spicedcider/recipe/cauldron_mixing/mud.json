@@ -1,0 +1,54 @@
+{
+  "type": "spicedcider:cauldron_mixing",
+  "fluid": "minecraft:water",
+  "ingredients": [
+    [
+      {
+        "item": "minecraft:dirt"
+      },
+      {
+        "item": "minecraft:coarse_dirt"
+      },
+      {
+        "item": "minecraft:rooted_dirt"
+      }
+    ],
+    [
+      {
+        "item": "minecraft:dirt"
+      },
+      {
+        "item": "minecraft:coarse_dirt"
+      },
+      {
+        "item": "minecraft:rooted_dirt"
+      }
+    ],
+    [
+      {
+        "item": "minecraft:dirt"
+      },
+      {
+        "item": "minecraft:coarse_dirt"
+      },
+      {
+        "item": "minecraft:rooted_dirt"
+      }
+    ],
+    [
+      {
+        "item": "minecraft:dirt"
+      },
+      {
+        "item": "minecraft:coarse_dirt"
+      },
+      {
+        "item": "minecraft:rooted_dirt"
+      }
+    ]
+  ],
+  "result": {
+    "id": "minecraft:mud",
+    "count": 4
+  }
+}

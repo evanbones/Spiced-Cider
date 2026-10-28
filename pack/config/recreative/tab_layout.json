@@ -5,7 +5,6 @@
       "minecraft:building_blocks"
     ],
     "remove_items": [
-      "minecraft:packed_ice",
       "everycomp:abnww/nomansland/pine_leaf_pile",
       "everycomp:abnww/nomansland/chiseled_pine_bookshelf",
       "everycomp:abnww/nomansland/pine_ladder",
@@ -88,11 +87,6 @@
       "bountifulfares:palm_mulch",
       "bountifulfares:palm_mulch_block",
       "everycomp:abnww/bountifulfares/golden_apple_leaf_pile",
-      "everycomp:abnww/spicedcider/cacao_leaf_pile",
-      "everycomp:abnww/spicedcider/flowering_avocado_leaf_pile",
-      "everycomp:abnww/spicedcider/flowering_cacao_leaf_pile",
-      "everycomp:abnww/spicedcider/pear_leaf_pile",
-      "everycomp:abnww/spicedcider/flowering_pear_leaf_pile",
       "supplementaries:slidy_block",
       "minecraft:dirt",
       "newworld:loam",
@@ -151,6 +145,11 @@
       "nirvana:purple_woven_burlap",
       "nirvana:magenta_woven_burlap",
       "nirvana:pink_woven_burlap",
+      "everycomp:q/architects_palette/twisted_chest",
+      "everycomp:q/architects_palette/trapped_twisted_chest",
+      "everycomp:abnww/architects_palette/chiseled_twisted_bookshelf",
+      "everycomp:abnww/architects_palette/twisted_ladder",
+      "everycomp:abnww/architects_palette/twisted_beehive",
       "everycomp:q/infernalexp/luminous_chest",
       "everycomp:q/infernalexp/trapped_luminous_chest",
       "everycomp:abnww/infernalexp/chiseled_luminous_bookshelf",
@@ -161,11 +160,6 @@
       "everycomp:abnww/mynethersdelight/chiseled_powdery_bookshelf",
       "everycomp:abnww/mynethersdelight/powdery_ladder",
       "everycomp:abnww/mynethersdelight/powdery_beehive",
-      "everycomp:q/architects_palette/twisted_chest",
-      "everycomp:q/architects_palette/trapped_twisted_chest",
-      "everycomp:abnww/architects_palette/chiseled_twisted_bookshelf",
-      "everycomp:abnww/architects_palette/twisted_ladder",
-      "everycomp:abnww/architects_palette/twisted_beehive",
       "everycomp:q/culturaldelights/beanstalk_chest",
       "everycomp:q/culturaldelights/trapped_beanstalk_chest",
       "everycomp:abnww/culturaldelights/chiseled_beanstalk_bookshelf",
@@ -226,33 +220,32 @@
       "quark:paper_lantern",
       "quark:paper_lantern_sakura",
       "everycomp:abnww/nomansland/yellow_birch_leaf_pile",
+      "everycomp:abnww/nomansland/pale_cherry_leaf_pile",
+      "everycomp:abnww/nomansland/red_maple_leaf_pile",
+      "everycomp:abnww/nomansland/willow_leaf_pile",
       "everycomp:abnww/nomansland/autumnal_oak_leaf_pile",
       "everycomp:abnww/nomansland/maple_leaf_pile",
-      "everycomp:abnww/nomansland/red_maple_leaf_pile",
-      "everycomp:abnww/nomansland/pale_cherry_leaf_pile",
-      "everycomp:abnww/nomansland/willow_leaf_pile",
-      "everycomp:abnww/mynethersdelight/powdery_closet",
-      "everycomp:abnww/culturaldelights/beanstalk_closet",
-      "everycomp:abnww/abundant_atmosphere/red_bamboo_closet",
-      "everycomp:abnww/mynethersdelight/trapped_powdery_closet",
-      "everycomp:abnww/culturaldelights/trapped_beanstalk_closet",
-      "everycomp:abnww/abundant_atmosphere/trapped_red_bamboo_closet",
-      "everycomp:abnww/nomansland/frosted_leaf_pile",
-      "everycomp:abnww/bountifulfares/flowering_apple_leaf_pile",
+      "everycomp:abnww/spicedcider/pear_leaf_pile",
       "everycomp:abnww/bountifulfares/flowering_plum_leaf_pile",
-      "everycomp:abnww/bountifulfares/flowering_orange_leaf_pile",
-      "everycomp:abnww/bountifulfares/flowering_lemon_leaf_pile",
       "everycomp:abnww/culturaldelights/avocado_leaf_pile",
+      "everycomp:abnww/bountifulfares/flowering_orange_leaf_pile",
+      "everycomp:abnww/bountifulfares/flowering_apple_leaf_pile",
+      "everycomp:abnww/spicedcider/cacao_leaf_pile",
+      "everycomp:abnww/spicedcider/flowering_cacao_leaf_pile",
+      "everycomp:abnww/spicedcider/flowering_avocado_leaf_pile",
       "everycomp:abnww/bountifulfares/flowering_golden_apple_leaf_pile",
-      "spicedcider:bb/environmental/wisteria_seat",
+      "everycomp:abnww/spicedcider/flowering_pear_leaf_pile",
+      "everycomp:abnww/nomansland/frosted_leaf_pile",
+      "everycomp:abnww/bountifulfares/flowering_lemon_leaf_pile",
       "spicedcider:bb/upgrade_aquatic/driftwood_seat",
-      "spicedcider:bb/bountifulfares/hoary_seat",
-      "spicedcider:bb/mynethersdelight/powdery_seat",
       "spicedcider:bb/architects_palette/twisted_seat",
-      "spicedcider:bb/infernalexp/luminous_seat",
+      "spicedcider:bb/culturaldelights/beanstalk_seat",
       "spicedcider:bb/caverns_and_chasms/azalea_seat",
+      "spicedcider:bb/infernalexp/luminous_seat",
       "spicedcider:bb/minecraft/pale_oak_seat",
-      "spicedcider:bb/culturaldelights/beanstalk_seat"
+      "spicedcider:bb/environmental/wisteria_seat",
+      "spicedcider:bb/mynethersdelight/powdery_seat",
+      "spicedcider:bb/bountifulfares/hoary_seat"
     ],
     "add_items": [
       "minecraft:oak_log",
@@ -703,7 +696,6 @@
       "valhelsia_structures:stripped_warped_post",
       "valhelsia_structures:bundled_warped_posts",
       "valhelsia_structures:bundled_stripped_warped_posts",
-      "everycomp:q/bountifulfares/plum_hedge",
       "architects_palette:twisted_log",
       "architects_palette:stripped_twisted_log",
       "architects_palette:twisted_planks",
@@ -725,6 +717,46 @@
       "everycomp:vs/architects_palette/stripped_twisted_post",
       "everycomp:vs/architects_palette/bundled_twisted_posts",
       "everycomp:vs/architects_palette/bundled_stripped_twisted_posts",
+      "culturaldelights:beanstalk",
+      "culturaldelights:beanstalk_planks",
+      "culturaldelights:beanstalk_fence",
+      "culturaldelights:beanstalk_fence_gate",
+      "everycomp:bf/culturaldelights/beanstalk_pickets",
+      "everycomp:ap/culturaldelights/beanstalk_railing",
+      "spicedcider:bb/culturaldelights/beanstalk_palisade",
+      "everycomp:vs/culturaldelights/beanstalk_post",
+      "culturaldelights:beanstalk_door",
+      "culturaldelights:beanstalk_trapdoor",
+      "culturaldelights:beanstalk_pressure_plate",
+      "culturaldelights:beanstalk_button",
+      "everycomp:c/culturaldelights/beanstalk_window",
+      "everycomp:c/culturaldelights/beanstalk_window_pane",
+      "shutterup:shutterup/culturaldelights/beanstalk_shutter",
+      "culturaldelights:stripped_beanstalk",
+      "spicedcider:bb/culturaldelights/stripped_beanstalk_palisade",
+      "everycomp:vs/culturaldelights/stripped_beanstalk_post",
+      "everycomp:vs/culturaldelights/bundled_beanstalk_posts",
+      "everycomp:vs/culturaldelights/bundled_stripped_beanstalk_posts",
+      "infernalexp:luminous_stem",
+      "infernalexp:stripped_luminous_stem",
+      "infernalexp:luminous_planks",
+      "infernalexp:luminous_planks_fence",
+      "infernalexp:luminous_planks_fence_gate",
+      "everycomp:bf/infernalexp/luminous_pickets",
+      "everycomp:ap/infernalexp/luminous_railing",
+      "spicedcider:bb/infernalexp/luminous_palisade",
+      "everycomp:vs/infernalexp/luminous_post",
+      "infernalexp:luminous_door",
+      "infernalexp:luminous_trapdoor",
+      "infernalexp:luminous_planks_pressure_plate",
+      "infernalexp:luminous_planks_button",
+      "everycomp:c/infernalexp/luminous_window",
+      "everycomp:c/infernalexp/luminous_window_pane",
+      "shutterup:shutterup/infernalexp/luminous_shutter",
+      "spicedcider:bb/infernalexp/stripped_luminous_palisade",
+      "everycomp:vs/infernalexp/stripped_luminous_post",
+      "everycomp:vs/infernalexp/bundled_luminous_posts",
+      "everycomp:vs/infernalexp/bundled_stripped_luminous_posts",
       "everycomp:q/mynethersdelight/hollow_powdery_log",
       "mynethersdelight:powdery_block",
       "mynethersdelight:powdery_planks",
@@ -747,46 +779,6 @@
       "everycomp:vs/mynethersdelight/bundled_stripped_powdery_posts",
       "mynethersdelight:powdery_mosaic",
       "mynethersdelight:stripped_powdery_block",
-      "infernalexp:luminous_stem",
-      "infernalexp:stripped_luminous_stem",
-      "infernalexp:luminous_planks",
-      "infernalexp:luminous_planks_fence",
-      "infernalexp:luminous_planks_fence_gate",
-      "everycomp:bf/infernalexp/luminous_pickets",
-      "everycomp:ap/infernalexp/luminous_railing",
-      "spicedcider:bb/infernalexp/luminous_palisade",
-      "everycomp:vs/infernalexp/luminous_post",
-      "infernalexp:luminous_door",
-      "infernalexp:luminous_trapdoor",
-      "infernalexp:luminous_planks_pressure_plate",
-      "infernalexp:luminous_planks_button",
-      "everycomp:c/infernalexp/luminous_window",
-      "everycomp:c/infernalexp/luminous_window_pane",
-      "shutterup:shutterup/infernalexp/luminous_shutter",
-      "spicedcider:bb/infernalexp/stripped_luminous_palisade",
-      "everycomp:vs/infernalexp/stripped_luminous_post",
-      "everycomp:vs/infernalexp/bundled_luminous_posts",
-      "everycomp:vs/infernalexp/bundled_stripped_luminous_posts",
-      "culturaldelights:beanstalk",
-      "culturaldelights:beanstalk_planks",
-      "culturaldelights:beanstalk_fence",
-      "culturaldelights:beanstalk_fence_gate",
-      "everycomp:bf/culturaldelights/beanstalk_pickets",
-      "everycomp:ap/culturaldelights/beanstalk_railing",
-      "spicedcider:bb/culturaldelights/beanstalk_palisade",
-      "everycomp:vs/culturaldelights/beanstalk_post",
-      "culturaldelights:beanstalk_door",
-      "culturaldelights:beanstalk_trapdoor",
-      "culturaldelights:beanstalk_pressure_plate",
-      "culturaldelights:beanstalk_button",
-      "everycomp:c/culturaldelights/beanstalk_window",
-      "everycomp:c/culturaldelights/beanstalk_window_pane",
-      "shutterup:shutterup/culturaldelights/beanstalk_shutter",
-      "culturaldelights:stripped_beanstalk",
-      "spicedcider:bb/culturaldelights/stripped_beanstalk_palisade",
-      "everycomp:vs/culturaldelights/stripped_beanstalk_post",
-      "everycomp:vs/culturaldelights/bundled_beanstalk_posts",
-      "everycomp:vs/culturaldelights/bundled_stripped_beanstalk_posts",
       "nomansland:maple_log",
       "nomansland:stripped_maple_log",
       "nomansland:maple_planks",
@@ -833,21 +825,15 @@
       "bountifulfares:stripped_apple_log",
       "bountifulfares:orange_log",
       "bountifulfares:stripped_orange_log",
+      "brick_and_mortar:orange_bricks",
+      "brick_and_mortar:orange_tiles",
       "bountifulfares:lemon_log",
       "bountifulfares:stripped_lemon_log",
       "bountifulfares:plum_log",
       "bountifulfares:stripped_plum_log",
-      "spicedcider:avocado_log",
-      "spicedcider:stripped_avocado_log",
-      "spicedcider:cacao_log",
-      "spicedcider:stripped_cacao_log",
-      "spicedcider:pear_log",
-      "spicedcider:stripped_pear_log",
-      "brick_and_mortar:orange_bricks",
-      "brick_and_mortar:orange_tiles",
+      "everycomp:q/bountifulfares/plum_hedge",
       "bountifulfares:palm_log",
       "bountifulfares:stripped_palm_log",
-      "bountifulfares:golden_apple_log",
       "nomansland:crude_door",
       "nomansland:crude_trapdoor",
       "nomansland:wooden_platform",
@@ -971,15 +957,6 @@
       "stonezone:sw/quark/shale_tiles",
       "quark:chiseled_shale_bricks",
       "quark:shale_pillar",
-      "quark:myalite",
-      "spicedcider:cobbled_myalite",
-      "spicedcider:mossy_cobbled_myalite",
-      "quark:polished_myalite",
-      "quark:myalite_bricks",
-      "spicedcider:mossy_myalite_bricks",
-      "stonezone:sw/quark/myalite_tiles",
-      "quark:chiseled_myalite_bricks",
-      "quark:myalite_pillar",
       "quark:permafrost",
       "spicedcider:cobbled_permafrost",
       "spicedcider:mossy_cobbled_permafrost",
@@ -1050,17 +1027,14 @@
       "minecraft:smooth_red_sandstone",
       "minecraft:cut_red_sandstone",
       "minecraft:chiseled_red_sandstone",
-      "spicedcider:dried_deepsilt",
-      "spicedcider:polished_dried_deepsilt",
-      "spicedcider:cut_dried_deepsilt",
-      "spicedcider:chiseled_dried_deepsilt",
+      "minecraft:packed_ice",
       "architects_palette:polished_packed_ice",
       "embers_and_icicles:packed_ice_bricks",
       "embers_and_icicles:chiseled_packed_ice",
       "architects_palette:packed_ice_pillar",
-      "blockbox:packed_snow",
       "embers_and_icicles:snow_bricks",
       "blockbox:carved_snow",
+      "blockbox:packed_snow",
       "autumnity:snail_shell_block",
       "autumnity:snail_shell_bricks",
       "autumnity:snail_shell_tiles",
@@ -1075,9 +1049,6 @@
       "stoneworks:chiseled_prismarine",
       "minecraft:dark_prismarine",
       "stoneworks:chiseled_dark_prismarine",
-      "spicedcider:chromarine",
-      "spicedcider:achromarine",
-      "spicedcider:sulfide",
       "bountifulfares:feldspar_block",
       "bountifulfares:feldspar_bricks",
       "stonezone:sw/bountifulfares/feldspar_pillar",
@@ -1189,16 +1160,11 @@
       "minecraft:chiseled_polished_blackstone",
       "minecraft:polished_blackstone_bricks",
       "minecraft:gilded_blackstone",
-      "minecraft:end_stone_bricks",
-      "stoneworks:mossy_end_stone_bricks",
-      "stoneworks:chiseled_end_stone",
-      "quark:dusky_myalite",
       "supplementaries:soap_block",
       "quark:midori_block",
       "quark:midori_pillar",
       "minecraft:coal_block",
       "quark:charcoal_block",
-      "architects_palette:charcoal_block",
       "modestmining:coke_block",
       "minecraft:iron_block",
       "create:weathered_iron_block",
@@ -1515,7 +1481,6 @@
       "architects_palette:wardstone_bricks",
       "architects_palette:chiseled_wardstone",
       "architects_palette:wardstone_pillar",
-      "architects_palette:tread_plate",
       "architects_palette:hazard_block",
       "architects_palette:bread_block",
       "architects_palette:crustless_bread_block",
@@ -1542,15 +1507,8 @@
       "neapolitan:chocolate_tiles",
       "neapolitan:chiseled_chocolate_bricks",
       "stonezone:sw/neapolitan/chocolate_pillar",
-      "neapolitan:vanilla_ice_cream_block",
-      "neapolitan:chocolate_ice_cream_block",
-      "neapolitan:strawberry_ice_cream_block",
-      "neapolitan:banana_ice_cream_block",
-      "neapolitan:mint_ice_cream_block",
       "minecraft:resin_bricks",
       "spicedcider:resin_tiles",
-      "minecraft:chiseled_resin_bricks",
-      "stonezone:sw/minecraft/resin_pillar",
       "minecraft:sulfur",
       "spicedcider:cobbled_sulfur",
       "spicedcider:mossy_cobbled_sulfur",
@@ -1627,6 +1585,10 @@
       "brick_and_mortar:light_soul_algal_tiles",
       "brick_and_mortar:burnt_soul_algal_bricks",
       "brick_and_mortar:burnt_soul_algal_tiles",
+      "spicedcider:dried_deepsilt",
+      "spicedcider:polished_dried_deepsilt",
+      "spicedcider:cut_dried_deepsilt",
+      "spicedcider:chiseled_dried_deepsilt",
       "infernalexp:dimstone",
       "spicedcider:cobbled_dimstone",
       "spicedcider:mossy_cobbled_dimstone",
@@ -1676,13 +1638,13 @@
       "quark:bamboo_mat",
       "quark:bamboo_mat_carpet",
       "everycomp:q/nomansland/yellow_birch_hedge",
-      "everycomp:q/environmental/pink_wisteria_hedge",
       "everycomp:q/environmental/white_wisteria_hedge",
-      "everycomp:q/environmental/purple_wisteria_hedge",
       "everycomp:q/environmental/blue_wisteria_hedge",
-      "everycomp:q/nomansland/autumnal_oak_hedge",
-      "everycomp:q/nomansland/red_maple_hedge",
+      "everycomp:q/environmental/purple_wisteria_hedge",
       "everycomp:q/nomansland/pale_cherry_hedge",
+      "everycomp:q/environmental/pink_wisteria_hedge",
+      "everycomp:q/nomansland/red_maple_hedge",
+      "everycomp:q/nomansland/autumnal_oak_hedge",
       "snowyspirit:gingerbread_frosted",
       "snowyspirit:gingerbread",
       "snowyspirit:gingerbread_door",
@@ -2515,6 +2477,7 @@
       "caverns_and_chasms:flint_block",
       "minecraft:sandstone",
       "minecraft:red_sandstone",
+      "minecraft:packed_ice",
       "minecraft:stone",
       "minecraft:deepslate",
       "minecraft:granite",
@@ -2528,7 +2491,6 @@
       "quark:limestone",
       "quark:jasper",
       "quark:shale",
-      "quark:myalite",
       "minecraft:prismarine",
       "minecraft:sulfur",
       "minecraft:netherrack",
@@ -2579,33 +2541,17 @@
       "minecraft:slime_block",
       "minecraft:honey_block",
       "autumnity:snail_goo_block",
-      "minecraft:sculk_sensor",
-      "spicedcider:chromarine",
-      "spicedcider:achromarine",
-      "spicedcider:sulfide",
-      "spicedcider:cacao_log",
-      "spicedcider:stripped_cacao_log",
-      "spicedcider:pear_log",
-      "spicedcider:stripped_pear_log",
-      "spicedcider:avocado_log",
-      "spicedcider:stripped_avocado_log",
-      "spicedcider:dried_deepsilt",
-      "spicedcider:polished_dried_deepsilt",
-      "spicedcider:cut_dried_deepsilt",
-      "spicedcider:chiseled_dried_deepsilt"
+      "minecraft:sculk_sensor"
     ],
     "add_items": [
       "minecraft:grass_block",
       "minecraft:dirt_path",
       "minecraft:podzol",
       "nomansland:podzol_path",
-      "environmental:podzol_path",
       "minecraft:mycelium",
       "nomansland:mycelium_path",
-      "environmental:mycelium_path",
       "nomansland:dirt_path",
       "minecraft:dirt",
-      "environmental:dirt_path",
       "minecraft:coarse_dirt",
       "minecraft:rooted_dirt",
       "spicedcider:wormy_dirt",
@@ -2621,12 +2567,9 @@
       "nomansland:coarse_silt",
       "nomansland:silt_path",
       "minecraft:gravel",
-      "spicedcider:algal_gravel",
       "supplementaries:raked_gravel",
       "nomansland:gravel_path",
       "minecraft:sand",
-      "spicedcider:algal_sand",
-      "spicedcider:deepsilt",
       "nomansland:sand_path",
       "minecraft:red_sand",
       "nomansland:red_sand_path",
@@ -2639,17 +2582,17 @@
       "spelunkery:saltpeter_block",
       "spelunkery:saltpeter",
       "minecraft:ice",
-      "minecraft:packed_ice",
       "minecraft:blue_ice",
       "nomansland:icicles",
       "embers_and_icicles:brittle_ice",
+      "embers_and_icicles:icicle",
+      "embers_and_icicles:ice_crystal",
       "minecraft:snow_block",
       "nomansland:snow_path",
       "minecraft:snow",
       "nomansland:snowy_grass_path",
       "abundant_atmosphere:moss_clump",
       "minecraft:moss_block",
-      "spicedcider:algae",
       "minecraft:moss_carpet",
       "minecraft:pale_moss_block",
       "minecraft:pale_moss_carpet",
@@ -2658,7 +2601,6 @@
       "abundant_atmosphere:rust_moss_block",
       "abundant_atmosphere:rust_moss_carpet",
       "minecraft:pointed_dripstone",
-      "embers_and_icicles:icicle",
       "minecraft:sulfur_spike",
       "minecraft:potent_sulfur",
       "minecraft:magma_block",
@@ -2689,7 +2631,6 @@
       "minecraft:deepslate_diamond_ore",
       "upgrade_aquatic:embedded_ammonite",
       "minecraft:nether_gold_ore",
-      "minecraft:nether_quartz_ore",
       "modestmining:nether_lead_ore",
       "caverns_and_chasms:soul_silver_ore",
       "minecraft:ancient_debris",
@@ -2715,12 +2656,6 @@
       "nomansland:medium_quartzite_bud",
       "nomansland:large_quartzite_bud",
       "nomansland:quartzite_cluster",
-      "spicedcider:budding_prismarine",
-      "spicedcider:small_prismarine_bud",
-      "spicedcider:medium_prismarine_bud",
-      "spicedcider:large_prismarine_bud",
-      "spicedcider:prismarine_cluster",
-      "embers_and_icicles:ice_crystal",
       "minecraft:mangrove_roots",
       "minecraft:muddy_mangrove_roots",
       "bountifulfares:palm_crown",
@@ -2781,23 +2716,23 @@
       "everycomp:abnww/bountifulfares/golden_apple_leaf_pile",
       "everycomp:abnww/architects_palette/twisted_leaf_pile",
       "everycomp:abnww/nomansland/yellow_birch_leaf_pile",
+      "everycomp:abnww/nomansland/pale_cherry_leaf_pile",
+      "everycomp:abnww/nomansland/red_maple_leaf_pile",
+      "everycomp:abnww/nomansland/willow_leaf_pile",
       "everycomp:abnww/nomansland/autumnal_oak_leaf_pile",
       "everycomp:abnww/nomansland/maple_leaf_pile",
-      "everycomp:abnww/nomansland/red_maple_leaf_pile",
-      "everycomp:abnww/nomansland/pale_cherry_leaf_pile",
-      "everycomp:abnww/nomansland/willow_leaf_pile",
-      "everycomp:abnww/nomansland/frosted_leaf_pile",
-      "everycomp:abnww/bountifulfares/flowering_apple_leaf_pile",
+      "everycomp:abnww/spicedcider/pear_leaf_pile",
       "everycomp:abnww/bountifulfares/flowering_plum_leaf_pile",
-      "everycomp:abnww/bountifulfares/flowering_orange_leaf_pile",
-      "everycomp:abnww/bountifulfares/flowering_lemon_leaf_pile",
       "everycomp:abnww/culturaldelights/avocado_leaf_pile",
-      "everycomp:abnww/spicedcider/flowering_avocado_leaf_pile",
+      "everycomp:abnww/bountifulfares/flowering_orange_leaf_pile",
+      "everycomp:abnww/bountifulfares/flowering_apple_leaf_pile",
       "everycomp:abnww/spicedcider/cacao_leaf_pile",
       "everycomp:abnww/spicedcider/flowering_cacao_leaf_pile",
-      "everycomp:abnww/spicedcider/pear_leaf_pile",
-      "everycomp:abnww/spicedcider/flowering_pear_leaf_pile",
+      "everycomp:abnww/spicedcider/flowering_avocado_leaf_pile",
       "everycomp:abnww/bountifulfares/flowering_golden_apple_leaf_pile",
+      "everycomp:abnww/spicedcider/flowering_pear_leaf_pile",
+      "everycomp:abnww/nomansland/frosted_leaf_pile",
+      "everycomp:abnww/bountifulfares/flowering_lemon_leaf_pile",
       "bountifulfares:apple_leaves",
       "bountifulfares:flowering_apple_leaves",
       "bountifulfares:orange_leaves",
@@ -2806,14 +2741,6 @@
       "bountifulfares:flowering_lemon_leaves",
       "bountifulfares:plum_leaves",
       "bountifulfares:flowering_plum_leaves",
-      "bountifulfares:golden_apple_leaves",
-      "bountifulfares:flowering_golden_apple_leaves",
-      "culturaldelights:avocado_leaves",
-      "spicedcider:flowering_avocado_leaves",
-      "spicedcider:cacao_leaves",
-      "spicedcider:flowering_cacao_leaves",
-      "spicedcider:pear_leaves",
-      "spicedcider:flowering_pear_leaves",
       "bountifulfares:walnut_leaves",
       "bountifulfares:hoary_leaves",
       "bountifulfares:palm_frond",
@@ -2847,9 +2774,6 @@
       "bountifulfares:orange_sapling",
       "bountifulfares:lemon_sapling",
       "bountifulfares:plum_sapling",
-      "culturaldelights:avocado_sapling",
-      "spicedcider:cacao_sapling",
-      "spicedcider:pear_sapling",
       "bountifulfares:hoary_apple_sapling",
       "environmental:pink_wisteria_sapling",
       "environmental:purple_wisteria_sapling",
@@ -2880,7 +2804,6 @@
       "newworld:moss_sprouts",
       "minecraft:fern",
       "nomansland:fiddlehead",
-      "environmental:mycelium_sprouts",
       "environmental:dwarf_spruce",
       "nomansland:short_beachgrass",
       "nomansland:tall_beachgrass",
@@ -2907,7 +2830,6 @@
       "minecraft:lily_of_the_valley",
       "nomansland:starflower",
       "nomansland:thistle",
-      "nomansland:autumn_crocus",
       "nomansland:aconite",
       "nomansland:yellow_lupine",
       "nomansland:pink_lupine",
@@ -2924,11 +2846,8 @@
       "caverns_and_chasms:moschatel",
       "caverns_and_chasms:false_hope",
       "environmental:bluebell",
-      "environmental:dianthus",
       "environmental:violet",
       "environmental:tasselflower",
-      "environmental:red_lotus_flower",
-      "environmental:white_lotus_flower",
       "environmental:cartwheel",
       "environmental:yellow_hibiscus",
       "environmental:orange_hibiscus",
@@ -3031,12 +2950,10 @@
       "minecraft:pumpkin_seeds",
       "minecraft:melon_seeds",
       "minecraft:beetroot_seeds",
-      "etcetera:cotton_seeds",
       "neapolitan:strawberry_pips",
-      "berry_good:glow_berry_pips",
       "berry_good:sweet_berry_pips",
       "autumnity:foul_berry_pips",
-      "bountifulfares:maize_seeds",
+      "berry_good:glow_berry_pips",
       "bountifulfares:leek_seeds",
       "bountifulfares:tea_berries",
       "bountifulfares:spongekin_seeds",
@@ -3051,13 +2968,6 @@
       "abundant_atmosphere:pink_water_lotus",
       "abundant_atmosphere:violet_water_lotus",
       "minecraft:seagrass",
-      "spicedcider:chromatic_bramble",
-      "spicedcider:tall_chromatic_bramble",
-      "spicedcider:achromatic_bramble",
-      "spicedcider:tall_achromatic_bramble",
-      "spicedcider:tubeworm",
-      "spicedcider:sulfide_vent",
-      "spicedcider:calcite_vent",
       "supplementaries:barnacles",
       "supplementaries:feather_block",
       "supplementaries:sugar_cube",
@@ -3072,12 +2982,6 @@
       "bountifulfares:walnut_mulch_block",
       "bountifulfares:palm_mulch",
       "bountifulfares:palm_mulch_block",
-      "bountifulfares:golden_apple_sapling",
-      "bountifulfares:apple_block",
-      "bountifulfares:orange_block",
-      "bountifulfares:lemon_block",
-      "bountifulfares:plum_block",
-      "bountifulfares:hoary_apple_block",
       "upgrade_aquatic:pickerelweed_block",
       "upgrade_aquatic:boiled_pickerelweed_block",
       "upgrade_aquatic:kelp_block",
@@ -3269,6 +3173,8 @@
       "farmersdelight:cabbage_seeds",
       "farmersdelight:tomato_seeds",
       "abundantdelight:puffball_mushroom_crate",
+      "quark:cocoa_beans_sack",
+      "quark:nether_wart_sack",
       "berry_good:sweet_berry_basket",
       "autumnity:foul_berry_basket",
       "berry_good:glow_berry_basket",
@@ -3304,9 +3210,41 @@
       "spicedcider:blackstone_deposit",
       "spicedcider:worm_crate",
       "spicedcider:golden_worm_crate",
-      "quark:myalite_crystal",
-      "quark:cocoa_beans_sack",
-      "quark:nether_wart_sack",
+      "spicedcider:orange_crate",
+      "spicedcider:plum_crate",
+      "spicedcider:hoary_apple_crate",
+      "spicedcider:cacao_log",
+      "spicedcider:stripped_cacao_log",
+      "spicedcider:cacao_leaves",
+      "spicedcider:flowering_cacao_leaves",
+      "spicedcider:cacao_sapling",
+      "spicedcider:pear_log",
+      "spicedcider:stripped_pear_log",
+      "spicedcider:pear_leaves",
+      "spicedcider:flowering_pear_leaves",
+      "spicedcider:pear_sapling",
+      "spicedcider:avocado_log",
+      "spicedcider:stripped_avocado_log",
+      "spicedcider:flowering_avocado_leaves",
+      "spicedcider:deepsilt",
+      "spicedcider:algae",
+      "spicedcider:algal_sand",
+      "spicedcider:algal_gravel",
+      "spicedcider:chromarine",
+      "spicedcider:achromarine",
+      "spicedcider:sulfide",
+      "spicedcider:sulfide_vent",
+      "spicedcider:calcite_vent",
+      "spicedcider:tubeworm",
+      "spicedcider:budding_prismarine",
+      "spicedcider:small_prismarine_bud",
+      "spicedcider:medium_prismarine_bud",
+      "spicedcider:large_prismarine_bud",
+      "spicedcider:prismarine_cluster",
+      "spicedcider:chromatic_bramble",
+      "spicedcider:tall_chromatic_bramble",
+      "spicedcider:achromatic_bramble",
+      "spicedcider:tall_achromatic_bramble",
       "snowyspirit:ginger_flower",
       "infernalexp:shimmer_sand",
       "infernalexp:glimmer_gravel",
@@ -3338,6 +3276,8 @@
       "culturaldelights:beanstalk_leaf",
       "culturaldelights:magic_beans",
       "culturaldelights:avocado_pit",
+      "culturaldelights:avocado_sapling",
+      "culturaldelights:avocado_leaves",
       "culturaldelights:bean_bag",
       "culturaldelights:salt_spike"
     ]
@@ -3422,7 +3362,6 @@
       "suppsquared:gold_candle_holder_pink",
       "suppsquared:gold_candle_holder_soul",
       "suppsquared:gold_candle_holder_cupric",
-      "bountifulfares:golden_apple_sapling",
       "minecraft:end_crystal",
       "minecraft:bee_nest",
       "etcetera:crumbling_stone",
@@ -3439,8 +3378,6 @@
       "bountifulfares:tinged_glass",
       "blockbox:rough_glass",
       "blockbox:rough_glass_pane",
-      "supplementaries:way_sign_poplar",
-      "suppsquared:item_shelf_poplar",
       "supplementaries:sack",
       "suppsquared:sack_white",
       "suppsquared:sack_light_gray",
@@ -3721,7 +3658,6 @@
       "spelunkery:sluice_grate",
       "minecraft:crafting_table",
       "minecraft:cartography_table",
-      "minecraft:fletching_table",
       "minecraft:smithing_table",
       "clayworks:pottery_table",
       "cold_sweat:sewing_table",
@@ -3730,7 +3666,6 @@
       "minecraft:stonecutter",
       "woodworks:sawmill",
       "minecraft:grindstone",
-      "spelunkery:diamond_grindstone",
       "minecraft:loom",
       "minecraft:furnace",
       "minecraft:smoker",
@@ -3751,7 +3686,6 @@
       "bountifulfares:coconut_candle",
       "buzzier_bees:soul_candle",
       "buzzier_bees:cupric_candle",
-      "bountifulfares:fermentation_vessel",
       "piglinproliferation:stone_fire_ring",
       "minecraft:anvil",
       "supplementaries:blackboard",
@@ -3772,18 +3706,18 @@
       "bountifulfares:hoary_trellis",
       "bountifulfares:crimson_trellis",
       "bountifulfares:warped_trellis",
-      "everycomp:bf/abundant_atmosphere/ashroot_trellis",
-      "everycomp:bf/environmental/wisteria_trellis",
       "everycomp:bf/upgrade_aquatic/driftwood_trellis",
-      "everycomp:bf/mynethersdelight/powdery_trellis",
-      "everycomp:bf/newworld/fir_trellis",
-      "everycomp:bf/architects_palette/twisted_trellis",
-      "everycomp:bf/infernalexp/luminous_trellis",
       "everycomp:bf/abundant_atmosphere/gourdrot_trellis",
-      "everycomp:bf/caverns_and_chasms/azalea_trellis",
-      "everycomp:bf/minecraft/pale_oak_trellis",
+      "everycomp:bf/architects_palette/twisted_trellis",
       "everycomp:bf/culturaldelights/beanstalk_trellis",
+      "everycomp:bf/caverns_and_chasms/azalea_trellis",
+      "everycomp:bf/infernalexp/luminous_trellis",
+      "everycomp:bf/abundant_atmosphere/ashroot_trellis",
+      "everycomp:bf/minecraft/pale_oak_trellis",
+      "everycomp:bf/environmental/wisteria_trellis",
+      "everycomp:bf/mynethersdelight/powdery_trellis",
       "everycomp:bf/abundant_atmosphere/red_bamboo_trellis",
+      "everycomp:bf/newworld/fir_trellis",
       "nomansland:pine_trellis",
       "nomansland:maple_trellis",
       "nomansland:walnut_trellis",
@@ -3792,7 +3726,6 @@
       "minecraft:jukebox",
       "supplementaries:speaker_block",
       "etcetera:drum",
-      "minecraft:brewing_stand",
       "minecraft:cauldron",
       "supplementaries:goblet",
       "supplementaries:jar",
@@ -3802,18 +3735,6 @@
       "snowyspirit:snow_globe",
       "supplementaries:cage",
       "nomansland:tap",
-      "minecraft:bell",
-      "alloyed:bronze_bell",
-      "create:peculiar_bell",
-      "create:haunted_bell",
-      "chimes:bamboo_chimes",
-      "chimes:carved_bamboo_chimes",
-      "chimes:iron_chimes",
-      "chimes:copper_chimes",
-      "chimes:amethyst_chimes",
-      "chimes:glass_bells",
-      "create:desk_bell",
-      "nomansland:ancient_bronze_bell",
       "etcetera:dream_catcher",
       "minecraft:beacon",
       "minecraft:conduit",
@@ -3845,9 +3766,9 @@
       "everycomp:abnww/minecraft/pale_oak_ladder",
       "everycomp:abnww/bountifulfares/hoary_ladder",
       "everycomp:abnww/abundant_atmosphere/red_bamboo_ladder",
+      "everycomp:abnww/architects_palette/twisted_ladder",
       "everycomp:abnww/infernalexp/luminous_ladder",
       "everycomp:abnww/mynethersdelight/powdery_ladder",
-      "everycomp:abnww/architects_palette/twisted_ladder",
       "everycomp:abnww/culturaldelights/beanstalk_ladder",
       "alloyed:steel_ladder",
       "create:copper_ladder",
@@ -3882,9 +3803,9 @@
       "everycomp:abnww/minecraft/pale_oak_beehive",
       "everycomp:abnww/bountifulfares/hoary_beehive",
       "everycomp:abnww/abundant_atmosphere/red_bamboo_beehive",
+      "everycomp:abnww/architects_palette/twisted_beehive",
       "everycomp:abnww/infernalexp/luminous_beehive",
       "everycomp:abnww/mynethersdelight/powdery_beehive",
-      "everycomp:abnww/architects_palette/twisted_beehive",
       "everycomp:abnww/culturaldelights/beanstalk_beehive",
       "minecraft:suspicious_sand",
       "abundant_atmosphere:suspicious_red_sand",
@@ -4848,9 +4769,9 @@
       "everycomp:abnww/bountifulfares/chiseled_hoary_bookshelf",
       "everycomp:abnww/abundant_atmosphere/chiseled_red_bamboo_bookshelf",
       "abundant_atmosphere:red_bamboo_bookshelf",
+      "everycomp:abnww/architects_palette/chiseled_twisted_bookshelf",
       "everycomp:abnww/infernalexp/chiseled_luminous_bookshelf",
       "everycomp:abnww/mynethersdelight/chiseled_powdery_bookshelf",
-      "everycomp:abnww/architects_palette/chiseled_twisted_bookshelf",
       "everycomp:abnww/culturaldelights/chiseled_beanstalk_bookshelf",
       "everycomp:nml/mynethersdelight/powdery_bookshelf",
       "everycomp:nml/culturaldelights/beanstalk_bookshelf",
@@ -4871,21 +4792,21 @@
       "minecraft:crimson_shelf",
       "minecraft:warped_shelf",
       "everycomp:vanillabackport/bountifulfares/walnut_shelf",
-      "everycomp:vanillabackport/environmental/wisteria_shelf",
-      "everycomp:vanillabackport/infernalexp/luminous_shelf",
-      "everycomp:vanillabackport/nomansland/maple_shelf",
-      "everycomp:vanillabackport/abundant_atmosphere/ashroot_shelf",
-      "everycomp:vanillabackport/upgrade_aquatic/driftwood_shelf",
-      "everycomp:vanillabackport/bountifulfares/hoary_shelf",
-      "everycomp:vanillabackport/mynethersdelight/powdery_shelf",
-      "everycomp:vanillabackport/newworld/fir_shelf",
       "everycomp:vanillabackport/architects_palette/twisted_shelf",
-      "everycomp:vanillabackport/abundant_atmosphere/gourdrot_shelf",
+      "everycomp:vanillabackport/nomansland/maple_shelf",
+      "everycomp:vanillabackport/infernalexp/luminous_shelf",
+      "everycomp:vanillabackport/abundant_atmosphere/ashroot_shelf",
+      "everycomp:vanillabackport/mynethersdelight/powdery_shelf",
       "everycomp:vanillabackport/nomansland/willow_shelf",
-      "everycomp:vanillabackport/caverns_and_chasms/azalea_shelf",
+      "everycomp:vanillabackport/upgrade_aquatic/driftwood_shelf",
+      "everycomp:vanillabackport/abundant_atmosphere/gourdrot_shelf",
       "everycomp:vanillabackport/nomansland/pine_shelf",
       "everycomp:vanillabackport/culturaldelights/beanstalk_shelf",
+      "everycomp:vanillabackport/caverns_and_chasms/azalea_shelf",
+      "everycomp:vanillabackport/environmental/wisteria_shelf",
       "everycomp:vanillabackport/abundant_atmosphere/red_bamboo_shelf",
+      "everycomp:vanillabackport/newworld/fir_shelf",
+      "everycomp:vanillabackport/bountifulfares/hoary_shelf",
       "supplementaries:item_shelf",
       "minecraft:lectern",
       "minecraft:oak_sign",
@@ -5004,20 +4925,19 @@
       "suppsquared:nomansland/item_shelf_maple",
       "suppsquared:nomansland/item_shelf_walnut",
       "suppsquared:nomansland/item_shelf_willow",
-      "quark:nether_brick_chest",
-      "quark:birch_chest",
-      "quark:spruce_chest",
-      "quark:dark_oak_chest",
       "quark:warped_chest",
-      "quark:jungle_chest",
-      "quark:mangrove_chest",
       "quark:cherry_chest",
-      "quark:prismarine_chest",
-      "quark:bamboo_chest",
-      "quark:oak_chest",
-      "quark:crimson_chest",
       "quark:acacia_chest",
-      "minecraft:chest",
+      "quark:oak_chest",
+      "quark:spruce_chest",
+      "quark:crimson_chest",
+      "quark:dark_oak_chest",
+      "quark:prismarine_chest",
+      "quark:jungle_chest",
+      "quark:bamboo_chest",
+      "quark:nether_brick_chest",
+      "quark:mangrove_chest",
+      "quark:birch_chest",
       "minecraft:copper_chest",
       "minecraft:weathered_copper_chest",
       "minecraft:exposed_copper_chest",
@@ -5040,22 +4960,16 @@
       "everycomp:q/minecraft/pale_oak_chest",
       "everycomp:q/bountifulfares/hoary_chest",
       "everycomp:q/abundant_atmosphere/red_bamboo_chest",
+      "everycomp:q/architects_palette/twisted_chest",
       "everycomp:q/infernalexp/luminous_chest",
       "everycomp:q/mynethersdelight/powdery_chest",
-      "everycomp:q/architects_palette/twisted_chest",
       "everycomp:q/culturaldelights/beanstalk_chest",
-      "woodworks:bamboo_closet",
-      "everycomp:abnww/mynethersdelight/powdery_closet",
-      "everycomp:abnww/culturaldelights/beanstalk_closet",
-      "everycomp:abnww/abundant_atmosphere/red_bamboo_closet",
       "minecraft:barrel",
       "adaptedmobs:support_spore_barrel",
       "adaptedmobs:rocket_spore_barrel",
-      "adaptedmobs:festive_spore_barrel",
       "quark:crate",
       "tide:wooden_crate",
       "tide:obsidian_crate",
-      "tide:purpur_crate",
       "supplementaries:safe",
       "etcetera:prickly_can",
       "minecraft:respawn_anchor",
@@ -5074,15 +4988,15 @@
       "abundant_atmosphere:ashroot_seat",
       "abundant_atmosphere:gourdrot_seat",
       "abundant_atmosphere:red_bamboo_seat",
-      "spicedcider:bb/environmental/wisteria_seat",
       "spicedcider:bb/upgrade_aquatic/driftwood_seat",
-      "spicedcider:bb/bountifulfares/hoary_seat",
-      "spicedcider:bb/mynethersdelight/powdery_seat",
       "spicedcider:bb/architects_palette/twisted_seat",
-      "spicedcider:bb/infernalexp/luminous_seat",
-      "spicedcider:bb/caverns_and_chasms/azalea_seat",
-      "spicedcider:bb/minecraft/pale_oak_seat",
       "spicedcider:bb/culturaldelights/beanstalk_seat",
+      "spicedcider:bb/caverns_and_chasms/azalea_seat",
+      "spicedcider:bb/infernalexp/luminous_seat",
+      "spicedcider:bb/minecraft/pale_oak_seat",
+      "spicedcider:bb/environmental/wisteria_seat",
+      "spicedcider:bb/mynethersdelight/powdery_seat",
+      "spicedcider:bb/bountifulfares/hoary_seat",
       "nomansland:maple_seat",
       "nomansland:pine_seat",
       "nomansland:walnut_seat",
@@ -5095,7 +5009,6 @@
       "minecraft:zombie_head",
       "minecraft:creeper_head",
       "supplementaries:spider_head",
-      "adaptedmobs:festive_creeper_head",
       "adaptedmobs:support_creeper_head",
       "adaptedmobs:rocket_creeper_head",
       "neapolitan:chimpanzee_head",
@@ -5129,39 +5042,7 @@
         "item": "supplementaries:bamboo_spikes_tipped",
         "components": {
           "minecraft:potion_contents": {
-            "potion": "minecraft:long_poison"
-          }
-        }
-      },
-      {
-        "item": "supplementaries:bamboo_spikes_tipped",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "minecraft:strong_poison"
-          }
-        }
-      },
-      {
-        "item": "supplementaries:bamboo_spikes_tipped",
-        "components": {
-          "minecraft:potion_contents": {
             "potion": "minecraft:slowness"
-          }
-        }
-      },
-      {
-        "item": "supplementaries:bamboo_spikes_tipped",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "minecraft:long_slowness"
-          }
-        }
-      },
-      {
-        "item": "supplementaries:bamboo_spikes_tipped",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "minecraft:strong_slowness"
           }
         }
       },
@@ -5177,23 +5058,7 @@
         "item": "supplementaries:bamboo_spikes_tipped",
         "components": {
           "minecraft:potion_contents": {
-            "potion": "minecraft:strong_harming"
-          }
-        }
-      },
-      {
-        "item": "supplementaries:bamboo_spikes_tipped",
-        "components": {
-          "minecraft:potion_contents": {
             "potion": "minecraft:weakness"
-          }
-        }
-      },
-      {
-        "item": "supplementaries:bamboo_spikes_tipped",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "minecraft:long_weakness"
           }
         }
       },
@@ -5217,31 +5082,7 @@
         "item": "supplementaries:bamboo_spikes_tipped",
         "components": {
           "minecraft:potion_contents": {
-            "potion": "embers_and_icicles:burning"
-          }
-        }
-      },
-      {
-        "item": "supplementaries:bamboo_spikes_tipped",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "embers_and_icicles:long_burning"
-          }
-        }
-      },
-      {
-        "item": "supplementaries:bamboo_spikes_tipped",
-        "components": {
-          "minecraft:potion_contents": {
             "potion": "embers_and_icicles:freezing"
-          }
-        }
-      },
-      {
-        "item": "supplementaries:bamboo_spikes_tipped",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "embers_and_icicles:long_freezing"
           }
         }
       },
@@ -5257,151 +5098,7 @@
         "item": "supplementaries:bamboo_spikes_tipped",
         "components": {
           "minecraft:potion_contents": {
-            "potion": "infernalexp:long_luminous"
-          }
-        }
-      },
-      {
-        "item": "supplementaries:bamboo_spikes_tipped",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "infernalexp:strong_luminous"
-          }
-        }
-      },
-      {
-        "item": "supplementaries:bamboo_spikes_tipped",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "bountifulfares:bountifulfares.acidic"
-          }
-        }
-      },
-      {
-        "item": "supplementaries:bamboo_spikes_tipped",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "bountifulfares:bountifulfares.long_acidic"
-          }
-        }
-      },
-      {
-        "item": "supplementaries:bamboo_spikes_tipped",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "bountifulfares:bountifulfares.strong_acidic"
-          }
-        }
-      },
-      {
-        "item": "supplementaries:bamboo_spikes_tipped",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "bountifulfares:bountifulfares.stupor"
-          }
-        }
-      },
-      {
-        "item": "supplementaries:bamboo_spikes_tipped",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "bountifulfares:bountifulfares.long_stupor"
-          }
-        }
-      },
-      {
-        "item": "supplementaries:bamboo_spikes_tipped",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "upgrade_aquatic:insomnia"
-          }
-        }
-      },
-      {
-        "item": "supplementaries:bamboo_spikes_tipped",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "upgrade_aquatic:insomnia_strong"
-          }
-        }
-      },
-      {
-        "item": "supplementaries:bamboo_spikes_tipped",
-        "components": {
-          "minecraft:potion_contents": {
             "potion": "upgrade_aquatic:repellence"
-          }
-        }
-      },
-      {
-        "item": "supplementaries:bamboo_spikes_tipped",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "upgrade_aquatic:repellence_strong"
-          }
-        }
-      },
-      {
-        "item": "supplementaries:bamboo_spikes_tipped",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "upgrade_aquatic:repellence_long"
-          }
-        }
-      },
-      {
-        "item": "supplementaries:bamboo_spikes_tipped",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "upgrade_aquatic:vibing"
-          }
-        }
-      },
-      {
-        "item": "supplementaries:bamboo_spikes_tipped",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "upgrade_aquatic:vibing_strong"
-          }
-        }
-      },
-      {
-        "item": "supplementaries:bamboo_spikes_tipped",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "upgrade_aquatic:vibing_long"
-          }
-        }
-      },
-      {
-        "item": "supplementaries:bamboo_spikes_tipped",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "nomansland:stasis"
-          }
-        }
-      },
-      {
-        "item": "supplementaries:bamboo_spikes_tipped",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "nomansland:long_stasis"
-          }
-        }
-      },
-      {
-        "item": "supplementaries:bamboo_spikes_tipped",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "caverns_and_chasms:blindness"
-          }
-        }
-      },
-      {
-        "item": "supplementaries:bamboo_spikes_tipped",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "caverns_and_chasms:long_blindness"
           }
         }
       },
@@ -5417,18 +5114,16 @@
         "item": "supplementaries:bamboo_spikes_tipped",
         "components": {
           "minecraft:potion_contents": {
-            "potion": "buzzier_bees:long_unluck"
+            "potion": "spicedcider:agility"
           }
         }
       },
-      {
-        "item": "supplementaries:bamboo_spikes_tipped",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "buzzier_bees:strong_unluck"
-          }
-        }
-      },
+      "chimes:bamboo_chimes",
+      "chimes:iron_chimes",
+      "chimes:carved_bamboo_chimes",
+      "chimes:copper_chimes",
+      "chimes:amethyst_chimes",
+      "chimes:glass_bells",
       "sootychimneys:brick_chimney",
       "sootychimneys:dirty_brick_chimney",
       "sootychimneys:cobblestone_chimney",
@@ -5489,6 +5184,11 @@
       "minecraft:spawner",
       "quark:monster_box",
       "nomansland:monster_anchor",
+      "alloyed:bronze_bell",
+      "create:peculiar_bell",
+      "create:haunted_bell",
+      "create:desk_bell",
+      "nomansland:ancient_bronze_bell",
       "exposure:photograph_frame",
       "exposure:glass_photograph_frame",
       "exposure:lightroom",
@@ -5704,15 +5404,7 @@
           "nomansland:pot_variant": "nomansland:ancient_pot_large_1"
         }
       },
-      "piglinproliferation:stone_soul_fire_ring",
-      "piglinproliferation:deepslate_fire_ring",
-      "piglinproliferation:deepslate_soul_fire_ring",
-      "piglinproliferation:netherrack_fire_ring",
-      "piglinproliferation:netherrack_soul_fire_ring",
-      "piglinproliferation:blackstone_fire_ring",
-      "piglinproliferation:blackstone_soul_fire_ring",
-      "piglinproliferation:end_stone_fire_ring",
-      "piglinproliferation:end_stone_soul_fire_ring"
+      "piglinproliferation:blackstone_soul_fire_ring"
     ]
   },
   {
@@ -5750,7 +5442,6 @@
       "bountifulfares:ceramic_tiles",
       "minecraft:string",
       "minecraft:lectern",
-      "minecraft:chest",
       "minecraft:barrel",
       "etcetera:prickly_can",
       "minecraft:chiseled_bookshelf",
@@ -5778,7 +5469,6 @@
       "minecraft:iron_trapdoor",
       "supplementaries:gold_trapdoor",
       "supplementaries:netherite_trapdoor",
-      "minecraft:bell",
       "minecraft:big_dripleaf",
       "minecraft:armor_stand",
       "minecraft:redstone_ore",
@@ -5830,14 +5520,10 @@
       "minecraft:tripwire_hook",
       "minecraft:daylight_detector",
       "minecraft:lightning_rod",
-      "supplementaries:wind_vane",
-      "livingwind:redstone_wind_vane",
-      "livingwind:redstone_windmill",
       "nomansland:spike_trap",
       "caverns_and_chasms:dimmer",
       "caverns_and_chasms:hoop",
       "caverns_and_chasms:winch",
-      "supplementaries:turn_table",
       "supplementaries:spring_launcher",
       "minecraft:piston",
       "minecraft:sticky_piston",
@@ -5852,20 +5538,19 @@
       "minecraft:crafter",
       "minecraft:hopper",
       "supplementaries:faucet",
-      "quark:trapped_nether_brick_chest",
-      "quark:trapped_birch_chest",
-      "quark:trapped_spruce_chest",
-      "quark:trapped_dark_oak_chest",
       "quark:trapped_warped_chest",
-      "quark:trapped_jungle_chest",
-      "quark:trapped_mangrove_chest",
       "quark:trapped_cherry_chest",
-      "quark:trapped_prismarine_chest",
-      "quark:trapped_bamboo_chest",
-      "quark:trapped_oak_chest",
-      "quark:trapped_crimson_chest",
       "quark:trapped_acacia_chest",
-      "minecraft:trapped_chest",
+      "quark:trapped_oak_chest",
+      "quark:trapped_spruce_chest",
+      "quark:trapped_crimson_chest",
+      "quark:trapped_dark_oak_chest",
+      "quark:trapped_prismarine_chest",
+      "quark:trapped_jungle_chest",
+      "quark:trapped_bamboo_chest",
+      "quark:trapped_nether_brick_chest",
+      "quark:trapped_mangrove_chest",
+      "quark:trapped_birch_chest",
       "caverns_and_chasms:trapped_azalea_chest",
       "environmental:trapped_wisteria_chest",
       "upgrade_aquatic:trapped_driftwood_chest",
@@ -5879,14 +5564,10 @@
       "everycomp:q/minecraft/trapped_pale_oak_chest",
       "everycomp:q/bountifulfares/trapped_hoary_chest",
       "everycomp:q/abundant_atmosphere/trapped_red_bamboo_chest",
+      "everycomp:q/architects_palette/trapped_twisted_chest",
       "everycomp:q/infernalexp/trapped_luminous_chest",
       "everycomp:q/mynethersdelight/trapped_powdery_chest",
-      "everycomp:q/architects_palette/trapped_twisted_chest",
       "everycomp:q/culturaldelights/trapped_beanstalk_chest",
-      "woodworks:trapped_bamboo_closet",
-      "everycomp:abnww/mynethersdelight/trapped_powdery_closet",
-      "everycomp:abnww/culturaldelights/trapped_beanstalk_closet",
-      "everycomp:abnww/abundant_atmosphere/trapped_red_bamboo_closet",
       "minecraft:observer",
       "supplementaries:grouper",
       "supplementaries:relayer",
@@ -5929,6 +5610,8 @@
       "minecraft:waxed_weathered_lightning_rod",
       "minecraft:waxed_exposed_lightning_rod",
       "minecraft:waxed_oxidized_lightning_rod",
+      "livingwind:redstone_wind_vane",
+      "livingwind:redstone_windmill",
       "vista:viewfinder",
       "vista:television",
       "quark:ender_watcher",
@@ -5955,7 +5638,6 @@
       "create:water_wheel",
       "create:large_water_wheel",
       "create:nozzle",
-      "create:turntable",
       "create:hand_crank",
       "create:cuckoo_clock",
       "create:crushing_wheel",
@@ -5990,7 +5672,6 @@
       "create:gantry_carriage",
       "create:gantry_shaft",
       "create:windmill_bearing",
-      "create:white_sail",
       "create:mechanical_bearing",
       "create:clockwork_bearing",
       "create:rope_pulley",
@@ -6004,6 +5685,7 @@
       "create:deployer",
       "create:portable_storage_interface",
       "create:redstone_contact",
+      "create:white_sail",
       "create:andesite_casing",
       "create:copper_casing",
       "create:mechanical_crafter",
@@ -6034,25 +5716,21 @@
       "create:display_board",
       "create:nixie_tube",
       "create:redstone_link",
-      "create:analog_lever",
       "create:pulse_repeater",
       "create:pulse_extender",
       "create:pulse_timer",
       "create:powered_latch",
       "create:powered_toggle_latch",
-      "create:propeller",
-      "create:whisk",
-      "create:brass_hand",
       "create:crafter_slot_cover",
       "create:electron_tube",
       "create:transmitter",
       "create:precision_mechanism",
-      "spicedcider:bronze_movement",
       "create:blaze_cake",
       "create:minecart_coupling",
       "create:filter",
       "create:attribute_filter",
-      "create:package_filter"
+      "create:package_filter",
+      "spicedcider:bronze_movement"
     ]
   },
   {
@@ -6067,8 +5745,6 @@
       "minecraft:ender_eye",
       "nomansland:ancient_bronze_mask",
       "nomansland:warding_effigy",
-      "supplementaries:cannon_boat_poplar",
-      "snowyspirit:sled_poplar",
       "caverns_and_chasms:copper_rail",
       "caverns_and_chasms:exposed_copper_rail",
       "caverns_and_chasms:weathered_copper_rail",
@@ -6144,10 +5820,6 @@
       "alloyed:steel_hoe",
       "alloyed:steel_shears",
       "alloyed:steel_fishing_rod",
-      "spicedcider:electrum_pickaxe",
-      "spicedcider:electrum_axe",
-      "spicedcider:electrum_shovel",
-      "spicedcider:electrum_hoe",
       "tide:iron_fishing_rod",
       "tide:iron_bobber",
       "tide:golden_bobber",
@@ -6165,7 +5837,6 @@
       "tide:magnetic_bait",
       "tide:fish_bone",
       "alloyed:steel_knife",
-      "spicedcider:electrum_knife",
       "farmersdelight:flint_knife",
       "abnormals_delight:copper_knife",
       "farmersdelight:diamond_knife",
@@ -6335,11 +6006,13 @@
       "minecraft:powder_snow_bucket",
       "minecraft:milk_bucket",
       "dimensional_tears:dimensional_tears_bucket",
-      "spicedcider:latex_bucket",
       "quark:bottled_cloud",
       "spelunkery:salt_bucket",
+      "spicedcider:latex_bucket",
+      "spicedcider:resin_bucket",
+      "spicedcider:maple_syrup_bucket",
+      "spicedcider:resin_oil_bucket",
       "infernalexp:strider_bucket",
-      "infernalexp:magma_cube_bucket",
       "tide:rainbow_trout_bucket",
       "tide:brook_trout_bucket",
       "tide:white_crappie_bucket",
@@ -6379,14 +6052,8 @@
       "tide:witherfin_bucket",
       "tide:blazing_swordfish_bucket",
       "tide:pale_clubfish_bucket",
-      "tide:enderfin_bucket",
-      "tide:chorus_cod_bucket",
-      "tide:ender_glider_bucket",
-      "tide:endergazer_bucket",
       "tide:violet_carp_bucket",
-      "tide:elytrout_bucket",
       "tide:snatcher_squid_bucket",
-      "tide:voidseeker_bucket",
       "create:honey_bucket",
       "create:chocolate_bucket",
       "minecraft:glass_bottle",
@@ -6394,7 +6061,6 @@
       "buzzier_bees:silverfish_bottle",
       "buzzier_bees:endermite_bottle",
       "infernalexp:glowsilk_moth_bottle",
-      "caverns_and_chasms:packing_container",
       "supplementaries:lunch_basket",
       "minecraft:fishing_rod",
       "spicedcider:grappling_hook",
@@ -6497,7 +6163,6 @@
       "minecraft:compass",
       "minecraft:recovery_compass",
       "spelunkery:depth_gauge",
-      "piglinproliferation:travelers_compass",
       "caverns_and_chasms:barometer",
       "minecraft:clock",
       "quark:abacus",
@@ -6507,6 +6172,7 @@
       "minecraft:map",
       "map_atlases:atlas",
       "supplementaries:slice_map",
+      "spicedcider:map_in_a_bottle",
       "minecraft:writable_book",
       "quark:soul_bead",
       "minecraft:ender_pearl",
@@ -6646,15 +6312,15 @@
       "minecraft:oak_chest_boat",
       "supplementaries:cannon_boat_oak",
       "boatload:oak_furnace_boat",
-      "everycomp:abnbl/bountifulfares/hoary_furnace_boat",
-      "everycomp:abnbl/newworld/fir_furnace_boat",
-      "everycomp:abnbl/minecraft/pale_oak_furnace_boat",
       "everycomp:abnbl/culturaldelights/beanstalk_furnace_boat",
+      "everycomp:abnbl/minecraft/pale_oak_furnace_boat",
+      "everycomp:abnbl/newworld/fir_furnace_boat",
+      "everycomp:abnbl/bountifulfares/hoary_furnace_boat",
       "boatload:large_oak_boat",
-      "everycomp:abnbl/bountifulfares/large_hoary_boat",
-      "everycomp:abnbl/newworld/large_fir_boat",
-      "everycomp:abnbl/minecraft/large_pale_oak_boat",
       "everycomp:abnbl/culturaldelights/large_beanstalk_boat",
+      "everycomp:abnbl/minecraft/large_pale_oak_boat",
+      "everycomp:abnbl/newworld/large_fir_boat",
+      "everycomp:abnbl/bountifulfares/large_hoary_boat",
       "minecraft:spruce_boat",
       "minecraft:spruce_chest_boat",
       "supplementaries:cannon_boat_spruce",
@@ -6962,14 +6628,6 @@
         "item": "nomansland:bandage",
         "components": {
           "minecraft:potion_contents": {
-            "potion": "embers_and_icicles:burning"
-          }
-        }
-      },
-      {
-        "item": "nomansland:bandage",
-        "components": {
-          "minecraft:potion_contents": {
             "potion": "embers_and_icicles:freezing"
           }
         }
@@ -6994,79 +6652,7 @@
         "item": "nomansland:bandage",
         "components": {
           "minecraft:potion_contents": {
-            "potion": "bountifulfares:bountifulfares.acidic"
-          }
-        }
-      },
-      {
-        "item": "nomansland:bandage",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "bountifulfares:bountifulfares.long_acidic"
-          }
-        }
-      },
-      {
-        "item": "nomansland:bandage",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "bountifulfares:bountifulfares.strong_acidic"
-          }
-        }
-      },
-      {
-        "item": "nomansland:bandage",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "bountifulfares:bountifulfares.stupor"
-          }
-        }
-      },
-      {
-        "item": "nomansland:bandage",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "bountifulfares:bountifulfares.long_stupor"
-          }
-        }
-      },
-      {
-        "item": "nomansland:bandage",
-        "components": {
-          "minecraft:potion_contents": {
             "potion": "cold_sweat:ice_resistance"
-          }
-        }
-      },
-      {
-        "item": "nomansland:bandage",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "upgrade_aquatic:insomnia"
-          }
-        }
-      },
-      {
-        "item": "nomansland:bandage",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "upgrade_aquatic:insomnia_strong"
-          }
-        }
-      },
-      {
-        "item": "nomansland:bandage",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "upgrade_aquatic:restfulness"
-          }
-        }
-      },
-      {
-        "item": "nomansland:bandage",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "upgrade_aquatic:restfulness_strong"
           }
         }
       },
@@ -7082,79 +6668,7 @@
         "item": "nomansland:bandage",
         "components": {
           "minecraft:potion_contents": {
-            "potion": "upgrade_aquatic:repellence_strong"
-          }
-        }
-      },
-      {
-        "item": "nomansland:bandage",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "upgrade_aquatic:repellence_long"
-          }
-        }
-      },
-      {
-        "item": "nomansland:bandage",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "upgrade_aquatic:vibing"
-          }
-        }
-      },
-      {
-        "item": "nomansland:bandage",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "upgrade_aquatic:vibing_strong"
-          }
-        }
-      },
-      {
-        "item": "nomansland:bandage",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "upgrade_aquatic:vibing_long"
-          }
-        }
-      },
-      {
-        "item": "nomansland:bandage",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "autumnity:extension"
-          }
-        }
-      },
-      {
-        "item": "nomansland:bandage",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "nomansland:stasis"
-          }
-        }
-      },
-      {
-        "item": "nomansland:bandage",
-        "components": {
-          "minecraft:potion_contents": {
             "potion": "caverns_and_chasms:rewind"
-          }
-        }
-      },
-      {
-        "item": "nomansland:bandage",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "caverns_and_chasms:subtle"
-          }
-        }
-      },
-      {
-        "item": "nomansland:bandage",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "caverns_and_chasms:blindness"
           }
         }
       },
@@ -7178,7 +6692,31 @@
         "item": "nomansland:bandage",
         "components": {
           "minecraft:potion_contents": {
-            "potion": "quark:resilience"
+            "potion": "spicedcider:tainted"
+          }
+        }
+      },
+      {
+        "item": "nomansland:bandage",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "spicedcider:haste"
+          }
+        }
+      },
+      {
+        "item": "nomansland:bandage",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "spicedcider:agility"
+          }
+        }
+      },
+      {
+        "item": "nomansland:bandage",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "spicedcider:harmony"
           }
         }
       },
@@ -7285,6 +6823,7 @@
       "caverns_and_chasms:music_disc_analogue",
       "caverns_and_chasms:music_disc_epilogue",
       "minecraft:music_disc_pigstep",
+      "spicedcider:music_disc_jynweythek",
       "supplementaries:music_disc_heave_ho",
       "vista:music_disc_sojourn",
       "snowyspirit:music_disc_a_carol",
@@ -7482,17 +7021,21 @@
       "chalk:chalk_box",
       "reliable_backpacks:backpack",
       "manual_labour:flint_hammer",
-      "manual_labour:iron_hammer",
       "manual_labour:golden_hammer",
       "manual_labour:diamond_hammer",
       "manual_labour:netherite_hammer",
       "manual_labour:pestle",
       "manual_labour:ladle",
       "manual_labour:silver_hammer",
-      "spicedcider:steel_hammer",
-      "spicedcider:electrum_hammer",
       "manual_labour:necromium_hammer",
       "brushstrokes:wax_brush",
+      "spicedcider:steel_hammer",
+      "spicedcider:electrum_shovel",
+      "spicedcider:electrum_pickaxe",
+      "spicedcider:electrum_axe",
+      "spicedcider:electrum_hoe",
+      "spicedcider:electrum_knife",
+      "spicedcider:electrum_hammer",
       "supplementaries:culturaldelights/cannon_raft_beanstalk",
       "supplementaries:bountifulfares/cannon_boat_hoary",
       {
@@ -7583,7 +7126,6 @@
       "quark:music_disc_clock",
       "quark:music_disc_crickets",
       "quark:music_disc_chatter",
-      "quark:music_disc_endermosh",
       "exposure:camera",
       "exposure_polaroid:instant_camera",
       "exposure_polaroid:instant_black_and_white_slide",
@@ -7609,7 +7151,6 @@
       "create:super_glue",
       "create:crafting_blueprint",
       "create:sand_paper",
-      "create:red_sand_paper",
       "create:empty_schematic",
       "create:schematic_and_quill",
       "nomansdelight:cleaver"
@@ -7675,30 +7216,18 @@
       "alloyed:steel_chestplate",
       "alloyed:steel_leggings",
       "alloyed:steel_boots",
-      "spicedcider:electrum_helmet",
-      "spicedcider:electrum_chestplate",
-      "spicedcider:electrum_leggings",
-      "spicedcider:electrum_boots",
-      "minecraft:copper_spear",
-      "minecraft:golden_spear",
-      "minecraft:diamond_spear",
-      "minecraft:netherite_spear",
+      "alloyed:steel_horse_armor",
       "spicedcider:infernite_cleaver",
       "minecraft:trident",
       "modestmining:flint_javelin",
-      "modestmining:wooden_javelin",
-      "modestmining:stone_javelin",
       "modestmining:bronze_javelin",
-      "modestmining:iron_javelin",
       "modestmining:steel_javelin",
-      "spicedcider:electrum_lance",
       "modestmining:golden_javelin",
       "modestmining:diamond_javelin",
       "modestmining:netherite_javelin",
       "modestmining:prismarite_javelin",
       "modestmining:valkyrium_javelin",
       "minecraft:shield",
-      "piglinproliferation:buckler",
       "minecraft:leather_helmet",
       "minecraft:leather_chestplate",
       "minecraft:leather_leggings",
@@ -7756,7 +7285,6 @@
       "minecraft:turtle_helmet",
       "etcetera:tidal_helmet",
       "etcetera:white_hat",
-      "etcetera:trader_hood",
       "etcetera:white_sweater",
       "etcetera:light_gray_sweater",
       "etcetera:light_gray_hat",
@@ -7788,7 +7316,6 @@
       "etcetera:magenta_hat",
       "etcetera:pink_sweater",
       "etcetera:pink_hat",
-      "etcetera:trader_robe",
       "nomansland:ancient_bronze_mask",
       "nomansland:tortoise_shell",
       "autumnity:snail_shell_chestplate",
@@ -7886,18 +7413,11 @@
       "environmental:yak_pants",
       "minecraft:leather_horse_armor",
       "minecraft:copper_horse_armor",
-      "spicedcider:bronze_horse_armor",
       "minecraft:golden_horse_armor",
-      "alloyed:steel_horse_armor",
       "caverns_and_chasms:silver_horse_armor",
       "minecraft:diamond_horse_armor",
-      "spicedcider:rose_gold_horse_armor",
       "minecraft:netherite_horse_armor",
-      "caverns_and_chasms:netherite_horse_armor",
-      "spicedcider:prismarite_horse_armor",
-      "spicedcider:valkyrium_horse_armor",
       "caverns_and_chasms:necromium_horse_armor",
-      "spicedcider:adamantite_horse_armor",
       "etcetera:golden_golem",
       "minecraft:totem_of_undying",
       "nomansland:explosive",
@@ -7931,22 +7451,6 @@
         "item": "minecraft:tipped_arrow",
         "components": {
           "minecraft:potion_contents": {
-            "potion": "minecraft:mundane"
-          }
-        }
-      },
-      {
-        "item": "minecraft:tipped_arrow",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "minecraft:thick"
-          }
-        }
-      },
-      {
-        "item": "minecraft:tipped_arrow",
-        "components": {
-          "minecraft:potion_contents": {
             "potion": "minecraft:awkward"
           }
         }
@@ -7963,23 +7467,7 @@
         "item": "minecraft:tipped_arrow",
         "components": {
           "minecraft:potion_contents": {
-            "potion": "minecraft:long_night_vision"
-          }
-        }
-      },
-      {
-        "item": "minecraft:tipped_arrow",
-        "components": {
-          "minecraft:potion_contents": {
             "potion": "minecraft:invisibility"
-          }
-        }
-      },
-      {
-        "item": "minecraft:tipped_arrow",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "minecraft:long_invisibility"
           }
         }
       },
@@ -7995,31 +7483,7 @@
         "item": "minecraft:tipped_arrow",
         "components": {
           "minecraft:potion_contents": {
-            "potion": "minecraft:long_leaping"
-          }
-        }
-      },
-      {
-        "item": "minecraft:tipped_arrow",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "minecraft:strong_leaping"
-          }
-        }
-      },
-      {
-        "item": "minecraft:tipped_arrow",
-        "components": {
-          "minecraft:potion_contents": {
             "potion": "minecraft:fire_resistance"
-          }
-        }
-      },
-      {
-        "item": "minecraft:tipped_arrow",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "minecraft:long_fire_resistance"
           }
         }
       },
@@ -8035,39 +7499,7 @@
         "item": "minecraft:tipped_arrow",
         "components": {
           "minecraft:potion_contents": {
-            "potion": "minecraft:long_swiftness"
-          }
-        }
-      },
-      {
-        "item": "minecraft:tipped_arrow",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "minecraft:strong_swiftness"
-          }
-        }
-      },
-      {
-        "item": "minecraft:tipped_arrow",
-        "components": {
-          "minecraft:potion_contents": {
             "potion": "minecraft:slowness"
-          }
-        }
-      },
-      {
-        "item": "minecraft:tipped_arrow",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "minecraft:long_slowness"
-          }
-        }
-      },
-      {
-        "item": "minecraft:tipped_arrow",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "minecraft:strong_slowness"
           }
         }
       },
@@ -8083,31 +7515,7 @@
         "item": "minecraft:tipped_arrow",
         "components": {
           "minecraft:potion_contents": {
-            "potion": "minecraft:long_turtle_master"
-          }
-        }
-      },
-      {
-        "item": "minecraft:tipped_arrow",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "minecraft:strong_turtle_master"
-          }
-        }
-      },
-      {
-        "item": "minecraft:tipped_arrow",
-        "components": {
-          "minecraft:potion_contents": {
             "potion": "minecraft:water_breathing"
-          }
-        }
-      },
-      {
-        "item": "minecraft:tipped_arrow",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "minecraft:long_water_breathing"
           }
         }
       },
@@ -8123,23 +7531,7 @@
         "item": "minecraft:tipped_arrow",
         "components": {
           "minecraft:potion_contents": {
-            "potion": "minecraft:strong_healing"
-          }
-        }
-      },
-      {
-        "item": "minecraft:tipped_arrow",
-        "components": {
-          "minecraft:potion_contents": {
             "potion": "minecraft:harming"
-          }
-        }
-      },
-      {
-        "item": "minecraft:tipped_arrow",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "minecraft:strong_harming"
           }
         }
       },
@@ -8155,39 +7547,7 @@
         "item": "minecraft:tipped_arrow",
         "components": {
           "minecraft:potion_contents": {
-            "potion": "minecraft:long_poison"
-          }
-        }
-      },
-      {
-        "item": "minecraft:tipped_arrow",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "minecraft:strong_poison"
-          }
-        }
-      },
-      {
-        "item": "minecraft:tipped_arrow",
-        "components": {
-          "minecraft:potion_contents": {
             "potion": "minecraft:regeneration"
-          }
-        }
-      },
-      {
-        "item": "minecraft:tipped_arrow",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "minecraft:long_regeneration"
-          }
-        }
-      },
-      {
-        "item": "minecraft:tipped_arrow",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "minecraft:strong_regeneration"
           }
         }
       },
@@ -8203,31 +7563,7 @@
         "item": "minecraft:tipped_arrow",
         "components": {
           "minecraft:potion_contents": {
-            "potion": "minecraft:long_strength"
-          }
-        }
-      },
-      {
-        "item": "minecraft:tipped_arrow",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "minecraft:strong_strength"
-          }
-        }
-      },
-      {
-        "item": "minecraft:tipped_arrow",
-        "components": {
-          "minecraft:potion_contents": {
             "potion": "minecraft:weakness"
-          }
-        }
-      },
-      {
-        "item": "minecraft:tipped_arrow",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "minecraft:long_weakness"
           }
         }
       },
@@ -8244,14 +7580,6 @@
         "components": {
           "minecraft:potion_contents": {
             "potion": "minecraft:slow_falling"
-          }
-        }
-      },
-      {
-        "item": "minecraft:tipped_arrow",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "minecraft:long_slow_falling"
           }
         }
       },
@@ -8291,31 +7619,7 @@
         "item": "minecraft:tipped_arrow",
         "components": {
           "minecraft:potion_contents": {
-            "potion": "embers_and_icicles:burning"
-          }
-        }
-      },
-      {
-        "item": "minecraft:tipped_arrow",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "embers_and_icicles:long_burning"
-          }
-        }
-      },
-      {
-        "item": "minecraft:tipped_arrow",
-        "components": {
-          "minecraft:potion_contents": {
             "potion": "embers_and_icicles:freezing"
-          }
-        }
-      },
-      {
-        "item": "minecraft:tipped_arrow",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "embers_and_icicles:long_freezing"
           }
         }
       },
@@ -8331,79 +7635,7 @@
         "item": "minecraft:tipped_arrow",
         "components": {
           "minecraft:potion_contents": {
-            "potion": "infernalexp:long_luminous"
-          }
-        }
-      },
-      {
-        "item": "minecraft:tipped_arrow",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "infernalexp:strong_luminous"
-          }
-        }
-      },
-      {
-        "item": "minecraft:tipped_arrow",
-        "components": {
-          "minecraft:potion_contents": {
             "potion": "infernalexp:warped"
-          }
-        }
-      },
-      {
-        "item": "minecraft:tipped_arrow",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "infernalexp:long_warped"
-          }
-        }
-      },
-      {
-        "item": "minecraft:tipped_arrow",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "infernalexp:strong_warped"
-          }
-        }
-      },
-      {
-        "item": "minecraft:tipped_arrow",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "bountifulfares:bountifulfares.acidic"
-          }
-        }
-      },
-      {
-        "item": "minecraft:tipped_arrow",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "bountifulfares:bountifulfares.long_acidic"
-          }
-        }
-      },
-      {
-        "item": "minecraft:tipped_arrow",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "bountifulfares:bountifulfares.strong_acidic"
-          }
-        }
-      },
-      {
-        "item": "minecraft:tipped_arrow",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "bountifulfares:bountifulfares.stupor"
-          }
-        }
-      },
-      {
-        "item": "minecraft:tipped_arrow",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "bountifulfares:bountifulfares.long_stupor"
           }
         }
       },
@@ -8419,111 +7651,7 @@
         "item": "minecraft:tipped_arrow",
         "components": {
           "minecraft:potion_contents": {
-            "potion": "cold_sweat:long_ice_resistance"
-          }
-        }
-      },
-      {
-        "item": "minecraft:tipped_arrow",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "upgrade_aquatic:insomnia"
-          }
-        }
-      },
-      {
-        "item": "minecraft:tipped_arrow",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "upgrade_aquatic:insomnia_strong"
-          }
-        }
-      },
-      {
-        "item": "minecraft:tipped_arrow",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "upgrade_aquatic:restfulness"
-          }
-        }
-      },
-      {
-        "item": "minecraft:tipped_arrow",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "upgrade_aquatic:restfulness_strong"
-          }
-        }
-      },
-      {
-        "item": "minecraft:tipped_arrow",
-        "components": {
-          "minecraft:potion_contents": {
             "potion": "upgrade_aquatic:repellence"
-          }
-        }
-      },
-      {
-        "item": "minecraft:tipped_arrow",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "upgrade_aquatic:repellence_strong"
-          }
-        }
-      },
-      {
-        "item": "minecraft:tipped_arrow",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "upgrade_aquatic:repellence_long"
-          }
-        }
-      },
-      {
-        "item": "minecraft:tipped_arrow",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "upgrade_aquatic:vibing"
-          }
-        }
-      },
-      {
-        "item": "minecraft:tipped_arrow",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "upgrade_aquatic:vibing_strong"
-          }
-        }
-      },
-      {
-        "item": "minecraft:tipped_arrow",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "upgrade_aquatic:vibing_long"
-          }
-        }
-      },
-      {
-        "item": "minecraft:tipped_arrow",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "autumnity:extension"
-          }
-        }
-      },
-      {
-        "item": "minecraft:tipped_arrow",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "nomansland:stasis"
-          }
-        }
-      },
-      {
-        "item": "minecraft:tipped_arrow",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "nomansland:long_stasis"
           }
         }
       },
@@ -8539,81 +7667,7 @@
         "item": "minecraft:tipped_arrow",
         "components": {
           "minecraft:potion_contents": {
-            "potion": "caverns_and_chasms:long_rewind"
-          }
-        }
-      },
-      {
-        "item": "minecraft:tipped_arrow",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "caverns_and_chasms:subtle"
-          },
-          "minecraft:rarity": "caverns_and_chasms:fancy"
-        }
-      },
-      {
-        "item": "minecraft:tipped_arrow",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "caverns_and_chasms:long_subtle"
-          },
-          "minecraft:rarity": "caverns_and_chasms:fancy"
-        }
-      },
-      {
-        "item": "minecraft:tipped_arrow",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "caverns_and_chasms:blindness"
-          }
-        }
-      },
-      {
-        "item": "minecraft:tipped_arrow",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "caverns_and_chasms:long_blindness"
-          }
-        }
-      },
-      {
-        "item": "minecraft:tipped_arrow",
-        "components": {
-          "minecraft:potion_contents": {
             "potion": "caverns_and_chasms:revenant"
-          }
-        }
-      },
-      {
-        "item": "minecraft:tipped_arrow",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "caverns_and_chasms:long_revenant"
-          }
-        }
-      },
-      {
-        "item": "minecraft:tipped_arrow",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "caverns_and_chasms:strong_revenant"
-          }
-        }
-      },
-      {
-        "item": "minecraft:tipped_arrow",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "buzzier_bees:long_luck"
-          }
-        }
-      },
-      {
-        "item": "minecraft:tipped_arrow",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "buzzier_bees:strong_luck"
           }
         }
       },
@@ -8629,7 +7683,7 @@
         "item": "minecraft:tipped_arrow",
         "components": {
           "minecraft:potion_contents": {
-            "potion": "buzzier_bees:long_unluck"
+            "potion": "spicedcider:tainted"
           }
         }
       },
@@ -8637,7 +7691,7 @@
         "item": "minecraft:tipped_arrow",
         "components": {
           "minecraft:potion_contents": {
-            "potion": "buzzier_bees:strong_unluck"
+            "potion": "spicedcider:haste"
           }
         }
       },
@@ -8645,7 +7699,7 @@
         "item": "minecraft:tipped_arrow",
         "components": {
           "minecraft:potion_contents": {
-            "potion": "quark:resilience"
+            "potion": "spicedcider:agility"
           }
         }
       },
@@ -8653,36 +7707,29 @@
         "item": "minecraft:tipped_arrow",
         "components": {
           "minecraft:potion_contents": {
-            "potion": "quark:long_resilience"
-          }
-        }
-      },
-      {
-        "item": "minecraft:tipped_arrow",
-        "components": {
-          "minecraft:potion_contents": {
-            "potion": "quark:strong_resilience"
+            "potion": "spicedcider:harmony"
           }
         }
       },
       "shieldexp:wooden_shield",
-      "shieldexp:iron_shield",
       "shieldexp:golden_shield",
       "shieldexp:diamond_shield",
       "shieldexp:netherite_shield",
-      "spicedcider:steel_shield",
-      "spicedcider:electrum_shield",
       "tolerable_creepers:mischief_arrow",
       "tolerable_creepers:spore_barrel",
       "tolerable_creepers:spore_bomb",
+      "spicedcider:steel_shield",
+      "spicedcider:electrum_shield",
+      "spicedcider:electrum_lance",
+      "spicedcider:electrum_helmet",
+      "spicedcider:electrum_chestplate",
+      "spicedcider:electrum_leggings",
+      "spicedcider:electrum_boots",
+      "spicedcider:bronze_horse_armor",
+      "spicedcider:rose_gold_horse_armor",
+      "spicedcider:prismarite_horse_armor",
+      "spicedcider:valkyrium_horse_armor",
       "quark:torch_arrow",
-      "create:netherite_backtank",
-      {
-        "item": "create:netherite_backtank",
-        "components": {
-          "create:banktank_air": 900
-        }
-      },
       {
         "item": "create:copper_backtank",
         "components": {
@@ -8697,11 +7744,6 @@
       "minecraft:food_and_drinks"
     ],
     "remove_items": [
-      "bountifulfares:apple_block",
-      "bountifulfares:orange_block",
-      "bountifulfares:lemon_block",
-      "bountifulfares:plum_block",
-      "bountifulfares:hoary_apple_block",
       "minecraft:milk_bucket",
       "minecraft:potion",
       "minecraft:splash_potion",
@@ -8738,7 +7780,6 @@
       "minecraft:carrot",
       "minecraft:potato",
       "minecraft:beetroot",
-      "bountifulfares:maize",
       "bountifulfares:leek",
       "onion_onion:onion_slice",
       "farmersdelight:cabbage",
@@ -8784,7 +7825,6 @@
       "nomansland:cooked_frog_leg",
       "quark:cooked_crab_leg",
       "quark:crab_leg",
-      "bountifulfares:cooked_egg",
       "bountifulfares:crusted_beef",
       "farmersdelight:fried_egg",
       "farmersdelight:minced_beef",
@@ -8880,14 +7920,8 @@
       "tide:witherfin",
       "tide:blazing_swordfish",
       "tide:pale_clubfish",
-      "tide:enderfin",
-      "tide:chorus_cod",
-      "tide:ender_glider",
-      "tide:endergazer",
       "tide:violet_carp",
-      "tide:elytrout",
       "tide:snatcher_squid",
-      "tide:voidseeker",
       "minecraft:bread",
       "neapolitan:banana_bread",
       "buzzier_bees:honey_bread",
@@ -8960,7 +7994,6 @@
       "mynethersdelight:plate_of_cold_striderloaf",
       "mynethersdelight:ghast_dough",
       "mynethersdelight:ghast_sourdough",
-      "mynethersdelight:slices_of_bread",
       "mynethersdelight:toasts",
       "mynethersdelight:magma_cake_block",
       "mynethersdelight:magma_cake_slice",
@@ -8976,29 +8009,29 @@
       "supplementaries:candy",
       "snowyspirit:candy_cane",
       "neapolitan:mint_candies",
-      "neapolitan:strawberry_bean_bonbons",
-      "neapolitan:chocolate_spider_eye",
       "bountifulfares:candy",
       "bountifulfares:piquant_candy",
       "bountifulfares:sour_candy",
       "bountifulfares:bitter_candy",
-      "bountifulfares:strange_candy",
       "bountifulfares:candied_apple",
       "bountifulfares:candied_plum",
       "bountifulfares:candied_orange",
       "bountifulfares:candied_lemon",
-      "neapolitan:vanilla_ice_cream",
-      "neapolitan:chocolate_ice_cream",
-      "neapolitan:strawberry_ice_cream",
-      "neapolitan:banana_ice_cream",
-      "neapolitan:mint_ice_cream",
-      "neapolitan:neapolitan_ice_cream",
       "modest_meals:ice_cream",
+      {
+        "item": "modest_meals:ice_cream",
+        "components": {
+          "modest_meals:meal_contents": {
+            "dubious": true
+          }
+        }
+      },
       "farmersdelight:melon_popsicle",
       "culturaldelights:marshmallow",
       "culturaldelights:marshmallow_on_a_stick",
       "culturaldelights:caramelized_marshmallow_on_a_stick",
       "culturaldelights:charred_marshmallow_on_a_stick",
+      "culturaldelights:ice_cream",
       "mynethersdelight:tear_popsicle",
       "mynethersdelight:spicy_cotton",
       "nomansdelight:smore",
@@ -9036,7 +8069,6 @@
       "bountifulfares:orange_compote_jar",
       "bountifulfares:lemon_compote_jar",
       "bountifulfares:plum_compote_jar",
-      "bountifulfares:stuffed_hoary_apple",
       "bountifulfares:hoary_compote_jar",
       "nomansland:syruped_pear",
       "nomansland:pine_nuts",
@@ -9052,7 +8084,6 @@
       "abundant_atmosphere:puffball_cutlet",
       "abundant_atmosphere:swamp_scran",
       "bountifulfares:pickled_beetroot",
-      "bountifulfares:popped_maize",
       "neapolitan:dried_vanilla_pods",
       "upgrade_aquatic:boiled_pickerelweed",
       "minecraft:dried_kelp",
@@ -9085,8 +8116,6 @@
       "abundantdelight:poreshroom_on_log",
       "abundantdelight:cooked_poreshroom_on_log",
       "abundantdelight:red_bamboo_stir_fry",
-      "abundantdelight:mossy_pancakes",
-      "abundantdelight:rust_mossy_pancakes",
       "abundantdelight:stuffed_gourdnut",
       "nomansland:candied_pear",
       "cold_sweat:soul_sprout",
@@ -9113,10 +8142,7 @@
           }
         }
       },
-      "modest_meals:pizza",
-      "modest_meals:pizza_slice",
       "modest_meals:roll",
-      "modest_meals:roll_slice",
       "farmersdelight:tomato_sauce",
       "farmersdelight:raw_pasta",
       "farmersdelight:pumpkin_slice",
@@ -9188,6 +8214,7 @@
       "culturaldelights:tropical_roll",
       "culturaldelights:rice_ball",
       "culturaldelights:calamari_roll",
+      "culturaldelights:wafer",
       "culturaldelights:fried_potato",
       "culturaldelights:fish_and_chips",
       "culturaldelights:cheese_block",
@@ -9233,7 +8260,9 @@
       "nomansdelight:shroomburger",
       "nomansland:stallion_strip",
       "nomansland:pasta_with_pesto",
-      "create:blaze_cake_base",
+      "modest_meals:pizza",
+      "modest_meals:pizza_slice",
+      "modest_meals:roll_slice",
       "nomansland:pear_cobbler",
       "onion_onion:motley_grill_block",
       "abundantdelight:stuffed_gourdnut_block",
@@ -9250,16 +8279,10 @@
       "nomansdelight:pesto_pizza",
       "nomansland:pot_of_witch_stew",
       "nomansland:stallion_strips",
-      "bountifulfares:apple_cider_jar",
       "bountifulfares:plum_cider_jar",
       "bountifulfares:hoary_cider_jar",
       "bountifulfares:elderberry_wine_bottle",
       "nomansland:pesto_bottle",
-      "neapolitan:vanilla_milkshake",
-      "neapolitan:chocolate_milkshake",
-      "neapolitan:strawberry_milkshake",
-      "neapolitan:banana_milkshake",
-      "neapolitan:mint_milkshake",
       "bountifulfares:coconut_milk_bottle",
       "bountifulfares:water_cup",
       "bountifulfares:green_tea_bottle",
@@ -9273,10 +8296,8 @@
       "supplementaries:lumisene_bottle",
       "nomansland:maple_syrup_bottle",
       "neapolitan:strawberry_banana_smoothie",
-      "bountifulfares:mead_bottle",
       "abundant_atmosphere:squashberry_jam",
       "nomansland:maple_mead_bottle",
-      "modest_meals:drink",
       "farmersdelight:milk_bottle",
       "farmersdelight:hot_cocoa",
       "farmersdelight:apple_cider",
@@ -9287,6 +8308,7 @@
       "culturaldelights:beer",
       "culturaldelights:wine",
       "culturaldelights:glow_wine",
+      "culturaldelights:ginger_beer",
       "culturaldelights:mead",
       "culturaldelights:apple_cider",
       "culturaldelights:mojito",
@@ -9307,13 +8329,11 @@
       "culturaldelights:lemonade",
       "mynethersdelight:strider_egg",
       "mynethersdelight:hot_cream",
-      "create:builders_tea",
-      "nomansdelight:lavender_tea",
       "nomansland:pear_juice",
+      "spicedcider:lavender_tea_mug",
       "minecraft:poisonous_potato",
       "minecraft:rotten_flesh",
       "bountifulfares:foul_flesh",
-      "minecraft:spider_eye",
       "redomesticate:rotten_apple"
     ]
   },
@@ -9324,7 +8344,6 @@
     ],
     "remove_items": [
       "minecraft:ancient_debris",
-      "bountifulfares:maize",
       "minecraft:bone_meal",
       "minecraft:snowball",
       "minecraft:fire_charge",
@@ -9336,11 +8355,9 @@
       "minecraft:glass_bottle",
       "minecraft:nether_wart",
       "minecraft:redstone",
-      "minecraft:fermented_spider_eye",
       "minecraft:blaze_powder",
       "minecraft:rabbit_foot",
       "minecraft:glistering_melon_slice",
-      "minecraft:spider_eye",
       "minecraft:pufferfish",
       "minecraft:magma_cream",
       "minecraft:golden_carrot",
@@ -9374,8 +8391,6 @@
       "spelunkery:magma_pebble",
       "spelunkery:blackstone_pebble",
       "spelunkery:basalt_pebble",
-      "spelunkery:coal_lump",
-      "spelunkery:charcoal_lump",
       "spelunkery:raw_iron_nugget",
       "spelunkery:raw_copper_nugget",
       "spelunkery:raw_gold_nugget",
@@ -9446,7 +8461,6 @@
       "minecraft:netherite_scrap",
       "modestmining:meteoric_scrap",
       "minecraft:netherite_ingot",
-      "spicedcider:latex_bottle",
       "etcetera:rubber",
       "modestmining:prismarite_ingot",
       "modestmining:valkyrium_ingot",
@@ -9462,7 +8476,6 @@
       "minecraft:flint",
       "snowyspirit:ginger",
       "minecraft:wheat",
-      "etcetera:cotton_flower",
       "minecraft:bone",
       "environmental:cattail_fluff",
       "minecraft:string",
@@ -9533,8 +8546,6 @@
       "quark:clear_shard",
       "minecraft:bowl",
       "bountifulfares:ceramic_dish",
-      "spicedcider:ceramic_mug",
-      "bountifulfares:jar",
       "minecraft:brick",
       "minecraft:nether_brick",
       "supplementaries:ash_brick",
@@ -9546,12 +8557,12 @@
       "bountifulfares:coconut_coir",
       "bountifulfares:tea_leaves",
       "bountifulfares:dried_tea_leaves",
+      "spicedcider:ceramic_mug",
       "nomansland:awkward_residue",
       "minecraft:glowstone_dust",
       "minecraft:gunpowder",
       "adaptedmobs:support_creeper_spores",
       "adaptedmobs:rocket_creeper_spores",
-      "adaptedmobs:festive_creeper_spores",
       "minecraft:sugar",
       "quark:crab_shell",
       "buzzier_bees:four_leaf_clover",
@@ -9672,6 +8683,7 @@
       "spicedcider:geode",
       "spicedcider:deepslate_geode",
       "spicedcider:blackstone_geode",
+      "spicedcider:latex_bottle",
       "infernalexp:dullrocks",
       "infernalexp:glowsilk_string",
       "infernalexp:glowcoke",

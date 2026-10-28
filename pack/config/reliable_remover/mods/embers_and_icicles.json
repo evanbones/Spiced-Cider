@@ -5,5 +5,13 @@
       "embers_and_icicles:ice_ball"
     ],
     "replace_with": "neapolitan:ice_cubes"
+  },
+  {
+    "action": "remove_potion",
+    "effects": [
+      "embers_and_icicles:long_freezing",
+      "embers_and_icicles:burning",
+      "embers_and_icicles:long_burning"
+    ]
   }
 ]

@@ -24,7 +24,7 @@
 	/**
 	 * Which sidebar should be searched using the search bar.
 	 */
-	search-sidebar: left;
+	search-sidebar: right;
 
 	/**
 	 * Whether normal search queries should include the tooltip.
@@ -167,17 +167,17 @@
 	/**
 	 * The pages in the left sidebar
 	 */
-	left-sidebar-pages: index;
+	left-sidebar-pages: craftables;
 
 	/**
 	 * The subpanels in the left sidebar
 	 */
-	left-sidebar-subpanels: favorites 1;
+	left-sidebar-subpanels: none;
 
 	/**
 	 * How many columns and rows of ingredients to limit the left sidebar to
 	 */
-	left-sidebar-size: 7, 7;
+	left-sidebar-size: 8, 7;
 
 	/**
 	 * How much space to maintain between the left sidebar and obstructions, in pixels
@@ -202,17 +202,17 @@
 	/**
 	 * The pages in the right sidebar
 	 */
-	right-sidebar-pages: craftables;
+	right-sidebar-pages: index;
 
 	/**
 	 * The subpanels in the right sidebar
 	 */
-	right-sidebar-subpanels: none;
+	right-sidebar-subpanels: favorites 1;
 
 	/**
 	 * How many columns and rows of ingredients to limit the right sidebar to
 	 */
-	right-sidebar-size: 8, 7;
+	right-sidebar-size: 7, 7;
 
 	/**
 	 * How much space to maintain between the right sidebar and obstructions, in pixels

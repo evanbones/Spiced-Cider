@@ -68,5 +68,14 @@
       "infernalexp:magma_cube_bucket"
     ],
     "replace_with": "slime_time:magma_cube_bucket"
+  },
+  {
+    "action": "remove_potion",
+    "effects": [
+      "infernalexp:long_luminous",
+      "infernalexp:strong_luminous",
+      "infernalexp:long_warped",
+      "infernalexp:strong_warped"
+    ]
   }
 ]

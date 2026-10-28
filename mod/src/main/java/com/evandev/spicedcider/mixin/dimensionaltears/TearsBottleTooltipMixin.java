@@ -9,7 +9,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import java.util.List;
 
 @IfModLoaded("dimensional_tears")
-@Mixin(targets = "com.ordana.dimensional_tears.items.DimensionalTearsBottleItem", remap = false)
+@Mixin(targets = {"com.ordana.dimensional_tears.items.DimensionalTearsBottleItem", "com.ordana.dimensional_tears.items.DimensionalTearsBucketItem"}, remap = false)
 public class TearsBottleTooltipMixin {
 
     @WrapOperation(method = "appendHoverText", at = @At(value = "INVOKE", target = "Ljava/util/List;add(Ljava/lang/Object;)Z", ordinal = 0))

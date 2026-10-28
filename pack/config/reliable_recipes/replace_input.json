@@ -252,6 +252,14 @@
   {
     "action": "replace_input",
     "filter": {
+      "id": "modestmagic:infusing/enchantment_tablet_infested"
+    },
+    "target": "minecraft:spider_eye",
+    "replacement": "buzzier_bees:silverfish_bottle"
+  },
+  {
+    "action": "replace_input",
+    "filter": {
       "id": "nomansland:wood/pine/cutting/pine_trapdoor"
     },
     "target": "nomansland:pine_hanging_sign",

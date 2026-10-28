@@ -49,6 +49,7 @@ repositories {
         }
         filter {
             includeGroup "net.createmod.ponder"
+            includeGroup "com.simibubi.create"
         }
     }
 
@@ -286,6 +287,8 @@ dependencies {
     compileOnly "maven.modrinth:fancymenu:3.9.12-1.21.1-neoforge"
     compileOnly "maven.modrinth:iceberg:IMssx9du"
     compileOnly "maven.modrinth:reliable-advancements:J5weQWAm"
+    compileOnly "maven.modrinth:toil-and-trouble:TAoMbdSb"
+    compileOnly "maven.modrinth:manual-labour:LKYGxFM2"
     compileOnly "maven.modrinth:mjGOuygR:KIYfGvje"
     //runtimeOnly "maven.modrinth:modern-world-creation:2.0.1-1.21.1-neoforge"
     //runtimeOnly "maven.modrinth:konkrete:1.9.9-1.21-neoforge"
@@ -437,11 +440,18 @@ dependencies {
     // Bountiful Fares
     compileOnly "maven.modrinth:bountiful-fares:3EC8C1GU"
 
+    // Reliable EMI
+    compileOnly "maven.modrinth:N9WucjHL:aMKmQMTe"
+
     // Lodged
     compileOnly "maven.modrinth:lodged:GKAyoKfK"
 
     // Alloyed
     runtimeOnly "maven.modrinth:create-alloyed:3.0.11+1.21.1-neoforge"
+
+    compileOnly("com.simibubi.create:create-1.21.1:6.0.10-281:slim") {
+        transitive = false
+    }
 
     // Ponder
     compileOnly("net.createmod.ponder:ponder-neoforge:1.0.82+mc1.21.1") {
@@ -523,6 +533,8 @@ publishMods {
         accessToken = providers.environmentVariable("CURSEFORGE_TOKEN")
         projectId = "" // TODO
         minecraftVersions.add(project.minecraft_version)
+        client = true
+        server = true
     }
 
     modrinth {

@@ -1,0 +1,11 @@
+{
+  "loader": "amendments:cauldron",
+  "cauldron": "amendments:block/cauldron",
+  "fluid": {
+    "parent": "spicedcider:block/cauldron_content_9",
+    "textures": {
+      "content": "minecraft:block/honey_block_top"
+    }
+  },
+  "translucent": true
+}

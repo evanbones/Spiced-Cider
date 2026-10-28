@@ -1,0 +1,544 @@
+{
+  "replace": true,
+  "values": {
+    "environmental:violet": {
+      "value": {
+        "potion": "minecraft:swiftness",
+        "seconds": 150,
+        "potency": 7
+      },
+      "required": false
+    },
+    "spelunkery:dust_bun": {
+      "value": {
+        "potion": "minecraft:swiftness",
+        "seconds": 300,
+        "potency": 14
+      },
+      "required": false
+    },
+    "adaptedmobs:support_creeper_spores": {
+      "value": {
+        "potion": "minecraft:swiftness",
+        "seconds": 450,
+        "potency": 21
+      },
+      "required": false
+    },
+    "minecraft:rabbit_hide": {
+      "potion": "minecraft:leaping",
+      "seconds": 150,
+      "potency": 7
+    },
+    "adaptedmobs:rocket_creeper_spores": {
+      "value": {
+        "potion": "minecraft:leaping",
+        "seconds": 450,
+        "potency": 21
+      },
+      "required": false
+    },
+    "minecraft:feather": {
+      "potion": "minecraft:slow_falling",
+      "seconds": 150,
+      "potency": 7
+    },
+    "environmental:cattail_fluff": {
+      "value": {
+        "potion": "minecraft:slow_falling",
+        "seconds": 300,
+        "potency": 14
+      },
+      "required": false
+    },
+    "quark:bottled_cloud": {
+      "value": {
+        "potion": "minecraft:slow_falling",
+        "seconds": 450,
+        "potency": 21
+      },
+      "required": false
+    },
+    "nomansland:thistle": {
+      "value": {
+        "potion": "minecraft:strength",
+        "seconds": 150,
+        "potency": 7
+      },
+      "required": false
+    },
+    "minecraft:blaze_powder": {
+      "potion": "minecraft:strength",
+      "seconds": 300,
+      "potency": 14
+    },
+    "minecraft:blaze_rod": {
+      "potion": "minecraft:strength",
+      "seconds": 450,
+      "potency": 21
+    },
+    "nomansland:fiddlehead": {
+      "value": {
+        "potion": "minecraft:regeneration",
+        "seconds": 150,
+        "potency": 7
+      },
+      "required": false
+    },
+    "infernalexp:shroomlight_tear": {
+      "value": {
+        "potion": "minecraft:regeneration",
+        "seconds": 300,
+        "potency": 14
+      },
+      "required": false
+    },
+    "minecraft:ghast_tear": {
+      "potion": "minecraft:regeneration",
+      "seconds": 450,
+      "potency": 21
+    },
+    "wilderflowers:hopeful_wildflowers": {
+      "value": {
+        "potion": "minecraft:healing",
+        "seconds": 150,
+        "potency": 7
+      },
+      "required": false
+    },
+    "minecraft:glistering_melon_slice": {
+      "potion": "minecraft:healing",
+      "seconds": 300,
+      "potency": 14
+    },
+    "minecraft:magma_cream": {
+      "potion": "minecraft:fire_resistance",
+      "seconds": 150,
+      "potency": 7
+    },
+    "cold_sweat:hoglin_hide": {
+      "value": {
+        "potion": "minecraft:fire_resistance",
+        "seconds": 300,
+        "potency": 14
+      },
+      "required": false
+    },
+    "supplementaries:barnacles": {
+      "value": {
+        "potion": "minecraft:water_breathing",
+        "seconds": 150,
+        "potency": 7
+      },
+      "required": false
+    },
+    "minecraft:prismarine_crystals": {
+      "potion": "minecraft:water_breathing",
+      "seconds": 300,
+      "potency": 14
+    },
+    "minecraft:nautilus_shell": {
+      "potion": "minecraft:water_breathing",
+      "seconds": 450,
+      "potency": 21
+    },
+    "minecraft:glow_lichen": {
+      "potion": "minecraft:night_vision",
+      "seconds": 150,
+      "potency": 7
+    },
+    "minecraft:glow_ink_sac": {
+      "potion": "minecraft:night_vision",
+      "seconds": 300,
+      "potency": 14
+    },
+    "quark:glow_shroom": {
+      "value": {
+        "potion": "minecraft:night_vision",
+        "seconds": 450,
+        "potency": 21
+      },
+      "required": false
+    },
+    "quark:clear_shard": {
+      "value": {
+        "potion": "minecraft:invisibility",
+        "seconds": 150,
+        "potency": 7
+      },
+      "required": false
+    },
+    "quark:soul_bead": {
+      "value": {
+        "potion": "minecraft:invisibility",
+        "seconds": 300,
+        "potency": 14
+      },
+      "required": false
+    },
+    "quark:crab_shell": {
+      "value": {
+        "potion": "minecraft:turtle_master",
+        "seconds": 150,
+        "potency": 7
+      },
+      "required": false
+    },
+    "nomansland:sturdy_scute": {
+      "value": {
+        "potion": "minecraft:turtle_master",
+        "seconds": 300,
+        "potency": 14
+      },
+      "required": false
+    },
+    "minecraft:turtle_scute": {
+      "potion": "minecraft:turtle_master",
+      "seconds": 450,
+      "potency": 21
+    },
+    "wilderflowers:clovers": {
+      "value": {
+        "potion": "minecraft:luck",
+        "seconds": 150,
+        "potency": 7
+      },
+      "required": false
+    },
+    "minecraft:rabbit_foot": {
+      "potion": "minecraft:luck",
+      "seconds": 300,
+      "potency": 14
+    },
+    "buzzier_bees:four_leaf_clover": {
+      "value": {
+        "potion": "minecraft:luck",
+        "seconds": 450,
+        "potency": 21
+      },
+      "required": false
+    },
+    "abundant_atmosphere:catsbane": {
+      "value": {
+        "potion": "buzzier_bees:unluck",
+        "seconds": 150,
+        "potency": 7
+      },
+      "required": false
+    },
+    "architects_palette:withered_bone": {
+      "value": {
+        "potion": "buzzier_bees:unluck",
+        "seconds": 300,
+        "potency": 14
+      },
+      "required": false
+    },
+    "minecraft:amethyst_shard": {
+      "value": {
+        "potion": "spicedcider:haste",
+        "seconds": 150,
+        "potency": 7
+      },
+      "required": false
+    },
+    "spelunkery:rough_quartz_shard": {
+      "value": {
+        "potion": "spicedcider:haste",
+        "seconds": 300,
+        "potency": 14
+      },
+      "required": false
+    },
+    "minecraft:vine": {
+      "value": {
+        "potion": "spicedcider:agility",
+        "seconds": 150,
+        "potency": 7
+      },
+      "required": false
+    },
+    "minecraft:weeping_vines": {
+      "value": {
+        "potion": "spicedcider:agility",
+        "seconds": 300,
+        "potency": 14
+      },
+      "required": false
+    },
+    "slimebiome:ooze_coating": {
+      "value": {
+        "potion": "spicedcider:agility",
+        "seconds": 450,
+        "potency": 21
+      },
+      "required": false
+    },
+    "bountifulfares:chamomile_flowers": {
+      "value": {
+        "potion": "spicedcider:harmony",
+        "seconds": 150,
+        "potency": 7
+      },
+      "required": false
+    },
+    "nomansland:lavender_bush": {
+      "value": {
+        "potion": "spicedcider:harmony",
+        "seconds": 300,
+        "potency": 14
+      },
+      "required": false
+    },
+    "minecraft:torchflower": {
+      "value": {
+        "potion": "spicedcider:harmony",
+        "seconds": 450,
+        "potency": 21
+      },
+      "required": false
+    },
+    "minecraft:lily_of_the_valley": {
+      "potion": "minecraft:poison",
+      "seconds": 150,
+      "potency": 7
+    },
+    "nomansland:aconite": {
+      "value": {
+        "potion": "minecraft:poison",
+        "seconds": 300,
+        "potency": 14
+      },
+      "required": false
+    },
+    "minecraft:soul_sand": {
+      "potion": "minecraft:slowness",
+      "seconds": 150,
+      "potency": 7
+    },
+    "autumnity:snail_goo": {
+      "value": {
+        "potion": "minecraft:slowness",
+        "seconds": 300,
+        "potency": 14
+      },
+      "required": false
+    },
+    "supplementaries:ash": {
+      "value": {
+        "potion": "minecraft:weakness",
+        "seconds": 150,
+        "potency": 7
+      },
+      "required": false
+    },
+    "minecraft:pointed_dripstone": {
+      "potion": "minecraft:harming",
+      "seconds": 150,
+      "potency": 7
+    },
+    "upgrade_aquatic:thrasher_tooth": {
+      "value": {
+        "potion": "minecraft:harming",
+        "seconds": 300,
+        "potency": 14
+      },
+      "required": false
+    },
+    "minecraft:wither_rose": {
+      "potion": "minecraft:harming",
+      "seconds": 450,
+      "potency": 21
+    },
+    "minecraft:string": {
+      "potion": "minecraft:weaving",
+      "seconds": 150,
+      "potency": 7
+    },
+    "minecraft:cobweb": {
+      "potion": "minecraft:weaving",
+      "seconds": 300,
+      "potency": 14
+    },
+    "minecraft:slime_ball": {
+      "potion": "minecraft:oozing",
+      "seconds": 150,
+      "potency": 7
+    },
+    "minecraft:slime_block": {
+      "potion": "minecraft:oozing",
+      "seconds": 300,
+      "potency": 14
+    },
+    "slimebiome:ooze": {
+      "value": {
+        "potion": "minecraft:oozing",
+        "seconds": 450,
+        "potency": 21
+      },
+      "required": false
+    },
+    "minecraft:infested_stone": {
+      "potion": "minecraft:infested",
+      "seconds": 150,
+      "potency": 7
+    },
+    "buzzier_bees:silverfish_bottle": {
+      "value": {
+        "potion": "minecraft:infested",
+        "seconds": 300,
+        "potency": 14
+      },
+      "required": false
+    },
+    "minecraft:infested_deepslate": {
+      "potion": "minecraft:infested",
+      "seconds": 450,
+      "potency": 21
+    },
+    "minecraft:dandelion": {
+      "potion": "minecraft:wind_charged",
+      "seconds": 150,
+      "potency": 7
+    },
+    "minecraft:breeze_rod": {
+      "potion": "minecraft:wind_charged",
+      "seconds": 450,
+      "potency": 21
+    },
+    "embers_and_icicles:icicle": {
+      "value": {
+        "potion": "embers_and_icicles:freezing",
+        "seconds": 150,
+        "potency": 7
+      },
+      "required": false
+    },
+    "embers_and_icicles:ice_crystal": {
+      "value": {
+        "potion": "embers_and_icicles:freezing",
+        "seconds": 300,
+        "potency": 14
+      },
+      "required": false
+    },
+    "minecraft:blue_ice": {
+      "value": {
+        "potion": "embers_and_icicles:freezing",
+        "seconds": 450,
+        "potency": 21
+      },
+      "required": false
+    },
+    "cold_sweat:goat_fur": {
+      "value": {
+        "potion": "cold_sweat:ice_resistance",
+        "seconds": 150,
+        "potency": 7
+      },
+      "required": false
+    },
+    "environmental:yak_hair": {
+      "value": {
+        "potion": "cold_sweat:ice_resistance",
+        "seconds": 300,
+        "potency": 14
+      },
+      "required": false
+    },
+    "infernalexp:luminous_fungus": {
+      "value": {
+        "potion": "infernalexp:luminous",
+        "seconds": 150,
+        "potency": 7
+      },
+      "required": false
+    },
+    "infernalexp:glowsilk_string": {
+      "value": {
+        "potion": "infernalexp:luminous",
+        "seconds": 300,
+        "potency": 14
+      },
+      "required": false
+    },
+    "infernalexp:phosphor_shroomlight_tear": {
+      "value": {
+        "potion": "infernalexp:luminous",
+        "seconds": 450,
+        "potency": 21
+      },
+      "required": false
+    },
+    "minecraft:warped_fungus": {
+      "value": {
+        "potion": "infernalexp:warped",
+        "seconds": 150,
+        "potency": 7
+      },
+      "required": false
+    },
+    "infernalexp:warped_fungus_cap": {
+      "value": {
+        "potion": "infernalexp:warped",
+        "seconds": 300,
+        "potency": 14
+      },
+      "required": false
+    },
+    "infernalexp:warped_shell": {
+      "value": {
+        "potion": "infernalexp:warped",
+        "seconds": 450,
+        "potency": 21
+      },
+      "required": false
+    },
+    "minecraft:ender_pearl": {
+      "value": {
+        "potion": "caverns_and_chasms:rewind",
+        "seconds": 300,
+        "potency": 14
+      },
+      "required": false
+    },
+    "minecraft:ender_eye": {
+      "value": {
+        "potion": "caverns_and_chasms:rewind",
+        "seconds": 450,
+        "potency": 21
+      },
+      "required": false
+    },
+    "minecraft:cactus": {
+      "value": {
+        "potion": "upgrade_aquatic:repellence",
+        "seconds": 150,
+        "potency": 7
+      },
+      "required": false
+    },
+    "infernalexp:dullthorns": {
+      "value": {
+        "potion": "upgrade_aquatic:repellence",
+        "seconds": 300,
+        "potency": 14
+      },
+      "required": false
+    },
+    "minecraft:redstone": {
+      "seconds": 300
+    },
+    "minecraft:glowstone_dust": {
+      "potency": 14
+    },
+    "caverns_and_chasms:living_flesh": {
+      "value": {
+        "potion": "caverns_and_chasms:revenant",
+        "seconds": 450,
+        "potency": 21
+      },
+      "required": false
+    }
+  }
+}

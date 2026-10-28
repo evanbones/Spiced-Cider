@@ -1,0 +1,201 @@
+{
+  "type": "spicedcider:music_disc_sources",
+  "conditions": [],
+  "discs": {
+    "caverns_and_chasms:music_disc_analogue": {
+      "tables": [
+        "caverns_and_chasms:archaeology/forge_rare"
+      ]
+    },
+    "caverns_and_chasms:music_disc_epilogue": {
+      "tables": [
+        "nomansland:chests/water_well"
+      ],
+      "chance": 0.25
+    },
+    "etcetera:music_disc_squall": {
+      "tables": [
+        "minecraft:chests/underwater_ruin_big"
+      ],
+      "chance": 0.25
+    },
+    "infernalexp:music_disc_flush": {
+      "tables": [
+        "infernalexp:chests/heaven_portal"
+      ]
+    },
+    "minecraft:music_disc_11": {
+      "tables": [
+        "nomansland:chests/ancient_pot_cave"
+      ],
+      "chance": 0.03
+    },
+    "minecraft:music_disc_13": {
+      "tables": [
+        "betterdungeons:skeleton_dungeon/chests/common"
+      ],
+      "chance": 0.15
+    },
+    "minecraft:music_disc_blocks": {
+      "tables": [
+        "betterdungeons:zombie_dungeon/chests/common"
+      ],
+      "chance": 0.15
+    },
+    "minecraft:music_disc_bounce": {
+      "tables": [
+        "minecraft:chests/abandoned_mineshaft"
+      ],
+      "chance": 0.05
+    },
+    "minecraft:music_disc_cat": {
+      "tables": [
+        "nomansland:chests/small_dungeon_core"
+      ],
+      "chance": 0.15
+    },
+    "minecraft:music_disc_chirp": {
+      "tables": [
+        "minecraft:chests/ruined_portal"
+      ],
+      "chance": 0.1
+    },
+    "minecraft:music_disc_far": {
+      "tables": [
+        "minecraft:chests/jungle_temple"
+      ],
+      "chance": 0.25
+    },
+    "minecraft:music_disc_mall": {
+      "tables": [
+        "minecraft:chests/abandoned_camp_secret_chest"
+      ],
+      "chance": 0.25
+    },
+    "minecraft:music_disc_mellohi": {
+      "tables": [
+        "minecraft:chests/buried_treasure"
+      ],
+      "chance": 0.3
+    },
+    "minecraft:music_disc_otherside": {
+      "tables": [
+        "minecraft:chests/ancient_city"
+      ],
+      "chance": 0.08
+    },
+    "minecraft:music_disc_pigstep": {
+      "tables": [
+        "minecraft:chests/bastion_other"
+      ],
+      "chance": 0.1
+    },
+    "minecraft:music_disc_relic": {
+      "tables": [
+        "minecraft:archaeology/trail_ruins_rare"
+      ]
+    },
+    "minecraft:music_disc_stal": {
+      "tables": [
+        "newworld:chests/bunker_cache"
+      ],
+      "chance": 0.3
+    },
+    "minecraft:music_disc_strad": {
+      "tables": [
+        "minecraft:chests/igloo_chest"
+      ],
+      "chance": 0.3
+    },
+    "minecraft:music_disc_wait": {
+      "tables": [
+        "minecraft:chests/shipwreck_supply"
+      ],
+      "chance": 0.1
+    },
+    "minecraft:music_disc_ward": {
+      "tables": [
+        "minecraft:chests/desert_pyramid"
+      ],
+      "chance": 0.15
+    },
+    "neapolitan:music_disc_hullabaloo": {
+      "tables": [
+        "minecraft:chests/shipwreck_treasure"
+      ],
+      "chance": 0.15
+    },
+    "nirvana:music_disc_jam": {
+      "tables": [
+        "nirvana:entities/reefer"
+      ]
+    },
+    "quark:music_disc_chatter": {
+      "tables": [
+        "nomansland:chests/sniffer_monument"
+      ],
+      "chance": 0.25
+    },
+    "quark:music_disc_clock": {
+      "tables": [
+        "nomansland:chests/redstone_parts"
+      ],
+      "chance": 0.15
+    },
+    "quark:music_disc_crickets": {
+      "tables": [
+        "betterwitchhuts:chests/hut_0"
+      ],
+      "chance": 0.3
+    },
+    "quark:music_disc_drips": {
+      "tables": [
+        "tide:chests/crates/underground"
+      ],
+      "chance": 0.06
+    },
+    "quark:music_disc_fire": {
+      "tables": [
+        "minecraft:chests/nether_bridge"
+      ],
+      "chance": 0.1
+    },
+    "quark:music_disc_ocean": {
+      "tables": [
+        "minecraft:chests/underwater_ruin_small"
+      ],
+      "chance": 0.1
+    },
+    "quark:music_disc_rain": {
+      "tables": [
+        "tide:chests/crates/surface_freshwater"
+      ],
+      "chance": 0.04
+    },
+    "quark:music_disc_wind": {
+      "tables": [
+        "minecraft:chests/shipwreck_map"
+      ],
+      "chance": 0.15
+    },
+    "snowyspirit:music_disc_a_carol": {
+      "tables": [
+        "snowyspirit:chests/igloo_sled",
+        "snowyspirit:chests/present_villager",
+        "spicedcider:chests/gingerbread_house"
+      ]
+    },
+    "spicedcider:music_disc_jynweythek": {
+      "tables": [
+        "nomansland:chests/small_dungeon_core"
+      ],
+      "chance": 0.15
+    },
+    "vista:music_disc_sojourn": {
+      "tables": [
+        "minecraft:entities/enderman",
+        "vista:inject/enderman_disc"
+      ]
+    }
+  }
+}

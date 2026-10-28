@@ -45,6 +45,21 @@ public class ModPonderSchematicProvider implements DataProvider {
                 .set(2, 3, 2, "minecraft:carved_pumpkin", "facing", "north");
     }
 
+    private static Schematic pineconeGolem() {
+        return new Schematic(5)
+                .set(1, 0, 0, "minecraft:grass_block")
+                .set(1, 1, 0, "minecraft:spruce_sapling")
+                .set(2, 1, 2, "environmental:pinecone")
+                .set(2, 2, 2, "minecraft:carved_pumpkin", "facing", "north");
+    }
+
+    private static Schematic gingerbreadGolem() {
+        return new Schematic(5)
+                .set(2, 1, 2, "snowyspirit:gingerbread")
+                .set(2, 1, 1, "snowyspirit:gumdrop_red", "facing", "north", "powered", "false")
+                .set(2, 2, 2, "minecraft:carved_pumpkin", "facing", "north");
+    }
+
     private static Schematic copperGolem() {
         return new Schematic(5)
                 .set(2, 1, 2, "minecraft:copper_block")
@@ -206,11 +221,56 @@ public class ModPonderSchematicProvider implements DataProvider {
                 .set(4, 3, 2, "farmersdelight:cooking_pot", "facing", "north", "support", "none");
     }
 
+    private static Schematic dripstoneFarm() {
+        return new Schematic(5)
+                .set(1, 4, 1, "minecraft:water")
+                .set(1, 3, 1, "minecraft:dripstone_block")
+                .set(1, 2, 1, "minecraft:pointed_dripstone", "thickness", "tip", "vertical_direction", "down")
+                .set(1, 1, 1, "minecraft:cauldron")
+                .set(3, 4, 1, "minecraft:lava")
+                .set(3, 3, 1, "minecraft:dripstone_block")
+                .set(3, 2, 1, "minecraft:pointed_dripstone", "thickness", "tip", "vertical_direction", "down")
+                .set(3, 1, 1, "minecraft:cauldron");
+    }
+
+    private static Schematic weepingObsidian() {
+        return new Schematic(5)
+                .set(2, 4, 2, "minecraft:crying_obsidian")
+                .set(2, 1, 2, "minecraft:cauldron");
+    }
+
+    private static Schematic saltSpikes() {
+        return new Schematic(5)
+                .set(2, 5, 2, "minecraft:water")
+                .set(2, 4, 2, "culturaldelights:salt_block")
+                .set(2, 3, 2, "minecraft:pointed_dripstone", "thickness", "tip", "vertical_direction", "down");
+    }
+
+    private static Schematic cauldronBrewing() {
+        return new Schematic(5)
+                .set(2, 1, 2, "minecraft:campfire", "facing", "north", "lit", "true")
+                .set(2, 2, 2, "toil_and_trouble:cauldron", "contents", "water", "potion_quantity", "3", "heated", "true", "brewing", "false");
+    }
+
+    private static Schematic lightroom() {
+        return new Schematic(5)
+                .set(2, 1, 2, "exposure:lightroom", "facing", "north", "printing", "false")
+                .set(3, 1, 2, "minecraft:lantern", "hanging", "false");
+    }
+
+    private static Schematic filmDeveloping() {
+        return new Schematic(5)
+                .set(2, 1, 2, "create:depot")
+                .set(2, 3, 2, "create:spout");
+    }
+
     @Override
     public CompletableFuture<?> run(CachedOutput output) {
         Map<String, Schematic> schematics = new LinkedHashMap<>();
         schematics.put("golems/iron_golem", ironGolem());
         schematics.put("golems/snow_golem", snowGolem());
+        schematics.put("golems/pinecone_golem", pineconeGolem());
+        schematics.put("golems/gingerbread_golem", gingerbreadGolem());
         schematics.put("golems/copper_golem", copperGolem());
         schematics.put("golems/copper_golem_sorting", copperGolemSorting());
         schematics.put("golems/sputter", sputter());
@@ -229,6 +289,12 @@ public class ModPonderSchematicProvider implements DataProvider {
         schematics.put("redstone/note_block", noteBlock());
         schematics.put("misc/tapping", tapping());
         schematics.put("misc/cooking_pot", cookingPot());
+        schematics.put("misc/dripstone_farm", dripstoneFarm());
+        schematics.put("misc/weeping_obsidian", weepingObsidian());
+        schematics.put("misc/salt_spikes", saltSpikes());
+        schematics.put("misc/cauldron_brewing", cauldronBrewing());
+        schematics.put("misc/lightroom", lightroom());
+        schematics.put("misc/film_developing", filmDeveloping());
         return CompletableFuture.allOf(schematics.entrySet().stream()
                 .map(entry -> write(output, entry.getKey(), entry.getValue()))
                 .toArray(CompletableFuture[]::new));

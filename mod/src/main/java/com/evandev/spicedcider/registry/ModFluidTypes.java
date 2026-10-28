@@ -29,6 +29,16 @@ public class ModFluidTypes {
                     .sound(SoundActions.BUCKET_FILL, SoundEvents.BUCKET_FILL)
                     .sound(SoundActions.BUCKET_EMPTY, SoundEvents.BUCKET_EMPTY)));
 
+    public static final DeferredHolder<FluidType, FluidType> RESIN_OIL = FLUID_TYPES.register("resin_oil",
+            () -> new FluidType(FluidType.Properties.create()
+                    .density(900)
+                    .viscosity(2000)
+                    .canSwim(false)
+                    .canDrown(true)
+                    .canExtinguish(false)
+                    .sound(SoundActions.BUCKET_FILL, SoundEvents.BUCKET_FILL)
+                    .sound(SoundActions.BUCKET_EMPTY, SoundEvents.BUCKET_EMPTY)));
+
     public static final DeferredHolder<FluidType, FluidType> LATEX = FLUID_TYPES.register("latex",
             () -> new FluidType(FluidType.Properties.create()
                     .density(1100)

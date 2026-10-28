@@ -1,0 +1,23 @@
+{
+  "type": "spicedcider:cauldron_mixing",
+  "fluid": "minecraft:water",
+  "ingredients": [
+    {
+      "item": "minecraft:pointed_dripstone"
+    },
+    {
+      "item": "minecraft:pointed_dripstone"
+    },
+    {
+      "item": "minecraft:pointed_dripstone"
+    },
+    {
+      "item": "minecraft:pointed_dripstone"
+    }
+  ],
+  "heated": true,
+  "result": {
+    "id": "spelunkery:salt",
+    "count": 4
+  }
+}

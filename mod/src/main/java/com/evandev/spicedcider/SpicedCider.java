@@ -1,6 +1,7 @@
 package com.evandev.spicedcider;
 
 import com.evandev.spicedcider.compat.continuity.ContinuityLazyModelWrapping;
+import com.evandev.spicedcider.client.mixing.CauldronStirClient;
 import com.evandev.spicedcider.compat.voxy.VoxyFog;
 import com.evandev.spicedcider.compat.wherewindsblow.WhereWindsBlowLazyModelWrapping;
 import com.evandev.spicedcider.compat.everycompat.BlockBoxEveryCompatLoader;
@@ -11,11 +12,13 @@ import com.evandev.spicedcider.compat.tide.TideCompat;
 import com.evandev.spicedcider.compat.yacl.ConfigScreenLoader;
 import com.evandev.spicedcider.config.LogReconfiguration;
 import com.evandev.spicedcider.config.SpicedCiderConfig;
+import com.evandev.spicedcider.compat.nomansland.NoMansLandCreate;
 import com.evandev.spicedcider.content.block.LatexCauldronBlock;
 import com.evandev.spicedcider.content.item.BalloonItem;
 import com.evandev.spicedcider.content.handler.SpawnControlEvents;
 import com.evandev.spicedcider.content.handler.SputterEvents;
 import com.evandev.spicedcider.namingunconvention.RandomNameGenerator;
+import com.evandev.spicedcider.networking.CauldronStirPayload;
 import com.evandev.spicedcider.networking.CloudCoverPayload;
 import com.evandev.spicedcider.networking.GenerationEdgePayload;
 import com.evandev.spicedcider.networking.LodChunkPayload;
@@ -62,6 +65,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Stream;
 
 @Mod(SpicedCider.MOD_ID)
@@ -106,8 +110,10 @@ public class SpicedCider {
         ModDrinkware.register(modEventBus);
         ModTierItems.register(modEventBus);
         ModRecipeSerializers.RECIPE_SERIALIZERS.register(modEventBus);
+        ModRecipeSerializers.RECIPE_TYPES.register(modEventBus);
         ModSounds.SOUNDS.register(modEventBus);
         ModMobEffects.MOB_EFFECTS.register(modEventBus);
+        ModPotions.POTIONS.register(modEventBus);
         ModParticleTypes.PARTICLE_TYPES.register(modEventBus);
         ModLootModifiers.LOOT_MODIFIER_SERIALIZERS.register(modEventBus);
         ModDataComponents.DATA_COMPONENTS.register(modEventBus);
@@ -143,6 +149,14 @@ public class SpicedCider {
         event.enqueueWork(TideCompat::registerFishingMediums);
         event.enqueueWork(IceCubes::registerDispenserBehavior);
         event.enqueueWork(LatexCauldronBlock::registerInteractions);
+        if (ModList.get().isLoaded("nomansland") && ModList.get().isLoaded("create")) {
+            event.enqueueWork(NoMansLandCreate::registerOpenPipeEffects);
+        }
+        event.enqueueWork(() -> {
+            ModBlocks.CHOCOLATE_CAULDRON.get().registerInteractions();
+            ModBlocks.SPRING_WATER_CAULDRON.get().registerInteractions();
+            ModBlocks.LUMISENE_CAULDRON.get().registerInteractions();
+        });
         event.enqueueWork(() -> ModItems.BALLOONS.values().forEach(balloon -> DispenserBlock.registerBehavior(balloon.get(), new BalloonItem.DispenseBehavior())));
         event.enqueueWork(() -> ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.GLOAMWOOD_SAPLING.getId(), ModBlocks.POTTED_GLOAMWOOD_SAPLING));
         event.enqueueWork(() -> ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.CACAO_SAPLING.getId(), ModBlocks.POTTED_CACAO_SAPLING));
@@ -185,6 +199,7 @@ public class SpicedCider {
                 ItemStack dyed = new ItemStack(ModItems.POCKET_JUKEBOXES.get(color).get());
                 event.insertBefore(new ItemStack(Items.MUSIC_DISC_13), dyed, vis);
             }
+            event.insertAfter(new ItemStack(Items.MUSIC_DISC_PIGSTEP), new ItemStack(ModItems.MUSIC_DISC_JYNWEYTHEK.get()), vis);
             if (ModItems.TWISTED_BOAT != null) {
                 event.insertAfter(new ItemStack(Items.BAMBOO_CHEST_RAFT), new ItemStack(ModItems.TWISTED_BOAT.get()), vis);
                 event.insertAfter(new ItemStack(ModItems.TWISTED_BOAT.get()), new ItemStack(ModItems.TWISTED_CHEST_BOAT.get()), vis);
@@ -203,9 +218,7 @@ public class SpicedCider {
             event.insertAfter(new ItemStack(Items.MILK_BUCKET), new ItemStack(ModItems.LATEX_BUCKET.get()), vis);
             event.insertAfter(new ItemStack(ModItems.LATEX_BUCKET.get()), new ItemStack(ModItems.RESIN_BUCKET.get()), vis);
             event.insertAfter(new ItemStack(ModItems.RESIN_BUCKET.get()), new ItemStack(ModItems.MAPLE_SYRUP_BUCKET.get()), vis);
-            if (ModItems.RESIN_OIL_BUCKET != null) {
-                event.insertAfter(new ItemStack(ModItems.MAPLE_SYRUP_BUCKET.get()), new ItemStack(ModItems.RESIN_OIL_BUCKET.get()), vis);
-            }
+            event.insertAfter(new ItemStack(ModItems.MAPLE_SYRUP_BUCKET.get()), new ItemStack(ModItems.RESIN_OIL_BUCKET.get()), vis);
         }
         if (event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
             event.insertAfter(new ItemStack(Items.ROOTED_DIRT), new ItemStack(ModItems.WORMY_DIRT.get()), vis);
@@ -215,6 +228,7 @@ public class SpicedCider {
             event.accept(ModItems.BLACKSTONE_DEPOSIT.get(), vis);
             event.accept(ModItems.WORM_CRATE.get(), vis);
             event.accept(ModItems.GOLDEN_WORM_CRATE.get(), vis);
+            Stream.of(ModItems.ORANGE_CRATE, ModItems.PLUM_CRATE, ModItems.HOARY_APPLE_CRATE).filter(Objects::nonNull).forEach(item -> event.accept(item.get(), vis));
             Stream.of(ModItems.CACAO_LOG, ModItems.CACAO_WOOD, ModItems.STRIPPED_CACAO_LOG, ModItems.STRIPPED_CACAO_WOOD).forEach(item -> event.accept(item.get(), vis));
             event.accept(ModItems.CACAO_LEAVES.get(), vis);
             event.accept(ModItems.FLOWERING_CACAO_LEAVES.get(), vis);
@@ -274,6 +288,11 @@ public class SpicedCider {
                 VoidTrailPayload.TYPE,
                 VoidTrailPayload.CODEC,
                 (payload, context) -> context.enqueueWork(() -> ClientVoidTrails.receive(payload))
+        );
+        registrar.playToClient(
+                CauldronStirPayload.TYPE,
+                CauldronStirPayload.CODEC,
+                (payload, context) -> context.enqueueWork(() -> CauldronStirClient.receive(payload))
         );
         registrar.playToClient(
                 CloudCoverPayload.TYPE,

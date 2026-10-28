@@ -12,7 +12,7 @@
 	filterMode = "BLACKLIST"
 	#Your custom particle IDs (blacklist additions, or whitelist entries).
 	#Living Wind maintains built-in blacklist defaults separately; future updates never replace your custom entries.
-	filter = ["colored_lights:torch_glow", "nomansland:maple_syrup_droplet", "nomansland:maple_syrup_droplet_flat", "nomansland:resin_droplet", "nomansland:resin_droplet_flat", "nomansland:milk_droplet", "nomansland:milk_droplet_flat", "etcetera:dripping_rubber", "etcetera:falling_rubber", "etcetera:landing_rubber"]
+	filter = ["colored_lights:torch_glow", "nomansland:maple_syrup_droplet", "nomansland:maple_syrup_droplet_flat", "nomansland:resin_droplet", "nomansland:resin_droplet_flat", "nomansland:milk_droplet", "nomansland:milk_droplet_flat", "etcetera:dripping_rubber", "etcetera:falling_rubber", "etcetera:landing_rubber", "amendments:boiling_bubble"]
 	#Optional per-particle wind response multipliers, stored as modid:particle=multiplier.
 	#1.0 keeps normal Living Wind response; values above 1 make a particle lighter/more wind-responsive;
 	#values between 0 and 1 reduce response. Particular leaves default to 2.5x and SkyLands clouds to 0.25x.

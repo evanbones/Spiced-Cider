@@ -73,7 +73,7 @@
 	"itemDragSoundEffect": {
 		"pitch": 1.6,
 		"volume": 0.3,
-		"enabledDynamic": true,
+		"enabledDynamic": false,
 		"id": "itemDrag",
 		"soundEvent": "minecraft:block.stone.hit",
 		"shouldPlay": true
@@ -81,7 +81,7 @@
 	"itemClickSoundEffect": {
 		"pitch": 2.0,
 		"volume": 0.3,
-		"enabledDynamic": true,
+		"enabledDynamic": false,
 		"id": "itemPick",
 		"soundEvent": "minecraft:block.stone.hit",
 		"shouldPlay": true

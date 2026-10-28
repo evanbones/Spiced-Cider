@@ -1,27 +1,7 @@
 {
   "neoforge:conditions": [
     {
-      "type": "neoforge:mod_loaded",
-      "modid": "create"
-    }
-  ],
-  "type": "create:mixing",
-  "heat_requirement": "heated",
-  "ingredients": [
-    {
-      "item": "minecraft:crying_obsidian"
-    },
-    {
-      "item": "minecraft:glowstone_dust"
-    }
-  ],
-  "results": [
-    {
-      "id": "minecraft:obsidian"
-    },
-    {
-      "id": "dimensional_tears:dimensional_tears",
-      "amount": 250
+      "type": "neoforge:false"
     }
   ]
 }

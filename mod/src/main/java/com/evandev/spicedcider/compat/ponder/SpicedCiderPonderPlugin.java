@@ -4,6 +4,7 @@ import com.evandev.spicedcider.SpicedCider;
 import com.evandev.spicedcider.compat.ponder.scenes.GolemScenes;
 import com.evandev.spicedcider.compat.ponder.scenes.MultiblockScenes;
 import com.evandev.spicedcider.compat.ponder.scenes.PackScenes;
+import com.evandev.spicedcider.compat.ponder.scenes.ProcessScenes;
 import com.evandev.spicedcider.compat.ponder.scenes.RedstoneScenes;
 import net.createmod.ponder.api.registration.MultiSceneBuilder;
 import net.createmod.ponder.api.registration.MultiTagBuilder;
@@ -34,6 +35,11 @@ public class SpicedCiderPonderPlugin implements PonderPlugin {
                 .addStoryBoard("golems/iron_golem", GolemScenes::ironGolem);
         components(helper, "minecraft:snow_block", "minecraft:carved_pumpkin", "minecraft:jack_o_lantern")
                 .addStoryBoard("golems/snow_golem", GolemScenes::snowGolem);
+        components(helper, "environmental:pinecone", "minecraft:carved_pumpkin", "minecraft:jack_o_lantern")
+                .addStoryBoard("golems/pinecone_golem", GolemScenes::pineconeGolem);
+        components(helper, "snowyspirit:gingerbread", "snowyspirit:gingerbread_frosted", "minecraft:carved_pumpkin", "minecraft:jack_o_lantern",
+                "snowyspirit:gumdrop_white", "snowyspirit:gumdrop_light_gray", "snowyspirit:gumdrop_gray", "snowyspirit:gumdrop_dark_gray", "snowyspirit:gumdrop_black", "snowyspirit:gumdrop_brown", "snowyspirit:gumdrop_red", "snowyspirit:gumdrop_orange", "snowyspirit:gumdrop_yellow", "snowyspirit:gumdrop_lime", "snowyspirit:gumdrop_green", "snowyspirit:gumdrop_cyan", "snowyspirit:gumdrop_light_blue", "snowyspirit:gumdrop_blue", "snowyspirit:gumdrop_purple", "snowyspirit:gumdrop_magenta", "snowyspirit:gumdrop_pink")
+                .addStoryBoard("golems/gingerbread_golem", GolemScenes::gingerbreadGolem);
         components(helper, "minecraft:copper_block", "minecraft:carved_pumpkin", "minecraft:jack_o_lantern",
                 "minecraft:copper_golem_statue", "minecraft:exposed_copper_golem_statue", "minecraft:weathered_copper_golem_statue",
                 "minecraft:oxidized_copper_golem_statue", "minecraft:waxed_copper_golem_statue", "minecraft:waxed_exposed_copper_golem_statue",
@@ -75,6 +81,20 @@ public class SpicedCiderPonderPlugin implements PonderPlugin {
                 .addStoryBoard("misc/tapping", PackScenes::tapping);
         components(helper, "farmersdelight:cooking_pot", "farmersdelight:stove", "farmersdelight:skillet")
                 .addStoryBoard("misc/cooking_pot", PackScenes::cookingPot);
+        components(helper, "minecraft:pointed_dripstone")
+                .addStoryBoard("misc/dripstone_farm", PackScenes::dripstoneFarm);
+        components(helper, "minecraft:crying_obsidian", "frame_changer:crying_obsidian_bricks", "frame_changer:crying_polished_obsidian",
+                "frame_changer:crying_obsidian_pillar", "frame_changer:crying_chiseled_obsidian")
+                .addStoryBoard("misc/weeping_obsidian", PackScenes::weepingObsidian);
+        components(helper, "culturaldelights:salt_block", "culturaldelights:salt_spike")
+                .addStoryBoard("misc/salt_spikes", PackScenes::saltSpikes);
+        components(helper, "minecraft:cauldron", "minecraft:nether_wart")
+                .addStoryBoard("misc/cauldron_brewing", ProcessScenes::cauldronBrewing);
+        components(helper, "exposure:lightroom", "exposure:developed_black_and_white_film", "exposure:developed_color_film", "exposure:photograph")
+                .addStoryBoard("misc/lightroom", ProcessScenes::lightroom);
+        components(helper, "exposure:black_and_white_film", "exposure:color_film", "exposure:high_sensitivity_black_and_white_film",
+                "exposure:high_sensitivity_color_film", "exposure:camera")
+                .addStoryBoard("misc/film_developing", ProcessScenes::filmDeveloping);
     }
 
     @Override
@@ -99,7 +119,7 @@ public class SpicedCiderPonderPlugin implements PonderPlugin {
                 .register();
 
         tag(helper, GOLEMS, "minecraft:carved_pumpkin", "minecraft:iron_block", "minecraft:snow_block", "minecraft:copper_block",
-                "minecraft:copper_chest", "minecraft:barrel", "minecraft:wither_skeleton_skull", "spelunkery:tuning_fork");
+                "minecraft:copper_chest", "minecraft:barrel", "minecraft:wither_skeleton_skull", "spelunkery:tuning_fork", "environmental:pinecone", "snowyspirit:gingerbread");
         tag(helper, MULTIBLOCKS, "minecraft:obsidian", "minecraft:beacon", "minecraft:conduit");
         tag(helper, REDSTONE, "minecraft:comparator", "minecraft:repeater", "minecraft:observer", "minecraft:daylight_detector",
                 "minecraft:hopper", "minecraft:crafter", "minecraft:note_block");

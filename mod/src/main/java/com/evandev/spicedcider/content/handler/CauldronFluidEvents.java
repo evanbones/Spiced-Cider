@@ -1,10 +1,13 @@
 package com.evandev.spicedcider.content.handler;
 
 import com.evandev.spicedcider.SpicedCider;
+import com.evandev.spicedcider.compat.toilandtrouble.ToilAndTroubleCauldrons;
+import com.evandev.spicedcider.content.block.FluidCauldronBlock;
 import com.evandev.spicedcider.content.block.LatexCauldronBlock;
 import com.evandev.spicedcider.registry.ModBlocks;
 import com.evandev.spicedcider.registry.ModFluids;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.core.cauldron.CauldronInteraction;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.sounds.SoundEvents;
@@ -19,10 +22,12 @@ import net.minecraft.world.item.MilkBucketItem;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.material.Fluids;
 import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.ModList;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.player.UseItemOnBlockEvent;
 import net.neoforged.neoforge.fluids.CauldronFluidContent;
@@ -32,6 +37,7 @@ import net.neoforged.neoforge.fluids.FluidUtil;
 import net.neoforged.neoforge.fluids.RegisterCauldronFluidContentEvent;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @EventBusSubscriber(modid = SpicedCider.MOD_ID)
@@ -41,6 +47,11 @@ public class CauldronFluidEvents {
     @SubscribeEvent
     public static void registerCauldronContent(RegisterCauldronFluidContentEvent event) {
         event.register(ModBlocks.LATEX_CAULDRON.get(), ModFluids.LATEX.get(), FluidType.BUCKET_VOLUME, LatexCauldronBlock.LEVEL);
+        for (FluidCauldronBlock cauldron : List.of(ModBlocks.CHOCOLATE_CAULDRON.get(), ModBlocks.SPRING_WATER_CAULDRON.get(), ModBlocks.LUMISENE_CAULDRON.get())) {
+            if (cauldron.fluid() != Fluids.EMPTY) {
+                event.register(cauldron, cauldron.fluid(), FluidType.BUCKET_VOLUME, FluidCauldronBlock.LEVEL);
+            }
+        }
     }
 
     @SubscribeEvent
@@ -60,11 +71,20 @@ public class CauldronFluidEvents {
             if (bucket == null) return;
             event.cancelWithResult(CauldronInteraction.fillBucket(state, level, pos, player, hand, stack, new ItemStack(bucket), s -> true, SoundEvents.BUCKET_FILL));
         } else if (stack.getItem() instanceof BucketItem || stack.getItem() instanceof MilkBucketItem) {
-            Fluid fluid = FluidUtil.getFluidContained(stack).map(FluidStack::getFluid).orElse(Fluids.EMPTY);
+            Fluid fluid = stack.getItem() instanceof BucketItem bucket ? bucket.content
+                    : FluidUtil.getFluidContained(stack).map(FluidStack::getFluid).orElse(Fluids.EMPTY);
             CauldronFluidContent content = CauldronFluidContent.getForFluid(fluid);
             if (content == null || isVanilla(content.block)) return;
             boolean partial = state.is(content.block) && content.currentLevel(state) < content.maxLevel;
-            if (!state.is(Blocks.CAULDRON) && !partial) return;
+            BlockEntity blockEntity = level.getBlockEntity(pos);
+            boolean emptyBrewing = blockEntity != null && ModList.get().isLoaded("toil_and_trouble") && ToilAndTroubleCauldrons.isEmpty(blockEntity, state);
+            if (!state.is(Blocks.CAULDRON) && !partial && !emptyBrewing) return;
+            if (emptyBrewing && !level.isClientSide()) {
+                for (ItemStack leftover : ToilAndTroubleCauldrons.items(blockEntity)) {
+                    Block.popResourceFromFace(level, pos, Direction.UP, leftover.copy());
+                }
+                ToilAndTroubleCauldrons.items(blockEntity).clear();
+            }
             BlockState full = content.block.defaultBlockState();
             if (content.levelProperty != null) full = full.setValue(content.levelProperty, content.maxLevel);
             ItemInteractionResult result = CauldronInteraction.emptyBucket(level, pos, player, hand, stack, full, SoundEvents.BUCKET_EMPTY);
@@ -81,7 +101,7 @@ public class CauldronFluidEvents {
         if (buckets == null) {
             Map<Fluid, Item> found = new HashMap<>();
             for (Item item : BuiltInRegistries.ITEM) {
-                if (item.getClass() == BucketItem.class) found.putIfAbsent(((BucketItem) item).content, item);
+                if (item instanceof BucketItem bucket) found.putIfAbsent(bucket.content, item);
             }
             buckets = found;
         }

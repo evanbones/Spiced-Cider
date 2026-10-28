@@ -13,5 +13,9 @@ public class SpicedCiderEmiPlugin implements EmiPlugin {
         if (ModList.get().isLoaded("nomansland")) {
             TappingEmiRecipe.register(registry);
         }
+        if (ModList.get().isLoaded("toil_and_trouble")) {
+            BrewingEmiRecipe.register(registry);
+        }
+        CauldronMixingEmiRecipe.register(registry);
     }
 }

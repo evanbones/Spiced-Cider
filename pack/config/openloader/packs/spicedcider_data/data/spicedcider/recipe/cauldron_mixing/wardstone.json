@@ -1,0 +1,19 @@
+{
+  "type": "spicedcider:cauldron_mixing",
+  "fluid": "minecraft:water",
+  "ingredients": [
+    {
+      "item": "minecraft:nether_wart"
+    },
+    {
+      "item": "minecraft:nether_wart"
+    },
+    {
+      "item": "minecraft:prismarine_crystals"
+    }
+  ],
+  "keep_fluid": true,
+  "result": {
+    "id": "architects_palette:wardstone"
+  }
+}

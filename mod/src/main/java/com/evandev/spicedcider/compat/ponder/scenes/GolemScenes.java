@@ -147,6 +147,136 @@ public class GolemScenes {
         scene.markAsFinished();
     }
 
+    public static void pineconeGolem(SceneBuilder scene, SceneBuildingUtil util) {
+        scene.title("pinecone_golem", "Building a Pinecone Golem");
+        scene.configureBasePlate(0, 0, 5);
+        scene.showBasePlate();
+        scene.idle(10);
+
+        BlockPos head = util.grid().at(2, 2, 2);
+        scene.world().showSection(util.select().position(2, 1, 2), Direction.DOWN);
+        scene.idle(10);
+
+        scene.overlay().showControls(util.vector().topOf(2, 1, 2), Pointing.DOWN, 40)
+                .rightClick()
+                .withItem(new ItemStack(Items.CARVED_PUMPKIN));
+        scene.idle(7);
+        scene.world().showSection(util.select().position(head), Direction.DOWN);
+        scene.idle(10);
+
+        scene.overlay().showText(70)
+                .attachKeyFrame()
+                .text("A Carved Pumpkin placed on top of a Pinecone builds a Pinecone Golem")
+                .pointAt(util.vector().centerOf(2, 1, 2))
+                .placeNearTarget();
+        scene.idle(80);
+
+        scene.world().setBlocks(util.select().fromTo(2, 1, 2, 2, 2, 2), Blocks.AIR.defaultBlockState(), true);
+        Vec3 start = util.vector().of(2.5, 1, 2.5);
+        ElementLink<EntityElement> golem = SceneHelper.spawn(scene, "environmental:pinecone_golem", start, 180, entity -> {});
+        scene.idle(20);
+
+        ItemStack sapling = new ItemStack(Items.SPRUCE_SAPLING);
+        scene.overlay().showControls(start.add(0, 1, 0), Pointing.DOWN, 40)
+                .rightClick()
+                .withItem(sapling);
+        scene.idle(7);
+        scene.world().modifyEntity(golem, entity -> ((LivingEntity) entity).setItemSlot(EquipmentSlot.MAINHAND, sapling.copy()));
+        scene.overlay().showText(70)
+                .attachKeyFrame()
+                .text("Hand it a Sapling and it carries it off")
+                .pointAt(start.add(0, 0.6, 0))
+                .placeNearTarget();
+        scene.idle(80);
+
+        Vec3 spot = util.vector().of(1.5, 1, 1.5);
+        SceneHelper.walk(scene, golem, start, spot, 20);
+        scene.world().modifyEntity(golem, entity -> ((LivingEntity) entity).setItemSlot(EquipmentSlot.MAINHAND, ItemStack.EMPTY));
+        scene.world().showSection(util.select().position(1, 1, 0), Direction.DOWN);
+        scene.idle(10);
+        scene.overlay().showText(70)
+                .text("It plants the Sapling wherever there's room for a tree to grow")
+                .pointAt(util.vector().centerOf(1, 1, 0))
+                .placeNearTarget();
+        scene.idle(80);
+
+        scene.overlay().showText(80)
+                .attachKeyFrame()
+                .text("With empty hands it follows anyone holding a Sapling and picks up Saplings lying nearby")
+                .pointAt(spot.add(0, 0.6, 0))
+                .placeNearTarget();
+        scene.idle(90);
+        scene.markAsFinished();
+    }
+
+    public static void gingerbreadGolem(SceneBuilder scene, SceneBuildingUtil util) {
+        scene.title("gingerbread_golem", "Building a Gingerbread Golem");
+        scene.configureBasePlate(0, 0, 5);
+        scene.showBasePlate();
+        scene.idle(10);
+
+        scene.world().showSection(util.select().position(2, 1, 2), Direction.DOWN);
+        scene.idle(10);
+        scene.overlay().showControls(util.vector().blockSurface(util.grid().at(2, 1, 2), Direction.NORTH), Pointing.RIGHT, 40)
+                .rightClick()
+                .withItem(SceneHelper.item("snowyspirit:gumdrop_red"));
+        scene.idle(7);
+        scene.world().showSection(util.select().position(2, 1, 1), Direction.SOUTH);
+        scene.idle(10);
+        scene.overlay().showText(70)
+                .attachKeyFrame()
+                .text("Stick a Gumdrop on the front of a Gingerbread block")
+                .pointAt(util.vector().blockSurface(util.grid().at(2, 1, 2), Direction.NORTH))
+                .placeNearTarget();
+        scene.idle(80);
+
+        scene.overlay().showControls(util.vector().topOf(2, 1, 2), Pointing.DOWN, 40)
+                .rightClick()
+                .withItem(new ItemStack(Items.CARVED_PUMPKIN));
+        scene.idle(7);
+        scene.world().showSection(util.select().position(2, 2, 2), Direction.DOWN);
+        scene.idle(10);
+        scene.overlay().showText(80)
+                .attachKeyFrame()
+                .text("A Carved Pumpkin on top, facing the same way as the Gumdrop, brings a Gingerbread Golem to life")
+                .pointAt(util.vector().centerOf(2, 2, 2))
+                .placeNearTarget();
+        scene.idle(90);
+
+        scene.world().setBlocks(util.select().fromTo(2, 1, 1, 2, 2, 2), Blocks.AIR.defaultBlockState(), true);
+        Vec3 start = util.vector().of(2.5, 1, 2.5);
+        SceneHelper.spawn(scene, "snowyspirit:gingerbread_golem", start, 180, entity -> {});
+        scene.idle(20);
+
+        scene.overlay().showText(70)
+                .attachKeyFrame()
+                .text("It follows whoever built it")
+                .pointAt(start.add(0, 0.8, 0))
+                .placeNearTarget();
+        scene.idle(80);
+
+        scene.overlay().showControls(start.add(0, 1.2, 0), Pointing.DOWN, 40)
+                .rightClick()
+                .whileSneaking();
+        scene.idle(10);
+        scene.overlay().showText(70)
+                .text("Sneak and right-click to make it sit or stand")
+                .pointAt(start.add(0, 0.6, 0))
+                .placeNearTarget();
+        scene.idle(80);
+
+        scene.overlay().showControls(start.add(0, 1.2, 0), Pointing.DOWN, 40)
+                .rightClick()
+                .withItem(SceneHelper.item("snowyspirit:gingerbread_cookie"));
+        scene.idle(10);
+        scene.overlay().showText(70)
+                .text("Gingerbread Cookies heal it and patch up its bites")
+                .pointAt(start.add(0, 0.6, 0))
+                .placeNearTarget();
+        scene.idle(80);
+        scene.markAsFinished();
+    }
+
     public static void copperGolem(SceneBuilder scene, SceneBuildingUtil util) {
         scene.title("copper_golem", "Building a Copper Golem");
         scene.configureBasePlate(0, 0, 5);

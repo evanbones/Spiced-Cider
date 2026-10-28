@@ -1,0 +1,19 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "bountifulfares"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "spicedcider:hoary_apple_crate"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "bountifulfares:hoary_apple"
+  }
+}

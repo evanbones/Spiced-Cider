@@ -17,11 +17,16 @@ public class ClientFluidEvents {
         event.registerFluidType(textured("resin"), ModFluidTypes.RESIN.get());
         event.registerFluidType(textured("maple_syrup"), ModFluidTypes.MAPLE_SYRUP.get());
         event.registerFluidType(textured("latex"), ModFluidTypes.LATEX.get());
+        event.registerFluidType(textured(ResourceLocation.fromNamespaceAndPath("nomansland", "block/fluid/resin_oil"),
+                ResourceLocation.fromNamespaceAndPath("nomansland", "block/fluid/flowing_resin_oil")), ModFluidTypes.RESIN_OIL.get());
     }
 
     private static IClientFluidTypeExtensions textured(String name) {
-        ResourceLocation still = ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "block/fluid/" + name + "_still");
-        ResourceLocation flowing = ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "block/fluid/" + name + "_flow");
+        return textured(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "block/fluid/" + name + "_still"),
+                ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "block/fluid/" + name + "_flow"));
+    }
+
+    private static IClientFluidTypeExtensions textured(ResourceLocation still, ResourceLocation flowing) {
         return new IClientFluidTypeExtensions() {
             @Override
             public ResourceLocation getStillTexture() {

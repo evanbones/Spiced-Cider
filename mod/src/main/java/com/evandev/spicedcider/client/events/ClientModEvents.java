@@ -222,6 +222,10 @@ public class ClientModEvents {
         PonderCompat.register();
         event.enqueueWork(() -> {
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.TEMPORARY_COBWEB.get(), RenderType.cutout());
+            if (ModList.get().isLoaded("toil_and_trouble")) {
+                ItemBlockRenderTypes.setRenderLayer(BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("toil_and_trouble", "cauldron")),
+                        type -> type == RenderType.cutout() || type == RenderType.translucent());
+            }
             Stream.of(ModBlocks.CACAO_SAPLING, ModBlocks.POTTED_CACAO_SAPLING, ModBlocks.CACAO_POD, ModBlocks.PEAR_SAPLING, ModBlocks.POTTED_PEAR_SAPLING,
                     ModBlocks.HANGING_PEAR, ModBlocks.HANGING_AVOCADO).forEach(block -> ItemBlockRenderTypes.setRenderLayer(block.get(), RenderType.cutout()));
             Stream.of(ModBlocks.CACAO_LEAVES, ModBlocks.FLOWERING_CACAO_LEAVES, ModBlocks.CACAO_LOG, ModBlocks.CACAO_WOOD, ModBlocks.STRIPPED_CACAO_LOG,

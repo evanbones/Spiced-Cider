@@ -15,6 +15,9 @@ public class ModSounds {
     public static final DeferredHolder<SoundEvent, SoundEvent> PLAYER_DEATH = SOUNDS.register("music.death.death1",
             () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "music.death.death1")));
 
+    public static final DeferredHolder<SoundEvent, SoundEvent> MUSIC_DISC_JYNWEYTHEK = SOUNDS.register("music_disc.jynweythek",
+            () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "music_disc.jynweythek")));
+
     public static final DeferredHolder<SoundEvent, SoundEvent> SPIDER_PREPARE_SHOOT = SOUNDS.register("entity.spider.prepare_shoot",
             () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "entity.spider.prepare_shoot")));
 

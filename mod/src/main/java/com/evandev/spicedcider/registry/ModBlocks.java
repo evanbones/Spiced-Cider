@@ -2,6 +2,7 @@ package com.evandev.spicedcider.registry;
 
 import com.evandev.spicedcider.SpicedCider;
 import com.evandev.spicedcider.compat.architectspalette.ArchitectsPaletteCompat;
+import com.evandev.spicedcider.compat.bountifulfares.BountifulFaresCompat;
 import com.evandev.spicedcider.compat.infernalexp.InfernalExpansionCompat;
 import com.evandev.spicedcider.content.block.AlgalBlock;
 import com.evandev.spicedcider.content.block.BuddingPrismarineBlock;
@@ -9,6 +10,9 @@ import com.evandev.spicedcider.content.block.CacaoPodBlock;
 import com.evandev.spicedcider.content.block.FruitLeavesBlock;
 import com.evandev.spicedcider.content.block.FruitLogBlock;
 import com.evandev.spicedcider.content.block.HangingFruitBlock;
+import com.evandev.spicedcider.content.block.FluidCauldronBlock;
+import net.minecraft.world.level.material.Fluid;
+import net.minecraft.core.registries.BuiltInRegistries;
 import com.evandev.spicedcider.content.block.LatexCauldronBlock;
 import com.evandev.spicedcider.content.block.PrismarineClusterBlock;
 import com.evandev.spicedcider.content.block.TallUnderwaterBrambleBlock;
@@ -63,6 +67,17 @@ public class ModBlocks {
     public static final DeferredBlock<LiquidBlock> MAPLE_SYRUP = BLOCKS.register("maple_syrup",
             () -> new LiquidBlock(ModFluids.MAPLE_SYRUP.get(), BlockBehaviour.Properties.ofFullCopy(Blocks.WATER).mapColor(MapColor.COLOR_ORANGE)));
 
+    public static final DeferredBlock<LiquidBlock> RESIN_OIL = BLOCKS.register("resin_oil",
+            () -> new LiquidBlock(ModFluids.RESIN_OIL.get(), BlockBehaviour.Properties.ofFullCopy(Blocks.WATER).mapColor(MapColor.COLOR_BROWN)));
+
+    public static final DeferredBlock<FluidCauldronBlock> CHOCOLATE_CAULDRON = BLOCKS.register("chocolate_cauldron",
+            () -> new FluidCauldronBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.CAULDRON), "chocolate", () -> fluid("create", "chocolate"), null));
+    public static final DeferredBlock<FluidCauldronBlock> SPRING_WATER_CAULDRON = BLOCKS.register("spring_water_cauldron",
+            () -> new FluidCauldronBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.CAULDRON), "spring_water", () -> fluid("spelunkery", "spring_water"), null));
+    public static final DeferredBlock<FluidCauldronBlock> LUMISENE_CAULDRON = BLOCKS.register("lumisene_cauldron",
+            () -> new FluidCauldronBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.CAULDRON).lightLevel(state -> 2 + state.getValue(FluidCauldronBlock.LEVEL) * 2),
+                    "lumisene", () -> fluid("supplementaries", "lumisene"), () -> BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath("supplementaries", "lumisene_bottle"))));
+
     public static final DeferredBlock<Block> LATEX_CAULDRON = BLOCKS.register("latex_cauldron",
             () -> new LatexCauldronBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.CAULDRON)));
 
@@ -83,6 +98,13 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> GOLDEN_WORM_CRATE = BLOCKS.register("golden_worm_crate",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BARREL)));
+
+    @Nullable
+    public static final DeferredBlock<Block> ORANGE_CRATE = fruitCrate("orange_crate");
+    @Nullable
+    public static final DeferredBlock<Block> PLUM_CRATE = fruitCrate("plum_crate");
+    @Nullable
+    public static final DeferredBlock<Block> HOARY_APPLE_CRATE = fruitCrate("hoary_apple_crate");
 
     public static final DeferredBlock<SaplingBlock> GLOAMWOOD_SAPLING = BLOCKS.register("gloamwood_sapling",
             () -> new SaplingBlock(new TreeGrower("gloamwood", Optional.empty(), Optional.of(ModTreeFeatures.GLOAMWOOD), Optional.empty()),
@@ -246,5 +268,16 @@ public class ModBlocks {
 
     private static BlockBehaviour.Properties driedDeepsiltProperties() {
         return BlockBehaviour.Properties.ofFullCopy(Blocks.SANDSTONE).mapColor(MapColor.COLOR_BLACK).sound(ModSounds.DRIED_SILT);
+    }
+
+    private static Fluid fluid(String namespace, String path) {
+        return BuiltInRegistries.FLUID.get(ResourceLocation.fromNamespaceAndPath(namespace, path));
+    }
+
+    @Nullable
+    private static DeferredBlock<Block> fruitCrate(String name) {
+        return BountifulFaresCompat.isLoaded()
+                ? BLOCKS.register(name, () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BARREL)))
+                : null;
     }
 }

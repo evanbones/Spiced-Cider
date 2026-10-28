@@ -218,5 +218,50 @@
       "bountifulfares:golden_apple_leaves",
       "bountifulfares:flowering_golden_apple_leaves"
     ]
+  },
+  {
+    "action": "remove_potion",
+    "effects": [
+      "bountifulfares:bountifulfares.acidic",
+      "bountifulfares:bountifulfares.long_acidic",
+      "bountifulfares:bountifulfares.strong_acidic",
+      "bountifulfares:bountifulfares.stupor",
+      "bountifulfares:bountifulfares.long_stupor"
+    ]
+  },
+  {
+    "action": "remove",
+    "items": [
+      "bountifulfares:apple_block"
+    ],
+    "replace_with": "nomansland:apple_crate"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "bountifulfares:lemon_block"
+    ],
+    "replace_with": "culturaldelights:lemon_crate"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "bountifulfares:orange_block"
+    ],
+    "replace_with": "spicedcider:orange_crate"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "bountifulfares:plum_block"
+    ],
+    "replace_with": "spicedcider:plum_crate"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "bountifulfares:hoary_apple_block"
+    ],
+    "replace_with": "spicedcider:hoary_apple_crate"
   }
 ]

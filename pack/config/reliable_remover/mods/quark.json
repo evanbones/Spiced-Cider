@@ -889,5 +889,13 @@
       "quark:flowering_azalea_leaf_carpet"
     ],
     "replace_with": "woodworks:flowering_azalea_leaf_pile"
+  },
+  {
+    "action": "remove_potion",
+    "effects": [
+      "quark:resilience",
+      "quark:long_resilience",
+      "quark:strong_resilience"
+    ]
   }
 ]

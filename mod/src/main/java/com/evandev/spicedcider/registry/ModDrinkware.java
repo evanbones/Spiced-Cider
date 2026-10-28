@@ -1,6 +1,8 @@
 package com.evandev.spicedcider.registry;
 
 import com.evandev.spicedcider.SpicedCider;
+import com.evandev.spicedcider.compat.bountifulfares.BountifulFaresCompat;
+import com.evandev.spicedcider.compat.bountifulfares.LavenderTeaMugItem;
 import com.evandev.spicedcider.content.item.CeramicMugItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -11,12 +13,18 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
+import org.jetbrains.annotations.Nullable;
 
 public class ModDrinkware {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(SpicedCider.MOD_ID);
 
     public static final DeferredItem<Item> CERAMIC_MUG = ITEMS.register("ceramic_mug",
             () -> new CeramicMugItem(new Item.Properties()));
+
+    @Nullable
+    public static final DeferredItem<Item> LAVENDER_TEA_MUG = BountifulFaresCompat.isLoaded()
+            ? ITEMS.register("lavender_tea_mug", LavenderTeaMugItem::new)
+            : null;
 
     public static void register(IEventBus modEventBus) {
         ITEMS.register(modEventBus);

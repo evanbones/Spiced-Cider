@@ -4,6 +4,7 @@ import com.evandev.spicedcider.SpicedCider;
 import com.evandev.spicedcider.content.loot.BonusBlockDropLootModifier;
 import com.evandev.spicedcider.content.loot.ReplaceLootLootModifier;
 import com.evandev.spicedcider.content.loot.CleaverSkullDropLootModifier;
+import com.evandev.spicedcider.content.loot.MusicDiscSourcesLootModifier;
 import com.mojang.serialization.MapCodec;
 import net.neoforged.neoforge.common.loot.IGlobalLootModifier;
 import net.neoforged.neoforge.registries.DeferredHolder;
@@ -21,4 +22,6 @@ public class ModLootModifiers {
             LOOT_MODIFIER_SERIALIZERS.register("bonus_block_drop", () -> BonusBlockDropLootModifier.CODEC);
     public static final DeferredHolder<MapCodec<? extends IGlobalLootModifier>, MapCodec<ReplaceLootLootModifier>> REPLACE_LOOT =
             LOOT_MODIFIER_SERIALIZERS.register("replace_loot", () -> ReplaceLootLootModifier.CODEC);
+    public static final DeferredHolder<MapCodec<? extends IGlobalLootModifier>, MapCodec<MusicDiscSourcesLootModifier>> MUSIC_DISC_SOURCES =
+            LOOT_MODIFIER_SERIALIZERS.register("music_disc_sources", () -> MusicDiscSourcesLootModifier.CODEC);
 }

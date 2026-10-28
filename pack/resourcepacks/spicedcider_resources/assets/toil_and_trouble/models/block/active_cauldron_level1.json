@@ -1,0 +1,11 @@
+{
+  "loader": "amendments:cauldron",
+  "cauldron": "amendments:block/cauldron",
+  "fluid": {
+    "parent": "spicedcider:block/cauldron_content_9",
+    "textures": {
+      "content": "toil_and_trouble:block/water_swirling"
+    }
+  },
+  "translucent": true
+}

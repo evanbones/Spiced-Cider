@@ -1,0 +1,11 @@
+{
+  "loader": "amendments:cauldron",
+  "cauldron": "amendments:block/cauldron",
+  "fluid": {
+    "parent": "spicedcider:block/cauldron_content_15",
+    "textures": {
+      "content": "minecraft:block/lava_still"
+    }
+  },
+  "translucent": false
+}

@@ -1,0 +1,19 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "bountifulfares"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "spicedcider:plum_crate"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "bountifulfares:plum"
+  }
+}

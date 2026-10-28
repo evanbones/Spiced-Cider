@@ -10,5 +10,14 @@
     "items": [
       "buzzier_bees:grizzly_bear_spawn_egg"
     ]
+  },
+  {
+    "action": "remove_potion",
+    "effects": [
+      "buzzier_bees:long_luck",
+      "buzzier_bees:strong_luck",
+      "buzzier_bees:long_unluck",
+      "buzzier_bees:strong_unluck"
+    ]
   }
 ]

@@ -1,0 +1,45 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    }
+  ],
+  "type": "create:mixing",
+  "heat_requirement": "heated",
+  "ingredients": [
+    {
+      "item": "minecraft:honeycomb"
+    },
+    {
+      "item": "nomansland:resin"
+    },
+    {
+      "item": "nomansland:resin"
+    },
+    {
+      "item": "nomansland:resin"
+    },
+    {
+      "item": "nomansland:resin"
+    },
+    {
+      "item": "nomansland:resin"
+    },
+    {
+      "item": "nomansland:resin"
+    },
+    {
+      "item": "nomansland:resin"
+    },
+    {
+      "item": "nomansland:resin"
+    }
+  ],
+  "results": [
+    {
+      "id": "spicedcider:resin_oil",
+      "amount": 1000
+    }
+  ]
+}

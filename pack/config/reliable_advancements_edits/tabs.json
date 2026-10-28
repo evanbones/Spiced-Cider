@@ -533,16 +533,12 @@
           84,
           210
         ],
-        "spicedcider:husbandry/fermentation_vessel": [
+        "spicedcider:husbandry/intoxication": [
           126,
           210
         ],
-        "spicedcider:husbandry/intoxication": [
-          168,
-          210
-        ],
         "spicedcider:husbandry/max_intoxication": [
-          210,
+          168,
           210
         ],
         "spicedcider:husbandry/pickle": [
@@ -1247,12 +1243,8 @@
           252,
           30
         ],
-        "spicedcider:nether/brewing_stand": [
-          294,
-          30
-        ],
         "spicedcider:nether/brew_potion": [
-          336,
+          294,
           30
         ],
         "spicedcider:nether/blaze_powder": [
@@ -2680,6 +2672,14 @@
     "spicedcider:spiced_cider/bronze_armor": {
       "title": "Podium Finish",
       "icon": "modestmining:bronze_chestplate"
+    },
+    "spicedcider:husbandry/feast": {
+      "title": "A Glorious Feast",
+      "icon": "farmersdelight:roast_chicken_block"
+    },
+    "spicedcider:husbandry/pizza": {
+      "title": "Pizza Time",
+      "icon": "modest_meals:pizza"
     }
   }
 }
