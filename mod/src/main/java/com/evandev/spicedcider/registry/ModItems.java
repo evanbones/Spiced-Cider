@@ -1,5 +1,8 @@
 package com.evandev.spicedcider.registry;
 
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.neoforged.fml.ModList;
 import com.evandev.spicedcider.SpicedCider;
 import com.evandev.spicedcider.content.item.MapInABottleItem;
 import com.evandev.spicedcider.content.item.BalloonItem;
@@ -98,6 +101,16 @@ public class ModItems {
 
     public static final DeferredItem<Item> LATEX_BUCKET = ITEMS.register("latex_bucket",
             () -> new BucketItem(ModFluids.LATEX.get(), new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1)));
+    public static final DeferredItem<Item> RESIN_BUCKET = ITEMS.register("resin_bucket",
+            () -> new BucketItem(ModFluids.RESIN.get(), new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1)));
+    public static final DeferredItem<Item> MAPLE_SYRUP_BUCKET = ITEMS.register("maple_syrup_bucket",
+            () -> new BucketItem(ModFluids.MAPLE_SYRUP.get(), new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1)));
+    @Nullable
+    public static final DeferredItem<Item> RESIN_OIL_BUCKET = ModList.get().isLoaded("nomansland")
+            ? ITEMS.register("resin_oil_bucket", () -> new BucketItem(
+            BuiltInRegistries.FLUID.get(ResourceLocation.fromNamespaceAndPath("nomansland", "resin_oil")),
+            new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1)))
+            : null;
     public static final DeferredItem<Item> LATEX_BOTTLE = ITEMS.register("latex_bottle",
             () -> new Item(new Item.Properties().craftRemainder(Items.GLASS_BOTTLE).stacksTo(16)));
 

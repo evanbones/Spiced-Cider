@@ -1,0 +1,26 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "newworld"
+    }
+  ],
+  "source": {
+    "block": "newworld:fir_log",
+    "properties": {
+      "axis": "y"
+    },
+    "tree": {}
+  },
+  "output": {
+    "cauldron": "nomansland:resin_cauldron"
+  },
+  "interval": {
+    "type": "minecraft:uniform",
+    "min_inclusive": 18000,
+    "max_inclusive": 36000
+  },
+  "particle": {
+    "type": "nomansland:resin_droplet"
+  }
+}

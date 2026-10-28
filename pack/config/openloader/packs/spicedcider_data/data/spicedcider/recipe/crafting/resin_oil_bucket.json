@@ -1,0 +1,31 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "nomansland"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:bucket"
+    },
+    {
+      "item": "nomansland:resin_oil_bottle"
+    },
+    {
+      "item": "nomansland:resin_oil_bottle"
+    },
+    {
+      "item": "nomansland:resin_oil_bottle"
+    },
+    {
+      "item": "nomansland:resin_oil_bottle"
+    }
+  ],
+  "result": {
+    "id": "spicedcider:resin_oil_bucket",
+    "count": 1
+  }
+}

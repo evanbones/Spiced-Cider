@@ -58,6 +58,11 @@ public class ModBlocks {
     public static final DeferredBlock<LiquidBlock> LATEX = BLOCKS.register("latex",
             () -> new LiquidBlock(ModFluids.LATEX.get(), BlockBehaviour.Properties.ofFullCopy(Blocks.WATER).mapColor(MapColor.COLOR_LIGHT_GRAY)));
 
+    public static final DeferredBlock<LiquidBlock> RESIN = BLOCKS.register("resin",
+            () -> new LiquidBlock(ModFluids.RESIN.get(), BlockBehaviour.Properties.ofFullCopy(Blocks.WATER).mapColor(MapColor.TERRACOTTA_ORANGE)));
+    public static final DeferredBlock<LiquidBlock> MAPLE_SYRUP = BLOCKS.register("maple_syrup",
+            () -> new LiquidBlock(ModFluids.MAPLE_SYRUP.get(), BlockBehaviour.Properties.ofFullCopy(Blocks.WATER).mapColor(MapColor.COLOR_ORANGE)));
+
     public static final DeferredBlock<Block> LATEX_CAULDRON = BLOCKS.register("latex_cauldron",
             () -> new LatexCauldronBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.CAULDRON)));
 

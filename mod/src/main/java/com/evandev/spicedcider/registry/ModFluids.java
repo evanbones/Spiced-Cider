@@ -26,11 +26,13 @@ public class ModFluids {
             () -> new BaseFlowingFluid.Flowing(ModFluids.latexProperties()));
 
     private static BaseFlowingFluid.Properties resinProperties() {
-        return new BaseFlowingFluid.Properties(ModFluidTypes.RESIN, RESIN, FLOWING_RESIN).slopeFindDistance(2).levelDecreasePerBlock(2).tickRate(30);
+        return new BaseFlowingFluid.Properties(ModFluidTypes.RESIN, RESIN, FLOWING_RESIN).slopeFindDistance(2).levelDecreasePerBlock(2).tickRate(30)
+                .bucket(ModItems.RESIN_BUCKET).block(ModBlocks.RESIN);
     }
 
     private static BaseFlowingFluid.Properties mapleSyrupProperties() {
-        return new BaseFlowingFluid.Properties(ModFluidTypes.MAPLE_SYRUP, MAPLE_SYRUP, FLOWING_MAPLE_SYRUP).slopeFindDistance(2).levelDecreasePerBlock(2).tickRate(20);
+        return new BaseFlowingFluid.Properties(ModFluidTypes.MAPLE_SYRUP, MAPLE_SYRUP, FLOWING_MAPLE_SYRUP).slopeFindDistance(2).levelDecreasePerBlock(2).tickRate(20)
+                .bucket(ModItems.MAPLE_SYRUP_BUCKET).block(ModBlocks.MAPLE_SYRUP);
     }
 
     private static BaseFlowingFluid.Properties latexProperties() {

@@ -1,11 +1,12 @@
 {
   "neoforge:conditions": [
     {
-      "modid": "create",
-      "type": "neoforge:mod_loaded"
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
     }
   ],
   "type": "create:mixing",
+  "heat_requirement": "heated",
   "ingredients": [
     {
       "item": "minecraft:crying_obsidian"
@@ -20,8 +21,7 @@
     },
     {
       "id": "dimensional_tears:dimensional_tears",
-      "amount": 144
+      "amount": 250
     }
-  ],
-  "heat_requirement": "heated"
+  ]
 }

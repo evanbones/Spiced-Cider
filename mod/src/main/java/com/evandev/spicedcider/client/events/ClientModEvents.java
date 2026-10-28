@@ -65,8 +65,17 @@ import net.neoforged.neoforge.client.extensions.common.IClientItemExtensions;
 import net.neoforged.neoforge.client.extensions.common.RegisterClientExtensionsEvent;
 import net.neoforged.neoforge.event.AddPackFindersEvent;
 
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Stream;
 
@@ -162,6 +171,26 @@ public class ClientModEvents {
         }
         event.register((stack, tintIndex) -> tintIndex == 0 ? FoliageColor.getDefaultColor() : -1, ModItems.CACAO_LEAVES.get(), ModItems.FLOWERING_CACAO_LEAVES.get(),
                 ModItems.PEAR_LEAVES.get(), ModItems.FLOWERING_PEAR_LEAVES.get());
+        if (TideCompat.isLoaded()) {
+            registerTideSpawnEggColors(event);
+        }
+    }
+
+    private static void registerTideSpawnEggColors(RegisterColorHandlersEvent.Item event) {
+        try (InputStream in = ClientModEvents.class.getResourceAsStream("/assets/spicedcider/tide_spawn_egg_colors.json")) {
+            if (in == null) return;
+            JsonObject colors = JsonParser.parseReader(new InputStreamReader(in, StandardCharsets.UTF_8)).getAsJsonObject();
+            for (Map.Entry<String, JsonElement> entry : colors.entrySet()) {
+                Item egg = BuiltInRegistries.ITEM.get(ResourceLocation.parse(entry.getKey()));
+                if (egg == Items.AIR) continue;
+                JsonArray pair = entry.getValue().getAsJsonArray();
+                int base = 0xFF000000 | Integer.parseInt(pair.get(0).getAsString().substring(1), 16);
+                int spots = 0xFF000000 | Integer.parseInt(pair.get(1).getAsString().substring(1), 16);
+                event.register((stack, tintIndex) -> tintIndex == 0 ? base : spots, egg);
+            }
+        } catch (IOException e) {
+            SpicedCider.LOGGER.error("Failed to read Tide spawn egg colors", e);
+        }
     }
 
     @SubscribeEvent

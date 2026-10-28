@@ -1,0 +1,26 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "nomansland"
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "type": "neoforge:single",
+      "fluid": "spicedcider:resin",
+      "amount": 250
+    }
+  ],
+  "results": [
+    {
+      "id": "nomansland:resin",
+      "count": 2
+    }
+  ]
+}

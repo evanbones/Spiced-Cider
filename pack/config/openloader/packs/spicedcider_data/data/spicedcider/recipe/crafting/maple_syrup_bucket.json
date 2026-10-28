@@ -1,0 +1,31 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "nomansland"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:bucket"
+    },
+    {
+      "item": "nomansland:maple_syrup_bottle"
+    },
+    {
+      "item": "nomansland:maple_syrup_bottle"
+    },
+    {
+      "item": "nomansland:maple_syrup_bottle"
+    },
+    {
+      "item": "nomansland:maple_syrup_bottle"
+    }
+  ],
+  "result": {
+    "id": "spicedcider:maple_syrup_bucket",
+    "count": 1
+  }
+}

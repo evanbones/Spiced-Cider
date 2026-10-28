@@ -1,0 +1,27 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "nomansland"
+    }
+  ],
+  "type": "create:emptying",
+  "ingredients": [
+    {
+      "item": "nomansland:maple_syrup_bottle"
+    }
+  ],
+  "results": [
+    {
+      "id": "minecraft:glass_bottle"
+    },
+    {
+      "id": "spicedcider:maple_syrup",
+      "amount": 250
+    }
+  ]
+}
