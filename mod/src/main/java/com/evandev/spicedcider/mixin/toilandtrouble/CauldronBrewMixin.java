@@ -7,6 +7,8 @@ import cc.cassian.cauldrons.core.CauldronModEvents;
 import cc.cassian.cauldrons.core.CauldronModRecipes;
 import cc.cassian.cauldrons.core.CauldronModTags;
 import cc.cassian.cauldrons.recipe.BrewingRecipeInput;
+import com.evandev.spicedcider.compat.toilandtrouble.AutomatedCauldron;
+import com.evandev.spicedcider.compat.toilandtrouble.CauldronItemHandler;
 import com.evandev.spicedcider.content.brewing.CauldronBrewing;
 import com.evandev.spicedcider.registry.ModDataMaps;
 import com.evandev.spicedcider.registry.ModPotions;
@@ -47,7 +49,7 @@ import java.util.Optional;
 
 @IfModLoaded("toil_and_trouble")
 @Mixin(value = CauldronBlockEntity.class, remap = false)
-public abstract class CauldronBrewMixin {
+public abstract class CauldronBrewMixin implements AutomatedCauldron {
 
     @Shadow
     protected CauldronContents contents;
@@ -79,6 +81,9 @@ public abstract class CauldronBrewMixin {
     @Nullable
     private List<ItemStack> spicedcider$leftovers;
 
+    @Unique
+    private int spicedcider$drained;
+
     @Shadow
     public abstract Integer getFillLevel();
 
@@ -105,13 +110,53 @@ public abstract class CauldronBrewMixin {
         if (stack.is(CauldronModTags.CLEANS_CAULDRONS)) {
             return;
         }
+        if (this.spicedcider$refuses(stack)) {
+            cir.setReturnValue(new Pair<>(CauldronModEvents.PASS_TO_EMPTY_HAND, ItemStack.EMPTY));
+        }
+    }
+
+    @Unique
+    private boolean spicedcider$refuses(ItemStack stack) {
         boolean tainted = CauldronBrewing.isTainted(this.contents.potion());
         boolean full = CauldronBrewing.ingredient(stack) != null && this.spicedcider$count + this.items.size() >= CauldronBrewing.MAX_INGREDIENTS;
         boolean foreign = !tainted && !this.spicedcider$fits(stack, null);
         boolean clashes = !tainted && !CauldronBrewing.isClear(this.contents.potion()) && !this.spicedcider$fits(stack, this.contents.potion().get());
-        if (tainted || full || foreign || clashes) {
-            cir.setReturnValue(new Pair<>(CauldronModEvents.PASS_TO_EMPTY_HAND, ItemStack.EMPTY));
+        return tainted || full || foreign || clashes;
+    }
+
+    @Override
+    public boolean spicedcider$accepts(ItemStack stack) {
+        if (stack.isEmpty()) {
+            return false;
         }
+        if (this.spicedcider$isBrew()) {
+            return !stack.is(CauldronModTags.CLEANS_CAULDRONS) && !this.spicedcider$refuses(stack);
+        }
+        Level level = ((CauldronBlockEntity) (Object) this).getLevel();
+        if (level == null || !this.items.isEmpty() || !CauldronBrewing.isWater(this.contents.potion())) {
+            return false;
+        }
+        return CauldronItemHandler.startsBrew(level, this.contents, stack);
+    }
+
+    @Override
+    public int spicedcider$drained() {
+        return this.spicedcider$drained;
+    }
+
+    @Override
+    public void spicedcider$setDrained(int drained) {
+        this.spicedcider$drained = drained;
+    }
+
+    @Inject(method = "canPlaceItemThroughFace", at = @At("HEAD"), cancellable = true)
+    private void spicedcider$automatedInsert(int slot, ItemStack stack, @Nullable Direction side, CallbackInfoReturnable<Boolean> cir) {
+        cir.setReturnValue(this.spicedcider$accepts(stack));
+    }
+
+    @Inject(method = "canTakeItemThroughFace", at = @At("HEAD"), cancellable = true)
+    private void spicedcider$noAutomatedTake(int slot, ItemStack stack, Direction side, CallbackInfoReturnable<Boolean> cir) {
+        cir.setReturnValue(false);
     }
 
     @Unique
@@ -243,6 +288,7 @@ public abstract class CauldronBrewMixin {
         tag.putInt("spicedcider.brew_seconds", this.spicedcider$seconds);
         tag.putInt("spicedcider.brew_potency", this.spicedcider$potency);
         tag.putInt("spicedcider.brew_count", this.spicedcider$count);
+        tag.putInt("spicedcider.drained", this.spicedcider$drained);
     }
 
     @Inject(method = "loadAdditional", at = @At("TAIL"))
@@ -253,6 +299,7 @@ public abstract class CauldronBrewMixin {
         this.spicedcider$seconds = tag.getInt("spicedcider.brew_seconds");
         this.spicedcider$potency = tag.getInt("spicedcider.brew_potency");
         this.spicedcider$count = tag.getInt("spicedcider.brew_count");
+        this.spicedcider$drained = tag.getInt("spicedcider.drained");
     }
 
     @Unique
@@ -279,5 +326,6 @@ public abstract class CauldronBrewMixin {
         this.spicedcider$seconds = 0;
         this.spicedcider$potency = 0;
         this.spicedcider$count = 0;
+        this.spicedcider$drained = 0;
     }
 }

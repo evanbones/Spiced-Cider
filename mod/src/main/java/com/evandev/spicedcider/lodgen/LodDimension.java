@@ -35,7 +35,7 @@ final class LodDimension {
     private static final int STARTS_RADIUS = 8;
     private static final int FAILURE_REACH = 3;
     private static final int MAX_NODES = 12000;
-    private static final int MAX_GENERATED = 2500;
+    private static final int MAX_GENERATED = Runtime.getRuntime().maxMemory() < 6L << 30 ? 1250 : 2500;
     private static final int DISK_PER_PLAN = 16;
 
     final ServerLevel level;

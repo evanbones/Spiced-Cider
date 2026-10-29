@@ -13,6 +13,7 @@ import com.evandev.spicedcider.compat.yacl.ConfigScreenLoader;
 import com.evandev.spicedcider.config.LogReconfiguration;
 import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.evandev.spicedcider.compat.nomansland.NoMansLandCreate;
+import com.evandev.spicedcider.compat.toilandtrouble.ToilAndTroubleCapabilities;
 import com.evandev.spicedcider.content.block.LatexCauldronBlock;
 import com.evandev.spicedcider.content.item.BalloonItem;
 import com.evandev.spicedcider.content.handler.SpawnControlEvents;
@@ -118,6 +119,7 @@ public class SpicedCider {
         ModLootModifiers.LOOT_MODIFIER_SERIALIZERS.register(modEventBus);
         ModDataComponents.DATA_COMPONENTS.register(modEventBus);
         if (ModList.get().isLoaded("iteminteractions")) ItemInteractionsCompat.register(modEventBus);
+        if (ModList.get().isLoaded("toil_and_trouble")) modEventBus.addListener(ToilAndTroubleCapabilities::register);
         ModFluidTypes.FLUID_TYPES.register(modEventBus);
         ModFluids.FLUIDS.register(modEventBus);
 
