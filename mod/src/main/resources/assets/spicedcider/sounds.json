@@ -211,5 +211,68 @@
       "spicedcider:block/dried_silt/step3",
       "spicedcider:block/dried_silt/step4"
     ]
+  },
+  "entity.straw_golem.ambient": {
+    "category": "neutral",
+    "subtitle": "subtitles.spicedcider.entity.straw_golem.ambient",
+    "sounds": [
+      "spicedcider:entity/straw_golem/ambient1",
+      "spicedcider:entity/straw_golem/ambient2",
+      "spicedcider:entity/straw_golem/ambient3",
+      "spicedcider:entity/straw_golem/ambient4",
+      "spicedcider:entity/straw_golem/ambient5",
+      "spicedcider:entity/straw_golem/ambient6",
+      "spicedcider:entity/straw_golem/ambient7",
+      "spicedcider:entity/straw_golem/ambient8",
+      "spicedcider:entity/straw_golem/ambient9"
+    ]
+  },
+  "entity.straw_golem.hurt": {
+    "category": "neutral",
+    "subtitle": "subtitles.spicedcider.entity.straw_golem.hurt",
+    "sounds": [
+      "spicedcider:entity/straw_golem/hurt1",
+      "spicedcider:entity/straw_golem/hurt2",
+      "spicedcider:entity/straw_golem/hurt3",
+      "spicedcider:entity/straw_golem/hurt4",
+      "spicedcider:entity/straw_golem/hurt5"
+    ]
+  },
+  "entity.straw_golem.death": {
+    "category": "neutral",
+    "subtitle": "subtitles.spicedcider.entity.straw_golem.death",
+    "sounds": [
+      "spicedcider:entity/straw_golem/death1",
+      "spicedcider:entity/straw_golem/death2"
+    ]
+  },
+  "entity.straw_golem.happy": {
+    "category": "neutral",
+    "subtitle": "subtitles.spicedcider.entity.straw_golem.happy",
+    "sounds": [
+      "spicedcider:entity/straw_golem/happy1",
+      "spicedcider:entity/straw_golem/happy2",
+      "spicedcider:entity/straw_golem/happy3",
+      "spicedcider:entity/straw_golem/happy4"
+    ]
+  },
+  "entity.straw_golem.interested": {
+    "category": "neutral",
+    "subtitle": "subtitles.spicedcider.entity.straw_golem.interested",
+    "sounds": [
+      "spicedcider:entity/straw_golem/interested1",
+      "spicedcider:entity/straw_golem/interested2",
+      "spicedcider:entity/straw_golem/interested3"
+    ]
+  },
+  "entity.straw_golem.scared": {
+    "category": "neutral",
+    "subtitle": "subtitles.spicedcider.entity.straw_golem.scared",
+    "sounds": [
+      "spicedcider:entity/straw_golem/scared1",
+      "spicedcider:entity/straw_golem/scared2",
+      "spicedcider:entity/straw_golem/scared3",
+      "spicedcider:entity/straw_golem/scared4"
+    ]
   }
 }

@@ -79,6 +79,15 @@ public class ModPonderSchematicProvider implements DataProvider {
                 .set(2, 2, 2, "minecraft:carved_pumpkin", "facing", "north");
     }
 
+    private static Schematic strawGolem() {
+        return new Schematic(5)
+                .fill(1, 0, 0, 3, 0, 0, "minecraft:farmland", "moisture", "7")
+                .fill(1, 1, 0, 3, 1, 0, "minecraft:carrots", "age", "7")
+                .set(0, 1, 3, "quark:oak_chest", "facing", "north", "type", "single", "waterlogged", "false")
+                .set(2, 1, 2, "minecraft:hay_block", "axis", "y")
+                .set(2, 2, 2, "minecraft:carved_pumpkin", "facing", "north");
+    }
+
     private static Schematic wither() {
         return new Schematic(5)
                 .set(2, 1, 2, "minecraft:soul_sand")
@@ -274,6 +283,7 @@ public class ModPonderSchematicProvider implements DataProvider {
         schematics.put("golems/copper_golem", copperGolem());
         schematics.put("golems/copper_golem_sorting", copperGolemSorting());
         schematics.put("golems/sputter", sputter());
+        schematics.put("golems/straw_golem", strawGolem());
         schematics.put("golems/wither", wither());
         schematics.put("golems/tuning_fork", tuningFork());
         schematics.put("multiblocks/nether_portal", netherPortal());

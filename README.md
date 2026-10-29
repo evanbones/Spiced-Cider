@@ -221,6 +221,13 @@ If you are thinking about using the code or assets from Spiced Cider, please not
 licensing. **All assets of this project are unlicensed and all rights are reserved to them by their respective
 authors.** The source code of the Spiced Cider mod for Minecraft 1.21.1 is available under the MIT license.
 
+**Exception:** the Straw Golem is ported from RE-Strawgolem and stays under its
+[AGPLv3 license](https://github.com/HeroBrianMack/RE-Strawgolem/blob/master/LICENSE.txt) (included at
+`META-INF/licenses/strawgolem-LICENSE.txt`). This covers the source in `entities/strawgolem/`,
+`client/models/strawgolem/`, `client/renderer/strawgolem/`, `mixin/strawgolem/` and
+`content/handler/StrawGolemEvents.java`, the sounds in `assets/spicedcider/sounds/entity/straw_golem/` and the
+Straw Hat item texture.
+
 ## Credits
 
 Spiced Cider contains code from [Better Log4j Config](https://modrinth.com/mod/better-log4j-config), used under
@@ -234,6 +241,9 @@ under its MIT license (included at `META-INF/licenses/void_water-LICENSE.txt`).
 
 Sputters are ported from [Nock Enough Arrows](https://www.curseforge.com/minecraft/mc-mods/nock-enough-arrows) by
 itayfeder, used under its MIT license (included at `META-INF/licenses/nock_enough_arrows-LICENSE.txt`).
+
+Straw Golems are ported from [RE-Strawgolem](https://github.com/HeroBrianMack/RE-Strawgolem) by HeroBrianMack
+(model by Fr3nderman), used under its AGPLv3 license, with delivery fixes from max-champlin's pull request #5.
 
 Sparks for hitting unmineable blocks ported from Valcon by [Ivqry](https://github.com/ivqrydev).
 

@@ -47,8 +47,10 @@ public class SpicedCiderPonderPlugin implements PonderPlugin {
                 .addStoryBoard("golems/copper_golem", GolemScenes::copperGolem);
         components(helper, "minecraft:copper_chest")
                 .addStoryBoard("golems/copper_golem_sorting", GolemScenes::copperGolemSorting);
-        components(helper, "minecraft:barrel", "minecraft:carved_pumpkin", "minecraft:jack_o_lantern", "spicedcider:sputter_spawn_egg")
+        components(helper, "minecraft:barrel", "minecraft:carved_pumpkin", "minecraft:jack_o_lantern")
                 .addStoryBoard("golems/sputter", GolemScenes::sputter);
+        components(helper, "minecraft:hay_block", "minecraft:carved_pumpkin", "minecraft:jack_o_lantern", "spicedcider:straw_hat")
+                .addStoryBoard("golems/straw_golem", GolemScenes::strawGolem);
         components(helper, "minecraft:wither_skeleton_skull", "minecraft:soul_sand", "minecraft:soul_soil")
                 .addStoryBoard("golems/wither", GolemScenes::wither);
         components(helper, "spelunkery:tuning_fork")
@@ -119,7 +121,7 @@ public class SpicedCiderPonderPlugin implements PonderPlugin {
                 .register();
 
         tag(helper, GOLEMS, "minecraft:carved_pumpkin", "minecraft:iron_block", "minecraft:snow_block", "minecraft:copper_block",
-                "minecraft:copper_chest", "minecraft:barrel", "minecraft:wither_skeleton_skull", "spelunkery:tuning_fork", "environmental:pinecone", "snowyspirit:gingerbread");
+                "minecraft:copper_chest", "minecraft:barrel", "minecraft:hay_block", "minecraft:wither_skeleton_skull", "spelunkery:tuning_fork", "environmental:pinecone", "snowyspirit:gingerbread");
         tag(helper, MULTIBLOCKS, "minecraft:obsidian", "minecraft:beacon", "minecraft:conduit");
         tag(helper, REDSTONE, "minecraft:comparator", "minecraft:repeater", "minecraft:observer", "minecraft:daylight_detector",
                 "minecraft:hopper", "minecraft:crafter", "minecraft:note_block");

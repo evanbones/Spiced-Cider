@@ -46,6 +46,7 @@ public class ModTags {
         public static final TagKey<Block> AVOCADO_LOGS = tag("avocado_logs");
         public static final TagKey<Block> AVOCADO_LEAVES = tag("avocado_leaves");
         public static final TagKey<Block> GROWS_PINECONES = tag("grows_pinecones");
+        public static final TagKey<Block> STRAW_GOLEM_CROPS = tag("straw_golem_crops");
 
         private static TagKey<Block> tag(String name) {
             return BlockTags.create(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, name));

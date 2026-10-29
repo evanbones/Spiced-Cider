@@ -17,4 +17,7 @@ public class ModModelLayers {
     public static final ModelLayerLocation SPUTTER_ARROWFUL = new ModelLayerLocation(
             ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "sputter"), "arrowful"
     );
+    public static final ModelLayerLocation STRAW_GOLEM = new ModelLayerLocation(
+            ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "straw_golem"), "main"
+    );
 }

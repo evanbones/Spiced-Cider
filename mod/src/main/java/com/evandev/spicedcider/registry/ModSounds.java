@@ -36,6 +36,13 @@ public class ModSounds {
     public static final DeferredHolder<SoundEvent, SoundEvent> BALLOON_POP = SOUNDS.register("entity.balloon.pop",
             () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "entity.balloon.pop")));
 
+    public static final DeferredHolder<SoundEvent, SoundEvent> STRAW_GOLEM_AMBIENT = entity("straw_golem.ambient");
+    public static final DeferredHolder<SoundEvent, SoundEvent> STRAW_GOLEM_HURT = entity("straw_golem.hurt");
+    public static final DeferredHolder<SoundEvent, SoundEvent> STRAW_GOLEM_DEATH = entity("straw_golem.death");
+    public static final DeferredHolder<SoundEvent, SoundEvent> STRAW_GOLEM_HAPPY = entity("straw_golem.happy");
+    public static final DeferredHolder<SoundEvent, SoundEvent> STRAW_GOLEM_INTERESTED = entity("straw_golem.interested");
+    public static final DeferredHolder<SoundEvent, SoundEvent> STRAW_GOLEM_SCARED = entity("straw_golem.scared");
+
     public static final DeferredHolder<SoundEvent, SoundEvent> ALGAE_BREAK = block("algae.break");
     public static final DeferredHolder<SoundEvent, SoundEvent> ALGAE_STEP = block("algae.step");
     public static final DeferredHolder<SoundEvent, SoundEvent> ALGAL_GRAVEL_BREAK = block("algal_gravel.break");
@@ -57,6 +64,11 @@ public class ModSounds {
     public static final SoundType SILT = new DeferredSoundType(1.0F, 1.0F, SILT_BREAK, SILT_STEP, SILT_BREAK, SILT_BREAK, SILT_STEP);
     public static final SoundType DRIED_SILT = new DeferredSoundType(1.0F, 1.0F, DRIED_SILT_BREAK, DRIED_SILT_STEP, DRIED_SILT_BREAK, DRIED_SILT_BREAK, DRIED_SILT_STEP);
     public static final SoundType PRISMARINE_CLUSTER = new DeferredSoundType(1.0F, 1.0F, PRISMARINE_CLUSTER_BREAK, SoundType.GLASS::getStepSound, SoundType.GLASS::getPlaceSound, SoundType.GLASS::getHitSound, SoundType.GLASS::getFallSound);
+
+    private static DeferredHolder<SoundEvent, SoundEvent> entity(String name) {
+        String id = "entity." + name;
+        return SOUNDS.register(id, () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, id)));
+    }
 
     private static DeferredHolder<SoundEvent, SoundEvent> block(String name) {
         String id = "block." + SpicedCider.MOD_ID + "." + name;

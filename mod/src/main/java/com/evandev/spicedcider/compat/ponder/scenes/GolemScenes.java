@@ -1,6 +1,8 @@
 package com.evandev.spicedcider.compat.ponder.scenes;
 
 import com.evandev.spicedcider.entities.sputter.SputterEntity;
+import com.evandev.spicedcider.entities.strawgolem.StrawGolem;
+import com.evandev.spicedcider.registry.ModItems;
 import com.evandev.spicedcider.registry.ModEntityTypes;
 import net.createmod.catnip.math.Pointing;
 import net.createmod.ponder.api.PonderPalette;
@@ -15,12 +17,14 @@ import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.animal.IronGolem;
 import net.minecraft.world.entity.boss.wither.WitherBoss;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.CropBlock;
 import net.minecraft.world.phys.Vec3;
 
 public class GolemScenes {
@@ -465,6 +469,132 @@ public class GolemScenes {
         scene.overlay().showText(70)
                 .text("A Dye gives it war paint")
                 .pointAt(util.vector().of(2.5, 1.5, 2.5))
+                .placeNearTarget();
+        scene.idle(80);
+        scene.markAsFinished();
+    }
+
+    public static void strawGolem(SceneBuilder scene, SceneBuildingUtil util) {
+        scene.title("straw_golem", "Building a Straw Golem");
+        scene.configureBasePlate(0, 0, 5);
+        scene.showBasePlate();
+        scene.idle(10);
+
+        BlockPos body = util.grid().at(2, 1, 2);
+        BlockPos head = util.grid().at(2, 2, 2);
+        BlockPos chest = util.grid().at(0, 1, 3);
+        scene.world().showSection(util.select().position(body), Direction.DOWN);
+        scene.idle(10);
+
+        scene.overlay().showControls(util.vector().topOf(body), Pointing.DOWN, 40)
+                .rightClick()
+                .withItem(new ItemStack(Items.CARVED_PUMPKIN));
+        scene.idle(7);
+        scene.world().showSection(util.select().position(head), Direction.DOWN);
+        scene.idle(10);
+
+        scene.overlay().showText(70)
+                .attachKeyFrame()
+                .text("A Carved Pumpkin on top of a Hay Bale makes a Straw Golem")
+                .pointAt(util.vector().centerOf(body))
+                .placeNearTarget();
+        scene.idle(80);
+
+        scene.world().setBlocks(util.select().fromTo(2, 1, 2, 2, 2, 2), Blocks.AIR.defaultBlockState(), true);
+        Vec3 start = util.vector().of(2.5, 1, 2.5);
+        Vec3 atCrops = util.vector().of(2.5, 1, 1.4);
+        Vec3 atChest = util.vector().of(1.4, 1, 3.5);
+        ElementLink<EntityElement> golem = SceneHelper.spawn(scene, ModEntityTypes.STRAW_GOLEM.get(), start, 180, entity -> ((Mob) entity).setNoAi(true));
+        scene.idle(15);
+        scene.world().setBlocks(util.select().fromTo(1, 1, 0, 3, 1, 0), Blocks.CARROTS.defaultBlockState().setValue(CropBlock.AGE, CropBlock.MAX_AGE), false);
+        scene.world().showSection(util.select().fromTo(1, 1, 0, 3, 1, 0), Direction.DOWN);
+        scene.idle(15);
+
+        scene.overlay().showText(70)
+                .attachKeyFrame()
+                .text("It harvests fully grown crops nearby...")
+                .pointAt(util.vector().topOf(2, 0, 0))
+                .placeNearTarget();
+        scene.idle(30);
+        SceneHelper.walk(scene, golem, start, atCrops, 20);
+        scene.world().modifyEntity(golem, entity -> ((StrawGolem) entity).setPickupStatus(1));
+        scene.idle(20);
+        scene.world().setBlock(util.grid().at(2, 1, 0), Blocks.CARROTS.defaultBlockState(), false);
+        scene.world().modifyEntity(golem, entity -> ((LivingEntity) entity).setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(Items.CARROT)));
+        scene.idle(20);
+        scene.world().modifyEntity(golem, entity -> ((StrawGolem) entity).setPickupStatus(0));
+        scene.idle(10);
+
+        scene.overlay().showText(70)
+                .text("...and replants them")
+                .pointAt(util.vector().topOf(2, 0, 0))
+                .placeNearTarget();
+        scene.idle(80);
+
+        scene.world().showSection(util.select().position(chest), Direction.DOWN);
+        scene.idle(10);
+        SceneHelper.walk(scene, golem, atCrops, atChest, 30);
+        scene.world().modifyEntity(golem, entity -> SceneHelper.face(entity, 90));
+        scene.idle(10);
+        scene.world().modifyEntity(golem, entity -> ((LivingEntity) entity).setItemSlot(EquipmentSlot.MAINHAND, ItemStack.EMPTY));
+        scene.effects().indicateSuccess(chest);
+        scene.overlay().showText(70)
+                .attachKeyFrame()
+                .text("The harvest goes into the nearest container")
+                .pointAt(util.vector().topOf(chest))
+                .placeNearTarget();
+        scene.idle(80);
+
+        scene.overlay().showControls(atChest.add(0, 1.2, 0), Pointing.DOWN, 30)
+                .rightClick()
+                .whileSneaking();
+        scene.idle(35);
+        scene.overlay().showControls(util.vector().topOf(chest), Pointing.DOWN, 30)
+                .rightClick()
+                .whileSneaking();
+        scene.idle(10);
+        scene.overlay().showText(80)
+                .attachKeyFrame()
+                .text("Sneak and use an empty hand on the golem, then on a container, to choose where it delivers")
+                .pointAt(util.vector().topOf(chest))
+                .placeNearTarget();
+        scene.idle(90);
+
+        SceneHelper.walk(scene, golem, atChest, start, 20);
+        scene.world().modifyEntity(golem, entity -> SceneHelper.face(entity, 180));
+        scene.idle(10);
+
+        scene.overlay().showControls(start.add(0, 1.2, 0), Pointing.DOWN, 40)
+                .rightClick()
+                .withItem(new ItemStack(ModItems.STRAW_HAT.get()));
+        scene.idle(10);
+        scene.world().modifyEntity(golem, entity -> ((StrawGolem) entity).setHat(true));
+        scene.overlay().showText(70)
+                .attachKeyFrame()
+                .text("A Straw Hat keeps the rain off its head")
+                .pointAt(start.add(0, 0.9, 0))
+                .placeNearTarget();
+        scene.idle(80);
+
+        scene.overlay().showControls(start.add(0, 1.2, 0), Pointing.DOWN, 40)
+                .rightClick()
+                .withItem(new ItemStack(Items.BARREL));
+        scene.idle(10);
+        scene.world().modifyEntity(golem, entity -> ((StrawGolem) entity).setBarrelHealth(StrawGolem.BARREL_HEALTH));
+        scene.overlay().showText(70)
+                .text("A Barrel lets it shrug off hits")
+                .pointAt(start.add(0, 0.5, 0))
+                .placeNearTarget();
+        scene.idle(80);
+
+        scene.overlay().showControls(start.add(0, 1.2, 0), Pointing.DOWN, 40)
+                .rightClick()
+                .withItem(new ItemStack(Items.WHEAT));
+        scene.idle(10);
+        scene.overlay().showText(70)
+                .colored(PonderPalette.GREEN)
+                .text("Wheat patches it up when it gets hurt")
+                .pointAt(start.add(0, 0.5, 0))
                 .placeNearTarget();
         scene.idle(80);
         scene.markAsFinished();

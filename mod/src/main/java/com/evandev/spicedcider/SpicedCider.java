@@ -18,6 +18,7 @@ import com.evandev.spicedcider.content.block.LatexCauldronBlock;
 import com.evandev.spicedcider.content.item.BalloonItem;
 import com.evandev.spicedcider.content.handler.SpawnControlEvents;
 import com.evandev.spicedcider.content.handler.SputterEvents;
+import com.evandev.spicedcider.content.handler.StrawGolemEvents;
 import com.evandev.spicedcider.namingunconvention.RandomNameGenerator;
 import com.evandev.spicedcider.networking.CauldronStirPayload;
 import com.evandev.spicedcider.networking.CloudCoverPayload;
@@ -129,6 +130,8 @@ public class SpicedCider {
         modEventBus.addListener(SpawnControlEvents::registerSpawnPlacements);
         modEventBus.addListener(SputterEvents::registerAttributes);
         modEventBus.addListener(SputterEvents::addToCreativeTab);
+        modEventBus.addListener(StrawGolemEvents::registerAttributes);
+        modEventBus.addListener(StrawGolemEvents::addToCreativeTab);
         NeoForge.EVENT_BUS.addListener(this::onTagsUpdated);
 
         if (SpicedCiderConfig.STARTUP.blockBoxWoodVariants.get()

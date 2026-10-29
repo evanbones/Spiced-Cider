@@ -14,7 +14,9 @@ import com.evandev.spicedcider.client.renderer.PocketJukeboxTooltipRenderer;
 import com.evandev.spicedcider.client.renderer.balloon.BalloonRenderer;
 import com.evandev.spicedcider.client.models.sputter.SputterArrowfulModel;
 import com.evandev.spicedcider.client.models.sputter.SputterModel;
+import com.evandev.spicedcider.client.models.strawgolem.StrawGolemModel;
 import com.evandev.spicedcider.client.renderer.sputter.SputterRenderer;
+import com.evandev.spicedcider.client.renderer.strawgolem.StrawGolemRenderer;
 import com.evandev.spicedcider.content.block.FruitLogBlock;
 import com.evandev.spicedcider.content.item.PocketJukeboxTooltip;
 import com.evandev.spicedcider.client.renderer.projectiles.CobwebProjectileRenderer;
@@ -91,6 +93,7 @@ public class ClientModEvents {
         event.registerEntityRenderer(ModEntityTypes.COBWEB_PROJECTILE.get(), CobwebProjectileRenderer::new);
         event.registerEntityRenderer(ModEntityTypes.BALLOON.get(), BalloonRenderer::new);
         event.registerEntityRenderer(ModEntityTypes.SPUTTER.get(), SputterRenderer::new);
+        event.registerEntityRenderer(ModEntityTypes.STRAW_GOLEM.get(), StrawGolemRenderer::new);
         if (TideCompat.isLoaded()) {
             event.registerEntityRenderer(ModEntityTypes.GRAPPLING_HOOK.get(), GrapplingHookRenderer::new);
         }
@@ -102,6 +105,7 @@ public class ClientModEvents {
         event.registerLayerDefinition(ModModelLayers.BALLOON, BalloonRenderer::createBodyLayer);
         event.registerLayerDefinition(ModModelLayers.SPUTTER, SputterModel::createBodyLayer);
         event.registerLayerDefinition(ModModelLayers.SPUTTER_ARROWFUL, SputterArrowfulModel::createBodyLayer);
+        event.registerLayerDefinition(ModModelLayers.STRAW_GOLEM, StrawGolemModel::createBodyLayer);
     }
 
     @SubscribeEvent

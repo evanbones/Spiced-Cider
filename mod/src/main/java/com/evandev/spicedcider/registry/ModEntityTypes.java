@@ -6,6 +6,7 @@ import com.evandev.spicedcider.compat.tide.TideCompat;
 import com.evandev.spicedcider.entities.balloon.BalloonEntity;
 import com.evandev.spicedcider.entities.projectiles.GrapplingHookEntity;
 import com.evandev.spicedcider.entities.sputter.SputterEntity;
+import com.evandev.spicedcider.entities.strawgolem.StrawGolem;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.Entity;
@@ -50,6 +51,14 @@ public class ModEntityTypes {
                     .clientTrackingRange(8)
                     .build(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "sputter").toString()),
             0x8C6239, 0xE38A1D
+    );
+
+    public static final DeferredHolder<EntityType<?>, EntityType<StrawGolem>> STRAW_GOLEM = registerEntity("straw_golem", () ->
+            EntityType.Builder.<StrawGolem>of(StrawGolem::new, MobCategory.MISC)
+                    .sized(0.6F, 0.9F)
+                    .clientTrackingRange(8)
+                    .build(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "straw_golem").toString()),
+            0xC9A93A, 0xA4512B
     );
 
     @Nullable

@@ -742,7 +742,7 @@ hash = "68d71838fd7512a4dcc4c58726d1318c0d30b3020a45e1940ccf956aa56024bc"
 
 [[files]]
 file = "config/fancymenu/customization/inventory_screen_layout.txt"
-hash = "64adf54b8934bfec039c52c3a5fda8cffe62d5d6543fec9460c92c2af6c7fc04"
+hash = "e9eeb096a831f168621b6dcaa2fca994a83a46edbdf2e8bece1855c710e53216"
 
 [[files]]
 file = "config/fancymenu/customization/pause_screen_layout.txt"
@@ -13330,7 +13330,7 @@ hash = "8ba8caf036bac59033157842f7812cf3eca3434a02d2e7e59648214fe42c48fc"
 
 [[files]]
 file = "config/where_winds_blow-client.toml"
-hash = "e9d2c0f76d07a4f82126d8ebcfe5bd7d873bef2f4878b32095152731adc5b776"
+hash = "9b166f977c5bcd198b1f8d1af00c03dd6ede6dd1d866d48b93426ac0c3df7291"
 
 [[files]]
 file = "config/where_winds_blow-common.toml"
@@ -13566,6 +13566,11 @@ hash = "4b272e27bc83062b9e5af6c597b002bad58088f1aba0f14736f30ca37c40d959"
 metafile = true
 
 [[files]]
+file = "mods/backup-straw-beds.pw.toml"
+hash = "3ee3be4de547cc37de1f634199723e2a2da9584a9c9988de6645ab5f0e386c39"
+metafile = true
+
+[[files]]
 file = "mods/bedspreads.pw.toml"
 hash = "7057d5d342a6fffba43bf3452f0f47f919f9e363c868f72787a8e3d770fdbfde"
 metafile = true
@@ -13593,10 +13598,6 @@ metafile = true
 [[files]]
 file = "mods/better_cloud_shadows-neoforge-1.21.1-1.4.2.jar"
 hash = "7a41985111cbdfe8bbbb93b94a3cceee7b442249d8875ae3878463aef4b4fa4b"
-
-[[files]]
-file = "mods/better_straw_beds-neoforge-1.21.1-1.0.0.jar"
-hash = "2814daa681ae86934b6f1e2418f5c1a3363b7d3223e6c3bff4bb6d6cda38574c"
 
 [[files]]
 file = "mods/betterdays.pw.toml"
@@ -14554,7 +14555,7 @@ metafile = true
 
 [[files]]
 file = "mods/spicedcider-1.0.0.jar"
-hash = "f96b8ac8df675ec511cf1a619df71fa5267c3fb9f038a6b528404c59dea55af7"
+hash = "ced99e3e079d92846bb8c650a08bc0bf75e5e3a9f7cddecf5dbd376edd7f7791"
 
 [[files]]
 file = "mods/spyglass-improvements.pw.toml"
@@ -23071,16 +23072,16 @@ file = "resourcepacks/spicedcider_resources/assets/scholar/textures/gui/formatti
 hash = "ee62909cd68837278b8704be3e6437e73df13343f0f870fca76656950b1f169c"
 
 [[files]]
-file = "resourcepacks/spicedcider_resources/assets/scholar/textures/item/cover.png"
+file = "resourcepacks/spicedcider_resources/assets/scholar/textures/item/quill.png"
+hash = "0e24d3805cc3992a1426ab2b234737237378ae6ccb1ff31aaa0843067ea2fca7"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/scholar/textures/item/writable_book_cover.png"
 hash = "20e22809422f89ff1c78b569e64343cab919a2286568fb10d0fdf030752881e4"
 
 [[files]]
-file = "resourcepacks/spicedcider_resources/assets/scholar/textures/item/paper.png"
+file = "resourcepacks/spicedcider_resources/assets/scholar/textures/item/writable_book_paper.png"
 hash = "16ed82f45e3d140077fa62a2d077f782ff61d3cda6664d068b2d798734f11352"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/scholar/textures/item/quill.png"
-hash = "0e24d3805cc3992a1426ab2b234737237378ae6ccb1ff31aaa0843067ea2fca7"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/screenshot_viewer/textures/gui/sprites/widget/icons/screenshot_viewer.png"
@@ -23308,7 +23309,7 @@ hash = "71341002dcc43dd8e4b8ac10e4ad84c6901b3b134037379ded7e18200558064a"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/spicedcider/lang/en_us.json"
-hash = "acf46ba2e1e97fb90a6ddcedec6f65440ac010ae90c000eb8c1cfd543d85bd00"
+hash = "8723bb11db50d4dd134eeb5f7140c39db1b21acc56c52b708432f81c3e49078b"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/spicedcider/models/block/cauldron_content_12.json"
