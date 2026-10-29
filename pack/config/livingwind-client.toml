@@ -181,9 +181,9 @@
 
 	#Experimental Complementary Reimagined r5.9.3 shader bridge, with or without Euphoria 1.10.5.
 	[compatibility.shaderBridge]
-		#Automatically patch existing compatible Complementary shader ZIPs and folders at startup.
-		#Keeps original shader backups in config/livingwind/shader-backups.
-		#Compatible packs are patched locally after backup. Restart after changing this option.
+		#Apply compatible Complementary GLSL changes only in memory when shaders load.
+		#Never modifies original shaderpacks. Legacy v1.3.x backups are restored safely if verified.
+		#Restart after changing this option.
 		autoPatchEuphoriaShaders = true
 		#Publish synchronized Living Wind strength, direction, gusts and animation time to shader loaders.
 		#Compatible Complementary packs support grass/leaves waving and Nether Storm drift.

@@ -376,7 +376,6 @@ dependencies {
     compileOnly("fuzs.puzzleslib:puzzleslib-neoforge:21.1.65") { transitive = false }
     compileOnly "maven.modrinth:where-winds-blow:gAxCACfZ"
     compileOnly "maven.modrinth:amendments:YDGxVNuU"
-    compileOnly "maven.modrinth:AtOSAunf:IZYJUvFM"
     compileOnly "maven.modrinth:ItRzabx0:2gdYSVNY"
 
     // Architect's Palette
@@ -407,7 +406,7 @@ dependencies {
     runtimeOnly "maven.modrinth:clutternomore:abvyDRwn"
 
     // Offgrid
-    compileOnly "maven.modrinth:offgrid:6Nk6zC5q"
+    compileOnly "maven.modrinth:offgrid:n2UsEkOI"
 
     // Polytone
     compileOnly "maven.modrinth:polytone:6mPQONys"

@@ -48,7 +48,7 @@ public class PathPackResourcesMixin {
         synchronized (spicedcider$indexes) {
             index = spicedcider$indexes[slot];
             if (index == null) {
-                index = PackFileIndex.build(root, type);
+                index = PackFileIndex.get(root, type);
                 spicedcider$indexes[slot] = index;
             }
             return index;

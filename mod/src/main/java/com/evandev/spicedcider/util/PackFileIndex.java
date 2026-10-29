@@ -12,10 +12,14 @@ import java.nio.file.NoSuchFileException;
 import java.nio.file.NotDirectoryException;
 import java.nio.file.Path;
 import java.util.List;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Stream;
 
 public final class PackFileIndex {
     private static final PackFileIndex UNINDEXED = new PackFileIndex(null);
+
+    private static final Map<Path, PackFileIndex[]> JAR_INDEXES = new ConcurrentHashMap<>();
 
     private static volatile List<Path> staticFolders;
 
@@ -44,7 +48,21 @@ public final class PackFileIndex {
         return folders;
     }
 
-    public static PackFileIndex build(Path root, PackType type) {
+    public static PackFileIndex get(Path root, PackType type) {
+        if (!"union".equals(root.getFileSystem().provider().getScheme())) return build(root, type);
+        PackFileIndex[] indexes = JAR_INDEXES.computeIfAbsent(root, path -> new PackFileIndex[PackType.values().length]);
+        int slot = type.ordinal();
+        synchronized (indexes) {
+            PackFileIndex index = indexes[slot];
+            if (index == null) {
+                index = build(root, type);
+                indexes[slot] = index;
+            }
+            return index;
+        }
+    }
+
+    private static PackFileIndex build(Path root, PackType type) {
         Path base = root.resolve(type.getDirectory());
         LongOpenHashSet entries = new LongOpenHashSet();
         try (Stream<Path> files = Files.walk(base)) {
