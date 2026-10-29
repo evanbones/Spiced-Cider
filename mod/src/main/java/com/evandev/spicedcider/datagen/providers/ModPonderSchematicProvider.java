@@ -48,7 +48,7 @@ public class ModPonderSchematicProvider implements DataProvider {
     private static Schematic pineconeGolem() {
         return new Schematic(5)
                 .set(1, 0, 0, "minecraft:grass_block")
-                .set(1, 1, 0, "minecraft:spruce_sapling")
+                .set(1, 1, 0, "nomansland:pine_sapling")
                 .set(2, 1, 2, "environmental:pinecone")
                 .set(2, 2, 2, "minecraft:carved_pumpkin", "facing", "north");
     }

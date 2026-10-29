@@ -1,0 +1,24 @@
+{
+  "criteria": {
+    "changed_shape": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "changed_shape"
+    ]
+  ],
+  "parent": "spicedcider:spiced_cider/crafting_table",
+  "display": {
+    "icon": {
+      "id": "minecraft:cobblestone_stairs"
+    },
+    "title": "Getting In Shape",
+    "description": "Change the shape of a block",
+    "frame": "task"
+  },
+  "parents": [
+    "spicedcider:spiced_cider/crafting_table"
+  ]
+}

@@ -176,7 +176,7 @@ public class GolemScenes {
         ElementLink<EntityElement> golem = SceneHelper.spawn(scene, "environmental:pinecone_golem", start, 180, entity -> {});
         scene.idle(20);
 
-        ItemStack sapling = new ItemStack(Items.SPRUCE_SAPLING);
+        ItemStack sapling = SceneHelper.item("nomansland:pine_sapling");
         scene.overlay().showControls(start.add(0, 1, 0), Pointing.DOWN, 40)
                 .rightClick()
                 .withItem(sapling);

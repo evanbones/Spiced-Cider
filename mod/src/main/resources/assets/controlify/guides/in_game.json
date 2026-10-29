@@ -1,0 +1,14 @@
+{
+  "rules": [
+    {
+      "for": "clutternomore:change_block_shape",
+      "where": "right",
+      "when": [
+        "spicedcider:can_change_shape"
+      ],
+      "then": {
+        "translate": "spicedcider.controlify.guide.change_shape"
+      }
+    }
+  ]
+}

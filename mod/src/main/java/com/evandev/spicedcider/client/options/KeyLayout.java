@@ -23,7 +23,6 @@ public final class KeyLayout {
             "gnetum.config.keyMapping",
             "key.dungeonconfig.open",
             "key.modernfix.config",
-            "quark.keybind.back",
             "quark.keybind.narrator_readout",
             "quark.keybind.narrator_full_readout",
             "key.modulation.panorama_screenshot",
@@ -42,16 +41,22 @@ public final class KeyLayout {
             "key.map_atlases.increase_slice",
             "key.map_atlases.decrease_slice",
             "key.lodged.remove_shield_arrow",
-            "key.f3backport.debug.debugOptions"
+            "key.f3backport.debug.debugOptions",
+            "key.spyglass-improvements.use",
+            "quark.keybind.variant_selector",
+            "treeliable.key.cycle_sneak_behavior",
+            "key.immersiveoverlays.toggle",
+            "key.exposure.camera_controls"
     );
+
+    private static final Set<String> HIDDEN_ACTIVE = Set.of("create.keyinfo.shift_modifier", "create.keyinfo.ctrl_modifier", "create.keyinfo.alt_modifier");
 
     private static final List<Set<String>> SHARED = List.of(
             Set.of("key.sneak", "key.jade.show_details", "create.keyinfo.shift_modifier"),
             Set.of("key.sprint", "create.keyinfo.ctrl_modifier"),
             Set.of("key.clutternomore.change_block_shape", "create.keyinfo.toolmenu", "create.keyinfo.alt_modifier"),
             Set.of("key.forward", "key.ponder.ponder"),
-            Set.of("key.reliable_remover.emi_delete", "key.reliable_remover.jei_delete"),
-            Set.of("quark.keybind.change_hotbar", "key.packdev_toolkit.export_description")
+            Set.of("key.reliable_remover.emi_delete", "key.reliable_remover.jei_delete")
     );
 
     private static final List<String> HIDDEN_PREFIXES = List.of(
@@ -68,17 +73,16 @@ public final class KeyLayout {
         group("movement", "key.forward", "key.left", "key.back", "key.right", "key.jump", "key.sneak", "key.sprint",
                 "key.personality.crawl", "key.personality.sit", "quark.keybind.autorun", "key.reliable_gliders.deploy");
         group("gameplay", "key.attack", "key.use", "key.pickItem", "key.swapOffhand", "key.drop",
-                "key.clutternomore.change_block_shape", "quark.keybind.variant_selector", "supplementaries.keybind.quiver",
-                "key.lodged.use_bandage", "treeliable.key.toggle_chopping",
-                "treeliable.key.cycle_sneak_behavior", "create.keyinfo.toolmenu", "create.keyinfo.toolbelt",
-                "create.keyinfo.rotate_menu", "key.exposure.camera_controls", "key.fieldguide.scan");
+                "key.clutternomore.change_block_shape", "supplementaries.keybind.quiver",
+                "key.lodged.use_bandage", "treeliable.key.toggle_chopping", "create.keyinfo.toolmenu", "create.keyinfo.toolbelt",
+                "create.keyinfo.rotate_menu", "key.fieldguide.scan");
         group("hotbar", "key.hotbar.1", "key.hotbar.2", "key.hotbar.3", "key.hotbar.4", "key.hotbar.5", "key.hotbar.6",
                 "key.hotbar.7", "key.hotbar.8", "key.hotbar.9", "quark.keybind.change_hotbar");
         group("interface", "key.inventory", "key.chat", "key.command", "key.playerlist", "key.advancements",
                 "key.fieldguide.open", "key.ponder.ponder", "key.jade.show_details", "quark.keybind.sort_player",
                 "quark.keybind.sort_container", "quark.keybind.transfer_insert", "quark.keybind.transfer_extract",
-                "quark.keybind.shift_lock", "key.map_atlases.open_minimap", "key.map_atlases.zoom_in_minimap",
-                "key.map_atlases.zoom_out_minimap", "key.map_atlases.place_pin", "key.immersiveoverlays.toggle");
+                "quark.keybind.shift_lock", "quark.keybind.back", "key.map_atlases.open_minimap", "key.map_atlases.zoom_in_minimap",
+                "key.map_atlases.zoom_out_minimap", "key.map_atlases.place_pin");
         group("camera", "key.togglePerspective", "key.smoothCamera", "quark.keybind.lock_rotation",
                 "quark.keybind.camera_mode", "key.picturemode.open", "key.screenshot",
                 "key.screenshot_viewer.open_screenshots_screen", "key.fullscreen");
@@ -100,6 +104,10 @@ public final class KeyLayout {
         }
         if (name.startsWith("quark.emote.")) return "emotes";
         return OTHER;
+    }
+
+    public static boolean isDisabled(String name) {
+        return groupOf(name) == null && !HIDDEN_ACTIVE.contains(name);
     }
 
     public static boolean sharesIntentionally(String a, String b) {

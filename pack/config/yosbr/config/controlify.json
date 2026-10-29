@@ -38,14 +38,14 @@
       "input": {
         "radial_menu": {
           "actions": [
-            "controlify:toggle_hud_visibility",
-            "controlify:change_perspective",
+            "fabric-key-binding-api-v1:key.fieldguide.open",
+            "fabric-key-binding-api-v1:key.map_atlases.open_minimap",
+            "fabric-key-binding-api-v1:key.personality.sit",
+            "fabric-key-binding-api-v1:key.personality.crawl",
             "controlify:drop_stack",
-            "controlify:open_chat",
-            "controlify:swap_hands",
-            "controlify:pick_block",
             "controlify:take_screenshot",
-            "controlify:show_player_list"
+            "controlify:show_player_list",
+            "controlify:toggle_hud_visibility"
           ],
           "button_focus_timeout_ticks": 20
         },
@@ -79,7 +79,8 @@
     "allow_server_rumble": true,
     "extra_ui_sounds": true,
     "virtual_mouse_screens": [
-      "net.minecraft.client.gui.screens.inventory.AbstractContainerScreen"
+      "net.minecraft.client.gui.screens.inventory.AbstractContainerScreen",
+      "com.evandev.fieldguide.client.gui.screens.BookScreen"
     ],
     "mixed_input": false,
     "out_of_focus_input": false

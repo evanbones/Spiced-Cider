@@ -61,14 +61,6 @@
         }
       }
     },
-    "ate_drink": {
-      "trigger": "minecraft:consume_item",
-      "conditions": {
-        "item": {
-          "items": "modest_meals:drink"
-        }
-      }
-    },
     "ate_jam": {
       "trigger": "minecraft:consume_item",
       "conditions": {
@@ -139,9 +131,6 @@
     ],
     [
       "ate_porridge"
-    ],
-    [
-      "ate_drink"
     ],
     [
       "ate_jam"

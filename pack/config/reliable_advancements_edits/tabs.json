@@ -27,6 +27,14 @@
           168,
           143
         ],
+        "spicedcider:spiced_cider/this_rocks": [
+          42,
+          173
+        ],
+        "spicedcider:spiced_cider/getting_in_shape": [
+          210,
+          98
+        ],
         "spicedcider:spiced_cider/flint": [
           42,
           128
@@ -305,6 +313,10 @@
         "spicedcider:adventure/die": [
           294,
           90
+        ],
+        "embers_and_icicles:adventure/what_goes_around_comes_around": [
+          336,
+          120
         ],
         "spicedcider:adventure/sniper_duel": [
           294,
@@ -1257,8 +1269,7 @@
       "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
       "index": 1,
       "roots": [
-        "minecraft:adventure/root",
-        "embers_and_icicles:adventure/what_goes_around_comes_around"
+        "minecraft:adventure/root"
       ]
     }
   },

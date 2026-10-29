@@ -1,0 +1,50 @@
+{
+  "parent": "spicedcider:adventure/sniper_duel",
+  "criteria": {
+    "kill_frostbite_with_ice_ball": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "embers_and_icicles:frostbite"
+            }
+          }
+        ],
+        "killing_blow": {
+          "direct_entity": {
+            "type": "embers_and_icicles:ice_ball"
+          },
+          "tags": [
+            {
+              "expected": true,
+              "id": "minecraft:is_projectile"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "kill_frostbite_with_ice_ball"
+    ]
+  ],
+  "display": {
+    "icon": {
+      "id": "neapolitan:ice_cubes"
+    },
+    "title": {
+      "text": "What Goes Around Comes Around"
+    },
+    "description": {
+      "text": "Kill a Frostbite with a thrown Ice Cube"
+    },
+    "frame": "task"
+  },
+  "parents": [
+    "spicedcider:adventure/sniper_duel"
+  ]
+}
