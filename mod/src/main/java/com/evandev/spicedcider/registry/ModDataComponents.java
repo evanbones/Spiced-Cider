@@ -2,6 +2,7 @@ package com.evandev.spicedcider.registry;
 
 import com.evandev.spicedcider.SpicedCider;
 import com.evandev.spicedcider.content.item.PocketJukeboxContents;
+import com.evandev.spicedcider.content.item.RuinedPageItem;
 import com.mojang.serialization.Codec;
 import net.minecraft.core.component.DataComponentType;
 import net.minecraft.core.registries.Registries;
@@ -27,6 +28,11 @@ public class ModDataComponents {
     public static final DeferredHolder<DataComponentType<?>, DataComponentType<PocketJukeboxContents>> POCKET_JUKEBOX = DATA_COMPONENTS.registerComponentType(
             "pocket_jukebox",
             builder -> builder.persistent(PocketJukeboxContents.CODEC).networkSynchronized(PocketJukeboxContents.STREAM_CODEC).cacheEncoding()
+    );
+
+    public static final DeferredHolder<DataComponentType<?>, DataComponentType<Integer>> RUINED_PAGE = DATA_COMPONENTS.registerComponentType(
+            "ruined_page",
+            builder -> builder.persistent(Codec.intRange(1, RuinedPageItem.PAGES)).networkSynchronized(ByteBufCodecs.VAR_INT)
     );
 
     public static final DeferredHolder<DataComponentType<?>, DataComponentType<Unit>> FORK_CONDUCTING = DATA_COMPONENTS.registerComponentType(

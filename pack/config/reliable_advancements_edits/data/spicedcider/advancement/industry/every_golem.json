@@ -1,0 +1,152 @@
+{
+  "parent": "spicedcider:industry/iron_golem",
+  "display": {
+    "icon": {
+      "id": "spicedcider:straw_hat"
+    },
+    "title": {
+      "text": "Gotta Build 'Em All"
+    },
+    "description": {
+      "text": "Bring every kind of golem to life"
+    },
+    "frame": "challenge"
+  },
+  "criteria": {
+    "iron_golem": {
+      "trigger": "minecraft:summoned_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:iron_golem"
+            }
+          }
+        ]
+      }
+    },
+    "snow_golem": {
+      "trigger": "minecraft:summoned_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:snow_golem"
+            }
+          }
+        ]
+      }
+    },
+    "copper_golem": {
+      "trigger": "minecraft:summoned_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:copper_golem"
+            }
+          }
+        ]
+      }
+    },
+    "straw_golem": {
+      "trigger": "minecraft:summoned_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "spicedcider:straw_golem"
+            }
+          }
+        ]
+      }
+    },
+    "sputter": {
+      "trigger": "minecraft:summoned_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "spicedcider:sputter"
+            }
+          }
+        ]
+      }
+    },
+    "pinecone_golem": {
+      "trigger": "minecraft:summoned_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "environmental:pinecone_golem"
+            }
+          }
+        ]
+      }
+    },
+    "gingerbread_golem": {
+      "trigger": "minecraft:summoned_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "snowyspirit:gingerbread_golem"
+            }
+          }
+        ]
+      }
+    },
+    "golden_golem": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipe_id": "etcetera:golden_golem"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "iron_golem"
+    ],
+    [
+      "snow_golem"
+    ],
+    [
+      "copper_golem"
+    ],
+    [
+      "straw_golem"
+    ],
+    [
+      "sputter"
+    ],
+    [
+      "pinecone_golem"
+    ],
+    [
+      "gingerbread_golem"
+    ],
+    [
+      "golden_golem"
+    ]
+  ],
+  "rewards": {
+    "loot": [
+      "spicedcider:advancement/industry_every_golem"
+    ]
+  }
+}

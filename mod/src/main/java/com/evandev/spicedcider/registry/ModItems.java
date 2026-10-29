@@ -7,6 +7,7 @@ import com.evandev.spicedcider.content.item.InferniteCleaverItem;
 import com.evandev.spicedcider.content.item.FireStrikerItem;
 import com.evandev.spicedcider.content.item.MischiefArmorItem;
 import com.evandev.spicedcider.content.item.PocketJukeboxItem;
+import com.evandev.spicedcider.content.item.RuinedPageItem;
 import com.evandev.spicedcider.compat.architectspalette.ArchitectsPaletteCompat;
 import com.evandev.spicedcider.compat.tide.TideCompat;
 import net.minecraft.core.registries.Registries;
@@ -122,6 +123,8 @@ public class ModItems {
     public static final DeferredItem<BlockItem> WORM_CRATE = ITEMS.registerSimpleBlockItem(ModBlocks.WORM_CRATE);
     public static final DeferredItem<Item> MAP_IN_A_BOTTLE = ITEMS.register("map_in_a_bottle",
             () -> new MapInABottleItem(new Item.Properties().stacksTo(16).rarity(Rarity.UNCOMMON)));
+    public static final DeferredItem<Item> RUINED_PAGE = ITEMS.register("ruined_page",
+            () -> new RuinedPageItem(new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON)));
     public static final DeferredItem<Item> GEODE = ITEMS.register("geode",
             () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> DEEPSLATE_GEODE = ITEMS.register("deepslate_geode",

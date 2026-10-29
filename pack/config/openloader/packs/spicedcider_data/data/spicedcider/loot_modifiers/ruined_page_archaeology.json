@@ -1,0 +1,56 @@
+{
+  "type": "spicedcider:replace_loot",
+  "conditions": [
+    {
+      "condition": "minecraft:any_of",
+      "terms": [
+        {
+          "condition": "neoforge:loot_table_id",
+          "loot_table_id": "minecraft:archaeology/desert_well"
+        },
+        {
+          "condition": "neoforge:loot_table_id",
+          "loot_table_id": "minecraft:archaeology/desert_pyramid"
+        },
+        {
+          "condition": "neoforge:loot_table_id",
+          "loot_table_id": "minecraft:archaeology/ocean_ruin_cold"
+        },
+        {
+          "condition": "neoforge:loot_table_id",
+          "loot_table_id": "minecraft:archaeology/ocean_ruin_warm"
+        },
+        {
+          "condition": "neoforge:loot_table_id",
+          "loot_table_id": "minecraft:archaeology/trail_ruins_common"
+        },
+        {
+          "condition": "neoforge:loot_table_id",
+          "loot_table_id": "minecraft:archaeology/trail_ruins_rare"
+        },
+        {
+          "condition": "neoforge:loot_table_id",
+          "loot_table_id": "nomansland:archaeology/alchemist_ruins"
+        },
+        {
+          "condition": "neoforge:loot_table_id",
+          "loot_table_id": "nomansland:archaeology/remains_dungeon"
+        },
+        {
+          "condition": "neoforge:loot_table_id",
+          "loot_table_id": "nomansland:archaeology/well"
+        },
+        {
+          "condition": "neoforge:loot_table_id",
+          "loot_table_id": "nomansland:archaeology/sniffer_monument"
+        },
+        {
+          "condition": "neoforge:loot_table_id",
+          "loot_table_id": "caverns_and_chasms:archaeology/forge_common"
+        }
+      ]
+    }
+  ],
+  "table": "spicedcider:inject/ruined_page",
+  "chance": 0.1
+}

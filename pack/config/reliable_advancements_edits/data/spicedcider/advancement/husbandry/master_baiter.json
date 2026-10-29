@@ -1,0 +1,574 @@
+{
+  "parent": "spicedcider:husbandry/fish_display",
+  "display": {
+    "icon": {
+      "id": "tide:coelacanth"
+    },
+    "title": {
+      "text": "Master Baiter"
+    },
+    "description": {
+      "text": "Catch every kind of fish"
+    },
+    "frame": "challenge"
+  },
+  "criteria": {
+    "cavefish": {
+      "trigger": "minecraft:fishing_rod_hooked",
+      "conditions": {
+        "item": {
+          "items": "caverns_and_chasms:cavefish"
+        }
+      }
+    },
+    "glow_squid": {
+      "trigger": "minecraft:fishing_rod_hooked",
+      "conditions": {
+        "item": {
+          "items": "culturaldelights:glow_squid"
+        }
+      }
+    },
+    "squid": {
+      "trigger": "minecraft:fishing_rod_hooked",
+      "conditions": {
+        "item": {
+          "items": "culturaldelights:squid"
+        }
+      }
+    },
+    "koi": {
+      "trigger": "minecraft:fishing_rod_hooked",
+      "conditions": {
+        "item": {
+          "items": "environmental:koi"
+        }
+      }
+    },
+    "cod": {
+      "trigger": "minecraft:fishing_rod_hooked",
+      "conditions": {
+        "item": {
+          "items": "minecraft:cod"
+        }
+      }
+    },
+    "pufferfish": {
+      "trigger": "minecraft:fishing_rod_hooked",
+      "conditions": {
+        "item": {
+          "items": "minecraft:pufferfish"
+        }
+      }
+    },
+    "salmon": {
+      "trigger": "minecraft:fishing_rod_hooked",
+      "conditions": {
+        "item": {
+          "items": "minecraft:salmon"
+        }
+      }
+    },
+    "tropical_fish": {
+      "trigger": "minecraft:fishing_rod_hooked",
+      "conditions": {
+        "item": {
+          "items": "minecraft:tropical_fish"
+        }
+      }
+    },
+    "billhook_bass": {
+      "trigger": "minecraft:fishing_rod_hooked",
+      "conditions": {
+        "item": {
+          "items": "nomansland:billhook_bass"
+        }
+      }
+    },
+    "anchovy": {
+      "trigger": "minecraft:fishing_rod_hooked",
+      "conditions": {
+        "item": {
+          "items": "tide:anchovy"
+        }
+      }
+    },
+    "angelfish": {
+      "trigger": "minecraft:fishing_rod_hooked",
+      "conditions": {
+        "item": {
+          "items": "tide:angelfish"
+        }
+      }
+    },
+    "anglerfish": {
+      "trigger": "minecraft:fishing_rod_hooked",
+      "conditions": {
+        "item": {
+          "items": "tide:anglerfish"
+        }
+      }
+    },
+    "arapaima": {
+      "trigger": "minecraft:fishing_rod_hooked",
+      "conditions": {
+        "item": {
+          "items": "tide:arapaima"
+        }
+      }
+    },
+    "ash_perch": {
+      "trigger": "minecraft:fishing_rod_hooked",
+      "conditions": {
+        "item": {
+          "items": "tide:ash_perch"
+        }
+      }
+    },
+    "black_crappie": {
+      "trigger": "minecraft:fishing_rod_hooked",
+      "conditions": {
+        "item": {
+          "items": "tide:black_crappie"
+        }
+      }
+    },
+    "blazing_swordfish": {
+      "trigger": "minecraft:fishing_rod_hooked",
+      "conditions": {
+        "item": {
+          "items": "tide:blazing_swordfish"
+        }
+      }
+    },
+    "bluegill": {
+      "trigger": "minecraft:fishing_rod_hooked",
+      "conditions": {
+        "item": {
+          "items": "tide:bluegill"
+        }
+      }
+    },
+    "brook_trout": {
+      "trigger": "minecraft:fishing_rod_hooked",
+      "conditions": {
+        "item": {
+          "items": "tide:brook_trout"
+        }
+      }
+    },
+    "carp": {
+      "trigger": "minecraft:fishing_rod_hooked",
+      "conditions": {
+        "item": {
+          "items": "tide:carp"
+        }
+      }
+    },
+    "catfish": {
+      "trigger": "minecraft:fishing_rod_hooked",
+      "conditions": {
+        "item": {
+          "items": "tide:catfish"
+        }
+      }
+    },
+    "cave_eel": {
+      "trigger": "minecraft:fishing_rod_hooked",
+      "conditions": {
+        "item": {
+          "items": "tide:cave_eel"
+        }
+      }
+    },
+    "coelacanth": {
+      "trigger": "minecraft:fishing_rod_hooked",
+      "conditions": {
+        "item": {
+          "items": "tide:coelacanth"
+        }
+      }
+    },
+    "crimson_fangjaw": {
+      "trigger": "minecraft:fishing_rod_hooked",
+      "conditions": {
+        "item": {
+          "items": "tide:crimson_fangjaw"
+        }
+      }
+    },
+    "deep_grouper": {
+      "trigger": "minecraft:fishing_rod_hooked",
+      "conditions": {
+        "item": {
+          "items": "tide:deep_grouper"
+        }
+      }
+    },
+    "devils_hole_pupfish": {
+      "trigger": "minecraft:fishing_rod_hooked",
+      "conditions": {
+        "item": {
+          "items": "tide:devils_hole_pupfish"
+        }
+      }
+    },
+    "ember_koi": {
+      "trigger": "minecraft:fishing_rod_hooked",
+      "conditions": {
+        "item": {
+          "items": "tide:ember_koi"
+        }
+      }
+    },
+    "flounder": {
+      "trigger": "minecraft:fishing_rod_hooked",
+      "conditions": {
+        "item": {
+          "items": "tide:flounder"
+        }
+      }
+    },
+    "guppy": {
+      "trigger": "minecraft:fishing_rod_hooked",
+      "conditions": {
+        "item": {
+          "items": "tide:guppy"
+        }
+      }
+    },
+    "inferno_guppy": {
+      "trigger": "minecraft:fishing_rod_hooked",
+      "conditions": {
+        "item": {
+          "items": "tide:inferno_guppy"
+        }
+      }
+    },
+    "mackerel": {
+      "trigger": "minecraft:fishing_rod_hooked",
+      "conditions": {
+        "item": {
+          "items": "tide:mackerel"
+        }
+      }
+    },
+    "magma_mackerel": {
+      "trigger": "minecraft:fishing_rod_hooked",
+      "conditions": {
+        "item": {
+          "items": "tide:magma_mackerel"
+        }
+      }
+    },
+    "mahi_mahi": {
+      "trigger": "minecraft:fishing_rod_hooked",
+      "conditions": {
+        "item": {
+          "items": "tide:mahi_mahi"
+        }
+      }
+    },
+    "manta_ray": {
+      "trigger": "minecraft:fishing_rod_hooked",
+      "conditions": {
+        "item": {
+          "items": "tide:manta_ray"
+        }
+      }
+    },
+    "mooneye": {
+      "trigger": "minecraft:fishing_rod_hooked",
+      "conditions": {
+        "item": {
+          "items": "tide:mooneye"
+        }
+      }
+    },
+    "obsidian_pike": {
+      "trigger": "minecraft:fishing_rod_hooked",
+      "conditions": {
+        "item": {
+          "items": "tide:obsidian_pike"
+        }
+      }
+    },
+    "rainbow_trout": {
+      "trigger": "minecraft:fishing_rod_hooked",
+      "conditions": {
+        "item": {
+          "items": "tide:rainbow_trout"
+        }
+      }
+    },
+    "red_snapper": {
+      "trigger": "minecraft:fishing_rod_hooked",
+      "conditions": {
+        "item": {
+          "items": "tide:red_snapper"
+        }
+      }
+    },
+    "sailfish": {
+      "trigger": "minecraft:fishing_rod_hooked",
+      "conditions": {
+        "item": {
+          "items": "tide:sailfish"
+        }
+      }
+    },
+    "snook": {
+      "trigger": "minecraft:fishing_rod_hooked",
+      "conditions": {
+        "item": {
+          "items": "tide:snook"
+        }
+      }
+    },
+    "soulscale": {
+      "trigger": "minecraft:fishing_rod_hooked",
+      "conditions": {
+        "item": {
+          "items": "tide:soulscale"
+        }
+      }
+    },
+    "sturgeon": {
+      "trigger": "minecraft:fishing_rod_hooked",
+      "conditions": {
+        "item": {
+          "items": "tide:sturgeon"
+        }
+      }
+    },
+    "swordfish": {
+      "trigger": "minecraft:fishing_rod_hooked",
+      "conditions": {
+        "item": {
+          "items": "tide:swordfish"
+        }
+      }
+    },
+    "tuna": {
+      "trigger": "minecraft:fishing_rod_hooked",
+      "conditions": {
+        "item": {
+          "items": "tide:tuna"
+        }
+      }
+    },
+    "walleye": {
+      "trigger": "minecraft:fishing_rod_hooked",
+      "conditions": {
+        "item": {
+          "items": "tide:walleye"
+        }
+      }
+    },
+    "warped_guppy": {
+      "trigger": "minecraft:fishing_rod_hooked",
+      "conditions": {
+        "item": {
+          "items": "tide:warped_guppy"
+        }
+      }
+    },
+    "white_crappie": {
+      "trigger": "minecraft:fishing_rod_hooked",
+      "conditions": {
+        "item": {
+          "items": "tide:white_crappie"
+        }
+      }
+    },
+    "witherfin": {
+      "trigger": "minecraft:fishing_rod_hooked",
+      "conditions": {
+        "item": {
+          "items": "tide:witherfin"
+        }
+      }
+    },
+    "lionfish": {
+      "trigger": "minecraft:fishing_rod_hooked",
+      "conditions": {
+        "item": {
+          "items": "upgrade_aquatic:lionfish"
+        }
+      }
+    },
+    "perch": {
+      "trigger": "minecraft:fishing_rod_hooked",
+      "conditions": {
+        "item": {
+          "items": "upgrade_aquatic:perch"
+        }
+      }
+    },
+    "pike": {
+      "trigger": "minecraft:fishing_rod_hooked",
+      "conditions": {
+        "item": {
+          "items": "upgrade_aquatic:pike"
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "cavefish"
+    ],
+    [
+      "glow_squid"
+    ],
+    [
+      "squid"
+    ],
+    [
+      "koi"
+    ],
+    [
+      "cod"
+    ],
+    [
+      "pufferfish"
+    ],
+    [
+      "salmon"
+    ],
+    [
+      "tropical_fish"
+    ],
+    [
+      "billhook_bass"
+    ],
+    [
+      "anchovy"
+    ],
+    [
+      "angelfish"
+    ],
+    [
+      "anglerfish"
+    ],
+    [
+      "arapaima"
+    ],
+    [
+      "ash_perch"
+    ],
+    [
+      "black_crappie"
+    ],
+    [
+      "blazing_swordfish"
+    ],
+    [
+      "bluegill"
+    ],
+    [
+      "brook_trout"
+    ],
+    [
+      "carp"
+    ],
+    [
+      "catfish"
+    ],
+    [
+      "cave_eel"
+    ],
+    [
+      "coelacanth"
+    ],
+    [
+      "crimson_fangjaw"
+    ],
+    [
+      "deep_grouper"
+    ],
+    [
+      "devils_hole_pupfish"
+    ],
+    [
+      "ember_koi"
+    ],
+    [
+      "flounder"
+    ],
+    [
+      "guppy"
+    ],
+    [
+      "inferno_guppy"
+    ],
+    [
+      "mackerel"
+    ],
+    [
+      "magma_mackerel"
+    ],
+    [
+      "mahi_mahi"
+    ],
+    [
+      "manta_ray"
+    ],
+    [
+      "mooneye"
+    ],
+    [
+      "obsidian_pike"
+    ],
+    [
+      "rainbow_trout"
+    ],
+    [
+      "red_snapper"
+    ],
+    [
+      "sailfish"
+    ],
+    [
+      "snook"
+    ],
+    [
+      "soulscale"
+    ],
+    [
+      "sturgeon"
+    ],
+    [
+      "swordfish"
+    ],
+    [
+      "tuna"
+    ],
+    [
+      "walleye"
+    ],
+    [
+      "warped_guppy"
+    ],
+    [
+      "white_crappie"
+    ],
+    [
+      "witherfin"
+    ],
+    [
+      "lionfish"
+    ],
+    [
+      "perch"
+    ],
+    [
+      "pike"
+    ]
+  ],
+  "rewards": {
+    "loot": [
+      "spicedcider:advancement/husbandry_master_baiter"
+    ]
+  }
+}

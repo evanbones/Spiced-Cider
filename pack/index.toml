@@ -1054,15 +1054,19 @@ hash = "ce8ab190281862b0554c92043c2bf8af106fbe4116bcd6dab433f6506781dbc0"
 
 [[files]]
 file = "config/livingwind-client-1.toml.bak"
-hash = "874f46e177256d2cb31251350af40e9151e3d579792931f82f5afc32acc390cc"
+hash = "942f5c92b4db6fb91fb367ba76546f8c13383b1ad697457605cc70e3f7823911"
 
 [[files]]
 file = "config/livingwind-client-2.toml.bak"
+hash = "874f46e177256d2cb31251350af40e9151e3d579792931f82f5afc32acc390cc"
+
+[[files]]
+file = "config/livingwind-client-3.toml.bak"
 hash = "17f8ac8324e8ee798c4338dab80489f2399853969135dba2868011541d184e09"
 
 [[files]]
 file = "config/livingwind-client.toml"
-hash = "942f5c92b4db6fb91fb367ba76546f8c13383b1ad697457605cc70e3f7823911"
+hash = "b8ab79a92480280794d4eb771e4567df06bea948c59e5833dddc97fdd1b56101"
 
 [[files]]
 file = "config/livingwind-common-1.toml.bak"
@@ -5858,7 +5862,7 @@ hash = "dcc93091e147198cbc86a08e08b538f9d4f4a0a2f312c8063cb191b9a79123a4"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/neoforge/loot_modifiers/global_loot_modifiers.json"
-hash = "304c664916b8959fa74f2eeda6ec37f35f3251871ffff5b6e61dd9dd5f119cfb"
+hash = "8d4ec0da1d29f9fb99a46095f8c1d5e65c7dc8100044ec942ddc5d99d9547868"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/newworld/nomansland/tapping/resin.json"
@@ -6429,6 +6433,14 @@ file = "config/openloader/packs/spicedcider_data/data/spelunkery/recipe/tin_nugg
 hash = "dbc32bd1bdb8b936d9f23084e53f15aae701a183e27cda7b90a9340bb2c3fc4a"
 
 [[files]]
+file = "config/openloader/packs/spicedcider_data/data/spelunkery/tags/item/blastable_foods.json"
+hash = "716ede9a2af4edbccb2b806b016e70dcb6799d7caccc4ef2da9a48fe255de31c"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spelunkery/tags/item/smeltable_foods.json"
+hash = "fa5d8e9b5ff2f9d7f395f9a381ce67e3b015318b3ca793f1ec10fd576b7dd021"
+
+[[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/blueprint/structure_repaletters/chest_repaletters.json"
 hash = "deb72e92240a378976d5924739e0debb46f0ba2ce29387061bf589363de1e55f"
 
@@ -6861,6 +6873,14 @@ file = "config/openloader/packs/spicedcider_data/data/spicedcider/loot_modifiers
 hash = "edd4a01d0bdced5f49a7fff157b6c8f24e93155e99cc08985e649cdda77716ab"
 
 [[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/loot_modifiers/ruined_page_archaeology.json"
+hash = "ea89bc7f434f1e82f1827b84c2d965085cd84da6fa3e0d85b9dadcebd9c0a0c0"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/loot_modifiers/ruined_page_chests.json"
+hash = "de54a114a5022e46487dfd365caf0e6404dd415698656c37cdc350862e7bde38"
+
+[[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/loot_table/advancement/adventure_all_dungeons.json"
 hash = "7fe9c6087886d586609573ec6f1912854b114755615e51d5154a3f56672869e6"
 
@@ -6941,6 +6961,10 @@ file = "config/openloader/packs/spicedcider_data/data/spicedcider/loot_table/adv
 hash = "d40c27bc87dc17a415e4b9df614b4ba685beb449a5b50e6467433511618cf40f"
 
 [[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/loot_table/advancement/husbandry_master_baiter.json"
+hash = "134b275ea70f089bbf92a7735fdabab9a71bf252147210dd2a09d0595e2ef9f7"
+
+[[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/loot_table/advancement/husbandry_master_chef.json"
 hash = "6fd876858469c9ee6f12c830bf676766e1d8df3c19610911e23cba6972970327"
 
@@ -6971,6 +6995,10 @@ hash = "d0b9468a6c0b46694aa77a06b33f91400a099afefc2cd2a9e7df2332c55efff1"
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/loot_table/advancement/industry_copper_golem.json"
 hash = "d2abac52edfdc2b25eb07c4ffb4da5b82275921e6c9611203224235e963b1c43"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/loot_table/advancement/industry_every_golem.json"
+hash = "60323353b247fc3a2bc06aff849502dedae93e80c4e69d6a992e623d603c1db2"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/loot_table/advancement/industry_iron_golem.json"
@@ -7167,6 +7195,10 @@ hash = "e6d464142e79ccd4c86aaf1566d755a2655d66f745f7f0af7b0d7adf6543afd1"
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/loot_table/inject/raw_nuggets_overworld.json"
 hash = "bee2a2d77d4eabdc2d20a4f5de29500ecefe2c0e418b6f62ebce6e7216b56468"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/loot_table/inject/ruined_page.json"
+hash = "ae0a6e45762fde7e8d4b2e7146bc4147c56e626764ebf8068a4b15a68e896151"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/modest_meals/ingredients/fish.json"
@@ -10933,6 +10965,10 @@ file = "config/reliable_advancements_edits/data/spicedcider/advancement/husbandr
 hash = "e2a01be174dfb1aa51d64abe59a0f0ce719d804330232e3330a5318f92395ac0"
 
 [[files]]
+file = "config/reliable_advancements_edits/data/spicedcider/advancement/husbandry/master_baiter.json"
+hash = "3e9a0d89f30e787226e1a1594a915c091154d9e0db675a1f0223327fdda875de"
+
+[[files]]
 file = "config/reliable_advancements_edits/data/spicedcider/advancement/husbandry/master_chef.json"
 hash = "bf6919ff2788e25c64494829bf3847d7f72cb15921dffdcb0d2354c9e98b7068"
 
@@ -11167,6 +11203,10 @@ hash = "efcded824465741cc3cb8e8e542443f4c1762da585c73b1f6f6fb03a1935a047"
 [[files]]
 file = "config/reliable_advancements_edits/data/spicedcider/advancement/industry/dynamite.json"
 hash = "c6bad27f05ee5544eff16d23a31a3ff9dd98cf9664f6844f7236f8841edfe464"
+
+[[files]]
+file = "config/reliable_advancements_edits/data/spicedcider/advancement/industry/every_golem.json"
+hash = "1ef4224fdbacfe82075c286fa42e8aa5f6e8f5b82bdf2f2d636b40795f9c11f8"
 
 [[files]]
 file = "config/reliable_advancements_edits/data/spicedcider/advancement/industry/explode_ore.json"
@@ -11774,7 +11814,7 @@ hash = "400f5879985ffb784f88fdf883faa9178142e85c28c1dddf9a0fc1ec37deb3e2"
 
 [[files]]
 file = "config/reliable_advancements_edits/tabs.json"
-hash = "3522e48c51b26417bfc2f331b413140fbc86cf5de0624d7dd0a75409c935af2a"
+hash = "f811d18dc841bdb2ed613ea98290ee8b12c596893a50a292831b9fb6c3ac2469"
 
 [[files]]
 file = "config/reliable_advancements_layout.json"
@@ -11838,7 +11878,7 @@ hash = "475dccf6c4690c735761361669c818d95667f86347b22e5322762fd564d1b39b"
 
 [[files]]
 file = "config/reliable_recipes/rule_leaks.json"
-hash = "9f16e675ecdbcc59d32a89b349cefb9bb752fb6e2e443f12902185cecd0ad05f"
+hash = "37b14e35e66d0a19ff8afca263a54dfd4cc6d58d0146069766ca0f4f6b81cd59"
 
 [[files]]
 file = "config/reliable_recipes/sawmill.json"
@@ -14555,7 +14595,7 @@ metafile = true
 
 [[files]]
 file = "mods/spicedcider-1.0.0.jar"
-hash = "f6816a8f6d3084d4953746205adaf5134897c4f034e19ef1d1158964059fdd63"
+hash = "4449bf1616c703049a808c858678ee8846c08cd6a8ae0340c45859581cd5a85a"
 
 [[files]]
 file = "mods/spyglass-improvements.pw.toml"
@@ -23309,7 +23349,7 @@ hash = "71341002dcc43dd8e4b8ac10e4ad84c6901b3b134037379ded7e18200558064a"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/spicedcider/lang/en_us.json"
-hash = "8723bb11db50d4dd134eeb5f7140c39db1b21acc56c52b708432f81c3e49078b"
+hash = "f28dcefffc726b4a6cd7f493c77648325b8ec9f00c3f280bc41e5ea57a581e97"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/spicedcider/models/block/cauldron_content_12.json"

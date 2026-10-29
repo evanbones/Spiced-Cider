@@ -56,6 +56,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.TALLOW.get());
         basicItem(ModItems.WORM.get());
         basicItem(ModItems.GOLDEN_WORM.get());
+        basicItem(ModItems.RUINED_PAGE.get());
         basicItem(ModItems.GEODE.get());
         basicItem(ModItems.DEEPSLATE_GEODE.get());
         basicItem(ModItems.BLACKSTONE_GEODE.get());
