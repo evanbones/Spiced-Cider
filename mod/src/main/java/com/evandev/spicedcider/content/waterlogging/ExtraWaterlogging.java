@@ -30,6 +30,8 @@ public final class ExtraWaterlogging {
 
     private static final Set<String> CLASSES = load();
 
+    private static final Set<String> ALWAYS = Set.of("com.infernalstudios.infernalexp.block.SupportedBlock");
+
     private static Set<String> load() {
         try (InputStream in = ExtraWaterlogging.class.getResourceAsStream("/spicedcider/extra_waterloggable_blocks.txt")) {
             if (in == null) return Set.of();
@@ -64,6 +66,7 @@ public final class ExtraWaterlogging {
         if (block instanceof LiquidBlockContainer || block instanceof BucketPickup || block instanceof MovingPistonBlock) return false;
         if (isCauldron(block) || isGrowingPlant(block)) return false;
         if (block.defaultBlockState().hasProperty(BlockStateProperties.WATERLOGGED) && !isExtra(block)) return false;
+        if (ALWAYS.contains(block.getClass().getName())) return true;
         for (BlockState state : block.getStateDefinition().getPossibleStates()) {
             if (isExtra(block) && state.getValue(BlockStateProperties.WATERLOGGED)) continue;
             if (keepsWaterOut(state)) return true;

@@ -66,19 +66,23 @@ hash = "872fe00296b85fff55abf7c6d99caa08102feeae78e561e13d1c44a3108e3a2b"
 
 [[files]]
 file = "config/amendments-client-1.toml.bak"
-hash = "f54a23961483e439ecd4e4fd01bddaf11fff82a06af8e8afad430456de41f4de"
+hash = "623cf7338171f079cfaa68b2ef8d6805b1ba06f1dd302e052739c0e0eae22d7e"
 
 [[files]]
 file = "config/amendments-client-2.toml.bak"
-hash = "15ab8b99195308891d3d13dcf91eb2e2ffe530d557057172474300ed03bb643f"
+hash = "f54a23961483e439ecd4e4fd01bddaf11fff82a06af8e8afad430456de41f4de"
 
 [[files]]
 file = "config/amendments-client-3.toml.bak"
+hash = "15ab8b99195308891d3d13dcf91eb2e2ffe530d557057172474300ed03bb643f"
+
+[[files]]
+file = "config/amendments-client-4.toml.bak"
 hash = "5fab30f26876adc07811dabecc63dd5895964bf30ed0dcd8e17cfce4878527ef"
 
 [[files]]
 file = "config/amendments-client.toml"
-hash = "623cf7338171f079cfaa68b2ef8d6805b1ba06f1dd302e052739c0e0eae22d7e"
+hash = "d4ac3f7e60298a3e58891cd9e805649b58406e413382d61b2c48c3378359fd2e"
 
 [[files]]
 file = "config/amendments-common-1.toml.bak"
@@ -6973,6 +6977,10 @@ file = "config/openloader/packs/spicedcider_data/data/spicedcider/loot_table/adv
 hash = "d611efdb6f05869a2db7ce052cf44b6d3b9ab63d1cdd79a79f846ce7afdf727e"
 
 [[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/loot_table/advancement/adventure_collect_my_pages.json"
+hash = "e997917e0df18c26e6f9dc131ef197d8397599d5a197d0523176b6c051db170f"
+
+[[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/loot_table/advancement/adventure_forgotten_hat.json"
 hash = "606d526cdc92f48b4be0aeaac14a5be426d9943f01ba4f4879374c92a6d71a24"
 
@@ -7078,7 +7086,7 @@ hash = "d2abac52edfdc2b25eb07c4ffb4da5b82275921e6c9611203224235e963b1c43"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/loot_table/advancement/industry_every_golem.json"
-hash = "60323353b247fc3a2bc06aff849502dedae93e80c4e69d6a992e623d603c1db2"
+hash = "696f3e6c5300ea2430e46f35ec55f900ba5002505629301d00d56f33f89b22a6"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/loot_table/advancement/industry_iron_golem.json"
@@ -7561,6 +7569,10 @@ file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/compact
 hash = "0241738fd606da9ffb24d1f14d57ce93346afa0ac41081298ccfeb81bf981b63"
 
 [[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/cooking/charcoal_chunk_from_tree_bark.json"
+hash = "4c894c472c0b79ce39eb3d87db8c42861742660a0a8085c8f87848c7e9a5c094"
+
+[[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/cooking/tallow.json"
 hash = "ae45d79539e44686e2c329420bd5aa3f4755a270c9d6e262dd1b3067ed18c936"
 
@@ -7703,10 +7715,6 @@ hash = "a8c0f1f759677ba467f2ac8534a689447efc58e3d93210cea3573a02761e8624"
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/crafting/chiseled/chiseled_silt_bricks.json"
 hash = "3e91cf3f59acdba7efd7271b45883e090790f596e051e7486a7790d39ce06f4d"
-
-[[files]]
-file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/crafting/cleaver.json"
-hash = "8e0f6e7c80b0377b9374f5f9e71cf176f6a35629e0e148a399e3a46b0c1841e1"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/crafting/dimensional_tears_bottle_from_bucket.json"
@@ -8689,6 +8697,10 @@ file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/filling
 hash = "060c71463b09f0b7e32ca72565bb06bdcb4f0b914eab0111da110cfaf8e788e2"
 
 [[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/forging/infernite_cleaver.json"
+hash = "0ef355e896776ec67985e0633f13e1a8809b375e0c5e9c99369708767f3c1bc9"
+
+[[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/milling/flux_dust_from_flux_gem.json"
 hash = "ce0c11a058b5c55c9db5a103fe5000f721b314e16df9a8b7cefa2582abd6dea4"
 
@@ -8815,10 +8827,6 @@ hash = "5844086ac2828011e82c11e167b0f7aa8af25202ce1799813e36db818c92a6bb"
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sequenced_assembly/bronze_movement.json"
 hash = "0a7a492356047df5af7672fc3672df77097046abecdd5279ceab3f6dd240ff5f"
-
-[[files]]
-file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/smithing/infernite_cleaver.json"
-hash = "fc60c7da4fdd27e9ad522fc7b42db0599370bcd445c6b35269cf7c20a27efbbf"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/smithing/steel_fishing_rod.json"
@@ -9386,7 +9394,7 @@ hash = "fc0b0258122fdd6281152773ddaa55694e05af9c3f8f99beb746724880b703a8"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/worldgen/biome/abyss.json"
-hash = "234a62c178695dc033c0d4ccb971ac48089c2629b5beeda92aa9250e76997521"
+hash = "fbd2df70293f576817e536beca5dce23c589ff7428d906ebf6fa8e553e77bb40"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/worldgen/biome/ooze_caves.json"
@@ -9395,6 +9403,10 @@ hash = "e49320630cd40c2d3df646f7b2339e4af7859ab728253eee1600e5f3283a8841"
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/worldgen/biome/prismatic_seep.json"
 hash = "3985b3aa6b7f87144c045e3bc9e62111f51fd96cd8b0f7fc411f28984270f869"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/worldgen/configured_feature/abyss_bones.json"
+hash = "041d714b9d1b87c7f1c0762090a3648d7c73db65627f20bff67604ac31c37277"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/worldgen/configured_feature/dripstone_salt_stripes.json"
@@ -9555,6 +9567,10 @@ hash = "ba1903f18f2f250554ae3b9a11421b70a527c1d40e7062cbb16bd702258566ff"
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/worldgen/noise/strawberry_fields_selector.json"
 hash = "82280be4756a48e2995d23a76536a41f60f4597acccf23d1d18bbeece1880ddd"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/worldgen/placed_feature/abyss_bones.json"
+hash = "fc683445a9eb09f351eff85098f3bd56c58766de816a027f5c40d599e3b72f45"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/worldgen/placed_feature/dripstone_salt_stripes.json"
@@ -10330,7 +10346,7 @@ hash = "1ae2c776da60c8981d74eac36892e749a1963fa96b22f05e95a333b115c57749"
 
 [[files]]
 file = "config/reliable_advancements.json"
-hash = "6294b6f6b0146b963deab65ab18acc28488b09b1755d24ad2207cbd2f6bf8548"
+hash = "e6e947b647d3bf11a34c1ab43c26bd4badeb13e1ee6ee18891aeeb5f03185449"
 
 [[files]]
 file = "config/reliable_advancements_edits/data/create/advancement/andesite_alloy.json"
@@ -10821,6 +10837,10 @@ file = "config/reliable_advancements_edits/data/spicedcider/advancement/adventur
 hash = "b8dccf3b4e11f1c5acdf2cc7a7b270a45ef9e0a8b0c3056eb1842fccfb98a0e1"
 
 [[files]]
+file = "config/reliable_advancements_edits/data/spicedcider/advancement/adventure/collect_my_pages.json"
+hash = "38dcebbff8b965359ad27d5eea4409dbc8b4273053e95a166fde193b98ffdf61"
+
+[[files]]
 file = "config/reliable_advancements_edits/data/spicedcider/advancement/adventure/consumed_by_the_light.json"
 hash = "23e15ac3a119172c6660e1255c0cda1fc071c1d7e627039e1c11b6a011031670"
 
@@ -11302,11 +11322,11 @@ hash = "c8124956d422c407054cb8384da57458807e2e644b9f997bff859d6b90ba732d"
 
 [[files]]
 file = "config/reliable_advancements_edits/data/spicedcider/advancement/industry/copper_chest.json"
-hash = "c8828fa3b394b2407ca9373405c83dece4769b5175d57a976a5ced05b005803e"
+hash = "e305d497e7b6d8da58e38c921c5d55fcff06a40f6a1282b37690ab0e27d96560"
 
 [[files]]
 file = "config/reliable_advancements_edits/data/spicedcider/advancement/industry/copper_golem.json"
-hash = "cc2f4a7f4b6567a10b989ea7d02e04f6563c4e00a20fc35f97ca27ae7367f58d"
+hash = "5362881735981a7fa555776a993ea896e9be36789433cc8c2529ee8172118801"
 
 [[files]]
 file = "config/reliable_advancements_edits/data/spicedcider/advancement/industry/copper_golem_statue.json"
@@ -11350,7 +11370,7 @@ hash = "c6bad27f05ee5544eff16d23a31a3ff9dd98cf9664f6844f7236f8841edfe464"
 
 [[files]]
 file = "config/reliable_advancements_edits/data/spicedcider/advancement/industry/every_golem.json"
-hash = "1ef4224fdbacfe82075c286fa42e8aa5f6e8f5b82bdf2f2d636b40795f9c11f8"
+hash = "bd24d173bdac2461839b5878e88163e8ef82268b4eacbad32f6427f0f8e9b55f"
 
 [[files]]
 file = "config/reliable_advancements_edits/data/spicedcider/advancement/industry/explode_ore.json"
@@ -11390,7 +11410,7 @@ hash = "8780eed4192603f8381f2e298eac4f2d7a0f71112ad922b10e87718e82efd4a8"
 
 [[files]]
 file = "config/reliable_advancements_edits/data/spicedcider/advancement/industry/iron_golem.json"
-hash = "006e3235dfc737447ea1f6f490b16c82f0817519e176a31e3525fbd39a0c596e"
+hash = "91ecda8133adb6550c997e7474820ede9b22ab8f594c9a02d89cbf1f417c9c80"
 
 [[files]]
 file = "config/reliable_advancements_edits/data/spicedcider/advancement/industry/item_magnet.json"
@@ -11458,7 +11478,7 @@ hash = "e7741faada3934866cdb4ee5e243bb14ca85c4900c54a73a009df3a40566dcac"
 
 [[files]]
 file = "config/reliable_advancements_edits/data/spicedcider/advancement/industry/root.json"
-hash = "49b1584d0f9ea5f816cb8ecf1f98b139b01963b58cd1b3d4c3a66e4316d07c18"
+hash = "fb048877a4ae6cc48600e86a7e62c914e74cb39e640a755e292dcc509893154c"
 
 [[files]]
 file = "config/reliable_advancements_edits/data/spicedcider/advancement/industry/saw.json"
@@ -11474,7 +11494,7 @@ hash = "99a2348c6964de2aeeec2a63c338565992c05fc5cf3ae5cc301132e2aea330fd"
 
 [[files]]
 file = "config/reliable_advancements_edits/data/spicedcider/advancement/industry/snow_golem.json"
-hash = "915e69ed95edba0e7df5c1ad7ebd8ee520fad6716a3f369ce4e00e1dece90abd"
+hash = "6fab78d33c5be8501f107a91d771e6281434b60a10eedd750de3a01f4b1c46a8"
 
 [[files]]
 file = "config/reliable_advancements_edits/data/spicedcider/advancement/industry/spout.json"
@@ -11642,7 +11662,7 @@ hash = "5328bbd993533bfe7635acc73fd9dba6e279c21ad0b09dcbfb8b41334310690f"
 
 [[files]]
 file = "config/reliable_advancements_edits/data/spicedcider/advancement/nether/infernite_cleaver.json"
-hash = "27e6998b6c8c25961d6c99edf1bef328fb28a009b31efa58e52dfe16ecd4d46e"
+hash = "73b4e992494cef9d9f3cce2606d56a8e38411473cbacdb12197d0ba799628e61"
 
 [[files]]
 file = "config/reliable_advancements_edits/data/spicedcider/advancement/nether/infernite_hoe.json"
@@ -11734,7 +11754,7 @@ hash = "66233987ead3a911d7b937610450b3a17f75f405eab4ab3f3a40e43852ec1654"
 
 [[files]]
 file = "config/reliable_advancements_edits/data/spicedcider/advancement/spiced_cider/all_metals.json"
-hash = "92898209f322b13faa86b80af766286ce4f855665bc786add3d4a78397f2120a"
+hash = "0e3ef0df0a1c1289ea409e4a6b676b6323c5a6572fd73ceab8d4f371ea2788af"
 
 [[files]]
 file = "config/reliable_advancements_edits/data/spicedcider/advancement/spiced_cider/all_tablets.json"
@@ -11750,11 +11770,11 @@ hash = "4ed7252e4ac1480aaa1654a2a1f0206731fb4ccb2485450b7bdd669cedb58ace"
 
 [[files]]
 file = "config/reliable_advancements_edits/data/spicedcider/advancement/spiced_cider/bronze.json"
-hash = "27cfe447dfd5734f66a93696c1c7c2275fd30c7cb6fb5b61731b3e8fca851c62"
+hash = "c6bc4bffb40bfd294c813064a530d79f4fd7946440a6a6c0583bdb7a873ce299"
 
 [[files]]
 file = "config/reliable_advancements_edits/data/spicedcider/advancement/spiced_cider/bronze_armor.json"
-hash = "050512ae2a6fb890e20f3c3b0f2726baf98a476245e1e5cf6756dc5ad3d42391"
+hash = "a90a205ecba195c6b684460018bfc6cff74e31c144c654f7c23a5279a23ec57d"
 
 [[files]]
 file = "config/reliable_advancements_edits/data/spicedcider/advancement/spiced_cider/bronze_tools.json"
@@ -11778,7 +11798,7 @@ hash = "fcbeafe8cec4e0562a12171532875d94a3e2e7286e70410b9be565b477c3447a"
 
 [[files]]
 file = "config/reliable_advancements_edits/data/spicedcider/advancement/spiced_cider/copper.json"
-hash = "09374c43304701dfda83588190401c64b9c6a22fdc0846c20abf455fb66515ea"
+hash = "f439c33aeb5f3b2fd42549559fd1c9e6ebdc94713d43f5ffc519bcbb105dc3dd"
 
 [[files]]
 file = "config/reliable_advancements_edits/data/spicedcider/advancement/spiced_cider/copper_armor.json"
@@ -11790,7 +11810,7 @@ hash = "60dbc81ff3183a1ecd7fe28caf54190a78a77d4a16205ab4b3a9d81cd14aa9e7"
 
 [[files]]
 file = "config/reliable_advancements_edits/data/spicedcider/advancement/spiced_cider/crafting_table.json"
-hash = "09b62d0bb1577ac977d0562dbb2818592a235c4f62dccef6b1a644947bebfa05"
+hash = "f6edd12f6844843dad26fc5199f24d879ace6d01cb76c7d170bece7dd67333a0"
 
 [[files]]
 file = "config/reliable_advancements_edits/data/spicedcider/advancement/spiced_cider/diamond.json"
@@ -11798,15 +11818,15 @@ hash = "1615a244c96dc2db425b33e8340a96a3a97d60b6259017ac998ba0036ce591b2"
 
 [[files]]
 file = "config/reliable_advancements_edits/data/spicedcider/advancement/spiced_cider/diamond_armor.json"
-hash = "ac875af43354d5b1c49853ac2ac7ad5dbe1a34ac6a210f39a0efff849392ca45"
+hash = "dbfb31a5cb589fb6ecd9b6bd6e48993004b25a795a17e5cc32977bf92e51eab5"
 
 [[files]]
 file = "config/reliable_advancements_edits/data/spicedcider/advancement/spiced_cider/diamond_pickaxe.json"
-hash = "2503afca72ef6791881a68123549fb5106d19de5c2f7d0de884a4bbe5d3d9a58"
+hash = "3f330f4b86cff9adef45ac62c459ee822e4f89b8e50578254f4ba07b258fef82"
 
 [[files]]
 file = "config/reliable_advancements_edits/data/spicedcider/advancement/spiced_cider/electrum.json"
-hash = "4c1abfb9ee49a4b11d67612889b9e79b73302c0d9e21d865c547bcde86e76318"
+hash = "ffee3c6c634f8d703ad4adf93eb6b89ed9ab6adef5e2757501f6d830b7bba777"
 
 [[files]]
 file = "config/reliable_advancements_edits/data/spicedcider/advancement/spiced_cider/enchanted_tablet.json"
@@ -11814,7 +11834,7 @@ hash = "1baea34b73ee134965d3704f47b3239c6682a8c9f9a45fcf52812c9ffd3cdbe1"
 
 [[files]]
 file = "config/reliable_advancements_edits/data/spicedcider/advancement/spiced_cider/enchantment_tablet.json"
-hash = "faf71e1f5bd43f2d286f82dae8d7fbdd6e98e650052a1cfe406608ee1b6ff13f"
+hash = "8d9c6921f9417d1b2174f028fb93efa150229789d0e55613dd8f8a96790074b1"
 
 [[files]]
 file = "config/reliable_advancements_edits/data/spicedcider/advancement/spiced_cider/fire_striker.json"
@@ -11822,7 +11842,7 @@ hash = "4ce14b9c3e8ba657a3f253a23d84010cd81a743c7c41f214c6fcdb6143a61e86"
 
 [[files]]
 file = "config/reliable_advancements_edits/data/spicedcider/advancement/spiced_cider/flint.json"
-hash = "f40d3bb0c57d01a35506cf340336bb819ffbe640740bddd9d139f2dfc063a359"
+hash = "b7b47cbf0a22bd90dbabae68a9b5c0ba467c43aafc0491aabfd4282985c9ca3f"
 
 [[files]]
 file = "config/reliable_advancements_edits/data/spicedcider/advancement/spiced_cider/flint_and_steel.json"
@@ -11830,11 +11850,11 @@ hash = "5b83b4437842c6f6d38d5c3e7beb9079b1b72704b814811f4b4c380ecd53af3a"
 
 [[files]]
 file = "config/reliable_advancements_edits/data/spicedcider/advancement/spiced_cider/flint_hammer.json"
-hash = "29c0e5ac2b1083992e0df9b0c5aa3228cd63c26b4025ddef1d4d21fcb1488b03"
+hash = "42d899a3a19a959ea7bd93de52d6e0118e79ab496440d876c74a9a24eedf396d"
 
 [[files]]
 file = "config/reliable_advancements_edits/data/spicedcider/advancement/spiced_cider/flint_hatchet.json"
-hash = "e34a671ee4483ed0c96a1446648c928ccab54b0e07e8dd784d0868d4a04bc5ed"
+hash = "b93b11b27047d4182f304be5c7c5cbedd44fab8b5cf2723ea02168b8282e66fd"
 
 [[files]]
 file = "config/reliable_advancements_edits/data/spicedcider/advancement/spiced_cider/flint_kit.json"
@@ -11862,7 +11882,7 @@ hash = "8bf56cb042e1ce3bba157b53c3da283c8c619bd7c1471c771e5dc65addcb20aa"
 
 [[files]]
 file = "config/reliable_advancements_edits/data/spicedcider/advancement/spiced_cider/getting_in_shape.json"
-hash = "722b030f00d4457c9a955f8fce41fa3b9b110aa9836658293aa5c67bfe0f2684"
+hash = "afbb606cf51748ffae092b7da6d81de124db90ae9b924f08e6726b2c4f9c3570"
 
 [[files]]
 file = "config/reliable_advancements_edits/data/spicedcider/advancement/spiced_cider/gold.json"
@@ -11874,7 +11894,7 @@ hash = "65f88b12514bae50ada4ab48049c10367d2bc40b370783813fab4af753018737"
 
 [[files]]
 file = "config/reliable_advancements_edits/data/spicedcider/advancement/spiced_cider/lead.json"
-hash = "68405a819430c06762c24786680d8afbfb496467a20188b3f68f47ba4596121c"
+hash = "2e06cda8328c2f2a8626d99b068e54b34b383b1d16655a0babb0d05b4013dd82"
 
 [[files]]
 file = "config/reliable_advancements_edits/data/spicedcider/advancement/spiced_cider/log.json"
@@ -11890,7 +11910,7 @@ hash = "233c27c50d9a15f515ed52d5efa625f43df6cdc3ae3a7b77abcf6de6b37ecefd"
 
 [[files]]
 file = "config/reliable_advancements_edits/data/spicedcider/advancement/spiced_cider/prismarite.json"
-hash = "2497e549484000ac3af9d887ef2deb8236fb55281983ec1944c3fcfdcc5cf505"
+hash = "589fc3e94ba2cb4720e59903c304fc075f25066c62b8659e7cd8ef8b83dbc271"
 
 [[files]]
 file = "config/reliable_advancements_edits/data/spicedcider/advancement/spiced_cider/root.json"
@@ -11898,7 +11918,7 @@ hash = "b96c0d8bf8fe2a43c8dcff208007c2634f8d2c68b2fcb9376b1e897a16b46e65"
 
 [[files]]
 file = "config/reliable_advancements_edits/data/spicedcider/advancement/spiced_cider/rose_gold.json"
-hash = "50e1c45aefa24b479ae249867faaf8e20eed08fc1ca4e9f7335fe308cdf5aa50"
+hash = "c85f2a2aa021b84aaaec56ab7e34fb640b1c8605d92b28dc7e1daa0ec2e84091"
 
 [[files]]
 file = "config/reliable_advancements_edits/data/spicedcider/advancement/spiced_cider/rose_gold_pickaxe.json"
@@ -11918,11 +11938,11 @@ hash = "7d8f54db15e0b437b06637f66656643af56bcd646b1a5b42c1af708a5ad9be70"
 
 [[files]]
 file = "config/reliable_advancements_edits/data/spicedcider/advancement/spiced_cider/steel.json"
-hash = "b5fb5d1cdf2bd10d76edd2f5846ed96d2d454d1d3e961b38c667320d7fab87e8"
+hash = "4ac3b0e50fb2f579e197978ed9aa3a02fd074d99952fb12c0d17e71720bebf40"
 
 [[files]]
 file = "config/reliable_advancements_edits/data/spicedcider/advancement/spiced_cider/steel_armor.json"
-hash = "eeec3b3e48a1024531bf16e37b42f4d933335bb94a16bab531048a05d5f81852"
+hash = "460a0998bfca50033c82c1afc782e648f49f261b4eb289843df7a6a01dd7368e"
 
 [[files]]
 file = "config/reliable_advancements_edits/data/spicedcider/advancement/spiced_cider/steel_pickaxe.json"
@@ -11954,11 +11974,11 @@ hash = "400f5879985ffb784f88fdf883faa9178142e85c28c1dddf9a0fc1ec37deb3e2"
 
 [[files]]
 file = "config/reliable_advancements_edits/tabs.json"
-hash = "a0580627bfe0ebc2a2ed9486aad0d8731d6247a6006abc96133cc62ae498334e"
+hash = "7b1c3e53e2922c55957f26a006cfc3bfdde15393e0c53ec914d265745780458d"
 
 [[files]]
 file = "config/reliable_advancements_layout.json"
-hash = "f11df962fec84d2e2588d1773f37753251681c6f40379c786b2c7913fc335da1"
+hash = "07973ec6a3e99ba26f4f5c36eeb9798e746b0569ef45b0ee8ad5c05ad8e1f78f"
 
 [[files]]
 file = "config/reliable_backpacks.json"
@@ -12050,7 +12070,7 @@ hash = "590ea074ec1c84ced8a0c60dedd7111edd69801f7441fe78654c2f6fdfb655b7"
 
 [[files]]
 file = "config/reliable_remover.json"
-hash = "744acc60c65d68313d2ac43e522667ffd7007037821137c07d50d8628789d1e1"
+hash = "516e0922f714dc0ef39a0eaebd090e00df534675434e5cf367f4504897eb71d3"
 
 [[files]]
 file = "config/reliable_remover/mods/abnormals_delight.json"
@@ -12106,7 +12126,7 @@ hash = "952bfd6c54ef31a65a66c45b3f17e1dd9c30ca146ea45b8a853c739efa6241bf"
 
 [[files]]
 file = "config/reliable_remover/mods/caverns_and_chasms.json"
-hash = "0427e73871e637f5f203bfe9a243d05bbb08616593bb9843c1f99dd23fbfcb0a"
+hash = "a2750f3b73d33288083dce189b4b21792356eae175dfbd564415d395a1899dc6"
 
 [[files]]
 file = "config/reliable_remover/mods/clayworks.json"
@@ -12222,7 +12242,7 @@ hash = "35cbbbee9094435965528b780ab95c89b951eff8c012067f7ec734b291eb0623"
 
 [[files]]
 file = "config/reliable_remover/mods/nomansdelight.json"
-hash = "37039b58119b405ba1f0dda471e91fa3a8f8515c58446fd5f4b4ddf4cccb72e0"
+hash = "5c8874b1e759d06a447871d3baf7a3f19f95dfb1782b0e1a159b2f7d42c5df1e"
 
 [[files]]
 file = "config/reliable_remover/mods/nomansland.json"
@@ -13238,27 +13258,27 @@ hash = "b45ab4e6ac9be0b6c02f13a5df100c201eb33ed8758f9549bcd70f8da1a70590"
 
 [[files]]
 file = "config/spicedcider-common-1.toml.bak"
-hash = "f4624d2d06d4ef39fdb4ccd9c68933a618440add81b6cac1cdb1cba8a80f3abc"
+hash = "31f68d2ab4ef109356ee59317d10da62b2c35e9575b154afe822aef672a0462f"
 
 [[files]]
 file = "config/spicedcider-common-2.toml.bak"
-hash = "4cb21d91939439841632b4a5ff70b688554cfb918c5bbfc880f700754e63f8b7"
+hash = "f4624d2d06d4ef39fdb4ccd9c68933a618440add81b6cac1cdb1cba8a80f3abc"
 
 [[files]]
 file = "config/spicedcider-common-3.toml.bak"
-hash = "86699ecd43200662f6e99b7dafe429b98f5963ba2ba92839bbe607cf843c48f8"
+hash = "4cb21d91939439841632b4a5ff70b688554cfb918c5bbfc880f700754e63f8b7"
 
 [[files]]
 file = "config/spicedcider-common-4.toml.bak"
-hash = "9b16db7df45f3c66719cfe32d9059e82ca94221f268ec1c54b5c1c1bc1c766e6"
+hash = "86699ecd43200662f6e99b7dafe429b98f5963ba2ba92839bbe607cf843c48f8"
 
 [[files]]
 file = "config/spicedcider-common-5.toml.bak"
-hash = "720f0604a27c07c34b369f7f687a86750fe43aedffc6963790b2e7f83e6a7543"
+hash = "9b16db7df45f3c66719cfe32d9059e82ca94221f268ec1c54b5c1c1bc1c766e6"
 
 [[files]]
 file = "config/spicedcider-common.toml"
-hash = "31f68d2ab4ef109356ee59317d10da62b2c35e9575b154afe822aef672a0462f"
+hash = "5f866dbe619be1435d41d2b19ede986330a0be87c704229b1837a29dd408af4b"
 
 [[files]]
 file = "config/spicedcider-startup.toml"
@@ -14584,7 +14604,7 @@ metafile = true
 
 [[files]]
 file = "mods/reliable-advancements.pw.toml"
-hash = "175de837139e52d1e067e56544400f4eb7c25ba3e678776c1a29cc8b16beac88"
+hash = "554a54931dfaeeaa70f77961d6c8c3a5c46921b85a8535ac4f56bddac7437f1a"
 metafile = true
 
 [[files]]
@@ -14738,7 +14758,7 @@ metafile = true
 
 [[files]]
 file = "mods/spicedcider-1.0.0.jar"
-hash = "2b3d70d77f6b131c071321e921bc3b35391d9d9907860db2c6a94b4309c81791"
+hash = "bc969d48c0ac4e712bb1786bb8e6088f66f3e28c29a9a863dc34acd31fab22e9"
 
 [[files]]
 file = "mods/spyglass-improvements.pw.toml"
@@ -15347,6 +15367,10 @@ file = "resourcepacks/spicedcider_resources/assets/alloyed/textures/block/steel_
 hash = "46fb9db70d109ccd78a3734d76a618b090e081e25a164a62459eb2ec3d6704b6"
 
 [[files]]
+file = "resourcepacks/spicedcider_resources/assets/alloyed/textures/entity/horse/armor/horse_armor_steel.png"
+hash = "7395410a63335e3e0e5bfd975d019b22d1a13b1288ccfa440d8e95ba3ec3b193"
+
+[[files]]
 file = "resourcepacks/spicedcider_resources/assets/alloyed/textures/gui/forge_gui.png"
 hash = "9f7de3aab8b61713baf1eec5d06707e228ce9136f49994e8dc837d84612a5369"
 
@@ -15373,6 +15397,10 @@ hash = "3b7ae867efdc981d23f055654c2a540b14f5531692ad91558cf89226979c70e2"
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/alloyed/textures/item/steel_hoe.png"
 hash = "74741251eaa21856b38165fa0d8df77afa4f455291b41135148e1fb48d686231"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/alloyed/textures/item/steel_horse_armor.png"
+hash = "29d88ad737014c3b1ea43ade8db730d1e5cb1bf4b9dbf0354381799a6d11dd54"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/alloyed/textures/item/steel_ingot.png"
@@ -16383,6 +16411,14 @@ file = "resourcepacks/spicedcider_resources/assets/caverns_and_chasms/textures/e
 hash = "f7a02d111ab4aadc4ed01cc40ac5dcfc70b55407ae66b3dc1178cb245ae331c6"
 
 [[files]]
+file = "resourcepacks/spicedcider_resources/assets/caverns_and_chasms/textures/entity/horse/armor/horse_armor_necromium.png"
+hash = "7bd289cb9dba3cd6afa88cec4a124c7c7be7bab0849aac4d206a332a5d587f8d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/caverns_and_chasms/textures/entity/horse/armor/horse_armor_silver.png"
+hash = "36f2bff50d55f3f5b20a1f48e9cce65717af8d23375daad6dd606805dadda595"
+
+[[files]]
 file = "resourcepacks/spicedcider_resources/assets/caverns_and_chasms/textures/gui/container/atoning_table.png"
 hash = "6c59dfbbe43b8f50e663b91c3494cf0dcc141f21d93b33c18929454e3ba12fc8"
 
@@ -16451,6 +16487,10 @@ file = "resourcepacks/spicedcider_resources/assets/caverns_and_chasms/textures/i
 hash = "4c05c83784c2ffcb2fc42113a859b9731df056c09955f4eafba1543d709d0c91"
 
 [[files]]
+file = "resourcepacks/spicedcider_resources/assets/caverns_and_chasms/textures/item/necromium_horse_armor.png"
+hash = "b66fbe82bda1f0395cf78f2a9e93c7a416318bfe1963443de484949d878a073e"
+
+[[files]]
 file = "resourcepacks/spicedcider_resources/assets/caverns_and_chasms/textures/item/necromium_pickaxe.png"
 hash = "e4fde6da2c3bcc0145a98964ab88546921ce20ce79238797716111b06e667475"
 
@@ -16501,6 +16541,10 @@ hash = "ace02fdd8e74e6a31cc75b02e3664152dbc8b008f1bfee68fa3c99e162e7c2d3"
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/caverns_and_chasms/textures/item/silver_hoe.png"
 hash = "fb5296de9584584637deeb5ce2510db1d3d05cd8d6838bd7b174a12d28631236"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/caverns_and_chasms/textures/item/silver_horse_armor.png"
+hash = "6489ab22a82e807fc334ec3380df297eee87a6a60e35991585b001984eaf59eb"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/caverns_and_chasms/textures/item/silver_ingot.png"
@@ -19076,7 +19120,7 @@ hash = "37a89b8b897de55cb662047194fbf7e2b09cc68f8f3ed5f73bf962ca1a7d5c8d"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/item_descriptions/lang/en_us.json"
-hash = "48ca899ed1a9ca5846eb3fc23fe2ddd758353152e7e57489c5f96c0a7dedd213"
+hash = "016234d8fbcfeee5c92d3292abd3d47cd86a05937781f05578b3d715cb987656"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/jade/textures/gui/sprites/progress_base.png"
@@ -20203,6 +20247,10 @@ file = "resourcepacks/spicedcider_resources/assets/minecraft/sounds/music/menu/p
 hash = "86e0a8ba3172ef8283fc392574707da34ce8758a3fc80ca4a31b2e19ae6293f0"
 
 [[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/stack_groups/minecarts.json"
+hash = "d15a2f530d1ae8986a68363bb4f5c499e232e82e6a4108c8c6ae9617f92f87b7"
+
+[[files]]
 file = "resourcepacks/spicedcider_resources/assets/minecraft/stack_groups/wooden_shelves.json"
 hash = "8f92a5073ba038f78f441a65bec08114b6e64e5f1bc29e16d54b64ec97f486f4"
 
@@ -20655,8 +20703,20 @@ file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/entity/hor
 hash = "d148b2b717d1db89b7d5fb6715a6f6f69c05ad2031380e5e06567482c1f4ccee"
 
 [[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/entity/horse/armor/horse_armor_diamond.png"
+hash = "1fdc3c23b4942a5aab31370e1da89e5a2c2aa3befdb28c324c4a2f12863aa99d"
+
+[[files]]
 file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/entity/horse/armor/horse_armor_exposed_copper.png"
 hash = "92787d0dbcb466cb521a7847670f25f958c0f3f03e21b2e81465f98ec30777e5"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/entity/horse/armor/horse_armor_gold.png"
+hash = "3a0822977df810d9785c0aca94272b1dbfdc34770a3ac31b71274ea745864ffa"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/entity/horse/armor/horse_armor_netherite.png"
+hash = "c309a07be94a6c56c23acbd2ab37c950cb86bb640123c150e9a72462e87ceafa"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/entity/horse/armor/horse_armor_oxidized_copper.png"
@@ -21483,6 +21543,10 @@ file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/cyan_
 hash = "8cce1c1b81e587a5e11936b20a9aaadf16c532d6e60c4b7eaf60d5322cf2484d"
 
 [[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/diamond_horse_armor.png"
+hash = "abf4d9646a33f90612bfb2dd9e6671685fc950bf384bbf35322d53ae83b74312"
+
+[[files]]
 file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/dried_kelp.png"
 hash = "2a80ee37c2ae562363e274127a95c920054ebc8f11cc5fd87105d0ab3e8deb77"
 
@@ -21553,6 +21617,10 @@ hash = "c93b32de53bde8e0ef4c32017e85982f04f92e56e23c7131291333c40f1679f0"
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/glistering_melon_slice.png"
 hash = "80104599523193dd0466f603c59ddeb41948d9749076df5a9281de3b246cbc04"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/golden_horse_armor.png"
+hash = "05c7442b6fa9f5d679fb5ef6faad4e9cf2d3d47fa0488e6fc36cf0eb28aab9c8"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/golden_pickaxe.png"
@@ -21629,6 +21697,10 @@ hash = "8dd8d8f8f6eab81dfa6e5c28142d66cce52ff9885dd57a5f69c8d800f09e529c"
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/netherite_hoe.png"
 hash = "d04ae6bd13b64acc20a9a98d0782aa08edea8baf46bbd4dd663a2b6c2f8c6e5d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/netherite_horse_armor.png"
+hash = "fedf5df732658cf74a631f0dae533f26c1d22b123597a28d7c4685fb492c66b4"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/minecraft/textures/item/netherite_ingot.png"
@@ -27060,7 +27132,7 @@ hash = "8e71e2a691bb2e8df2d40b8610efa8dca396d434eeaf6c68a4efc264fc0baadc"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/spicedcider/textures/item/map/ruined_portal_map.png"
-hash = "dd34b5307f48565ac6a60a41870b20d84e0a416d4ea31e2e670389c9bfe16d87"
+hash = "88eff562f49317384055b91c729d6fb0c0c3b2cfba1d486f9137a37c192c2a75"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/spicedcider/textures/item/map/slice_map.png"

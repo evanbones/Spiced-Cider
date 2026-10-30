@@ -1,0 +1,520 @@
+{
+  "parent": "spicedcider:adventure/dungeon",
+  "display": {
+    "icon": {
+      "id": "spicedcider:ruined_page"
+    },
+    "title": {
+      "text": "Collect My Pages"
+    },
+    "description": {
+      "text": "Collect every Ruined Page"
+    },
+    "frame": "challenge"
+  },
+  "criteria": {
+    "page_1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "spicedcider:ruined_page",
+            "components": {
+              "spicedcider:ruined_page": 1
+            }
+          }
+        ]
+      }
+    },
+    "page_2": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "spicedcider:ruined_page",
+            "components": {
+              "spicedcider:ruined_page": 2
+            }
+          }
+        ]
+      }
+    },
+    "page_3": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "spicedcider:ruined_page",
+            "components": {
+              "spicedcider:ruined_page": 3
+            }
+          }
+        ]
+      }
+    },
+    "page_4": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "spicedcider:ruined_page",
+            "components": {
+              "spicedcider:ruined_page": 4
+            }
+          }
+        ]
+      }
+    },
+    "page_5": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "spicedcider:ruined_page",
+            "components": {
+              "spicedcider:ruined_page": 5
+            }
+          }
+        ]
+      }
+    },
+    "page_6": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "spicedcider:ruined_page",
+            "components": {
+              "spicedcider:ruined_page": 6
+            }
+          }
+        ]
+      }
+    },
+    "page_7": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "spicedcider:ruined_page",
+            "components": {
+              "spicedcider:ruined_page": 7
+            }
+          }
+        ]
+      }
+    },
+    "page_8": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "spicedcider:ruined_page",
+            "components": {
+              "spicedcider:ruined_page": 8
+            }
+          }
+        ]
+      }
+    },
+    "page_9": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "spicedcider:ruined_page",
+            "components": {
+              "spicedcider:ruined_page": 9
+            }
+          }
+        ]
+      }
+    },
+    "page_10": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "spicedcider:ruined_page",
+            "components": {
+              "spicedcider:ruined_page": 10
+            }
+          }
+        ]
+      }
+    },
+    "page_11": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "spicedcider:ruined_page",
+            "components": {
+              "spicedcider:ruined_page": 11
+            }
+          }
+        ]
+      }
+    },
+    "page_12": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "spicedcider:ruined_page",
+            "components": {
+              "spicedcider:ruined_page": 12
+            }
+          }
+        ]
+      }
+    },
+    "page_13": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "spicedcider:ruined_page",
+            "components": {
+              "spicedcider:ruined_page": 13
+            }
+          }
+        ]
+      }
+    },
+    "page_14": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "spicedcider:ruined_page",
+            "components": {
+              "spicedcider:ruined_page": 14
+            }
+          }
+        ]
+      }
+    },
+    "page_15": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "spicedcider:ruined_page",
+            "components": {
+              "spicedcider:ruined_page": 15
+            }
+          }
+        ]
+      }
+    },
+    "page_16": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "spicedcider:ruined_page",
+            "components": {
+              "spicedcider:ruined_page": 16
+            }
+          }
+        ]
+      }
+    },
+    "page_17": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "spicedcider:ruined_page",
+            "components": {
+              "spicedcider:ruined_page": 17
+            }
+          }
+        ]
+      }
+    },
+    "page_18": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "spicedcider:ruined_page",
+            "components": {
+              "spicedcider:ruined_page": 18
+            }
+          }
+        ]
+      }
+    },
+    "page_19": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "spicedcider:ruined_page",
+            "components": {
+              "spicedcider:ruined_page": 19
+            }
+          }
+        ]
+      }
+    },
+    "page_20": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "spicedcider:ruined_page",
+            "components": {
+              "spicedcider:ruined_page": 20
+            }
+          }
+        ]
+      }
+    },
+    "page_21": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "spicedcider:ruined_page",
+            "components": {
+              "spicedcider:ruined_page": 21
+            }
+          }
+        ]
+      }
+    },
+    "page_22": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "spicedcider:ruined_page",
+            "components": {
+              "spicedcider:ruined_page": 22
+            }
+          }
+        ]
+      }
+    },
+    "page_23": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "spicedcider:ruined_page",
+            "components": {
+              "spicedcider:ruined_page": 23
+            }
+          }
+        ]
+      }
+    },
+    "page_24": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "spicedcider:ruined_page",
+            "components": {
+              "spicedcider:ruined_page": 24
+            }
+          }
+        ]
+      }
+    },
+    "page_25": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "spicedcider:ruined_page",
+            "components": {
+              "spicedcider:ruined_page": 25
+            }
+          }
+        ]
+      }
+    },
+    "page_26": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "spicedcider:ruined_page",
+            "components": {
+              "spicedcider:ruined_page": 26
+            }
+          }
+        ]
+      }
+    },
+    "page_27": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "spicedcider:ruined_page",
+            "components": {
+              "spicedcider:ruined_page": 27
+            }
+          }
+        ]
+      }
+    },
+    "page_28": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "spicedcider:ruined_page",
+            "components": {
+              "spicedcider:ruined_page": 28
+            }
+          }
+        ]
+      }
+    },
+    "page_29": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "spicedcider:ruined_page",
+            "components": {
+              "spicedcider:ruined_page": 29
+            }
+          }
+        ]
+      }
+    },
+    "page_30": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "spicedcider:ruined_page",
+            "components": {
+              "spicedcider:ruined_page": 30
+            }
+          }
+        ]
+      }
+    },
+    "page_31": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "spicedcider:ruined_page",
+            "components": {
+              "spicedcider:ruined_page": 31
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "page_1"
+    ],
+    [
+      "page_2"
+    ],
+    [
+      "page_3"
+    ],
+    [
+      "page_4"
+    ],
+    [
+      "page_5"
+    ],
+    [
+      "page_6"
+    ],
+    [
+      "page_7"
+    ],
+    [
+      "page_8"
+    ],
+    [
+      "page_9"
+    ],
+    [
+      "page_10"
+    ],
+    [
+      "page_11"
+    ],
+    [
+      "page_12"
+    ],
+    [
+      "page_13"
+    ],
+    [
+      "page_14"
+    ],
+    [
+      "page_15"
+    ],
+    [
+      "page_16"
+    ],
+    [
+      "page_17"
+    ],
+    [
+      "page_18"
+    ],
+    [
+      "page_19"
+    ],
+    [
+      "page_20"
+    ],
+    [
+      "page_21"
+    ],
+    [
+      "page_22"
+    ],
+    [
+      "page_23"
+    ],
+    [
+      "page_24"
+    ],
+    [
+      "page_25"
+    ],
+    [
+      "page_26"
+    ],
+    [
+      "page_27"
+    ],
+    [
+      "page_28"
+    ],
+    [
+      "page_29"
+    ],
+    [
+      "page_30"
+    ],
+    [
+      "page_31"
+    ]
+  ],
+  "rewards": {
+    "loot": [
+      "spicedcider:advancement/adventure_collect_my_pages"
+    ]
+  }
+}

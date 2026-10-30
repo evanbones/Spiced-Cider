@@ -1,28 +1,15 @@
 {
-  "parent": "spicedcider:industry/copper_golem",
-  "display": {
-    "icon": {
-      "id": "minecraft:carved_pumpkin"
-    },
-    "title": {
-      "text": "Do You Want to Build a Snowman?"
-    },
-    "description": {
-      "text": "Bring a Snow Golem to life"
-    },
-    "frame": "task"
-  },
   "criteria": {
     "summoned_snow_golem": {
       "trigger": "minecraft:summoned_entity",
       "conditions": {
         "entity": [
           {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
             "predicate": {
               "type": "minecraft:snow_golem"
-            }
+            },
+            "entity": "this",
+            "condition": "minecraft:entity_properties"
           }
         ]
       }
@@ -32,5 +19,15 @@
     [
       "summoned_snow_golem"
     ]
-  ]
+  ],
+  "display": {
+    "icon": {
+      "id": "minecraft:carved_pumpkin",
+      "count": 1
+    },
+    "title": "Do You Want to Build a Snowman?",
+    "description": "Bring a Snow Golem to life",
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
+  },
+  "reliable_advancements:tab_member": true
 }

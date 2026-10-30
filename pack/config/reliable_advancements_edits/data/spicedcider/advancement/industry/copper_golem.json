@@ -1,28 +1,15 @@
 {
-  "parent": "spicedcider:industry/copper_chest",
-  "display": {
-    "icon": {
-      "id": "minecraft:copper_golem_spawn_egg"
-    },
-    "title": {
-      "text": "Ex Machina"
-    },
-    "description": {
-      "text": "Build a Copper Golem from a Carved Pumpkin and a Block of Copper"
-    },
-    "frame": "goal"
-  },
   "criteria": {
     "summoned_copper_golem": {
       "trigger": "minecraft:summoned_entity",
       "conditions": {
         "entity": [
           {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
             "predicate": {
               "type": "minecraft:copper_golem"
-            }
+            },
+            "entity": "this",
+            "condition": "minecraft:entity_properties"
           }
         ]
       }
@@ -33,9 +20,23 @@
       "summoned_copper_golem"
     ]
   ],
+  "parent": "spicedcider:industry/copper_chest",
+  "display": {
+    "frame": "goal",
+    "icon": {
+      "id": "minecraft:copper_golem_spawn_egg",
+      "count": 1
+    },
+    "title": "Ex Machina",
+    "description": "Build a Copper Golem from a Carved Pumpkin and a Block of Copper"
+  },
   "rewards": {
     "loot": [
       "spicedcider:advancement/industry_copper_golem"
     ]
-  }
+  },
+  "parents": [
+    "spicedcider:industry/copper_chest",
+    "spicedcider:industry/iron_golem"
+  ]
 }

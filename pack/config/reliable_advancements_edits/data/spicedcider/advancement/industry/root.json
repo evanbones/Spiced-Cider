@@ -1,20 +1,4 @@
 {
-  "display": {
-    "icon": {
-      "id": "create:cogwheel"
-    },
-    "title": {
-      "text": "Industry"
-    },
-    "description": {
-      "text": "Gears, pipes, Flux and golems to do the work for you"
-    },
-    "frame": "task",
-    "show_toast": false,
-    "announce_to_chat": false,
-    "hidden": true,
-    "background": "create:textures/block/andesite_casing.png"
-  },
   "criteria": {
     "industrial": {
       "trigger": "minecraft:inventory_changed",
@@ -24,11 +8,7 @@
             "items": [
               "minecraft:redstone",
               "create:shaft",
-              "create:cogwheel",
-              "minecraft:copper_chest",
-              "alloyed:bronze_ingot",
-              "minecraft:piston",
-              "spelunkery:tuning_fork"
+              "alloyed:bronze_ingot"
             ]
           }
         ]
@@ -39,5 +19,17 @@
     [
       "industrial"
     ]
-  ]
+  ],
+  "display": {
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": true,
+    "icon": {
+      "id": "create:cogwheel"
+    },
+    "title": "Industry",
+    "description": "Gears, pipes, Flux and golems to do the work for you",
+    "background": "create:textures/block/andesite_casing.png",
+    "frame": "task"
+  }
 }

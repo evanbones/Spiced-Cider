@@ -1,0 +1,25 @@
+{
+  "type": "modestmining:forging_shaped",
+  "key": {
+    "#": {
+      "item": "minecraft:netherite_sword"
+    },
+    "I": {
+      "tag": "c:ingots/netherite"
+    },
+    "Q": {
+      "tag": "c:gems/quartz"
+    },
+    "B": {
+      "item": "architects_palette:withered_bone"
+    }
+  },
+  "pattern": [
+    " IQ",
+    " #I",
+    "B  "
+  ],
+  "result": {
+    "id": "spicedcider:infernite_cleaver"
+  }
+}

@@ -1,17 +1,4 @@
 {
-  "parent": "spicedcider:spiced_cider/copper_pickaxe",
-  "display": {
-    "icon": {
-      "id": "modestmining:lead_ingot"
-    },
-    "title": {
-      "text": "Get the Lead Out"
-    },
-    "description": {
-      "text": "Smelt a Lead Ingot, heavy and dull but weirdly good for fishing"
-    },
-    "frame": "task"
-  },
   "criteria": {
     "has_lead_ingot": {
       "trigger": "minecraft:inventory_changed",
@@ -28,5 +15,17 @@
     [
       "has_lead_ingot"
     ]
+  ],
+  "parent": "spicedcider:spiced_cider/copper_pickaxe",
+  "display": {
+    "icon": {
+      "id": "modestmining:lead_ingot"
+    },
+    "title": "Get the Lead Out",
+    "description": "Smelt a Lead Ingot, heavy and dull",
+    "frame": "task"
+  },
+  "parents": [
+    "spicedcider:spiced_cider/copper_pickaxe"
   ]
 }

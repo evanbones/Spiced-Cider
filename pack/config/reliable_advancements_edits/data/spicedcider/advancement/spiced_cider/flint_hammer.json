@@ -1,28 +1,11 @@
 {
-  "parent": "spicedcider:spiced_cider/crafting_table",
-  "parents": [
-    "spicedcider:spiced_cider/crafting_table",
-    "spicedcider:spiced_cider/workstone"
-  ],
-  "display": {
-    "icon": {
-      "id": "manual_labour:flint_hammer"
-    },
-    "title": {
-      "text": "Hammer Time"
-    },
-    "description": {
-      "text": "Make a Flint Hammer for things placed on a Workstone"
-    },
-    "frame": "task"
-  },
   "criteria": {
     "has_flint_hammer": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "items": "manual_labour:flint_hammer"
+            "items": "#manual_labour:hammers"
           }
         ]
       }
@@ -32,5 +15,14 @@
     [
       "has_flint_hammer"
     ]
-  ]
+  ],
+  "parent": "spicedcider:spiced_cider/crafting_table",
+  "display": {
+    "icon": {
+      "id": "manual_labour:flint_hammer"
+    },
+    "title": "Hammer Time",
+    "description": "Make a Hammer for things placed on a Workstone",
+    "frame": "task"
+  }
 }

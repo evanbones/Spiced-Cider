@@ -1,28 +1,15 @@
 {
-  "parent": "spicedcider:industry/copper_golem",
-  "display": {
-    "icon": {
-      "id": "minecraft:iron_block"
-    },
-    "title": {
-      "text": "Autobots, Roll Out!"
-    },
-    "description": {
-      "text": "Summon an Iron Golem at an Altar"
-    },
-    "frame": "goal"
-  },
   "criteria": {
     "summoned_iron_golem": {
       "trigger": "minecraft:summoned_entity",
       "conditions": {
         "entity": [
           {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
             "predicate": {
               "type": "minecraft:iron_golem"
-            }
+            },
+            "entity": "this",
+            "condition": "minecraft:entity_properties"
           }
         ]
       }
@@ -33,9 +20,22 @@
       "summoned_iron_golem"
     ]
   ],
+  "display": {
+    "frame": "goal",
+    "icon": {
+      "id": "minecraft:iron_block",
+      "count": 1
+    },
+    "title": "Autobots, Roll Out!",
+    "description": "Build an Iron Golem from Iron Blocks and a Carved Pumpkin"
+  },
   "rewards": {
     "loot": [
       "spicedcider:advancement/industry_iron_golem"
     ]
-  }
+  },
+  "parent": "spicedcider:industry/snow_golem",
+  "parents": [
+    "spicedcider:industry/snow_golem"
+  ]
 }

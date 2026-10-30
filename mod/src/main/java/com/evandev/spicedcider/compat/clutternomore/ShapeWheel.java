@@ -1,6 +1,6 @@
 package com.evandev.spicedcider.compat.clutternomore;
 
-import com.evandev.spicedcider.SpicedCider;
+import com.evandev.spicedcider.client.gui.WheelButtons;
 import com.evandev.spicedcider.client.gui.WheelLabel;
 import com.mojang.blaze3d.systems.RenderSystem;
 import dev.tazer.clutternomore.client.ClutterNoMoreClient;
@@ -10,7 +10,6 @@ import net.minecraft.Util;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.GuiGraphics;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.FormattedCharSequence;
 import net.minecraft.util.Mth;
 import net.minecraft.world.item.ItemStack;
@@ -19,10 +18,6 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 public final class ShapeWheel {
-    private static final ResourceLocation BUTTONS = ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "textures/gui/shape_wheel/buttons.png");
-    private static final int BUTTON_SIZE = 32;
-    private static final float BUTTON_PITCH = Mth.sqrt(2048.0F) + 8.0F;
-    private static final float MIN_RADIUS = 43.0F;
     private static final float MAX_RADIUS = 72.0F;
     private static final float LABEL_MARGIN = 3.0F;
     private static final float[] LABEL_SCALES = {WheelLabel.SCALE, 0.625F, 0.5F};
@@ -95,25 +90,19 @@ public final class ShapeWheel {
         cursorY = y;
         if (length < DEADZONE) return;
 
-        int count = overlay.getShapeCount();
-        double turn = Math.atan2(x, -y) / (Math.PI * 2.0);
-        int index = Math.floorMod(Math.round((float) (turn * count)), count);
+        int index = WheelButtons.sector(x, y, overlay.getShapeCount());
         if (index == pointed) return;
         pointed = index;
         if (index != overlay.getSelectedIndex()) overlay.changeSlot(index);
     }
 
     private static float radius(ShapeSwitcherOverlay overlay) {
-        return layoutRadius > 0.0F ? layoutRadius : ringRadius(overlay.getShapeCount());
-    }
-
-    private static float ringRadius(int count) {
-        return Math.max(MIN_RADIUS, count * BUTTON_PITCH / (Mth.PI * 2.0F));
+        return layoutRadius > 0.0F ? layoutRadius : WheelButtons.ringRadius(overlay.getShapeCount());
     }
 
     private static void layout(ShapeSwitcherOverlay overlay, ItemStack held, Font font) {
-        float ring = ringRadius(overlay.getShapeCount());
-        float buttonReach = BUTTON_SIZE / 2.0F + LABEL_MARGIN;
+        float ring = WheelButtons.ringRadius(overlay.getShapeCount());
+        float buttonReach = WheelButtons.SIZE / 2.0F + LABEL_MARGIN;
         float best = Float.MAX_VALUE;
         for (float target : LABEL_SCALES) {
             float scale = WheelLabel.snap(target);
@@ -161,14 +150,7 @@ public final class ShapeWheel {
 
         RenderSystem.enableBlend();
         for (int index = 0; index < count; index++) {
-            float angle = Mth.PI * 2.0F * index / count;
-            graphics.pose().pushPose();
-            graphics.pose().translate(centreX + Mth.sin(angle) * radius - BUTTON_SIZE / 2.0F, centreY - Mth.cos(angle) * radius - BUTTON_SIZE / 2.0F, 0.0F);
-            graphics.blit(BUTTONS, 0, 0, index == selected ? BUTTON_SIZE : 0.0F, 0.0F, BUTTON_SIZE, BUTTON_SIZE, BUTTON_SIZE * 2, BUTTON_SIZE);
-            graphics.pose().translate(4.0F, 4.0F, 0.0F);
-            graphics.pose().scale(1.5F, 1.5F, 1.0F);
-            graphics.renderFakeItem(ShapeMap.transferStack(held, index), 0, 0);
-            graphics.pose().popPose();
+            WheelButtons.render(graphics, ShapeMap.transferStack(held, index), index, count, radius, centreX, centreY, index == selected);
         }
 
         List<FormattedCharSequence> lines = font.split(ShapeMap.transferStack(held, selected).getHoverName(), labelWrap);

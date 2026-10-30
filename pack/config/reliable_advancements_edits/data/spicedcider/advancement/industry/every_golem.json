@@ -1,56 +1,15 @@
 {
-  "parent": "spicedcider:industry/iron_golem",
-  "display": {
-    "icon": {
-      "id": "spicedcider:straw_hat"
-    },
-    "title": {
-      "text": "Gotta Build 'Em All"
-    },
-    "description": {
-      "text": "Bring every kind of golem to life"
-    },
-    "frame": "challenge"
-  },
   "criteria": {
     "iron_golem": {
       "trigger": "minecraft:summoned_entity",
       "conditions": {
         "entity": [
           {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
             "predicate": {
               "type": "minecraft:iron_golem"
-            }
-          }
-        ]
-      }
-    },
-    "snow_golem": {
-      "trigger": "minecraft:summoned_entity",
-      "conditions": {
-        "entity": [
-          {
-            "condition": "minecraft:entity_properties",
+            },
             "entity": "this",
-            "predicate": {
-              "type": "minecraft:snow_golem"
-            }
-          }
-        ]
-      }
-    },
-    "copper_golem": {
-      "trigger": "minecraft:summoned_entity",
-      "conditions": {
-        "entity": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "type": "minecraft:copper_golem"
-            }
+            "condition": "minecraft:entity_properties"
           }
         ]
       }
@@ -60,25 +19,25 @@
       "conditions": {
         "entity": [
           {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
             "predicate": {
               "type": "spicedcider:straw_golem"
-            }
+            },
+            "entity": "this",
+            "condition": "minecraft:entity_properties"
           }
         ]
       }
     },
-    "sputter": {
+    "snow_golem": {
       "trigger": "minecraft:summoned_entity",
       "conditions": {
         "entity": [
           {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
             "predicate": {
-              "type": "spicedcider:sputter"
-            }
+              "type": "minecraft:snow_golem"
+            },
+            "entity": "this",
+            "condition": "minecraft:entity_properties"
           }
         ]
       }
@@ -88,11 +47,11 @@
       "conditions": {
         "entity": [
           {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
             "predicate": {
               "type": "environmental:pinecone_golem"
-            }
+            },
+            "entity": "this",
+            "condition": "minecraft:entity_properties"
           }
         ]
       }
@@ -102,11 +61,39 @@
       "conditions": {
         "entity": [
           {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
             "predicate": {
               "type": "snowyspirit:gingerbread_golem"
-            }
+            },
+            "entity": "this",
+            "condition": "minecraft:entity_properties"
+          }
+        ]
+      }
+    },
+    "copper_golem": {
+      "trigger": "minecraft:summoned_entity",
+      "conditions": {
+        "entity": [
+          {
+            "predicate": {
+              "type": "minecraft:copper_golem"
+            },
+            "entity": "this",
+            "condition": "minecraft:entity_properties"
+          }
+        ]
+      }
+    },
+    "sputter": {
+      "trigger": "minecraft:summoned_entity",
+      "conditions": {
+        "entity": [
+          {
+            "predicate": {
+              "type": "spicedcider:sputter"
+            },
+            "entity": "this",
+            "condition": "minecraft:entity_properties"
           }
         ]
       }
@@ -144,9 +131,22 @@
       "golden_golem"
     ]
   ],
+  "display": {
+    "frame": "challenge",
+    "icon": {
+      "id": "minecraft:carved_pumpkin",
+      "count": 1
+    },
+    "title": "Gotta Build \u0027Em All",
+    "description": "Bring every kind of golem to life"
+  },
   "rewards": {
     "loot": [
       "spicedcider:advancement/industry_every_golem"
     ]
-  }
+  },
+  "parent": "spicedcider:industry/control_golem",
+  "parents": [
+    "spicedcider:industry/control_golem"
+  ]
 }

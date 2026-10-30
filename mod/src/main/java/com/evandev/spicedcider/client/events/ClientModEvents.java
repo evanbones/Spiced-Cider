@@ -50,6 +50,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.ModList;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
+import com.evandev.spicedcider.compat.controlify.CarvingWheelScreenProcessor;
 import com.evandev.spicedcider.compat.controlify.ControlifySettings;
 import com.evandev.spicedcider.compat.f3backport.LodDebugEntry;
 import com.evandev.spicedcider.registry.ModItems;
@@ -219,6 +220,7 @@ public class ClientModEvents {
     public static void onClientSetup(FMLClientSetupEvent event) {
         if (ModList.get().isLoaded("controlify")) {
             ControlifySettings.register();
+            if (ModList.get().isLoaded("nomansland")) CarvingWheelScreenProcessor.register();
         }
         if (ModList.get().isLoaded("f3backport")) {
             LodDebugEntry.register();
