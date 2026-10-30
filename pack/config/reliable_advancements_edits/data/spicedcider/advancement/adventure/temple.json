@@ -8,7 +8,7 @@
       "text": "Temple Run"
     },
     "description": {
-      "text": "Stumble upon a Desert, Badlands or Jungle Pyramid"
+      "text": "Stumble upon a Desert or Jungle Pyramid"
     },
     "frame": "task"
   },
@@ -44,29 +44,12 @@
           }
         ]
       }
-    },
-    "found_badlands_pyramid": {
-      "trigger": "minecraft:location",
-      "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "location": {
-                "structures": "explorify:badlands_pyramid"
-              }
-            }
-          }
-        ]
-      }
     }
   },
   "requirements": [
     [
       "found_desert_pyramid",
-      "found_jungle_pyramid",
-      "found_badlands_pyramid"
+      "found_jungle_pyramid"
     ]
   ]
 }
