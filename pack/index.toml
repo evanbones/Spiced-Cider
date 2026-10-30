@@ -10606,7 +10606,7 @@ hash = "2edbf62b60165a7ebbea68d5babc9b1991c73ece3e00c57832d6e99529ed69ef"
 
 [[files]]
 file = "config/recreative/tab_layout.json"
-hash = "e704aab60b05cb0c3f16091406bb445e49d945c1c785229dfbd59df44707fbce"
+hash = "a9b97f5f64c27e9bbbcd71b50281cf4c337d14c9bbc5505bc9dbb80f11ee41d4"
 
 [[files]]
 file = "config/recreative/tab_order.json"
@@ -13590,7 +13590,7 @@ hash = "81dbb7c092e0b0942e40a5765e3534ae8169a0a92c72a6d415bccedc573e1e85"
 
 [[files]]
 file = "config/spicedcider/tool_stats.json"
-hash = "ddcfa38bc900ae363c0fb9a562262cc59d5ad2105fa62ee488687bbdf9cbe748"
+hash = "936f96016ba3dc6dad6217352c88295d0eeab9efc389cd76ea2ef635bea24bf3"
 
 [[files]]
 file = "config/stacksizetweaks.json5"
@@ -15058,7 +15058,7 @@ metafile = true
 
 [[files]]
 file = "mods/spicedcider-1.0.0.jar"
-hash = "e027e1e8b852ab8f46bb2edd107b82e4d520e54fd81c05ad343da06527add67b"
+hash = "4ac7841f58e58b2e887a641918812e841bf330892eb8800d2e731a25c1298303"
 
 [[files]]
 file = "mods/spyglass-improvements.pw.toml"
@@ -15489,7 +15489,11 @@ hash = "83e32d7e2d6dea4413b2b63bfb121ddf414a7b476712c263c5b2477b75adab2b"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/abundant_atmosphere/lang/en_us.json"
-hash = "f5db34e2491845e6558cd0d745783e86df67304888f73967eb93610c69780d3b"
+hash = "2af68be1415fe0d959d2e7f5a4415c19efe723ef531a7732a50fbc5d5f209070"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/abundant_atmosphere/models/item/puffball_mushroom.json"
+hash = "ac23cb87a79a750ad5f878f9928d0c590e28167698a5d70a7442fc179f1dbf87"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/abundant_atmosphere/sounds.json"
@@ -15566,6 +15570,10 @@ hash = "8c5c914a5f495edd6f4fbb8173da6aae56beee0b19502bbacdd4f62666086a7f"
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/abundant_atmosphere/textures/item/lamp_o_gourd.png"
 hash = "9d630dc814e1ebf58c2b76b700da7de4f8759220a73f95bea9466fddce66c9eb"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/abundant_atmosphere/textures/item/puffball_mushroom.png"
+hash = "ca734d2551248c72da41ca355d744fa2fdfbfd196fe5878f37423ff6baf8ba0c"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/abundant_atmosphere/textures/item/squashberry_cookie.png"
@@ -18733,7 +18741,7 @@ hash = "f18793b9d45b7209c40135475ef64c1e164bbddbbdb39602fe22417ff14e6ad5"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/emi/lang/en_us.json"
-hash = "b582720f16cb0931e09fdf5aaff8a33bd47a7c4c17be773ad845bddd07b1e3ff"
+hash = "b5caf0ae8616d9a8d3ae7033ce285ebaa4d584555d51d9d5b933ef821d220244"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/emi/recipe/filters/hidden_brewing.json"
@@ -19352,6 +19360,10 @@ file = "resourcepacks/spicedcider_resources/assets/infernalexp/models/item/glowl
 hash = "d0020c899f5e8872ead45a220c103ca53c591d21b6cf9c4b8958f63ae8ded238"
 
 [[files]]
+file = "resourcepacks/spicedcider_resources/assets/infernalexp/models/item/luminous_fungus.json"
+hash = "47f9c98f5ced2d06e790d9db88a2a909ef44b5d91e940de0105fcd3573f48921"
+
+[[files]]
 file = "resourcepacks/spicedcider_resources/assets/infernalexp/models/item/painting/glowstone_canyon.json"
 hash = "45eaf40241da8c3468da49ce3b35b5d77c05d38716e200d9cb090f16ca7f2e42"
 
@@ -19406,6 +19418,10 @@ hash = "cfaf0764b5a26d73170f129a2506c90c5eff9d2abfc7cc3475122e9a157e2717"
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/infernalexp/textures/item/glowlight_torch.png"
 hash = "808266d0b22cdf424fa5b429e9041e59dfc1762990b0653c252344096ea3a996"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/infernalexp/textures/item/luminous_fungus.png"
+hash = "ed6df2ac6291918745c278d5af47157d9417aa31cabc18fca3078bd12e0c3aed"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/infernalexp/textures/item/music_disc_flush.png"
@@ -19518,22 +19534,6 @@ hash = "cd08bae666ce9911f2c28feb71a86da13a3aac97a910f6244160a583de46d95e"
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/livingwind/textures/item/windmill.png"
 hash = "70443c07590c04a66bb3fb1750b85339ba8c1951af7aab541f8fd159254661c8"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/lodestone/shaders/core/shapes/scrolling_texture.json"
-hash = "0f7c00d900982abb11b899c6e0d55b288283053ebb6ea20d13f26283d21a3ccf"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/lodestone/shaders/core/shapes/scrolling_triangle_texture.json"
-hash = "b7d9f29bb64ef7f65cc34b6d0d41c4e5e6be59508b51e46680d396b1ce05dd2d"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/lodestone/shaders/program/blend.json"
-hash = "c2067ce6c6345e15b803dc1491934b56c7c66360db034a0379c5bde82eae4256"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/lodestone/shaders/program/gaussian.json"
-hash = "619265adf5b2bbec0f936f6a917a4f112448f6ab0de9b70e910ce7c0dfefc08a"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/mannequins/lang/en_us.json"
@@ -23096,16 +23096,8 @@ file = "resourcepacks/spicedcider_resources/assets/piglin_set/all_gold_tools.png
 hash = "f88133c364ba80a832b43939e4ebe39587817c92e927551da2b2d005dfa63d1a"
 
 [[files]]
-file = "resourcepacks/spicedcider_resources/assets/piglin_set/golden_axe.png"
-hash = "ecac5768fe0fab8e492266599051e7d02700b525e0a7375a8e175f695833851f"
-
-[[files]]
 file = "resourcepacks/spicedcider_resources/assets/piglin_set/golden_pickaxe.png"
 hash = "4ce1a6b2a2d657593c80cad963860031387e8cfecf68e87e2202e826dc1b0966"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/piglin_set/golden_sword.png"
-hash = "6a95f7f8d24d870fd88279cabbedcb7f4e1ff7499dc885eda6a5898978d07d88"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/piglinproliferation/lang/en_us.json"
@@ -23150,6 +23142,10 @@ hash = "0e46fa3cb5d0789905ca90b211bef4001669aaad1ce9b63c4f9f2e19e720bcb7"
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/quark/models/item/dirty_glass_pane.json"
 hash = "328f509913543e5dddb339fc9d4f167d514a62ff034478168805ee2d8d580616"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/quark/models/item/glow_shroom.json"
+hash = "499a5b87bfa7f41f314afd83488ce9c70279b0e75ced547aa79ea4a11d7a26cc"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/quark/models/item/smithing_template_rune.json"
@@ -23292,6 +23288,10 @@ file = "resourcepacks/spicedcider_resources/assets/quark/textures/item/crab_buck
 hash = "dd98cac6ca32991d0a9c01c32c90a2e71f5f9816e824323bfae573e6b0358ba8"
 
 [[files]]
+file = "resourcepacks/spicedcider_resources/assets/quark/textures/item/glow_shroom.png"
+hash = "a093f0c93789ff5d55147b037e58b139193b02697d6bc1334e03bb9314063614"
+
+[[files]]
 file = "resourcepacks/spicedcider_resources/assets/quark/textures/item/music_disc_chatter.png"
 hash = "48d7e86b5e3428559ae128d23506bced3a3faaab52b420deaa61f01db3fb7b4b"
 
@@ -23373,7 +23373,7 @@ hash = "efb174ebe1d8bcaa8d05e517ced770559bcfcec566d330a119ef48ae706a1dce"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/redomesticate/lang/en_us.json"
-hash = "faf774670cfcdc05232efa316beab6120ef6ed93ee28fe46d495bfa839546b91"
+hash = "8734672db919426f2255a33c5bb1db52a32843fa145d4ab11fc5453fedd31539"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/redomesticate/models/block/wayward_lantern.json"
@@ -23893,7 +23893,7 @@ hash = "71341002dcc43dd8e4b8ac10e4ad84c6901b3b134037379ded7e18200558064a"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/spicedcider/lang/en_us.json"
-hash = "f28dcefffc726b4a6cd7f493c77648325b8ec9f00c3f280bc41e5ea57a581e97"
+hash = "937777bf40203bda5126fb1e1bb9771fafcb4bf70dfef8eeee0c58afc8acdc7e"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/spicedcider/models/block/cauldron_content_12.json"

@@ -281,6 +281,8 @@ public class SpicedCider {
         }
         if (event.getTabKey() == CreativeModeTabs.COMBAT) {
             event.insertAfter(new ItemStack(Items.NETHERITE_AXE), new ItemStack(ModItems.INFERNITE_CLEAVER.get()), vis);
+            event.insertAfter(new ItemStack(Items.GOLDEN_SWORD), new ItemStack(ModItems.PIGLIN_BROADSWORD.get()), vis);
+            event.insertAfter(new ItemStack(Items.GOLDEN_AXE), new ItemStack(ModItems.PIGLIN_BATTLEAXE.get()), vis);
             event.insertAfter(new ItemStack(Items.IRON_BOOTS), new ItemStack(ModItems.MISCHIEF_HELMET.get()), vis);
             event.insertAfter(new ItemStack(ModItems.MISCHIEF_HELMET.get()), new ItemStack(ModItems.MISCHIEF_CHESTPLATE.get()), vis);
             event.insertAfter(new ItemStack(ModItems.MISCHIEF_CHESTPLATE.get()), new ItemStack(ModItems.MISCHIEF_LEGGINGS.get()), vis);

@@ -9,6 +9,7 @@ import com.evandev.spicedcider.content.item.MischiefArmorItem;
 import com.evandev.spicedcider.content.item.PocketJukeboxItem;
 import com.evandev.spicedcider.content.item.RuinedPageItem;
 import com.evandev.spicedcider.compat.architectspalette.ArchitectsPaletteCompat;
+import com.evandev.spicedcider.compat.farmersdelight.FarmersDelightCompat;
 import com.evandev.spicedcider.compat.tide.TideCompat;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
@@ -85,6 +86,11 @@ public class ModItems {
             () -> new InferniteCleaverItem(ModItemTiers.CLEAVER,
                     new Item.Properties().rarity(Rarity.UNCOMMON).stacksTo(1)
                             .attributes(DiggerItem.createAttributes(ModItemTiers.CLEAVER, 11.0F, -3.4F))));
+
+    public static final DeferredItem<Item> PIGLIN_BROADSWORD = ITEMS.register("piglin_broadsword",
+            () -> new SwordItem(Tiers.GOLD, new Item.Properties().attributes(SwordItem.createAttributes(Tiers.GOLD, 4, -2.8F))));
+    public static final DeferredItem<Item> PIGLIN_BATTLEAXE = ITEMS.register("piglin_battleaxe",
+            () -> new AxeItem(Tiers.GOLD, new Item.Properties().attributes(AxeItem.createAttributes(Tiers.GOLD, 7.0F, -3.1F))));
 
     public static final DeferredItem<Item> CAST_IRON_INGOT = ITEMS.register("cast_iron_ingot",
             () -> new Item(new Item.Properties()));
@@ -189,6 +195,9 @@ public class ModItems {
     public static final DeferredItem<BlockItem> CHISELED_GLOWSTONE_BRICKS = ITEMS.registerSimpleBlockItem(ModBlocks.CHISELED_GLOWSTONE_BRICKS);
     public static final DeferredItem<BlockItem> POLISHED_GLOWSTONE_PILLAR = ITEMS.registerSimpleBlockItem(ModBlocks.POLISHED_GLOWSTONE_PILLAR);
 
+    @Nullable
+    public static final DeferredItem<Item> LUMINOUS_FUNGUS_COLONY = ModBlocks.LUMINOUS_FUNGUS_COLONY != null
+            ? ITEMS.register("luminous_fungus_colony", () -> FarmersDelightCompat.createColonyItem(ModBlocks.LUMINOUS_FUNGUS_COLONY.get(), new Item.Properties())) : null;
     @Nullable
     public static final DeferredItem<BlockItem> POLISHED_GLOWSTONE_STAIRS = ModBlocks.POLISHED_GLOWSTONE_STAIRS != null
             ? ITEMS.registerSimpleBlockItem(ModBlocks.POLISHED_GLOWSTONE_STAIRS) : null;

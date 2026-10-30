@@ -9,6 +9,7 @@ public final class InfernalExpansionCompat {
 
     public static final String MOD_ID = "infernalexp";
     public static final ResourceLocation POLISHED_GLOWSTONE = ResourceLocation.fromNamespaceAndPath(MOD_ID, "polished_glowstone");
+    public static final ResourceLocation LUMINOUS_FUNGUS = ResourceLocation.fromNamespaceAndPath(MOD_ID, "luminous_fungus");
     public static final ResourceLocation TAB = ResourceLocation.fromNamespaceAndPath(MOD_ID, "infernalexp");
 
     private static Boolean loaded;

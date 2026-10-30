@@ -82,6 +82,13 @@ public class ModItemTagsProvider extends ItemTagsProvider {
         this.tag(ItemTags.CREEPER_IGNITERS)
                 .add(ModItems.FIRE_STRIKER.get());
 
+        this.tag(ItemTags.SWORDS)
+                .add(ModItems.PIGLIN_BROADSWORD.get());
+        this.tag(ItemTags.AXES)
+                .add(ModItems.PIGLIN_BATTLEAXE.get());
+        this.tag(ItemTags.PIGLIN_LOVED)
+                .add(ModItems.PIGLIN_BROADSWORD.get(), ModItems.PIGLIN_BATTLEAXE.get());
+
         this.tag(Tags.Items.TOOLS)
                 .add(ModItems.INFERNITE_CLEAVER.get());
         this.tag(Tags.Items.MELEE_WEAPON_TOOLS)

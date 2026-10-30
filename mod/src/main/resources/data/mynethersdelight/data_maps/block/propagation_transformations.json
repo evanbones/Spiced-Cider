@@ -1,0 +1,87 @@
+{
+  "values": {
+    "infernalexp:luminous_fungus": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "infernalexp"
+        },
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "farmersdelight"
+        }
+      ],
+      "neoforge:value": {
+        "rules": [
+          {
+            "chance_mode": "absolute",
+            "direction": "above",
+            "soil": "resurgent_soil",
+            "state": {
+              "is_floor": "true"
+            },
+            "action": {
+              "type": "replace",
+              "result": {
+                "block": "spicedcider:luminous_fungus_colony"
+              }
+            }
+          },
+          {
+            "chance": 0.4,
+            "direction": "above",
+            "soil": "resurgent_soil",
+            "action": {
+              "type": "propagate",
+              "result": {
+                "block": "infernalexp:luminous_fungus"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "spicedcider:luminous_fungus_colony": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "infernalexp"
+        },
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "farmersdelight"
+        }
+      ],
+      "neoforge:value": {
+        "rules": [
+          {
+            "chance": 0.4,
+            "direction": "above",
+            "soil": "resurgent_soil",
+            "state": {
+              "age": "3"
+            },
+            "action": {
+              "type": "propagate",
+              "result": {
+                "block": "spicedcider:luminous_fungus_colony"
+              }
+            }
+          },
+          {
+            "chance": 0.4,
+            "chance_mode": "absolute",
+            "direction": "above",
+            "soil": "resurgent_soil",
+            "action": {
+              "type": "propagate",
+              "result": {
+                "block": "infernalexp:luminous_fungus"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

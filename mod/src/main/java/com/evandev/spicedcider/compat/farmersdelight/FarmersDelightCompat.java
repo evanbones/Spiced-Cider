@@ -23,6 +23,14 @@ public final class FarmersDelightCompat {
         return loaded;
     }
 
+    public static Block createFungusColony(ResourceLocation fungus, int baseLight) {
+        return FarmersDelightBridge.createFungusColony(fungus, baseLight);
+    }
+
+    public static Item createColonyItem(Block block, Item.Properties properties) {
+        return FarmersDelightBridge.createColonyItem(block, properties);
+    }
+
     public static Item createKnife(Tier tier, Item.Properties properties) {
         return isLoaded()
                 ? FarmersDelightBridge.createKnife(tier, properties)

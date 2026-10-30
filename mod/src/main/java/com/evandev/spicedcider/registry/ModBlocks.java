@@ -3,6 +3,7 @@ package com.evandev.spicedcider.registry;
 import com.evandev.spicedcider.SpicedCider;
 import com.evandev.spicedcider.compat.architectspalette.ArchitectsPaletteCompat;
 import com.evandev.spicedcider.compat.bountifulfares.BountifulFaresCompat;
+import com.evandev.spicedcider.compat.farmersdelight.FarmersDelightCompat;
 import com.evandev.spicedcider.compat.infernalexp.InfernalExpansionCompat;
 import com.evandev.spicedcider.content.block.AlgalBlock;
 import com.evandev.spicedcider.content.block.BuddingPrismarineBlock;
@@ -238,6 +239,11 @@ public class ModBlocks {
     @Nullable
     public static final DeferredBlock<WallBlock> POLISHED_GLOWSTONE_WALL = InfernalExpansionCompat.isLoaded()
             ? BLOCKS.register("polished_glowstone_wall", () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(InfernalExpansionCompat.polishedGlowstone()).forceSolidOn()))
+            : null;
+
+    @Nullable
+    public static final DeferredBlock<Block> LUMINOUS_FUNGUS_COLONY = InfernalExpansionCompat.isLoaded() && FarmersDelightCompat.isLoaded()
+            ? BLOCKS.register("luminous_fungus_colony", () -> FarmersDelightCompat.createFungusColony(InfernalExpansionCompat.LUMINOUS_FUNGUS, 6))
             : null;
 
     @Nullable
