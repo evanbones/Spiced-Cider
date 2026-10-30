@@ -1,0 +1,53 @@
+{
+  "type": "farmersdelight:add_item",
+  "conditions": [
+    {
+      "condition": "minecraft:match_tool",
+      "predicate": {
+        "items": "#farmersdelight:straw_harvesters"
+      }
+    },
+    {
+      "condition": "minecraft:random_chance",
+      "chance": 0.2
+    },
+    {
+      "condition": "minecraft:any_of",
+      "terms": [
+        {
+          "condition": "minecraft:block_state_property",
+          "block": "minecraft:tall_grass"
+        },
+        {
+          "condition": "minecraft:block_state_property",
+          "block": "environmental:giant_tall_grass"
+        },
+        {
+          "condition": "minecraft:block_state_property",
+          "block": "nomansland:grass_sprouts"
+        },
+        {
+          "condition": "minecraft:block_state_property",
+          "block": "nomansland:dried_grass"
+        },
+        {
+          "condition": "minecraft:block_state_property",
+          "block": "nomansland:frosted_grass"
+        },
+        {
+          "condition": "minecraft:block_state_property",
+          "block": "nomansland:oat_grass"
+        },
+        {
+          "condition": "minecraft:block_state_property",
+          "block": "nomansland:short_beachgrass"
+        },
+        {
+          "condition": "minecraft:block_state_property",
+          "block": "nomansland:tall_beachgrass"
+        }
+      ]
+    }
+  ],
+  "item": "farmersdelight:straw"
+}

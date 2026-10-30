@@ -21,6 +21,7 @@ public class StrawGolemRenderer extends MobRenderer<StrawGolem, StrawGolemModel>
         super(context, new StrawGolemModel(context.bakeLayer(ModModelLayers.STRAW_GOLEM)), 0.35F);
         this.addLayer(new StrawGolemBarrelLayer(this, context.getBlockRenderDispatcher()));
         this.addLayer(new StrawGolemItemLayer(this, context.getItemRenderer()));
+        this.addLayer(new StrawGolemHatLayer(this, context.getItemRenderer()));
     }
 
     private static ResourceLocation texture(String name) {

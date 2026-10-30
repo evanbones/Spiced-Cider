@@ -614,7 +614,7 @@
 		"Display Baked Enchantments In Tooltip" = true
 		"Italic Tooltip" = true
 		#Enchantments other than Gold's Fortune/Looting to bake into items. Format is "item+enchant@level", such as "minecraft:stick+minecraft:sharpness@10".
-		"Item Enchantments" = []
+		"Item Enchantments" = ["oooh_pinky:rose_gold_pickaxe+minecraft:silk_touch@1", "oooh_pinky:rose_gold_shovel+minecraft:silk_touch@1", "oooh_pinky:rose_gold_axe+minecraft:silk_touch@1", "oooh_pinky:rose_gold_hoe+minecraft:silk_touch@1", "oooh_pinky:rose_gold_knife+minecraft:silk_touch@1"]
 
 	[tweaks.grab_chickens]
 		"Needs No Helmet" = true

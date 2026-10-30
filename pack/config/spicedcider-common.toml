@@ -37,7 +37,7 @@
 	voidWaterExcludedDimensions = ["minecraft:the_end"]
 
 [performance]
-	#Disables recipe book unlock tracking/saving/syncing entirely. Saves memory and disk I/O.
+	#Disables recipe book unlock tracking/saving/syncing entirely and skips loading recipe unlock advancements. Saves memory, disk I/O and time on every inventory change.
 	disableRecipeBookTracking = true
 
 [caveMaps]

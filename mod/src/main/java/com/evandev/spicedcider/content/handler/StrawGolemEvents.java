@@ -5,7 +5,6 @@ import com.evandev.spicedcider.entities.strawgolem.StrawGolem;
 import com.evandev.spicedcider.entities.strawgolem.StrawGolemSenses;
 import com.evandev.spicedcider.entities.strawgolem.goals.ConsumeGolemGoal;
 import com.evandev.spicedcider.registry.ModEntityTypes;
-import com.evandev.spicedcider.registry.ModItems;
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -57,8 +56,6 @@ public class StrawGolemEvents {
     public static void addToCreativeTab(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.SPAWN_EGGS) {
             event.insertAfter(new ItemStack(Items.STRAY_SPAWN_EGG), new ItemStack(BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "straw_golem_spawn_egg"))), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-        } else if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
-            event.accept(ModItems.STRAW_HAT.get());
         }
     }
 

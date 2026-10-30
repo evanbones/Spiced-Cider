@@ -6,8 +6,8 @@ import com.evandev.spicedcider.entities.strawgolem.goals.GolemDepositGoal;
 import com.evandev.spicedcider.entities.strawgolem.goals.GolemGrabGoal;
 import com.evandev.spicedcider.entities.strawgolem.goals.GolemHarvestGoal;
 import com.evandev.spicedcider.entities.strawgolem.goals.GolemWanderGoal;
-import com.evandev.spicedcider.registry.ModItems;
 import com.evandev.spicedcider.registry.ModSounds;
+import com.evandev.spicedcider.registry.ModTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.NbtUtils;
@@ -56,7 +56,7 @@ public class StrawGolem extends AbstractGolem {
     public static final int SEARCH_RANGE_VERTICAL = 3;
     public static final double REACH = 1.5;
 
-    private static final EntityDataAccessor<Boolean> HAT = SynchedEntityData.defineId(StrawGolem.class, EntityDataSerializers.BOOLEAN);
+    private static final EntityDataAccessor<ItemStack> HAT = SynchedEntityData.defineId(StrawGolem.class, EntityDataSerializers.ITEM_STACK);
     private static final EntityDataAccessor<Boolean> PANIC = SynchedEntityData.defineId(StrawGolem.class, EntityDataSerializers.BOOLEAN);
     private static final EntityDataAccessor<Integer> PICKUP_STATUS = SynchedEntityData.defineId(StrawGolem.class, EntityDataSerializers.INT);
     private static final EntityDataAccessor<Integer> BARREL = SynchedEntityData.defineId(StrawGolem.class, EntityDataSerializers.INT);
@@ -92,7 +92,7 @@ public class StrawGolem extends AbstractGolem {
     @Override
     protected void defineSynchedData(SynchedEntityData.Builder builder) {
         super.defineSynchedData(builder);
-        builder.define(HAT, false);
+        builder.define(HAT, ItemStack.EMPTY);
         builder.define(PANIC, false);
         builder.define(PICKUP_STATUS, 0);
         builder.define(BARREL, 0);
@@ -151,10 +151,10 @@ public class StrawGolem extends AbstractGolem {
             if (!client) {
                 heal(3.0F);
             }
-        } else if (stack.is(ModItems.STRAW_HAT.get()) && !hasHat()) {
+        } else if (stack.is(ModTags.Items.STRAW_GOLEM_HATS) && !hasHat()) {
             sound = ModSounds.STRAW_GOLEM_INTERESTED.get();
             if (!client) {
-                entityData.set(HAT, true);
+                setHat(stack.copyWithCount(1));
             }
         } else if (stack.is(Items.BRUSH)) {
             sound = ModSounds.STRAW_GOLEM_HAPPY.get();
@@ -190,7 +190,7 @@ public class StrawGolem extends AbstractGolem {
     protected void dropCustomDeathLoot(ServerLevel level, DamageSource source, boolean recentlyHit) {
         super.dropCustomDeathLoot(level, source, recentlyHit);
         if (hasHat()) {
-            spawnAtLocation(ModItems.STRAW_HAT.get());
+            spawnAtLocation(getHat());
         }
     }
 
@@ -237,7 +237,7 @@ public class StrawGolem extends AbstractGolem {
     @Override
     public void readAdditionalSaveData(CompoundTag tag) {
         super.readAdditionalSaveData(tag);
-        entityData.set(HAT, tag.getBoolean("hat"));
+        setHat(ItemStack.parseOptional(registryAccess(), tag.getCompound("hat")));
         entityData.set(BARREL, tag.getInt("barrel_health"));
         priorityPos = NbtUtils.readBlockPos(tag, "priority_pos").orElse(null);
     }
@@ -245,7 +245,9 @@ public class StrawGolem extends AbstractGolem {
     @Override
     public void addAdditionalSaveData(CompoundTag tag) {
         super.addAdditionalSaveData(tag);
-        tag.putBoolean("hat", hasHat());
+        if (hasHat()) {
+            tag.put("hat", getHat().save(registryAccess()));
+        }
         tag.putInt("barrel_health", barrelHealth());
         if (priorityPos != null) {
             tag.put("priority_pos", NbtUtils.writeBlockPos(priorityPos));
@@ -291,10 +293,14 @@ public class StrawGolem extends AbstractGolem {
     }
 
     public boolean hasHat() {
+        return !getHat().isEmpty();
+    }
+
+    public ItemStack getHat() {
         return entityData.get(HAT);
     }
 
-    public void setHat(boolean hat) {
+    public void setHat(ItemStack hat) {
         entityData.set(HAT, hat);
     }
 

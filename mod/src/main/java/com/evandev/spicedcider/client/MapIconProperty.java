@@ -26,7 +26,7 @@ public final class MapIconProperty {
             icon("minecraft:jungle_temple", 6), icon("minecraft:swamp_hut", 7), icon("minecraft:desert_pyramid", 8), icon("minecraft:ancient_city", 9),
             icon("supplementaries:ancient_city", 9), icon("minecraft:mineshaft", 10), icon("minecraft:ocean_ruin_warm", 11), icon("supplementaries:ocean_ruin", 11),
             icon("minecraft:abandoned_camp", 12), icon("minecraft:village_plains", 13), icon("minecraft:village_desert", 14), icon("minecraft:village_savanna", 15),
-            icon("minecraft:village_snowy", 16), icon("minecraft:village_taiga", 17));
+            icon("minecraft:village_snowy", 16), icon("minecraft:village_taiga", 17), icon("spicedcider:ruined_portal", 18));
     private static final Map<Object, Float> CUSTOM_CACHE = new WeakHashMap<>();
 
     public static float get(ItemStack stack, ClientLevel level, LivingEntity entity, int seed) {

@@ -49,7 +49,7 @@ public class SpicedCiderPonderPlugin implements PonderPlugin {
                 .addStoryBoard("golems/copper_golem_sorting", GolemScenes::copperGolemSorting);
         components(helper, "minecraft:barrel", "minecraft:carved_pumpkin", "minecraft:jack_o_lantern")
                 .addStoryBoard("golems/sputter", GolemScenes::sputter);
-        components(helper, "minecraft:hay_block", "minecraft:carved_pumpkin", "minecraft:jack_o_lantern", "spicedcider:straw_hat")
+        components(helper, "minecraft:hay_block", "minecraft:carved_pumpkin", "minecraft:jack_o_lantern", "bountifulfares:sun_hat")
                 .addStoryBoard("golems/straw_golem", GolemScenes::strawGolem);
         components(helper, "minecraft:wither_skeleton_skull", "minecraft:soul_sand", "minecraft:soul_soil")
                 .addStoryBoard("golems/wither", GolemScenes::wither);

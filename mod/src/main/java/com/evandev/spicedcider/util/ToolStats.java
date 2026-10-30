@@ -27,7 +27,7 @@ import java.util.regex.PatternSyntaxException;
 
 public final class ToolStats {
 
-    public record Stats(int durability, Optional<Float> speed) {
+    public record Stats(int durability, Optional<Float> speed, Optional<ResourceLocation> incorrect) {
     }
 
     private record Entry(Stats stats, Set<ResourceLocation> ids, List<Pattern> patterns) {
@@ -151,6 +151,7 @@ public final class ToolStats {
     private static Stats readStats(JsonObject obj, boolean allowSpeed) {
         int durability = obj.get("durability").getAsInt();
         Optional<Float> speed = allowSpeed && obj.has("speed") ? Optional.of(obj.get("speed").getAsFloat()) : Optional.empty();
-        return new Stats(durability, speed);
+        Optional<ResourceLocation> incorrect = allowSpeed && obj.has("incorrect") ? Optional.ofNullable(ResourceLocation.tryParse(obj.get("incorrect").getAsString())) : Optional.empty();
+        return new Stats(durability, speed, incorrect);
     }
 }

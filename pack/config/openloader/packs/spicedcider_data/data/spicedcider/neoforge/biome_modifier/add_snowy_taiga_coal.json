@@ -1,0 +1,14 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": {
+    "type": "neoforge:and",
+    "values": [
+      "#c:is_taiga",
+      "#c:is_snowy"
+    ]
+  },
+  "features": [
+    "spicedcider:ore_coal_snowy_taiga"
+  ],
+  "step": "underground_ores"
+}

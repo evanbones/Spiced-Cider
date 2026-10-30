@@ -13,6 +13,7 @@
     "gold": {
       "durability": 150,
       "speed": 20.0,
+      "incorrect": "spicedcider:incorrect_for_bronze_tool",
       "items": [
         "minecraft:golden_(sword|shovel|pickaxe|axe|hoe|spear)",
         "farmersdelight:golden_knife",
@@ -34,6 +35,7 @@
     "silver": {
       "durability": 250,
       "speed": 12.0,
+      "incorrect": "spicedcider:incorrect_for_bronze_tool",
       "items": [
         "caverns_and_chasms:silver_(sword|shovel|pickaxe|axe|hoe)",
         "abnormals_delight:silver_knife",
@@ -43,6 +45,7 @@
     "bronze": {
       "durability": 700,
       "speed": 6.5,
+      "incorrect": "spicedcider:incorrect_for_bronze_tool",
       "items": [
         "modestmining:bronze_(sword|shovel|pickaxe|axe|hoe|knife|javelin|hammer)"
       ]
@@ -50,6 +53,7 @@
     "rose_gold": {
       "durability": 1000,
       "speed": 14.0,
+      "incorrect": "spicedcider:incorrect_for_bronze_tool",
       "items": [
         "oooh_pinky:rose_gold_(sword|shovel|pickaxe|axe|hoe|knife)"
       ]
@@ -57,6 +61,7 @@
     "steel": {
       "durability": 3000,
       "speed": 6.5,
+      "incorrect": "spicedcider:incorrect_for_steel_tool",
       "items": [
         "alloyed:steel_(sword|shovel|pickaxe|axe|hoe|knife|spear)",
         "modestmining:steel_(sword|shovel|pickaxe|axe|hoe|knife|javelin|hammer)",

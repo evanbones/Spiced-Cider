@@ -62,9 +62,6 @@ public class ModItems {
             () -> TideCompat.createFishingRod(3, 512, new Item.Properties().fireResistant()))
             : null;
 
-    public static final DeferredItem<Item> STRAW_HAT = ITEMS.register("straw_hat",
-            () -> new Item(new Item.Properties().stacksTo(1)));
-
     public static final DeferredItem<Item> RUBBER_CABLE = ITEMS.register("rubber_cable",
             () -> new Item(new Item.Properties()));
 

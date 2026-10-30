@@ -25,6 +25,7 @@ public class ModTags {
         public static final TagKey<Item> CACAO_LOGS = tag("cacao_logs");
         public static final TagKey<Item> PEAR_LOGS = tag("pear_logs");
         public static final TagKey<Item> AVOCADO_LOGS = tag("avocado_logs");
+        public static final TagKey<Item> STRAW_GOLEM_HATS = tag("straw_golem_hats");
 
         private static TagKey<Item> tag(String name) {
             return ItemTags.create(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, name));

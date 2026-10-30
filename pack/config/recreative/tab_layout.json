@@ -6167,6 +6167,127 @@
       "map_atlases:atlas",
       "supplementaries:slice_map",
       "spicedcider:map_in_a_bottle",
+      {
+        "item": "supplementaries:cartographers_quill",
+        "components": {
+          "minecraft:item_name": "{\"translate\":\"filled_map.buried_treasure\"}",
+          "supplementaries:quill_structure": "minecraft:buried_treasure",
+          "supplementaries:quill_decoration": "minecraft:red_x",
+          "supplementaries:quill_zoom": 1,
+          "supplementaries:quill_search_radius": 75,
+          "supplementaries:quill_skip_known": false
+        }
+      },
+      {
+        "item": "supplementaries:cartographers_quill",
+        "components": {
+          "minecraft:item_name": "{\"translate\":\"filled_map.spicedcider.ruined_portal\"}",
+          "supplementaries:quill_structure": "minecraft:ruined_portal",
+          "supplementaries:quill_decoration": "spicedcider:ruined_portal",
+          "supplementaries:quill_zoom": 1,
+          "supplementaries:quill_search_radius": 75,
+          "supplementaries:quill_skip_known": false
+        }
+      },
+      {
+        "item": "supplementaries:cartographers_quill",
+        "components": {
+          "minecraft:item_name": "{\"translate\":\"filled_map.monument\"}",
+          "supplementaries:quill_structure": "minecraft:monument",
+          "supplementaries:quill_decoration": "minecraft:monument",
+          "supplementaries:quill_zoom": 1,
+          "supplementaries:quill_search_radius": 75,
+          "supplementaries:quill_skip_known": false
+        }
+      },
+      {
+        "item": "supplementaries:cartographers_quill",
+        "components": {
+          "minecraft:item_name": "{\"translate\":\"filled_map.spicedcider.ocean_ruin_warm\"}",
+          "supplementaries:quill_structure": "minecraft:ocean_ruin_warm",
+          "supplementaries:quill_decoration": "minecraft:ocean_ruin_warm",
+          "supplementaries:quill_zoom": 1,
+          "supplementaries:quill_search_radius": 75,
+          "supplementaries:quill_skip_known": false
+        }
+      },
+      {
+        "item": "supplementaries:cartographers_quill",
+        "components": {
+          "minecraft:item_name": "{\"translate\":\"filled_map.spicedcider.desert_pyramid\"}",
+          "supplementaries:quill_structure": "minecraft:desert_pyramid",
+          "supplementaries:quill_decoration": "minecraft:desert_pyramid",
+          "supplementaries:quill_zoom": 1,
+          "supplementaries:quill_search_radius": 75,
+          "supplementaries:quill_skip_known": false
+        }
+      },
+      {
+        "item": "supplementaries:cartographers_quill",
+        "components": {
+          "minecraft:item_name": "{\"translate\":\"filled_map.explorer_jungle\"}",
+          "supplementaries:quill_structure": "minecraft:jungle_pyramid",
+          "supplementaries:quill_decoration": "minecraft:jungle_temple",
+          "supplementaries:quill_zoom": 1,
+          "supplementaries:quill_search_radius": 75,
+          "supplementaries:quill_skip_known": false
+        }
+      },
+      {
+        "item": "supplementaries:cartographers_quill",
+        "components": {
+          "minecraft:item_name": "{\"translate\":\"filled_map.explorer_swamp\"}",
+          "supplementaries:quill_structure": "betterwitchhuts:witch_hut",
+          "supplementaries:quill_decoration": "minecraft:swamp_hut",
+          "supplementaries:quill_zoom": 1,
+          "supplementaries:quill_search_radius": 75,
+          "supplementaries:quill_skip_known": false
+        }
+      },
+      {
+        "item": "supplementaries:cartographers_quill",
+        "components": {
+          "minecraft:item_name": "{\"translate\":\"filled_map.spicedcider.mineshaft\"}",
+          "supplementaries:quill_structure": "bettermineshafts:mineshaft_oak",
+          "supplementaries:quill_decoration": "minecraft:mineshaft",
+          "supplementaries:quill_zoom": 1,
+          "supplementaries:quill_search_radius": 75,
+          "supplementaries:quill_skip_known": false
+        }
+      },
+      {
+        "item": "supplementaries:cartographers_quill",
+        "components": {
+          "minecraft:item_name": "{\"translate\":\"filled_map.spicedcider.abandoned_camp\"}",
+          "supplementaries:quill_structure": "minecraft:abandoned_camp_forest",
+          "supplementaries:quill_decoration": "minecraft:abandoned_camp",
+          "supplementaries:quill_zoom": 1,
+          "supplementaries:quill_search_radius": 75,
+          "supplementaries:quill_skip_known": false
+        }
+      },
+      {
+        "item": "supplementaries:cartographers_quill",
+        "components": {
+          "minecraft:item_name": "{\"translate\":\"filled_map.spicedcider.ancient_city\"}",
+          "supplementaries:quill_structure": "minecraft:ancient_city",
+          "supplementaries:quill_decoration": "minecraft:ancient_city",
+          "supplementaries:quill_zoom": 1,
+          "supplementaries:quill_search_radius": 75,
+          "supplementaries:quill_skip_known": false
+        }
+      },
+      {
+        "item": "supplementaries:cartographers_quill",
+        "components": {
+          "minecraft:item_name": "{\"translate\":\"nomansland.filled_map.bell_sanctuary\"}",
+          "supplementaries:quill_structure": "nomansland:bell_sanctuary",
+          "supplementaries:quill_decoration": "nomansland:bell_sanctuary",
+          "supplementaries:quill_zoom": 1,
+          "supplementaries:quill_search_radius": 75,
+          "supplementaries:quill_skip_known": false
+        }
+      },
       "minecraft:writable_book",
       "quark:soul_bead",
       "minecraft:ender_pearl",

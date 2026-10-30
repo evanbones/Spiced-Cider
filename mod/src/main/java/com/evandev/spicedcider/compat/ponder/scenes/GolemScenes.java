@@ -2,7 +2,6 @@ package com.evandev.spicedcider.compat.ponder.scenes;
 
 import com.evandev.spicedcider.entities.sputter.SputterEntity;
 import com.evandev.spicedcider.entities.strawgolem.StrawGolem;
-import com.evandev.spicedcider.registry.ModItems;
 import com.evandev.spicedcider.registry.ModEntityTypes;
 import net.createmod.catnip.math.Pointing;
 import net.createmod.ponder.api.PonderPalette;
@@ -14,6 +13,8 @@ import net.createmod.ponder.api.scene.Selection;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
@@ -564,14 +565,15 @@ public class GolemScenes {
         scene.world().modifyEntity(golem, entity -> SceneHelper.face(entity, 180));
         scene.idle(10);
 
+        ItemStack hat = new ItemStack(BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath("bountifulfares", "sun_hat")));
         scene.overlay().showControls(start.add(0, 1.2, 0), Pointing.DOWN, 40)
                 .rightClick()
-                .withItem(new ItemStack(ModItems.STRAW_HAT.get()));
+                .withItem(hat);
         scene.idle(10);
-        scene.world().modifyEntity(golem, entity -> ((StrawGolem) entity).setHat(true));
+        scene.world().modifyEntity(golem, entity -> ((StrawGolem) entity).setHat(hat.copy()));
         scene.overlay().showText(70)
                 .attachKeyFrame()
-                .text("A Straw Hat keeps the rain off its head")
+                .text("A Sun Hat keeps the rain off its head")
                 .pointAt(start.add(0, 0.9, 0))
                 .placeNearTarget();
         scene.idle(80);

@@ -2,11 +2,16 @@ package com.evandev.spicedcider.content.handler;
 
 import com.evandev.spicedcider.SpicedCider;
 import com.evandev.spicedcider.util.ToolStats;
+import net.minecraft.core.HolderSet;
 import net.minecraft.core.component.DataComponents;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.TieredItem;
 import net.minecraft.world.item.component.Tool;
+import net.minecraft.world.level.block.Block;
 import net.neoforged.bus.api.EventPriority;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -46,18 +51,23 @@ public class ToolStatsEvents {
     }
 
     private static Tool retunedTool(Item item, ToolStats.Stats stats) {
-        if (stats.speed().isEmpty()) return null;
-        if (!(item instanceof TieredItem tiered) || item instanceof SwordItem) return null;
+        if (stats.speed().isEmpty() && stats.incorrect().isEmpty()) return null;
+        if (!(item instanceof TieredItem tiered)) return null;
         Tool tool = item.components().get(DataComponents.TOOL);
         if (tool == null) return null;
 
         float oldSpeed = tiered.getTier().getSpeed();
-        float newSpeed = stats.speed().get();
+        Optional<HolderSet<Block>> incorrect = stats.incorrect()
+                .map(id -> BuiltInRegistries.BLOCK.getOrCreateTag(TagKey.create(Registries.BLOCK, id)));
+        boolean retuneSpeed = stats.speed().isPresent() && !(item instanceof SwordItem);
         boolean changed = false;
         List<Tool.Rule> rules = new ArrayList<>(tool.rules().size());
         for (Tool.Rule rule : tool.rules()) {
-            if (rule.speed().isPresent() && Math.abs(rule.speed().get() - oldSpeed) < 1.0E-4F) {
-                rules.add(new Tool.Rule(rule.blocks(), Optional.of(newSpeed), rule.correctForDrops()));
+            if (incorrect.isPresent() && rule.correctForDrops().isPresent() && !rule.correctForDrops().get()) {
+                rules.add(new Tool.Rule(incorrect.get(), rule.speed(), rule.correctForDrops()));
+                changed = true;
+            } else if (retuneSpeed && rule.speed().isPresent() && Math.abs(rule.speed().get() - oldSpeed) < 1.0E-4F) {
+                rules.add(new Tool.Rule(rule.blocks(), Optional.of(stats.speed().get()), rule.correctForDrops()));
                 changed = true;
             } else {
                 rules.add(rule);

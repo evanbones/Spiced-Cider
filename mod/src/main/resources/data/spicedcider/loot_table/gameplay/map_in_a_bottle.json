@@ -175,6 +175,27 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:map",
+          "weight": 3,
+          "functions": [
+            {
+              "function": "minecraft:exploration_map",
+              "destination": "spicedcider:on_ruined_portal_maps",
+              "decoration": "spicedcider:ruined_portal",
+              "zoom": 1,
+              "skip_existing_chunks": false
+            },
+            {
+              "function": "minecraft:set_name",
+              "target": "item_name",
+              "name": {
+                "translate": "filled_map.spicedcider.ruined_portal"
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:map",
           "weight": 1,
           "functions": [
             {

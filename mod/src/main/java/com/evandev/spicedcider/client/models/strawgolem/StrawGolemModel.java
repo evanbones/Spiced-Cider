@@ -20,7 +20,7 @@ public class StrawGolemModel extends HierarchicalModel<StrawGolem> {
     private final ModelPart root;
     private final ModelPart upper;
     private final ModelPart body;
-    private final ModelPart hat;
+    private final ModelPart head;
     private final ModelPart item;
 
     public StrawGolemModel(ModelPart root) {
@@ -28,7 +28,7 @@ public class StrawGolemModel extends HierarchicalModel<StrawGolem> {
         this.root = root;
         this.upper = root.getChild("upper");
         this.body = upper.getChild("body");
-        this.hat = upper.getChild("head").getChild("hat");
+        this.head = upper.getChild("head");
         this.item = root.getChild("item");
     }
 
@@ -51,11 +51,8 @@ public class StrawGolemModel extends HierarchicalModel<StrawGolem> {
         arms.addOrReplaceChild("left_arm", CubeListBuilder.create()
                 .texOffs(0, 20).mirror().addBox(-1.0F, -1.0F, -1.0F, 2.0F, 7.0F, 2.0F), PartPose.offset(5.0F, 0.0F, 0.0F));
 
-        PartDefinition head = upper.addOrReplaceChild("head", CubeListBuilder.create()
+        upper.addOrReplaceChild("head", CubeListBuilder.create()
                 .texOffs(32, 0).addBox(-2.0F, -3.9F, -2.0F, 4.0F, 4.0F, 4.0F), PartPose.offset(0.0F, -8.0F, 0.0F));
-        head.addOrReplaceChild("hat", CubeListBuilder.create()
-                .texOffs(0, 32).addBox(-5.5F, -2.5F, -5.5F, 11.0F, 0.0F, 11.0F)
-                .texOffs(16, 20).addBox(-2.5F, -4.55F, -2.5F, 5.0F, 2.0F, 5.0F), PartPose.ZERO);
 
         root.addOrReplaceChild("item", CubeListBuilder.create(), PartPose.offset(0.0F, 15.5F, -5.5F));
 
@@ -70,7 +67,6 @@ public class StrawGolemModel extends HierarchicalModel<StrawGolem> {
     @Override
     public void setupAnim(StrawGolem golem, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
         root.getAllParts().forEach(ModelPart::resetPose);
-        hat.visible = golem.hasHat();
 
         if (golem.harvestAnimationState.isStarted()) {
             animate(golem.harvestAnimationState, golem.isHarvestingBlock() ? StrawGolemAnimations.HARVEST_BLOCK : StrawGolemAnimations.HARVEST_ITEM, ageInTicks);
@@ -107,6 +103,12 @@ public class StrawGolemModel extends HierarchicalModel<StrawGolem> {
         root.translateAndRotate(poseStack);
         upper.translateAndRotate(poseStack);
         body.translateAndRotate(poseStack);
+    }
+
+    public void translateToHead(PoseStack poseStack) {
+        root.translateAndRotate(poseStack);
+        upper.translateAndRotate(poseStack);
+        head.translateAndRotate(poseStack);
     }
 
     public void translateToItem(PoseStack poseStack) {
