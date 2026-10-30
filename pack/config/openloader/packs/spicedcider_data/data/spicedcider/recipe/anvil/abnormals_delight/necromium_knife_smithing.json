@@ -1,0 +1,27 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "caverns_and_chasms"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "abnormals_delight"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "farmersdelight"
+    }
+  ],
+  "type": "spicedcider:anvil_smithing",
+  "base": {
+    "item": "farmersdelight:diamond_knife"
+  },
+  "addition": {
+    "tag": "c:ingots/necromium"
+  },
+  "result": {
+    "count": 1,
+    "id": "abnormals_delight:necromium_knife"
+  }
+}

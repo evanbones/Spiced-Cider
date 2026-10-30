@@ -74,14 +74,6 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_diamond", has(Tags.Items.GEMS_DIAMOND))
                 .save(tideOutput);
 
-        SmithingTransformRecipeBuilder.smithing(
-                        Ingredient.of(Tags.Items.STRINGS),
-                        Ingredient.of(BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath("alloyed", "steel_fishing_rod"))),
-                        Ingredient.of(adamantiteIngots),
-                        RecipeCategory.TOOLS, ModItems.ADAMANTITE_FISHING_ROD.get())
-                .unlocks("has_adamantite_ingot", has(adamantiteIngots))
-                .save(adamantiteOutput.withConditions(new ModLoadedCondition("alloyed")), ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "adamantite_fishing_rod_smithing"));
-
         ShapelessRecipeBuilder.shapeless(RecipeCategory.TOOLS, ModItems.FIRE_STRIKER.get())
                 .requires(Items.FLINT, 2)
                 .unlockedBy("has_flint", has(Items.FLINT))

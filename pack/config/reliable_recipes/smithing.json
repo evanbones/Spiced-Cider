@@ -1,0 +1,15 @@
+[
+  {
+    "action": "remove_recipe",
+    "type": [
+      "minecraft:smithing_transform",
+      "minecraft:smithing_trim",
+      "caverns_and_chasms:smithing_modifier",
+      "quark:smithing_rune"
+    ]
+  },
+  {
+    "action": "remove_recipe",
+    "output": "#minecraft:trim_templates"
+  }
+]

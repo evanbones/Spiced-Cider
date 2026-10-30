@@ -45,8 +45,7 @@
   },
   "ui.toast.challenge_complete": {
     "replace": true,
-    "sounds": [
-    ]
+    "sounds": []
   },
   "music.creative": {
     "replace": true,
@@ -2065,5 +2064,15 @@
         "volume": 0.52
       }
     ]
+  },
+  "block.anvil.use": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "random/anvil_use",
+        "volume": 0.4
+      }
+    ],
+    "subtitle": "subtitles.block.anvil.use"
   }
 }

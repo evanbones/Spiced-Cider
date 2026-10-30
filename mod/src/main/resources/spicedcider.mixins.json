@@ -76,6 +76,7 @@
     "minecraft.AzaleaNoTreeMixin",
     "minecraft.BoatBalloonMixin",
     "minecraft.FireBlockMixin",
+    "minecraft.IglooNoBasementMixin",
     "minecraft.ItemStackKeeperMixin",
     "minecraft.LivingEntityBalloonMixin",
     "minecraft.OceanRuinChestMixin",
@@ -111,7 +112,6 @@
     "leaks.ExposureServerAccessor",
     "leaks.VoiceChatChannelAccessor",
     "lithostitched.SampleDensityPlacementConditionMixin",
-    "perf.AllTheLeaksServerStopGcMixin",
     "perf.ClimateSamplerMixin",
     "perf.PathPackResourcesMixin",
     "perf.RecipeBookMixin",
@@ -164,7 +164,13 @@
     "wherewindsblow.GrassBonemealHandlerMixin",
     "minecraft.OceanMonumentCoreRoomChestMixin",
     "minecraft.OceanMonumentPenthouseChestMixin",
-    "minecraft.OceanMonumentWingRoomChestMixin"
+    "minecraft.OceanMonumentWingRoomChestMixin",
+    "easyanvils.ModAnvilMenuFreeMixin",
+    "vanity.StylingMenuTrimMixin",
+    "vanity.StylingResultSlotMixin",
+    "vanity.StylingProviderTrimMixin",
+    "vanity.DesignSlotTrimMixin",
+    "supplementaries.SoapClearTrimMixin"
   ],
   "client": [
     "remi.EmiScreenManagerRightTabsMixin",
@@ -289,6 +295,7 @@
     "moonlight.TextureCacheThreadSafetyMixin",
     "namingunconvention.ModernWorldCreationGameTabMixin",
     "namingunconvention.WorldCreationUiStateMixin",
+    "perf.AllTheLeaksServerStopGcMixin",
     "perf.ClientRecipeBookMixin",
     "perf.client.BlockModelShaperLocationCacheMixin",
     "perf.client.ModelManagerLocationCacheMixin",
@@ -344,10 +351,22 @@
     "wherewindsblow.DynamicWindManagerLivingWindMixin",
     "wherewindsblow.ResponsiveFoliageContinuitySnowMixin",
     "wherewindsblow.SnowVariantModelSwayMixin",
-    "wherewindsblow.WhereWindsBlowClientBakingMixin"
+    "wherewindsblow.WhereWindsBlowClientBakingMixin",
+    "minecraft.client.AnvilScreenAccessor",
+    "minecraft.client.AnvilScreenNoNameFieldMixin",
+    "easyanvils.ModAnvilScreenMixin",
+    "vanity.client.StyleButtonTrimMixin",
+    "vanity.client.StylesListWidgetAccessor",
+    "vanity.client.StylingScreenTrimMixin",
+    "minecraft.client.SmithingTemplateTooltipMixin",
+    "minecraft.client.HumanoidArmorLayerTrimFallbackMixin",
+    "minecraft.client.GuiGraphicsTrimMixin",
+    "minecraft.client.ItemRendererStaticTrimMixin",
+    "minecraft.client.ItemEntityRendererTrimMixin",
+    "vanity.client.StyledItemWidgetTrimMixin",
+    "vanity.client.StorageScreenTrimMixin"
   ],
-  "server": [
-  ],
+  "server": [],
   "injectors": {
     "defaultRequire": 1
   },

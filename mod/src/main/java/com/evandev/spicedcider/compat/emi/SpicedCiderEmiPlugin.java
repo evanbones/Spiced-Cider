@@ -3,6 +3,7 @@ package com.evandev.spicedcider.compat.emi;
 import dev.emi.emi.api.EmiEntrypoint;
 import dev.emi.emi.api.EmiPlugin;
 import dev.emi.emi.api.EmiRegistry;
+import dev.emi.emi.api.recipe.VanillaEmiRecipeCategories;
 import dev.emi.emi.api.stack.Comparison;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
@@ -20,6 +21,11 @@ public class SpicedCiderEmiPlugin implements EmiPlugin {
             BrewingEmiRecipe.register(registry);
         }
         CauldronMixingEmiRecipe.register(registry);
+        registry.removeRecipes(recipe -> recipe.getCategory() == VanillaEmiRecipeCategories.SMITHING);
+        AnvilSmithingEmiRecipe.register(registry);
+        if (ModList.get().isLoaded("vanity")) {
+            TrimStylingEmiRecipe.register(registry);
+        }
         if (ModList.get().isLoaded("supplementaries")) {
             registry.setDefaultComparison(BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath("supplementaries", "cartographers_quill")), Comparison.compareComponents());
         }

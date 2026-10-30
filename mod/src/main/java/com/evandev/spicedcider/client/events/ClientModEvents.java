@@ -179,6 +179,7 @@ public class ClientModEvents {
         if (TideCompat.isLoaded()) {
             registerTideSpawnEggColors(event);
         }
+        RuneClientEvents.registerColors(event);
     }
 
     private static void registerTideSpawnEggColors(RegisterColorHandlersEvent.Item event) {

@@ -17,4 +17,8 @@ public final class ReliableRemoverCompat {
     public static boolean isRemoved(Item item) {
         return isLoaded() && ReliableRemoverBridge.isRemoved(item);
     }
+
+    public static boolean isHiddenFromViewers(Item item) {
+        return isLoaded() && ReliableRemoverBridge.isHiddenFromViewers(item);
+    }
 }

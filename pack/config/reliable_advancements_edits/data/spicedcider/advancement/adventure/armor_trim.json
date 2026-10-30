@@ -1,0 +1,34 @@
+{
+  "parent": "spicedcider:adventure/styling_table",
+  "display": {
+    "icon": {
+      "id": "vanity:styling_table"
+    },
+    "title": {
+      "text": "Dressed to Impress"
+    },
+    "description": {
+      "text": "Use a Trim from a Styling Table on a piece of armor or a tool"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "has_trimmed_armor": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "predicates": {
+              "minecraft:trim": {}
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_trimmed_armor"
+    ]
+  ]
+}

@@ -38,6 +38,10 @@ public class SpicedCiderMixinCanceller implements MixinCanceller {
             return true;
         }
 
+        if ("tech.thatgravyboat.vanity.neoforge.mixin.geckolib.HumanoidArmorLayerMixin".equals(mixinClassName)) {
+            return LoadingModList.get().getModFileById("geckolib") == null;
+        }
+
         if (VANILLA_BACKPORT_MUSIC_MIXINS.contains(mixinClassName)) {
             return LoadingModList.get().getModFileById("music_tweaks") != null;
         }

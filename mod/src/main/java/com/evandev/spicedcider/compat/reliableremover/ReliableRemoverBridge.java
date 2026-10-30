@@ -9,4 +9,9 @@ final class ReliableRemoverBridge {
     static boolean isRemoved(Item item) {
         return ReliableRemoverAPI.isLootBlocked(new ItemStack(item));
     }
+
+    static boolean isHiddenFromViewers(Item item) {
+        ItemStack stack = new ItemStack(item);
+        return ReliableRemoverAPI.isLootBlocked(stack) || ReliableRemoverAPI.isCreativeBlocked(stack) || ReliableRemoverAPI.isItemHidden(stack);
+    }
 }

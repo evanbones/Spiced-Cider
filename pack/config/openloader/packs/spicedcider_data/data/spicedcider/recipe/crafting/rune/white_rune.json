@@ -1,0 +1,26 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "quark"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "rune",
+  "ingredients": [
+    {
+      "item": "quark:smithing_template_rune"
+    },
+    {
+      "tag": "c:dyes/white"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "quark:smithing_template_rune",
+    "components": {
+      "spicedcider:rune_color": "white"
+    }
+  }
+}

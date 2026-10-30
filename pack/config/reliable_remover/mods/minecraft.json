@@ -276,6 +276,7 @@
       "minecraft:guster_banner_pattern",
       "minecraft:flow_armor_trim_smithing_template",
       "minecraft:bolt_armor_trim_smithing_template",
+      "minecraft:netherite_upgrade_smithing_template",
       "minecraft:flow_pottery_sherd",
       "minecraft:guster_pottery_sherd",
       "minecraft:scrape_pottery_sherd"
@@ -310,6 +311,13 @@
       "minecraft:chest"
     ],
     "replace_with": "quark:oak_chest"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "minecraft:smithing_table"
+    ],
+    "replace_with": "vanity:styling_table"
   },
   {
     "action": "remove",

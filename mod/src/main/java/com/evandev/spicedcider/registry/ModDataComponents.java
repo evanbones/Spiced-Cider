@@ -39,4 +39,9 @@ public class ModDataComponents {
             "fork_conducting",
             builder -> builder.persistent(Unit.CODEC).networkSynchronized(StreamCodec.unit(Unit.INSTANCE))
     );
+
+    public static final DeferredHolder<DataComponentType<?>, DataComponentType<String>> RUNE_COLOR = DATA_COMPONENTS.registerComponentType(
+            "rune_color",
+            builder -> builder.persistent(Codec.STRING).networkSynchronized(ByteBufCodecs.STRING_UTF8)
+    );
 }

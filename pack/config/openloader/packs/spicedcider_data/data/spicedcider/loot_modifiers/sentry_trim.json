@@ -1,0 +1,16 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "betterdungeons"
+    }
+  ],
+  "type": "neoforge:add_table",
+  "conditions": [
+    {
+      "condition": "neoforge:loot_table_id",
+      "loot_table_id": "betterdungeons:skeleton_dungeon/chests/common"
+    }
+  ],
+  "table": "spicedcider:inject/sentry_trim"
+}

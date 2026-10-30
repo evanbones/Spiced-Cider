@@ -1,0 +1,32 @@
+{
+  "parent": "spicedcider:adventure/temple",
+  "display": {
+    "icon": {
+      "id": "minecraft:coast_armor_trim_smithing_template"
+    },
+    "title": {
+      "text": "Fashion Forward"
+    },
+    "description": {
+      "text": "Find a Trim"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "has_trim_design": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "#minecraft:trim_templates"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_trim_design"
+    ]
+  ]
+}
