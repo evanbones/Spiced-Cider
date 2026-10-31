@@ -20,6 +20,9 @@ public class SpicedCiderEmiPlugin implements EmiPlugin {
         if (ModList.get().isLoaded("toil_and_trouble")) {
             BrewingEmiRecipe.register(registry);
         }
+        if (ModList.get().isLoaded("etcetera")) {
+            ChiselingEmiRecipes.register(registry);
+        }
         CauldronMixingEmiRecipe.register(registry);
         registry.removeRecipes(recipe -> recipe.getCategory() == VanillaEmiRecipeCategories.SMITHING);
         AnvilSmithingEmiRecipe.register(registry);

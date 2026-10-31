@@ -4733,12 +4733,20 @@ file = "config/openloader/packs/spicedcider_data/data/environmental/worldgen/pro
 hash = "ba8ac1be065b17f59997623e8151557b75b54af78cebb0e96d636f990030d9ce"
 
 [[files]]
+file = "config/openloader/packs/spicedcider_data/data/etcetera/process/chiselling.json"
+hash = "af243a5c5bdcea56a714e71daf1a4c85f7188dfda38aaa12359c298b89033bdc"
+
+[[files]]
 file = "config/openloader/packs/spicedcider_data/data/etcetera/recipe/handbell.json"
 hash = "fd61882540900641200078a885508a364ba986efd118c9748858b5dfa731978f"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/etcetera/recipe/item_label.json"
 hash = "e62fe7295fa9085befaf7859c45e1ade4e4e7adc484ab1756b2299f98e511b0e"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/etcetera/tags/block/chisellable.json"
+hash = "bef4d172fc1bfb34d342e79090726c4a0c272dd404783c3ea022b992e0e0415e"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/explorify/tags/worldgen/biome/has_structure/campsite.json"
@@ -7747,6 +7755,10 @@ hash = "e3fc44fbe92d2614e3589fc9d44675c22b9af0d1d9fb275b8fbb53610cd2ff45"
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/cauldron_mixing/wardstone.json"
 hash = "047ee7ae16ac63ecfe0274d87c8e20efef86ff755eea8f63cdb3e17b376f39ee"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/cauldron_mixing/wheat_dough.json"
+hash = "ea43c1e5866a3bce6bd663621722f8971babbc3e58627fd4a4531bf84bc3f9ac"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/compacting/dimensional_tears_from_crying_chiseled_obsidian.json"
@@ -15046,7 +15058,7 @@ metafile = true
 
 [[files]]
 file = "mods/spicedcider-1.0.0.jar"
-hash = "c735d36e48247b0fe85d46def3701666829e924f11f264e6b9c72cf71a5ed9bc"
+hash = "e1ee624ccba4917dc0c1ee32e903adf8162fa0eb424dfbd6b7affeb1a3f55502"
 
 [[files]]
 file = "mods/spyglass-improvements.pw.toml"

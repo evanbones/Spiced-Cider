@@ -4,6 +4,7 @@ import com.evandev.spicedcider.SpicedCider;
 import com.evandev.spicedcider.compat.architectspalette.ArchitectsPaletteCompat;
 import com.evandev.spicedcider.compat.infernalexp.InfernalExpansionCompat;
 import com.evandev.spicedcider.compat.tide.TideCompat;
+import com.evandev.spicedcider.recipe.LabelRecipe;
 import com.evandev.spicedcider.recipe.RenameRecipe;
 import com.evandev.spicedcider.registry.ModBlocks;
 import com.evandev.spicedcider.registry.ModItems;
@@ -213,6 +214,9 @@ public class ModRecipeProvider extends RecipeProvider {
 
         SpecialRecipeBuilder.special(RenameRecipe::new)
                 .save(output, "spicedcider:rename_item");
+
+        SpecialRecipeBuilder.special(LabelRecipe::new)
+                .save(output.withConditions(new ModLoadedCondition("etcetera")), "spicedcider:label_item");
     }
 
     private static void stonecutting(RecipeOutput output, RecipeCategory category, ItemLike result, ItemLike base, int count) {
