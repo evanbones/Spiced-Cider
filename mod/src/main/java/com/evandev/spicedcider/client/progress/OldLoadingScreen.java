@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.client.progress;
 
+import com.evandev.spicedcider.client.tips.Tips;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
@@ -42,6 +43,7 @@ public class OldLoadingScreen extends Screen {
         ProgressRenderer.drawHeaderText(graphics, this.header, this.width);
         ProgressRenderer.drawStageText(graphics, this.stage, this.width);
         ProgressRenderer.renderProgressWithInt(this.progressListener.getProgress());
+        Tips.renderBottomLeft(graphics, this.font, this.width, this.height);
     }
 
     @Override

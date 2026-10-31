@@ -1,14 +1,14 @@
 {
-  "result": {
-    "id": "slimebiome:ooze",
-    "count": 1
-  },
-  "experience": 0.5,
-  "cookingtime": 200,
-  "group": "ooze",
+  "type": "minecraft:smelting",
   "category": "blocks",
+  "cookingtime": 200,
+  "experience": 0.5,
+  "group": "crystallized_slime",
   "ingredient": {
     "tag": "slime_time:slime_blocks"
   },
-  "type": "minecraft:smelting"
+  "result": {
+    "count": 1,
+    "id": "spicedcider:crystallized_slime"
+  }
 }

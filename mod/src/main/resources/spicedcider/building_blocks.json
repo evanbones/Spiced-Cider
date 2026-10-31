@@ -6917,5 +6917,178 @@
   ],
   "requires": [],
   "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:crystallized_slime",
+  "kind": "CUBE",
+  "mod": "slimebiome",
+  "properties": "slimebiome:ooze",
+  "parent": null,
+  "side": "spicedcider:block/crystallized_slime",
+  "top": "spicedcider:block/crystallized_slime",
+  "bottom": "spicedcider:block/crystallized_slime",
+  "craft": "NONE",
+  "craftFrom": null,
+  "cut": [],
+  "requires": [
+   "slimebiome"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:crystallized_slime_stairs",
+  "kind": "STAIRS",
+  "mod": "slimebiome",
+  "properties": "slimebiome:ooze",
+  "parent": "spicedcider:crystallized_slime",
+  "side": "spicedcider:block/crystallized_slime",
+  "top": "spicedcider:block/crystallized_slime",
+  "bottom": "spicedcider:block/crystallized_slime",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:crystallized_slime",
+  "cut": [
+   "spicedcider:crystallized_slime"
+  ],
+  "requires": [
+   "slimebiome"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:crystallized_slime_slab",
+  "kind": "SLAB",
+  "mod": "slimebiome",
+  "properties": "slimebiome:ooze",
+  "parent": "spicedcider:crystallized_slime",
+  "side": "spicedcider:block/crystallized_slime",
+  "top": "spicedcider:block/crystallized_slime",
+  "bottom": "spicedcider:block/crystallized_slime",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:crystallized_slime",
+  "cut": [
+   "spicedcider:crystallized_slime"
+  ],
+  "requires": [
+   "slimebiome"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:crystallized_slime_wall",
+  "kind": "WALL",
+  "mod": "slimebiome",
+  "properties": "slimebiome:ooze",
+  "parent": "spicedcider:crystallized_slime",
+  "side": "spicedcider:block/crystallized_slime",
+  "top": "spicedcider:block/crystallized_slime",
+  "bottom": "spicedcider:block/crystallized_slime",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:crystallized_slime",
+  "cut": [
+   "spicedcider:crystallized_slime"
+  ],
+  "requires": [
+   "slimebiome"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:crystallized_slime_bricks",
+  "kind": "CUBE",
+  "mod": "slimebiome",
+  "properties": "slimebiome:ooze",
+  "parent": null,
+  "side": "spicedcider:block/crystallized_slime_bricks",
+  "top": "spicedcider:block/crystallized_slime_bricks",
+  "bottom": "spicedcider:block/crystallized_slime_bricks",
+  "craft": "POLISH",
+  "craftFrom": "spicedcider:crystallized_slime",
+  "cut": [
+   "spicedcider:crystallized_slime"
+  ],
+  "requires": [
+   "slimebiome"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:crystallized_slime_brick_stairs",
+  "kind": "STAIRS",
+  "mod": "slimebiome",
+  "properties": "slimebiome:ooze",
+  "parent": "spicedcider:crystallized_slime_bricks",
+  "side": "spicedcider:block/crystallized_slime_bricks",
+  "top": "spicedcider:block/crystallized_slime_bricks",
+  "bottom": "spicedcider:block/crystallized_slime_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:crystallized_slime_bricks",
+  "cut": [
+   "spicedcider:crystallized_slime_bricks",
+   "spicedcider:crystallized_slime"
+  ],
+  "requires": [
+   "slimebiome"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:crystallized_slime_brick_slab",
+  "kind": "SLAB",
+  "mod": "slimebiome",
+  "properties": "slimebiome:ooze",
+  "parent": "spicedcider:crystallized_slime_bricks",
+  "side": "spicedcider:block/crystallized_slime_bricks",
+  "top": "spicedcider:block/crystallized_slime_bricks",
+  "bottom": "spicedcider:block/crystallized_slime_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:crystallized_slime_bricks",
+  "cut": [
+   "spicedcider:crystallized_slime_bricks",
+   "spicedcider:crystallized_slime"
+  ],
+  "requires": [
+   "slimebiome"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:crystallized_slime_brick_wall",
+  "kind": "WALL",
+  "mod": "slimebiome",
+  "properties": "slimebiome:ooze",
+  "parent": "spicedcider:crystallized_slime_bricks",
+  "side": "spicedcider:block/crystallized_slime_bricks",
+  "top": "spicedcider:block/crystallized_slime_bricks",
+  "bottom": "spicedcider:block/crystallized_slime_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:crystallized_slime_bricks",
+  "cut": [
+   "spicedcider:crystallized_slime_bricks",
+   "spicedcider:crystallized_slime"
+  ],
+  "requires": [
+   "slimebiome"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:chiseled_crystallized_slime",
+  "kind": "CUBE",
+  "mod": "slimebiome",
+  "properties": "slimebiome:ooze",
+  "parent": null,
+  "side": "spicedcider:block/chiseled_crystallized_slime",
+  "top": "spicedcider:block/chiseled_crystallized_slime",
+  "bottom": "spicedcider:block/chiseled_crystallized_slime",
+  "craft": "NONE",
+  "craftFrom": null,
+  "cut": [
+   "spicedcider:crystallized_slime",
+   "spicedcider:crystallized_slime_bricks"
+  ],
+  "requires": [
+   "slimebiome"
+  ],
+  "tool": "pickaxe"
  }
 ]

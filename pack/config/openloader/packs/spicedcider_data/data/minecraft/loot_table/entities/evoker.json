@@ -16,7 +16,7 @@
               "add": false,
               "count": {
                 "type": "minecraft:uniform",
-                "max": 1.0,
+                "max": 2.0,
                 "min": 0.0
               },
               "function": "minecraft:set_count"
@@ -31,7 +31,32 @@
               "function": "minecraft:enchanted_count_increase"
             }
           ],
-          "name": "minecraft:emerald"
+          "name": "caverns_and_chasms:living_flesh"
+        }
+      ],
+      "rolls": 1.0
+    },
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:killed_by_player"
+        },
+        {
+          "condition": "minecraft:random_chance_with_enchanted_bonus",
+          "enchantment": "minecraft:looting",
+          "unenchanted_chance": 0.08,
+          "enchanted_chance": {
+            "type": "minecraft:linear",
+            "base": 0.1,
+            "per_level_above_first": 0.02
+          }
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:totem_of_undying"
         }
       ],
       "rolls": 1.0

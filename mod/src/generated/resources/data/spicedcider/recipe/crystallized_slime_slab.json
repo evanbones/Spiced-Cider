@@ -1,0 +1,22 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "slimebiome"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "spicedcider:crystallized_slime"
+    }
+  },
+  "pattern": [
+    "###"
+  ],
+  "result": {
+    "count": 6,
+    "id": "spicedcider:crystallized_slime_slab"
+  }
+}

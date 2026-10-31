@@ -1,0 +1,16 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "slimebiome"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "spicedcider:crystallized_slime"
+  },
+  "result": {
+    "count": 1,
+    "id": "spicedcider:crystallized_slime_stairs"
+  }
+}

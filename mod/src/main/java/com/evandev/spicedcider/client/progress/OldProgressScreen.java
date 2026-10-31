@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.client.progress;
 
+import com.evandev.spicedcider.client.tips.Tips;
 import com.evandev.spicedcider.mixin.minecraft.client.ProgressScreenAccessor;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
@@ -132,6 +133,7 @@ public class OldProgressScreen extends ProgressScreen implements ProgressListene
         if (this.stage != null) {
             ProgressRenderer.drawStageText(graphics, this.stage, this.width);
         }
+        Tips.renderBottomLeft(graphics, this.font, this.width, this.height);
     }
 
     @Override
