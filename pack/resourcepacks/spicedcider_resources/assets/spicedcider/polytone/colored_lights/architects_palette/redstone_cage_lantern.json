@@ -1,0 +1,8 @@
+{
+  "require_mods": "architects_palette",
+  "targets": "architects_palette:redstone_cage_lantern",
+  "colored_light": {
+    "color": "#FF2200",
+    "brightness": "object.blockStateValue('lit') ? 1 : 0"
+  }
+}

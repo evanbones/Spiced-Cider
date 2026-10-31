@@ -1,0 +1,8 @@
+{
+  "require_mods": "architects_palette",
+  "targets": "architects_palette:algal_cage_lantern",
+  "colored_light": {
+    "color": "#B8E070",
+    "brightness": "object.blockStateValue('lit') ? 1 : 0"
+  }
+}

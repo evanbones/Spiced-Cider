@@ -1,0 +1,8 @@
+{
+  "require_mods": "architects_palette",
+  "targets": "architects_palette:glowstone_cage_lantern",
+  "colored_light": {
+    "color": "#FFD79B",
+    "brightness": "object.blockStateValue('lit') ? 1 : 0"
+  }
+}

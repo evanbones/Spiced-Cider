@@ -1,0 +1,23 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "snowyspirit"
+    }
+  ],
+  "type": "modestmagic:summoning",
+  "base": {
+    "tag": "snowyspirit:gumdrops"
+  },
+  "ingredients": [
+    {
+      "tag": "snowyspirit:gingerbreads"
+    }
+  ],
+  "consume_base": true,
+  "outcomes": [
+    {
+      "result_entity": "snowyspirit:gingerbread_golem"
+    }
+  ]
+}

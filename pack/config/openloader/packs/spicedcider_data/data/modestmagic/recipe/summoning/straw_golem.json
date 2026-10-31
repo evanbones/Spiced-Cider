@@ -1,0 +1,17 @@
+{
+  "type": "modestmagic:summoning",
+  "base": {
+    "item": "minecraft:carved_pumpkin"
+  },
+  "ingredients": [
+    {
+      "item": "minecraft:hay_block"
+    }
+  ],
+  "consume_base": true,
+  "outcomes": [
+    {
+      "result_entity": "spicedcider:straw_golem"
+    }
+  ]
+}

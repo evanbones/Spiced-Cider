@@ -1,0 +1,23 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "etcetera"
+    }
+  ],
+  "type": "modestmagic:summoning",
+  "base": {
+    "item": "minecraft:carved_pumpkin"
+  },
+  "ingredients": [
+    {
+      "item": "minecraft:gold_block"
+    }
+  ],
+  "consume_base": true,
+  "outcomes": [
+    {
+      "result_entity": "etcetera:golden_golem"
+    }
+  ]
+}

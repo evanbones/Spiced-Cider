@@ -1,0 +1,17 @@
+{
+  "type": "modestmagic:summoning",
+  "base": {
+    "item": "minecraft:carved_pumpkin"
+  },
+  "ingredients": [
+    {
+      "tag": "c:barrels"
+    }
+  ],
+  "consume_base": true,
+  "outcomes": [
+    {
+      "result_entity": "spicedcider:sputter"
+    }
+  ]
+}

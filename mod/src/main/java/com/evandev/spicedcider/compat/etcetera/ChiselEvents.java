@@ -2,6 +2,7 @@ package com.evandev.spicedcider.compat.etcetera;
 
 import com.evandev.spicedcider.SpicedCider;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundSource;
@@ -11,12 +12,14 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.component.ItemAttributeModifiers;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.LevelEvent;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.event.ModifyDefaultComponentsEvent;
 import net.neoforged.neoforge.event.entity.player.UseItemOnBlockEvent;
 
 @EventBusSubscriber(modid = SpicedCider.MOD_ID)
@@ -30,6 +33,13 @@ public class ChiselEvents {
 
     public static Item chisel() {
         return BuiltInRegistries.ITEM.get(CHISEL);
+    }
+
+    @SubscribeEvent
+    public static void hideAttributeTooltip(ModifyDefaultComponentsEvent event) {
+        BuiltInRegistries.ITEM.getOptional(CHISEL).ifPresent(item -> event.modify(item, builder -> builder.set(
+                DataComponents.ATTRIBUTE_MODIFIERS,
+                item.components().getOrDefault(DataComponents.ATTRIBUTE_MODIFIERS, ItemAttributeModifiers.EMPTY).withTooltip(false))));
     }
 
     @SubscribeEvent
