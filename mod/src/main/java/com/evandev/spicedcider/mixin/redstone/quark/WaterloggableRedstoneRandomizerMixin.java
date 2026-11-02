@@ -1,18 +1,23 @@
 package com.evandev.spicedcider.mixin.redstone.quark;
 
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.moulberry.mixinconstraints.annotations.IfModLoaded;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SimpleWaterloggedBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -41,7 +46,7 @@ public abstract class WaterloggableRedstoneRandomizerMixin extends Block impleme
     @Inject(method = "getStateForPlacement", at = @At("RETURN"), cancellable = true)
     private void spicedcider$getStateForPlacement(@NotNull BlockPlaceContext context, @NotNull CallbackInfoReturnable<BlockState> cir) {
         BlockState state = cir.getReturnValue();
-        if (state != null && state.hasProperty(BlockStateProperties.WATERLOGGED)) {
+        if (state != null && state.hasProperty(BlockStateProperties.WATERLOGGED) && SpicedCiderConfig.feature("waterloggableRedstone")) {
             FluidState fluidState = context.getLevel().getFluidState(context.getClickedPos());
             cir.setReturnValue(state.setValue(BlockStateProperties.WATERLOGGED, fluidState.getType() == Fluids.WATER));
         }
@@ -53,6 +58,11 @@ public abstract class WaterloggableRedstoneRandomizerMixin extends Block impleme
             level.scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickDelay(level));
         }
         return super.updateShape(state, facing, facingState, level, currentPos, facingPos);
+    }
+
+    @Override
+    public boolean canPlaceLiquid(@Nullable Player player, @NotNull BlockGetter level, @NotNull BlockPos pos, @NotNull BlockState state, @NotNull Fluid fluid) {
+        return SpicedCiderConfig.feature("waterloggableRedstone") && SimpleWaterloggedBlock.super.canPlaceLiquid(player, level, pos, state, fluid);
     }
 
     @Override

@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.mixin.minecraft;
 
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.evandev.spicedcider.content.worldgen.MonumentChests;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -31,6 +32,7 @@ public abstract class OceanMonumentWingRoomChestMixin extends StructurePiece {
     @Inject(method = "postProcess", at = @At("TAIL"))
     private void spicedcider$addChests(WorldGenLevel level, StructureManager structureManager, ChunkGenerator generator, RandomSource random,
                                        BoundingBox box, ChunkPos chunkPos, BlockPos pos, CallbackInfo ci) {
+        if (!SpicedCiderConfig.feature("monumentChests")) return;
         if (this.mainDesign == 0) this.spicedcider$chest(level, box, random, 11, 1, 8, Direction.SOUTH);
         else this.spicedcider$chest(level, box, random, 11, 0, 8, Direction.SOUTH);
     }

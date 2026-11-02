@@ -4,6 +4,7 @@ import com.evandev.spicedcider.SpicedCider;
 import com.evandev.spicedcider.compat.architectspalette.ArchitectsPaletteCompat;
 import com.evandev.spicedcider.compat.infernalexp.InfernalExpansionCompat;
 import com.evandev.spicedcider.compat.tide.TideCompat;
+import com.evandev.spicedcider.config.FeatureCondition;
 import com.evandev.spicedcider.recipe.LabelRecipe;
 import com.evandev.spicedcider.recipe.RenameRecipe;
 import com.evandev.spicedcider.registry.ModBlocks;
@@ -42,19 +43,21 @@ public class ModRecipeProvider extends RecipeProvider {
     @Override
     protected void buildRecipes(@NotNull RecipeOutput output) {
         RecipeOutput tideOutput = output.withConditions(new ModLoadedCondition(TideCompat.MOD_ID));
+        RecipeOutput grapplingOutput = tideOutput.withConditions(new FeatureCondition("grapplingHooks"));
+        RecipeOutput buildingOutput = output.withConditions(new FeatureCondition("buildingBlocks"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.GRAPPLING_HOOK.get())
                 .pattern(" C")
                 .pattern("CC")
                 .define('C', Tags.Items.INGOTS_COPPER)
                 .unlockedBy("has_copper_ingot", has(Tags.Items.INGOTS_COPPER))
-                .save(tideOutput);
+                .save(grapplingOutput);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.TOOLS, ModItems.STICKY_GRAPPLING_HOOK.get())
                 .requires(ModItems.GRAPPLING_HOOK.get())
                 .requires(Items.SLIME_BALL)
                 .unlockedBy("has_grappling_hook", has(ModItems.GRAPPLING_HOOK.get()))
-                .save(tideOutput);
+                .save(grapplingOutput);
 
         TagKey<Item> adamantiteIngots = commonTag("ingots/adamantite");
         RecipeOutput adamantiteOutput = tideOutput.withConditions(new NotCondition(new TagEmptyCondition(adamantiteIngots.location())));
@@ -78,7 +81,7 @@ public class ModRecipeProvider extends RecipeProvider {
         ShapelessRecipeBuilder.shapeless(RecipeCategory.TOOLS, ModItems.FIRE_STRIKER.get())
                 .requires(Items.FLINT, 2)
                 .unlockedBy("has_flint", has(Items.FLINT))
-                .save(output);
+                .save(output.withConditions(new FeatureCondition("fireStriker")));
 
         nineBlockStorageRecipes(output, RecipeCategory.MISC, ModItems.CAST_IRON_INGOT.get(), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CAST_IRON_BLOCK.get());
         nineBlockStorageRecipes(output, RecipeCategory.MISC, ModItems.CAST_IRON_NUGGET.get(), RecipeCategory.MISC, ModItems.CAST_IRON_INGOT.get(), "spicedcider:cast_iron_ingot_from_nuggets", null, "spicedcider:cast_iron_nugget_from_ingot", null);
@@ -134,27 +137,27 @@ public class ModRecipeProvider extends RecipeProvider {
         Block glowstonePillar = ModBlocks.POLISHED_GLOWSTONE_PILLAR.get();
         stairBuilder(glowstoneBrickStairs, Ingredient.of(glowstoneBricks))
                 .unlockedBy(getHasName(glowstoneBricks), has(glowstoneBricks))
-                .save(output);
-        slab(output, RecipeCategory.BUILDING_BLOCKS, glowstoneBrickSlab, glowstoneBricks);
-        wall(output, RecipeCategory.DECORATIONS, glowstoneBrickWall, glowstoneBricks);
+                .save(buildingOutput);
+        slab(buildingOutput, RecipeCategory.BUILDING_BLOCKS, glowstoneBrickSlab, glowstoneBricks);
+        wall(buildingOutput, RecipeCategory.DECORATIONS, glowstoneBrickWall, glowstoneBricks);
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_GLOWSTONE_BRICKS.get(), 4)
                 .pattern(" # ")
                 .pattern("# #")
                 .pattern(" # ")
                 .define('#', glowstoneBricks)
                 .unlockedBy(getHasName(glowstoneBricks), has(glowstoneBricks))
-                .save(output);
-        stonecutting(output, RecipeCategory.BUILDING_BLOCKS, glowstoneBrickStairs, glowstoneBricks, 1);
-        stonecutting(output, RecipeCategory.BUILDING_BLOCKS, glowstoneBrickSlab, glowstoneBricks, 2);
-        stonecutting(output, RecipeCategory.DECORATIONS, glowstoneBrickWall, glowstoneBricks, 1);
-        stonecutting(output, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_GLOWSTONE_BRICKS.get(), glowstoneBricks, 1);
+                .save(buildingOutput);
+        stonecutting(buildingOutput, RecipeCategory.BUILDING_BLOCKS, glowstoneBrickStairs, glowstoneBricks, 1);
+        stonecutting(buildingOutput, RecipeCategory.BUILDING_BLOCKS, glowstoneBrickSlab, glowstoneBricks, 2);
+        stonecutting(buildingOutput, RecipeCategory.DECORATIONS, glowstoneBrickWall, glowstoneBricks, 1);
+        stonecutting(buildingOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_GLOWSTONE_BRICKS.get(), glowstoneBricks, 1);
         for (Block glowstoneProduct : List.of(glowstoneBricks, glowstoneBrickStairs, glowstoneBrickWall, ModBlocks.CHISELED_GLOWSTONE_BRICKS.get(), glowstonePillar)) {
-            stonecutting(output, RecipeCategory.BUILDING_BLOCKS, glowstoneProduct, Blocks.GLOWSTONE, 1);
+            stonecutting(buildingOutput, RecipeCategory.BUILDING_BLOCKS, glowstoneProduct, Blocks.GLOWSTONE, 1);
         }
-        stonecutting(output, RecipeCategory.BUILDING_BLOCKS, glowstoneBrickSlab, Blocks.GLOWSTONE, 2);
+        stonecutting(buildingOutput, RecipeCategory.BUILDING_BLOCKS, glowstoneBrickSlab, Blocks.GLOWSTONE, 2);
 
         if (ModBlocks.POLISHED_GLOWSTONE_STAIRS != null) {
-            RecipeOutput infernalOutput = output.withConditions(new ModLoadedCondition(InfernalExpansionCompat.MOD_ID));
+            RecipeOutput infernalOutput = buildingOutput.withConditions(new ModLoadedCondition(InfernalExpansionCompat.MOD_ID));
             Block polished = InfernalExpansionCompat.polishedGlowstone();
             Block stairs = ModBlocks.POLISHED_GLOWSTONE_STAIRS.get();
             Block slab = ModBlocks.POLISHED_GLOWSTONE_SLAB.get();
@@ -209,11 +212,11 @@ public class ModRecipeProvider extends RecipeProvider {
                     .requires(others)
                     .group("balloon_dye")
                     .unlockedBy("has_balloon", has(ModTags.Items.BALLOONS))
-                    .save(output, ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "dye_" + color.getName() + "_balloon"));
+                    .save(output.withConditions(new FeatureCondition("balloons")), ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "dye_" + color.getName() + "_balloon"));
         }
 
         SpecialRecipeBuilder.special(RenameRecipe::new)
-                .save(output, "spicedcider:rename_item");
+                .save(output.withConditions(new FeatureCondition("renameRecipe")), "spicedcider:rename_item");
 
         SpecialRecipeBuilder.special(LabelRecipe::new)
                 .save(output.withConditions(new ModLoadedCondition("etcetera")), "spicedcider:label_item");

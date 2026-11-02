@@ -24,6 +24,8 @@ import org.jetbrains.annotations.NotNull;
 public class MapInABottleItem extends Item {
     private static final ResourceKey<LootTable> CONTENTS = ResourceKey.create(Registries.LOOT_TABLE,
             ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "gameplay/map_in_a_bottle"));
+    private static final ResourceKey<LootTable> BACKPORT_CONTENTS = ResourceKey.create(Registries.LOOT_TABLE,
+            ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "gameplay/map_in_a_bottle_backport"));
 
     public MapInABottleItem(Properties properties) {
         super(properties);
@@ -39,7 +41,9 @@ public class MapInABottleItem extends Item {
                     .withParameter(LootContextParams.THIS_ENTITY, player)
                     .withLuck(player.getLuck())
                     .create(LootContextParamSets.CHEST);
-            serverLevel.getServer().reloadableRegistries().getLootTable(CONTENTS).getRandomItems(params).forEach(item -> {
+            LootTable table = serverLevel.getServer().reloadableRegistries().getLootTable(BACKPORT_CONTENTS);
+            if (table == LootTable.EMPTY) table = serverLevel.getServer().reloadableRegistries().getLootTable(CONTENTS);
+            table.getRandomItems(params).forEach(item -> {
                 if (!player.getInventory().add(item)) player.drop(item, false);
             });
         }

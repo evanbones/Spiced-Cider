@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.mixin.voicechat;
 
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.moulberry.mixinconstraints.annotations.IfModLoaded;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.server.IntegratedServer;
@@ -14,6 +15,7 @@ public class RenderEventsSingleplayerMixin {
 
     @Inject(method = "onRenderHUD", at = @At("HEAD"), cancellable = true)
     private void spicedcider$hideInSingleplayer(CallbackInfo ci) {
+        if (!SpicedCiderConfig.clientOr(SpicedCiderConfig.CLIENT.voiceChatHideSingleplayerHud, false)) return;
         IntegratedServer server = Minecraft.getInstance().getSingleplayerServer();
         if (server != null && !server.isPublished()) ci.cancel();
     }

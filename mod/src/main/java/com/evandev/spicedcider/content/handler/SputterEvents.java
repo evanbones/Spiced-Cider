@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.content.handler;
 
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.evandev.spicedcider.SpicedCider;
 import com.evandev.spicedcider.entities.sputter.SputterEntity;
 import com.evandev.spicedcider.registry.ModEntityTypes;
@@ -35,7 +36,7 @@ public class SputterEvents {
     }
 
     public static void addToCreativeTab(BuildCreativeModeTabContentsEvent event) {
-        if (event.getTabKey() == CreativeModeTabs.SPAWN_EGGS) {
+        if (event.getTabKey() == CreativeModeTabs.SPAWN_EGGS && SpicedCiderConfig.feature("sputters")) {
             Item egg = BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "sputter_spawn_egg"));
             event.insertAfter(new ItemStack(Items.SPIDER_SPAWN_EGG), new ItemStack(egg), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
         }
@@ -43,7 +44,7 @@ public class SputterEvents {
 
     @SubscribeEvent
     public static void onPlace(BlockEvent.EntityPlaceEvent event) {
-        if (!(event.getLevel() instanceof ServerLevel level)) return;
+        if (!(event.getLevel() instanceof ServerLevel level) || !SpicedCiderConfig.feature("sputters")) return;
         BlockPattern.BlockPatternMatch match = pattern().find(level, event.getPos());
         if (match == null) return;
         SputterEntity sputter = ModEntityTypes.SPUTTER.get().create(level);

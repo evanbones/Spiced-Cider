@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.weather;
 
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.evandev.spicedcider.SpicedCider;
 import com.evandev.spicedcider.networking.CloudCoverPayload;
 import com.mojang.brigadier.CommandDispatcher;
@@ -25,7 +26,8 @@ public class CloudCoverEvents {
     @SubscribeEvent
     public static void onLevelTick(LevelTickEvent.Post event) {
         if (event.getLevel() instanceof ServerLevel level && level.dimension() == Level.OVERWORLD) {
-            CloudCoverData.get(level).tick(level);
+            if (SpicedCiderConfig.feature("cloudCover")) CloudCoverData.get(level).tick(level);
+            else CloudCoverData.get(level).hold(level);
         }
     }
 
@@ -39,6 +41,7 @@ public class CloudCoverEvents {
 
     @SubscribeEvent
     public static void onRegisterCommands(RegisterCommandsEvent event) {
+        if (!SpicedCiderConfig.feature("cloudCover")) return;
         CommandDispatcher<CommandSourceStack> dispatcher = event.getDispatcher();
         LiteralArgumentBuilder<CommandSourceStack> weather = Commands.literal("weather").requires(source -> source.hasPermission(2));
         for (CloudCover cover : CloudCover.values()) {

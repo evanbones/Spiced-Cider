@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.mixin.minecraft;
 
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.BlockGetter;
@@ -60,7 +61,7 @@ public class StandingSignModelShapeMixin {
 
     @ModifyReturnValue(method = "getShape", at = @At("RETURN"))
     private VoxelShape spicedcider$modelAccurateStandingShape(VoxelShape original, BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
-        if (!(state.getBlock() instanceof StandingSignBlock) || !state.hasProperty(BlockStateProperties.ROTATION_16)) {
+        if (!SpicedCiderConfig.commonOr(SpicedCiderConfig.COMMON.accurateSignHitboxes, true) || !(state.getBlock() instanceof StandingSignBlock) || !state.hasProperty(BlockStateProperties.ROTATION_16)) {
             return original;
         }
         return spicedcider$SHAPES[state.getValue(BlockStateProperties.ROTATION_16)];

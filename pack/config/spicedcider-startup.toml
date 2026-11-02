@@ -4,3 +4,9 @@ blockBoxWoodVariants = true
 skeletonHealthNerf = true
 #Horse armor works like wolf armor: it tanks the hit, loses durability, and is repaired by right-clicking the pet with the armor's material. Applies to horses and, with wolvesWearAnyArmor, to wolves. Requires a restart to take effect.
 unifiedPetArmor = true
+#Ciders, wines and meads make you Intoxicated. Requires Cultural Delights. Requires a restart to take effect.
+drinkIntoxication = true
+#Leaves from every mod never suffocate or block vision, like vanilla leaves. Requires a restart to take effect.
+leavesNotSuffocating = true
+#Torchflowers and potted torchflowers give off light. Requires a restart to take effect.
+torchflowerLight = true

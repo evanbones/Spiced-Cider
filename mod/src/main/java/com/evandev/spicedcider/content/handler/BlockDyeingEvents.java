@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.content.handler;
 
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.evandev.spicedcider.SpicedCider;
 import com.evandev.spicedcider.compat.reliableremover.ReliableRemoverCompat;
 import net.minecraft.core.BlockPos;
@@ -36,7 +37,7 @@ public class BlockDyeingEvents {
 
     @SubscribeEvent
     public static void use(UseItemOnBlockEvent event) {
-        if (event.getUsePhase() != UseItemOnBlockEvent.UsePhase.ITEM_BEFORE_BLOCK) return;
+        if (event.getUsePhase() != UseItemOnBlockEvent.UsePhase.ITEM_BEFORE_BLOCK || !SpicedCiderConfig.commonOr(SpicedCiderConfig.COMMON.blockDyeing, true)) return;
         ItemStack held = event.getItemStack();
         DyeColor color = DyeColor.getColor(held);
         if (color == null) return;

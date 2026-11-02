@@ -25,5 +25,69 @@
       "mynethersdelight:slices_of_bread"
     ],
     "replace_with": "culturaldelights:rustic_loaf_slice"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "mynethersdelight:ghasmati",
+      "mynethersdelight:ghast_dough",
+      "mynethersdelight:ghast_sourdough",
+      "mynethersdelight:dried_ghast_with_milk",
+      "mynethersdelight:sizzling_pudding",
+      "mynethersdelight:strider_rock",
+      "mynethersdelight:strider_egg",
+      "mynethersdelight:rock_soup",
+      "mynethersdelight:tear_popsicle",
+      "mynethersdelight:giant_takoyaki",
+      "mynethersdelight:spicy_cotton",
+      "mynethersdelight:burnt_roll",
+      "mynethersdelight:fries_ghasta",
+      "mynethersdelight:nether_bricks_stove",
+      "mynethersdelight:nether_bricks_cabinet",
+      "mynethersdelight:red_nether_bricks_cabinet",
+      "mynethersdelight:blackstone_bricks_cabinet"
+    ]
+  },
+  {
+    "action": "remove",
+    "items": [
+      "mynethersdelight:hoglin_sausage"
+    ],
+    "replace_with": "culturaldelights:raw_sausage"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "mynethersdelight:roasted_sausage"
+    ],
+    "replace_with": "culturaldelights:cooked_sausage"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "mynethersdelight:hotdog"
+    ],
+    "replace_with": "culturaldelights:hot_dog"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "mynethersdelight:resurgent_soil"
+    ],
+    "replace_with": "farmersdelight:rich_soil"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "mynethersdelight:resurgent_soil_farmland"
+    ],
+    "replace_with": "farmersdelight:rich_soil_farmland"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "mynethersdelight:letios_compost"
+    ],
+    "replace_with": "farmersdelight:organic_compost"
   }
 ]

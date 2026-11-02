@@ -1,4 +1,10 @@
 {
+  "neoforge:conditions": [
+    {
+      "type": "spicedcider:feature",
+      "feature": "deposits"
+    }
+  ],
   "type": "neoforge:add_features",
   "biomes": "#minecraft:is_nether",
   "features": "spicedcider:ore_blackstone_deposit",

@@ -119,6 +119,7 @@ public class SpicedCider {
         ModParticleTypes.PARTICLE_TYPES.register(modEventBus);
         ModMapDecorationTypes.MAP_DECORATION_TYPES.register(modEventBus);
         ModLootModifiers.LOOT_MODIFIER_SERIALIZERS.register(modEventBus);
+        ModConditions.CONDITION_CODECS.register(modEventBus);
         ModDataComponents.DATA_COMPONENTS.register(modEventBus);
         if (ModList.get().isLoaded("iteminteractions")) ItemInteractionsCompat.register(modEventBus);
         if (ModList.get().isLoaded("toil_and_trouble")) modEventBus.addListener(ToilAndTroubleCapabilities::register);

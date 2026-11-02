@@ -26,10 +26,14 @@
 	dragon_fireball_trail = true
 	#Makes 3D charges tumble in the air when moving
 	charges_tumble = true
-	#Makes 3D snowballs and slimeballs (supp compat) tumble in the air when moving
+	#Makes 3D snowballs, slimeballs (supp compat) and mud balls (environmental compat) tumble in the air when moving
 	projectiles_tumble = false
 	#Makes slimeballs render in 3D (supplementaries only)
 	slimeball_3d = true
+	#Makes snowballs leave a trail of snowflakes and spawn more of them on hit
+	extra_particles = true
+	#Makes Environmental mud balls render in 3D (environmental only)
+	mudball_3d = false
 
 	[projectiles.dragon_fireball]
 		#Makes dragon's breath particles emissive to better match new visuals
@@ -142,7 +146,3 @@
 		#What the animation does when the selection texture is opaque. NONE keeps it on top of the items, IN_BACKGROUND moves it behind them, TURNS_OFF disables the animation
 		#Allowed Values: NONE, IN_BACKGROUND, TURNS_OFF
 		opaque_behavior = "IN_BACKGROUND"
-
-[buckets]
-	#Axolotl buckets show the color of the axolotl inside
-	axolotl_variants = true

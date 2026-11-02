@@ -1,4 +1,10 @@
 {
+  "neoforge:conditions": [
+    {
+      "type": "spicedcider:feature",
+      "feature": "wormyDirt"
+    }
+  ],
   "type": "neoforge:add_features",
   "biomes": "#minecraft:is_overworld",
   "features": "spicedcider:ore_wormy_dirt",

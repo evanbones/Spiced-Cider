@@ -1,6 +1,10 @@
 {
   "neoforge:conditions": [
     {
+      "type": "spicedcider:feature",
+      "feature": "buildingBlocks"
+    },
+    {
       "type": "neoforge:mod_loaded",
       "modid": "infernalexp"
     }

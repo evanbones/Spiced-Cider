@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.content.handler;
 
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.evandev.spicedcider.SpicedCider;
 import net.minecraft.world.entity.projectile.LargeFireball;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -11,7 +12,7 @@ public class ProjectileEvents {
 
     @SubscribeEvent
     public static void onExplosionDetonate(ExplosionEvent.Detonate event) {
-        if (event.getExplosion().getDirectSourceEntity() instanceof LargeFireball) {
+        if (event.getExplosion().getDirectSourceEntity() instanceof LargeFireball && SpicedCiderConfig.commonOr(SpicedCiderConfig.COMMON.harmlessGhastFireballs, false)) {
             event.getAffectedBlocks().clear();
         }
     }

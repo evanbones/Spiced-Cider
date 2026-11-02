@@ -1,4 +1,10 @@
 {
+  "neoforge:conditions": [
+    {
+      "type": "spicedcider:feature",
+      "feature": "buildingBlocks"
+    }
+  ],
   "type": "minecraft:stonecutting",
   "ingredient": {
     "item": "minecraft:prismarine_bricks"

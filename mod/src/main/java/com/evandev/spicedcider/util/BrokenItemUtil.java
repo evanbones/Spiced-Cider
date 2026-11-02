@@ -15,6 +15,7 @@ public final class BrokenItemUtil {
     }
 
     public static boolean isKeeper(ItemStack stack) {
-        return stack.is(ModTags.Items.KEPT_WHEN_BROKEN) && !stack.is(ModTags.Items.DESTROYED_WHEN_BROKEN);
+        return SpicedCiderConfig.COMMON.keepBrokenItems.get()
+                && stack.is(ModTags.Items.KEPT_WHEN_BROKEN) && !stack.is(ModTags.Items.DESTROYED_WHEN_BROKEN);
     }
 }

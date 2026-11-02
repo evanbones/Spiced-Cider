@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.content.handler;
 
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.evandev.spicedcider.SpicedCider;
 import com.evandev.spicedcider.registry.ModItems;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -18,7 +19,7 @@ public class PiglinWeaponEvents {
 
     @SubscribeEvent
     public static void onJoinLevel(EntityJoinLevelEvent event) {
-        if (event.loadedFromDisk() || event.getLevel().isClientSide()) return;
+        if (event.loadedFromDisk() || event.getLevel().isClientSide() || !SpicedCiderConfig.commonOr(SpicedCiderConfig.COMMON.piglinWeaponSwap, false)) return;
         if (!(event.getEntity() instanceof AbstractPiglin) && !(event.getEntity() instanceof ZombifiedPiglin)) return;
         Mob mob = (Mob) event.getEntity();
         for (EquipmentSlot slot : new EquipmentSlot[]{EquipmentSlot.MAINHAND, EquipmentSlot.OFFHAND}) {

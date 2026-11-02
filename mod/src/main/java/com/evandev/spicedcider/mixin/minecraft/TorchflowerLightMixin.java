@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.mixin.minecraft;
 
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Blocks;
@@ -11,6 +12,6 @@ import org.spongepowered.asm.mixin.Mixin;
 public class TorchflowerLightMixin {
 
     public int getLightEmission(BlockState state, BlockGetter level, BlockPos pos) {
-        return (Object) this == Blocks.TORCHFLOWER ? 12 : state.getLightEmission();
+        return (Object) this == Blocks.TORCHFLOWER && SpicedCiderConfig.startupOr(SpicedCiderConfig.STARTUP.torchflowerLight, true) ? 12 : state.getLightEmission();
     }
 }

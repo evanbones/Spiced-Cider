@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.mixin.minecraft;
 
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.player.Player;
@@ -17,7 +18,7 @@ public class ThrowablePotionCooldownMixin {
 
     @Inject(method = "use", at = @At("RETURN"))
     private void spicedcider$throwCooldown(Level level, Player player, InteractionHand hand, CallbackInfoReturnable<InteractionResultHolder<ItemStack>> cir) {
-        if (cir.getReturnValue().getResult().consumesAction()) {
+        if (cir.getReturnValue().getResult().consumesAction() && SpicedCiderConfig.commonOr(SpicedCiderConfig.COMMON.throwablePotionCooldown, false)) {
             player.getCooldowns().addCooldown((ThrowablePotionItem) (Object) this, (Object) this instanceof LingeringPotionItem ? 100 : 200);
         }
     }

@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.content.handler;
 
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.evandev.spicedcider.SpicedCider;
 import com.evandev.spicedcider.registry.ModTags;
 import net.minecraft.world.entity.player.Player;
@@ -12,7 +13,8 @@ public class MossHarvestEvents {
 
     @SubscribeEvent
     public static void onBlockDrops(BlockDropsEvent event) {
-        if (event.getBreaker() instanceof Player
+        if (SpicedCiderConfig.commonOr(SpicedCiderConfig.COMMON.mossNeedsHoe, false)
+                && event.getBreaker() instanceof Player
                 && event.getState().is(ModTags.Blocks.NEEDS_HOE_TO_HARVEST)
                 && !event.getTool().isCorrectToolForDrops(event.getState())) {
             event.getDrops().clear();

@@ -259,10 +259,24 @@ public class ModBuildingBlocksProvider implements DataProvider {
         JsonArray pools = new JsonArray();
         pools.add(pool);
         JsonObject json = new JsonObject();
+        if (def.mod() != null) {
+            json.add("neoforge:conditions", modConditions(List.of(def.mod())));
+        }
         json.addProperty("type", "minecraft:block");
         json.add("pools", pools);
         json.addProperty("random_sequence", SpicedCider.MOD_ID + ":blocks/" + def.path());
         save(data(SpicedCider.MOD_ID, "loot_table/blocks/" + def.path()), json);
+    }
+
+    private JsonArray modConditions(List<String> mods) {
+        JsonArray conditions = new JsonArray();
+        for (String mod : mods) {
+            JsonObject condition = new JsonObject();
+            condition.addProperty("type", "neoforge:mod_loaded");
+            condition.addProperty("modid", mod);
+            conditions.add(condition);
+        }
+        return conditions;
     }
 
     private JsonObject item(String id) {
@@ -279,20 +293,15 @@ public class ModBuildingBlocksProvider implements DataProvider {
     }
 
     private void recipe(Def def, String name, JsonObject json) {
-        if (!def.requires().isEmpty()) {
-            JsonArray conditions = new JsonArray();
-            for (String mod : def.requires()) {
-                JsonObject condition = new JsonObject();
-                condition.addProperty("type", "neoforge:mod_loaded");
-                condition.addProperty("modid", mod);
-                conditions.add(condition);
-            }
-            JsonObject wrapped = new JsonObject();
-            wrapped.add("neoforge:conditions", conditions);
-            json.entrySet().forEach(e -> wrapped.add(e.getKey(), e.getValue()));
-            json = wrapped;
-        }
-        save(data(SpicedCider.MOD_ID, "recipe/" + name), json);
+        JsonArray conditions = def.requires().isEmpty() ? new JsonArray() : modConditions(def.requires());
+        JsonObject feature = new JsonObject();
+        feature.addProperty("type", "spicedcider:feature");
+        feature.addProperty("feature", "buildingBlocks");
+        conditions.add(feature);
+        JsonObject wrapped = new JsonObject();
+        wrapped.add("neoforge:conditions", conditions);
+        json.entrySet().forEach(e -> wrapped.add(e.getKey(), e.getValue()));
+        save(data(SpicedCider.MOD_ID, "recipe/" + name), wrapped);
     }
 
     private void shaped(Def def, String name, int count, String from, String... pattern) {

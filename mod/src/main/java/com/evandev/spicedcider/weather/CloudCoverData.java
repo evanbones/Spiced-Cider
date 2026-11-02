@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.weather;
 
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.evandev.spicedcider.networking.CloudCoverPayload;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
@@ -54,6 +55,12 @@ public class CloudCoverData extends SavedData {
             change(level, next, next.sampleDuration(level.random), false);
         }
         setDirty();
+    }
+
+    public void hold(ServerLevel level) {
+        commanded = false;
+        stormy = false;
+        if (cover != CloudCover.PARTLY_CLOUDY) change(level, CloudCover.PARTLY_CLOUDY, -1, false);
     }
 
     public void command(ServerLevel level, CloudCover cover, int duration) {

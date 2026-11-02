@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.mixin.minecraft;
 
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.evandev.spicedcider.content.haunting.SoulHaunting;
 import com.llamalad7.mixinextras.injector.wrapmethod.WrapMethod;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
@@ -26,7 +27,7 @@ public class CampfireSoulHauntingMixin {
     private Optional<RecipeHolder<CampfireCookingRecipe>> spicedcider$hauntOnSoulCampfire(ItemStack stack, Operation<Optional<RecipeHolder<CampfireCookingRecipe>>> original) {
         CampfireBlockEntity campfire = (CampfireBlockEntity) (Object) this;
         Level level = campfire.getLevel();
-        if (level != null && SoulHaunting.isSoulCampfire(campfire.getBlockState())) {
+        if (level != null && SpicedCiderConfig.commonOr(SpicedCiderConfig.COMMON.soulCampfireHaunting, true) && SoulHaunting.isSoulCampfire(campfire.getBlockState())) {
             Optional<RecipeHolder<CampfireCookingRecipe>> haunting = SoulHaunting.campfireRecipe(level, stack);
             if (haunting.isPresent()) return haunting;
         }
@@ -35,7 +36,7 @@ public class CampfireSoulHauntingMixin {
 
     @WrapOperation(method = "cookTick", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/crafting/RecipeManager$CachedCheck;getRecipeFor(Lnet/minecraft/world/item/crafting/RecipeInput;Lnet/minecraft/world/level/Level;)Ljava/util/Optional;"))
     private static Optional<?> spicedcider$cookHaunting(RecipeManager.CachedCheck<?, ?> check, RecipeInput input, Level level, Operation<Optional<?>> original, @Local(argsOnly = true) BlockState state) {
-        if (SoulHaunting.isSoulCampfire(state) && input instanceof SingleRecipeInput single) {
+        if (SpicedCiderConfig.commonOr(SpicedCiderConfig.COMMON.soulCampfireHaunting, true) && SoulHaunting.isSoulCampfire(state) && input instanceof SingleRecipeInput single) {
             Optional<RecipeHolder<CampfireCookingRecipe>> haunting = SoulHaunting.campfireRecipe(level, single.item());
             if (haunting.isPresent()) return haunting;
         }

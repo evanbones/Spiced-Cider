@@ -1,0 +1,21 @@
+{
+  "type": "spicedcider:cauldron_mixing",
+  "fluid": "minecraft:water",
+  "heated": true,
+  "ingredients": [
+    {
+      "item": "minecraft:blackstone"
+    },
+    {
+      "item": "quark:limestone"
+    },
+    {
+      "tag": "c:gems/quartz"
+    }
+  ],
+  "keep_fluid": true,
+  "result": {
+    "id": "architects_palette:onyx",
+    "count": 4
+  }
+}

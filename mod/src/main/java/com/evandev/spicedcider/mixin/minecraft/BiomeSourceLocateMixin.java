@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.mixin.minecraft;
 
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.evandev.spicedcider.locate.BiomeSearch;
 import com.evandev.spicedcider.locate.LocateWorkers;
 import com.llamalad7.mixinextras.injector.wrapmethod.WrapMethod;
@@ -21,6 +22,9 @@ public class BiomeSourceLocateMixin {
     @WrapMethod(method = "findClosestBiome3d")
     private Pair<BlockPos, Holder<Biome>> spicedcider$parallelSearch(BlockPos pos, int radius, int horizontalStep, int verticalStep, Predicate<Holder<Biome>> biomePredicate,
                                                                    Climate.Sampler sampler, LevelReader level, Operation<Pair<BlockPos, Holder<Biome>>> original) {
+        if (!SpicedCiderConfig.commonOr(SpicedCiderConfig.COMMON.parallelLocate, true)) {
+            return original.call(pos, radius, horizontalStep, verticalStep, biomePredicate, sampler, level);
+        }
         try {
             return BiomeSearch.findClosest((BiomeSource) (Object) this, pos, radius, horizontalStep, verticalStep, biomePredicate, sampler, level);
         } catch (LocateWorkers.LocateFailure failure) {

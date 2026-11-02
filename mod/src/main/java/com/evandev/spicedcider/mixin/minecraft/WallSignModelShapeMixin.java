@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.mixin.minecraft;
 
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -52,7 +53,7 @@ public class WallSignModelShapeMixin {
 
     @ModifyReturnValue(method = "getShape", at = @At("RETURN"))
     private VoxelShape spicedcider$modelAccurateWallShape(VoxelShape original, BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
-        if (!state.hasProperty(BlockStateProperties.HORIZONTAL_FACING)) {
+        if (!SpicedCiderConfig.commonOr(SpicedCiderConfig.COMMON.accurateSignHitboxes, true) || !state.hasProperty(BlockStateProperties.HORIZONTAL_FACING)) {
             return original;
         }
         VoxelShape shape = spicedcider$SHAPES.get(state.getValue(BlockStateProperties.HORIZONTAL_FACING));

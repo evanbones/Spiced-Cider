@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.mixin.redstone;
 
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.entity.player.Player;
@@ -33,7 +34,7 @@ public abstract class WaterloggableDiodeMixin extends Block implements SimpleWat
     @Inject(method = "getStateForPlacement", at = @At("RETURN"), cancellable = true)
     private void spicedcider$getStateForPlacement(@NotNull BlockPlaceContext context, @NotNull CallbackInfoReturnable<BlockState> cir) {
         BlockState state = cir.getReturnValue();
-        if (state != null && state.hasProperty(BlockStateProperties.WATERLOGGED)) {
+        if (state != null && state.hasProperty(BlockStateProperties.WATERLOGGED) && SpicedCiderConfig.feature("waterloggableRedstone")) {
             FluidState fluidState = context.getLevel().getFluidState(context.getClickedPos());
             cir.setReturnValue(state.setValue(BlockStateProperties.WATERLOGGED, fluidState.getType() == Fluids.WATER));
         }
@@ -49,12 +50,12 @@ public abstract class WaterloggableDiodeMixin extends Block implements SimpleWat
 
     @Override
     public boolean canPlaceLiquid(@Nullable Player player, @NotNull BlockGetter level, @NotNull BlockPos pos, @NotNull BlockState state, @NotNull Fluid fluid) {
-        return state.hasProperty(BlockStateProperties.WATERLOGGED) && fluid == Fluids.WATER;
+        return state.hasProperty(BlockStateProperties.WATERLOGGED) && fluid == Fluids.WATER && SpicedCiderConfig.feature("waterloggableRedstone");
     }
 
     @Override
     public boolean placeLiquid(@NotNull LevelAccessor level, @NotNull BlockPos pos, @NotNull BlockState state, @NotNull FluidState fluidState) {
-        if (!state.hasProperty(BlockStateProperties.WATERLOGGED) || state.getValue(BlockStateProperties.WATERLOGGED) || fluidState.getType() != Fluids.WATER) return false;
+        if (!state.hasProperty(BlockStateProperties.WATERLOGGED) || state.getValue(BlockStateProperties.WATERLOGGED) || fluidState.getType() != Fluids.WATER || !SpicedCiderConfig.feature("waterloggableRedstone")) return false;
         if (!level.isClientSide()) {
             level.setBlock(pos, state.setValue(BlockStateProperties.WATERLOGGED, true), 3);
             level.scheduleTick(pos, fluidState.getType(), fluidState.getType().getTickDelay(level));

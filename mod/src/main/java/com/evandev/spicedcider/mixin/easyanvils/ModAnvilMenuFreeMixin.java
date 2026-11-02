@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.mixin.easyanvils;
 
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.moulberry.mixinconstraints.annotations.IfModLoaded;
 import net.minecraft.world.inventory.AnvilMenu;
 import org.spongepowered.asm.mixin.Mixin;
@@ -13,6 +14,8 @@ public class ModAnvilMenuFreeMixin {
 
     @Inject(method = "createResult()V", at = @At("RETURN"))
     private void spicedcider$free(CallbackInfo ci) {
-        ((AnvilMenu) (Object) this).setMaximumCost(0);
+        if (SpicedCiderConfig.commonOr(SpicedCiderConfig.COMMON.easyAnvilsFreeRepairs, false)) {
+            ((AnvilMenu) (Object) this).setMaximumCost(0);
+        }
     }
 }

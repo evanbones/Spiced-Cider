@@ -23,10 +23,10 @@
 	# Default: 64
 	# Range: 16 ~ 2048
 	vistaMirrorReflectionDistance = 64
-	#Regular reflection render rate per mirror, in updates per second, when the frame budget is not under pressure. Values at or above 20 mean effectively every frame.
-	# Default: 15.0
+	#Regular reflection render rate per mirror, in updates per second, when the frame budget is not under pressure.
+	# Default: 30.0
 	# Range: 1.0 ~ 240.0
-	vistaMirrorUpdateFps = 15.0
+	vistaMirrorUpdateFps = 30.0
 	#The floor that the mirror update rate will never drop below. Values above the base update rate are ignored.
 	# Default: 4.0
 	# Range: 0.25 ~ 240.0
@@ -39,14 +39,24 @@
 	# Default: 3.5
 	# Range: 0.5 ~ 1000.0
 	vistaMirrorThrottleBudgetMs = 3.5
+	#Draws thick fog inside mirror reflections and TV feeds, scaled to the mirror reflection distance, so the shortened view fades out instead of ending abruptly. Requires Mirror Performance Fixes.
+	vistaMirrorFog = true
+	#Distance where mirror fog begins, as a percentage of the mirror reflection distance.
+	# Default: 20
+	# Range: 0 ~ 100
+	vistaMirrorFogStart = 20
+	#Distance where mirror fog becomes fully opaque, as a percentage of the mirror reflection distance.
+	# Default: 90
+	# Range: 10 ~ 100
+	vistaMirrorFogEnd = 90
 
 [compat]
-	#Restores vanilla parity for Sodium's Smooth Lighting corner blending, which stretches light further out than vanilla and causes flicker near moving dynamic light sources (e.g. LambDynamicLights). Requires Sodium.
-	sodiumLightingParityFix = true
 	#Hides the arrow depth line (Shallow hit, Lodged, Deep lodged) from Lodged's inventory arrow tooltip. Requires Lodged.
 	lodgedHideArrowDepth = true
 	#Hides the Bleeding risk line from Lodged's inventory arrow tooltip. Requires Lodged.
 	lodgedHideBleedingRisk = true
+	#Hides the voice chat HUD while playing in a world that isn't open to LAN. Requires Simple Voice Chat.
+	voiceChatHideSingleplayerHud = true
 
 [voxy]
 	#Replaces the terrain fog with configurable start and end distances that cover Voxy's LoD terrain, plus weather and cave fog. Disable to use Roxy's own fog.

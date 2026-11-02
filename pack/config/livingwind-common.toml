@@ -142,6 +142,14 @@
 	# Default: 1.0
 	# Range: 0.0 ~ 5.0
 	forceMultiplier = 1.0
+	#Drive Transmission & Linkage Kinetic Conversion Bearings with Living Wind. Only assembled Sable rotors with Create windmill sails generate torque. NeoForge 1.21.1 only.
+	kineticConversionBearingEnabled = true
+	#Transmission & Linkage windmill power multiplier. 1.0 uses the stronger v1.3.7 wind-drive balance; higher values provide more power under load. 0 disables wind drive (drag remains).
+	# Default: 1.0
+	# Range: 0.0 ~ 5.0
+	kineticConversionBearingTorqueMultiplier = 1.0
+	#Diagnostic: log rotor sail layout every 10 seconds, plus wind strength, RPM and limiting forces every 5 seconds. Enable only for testing.
+	kineticConversionBearingDebug = false
 
 #Optional Create: High Seas wind integration. Replaces its wind queries with Living Wind, leaving sail physics to High Seas. Requires Create: High Seas.
 [highSeas]
@@ -169,3 +177,43 @@
 	# Default: 1.0
 	# Range: 0.0 ~ 5.0
 	windMultiplier = 1.0
+
+#Optional Serene Seasons / Ecliptic Seasons seasonal atmosphere. Server controls affect the synchronized wind for every player.
+[seasonalCompatibility]
+	#Adjust background wind and natural gust frequency/intensity across the four seasons. Respects manual wind commands and dimensions without seasons.
+	seasonalWindEnabled = true
+	#Scale seasonal wind differences: 0 = normal Living Wind all year, 1 = balanced seasons, 2 = exaggerated seasonal changes.
+	# Default: 1.0
+	# Range: 0.0 ~ 2.0
+	seasonalWindIntensity = 1.0
+
+#Optional physical wind on entities. Disabled by default; changes gameplay when enabled.
+[entityWind]
+	#Master switch: allow Living Wind to influence entity movement. OFF by default.
+	enabled = false
+	#Push survival/adventure players, with stronger effects while airborne. Creative/spectator and mounted players are excluded.
+	players = true
+	#Wind force on grounded players, relative to the original 0.12 grounded factor. 2.5 is 2.5x stronger than before.
+	# Default: 2.5
+	# Range: 0.0 ~ 5.0
+	playerGroundedMultiplier = 2.5
+	#Wind force on jumping/falling players. Existing playerMultiplier values are preserved. 0 disables airborne player push.
+	# Default: 1.0
+	# Range: 0.0 ~ 5.0
+	playerMultiplier = 1.0
+	#Push mobs, especially while falling or jumping. Ground movement receives only a small push.
+	mobs = true
+	#Wind force on grounded mobs, relative to the original 0.12 grounded factor. 2.5 is 2.5x stronger than before.
+	# Default: 2.5
+	# Range: 0.0 ~ 5.0
+	mobGroundedMultiplier = 2.5
+	#Wind force on airborne mobs. Existing mobMultiplier values are preserved. 0 disables airborne mob push.
+	# Default: 1.0
+	# Range: 0.0 ~ 5.0
+	mobMultiplier = 1.0
+	#Deflect moving projectiles while airborne, such as arrows, snowballs and thrown potions.
+	projectiles = true
+	#Multiplier for wind deflection of projectiles. 0 disables the force for projectiles.
+	# Default: 1.0
+	# Range: 0.0 ~ 5.0
+	projectileMultiplier = 1.0

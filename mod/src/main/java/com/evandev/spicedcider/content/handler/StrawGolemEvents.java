@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.content.handler;
 
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.evandev.spicedcider.SpicedCider;
 import com.evandev.spicedcider.entities.strawgolem.StrawGolem;
 import com.evandev.spicedcider.entities.strawgolem.StrawGolemSenses;
@@ -54,12 +55,13 @@ public class StrawGolemEvents {
     }
 
     public static void addToCreativeTab(BuildCreativeModeTabContentsEvent event) {
-        if (event.getTabKey() == CreativeModeTabs.SPAWN_EGGS) {
+        if (event.getTabKey() == CreativeModeTabs.SPAWN_EGGS && SpicedCiderConfig.feature("strawGolems")) {
             event.insertAfter(new ItemStack(Items.STRAY_SPAWN_EGG), new ItemStack(BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "straw_golem_spawn_egg"))), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
         }
     }
 
     public static boolean trySpawn(Level level, BlockPos pos) {
+        if (!SpicedCiderConfig.feature("strawGolems")) return false;
         BlockPattern.BlockPatternMatch match = fullPattern().find(level, pos);
         if (match == null) return false;
         StrawGolem golem = ModEntityTypes.STRAW_GOLEM.get().create(level);

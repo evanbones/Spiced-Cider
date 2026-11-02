@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.mixin.piglinproliferation;
 
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.llamalad7.mixinextras.injector.wrapmethod.WrapMethod;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.moulberry.mixinconstraints.annotations.IfModLoaded;
@@ -15,6 +16,7 @@ public class FireRingNoPotionsMixin {
 
     @WrapMethod(method = "addEffects")
     private boolean spicedcider$noPotions(Player player, InteractionHand hand, ItemStack stack, PotionContents contents, Operation<Boolean> original) {
-        return false;
+        if (SpicedCiderConfig.commonOr(SpicedCiderConfig.COMMON.fireRingNoPotions, false)) return false;
+        return original.call(player, hand, stack, contents);
     }
 }

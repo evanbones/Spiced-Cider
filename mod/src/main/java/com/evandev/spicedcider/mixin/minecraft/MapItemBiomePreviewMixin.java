@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.mixin.minecraft;
 
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.evandev.spicedcider.locate.BiomePreview;
 import com.evandev.spicedcider.locate.LocateWorkers;
 import com.llamalad7.mixinextras.injector.wrapmethod.WrapMethod;
@@ -22,7 +23,7 @@ public class MapItemBiomePreviewMixin {
     @WrapMethod(method = "renderBiomePreviewMap")
     private static void spicedcider$parallelPreview(ServerLevel level, ItemStack stack, Operation<Void> original) {
         MapItemSavedData data = MapItem.getSavedData(stack, level);
-        if (data == null || level.dimension() != data.dimension) {
+        if (data == null || level.dimension() != data.dimension || !SpicedCiderConfig.commonOr(SpicedCiderConfig.COMMON.parallelLocate, true)) {
             original.call(level, stack);
             return;
         }

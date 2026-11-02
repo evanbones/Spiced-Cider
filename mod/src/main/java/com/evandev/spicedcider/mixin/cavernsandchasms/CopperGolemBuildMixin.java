@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.mixin.cavernsandchasms;
 
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.moulberry.mixinconstraints.annotations.IfModLoaded;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.Level;
@@ -15,6 +16,6 @@ public class CopperGolemBuildMixin {
 
     @Inject(method = "createGolem", at = @At("HEAD"), cancellable = true)
     private static void spicedcider$keepBlocks(Level level, BlockPos pos, BlockState state, CallbackInfo ci) {
-        ci.cancel();
+        if (SpicedCiderConfig.commonOr(SpicedCiderConfig.COMMON.copperGolemBuildingDisabled, false)) ci.cancel();
     }
 }

@@ -11,7 +11,9 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 
 public class SpicedCiderConfig {
     private static final String LANG_PATH = "assets/spicedcider/lang/en_us.json";
@@ -44,8 +46,18 @@ public class SpicedCiderConfig {
         return CLIENT_SPEC.isLoaded() ? value.get() : fallback;
     }
 
+    public static <T> T startupOr(ModConfigSpec.ConfigValue<T> value, T fallback) {
+        return STARTUP_SPEC.isLoaded() ? value.get() : fallback;
+    }
+
     public static <T> T commonOr(ModConfigSpec.ConfigValue<T> value, T fallback) {
         return COMMON_SPEC.isLoaded() ? value.get() : fallback;
+    }
+
+    public static boolean feature(String name) {
+        ModConfigSpec.BooleanValue value = COMMON.features.get(name);
+        if (value == null) throw new IllegalArgumentException("Unknown feature " + name);
+        return commonOr(value, true);
     }
 
     private static JsonObject loadLang() {
@@ -71,6 +83,9 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.BooleanValue blockBoxWoodVariants;
         public final ModConfigSpec.BooleanValue skeletonHealthNerf;
         public final ModConfigSpec.BooleanValue unifiedPetArmor;
+        public final ModConfigSpec.BooleanValue leavesNotSuffocating;
+        public final ModConfigSpec.BooleanValue torchflowerLight;
+        public final ModConfigSpec.BooleanValue drinkIntoxication;
 
         public Startup(ModConfigSpec.Builder builder) {
             blockBoxWoodVariants = builder
@@ -88,12 +103,50 @@ public class SpicedCiderConfig {
                     .translation("option.spicedcider.unifiedPetArmor")
                     .define("unifiedPetArmor", false);
 
+            leavesNotSuffocating = builder
+                    .comment(tooltip("leavesNotSuffocating"))
+                    .translation("option.spicedcider.leavesNotSuffocating")
+                    .define("leavesNotSuffocating", true);
+
+            torchflowerLight = builder
+                    .comment(tooltip("torchflowerLight"))
+                    .translation("option.spicedcider.torchflowerLight")
+                    .define("torchflowerLight", true);
+
+            drinkIntoxication = builder
+                    .comment(tooltip("drinkIntoxication"))
+                    .translation("option.spicedcider.drinkIntoxication")
+                    .define("drinkIntoxication", false);
+
         }
     }
 
     public static class Common {
+        public static final List<String> FEATURES = List.of(
+                "renameRecipe",
+                "waterloggableRedstone",
+                "cloudCover",
+                "monumentChests",
+                "ruinedPages",
+                "balloons",
+                "pocketJukebox",
+                "grapplingHooks",
+                "strawGolems",
+                "sputters",
+                "leafSticks",
+                "fireStriker",
+                "deposits",
+                "wormyDirt",
+                "fruitTrees",
+                "oceanDepths",
+                "buildingBlocks");
+
         public final ModConfigSpec.BooleanValue oldWisteriaTrees;
         public final ModConfigSpec.BooleanValue slimeTimeDisableItemMerging;
+        public final ModConfigSpec.BooleanValue easyAnvilsFreeRepairs;
+        public final ModConfigSpec.BooleanValue fireRingNoPotions;
+        public final ModConfigSpec.BooleanValue copperGolemBuildingDisabled;
+        public final ModConfigSpec.BooleanValue whereWindsBlowNoBonemealGrass;
 
         public final ModConfigSpec.BooleanValue bedExplosionPrevention;
         public final ModConfigSpec.BooleanValue respawnAnchorExplosionPrevention;
@@ -103,6 +156,19 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.BooleanValue wolvesWearAnyArmor;
         public final ModConfigSpec.BooleanValue spiderRangedWebAttacks;
         public final ModConfigSpec.BooleanValue removeQuasiConnectivity;
+        public final ModConfigSpec.BooleanValue harmlessGhastFireballs;
+        public final ModConfigSpec.BooleanValue logsNeedAxe;
+        public final ModConfigSpec.BooleanValue treeBark;
+        public final ModConfigSpec.BooleanValue mossNeedsHoe;
+        public final ModConfigSpec.BooleanValue blockDyeing;
+        public final ModConfigSpec.BooleanValue composterWorms;
+        public final ModConfigSpec.BooleanValue azaleaTreePrevention;
+        public final ModConfigSpec.BooleanValue zombieTorches;
+        public final ModConfigSpec.BooleanValue piglinWeaponSwap;
+        public final ModConfigSpec.BooleanValue soulCampfireHaunting;
+        public final ModConfigSpec.BooleanValue throwablePotionCooldown;
+        public final ModConfigSpec.BooleanValue accurateSignHitboxes;
+        public final ModConfigSpec.BooleanValue iglooBasementRemoval;
         public final ModConfigSpec.BooleanValue voidWater;
         public final ModConfigSpec.IntValue voidWaterTrailLength;
         public final ModConfigSpec.DoubleValue voidWaterTrailDecay;
@@ -113,7 +179,10 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.ConfigValue<List<? extends String>> caveMapsFixedHeights;
         public final ModConfigSpec.ConfigValue<List<? extends String>> caveMapsCreationHeightDimensions;
 
+        public final Map<String, ModConfigSpec.BooleanValue> features = new LinkedHashMap<>();
+
         public final ModConfigSpec.BooleanValue disableRecipeBookTracking;
+        public final ModConfigSpec.BooleanValue parallelLocate;
         public final ModConfigSpec.BooleanValue lodGeneration;
         public final ModConfigSpec.IntValue lodGenerationMaxRadius;
         public final ModConfigSpec.IntValue lodGenerationThreads;
@@ -125,14 +194,43 @@ public class SpicedCiderConfig {
             oldWisteriaTrees = builder
                     .comment(tooltip("oldWisteriaTrees"))
                     .translation("option.spicedcider.oldWisteriaTrees")
-                    .define("oldWisteriaTrees", true);
+                    .define("oldWisteriaTrees", false);
 
             slimeTimeDisableItemMerging = builder
                     .comment(tooltip("slimeTimeDisableItemMerging"))
                     .translation("option.spicedcider.slimeTimeDisableItemMerging")
-                    .define("slimeTimeDisableItemMerging", true);
+                    .define("slimeTimeDisableItemMerging", false);
+
+            easyAnvilsFreeRepairs = builder
+                    .comment(tooltip("easyAnvilsFreeRepairs"))
+                    .translation("option.spicedcider.easyAnvilsFreeRepairs")
+                    .define("easyAnvilsFreeRepairs", false);
+
+            fireRingNoPotions = builder
+                    .comment(tooltip("fireRingNoPotions"))
+                    .translation("option.spicedcider.fireRingNoPotions")
+                    .define("fireRingNoPotions", false);
+
+            copperGolemBuildingDisabled = builder
+                    .comment(tooltip("copperGolemBuildingDisabled"))
+                    .translation("option.spicedcider.copperGolemBuildingDisabled")
+                    .define("copperGolemBuildingDisabled", false);
+
+            whereWindsBlowNoBonemealGrass = builder
+                    .comment(tooltip("whereWindsBlowNoBonemealGrass"))
+                    .translation("option.spicedcider.whereWindsBlowNoBonemealGrass")
+                    .define("whereWindsBlowNoBonemealGrass", false);
 
             builder.pop();
+            builder.push("features");
+
+            for (String feature : FEATURES) {
+                features.put(feature, builder
+                        .comment(tooltip(feature))
+                        .translation("option.spicedcider." + feature)
+                        .define(feature, true));
+            }
+
             builder.push("gameplay");
 
             bedExplosionPrevention = builder
@@ -174,6 +272,71 @@ public class SpicedCiderConfig {
                     .comment(tooltip("removeQuasiConnectivity"))
                     .translation("option.spicedcider.removeQuasiConnectivity")
                     .define("removeQuasiConnectivity", false);
+
+            harmlessGhastFireballs = builder
+                    .comment(tooltip("harmlessGhastFireballs"))
+                    .translation("option.spicedcider.harmlessGhastFireballs")
+                    .define("harmlessGhastFireballs", false);
+
+            logsNeedAxe = builder
+                    .comment(tooltip("logsNeedAxe"))
+                    .translation("option.spicedcider.logsNeedAxe")
+                    .define("logsNeedAxe", false);
+
+            treeBark = builder
+                    .comment(tooltip("treeBark"))
+                    .translation("option.spicedcider.treeBark")
+                    .define("treeBark", false);
+
+            mossNeedsHoe = builder
+                    .comment(tooltip("mossNeedsHoe"))
+                    .translation("option.spicedcider.mossNeedsHoe")
+                    .define("mossNeedsHoe", false);
+
+            blockDyeing = builder
+                    .comment(tooltip("blockDyeing"))
+                    .translation("option.spicedcider.blockDyeing")
+                    .define("blockDyeing", true);
+
+            composterWorms = builder
+                    .comment(tooltip("composterWorms"))
+                    .translation("option.spicedcider.composterWorms")
+                    .define("composterWorms", true);
+
+            azaleaTreePrevention = builder
+                    .comment(tooltip("azaleaTreePrevention"))
+                    .translation("option.spicedcider.azaleaTreePrevention")
+                    .define("azaleaTreePrevention", false);
+
+            zombieTorches = builder
+                    .comment(tooltip("zombieTorches"))
+                    .translation("option.spicedcider.zombieTorches")
+                    .define("zombieTorches", false);
+
+            piglinWeaponSwap = builder
+                    .comment(tooltip("piglinWeaponSwap"))
+                    .translation("option.spicedcider.piglinWeaponSwap")
+                    .define("piglinWeaponSwap", false);
+
+            soulCampfireHaunting = builder
+                    .comment(tooltip("soulCampfireHaunting"))
+                    .translation("option.spicedcider.soulCampfireHaunting")
+                    .define("soulCampfireHaunting", true);
+
+            throwablePotionCooldown = builder
+                    .comment(tooltip("throwablePotionCooldown"))
+                    .translation("option.spicedcider.throwablePotionCooldown")
+                    .define("throwablePotionCooldown", false);
+
+            accurateSignHitboxes = builder
+                    .comment(tooltip("accurateSignHitboxes"))
+                    .translation("option.spicedcider.accurateSignHitboxes")
+                    .define("accurateSignHitboxes", true);
+
+            iglooBasementRemoval = builder
+                    .comment(tooltip("iglooBasementRemoval"))
+                    .translation("option.spicedcider.iglooBasementRemoval")
+                    .define("iglooBasementRemoval", false);
 
             builder.pop();
             builder.push("voidWater");
@@ -237,6 +400,11 @@ public class SpicedCiderConfig {
                     .translation("option.spicedcider.disableRecipeBookTracking")
                     .define("disableRecipeBookTracking", true);
 
+            parallelLocate = builder
+                    .comment(tooltip("parallelLocate"))
+                    .translation("option.spicedcider.parallelLocate")
+                    .define("parallelLocate", true);
+
             builder.pop();
             builder.push("lod");
 
@@ -277,6 +445,9 @@ public class SpicedCiderConfig {
 
         public final ModConfigSpec.BooleanValue vistaMirrorPerfFixes;
         public final ModConfigSpec.IntValue vistaMirrorReflectionDistance;
+        public final ModConfigSpec.BooleanValue vistaMirrorFog;
+        public final ModConfigSpec.IntValue vistaMirrorFogStart;
+        public final ModConfigSpec.IntValue vistaMirrorFogEnd;
         public final ModConfigSpec.DoubleValue vistaMirrorUpdateFps;
         public final ModConfigSpec.DoubleValue vistaMirrorMinUpdateFps;
         public final ModConfigSpec.DoubleValue vistaMirrorIdleUpdateFps;
@@ -296,27 +467,27 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.BooleanValue netherMist;
         public final ModConfigSpec.IntValue netherAmbientTint;
 
-        public final ModConfigSpec.BooleanValue sodiumLightingParityFix;
         public final ModConfigSpec.BooleanValue lodgedHideArrowDepth;
         public final ModConfigSpec.BooleanValue lodgedHideBleedingRisk;
+        public final ModConfigSpec.BooleanValue voiceChatHideSingleplayerHud;
 
         public Client(ModConfigSpec.Builder builder) {
             builder.push("compat");
 
-            sodiumLightingParityFix = builder
-                    .comment(tooltip("sodiumLightingParityFix"))
-                    .translation("option.spicedcider.sodiumLightingParityFix")
-                    .define("sodiumLightingParityFix", true);
-
             lodgedHideArrowDepth = builder
                     .comment(tooltip("lodgedHideArrowDepth"))
                     .translation("option.spicedcider.lodgedHideArrowDepth")
-                    .define("lodgedHideArrowDepth", true);
+                    .define("lodgedHideArrowDepth", false);
 
             lodgedHideBleedingRisk = builder
                     .comment(tooltip("lodgedHideBleedingRisk"))
                     .translation("option.spicedcider.lodgedHideBleedingRisk")
-                    .define("lodgedHideBleedingRisk", true);
+                    .define("lodgedHideBleedingRisk", false);
+
+            voiceChatHideSingleplayerHud = builder
+                    .comment(tooltip("voiceChatHideSingleplayerHud"))
+                    .translation("option.spicedcider.voiceChatHideSingleplayerHud")
+                    .define("voiceChatHideSingleplayerHud", false);
 
             builder.pop();
             builder.push("naming");
@@ -337,7 +508,7 @@ public class SpicedCiderConfig {
             customDeathSound = builder
                     .comment(tooltip("customDeathSound"))
                     .translation("option.spicedcider.customDeathSound")
-                    .define("customDeathSound", true);
+                    .define("customDeathSound", false);
 
             customWindowTitle = builder
                     .comment(tooltip("customWindowTitle"))
@@ -352,12 +523,12 @@ public class SpicedCiderConfig {
             oldProgressScreen = builder
                     .comment(tooltip("oldProgressScreen"))
                     .translation("option.spicedcider.oldProgressScreen")
-                    .define("oldProgressScreen", true);
+                    .define("oldProgressScreen", false);
 
             customOptionsScreen = builder
                     .comment(tooltip("customOptionsScreen"))
                     .translation("option.spicedcider.customOptionsScreen")
-                    .define("customOptionsScreen", true);
+                    .define("customOptionsScreen", false);
 
             builder.pop();
             builder.push("vista");
@@ -372,10 +543,25 @@ public class SpicedCiderConfig {
                     .translation("option.spicedcider.vistaMirrorReflectionDistance")
                     .defineInRange("vistaMirrorReflectionDistance", 64, 16, 2048);
 
+            vistaMirrorFog = builder
+                    .comment(tooltip("vistaMirrorFog"))
+                    .translation("option.spicedcider.vistaMirrorFog")
+                    .define("vistaMirrorFog", true);
+
+            vistaMirrorFogStart = builder
+                    .comment(tooltip("vistaMirrorFogStart"))
+                    .translation("option.spicedcider.vistaMirrorFogStart")
+                    .defineInRange("vistaMirrorFogStart", 20, 0, 100);
+
+            vistaMirrorFogEnd = builder
+                    .comment(tooltip("vistaMirrorFogEnd"))
+                    .translation("option.spicedcider.vistaMirrorFogEnd")
+                    .defineInRange("vistaMirrorFogEnd", 90, 10, 100);
+
             vistaMirrorUpdateFps = builder
                     .comment(tooltip("vistaMirrorUpdateFps"))
                     .translation("option.spicedcider.vistaMirrorUpdateFps")
-                    .defineInRange("vistaMirrorUpdateFps", 15.0, 1.0, 240.0);
+                    .defineInRange("vistaMirrorUpdateFps", 30.0, 1.0, 240.0);
 
             vistaMirrorMinUpdateFps = builder
                     .comment(tooltip("vistaMirrorMinUpdateFps"))

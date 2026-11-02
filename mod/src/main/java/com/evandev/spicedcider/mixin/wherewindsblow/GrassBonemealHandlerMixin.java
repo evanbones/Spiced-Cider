@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.mixin.wherewindsblow;
 
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.jvn.wherewindsblow.block.GrassBonemealHandler;
 import com.moulberry.mixinconstraints.annotations.IfModLoaded;
 import net.neoforged.neoforge.event.entity.player.BonemealEvent;
@@ -14,6 +15,6 @@ public class GrassBonemealHandlerMixin {
 
     @Inject(method = "onBonemeal", at = @At("HEAD"), cancellable = true)
     private static void spicedcider$noOvergrownGrass(BonemealEvent event, CallbackInfo ci) {
-        ci.cancel();
+        if (SpicedCiderConfig.commonOr(SpicedCiderConfig.COMMON.whereWindsBlowNoBonemealGrass, false)) ci.cancel();
     }
 }

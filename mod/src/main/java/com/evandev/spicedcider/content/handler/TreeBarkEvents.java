@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.content.handler;
 
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.evandev.spicedcider.SpicedCider;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -44,7 +45,7 @@ public class TreeBarkEvents {
     }
 
     public static void dropBark(Level level, BlockPos pos, Direction face, BlockState original) {
-        if (level.isClientSide() || !original.is(BlockTags.LOGS)) return;
+        if (level.isClientSide() || !original.is(BlockTags.LOGS) || !SpicedCiderConfig.commonOr(SpicedCiderConfig.COMMON.treeBark, false)) return;
         treeBark().ifPresent(bark -> Block.popResourceFromFace(level, pos, face, new ItemStack(bark)));
     }
 
@@ -57,7 +58,7 @@ public class TreeBarkEvents {
     public static void onRightClickBlock(PlayerInteractEvent.RightClickBlock event) {
         ItemStack stack = event.getItemStack();
         Optional<Item> bark = treeBark();
-        if (bark.isEmpty() || !stack.is(bark.get())) return;
+        if (bark.isEmpty() || !stack.is(bark.get()) || !SpicedCiderConfig.commonOr(SpicedCiderConfig.COMMON.treeBark, false)) return;
 
         Level level = event.getLevel();
         BlockPos pos = event.getPos();

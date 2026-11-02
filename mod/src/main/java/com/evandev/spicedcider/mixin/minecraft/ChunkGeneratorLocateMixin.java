@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.mixin.minecraft;
 
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.evandev.spicedcider.locate.StructurePrefetch;
 import com.mojang.datafixers.util.Pair;
 import net.minecraft.core.BlockPos;
@@ -24,6 +25,6 @@ public class ChunkGeneratorLocateMixin {
     private static void spicedcider$prefetchRing(Set<Holder<Structure>> structures, LevelReader level, StructureManager structureManager, int chunkX, int chunkZ, int ring,
                                                  boolean skipKnownStructures, long seed, RandomSpreadStructurePlacement placement,
                                                  CallbackInfoReturnable<Pair<BlockPos, Holder<Structure>>> cir) {
-        StructurePrefetch.warmRing(structureManager, structures, chunkX, chunkZ, ring, seed, placement);
+        if (SpicedCiderConfig.commonOr(SpicedCiderConfig.COMMON.parallelLocate, true)) StructurePrefetch.warmRing(structureManager, structures, chunkX, chunkZ, ring, seed, placement);
     }
 }

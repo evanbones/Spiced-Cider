@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.content.handler;
 
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.evandev.spicedcider.SpicedCider;
 import net.minecraft.core.Holder;
 import net.minecraft.core.component.DataComponents;
@@ -30,7 +31,7 @@ public class DrinkIntoxicationEvents {
     @SubscribeEvent
     public static void addIntoxication(ModifyDefaultComponentsEvent event) {
         Optional<Holder.Reference<MobEffect>> effect = BuiltInRegistries.MOB_EFFECT.getHolder(INTOXICATION);
-        if (effect.isEmpty()) return;
+        if (effect.isEmpty() || !SpicedCiderConfig.startupOr(SpicedCiderConfig.STARTUP.drinkIntoxication, false)) return;
         for (String id : DRINKS) {
             BuiltInRegistries.ITEM.getOptional(ResourceLocation.parse(id)).ifPresent(item -> {
                 FoodProperties food = item.components().get(DataComponents.FOOD);

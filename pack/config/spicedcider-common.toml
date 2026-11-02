@@ -3,69 +3,141 @@
 	slimeTimeDisableItemMerging = true
 	#Use Environmental's old 1.19 wisteria tree leaf generation instead of the current sparse/patchy one. Requires Environmental (obviously).
 	oldWisteriaTrees = true
+	#Anvil repairs and renames cost no experience. Requires Easy Anvils.
+	easyAnvilsFreeRepairs = true
+	#Fire rings no longer take potions to spread their effects. Requires Piglin Proliferation.
+	fireRingNoPotions = true
+	#Stops copper golems from being built out of blocks. Requires Caverns & Chasms.
+	copperGolemBuildingDisabled = true
+	#Bonemeal no longer turns grass into overgrown grass. Requires Where Winds Blow.
+	whereWindsBlowNoBonemealGrass = true
 
-[gameplay]
-	#Beds don't explode outside the Overworld; instead they show a message and wake sleeping villagers.
-	bedExplosionPrevention = true
-	#Respawn anchors don't explode outside dimensions where they work; instead they show a message.
-	respawnAnchorExplosionPrevention = true
-	#End crystals can be placed on any block, not just obsidian/bedrock.
-	endCrystalPlaceAnywhere = true
-	#End crystals with no beam target heal nearby damaged entities and render a beam to their heal target.
-	endCrystalHealing = true
-	#Enchanted, named, or elytra items become "Broken" instead of being destroyed when they run out of durability.
-	keepBrokenItems = true
-	#Tamed wolves can be equipped with horse/animal armor as body armor.
-	wolvesWearAnyArmor = true
-	#Spiders switch to shooting cobweb projectiles at range when their target is trapped.
-	spiderRangedWebAttacks = true
-	#Removes quasi-connectivity from pistons, dispensers, and droppers.
-	removeQuasiConnectivity = true
+[features]
+	#Combine a named name tag with an item in the crafting grid to rename it. Takes effect after /reload.
+	renameRecipe = true
+	#Repeaters, comparators and other diodes can be placed in water.
+	waterloggableRedstone = true
+	#Overworld skies cycle between clear, mostly clear, partly cloudy and cloudy, and cloud over before rain. Adds the extra /weather states. Requires a restart to add or remove the commands.
+	cloudCover = true
+	#Newly generated ocean monuments hold chests of loot.
+	monumentChests = true
+	#Pages of the End Poem turn up in dungeon chests and archaeology loot. Takes effect after /reload.
+	ruinedPages = true
+	#Balloons can be crafted and dyed. Takes effect after /reload.
+	balloons = true
+	#The Pocket Jukebox can be crafted and dyed. Takes effect after /reload.
+	pocketJukebox = true
+	#Grappling Hooks can be crafted. Requires Tide. Takes effect after /reload.
+	grapplingHooks = true
+	#Straw Golems can be built from a hay bale and a carved pumpkin.
+	strawGolems = true
+	#Sputters can be built from a barrel and a carved pumpkin.
+	sputters = true
+	#Breaking leaves sometimes drops a stick. Takes effect after /reload.
+	leafSticks = true
+	#Two flint craft a single-use Fire Striker. Takes effect after /reload.
+	fireStriker = true
+	#Deposit ores generate underground, and geodes turn up in dungeon and Nether chests. Worldgen changes need a world restart and only affect new chunks.
+	deposits = true
+	#Wormy dirt generates underground. Needs a world restart and only affects new chunks.
+	wormyDirt = true
+	#Cacao and pear trees generate in the world. Needs a world restart and only affects new chunks.
+	fruitTrees = true
+	#Algae, chromarine and achromarine reefs and brambles, and hydrothermal vents generate in oceans. Needs a world restart and only affects new chunks.
+	oceanDepths = true
+	#Recipes for the extra stairs, slabs, walls and other building blocks. Takes effect after /reload.
+	buildingBlocks = true
 
-[voidWater]
-	#Fluids at the bottom of the world spill into the void as fading trails you can swim in. Takes effect when a world is next loaded.
-	voidWater = true
-	#How many blocks fluid trails extend below the bottom of the world.
-	# Default: 16
-	# Range: 0 ~ 255
-	voidWaterTrailLength = 16
-	#How quickly void fluid trails fade out. Higher values fade faster.
-	# Default: 2.0
-	# Range: 0.05 ~ 16.0
-	voidWaterTrailDecay = 2.0
-	#Dimension ids where fluids never spill into the void. The End is excluded by default because its floor is a sea of Dimensional Tears.
-	voidWaterExcludedDimensions = ["minecraft:the_end"]
+	[features.gameplay]
+		#Beds don't explode outside the Overworld; instead they show a message and wake sleeping villagers.
+		bedExplosionPrevention = false
+		#Respawn anchors don't explode outside dimensions where they work; instead they show a message.
+		respawnAnchorExplosionPrevention = false
+		#End crystals can be placed on any block, not just obsidian/bedrock.
+		endCrystalPlaceAnywhere = false
+		#End crystals with no beam target heal nearby damaged entities and render a beam to their heal target.
+		endCrystalHealing = false
+		#Tools, armor, and elytra become "Broken" instead of being destroyed when they run out of durability.
+		keepBrokenItems = false
+		#Tamed wolves can be equipped with horse/animal armor as body armor.
+		wolvesWearAnyArmor = false
+		#Spiders switch to shooting cobweb projectiles at range when their target is trapped.
+		spiderRangedWebAttacks = false
+		#Removes quasi-connectivity from pistons, dispensers, and droppers.
+		removeQuasiConnectivity = false
+		#Ghast fireballs no longer destroy blocks.
+		harmlessGhastFireballs = false
+		#Blocks tagged spicedcider:needs_axe_to_harvest (logs) only drop when broken with an axe.
+		logsNeedAxe = false
+		#Stripping a log with an axe drops Tree Bark, which can be used on a stripped log to restore it.
+		treeBark = false
+		#Blocks tagged spicedcider:needs_hoe_to_harvest (moss) only drop when broken with a hoe.
+		mossNeedsHoe = false
+		#Use a dye on a placed colored block to recolor it.
+		blockDyeing = true
+		#Emptying a composter sometimes pops out worms.
+		composterWorms = true
+		#Azaleas can no longer be bonemealed into trees.
+		azaleaTreePrevention = false
+		#Zombies sometimes spawn holding a torch.
+		zombieTorches = false
+		#Piglins spawn with Piglin Broadswords and Battleaxes instead of golden swords and axes.
+		piglinWeaponSwap = false
+		#Soul campfires haunt items using Create's haunting recipes. Requires Create.
+		soulCampfireHaunting = true
+		#Splash potions have a 10 second cooldown and lingering potions a 5 second cooldown.
+		throwablePotionCooldown = false
+		#Sign hitboxes follow the sign's model and rotation.
+		accurateSignHitboxes = true
+		#Igloos generate without their basement.
+		iglooBasementRemoval = false
 
-[performance]
-	#Disables recipe book unlock tracking/saving/syncing entirely and skips loading recipe unlock advancements. Saves memory and disk I/O.
-	disableRecipeBookTracking = true
+	[features.voidWater]
+		#Fluids at the bottom of the world spill into the void as fading trails you can swim in. Takes effect when a world is next loaded.
+		voidWater = true
+		#How many blocks fluid trails extend below the bottom of the world.
+		# Default: 16
+		# Range: 0 ~ 255
+		voidWaterTrailLength = 16
+		#How quickly void fluid trails fade out. Higher values fade faster.
+		# Default: 2.0
+		# Range: 0.05 ~ 16.0
+		voidWaterTrailDecay = 2.0
+		#Dimension ids where fluids never spill into the void. The End is excluded by default because its floor is a sea of Dimensional Tears.
+		voidWaterExcludedDimensions = ["minecraft:the_end"]
 
-[caveMaps]
-	#Maps in the Nether and other dimensions with a ceiling show the terrain at a usable height instead of the bedrock roof.
-	caveMaps = true
-	#In dimensions with a ceiling, maps show the terrain at the height where they were created. When off, the fixed height is used.
-	caveMapsUseCreationHeight = true
-	#Height maps show in dimensions with a ceiling when Use Map Creation Height is off.
-	# Default: 100
-	# Range: -64 ~ 320
-	caveMapsFixedHeight = 100
-	#Entries like minecraft:the_nether=40. Maps in these dimensions always show this height, overriding the other settings.
-	caveMapsFixedHeights = ["minecraft:the_nether=40"]
-	#Dimension ids where maps always show the height they were created at, even without a ceiling.
-	caveMapsCreationHeightDimensions = []
+	[features.caveMaps]
+		#Maps in the Nether and other dimensions with a ceiling show the terrain at a usable height instead of the bedrock roof.
+		caveMaps = true
+		#In dimensions with a ceiling, maps show the terrain at the height where they were created. When off, the fixed height is used.
+		caveMapsUseCreationHeight = true
+		#Height maps show in dimensions with a ceiling when Use Map Creation Height is off.
+		# Default: 100
+		# Range: -64 ~ 320
+		caveMapsFixedHeight = 100
+		#Entries like minecraft:the_nether=40. Maps in these dimensions always show this height, overriding the other settings.
+		caveMapsFixedHeights = ["minecraft:the_nether=40"]
+		#Dimension ids where maps always show the height they were created at, even without a ceiling.
+		caveMapsCreationHeightDimensions = []
 
-[lod]
-	#Generates terrain beyond your render distance in the background so it can be drawn in the distance, out to your Distant Terrain Range. The chunks are never saved, so the world folder doesn't grow.
-	lodGeneration = true
-	#Server-side cap, in chunks, on how far LoD terrain is generated around each player. Each player's own Voxy LoD render distance is used up to this limit.
-	# Default: 128
-	# Range: 8 ~ 512
-	lodGenerationMaxRadius = 128
-	#Worker threads used to generate distant terrain. 0 picks automatically: an eighth of your CPU threads, between 1 and 4. More is faster but costs frame rate while terrain is generating. Requires rejoining the world.
-	# Default: 0
-	# Range: 0 ~ 16
-	lodGenerationThreads = 0
-	#Chunks per second sent to each player on a server. Singleplayer hands chunks to Voxy directly and ignores this.
-	# Default: 100
-	# Range: 10 ~ 2000
-	lodGenerationSendRate = 100
+	[features.performance]
+		#Disables recipe book unlock tracking/saving/syncing entirely and skips loading recipe unlock advancements. Saves memory and disk I/O.
+		disableRecipeBookTracking = true
+		#Runs /locate biome searches, structure locating and map biome previews across several threads.
+		parallelLocate = true
+
+	[features.lod]
+		#Generates terrain beyond your render distance in the background so it can be drawn in the distance, out to your Distant Terrain Range. The chunks are never saved, so the world folder doesn't grow.
+		lodGeneration = true
+		#Server-side cap, in chunks, on how far LoD terrain is generated around each player. Each player's own Voxy LoD render distance is used up to this limit.
+		# Default: 128
+		# Range: 8 ~ 512
+		lodGenerationMaxRadius = 128
+		#Worker threads used to generate distant terrain. 0 picks automatically: an eighth of your CPU threads, between 1 and 4. More is faster but costs frame rate while terrain is generating. Requires rejoining the world.
+		# Default: 0
+		# Range: 0 ~ 16
+		lodGenerationThreads = 0
+		#Chunks per second sent to each player on a server. Singleplayer hands chunks to Voxy directly and ignores this.
+		# Default: 100
+		# Range: 10 ~ 2000
+		lodGenerationSendRate = 100

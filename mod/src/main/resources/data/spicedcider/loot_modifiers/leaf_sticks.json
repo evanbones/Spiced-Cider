@@ -1,4 +1,10 @@
 {
+  "neoforge:conditions": [
+    {
+      "type": "spicedcider:feature",
+      "feature": "leafSticks"
+    }
+  ],
   "type": "spicedcider:bonus_block_drop",
   "conditions": [],
   "blocks": "minecraft:leaves",

@@ -265,6 +265,24 @@
 		# Range: 0.0 ~ 3.0
 		windMultiplier = 1.0
 
+	#Serene Seasons / Ecliptic Seasons seasonal foliage and snow effects. Uses the existing particle budgets and the current world season.
+	[compatibility.seasonalCompatibility]
+		#Make native leaf, petal, grass and ambient particles react to the current season. Respects normal leaf-source selection and emitter limits.
+		seasonalParticlesEnabled = true
+		#Seasonal foliage/snow variation: 0 = unchanged, 1 = normal seasons, 2 = exaggerated seasonal particles. Native particle limits stay in effect.
+		# Default: 1.0
+		# Range: 0.0 ~ 2.0
+		seasonalParticlesIntensity = 1.0
+		#Boost blowing snow above real snow-covered ground during winter. No snow is generated just from the calendar season.
+		seasonalSnowEnabled = true
+		#Choose falling tree-leaf particles when Ecliptic Seasons is installed.
+		#LIVING_WIND (default): Living Wind only. ECLIPTIC_SEASONS: Ecliptic Seasons only. BOTH: both.
+		#Flowers, flying blooms, grass and other seasonal effects are not changed.
+		#Living Wind's leaves remain enabled if Ecliptic Seasons is not installed.
+		#If Particular Reforged is also installed, its separate leaf-source option still applies.
+		#Allowed Values: LIVING_WIND, ECLIPTIC_SEASONS, BOTH
+		eclipticLeavesSource = "LIVING_WIND"
+
 #Client-side wind ambience. Uses the final altitude/shelter-adjusted wind strength.
 [windAudio]
 	#Play Living Wind's wind ambience. Disable to silence all its wind sounds.

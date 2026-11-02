@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.mixin.minecraft;
 
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.entity.EntityType;
@@ -27,7 +28,7 @@ public abstract class ZombieTorchMixin extends Monster {
 
     @Inject(method = "populateDefaultEquipmentSlots", at = @At("TAIL"))
     private void spicedcider$holdTorch(RandomSource random, DifficultyInstance difficulty, CallbackInfo ci) {
-        if (this.getMainHandItem().isEmpty() && random.nextFloat() < spicedcider$TORCH_CHANCE) {
+        if (this.getMainHandItem().isEmpty() && SpicedCiderConfig.commonOr(SpicedCiderConfig.COMMON.zombieTorches, false) && random.nextFloat() < spicedcider$TORCH_CHANCE) {
             this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(Items.TORCH));
         }
     }

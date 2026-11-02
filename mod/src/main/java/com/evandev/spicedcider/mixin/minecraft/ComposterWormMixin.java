@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.mixin.minecraft;
 
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.evandev.spicedcider.registry.ModItems;
 import com.llamalad7.mixinextras.injector.wrapmethod.WrapMethod;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
@@ -19,7 +20,7 @@ public class ComposterWormMixin {
     @WrapMethod(method = "extractProduce")
     private static BlockState spicedcider$popWorms(Entity entity, BlockState state, Level level, BlockPos pos, Operation<BlockState> original) {
         BlockState result = original.call(entity, state, level, pos);
-        if (!level.isClientSide && level.random.nextFloat() < 0.3F) {
+        if (!level.isClientSide && SpicedCiderConfig.commonOr(SpicedCiderConfig.COMMON.composterWorms, true) && level.random.nextFloat() < 0.3F) {
             Vec3 spot = Vec3.atLowerCornerWithOffset(pos, 0.5, 1.01, 0.5).offsetRandom(level.random, 0.7F);
             ItemEntity worms = new ItemEntity(level, spot.x(), spot.y(), spot.z(), new ItemStack(ModItems.WORM.get(), 1 + level.random.nextInt(2)));
             worms.setDefaultPickUpDelay();
