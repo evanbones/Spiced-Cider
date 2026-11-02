@@ -4,8 +4,13 @@ plugins {
 
 evaluationDependsOn(":mod")
 
-group = mod_group_id
-version = mod_version
+def modProject = project(":mod")
+def modId = modProject.mod_id
+def modName = modProject.mod_name
+def modVersion = modProject.mod_version
+
+group = modProject.mod_group_id
+version = modVersion
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(21)
 
@@ -23,12 +28,11 @@ dependencies {
     compileOnly "net.java.dev.jna:jna:5.14.0"
 }
 
-def modJar = project(":mod").tasks.named("jar")
-def modId = mod_id
-def bundledName = "${mod_id}-${mod_version}-mod.jar"
+def modJar = modProject.tasks.named("jar")
+def bundledName = "${modId}-${modVersion}-mod.jar"
 
 jar {
-    archiveFileName = "${modId}-${mod_version}.jar"
+    archiveFileName = "${modId}-${modVersion}.jar"
     into("META-INF/jarjar") {
         from(modJar)
         rename { bundledName }
@@ -39,7 +43,7 @@ jar {
     manifest {
         attributes(
                 "FMLModType": "LIBRARY",
-                "Implementation-Title": mod_name,
+                "Implementation-Title": modName,
                 "Implementation-Version": project.version,
                 "Automatic-Module-Name": "${modId}.bootstrap"
         )

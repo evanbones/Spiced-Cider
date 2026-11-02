@@ -1,3 +1,8 @@
+import groovy.json.JsonSlurper
+
+import java.nio.file.Files
+import java.nio.file.StandardCopyOption
+
 plugins {
     id 'java-library'
     id 'maven-publish'
@@ -528,7 +533,7 @@ publishMods {
     changelog = project.file("CHANGELOG-LATEST.md").exists() ? project.file("CHANGELOG-LATEST.md").text : ""
     type = STABLE
     version = "${project.version}+${project.minecraft_version}"
-    displayName = "Spiced Cider ${project.version}"
+    displayName = "${mod_name} ${project.version}"
     modLoaders.add("neoforge")
 
     modrinth {
@@ -538,21 +543,85 @@ publishMods {
     }
 }
 
-def packDir = rootProject.layout.projectDirectory.dir("pack")
+class CiderCoreSwap {
+    static void clear(File dir) {
+        if (!dir.isDirectory()) return
+        dir.listFiles().findAll { it.name ==~ /spicedcider-.*\.jar/ || it.name == "cider-core.pw.toml" }.each {
+            if (!it.delete()) throw new GradleException("Could not delete ${it}; close the game first")
+        }
+    }
 
-var packwizRefresh = tasks.register("packwizRefresh", Exec) {
-    group = "spiced cider"
-    workingDir = packDir.asFile
-    commandLine packDir.file("packwiz.exe").asFile.absolutePath, "refresh"
+    static void install(File source, File dir, String name, File tmpDir) {
+        tmpDir.mkdirs()
+        def tmp = new File(tmpDir, name + ".tmp").toPath()
+        Files.copy(source.toPath(), tmp, StandardCopyOption.REPLACE_EXISTING)
+        Files.move(tmp, new File(dir, name).toPath(), StandardCopyOption.REPLACE_EXISTING)
+    }
+
+    static void download(String url, File dir, String name, File tmpDir) {
+        tmpDir.mkdirs()
+        def tmp = new File(tmpDir, name + ".tmp")
+        new URL(url).withInputStream { tmp.bytes = it.bytes }
+        install(tmp, dir, name, tmpDir)
+        tmp.delete()
+    }
+
+    static void packwiz(String exe, File packDir, String... args) {
+        def process = new ProcessBuilder([exe] + args.toList()).directory(packDir).inheritIO().start()
+        if (process.waitFor() != 0) throw new GradleException("packwiz ${args.join(' ')} failed")
+    }
 }
+
+def packDir = rootProject.layout.projectDirectory.dir("pack")
+def packDirFile = packDir.asFile
+def packModsDir = packDir.dir("mods").asFile
+def packwizExe = packDir.file("packwiz.exe").asFile.absolutePath
+def prismModsDir = new File(providers.gradleProperty("prism_mods_dir")
+        .orElse(providers.environmentVariable("APPDATA").map { "${it}/PrismLauncher/instances/Spiced Cider Dev/minecraft/mods" })
+        .getOrElse(""))
+def swapTmpDir = layout.buildDirectory.dir("tmp/ciderCoreSwap").get().asFile
+def devJarName = "${mod_id}-${mod_version}-dev.jar"
+def bootstrapJar = project(":bootstrap").tasks.named("jar").flatMap { it.archiveFile }
+def minecraftVersion = minecraft_version
 
 tasks.matching { it.name.startsWith("publish") && it.name != "publishToMavenLocal" }.configureEach {
     dependsOn(":bootstrap:jar")
 }
 
-tasks.register("deployToPack", Copy) {
+tasks.register("deployToPack") {
     group = "spiced cider"
-    from(project(":bootstrap").tasks.named("jar"))
-    into(packDir.dir("mods"))
-    finalizedBy(packwizRefresh)
+    description = "Swaps the pack's Modrinth Cider Core for a local build in both Prism and pack/mods"
+    dependsOn(":bootstrap:jar")
+    inputs.file(bootstrapJar)
+    outputs.upToDateWhen { false }
+    doLast {
+        def jar = bootstrapJar.get().asFile
+        if (prismModsDir.isDirectory()) {
+            CiderCoreSwap.clear(prismModsDir)
+            CiderCoreSwap.install(jar, prismModsDir, devJarName, swapTmpDir)
+        }
+        CiderCoreSwap.clear(packModsDir)
+        CiderCoreSwap.install(jar, packModsDir, devJarName, swapTmpDir)
+        CiderCoreSwap.packwiz(packwizExe, packDirFile, "refresh")
+    }
+}
+
+tasks.register("useModrinthCiderCore") {
+    group = "spiced cider"
+    description = "Puts the latest Modrinth Cider Core back into Prism and pack/mods"
+    outputs.upToDateWhen { false }
+    doLast {
+        def query = "loaders=%5B%22neoforge%22%5D&game_versions=%5B%22${minecraftVersion}%22%5D"
+        def versions = new JsonSlurper().parse(new URL("https://api.modrinth.com/v2/project/cider-core/version?${query}"))
+        if (versions.isEmpty()) throw new GradleException("No Cider Core version on Modrinth for ${minecraftVersion}")
+        def latest = versions[0]
+        def primary = latest.files.find { it.primary } ?: latest.files[0]
+        if (prismModsDir.isDirectory()) {
+            CiderCoreSwap.clear(prismModsDir)
+            CiderCoreSwap.download(primary.url as String, prismModsDir, primary.filename as String, swapTmpDir)
+        }
+        CiderCoreSwap.clear(packModsDir)
+        CiderCoreSwap.packwiz(packwizExe, packDirFile, "modrinth", "add", "https://modrinth.com/mod/cider-core/version/${latest.id}", "-y")
+        CiderCoreSwap.packwiz(packwizExe, packDirFile, "refresh")
+    }
 }

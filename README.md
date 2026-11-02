@@ -14,12 +14,6 @@ If you are thinking about using the code or assets from Spiced Cider, please not
 licensing. **All assets of this project are unlicensed and all rights are reserved to them by their respective
 authors.** The source code of the Spiced Cider mod for Minecraft 1.21.1 is available under the MIT license.
 
-**Exception:** the Straw Golem is ported from RE-Strawgolem and stays under its
-[AGPLv3 license](https://github.com/HeroBrianMack/RE-Strawgolem/blob/master/LICENSE.txt) (included at
-`META-INF/licenses/strawgolem-LICENSE.txt`). This covers the source in `entities/strawgolem/`,
-`client/models/strawgolem/`, `client/renderer/strawgolem/`, `mixin/strawgolem/` and
-`content/handler/StrawGolemEvents.java`, and the sounds in `assets/spicedcider/sounds/entity/straw_golem/`.
-
 ---
 
 [![discord-plural](https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/compact/social/discord-plural_vector.svg)](https://discord.com/invite/JcGRdT6Pbx) [![github-plural](https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/compact/social/github-plural_vector.svg)](https://github.com/evanbones/Spiced-Cider)

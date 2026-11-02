@@ -34,7 +34,7 @@ public class EarlyTaskbarIcon implements GraphicsBootstrapper {
         } catch (Throwable ignored) {
             return;
         }
-        Thread thread = new Thread(EarlyTaskbarIcon::applyWhenWindowExists, "Spiced Cider early icon");
+        Thread thread = new Thread(EarlyTaskbarIcon::applyWhenWindowExists, "Cider Core early icon");
         thread.setDaemon(true);
         thread.start();
     }

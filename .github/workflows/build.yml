@@ -1,4 +1,4 @@
-name: Build and Deploy Modpack
+name: Deploy Packwiz Instance
 
 on:
   push:
@@ -22,43 +22,15 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Setup Java 21
-        uses: actions/setup-java@v4
-        with:
-          distribution: 'temurin'
-          java-version: '21'
-          cache: gradle
-
-      - name: Make Gradle Wrapper Executable
-        run: chmod +x gradlew
-
-      - name: Build Coremod
-        run: ./gradlew :mod:build
-
       - name: Setup Packwiz
         run: |
           go install github.com/packwiz/packwiz@latest
           echo "$(go env GOPATH)/bin" >> $GITHUB_PATH
 
-      - name: Inject Coremod into Packwiz
+      - name: Refresh Packwiz Index
         run: |
-          mkdir -p pack/mods
-          cp mod/build/libs/spicedcider-*.jar pack/mods/
-          
           cd pack
           packwiz refresh
-
-      - name: Build Modrinth .mrpack
-        run: |
-          cd pack
-          packwiz modrinth export
-
-      - name: Upload .mrpack Artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: Spiced-Cider-Modpack
-          path: pack/*.mrpack
-          retention-days: 14
 
       - name: Upload Pack Artifact
         if: github.event_name == 'push'

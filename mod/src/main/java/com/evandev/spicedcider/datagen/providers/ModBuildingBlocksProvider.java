@@ -260,7 +260,7 @@ public class ModBuildingBlocksProvider implements DataProvider {
         pools.add(pool);
         JsonObject json = new JsonObject();
         if (def.mod() != null) {
-            json.add("neoforge:conditions", modConditions(List.of(def.mod())));
+            json.add("neoforge:conditions", modConditions(def.registrationMods()));
         }
         json.addProperty("type", "minecraft:block");
         json.add("pools", pools);

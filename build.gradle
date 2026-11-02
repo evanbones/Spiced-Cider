@@ -1,8 +1,73 @@
+import groovy.json.JsonSlurper
+
 plugins {
     id 'net.neoforged.moddev' version '2.0.141' apply false
-    id 'maven-publish'
-    id "me.modmuss50.mod-publish-plugin" version "2.2.0" apply false
+    id "me.modmuss50.mod-publish-plugin" version "2.2.0"
     id 'co.uzzu.dotenv.gradle' version "4.0.0"
 }
 
-version = project.mod_version + "+" + project.minecraft_version
+version = pack_version
+
+def packDir = layout.projectDirectory.dir("pack")
+def packToml = packDir.file("pack.toml").asFile
+def packwizExe = packDir.file("packwiz.exe").asFile
+def packwiz = System.getProperty("os.name").toLowerCase().contains("windows") && packwizExe.exists() ? packwizExe.absolutePath : "packwiz"
+def packVersion = pack_version
+def mrpack = layout.buildDirectory.file("pack/${pack_name.replace(' ', '-')}-${pack_version}.mrpack")
+
+var syncPackVersion = tasks.register("syncPackVersion") {
+    group = "spiced cider"
+    inputs.property("version", packVersion)
+    outputs.file(packToml)
+    doLast {
+        def text = packToml.getText("UTF-8")
+        def updated = text.replaceFirst(/(?m)^version = ".*"$/, "version = \"${packVersion}\"")
+        if (updated != text) {
+            packToml.setText(updated, "UTF-8")
+        }
+    }
+}
+
+var refreshPack = tasks.register("refreshPack", Exec) {
+    group = "spiced cider"
+    dependsOn(syncPackVersion)
+    workingDir = packDir.asFile
+    commandLine packwiz, "refresh"
+}
+
+var exportPack = tasks.register("exportPack", Exec) {
+    group = "spiced cider"
+    dependsOn(refreshPack)
+    workingDir = packDir.asFile
+    outputs.file(mrpack)
+    outputs.upToDateWhen { false }
+    doFirst { mrpack.get().asFile.parentFile.mkdirs() }
+    commandLine packwiz, "modrinth", "export", "--output", mrpack.get().asFile.absolutePath
+}
+
+def packSlug = pack_modrinth_slug
+
+publishMods {
+    file = mrpack
+    changelog = file("CHANGELOG-LATEST.md").exists() ? file("CHANGELOG-LATEST.md").text : ""
+    type = STABLE
+    version = packVersion
+    displayName = "${pack_name} ${packVersion}"
+    modLoaders.add("neoforge")
+
+    modrinth {
+        accessToken = providers.environmentVariable("MODRINTH_TOKEN")
+        projectId = providers.provider {
+            try {
+                new JsonSlurper().parse(new URL("https://api.modrinth.com/v2/project/${packSlug}")).id as String
+            } catch (Exception ignored) {
+                throw new GradleException("Modrinth project '${packSlug}' does not exist yet")
+            }
+        }
+        minecraftVersions.add(minecraft_version)
+    }
+}
+
+tasks.matching { it.name.startsWith("publish") }.configureEach {
+    dependsOn(exportPack)
+}

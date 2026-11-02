@@ -27,7 +27,7 @@ public class BundledModLocator implements IModFileCandidateLocator {
             jars.filter(path -> path.getFileName().toString().endsWith(BUNDLED_SUFFIX))
                     .forEach(path -> add(path, pipeline));
         } catch (Exception e) {
-            throw new IllegalStateException("Failed to list bundled Spiced Cider jars in " + bundled, e);
+            throw new IllegalStateException("Failed to list bundled Cider Core jars in " + bundled, e);
         }
     }
 
@@ -45,12 +45,12 @@ public class BundledModLocator implements IModFileCandidateLocator {
     private static Path locateRoot() {
         CodeSource source = BundledModLocator.class.getProtectionDomain().getCodeSource();
         if (source == null || source.getLocation() == null) {
-            throw new IllegalStateException("Cannot locate the Spiced Cider bootstrap jar");
+            throw new IllegalStateException("Cannot locate the Cider Core bootstrap jar");
         }
         try {
             return Paths.get(source.getLocation().toURI());
         } catch (Exception e) {
-            throw new IllegalStateException("Cannot resolve the Spiced Cider bootstrap jar from " + source.getLocation(), e);
+            throw new IllegalStateException("Cannot resolve the Cider Core bootstrap jar from " + source.getLocation(), e);
         }
     }
 }

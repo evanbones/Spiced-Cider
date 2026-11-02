@@ -27,6 +27,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Stream;
 
 public final class ModBuildingBlocks {
     public enum Kind { CUBE, PILLAR, STAIRS, SLAB, WALL }
@@ -45,7 +46,12 @@ public final class ModBuildingBlocks {
         }
 
         public boolean available() {
-            return mod == null || ModList.get().isLoaded(mod);
+            return mod == null || registrationMods().stream().allMatch(ModList.get()::isLoaded);
+        }
+
+        public List<String> registrationMods() {
+            if (mod == null) return List.of();
+            return Stream.concat(Stream.of(mod), requires.stream()).distinct().toList();
         }
     }
 
