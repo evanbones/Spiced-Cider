@@ -56,12 +56,30 @@ public abstract class BuildCreativeModeTabContentsEventMixin {
 
     @WrapMethod(method = "insertAfter")
     private void spicedcider$freshInsertAfter(ItemStack existingEntry, ItemStack newEntry, CreativeModeTab.TabVisibility visibility, Operation<Void> original) {
-        original.call(spicedcider$fresh(existingEntry), spicedcider$fresh(newEntry), visibility);
+        ItemStack existing = spicedcider$fresh(existingEntry);
+        ItemStack entry = spicedcider$fresh(newEntry);
+        if (spicedcider$missingAnchor(existing, visibility)) {
+            ((CreativeModeTab.Output) this).accept(entry, visibility);
+            return;
+        }
+        original.call(existing, entry, visibility);
     }
 
     @WrapMethod(method = "insertBefore")
     private void spicedcider$freshInsertBefore(ItemStack existingEntry, ItemStack newEntry, CreativeModeTab.TabVisibility visibility, Operation<Void> original) {
-        original.call(spicedcider$fresh(existingEntry), spicedcider$fresh(newEntry), visibility);
+        ItemStack existing = spicedcider$fresh(existingEntry);
+        ItemStack entry = spicedcider$fresh(newEntry);
+        if (spicedcider$missingAnchor(existing, visibility)) {
+            ((CreativeModeTab.Output) this).accept(entry, visibility);
+            return;
+        }
+        original.call(existing, entry, visibility);
+    }
+
+    @Unique
+    private boolean spicedcider$missingAnchor(ItemStack existing, CreativeModeTab.TabVisibility visibility) {
+        if (visibility != CreativeModeTab.TabVisibility.SEARCH_TAB_ONLY && !parentEntries.contains(existing)) return true;
+        return visibility != CreativeModeTab.TabVisibility.PARENT_TAB_ONLY && !searchEntries.contains(existing);
     }
 
     @WrapMethod(method = "remove")

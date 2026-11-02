@@ -231,6 +231,7 @@ public class SpicedCider {
         if (event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
             event.insertAfter(new ItemStack(Items.ROOTED_DIRT), new ItemStack(ModItems.WORMY_DIRT.get()), vis);
             event.insertAfter(new ItemStack(Items.FLOWERING_AZALEA), new ItemStack(ModItems.GLOAMWOOD_SAPLING.get()), vis);
+            event.insertAfter(new ItemStack(Items.HONEYCOMB_BLOCK), new ItemStack(ModItems.TALLOW_BLOCK.get()), vis);
             event.accept(ModItems.DEPOSIT.get(), vis);
             event.accept(ModItems.DEEPSLATE_DEPOSIT.get(), vis);
             event.accept(ModItems.BLACKSTONE_DEPOSIT.get(), vis);
@@ -256,7 +257,6 @@ public class SpicedCider {
         }
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.insertAfter(new ItemStack(Items.IRON_BLOCK), new ItemStack(ModItems.CAST_IRON_BLOCK.get()), vis);
-            event.insertAfter(new ItemStack(Items.HONEYCOMB_BLOCK), new ItemStack(ModItems.TALLOW_BLOCK.get()), vis);
             Stream.of(ModItems.DRIED_DEEPSILT, ModItems.CUT_DRIED_DEEPSILT, ModItems.POLISHED_DRIED_DEEPSILT, ModItems.CHISELED_DRIED_DEEPSILT).forEach(item -> event.accept(item.get(), vis));
             ModBuildingBlocks.ITEMS.values().forEach(item -> event.accept(item.get(), vis));
             event.accept(ModItems.GLOWSTONE_BRICKS.get(), vis);

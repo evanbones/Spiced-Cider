@@ -525,7 +525,7 @@ idea {
 
 publishMods {
     file = rootProject.layout.projectDirectory.file("bootstrap/build/libs/${mod_id}-${project.version}.jar")
-    changelog = rootProject.file("CHANGELOG-LATEST.md").exists() ? rootProject.file("CHANGELOG-LATEST.md").text : ""
+    changelog = project.file("CHANGELOG-LATEST.md").exists() ? project.file("CHANGELOG-LATEST.md").text : ""
     type = STABLE
     version = "${project.version}+${project.minecraft_version}"
     displayName = "Spiced Cider ${project.version}"

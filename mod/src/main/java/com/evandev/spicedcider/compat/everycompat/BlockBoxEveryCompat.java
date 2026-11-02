@@ -9,12 +9,14 @@ import net.mehvahdjukaar.moonlight.api.util.Utils;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.level.block.Block;
 import vectorwing.blockbox.BlockBox;
 import vectorwing.blockbox.common.block.PalisadeBlock;
 import vectorwing.blockbox.common.block.SeatBlock;
 import vectorwing.blockbox.common.block.SpikedPalisadeBlock;
 import vectorwing.blockbox.common.registry.ModBlocks;
+import vectorwing.blockbox.common.registry.ModCreativeTabs;
 
 public class BlockBoxEveryCompat extends SimpleModule {
 
@@ -27,8 +29,7 @@ public class BlockBoxEveryCompat extends SimpleModule {
     public BlockBoxEveryCompat(String myModId) {
         super(BlockBox.MODID, "bb", myModId);
 
-        ResourceLocation tabKey = ResourceLocation.parse("minecraft:building_blocks");
-        ResourceKey<net.minecraft.world.item.CreativeModeTab> tab = ResourceKey.create(Registries.CREATIVE_MODE_TAB, tabKey);
+        ResourceKey<CreativeModeTab> tab = ModCreativeTabs.TAB_BLOCK_BOX.getKey();
 
         ResourceLocation axeTag = ResourceLocation.parse("minecraft:mineable/axe");
         ResourceLocation wallsTag = ResourceLocation.parse("minecraft:walls");

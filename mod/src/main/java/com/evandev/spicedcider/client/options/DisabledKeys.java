@@ -1,6 +1,7 @@
 package com.evandev.spicedcider.client.options;
 
 import com.evandev.spicedcider.SpicedCider;
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.mojang.blaze3d.platform.InputConstants;
 import net.minecraft.client.KeyMapping;
 import net.minecraft.client.Minecraft;
@@ -18,6 +19,7 @@ public class DisabledKeys {
     public static void onScreenInit(ScreenEvent.Init.Post event) {
         if (applied) return;
         applied = true;
+        if (!SpicedCiderConfig.clientOr(SpicedCiderConfig.CLIENT.customOptionsScreen, false)) return;
 
         Minecraft minecraft = Minecraft.getInstance();
         boolean changed = false;
