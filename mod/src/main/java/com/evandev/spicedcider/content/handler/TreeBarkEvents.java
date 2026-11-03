@@ -44,8 +44,8 @@ public class TreeBarkEvents {
         return BuiltInRegistries.ITEM.getOptional(TREE_BARK);
     }
 
-    public static void dropBark(Level level, BlockPos pos, Direction face, BlockState original) {
-        if (level.isClientSide() || !original.is(BlockTags.LOGS) || !SpicedCiderConfig.commonOr(SpicedCiderConfig.COMMON.treeBark, false)) return;
+    public static void dropBark(Level level, BlockPos pos, Direction face, BlockState original, @Nullable Player player) {
+        if (level.isClientSide() || (player != null && player.hasInfiniteMaterials()) || !original.is(BlockTags.LOGS) || !SpicedCiderConfig.commonOr(SpicedCiderConfig.COMMON.treeBark, false)) return;
         treeBark().ifPresent(bark -> Block.popResourceFromFace(level, pos, face, new ItemStack(bark)));
     }
 

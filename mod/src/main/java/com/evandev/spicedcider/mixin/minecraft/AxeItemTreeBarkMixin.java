@@ -19,7 +19,7 @@ public class AxeItemTreeBarkMixin {
     @WrapOperation(method = "evaluateNewBlockState", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/level/block/state/BlockState;getToolModifiedState(Lnet/minecraft/world/item/context/UseOnContext;Lnet/neoforged/neoforge/common/ItemAbility;Z)Lnet/minecraft/world/level/block/state/BlockState;", ordinal = 0))
     private BlockState spicedcider$dropBark(BlockState state, UseOnContext context, ItemAbility ability, boolean simulate, Operation<BlockState> original, Level level, BlockPos pos, Player player) {
         BlockState stripped = original.call(state, context, ability, simulate);
-        if (stripped != null) TreeBarkEvents.dropBark(level, pos, context.getClickedFace(), state);
+        if (stripped != null) TreeBarkEvents.dropBark(level, pos, context.getClickedFace(), state, player);
         return stripped;
     }
 }
