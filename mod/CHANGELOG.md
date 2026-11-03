@@ -5,6 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.3.0] - 2026-11-02
+
+### Added
+
+- Added EMI categories for sluicing, piglin bartering, sniffing, archaeology, and structure loot.
+- Each extra EMI category (tree tapping, sluicing, bartering, sniffing, archaeology, structure loot) has its own option,
+  off by default.
+- Added the Sulfur Caves Rework option (off by default).
+
+### Fixed
+
+- Fixed modded chests without an item handler (such as Every Compat chests) not working with Create funnels and other
+  item transfer.
+
 ## [1.2.3] - 2026-11-02
 
 ### Fixed

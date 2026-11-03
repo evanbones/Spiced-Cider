@@ -18,6 +18,8 @@ public class SpicedCiderMixinCanceller implements MixinCanceller {
 
     private static final String LIVING_WIND_CHIMES_MIXINS = "com.macatmovie.livingwind.mixin.Chimes";
 
+    private static final String EMBERS_SNOW_GRAVITY_MIXINS = "cc.cassian.effects.mixin.snow_gravity.";
+
     @Override
     public boolean shouldCancel(List<String> targetClassNames, String mixinClassName) {
 
@@ -40,6 +42,10 @@ public class SpicedCiderMixinCanceller implements MixinCanceller {
 
         if ("tech.thatgravyboat.vanity.neoforge.mixin.geckolib.HumanoidArmorLayerMixin".equals(mixinClassName)) {
             return LoadingModList.get().getModFileById("geckolib") == null;
+        }
+
+        if (mixinClassName.startsWith(EMBERS_SNOW_GRAVITY_MIXINS)) {
+            return LoadingModList.get().getModFileById("snowrealmagic") != null;
         }
 
         if (VANILLA_BACKPORT_MUSIC_MIXINS.contains(mixinClassName)) {

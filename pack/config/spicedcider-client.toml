@@ -59,6 +59,18 @@
 	voiceChatHideSingleplayerHud = true
 	#Replaces Clutter No More's scrolling shape switcher with a radial wheel, and makes the controller shape button hold-to-open. Requires Clutter No More.
 	clutterNoMoreShapeWheel = true
+	#Adds an EMI category for tapping trees with a tap. Requires EMI and No Man's Land. Reload EMI or rejoin the world to apply.
+	emiTappingCategory = true
+	#Adds an EMI category for what sluices filter out of each fluid. Requires EMI and Spelunkery. Reload EMI or rejoin the world to apply.
+	emiSluicingCategory = true
+	#Adds an EMI category for what piglins give in exchange for gold. Requires EMI. Reload EMI or rejoin the world to apply.
+	emiBarteringCategory = true
+	#Adds an EMI category for what sniffers dig up. Requires EMI. Reload EMI or rejoin the world to apply.
+	emiSniffingCategory = true
+	#Adds an EMI category for what brushing suspicious blocks can uncover. Requires EMI. Reload EMI or rejoin the world to apply.
+	emiArchaeologyCategory = true
+	#Adds an EMI category for the loot found in each structure's chests. Requires EMI. Reload EMI or rejoin the world to apply.
+	emiStructureLootCategory = true
 
 [voxy]
 	#Replaces the terrain fog with configurable start and end distances that cover Voxy's LoD terrain, plus weather and cave fog. Disable to use Roxy's own fog.

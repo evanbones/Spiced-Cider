@@ -15,6 +15,7 @@ import com.evandev.spicedcider.config.LogReconfiguration;
 import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.evandev.spicedcider.compat.nomansland.NoMansLandCreate;
 import com.evandev.spicedcider.compat.toilandtrouble.ToilAndTroubleCapabilities;
+import com.evandev.spicedcider.compat.everycompat.ChestCapabilities;
 import com.evandev.spicedcider.content.block.LatexCauldronBlock;
 import com.evandev.spicedcider.content.item.BalloonItem;
 import com.evandev.spicedcider.content.handler.SpawnControlEvents;
@@ -23,6 +24,8 @@ import com.evandev.spicedcider.content.handler.StrawGolemEvents;
 import com.evandev.spicedcider.namingunconvention.RandomNameGenerator;
 import com.evandev.spicedcider.networking.CauldronStirPayload;
 import com.evandev.spicedcider.networking.CloudCoverPayload;
+import com.evandev.spicedcider.networking.LootDisplayPayload;
+import com.evandev.spicedcider.content.loot.LootDisplays;
 import com.evandev.spicedcider.networking.GenerationEdgePayload;
 import com.evandev.spicedcider.networking.LodChunkPayload;
 import com.evandev.spicedcider.networking.LodHelloPayload;
@@ -48,6 +51,7 @@ import net.minecraft.world.level.block.DispenserBlock;
 import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.neoforged.api.distmarker.Dist;
+import net.neoforged.bus.api.EventPriority;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModContainer;
@@ -128,6 +132,7 @@ public class SpicedCider {
         ModDataComponents.DATA_COMPONENTS.register(modEventBus);
         if (ModList.get().isLoaded("iteminteractions")) ItemInteractionsCompat.register(modEventBus);
         if (ModList.get().isLoaded("toil_and_trouble")) modEventBus.addListener(ToilAndTroubleCapabilities::register);
+        modEventBus.addListener(EventPriority.LOWEST, ChestCapabilities::register);
         ModFluidTypes.FLUID_TYPES.register(modEventBus);
         ModFluids.FLUIDS.register(modEventBus);
 
@@ -313,6 +318,11 @@ public class SpicedCider {
                 CloudCoverPayload.TYPE,
                 CloudCoverPayload.CODEC,
                 (payload, context) -> context.enqueueWork(() -> CloudCoverClient.receive(payload.cover(), payload.fast()))
+        );
+        registrar.playToClient(
+                LootDisplayPayload.TYPE,
+                LootDisplayPayload.CODEC,
+                (payload, context) -> context.enqueueWork(() -> LootDisplays.receive(payload))
         );
         registrar.playToClient(
                 GenerationEdgePayload.TYPE,

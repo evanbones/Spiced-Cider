@@ -74,6 +74,8 @@ public class SpicedCiderConfigScreen {
                                 toggle("blockBoxWoodVariants", startup.blockBoxWoodVariants))
                         .optionIf(ModList.get().isLoaded("tide"),
                                 toggle("tideSpawnEggs", startup.tideSpawnEggs))
+                        .optionIf(ModList.get().isLoaded("vanillabackport"),
+                                toggle("sulfurCavesRework", startup.sulfurCavesRework))
                         .optionIf(ModList.get().isLoaded("culturaldelights"),
                                 toggle("drinkIntoxication", startup.drinkIntoxication))
                         .optionIf(ModList.get().isLoaded("create"),
@@ -96,6 +98,18 @@ public class SpicedCiderConfigScreen {
                                 toggle("voiceChatHideSingleplayerHud", client.voiceChatHideSingleplayerHud))
                         .optionIf(ModList.get().isLoaded("clutternomore"),
                                 toggle("clutterNoMoreShapeWheel", client.clutterNoMoreShapeWheel))
+                        .optionIf(ModList.get().isLoaded("emi") && ModList.get().isLoaded("nomansland"),
+                                toggle("emiTappingCategory", client.emiTappingCategory))
+                        .optionIf(ModList.get().isLoaded("emi") && ModList.get().isLoaded("spelunkery"),
+                                toggle("emiSluicingCategory", client.emiSluicingCategory))
+                        .optionIf(ModList.get().isLoaded("emi"),
+                                toggle("emiBarteringCategory", client.emiBarteringCategory))
+                        .optionIf(ModList.get().isLoaded("emi"),
+                                toggle("emiSniffingCategory", client.emiSniffingCategory))
+                        .optionIf(ModList.get().isLoaded("emi"),
+                                toggle("emiArchaeologyCategory", client.emiArchaeologyCategory))
+                        .optionIf(ModList.get().isLoaded("emi"),
+                                toggle("emiStructureLootCategory", client.emiStructureLootCategory))
                         .build())
                 .category(ConfigCategory.createBuilder()
                         .name(Component.translatable("category.spicedcider.performance"))

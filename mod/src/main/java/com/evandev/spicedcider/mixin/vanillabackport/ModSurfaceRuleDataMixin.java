@@ -5,6 +5,9 @@ import com.blackgear.vanillabackport.common.registries.blocks.ModBlocks;
 import com.blackgear.vanillabackport.common.registries.worldgen.ModNoises;
 import com.blackgear.vanillabackport.common.worldgen.surface.ModSurfaceRuleData;
 import com.blackgear.vanillabackport.common.level.worldgen.surface.SpatialNoiseThresholdConditionSource;
+import com.evandev.spicedcider.config.SpicedCiderConfig;
+import com.llamalad7.mixinextras.injector.wrapmethod.WrapMethod;
+import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.moulberry.mixinconstraints.annotations.IfModLoaded;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.block.Blocks;
@@ -12,21 +15,17 @@ import net.minecraft.world.level.levelgen.SurfaceRules;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.synth.NormalNoise;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Overwrite;
 import org.spongepowered.asm.mixin.Unique;
 
 @IfModLoaded("vanillabackport")
 @Mixin(value = ModSurfaceRuleData.class, remap = false)
 public class ModSurfaceRuleDataMixin {
 
-    /**
-     * @author Evan
-     * @reason Rework Sulphur Caves surface rules:
-     * - Tuff outer transition line [-0.48, -0.4] and [0.4, 0.48]
-     * - Sulfur across the rest of the biome
-     */
-    @Overwrite
-    public static SurfaceRules.RuleSource makeRules() {
+    @WrapMethod(method = "makeRules")
+    private static SurfaceRules.RuleSource cider$makeRules(Operation<SurfaceRules.RuleSource> original) {
+        if (!SpicedCiderConfig.startupOr(SpicedCiderConfig.STARTUP.sulfurCavesRework, false)) {
+            return original.call();
+        }
         SurfaceRules.RuleSource sulfur = SurfaceRules.state(ModBlocks.SULFUR.get().defaultBlockState());
         SurfaceRules.RuleSource tuff = SurfaceRules.state(Blocks.TUFF.defaultBlockState());
         SurfaceRules.RuleSource bedrock = SurfaceRules.ifTrue(

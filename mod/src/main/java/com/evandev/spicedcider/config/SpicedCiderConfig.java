@@ -87,6 +87,7 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.BooleanValue torchflowerLight;
         public final ModConfigSpec.BooleanValue drinkIntoxication;
         public final ModConfigSpec.BooleanValue tideSpawnEggs;
+        public final ModConfigSpec.BooleanValue sulfurCavesRework;
 
         public Startup(ModConfigSpec.Builder builder) {
             blockBoxWoodVariants = builder
@@ -123,6 +124,11 @@ public class SpicedCiderConfig {
                     .comment(tooltip("tideSpawnEggs"))
                     .translation("option.spicedcider.tideSpawnEggs")
                     .define("tideSpawnEggs", false);
+
+            sulfurCavesRework = builder
+                    .comment(tooltip("sulfurCavesRework"))
+                    .translation("option.spicedcider.sulfurCavesRework")
+                    .define("sulfurCavesRework", false);
 
         }
     }
@@ -477,6 +483,12 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.BooleanValue lodgedHideBleedingRisk;
         public final ModConfigSpec.BooleanValue voiceChatHideSingleplayerHud;
         public final ModConfigSpec.BooleanValue clutterNoMoreShapeWheel;
+        public final ModConfigSpec.BooleanValue emiTappingCategory;
+        public final ModConfigSpec.BooleanValue emiSluicingCategory;
+        public final ModConfigSpec.BooleanValue emiBarteringCategory;
+        public final ModConfigSpec.BooleanValue emiSniffingCategory;
+        public final ModConfigSpec.BooleanValue emiArchaeologyCategory;
+        public final ModConfigSpec.BooleanValue emiStructureLootCategory;
 
         public Client(ModConfigSpec.Builder builder) {
             builder.push("compat");
@@ -495,6 +507,36 @@ public class SpicedCiderConfig {
                     .comment(tooltip("voiceChatHideSingleplayerHud"))
                     .translation("option.spicedcider.voiceChatHideSingleplayerHud")
                     .define("voiceChatHideSingleplayerHud", false);
+
+            emiTappingCategory = builder
+                    .comment(tooltip("emiTappingCategory"))
+                    .translation("option.spicedcider.emiTappingCategory")
+                    .define("emiTappingCategory", false);
+
+            emiSluicingCategory = builder
+                    .comment(tooltip("emiSluicingCategory"))
+                    .translation("option.spicedcider.emiSluicingCategory")
+                    .define("emiSluicingCategory", false);
+
+            emiBarteringCategory = builder
+                    .comment(tooltip("emiBarteringCategory"))
+                    .translation("option.spicedcider.emiBarteringCategory")
+                    .define("emiBarteringCategory", false);
+
+            emiSniffingCategory = builder
+                    .comment(tooltip("emiSniffingCategory"))
+                    .translation("option.spicedcider.emiSniffingCategory")
+                    .define("emiSniffingCategory", false);
+
+            emiArchaeologyCategory = builder
+                    .comment(tooltip("emiArchaeologyCategory"))
+                    .translation("option.spicedcider.emiArchaeologyCategory")
+                    .define("emiArchaeologyCategory", false);
+
+            emiStructureLootCategory = builder
+                    .comment(tooltip("emiStructureLootCategory"))
+                    .translation("option.spicedcider.emiStructureLootCategory")
+                    .define("emiStructureLootCategory", false);
 
             clutterNoMoreShapeWheel = builder
                     .comment(tooltip("clutterNoMoreShapeWheel"))

@@ -1,5 +1,7 @@
 package com.evandev.spicedcider.client.events;
 
+import com.evandev.spicedcider.client.SceneEntities;
+import com.evandev.spicedcider.content.loot.LootDisplays;
 import com.evandev.spicedcider.SpicedCider;
 import com.evandev.spicedcider.client.music.DeathSoundInstance;
 import com.evandev.spicedcider.config.SpicedCiderConfig;
@@ -19,6 +21,8 @@ public class ClientGameEvents {
     @SubscribeEvent
     public static void onLoggingOut(ClientPlayerNetworkEvent.LoggingOut event) {
         ServerLeakEvents.onClientLoggedOut();
+        SceneEntities.clear();
+        LootDisplays.clearReceived();
     }
 
     @SubscribeEvent
