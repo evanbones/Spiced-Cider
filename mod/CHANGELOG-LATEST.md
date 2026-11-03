@@ -1,3 +1,3 @@
 ### Fixed
 
-- Fixed a startup crash when Slime Biome, Clayworks or Stoneworks loaded after Cider Core.
+- Fixed Vista breaking Mini Music Tweaks pause menu music unpausing.
