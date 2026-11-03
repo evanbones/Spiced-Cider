@@ -1,17 +1,30 @@
 {
+  "ui.toast.task_complete": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "advancementplaques:ui/toast/task_complete",
+        "volume": 0.6
+      },
+      {
+        "name": "advancementplaques:ui/toast/task_complete_danny",
+        "volume": 0.535
+      },
+      {
+        "name": "advancementplaques:ui/toast/task_complete_haggstrom",
+        "volume": 0.535
+      },
+      {
+        "name": "advancementplaques:ui/toast/task_complete_sweden",
+        "volume": 0.477
+      }
+    ]
+  },
   "ui.toast.goal_complete": {
     "replace": true,
     "sounds": [
       {
         "name": "advancementplaques:ui/toast/goal_complete",
-        "volume": 0.6
-      },
-      {
-        "name": "advancementplaques:ui/toast/goal_complete_haggstrom",
-        "volume": 0.6
-      },
-      {
-        "name": "advancementplaques:ui/toast/goal_complete_danny",
         "volume": 0.6
       }
     ]

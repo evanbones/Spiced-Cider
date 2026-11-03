@@ -12010,7 +12010,7 @@ hash = "5010a76795b99d837e3fb0b724e084d063db7563d3a42ffa3a9cf69793471615"
 
 [[files]]
 file = "config/reliable_advancements_edits/data/spicedcider/advancement/spiced_cider/cobblestone.json"
-hash = "108eec349cb89c1b3ecc4418a3d11dd9f9e1c39e9013c346bc8a80125b9226cd"
+hash = "8c90c403c1457123f6b73a3ce14c007092eb73fd478031652c4a343835debe16"
 
 [[files]]
 file = "config/reliable_advancements_edits/data/spicedcider/advancement/spiced_cider/coke.json"
@@ -12086,7 +12086,7 @@ hash = "47341b48188d4fd891790c8bc32bfe5d8f461a6525ee649f33e498867356eef7"
 
 [[files]]
 file = "config/reliable_advancements_edits/data/spicedcider/advancement/spiced_cider/flint_mattock.json"
-hash = "cf67110b0c4760eb3829bb351dbad8b7910ed4629bdcea72e5d94e9fb18b7e62"
+hash = "d3709835480cc681938ba63cbf3d37fb5b02acc4d55cadba975d0a0205a8940f"
 
 [[files]]
 file = "config/reliable_advancements_edits/data/spicedcider/advancement/spiced_cider/forge.json"
@@ -12094,7 +12094,7 @@ hash = "5ebd289244746dba4ceb8f1a4cae0e0de261e145f20e796366a2c565bce565bd"
 
 [[files]]
 file = "config/reliable_advancements_edits/data/spicedcider/advancement/spiced_cider/furnace.json"
-hash = "1ea5c9162d9d30a8c3b1ddbde3bad5fdc8ec628267dc278242bf418dfc551db5"
+hash = "5cabef234c86aa63a1b100ecb6d1d44b5b8385100041c67fe8f6b27d0620aafc"
 
 [[files]]
 file = "config/reliable_advancements_edits/data/spicedcider/advancement/spiced_cider/geode.json"
@@ -12178,7 +12178,7 @@ hash = "47a9868181d195e31877c6bdf64aeb6b2cc6a29e7c60b669238c4fa03a0ae90b"
 
 [[files]]
 file = "config/reliable_advancements_edits/data/spicedcider/advancement/spiced_cider/workstone.json"
-hash = "45bf11f95e54406e0a1d30487f1e8e16c106da8ab00e6f324805202dc54f58d0"
+hash = "763efcc71d0187c75e7ed9b129f158d4cb3678fcbc05c8830fd75527ab8da8b0"
 
 [[files]]
 file = "config/reliable_advancements_edits/data/supplementaries/advancement/husbandry/soap.json"
@@ -12190,7 +12190,7 @@ hash = "400f5879985ffb784f88fdf883faa9178142e85c28c1dddf9a0fc1ec37deb3e2"
 
 [[files]]
 file = "config/reliable_advancements_edits/tabs.json"
-hash = "d1aec420ad5c268106275374bff0823603c503758c5d122f58dd3ef62a8da95b"
+hash = "9a12814f173fab9d0731fbefa9b3419db1a93fdbab658bc0434e329a5a8ac065"
 
 [[files]]
 file = "config/reliable_advancements_layout.json"
@@ -14034,7 +14034,7 @@ metafile = true
 
 [[files]]
 file = "mods/cider-core.pw.toml"
-hash = "bfef97607b1c1cc2fc5b424cbf3c1cb60f10eafecfaa0fa37081fa72beedac5f"
+hash = "0b5a91fa691ce0dfd281c57f1745d9cbac9dc68f9ba133289904a78977af0d29"
 metafile = true
 
 [[files]]
@@ -14864,7 +14864,7 @@ metafile = true
 
 [[files]]
 file = "mods/snowy-spirit.pw.toml"
-hash = "bb90a2930e695f1ae3310f9728abd2fe9d39e32497145713017b7b6e863f54be"
+hash = "a8be1c23d5dc360538dd10e979fccb6512232f06328676502e8c6586ec6c93ef"
 metafile = true
 
 [[files]]
@@ -15416,23 +15416,27 @@ hash = "f5ac89d30644577da4b65a321f42b77accd4d63b7d99e35cb3c12e679ce65468"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/advancementplaques/sounds.json"
-hash = "6be51d59cf7adcd1b62d032fa3d78e64d9ed8e999a429cde5d3f96e8a5249048"
+hash = "312c5167d45a12e64b3ccf7e54f01c2194d0120353f43da60d0389a53a220201"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/advancementplaques/sounds/ui/toast/goal_complete.ogg"
 hash = "2d3b4d64ab0201ec8b02195133106e4c09fea2105136c7423d9f925560ed894c"
 
 [[files]]
-file = "resourcepacks/spicedcider_resources/assets/advancementplaques/sounds/ui/toast/goal_complete_danny.ogg"
+file = "resourcepacks/spicedcider_resources/assets/advancementplaques/sounds/ui/toast/task_complete.ogg"
+hash = "9a44786bcfe54c9546ac0793234689b920c800fae6448973a86a6b24f61b14c7"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/advancementplaques/sounds/ui/toast/task_complete_danny.ogg"
 hash = "7b650a40ed2af05801046cbad4e26effdba33c5d12d4bcf49dfa9198b81faed6"
 
 [[files]]
-file = "resourcepacks/spicedcider_resources/assets/advancementplaques/sounds/ui/toast/goal_complete_haggstrom.ogg"
+file = "resourcepacks/spicedcider_resources/assets/advancementplaques/sounds/ui/toast/task_complete_haggstrom.ogg"
 hash = "5796ac7fb096a16705d6f8c203f287c8f75f2a755ca9a07f5ac7c335f9a6eebc"
 
 [[files]]
-file = "resourcepacks/spicedcider_resources/assets/advancementplaques/sounds/ui/toast/task_complete.ogg"
-hash = "9a44786bcfe54c9546ac0793234689b920c800fae6448973a86a6b24f61b14c7"
+file = "resourcepacks/spicedcider_resources/assets/advancementplaques/sounds/ui/toast/task_complete_sweden.ogg"
+hash = "cac1ee04d9525c99e2d68c916d34ce26458c97a2d4b0a79e61d88be6efa2a637"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/advancementplaques/textures/gui/plaqueeffect.png"
@@ -20300,7 +20304,7 @@ hash = "17005b551cf7b2d64b4c5dd6cfa64e7555f6d09489dc9ea492ea5f2757ddd2db"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/minecraft/sounds.json"
-hash = "d2d08f110e2a9faf9219720c69f9924d7c01ebae438b6bc1c8816c2c8947944d"
+hash = "bf19dfd08462fed0a665cfc4407392213a3fed0e6ddb20c75bb64d59db87fc6d"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/minecraft/sounds/ambient/cave/cave20.ogg"
@@ -27297,10 +27301,6 @@ hash = "d7d210c3554b07ea53c62fc2269573299a113df88c1ecafe3702df0ccf6ea600"
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/ui/toast/challenge_complete.ogg"
 hash = "460d882d6a5b656ee637ca8806b2af8d841eb38b9626eac747e3da06761698ac"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/ui/toast/challenge_complete_sweden.ogg"
-hash = "cac1ee04d9525c99e2d68c916d34ce26458c97a2d4b0a79e61d88be6efa2a637"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/spicedcider/sounds/ui/toast/nether_complete.ogg"

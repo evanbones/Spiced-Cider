@@ -2,25 +2,29 @@
   "parent": "spicedcider:spiced_cider/flint_mattock",
   "display": {
     "icon": {
-      "id": "minecraft:cobblestone"
+      "id": "minecraft:stone"
     },
     "title": {
-      "text": "Rock Bottom"
+      "text": "Stone Age"
     },
     "description": {
-      "text": "Mine Cobblestone with your new Flint Mattock"
+      "text": "Mine Stone with your new Flint Mattock"
     },
     "frame": "task"
   },
   "criteria": {
-    "cobble": {
+    "stone": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:cobblestone",
-              "minecraft:cobbled_deepslate"
+              "minecraft:stone",
+              "minecraft:deepslate",
+              "minecraft:granite",
+              "minecraft:diorite",
+              "minecraft:andesite",
+              "minecraft:tuff"
             ]
           }
         ]
@@ -29,7 +33,7 @@
   },
   "requirements": [
     [
-      "cobble"
+      "stone"
     ]
   ]
 }
