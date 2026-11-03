@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.mixin.minecraft;
 
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.evandev.spicedcider.registry.ModTreeFeatures;
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import net.minecraft.resources.ResourceKey;
@@ -18,11 +19,11 @@ public class TreeGrowerGloomwoodMixin {
 
     @ModifyReturnValue(method = "getConfiguredFeature", at = @At("RETURN"))
     private ResourceKey<ConfiguredFeature<?, ?>> spicedcider$gloomwoodTree(ResourceKey<ConfiguredFeature<?, ?>> original) {
-        return "pale_oak".equals(this.name) ? ModTreeFeatures.GLOOMWOOD : original;
+        return "pale_oak".equals(this.name) && SpicedCiderConfig.commonOr(SpicedCiderConfig.COMMON.paleOakGrowsGloomwood, false) ? ModTreeFeatures.GLOOMWOOD : original;
     }
 
     @ModifyReturnValue(method = "getConfiguredMegaFeature", at = @At("RETURN"))
     private ResourceKey<ConfiguredFeature<?, ?>> spicedcider$noMegaGloomwood(ResourceKey<ConfiguredFeature<?, ?>> original) {
-        return "pale_oak".equals(this.name) ? null : original;
+        return "pale_oak".equals(this.name) && SpicedCiderConfig.commonOr(SpicedCiderConfig.COMMON.paleOakGrowsGloomwood, false) ? null : original;
     }
 }

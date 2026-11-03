@@ -2,6 +2,7 @@ package com.evandev.spicedcider.mixin.reliablebackpacks;
 
 import com.evandev.reliable_backpacks.common.events.BackpackPickupEvents;
 import com.evandev.reliable_backpacks.platform.services.IPlatformHelper;
+import com.evandev.spicedcider.compat.reliablebackpacks.WornBackpackContainer;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import com.moulberry.mixinconstraints.annotations.IfModLoaded;
@@ -20,6 +21,6 @@ public class BackpackPickupEventsMixin {
             )
     )
     private static boolean spicedcider$noPlacementFromBack(IPlatformHelper platform, LivingEntity entity, Operation<Boolean> original) {
-        return false;
+        return !WornBackpackContainer.enabled() && original.call(platform, entity);
     }
 }

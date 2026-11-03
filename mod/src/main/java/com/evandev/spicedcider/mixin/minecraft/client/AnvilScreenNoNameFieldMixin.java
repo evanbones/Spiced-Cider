@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.mixin.minecraft.client;
 
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.llamalad7.mixinextras.injector.v2.WrapWithCondition;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.inventory.AnvilScreen;
@@ -12,6 +13,6 @@ public class AnvilScreenNoNameFieldMixin {
 
     @WrapWithCondition(method = "renderBg", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/GuiGraphics;blitSprite(Lnet/minecraft/resources/ResourceLocation;IIII)V"))
     private boolean spicedcider$skipNameField(GuiGraphics graphics, ResourceLocation sprite, int x, int y, int width, int height) {
-        return false;
+        return !SpicedCiderConfig.clientOr(SpicedCiderConfig.CLIENT.anvilHideNameField, false);
     }
 }

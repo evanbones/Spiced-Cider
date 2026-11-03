@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.mixin.minecraft.client;
 
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.ImageButton;
@@ -36,7 +37,7 @@ public abstract class InventoryScreenRecipeButtonMixin extends EffectRenderingIn
 
     @Inject(method = "renderBg", at = @At("HEAD"))
     private void spicedcider$placeBookButton(GuiGraphics guiGraphics, float partialTick, int mouseX, int mouseY, CallbackInfo ci) {
-        if (this.spicedcider$bookButton != null) {
+        if (this.spicedcider$bookButton != null && SpicedCiderConfig.clientOr(SpicedCiderConfig.CLIENT.moveRecipeBookButton, false)) {
             this.spicedcider$bookButton.setX(this.leftPos + SPICEDCIDER$RECIPE_BUTTON_X);
         }
     }

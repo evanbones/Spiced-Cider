@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.mixin.emi;
 
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.moulberry.mixinconstraints.annotations.IfModLoaded;
 import dev.emi.emi.api.EmiRegistry;
 import dev.emi.emi.api.recipe.EmiRecipe;
@@ -32,7 +33,7 @@ public class EmiRegistryHauntingMixin {
 
     @Inject(method = "addCategory", at = @At("TAIL"))
     private void spicedcider$soulHauntingCategory(EmiRecipeCategory category, CallbackInfo ci) {
-        if (!SPICEDCIDER$HAUNTING.equals(category.getId())) return;
+        if (!SPICEDCIDER$HAUNTING.equals(category.getId()) || !SpicedCiderConfig.clientOr(SpicedCiderConfig.CLIENT.emiCreateFanRework, false)) return;
         EmiRenderable soulFire = (graphics, x, y, delta) -> {
             TextureAtlasSprite sprite = Minecraft.getInstance().getTextureAtlas(InventoryMenu.BLOCK_ATLAS).apply(SPICEDCIDER$SOUL_FIRE);
             graphics.blit(x, y, 0, 16, 16, sprite);
@@ -45,6 +46,6 @@ public class EmiRegistryHauntingMixin {
     @Inject(method = "addRecipe", at = @At("HEAD"), cancellable = true)
     private void spicedcider$dropFanOnlyRecipes(EmiRecipe recipe, CallbackInfo ci) {
         EmiRecipeCategory category = recipe.getCategory();
-        if (category != null && SPICEDCIDER$FAN_ONLY.contains(category.getId())) ci.cancel();
+        if (category != null && SpicedCiderConfig.clientOr(SpicedCiderConfig.CLIENT.emiCreateFanRework, false) && SPICEDCIDER$FAN_ONLY.contains(category.getId())) ci.cancel();
     }
 }

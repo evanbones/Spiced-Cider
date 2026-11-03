@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.mixin.nomansland;
 
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.evandev.spicedcider.compat.nomansland.CarvingWheelScreen;
 import com.farcr.nomansland.client.gui.CarvingSelectionScreen;
 import com.farcr.nomansland.common.carving.CarvingType;
@@ -21,6 +22,7 @@ public class CarvingWheelMixin {
 
     @Inject(method = "open", at = @At("HEAD"), cancellable = true)
     private static void spicedcider$openWheel(BlockPos clickedPos, Direction clickedFace, InteractionHand hand, List<CarvingType> types, CallbackInfo ci) {
+        if (!SpicedCiderConfig.clientOr(SpicedCiderConfig.CLIENT.carvingWheel, false)) return;
         Minecraft.getInstance().setScreen(new CarvingWheelScreen(clickedPos, clickedFace, hand, types));
         ci.cancel();
     }

@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.mixin.remi;
 
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.evandev.remi.feature.creativemodetab.gui.itemtab.ItemTabButton;
 import com.evandev.remi.integration.emi.ScreenManager;
 import com.evandev.remi.util.GuiGraphicsUtils;
@@ -26,7 +27,7 @@ public class ItemTabButtonRightTabsMixin {
 
     @ModifyVariable(method = "renderWidget", name = "iconX", at = @At(value = "INVOKE", target = "Lcom/evandev/remi/util/GuiGraphicsUtils;blitSprite(Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/resources/ResourceLocation;IIII)V"))
     private int spicedcider$centerRightTabIcon(int iconX) {
-        if (this.style != ItemTabButton.ButtonStyle.RIGHT) {
+        if (this.style != ItemTabButton.ButtonStyle.RIGHT || !SpicedCiderConfig.clientOr(SpicedCiderConfig.CLIENT.remiRightSideTabs, false)) {
             return iconX;
         }
         EmiScreenManager.SidebarPanel panel = ScreenManager.getTargetCreativeTabPanel();
@@ -35,7 +36,7 @@ public class ItemTabButtonRightTabsMixin {
 
     @WrapOperation(method = "renderWidget", at = @At(value = "INVOKE", target = "Lcom/evandev/remi/util/GuiGraphicsUtils;blitSprite(Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/resources/ResourceLocation;IIII)V"))
     private void spicedcider$mirrorRightTab(GuiGraphics graphics, ResourceLocation sprite, int x, int y, int width, int height, Operation<Void> original) {
-        if (this.style != ItemTabButton.ButtonStyle.RIGHT) {
+        if (this.style != ItemTabButton.ButtonStyle.RIGHT || !SpicedCiderConfig.clientOr(SpicedCiderConfig.CLIENT.remiRightSideTabs, false)) {
             original.call(graphics, sprite, x, y, width, height);
             return;
         }

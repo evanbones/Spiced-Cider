@@ -14,6 +14,6 @@ public abstract class PlayerBackpackSlotMixin {
     @ModifyReturnValue(method = "canUseSlot", at = @At("RETURN"))
     private boolean spicedcider$keepFilledBackpackOn(boolean original, EquipmentSlot slot) {
         Player player = (Player) (Object) this;
-        return original && !(slot == EquipmentSlot.CHEST && !player.isCreative() && WornBackpackContainer.hasContents(player.getItemBySlot(EquipmentSlot.CHEST)));
+        return original && !(WornBackpackContainer.enabled() && slot == EquipmentSlot.CHEST && !player.isCreative() && WornBackpackContainer.hasContents(player.getItemBySlot(EquipmentSlot.CHEST)));
     }
 }

@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.mixin.architectspalette;
 
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.moulberry.mixinconstraints.annotations.IfModLoaded;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -11,6 +12,6 @@ public class CageLanternLightMixin {
 
     @ModifyVariable(method = "getLightValueLit", at = @At("HEAD"), argsOnly = true)
     private static int spicedcider$brighterCageLanterns(int lightValue) {
-        return 15;
+        return SpicedCiderConfig.startupOr(SpicedCiderConfig.STARTUP.brightCageLanterns, false) ? 15 : lightValue;
     }
 }

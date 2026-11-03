@@ -36,6 +36,7 @@ public abstract class InventoryScreenBackpackMixin extends EffectRenderingInvent
 
     @Inject(method = "init", at = @At("HEAD"))
     private void spicedcider$sizeForBackpack(CallbackInfo ci) {
+        if (!WornBackpackSlot.hasSlots(this.menu)) return;
         this.spicedcider$expanded = WornBackpackSlot.isOpen(this.menu);
         this.imageHeight = this.spicedcider$expanded ? WornBackpackSlot.EXPANDED_HEIGHT : 166;
         WornBackpackSlot.layout(this.menu, this.spicedcider$expanded);
@@ -57,7 +58,7 @@ public abstract class InventoryScreenBackpackMixin extends EffectRenderingInvent
     @Inject(method = "renderBg", at = @At("HEAD"))
     private void spicedcider$keepRecipeButtonInPlace(GuiGraphics guiGraphics, float partialTick, int mouseX, int mouseY, CallbackInfo ci) {
         ImageButton button = this.spicedcider$recipeButton;
-        if (button == null) return;
+        if (button == null || !WornBackpackSlot.hasSlots(this.menu)) return;
         int anchor = this.height / 2 - 22;
         if (button.getY() == anchor || button.getY() == anchor - WornBackpackSlot.SCREEN_SHIFT) {
             button.setY(this.spicedcider$expanded ? anchor - WornBackpackSlot.SCREEN_SHIFT : anchor);

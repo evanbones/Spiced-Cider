@@ -35,7 +35,7 @@ public abstract class InventoryMenuBackpackMixin extends RecipeBookMenu<Crafting
 
     @Inject(method = "<init>", at = @At("TAIL"))
     private void spicedcider$addBackpackSlots(Inventory playerInventory, boolean active, Player owner, CallbackInfo ci) {
-        if ((Object) this.getClass() != InventoryMenu.class) return;
+        if ((Object) this.getClass() != InventoryMenu.class || !WornBackpackContainer.enabled()) return;
         this.spicedcider$backpack = new WornBackpackContainer(owner);
         for (int i = 0; i < WornBackpackContainer.SIZE; i++) {
             this.addSlot(new WornBackpackSlot(this.spicedcider$backpack, i));

@@ -15,6 +15,16 @@
 	oldProgressScreen = true
 	#Replace the vanilla Options screen with Spiced Cider's single settings screen (sidebar pages, curated options). Keybinds the screen hides are unbound.
 	customOptionsScreen = true
+	#Removes the rename text field from the anvil screen.
+	anvilHideNameField = true
+	#While sleeping, the chat box is replaced by gameplay tips.
+	bedScreenTips = true
+	#Moves the recipe book button in the inventory screen to the right, beside the crafting grid.
+	moveRecipeBookButton = true
+	#Hides your own potion effect particles in first person.
+	hideOwnEffectParticles = true
+	#Removes the "Applies to" and "Ingredients" lines from smithing template tooltips.
+	hideSmithingTemplateTooltips = true
 
 [vista]
 	#Applies performance fixes to Vista's mirror/TV reflection rendering (better culling, better shared-states, re-render throttling). Requires Vista (obviously).
@@ -71,6 +81,18 @@
 	emiArchaeologyCategory = true
 	#Adds an EMI category for the loot found in each structure's chests. Requires EMI. Reload EMI or rejoin the world to apply.
 	emiStructureLootCategory = true
+	#When the creative tab panel is on the right side of the item list, its tabs are drawn on the right edge too. Requires REMI.
+	remiRightSideTabs = true
+	#Removes the smithing table category from EMI. Requires EMI.
+	emiHideSmithingCategory = true
+	#EMI shows haunting under a soul campfire instead of an encased fan, and hides the fan washing, smoking and blasting categories. Requires EMI and Create.
+	emiCreateFanRework = true
+	#Hides the hold-shift item descriptions Create adds to item tooltips. Requires Create.
+	createHideItemDescriptions = true
+	#Hides the item information pages Quark adds to the recipe viewer. Requires Quark.
+	quarkHideHints = true
+	#Replaces No Man's Land's carving menu with a radial wheel. Requires No Man's Land.
+	carvingWheel = true
 
 [voxy]
 	#Replaces the terrain fog with configurable start and end distances that cover Voxy's LoD terrain, plus weather and cave fog. Disable to use Roxy's own fog.

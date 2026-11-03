@@ -88,6 +88,7 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.BooleanValue drinkIntoxication;
         public final ModConfigSpec.BooleanValue tideSpawnEggs;
         public final ModConfigSpec.BooleanValue sulfurCavesRework;
+        public final ModConfigSpec.BooleanValue brightCageLanterns;
 
         public Startup(ModConfigSpec.Builder builder) {
             blockBoxWoodVariants = builder
@@ -130,6 +131,11 @@ public class SpicedCiderConfig {
                     .translation("option.spicedcider.sulfurCavesRework")
                     .define("sulfurCavesRework", false);
 
+            brightCageLanterns = builder
+                    .comment(tooltip("brightCageLanterns"))
+                    .translation("option.spicedcider.brightCageLanterns")
+                    .define("brightCageLanterns", false);
+
         }
     }
 
@@ -159,6 +165,14 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.BooleanValue fireRingNoPotions;
         public final ModConfigSpec.BooleanValue copperGolemBuildingDisabled;
         public final ModConfigSpec.BooleanValue whereWindsBlowNoBonemealGrass;
+        public final ModConfigSpec.BooleanValue backpackInventoryRows;
+        public final ModConfigSpec.BooleanValue backpackAcceptAnything;
+        public final ModConfigSpec.BooleanValue incrementalMiningVanillaSpeed;
+        public final ModConfigSpec.BooleanValue dustBunnySpawners;
+        public final ModConfigSpec.BooleanValue pineconesOnTrees;
+        public final ModConfigSpec.BooleanValue copperGolemNoChest;
+        public final ModConfigSpec.BooleanValue vanillaBackportLightTweaks;
+        public final ModConfigSpec.BooleanValue oceanRuinPrismarineChests;
 
         public final ModConfigSpec.BooleanValue bedExplosionPrevention;
         public final ModConfigSpec.BooleanValue respawnAnchorExplosionPrevention;
@@ -181,6 +195,8 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.BooleanValue throwablePotionCooldown;
         public final ModConfigSpec.BooleanValue accurateSignHitboxes;
         public final ModConfigSpec.BooleanValue iglooBasementRemoval;
+        public final ModConfigSpec.BooleanValue noVanillaCocoaPods;
+        public final ModConfigSpec.BooleanValue paleOakGrowsGloomwood;
         public final ModConfigSpec.BooleanValue voidWater;
         public final ModConfigSpec.IntValue voidWaterTrailLength;
         public final ModConfigSpec.DoubleValue voidWaterTrailDecay;
@@ -232,6 +248,46 @@ public class SpicedCiderConfig {
                     .comment(tooltip("whereWindsBlowNoBonemealGrass"))
                     .translation("option.spicedcider.whereWindsBlowNoBonemealGrass")
                     .define("whereWindsBlowNoBonemealGrass", false);
+
+            backpackInventoryRows = builder
+                    .comment(tooltip("backpackInventoryRows"))
+                    .translation("option.spicedcider.backpackInventoryRows")
+                    .define("backpackInventoryRows", false);
+
+            backpackAcceptAnything = builder
+                    .comment(tooltip("backpackAcceptAnything"))
+                    .translation("option.spicedcider.backpackAcceptAnything")
+                    .define("backpackAcceptAnything", false);
+
+            incrementalMiningVanillaSpeed = builder
+                    .comment(tooltip("incrementalMiningVanillaSpeed"))
+                    .translation("option.spicedcider.incrementalMiningVanillaSpeed")
+                    .define("incrementalMiningVanillaSpeed", false);
+
+            dustBunnySpawners = builder
+                    .comment(tooltip("dustBunnySpawners"))
+                    .translation("option.spicedcider.dustBunnySpawners")
+                    .define("dustBunnySpawners", false);
+
+            pineconesOnTrees = builder
+                    .comment(tooltip("pineconesOnTrees"))
+                    .translation("option.spicedcider.pineconesOnTrees")
+                    .define("pineconesOnTrees", false);
+
+            copperGolemNoChest = builder
+                    .comment(tooltip("copperGolemNoChest"))
+                    .translation("option.spicedcider.copperGolemNoChest")
+                    .define("copperGolemNoChest", false);
+
+            vanillaBackportLightTweaks = builder
+                    .comment(tooltip("vanillaBackportLightTweaks"))
+                    .translation("option.spicedcider.vanillaBackportLightTweaks")
+                    .define("vanillaBackportLightTweaks", false);
+
+            oceanRuinPrismarineChests = builder
+                    .comment(tooltip("oceanRuinPrismarineChests"))
+                    .translation("option.spicedcider.oceanRuinPrismarineChests")
+                    .define("oceanRuinPrismarineChests", false);
 
             builder.pop();
             builder.push("features");
@@ -350,6 +406,16 @@ public class SpicedCiderConfig {
                     .translation("option.spicedcider.iglooBasementRemoval")
                     .define("iglooBasementRemoval", false);
 
+            noVanillaCocoaPods = builder
+                    .comment(tooltip("noVanillaCocoaPods"))
+                    .translation("option.spicedcider.noVanillaCocoaPods")
+                    .define("noVanillaCocoaPods", false);
+
+            paleOakGrowsGloomwood = builder
+                    .comment(tooltip("paleOakGrowsGloomwood"))
+                    .translation("option.spicedcider.paleOakGrowsGloomwood")
+                    .define("paleOakGrowsGloomwood", false);
+
             builder.pop();
             builder.push("voidWater");
 
@@ -454,6 +520,11 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.ConfigValue<String> windowTitleFormat;
         public final ModConfigSpec.BooleanValue oldProgressScreen;
         public final ModConfigSpec.BooleanValue customOptionsScreen;
+        public final ModConfigSpec.BooleanValue anvilHideNameField;
+        public final ModConfigSpec.BooleanValue bedScreenTips;
+        public final ModConfigSpec.BooleanValue moveRecipeBookButton;
+        public final ModConfigSpec.BooleanValue hideOwnEffectParticles;
+        public final ModConfigSpec.BooleanValue hideSmithingTemplateTooltips;
 
         public final ModConfigSpec.BooleanValue vistaMirrorPerfFixes;
         public final ModConfigSpec.IntValue vistaMirrorReflectionDistance;
@@ -483,6 +554,12 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.BooleanValue lodgedHideBleedingRisk;
         public final ModConfigSpec.BooleanValue voiceChatHideSingleplayerHud;
         public final ModConfigSpec.BooleanValue clutterNoMoreShapeWheel;
+        public final ModConfigSpec.BooleanValue remiRightSideTabs;
+        public final ModConfigSpec.BooleanValue emiHideSmithingCategory;
+        public final ModConfigSpec.BooleanValue emiCreateFanRework;
+        public final ModConfigSpec.BooleanValue createHideItemDescriptions;
+        public final ModConfigSpec.BooleanValue quarkHideHints;
+        public final ModConfigSpec.BooleanValue carvingWheel;
         public final ModConfigSpec.BooleanValue emiTappingCategory;
         public final ModConfigSpec.BooleanValue emiSluicingCategory;
         public final ModConfigSpec.BooleanValue emiBarteringCategory;
@@ -543,6 +620,36 @@ public class SpicedCiderConfig {
                     .translation("option.spicedcider.clutterNoMoreShapeWheel")
                     .define("clutterNoMoreShapeWheel", false);
 
+            remiRightSideTabs = builder
+                    .comment(tooltip("remiRightSideTabs"))
+                    .translation("option.spicedcider.remiRightSideTabs")
+                    .define("remiRightSideTabs", false);
+
+            emiHideSmithingCategory = builder
+                    .comment(tooltip("emiHideSmithingCategory"))
+                    .translation("option.spicedcider.emiHideSmithingCategory")
+                    .define("emiHideSmithingCategory", false);
+
+            emiCreateFanRework = builder
+                    .comment(tooltip("emiCreateFanRework"))
+                    .translation("option.spicedcider.emiCreateFanRework")
+                    .define("emiCreateFanRework", false);
+
+            createHideItemDescriptions = builder
+                    .comment(tooltip("createHideItemDescriptions"))
+                    .translation("option.spicedcider.createHideItemDescriptions")
+                    .define("createHideItemDescriptions", false);
+
+            quarkHideHints = builder
+                    .comment(tooltip("quarkHideHints"))
+                    .translation("option.spicedcider.quarkHideHints")
+                    .define("quarkHideHints", false);
+
+            carvingWheel = builder
+                    .comment(tooltip("carvingWheel"))
+                    .translation("option.spicedcider.carvingWheel")
+                    .define("carvingWheel", false);
+
             builder.pop();
             builder.push("naming");
 
@@ -583,6 +690,31 @@ public class SpicedCiderConfig {
                     .comment(tooltip("customOptionsScreen"))
                     .translation("option.spicedcider.customOptionsScreen")
                     .define("customOptionsScreen", false);
+
+            anvilHideNameField = builder
+                    .comment(tooltip("anvilHideNameField"))
+                    .translation("option.spicedcider.anvilHideNameField")
+                    .define("anvilHideNameField", false);
+
+            bedScreenTips = builder
+                    .comment(tooltip("bedScreenTips"))
+                    .translation("option.spicedcider.bedScreenTips")
+                    .define("bedScreenTips", false);
+
+            moveRecipeBookButton = builder
+                    .comment(tooltip("moveRecipeBookButton"))
+                    .translation("option.spicedcider.moveRecipeBookButton")
+                    .define("moveRecipeBookButton", false);
+
+            hideOwnEffectParticles = builder
+                    .comment(tooltip("hideOwnEffectParticles"))
+                    .translation("option.spicedcider.hideOwnEffectParticles")
+                    .define("hideOwnEffectParticles", false);
+
+            hideSmithingTemplateTooltips = builder
+                    .comment(tooltip("hideSmithingTemplateTooltips"))
+                    .translation("option.spicedcider.hideSmithingTemplateTooltips")
+                    .define("hideSmithingTemplateTooltips", false);
 
             builder.pop();
             builder.push("vista");

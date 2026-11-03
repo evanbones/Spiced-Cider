@@ -1,9 +1,4 @@
-### Added
+### Changed
 
-- Added EMI categories for sluicing, piglin bartering, sniffing, archaeology, and structure loot.
-- Each extra EMI category (tree tapping, sluicing, bartering, sniffing, archaeology, structure loot) has its own option, off by default.
-- Added the Sulfur Caves Rework option (off by default).
-
-### Fixed
-
-- Fixed modded chests without an item handler (such as Every Compat chests) not working with Create funnels and other item transfer.
+- Many more Spiced Cider-specific changes are now options and off by default.
+- The Compatibility page of the config screen is grouped by mod, and only shows mods that are installed.

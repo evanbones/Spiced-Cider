@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.mixin.reliablebackpacks;
 
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.llamalad7.mixinextras.injector.wrapmethod.WrapMethod;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.moulberry.mixinconstraints.annotations.IfModLoaded;
@@ -11,6 +12,6 @@ import org.spongepowered.asm.mixin.Mixin;
 public class BackpackMenuSlotMixin {
     @WrapMethod(method = "mayPlace")
     private boolean spicedcider$allowAnything(ItemStack stack, Operation<Boolean> original) {
-        return true;
+        return SpicedCiderConfig.commonOr(SpicedCiderConfig.COMMON.backpackAcceptAnything, false) || original.call(stack);
     }
 }

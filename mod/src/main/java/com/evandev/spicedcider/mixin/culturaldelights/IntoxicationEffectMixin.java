@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.mixin.culturaldelights;
 
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.moulberry.mixinconstraints.annotations.IfModLoaded;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
@@ -15,6 +16,6 @@ public abstract class IntoxicationEffectMixin extends MobEffect {
 
     @Override
     public MobEffectCategory getCategory() {
-        return MobEffectCategory.HARMFUL;
+        return SpicedCiderConfig.startupOr(SpicedCiderConfig.STARTUP.drinkIntoxication, false) ? MobEffectCategory.HARMFUL : super.getCategory();
     }
 }

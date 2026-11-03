@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.mixin.minecraft.client;
 
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.evandev.spicedcider.client.tips.Tips;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.Button;
@@ -24,12 +25,14 @@ public abstract class InBedChatScreenTipsMixin extends ChatScreen {
 
     @Inject(method = "init", at = @At("TAIL"))
     private void spicedcider$hideChatInput(CallbackInfo ci) {
+        if (!SpicedCiderConfig.clientOr(SpicedCiderConfig.CLIENT.bedScreenTips, false)) return;
         this.removeWidget(this.input);
         this.setFocused(null);
     }
 
     @Inject(method = "render", at = @At("HEAD"), cancellable = true)
     private void spicedcider$renderTips(GuiGraphics graphics, int mouseX, int mouseY, float partialTick, CallbackInfo ci) {
+        if (!SpicedCiderConfig.clientOr(SpicedCiderConfig.CLIENT.bedScreenTips, false)) return;
         ci.cancel();
         this.leaveBedButton.render(graphics, mouseX, mouseY, partialTick);
         int besideButton = this.leaveBedButton.getX() - 16;
@@ -42,11 +45,13 @@ public abstract class InBedChatScreenTipsMixin extends ChatScreen {
 
     @Inject(method = "charTyped", at = @At("HEAD"), cancellable = true)
     private void spicedcider$ignoreTyping(char codePoint, int modifiers, CallbackInfoReturnable<Boolean> cir) {
+        if (!SpicedCiderConfig.clientOr(SpicedCiderConfig.CLIENT.bedScreenTips, false)) return;
         cir.setReturnValue(true);
     }
 
     @Inject(method = "keyPressed", at = @At("HEAD"), cancellable = true)
     private void spicedcider$openChat(int keyCode, int scanCode, int modifiers, CallbackInfoReturnable<Boolean> cir) {
+        if (!SpicedCiderConfig.clientOr(SpicedCiderConfig.CLIENT.bedScreenTips, false)) return;
         String initial = this.minecraft.options.keyChat.matches(keyCode, scanCode) ? ""
                 : this.minecraft.options.keyCommand.matches(keyCode, scanCode) ? "/" : null;
         if (initial == null) return;

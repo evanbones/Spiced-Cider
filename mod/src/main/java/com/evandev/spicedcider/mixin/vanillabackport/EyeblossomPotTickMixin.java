@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.mixin.vanillabackport;
 
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.blackgear.vanillabackport.common.level.blocks.EyeblossomPotBlock;
 import com.moulberry.mixinconstraints.annotations.IfModLoaded;
 import net.minecraft.core.BlockPos;
@@ -20,6 +21,10 @@ public abstract class EyeblossomPotTickMixin extends FlowerPotBlock {
 
     @Override
     protected void tick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
-        this.randomTick(state, level, pos, random);
+        if (SpicedCiderConfig.commonOr(SpicedCiderConfig.COMMON.vanillaBackportLightTweaks, false)) {
+            this.randomTick(state, level, pos, random);
+        } else {
+            super.tick(state, level, pos, random);
+        }
     }
 }

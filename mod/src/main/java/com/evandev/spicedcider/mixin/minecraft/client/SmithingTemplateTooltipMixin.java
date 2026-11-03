@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.mixin.minecraft.client;
 
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -17,6 +18,6 @@ public class SmithingTemplateTooltipMixin {
 
     @Inject(method = "appendHoverText", at = @At("HEAD"), cancellable = true)
     private void spicedcider$noSmithingLines(ItemStack stack, Item.TooltipContext context, List<Component> tooltip, TooltipFlag flag, CallbackInfo ci) {
-        ci.cancel();
+        if (SpicedCiderConfig.clientOr(SpicedCiderConfig.CLIENT.hideSmithingTemplateTooltips, false)) ci.cancel();
     }
 }

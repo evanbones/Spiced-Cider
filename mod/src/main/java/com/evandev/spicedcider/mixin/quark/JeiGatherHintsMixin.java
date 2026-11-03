@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.mixin.quark;
 
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.llamalad7.mixinextras.injector.wrapmethod.WrapMethod;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.moulberry.mixinconstraints.annotations.IfModLoaded;
@@ -13,5 +14,6 @@ public class JeiGatherHintsMixin {
 
     @WrapMethod(method = "accept(Lnet/minecraft/world/level/ItemLike;Lnet/minecraft/network/chat/Component;)V")
     private void spicedcider$dropHint(ItemLike item, Component text, Operation<Void> original) {
+        if (!SpicedCiderConfig.clientOr(SpicedCiderConfig.CLIENT.quarkHideHints, false)) original.call(item, text);
     }
 }

@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.mixin.create;
 
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.llamalad7.mixinextras.injector.wrapmethod.WrapMethod;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.moulberry.mixinconstraints.annotations.IfModLoaded;
@@ -12,5 +13,6 @@ public class ItemDescriptionTooltipMixin {
 
     @WrapMethod(method = "modify")
     private void spicedcider$skipDescription(ItemTooltipEvent event, Operation<Void> original) {
+        if (!SpicedCiderConfig.clientOr(SpicedCiderConfig.CLIENT.createHideItemDescriptions, false)) original.call(event);
     }
 }

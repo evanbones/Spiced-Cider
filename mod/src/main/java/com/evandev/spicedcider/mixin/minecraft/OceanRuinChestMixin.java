@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.mixin.minecraft;
 
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import net.minecraft.core.BlockPos;
@@ -19,7 +20,7 @@ public class OceanRuinChestMixin {
 
     @WrapOperation(method = "handleDataMarker", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/level/ServerLevelAccessor;setBlock(Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;I)Z"))
     private boolean spicedcider$prismarineChest(ServerLevelAccessor level, BlockPos pos, BlockState state, int flags, Operation<Boolean> original) {
-        if (state.is(Blocks.CHEST)) {
+        if (state.is(Blocks.CHEST) && SpicedCiderConfig.commonOr(SpicedCiderConfig.COMMON.oceanRuinPrismarineChests, false)) {
             BlockState chest = BuiltInRegistries.BLOCK.getOptional(PRISMARINE_CHEST)
                     .map(block -> block.defaultBlockState())
                     .filter(candidate -> candidate.hasProperty(ChestBlock.WATERLOGGED))

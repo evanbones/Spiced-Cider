@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.mixin.minecraft;
 
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import net.minecraft.world.level.block.CocoaBlock;
 import org.spongepowered.asm.mixin.Mixin;
@@ -10,6 +11,6 @@ public class CocoaBlockKapokMixin {
 
     @ModifyReturnValue(method = "canSurvive", at = @At("RETURN"))
     private boolean spicedcider$cocoaGrowsOnCacaoTrees(boolean original) {
-        return false;
+        return original && !SpicedCiderConfig.commonOr(SpicedCiderConfig.COMMON.noVanillaCocoaPods, false);
     }
 }

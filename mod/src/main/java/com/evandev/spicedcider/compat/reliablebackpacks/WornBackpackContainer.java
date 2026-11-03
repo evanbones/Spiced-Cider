@@ -1,6 +1,7 @@
 package com.evandev.spicedcider.compat.reliablebackpacks;
 
 import com.evandev.reliable_backpacks.registry.BPItems;
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import net.minecraft.core.NonNullList;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.Container;
@@ -22,6 +23,10 @@ public class WornBackpackContainer implements Container {
 
     public WornBackpackContainer(Player owner) {
         this.owner = owner;
+    }
+
+    public static boolean enabled() {
+        return SpicedCiderConfig.commonOr(SpicedCiderConfig.COMMON.backpackInventoryRows, false);
     }
 
     public static boolean hasContents(ItemStack stack) {

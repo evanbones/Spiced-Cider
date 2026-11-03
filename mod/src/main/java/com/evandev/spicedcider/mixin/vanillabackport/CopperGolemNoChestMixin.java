@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.mixin.vanillabackport;
 
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.blackgear.vanillabackport.common.level.blocks.CopperChestBlock;
 import com.moulberry.mixinconstraints.annotations.IfModLoaded;
 import net.minecraft.core.BlockPos;
@@ -19,6 +20,6 @@ public class CopperGolemNoChestMixin {
 
     @Inject(method = "getFromCopperBlock", at = @At("HEAD"), cancellable = true)
     private static void spicedcider$noChest(Block copperBlock, Direction facing, Level level, BlockPos pos, CallbackInfoReturnable<BlockState> cir) {
-        cir.setReturnValue(Blocks.AIR.defaultBlockState());
+        if (SpicedCiderConfig.commonOr(SpicedCiderConfig.COMMON.copperGolemNoChest, false)) cir.setReturnValue(Blocks.AIR.defaultBlockState());
     }
 }

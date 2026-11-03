@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.mixin.incrementalmining;
 
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.moulberry.mixinconstraints.annotations.IfModLoaded;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerPlayer;
@@ -17,6 +18,7 @@ public class MiningRulesVanillaTicksMixin {
 
     @Inject(method = "getIncrementalMiningTicks", at = @At("HEAD"), cancellable = true)
     private static void spicedcider$vanillaTicks(BlockState state, ServerPlayer player, BlockPos pos, ItemStack tool, CallbackInfoReturnable<Integer> cir) {
+        if (!SpicedCiderConfig.commonOr(SpicedCiderConfig.COMMON.incrementalMiningVanillaSpeed, false)) return;
         if (state.getDestroySpeed(player.level(), pos) < 0.0F) {
             cir.setReturnValue(-1);
             return;

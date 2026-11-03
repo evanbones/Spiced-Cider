@@ -11,6 +11,22 @@
 	copperGolemBuildingDisabled = true
 	#Bonemeal no longer turns grass into overgrown grass. Requires Where Winds Blow.
 	whereWindsBlowNoBonemealGrass = true
+	#A worn backpack adds its 27 slots to the player inventory screen, and a backpack with items in it can't be taken off or placed from your back. Client and server must match. Requires Reliable Backpacks.
+	backpackInventoryRows = true
+	#Removes the backpack item filter, so backpacks can hold any item. Requires Reliable Backpacks.
+	backpackAcceptAnything = true
+	#Incremental Mining uses the normal block breaking time instead of its own. Requires Incremental Mining.
+	incrementalMiningVanillaSpeed = true
+	#Half of the mineshaft side-room dungeon spawners spawn dust bunnies. Requires YUNG's Better Mineshafts and Spelunkery. Only affects newly generated terrain.
+	dustBunnySpawners = true
+	#Trees with pinecone-growing logs generate with pinecones. Requires Environmental. Only affects newly generated terrain.
+	pineconesOnTrees = true
+	#Building a copper golem doesn't leave a copper chest behind. Requires Vanilla Backport.
+	copperGolemNoChest = true
+	#Awake creaking hearts and resin clumps give off light, creaking eyes always glow, and eyeblossoms open in dim light at any time of day. Requires Vanilla Backport.
+	vanillaBackportLightTweaks = true
+	#Ocean ruins generate prismarine chests instead of regular chests. Requires Quark. Only affects newly generated terrain.
+	oceanRuinPrismarineChests = true
 
 [features]
 	#Combine a named name tag with an item in the crafting grid to rename it. Takes effect after /reload.
@@ -91,6 +107,10 @@
 		accurateSignHitboxes = true
 		#Igloos generate without their basement.
 		iglooBasementRemoval = true
+		#Cocoa pods can't be placed and break off logs. Cacao trees grow their own pods.
+		noVanillaCocoaPods = true
+		#Pale oak saplings grow into gloomwood trees, and don't grow as 2x2 trees.
+		paleOakGrowsGloomwood = true
 
 	[features.voidWater]
 		#Fluids at the bottom of the world spill into the void as fading trails you can swim in. Takes effect when a world is next loaded.

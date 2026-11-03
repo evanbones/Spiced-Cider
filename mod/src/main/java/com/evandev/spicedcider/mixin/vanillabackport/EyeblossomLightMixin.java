@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.mixin.vanillabackport;
 
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.blackgear.vanillabackport.common.level.blocks.EyeblossomBlock;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
@@ -21,6 +22,6 @@ public class EyeblossomLightMixin {
             at = @At(value = "INVOKE", target = "Lcom/blackgear/vanillabackport/core/util/WorldUtilities$EnvironmentUtils;isNaturalNight(Lnet/minecraft/world/level/Level;)Z")
     )
     private boolean spicedcider$openInDimLight(Level level, Operation<Boolean> original, BlockState state, ServerLevel serverLevel, BlockPos pos, RandomSource random) {
-        return level.getMaxLocalRawBrightness(pos) <= 7;
+        return SpicedCiderConfig.commonOr(SpicedCiderConfig.COMMON.vanillaBackportLightTweaks, false) ? level.getMaxLocalRawBrightness(pos) <= 7 : original.call(level);
     }
 }

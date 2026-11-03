@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.mixin.environmental;
 
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.evandev.spicedcider.registry.ModTags;
 import com.google.common.collect.Sets;
 import com.google.gson.JsonObject;
@@ -35,6 +36,9 @@ public class TreeFeaturePineconeMixin {
     private boolean spicedcider$addPinecones(TreeFeature feature, WorldGenLevel level, RandomSource random, BlockPos pos,
                                              BiConsumer<BlockPos, BlockState> roots, BiConsumer<BlockPos, BlockState> trunk,
                                              FoliagePlacer.FoliageSetter foliage, TreeConfiguration config, Operation<Boolean> original) {
+        if (!SpicedCiderConfig.commonOr(SpicedCiderConfig.COMMON.pineconesOnTrees, false)) {
+            return original.call(feature, level, random, pos, roots, trunk, foliage, config);
+        }
         Set<BlockPos> logs = Sets.newHashSet();
         Set<BlockPos> leaves = Sets.newHashSet();
         BiConsumer<BlockPos, BlockState> trackedTrunk = (p, state) -> {

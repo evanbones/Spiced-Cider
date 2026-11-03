@@ -20,8 +20,12 @@ public class WornBackpackSlot extends Slot {
         this.backpack = backpack;
     }
 
+    public static boolean hasSlots(InventoryMenu menu) {
+        return menu.slots.size() > FIRST && menu.slots.get(FIRST) instanceof WornBackpackSlot;
+    }
+
     public static boolean isOpen(InventoryMenu menu) {
-        return menu.slots.size() > FIRST && menu.slots.get(FIRST) instanceof WornBackpackSlot slot && slot.isActive();
+        return hasSlots(menu) && menu.slots.get(FIRST).isActive();
     }
 
     public static void layout(InventoryMenu menu, boolean expanded) {

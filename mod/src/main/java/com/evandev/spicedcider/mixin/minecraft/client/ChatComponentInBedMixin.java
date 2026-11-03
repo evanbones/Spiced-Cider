@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.mixin.minecraft.client;
 
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.components.ChatComponent;
@@ -18,6 +19,6 @@ public abstract class ChatComponentInBedMixin {
 
     @ModifyReturnValue(method = "isChatFocused", at = @At("RETURN"))
     private boolean spicedcider$unfocusInBed(boolean focused) {
-        return focused && !(this.minecraft.screen instanceof InBedChatScreen);
+        return focused && !(SpicedCiderConfig.clientOr(SpicedCiderConfig.CLIENT.bedScreenTips, false) && this.minecraft.screen instanceof InBedChatScreen);
     }
 }

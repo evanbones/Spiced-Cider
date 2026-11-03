@@ -29,7 +29,9 @@ public class SpicedCiderEmiPlugin implements EmiPlugin {
         }
         CauldronMixingEmiRecipe.register(registry);
         LootEmiCategories.register(registry);
-        registry.removeRecipes(recipe -> recipe.getCategory() == VanillaEmiRecipeCategories.SMITHING);
+        if (SpicedCiderConfig.clientOr(SpicedCiderConfig.CLIENT.emiHideSmithingCategory, false)) {
+            registry.removeRecipes(recipe -> recipe.getCategory() == VanillaEmiRecipeCategories.SMITHING);
+        }
         registry.removeRecipes(recipe -> recipe.getCategory() == VanillaEmiRecipeCategories.INFO && recipe.getId() == null
                 && !recipe.getInputs().isEmpty()
                 && recipe.getInputs().stream().flatMap(input -> input.getEmiStacks().stream())

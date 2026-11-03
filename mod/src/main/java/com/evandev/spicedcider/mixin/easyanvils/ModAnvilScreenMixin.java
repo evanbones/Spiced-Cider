@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.mixin.easyanvils;
 
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.evandev.spicedcider.mixin.minecraft.client.AnvilScreenAccessor;
 import com.moulberry.mixinconstraints.annotations.IfModLoaded;
 import net.minecraft.client.gui.components.EditBox;
@@ -27,6 +28,7 @@ public abstract class ModAnvilScreenMixin extends AnvilScreen {
 
     @Inject(method = "subInit()V", at = @At("TAIL"))
     private void spicedcider$dropRenaming(CallbackInfo ci) {
+        if (!SpicedCiderConfig.clientOr(SpicedCiderConfig.CLIENT.anvilHideNameField, false)) return;
         for (GuiEventListener child : List.copyOf(this.children())) {
             if (child.getClass().getSimpleName().equals("FormattingGuideWidget")) {
                 this.removeWidget(child);
@@ -38,6 +40,7 @@ public abstract class ModAnvilScreenMixin extends AnvilScreen {
 
     @Inject(method = "slotChanged(Lnet/minecraft/world/inventory/AbstractContainerMenu;ILnet/minecraft/world/item/ItemStack;)V", at = @At("TAIL"))
     private void spicedcider$keepNameHidden(AbstractContainerMenu menu, int slot, ItemStack stack, CallbackInfo ci) {
+        if (!SpicedCiderConfig.clientOr(SpicedCiderConfig.CLIENT.anvilHideNameField, false)) return;
         this.spicedcider$hideName();
     }
 

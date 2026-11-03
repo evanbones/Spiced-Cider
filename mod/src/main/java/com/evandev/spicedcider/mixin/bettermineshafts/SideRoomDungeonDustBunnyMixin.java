@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.mixin.bettermineshafts;
 
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import com.moulberry.mixinconstraints.annotations.IfModLoaded;
@@ -22,7 +23,7 @@ public class SideRoomDungeonDustBunnyMixin {
 
     @WrapOperation(method = "postProcess", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/level/block/entity/SpawnerBlockEntity;setEntityId(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/util/RandomSource;)V"))
     private void spicedcider$dustBunnySpawner(SpawnerBlockEntity spawner, EntityType<?> type, RandomSource random, Operation<Void> original) {
-        if (random.nextBoolean()) {
+        if (SpicedCiderConfig.commonOr(SpicedCiderConfig.COMMON.dustBunnySpawners, false) && random.nextBoolean()) {
             EntityType<?> dustBunny = BuiltInRegistries.ENTITY_TYPE.getOptional(spicedcider$DUST_BUNNY).orElse(type);
             original.call(spawner, dustBunny, random);
             return;

@@ -25,6 +25,6 @@ public abstract class ArmorSlotBackpackMixin extends Slot {
 
     @ModifyReturnValue(method = "mayPickup", at = @At("RETURN"))
     private boolean spicedcider$keepFilledBackpackOn(boolean original, Player player) {
-        return original && !(this.slot == EquipmentSlot.CHEST && !player.isCreative() && WornBackpackContainer.hasContents(this.getItem()));
+        return original && !(WornBackpackContainer.enabled() && this.slot == EquipmentSlot.CHEST && !player.isCreative() && WornBackpackContainer.hasContents(this.getItem()));
     }
 }

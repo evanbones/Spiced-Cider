@@ -4,6 +4,7 @@ import com.evandev.spicedcider.config.SpicedCiderConfig;
 import dev.isxander.yacl3.api.ConfigCategory;
 import dev.isxander.yacl3.api.Option;
 import dev.isxander.yacl3.api.OptionDescription;
+import dev.isxander.yacl3.api.OptionGroup;
 import dev.isxander.yacl3.api.YetAnotherConfigLib;
 import dev.isxander.yacl3.api.controller.DoubleSliderControllerBuilder;
 import dev.isxander.yacl3.api.controller.IntegerSliderControllerBuilder;
@@ -13,8 +14,14 @@ import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
 import net.neoforged.fml.ModList;
 import net.neoforged.neoforge.common.ModConfigSpec;
+import org.jetbrains.annotations.Nullable;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Objects;
 import java.util.function.Consumer;
+import java.util.stream.Collectors;
 
 public class SpicedCiderConfigScreen {
 
@@ -22,6 +29,7 @@ public class SpicedCiderConfigScreen {
         SpicedCiderConfig.Startup startup = SpicedCiderConfig.STARTUP;
         SpicedCiderConfig.Common common = SpicedCiderConfig.COMMON;
         SpicedCiderConfig.Client client = SpicedCiderConfig.CLIENT;
+        ConfigCategory compat = compat(startup, common, client);
 
         return YetAnotherConfigLib.createBuilder()
                 .title(Component.translatable("title.spicedcider.config"))
@@ -60,57 +68,13 @@ public class SpicedCiderConfigScreen {
                         .option(toggle("voidWater", common.voidWater))
                         .option(intSlider("voidWaterTrailLength", common.voidWaterTrailLength, 0, 64, 1))
                         .option(doubleSlider("voidWaterTrailDecay", common.voidWaterTrailDecay, 0.25, 8.0, 0.25))
+                        .option(toggle("noVanillaCocoaPods", common.noVanillaCocoaPods))
                         .option(toggle("caveMaps", common.caveMaps))
                         .option(toggle("caveMapsUseCreationHeight", common.caveMapsUseCreationHeight))
                         .option(intSlider("caveMapsFixedHeight", common.caveMapsFixedHeight, -64, 320, 1))
                         .build())
                 .category(features(common))
-                .category(ConfigCategory.createBuilder()
-                        .name(Component.translatable("category.spicedcider.compat"))
-                        .tooltip(Component.translatable("category.spicedcider.compat.tooltip"))
-                        .optionIf(ModList.get().isLoaded("environmental"),
-                                toggle("oldWisteriaTrees", common.oldWisteriaTrees))
-                        .optionIf(ModList.get().isLoaded("blockbox") && ModList.get().isLoaded("everycomp") && ModList.get().isLoaded("moonlight"),
-                                toggle("blockBoxWoodVariants", startup.blockBoxWoodVariants))
-                        .optionIf(ModList.get().isLoaded("tide"),
-                                toggle("tideSpawnEggs", startup.tideSpawnEggs))
-                        .optionIf(ModList.get().isLoaded("vanillabackport"),
-                                toggle("sulfurCavesRework", startup.sulfurCavesRework))
-                        .optionIf(ModList.get().isLoaded("culturaldelights"),
-                                toggle("drinkIntoxication", startup.drinkIntoxication))
-                        .optionIf(ModList.get().isLoaded("create"),
-                                toggle("soulCampfireHaunting", common.soulCampfireHaunting))
-                        .optionIf(ModList.get().isLoaded("slime_time"),
-                                toggle("slimeTimeDisableItemMerging", common.slimeTimeDisableItemMerging))
-                        .optionIf(ModList.get().isLoaded("lodged"),
-                                toggle("lodgedHideArrowDepth", client.lodgedHideArrowDepth))
-                        .optionIf(ModList.get().isLoaded("lodged"),
-                                toggle("lodgedHideBleedingRisk", client.lodgedHideBleedingRisk))
-                        .optionIf(ModList.get().isLoaded("easyanvils"),
-                                toggle("easyAnvilsFreeRepairs", common.easyAnvilsFreeRepairs))
-                        .optionIf(ModList.get().isLoaded("piglinproliferation"),
-                                toggle("fireRingNoPotions", common.fireRingNoPotions))
-                        .optionIf(ModList.get().isLoaded("caverns_and_chasms"),
-                                toggle("copperGolemBuildingDisabled", common.copperGolemBuildingDisabled))
-                        .optionIf(ModList.get().isLoaded("where_winds_blow"),
-                                toggle("whereWindsBlowNoBonemealGrass", common.whereWindsBlowNoBonemealGrass))
-                        .optionIf(ModList.get().isLoaded("voicechat"),
-                                toggle("voiceChatHideSingleplayerHud", client.voiceChatHideSingleplayerHud))
-                        .optionIf(ModList.get().isLoaded("clutternomore"),
-                                toggle("clutterNoMoreShapeWheel", client.clutterNoMoreShapeWheel))
-                        .optionIf(ModList.get().isLoaded("emi") && ModList.get().isLoaded("nomansland"),
-                                toggle("emiTappingCategory", client.emiTappingCategory))
-                        .optionIf(ModList.get().isLoaded("emi") && ModList.get().isLoaded("spelunkery"),
-                                toggle("emiSluicingCategory", client.emiSluicingCategory))
-                        .optionIf(ModList.get().isLoaded("emi"),
-                                toggle("emiBarteringCategory", client.emiBarteringCategory))
-                        .optionIf(ModList.get().isLoaded("emi"),
-                                toggle("emiSniffingCategory", client.emiSniffingCategory))
-                        .optionIf(ModList.get().isLoaded("emi"),
-                                toggle("emiArchaeologyCategory", client.emiArchaeologyCategory))
-                        .optionIf(ModList.get().isLoaded("emi"),
-                                toggle("emiStructureLootCategory", client.emiStructureLootCategory))
-                        .build())
+                .categoryIf(compat != null, compat)
                 .category(ConfigCategory.createBuilder()
                         .name(Component.translatable("category.spicedcider.performance"))
                         .tooltip(Component.translatable("category.spicedcider.performance.tooltip"))
@@ -127,6 +91,11 @@ public class SpicedCiderConfigScreen {
                         .option(stringField("windowTitleFormat", client.windowTitleFormat))
                         .option(toggle("oldProgressScreen", client.oldProgressScreen))
                         .option(toggle("customOptionsScreen", client.customOptionsScreen))
+                        .option(toggle("anvilHideNameField", client.anvilHideNameField))
+                        .option(toggle("bedScreenTips", client.bedScreenTips))
+                        .option(toggle("moveRecipeBookButton", client.moveRecipeBookButton))
+                        .option(toggle("hideOwnEffectParticles", client.hideOwnEffectParticles))
+                        .option(toggle("hideSmithingTemplateTooltips", client.hideSmithingTemplateTooltips))
                         .build())
                 .categoryIf(ModList.get().isLoaded("vista"), ConfigCategory.createBuilder()
                         .name(Component.translatable("category.spicedcider.vista"))
@@ -167,6 +136,90 @@ public class SpicedCiderConfigScreen {
                         .build())
                 .build()
                 .generateScreen(parent);
+    }
+
+    @Nullable
+    private static ConfigCategory compat(SpicedCiderConfig.Startup startup, SpicedCiderConfig.Common common, SpicedCiderConfig.Client client) {
+        ModList mods = ModList.get();
+        List<OptionGroup> groups = new ArrayList<>();
+        group(groups, List.of("architects_palette"),
+                toggle("brightCageLanterns", startup.brightCageLanterns));
+        group(groups, List.of("blockbox", "everycomp", "moonlight"),
+                toggle("blockBoxWoodVariants", startup.blockBoxWoodVariants));
+        group(groups, List.of("caverns_and_chasms"),
+                toggle("copperGolemBuildingDisabled", common.copperGolemBuildingDisabled));
+        group(groups, List.of("clutternomore"),
+                toggle("clutterNoMoreShapeWheel", client.clutterNoMoreShapeWheel));
+        group(groups, List.of("create"),
+                toggle("soulCampfireHaunting", common.soulCampfireHaunting),
+                toggle("createHideItemDescriptions", client.createHideItemDescriptions));
+        group(groups, List.of("culturaldelights"),
+                toggle("drinkIntoxication", startup.drinkIntoxication));
+        group(groups, List.of("easyanvils"),
+                toggle("easyAnvilsFreeRepairs", common.easyAnvilsFreeRepairs));
+        group(groups, List.of("emi"),
+                toggle("emiHideSmithingCategory", client.emiHideSmithingCategory),
+                toggle("emiBarteringCategory", client.emiBarteringCategory),
+                toggle("emiSniffingCategory", client.emiSniffingCategory),
+                toggle("emiArchaeologyCategory", client.emiArchaeologyCategory),
+                toggle("emiStructureLootCategory", client.emiStructureLootCategory),
+                mods.isLoaded("nomansland") ? toggle("emiTappingCategory", client.emiTappingCategory) : null,
+                mods.isLoaded("spelunkery") ? toggle("emiSluicingCategory", client.emiSluicingCategory) : null,
+                mods.isLoaded("create") ? toggle("emiCreateFanRework", client.emiCreateFanRework) : null);
+        group(groups, List.of("environmental"),
+                toggle("oldWisteriaTrees", common.oldWisteriaTrees),
+                toggle("pineconesOnTrees", common.pineconesOnTrees));
+        group(groups, List.of("incrementalmining"),
+                toggle("incrementalMiningVanillaSpeed", common.incrementalMiningVanillaSpeed));
+        group(groups, List.of("lodged"),
+                toggle("lodgedHideArrowDepth", client.lodgedHideArrowDepth),
+                toggle("lodgedHideBleedingRisk", client.lodgedHideBleedingRisk));
+        group(groups, List.of("nomansland"),
+                toggle("carvingWheel", client.carvingWheel));
+        group(groups, List.of("piglinproliferation"),
+                toggle("fireRingNoPotions", common.fireRingNoPotions));
+        group(groups, List.of("quark"),
+                toggle("quarkHideHints", client.quarkHideHints),
+                toggle("oceanRuinPrismarineChests", common.oceanRuinPrismarineChests));
+        group(groups, List.of("reliable_backpacks"),
+                toggle("backpackInventoryRows", common.backpackInventoryRows),
+                toggle("backpackAcceptAnything", common.backpackAcceptAnything));
+        group(groups, List.of("remi"),
+                toggle("remiRightSideTabs", client.remiRightSideTabs));
+        group(groups, List.of("slime_time"),
+                toggle("slimeTimeDisableItemMerging", common.slimeTimeDisableItemMerging));
+        group(groups, List.of("tide"),
+                toggle("tideSpawnEggs", startup.tideSpawnEggs));
+        group(groups, List.of("vanillabackport"),
+                toggle("sulfurCavesRework", startup.sulfurCavesRework),
+                toggle("vanillaBackportLightTweaks", common.vanillaBackportLightTweaks),
+                toggle("copperGolemNoChest", common.copperGolemNoChest),
+                toggle("paleOakGrowsGloomwood", common.paleOakGrowsGloomwood));
+        group(groups, List.of("voicechat"),
+                toggle("voiceChatHideSingleplayerHud", client.voiceChatHideSingleplayerHud));
+        group(groups, List.of("where_winds_blow"),
+                toggle("whereWindsBlowNoBonemealGrass", common.whereWindsBlowNoBonemealGrass));
+        group(groups, List.of("bettermineshafts", "spelunkery"),
+                toggle("dustBunnySpawners", common.dustBunnySpawners));
+        if (groups.isEmpty()) return null;
+        return ConfigCategory.createBuilder()
+                .name(Component.translatable("category.spicedcider.compat"))
+                .tooltip(Component.translatable("category.spicedcider.compat.tooltip"))
+                .groups(groups)
+                .build();
+    }
+
+    private static void group(List<OptionGroup> groups, List<String> modIds, @Nullable Option<?>... options) {
+        ModList mods = ModList.get();
+        if (!modIds.stream().allMatch(mods::isLoaded)) return;
+        String name = modIds.stream()
+                .map(id -> mods.getModContainerById(id).map(container -> container.getModInfo().getDisplayName()).orElse(id))
+                .collect(Collectors.joining(" + "));
+        groups.add(OptionGroup.createBuilder()
+                .name(Component.literal(name))
+                .options(Arrays.stream(options).filter(Objects::nonNull).toList())
+                .collapsed(false)
+                .build());
     }
 
     private static ConfigCategory features(SpicedCiderConfig.Common common) {

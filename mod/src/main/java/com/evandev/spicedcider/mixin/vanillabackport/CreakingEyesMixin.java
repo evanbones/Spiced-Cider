@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.mixin.vanillabackport;
 
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.blackgear.vanillabackport.common.level.entities.mob.monster.creaking.Creaking;
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import com.moulberry.mixinconstraints.annotations.IfModLoaded;
@@ -15,6 +16,6 @@ public abstract class CreakingEyesMixin {
 
     @ModifyReturnValue(method = "shouldEyesGlow", at = @At("RETURN"))
     private boolean spicedcider$alwaysGlow(boolean original) {
-        return this.isTearingDown() ? original : true;
+        return this.isTearingDown() || !SpicedCiderConfig.commonOr(SpicedCiderConfig.COMMON.vanillaBackportLightTweaks, false) ? original : true;
     }
 }
