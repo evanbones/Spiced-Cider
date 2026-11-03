@@ -283,6 +283,10 @@ neoForge {
 
 def mappingsAttribute = Attribute.of("net.minecraft.mappings", String)
 
+configurations {
+    dynamicCrosshairMod
+}
+
 dependencies {
     attributesSchema {
         attribute(mappingsAttribute)
@@ -292,6 +296,7 @@ dependencies {
     compileOnly "maven.modrinth:fancymenu:3.9.12-1.21.1-neoforge"
     compileOnly "maven.modrinth:iceberg:IMssx9du"
     compileOnly "maven.modrinth:reliable-advancements:J5weQWAm"
+    compileOnly "maven.modrinth:advancement-plaques:OWylG33I"
     compileOnly "maven.modrinth:toil-and-trouble:TAoMbdSb"
     compileOnly "maven.modrinth:manual-labour:LKYGxFM2"
     compileOnly "maven.modrinth:fX4dIQCo:ZIsoNOTJ"
@@ -417,6 +422,14 @@ dependencies {
 
     // Jade
     compileOnly "maven.modrinth:jade:15.10.6+neoforge"
+
+    // Dynamic Crosshair
+    dynamicCrosshairMod("maven.modrinth:dynamiccrosshair:9.11+1.21.1-neoforge") { transitive = false }
+    compileOnly files({
+        configurations.dynamicCrosshairMod.collect { jar ->
+            zipTree(jar).matching { include 'META-INF/jars/dynamiccrosshair-api-*.jar' }.files
+        }.flatten()
+    })
 
     // Resource Pack Overrides
     compileOnly "maven.modrinth:resource-pack-overrides:v21.1.0-1.21.1-NeoForge"

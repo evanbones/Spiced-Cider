@@ -1,0 +1,26 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "spicedcider:item/copper_hammer"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "damage": 0.25
+      },
+      "model": "spicedcider:item/exposed_copper_hammer"
+    },
+    {
+      "predicate": {
+        "damage": 0.5
+      },
+      "model": "spicedcider:item/weathered_copper_hammer"
+    },
+    {
+      "predicate": {
+        "damage": 0.75
+      },
+      "model": "spicedcider:item/oxidized_copper_hammer"
+    }
+  ]
+}

@@ -10,7 +10,7 @@
     "description": {
       "text": "Mount a fish on a Fish Display"
     },
-    "frame": "task"
+    "frame": "goal"
   },
   "criteria": {
     "placed_fish_display": {
@@ -33,5 +33,10 @@
     [
       "placed_fish_display"
     ]
-  ]
+  ],
+  "rewards": {
+    "loot": [
+      "spicedcider:advancement/husbandry_fish_display"
+    ]
+  }
 }

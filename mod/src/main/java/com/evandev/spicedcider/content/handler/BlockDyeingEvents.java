@@ -21,6 +21,7 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.event.TagsUpdatedEvent;
 import net.neoforged.neoforge.event.entity.player.UseItemOnBlockEvent;
 import org.jetbrains.annotations.Nullable;
 
@@ -61,6 +62,11 @@ public class BlockDyeingEvents {
         }
     }
 
+    @SubscribeEvent
+    public static void onTagsUpdated(TagsUpdatedEvent event) {
+        families = null;
+    }
+
     @Nullable
     public static Block dyed(Block block, DyeColor color) {
         Map<DyeColor, Block> family = families().get(block);
@@ -77,7 +83,7 @@ public class BlockDyeingEvents {
     private static Map<Block, Map<DyeColor, Block>> buildFamilies() {
         Map<String, Map<DyeColor, Block>> byKey = new HashMap<>();
         for (Block block : BuiltInRegistries.BLOCK) {
-            if (!dyeable(block)) continue;
+            if (!dyeable(block) || ReliableRemoverCompat.isRemoved(block.asItem())) continue;
             ResourceLocation id = BuiltInRegistries.BLOCK.getKey(block);
             List<String> tokens = new ArrayList<>(Arrays.asList(id.getPath().split("_")));
             DyeColor color = stripColor(tokens);
@@ -90,10 +96,23 @@ public class BlockDyeingEvents {
         byKey.forEach((key, family) -> {
             if (family.size() < DyeColor.values().length) return;
             family.values().forEach(block -> result.put(block, family));
-            Block base = BuiltInRegistries.BLOCK.getOptional(ResourceLocation.parse(key)).orElse(null);
+            Block base = base(ResourceLocation.parse(key), family);
             if (base != null && dyeable(base)) result.put(base, family);
         });
         return result;
+    }
+
+    @Nullable
+    private static Block base(ResourceLocation key, Map<DyeColor, Block> family) {
+        Block own = BuiltInRegistries.BLOCK.getOptional(key).orElse(null);
+        if (own != null) return own;
+        Block found = null;
+        for (Block block : BuiltInRegistries.BLOCK) {
+            if (!BuiltInRegistries.BLOCK.getKey(block).getPath().equals(key.getPath()) || family.containsValue(block)) continue;
+            if (found != null) return null;
+            found = block;
+        }
+        return found;
     }
 
     private static boolean dyeable(Block block) {

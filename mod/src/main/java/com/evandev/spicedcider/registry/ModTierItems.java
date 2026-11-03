@@ -17,6 +17,7 @@ import net.minecraft.world.item.*;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.fml.ModList;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -37,9 +38,16 @@ public class ModTierItems {
     public static final TagKey<Item> PRISMARITE_INGOTS = ItemTags.create(ResourceLocation.fromNamespaceAndPath("c", "ingots/prismarite"));
     public static final TagKey<Item> VALKYRIUM_INGOTS = ItemTags.create(ResourceLocation.fromNamespaceAndPath("c", "ingots/valkyrium"));
     public static final TagKey<Item> ADAMANTITE_INGOTS = ItemTags.create(ResourceLocation.fromNamespaceAndPath("c", "ingots/adamantite"));
+    public static final TagKey<Item> COPPER_INGOTS = ItemTags.create(ResourceLocation.fromNamespaceAndPath("c", "ingots/copper"));
+    public static final TagKey<Block> INCORRECT_FOR_COPPER_TOOL = BlockTags.create(ResourceLocation.withDefaultNamespace("incorrect_for_copper_tool"));
 
     public static final Tier STEEL = tier(1000, 7.0F, 3.0F, BlockTags.INCORRECT_FOR_IRON_TOOL, 11, STEEL_INGOTS);
     public static final Tier ELECTRUM = tier(4000, 24.0F, 3.5F, BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 18, ELECTRUM_INGOTS);
+    public static final Tier COPPER = tier(190, 5.0F, 1.0F, INCORRECT_FOR_COPPER_TOOL, 13, COPPER_INGOTS);
+    public static final Tier BRONZE = tier(700, 6.5F, 2.0F, BlockTags.INCORRECT_FOR_IRON_TOOL, 12, BRONZE_INGOTS);
+    public static final Tier ROSE_GOLD = tier(1000, 14.0F, 2.0F, BlockTags.INCORRECT_FOR_IRON_TOOL, 22, ROSE_GOLD_INGOTS);
+    public static final Tier PRISMARITE = tier(4000, 12.0F, 4.0F, BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 15, PRISMARITE_INGOTS);
+    public static final Tier VALKYRIUM = tier(6000, 16.0F, 4.0F, BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 15, VALKYRIUM_INGOTS);
 
     public static final DeferredHolder<ArmorMaterial, ArmorMaterial> ELECTRUM_ARMOR = ARMOR_MATERIALS.register("electrum", () -> new ArmorMaterial(
             Map.of(
@@ -62,7 +70,12 @@ public class ModTierItems {
     public static final DeferredHolder<ArmorMaterial, ArmorMaterial> VALKYRIUM_PET_ARMOR = petArmorMaterial("valkyrium", 19, 3.0F, 0.1F, SoundEvents.ARMOR_EQUIP_NETHERITE, VALKYRIUM_INGOTS);
     public static final DeferredHolder<ArmorMaterial, ArmorMaterial> ADAMANTITE_PET_ARMOR = petArmorMaterial("adamantite", 19, 3.0F, 0.1F, SoundEvents.ARMOR_EQUIP_NETHERITE, ADAMANTITE_INGOTS);
 
+    public static final DeferredItem<Item> COPPER_HAMMER = hammer("copper_hammer", COPPER, 6.0F, -3.2F);
+    public static final DeferredItem<Item> BRONZE_HAMMER = hammer("bronze_hammer", BRONZE, 6.0F, -3.1F);
+    public static final DeferredItem<Item> ROSE_GOLD_HAMMER = hammer("rose_gold_hammer", ROSE_GOLD, 6.0F, -3.0F);
     public static final DeferredItem<Item> STEEL_HAMMER = hammer("steel_hammer", STEEL, 6.0F, -3.1F);
+    public static final DeferredItem<Item> PRISMARITE_HAMMER = hammer("prismarite_hammer", PRISMARITE, 5.0F, -3.0F);
+    public static final DeferredItem<Item> VALKYRIUM_HAMMER = hammer("valkyrium_hammer", VALKYRIUM, 5.0F, -3.0F);
     public static final DeferredItem<Item> STEEL_SHIELD = ITEMS.register("steel_shield",
             () -> new MetalShieldItem(STEEL_INGOTS, new Item.Properties().durability(1500)));
 
@@ -94,8 +107,16 @@ public class ModTierItems {
     public static final DeferredItem<Item> VALKYRIUM_HORSE_ARMOR = petArmor("valkyrium_horse_armor", VALKYRIUM_PET_ARMOR, 592);
     public static final DeferredItem<Item> ADAMANTITE_HORSE_ARMOR = petArmor("adamantite_horse_armor", ADAMANTITE_PET_ARMOR, 592);
 
-    public static final List<DeferredItem<Item>> TOOLS = List.of(STEEL_HAMMER, ELECTRUM_SHOVEL, ELECTRUM_PICKAXE,
-            ELECTRUM_AXE, ELECTRUM_HOE, ELECTRUM_KNIFE, ELECTRUM_HAMMER);
+    public static final List<DeferredItem<Item>> HAMMERS = List.of(COPPER_HAMMER, BRONZE_HAMMER, ROSE_GOLD_HAMMER,
+            STEEL_HAMMER, ELECTRUM_HAMMER, PRISMARITE_HAMMER, VALKYRIUM_HAMMER);
+    private static final Map<DeferredItem<Item>, String> REQUIRED_MODS = Map.of(
+            BRONZE_HAMMER, "modestmining",
+            ROSE_GOLD_HAMMER, "oooh_pinky",
+            PRISMARITE_HAMMER, "modestmining",
+            VALKYRIUM_HAMMER, "modestmining");
+    public static final List<DeferredItem<Item>> TOOLS = List.of(COPPER_HAMMER, BRONZE_HAMMER, ROSE_GOLD_HAMMER,
+            STEEL_HAMMER, ELECTRUM_SHOVEL, ELECTRUM_PICKAXE, ELECTRUM_AXE, ELECTRUM_HOE, ELECTRUM_KNIFE, ELECTRUM_HAMMER,
+            PRISMARITE_HAMMER, VALKYRIUM_HAMMER);
     public static final List<DeferredItem<Item>> COMBAT = List.of(STEEL_SHIELD, ELECTRUM_SHIELD, ELECTRUM_LANCE,
             ELECTRUM_HELMET, ELECTRUM_CHESTPLATE, ELECTRUM_LEGGINGS, ELECTRUM_BOOTS, BRONZE_HORSE_ARMOR,
             ROSE_GOLD_HORSE_ARMOR, PRISMARITE_HORSE_ARMOR, VALKYRIUM_HORSE_ARMOR, ADAMANTITE_HORSE_ARMOR);
@@ -109,7 +130,9 @@ public class ModTierItems {
     private static void buildContents(BuildCreativeModeTabContentsEvent event) {
         CreativeModeTab.TabVisibility vis = CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS;
         if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
-            TOOLS.forEach(item -> event.accept(item.get(), vis));
+            TOOLS.stream()
+                    .filter(item -> !REQUIRED_MODS.containsKey(item) || ModList.get().isLoaded(REQUIRED_MODS.get(item)))
+                    .forEach(item -> event.accept(item.get(), vis));
         }
         if (event.getTabKey() == CreativeModeTabs.COMBAT) {
             COMBAT.forEach(item -> event.accept(item.get(), vis));

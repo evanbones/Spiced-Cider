@@ -1,6 +1,7 @@
 package com.evandev.spicedcider;
 
 import com.evandev.spicedcider.compat.continuity.ContinuityLazyModelWrapping;
+import com.evandev.spicedcider.compat.dynamiccrosshair.DynamicCrosshairCompat;
 import com.evandev.spicedcider.client.mixing.CauldronStirClient;
 import com.evandev.spicedcider.compat.voxy.VoxyFog;
 import com.evandev.spicedcider.compat.wherewindsblow.WhereWindsBlowLazyModelWrapping;
@@ -94,6 +95,9 @@ public class SpicedCider {
             if (ModList.get().isLoaded("where_winds_blow") && ModList.get().isLoaded("modernfix")) {
                 WhereWindsBlowLazyModelWrapping.register();
             }
+            if (ModList.get().isLoaded("dynamiccrosshair")) {
+                DynamicCrosshairCompat.register(modEventBus);
+            }
         }
 
         ModEntityTypes.ENTITY_TYPES.register(modEventBus);
@@ -119,6 +123,7 @@ public class SpicedCider {
         ModParticleTypes.PARTICLE_TYPES.register(modEventBus);
         ModMapDecorationTypes.MAP_DECORATION_TYPES.register(modEventBus);
         ModLootModifiers.LOOT_MODIFIER_SERIALIZERS.register(modEventBus);
+        ModLootConditions.LOOT_CONDITION_TYPES.register(modEventBus);
         ModConditions.CONDITION_CODECS.register(modEventBus);
         ModDataComponents.DATA_COMPONENTS.register(modEventBus);
         if (ModList.get().isLoaded("iteminteractions")) ItemInteractionsCompat.register(modEventBus);

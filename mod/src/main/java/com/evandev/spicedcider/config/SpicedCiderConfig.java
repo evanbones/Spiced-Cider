@@ -86,6 +86,7 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.BooleanValue leavesNotSuffocating;
         public final ModConfigSpec.BooleanValue torchflowerLight;
         public final ModConfigSpec.BooleanValue drinkIntoxication;
+        public final ModConfigSpec.BooleanValue tideSpawnEggs;
 
         public Startup(ModConfigSpec.Builder builder) {
             blockBoxWoodVariants = builder
@@ -117,6 +118,11 @@ public class SpicedCiderConfig {
                     .comment(tooltip("drinkIntoxication"))
                     .translation("option.spicedcider.drinkIntoxication")
                     .define("drinkIntoxication", false);
+
+            tideSpawnEggs = builder
+                    .comment(tooltip("tideSpawnEggs"))
+                    .translation("option.spicedcider.tideSpawnEggs")
+                    .define("tideSpawnEggs", false);
 
         }
     }
@@ -470,6 +476,7 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.BooleanValue lodgedHideArrowDepth;
         public final ModConfigSpec.BooleanValue lodgedHideBleedingRisk;
         public final ModConfigSpec.BooleanValue voiceChatHideSingleplayerHud;
+        public final ModConfigSpec.BooleanValue clutterNoMoreShapeWheel;
 
         public Client(ModConfigSpec.Builder builder) {
             builder.push("compat");
@@ -488,6 +495,11 @@ public class SpicedCiderConfig {
                     .comment(tooltip("voiceChatHideSingleplayerHud"))
                     .translation("option.spicedcider.voiceChatHideSingleplayerHud")
                     .define("voiceChatHideSingleplayerHud", false);
+
+            clutterNoMoreShapeWheel = builder
+                    .comment(tooltip("clutterNoMoreShapeWheel"))
+                    .translation("option.spicedcider.clutterNoMoreShapeWheel")
+                    .define("clutterNoMoreShapeWheel", false);
 
             builder.pop();
             builder.push("naming");

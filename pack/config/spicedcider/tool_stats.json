@@ -30,7 +30,8 @@
         "minecraft:shears",
         "abnormals_delight:(waxed_)?((exposed|weathered|oxidized)_)?copper_knife",
         "caverns_and_chasms:(waxed_)?((exposed|weathered|oxidized)_)?copper_(sword|shovel|pickaxe|axe|hoe)",
-        "manual_labour:(waxed_)?((exposed|weathered|oxidized)_)?copper_hammer"
+        "manual_labour:(waxed_)?((exposed|weathered|oxidized)_)?copper_hammer",
+        "?spicedcider:copper_hammer"
       ]
     },
     "silver": {
@@ -48,7 +49,8 @@
       "speed": 6.5,
       "incorrect": "spicedcider:incorrect_for_bronze_tool",
       "items": [
-        "modestmining:bronze_(sword|shovel|pickaxe|axe|hoe|knife|javelin|hammer)"
+        "modestmining:bronze_(sword|shovel|pickaxe|axe|hoe|knife|javelin|hammer)",
+        "?spicedcider:bronze_hammer"
       ]
     },
     "rose_gold": {
@@ -56,7 +58,8 @@
       "speed": 14.0,
       "incorrect": "spicedcider:incorrect_for_bronze_tool",
       "items": [
-        "oooh_pinky:rose_gold_(sword|shovel|pickaxe|axe|hoe|knife)"
+        "oooh_pinky:rose_gold_(sword|shovel|pickaxe|axe|hoe|knife)",
+        "?spicedcider:rose_gold_hammer"
       ]
     },
     "steel": {
@@ -110,14 +113,16 @@
       "durability": 4000,
       "speed": 12.0,
       "items": [
-        "modestmining:prismarite_(sword|shovel|pickaxe|axe|hoe|knife|javelin|hammer)"
+        "modestmining:prismarite_(sword|shovel|pickaxe|axe|hoe|knife|javelin|hammer)",
+        "?spicedcider:prismarite_hammer"
       ]
     },
     "valkyrium": {
       "durability": 6000,
       "speed": 16.0,
       "items": [
-        "modestmining:valkyrium_(sword|shovel|pickaxe|axe|hoe|knife|javelin|hammer)"
+        "modestmining:valkyrium_(sword|shovel|pickaxe|axe|hoe|knife|javelin|hammer)",
+        "?spicedcider:valkyrium_hammer"
       ]
     }
   },

@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.mixin.clutternomore;
 
+import com.evandev.spicedcider.compat.clutternomore.ShapeWheel;
 import com.llamalad7.mixinextras.injector.wrapmethod.WrapMethod;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.moulberry.mixinconstraints.annotations.IfModLoaded;
@@ -15,6 +16,10 @@ public class ControllerShapeHoldMixin {
 
     @WrapMethod(method = "onControllerShapeKey")
     private static void spicedcider$holdOnController(boolean down, boolean justPressed, boolean justReleased, boolean justTapped, Operation<Void> original) {
+        if (!ShapeWheel.enabled()) {
+            original.call(down, justPressed, justReleased, justTapped);
+            return;
+        }
         if (justReleased) {
             if (ClutterNoMoreClient.getOverlay() != null) ClutterNoMoreClient.closeOverlay();
             return;

@@ -1,0 +1,27 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "oooh_pinky"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "X": {
+      "tag": "c:ingots/rose_gold"
+    },
+    "|": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "XXX",
+    "X|X",
+    " | "
+  ],
+  "result": {
+    "count": 1,
+    "id": "spicedcider:rose_gold_hammer"
+  }
+}

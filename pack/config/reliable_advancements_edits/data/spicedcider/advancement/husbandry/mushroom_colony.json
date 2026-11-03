@@ -10,7 +10,7 @@
     "description": {
       "text": "Grow a Mushroom Colony on Rich Soil and harvest it with Shears"
     },
-    "frame": "task"
+    "frame": "goal"
   },
   "criteria": {
     "brown_mushroom_colony": {
@@ -39,5 +39,10 @@
       "brown_mushroom_colony",
       "red_mushroom_colony"
     ]
-  ]
+  ],
+  "rewards": {
+    "loot": [
+      "spicedcider:advancement/husbandry_mushroom_colony"
+    ]
+  }
 }

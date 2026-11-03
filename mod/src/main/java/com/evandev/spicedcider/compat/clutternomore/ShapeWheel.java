@@ -2,6 +2,7 @@ package com.evandev.spicedcider.compat.clutternomore;
 
 import com.evandev.spicedcider.client.gui.WheelButtons;
 import com.evandev.spicedcider.client.gui.WheelLabel;
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.mojang.blaze3d.systems.RenderSystem;
 import dev.tazer.clutternomore.client.ClutterNoMoreClient;
 import dev.tazer.clutternomore.client.ShapeSwitcherOverlay;
@@ -38,6 +39,7 @@ public final class ShapeWheel {
 
     @Nullable
     private static ShapeSwitcherOverlay open() {
+        if (!enabled()) return null;
         ShapeSwitcherOverlay overlay = ClutterNoMoreClient.getOverlay();
         if (overlay == null || !overlay.isVisible() || overlay.getShapeCount() < 2) return null;
         if (overlay != owner) {
@@ -49,6 +51,10 @@ public final class ShapeWheel {
             layoutRadius = -1.0F;
         }
         return overlay;
+    }
+
+    public static boolean enabled() {
+        return SpicedCiderConfig.clientOr(SpicedCiderConfig.CLIENT.clutterNoMoreShapeWheel, false);
     }
 
     public static boolean isShowing() {

@@ -15,6 +15,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.Tags;
+import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -88,6 +89,8 @@ public class ModItemTagsProvider extends ItemTagsProvider {
                 .add(ModItems.PIGLIN_BATTLEAXE.get());
         this.tag(ItemTags.PIGLIN_LOVED)
                 .add(ModItems.PIGLIN_BROADSWORD.get(), ModItems.PIGLIN_BATTLEAXE.get());
+        this.tag(externalTag("quark", "counts_as_weapon_for_gold_tools_have_fortune"))
+                .add(ModItems.PIGLIN_BROADSWORD.get());
 
         this.tag(Tags.Items.TOOLS)
                 .add(ModItems.INFERNITE_CLEAVER.get());
@@ -211,8 +214,7 @@ public class ModItemTagsProvider extends ItemTagsProvider {
     }
 
     private void addTierItemTags() {
-        Item steelHammer = ModTierItems.STEEL_HAMMER.get();
-        Item electrumHammer = ModTierItems.ELECTRUM_HAMMER.get();
+        Item[] hammers = ModTierItems.HAMMERS.stream().map(DeferredItem::get).toArray(Item[]::new);
         Item pickaxe = ModTierItems.ELECTRUM_PICKAXE.get();
         Item knife = ModTierItems.ELECTRUM_KNIFE.get();
         Item lance = ModTierItems.ELECTRUM_LANCE.get();
@@ -225,10 +227,10 @@ public class ModItemTagsProvider extends ItemTagsProvider {
 
         for (TagKey<Item> tag : List.of(externalTag("manual_labour", "hammers"), externalTag("c", "tools/hammer"),
                 ItemTags.CLUSTER_MAX_HARVESTABLES, ItemTags.MINING_ENCHANTABLE, ItemTags.MINING_LOOT_ENCHANTABLE)) {
-            this.tag(tag).add(steelHammer, electrumHammer);
+            this.tag(tag).add(hammers);
         }
-        this.tag(Tags.Items.MINING_TOOL_TOOLS).add(steelHammer, electrumHammer, pickaxe);
-        this.tag(Tags.Items.TOOLS).add(steelHammer, electrumHammer, knife);
+        this.tag(Tags.Items.MINING_TOOL_TOOLS).add(hammers).add(pickaxe);
+        this.tag(Tags.Items.TOOLS).add(hammers).add(knife);
 
         this.tag(ItemTags.PICKAXES).add(pickaxe);
         this.tag(ItemTags.AXES).add(ModTierItems.ELECTRUM_AXE.get());
@@ -250,7 +252,7 @@ public class ModItemTagsProvider extends ItemTagsProvider {
 
         this.tag(Tags.Items.TOOLS_SHIELD).add(steelShield, electrumShield);
 
-        this.tag(ItemTags.DURABILITY_ENCHANTABLE).add(steelHammer, electrumHammer, knife, lance, steelShield, electrumShield,
+        this.tag(ItemTags.DURABILITY_ENCHANTABLE).add(hammers).add(knife, lance, steelShield, electrumShield,
                 helmet, chestplate, leggings, boots);
         this.tag(ItemTags.VANISHING_ENCHANTABLE).add(helmet, chestplate, leggings, boots);
 
@@ -267,7 +269,7 @@ public class ModItemTagsProvider extends ItemTagsProvider {
         this.tag(ItemTags.FOOT_ARMOR_ENCHANTABLE).add(boots);
 
         ModTierItems.ITEMS.getEntries().stream()
-                .filter(holder -> holder.getId().getPath().startsWith("electrum_"))
+                .filter(holder -> holder.getId().getPath().startsWith("electrum_") || holder.getId().getPath().startsWith("rose_gold_"))
                 .forEach(holder -> this.tag(ItemTags.PIGLIN_LOVED).add(holder.get()));
     }
 

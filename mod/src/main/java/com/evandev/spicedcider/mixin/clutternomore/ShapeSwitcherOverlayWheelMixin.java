@@ -33,5 +33,6 @@ public class ShapeSwitcherOverlayWheelMixin {
 
     @WrapMethod(method = "tickLook")
     private void spicedcider$noLookSwitching(Operation<Void> original) {
+        if (!ShapeWheel.enabled()) original.call();
     }
 }

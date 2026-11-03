@@ -10,7 +10,7 @@
     "description": {
       "text": "Craft every Flint tool"
     },
-    "frame": "goal"
+    "frame": "task"
   },
   "criteria": {
     "has_flint_mattock": {
@@ -119,10 +119,5 @@
     [
       "has_flint_javelin"
     ]
-  ],
-  "rewards": {
-    "loot": [
-      "spicedcider:advancement/spiced_cider_flint_kit"
-    ]
-  }
+  ]
 }

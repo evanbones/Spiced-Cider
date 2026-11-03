@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "X": {
+      "tag": "c:ingots/copper"
+    },
+    "|": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "XXX",
+    "X|X",
+    " | "
+  ],
+  "result": {
+    "count": 1,
+    "id": "spicedcider:copper_hammer"
+  }
+}

@@ -39,7 +39,12 @@
   "crystalHeartHealthAmount": 2.0,
   "enableSpawnerShardDrop": true,
   "spawnerShardDropChance": 1.0,
-  "spawnerShardDropCount": 1,
+  "spawnerShardDropCount": 2,
+  "enableStaminaReductionOnDeath": false,
+  "staminaLossPerDeath": 2.0,
+  "minStaminaCapacity": 10.0,
+  "maxStaminaCapacity": 30.0,
+  "crystalBoltStaminaAmount": 2.0,
   "restrictRespawning": false,
   "respawnRandomRadius": 0,
   "displayDeathCoordinates": false

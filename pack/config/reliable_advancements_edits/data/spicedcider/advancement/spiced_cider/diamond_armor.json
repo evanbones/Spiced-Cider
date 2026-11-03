@@ -10,7 +10,7 @@
     "description": {
       "text": "Forge a full set of Diamond armor, very shiny and very expensive"
     },
-    "frame": "goal"
+    "frame": "task"
   },
   "criteria": {
     "has_diamond_helmet": {
@@ -67,10 +67,5 @@
     [
       "has_diamond_boots"
     ]
-  ],
-  "rewards": {
-    "loot": [
-      "spicedcider:advancement/spiced_cider_diamond_armor"
-    ]
-  }
+  ]
 }

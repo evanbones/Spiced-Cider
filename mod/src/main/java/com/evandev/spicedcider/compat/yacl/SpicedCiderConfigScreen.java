@@ -72,6 +72,8 @@ public class SpicedCiderConfigScreen {
                                 toggle("oldWisteriaTrees", common.oldWisteriaTrees))
                         .optionIf(ModList.get().isLoaded("blockbox") && ModList.get().isLoaded("everycomp") && ModList.get().isLoaded("moonlight"),
                                 toggle("blockBoxWoodVariants", startup.blockBoxWoodVariants))
+                        .optionIf(ModList.get().isLoaded("tide"),
+                                toggle("tideSpawnEggs", startup.tideSpawnEggs))
                         .optionIf(ModList.get().isLoaded("culturaldelights"),
                                 toggle("drinkIntoxication", startup.drinkIntoxication))
                         .optionIf(ModList.get().isLoaded("create"),
@@ -92,6 +94,8 @@ public class SpicedCiderConfigScreen {
                                 toggle("whereWindsBlowNoBonemealGrass", common.whereWindsBlowNoBonemealGrass))
                         .optionIf(ModList.get().isLoaded("voicechat"),
                                 toggle("voiceChatHideSingleplayerHud", client.voiceChatHideSingleplayerHud))
+                        .optionIf(ModList.get().isLoaded("clutternomore"),
+                                toggle("clutterNoMoreShapeWheel", client.clutterNoMoreShapeWheel))
                         .build())
                 .category(ConfigCategory.createBuilder()
                         .name(Component.translatable("category.spicedcider.performance"))

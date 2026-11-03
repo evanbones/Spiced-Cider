@@ -4,24 +4,29 @@ iceDropsIceBalls = true
 # Whether to rename Ice Balls to Ice Cubes
 # default: true
 iceCubes = true
-# Whether Ice Caves generate beneath frozen oceans in new chunks
+# Whether Snow should obey gravity.
 # default: true
-generateIceCaves = true
-# Whether Zombies turn into Frostbites, and Husks and Drowned into Zombies, after standing in Powder Snow
-# default: true
-freezingConversions = true
-# Whether Ice, Packed Ice, Blue Ice and Frosted Ice use their 26.4 sounds, including ambient Ice sounds
-# default: true
-newIceSounds = false
-# Whether Snowballs knock back players
-# default: true
-snowballKnockback = true
-# Whether Water next to Blue Ice freezes into Brittle Ice
-# default: true
-blueIceMakesBrittleIce = true
-# Whether Mushrooms can be placed on any solid block regardless of light level
-# default: true
-mushroomPlacement = true
+snowGravity = true
 # Whether the Frostbite Spawn Egg uses the old two-tone style instead of its 26.4 texture
 # default: true
 legacySpawnEgg = true
+
+[backport]
+	# Whether Ice Caves generate beneath frozen oceans in new chunks
+	# default: true
+	generateIceCaves = true
+	# Whether Zombies turn into Frostbites, and Husks and Drowned into Zombies, after standing in Powder Snow
+	# default: true
+	freezingConversions = true
+	# Whether Ice, Packed Ice, Blue Ice and Frosted Ice use their 26.4 sounds, including ambient Ice sounds
+	# default: true
+	newIceSounds = true
+	# Whether Snowballs knock back players
+	# default: true
+	snowballKnockback = true
+	# Whether Water next to Blue Ice freezes into Brittle Ice
+	# default: true
+	blueIceMakesBrittleIce = true
+	# Whether Mushrooms can be placed on any solid block regardless of light level
+	# default: true
+	mushroomPlacement = true

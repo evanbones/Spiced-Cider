@@ -23,6 +23,7 @@ import com.evandev.spicedcider.client.renderer.projectiles.CobwebProjectileRende
 import com.evandev.spicedcider.client.renderer.projectiles.GrapplingHookRenderer;
 import com.evandev.spicedcider.compat.ponder.PonderCompat;
 import com.evandev.spicedcider.compat.tide.TideCompat;
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.evandev.spicedcider.content.block.TubewormBlock;
 import com.evandev.spicedcider.registry.*;
 import com.evandev.spicedcider.resource.ResourceBaker;
@@ -37,6 +38,7 @@ import net.minecraft.server.packs.FilePackResources;
 import net.minecraft.server.packs.PackLocationInfo;
 import net.minecraft.server.packs.PackSelectionConfig;
 import net.minecraft.server.packs.PackType;
+import net.minecraft.server.packs.PathPackResources;
 import net.minecraft.server.packs.repository.Pack;
 import net.minecraft.server.packs.repository.PackSource;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -176,7 +178,7 @@ public class ClientModEvents {
         }
         event.register((stack, tintIndex) -> tintIndex == 0 ? FoliageColor.getDefaultColor() : -1, ModItems.CACAO_LEAVES.get(), ModItems.FLOWERING_CACAO_LEAVES.get(),
                 ModItems.PEAR_LEAVES.get(), ModItems.FLOWERING_PEAR_LEAVES.get());
-        if (TideCompat.isLoaded()) {
+        if (TideCompat.isLoaded() && SpicedCiderConfig.startupOr(SpicedCiderConfig.STARTUP.tideSpawnEggs, false)) {
             registerTideSpawnEggColors(event);
         }
         RuneClientEvents.registerColors(event);
@@ -260,9 +262,28 @@ public class ClientModEvents {
         });
     }
 
+    private static void addTideSpawnEggPack(AddPackFindersEvent event) {
+        Path root = ModList.get().getModFileById(SpicedCider.MOD_ID).getFile().findResource("resourcepacks", "tide_spawn_eggs");
+        PackLocationInfo info = new PackLocationInfo(
+                "spicedcider_tide_spawn_eggs",
+                Component.literal("Spiced Cider Tide Spawn Eggs"),
+                PackSource.BUILT_IN,
+                Optional.empty()
+        );
+        Pack pack = Pack.readMetaAndCreate(info, new PathPackResources.PathResourcesSupplier(root), PackType.CLIENT_RESOURCES,
+                new PackSelectionConfig(true, Pack.Position.TOP, false));
+        if (pack != null) {
+            event.addRepositorySource(consumer -> consumer.accept(pack));
+        }
+    }
+
     @SubscribeEvent
     public static void onAddPackFinders(AddPackFindersEvent event) {
         if (event.getPackType() != PackType.CLIENT_RESOURCES) return;
+
+        if (TideCompat.isLoaded() && SpicedCiderConfig.startupOr(SpicedCiderConfig.STARTUP.tideSpawnEggs, false)) {
+            addTideSpawnEggPack(event);
+        }
 
         Path gameDir = FMLPaths.GAMEDIR.get();
         Path cacheDir = gameDir.resolve(".spicedcider_cache");

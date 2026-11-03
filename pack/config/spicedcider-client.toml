@@ -13,7 +13,7 @@
 	windowTitleFormat = "Minecraft - Spiced Cider %v"
 	#Restore classic style loading/progress screen when loading worlds, saving worlds, or changing dimensions.
 	oldProgressScreen = true
-	#Replace the vanilla Options screen with Spiced Cider's single settings screen (sidebar pages, curated options).
+	#Replace the vanilla Options screen with Spiced Cider's single settings screen (sidebar pages, curated options). Keybinds the screen hides are unbound.
 	customOptionsScreen = true
 
 [vista]
@@ -57,6 +57,8 @@
 	lodgedHideBleedingRisk = true
 	#Hides the voice chat HUD while playing in a world that isn't open to LAN. Requires Simple Voice Chat.
 	voiceChatHideSingleplayerHud = true
+	#Replaces Clutter No More's scrolling shape switcher with a radial wheel, and makes the controller shape button hold-to-open. Requires Clutter No More.
+	clutterNoMoreShapeWheel = true
 
 [voxy]
 	#Replaces the terrain fog with configurable start and end distances that cover Voxy's LoD terrain, plus weather and cave fog. Disable to use Roxy's own fog.

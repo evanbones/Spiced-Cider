@@ -12,5 +12,11 @@
   "jukebox_distance": 64.0,
   "permanent_toast_in_options": true,
   "play_toast_sound": true,
-  "play_music_when_paused": true
+  "play_music_when_paused": true,
+  "music_fade_sounds": [
+    "minecraft:ui.toast.challenge_complete",
+    "advancementplaques:ui.toast.task_complete",
+    "advancementplaques:ui.toast.goal_complete",
+    "spicedcider:ui.toast.nether_complete"
+  ]
 }

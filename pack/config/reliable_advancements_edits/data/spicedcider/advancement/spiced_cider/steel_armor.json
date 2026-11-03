@@ -10,7 +10,7 @@
     "description": {
       "text": "Forge a full set of Steel armor"
     },
-    "frame": "goal"
+    "frame": "task"
   },
   "criteria": {
     "has_steel_helmet": {
@@ -67,10 +67,5 @@
     [
       "has_steel_boots"
     ]
-  ],
-  "rewards": {
-    "loot": [
-      "spicedcider:advancement/spiced_cider_steel_armor"
-    ]
-  }
+  ]
 }

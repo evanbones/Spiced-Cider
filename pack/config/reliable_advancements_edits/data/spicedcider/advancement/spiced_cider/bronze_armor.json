@@ -10,7 +10,7 @@
     "description": {
       "text": "Forge a full set of Bronze armor"
     },
-    "frame": "goal"
+    "frame": "task"
   },
   "criteria": {
     "has_bronze_helmet": {
@@ -67,10 +67,5 @@
     [
       "has_bronze_boots"
     ]
-  ],
-  "rewards": {
-    "loot": [
-      "spicedcider:advancement/spiced_cider_bronze_armor"
-    ]
-  }
+  ]
 }
