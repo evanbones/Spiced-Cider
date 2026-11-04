@@ -53,14 +53,6 @@
         }
       }
     },
-    "ate_porridge": {
-      "trigger": "minecraft:consume_item",
-      "conditions": {
-        "item": {
-          "items": "modest_meals:porridge"
-        }
-      }
-    },
     "ate_jam": {
       "trigger": "minecraft:consume_item",
       "conditions": {
@@ -108,7 +100,34 @@
       "trigger": "minecraft:consume_item",
       "conditions": {
         "item": {
-          "items": "modest_meals:ice_cream"
+          "items": [
+            "modest_meals:ice_cream",
+            "modest_meals:ice_cream_bowl"
+          ]
+        }
+      }
+    },
+    "ate_pie": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "modest_meals:pie_slice"
+        }
+      }
+    },
+    "ate_cake": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "modest_meals:cake_slice"
+        }
+      }
+    },
+    "ate_milkshake": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "modest_meals:milkshake"
         }
       }
     }
@@ -130,9 +149,6 @@
       "ate_curry"
     ],
     [
-      "ate_porridge"
-    ],
-    [
       "ate_jam"
     ],
     [
@@ -149,6 +165,15 @@
     ],
     [
       "ate_ice_cream"
+    ],
+    [
+      "ate_pie"
+    ],
+    [
+      "ate_cake"
+    ],
+    [
+      "ate_milkshake"
     ]
   ],
   "rewards": {
