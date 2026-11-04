@@ -154,5 +154,18 @@
       "upgrade_aquatic:vibing_long",
       "upgrade_aquatic:vibing_strong"
     ]
+  },
+  {
+    "action": "remove",
+    "items": [
+      "upgrade_aquatic:driftwood_boards"
+    ],
+    "replace_with": "everycomp:mm/upgrade_aquatic/driftwood_boards"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "upgrade_aquatic:river_boards"
+    ]
   }
 ]

@@ -87,7 +87,9 @@
 		".*/nomansland/cut_stripped_walnut_post",
 		".*/nomansland/cut_walnut_post",
 		".*/nomansland/stripped_walnut_post",
-		".*/nomansland/walnut_post"
+		".*/nomansland/walnut_post",
+		".*/bountifulfares/walnut_(boards|tiles|pillar)",
+		".*/bountifulfares/(carved|chiseled)_walnut_planks"
 	]
 
 [entryset]
@@ -115,7 +117,17 @@
 		"woodworks:chest",
 		"woodworks:bookshelf",
 		"woodworks:closet",
-		"woodworks:trapped_closet"
+		"woodworks:trapped_closet",
+		"woodworks:boards",
+		"modestmasonry:board_slab",
+		"modestmasonry:board_stairs",
+		"modestmasonry:board_wall",
+		"modestmasonry:tile_slab",
+		"modestmasonry:tile_stairs",
+		"modestmasonry:tile_wall",
+		"modestmasonry:carved_plank_slab",
+		"modestmasonry:carved_plank_stairs",
+		"modestmasonry:carved_plank_wall"
 	]
 
 [module]

@@ -1,0 +1,17 @@
+{
+  "priority": 1000,
+  "add": {
+    "/(?<namespace>[^:]+):(?<wood>.+)_planks/": [
+      "modestmasonry:${wood}_boards",
+      "everycomp:mm/${namespace}/${wood}_boards",
+      "modestmasonry:${wood}_tiles",
+      "everycomp:mm/${namespace}/${wood}_tiles",
+      "modestmasonry:carved_${wood}_planks",
+      "everycomp:mm/${namespace}/carved_${wood}_planks",
+      "modestmasonry:chiseled_${wood}_planks",
+      "everycomp:mm/${namespace}/chiseled_${wood}_planks",
+      "modestmasonry:${wood}_pillar",
+      "everycomp:mm/${namespace}/${wood}_pillar"
+    ]
+  }
+}

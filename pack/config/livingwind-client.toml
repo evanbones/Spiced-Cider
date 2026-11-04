@@ -194,11 +194,11 @@
 		# Range: 0.0 ~ 3.0
 		wavingMultiplier = 1.0
 
-	#Fancy World Animations wind-responsive chains, lanterns and bells.
+	#Fancy World Animations wind-responsive chains and lanterns.
 	[compatibility.fancyWorldAnimations]
 		#Link FWA swing animations to Living Wind strength, direction, gusts and shelter. Requires Fancy World Animations.
 		enabled = true
-		#Overall impact of Living Wind on Fancy World Animations swinging objects. 0 = original FWA motion; 6 = visibly stronger wind-driven swings. Individual chain, lantern and bell intensities are additional multipliers.
+		#Overall impact of Living Wind on Fancy World Animations swinging objects. 0 = original FWA motion; 6 = visibly stronger wind-driven swings. Individual chain and lantern intensities are additional multipliers.
 		# Default: 6.0
 		# Range: 0.0 ~ 12.0
 		windImpact = 6.0
@@ -210,10 +210,6 @@
 		# Default: 1.0
 		# Range: 0.0 ~ 3.0
 		lanternIntensity = 1.0
-		#Strength of wind-driven idle bell rocking (does not affect bell ringing).
-		# Default: 1.0
-		# Range: 0.0 ~ 3.0
-		bellIntensity = 1.0
 
 	#Swinging Lanterns 2.0.4 integration; its physics, collisions and Create motion remain native.
 	[compatibility.swingingLanterns]

@@ -400,5 +400,23 @@
       "caverns_and_chasms:toolbox"
     ],
     "output": "create:brown_toolbox"
+  },
+  {
+    "inputs": [
+      "caverns_and_chasms:calcite_stairs"
+    ],
+    "output": "embers_and_icicles:calcite_stairs"
+  },
+  {
+    "inputs": [
+      "caverns_and_chasms:calcite_slab"
+    ],
+    "output": "embers_and_icicles:calcite_slab"
+  },
+  {
+    "inputs": [
+      "caverns_and_chasms:calcite_wall"
+    ],
+    "output": "embers_and_icicles:calcite_wall"
   }
 ]

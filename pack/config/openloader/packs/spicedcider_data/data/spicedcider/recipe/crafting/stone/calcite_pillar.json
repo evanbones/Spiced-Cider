@@ -2,7 +2,7 @@
   "neoforge:conditions": [
     {
       "type": "neoforge:mod_loaded",
-      "modid": "stoneworks"
+      "modid": "embers_and_icicles"
     }
   ],
   "type": "minecraft:crafting_shaped",
@@ -13,11 +13,11 @@
   ],
   "key": {
     "#": {
-      "item": "stoneworks:polished_calcite"
+      "item": "embers_and_icicles:polished_calcite"
     }
   },
   "result": {
-    "id": "stoneworks:calcite_pillar",
+    "id": "embers_and_icicles:calcite_pillar",
     "count": 2
   }
 }

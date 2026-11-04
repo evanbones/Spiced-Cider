@@ -177,11 +177,7 @@
       "create:smoking/bread",
       "embers_and_icicles:chiseled_packed_ice_from_packed_ice_stonecutting",
       "embers_and_icicles:packed_ice_bricks",
-      "embers_and_icicles:snow_brick_slab_from_snow_stonecutting",
-      "embers_and_icicles:snow_brick_stairs_from_snow_stonecutting",
-      "embers_and_icicles:snow_brick_wall_from_snow_stonecutting",
       "embers_and_icicles:snow_bricks",
-      "embers_and_icicles:snow_bricks_from_snow_block_stonecutting",
       "everycomp:abnww/bountifulfares/walnut_planks_from_walnut_logs_sawing",
       "everycomp:fd/bountifulfares/cutting/walnut_log",
       "everycomp:fd/caverns_and_chasms/cutting/azalea_log",
@@ -253,6 +249,16 @@
       "supplementaries:sack_3",
       "wilderflowers:milling/pink_dye_from_pink_petals",
       "woodworks:trapped_bamboo_closet"
+    ]
+  },
+  {
+    "action": "remove_recipe",
+    "id": [
+      "clayworks:cracked_nether_bricks_from_baking",
+      "clayworks:cracked_deepslate_tiles_from_baking",
+      "clayworks:cracked_stone_bricks_from_baking",
+      "clayworks:cracked_deepslate_bricks_from_baking",
+      "clayworks:cracked_polished_blackstone_bricks_from_baking"
     ]
   }
 ]

@@ -143,5 +143,18 @@
       "environmental:mycelium_sprouts"
     ],
     "replace_with": "nomansland:mycelium_sprouts"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "environmental:wisteria_boards"
+    ],
+    "replace_with": "everycomp:mm/environmental/wisteria_boards"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "environmental:plum_boards"
+    ]
   }
 ]

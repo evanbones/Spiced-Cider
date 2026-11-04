@@ -45,12 +45,6 @@ ordering = "AFTER"
 side = "BOTH"
 
 [[dependencies.${ mod_id }]]
-modId = "brick_and_mortar"
-type = "optional"
-ordering = "AFTER"
-side = "BOTH"
-
-[[dependencies.${ mod_id }]]
 modId = "supplementaries"
 type = "optional"
 ordering = "AFTER"

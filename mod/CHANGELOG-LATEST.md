@@ -1,3 +1,3 @@
 ### Fixed
 
-- Bark from trees now only drops in survival.
+- Fixed fire striker not taking durability in certain actions with NML.

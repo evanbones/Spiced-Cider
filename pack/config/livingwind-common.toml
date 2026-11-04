@@ -217,3 +217,15 @@
 	# Default: 1.0
 	# Range: 0.0 ~ 5.0
 	projectileMultiplier = 1.0
+	#Let wind gently drift vanilla boats and chest boats. Steering remains under the rider's control. OFF by default.
+	boats = false
+	#Multiplier for wind-driven boat drift. 0 disables boat force. Only applies in exposed outdoor areas.
+	# Default: 1.0
+	# Range: 0.0 ~ 5.0
+	boatMultiplier = 1.0
+	#Let exposed dropped item entities drift with wind, including items floating at the water surface. OFF by default.
+	droppedItems = false
+	#Multiplier for dropped item wind drift. 0 disables the force; items on the ground experience less push.
+	# Default: 1.0
+	# Range: 0.0 ~ 5.0
+	droppedItemMultiplier = 1.0

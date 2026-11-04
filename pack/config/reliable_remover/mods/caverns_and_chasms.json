@@ -229,7 +229,7 @@
     "items": [
       "caverns_and_chasms:calcite_pillar"
     ],
-    "replace_with": "architects_palette:calcite_pillar"
+    "replace_with": "embers_and_icicles:calcite_pillar"
   },
   {
     "action": "remove",
@@ -715,14 +715,14 @@
     "items": [
       "caverns_and_chasms:calcite_brick_wall"
     ],
-    "replace_with": "stoneworks:calcite_brick_wall"
+    "replace_with": "embers_and_icicles:polished_calcite_brick_wall"
   },
   {
     "action": "remove",
     "items": [
       "caverns_and_chasms:polished_calcite_wall"
     ],
-    "replace_with": "stoneworks:polished_calcite_wall"
+    "replace_with": "embers_and_icicles:polished_calcite_wall"
   },
   {
     "action": "remove",
@@ -1012,5 +1012,33 @@
       "caverns_and_chasms:long_revenant",
       "caverns_and_chasms:strong_revenant"
     ]
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:calcite_stairs"
+    ],
+    "replace_with": "embers_and_icicles:calcite_stairs"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:calcite_slab"
+    ],
+    "replace_with": "embers_and_icicles:calcite_slab"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:calcite_wall"
+    ],
+    "replace_with": "embers_and_icicles:calcite_wall"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "caverns_and_chasms:azalea_boards"
+    ],
+    "replace_with": "everycomp:mm/caverns_and_chasms/azalea_boards"
   }
 ]

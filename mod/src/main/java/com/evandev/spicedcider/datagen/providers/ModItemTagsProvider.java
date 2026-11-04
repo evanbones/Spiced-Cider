@@ -22,7 +22,6 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
-import java.util.stream.Stream;
 
 public class ModItemTagsProvider extends ItemTagsProvider {
 
@@ -189,9 +188,6 @@ public class ModItemTagsProvider extends ItemTagsProvider {
                 default -> {
                 }
             }
-            if ("brick_and_mortar".equals(def.mod())) {
-                this.tag(masonryTag(def.location().getPath())).addOptional(def.location());
-            }
         }
         if (ModItems.TWISTED_SIGN != null) {
             this.tag(ItemTags.SIGNS).addOptional(ModItems.TWISTED_SIGN.getId());
@@ -275,14 +271,5 @@ public class ModItemTagsProvider extends ItemTagsProvider {
 
     private static TagKey<Item> externalTag(String namespace, String path) {
         return ItemTags.create(ResourceLocation.fromNamespaceAndPath(namespace, path));
-    }
-
-    private static TagKey<Item> masonryTag(String path) {
-        String family = Stream.of("resin", "purpur", "algal", "ash", "nether")
-                .filter(path::contains)
-                .findFirst()
-                .orElseThrow(() -> new IllegalStateException("No Brick and Mortar masonry family for " + path));
-        String soul = path.contains("soul_") ? "soul_" : "";
-        return ItemTags.create(ResourceLocation.fromNamespaceAndPath("brick_and_mortar", soul + family + "_masonry"));
     }
 }

@@ -243,6 +243,9 @@
 		[types.stone_type.upgrade_aquatic]
 			tooth = true
 
+		[types.stone_type.modestmasonry]
+			cement = true
+
 		[entries.wood_type.nomansland]
 			bookshelf = true
 			trimmed_planks = true
@@ -311,6 +314,22 @@
 			palisade = true
 			seat = true
 			stripped_spiked_palisade = true
+
+		[entries.wood_type.modestmasonry]
+			carved_plank_slab = true
+			boards = true
+			tile_wall = true
+			carved_plank_stairs = true
+			tiles = true
+			tile_stairs = true
+			pillar = true
+			carved_planks = true
+			board_stairs = true
+			tile_slab = true
+			board_wall = true
+			carved_plank_wall = true
+			chiseled_planks = true
+			board_slab = true
 
 		[entries.leaves_type.quark]
 			hedge = true
