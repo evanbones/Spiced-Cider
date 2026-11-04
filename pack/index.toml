@@ -522,7 +522,7 @@ hash = "6bccd9a5af80821fe4b83ea397da43adac0b8511bfb7d3b297c038f2b69da8f1"
 
 [[files]]
 file = "config/everycomp-entries.toml"
-hash = "d665c75aa3ffb86356884e62175437b77672aa17fb3bb074d8abfb118f3cc772"
+hash = "e2fdef3f67369d3d10ea2c8db5566c54a29dc47bbbb2dd4c8557d7c46c2e01d3"
 
 [[files]]
 file = "config/everycomp-hazardous.toml"
@@ -5609,6 +5609,10 @@ file = "config/openloader/packs/spicedcider_data/data/spelunkery/recipe/lead_nug
 hash = "81f8235dd918b545ff695245a1b794724c2627dbbf751eef19c372ac4e7759cc"
 
 [[files]]
+file = "config/openloader/packs/spicedcider_data/data/spelunkery/recipe/mixing/rock_salt.json"
+hash = "21b11674b18c3fb0d8292095cf7c12bca82ef4054ec3f1cd8d1e0222d1655629"
+
+[[files]]
 file = "config/openloader/packs/spicedcider_data/data/spelunkery/recipe/mixing/salt.json"
 hash = "19699fc59b308caa660c19f6435c0a3ff01ef61ceea12cbd6916f64016bbb261"
 
@@ -6797,12 +6801,20 @@ file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/anvil/t
 hash = "a8d09c594b6eb799fa5b8fb03a460c3f94b492fc732536e251f5e5d76838753b"
 
 [[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/cauldron_mixing/cardboard_pulp.json"
+hash = "9300fc18292797c9e1b285280ac9a3356a7e572c7ca48a9bd4526135bf299572"
+
+[[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/cauldron_mixing/chocolate.json"
-hash = "653da0ac594f708068742762b9a7e9f80a50c4b314490a980ddd992cd2d58091"
+hash = "64bedc5e4e29c11fc47565903f22fd7668b6e3a7ecb9cb6cd3a6d4e34362ee0e"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/cauldron_mixing/chocolate_melting.json"
+hash = "eeda4e34571089c98aac9282f95c75507f4e908a1994022f9136782b474826df"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/cauldron_mixing/corn_dough.json"
-hash = "fb3bfaa47ca517f5fb6111768856989549e3d825c5ca781446aca900c1d6bec0"
+hash = "8b79abffc4782bb72a68f21af512d31d51caad5ad3c91526fa1c054b272dafd4"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/cauldron_mixing/honey.json"
@@ -6810,7 +6822,7 @@ hash = "419b88ff5b91439b3eaa2ea31bb4eae7073b07d9dbed89dc64a03075794f7517"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/cauldron_mixing/lumisene.json"
-hash = "ca8b9d9b797573148b2ef3d763e8fd9bc1073cfedf403869da2091122b334c57"
+hash = "b905601b94634e21162d0780e9b12a7475393fc1d3438c7a61b362a29e9da2f0"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/cauldron_mixing/mud.json"
@@ -6822,7 +6834,7 @@ hash = "d51076595b40f774bb4c4af5fce9031bf86a074c11db189b1f2bab41e271ec15"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/cauldron_mixing/pie_crust.json"
-hash = "3db1bc0de75175795f92fc75fa4b8e73d6d59aa5fafdb6b42b0d629df694a34d"
+hash = "a3840b1c5720257a8d60450b80c2aab738951efc3313150d695ec5c869f6abf1"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/cauldron_mixing/resin.json"
@@ -6846,7 +6858,7 @@ hash = "e7e1607a877c54425cefaf512f97c56ecba42606a8c589cb26815b180c464c26"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/cauldron_mixing/wheat_dough.json"
-hash = "ea43c1e5866a3bce6bd663621722f8971babbc3e58627fd4a4531bf84bc3f9ac"
+hash = "c086147d5d42bbe6d447c2edddb3a0d2060c31890fdd1306b9899fb083da44dd"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/compacting/dimensional_tears_from_crying_chiseled_obsidian.json"
@@ -13148,7 +13160,7 @@ metafile = true
 
 [[files]]
 file = "mods/cider-core.pw.toml"
-hash = "3009b3d5ea765aac510381ed234a0b4a134bc6583b4b06ff7fab3d20d6abba65"
+hash = "e757b9fcf71188acd0a944040484c69841dd9d3c6a854aa15d79b29ef7d90a76"
 metafile = true
 
 [[files]]
@@ -13282,7 +13294,7 @@ metafile = true
 
 [[files]]
 file = "mods/embers-and-icicles.pw.toml"
-hash = "514391fc19819dbe3e28a80ea1d2c9b7aabf393f230b3eb3a55a3442e33f1e9d"
+hash = "e384269507ed0998d9db491f28c69d4c7356ec1596b55e2910104b5d7879c7a3"
 metafile = true
 
 [[files]]
@@ -13636,7 +13648,7 @@ metafile = true
 
 [[files]]
 file = "mods/moonlight.pw.toml"
-hash = "792f2799c2ae697ab90e1bba05ca4736d06384cba26ed5f1d35442417ab0d9b5"
+hash = "368d2e5c2facad617995d85e71f136ef676e21067e8cfaf748d0943cb1ebf049"
 metafile = true
 
 [[files]]
@@ -13826,7 +13838,7 @@ metafile = true
 
 [[files]]
 file = "mods/reconnectible-chains.pw.toml"
-hash = "2a4f123fab3b78243abc248cc22c83a496b5d0c189d54b64fdfd52fdcaf42a56"
+hash = "8fe741853924944b4bb7e8cf18822d39922a9bc85e1208cddfba509e1344a0a4"
 metafile = true
 
 [[files]]
