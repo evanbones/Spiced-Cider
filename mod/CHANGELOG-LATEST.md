@@ -1,3 +1,3 @@
 ### Fixed
 
-- Fixed Netherrack block variant textures.
+- Tag entries are now optional.

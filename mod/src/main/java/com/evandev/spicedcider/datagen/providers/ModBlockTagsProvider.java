@@ -19,6 +19,7 @@ import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 public class ModBlockTagsProvider extends BlockTagsProvider {
@@ -173,15 +174,18 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
     }
 
     private void paleGarden() {
-        Block[] jacks = ModPaleGardenBlocks.JACK_O_LANTERNS.stream().map(DeferredBlock::get).toArray(Block[]::new);
-        Block[] paleJacks = ModPaleGardenBlocks.JACK_O_LANTERNS.stream().filter(b -> b.getId().getPath().startsWith("pale_")).map(DeferredBlock::get).toArray(Block[]::new);
-        this.tag(BlockTags.MINEABLE_WITH_AXE).add(ModPaleGardenBlocks.PALE_PUMPKIN.get(), ModPaleGardenBlocks.CARVED_PALE_PUMPKIN.get()).add(jacks);
+        List<ResourceLocation> jacks = ModPaleGardenBlocks.JACK_O_LANTERNS.stream().map(DeferredBlock::getId).toList();
+        List<ResourceLocation> paleJacks = jacks.stream().filter(id -> id.getPath().startsWith("pale_")).toList();
+        this.tag(BlockTags.MINEABLE_WITH_AXE).add(ModPaleGardenBlocks.PALE_PUMPKIN.get(), ModPaleGardenBlocks.CARVED_PALE_PUMPKIN.get());
+        optional(BlockTags.MINEABLE_WITH_AXE, jacks);
         this.tag(Tags.Blocks.PUMPKINS_NORMAL).add(ModPaleGardenBlocks.PALE_PUMPKIN.get());
         this.tag(Tags.Blocks.PUMPKINS_CARVED).add(ModPaleGardenBlocks.CARVED_PALE_PUMPKIN.get());
-        this.tag(Tags.Blocks.PUMPKINS_JACK_O_LANTERNS).add(jacks);
+        optional(Tags.Blocks.PUMPKINS_JACK_O_LANTERNS, jacks);
         this.tag(BlockTags.ENDERMAN_HOLDABLE).add(ModPaleGardenBlocks.PALE_PUMPKIN.get());
-        this.tag(ModTags.Blocks.GOLEM_HEADS).add(ModPaleGardenBlocks.CARVED_PALE_PUMPKIN.get()).add(jacks);
-        this.tag(ModTags.Blocks.PALE_GOLEM_HEADS).add(ModPaleGardenBlocks.CARVED_PALE_PUMPKIN.get()).add(paleJacks);
+        this.tag(ModTags.Blocks.GOLEM_HEADS).add(ModPaleGardenBlocks.CARVED_PALE_PUMPKIN.get());
+        optional(ModTags.Blocks.GOLEM_HEADS, jacks);
+        this.tag(ModTags.Blocks.PALE_GOLEM_HEADS).add(ModPaleGardenBlocks.CARVED_PALE_PUMPKIN.get());
+        optional(ModTags.Blocks.PALE_GOLEM_HEADS, paleJacks);
         this.tag(BlockTags.SMALL_FLOWERS).add(ModPaleGardenBlocks.PALE_ROSE.get());
         this.tag(BlockTags.SWORD_EFFICIENT).add(ModPaleGardenBlocks.PALE_BUSH.get(), ModPaleGardenBlocks.TALL_PALE_BUSH.get());
         this.tag(BlockTags.REPLACEABLE_BY_TREES).add(ModPaleGardenBlocks.PALE_BUSH.get(), ModPaleGardenBlocks.TALL_PALE_BUSH.get());
@@ -206,6 +210,11 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         optional(BlockTags.create(ResourceLocation.fromNamespaceAndPath("supplementaries", "candle_holders")),
                 "candle_holder_sulfur", "candle_holder_glowlight", "gold_candle_holder_sulfur", "gold_candle_holder_glowlight");
         optional(BlockTags.create(ResourceLocation.fromNamespaceAndPath("caverns_and_chasms", "braziers")), "sulfur_brazier");
+    }
+
+    private void optional(TagKey<Block> tag, List<ResourceLocation> ids) {
+        var builder = this.tag(tag);
+        for (ResourceLocation id : ids) builder.addOptional(id);
     }
 
     private void optional(TagKey<Block> tag, String... ids) {

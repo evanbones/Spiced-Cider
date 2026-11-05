@@ -48,7 +48,8 @@ public class ModItemTagsProvider extends ItemTagsProvider {
 
         this.tag(Tags.Items.PUMPKINS_NORMAL).add(ModPaleGardenBlocks.PALE_PUMPKIN_ITEM.get());
         this.tag(Tags.Items.PUMPKINS_CARVED).add(ModPaleGardenBlocks.CARVED_PALE_PUMPKIN_ITEM.get());
-        this.tag(Tags.Items.PUMPKINS_JACK_O_LANTERNS).add(ModPaleGardenBlocks.JACK_O_LANTERN_ITEMS.stream().map(DeferredItem::get).toArray(Item[]::new));
+        var jackItems = this.tag(Tags.Items.PUMPKINS_JACK_O_LANTERNS);
+        ModPaleGardenBlocks.JACK_O_LANTERN_ITEMS.forEach(item -> jackItems.addOptional(item.getId()));
         this.tag(ItemTags.SMALL_FLOWERS).add(ModPaleGardenBlocks.PALE_ROSE_ITEM.get());
         this.tag(ModTags.Items.SULFUR_TORCHES).add(ModFireBlocks.SULFUR_TORCH_ITEM.get());
         fireVariants();
