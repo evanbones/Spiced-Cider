@@ -1,0 +1,26 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "autumnity"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "A": {
+      "item": "autumnity:carved_large_pumpkin_slice"
+    },
+    "B": {
+      "item": "spicedcider:sulfur_torch"
+    }
+  },
+  "pattern": [
+    "A",
+    "B"
+  ],
+  "result": {
+    "count": 1,
+    "id": "spicedcider:large_sulfur_jack_o_lantern_slice"
+  }
+}

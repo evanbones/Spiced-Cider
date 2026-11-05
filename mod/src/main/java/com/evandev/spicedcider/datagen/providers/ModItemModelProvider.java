@@ -60,6 +60,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.GEODE.get());
         basicItem(ModItems.DEEPSLATE_GEODE.get());
         basicItem(ModItems.BLACKSTONE_GEODE.get());
+        basicItem(ModItems.CACAO_POD.get());
         withExistingParent("tallow_block", modLoc("block/tallow_block"));
         if (ModItems.TWISTED_SIGN != null) {
             basicItem(ModItems.TWISTED_SIGN.get());

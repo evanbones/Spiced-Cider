@@ -4,6 +4,13 @@ import com.evandev.spicedcider.SpicedCider;
 import com.evandev.spicedcider.compat.architectspalette.ArchitectsPaletteCompat;
 import com.evandev.spicedcider.compat.infernalexp.InfernalExpansionCompat;
 import com.evandev.spicedcider.registry.ModBlocks;
+import com.evandev.spicedcider.content.block.pale.RedstoneJackOLanternBlock;
+import com.evandev.spicedcider.registry.ModPaleGardenBlocks;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.DoublePlantBlock;
+import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
+import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
+import net.neoforged.neoforge.registries.DeferredBlock;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
@@ -84,5 +91,68 @@ public class ModBlockStateProvider extends BlockStateProvider {
             signBlock(ModBlocks.TWISTED_SIGN.get(), ModBlocks.TWISTED_WALL_SIGN.get(), planks);
             hangingSignBlock(ModBlocks.TWISTED_HANGING_SIGN.get(), ModBlocks.TWISTED_WALL_HANGING_SIGN.get(), strippedLog);
         }
+        paleGarden();
+    }
+
+    private void paleGarden() {
+        ResourceLocation paleSide = modLoc("block/pale_pumpkin_side");
+        ResourceLocation paleTop = modLoc("block/pale_pumpkin_top");
+        simpleBlockWithItem(ModPaleGardenBlocks.PALE_PUMPKIN.get(), models().cubeColumn("pale_pumpkin", paleSide, paleTop));
+        for (DeferredBlock<? extends Block> block : List.<DeferredBlock<? extends Block>>of(ModPaleGardenBlocks.CARVED_PALE_PUMPKIN)) {
+            carved(block, paleSide, paleTop);
+        }
+        for (DeferredBlock<? extends Block> block : ModPaleGardenBlocks.JACK_O_LANTERNS) {
+            String name = block.getId().getPath();
+            boolean pale = name.startsWith("pale_");
+            ResourceLocation side = pale ? paleSide : mcLoc("block/pumpkin_side");
+            ResourceLocation top = pale ? paleTop : mcLoc("block/pumpkin_top");
+            if (block.get() instanceof RedstoneJackOLanternBlock) {
+                ModelFile off = models().orientable(name, side, modLoc("block/" + name), top);
+                ModelFile on = models().orientable(name + "_on", side, modLoc("block/" + name + "_on"), top);
+                horizontalBlock(block.get(), state -> state.getValue(RedstoneJackOLanternBlock.LIT) ? on : off);
+                simpleBlockItem(block.get(), off);
+            } else {
+                carved(block, side, top);
+            }
+        }
+
+        cross(ModPaleGardenBlocks.PALE_ROSE, "pale_rose");
+        cross(ModPaleGardenBlocks.PALE_BUSH, "pale_bush");
+        ModelFile tallBottom = models().cross("tall_pale_bush_bottom", modLoc("block/tall_pale_bush_bottom")).renderType("cutout");
+        ModelFile tallTop = models().cross("tall_pale_bush_top", modLoc("block/tall_pale_bush_top")).renderType("cutout");
+        getVariantBuilder(ModPaleGardenBlocks.TALL_PALE_BUSH.get()).forAllStates(state -> ConfiguredModel.builder()
+                .modelFile(state.getValue(DoublePlantBlock.HALF) == DoubleBlockHalf.LOWER ? tallBottom : tallTop).build());
+        itemModels().withExistingParent("tall_pale_bush", mcLoc("item/generated")).texture("layer0", modLoc("block/tall_pale_bush_top"));
+
+        pottedCross(ModPaleGardenBlocks.POTTED_PALE_ROSE, modLoc("block/pale_rose"));
+        pottedCross(ModPaleGardenBlocks.POTTED_PALE_BUSH, modLoc("block/pale_bush"));
+        pottedTall(ModPaleGardenBlocks.POTTED_TALL_PALE_BUSH, modLoc("block/tall_pale_bush_bottom"), modLoc("block/tall_pale_bush_top"));
+        pottedTall(ModPaleGardenBlocks.POTTED_ROSE_BUSH, mcLoc("block/rose_bush_bottom"), mcLoc("block/rose_bush_top"));
+        pottedTall(ModPaleGardenBlocks.POTTED_PEONY, mcLoc("block/peony_bottom"), mcLoc("block/peony_top"));
+        pottedTall(ModPaleGardenBlocks.POTTED_LILAC, mcLoc("block/lilac_bottom"), mcLoc("block/lilac_top"));
+        simpleBlock(ModPaleGardenBlocks.POTTED_SUNFLOWER.get(), models().getExistingFile(modLoc("block/potted_sunflower")));
+        simpleBlock(ModPaleGardenBlocks.POTTED_PITCHER_PLANT.get(), models().getExistingFile(modLoc("block/potted_pitcher_plant")));
+    }
+
+    private void carved(DeferredBlock<? extends Block> block, ResourceLocation side, ResourceLocation top) {
+        String name = block.getId().getPath();
+        ModelFile model = models().orientable(name, side, modLoc("block/" + name), top);
+        horizontalBlock(block.get(), model);
+        simpleBlockItem(block.get(), model);
+    }
+
+    private void cross(DeferredBlock<? extends Block> block, String texture) {
+        simpleBlock(block.get(), models().cross(block.getId().getPath(), modLoc("block/" + texture)).renderType("cutout"));
+        itemModels().withExistingParent(block.getId().getPath(), mcLoc("item/generated")).texture("layer0", modLoc("block/" + texture));
+    }
+
+    private void pottedCross(DeferredBlock<? extends Block> block, ResourceLocation plant) {
+        simpleBlock(block.get(), models().withExistingParent(block.getId().getPath(), mcLoc("block/flower_pot_cross"))
+                .texture("plant", plant).renderType("cutout"));
+    }
+
+    private void pottedTall(DeferredBlock<? extends Block> block, ResourceLocation bottom, ResourceLocation top) {
+        simpleBlock(block.get(), models().withExistingParent(block.getId().getPath(), modLoc("block/tall_flower_pot_cross"))
+                .texture("plant_bottom", bottom).texture("plant_top", top).renderType("cutout"));
     }
 }

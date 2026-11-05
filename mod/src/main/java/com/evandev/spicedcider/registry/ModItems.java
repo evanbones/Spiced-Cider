@@ -152,6 +152,7 @@ public class ModItems {
     public static final DeferredItem<BlockItem> CACAO_LEAVES = ITEMS.registerSimpleBlockItem(ModBlocks.CACAO_LEAVES);
     public static final DeferredItem<BlockItem> FLOWERING_CACAO_LEAVES = ITEMS.registerSimpleBlockItem(ModBlocks.FLOWERING_CACAO_LEAVES);
     public static final DeferredItem<BlockItem> CACAO_SAPLING = ITEMS.registerSimpleBlockItem(ModBlocks.CACAO_SAPLING);
+    public static final DeferredItem<Item> CACAO_POD = ITEMS.registerSimpleItem("cacao_pod");
     public static final DeferredItem<BlockItem> PEAR_LOG = ITEMS.registerSimpleBlockItem(ModBlocks.PEAR_LOG);
     public static final DeferredItem<BlockItem> PEAR_WOOD = ITEMS.registerSimpleBlockItem(ModBlocks.PEAR_WOOD);
     public static final DeferredItem<BlockItem> STRIPPED_PEAR_LOG = ITEMS.registerSimpleBlockItem(ModBlocks.STRIPPED_PEAR_LOG);

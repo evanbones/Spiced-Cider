@@ -46,6 +46,7 @@ public class SpicedCiderConfigScreen {
                         .option(toggle("endCrystalPlaceAnywhere", common.endCrystalPlaceAnywhere))
                         .option(toggle("endCrystalHealing", common.endCrystalHealing))
                         .option(toggle("keepBrokenItems", common.keepBrokenItems))
+                        .option(toggle("brokenToolsOnCuttingBoards", common.brokenToolsOnCuttingBoards))
                         .option(toggle("wolvesWearAnyArmor", common.wolvesWearAnyArmor))
                         .option(toggle("unifiedPetArmor", startup.unifiedPetArmor))
                         .option(toggle("spiderRangedWebAttacks", common.spiderRangedWebAttacks))
@@ -193,8 +194,13 @@ public class SpicedCiderConfigScreen {
         group(groups, List.of("vanillabackport"),
                 toggle("sulfurCavesRework", startup.sulfurCavesRework),
                 toggle("vanillaBackportLightTweaks", common.vanillaBackportLightTweaks),
+                toggle("creakingBuff", common.creakingBuff),
+                toggle("creakingEyeParticles", client.creakingEyeParticles),
                 toggle("copperGolemNoChest", common.copperGolemNoChest),
                 toggle("paleOakGrowsGloomwood", common.paleOakGrowsGloomwood));
+        group(groups, List.of("tiny_takeover_backport"),
+                toggle("goldenDandelionTempting", common.goldenDandelionTempting),
+                toggle("goldenDandelionParticles", client.goldenDandelionParticles));
         group(groups, List.of("voicechat"),
                 toggle("voiceChatHideSingleplayerHud", client.voiceChatHideSingleplayerHud));
         group(groups, List.of("where_winds_blow"),

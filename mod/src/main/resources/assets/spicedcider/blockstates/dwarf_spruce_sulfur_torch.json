@@ -1,0 +1,28 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "top": "false"
+      },
+      "apply": {
+        "model": "spicedcider:block/dwarf_spruce_sulfur_torch"
+      }
+    },
+    {
+      "when": {
+        "top": "true"
+      },
+      "apply": {
+        "model": "spicedcider:block/dwarf_spruce_top_sulfur_torch"
+      }
+    },
+    {
+      "when": {
+        "star": "true"
+      },
+      "apply": {
+        "model": "environmental:block/dwarf_spruce_star"
+      }
+    }
+  ]
+}

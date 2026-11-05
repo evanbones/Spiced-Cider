@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "spicedcider:block/sulfur_wall_torch"
+    },
+    "facing=north": {
+      "model": "spicedcider:block/sulfur_wall_torch",
+      "y": 270
+    },
+    "facing=south": {
+      "model": "spicedcider:block/sulfur_wall_torch",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "spicedcider:block/sulfur_wall_torch",
+      "y": 180
+    }
+  }
+}

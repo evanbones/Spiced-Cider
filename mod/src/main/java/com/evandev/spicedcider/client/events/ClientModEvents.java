@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.client.events;
 
+import com.evandev.spicedcider.client.FireVariantClient;
 import com.evandev.spicedcider.client.MapIconProperty;
 import com.evandev.spicedcider.SpicedCider;
 import com.evandev.spicedcider.client.models.armor.MischiefArmorModel;
@@ -7,6 +8,8 @@ import com.evandev.spicedcider.client.models.projectile.CobwebProjectileModel;
 import com.evandev.spicedcider.client.nether.NetherFogBanks;
 import com.evandev.spicedcider.client.nether.NetherHeatHaze;
 import com.evandev.spicedcider.client.particle.CleaverSweepParticle;
+import com.evandev.spicedcider.client.particle.CreakingEyesParticle;
+import com.evandev.spicedcider.client.particle.GoldenDandelionParticle;
 import com.evandev.spicedcider.client.particle.VentSmokeParticle;
 import com.evandev.spicedcider.client.resource.BrokenTextureReloadListener;
 import com.evandev.spicedcider.client.music.PocketJukeboxClient;
@@ -31,6 +34,7 @@ import com.evandev.spicedcider.weather.client.CloudCoverClient;
 import net.minecraft.client.renderer.BiomeColors;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.neoforged.neoforge.client.event.RegisterClientTooltipComponentFactoriesEvent;
+import net.minecraft.client.particle.FlameParticle;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.Sheets;
 import net.minecraft.network.chat.Component;
@@ -116,6 +120,10 @@ public class ClientModEvents {
         event.registerSpriteSet(ModParticleTypes.CLEAVER_SWEEP.get(), CleaverSweepParticle.Factory::new);
         event.registerSpriteSet(ModParticleTypes.WHITE_VENT_SMOKE.get(), sprites -> new VentSmokeParticle.Provider(sprites, 0.92F));
         event.registerSpriteSet(ModParticleTypes.BLACK_VENT_SMOKE.get(), sprites -> new VentSmokeParticle.Provider(sprites, 0.1F));
+        event.registerSpriteSet(ModParticleTypes.CREAKING_EYES.get(), CreakingEyesParticle.Provider::new);
+        event.registerSpriteSet(ModParticleTypes.GOLDEN_DANDELION.get(), GoldenDandelionParticle.Provider::new);
+        event.registerSpriteSet(ModParticleTypes.SULFUR_FIRE_FLAME.get(), FlameParticle.Provider::new);
+        event.registerSpriteSet(ModParticleTypes.SMALL_SULFUR_FIRE_FLAME.get(), FlameParticle.SmallFlameProvider::new);
     }
 
     @SubscribeEvent
@@ -237,6 +245,12 @@ public class ClientModEvents {
             }
             Stream.of(ModBlocks.CACAO_SAPLING, ModBlocks.POTTED_CACAO_SAPLING, ModBlocks.CACAO_POD, ModBlocks.PEAR_SAPLING, ModBlocks.POTTED_PEAR_SAPLING,
                     ModBlocks.HANGING_PEAR, ModBlocks.HANGING_AVOCADO).forEach(block -> ItemBlockRenderTypes.setRenderLayer(block.get(), RenderType.cutout()));
+            Stream.of(ModPaleGardenBlocks.PALE_ROSE, ModPaleGardenBlocks.PALE_BUSH, ModPaleGardenBlocks.TALL_PALE_BUSH)
+                    .forEach(block -> ItemBlockRenderTypes.setRenderLayer(block.get(), RenderType.cutout()));
+            ModPaleGardenBlocks.POTS.forEach(block -> ItemBlockRenderTypes.setRenderLayer(block.get(), RenderType.cutout()));
+            Stream.of(ModFireBlocks.SULFUR_FIRE, ModFireBlocks.SULFUR_TORCH, ModFireBlocks.SULFUR_WALL_TORCH, ModFireBlocks.SULFUR_LANTERN, ModFireBlocks.SULFUR_CAMPFIRE)
+                    .forEach(block -> ItemBlockRenderTypes.setRenderLayer(block.get(), RenderType.cutout()));
+            FireVariantClient.setup();
             Stream.of(ModBlocks.CACAO_LEAVES, ModBlocks.FLOWERING_CACAO_LEAVES, ModBlocks.CACAO_LOG, ModBlocks.CACAO_WOOD, ModBlocks.STRIPPED_CACAO_LOG,
                             ModBlocks.STRIPPED_CACAO_WOOD, ModBlocks.PEAR_LEAVES, ModBlocks.FLOWERING_PEAR_LEAVES, ModBlocks.PEAR_LOG, ModBlocks.PEAR_WOOD,
                             ModBlocks.STRIPPED_PEAR_LOG, ModBlocks.STRIPPED_PEAR_WOOD, ModBlocks.FLOWERING_AVOCADO_LEAVES, ModBlocks.AVOCADO_LOG,

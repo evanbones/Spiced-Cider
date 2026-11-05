@@ -1,0 +1,10 @@
+{
+  "require_config": "colored_lights:item_lights",
+  "target_type": "item",
+  "targets": "spicedcider:pale_jack_o_lantern",
+  "colored_light": {
+    "color": "#FFA040",
+    "radius": 6,
+    "brightness": "o.inWater() ? 0 : 1"
+  }
+}

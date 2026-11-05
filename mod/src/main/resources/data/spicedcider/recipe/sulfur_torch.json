@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "X": {
+      "tag": "minecraft:coals"
+    },
+    "#": {
+      "tag": "c:rods/wooden"
+    },
+    "C": {
+      "tag": "c:dusts/sulfur"
+    }
+  },
+  "pattern": [
+    "X",
+    "#",
+    "C"
+  ],
+  "result": {
+    "count": 4,
+    "id": "spicedcider:sulfur_torch"
+  }
+}

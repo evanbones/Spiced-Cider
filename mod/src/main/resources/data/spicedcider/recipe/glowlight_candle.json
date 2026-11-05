@@ -1,0 +1,34 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "buzzier_bees"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "infernalexp"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "tag": "infernalexp:glowlight_fire_base_blocks"
+    },
+    "H": {
+      "item": "minecraft:honeycomb"
+    },
+    "S": {
+      "item": "minecraft:string"
+    }
+  },
+  "pattern": [
+    "S",
+    "H",
+    "B"
+  ],
+  "result": {
+    "count": 1,
+    "id": "spicedcider:glowlight_candle"
+  }
+}

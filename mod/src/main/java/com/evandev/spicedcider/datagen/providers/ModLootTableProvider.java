@@ -17,12 +17,14 @@ import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 
 public class ModLootTableProvider implements DataProvider {
-    private static final Map<String, String> REQUIRED_MODS = Map.of(
-            "polished_glowstone_stairs", "infernalexp",
-            "polished_glowstone_slab", "infernalexp",
-            "polished_glowstone_wall", "infernalexp",
-            "twisted_sign", "architects_palette",
-            "twisted_hanging_sign", "architects_palette"
+    private static final Map<String, String> REQUIRED_MODS = Map.ofEntries(
+            Map.entry("polished_glowstone_stairs", "infernalexp"),
+            Map.entry("polished_glowstone_slab", "infernalexp"),
+            Map.entry("polished_glowstone_wall", "infernalexp"),
+            Map.entry("twisted_sign", "architects_palette"),
+            Map.entry("twisted_hanging_sign", "architects_palette"),
+            Map.entry("pale_cupric_jack_o_lantern", "caverns_and_chasms"),
+            Map.entry("pale_glowlight_jack_o_lantern", "infernalexp")
     );
 
     private final LootTableProvider delegate;

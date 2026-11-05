@@ -1,0 +1,8 @@
+{
+  "targets": "spicedcider:sulfur_campfire",
+  "colored_light": {
+    "color": "#7A7CFF",
+    "radius": 10,
+    "brightness": "object.blockStateValue('lit') ? 0.85 : 0"
+  }
+}

@@ -2,6 +2,8 @@ package com.evandev.spicedcider.datagen.providers;
 
 import com.evandev.spicedcider.content.block.CacaoPodBlock;
 import com.evandev.spicedcider.registry.ModBlocks;
+import com.evandev.spicedcider.registry.ModFireBlocks;
+import com.evandev.spicedcider.registry.ModPaleGardenBlocks;
 import com.evandev.spicedcider.registry.ModItems;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.enchantment.Enchantment;
@@ -61,15 +63,25 @@ public class ModBlockLootProvider extends BlockLootSubProvider {
         this.add(ModBlocks.PEAR_LEAVES.get(), block -> this.createLeavesDrops(block, ModBlocks.PEAR_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
         this.add(ModBlocks.FLOWERING_PEAR_LEAVES.get(), block -> this.createLeavesDrops(block, ModBlocks.PEAR_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
         this.add(ModBlocks.CACAO_POD.get(), block -> LootTable.lootTable().withPool(LootPool.lootPool()
-                .add(this.applyExplosionDecay(block, LootItem.lootTableItem(Items.COCOA_BEANS)
-                        .apply(SetItemCountFunction.setCount(ConstantValue.exactly(3.0F))
-                                .when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(block)
-                                        .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(CacaoPodBlock.AGE, CacaoPodBlock.MAX_AGE))))))));
+                .add(this.applyExplosionDecay(block, LootItem.lootTableItem(ModItems.CACAO_POD.get())))
+                .when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(block)
+                        .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(CacaoPodBlock.AGE, CacaoPodBlock.MAX_AGE)))));
         Stream.of(ModBlocks.CACAO_LOG, ModBlocks.CACAO_WOOD, ModBlocks.STRIPPED_CACAO_LOG, ModBlocks.STRIPPED_CACAO_WOOD, ModBlocks.PEAR_LOG, ModBlocks.PEAR_WOOD,
                 ModBlocks.STRIPPED_PEAR_LOG, ModBlocks.STRIPPED_PEAR_WOOD, ModBlocks.AVOCADO_LOG, ModBlocks.AVOCADO_WOOD, ModBlocks.STRIPPED_AVOCADO_LOG,
                 ModBlocks.STRIPPED_AVOCADO_WOOD, ModBlocks.DEEPSILT, ModBlocks.DRIED_DEEPSILT, ModBlocks.CUT_DRIED_DEEPSILT, ModBlocks.POLISHED_DRIED_DEEPSILT,
                 ModBlocks.CHISELED_DRIED_DEEPSILT).forEach(block -> this.dropSelf(block.get()));
         this.dropSelf(ModBlocks.ALGAE.get());
+        this.dropSelf(ModPaleGardenBlocks.PALE_PUMPKIN.get());
+        this.dropSelf(ModPaleGardenBlocks.CARVED_PALE_PUMPKIN.get());
+        ModPaleGardenBlocks.JACK_O_LANTERNS.forEach(block -> this.dropSelf(block.get()));
+        this.dropSelf(ModPaleGardenBlocks.PALE_ROSE.get());
+        this.dropSelf(ModPaleGardenBlocks.PALE_BUSH.get());
+        this.add(ModPaleGardenBlocks.TALL_PALE_BUSH.get(), block -> this.createSinglePropConditionTable(block, DoublePlantBlock.HALF, DoubleBlockHalf.LOWER));
+        ModPaleGardenBlocks.POTS.forEach(pot -> this.dropPottedContents(pot.get()));
+        this.dropSelf(ModFireBlocks.SULFUR_TORCH.get());
+        this.dropSelf(ModFireBlocks.SULFUR_LANTERN.get());
+        this.add(ModFireBlocks.SULFUR_CAMPFIRE.get(), block -> this.createSilkTouchDispatchTable(block,
+                this.applyExplosionCondition(block, LootItem.lootTableItem(Items.CHARCOAL).apply(SetItemCountFunction.setCount(ConstantValue.exactly(2.0F))))));
         this.dropSelf(ModBlocks.ALGAL_SAND.get());
         this.dropSelf(ModBlocks.ALGAL_GRAVEL.get());
         this.dropSelf(ModBlocks.ACHROMARINE.get());
@@ -167,6 +179,12 @@ public class ModBlockLootProvider extends BlockLootSubProvider {
             blocks.add(ModBlocks.TWISTED_HANGING_SIGN.get());
             blocks.add(ModBlocks.TWISTED_WALL_HANGING_SIGN.get());
         }
+        blocks.add(ModPaleGardenBlocks.PALE_PUMPKIN.get());
+        blocks.add(ModPaleGardenBlocks.CARVED_PALE_PUMPKIN.get());
+        ModPaleGardenBlocks.JACK_O_LANTERNS.forEach(block -> blocks.add(block.get()));
+        Stream.of(ModPaleGardenBlocks.PALE_ROSE, ModPaleGardenBlocks.PALE_BUSH, ModPaleGardenBlocks.TALL_PALE_BUSH).forEach(block -> blocks.add(block.get()));
+        ModPaleGardenBlocks.POTS.forEach(pot -> blocks.add(pot.get()));
+        Stream.of(ModFireBlocks.SULFUR_TORCH, ModFireBlocks.SULFUR_LANTERN, ModFireBlocks.SULFUR_CAMPFIRE).forEach(block -> blocks.add(block.get()));
         return blocks;
     }
 }

@@ -2,12 +2,17 @@ package com.evandev.spicedcider.datagen.providers;
 
 import com.evandev.spicedcider.SpicedCider;
 import com.evandev.spicedcider.registry.ModBlocks;
+import net.minecraft.world.level.block.Block;
+import net.neoforged.neoforge.registries.DeferredBlock;
+import com.evandev.spicedcider.registry.ModFireBlocks;
+import com.evandev.spicedcider.registry.ModPaleGardenBlocks;
 import com.evandev.spicedcider.registry.ModBuildingBlocks;
 import com.evandev.spicedcider.registry.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.TagKey;
 import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.data.BlockTagsProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
@@ -57,6 +62,8 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         this.tag(BlockTags.create(ResourceLocation.fromNamespaceAndPath("c", "storage_blocks/cast_iron")))
                 .add(ModBlocks.CAST_IRON_BLOCK.get());
 
+        paleGarden();
+        fireVariants();
         this.tag(BlockTags.SAPLINGS).add(ModBlocks.GLOAMWOOD_SAPLING.get());
         this.tag(BlockTags.SAPLINGS).add(ModBlocks.CACAO_SAPLING.get());
         this.tag(BlockTags.FLOWER_POTS).add(ModBlocks.POTTED_CACAO_SAPLING.get());
@@ -150,5 +157,46 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
             this.tag(BlockTags.CEILING_HANGING_SIGNS).addOptional(ModBlocks.TWISTED_HANGING_SIGN.getId());
             this.tag(BlockTags.WALL_HANGING_SIGNS).addOptional(ModBlocks.TWISTED_WALL_HANGING_SIGN.getId());
         }
+    }
+
+    private void paleGarden() {
+        Block[] jacks = ModPaleGardenBlocks.JACK_O_LANTERNS.stream().map(DeferredBlock::get).toArray(Block[]::new);
+        Block[] paleJacks = ModPaleGardenBlocks.JACK_O_LANTERNS.stream().filter(b -> b.getId().getPath().startsWith("pale_")).map(DeferredBlock::get).toArray(Block[]::new);
+        this.tag(BlockTags.MINEABLE_WITH_AXE).add(ModPaleGardenBlocks.PALE_PUMPKIN.get(), ModPaleGardenBlocks.CARVED_PALE_PUMPKIN.get()).add(jacks);
+        this.tag(Tags.Blocks.PUMPKINS_NORMAL).add(ModPaleGardenBlocks.PALE_PUMPKIN.get());
+        this.tag(Tags.Blocks.PUMPKINS_CARVED).add(ModPaleGardenBlocks.CARVED_PALE_PUMPKIN.get());
+        this.tag(Tags.Blocks.PUMPKINS_JACK_O_LANTERNS).add(jacks);
+        this.tag(BlockTags.ENDERMAN_HOLDABLE).add(ModPaleGardenBlocks.PALE_PUMPKIN.get());
+        this.tag(ModTags.Blocks.GOLEM_HEADS).add(ModPaleGardenBlocks.CARVED_PALE_PUMPKIN.get()).add(jacks);
+        this.tag(ModTags.Blocks.PALE_GOLEM_HEADS).add(ModPaleGardenBlocks.CARVED_PALE_PUMPKIN.get()).add(paleJacks);
+        this.tag(BlockTags.SMALL_FLOWERS).add(ModPaleGardenBlocks.PALE_ROSE.get());
+        this.tag(BlockTags.SWORD_EFFICIENT).add(ModPaleGardenBlocks.PALE_BUSH.get(), ModPaleGardenBlocks.TALL_PALE_BUSH.get());
+        this.tag(BlockTags.REPLACEABLE_BY_TREES).add(ModPaleGardenBlocks.PALE_BUSH.get(), ModPaleGardenBlocks.TALL_PALE_BUSH.get());
+        this.tag(BlockTags.FLOWER_POTS).add(ModPaleGardenBlocks.POTS.stream().map(DeferredBlock::get).toArray(Block[]::new));
+        this.tag(BlockTags.FLOWER_POTS).addOptional(ResourceLocation.fromNamespaceAndPath("spicedcider", "potted_cactus_flower"));
+        this.tag(BlockTags.FIRE).add(ModFireBlocks.SULFUR_FIRE.get());
+        this.tag(BlockTags.CAMPFIRES).add(ModFireBlocks.SULFUR_CAMPFIRE.get());
+        this.tag(BlockTags.MINEABLE_WITH_AXE).add(ModFireBlocks.SULFUR_CAMPFIRE.get());
+        this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(ModFireBlocks.SULFUR_LANTERN.get());
+        this.tag(BlockTags.WALL_POST_OVERRIDE).add(ModFireBlocks.SULFUR_TORCH.get());
+    }
+
+    private void fireVariants() {
+        optional(BlockTags.CANDLES, "sulfur_candle", "glowlight_candle");
+        optional(BlockTags.CANDLE_CAKES, "sulfur_candle_cake", "glowlight_candle_cake");
+        optional(BlockTags.MINEABLE_WITH_PICKAXE, "sulfur_brazier");
+        optional(BlockTags.MINEABLE_WITH_AXE, "large_sulfur_jack_o_lantern_slice", "dwarf_spruce_sulfur_torch", "dwarf_spruce_plant_sulfur_torch");
+        optional(BlockTags.SWORD_EFFICIENT, "large_sulfur_jack_o_lantern_slice");
+        optional(Tags.Blocks.PUMPKINS_JACK_O_LANTERNS, "large_sulfur_jack_o_lantern_slice");
+        optional(BlockTags.create(ResourceLocation.fromNamespaceAndPath("farmersdelight", "mineable/knife")), "large_sulfur_jack_o_lantern_slice");
+        optional(BlockTags.create(ResourceLocation.fromNamespaceAndPath("supplementaries", "sconces")), "sconce_sulfur", "sconce_wall_sulfur");
+        optional(BlockTags.create(ResourceLocation.fromNamespaceAndPath("supplementaries", "candle_holders")),
+                "candle_holder_sulfur", "candle_holder_glowlight", "gold_candle_holder_sulfur", "gold_candle_holder_glowlight");
+        optional(BlockTags.create(ResourceLocation.fromNamespaceAndPath("caverns_and_chasms", "braziers")), "sulfur_brazier");
+    }
+
+    private void optional(TagKey<Block> tag, String... ids) {
+        var builder = this.tag(tag);
+        for (String id : ids) builder.addOptional(ResourceLocation.fromNamespaceAndPath("spicedcider", id));
     }
 }

@@ -1,0 +1,21 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "tiny_takeover_backport"
+    },
+    {
+      "type": "spicedcider:feature",
+      "feature": "snifferGoldenDandelions"
+    }
+  ],
+  "type": "spicedcider:replace_loot",
+  "conditions": [
+    {
+      "condition": "neoforge:loot_table_id",
+      "loot_table_id": "minecraft:gameplay/sniffer_digging"
+    }
+  ],
+  "item": "minecraft:golden_dandelion",
+  "chance": 0.33333334
+}

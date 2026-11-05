@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": {
+      "tag": "c:rods/wooden"
+    },
+    "C": {
+      "tag": "spicedcider:sulfur_fire_base_blocks"
+    },
+    "L": {
+      "tag": "minecraft:logs"
+    }
+  },
+  "pattern": [
+    " S ",
+    "SCS",
+    "LLL"
+  ],
+  "result": {
+    "count": 1,
+    "id": "spicedcider:sulfur_campfire"
+  }
+}

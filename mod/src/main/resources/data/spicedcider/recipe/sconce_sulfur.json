@@ -1,0 +1,30 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "supplementaries:flag",
+      "flag": "sconce"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "supplementaries"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "212",
+    " 2 "
+  ],
+  "key": {
+    "1": {
+      "item": "spicedcider:sulfur_torch"
+    },
+    "2": {
+      "tag": "c:nuggets/iron"
+    }
+  },
+  "result": {
+    "id": "spicedcider:sconce_sulfur",
+    "count": 1
+  }
+}

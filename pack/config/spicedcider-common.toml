@@ -25,6 +25,10 @@
 	copperGolemNoChest = true
 	#Awake creaking hearts and resin clumps give off light, creaking eyes always glow, and eyeblossoms open in dim light at any time of day. Requires Vanilla Backport.
 	vanillaBackportLightTweaks = true
+	#The creaking moves a little faster and hits twice as hard. Requires Vanilla Backport.
+	creakingBuff = true
+	#Baby animals that are still growing follow players holding a golden dandelion. Requires Tiny Takeover Backport.
+	goldenDandelionTempting = true
 	#Ocean ruins generate prismarine chests instead of regular chests. Requires Quark. Only affects newly generated terrain.
 	oceanRuinPrismarineChests = true
 
@@ -63,6 +67,10 @@
 	oceanDepths = true
 	#Recipes for the extra stairs, slabs, walls and other building blocks. Takes effect after /reload.
 	buildingBlocks = true
+	#Pale pumpkins, pale roses and pale bushes grow in pale gardens. Requires Vanilla Backport. Only affects newly generated terrain.
+	paleGardenPlants = true
+	#Sniffers can dig up golden dandelions. Requires Tiny Takeover Backport. Takes effect after /reload.
+	snifferGoldenDandelions = true
 
 	[features.gameplay]
 		#Beds don't explode outside the Overworld; instead they show a message and wake sleeping villagers.
@@ -111,6 +119,8 @@
 		noVanillaCocoaPods = true
 		#Pale oak saplings grow into thin gloomwood trees, and don't grow as 2x2 trees.
 		paleOakGrowsGloomwood = true
+		#Broken tools can still be used to cut ingredients on cutting boards.
+		brokenToolsOnCuttingBoards = false
 
 	[features.voidWater]
 		#Fluids at the bottom of the world spill into the void as fading trails you can swim in. Takes effect when a world is next loaded.

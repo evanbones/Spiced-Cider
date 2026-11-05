@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "spicedcider:block/carved_pale_pumpkin",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "spicedcider:block/carved_pale_pumpkin"
+    },
+    "facing=south": {
+      "model": "spicedcider:block/carved_pale_pumpkin",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "spicedcider:block/carved_pale_pumpkin",
+      "y": 270
+    }
+  }
+}

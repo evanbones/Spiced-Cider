@@ -157,7 +157,9 @@ public class SpicedCiderConfig {
                 "wormyDirt",
                 "fruitTrees",
                 "oceanDepths",
-                "buildingBlocks");
+                "buildingBlocks",
+                "paleGardenPlants",
+                "snifferGoldenDandelions");
 
         public final ModConfigSpec.BooleanValue oldWisteriaTrees;
         public final ModConfigSpec.BooleanValue slimeTimeDisableItemMerging;
@@ -172,6 +174,8 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.BooleanValue pineconesOnTrees;
         public final ModConfigSpec.BooleanValue copperGolemNoChest;
         public final ModConfigSpec.BooleanValue vanillaBackportLightTweaks;
+        public final ModConfigSpec.BooleanValue creakingBuff;
+        public final ModConfigSpec.BooleanValue goldenDandelionTempting;
         public final ModConfigSpec.BooleanValue oceanRuinPrismarineChests;
 
         public final ModConfigSpec.BooleanValue bedExplosionPrevention;
@@ -179,6 +183,7 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.BooleanValue endCrystalPlaceAnywhere;
         public final ModConfigSpec.BooleanValue endCrystalHealing;
         public final ModConfigSpec.BooleanValue keepBrokenItems;
+        public final ModConfigSpec.BooleanValue brokenToolsOnCuttingBoards;
         public final ModConfigSpec.BooleanValue wolvesWearAnyArmor;
         public final ModConfigSpec.BooleanValue spiderRangedWebAttacks;
         public final ModConfigSpec.BooleanValue removeQuasiConnectivity;
@@ -284,6 +289,16 @@ public class SpicedCiderConfig {
                     .translation("option.spicedcider.vanillaBackportLightTweaks")
                     .define("vanillaBackportLightTweaks", false);
 
+            creakingBuff = builder
+                    .comment(tooltip("creakingBuff"))
+                    .translation("option.spicedcider.creakingBuff")
+                    .define("creakingBuff", false);
+
+            goldenDandelionTempting = builder
+                    .comment(tooltip("goldenDandelionTempting"))
+                    .translation("option.spicedcider.goldenDandelionTempting")
+                    .define("goldenDandelionTempting", false);
+
             oceanRuinPrismarineChests = builder
                     .comment(tooltip("oceanRuinPrismarineChests"))
                     .translation("option.spicedcider.oceanRuinPrismarineChests")
@@ -325,6 +340,11 @@ public class SpicedCiderConfig {
                     .comment(tooltip("keepBrokenItems"))
                     .translation("option.spicedcider.keepBrokenItems")
                     .define("keepBrokenItems", false);
+
+            brokenToolsOnCuttingBoards = builder
+                    .comment(tooltip("brokenToolsOnCuttingBoards"))
+                    .translation("option.spicedcider.brokenToolsOnCuttingBoards")
+                    .define("brokenToolsOnCuttingBoards", false);
 
             wolvesWearAnyArmor = builder
                     .comment(tooltip("wolvesWearAnyArmor"))
@@ -559,6 +579,8 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.BooleanValue emiCreateFanRework;
         public final ModConfigSpec.BooleanValue createHideItemDescriptions;
         public final ModConfigSpec.BooleanValue quarkHideHints;
+        public final ModConfigSpec.BooleanValue creakingEyeParticles;
+        public final ModConfigSpec.BooleanValue goldenDandelionParticles;
         public final ModConfigSpec.BooleanValue carvingWheel;
         public final ModConfigSpec.BooleanValue emiTappingCategory;
         public final ModConfigSpec.BooleanValue emiSluicingCategory;
@@ -644,6 +666,16 @@ public class SpicedCiderConfig {
                     .comment(tooltip("quarkHideHints"))
                     .translation("option.spicedcider.quarkHideHints")
                     .define("quarkHideHints", false);
+
+            creakingEyeParticles = builder
+                    .comment(tooltip("creakingEyeParticles"))
+                    .translation("option.spicedcider.creakingEyeParticles")
+                    .define("creakingEyeParticles", true);
+
+            goldenDandelionParticles = builder
+                    .comment(tooltip("goldenDandelionParticles"))
+                    .translation("option.spicedcider.goldenDandelionParticles")
+                    .define("goldenDandelionParticles", true);
 
             carvingWheel = builder
                     .comment(tooltip("carvingWheel"))

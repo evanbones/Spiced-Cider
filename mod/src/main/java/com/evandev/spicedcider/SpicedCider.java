@@ -32,6 +32,7 @@ import com.evandev.spicedcider.networking.LodHelloPayload;
 import com.evandev.spicedcider.lodgen.LodGen;
 import com.evandev.spicedcider.lodgen.client.LodClient;
 import com.evandev.spicedcider.networking.VoidTrailPayload;
+import com.evandev.spicedcider.compat.firevariants.FireVariantCompat;
 import com.evandev.spicedcider.registry.*;
 import com.evandev.spicedcider.util.ItemAbilityItemsCache;
 import com.evandev.spicedcider.voidwater.client.ClientVoidTrails;
@@ -46,6 +47,7 @@ import net.minecraft.world.item.DyeColor;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.DispenserBlock;
 import net.minecraft.world.level.block.FlowerPotBlock;
@@ -107,6 +109,8 @@ public class SpicedCider {
         ModEntityTypes.ENTITY_TYPES.register(modEventBus);
         ModEntityTypes.ITEMS.register(modEventBus);
         ModBuildingBlocks.register();
+        ModPaleGardenBlocks.register();
+        ModFireBlocks.register();
         ModBlocks.BLOCKS.register(modEventBus);
         ModBlockEntities.BLOCK_ENTITIES.register(modEventBus);
         ModTreeFeatures.TRUNK_PLACERS.register(modEventBus);
@@ -157,6 +161,7 @@ public class SpicedCider {
     }
 
     private static void addSignBlocks(BlockEntityTypeAddBlocksEvent event) {
+        event.modify(BlockEntityType.CAMPFIRE, ModFireBlocks.SULFUR_CAMPFIRE.get());
         if (ModBlocks.TWISTED_SIGN == null) return;
         event.modify(BlockEntityType.SIGN, ModBlocks.TWISTED_SIGN.get(), ModBlocks.TWISTED_WALL_SIGN.get());
         event.modify(BlockEntityType.HANGING_SIGN, ModBlocks.TWISTED_HANGING_SIGN.get(), ModBlocks.TWISTED_WALL_HANGING_SIGN.get());
@@ -177,6 +182,8 @@ public class SpicedCider {
         event.enqueueWork(() -> ModItems.BALLOONS.values().forEach(balloon -> DispenserBlock.registerBehavior(balloon.get(), new BalloonItem.DispenseBehavior())));
         event.enqueueWork(() -> ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.GLOAMWOOD_SAPLING.getId(), ModBlocks.POTTED_GLOAMWOOD_SAPLING));
         event.enqueueWork(() -> ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.CACAO_SAPLING.getId(), ModBlocks.POTTED_CACAO_SAPLING));
+        event.enqueueWork(() -> ModPaleGardenBlocks.POTS.forEach(pot -> ((FlowerPotBlock) Blocks.FLOWER_POT)
+                .addPlant(BuiltInRegistries.BLOCK.getKey(pot.get().getPotted()), pot)));
         event.enqueueWork(() -> ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.PEAR_SAPLING.getId(), ModBlocks.POTTED_PEAR_SAPLING));
         if (ModItems.TWISTED_BOAT == null) return;
         event.enqueueWork(() -> {
@@ -252,6 +259,26 @@ public class SpicedCider {
             event.accept(ModItems.CACAO_LEAVES.get(), vis);
             event.accept(ModItems.FLOWERING_CACAO_LEAVES.get(), vis);
             event.accept(ModItems.CACAO_SAPLING.get(), vis);
+            event.accept(ModItems.CACAO_POD.get(), vis);
+        }
+        FireVariantCompat.addToTabs(event, vis);
+        if (event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
+            event.insertAfter(new ItemStack(Items.SOUL_TORCH), new ItemStack(ModFireBlocks.SULFUR_TORCH_ITEM.get()), vis);
+            event.insertAfter(new ItemStack(Items.SOUL_LANTERN), new ItemStack(ModFireBlocks.SULFUR_LANTERN_ITEM.get()), vis);
+            event.insertAfter(new ItemStack(Items.SOUL_CAMPFIRE), new ItemStack(ModFireBlocks.SULFUR_CAMPFIRE_ITEM.get()), vis);
+        }
+        if (event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
+            event.insertAfter(new ItemStack(Items.JACK_O_LANTERN), new ItemStack(ModPaleGardenBlocks.PALE_PUMPKIN_ITEM.get()), vis);
+            event.insertAfter(new ItemStack(ModPaleGardenBlocks.PALE_PUMPKIN_ITEM.get()), new ItemStack(ModPaleGardenBlocks.CARVED_PALE_PUMPKIN_ITEM.get()), vis);
+            ItemStack previous = new ItemStack(ModPaleGardenBlocks.CARVED_PALE_PUMPKIN_ITEM.get());
+            for (var jack : ModPaleGardenBlocks.JACK_O_LANTERN_ITEMS) {
+                ItemStack stack = new ItemStack(jack.get());
+                event.insertAfter(previous, stack, vis);
+                previous = stack;
+            }
+            event.insertAfter(new ItemStack(Items.WITHER_ROSE), new ItemStack(ModPaleGardenBlocks.PALE_ROSE_ITEM.get()), vis);
+            event.insertAfter(new ItemStack(Items.DEAD_BUSH), new ItemStack(ModPaleGardenBlocks.PALE_BUSH_ITEM.get()), vis);
+            event.insertAfter(new ItemStack(ModPaleGardenBlocks.PALE_BUSH_ITEM.get()), new ItemStack(ModPaleGardenBlocks.TALL_PALE_BUSH_ITEM.get()), vis);
             Stream.of(ModItems.PEAR_LOG, ModItems.PEAR_WOOD, ModItems.STRIPPED_PEAR_LOG, ModItems.STRIPPED_PEAR_WOOD, ModItems.PEAR_LEAVES,
                     ModItems.FLOWERING_PEAR_LEAVES, ModItems.PEAR_SAPLING).forEach(item -> event.accept(item.get(), vis));
             Stream.of(ModItems.AVOCADO_LOG, ModItems.AVOCADO_WOOD, ModItems.STRIPPED_AVOCADO_LOG, ModItems.STRIPPED_AVOCADO_WOOD,

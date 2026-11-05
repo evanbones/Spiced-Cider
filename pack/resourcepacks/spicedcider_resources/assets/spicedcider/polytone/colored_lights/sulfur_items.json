@@ -1,0 +1,16 @@
+{
+  "require_config": "colored_lights:item_lights",
+  "target_type": "item",
+  "targets": [
+    "spicedcider:sulfur_torch",
+    "spicedcider:sulfur_lantern",
+    "spicedcider:sulfur_campfire",
+    "spicedcider:sulfur_jack_o_lantern",
+    "spicedcider:pale_sulfur_jack_o_lantern"
+  ],
+  "colored_light": {
+    "color": "#7A7CFF",
+    "radius": 6,
+    "brightness": "o.inWater() ? 0 : 1"
+  }
+}

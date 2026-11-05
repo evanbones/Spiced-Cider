@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.mixin.farmersdelight;
 
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.evandev.spicedcider.util.BrokenItemUtil;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
@@ -14,6 +15,7 @@ import org.spongepowered.asm.mixin.injection.At;
 public class CuttingBoardBrokenToolMixin {
     @WrapOperation(method = "getMatchingRecipe", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/crafting/Ingredient;test(Lnet/minecraft/world/item/ItemStack;)Z"))
     private boolean spicedcider$brokenToolCantCut(Ingredient ingredient, ItemStack tool, Operation<Boolean> original) {
-        return !BrokenItemUtil.isBroken(tool) && original.call(ingredient, tool);
+        if (BrokenItemUtil.isBroken(tool) && !SpicedCiderConfig.COMMON.brokenToolsOnCuttingBoards.get()) return false;
+        return original.call(ingredient, tool);
     }
 }

@@ -522,7 +522,7 @@ hash = "6bccd9a5af80821fe4b83ea397da43adac0b8511bfb7d3b297c038f2b69da8f1"
 
 [[files]]
 file = "config/everycomp-entries.toml"
-hash = "acec2d5c18c695757f0def3ce8ace410bf55553f43c66c49e968b1b2f2ed3443"
+hash = "f0c85a07d7d36a65ce63d37e8302b94624c1e3de8be5cb23e53c340cc90798c3"
 
 [[files]]
 file = "config/everycomp-hazardous.toml"
@@ -8509,6 +8509,10 @@ file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/stonecu
 hash = "0764087df3244264c1b533c1bee9ce274bcb06b056b6adbe476345f98666cf30"
 
 [[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sulfur_campfire.json"
+hash = "ca0b86a297ac3e1b2b63f1f6500c7144012814e8773df898ef8dbbe5d85e14de"
+
+[[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/workstone/andesite_to_cobbled_andesite.json"
 hash = "68eb38b6f085e73ab3628e77c048a3c9f8cb70d100ae3cc3d4b55b8fc9ca5f89"
 
@@ -8993,6 +8997,10 @@ file = "config/openloader/packs/spicedcider_data/data/spicedcider/worldgen/place
 hash = "f8abe49cd88bf519d86022f0d902f7f4d22f790806d4b11aa97d65a37ca8d448"
 
 [[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/worldgen/placed_feature/pale_bushes.json"
+hash = "c8e75a9506ef9048f38f70d0e3991230bd0ce3bcbd49377ae496cefcf53bf345"
+
+[[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/worldgen/placed_feature/pale_garden_ceiling_vegetation.json"
 hash = "ade64054d32ba190c4e56b1519a868205e5512fe5398646cc7ab25d8ead62204"
 
@@ -9003,6 +9011,14 @@ hash = "848432cb33dda41ea538500785fdc6f39e1c6ad119f74da962d072f5441891a4"
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/worldgen/placed_feature/pale_garden_trees.json"
 hash = "e4cc7161c40d3dd5e8c99e5b858ed81875fe12484e96e921332ebe5a7ff07a1f"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/worldgen/placed_feature/pale_pumpkin_patch.json"
+hash = "b94b537a513669d9061c4c562f54bc936dc3de6957130d13c6fbe1a570c701fd"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/worldgen/placed_feature/pale_roses.json"
+hash = "12b48b2ead37b2a9b64ef45931670473f3b4cecfc3996eaf5f811da0ac51612f"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/worldgen/placed_feature/seep_seagrass.json"
@@ -9674,7 +9690,7 @@ hash = "2edbf62b60165a7ebbea68d5babc9b1991c73ece3e00c57832d6e99529ed69ef"
 
 [[files]]
 file = "config/recreative/tab_layout.json"
-hash = "fac23747599c0660551cc28ff9474417d0d33f25c1c4c64d4653f6dff539a745"
+hash = "0cd70596ffb73c47bf1dc1773e305aae171788ff6c6df64197718d6e1fec7634"
 
 [[files]]
 file = "config/recreative/tab_order.json"
@@ -11854,7 +11870,7 @@ hash = "9e9150d9e3c23e584b78cc718a2df4536f177ae99686817f4769ef4a320d345e"
 
 [[files]]
 file = "config/remi/stack_groups/braziers.json"
-hash = "888938326e1d2bef36efd7eeaf9a541c9147a100f9c08b3f3bd06b3606c8d500"
+hash = "e51b127c19afaf4b3839da0b106354399d7d3ee54a57abf27a6a5b8a0e8e9ce0"
 
 [[files]]
 file = "config/remi/stack_groups/bundled_posts.json"
@@ -11914,7 +11930,7 @@ hash = "fd65379f5da767e5901c8b7e9487680744ad2b4edda7921e5ab08635e79b3416"
 
 [[files]]
 file = "config/remi/stack_groups/campfires.json"
-hash = "1dda980e892ac6dbdad32915c3feb02c6139823eb49e0adb1a216246b384c5f3"
+hash = "61f010d76c3979176fbecc6491b4fa6c12d3e59587ea67ca1086e70d9fdd9395"
 
 [[files]]
 file = "config/remi/stack_groups/caverns_and_chasms_chiseled_copper_bricks.json"
@@ -12129,8 +12145,12 @@ file = "config/remi/stack_groups/heads.json"
 hash = "be84343e36b2124ab325da8f37158c2e072fc17e00713b811484d66200d314ed"
 
 [[files]]
+file = "config/remi/stack_groups/jack_o_lanterns.json"
+hash = "d6b88e911aca899ab62aa4b338c20700412de865e429212e5bbcea2cd1f61304"
+
+[[files]]
 file = "config/remi/stack_groups/lanterns.json"
-hash = "67cebecff7a78b023b5c1a5a93300c2aec62d367ff8205bbdae523311878ebdd"
+hash = "bd7913912d9db8f8923811d9f2156f817a86500bcc2b944ce09b8f795ba1c8f4"
 
 [[files]]
 file = "config/remi/stack_groups/lightning_rods.json"
@@ -12562,11 +12582,11 @@ hash = "20054029e0014a38add4a1f49f3709dab64de66cb5457277a774407952e66d88"
 
 [[files]]
 file = "config/spicedcider-client.toml"
-hash = "745b905b1e1fefc02fd31b04905679515901fa43fad7293ab8d6cd75124d25e6"
+hash = "a3b9d5eb03391c385123ee5bab1b7c88595701cddd4a7be7c08d6a02d0ad0d08"
 
 [[files]]
 file = "config/spicedcider-common.toml"
-hash = "64e34e9c7a8aab8608af97b39ba76104e0d33c71201578ab842c668cd6ecee7d"
+hash = "abed158032a2dc441b43a12d2d2e5d3acbcf27e9b0836dc74e97950712bc7cb5"
 
 [[files]]
 file = "config/spicedcider-startup.toml"
@@ -18159,7 +18179,7 @@ hash = "47b991cde60d532382f8343a40d1c2308ac091cf6b709b05e9c5cd4ad7b5cd55"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/fieldguide/lang/en_us.json"
-hash = "78c1d3dac260f8942848b9c46a137453d7698cf6f2d69f0aaae5056c459c975e"
+hash = "f1f235be282198d9e08f852f5828afdd634689e81bddea82e3c053c5200835c3"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/frame_changer/lang/en_us.json"
@@ -22775,7 +22795,7 @@ hash = "71341002dcc43dd8e4b8ac10e4ad84c6901b3b134037379ded7e18200558064a"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/spicedcider/lang/en_us.json"
-hash = "27e1e247cf2b2216b334a1be35eaf0009dc200e113348926ca0f895395458f6d"
+hash = "6876a666a122bc2843e18deaec2ce9e93900b6936ea442f6d895937a61cac8ae"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/spicedcider/models/block/cauldron_content_12.json"
@@ -22796,6 +22816,18 @@ hash = "a08e9496b5d4c0c88ebfdfd21cc6e6383a831512de6c1eb115992ab04299aa22"
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/spicedcider/models/block/glowing_column_horizontal.json"
 hash = "1b32517f550945f33100b470908ba78d0c160ea0f55e558693503400d3d15444"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/models/block/sulfur_fire_floor1.json"
+hash = "d2a2bd9d94de437136a92ba69a8f84a6670dec302a9eabdb1bffd74233097d86"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/models/block/sulfur_fire_side1.json"
+hash = "95fa9a419fae9e001a3ada7c795f9fe49219a22cd8b9600e42b2c1b03975fa70"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/models/block/sulfur_fire_side_alt1.json"
+hash = "47b4dee14a0d42d556f02c6a1779fa86e759cccddad65621ee5e31e069579d02"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/spicedcider/models/item/explorer_map/abandoned_camp_map.json"
@@ -22868,6 +22900,18 @@ hash = "a92f776b1f45298b04153784d289552c2e5cfb6609cb26f10b5b869030b54fed"
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/spicedcider/models/item/explorer_map/woodland_mansion_map.json"
 hash = "146b49f7197baeb6b068fb2dd096001585ddc171314824f1b0699b4772bbc67b"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/models/item/sconce_sulfur.json"
+hash = "78bb50ec202efac4312dafd42454dd1afefdd399ea7bd0eae0e95d381530fc64"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/models/item/sulfur_lantern.json"
+hash = "563afdc9e4fa6a089f3d0637625419a3098856659dcaeb985f52c03e06f9f553"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/models/item/sulfur_torch.json"
+hash = "0bea9cc641944a8f789daae77966892bdd8fb78341bba4de82222a4d7504fdfc"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glass/blockbox/rough_glass/0.png"
@@ -24058,6 +24102,14 @@ file = "resourcepacks/spicedcider_resources/assets/spicedcider/optifine/ctm/glas
 hash = "eef7031b39b88cd4732f50bfcdb44875a628dfbf45ddf12f4cbd1628dff691ba"
 
 [[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/particles/small_sulfur_fire_flame.json"
+hash = "840b71f9a81dc04b41d73bc68982549e2d35708b984d2bfcb58b4dc2e471fac7"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/particles/sulfur_fire_flame.json"
+hash = "bfe75e03595ac2a602ce2a079f46b0ea5076532ceb7365f51ff08564684d2f68"
+
+[[files]]
 file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/alt_glasswood_1.json"
 hash = "41adf1031a35ca384bab2ef83a4b383263acd5a9d3406d694032de3553d51f6a"
 
@@ -24167,7 +24219,7 @@ hash = "f814e19b72b34a7f4361cf5f0d73b207754fbedcd51897c26b4463d2df59d04d"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/flower_pot.json"
-hash = "8afc8229b17d40172ababa899822fc56a7a82dc9c440152ce8270df0686baaf0"
+hash = "152f2e9859169d2f61446182fd830ed79abfea01d4ad261b05f11279d7f544aa"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/fungus.json"
@@ -24408,6 +24460,50 @@ hash = "f29a7420395ba01224a25034d6b856930fbf87531768228679bc55c3d5da54de"
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/architects_palette/redstone_cage_lantern.json"
 hash = "2db599996f0424327c2a402822316646edcb4faee05b4dd1df644e3530931187"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/pale_cupric_jack_o_lantern.json"
+hash = "6ab14946edae06b8f89477a201fb4aacfa1f9263b969c972e63bde08beeebdbe"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/pale_jack_o_lantern.json"
+hash = "cae606f65694311a93a9b6d5b699a5f40c10be0e8c57ac4f677234c929a1c784"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/pale_jack_o_lantern_items.json"
+hash = "5ca9aeb2c9add2735a067b8c374098e3f750e60da7fff5d252edae4b30119711"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/pale_redstone_jack_o_lantern.json"
+hash = "c74019da6b270a8d1a4a1267489244f4fa07ebb86032774c26ccfa4a2325dc82"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/pale_soul_jack_o_lantern.json"
+hash = "f2f95d157253bdba5f2025ba6926db498035e972b2e232de881d225d5fa64a81"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/sulfur_brazier.json"
+hash = "c1f2bd72002f7000867646b23f487f64b47e0031a155b5e199eb406b23b9e1b1"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/sulfur_campfire.json"
+hash = "f57ed42890d65fa41455a6ff9eb89fbf05a3657226b2635a139b826bc834e5f7"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/sulfur_compat_lights.json"
+hash = "4592cdae6610d0e7ac7c4c20383174ba176446b3ba8c711ee67f66aa9a09f81d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/sulfur_items.json"
+hash = "d47594aa402effaa358215b39f4504a86bc4d17c577cc3e2d6184ca32f7e964d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/sulfur_jack_o_lanterns.json"
+hash = "bf2a1733bc23d41009317c9addd88f8ab8292139ea7cadc861f468eabfe6aeed"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/sulfur_lights.json"
+hash = "476e605f440b8f7a0cc3e46269ea6a8e5d61f99210fb68b5224404638027a64a"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/global_expressions/pale_garden_fade.json"
@@ -26294,6 +26390,62 @@ file = "resourcepacks/spicedcider_resources/assets/spicedcider/structure/pear.nb
 hash = "52d87092675d199ed0a52503d59deda93ac5e3a81c1e944f79128672b72a02c7"
 
 [[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/textures/block/glowlight_candle.png"
+hash = "369523ca87d78dc8b4628a9d06a56d2194f9419f0ab51a324b6cce03d3a06019"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/textures/block/glowlight_candle_lit.png"
+hash = "c86ad3183fb8405b11a98123681ef5ae519ac4988772745a8bcd0ac4f40bfa03"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/textures/block/sconce_sulfur.png"
+hash = "b7dae9bef03a82ad64ac64aa49ae0fa220d3d3f0da690e46d488fedeb1dc9c50"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/textures/block/sulfur_campfire_log_lit.png"
+hash = "b444061dafeeea1ee13e9f12f5756bf3dfdc60df00816c91c65d036f76a3a3e3"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/textures/block/sulfur_campfire_log_lit.png.mcmeta"
+hash = "65361c7535e9bcfc1dc7bcc8bab5a4fc74a2edef3677d5c870436c09370cf072"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/textures/block/sulfur_candle.png"
+hash = "2a90b7363055cd09d7cf76bdeac34c6bcc3eac938674258c9ce8bd6f0aba1662"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/textures/block/sulfur_candle_lit.png"
+hash = "01ceba9e9440134e4ec362aae59ec11557fcd96218f88b62b21d8dc43ce40bca"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/textures/block/sulfur_fire_0.png"
+hash = "e73b39092e0194b16bbd6cee1546dffc6a582a8f6f9b417daa98266e4714af13"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/textures/block/sulfur_fire_0.png.mcmeta"
+hash = "5f3e552df12ee396d7ec7d93b9cf56c3c9db521d95514d7580ee9b1367cc93dc"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/textures/block/sulfur_fire_2.png"
+hash = "dbd46ba3578b17fc68f6c0bab8419f7fe8617a3137116258945ea91eee91fc96"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/textures/block/sulfur_fire_2.png.mcmeta"
+hash = "802acdb8f55f30146d5ed18414b21ba35650d4e550f81825ea104131c12dc4fc"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/textures/block/sulfur_lantern.png"
+hash = "c7bb577c066e73aa3d5ffdda455d97f42d08ec7e3e3f15b9e315be87fd4b7f0a"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/textures/block/sulfur_lantern.png.mcmeta"
+hash = "c448c648b6f3eb5338f5ad8ea0f5c4a63fbb3a804033da898c55f63beaf91640"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/textures/block/sulfur_torch.png"
+hash = "a5ba22acd9109bf60703e9a2b980322e8afd9fb3349bc10baeb3edaa90dd127a"
+
+[[files]]
 file = "resourcepacks/spicedcider_resources/assets/spicedcider/textures/gui/creative_tabs/building_icon.png"
 hash = "82ea09223aa4442146b43bc61fb8c9ee2b77489237e440de6ef5eb5a97d90de3"
 
@@ -26368,6 +26520,78 @@ hash = "88eff562f49317384055b91c729d6fb0c0c3b2cfba1d486f9137a37c192c2a75"
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/spicedcider/textures/item/map/slice_map.png"
 hash = "3b80fc3ff4affe7a2e3524791ef1c8fc077e561ae804a732bd6acf4744bed15c"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/textures/item/sconce_sulfur.png"
+hash = "b8bd96540f1bea92dc71de23ff745e5ca4ac8578bd238b2b68881fcf49f879c2"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/textures/item/sulfur_campfire.png"
+hash = "688a668ca50876f6c085c2e47f3b2e282cfd53ff60f87a6f6e5747e7df948fa9"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/textures/item/sulfur_lantern.png"
+hash = "2dd1d05ba5b85902ee2d45925c13ad5d94ec8fe817ce575375ccaea1cddc4d8a"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/textures/item/sulfur_torch.png"
+hash = "7bf39b8dd1910d8b879d2b29eed31e58d9da9ed47a63333cda755a95566cd439"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/textures/misc/pale_pumpkinblur.png"
+hash = "a973871c07f5a1aca32ff451312f3e9e93f43ca35a3089b7af01327f07425eca"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/textures/misc/pale_pumpkinblur.png.mcmeta"
+hash = "f485e292229b19e0c9a6b12dfbd3764302099ada672a65651ed231834c109fc6"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/textures/particle/small_sulfur_fire_flame_1.png"
+hash = "2e19f98bf74a735402d95e6bddfbaf8bc50a55abbb95bcfcc6068ec957d13925"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/textures/particle/small_sulfur_fire_flame_2.png"
+hash = "4991bc40f6c5c94134404bd2338e45f90a46646e0d725f68f58e5e1b88480c67"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/textures/particle/small_sulfur_fire_flame_3.png"
+hash = "8f6656c42fe41f230cb0bdd7816be3d3f4ca6fc56f1e5603e34bfe303ff047ff"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/textures/particle/small_sulfur_fire_flame_4.png"
+hash = "07726be1a464e24906b0489cb171f5537cd09a119ce627f84784db1bafc7b02c"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/textures/particle/small_sulfur_fire_flame_5.png"
+hash = "bb9071060374afefca7c4045e70f37b8c79201ca96e83570868fe0876a6bc727"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/textures/particle/small_sulfur_fire_flame_6.png"
+hash = "d026a5f4f5fa57a4d677be803e697f3ba4b6f92924b451e4c9bb4f6b6ca83394"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/textures/particle/sulfur_fire_flame_1.png"
+hash = "ccfec4766765898db796a03c1469aea5700b98b2a0c3563050f23a343ed5d3c3"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/textures/particle/sulfur_fire_flame_2.png"
+hash = "cc4d7a133b260a46f459de21728f4049a4a8eb916fd4ed12c799f18825ac28ad"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/textures/particle/sulfur_fire_flame_3.png"
+hash = "9fc0af1f9ea1df579146183d6f2f50700ffa2570461518cd12e4797110163b9d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/textures/particle/sulfur_fire_flame_4.png"
+hash = "e68e67372bd714f4435bdb8b7752517e4629c8079d2cb35cb972ce6ae48ed055"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/textures/particle/sulfur_fire_flame_5.png"
+hash = "7ad1d185e12ca678f5cee69f98ef908304763c9e4e5d57c530582c4ee3c2835a"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/textures/particle/sulfur_fire_flame_6.png"
+hash = "53dae9aa11013608de0a2da572dbda49d6f7846ed065232feb72a7e9d2c547a8"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/spicedcider/where_winds_blow/foliage_profiles/pack_cattails.json"

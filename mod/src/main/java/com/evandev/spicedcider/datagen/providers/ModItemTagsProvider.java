@@ -3,6 +3,8 @@ package com.evandev.spicedcider.datagen.providers;
 import com.evandev.spicedcider.SpicedCider;
 import com.evandev.spicedcider.registry.ModBuildingBlocks;
 import com.evandev.spicedcider.registry.ModItems;
+import com.evandev.spicedcider.registry.ModPaleGardenBlocks;
+import com.evandev.spicedcider.registry.ModFireBlocks;
 import com.evandev.spicedcider.registry.ModTags;
 import com.evandev.spicedcider.registry.ModTierItems;
 import net.minecraft.core.HolderLookup;
@@ -44,6 +46,12 @@ public class ModItemTagsProvider extends ItemTagsProvider {
                 .addOptional(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "featherlight_hook"))
                 .addOptional(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "necromium_hook"));
 
+        this.tag(Tags.Items.PUMPKINS_NORMAL).add(ModPaleGardenBlocks.PALE_PUMPKIN_ITEM.get());
+        this.tag(Tags.Items.PUMPKINS_CARVED).add(ModPaleGardenBlocks.CARVED_PALE_PUMPKIN_ITEM.get());
+        this.tag(Tags.Items.PUMPKINS_JACK_O_LANTERNS).add(ModPaleGardenBlocks.JACK_O_LANTERN_ITEMS.stream().map(DeferredItem::get).toArray(Item[]::new));
+        this.tag(ItemTags.SMALL_FLOWERS).add(ModPaleGardenBlocks.PALE_ROSE_ITEM.get());
+        this.tag(ModTags.Items.SULFUR_TORCHES).add(ModFireBlocks.SULFUR_TORCH_ITEM.get());
+        fireVariants();
         this.tag(ItemTags.SAPLINGS).add(ModItems.GLOAMWOOD_SAPLING.get());
         this.tag(ItemTags.SAPLINGS).add(ModItems.CACAO_SAPLING.get());
         this.tag(ItemTags.LEAVES).add(ModItems.CACAO_LEAVES.get());
@@ -271,5 +279,18 @@ public class ModItemTagsProvider extends ItemTagsProvider {
 
     private static TagKey<Item> externalTag(String namespace, String path) {
         return ItemTags.create(ResourceLocation.fromNamespaceAndPath(namespace, path));
+    }
+
+    private void fireVariants() {
+        optional(ItemTags.CANDLES, "sulfur_candle", "glowlight_candle");
+        optional(Tags.Items.PUMPKINS_JACK_O_LANTERNS, "large_sulfur_jack_o_lantern_slice");
+        optional(ItemTags.create(ResourceLocation.fromNamespaceAndPath("supplementaries", "sconces")), "sconce_sulfur");
+        optional(ItemTags.create(ResourceLocation.fromNamespaceAndPath("supplementaries", "candle_holders")),
+                "candle_holder_sulfur", "candle_holder_glowlight", "gold_candle_holder_sulfur", "gold_candle_holder_glowlight");
+    }
+
+    private void optional(TagKey<Item> tag, String... ids) {
+        var builder = this.tag(tag);
+        for (String id : ids) builder.addOptional(ResourceLocation.fromNamespaceAndPath("spicedcider", id));
     }
 }

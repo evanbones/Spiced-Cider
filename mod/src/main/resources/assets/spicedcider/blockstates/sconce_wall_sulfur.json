@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "lit=true,facing=north": {
+      "model": "spicedcider:block/sconce_wall_sulfur"
+    },
+    "lit=true,facing=east": {
+      "model": "spicedcider:block/sconce_wall_sulfur",
+      "y": 90
+    },
+    "lit=true,facing=south": {
+      "model": "spicedcider:block/sconce_wall_sulfur",
+      "y": 180
+    },
+    "lit=true,facing=west": {
+      "model": "spicedcider:block/sconce_wall_sulfur",
+      "y": 270
+    },
+    "lit=false,facing=north": {
+      "model": "spicedcider:block/sconce_wall_sulfur_off"
+    },
+    "lit=false,facing=east": {
+      "model": "spicedcider:block/sconce_wall_sulfur_off",
+      "y": 90
+    },
+    "lit=false,facing=south": {
+      "model": "spicedcider:block/sconce_wall_sulfur_off",
+      "y": 180
+    },
+    "lit=false,facing=west": {
+      "model": "spicedcider:block/sconce_wall_sulfur_off",
+      "y": 270
+    }
+  }
+}

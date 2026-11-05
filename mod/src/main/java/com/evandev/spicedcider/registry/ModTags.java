@@ -26,6 +26,9 @@ public class ModTags {
         public static final TagKey<Item> PEAR_LOGS = tag("pear_logs");
         public static final TagKey<Item> AVOCADO_LOGS = tag("avocado_logs");
         public static final TagKey<Item> STRAW_GOLEM_HATS = tag("straw_golem_hats");
+        public static final TagKey<Item> SULFUR_FIRE_BASE_BLOCKS = tag("sulfur_fire_base_blocks");
+        public static final TagKey<Item> SULFUR_TORCHES = tag("c", "torches/sulfur");
+        public static final TagKey<Item> SULFUR_DUSTS = tag("c", "dusts/sulfur");
 
         private static TagKey<Item> tag(String name) {
             return ItemTags.create(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, name));
@@ -48,6 +51,9 @@ public class ModTags {
         public static final TagKey<Block> AVOCADO_LEAVES = tag("avocado_leaves");
         public static final TagKey<Block> GROWS_PINECONES = tag("grows_pinecones");
         public static final TagKey<Block> STRAW_GOLEM_CROPS = tag("straw_golem_crops");
+        public static final TagKey<Block> GOLEM_HEADS = tag("golem_heads");
+        public static final TagKey<Block> SULFUR_FIRE_BASE_BLOCKS = tag("sulfur_fire_base_blocks");
+        public static final TagKey<Block> PALE_GOLEM_HEADS = tag("pale_golem_heads");
 
         private static TagKey<Block> tag(String name) {
             return BlockTags.create(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, name));

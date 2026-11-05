@@ -93,6 +93,10 @@
 	quarkHideHints = true
 	#Replaces No Man's Land's carving menu with a radial wheel. Requires No Man's Land.
 	carvingWheel = true
+	#Glowing eyes sometimes appear under the tips of pale hanging moss in the dark. Requires Vanilla Backport.
+	creakingEyeParticles = true
+	#Golden dandelions give off drifting golden specks. Requires Tiny Takeover Backport.
+	goldenDandelionParticles = true
 
 [voxy]
 	#Replaces the terrain fog with configurable start and end distances that cover Voxy's LoD terrain, plus weather and cave fog. Disable to use Roxy's own fog.

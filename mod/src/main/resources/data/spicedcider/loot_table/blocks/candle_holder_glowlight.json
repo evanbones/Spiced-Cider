@@ -1,0 +1,76 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "buzzier_bees"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "supplementaries"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "infernalexp"
+    }
+  ],
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "moonlight:optional_item",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "conditions": [
+                {
+                  "condition": "moonlight:optional_block_state_property",
+                  "block": "spicedcider:candle_holder_glowlight",
+                  "properties": {
+                    "candles": "2"
+                  }
+                }
+              ],
+              "count": 2.0,
+              "add": false
+            },
+            {
+              "function": "minecraft:set_count",
+              "conditions": [
+                {
+                  "condition": "moonlight:optional_block_state_property",
+                  "block": "spicedcider:candle_holder_glowlight",
+                  "properties": {
+                    "candles": "3"
+                  }
+                }
+              ],
+              "count": 3.0,
+              "add": false
+            },
+            {
+              "function": "minecraft:set_count",
+              "conditions": [
+                {
+                  "condition": "moonlight:optional_block_state_property",
+                  "block": "spicedcider:candle_holder_glowlight",
+                  "properties": {
+                    "candles": "4"
+                  }
+                }
+              ],
+              "count": 4.0,
+              "add": false
+            },
+            {
+              "function": "minecraft:explosion_decay"
+            }
+          ],
+          "name": "spicedcider:candle_holder_glowlight"
+        }
+      ]
+    }
+  ]
+}
