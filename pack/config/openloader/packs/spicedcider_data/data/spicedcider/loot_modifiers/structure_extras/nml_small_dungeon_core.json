@@ -1,0 +1,16 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "nomansland"
+    }
+  ],
+  "type": "neoforge:add_table",
+  "conditions": [
+    {
+      "condition": "neoforge:loot_table_id",
+      "loot_table_id": "nomansland:chests/small_dungeon_core"
+    }
+  ],
+  "table": "spicedcider:inject/structure_extras/nml_small_dungeon_core"
+}

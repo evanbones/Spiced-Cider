@@ -147,7 +147,20 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                 default -> {
                 }
             }
-            this.tag(def.tool().equals("axe") ? BlockTags.MINEABLE_WITH_AXE : BlockTags.MINEABLE_WITH_PICKAXE).addOptional(def.location());
+            switch (def.tool()) {
+                case "none" -> {
+                }
+                case "axe" -> this.tag(BlockTags.MINEABLE_WITH_AXE).addOptional(def.location());
+                case "shovel" -> this.tag(BlockTags.MINEABLE_WITH_SHOVEL).addOptional(def.location());
+                default -> this.tag(BlockTags.MINEABLE_WITH_PICKAXE).addOptional(def.location());
+            }
+            if (def.needs() != null) {
+                this.tag(switch (def.needs()) {
+                    case "diamond" -> BlockTags.NEEDS_DIAMOND_TOOL;
+                    case "iron" -> BlockTags.NEEDS_IRON_TOOL;
+                    default -> BlockTags.NEEDS_STONE_TOOL;
+                }).addOptional(def.location());
+            }
         }
 
 

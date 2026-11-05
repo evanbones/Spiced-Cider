@@ -1,0 +1,23 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "alloyed"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "modestmining"
+    }
+  ],
+  "asset_name": "spicedcider_bronze",
+  "description": {
+    "color": "#AA834B",
+    "translate": "trim_material.spicedcider.bronze"
+  },
+  "ingredient": "alloyed:bronze_ingot",
+  "item_model_index": -1.0,
+  "override_armor_materials": {
+    "modestmining:bronze": "spicedcider_bronze_darker",
+    "spicedcider:bronze": "spicedcider_bronze_darker"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "oooh_pinky"
+    }
+  ],
+  "asset_name": "spicedcider_rose_gold",
+  "description": {
+    "color": "#FF9792",
+    "translate": "trim_material.spicedcider.rose_gold"
+  },
+  "ingredient": "oooh_pinky:rose_gold_ingot",
+  "item_model_index": -1.0,
+  "override_armor_materials": {
+    "oooh_pinky:rose_gold": "spicedcider_rose_gold_darker",
+    "spicedcider:rose_gold": "spicedcider_rose_gold_darker"
+  }
+}

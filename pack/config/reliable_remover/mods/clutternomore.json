@@ -92,5 +92,33 @@
       "clutternomore:stonezone/vertical_sw/minecraft/cinnabar_tile_slab",
       "clutternomore:stonezone/sw/minecraft/cinnabar_tile_step"
     ]
+  },
+  {
+    "action": "remove",
+    "items": [
+      "clutternomore:blockbox/vertical_corrugated_iron_plate_slab"
+    ],
+    "replace_with": "clutternomore:blockbox/vertical_iron_tread_plate_slab"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "clutternomore:blockbox/corrugated_iron_plate_step"
+    ],
+    "replace_with": "clutternomore:blockbox/iron_tread_plate_step"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "clutternomore:blockbox/vertical_golden_brick_slab"
+    ],
+    "replace_with": "clutternomore:caverns_and_chasms/vertical_gold_brick_slab"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "clutternomore:blockbox/golden_brick_step"
+    ],
+    "replace_with": "clutternomore:caverns_and_chasms/gold_brick_step"
   }
 ]

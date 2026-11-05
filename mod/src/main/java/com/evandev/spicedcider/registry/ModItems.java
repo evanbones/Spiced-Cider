@@ -8,6 +8,7 @@ import com.evandev.spicedcider.content.item.FireStrikerItem;
 import com.evandev.spicedcider.content.item.MischiefArmorItem;
 import com.evandev.spicedcider.content.item.PocketJukeboxItem;
 import com.evandev.spicedcider.content.item.RuinedPageItem;
+import com.evandev.spicedcider.content.item.SeedPouchItem;
 import com.evandev.spicedcider.compat.architectspalette.ArchitectsPaletteCompat;
 import com.evandev.spicedcider.compat.farmersdelight.FarmersDelightCompat;
 import com.evandev.spicedcider.compat.tide.TideCompat;
@@ -126,6 +127,8 @@ public class ModItems {
     public static final DeferredItem<BlockItem> WORM_CRATE = ITEMS.registerSimpleBlockItem(ModBlocks.WORM_CRATE);
     public static final DeferredItem<Item> MAP_IN_A_BOTTLE = ITEMS.register("map_in_a_bottle",
             () -> new MapInABottleItem(new Item.Properties().stacksTo(16).rarity(Rarity.UNCOMMON)));
+    public static final DeferredItem<Item> SEED_POUCH = ITEMS.register("seed_pouch",
+            () -> new SeedPouchItem(new Item.Properties().stacksTo(16)));
     public static final DeferredItem<Item> RUINED_PAGE = ITEMS.register("ruined_page",
             () -> new RuinedPageItem(new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON)));
     public static final DeferredItem<Item> GEODE = ITEMS.register("geode",
@@ -144,6 +147,10 @@ public class ModItems {
     public static final DeferredItem<BlockItem> PLUM_CRATE = ModBlocks.PLUM_CRATE != null ? ITEMS.registerSimpleBlockItem(ModBlocks.PLUM_CRATE) : null;
     @Nullable
     public static final DeferredItem<BlockItem> HOARY_APPLE_CRATE = ModBlocks.HOARY_APPLE_CRATE != null ? ITEMS.registerSimpleBlockItem(ModBlocks.HOARY_APPLE_CRATE) : null;
+    @Nullable
+    public static final DeferredItem<BlockItem> ELDERBERRY_CRATE = ModBlocks.ELDERBERRY_CRATE != null ? ITEMS.registerSimpleBlockItem(ModBlocks.ELDERBERRY_CRATE) : null;
+    @Nullable
+    public static final DeferredItem<BlockItem> PASSION_FRUIT_CRATE = ModBlocks.PASSION_FRUIT_CRATE != null ? ITEMS.registerSimpleBlockItem(ModBlocks.PASSION_FRUIT_CRATE) : null;
 
     public static final DeferredItem<BlockItem> CACAO_LOG = ITEMS.registerSimpleBlockItem(ModBlocks.CACAO_LOG);
     public static final DeferredItem<BlockItem> CACAO_WOOD = ITEMS.registerSimpleBlockItem(ModBlocks.CACAO_WOOD);

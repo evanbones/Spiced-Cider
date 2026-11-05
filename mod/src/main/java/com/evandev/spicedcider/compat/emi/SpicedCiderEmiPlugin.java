@@ -6,6 +6,7 @@ import dev.emi.emi.api.EmiPlugin;
 import dev.emi.emi.api.EmiRegistry;
 import dev.emi.emi.api.recipe.VanillaEmiRecipeCategories;
 import dev.emi.emi.api.stack.Comparison;
+import dev.emi.emi.api.stack.EmiStack;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.neoforged.fml.ModList;
@@ -42,6 +43,10 @@ public class SpicedCiderEmiPlugin implements EmiPlugin {
         AnvilSmithingEmiRecipe.register(registry);
         if (ModList.get().isLoaded("vanity")) {
             TrimStylingEmiRecipe.register(registry);
+        }
+        if (ModList.get().isLoaded("farmersdelight")) {
+            registry.addWorkstation(VanillaEmiRecipeCategories.CAMPFIRE_COOKING,
+                    EmiStack.of(BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath("farmersdelight", "stove"))));
         }
         if (ModList.get().isLoaded("supplementaries")) {
             registry.setDefaultComparison(BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath("supplementaries", "cartographers_quill")), Comparison.compareComponents());

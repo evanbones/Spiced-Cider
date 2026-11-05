@@ -579,7 +579,6 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.BooleanValue emiCreateFanRework;
         public final ModConfigSpec.BooleanValue createHideItemDescriptions;
         public final ModConfigSpec.BooleanValue quarkHideHints;
-        public final ModConfigSpec.BooleanValue creakingEyeParticles;
         public final ModConfigSpec.BooleanValue goldenDandelionParticles;
         public final ModConfigSpec.BooleanValue carvingWheel;
         public final ModConfigSpec.BooleanValue emiTappingCategory;
@@ -666,11 +665,6 @@ public class SpicedCiderConfig {
                     .comment(tooltip("quarkHideHints"))
                     .translation("option.spicedcider.quarkHideHints")
                     .define("quarkHideHints", false);
-
-            creakingEyeParticles = builder
-                    .comment(tooltip("creakingEyeParticles"))
-                    .translation("option.spicedcider.creakingEyeParticles")
-                    .define("creakingEyeParticles", true);
 
             goldenDandelionParticles = builder
                     .comment(tooltip("goldenDandelionParticles"))

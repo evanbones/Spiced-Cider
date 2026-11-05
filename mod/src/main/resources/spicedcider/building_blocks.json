@@ -3456,7 +3456,8 @@
    "minecraft:obsidian"
   ],
   "requires": [],
-  "tool": "pickaxe"
+  "tool": "pickaxe",
+  "needs": "diamond"
  },
  {
   "id": "spicedcider:obsidian_slab",
@@ -3473,7 +3474,8 @@
    "minecraft:obsidian"
   ],
   "requires": [],
-  "tool": "pickaxe"
+  "tool": "pickaxe",
+  "needs": "diamond"
  },
  {
   "id": "spicedcider:obsidian_wall",
@@ -3490,7 +3492,8 @@
    "minecraft:obsidian"
   ],
   "requires": [],
-  "tool": "pickaxe"
+  "tool": "pickaxe",
+  "needs": "diamond"
  },
  {
   "id": "spicedcider:packed_mud_stairs",
@@ -4140,25 +4143,6 @@
   ],
   "requires": [
    "upgrade_aquatic"
-  ],
-  "tool": "pickaxe"
- },
- {
-  "id": "spicedcider:golden_brick_wall",
-  "kind": "WALL",
-  "mod": "blockbox",
-  "properties": "blockbox:golden_bricks",
-  "parent": "blockbox:golden_bricks",
-  "side": "blockbox:block/golden_bricks",
-  "top": "blockbox:block/golden_bricks",
-  "bottom": "blockbox:block/golden_bricks",
-  "craft": "SHAPE",
-  "craftFrom": "blockbox:golden_bricks",
-  "cut": [
-   "blockbox:golden_bricks"
-  ],
-  "requires": [
-   "blockbox"
   ],
   "tool": "pickaxe"
  },
@@ -5545,6 +5529,589 @@
   ],
   "requires": [
    "supplementaries"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:molten_nether_brick_stairs",
+  "kind": "STAIRS",
+  "mod": "architects_palette",
+  "properties": "architects_palette:molten_nether_bricks",
+  "parent": "architects_palette:molten_nether_bricks",
+  "side": "architects_palette:block/molten_nether_bricks",
+  "top": "architects_palette:block/molten_nether_bricks",
+  "bottom": "architects_palette:block/molten_nether_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "architects_palette:molten_nether_bricks",
+  "cut": [
+   "architects_palette:molten_nether_bricks"
+  ],
+  "requires": [
+   "architects_palette"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:molten_nether_brick_slab",
+  "kind": "SLAB",
+  "mod": "architects_palette",
+  "properties": "architects_palette:molten_nether_bricks",
+  "parent": "architects_palette:molten_nether_bricks",
+  "side": "architects_palette:block/molten_nether_bricks",
+  "top": "architects_palette:block/molten_nether_bricks",
+  "bottom": "architects_palette:block/molten_nether_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "architects_palette:molten_nether_bricks",
+  "cut": [
+   "architects_palette:molten_nether_bricks"
+  ],
+  "requires": [
+   "architects_palette"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:molten_nether_brick_wall",
+  "kind": "WALL",
+  "mod": "architects_palette",
+  "properties": "architects_palette:molten_nether_bricks",
+  "parent": "architects_palette:molten_nether_bricks",
+  "side": "architects_palette:block/molten_nether_bricks",
+  "top": "architects_palette:block/molten_nether_bricks",
+  "bottom": "architects_palette:block/molten_nether_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "architects_palette:molten_nether_bricks",
+  "cut": [
+   "architects_palette:molten_nether_bricks"
+  ],
+  "requires": [
+   "architects_palette"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:rose_quartz_tile_stairs",
+  "kind": "STAIRS",
+  "mod": "create",
+  "properties": "create:rose_quartz_tiles",
+  "parent": "create:rose_quartz_tiles",
+  "side": "create:block/palettes/rose_quartz_tiles",
+  "top": "create:block/palettes/rose_quartz_tiles",
+  "bottom": "create:block/palettes/rose_quartz_tiles",
+  "craft": "SHAPE",
+  "craftFrom": "create:rose_quartz_tiles",
+  "cut": [
+   "create:rose_quartz_tiles"
+  ],
+  "requires": [
+   "create"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:rose_quartz_tile_slab",
+  "kind": "SLAB",
+  "mod": "create",
+  "properties": "create:rose_quartz_tiles",
+  "parent": "create:rose_quartz_tiles",
+  "side": "create:block/palettes/rose_quartz_tiles",
+  "top": "create:block/palettes/rose_quartz_tiles",
+  "bottom": "create:block/palettes/rose_quartz_tiles",
+  "craft": "SHAPE",
+  "craftFrom": "create:rose_quartz_tiles",
+  "cut": [
+   "create:rose_quartz_tiles"
+  ],
+  "requires": [
+   "create"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:rose_quartz_tile_wall",
+  "kind": "WALL",
+  "mod": "create",
+  "properties": "create:rose_quartz_tiles",
+  "parent": "create:rose_quartz_tiles",
+  "side": "create:block/palettes/rose_quartz_tiles",
+  "top": "create:block/palettes/rose_quartz_tiles",
+  "bottom": "create:block/palettes/rose_quartz_tiles",
+  "craft": "SHAPE",
+  "craftFrom": "create:rose_quartz_tiles",
+  "cut": [
+   "create:rose_quartz_tiles"
+  ],
+  "requires": [
+   "create"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:snail_shell_stairs",
+  "kind": "STAIRS",
+  "mod": "autumnity",
+  "properties": "autumnity:snail_shell_block",
+  "parent": "autumnity:snail_shell_block",
+  "side": "autumnity:block/snail_shell_block_stripes",
+  "top": "autumnity:block/snail_shell_block_swirl",
+  "bottom": "autumnity:block/snail_shell_block_swirl",
+  "craft": "SHAPE",
+  "craftFrom": "autumnity:snail_shell_block",
+  "cut": [
+   "autumnity:snail_shell_block"
+  ],
+  "requires": [
+   "autumnity"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:snail_shell_slab",
+  "kind": "SLAB",
+  "mod": "autumnity",
+  "properties": "autumnity:snail_shell_block",
+  "parent": "autumnity:snail_shell_block",
+  "side": "autumnity:block/snail_shell_block_stripes",
+  "top": "autumnity:block/snail_shell_block_swirl",
+  "bottom": "autumnity:block/snail_shell_block_swirl",
+  "craft": "SHAPE",
+  "craftFrom": "autumnity:snail_shell_block",
+  "cut": [
+   "autumnity:snail_shell_block"
+  ],
+  "requires": [
+   "autumnity"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:snail_shell_wall",
+  "kind": "WALL",
+  "mod": "autumnity",
+  "properties": "autumnity:snail_shell_block",
+  "parent": "autumnity:snail_shell_block",
+  "side": "autumnity:block/snail_shell_block_stripes",
+  "top": "autumnity:block/snail_shell_block_swirl",
+  "bottom": "autumnity:block/snail_shell_block_swirl",
+  "craft": "SHAPE",
+  "craftFrom": "autumnity:snail_shell_block",
+  "cut": [
+   "autumnity:snail_shell_block"
+  ],
+  "requires": [
+   "autumnity"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:scute_stairs",
+  "kind": "STAIRS",
+  "mod": "upgrade_aquatic",
+  "properties": "upgrade_aquatic:scute_block",
+  "parent": "upgrade_aquatic:scute_block",
+  "side": "upgrade_aquatic:block/scute_block_side",
+  "top": "upgrade_aquatic:block/scute_block_top",
+  "bottom": "upgrade_aquatic:block/scute_block_bottom",
+  "craft": "SHAPE",
+  "craftFrom": "upgrade_aquatic:scute_block",
+  "cut": [
+   "upgrade_aquatic:scute_block"
+  ],
+  "requires": [
+   "upgrade_aquatic"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:scute_slab",
+  "kind": "SLAB",
+  "mod": "upgrade_aquatic",
+  "properties": "upgrade_aquatic:scute_block",
+  "parent": "upgrade_aquatic:scute_block",
+  "side": "upgrade_aquatic:block/scute_block_side",
+  "top": "upgrade_aquatic:block/scute_block_top",
+  "bottom": "upgrade_aquatic:block/scute_block_bottom",
+  "craft": "SHAPE",
+  "craftFrom": "upgrade_aquatic:scute_block",
+  "cut": [
+   "upgrade_aquatic:scute_block"
+  ],
+  "requires": [
+   "upgrade_aquatic"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:scute_wall",
+  "kind": "WALL",
+  "mod": "upgrade_aquatic",
+  "properties": "upgrade_aquatic:scute_block",
+  "parent": "upgrade_aquatic:scute_block",
+  "side": "upgrade_aquatic:block/scute_block_side",
+  "top": "upgrade_aquatic:block/scute_block_top",
+  "bottom": "upgrade_aquatic:block/scute_block_bottom",
+  "craft": "SHAPE",
+  "craftFrom": "upgrade_aquatic:scute_block",
+  "cut": [
+   "upgrade_aquatic:scute_block"
+  ],
+  "requires": [
+   "upgrade_aquatic"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:sanguine_stairs",
+  "kind": "STAIRS",
+  "mod": "caverns_and_chasms",
+  "properties": "caverns_and_chasms:sanguine_block",
+  "parent": "caverns_and_chasms:sanguine_block",
+  "side": "caverns_and_chasms:block/sanguine_block",
+  "top": "caverns_and_chasms:block/sanguine_block",
+  "bottom": "caverns_and_chasms:block/sanguine_block",
+  "craft": "SHAPE",
+  "craftFrom": "caverns_and_chasms:sanguine_block",
+  "cut": [
+   "caverns_and_chasms:sanguine_block"
+  ],
+  "requires": [
+   "caverns_and_chasms"
+  ],
+  "tool": "pickaxe",
+  "needs": "stone"
+ },
+ {
+  "id": "spicedcider:sanguine_slab",
+  "kind": "SLAB",
+  "mod": "caverns_and_chasms",
+  "properties": "caverns_and_chasms:sanguine_block",
+  "parent": "caverns_and_chasms:sanguine_block",
+  "side": "caverns_and_chasms:block/sanguine_block",
+  "top": "caverns_and_chasms:block/sanguine_block",
+  "bottom": "caverns_and_chasms:block/sanguine_block",
+  "craft": "SHAPE",
+  "craftFrom": "caverns_and_chasms:sanguine_block",
+  "cut": [
+   "caverns_and_chasms:sanguine_block"
+  ],
+  "requires": [
+   "caverns_and_chasms"
+  ],
+  "tool": "pickaxe",
+  "needs": "stone"
+ },
+ {
+  "id": "spicedcider:sanguine_wall",
+  "kind": "WALL",
+  "mod": "caverns_and_chasms",
+  "properties": "caverns_and_chasms:sanguine_block",
+  "parent": "caverns_and_chasms:sanguine_block",
+  "side": "caverns_and_chasms:block/sanguine_block",
+  "top": "caverns_and_chasms:block/sanguine_block",
+  "bottom": "caverns_and_chasms:block/sanguine_block",
+  "craft": "SHAPE",
+  "craftFrom": "caverns_and_chasms:sanguine_block",
+  "cut": [
+   "caverns_and_chasms:sanguine_block"
+  ],
+  "requires": [
+   "caverns_and_chasms"
+  ],
+  "tool": "pickaxe",
+  "needs": "stone"
+ },
+ {
+  "id": "spicedcider:chocolate_stairs",
+  "kind": "STAIRS",
+  "mod": "neapolitan",
+  "properties": "neapolitan:chocolate_block",
+  "parent": "neapolitan:chocolate_block",
+  "side": "neapolitan:block/chocolate_block",
+  "top": "neapolitan:block/chocolate_block",
+  "bottom": "neapolitan:block/chocolate_block",
+  "craft": "SHAPE",
+  "craftFrom": "neapolitan:chocolate_block",
+  "cut": [
+   "neapolitan:chocolate_block"
+  ],
+  "requires": [
+   "neapolitan"
+  ],
+  "tool": "axe"
+ },
+ {
+  "id": "spicedcider:chocolate_slab",
+  "kind": "SLAB",
+  "mod": "neapolitan",
+  "properties": "neapolitan:chocolate_block",
+  "parent": "neapolitan:chocolate_block",
+  "side": "neapolitan:block/chocolate_block",
+  "top": "neapolitan:block/chocolate_block",
+  "bottom": "neapolitan:block/chocolate_block",
+  "craft": "SHAPE",
+  "craftFrom": "neapolitan:chocolate_block",
+  "cut": [
+   "neapolitan:chocolate_block"
+  ],
+  "requires": [
+   "neapolitan"
+  ],
+  "tool": "axe"
+ },
+ {
+  "id": "spicedcider:chocolate_wall",
+  "kind": "WALL",
+  "mod": "neapolitan",
+  "properties": "neapolitan:chocolate_block",
+  "parent": "neapolitan:chocolate_block",
+  "side": "neapolitan:block/chocolate_block",
+  "top": "neapolitan:block/chocolate_block",
+  "bottom": "neapolitan:block/chocolate_block",
+  "craft": "SHAPE",
+  "craftFrom": "neapolitan:chocolate_block",
+  "cut": [
+   "neapolitan:chocolate_block"
+  ],
+  "requires": [
+   "neapolitan"
+  ],
+  "tool": "axe"
+ },
+ {
+  "id": "spicedcider:glowstone_stairs",
+  "kind": "STAIRS",
+  "mod": null,
+  "properties": "minecraft:glowstone",
+  "parent": "minecraft:glowstone",
+  "side": "minecraft:block/glowstone",
+  "top": "minecraft:block/glowstone",
+  "bottom": "minecraft:block/glowstone",
+  "craft": "SHAPE",
+  "craftFrom": "minecraft:glowstone",
+  "cut": [
+   "minecraft:glowstone"
+  ],
+  "requires": [],
+  "tool": "none"
+ },
+ {
+  "id": "spicedcider:glowstone_slab",
+  "kind": "SLAB",
+  "mod": null,
+  "properties": "minecraft:glowstone",
+  "parent": "minecraft:glowstone",
+  "side": "minecraft:block/glowstone",
+  "top": "minecraft:block/glowstone",
+  "bottom": "minecraft:block/glowstone",
+  "craft": "SHAPE",
+  "craftFrom": "minecraft:glowstone",
+  "cut": [
+   "minecraft:glowstone"
+  ],
+  "requires": [],
+  "tool": "none"
+ },
+ {
+  "id": "spicedcider:glowstone_wall",
+  "kind": "WALL",
+  "mod": null,
+  "properties": "minecraft:glowstone",
+  "parent": "minecraft:glowstone",
+  "side": "minecraft:block/glowstone",
+  "top": "minecraft:block/glowstone",
+  "bottom": "minecraft:block/glowstone",
+  "craft": "SHAPE",
+  "craftFrom": "minecraft:glowstone",
+  "cut": [
+   "minecraft:glowstone"
+  ],
+  "requires": [],
+  "tool": "none"
+ },
+ {
+  "id": "spicedcider:crying_obsidian_stairs",
+  "kind": "STAIRS",
+  "mod": null,
+  "properties": "minecraft:crying_obsidian",
+  "parent": "minecraft:crying_obsidian",
+  "side": "minecraft:block/crying_obsidian",
+  "top": "minecraft:block/crying_obsidian",
+  "bottom": "minecraft:block/crying_obsidian",
+  "craft": "SHAPE",
+  "craftFrom": "minecraft:crying_obsidian",
+  "cut": [
+   "minecraft:crying_obsidian"
+  ],
+  "requires": [],
+  "tool": "pickaxe",
+  "needs": "diamond"
+ },
+ {
+  "id": "spicedcider:crying_obsidian_slab",
+  "kind": "SLAB",
+  "mod": null,
+  "properties": "minecraft:crying_obsidian",
+  "parent": "minecraft:crying_obsidian",
+  "side": "minecraft:block/crying_obsidian",
+  "top": "minecraft:block/crying_obsidian",
+  "bottom": "minecraft:block/crying_obsidian",
+  "craft": "SHAPE",
+  "craftFrom": "minecraft:crying_obsidian",
+  "cut": [
+   "minecraft:crying_obsidian"
+  ],
+  "requires": [],
+  "tool": "pickaxe",
+  "needs": "diamond"
+ },
+ {
+  "id": "spicedcider:crying_obsidian_wall",
+  "kind": "WALL",
+  "mod": null,
+  "properties": "minecraft:crying_obsidian",
+  "parent": "minecraft:crying_obsidian",
+  "side": "minecraft:block/crying_obsidian",
+  "top": "minecraft:block/crying_obsidian",
+  "bottom": "minecraft:block/crying_obsidian",
+  "craft": "SHAPE",
+  "craftFrom": "minecraft:crying_obsidian",
+  "cut": [
+   "minecraft:crying_obsidian"
+  ],
+  "requires": [],
+  "tool": "pickaxe",
+  "needs": "diamond"
+ },
+ {
+  "id": "spicedcider:coarse_silt_stairs",
+  "kind": "STAIRS",
+  "mod": "nomansland",
+  "properties": "nomansland:coarse_silt",
+  "parent": "nomansland:coarse_silt",
+  "side": "nomansland:block/underground/coarse_silt",
+  "top": "nomansland:block/underground/coarse_silt",
+  "bottom": "nomansland:block/underground/coarse_silt",
+  "craft": "SHAPE",
+  "craftFrom": "nomansland:coarse_silt",
+  "cut": [
+   "nomansland:coarse_silt"
+  ],
+  "requires": [
+   "nomansland"
+  ],
+  "tool": "shovel"
+ },
+ {
+  "id": "spicedcider:coarse_silt_slab",
+  "kind": "SLAB",
+  "mod": "nomansland",
+  "properties": "nomansland:coarse_silt",
+  "parent": "nomansland:coarse_silt",
+  "side": "nomansland:block/underground/coarse_silt",
+  "top": "nomansland:block/underground/coarse_silt",
+  "bottom": "nomansland:block/underground/coarse_silt",
+  "craft": "SHAPE",
+  "craftFrom": "nomansland:coarse_silt",
+  "cut": [
+   "nomansland:coarse_silt"
+  ],
+  "requires": [
+   "nomansland"
+  ],
+  "tool": "shovel"
+ },
+ {
+  "id": "spicedcider:coarse_silt_wall",
+  "kind": "WALL",
+  "mod": "nomansland",
+  "properties": "nomansland:coarse_silt",
+  "parent": "nomansland:coarse_silt",
+  "side": "nomansland:block/underground/coarse_silt",
+  "top": "nomansland:block/underground/coarse_silt",
+  "bottom": "nomansland:block/underground/coarse_silt",
+  "craft": "SHAPE",
+  "craftFrom": "nomansland:coarse_silt",
+  "cut": [
+   "nomansland:coarse_silt"
+  ],
+  "requires": [
+   "nomansland"
+  ],
+  "tool": "shovel"
+ },
+ {
+  "id": "spicedcider:midori_wall",
+  "kind": "WALL",
+  "mod": "quark",
+  "properties": "quark:midori_block",
+  "parent": "quark:midori_block",
+  "side": "quark:block/midori_block",
+  "top": "quark:block/midori_block",
+  "bottom": "quark:block/midori_block",
+  "craft": "SHAPE",
+  "craftFrom": "quark:midori_block",
+  "cut": [
+   "quark:midori_block"
+  ],
+  "requires": [
+   "quark"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:lunar_tile_wall",
+  "kind": "WALL",
+  "mod": "nomansland",
+  "properties": "nomansland:lunar_tiles",
+  "parent": "nomansland:lunar_tiles",
+  "side": "nomansland:block/building/lunar_tiles",
+  "top": "nomansland:block/building/lunar_tiles",
+  "bottom": "nomansland:block/building/lunar_tiles",
+  "craft": "SHAPE",
+  "craftFrom": "nomansland:lunar_tiles",
+  "cut": [
+   "nomansland:lunar_tiles"
+  ],
+  "requires": [
+   "nomansland"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:solar_tile_wall",
+  "kind": "WALL",
+  "mod": "nomansland",
+  "properties": "nomansland:solar_tiles",
+  "parent": "nomansland:solar_tiles",
+  "side": "nomansland:block/building/solar_tiles",
+  "top": "nomansland:block/building/solar_tiles",
+  "bottom": "nomansland:block/building/solar_tiles",
+  "craft": "SHAPE",
+  "craftFrom": "nomansland:solar_tiles",
+  "cut": [
+   "nomansland:solar_tiles"
+  ],
+  "requires": [
+   "nomansland"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:stellar_tile_wall",
+  "kind": "WALL",
+  "mod": "nomansland",
+  "properties": "nomansland:stellar_tiles",
+  "parent": "nomansland:stellar_tiles",
+  "side": "nomansland:block/building/stellar_tiles",
+  "top": "nomansland:block/building/stellar_tiles",
+  "bottom": "nomansland:block/building/stellar_tiles",
+  "craft": "SHAPE",
+  "craftFrom": "nomansland:stellar_tiles",
+  "cut": [
+   "nomansland:stellar_tiles"
+  ],
+  "requires": [
+   "nomansland"
   ],
   "tool": "pickaxe"
  }

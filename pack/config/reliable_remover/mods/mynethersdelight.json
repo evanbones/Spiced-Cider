@@ -89,5 +89,26 @@
       "mynethersdelight:letios_compost"
     ],
     "replace_with": "farmersdelight:organic_compost"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "mynethersdelight:hotdog_with_mixed_salad"
+    ],
+    "replace_with": "culturaldelights:hot_dog"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "mynethersdelight:hotdog_with_nether_salad"
+    ],
+    "replace_with": "culturaldelights:hot_dog"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "mynethersdelight:powdery_torch"
+    ],
+    "replace_with": "minecraft:torch"
   }
 ]

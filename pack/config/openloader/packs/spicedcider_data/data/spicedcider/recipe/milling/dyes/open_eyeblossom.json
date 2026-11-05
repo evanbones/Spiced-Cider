@@ -1,0 +1,25 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    }
+  ],
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "item": "minecraft:open_eyeblossom"
+    }
+  ],
+  "processing_time": 50,
+  "results": [
+    {
+      "id": "minecraft:orange_dye",
+      "count": 2
+    },
+    {
+      "id": "minecraft:green_dye",
+      "chance": 0.05
+    }
+  ]
+}

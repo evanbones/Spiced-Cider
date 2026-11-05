@@ -1,0 +1,40 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "modestmagic"
+    }
+  ],
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "modestmagic:enchantment_tablet_heavy",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "modestmagic:enchantment_tablet_light",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "modestmagic:enchantment_tablet_lucky",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "modestmagic:enchantment_tablet_infested",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "modestmagic:enchantment_tablet"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "modestmagic"
+    }
+  ],
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "modestmagic:enchantment_tablet_hallowed",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "modestmagic:enchantment_tablet_serrated",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "modestmagic:enchantment_tablet_puncturing",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "modestmagic:enchantment_tablet_flinging",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "modestmagic:enchantment_tablet"
+        }
+      ]
+    }
+  ]
+}

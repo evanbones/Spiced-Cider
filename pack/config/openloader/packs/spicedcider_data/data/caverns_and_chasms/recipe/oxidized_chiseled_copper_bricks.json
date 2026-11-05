@@ -1,0 +1,24 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "caverns_and_chasms"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    " # ",
+    "# #",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "caverns_and_chasms:oxidized_copper_bricks"
+    }
+  },
+  "result": {
+    "id": "caverns_and_chasms:oxidized_chiseled_copper_bricks",
+    "count": 4
+  }
+}

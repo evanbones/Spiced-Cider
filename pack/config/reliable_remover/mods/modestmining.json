@@ -42,7 +42,8 @@
       "modestmining:aluminium_block",
       "modestmining:aluminium_ore",
       "modestmining:deepslate_aluminium_ore",
-      "modestmining:raw_aluminium_block"
+      "modestmining:raw_aluminium_block",
+      "modestmining:flesh"
     ]
   },
   {
@@ -148,5 +149,12 @@
       "modestmining:stone_javelin",
       "modestmining:iron_javelin"
     ]
+  },
+  {
+    "action": "remove",
+    "items": [
+      "modestmining:amethyst"
+    ],
+    "replace_with": "minecraft:amethyst_shard"
   }
 ]

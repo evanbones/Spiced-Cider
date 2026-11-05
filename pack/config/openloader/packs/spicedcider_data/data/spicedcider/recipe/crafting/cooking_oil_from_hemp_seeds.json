@@ -1,0 +1,35 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "culturaldelights"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "nirvana"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:glass_bottle"
+    },
+    {
+      "item": "nirvana:hemp_seeds"
+    },
+    {
+      "item": "nirvana:hemp_seeds"
+    },
+    {
+      "item": "nirvana:hemp_seeds"
+    },
+    {
+      "item": "nirvana:hemp_seeds"
+    }
+  ],
+  "result": {
+    "id": "culturaldelights:cooking_oil",
+    "count": 1
+  }
+}

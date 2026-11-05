@@ -28,7 +28,9 @@
       "blockbox:waxed_copper_bars",
       "blockbox:waxed_exposed_copper_bars",
       "blockbox:waxed_weathered_copper_bars",
-      "blockbox:waxed_oxidized_copper_bars"
+      "blockbox:waxed_oxidized_copper_bars",
+      "blockbox:golden_tiles",
+      "blockbox:golden_pillar"
     ]
   },
   {
@@ -213,5 +215,68 @@
       "blockbox:amethyst_mosaic_stairs",
       "blockbox:amethyst_mosaic_slab"
     ]
+  },
+  {
+    "action": "remove",
+    "items": [
+      "blockbox:iron_plate_door"
+    ],
+    "replace_with": "minecraft:iron_door"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "blockbox:iron_plate_trapdoor"
+    ],
+    "replace_with": "minecraft:iron_trapdoor"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "blockbox:corrugated_iron_plate"
+    ],
+    "replace_with": "blockbox:iron_tread_plate"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "blockbox:corrugated_iron_plate_stairs"
+    ],
+    "replace_with": "blockbox:iron_tread_plate_stairs"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "blockbox:corrugated_iron_plate_slab"
+    ],
+    "replace_with": "blockbox:iron_tread_plate_slab"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "blockbox:golden_bricks"
+    ],
+    "replace_with": "caverns_and_chasms:gold_bricks"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "blockbox:golden_brick_stairs"
+    ],
+    "replace_with": "caverns_and_chasms:gold_brick_stairs"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "blockbox:golden_brick_slab"
+    ],
+    "replace_with": "caverns_and_chasms:gold_brick_slab"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "blockbox:chiseled_gold"
+    ],
+    "replace_with": "caverns_and_chasms:chiseled_gold_bricks"
   }
 ]

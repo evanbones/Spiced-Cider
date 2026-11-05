@@ -1,0 +1,29 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "infernalexp"
+    }
+  ],
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "spicedcider:cobbled_dullstone"
+    }
+  ],
+  "processing_time": 250,
+  "results": [
+    {
+      "id": "infernalexp:dullrocks",
+      "count": 3
+    },
+    {
+      "id": "infernalexp:dullrocks",
+      "chance": 0.5
+    }
+  ]
+}

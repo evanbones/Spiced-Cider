@@ -1,0 +1,19 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "modestmining"
+    }
+  ],
+  "asset_name": "spicedcider_prismarite",
+  "description": {
+    "color": "#9CCEC8",
+    "translate": "trim_material.spicedcider.prismarite"
+  },
+  "ingredient": "modestmining:prismarite_ingot",
+  "item_model_index": -1.0,
+  "override_armor_materials": {
+    "modestmining:prismarite": "spicedcider_prismarite_darker",
+    "spicedcider:prismarite": "spicedcider_prismarite_darker"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "nomansland"
+    }
+  ],
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "nomansland:pine_nuts",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 2,
+                "max": 4
+              },
+              "add": false
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "nomansland:walnut_sapling"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "nomansland:maple_sapling"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "nomansland:yellow_birch_sapling"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "nomansland:autumnal_oak_sapling"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "nomansland:willow_sapling"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "stoneworks"
+    }
+  ],
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "stoneworks:cobbled_netherrack"
+    }
+  ],
+  "processing_time": 250,
+  "results": [
+    {
+      "id": "create:cinder_flour"
+    },
+    {
+      "id": "create:cinder_flour",
+      "chance": 0.5
+    }
+  ]
+}

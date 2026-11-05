@@ -16,8 +16,6 @@ public class ModParticleTypes {
             () -> new SimpleParticleType(true));
     public static final DeferredHolder<ParticleType<?>, SimpleParticleType> BLACK_VENT_SMOKE = PARTICLE_TYPES.register("black_vent_smoke",
             () -> new SimpleParticleType(true));
-    public static final DeferredHolder<ParticleType<?>, SimpleParticleType> CREAKING_EYES = PARTICLE_TYPES.register("creaking_eyes",
-            () -> new SimpleParticleType(false));
     public static final DeferredHolder<ParticleType<?>, SimpleParticleType> SULFUR_FIRE_FLAME = PARTICLE_TYPES.register("sulfur_fire_flame",
             () -> new SimpleParticleType(false));
     public static final DeferredHolder<ParticleType<?>, SimpleParticleType> SMALL_SULFUR_FIRE_FLAME = PARTICLE_TYPES.register("small_sulfur_fire_flame",

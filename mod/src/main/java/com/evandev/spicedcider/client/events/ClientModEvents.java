@@ -8,7 +8,6 @@ import com.evandev.spicedcider.client.models.projectile.CobwebProjectileModel;
 import com.evandev.spicedcider.client.nether.NetherFogBanks;
 import com.evandev.spicedcider.client.nether.NetherHeatHaze;
 import com.evandev.spicedcider.client.particle.CleaverSweepParticle;
-import com.evandev.spicedcider.client.particle.CreakingEyesParticle;
 import com.evandev.spicedcider.client.particle.GoldenDandelionParticle;
 import com.evandev.spicedcider.client.particle.VentSmokeParticle;
 import com.evandev.spicedcider.client.resource.BrokenTextureReloadListener;
@@ -120,7 +119,6 @@ public class ClientModEvents {
         event.registerSpriteSet(ModParticleTypes.CLEAVER_SWEEP.get(), CleaverSweepParticle.Factory::new);
         event.registerSpriteSet(ModParticleTypes.WHITE_VENT_SMOKE.get(), sprites -> new VentSmokeParticle.Provider(sprites, 0.92F));
         event.registerSpriteSet(ModParticleTypes.BLACK_VENT_SMOKE.get(), sprites -> new VentSmokeParticle.Provider(sprites, 0.1F));
-        event.registerSpriteSet(ModParticleTypes.CREAKING_EYES.get(), CreakingEyesParticle.Provider::new);
         event.registerSpriteSet(ModParticleTypes.GOLDEN_DANDELION.get(), GoldenDandelionParticle.Provider::new);
         event.registerSpriteSet(ModParticleTypes.SULFUR_FIRE_FLAME.get(), FlameParticle.Provider::new);
         event.registerSpriteSet(ModParticleTypes.SMALL_SULFUR_FIRE_FLAME.get(), FlameParticle.SmallFlameProvider::new);
@@ -265,6 +263,8 @@ public class ClientModEvents {
             ItemProperties.register(ModItems.POCKET_JUKEBOX.get(), PLAYING, PocketJukeboxClient::playingProperty);
             ModItems.POCKET_JUKEBOXES.values().forEach(item -> ItemProperties.register(item.get(), PLAYING, PocketJukeboxClient::playingProperty));
             ItemProperties.register(Items.FILLED_MAP, MAP_ICON, MapIconProperty::get);
+            ModTierItems.JAVELINS.forEach(item -> ItemProperties.register(item.get(), ResourceLocation.fromNamespaceAndPath("modestmining", "throwing"),
+                    (stack, level, entity, seed) -> entity != null && entity.isUsingItem() && entity.getUseItem() == stack ? 1.0F : 0.0F));
             if (ModItems.ADAMANTITE_FISHING_ROD != null) {
                 ItemProperties.register(ModItems.ADAMANTITE_FISHING_ROD.get(), ResourceLocation.withDefaultNamespace("cast"), (stack, level, entity, seed) -> {
                     if (!(entity instanceof Player player) || player.fishing == null) return 0.0F;

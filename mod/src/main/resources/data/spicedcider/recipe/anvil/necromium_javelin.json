@@ -1,0 +1,22 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "modestmining"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "caverns_and_chasms"
+    }
+  ],
+  "type": "spicedcider:anvil_smithing",
+  "base": {
+    "item": "modestmining:diamond_javelin"
+  },
+  "addition": {
+    "tag": "c:ingots/necromium"
+  },
+  "result": {
+    "id": "spicedcider:necromium_javelin"
+  }
+}

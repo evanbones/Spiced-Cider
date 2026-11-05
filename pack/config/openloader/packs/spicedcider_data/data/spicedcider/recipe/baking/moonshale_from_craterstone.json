@@ -1,0 +1,27 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "architects_palette"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "clayworks"
+    },
+    {
+      "type": "clayworks:config",
+      "value": "kiln"
+    }
+  ],
+  "type": "clayworks:baking",
+  "category": "blocks",
+  "cookingtime": 100,
+  "experience": 0.1,
+  "ingredient": {
+    "item": "architects_palette:craterstone"
+  },
+  "result": {
+    "count": 1,
+    "id": "architects_palette:moonshale"
+  }
+}

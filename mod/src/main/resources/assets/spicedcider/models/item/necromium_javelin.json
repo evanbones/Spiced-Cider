@@ -1,0 +1,29 @@
+{
+  "parent": "minecraft:item/handheld",
+  "loader": "neoforge:separate_transforms",
+  "textures": {
+    "layer0": "spicedcider:item/necromium_javelin"
+  },
+  "base": {
+    "parent": "spicedcider:item/necromium_javelin_handheld"
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "spicedcider:item/necromium_javelin_gui"
+    },
+    "fixed": {
+      "parent": "spicedcider:item/necromium_javelin_gui"
+    },
+    "ground": {
+      "parent": "spicedcider:item/necromium_javelin_gui"
+    }
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "modestmining:throwing": 1
+      },
+      "model": "spicedcider:item/necromium_javelin_throwing"
+    }
+  ]
+}

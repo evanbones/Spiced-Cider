@@ -1,0 +1,32 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "abundant_atmosphere"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "autumnity"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "betterwitchhuts"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "bountifulfares"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "redomesticate"
+    }
+  ],
+  "type": "neoforge:add_table",
+  "conditions": [
+    {
+      "condition": "neoforge:loot_table_id",
+      "loot_table_id": "betterwitchhuts:chests/hut_0"
+    }
+  ],
+  "table": "spicedcider:inject/structure_extras/witch_hut"
+}

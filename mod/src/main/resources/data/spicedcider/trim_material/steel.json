@@ -1,0 +1,18 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "alloyed"
+    }
+  ],
+  "asset_name": "spicedcider_steel",
+  "description": {
+    "color": "#837F91",
+    "translate": "trim_material.spicedcider.steel"
+  },
+  "ingredient": "alloyed:steel_ingot",
+  "item_model_index": -1.0,
+  "override_armor_materials": {
+    "alloyed:steel": "spicedcider_steel_darker"
+  }
+}

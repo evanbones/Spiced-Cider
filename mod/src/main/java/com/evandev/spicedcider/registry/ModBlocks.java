@@ -106,6 +106,10 @@ public class ModBlocks {
     public static final DeferredBlock<Block> PLUM_CRATE = fruitCrate("plum_crate");
     @Nullable
     public static final DeferredBlock<Block> HOARY_APPLE_CRATE = fruitCrate("hoary_apple_crate");
+    @Nullable
+    public static final DeferredBlock<Block> ELDERBERRY_CRATE = fruitCrate("elderberry_crate");
+    @Nullable
+    public static final DeferredBlock<Block> PASSION_FRUIT_CRATE = fruitCrate("passion_fruit_crate");
 
     public static final DeferredBlock<SaplingBlock> GLOAMWOOD_SAPLING = BLOCKS.register("gloamwood_sapling",
             () -> new SaplingBlock(new TreeGrower("gloamwood", Optional.empty(), Optional.of(ModTreeFeatures.GLOAMWOOD), Optional.empty()),

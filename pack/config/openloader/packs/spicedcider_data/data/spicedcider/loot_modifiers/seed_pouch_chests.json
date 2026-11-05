@@ -1,0 +1,49 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "spicedcider:seed_pouch"
+    }
+  ],
+  "type": "neoforge:add_table",
+  "conditions": [
+    {
+      "condition": "minecraft:any_of",
+      "terms": [
+        {
+          "condition": "neoforge:loot_table_id",
+          "loot_table_id": "minecraft:barrels/abandoned_camp_barrel"
+        },
+        {
+          "condition": "neoforge:loot_table_id",
+          "loot_table_id": "betterwitchhuts:chests/hut_0"
+        },
+        {
+          "condition": "neoforge:loot_table_id",
+          "loot_table_id": "autumnity:chests/maple_hut"
+        },
+        {
+          "condition": "neoforge:loot_table_id",
+          "loot_table_id": "minecraft:chests/shipwreck_supply"
+        },
+        {
+          "condition": "neoforge:loot_table_id",
+          "loot_table_id": "nomansland:chests/dungeon_kitchen"
+        },
+        {
+          "condition": "neoforge:loot_table_id",
+          "loot_table_id": "nomansdelight:blocks/food_storage"
+        },
+        {
+          "condition": "neoforge:loot_table_id",
+          "loot_table_id": "nomansland:chests/sniffer_monument"
+        }
+      ]
+    },
+    {
+      "condition": "minecraft:random_chance",
+      "chance": 0.2
+    }
+  ],
+  "table": "spicedcider:inject/seed_pouch"
+}

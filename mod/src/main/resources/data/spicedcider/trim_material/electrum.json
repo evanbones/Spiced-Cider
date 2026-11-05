@@ -1,0 +1,18 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "modestmining"
+    }
+  ],
+  "asset_name": "spicedcider_electrum",
+  "description": {
+    "color": "#D7D79E",
+    "translate": "trim_material.spicedcider.electrum"
+  },
+  "ingredient": "modestmining:electrum_ingot",
+  "item_model_index": -1.0,
+  "override_armor_materials": {
+    "spicedcider:electrum": "spicedcider_electrum_darker"
+  }
+}

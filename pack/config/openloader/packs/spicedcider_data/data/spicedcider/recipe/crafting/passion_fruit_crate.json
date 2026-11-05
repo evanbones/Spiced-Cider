@@ -1,0 +1,25 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "bountifulfares"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "fruit_crates",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "bountifulfares:passion_fruit"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "spicedcider:passion_fruit_crate"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "modestmining"
+    }
+  ],
+  "asset_name": "spicedcider_valkyrium",
+  "description": {
+    "color": "#E2C8AE",
+    "translate": "trim_material.spicedcider.valkyrium"
+  },
+  "ingredient": "modestmining:valkyrium_ingot",
+  "item_model_index": -1.0,
+  "override_armor_materials": {
+    "modestmining:valkyrium": "spicedcider_valkyrium_darker",
+    "spicedcider:valkyrium": "spicedcider_valkyrium_darker"
+  }
+}

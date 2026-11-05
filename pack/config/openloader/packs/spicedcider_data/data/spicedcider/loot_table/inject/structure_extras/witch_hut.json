@@ -1,0 +1,73 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "abundant_atmosphere"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "autumnity"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "betterwitchhuts"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "bountifulfares"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "redomesticate"
+    }
+  ],
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "name": "spicedcider:regional",
+      "rolls": {
+        "type": "minecraft:uniform",
+        "min": 1,
+        "max": 2
+      },
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "spicedcider:sub/regional/swamp"
+        }
+      ]
+    },
+    {
+      "name": "spicedcider:banner_pattern",
+      "rolls": 1,
+      "conditions": [
+        {
+          "condition": "minecraft:random_chance",
+          "chance": 0.12
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "autumnity:swirl_banner_pattern"
+        }
+      ]
+    },
+    {
+      "name": "spicedcider:sinister_carrot",
+      "rolls": 1,
+      "conditions": [
+        {
+          "condition": "minecraft:random_chance",
+          "chance": 0.1
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "redomesticate:sinister_carrot"
+        }
+      ]
+    }
+  ]
+}

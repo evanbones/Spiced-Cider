@@ -2,6 +2,7 @@ package com.evandev.spicedcider.registry;
 
 import com.evandev.spicedcider.SpicedCider;
 import com.evandev.spicedcider.compat.farmersdelight.FarmersDelightCompat;
+import com.evandev.spicedcider.compat.modestmining.ModestMiningCompat;
 import com.evandev.spicedcider.compat.vanillabackport.VanillaBackportCompat;
 import com.evandev.spicedcider.content.item.ElectrumArmorItem;
 import com.evandev.spicedcider.content.item.MetalShieldItem;
@@ -23,9 +24,12 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
+import java.util.stream.Stream;
 
 public class ModTierItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(SpicedCider.MOD_ID);
@@ -39,6 +43,8 @@ public class ModTierItems {
     public static final TagKey<Item> VALKYRIUM_INGOTS = ItemTags.create(ResourceLocation.fromNamespaceAndPath("c", "ingots/valkyrium"));
     public static final TagKey<Item> ADAMANTITE_INGOTS = ItemTags.create(ResourceLocation.fromNamespaceAndPath("c", "ingots/adamantite"));
     public static final TagKey<Item> COPPER_INGOTS = ItemTags.create(ResourceLocation.fromNamespaceAndPath("c", "ingots/copper"));
+    public static final TagKey<Item> SILVER_INGOTS = ItemTags.create(ResourceLocation.fromNamespaceAndPath("c", "ingots/silver"));
+    public static final TagKey<Item> NECROMIUM_INGOTS = ItemTags.create(ResourceLocation.fromNamespaceAndPath("c", "ingots/necromium"));
     public static final TagKey<Block> INCORRECT_FOR_COPPER_TOOL = BlockTags.create(ResourceLocation.withDefaultNamespace("incorrect_for_copper_tool"));
 
     public static final Tier STEEL = tier(1000, 7.0F, 3.0F, BlockTags.INCORRECT_FOR_IRON_TOOL, 11, STEEL_INGOTS);
@@ -48,6 +54,8 @@ public class ModTierItems {
     public static final Tier ROSE_GOLD = tier(1000, 14.0F, 2.0F, BlockTags.INCORRECT_FOR_IRON_TOOL, 22, ROSE_GOLD_INGOTS);
     public static final Tier PRISMARITE = tier(4000, 12.0F, 4.0F, BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 15, PRISMARITE_INGOTS);
     public static final Tier VALKYRIUM = tier(6000, 16.0F, 4.0F, BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 15, VALKYRIUM_INGOTS);
+    public static final Tier SILVER = tier(250, 12.0F, 2.0F, BlockTags.INCORRECT_FOR_IRON_TOOL, 18, SILVER_INGOTS);
+    public static final Tier NECROMIUM = tier(6000, 14.0F, 3.0F, BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 15, NECROMIUM_INGOTS);
 
     public static final DeferredHolder<ArmorMaterial, ArmorMaterial> ELECTRUM_ARMOR = ARMOR_MATERIALS.register("electrum", () -> new ArmorMaterial(
             Map.of(
@@ -96,6 +104,17 @@ public class ModTierItems {
             () -> VanillaBackportCompat.createLance(ELECTRUM,
                     ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "electrum_lance_reach"), new Item.Properties()));
 
+    @Nullable
+    public static final DeferredItem<Item> COPPER_JAVELIN = javelin("copper_javelin", COPPER, -2.9F, "modestmining", new Item.Properties());
+    @Nullable
+    public static final DeferredItem<Item> ROSE_GOLD_JAVELIN = javelin("rose_gold_javelin", ROSE_GOLD, -2.8F, "oooh_pinky", new Item.Properties());
+    @Nullable
+    public static final DeferredItem<Item> SILVER_JAVELIN = javelin("silver_javelin", SILVER, -2.8F, "caverns_and_chasms", new Item.Properties());
+    @Nullable
+    public static final DeferredItem<Item> ELECTRUM_JAVELIN = javelin("electrum_javelin", ELECTRUM, -2.7F, "modestmining", new Item.Properties());
+    @Nullable
+    public static final DeferredItem<Item> NECROMIUM_JAVELIN = javelin("necromium_javelin", NECROMIUM, -2.7F, "caverns_and_chasms", new Item.Properties().fireResistant());
+
     public static final DeferredItem<Item> ELECTRUM_HELMET = armor("electrum_helmet", ArmorItem.Type.HELMET);
     public static final DeferredItem<Item> ELECTRUM_CHESTPLATE = armor("electrum_chestplate", ArmorItem.Type.CHESTPLATE);
     public static final DeferredItem<Item> ELECTRUM_LEGGINGS = armor("electrum_leggings", ArmorItem.Type.LEGGINGS);
@@ -121,6 +140,9 @@ public class ModTierItems {
             ELECTRUM_HELMET, ELECTRUM_CHESTPLATE, ELECTRUM_LEGGINGS, ELECTRUM_BOOTS, BRONZE_HORSE_ARMOR,
             ROSE_GOLD_HORSE_ARMOR, PRISMARITE_HORSE_ARMOR, VALKYRIUM_HORSE_ARMOR, ADAMANTITE_HORSE_ARMOR);
 
+    public static final List<DeferredItem<Item>> JAVELINS = Stream.of(COPPER_JAVELIN, ROSE_GOLD_JAVELIN, SILVER_JAVELIN,
+            ELECTRUM_JAVELIN, NECROMIUM_JAVELIN).filter(Objects::nonNull).toList();
+
     public static void register(IEventBus modEventBus) {
         ARMOR_MATERIALS.register(modEventBus);
         ITEMS.register(modEventBus);
@@ -136,12 +158,20 @@ public class ModTierItems {
         }
         if (event.getTabKey() == CreativeModeTabs.COMBAT) {
             COMBAT.forEach(item -> event.accept(item.get(), vis));
+            JAVELINS.forEach(item -> event.accept(item.get(), vis));
         }
     }
 
     private static DeferredItem<Item> hammer(String name, Tier tier, float damage, float speed) {
         return ITEMS.register(name, () -> new DiggerItem(tier, BlockTags.MINEABLE_WITH_PICKAXE,
                 new Item.Properties().attributes(DiggerItem.createAttributes(tier, damage, speed))));
+    }
+
+    @Nullable
+    private static DeferredItem<Item> javelin(String name, Tier tier, float speed, String metalMod, Item.Properties properties) {
+        return ModList.get().isLoaded("modestmining") && ModList.get().isLoaded(metalMod)
+                ? ITEMS.register(name, () -> ModestMiningCompat.createJavelin(tier, 2.0F, speed, 1.5F, properties))
+                : null;
     }
 
     private static DeferredItem<Item> armor(String name, ArmorItem.Type type) {

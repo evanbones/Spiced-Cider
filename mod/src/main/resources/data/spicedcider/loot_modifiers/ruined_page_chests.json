@@ -53,12 +53,32 @@
         {
           "condition": "neoforge:loot_table_id",
           "loot_table_id": "nomansland:chests/dungeon_kitchen"
+        },
+        {
+          "condition": "neoforge:loot_table_id",
+          "loot_table_id": "minecraft:chests/abandoned_mineshaft"
+        },
+        {
+          "condition": "neoforge:loot_table_id",
+          "loot_table_id": "minecraft:chests/shipwreck_map"
+        },
+        {
+          "condition": "neoforge:loot_table_id",
+          "loot_table_id": "newworld:chests/bunker_cache"
+        },
+        {
+          "condition": "neoforge:loot_table_id",
+          "loot_table_id": "minecraft:chests/igloo_chest"
+        },
+        {
+          "condition": "neoforge:loot_table_id",
+          "loot_table_id": "minecraft:chests/ancient_city"
         }
       ]
     },
     {
       "condition": "minecraft:random_chance",
-      "chance": 0.4
+      "chance": 0.2
     }
   ],
   "table": "spicedcider:inject/ruined_page"

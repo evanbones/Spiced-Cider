@@ -1,0 +1,33 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "alloyed"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "modestmining"
+    }
+  ],
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "item": "modestmining:bronze_javelin"
+    }
+  ],
+  "processing_time": 200,
+  "results": [
+    {
+      "id": "alloyed:bronze_nugget",
+      "count": 6
+    },
+    {
+      "id": "minecraft:stick",
+      "chance": 0.5
+    }
+  ]
+}

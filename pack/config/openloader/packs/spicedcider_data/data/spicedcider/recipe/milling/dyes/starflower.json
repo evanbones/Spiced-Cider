@@ -1,0 +1,29 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "nomansland"
+    }
+  ],
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "item": "nomansland:starflower"
+    }
+  ],
+  "processing_time": 50,
+  "results": [
+    {
+      "id": "minecraft:white_dye",
+      "count": 2
+    },
+    {
+      "id": "minecraft:green_dye",
+      "chance": 0.05
+    }
+  ]
+}

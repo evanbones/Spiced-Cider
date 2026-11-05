@@ -1,0 +1,30 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "caverns_and_chasms"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "supplementaries"
+    },
+    {
+      "type": "supplementaries:flag",
+      "flag": "cannon_boat"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "supplementaries:cannon"
+    },
+    {
+      "item": "caverns_and_chasms:azalea_boat"
+    }
+  ],
+  "result": {
+    "id": "supplementaries:caverns_and_chasms/cannon_boat_azalea",
+    "count": 1
+  }
+}

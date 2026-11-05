@@ -1,0 +1,21 @@
+{
+  "priority": 1000,
+  "add": {
+    "upgrade_aquatic:tooth_tiles": [
+      "upgrade_aquatic:tooth_stairs",
+      "upgrade_aquatic:tooth_slab",
+      "upgrade_aquatic:tooth_wall",
+      "clutternomore:upgrade_aquatic/vertical_tooth_slab",
+      "clutternomore:upgrade_aquatic/tooth_step"
+    ]
+  },
+  "remove": {
+    "upgrade_aquatic:tooth_block": [
+      "upgrade_aquatic:tooth_stairs",
+      "upgrade_aquatic:tooth_slab",
+      "upgrade_aquatic:tooth_wall",
+      "clutternomore:upgrade_aquatic/vertical_tooth_slab",
+      "clutternomore:upgrade_aquatic/tooth_step"
+    ]
+  }
+}

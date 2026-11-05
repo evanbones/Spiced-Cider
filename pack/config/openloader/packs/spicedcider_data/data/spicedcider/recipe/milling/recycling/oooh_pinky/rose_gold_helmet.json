@@ -1,0 +1,25 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "oooh_pinky"
+    }
+  ],
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "item": "oooh_pinky:rose_gold_helmet"
+    }
+  ],
+  "processing_time": 200,
+  "results": [
+    {
+      "id": "oooh_pinky:rose_gold_nugget",
+      "count": 10
+    }
+  ]
+}

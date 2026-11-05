@@ -1,0 +1,28 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "stoneworks"
+    }
+  ],
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "stoneworks:cobbled_calcite"
+    }
+  ],
+  "processing_time": 250,
+  "results": [
+    {
+      "id": "minecraft:bone_meal"
+    },
+    {
+      "id": "minecraft:bone_meal",
+      "chance": 0.5
+    }
+  ]
+}

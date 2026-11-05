@@ -272,8 +272,23 @@ public class ModItemTagsProvider extends ItemTagsProvider {
         this.tag(ItemTags.LEG_ARMOR_ENCHANTABLE).add(leggings);
         this.tag(ItemTags.FOOT_ARMOR_ENCHANTABLE).add(boots);
 
+        for (String javelin : List.of("copper_javelin", "rose_gold_javelin", "silver_javelin", "electrum_javelin", "necromium_javelin")) {
+            ResourceLocation id = ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, javelin);
+            this.tag(externalTag("modestmining", "javelins")).addOptional(id);
+            this.tag(externalTag("c", "tools/javelins")).addOptional(id);
+        }
+        this.tag(ItemTags.TRIM_MATERIALS).add(ModItems.CAST_IRON_INGOT.get());
+        for (String material : List.of("alloyed:bronze_ingot", "alloyed:steel_ingot", "oooh_pinky:rose_gold_ingot",
+                "modestmining:electrum_ingot", "modestmining:lead_ingot", "modestmining:prismarite_ingot",
+                "modestmining:valkyrium_ingot", "spelunkery:cinnabar", "modestmining:pearl")) {
+            this.tag(ItemTags.TRIM_MATERIALS).addOptional(ResourceLocation.parse(material));
+        }
+        this.tag(ItemTags.PIGLIN_LOVED).addOptional(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "rose_gold_javelin"));
+        this.tag(ItemTags.PIGLIN_LOVED).addOptional(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "electrum_javelin"));
+
         ModTierItems.ITEMS.getEntries().stream()
                 .filter(holder -> holder.getId().getPath().startsWith("electrum_") || holder.getId().getPath().startsWith("rose_gold_"))
+                .filter(holder -> !holder.getId().getPath().endsWith("_javelin"))
                 .forEach(holder -> this.tag(ItemTags.PIGLIN_LOVED).add(holder.get()));
     }
 

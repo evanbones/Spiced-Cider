@@ -1,0 +1,27 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "clayworks"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "infernalexp"
+    },
+    {
+      "type": "clayworks:config",
+      "value": "kiln"
+    }
+  ],
+  "type": "clayworks:baking",
+  "category": "blocks",
+  "cookingtime": 100,
+  "experience": 0.1,
+  "ingredient": {
+    "item": "infernalexp:shimmer_sand"
+  },
+  "result": {
+    "count": 1,
+    "id": "infernalexp:glowlight_glass"
+  }
+}

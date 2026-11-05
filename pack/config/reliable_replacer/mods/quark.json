@@ -136,5 +136,23 @@
       "quark:netherrack_bricks_stairs"
     ],
     "output": "stoneworks:netherrack_brick_stairs"
+  },
+  {
+    "inputs": [
+      "quark:dirty_glass"
+    ],
+    "output": "blockbox:rough_glass"
+  },
+  {
+    "inputs": [
+      "quark:dirty_glass_pane"
+    ],
+    "output": "blockbox:rough_glass_pane"
+  },
+  {
+    "inputs": [
+      "quark:carved_mud_bricks"
+    ],
+    "output": "abundant_atmosphere:chiseled_mud_bricks"
   }
 ]

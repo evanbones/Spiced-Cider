@@ -46,14 +46,21 @@
     "architects_palette:hazard_block": [
       "spicedcider:hazard_stairs"
     ],
+    "architects_palette:molten_nether_bricks": [
+      "spicedcider:molten_nether_brick_stairs",
+      "spicedcider:molten_nether_brick_slab",
+      "spicedcider:molten_nether_brick_wall"
+    ],
     "architects_palette:oracle_block": [
       "spicedcider:oracle_wall"
     ],
     "architects_palette:sunmetal_block": [
       "spicedcider:sunmetal_wall"
     ],
-    "blockbox:golden_bricks": [
-      "spicedcider:golden_brick_wall"
+    "autumnity:snail_shell_block": [
+      "spicedcider:snail_shell_stairs",
+      "spicedcider:snail_shell_slab",
+      "spicedcider:snail_shell_wall"
     ],
     "blockbox:polished_amethyst": [
       "spicedcider:polished_amethyst_stairs",
@@ -73,10 +80,20 @@
       "spicedcider:feldspar_slab",
       "spicedcider:feldspar_wall"
     ],
+    "caverns_and_chasms:sanguine_block": [
+      "spicedcider:sanguine_stairs",
+      "spicedcider:sanguine_slab",
+      "spicedcider:sanguine_wall"
+    ],
     "clayworks:concrete": [
       "spicedcider:concrete_stairs",
       "spicedcider:concrete_slab",
       "spicedcider:concrete_wall"
+    ],
+    "create:rose_quartz_tiles": [
+      "spicedcider:rose_quartz_tile_stairs",
+      "spicedcider:rose_quartz_tile_slab",
+      "spicedcider:rose_quartz_tile_wall"
     ],
     "environmental:smooth_mud": [
       "spicedcider:smooth_mud_stairs",
@@ -111,6 +128,11 @@
     "minecraft:brown_concrete": [
       "spicedcider:brown_concrete_wall"
     ],
+    "minecraft:crying_obsidian": [
+      "spicedcider:crying_obsidian_stairs",
+      "spicedcider:crying_obsidian_slab",
+      "spicedcider:crying_obsidian_wall"
+    ],
     "minecraft:cut_red_sandstone": [
       "spicedcider:cut_red_sandstone_stairs",
       "spicedcider:cut_red_sandstone_wall"
@@ -129,6 +151,11 @@
       "spicedcider:end_stone_stairs",
       "spicedcider:end_stone_slab",
       "spicedcider:end_stone_wall"
+    ],
+    "minecraft:glowstone": [
+      "spicedcider:glowstone_stairs",
+      "spicedcider:glowstone_slab",
+      "spicedcider:glowstone_wall"
     ],
     "minecraft:gray_concrete": [
       "spicedcider:gray_concrete_wall"
@@ -208,11 +235,24 @@
     "minecraft:yellow_concrete": [
       "spicedcider:yellow_concrete_wall"
     ],
+    "neapolitan:chocolate_block": [
+      "spicedcider:chocolate_stairs",
+      "spicedcider:chocolate_slab",
+      "spicedcider:chocolate_wall"
+    ],
+    "nomansland:coarse_silt": [
+      "spicedcider:coarse_silt_stairs",
+      "spicedcider:coarse_silt_slab",
+      "spicedcider:coarse_silt_wall"
+    ],
     "nomansland:dross_tiles": [
       "spicedcider:dross_tile_wall"
     ],
     "nomansland:earthen_tiles": [
       "spicedcider:earthen_tile_wall"
+    ],
+    "nomansland:lunar_tiles": [
+      "spicedcider:lunar_tile_wall"
     ],
     "nomansland:mundane_tiles": [
       "spicedcider:mundane_tile_wall"
@@ -223,9 +263,18 @@
     "nomansland:silt_bricks": [
       "spicedcider:silt_brick_wall"
     ],
+    "nomansland:solar_tiles": [
+      "spicedcider:solar_tile_wall"
+    ],
+    "nomansland:stellar_tiles": [
+      "spicedcider:stellar_tile_wall"
+    ],
     "quark:cut_soul_sandstone": [
       "spicedcider:cut_soul_sandstone_stairs",
       "spicedcider:cut_soul_sandstone_wall"
+    ],
+    "quark:midori_block": [
+      "spicedcider:midori_wall"
     ],
     "quark:polished_jasper": [
       "spicedcider:polished_jasper_wall"
@@ -478,6 +527,11 @@
     ],
     "upgrade_aquatic:luminous_prismarine": [
       "spicedcider:luminous_prismarine_wall"
+    ],
+    "upgrade_aquatic:scute_block": [
+      "spicedcider:scute_stairs",
+      "spicedcider:scute_slab",
+      "spicedcider:scute_wall"
     ]
   },
   "priority": 1000

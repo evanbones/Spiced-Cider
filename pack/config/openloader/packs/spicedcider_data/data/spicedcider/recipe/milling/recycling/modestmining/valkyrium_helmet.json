@@ -1,0 +1,29 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "modestmining"
+    }
+  ],
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "item": "modestmining:valkyrium_helmet"
+    }
+  ],
+  "processing_time": 200,
+  "results": [
+    {
+      "id": "modestmining:diamond_shard",
+      "count": 10
+    },
+    {
+      "id": "modestmining:valkyrium_nugget",
+      "count": 2
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "modestmining"
+    }
+  ],
+  "type": "modestmining:forging_shaped",
+  "category": "equipment",
+  "cooktime": 144,
+  "key": {
+    "X": {
+      "item": "minecraft:stick"
+    },
+    "#": {
+      "tag": "c:ingots/electrum"
+    }
+  },
+  "pattern": [
+    " ##",
+    " X#",
+    "X  "
+  ],
+  "fuel": {
+    "tag": "modestmining:forge_fuels_tier_1"
+  },
+  "result": {
+    "id": "spicedcider:electrum_javelin"
+  }
+}

@@ -897,5 +897,26 @@
       "quark:long_resilience",
       "quark:strong_resilience"
     ]
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:dirty_glass"
+    ],
+    "replace_with": "blockbox:rough_glass"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:dirty_glass_pane"
+    ],
+    "replace_with": "blockbox:rough_glass_pane"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:carved_mud_bricks"
+    ],
+    "replace_with": "abundant_atmosphere:chiseled_mud_bricks"
   }
 ]

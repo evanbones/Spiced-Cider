@@ -1,0 +1,15 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "modestmining"
+    }
+  ],
+  "asset_name": "spicedcider_lead",
+  "description": {
+    "color": "#747293",
+    "translate": "trim_material.spicedcider.lead"
+  },
+  "ingredient": "modestmining:lead_ingot",
+  "item_model_index": -1.0
+}

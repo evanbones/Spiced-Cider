@@ -1,0 +1,15 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:false"
+    }
+  ],
+  "type": "neoforge:add_table",
+  "conditions": [
+    {
+      "condition": "neoforge:loot_table_id",
+      "loot_table_id": "nomansland:chests/small_dungeon_core"
+    }
+  ],
+  "table": "nomansland:chests/warding_effigy_addition"
+}

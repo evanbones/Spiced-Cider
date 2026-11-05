@@ -1,5 +1,18 @@
 {
+  "remove": [],
   "values": [
-    "spicedcider:cast_iron_block"
+    "spicedcider:cast_iron_block",
+    {
+      "id": "spicedcider:sanguine_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:sanguine_slab",
+      "required": false
+    },
+    {
+      "id": "spicedcider:sanguine_wall",
+      "required": false
+    }
   ]
 }

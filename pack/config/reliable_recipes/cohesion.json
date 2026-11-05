@@ -1,0 +1,77 @@
+[
+  {
+    "action": "remove_recipe",
+    "type": [
+      "modestmining:milling",
+      "bountifulfares:milling"
+    ]
+  },
+  {
+    "action": "remove_recipe",
+    "id": [
+      "architects_palette:smelting/cracked_algal_bricks_from_algal_bricks_smelting",
+      "architects_palette:smelting/cracked_moonshale_bricks_from_moonshale_bricks_smelting",
+      "blockbox:iron_plate",
+      "blockbox:iron_plate_from_corrugated_iron_plate_stonecutting",
+      "blockbox:packed_ice_from_packed_ice_bricks_stonecutting",
+      "blockbox:packed_ice_from_polished_packed_ice_stonecutting",
+      "blockbox:polished_packed_ice_from_packed_ice_bricks_stonecutting",
+      "bountifulfares:apple",
+      "bountifulfares:apple_block",
+      "bountifulfares:bitter_candy",
+      "bountifulfares:candy",
+      "bountifulfares:cracked_ceramic_tiles_from_smelting_ceramic_tiles",
+      "bountifulfares:hoary_apple",
+      "bountifulfares:hoary_apple_block",
+      "bountifulfares:lemon",
+      "bountifulfares:lemon_block",
+      "bountifulfares:orange",
+      "bountifulfares:orange_block",
+      "bountifulfares:piquant_candy",
+      "bountifulfares:plum",
+      "bountifulfares:plum_block",
+      "bountifulfares:sour_candy",
+      "caverns_and_chasms:cracked_dripstone_bricks",
+      "caverns_and_chasms:miming",
+      "create:andesite_from_stone_types_andesite_stonecutting",
+      "create:calcite_from_stone_types_calcite_stonecutting",
+      "create:deepslate_from_stone_types_deepslate_stonecutting",
+      "create:diorite_from_stone_types_diorite_stonecutting",
+      "create:dripstone_block_from_stone_types_dripstone_stonecutting",
+      "create:granite_from_stone_types_granite_stonecutting",
+      "create:industrial_iron_block_from_ingots_iron_stonecutting",
+      "create:tuff_from_stone_types_tuff_stonecutting",
+      "create:weathered_iron_block_from_ingots_iron_stonecutting",
+      "create:weathered_iron_window",
+      "create:weathered_iron_window_pane",
+      "minecraft:cracked_deepslate_bricks",
+      "minecraft:cracked_deepslate_tiles",
+      "minecraft:cracked_nether_bricks",
+      "minecraft:cracked_polished_blackstone_bricks",
+      "minecraft:cracked_stone_bricks",
+      "nomansdelight:cooking/lavender_tea",
+      "nomansland:bundle",
+      "nomansland:integration/farmersdelight/bundle",
+      "stonezone:c/quark/stonecutting/cut_soul_sandstone_from_soul_sandstone",
+      "stonezone:sw/upgrade_aquatic/tooth_pillar_from_tooth_toothcutting",
+      "vanillabackport:cake"
+    ]
+  },
+  {
+    "action": "replace_input",
+    "id": [
+      "abundant_atmosphere:stonecutting/deepslate_door_from_deepslate",
+      "abundant_atmosphere:stonecutting/deepslate_trapdoor_from_deepslate"
+    ],
+    "target": "minecraft:cobbled_deepslate",
+    "replacement": "minecraft:deepslate"
+  },
+  {
+    "action": "remove_from_tag",
+    "tag": "c:foods/pie_crust",
+    "id": [
+      "farmersdelight:wheat_dough",
+      "culturaldelights:corn_dough"
+    ]
+  }
+]

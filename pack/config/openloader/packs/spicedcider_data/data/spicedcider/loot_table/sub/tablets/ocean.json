@@ -1,0 +1,30 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "modestmagic"
+    }
+  ],
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "modestmagic:enchantment_tablet_aquatic",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "modestmagic:enchantment_tablet_cyclic",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "modestmagic:enchantment_tablet"
+        }
+      ]
+    }
+  ]
+}

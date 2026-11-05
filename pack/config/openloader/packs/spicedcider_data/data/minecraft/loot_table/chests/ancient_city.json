@@ -388,8 +388,19 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "modestmagic:enchantment_tablet_swift",
-          "weight": 2
+          "name": "modestmagic:enchantment_tablet_swift"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "modestmagic:enchantment_tablet_secure"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "modestmagic:enchantment_tablet_everlasting"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "modestmagic:enchantment_tablet_recollection"
         },
         {
           "type": "minecraft:item",
@@ -397,7 +408,7 @@
         },
         {
           "type": "minecraft:empty",
-          "weight": 9
+          "weight": 11
         }
       ]
     },

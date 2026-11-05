@@ -195,7 +195,6 @@ public class SpicedCiderConfigScreen {
                 toggle("sulfurCavesRework", startup.sulfurCavesRework),
                 toggle("vanillaBackportLightTweaks", common.vanillaBackportLightTweaks),
                 toggle("creakingBuff", common.creakingBuff),
-                toggle("creakingEyeParticles", client.creakingEyeParticles),
                 toggle("copperGolemNoChest", common.copperGolemNoChest),
                 toggle("paleOakGrowsGloomwood", common.paleOakGrowsGloomwood));
         group(groups, List.of("tiny_takeover_backport"),

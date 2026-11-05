@@ -240,6 +240,7 @@ public class SpicedCider {
         if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
             event.insertAfter(new ItemStack(Items.MAP), new ItemStack(ModItems.MAP_IN_A_BOTTLE.get()), vis);
             event.insertAfter(new ItemStack(ModItems.MAP_IN_A_BOTTLE.get()), new ItemStack(ModItems.RUINED_PAGE.get()), vis);
+            event.insertAfter(new ItemStack(ModItems.MAP_IN_A_BOTTLE.get()), new ItemStack(ModItems.SEED_POUCH.get()), vis);
             event.insertAfter(new ItemStack(Items.MILK_BUCKET), new ItemStack(ModItems.LATEX_BUCKET.get()), vis);
             event.insertAfter(new ItemStack(ModItems.LATEX_BUCKET.get()), new ItemStack(ModItems.RESIN_BUCKET.get()), vis);
             event.insertAfter(new ItemStack(ModItems.RESIN_BUCKET.get()), new ItemStack(ModItems.MAPLE_SYRUP_BUCKET.get()), vis);
@@ -254,7 +255,7 @@ public class SpicedCider {
             event.accept(ModItems.BLACKSTONE_DEPOSIT.get(), vis);
             event.accept(ModItems.WORM_CRATE.get(), vis);
             event.accept(ModItems.GOLDEN_WORM_CRATE.get(), vis);
-            Stream.of(ModItems.ORANGE_CRATE, ModItems.PLUM_CRATE, ModItems.HOARY_APPLE_CRATE).filter(Objects::nonNull).forEach(item -> event.accept(item.get(), vis));
+            Stream.of(ModItems.ORANGE_CRATE, ModItems.PLUM_CRATE, ModItems.HOARY_APPLE_CRATE, ModItems.ELDERBERRY_CRATE, ModItems.PASSION_FRUIT_CRATE).filter(Objects::nonNull).forEach(item -> event.accept(item.get(), vis));
             Stream.of(ModItems.CACAO_LOG, ModItems.CACAO_WOOD, ModItems.STRIPPED_CACAO_LOG, ModItems.STRIPPED_CACAO_WOOD).forEach(item -> event.accept(item.get(), vis));
             event.accept(ModItems.CACAO_LEAVES.get(), vis);
             event.accept(ModItems.FLOWERING_CACAO_LEAVES.get(), vis);

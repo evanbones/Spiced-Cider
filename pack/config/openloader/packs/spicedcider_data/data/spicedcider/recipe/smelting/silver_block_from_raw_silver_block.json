@@ -1,0 +1,19 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "caverns_and_chasms"
+    }
+  ],
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 1800,
+  "experience": 6.3,
+  "ingredient": {
+    "item": "caverns_and_chasms:raw_silver_block"
+  },
+  "result": {
+    "id": "caverns_and_chasms:silver_block",
+    "count": 1
+  }
+}

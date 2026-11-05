@@ -1,0 +1,16 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "spicedcider:feature",
+      "feature": "buildingBlocks"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:glowstone"
+  },
+  "result": {
+    "count": 1,
+    "id": "spicedcider:glowstone_wall"
+  }
+}

@@ -2,6 +2,34 @@
   "sources": [
     {
       "type": "spicedcider:tool_trims"
+    },
+    {
+      "type": "minecraft:paletted_permutations",
+      "textures": [
+        "minecraft:trims/items/helmet_trim",
+        "minecraft:trims/items/chestplate_trim",
+        "minecraft:trims/items/leggings_trim",
+        "minecraft:trims/items/boots_trim"
+      ],
+      "palette_key": "minecraft:trims/color_palettes/trim_palette",
+      "permutations": {
+        "spicedcider_bronze": "spicedcider:trims/color_palettes/bronze",
+        "spicedcider_bronze_darker": "spicedcider:trims/color_palettes/bronze_darker",
+        "spicedcider_steel": "spicedcider:trims/color_palettes/steel",
+        "spicedcider_steel_darker": "spicedcider:trims/color_palettes/steel_darker",
+        "spicedcider_rose_gold": "spicedcider:trims/color_palettes/rose_gold",
+        "spicedcider_rose_gold_darker": "spicedcider:trims/color_palettes/rose_gold_darker",
+        "spicedcider_electrum": "spicedcider:trims/color_palettes/electrum",
+        "spicedcider_electrum_darker": "spicedcider:trims/color_palettes/electrum_darker",
+        "spicedcider_lead": "spicedcider:trims/color_palettes/lead",
+        "spicedcider_prismarite": "spicedcider:trims/color_palettes/prismarite",
+        "spicedcider_prismarite_darker": "spicedcider:trims/color_palettes/prismarite_darker",
+        "spicedcider_valkyrium": "spicedcider:trims/color_palettes/valkyrium",
+        "spicedcider_valkyrium_darker": "spicedcider:trims/color_palettes/valkyrium_darker",
+        "spicedcider_cast_iron": "spicedcider:trims/color_palettes/cast_iron",
+        "spicedcider_flux": "spicedcider:trims/color_palettes/flux",
+        "spicedcider_pearl": "spicedcider:trims/color_palettes/pearl"
+      }
     }
   ]
 }

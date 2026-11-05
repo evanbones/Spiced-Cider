@@ -1,0 +1,19 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "modestmining"
+    }
+  ],
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 1800,
+  "experience": 6.3,
+  "ingredient": {
+    "item": "modestmining:raw_lead_block"
+  },
+  "result": {
+    "id": "modestmining:lead_block",
+    "count": 1
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "bountifulfares"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "everycomp"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "quark"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "L",
+    "W"
+  ],
+  "key": {
+    "L": {
+      "item": "bountifulfares:plum_leaves"
+    },
+    "W": [
+      {
+        "item": "bountifulfares:plum_log"
+      },
+      {
+        "item": "bountifulfares:stripped_plum_log"
+      }
+    ]
+  },
+  "result": {
+    "id": "everycomp:q/bountifulfares/plum_hedge",
+    "count": 2
+  }
+}
