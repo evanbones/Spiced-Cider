@@ -1,0 +1,8 @@
+{
+  "require_mods": "architects_palette",
+  "targets": "architects_palette:hadaline(_bricks|_brick_slab|_tiles|_tile_slab|_pillar|_lamp)?",
+  "colored_light": {
+    "color": "#FF3A3A",
+    "brightness": "object.blockStateValue('charged') ? 1 : 0"
+  }
+}

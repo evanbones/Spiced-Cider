@@ -1,0 +1,17 @@
+{
+  "require_mods": "supplementaries",
+  "targets": [
+    {
+      "id": "supplementaries:safe",
+      "required": false
+    },
+    {
+      "id": "supplementaries:netherite_trapdoor",
+      "required": false
+    }
+  ],
+  "colored_light": {
+    "color": "#FF6A1A",
+    "brightness": "object.blockStateValue('lavalogged') ? 1 : 0"
+  }
+}

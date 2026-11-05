@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "key": {
+    "1": {
+      "tag": "c:ingots/copper"
+    },
+    "2": {
+      "item": "minecraft:redstone_block"
+    },
+    "S": {
+      "item": "modestmining:copper_screw"
+    }
+  },
+  "pattern": [
+    "S1S",
+    "121",
+    "S1S"
+  ],
+  "result": {
+    "id": "supplementaries:cog_block",
+    "count": 6
+  }
+}

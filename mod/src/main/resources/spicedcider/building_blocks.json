@@ -5399,5 +5399,153 @@
    "slimebiome"
   ],
   "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:ash_adobe_bricks",
+  "kind": "CUBE",
+  "mod": "supplementaries",
+  "properties": "supplementaries:ash_bricks",
+  "parent": null,
+  "side": "spicedcider:block/ash_adobe_bricks",
+  "top": "spicedcider:block/ash_adobe_bricks",
+  "bottom": "spicedcider:block/ash_adobe_bricks",
+  "craft": "TILES",
+  "craftFrom": "supplementaries:ash_bricks",
+  "cut": [],
+  "requires": [
+   "supplementaries"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:ash_adobe_brick_stairs",
+  "kind": "STAIRS",
+  "mod": "supplementaries",
+  "properties": "supplementaries:ash_bricks",
+  "parent": "spicedcider:ash_adobe_bricks",
+  "side": "spicedcider:block/ash_adobe_bricks",
+  "top": "spicedcider:block/ash_adobe_bricks",
+  "bottom": "spicedcider:block/ash_adobe_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:ash_adobe_bricks",
+  "cut": [
+   "spicedcider:ash_adobe_bricks"
+  ],
+  "requires": [
+   "supplementaries"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:ash_adobe_brick_slab",
+  "kind": "SLAB",
+  "mod": "supplementaries",
+  "properties": "supplementaries:ash_bricks",
+  "parent": "spicedcider:ash_adobe_bricks",
+  "side": "spicedcider:block/ash_adobe_bricks",
+  "top": "spicedcider:block/ash_adobe_bricks",
+  "bottom": "spicedcider:block/ash_adobe_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:ash_adobe_bricks",
+  "cut": [
+   "spicedcider:ash_adobe_bricks"
+  ],
+  "requires": [
+   "supplementaries"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:ash_adobe_brick_wall",
+  "kind": "WALL",
+  "mod": "supplementaries",
+  "properties": "supplementaries:ash_bricks",
+  "parent": "spicedcider:ash_adobe_bricks",
+  "side": "spicedcider:block/ash_adobe_bricks",
+  "top": "spicedcider:block/ash_adobe_bricks",
+  "bottom": "spicedcider:block/ash_adobe_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:ash_adobe_bricks",
+  "cut": [
+   "spicedcider:ash_adobe_bricks"
+  ],
+  "requires": [
+   "supplementaries"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_ash_adobe_bricks",
+  "kind": "CUBE",
+  "mod": "supplementaries",
+  "properties": "supplementaries:ash_bricks",
+  "parent": null,
+  "side": "spicedcider:block/mossy_ash_adobe_bricks",
+  "top": "spicedcider:block/mossy_ash_adobe_bricks",
+  "bottom": "spicedcider:block/mossy_ash_adobe_bricks",
+  "craft": "MOSSY",
+  "craftFrom": "spicedcider:ash_adobe_bricks",
+  "cut": [],
+  "requires": [
+   "supplementaries"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_ash_adobe_brick_stairs",
+  "kind": "STAIRS",
+  "mod": "supplementaries",
+  "properties": "supplementaries:ash_bricks",
+  "parent": "spicedcider:mossy_ash_adobe_bricks",
+  "side": "spicedcider:block/mossy_ash_adobe_bricks",
+  "top": "spicedcider:block/mossy_ash_adobe_bricks",
+  "bottom": "spicedcider:block/mossy_ash_adobe_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:mossy_ash_adobe_bricks",
+  "cut": [
+   "spicedcider:mossy_ash_adobe_bricks"
+  ],
+  "requires": [
+   "supplementaries"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_ash_adobe_brick_slab",
+  "kind": "SLAB",
+  "mod": "supplementaries",
+  "properties": "supplementaries:ash_bricks",
+  "parent": "spicedcider:mossy_ash_adobe_bricks",
+  "side": "spicedcider:block/mossy_ash_adobe_bricks",
+  "top": "spicedcider:block/mossy_ash_adobe_bricks",
+  "bottom": "spicedcider:block/mossy_ash_adobe_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:mossy_ash_adobe_bricks",
+  "cut": [
+   "spicedcider:mossy_ash_adobe_bricks"
+  ],
+  "requires": [
+   "supplementaries"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_ash_adobe_brick_wall",
+  "kind": "WALL",
+  "mod": "supplementaries",
+  "properties": "supplementaries:ash_bricks",
+  "parent": "spicedcider:mossy_ash_adobe_bricks",
+  "side": "spicedcider:block/mossy_ash_adobe_bricks",
+  "top": "spicedcider:block/mossy_ash_adobe_bricks",
+  "bottom": "spicedcider:block/mossy_ash_adobe_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:mossy_ash_adobe_bricks",
+  "cut": [
+   "spicedcider:mossy_ash_adobe_bricks"
+  ],
+  "requires": [
+   "supplementaries"
+  ],
+  "tool": "pickaxe"
  }
 ]

@@ -758,7 +758,7 @@
 		#Miminum search radius for quill. Used to incrase the radius of vanilla searches. For reference buried treasures are at 50 and locate is at 100 chunks
 		# Default: 75
 		# Range: 10 ~ 600
-		min_search_radius = 75
+		min_search_radius = 500
 
 		[tweaks.map_tweaks.random_adventurer_maps]
 			#Cartographers will sell 'adventurer maps' that will lead to a random vanilla structure (choosen from a thought out preset list).

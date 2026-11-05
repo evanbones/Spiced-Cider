@@ -245,7 +245,29 @@
       "spicedcider:bb/minecraft/pale_oak_seat",
       "spicedcider:bb/environmental/wisteria_seat",
       "spicedcider:bb/mynethersdelight/powdery_seat",
-      "spicedcider:bb/bountifulfares/hoary_seat"
+      "spicedcider:bb/bountifulfares/hoary_seat",
+      "modestmasonry:white_bricks",
+      "modestmasonry:light_gray_bricks",
+      "modestmasonry:gray_bricks",
+      "modestmasonry:black_bricks",
+      "modestmasonry:brown_bricks",
+      "modestmasonry:red_bricks",
+      "modestmasonry:orange_bricks",
+      "modestmasonry:yellow_bricks",
+      "modestmasonry:lime_bricks",
+      "modestmasonry:green_bricks",
+      "modestmasonry:cyan_bricks",
+      "modestmasonry:light_blue_bricks",
+      "modestmasonry:blue_bricks",
+      "modestmasonry:purple_bricks",
+      "modestmasonry:magenta_bricks",
+      "modestmasonry:pink_bricks",
+      "neapolitan:vanilla_ice_cream_block",
+      "neapolitan:chocolate_ice_cream_block",
+      "neapolitan:strawberry_ice_cream_block",
+      "neapolitan:banana_ice_cream_block",
+      "neapolitan:mint_ice_cream_block",
+      "spicedcider:tallow_block"
     ],
     "add_items": [
       "minecraft:oak_log",
@@ -1004,6 +1026,15 @@
       "quark:mud_pillar",
       "quark:carved_mud_bricks",
       "quark:mud_brick_lattice",
+      "modestmasonry:adobe_bricks",
+      "modestmasonry:mossy_adobe_bricks",
+      "spicedcider:ash_adobe_bricks",
+      "spicedcider:mossy_ash_adobe_bricks",
+      "modestmasonry:cement_powder",
+      "modestmasonry:cement",
+      "modestmasonry:polished_cement",
+      "modestmasonry:cement_bricks",
+      "modestmasonry:cement_pillar",
       "etcetera:rubber_block",
       "etcetera:rubber_button",
       "nomansland:thatch",
@@ -1486,7 +1517,6 @@
       "buzzier_bees:honeycomb_bricks",
       "buzzier_bees:honeycomb_tiles",
       "buzzier_bees:chiseled_honeycomb_bricks",
-      "spicedcider:tallow_block",
       "neapolitan:carved_banana_stalk",
       "neapolitan:frond_thatch",
       "neapolitan:chocolate_block",
@@ -1725,6 +1755,22 @@
       "clayworks:chiseled_purple_terracotta_bricks",
       "clayworks:chiseled_magenta_terracotta_bricks",
       "clayworks:chiseled_pink_terracotta_bricks",
+      "modestmasonry:white_bricks",
+      "modestmasonry:light_gray_bricks",
+      "modestmasonry:gray_bricks",
+      "modestmasonry:black_bricks",
+      "modestmasonry:brown_bricks",
+      "modestmasonry:red_bricks",
+      "modestmasonry:orange_bricks",
+      "modestmasonry:yellow_bricks",
+      "modestmasonry:lime_bricks",
+      "modestmasonry:green_bricks",
+      "modestmasonry:cyan_bricks",
+      "modestmasonry:light_blue_bricks",
+      "modestmasonry:blue_bricks",
+      "modestmasonry:purple_bricks",
+      "modestmasonry:magenta_bricks",
+      "modestmasonry:pink_bricks",
       "clayworks:concrete",
       "minecraft:white_concrete",
       "minecraft:light_gray_concrete",
@@ -2540,6 +2586,7 @@
       "minecraft:soul_sand",
       "minecraft:soul_soil",
       "minecraft:bone_block",
+      "spicedcider:tallow_block",
       "minecraft:coal_ore",
       "minecraft:deepslate_coal_ore",
       "minecraft:iron_ore",
@@ -3626,6 +3673,7 @@
       "minecraft:furnace",
       "minecraft:smoker",
       "minecraft:blast_furnace",
+      "clayworks:kiln",
       "modestmining:forge",
       "supplementaries:fire_pit",
       "minecraft:campfire",
@@ -6133,7 +6181,7 @@
           "supplementaries:quill_structure": "minecraft:buried_treasure",
           "supplementaries:quill_decoration": "minecraft:red_x",
           "supplementaries:quill_zoom": 1,
-          "supplementaries:quill_search_radius": 75,
+          "supplementaries:quill_search_radius": 500,
           "supplementaries:quill_skip_known": false
         }
       },
@@ -6144,7 +6192,7 @@
           "supplementaries:quill_structure": "minecraft:ruined_portal",
           "supplementaries:quill_decoration": "spicedcider:ruined_portal",
           "supplementaries:quill_zoom": 1,
-          "supplementaries:quill_search_radius": 75,
+          "supplementaries:quill_search_radius": 500,
           "supplementaries:quill_skip_known": false
         }
       },
@@ -6155,7 +6203,7 @@
           "supplementaries:quill_structure": "minecraft:monument",
           "supplementaries:quill_decoration": "minecraft:monument",
           "supplementaries:quill_zoom": 1,
-          "supplementaries:quill_search_radius": 75,
+          "supplementaries:quill_search_radius": 500,
           "supplementaries:quill_skip_known": false
         }
       },
@@ -6166,7 +6214,7 @@
           "supplementaries:quill_structure": "minecraft:ocean_ruin_warm",
           "supplementaries:quill_decoration": "minecraft:ocean_ruin_warm",
           "supplementaries:quill_zoom": 1,
-          "supplementaries:quill_search_radius": 75,
+          "supplementaries:quill_search_radius": 500,
           "supplementaries:quill_skip_known": false
         }
       },
@@ -6177,7 +6225,7 @@
           "supplementaries:quill_structure": "minecraft:desert_pyramid",
           "supplementaries:quill_decoration": "minecraft:desert_pyramid",
           "supplementaries:quill_zoom": 1,
-          "supplementaries:quill_search_radius": 75,
+          "supplementaries:quill_search_radius": 500,
           "supplementaries:quill_skip_known": false
         }
       },
@@ -6188,7 +6236,7 @@
           "supplementaries:quill_structure": "minecraft:jungle_pyramid",
           "supplementaries:quill_decoration": "minecraft:jungle_temple",
           "supplementaries:quill_zoom": 1,
-          "supplementaries:quill_search_radius": 75,
+          "supplementaries:quill_search_radius": 500,
           "supplementaries:quill_skip_known": false
         }
       },
@@ -6199,7 +6247,7 @@
           "supplementaries:quill_structure": "betterwitchhuts:witch_hut",
           "supplementaries:quill_decoration": "minecraft:swamp_hut",
           "supplementaries:quill_zoom": 1,
-          "supplementaries:quill_search_radius": 75,
+          "supplementaries:quill_search_radius": 500,
           "supplementaries:quill_skip_known": false
         }
       },
@@ -6210,7 +6258,7 @@
           "supplementaries:quill_structure": "bettermineshafts:mineshaft_oak",
           "supplementaries:quill_decoration": "minecraft:mineshaft",
           "supplementaries:quill_zoom": 1,
-          "supplementaries:quill_search_radius": 75,
+          "supplementaries:quill_search_radius": 500,
           "supplementaries:quill_skip_known": false
         }
       },
@@ -6221,7 +6269,7 @@
           "supplementaries:quill_structure": "minecraft:abandoned_camp_forest",
           "supplementaries:quill_decoration": "minecraft:abandoned_camp",
           "supplementaries:quill_zoom": 1,
-          "supplementaries:quill_search_radius": 75,
+          "supplementaries:quill_search_radius": 500,
           "supplementaries:quill_skip_known": false
         }
       },
@@ -6232,7 +6280,7 @@
           "supplementaries:quill_structure": "minecraft:ancient_city",
           "supplementaries:quill_decoration": "minecraft:ancient_city",
           "supplementaries:quill_zoom": 1,
-          "supplementaries:quill_search_radius": 75,
+          "supplementaries:quill_search_radius": 500,
           "supplementaries:quill_skip_known": false
         }
       },
@@ -6243,7 +6291,7 @@
           "supplementaries:quill_structure": "nomansland:bell_sanctuary",
           "supplementaries:quill_decoration": "nomansland:bell_sanctuary",
           "supplementaries:quill_zoom": 1,
-          "supplementaries:quill_search_radius": 75,
+          "supplementaries:quill_search_radius": 500,
           "supplementaries:quill_skip_known": false
         }
       },
@@ -6956,6 +7004,7 @@
       },
       "fieldguide:field_guide",
       "fieldguide:page",
+      "spicedcider:ruined_page",
       "nirvana:music_disc_jam",
       "nirvana:old_pipe",
       "nirvana:stuffed_pipe",
@@ -7087,6 +7136,9 @@
       "chalk:chalk_box",
       "reliable_backpacks:backpack",
       "manual_labour:flint_hammer",
+      "spicedcider:copper_hammer",
+      "spicedcider:bronze_hammer",
+      "spicedcider:rose_gold_hammer",
       "manual_labour:golden_hammer",
       "manual_labour:diamond_hammer",
       "manual_labour:netherite_hammer",
@@ -7096,6 +7148,8 @@
       "manual_labour:necromium_hammer",
       "brushstrokes:wax_brush",
       "spicedcider:steel_hammer",
+      "spicedcider:prismarite_hammer",
+      "spicedcider:valkyrium_hammer",
       "spicedcider:electrum_shovel",
       "spicedcider:electrum_pickaxe",
       "spicedcider:electrum_axe",

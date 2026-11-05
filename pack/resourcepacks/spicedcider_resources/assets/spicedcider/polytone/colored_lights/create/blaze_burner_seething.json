@@ -1,0 +1,11 @@
+{
+  "require_mods": "create",
+  "targets": {
+    "id": "create:blaze_burner",
+    "required": false
+  },
+  "colored_light": {
+    "color": "#5AB8FF",
+    "brightness": "object.blockStateValue('blaze') == 'seething' ? 1 : 0"
+  }
+}

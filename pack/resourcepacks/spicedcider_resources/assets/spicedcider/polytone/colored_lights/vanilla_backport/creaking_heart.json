@@ -1,0 +1,12 @@
+{
+  "require_mods": "vanillabackport",
+  "targets": {
+    "id": "minecraft:creaking_heart",
+    "required": false
+  },
+  "colored_light": {
+    "color": "#FF8A2E",
+    "radius": 5,
+    "brightness": "object.blockStateValue('creaking_heart_state') == 'awake' ? 0.8 : 0"
+  }
+}

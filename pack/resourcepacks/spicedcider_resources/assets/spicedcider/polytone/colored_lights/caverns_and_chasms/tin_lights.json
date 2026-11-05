@@ -1,0 +1,11 @@
+{
+  "require_mods": "caverns_and_chasms",
+  "targets": [
+    {
+      "id": "caverns_and_chasms:tin_bulb",
+      "required": false
+    },
+    "caverns_and_chasms:(wall_)?dimmer"
+  ],
+  "colored_light": "#FFE0B8"
+}

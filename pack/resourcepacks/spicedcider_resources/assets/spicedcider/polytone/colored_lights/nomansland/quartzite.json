@@ -1,0 +1,11 @@
+{
+  "require_mods": "nomansland",
+  "targets": [
+    {
+      "id": "nomansland:quartzite_cluster",
+      "required": false
+    },
+    "nomansland:(small|medium|large)_quartzite_bud"
+  ],
+  "colored_light": "#FFF4E8"
+}

@@ -64,6 +64,8 @@ public class LootDisplays {
     public static final String STRUCTURE_LOOT = "structure";
     private static final int SAMPLES = 16;
     private static final int MAX_DEPTH = 4;
+    private static final Map<String, ResourceLocation> ITEM_MODIFIERS = Map.of(
+            "modestmining:copper_screw", ResourceLocation.fromNamespaceAndPath("modestmining", "copper_screw"));
 
     private static ReloadableServerRegistries.Holder builtFor;
     private static LootDisplayPayload built;
@@ -132,6 +134,7 @@ public class LootDisplays {
 
         Sampler sampler = new Sampler(server.overworld(), holder);
         Map<ResourceLocation, Set<ResourceLocation>> injections = injections(sampler.ops, sampler.keys);
+        additions = additions(sampler.ops);
         List<Table> tables = new ArrayList<>();
 
         sampler.keys.stream()
@@ -166,8 +169,39 @@ public class LootDisplays {
             all.add(source);
             all.addAll(injections.getOrDefault(source, Set.of()));
         }
-        List<Drop> drops = sampler.drops(all);
-        if (!drops.isEmpty()) tables.add(new Table(kind, id, inputs, drops));
+        List<Drop> drops = new ArrayList<>(sampler.drops(all));
+        if (!drops.isEmpty()) {
+            all.stream().flatMap(source -> additions.getOrDefault(source, Set.of()).stream()).distinct().forEach(itemId -> {
+                Item item = BuiltInRegistries.ITEM.get(itemId);
+                if (item != Items.AIR && drops.stream().noneMatch(drop -> drop.stack().is(item))) {
+                    drops.add(new Drop(new ItemStack(item), 1, 1, List.of(), List.of()));
+                }
+            });
+            tables.add(new Table(kind, id, inputs, drops));
+        }
+    }
+
+    private static Map<ResourceLocation, Set<ResourceLocation>> additions = Map.of();
+
+    private static Map<ResourceLocation, Set<ResourceLocation>> additions(RegistryOps<JsonElement> ops) {
+        Map<ResourceLocation, Set<ResourceLocation>> found = new HashMap<>();
+        LootModifierManager manager = lootModifierManager();
+        if (manager == null) return found;
+        for (IGlobalLootModifier modifier : manager.getAllLootMods()) {
+            JsonElement json;
+            try {
+                json = IGlobalLootModifier.DIRECT_CODEC.encodeStart(ops, modifier).result().orElse(null);
+            } catch (RuntimeException e) {
+                continue;
+            }
+            if (!(json instanceof JsonObject object)) continue;
+            ResourceLocation item = ITEM_MODIFIERS.get(string(object.get("type")));
+            if (item == null) continue;
+            for (ResourceLocation target : targets(object.get("conditions"))) {
+                found.computeIfAbsent(target, key -> new LinkedHashSet<>()).add(item);
+            }
+        }
+        return found;
     }
 
     private static Map<ResourceLocation, Set<ResourceLocation>> injections(RegistryOps<JsonElement> ops, Set<ResourceLocation> keys) {
@@ -211,12 +245,20 @@ public class LootDisplays {
         Set<ResourceLocation> targets = new LinkedHashSet<>();
         if (!(conditions instanceof JsonArray array)) return targets;
         for (JsonElement element : array) {
-            if (element instanceof JsonObject condition && "neoforge:loot_table_id".equals(string(condition.get("condition")))) {
-                ResourceLocation id = ResourceLocation.tryParse(string(condition.get("loot_table_id")));
-                if (id != null) targets.add(id);
-            }
+            collectTargets(element, targets);
         }
         return targets;
+    }
+
+    private static void collectTargets(JsonElement element, Set<ResourceLocation> targets) {
+        if (!(element instanceof JsonObject condition)) return;
+        String type = string(condition.get("condition"));
+        if ("neoforge:loot_table_id".equals(type)) {
+            ResourceLocation id = ResourceLocation.tryParse(string(condition.get("loot_table_id")));
+            if (id != null) targets.add(id);
+        } else if (("minecraft:any_of".equals(type) || "minecraft:all_of".equals(type)) && condition.get("terms") instanceof JsonArray terms) {
+            terms.forEach(term -> collectTargets(term, targets));
+        }
     }
 
     private static void collectTableIds(JsonElement element, Set<ResourceLocation> keys, Set<ResourceLocation> found) {

@@ -27,6 +27,9 @@ public class SpicedCiderEmiPlugin implements EmiPlugin {
         if (ModList.get().isLoaded("etcetera")) {
             ChiselingEmiRecipes.register(registry);
         }
+        if (ModList.get().isLoaded("clayworks")) {
+            KilnBakingEmi.register(registry);
+        }
         CauldronMixingEmiRecipe.register(registry);
         LootEmiCategories.register(registry);
         if (SpicedCiderConfig.clientOr(SpicedCiderConfig.CLIENT.emiHideSmithingCategory, false)) {

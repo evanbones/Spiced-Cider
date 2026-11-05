@@ -1,0 +1,20 @@
+{
+  "require_mods": "infernalexp",
+  "targets": [
+    "infernalexp:glowlight_(glass|glass_pane|fire|campfire|lantern|jack_o_lantern|torch|wall_torch|brazier)",
+    {
+      "id": "infernalexp:large_glowlight_jack_o_lantern_slice",
+      "required": false
+    },
+    {
+      "id": "infernalexp:glowsilk_cocoon",
+      "required": false
+    },
+    "infernalexp:dwarf_spruce(_plant)?_glowlight_torch",
+    {
+      "id": "amendments:infernalexp/wall_glowlight_lantern",
+      "required": false
+    }
+  ],
+  "colored_light": "#FFE070"
+}

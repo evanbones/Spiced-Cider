@@ -1,21 +1,24 @@
 {
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
   "key": {
     "#": {
       "item": "minecraft:glass"
     },
     "X": {
       "tag": "c:ingots/copper"
+    },
+    "S": {
+      "item": "modestmining:copper_screw"
     }
   },
   "pattern": [
     "  #",
     " X ",
-    "X  "
+    "S  "
   ],
   "result": {
     "id": "minecraft:spyglass",
     "count": 1
-  },
-  "category": "equipment",
-  "type": "minecraft:crafting_shaped"
+  }
 }

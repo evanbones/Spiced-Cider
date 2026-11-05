@@ -1,0 +1,11 @@
+{
+  "require_mods": "architects_palette",
+  "targets": {
+    "id": "architects_palette:chiseled_hadaline_bricks",
+    "required": false
+  },
+  "colored_light": {
+    "color": "#FF6050",
+    "brightness": "object.blockStateValue('charged') ? 1 : 0"
+  }
+}

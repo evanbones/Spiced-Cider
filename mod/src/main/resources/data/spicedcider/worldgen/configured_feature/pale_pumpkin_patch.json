@@ -9,10 +9,51 @@
         "type": "minecraft:simple_block",
         "config": {
           "to_place": {
-            "type": "minecraft:simple_state_provider",
-            "state": {
-              "Name": "spicedcider:pale_pumpkin"
-            }
+            "type": "minecraft:weighted_state_provider",
+            "entries": [
+              {
+                "data": {
+                  "Name": "spicedcider:pale_pumpkin"
+                },
+                "weight": 20
+              },
+              {
+                "data": {
+                  "Name": "spicedcider:carved_pale_pumpkin",
+                  "Properties": {
+                    "facing": "north"
+                  }
+                },
+                "weight": 1
+              },
+              {
+                "data": {
+                  "Name": "spicedcider:carved_pale_pumpkin",
+                  "Properties": {
+                    "facing": "east"
+                  }
+                },
+                "weight": 1
+              },
+              {
+                "data": {
+                  "Name": "spicedcider:carved_pale_pumpkin",
+                  "Properties": {
+                    "facing": "south"
+                  }
+                },
+                "weight": 1
+              },
+              {
+                "data": {
+                  "Name": "spicedcider:carved_pale_pumpkin",
+                  "Properties": {
+                    "facing": "west"
+                  }
+                },
+                "weight": 1
+              }
+            ]
           }
         }
       },

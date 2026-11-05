@@ -1,6 +1,10 @@
 {
   "replace": false,
   "values": [
-    "minecraft:resin_brick"
+    "minecraft:resin_brick",
+    {
+      "id": "#c:bricks/algal",
+      "required": false
+    }
   ]
 }

@@ -1,0 +1,12 @@
+{
+  "targets": [
+    "minecraft:([a-z_]+_)?candle(_cake)?",
+    "neapolitan:([a-z_]+_)?candle_cake",
+    "nomansland:([a-z_]+_)?candle_fruit_cake",
+    "amendments:skull_candle"
+  ],
+  "colored_light": {
+    "color": "#FFC070",
+    "brightness": "object.blockStateValue('lit') ? 1 : 0"
+  }
+}

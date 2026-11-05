@@ -1,0 +1,11 @@
+{
+  "require_mods": "architects_palette",
+  "targets": {
+    "id": "architects_palette:chiseled_abyssaline_bricks",
+    "required": false
+  },
+  "colored_light": {
+    "color": "#8A90FF",
+    "brightness": "object.blockStateValue('charged') ? 1 : 0"
+  }
+}

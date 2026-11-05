@@ -1,0 +1,11 @@
+{
+  "require_mods": "quark",
+  "targets": [
+    "quark:(waxed_)?black_corundum(_cluster|_pane)?",
+    {
+      "id": "quark:black_crystal_lamp",
+      "required": false
+    }
+  ],
+  "colored_light": "#8A70C0"
+}

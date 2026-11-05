@@ -2494,7 +2494,11 @@ hash = "edb0a0fa8456d6ac78630b2ea53f0d25d8f0ef336d81bf8079a65ef13a3ef848"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/c/tags/item/bricks.json"
-hash = "de63deded6cba53c6e21cd19f74d59b102cd1c29ab127130c1cc6b2cbe4647e3"
+hash = "b13bedd6ce13a8803f6691ff08a1edfd2fd21c880607877f78bbde7742158398"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/c/tags/item/bricks/algal.json"
+hash = "d184c902b17cd411fc15fa883abd5814aab81a84f19774e6851962634066e656"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/c/tags/item/buckets.json"
@@ -3107,6 +3111,10 @@ hash = "fd1632c97e22de0790c05529f189200404413a500ee10c3587c6f3a1ad274443"
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/create/recipe/crafting/kinetics/depot.json"
 hash = "2a797eff7efc3683870ac2d08ab573c1eaccd95ed421285e9161bd8c087eb921"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/create/recipe/crafting/kinetics/hand_crank.json"
+hash = "e746b4048d6d0fa4bea327f3cd0e6717da0e8fe25bddbf2a004f2f81da1a5f33"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/create/recipe/crafting/kinetics/mechanical_mixer.json"
@@ -4102,7 +4110,7 @@ hash = "d3dd840f85e6740325637fb4c23368a917be95a6f4ccd7cdcfb85c48bcb0076c"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/minecraft/recipe/clock.json"
-hash = "ac064f3b4e1a8e9f58890dac73638d4d04a08ad4432cfa004c8f3e57d50f2022"
+hash = "9713ee35dc0e36e6cec2871b0c5891a3cfb4cdb82b4724698a219e37abeea0e3"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/minecraft/recipe/crafting_table.json"
@@ -4166,7 +4174,7 @@ hash = "108dfd6c89ed4cdb256a96b3c21428c247547be2f54975c07089e90c61ad1242"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/minecraft/recipe/spyglass.json"
-hash = "974236f6c55258315d0aa7c8c3e41f3ba96cdeab50ef9210bd9ed1284a63a985"
+hash = "817b06cbaecd3adc41325f350156ab676a739f7a188f9b728b4f952a379dee21"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/minecraft/structure/igloo/top.nbt"
@@ -4993,6 +5001,10 @@ file = "config/openloader/packs/spicedcider_data/data/modestmining/neoforge/biom
 hash = "99b969132018e9da1071065a8593ba9564928b1ed0aa5ae3ab45f9dac071f7d5"
 
 [[files]]
+file = "config/openloader/packs/spicedcider_data/data/modestmining/recipe/chisel.json"
+hash = "99622595565438bc74f8f583a4757c255feba04660e8858009b63b9634402018"
+
+[[files]]
 file = "config/openloader/packs/spicedcider_data/data/modestmining/recipe/flint_blade.json"
 hash = "9e67ba876d27498befbad089118a8a8efa0714f96c1b5f6dd635d511a5028406"
 
@@ -5001,12 +5013,28 @@ file = "config/openloader/packs/spicedcider_data/data/modestmining/recipe/flint_
 hash = "06b47da336c97b83b3cb850f22cf66775f3805a364d4cb53fb00be6cf5fe74b2"
 
 [[files]]
+file = "config/openloader/packs/spicedcider_data/data/modestmining/recipe/milling/chisel.json"
+hash = "2c3027c9356b3357ce56e3964143e6a3b19996f3243d28af20d7518a7bfb6e9c"
+
+[[files]]
 file = "config/openloader/packs/spicedcider_data/data/modestmining/recipe/milling/cobbled_deepslate.json"
 hash = "c871d2c627acf256637789a3ca0197bc347c849fa00eae4dc68b6cc51a0c6b6e"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/modestmining/recipe/milling/cobblestone.json"
 hash = "b7c37aa2c2d9b59a32de7d1815f2eb00a7453c8ed8d0eadc205114f9f27343d1"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/modestmining/recipe/milling/copper_screw.json"
+hash = "1bdc4ba6969d89ea5f7bc270099e3fca2ce7e28fff58c4511e98b65c41c8272c"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/modestmining/recipe/smelting/copper_nugget.json"
+hash = "2c0e7d74f171f8fa9d0e1b74f7ab5990e5fd6c5ee08a9a700b27b87343c3f16f"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/modestmining/recipe/smelting/copper_nugget_from_blasting.json"
+hash = "35bfcdac07623a7079c1d3f01ad71411f5d49b16b8328dc8e148d3e1c4d9eb4d"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/modestmining/tags/item/concrete_powders.json"
@@ -6785,6 +6813,10 @@ file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/anvil/t
 hash = "a8d09c594b6eb799fa5b8fb03a460c3f94b492fc732536e251f5e5d76838753b"
 
 [[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/blasting/iron_nugget_from_chisel.json"
+hash = "c4bcf4567bc996b54118677ec29a0d8e21c2071d5d45cf9f97f70dd55ab14d30"
+
+[[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/cauldron_mixing/cardboard_pulp.json"
 hash = "9300fc18292797c9e1b285280ac9a3356a7e572c7ca48a9bd4526135bf299572"
 
@@ -7757,6 +7789,10 @@ file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/crushed
 hash = "e64a481e94d93ec7985a47425ad115e47cc3cd39326fe6bb003045739c8e99c0"
 
 [[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/crushing/copper_screw.json"
+hash = "03af08524f9128accec8a7284dd2abca18397a855e93ed850b937b8e3d3ed94f"
+
+[[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/crushing/flux_dust_from_flux_gem.json"
 hash = "e2da4e0604544ac6bcd27146b0fb65a8b0d86b9612a1252cafb24e4007283444"
 
@@ -8069,6 +8105,10 @@ file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/filling
 hash = "060c71463b09f0b7e32ca72565bb06bdcb4f0b914eab0111da110cfaf8e788e2"
 
 [[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/forging/copper_screw.json"
+hash = "6b629c088c15a415e23bd5d216224ec6c96c7d99dbb6163067831336af46a2a2"
+
+[[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/forging/infernite_cleaver.json"
 hash = "0ef355e896776ec67985e0633f13e1a8809b375e0c5e9c99369708767f3c1bc9"
 
@@ -8203,6 +8243,10 @@ hash = "0a7a492356047df5af7672fc3672df77097046abecdd5279ceab3f6dd240ff5f"
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/smelting/crystallized_slime.json"
 hash = "59705787e909e492603b4010daf2fc117a9a15cf68bb42fc25f909b399dfac29"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/smelting/iron_nugget_from_chisel.json"
+hash = "5d330cc947500e22cc57ad9fb627e326928c0b57d99e881ad6bb75b2f13f1fb0"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/stonecutting/andesite_tiles_from_andesite_bricks.json"
@@ -8802,7 +8846,7 @@ hash = "a0df58b5c019273238e513e76a0fb446edfaa0311e59751adee67fd90c1c7527"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/worldgen/configured_feature/pale_garden_ground_cover.json"
-hash = "e55c20267650d57fd2bb0ea5b838578cd87410540cc4b9422a523ee936a2254f"
+hash = "e722ef445c915e9a021f0d4fd4428fd461a2ba576d3b449c78fe19c6b61b6230"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/worldgen/configured_feature/pale_garden_trees.json"
@@ -9014,7 +9058,7 @@ hash = "e4cc7161c40d3dd5e8c99e5b858ed81875fe12484e96e921332ebe5a7ff07a1f"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/worldgen/placed_feature/pale_pumpkin_patch.json"
-hash = "b94b537a513669d9061c4c562f54bc936dc3de6957130d13c6fbe1a570c701fd"
+hash = "fa1112f1406629e52854d98bd782e81f06d854fcea34f75a488d1bec43a19eed"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/worldgen/placed_feature/pale_roses.json"
@@ -9045,8 +9089,20 @@ file = "config/openloader/packs/spicedcider_data/data/supplementaries/recipe/cag
 hash = "075deb18d18070f357bbc44ea46dad20a1f59748ffdfb3fb0e88d2c1ce32ff79"
 
 [[files]]
+file = "config/openloader/packs/spicedcider_data/data/supplementaries/recipe/clock_block.json"
+hash = "7790347bbb9350faa5deece3e7dae7e1081158d372e3c11b91bf4f2a9c92778c"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/supplementaries/recipe/cog_block.json"
+hash = "dbd8b7f6ad51dc11967793503cc9337ab6ee5f7b95c47020ff3913f2672c4231"
+
+[[files]]
 file = "config/openloader/packs/spicedcider_data/data/supplementaries/recipe/doormat_2.json"
 hash = "ffe29124136dbb931a9017614ba294e761dd47c76382fa01ebb7dd3fed4aaa40"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/supplementaries/recipe/hourglass.json"
+hash = "40a774b79e1d917234fd67e1b1fcfe0e089e3e49c361247c765b831a0719cabc"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/supplementaries/recipe/sack.json"
@@ -9059,6 +9115,10 @@ hash = "ea9fef0cccd47ee2cc7405cd1058efdf0ec62c34891712b085d8534d6dc747d8"
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/supplementaries/recipe/speaker_block.json"
 hash = "091a9d1ee4d2e4121ab8eb271d1029efa1f94fd022075588b18e3a29756eb16e"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/supplementaries/recipe/spring_launcher.json"
+hash = "280766545b5059a896b1144ad5f372904801ccb6d45ab978e7fe55d49622367c"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/supplementaries/tags/item/fire_sources.json"
@@ -9690,7 +9750,7 @@ hash = "2edbf62b60165a7ebbea68d5babc9b1991c73ece3e00c57832d6e99529ed69ef"
 
 [[files]]
 file = "config/recreative/tab_layout.json"
-hash = "0cd70596ffb73c47bf1dc1773e305aae171788ff6c6df64197718d6e1fec7634"
+hash = "695214481ff1b9bc9e862e02d4ed0439ec80a860725b4954769a6d8789f88b10"
 
 [[files]]
 file = "config/recreative/tab_order.json"
@@ -11594,7 +11654,7 @@ hash = "0e0cc1a250769c151f162342a40c4a4c3575576faa16d038a7e781e53bc5a353"
 
 [[files]]
 file = "config/reliable_remover/mods/modestmasonry.json"
-hash = "d5be6ba75c6ea6f758e14d0e1fb62e9fd43223e3ba5d4870b9275d89e16c1952"
+hash = "6cee2f8117da54e8d892aab49d6bb3f8c6cffd7f5c7c941a4059d104c4bdedee"
 
 [[files]]
 file = "config/reliable_remover/mods/modestmining.json"
@@ -11795,6 +11855,10 @@ hash = "01e7332713691cc624250ac8564ab36b4ed6f523172e5deaf772b5d49316a06f"
 [[files]]
 file = "config/remi/remi.json"
 hash = "594f7ce36b54488e5d300673bd8587150f02dc94a95ff56c06702d6c1c94c052"
+
+[[files]]
+file = "config/remi/stack_groups/adobe_bricks.json"
+hash = "b0d9ee993c74c213c1e8f790211bd2328572ebfcafd43738c20b8fd272d3a9fc"
 
 [[files]]
 file = "config/remi/stack_groups/armor_boots.json"
@@ -12187,6 +12251,10 @@ hash = "f101ae2b464a926677a026064487787ce1164df307302ac939ddbbb4ffed79b8"
 [[files]]
 file = "config/remi/stack_groups/modestmagic_tablets.json"
 hash = "a08b2f7858bfa6df03f47282125dd885f9b01daa426dac33a452fa8c7fec2462"
+
+[[files]]
+file = "config/remi/stack_groups/modestmasonry_colored_bricks.json"
+hash = "6f19121ae595d7ad0c601e11de7039f68567caa6ce008c5ec2b5d8d7adc3ae20"
 
 [[files]]
 file = "config/remi/stack_groups/modestmining_javelins.json"
@@ -12586,7 +12654,7 @@ hash = "a3b9d5eb03391c385123ee5bab1b7c88595701cddd4a7be7c08d6a02d0ad0d08"
 
 [[files]]
 file = "config/spicedcider-common.toml"
-hash = "abed158032a2dc441b43a12d2d2e5d3acbcf27e9b0836dc74e97950712bc7cb5"
+hash = "a7fb54713d8354ed728d2a314d66de0778a867be578e010c699ee45e613385d5"
 
 [[files]]
 file = "config/spicedcider-startup.toml"
@@ -12594,7 +12662,7 @@ hash = "332b8daf2204592feb379966ebb98df3303c23f5ef84e44f3e547d8b0d36d090"
 
 [[files]]
 file = "config/spicedcider/spicedcider_manifest.json"
-hash = "81dbb7c092e0b0942e40a5765e3534ae8169a0a92c72a6d415bccedc573e1e85"
+hash = "bdd3f4a9e9a004fc2c1ddbd490f4bfea9502bcc21878739c3781dfd6d945917b"
 
 [[files]]
 file = "config/spicedcider/tips.txt"
@@ -12634,7 +12702,7 @@ hash = "5f27b37ade66a2307181bc5be9f211dddcbe5a86e70ef73a6985600d660faaf6"
 
 [[files]]
 file = "config/supplementaries-common.toml"
-hash = "5a798ec8f55e175099be3f4e1a4a6c31014782f4a12e313a77e8ddcf94de5aa9"
+hash = "9932f0e830d1d76b72599443e952fb66d225f7fd96d316f4dfe1c4fb4a3ed291"
 
 [[files]]
 file = "config/suppsquared-common.toml"
@@ -13164,7 +13232,7 @@ metafile = true
 
 [[files]]
 file = "mods/cider-core.pw.toml"
-hash = "03591211862be505088eec562b8f9879944050956635489b20d1f65844f91b90"
+hash = "32cecc8de5a3cc26abb5eef4d1d4756d81447e57ec64704b32181cd76ebcb003"
 metafile = true
 
 [[files]]
@@ -13637,7 +13705,7 @@ metafile = true
 
 [[files]]
 file = "mods/modest-meals.pw.toml"
-hash = "c9dc1bbe5939893904fa1ea433c175c78cd63403cea3456cd17733325c1c61bf"
+hash = "f3b4d8645dd75a57a2c763bc354d50658f582748c61e8e0de024e558fc846a68"
 metafile = true
 
 [[files]]
@@ -16908,6 +16976,10 @@ hash = "1b903715cde620f35338046e91229210fe5e25debfd109f2a89bd9faa8807f7c"
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/clutternomore/lang/en_us.json"
 hash = "4d0c061c7c45dbfa3b10b02c3f556197f14ffb25035d0e0dc1b74e33aef965d1"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/colored_lights/polytone/colored_lights/candles.json"
+hash = "e67794f335a592997e40547a2714476c4ea1d67222ee341ded5230f508cbce90"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/connectiblechains/textures/entity/chain_knot.png"
@@ -21335,7 +21407,7 @@ hash = "a70fe5ebad115fa384350abc626fe20aed6b8f436741783dd9464db10a437e94"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/modestmining/lang/en_us.json"
-hash = "85502aa3e01a9e226913596a8a6255711d8ad5d9db78be52eb0edd6c3bcea4e3"
+hash = "510e5ed262cd7651ab094a38894e5ed696e4b0ae55dd95c105d58c8ca967c1ea"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/modestmining/textures/block/meteorite.png"
@@ -21442,50 +21514,6 @@ file = "resourcepacks/spicedcider_resources/assets/neapolitan/lang/en_us.json"
 hash = "2f477986aaf369b2cff1310057f62c214a57093833f527297cf9da85f4063ffd"
 
 [[files]]
-file = "resourcepacks/spicedcider_resources/assets/neapolitan/models/item/adzuki_milkshake.json"
-hash = "527fa7e3f08108c1d67cd2b633e2611649c5f41fb639ad84b145b521063e1234"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/neapolitan/models/item/banana_milkshake.json"
-hash = "b1db76ae53f90ea86a341f3fa4bc3caee514e7039c7bc05ee2468ddc8204c874"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/neapolitan/models/item/bubblegum_milkshake.json"
-hash = "778573ae5a81fb0d7257db3ec7c06b46e78c4a3155d882f59cc229f0a0724c63"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/neapolitan/models/item/chocolate_milkshake.json"
-hash = "bca28e2827281cc6d320fb53a1ef6471f6d6f0db12ab28b2e4100bd3c563a419"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/neapolitan/models/item/cinnamon_milkshake.json"
-hash = "513ab17326ccc21aa9a4346fda596d4e2f638d1588cd6af2e0a4109e94b88a67"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/neapolitan/models/item/mango_milkshake.json"
-hash = "c58cc53c319e36f99ab7327b0f9e9dbfddc018a27029abae49a5b4853fef9098"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/neapolitan/models/item/milkshake.json"
-hash = "1003bc5bdf620b2db68da020512d468abf451eb74dfd50fc443e2307fc0368ca"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/neapolitan/models/item/mint_milkshake.json"
-hash = "f58aae871fa12006311b7bdb7f42a722411fecf6c76d29a405ba2464c9e98f8d"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/neapolitan/models/item/strawberry_banana_smoothie.json"
-hash = "94bb9a41942fab61420209d38de454f4a0c778a30a8d1455dc8f95eff0a7052e"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/neapolitan/models/item/strawberry_milkshake.json"
-hash = "cdf226e9754f66e1a46e050aac25188c2191f101bf20456d24497366dfcd5bd7"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/neapolitan/models/item/vanilla_milkshake.json"
-hash = "26abde66450c4f7b4b6f35130372eb1387865f70161eaafdbbfb9ca810cd0026"
-
-[[files]]
 file = "resourcepacks/spicedcider_resources/assets/neapolitan/sounds/mob/chimpanzee/ambient1.ogg"
 hash = "e4be2f34e60d9882aad1c9fdf17eb8466be6c358ec10df1fde1a7511e14734c2"
 
@@ -21576,46 +21604,6 @@ hash = "1b0edf89597a238de0818fbf889f9e7c8ef0a6db429c3b67e38485f8d9b1dc27"
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/neapolitan/textures/immersiveoverlays/strawberry_fields.png"
 hash = "3dc20c760f9752a16ef16a0806ab3606bddb6ccae7891ddd3b021724f62be4a8"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/neapolitan/textures/item/adzuki_milkshake.png"
-hash = "449a00c03081bb836f4646acb91b08d76dadb73af4ac6cc3f74d3728580d3d55"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/neapolitan/textures/item/banana_milkshake.png"
-hash = "72bcdd63917d925f75aff3c15c681f6f7bbf8e650742b4f0690c9aee03c5835d"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/neapolitan/textures/item/bubblegum_milkshake.png"
-hash = "39de6b26a0196b2dbf16225c7460b3596c8a26863f80c76785b7aa4c926791f3"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/neapolitan/textures/item/chocolate_milkshake.png"
-hash = "f820a9e62f85aa8e7668649247d451823f9498a51aa9aaefe58be5656d91fdb9"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/neapolitan/textures/item/cinnamon_milkshake.png"
-hash = "530dc01d5eb8bec23aca799823bb151e78dc3049f5f3ed47b6bf805bd4e0bf00"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/neapolitan/textures/item/mango_milkshake.png"
-hash = "58721afab35fdf4a0b3f02dee51d6129232294165774fea11865cc37f7ba4a4e"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/neapolitan/textures/item/mint_milkshake.png"
-hash = "1800bf4f0b6dc5d21c39d56bc5d9060649e47541997c48b4f50f81ec14436d54"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/neapolitan/textures/item/strawberry_banana_smoothie.png"
-hash = "78f362a004aa40257ec4208a9aee1030df9e46ef7e6b95be1f5db1310d46ad33"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/neapolitan/textures/item/strawberry_milkshake.png"
-hash = "6853b5ce91798d9797135b1db8834af8def11ee6f00ac23e6731d568298d3cbc"
-
-[[files]]
-file = "resourcepacks/spicedcider_resources/assets/neapolitan/textures/item/vanilla_milkshake.png"
-hash = "ec5775635aebb78670272233deb5d0f33971f460a0c5ffd975f198227dedb404"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/neapolitan/textures/mob_effect/agility.png"
@@ -24187,7 +24175,7 @@ hash = "8352c4a3b21218e5e9f858c2edf7315307a3271d33963284ff9f6e879298706c"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/clay_bricks.json"
-hash = "aab320dacef90f11f538a84d504e839e7b3c3087887b66482ce67ba131308d6a"
+hash = "11b9c24e82fc4a5789ed7e723deb00bad7ed9b703bcab95c882b4ac7d7c6618a"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_modifiers/clothwood.json"
@@ -24450,16 +24438,572 @@ file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/block_mo
 hash = "4c66546343b72f969e446e40359ddd7c2b721c7e18153f4758b3c1f033cb1500"
 
 [[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/abundant_atmosphere/cerulean_froglight.json"
+hash = "6689524c34376a05dca519bf1263eea1de81ef21a2fa84c2a6c77e27821fd9a3"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/abundant_atmosphere/chromatic_froglight.json"
+hash = "35215ee5097aa9ba24e50d33b7d92d6484601f32c372154dd69dac605310216e"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/abundant_atmosphere/lamp_o_gourd.json"
+hash = "b6f61033e5ebe44a5cf964ab4344572af0992ccaffbd6fdd75c392021c25684a"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/abundant_atmosphere/midnight_lily.json"
+hash = "4e2ae52cbfde3d20c2c6e3aa2c63e943943e0cc54ccfdaae1c7411a180dba597"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/abundant_atmosphere/mud_lamp.json"
+hash = "b108a6dbea8994b0a1849b30430c4fff4981632cb2d4b8fd82c5a1703b99304e"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/amendments/skull_candle_soul.json"
+hash = "36c5ebdb8b1d445b97fc7d499beb541fd143054c8859b072146b912e9faf564b"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/amendments/skull_candle_wall.json"
+hash = "242874afca98a8a0d557546dc1fe0eab78a256ef16f7fd679106e4ded788708f"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/architects_palette/abyssaline.json"
+hash = "4c250524fef2dc23a8fc77f535ff517bf3f50ffc2630f26a98fa0bc90791a3a2"
+
+[[files]]
 file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/architects_palette/algal_cage_lantern.json"
 hash = "2cf49880b79e00f09d0c2520957a32e8f9fa6b317477393790ee04deb0aa62a7"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/architects_palette/algal_lamp.json"
+hash = "3bba22290b8633fd36076e1d47b1485cc82984894be2fd83b3d4b1af40437fde"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/architects_palette/chiseled_abyssaline.json"
+hash = "5727aeb72c1336e2f72ad05b65e94b29c2e5909d4eacc5e1d4ff1c294d213f6d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/architects_palette/chiseled_hadaline.json"
+hash = "6a4886e52feb25f3808fe65150c1c997139cd812ca94119e83e8d3b21da7431b"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/architects_palette/glowstone_cage_lantern.json"
 hash = "f29a7420395ba01224a25034d6b856930fbf87531768228679bc55c3d5da54de"
 
 [[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/architects_palette/hadaline.json"
+hash = "98c723be2d0ccf301ca8f1a8b06a0644c7848939f3c7198b0853aa17339cb7e4"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/architects_palette/molten_nether_bricks.json"
+hash = "ae3d1c09f509a39cc7ae0052ee1b8069da21c4aee2701c2d2e114801243f5bba"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/architects_palette/moonstone.json"
+hash = "f1be4535c68576da30aa6052bedc4eeb6e8fde199a4f1c221856f829ef2ce508"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/architects_palette/nether_brass_fire.json"
+hash = "e2c103c288f3e62fb870745e63abf6e6525911686eed1a57a6683d36f2cbe526"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/architects_palette/osseous_skull.json"
+hash = "0e2f9eda77f889dc2d25da1df62d9fd1e65cf68336a8f31403086ab3027e13c3"
+
+[[files]]
 file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/architects_palette/redstone_cage_lantern.json"
 hash = "2db599996f0424327c2a402822316646edcb4faee05b4dd1df644e3530931187"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/architects_palette/stone_lamps.json"
+hash = "ab6fba5792f2f85f828911a36ae07707122ef60bcbfba2d515c63a39a765fbd9"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/architects_palette/sunstone.json"
+hash = "23653250a4db9335e37bc4b440a758577178a74965db0a38d7085c1998663570"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/architects_palette/wardstone_lamp.json"
+hash = "21e73e82c37e12671f1d70a6bf8d6a58319e99f865cb9dd63ebde071c56b05c5"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/architects_palette/wither_lamp.json"
+hash = "90974675739998b09f9a6b7a6605c08bfb9c36c748fb878bf81169210323dc1f"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/architects_palette/withered_osseous_skull.json"
+hash = "02a5f715da2d51078507a4c09ce4cd9bd15efb466d3c34c04432600d764652a5"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/blockbox/sky_lanterns/black.json"
+hash = "3a7a18c2a484747137869dba2c8e08852a1e796488a5a942e039fb9c8b3f24a0"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/blockbox/sky_lanterns/blue.json"
+hash = "346502cf10609b0e27aad6a8fb9cf3d4bcda8da600c5724fc2a31133c621f9a3"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/blockbox/sky_lanterns/brown.json"
+hash = "576970051c524bf54b8e63b9882b7db1a135b7c6765cfb8b034de6841028ce2e"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/blockbox/sky_lanterns/cyan.json"
+hash = "5a0d1902afbccced4ca8a5f2f8ed61f6741795bb39e5f2e062af709253f8722d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/blockbox/sky_lanterns/gray.json"
+hash = "98934db22c4d618a7697d1ef95f510bf6ccf061916b843e75af2923caf91fedc"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/blockbox/sky_lanterns/green.json"
+hash = "88d5096ab55db98967e21bfc2536705fe14b7e014bb9ba83944a474047af8b26"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/blockbox/sky_lanterns/light_blue.json"
+hash = "55588e629b457ec60089816aeba6e62b9c8050dc3e3a551c2698e956876e682b"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/blockbox/sky_lanterns/light_gray.json"
+hash = "e673e224fa5ca9592bc9d12071b1c87ff6ae054160ef6190399bc8c8441fd1b7"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/blockbox/sky_lanterns/lime.json"
+hash = "7044a8771d09faf6be7b2927677bbaa7b54b241f539ad712566f6fb3c29a8bac"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/blockbox/sky_lanterns/magenta.json"
+hash = "b817578f228d4109a77f30625c5ad79c9b2c12971a59f6fb005326d1254aa5e0"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/blockbox/sky_lanterns/orange.json"
+hash = "f8a9a365036f1b3044b34e021d91333bed0dc5e9c3244071e1081eefa8a51eb6"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/blockbox/sky_lanterns/pink.json"
+hash = "442ae17e9642c81e109dd9815dabf7caa1b5259646b963f91067a4aa6957c24b"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/blockbox/sky_lanterns/purple.json"
+hash = "90e087a5b0ef2f610f61065a5330ae950db64ab67c51244f1fb9dc64ae77f0cb"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/blockbox/sky_lanterns/red.json"
+hash = "e9f81d1102ad7d7ded00283396e6502238ce99789a536f55afe55f8c125ea5ae"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/blockbox/sky_lanterns/white.json"
+hash = "6da8ad6f6a4ee93134480c7f1dc0f01367f4a00b8efa91c249610582356d7686"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/blockbox/sky_lanterns/yellow.json"
+hash = "a7246dacdcd19e9fc5ca77037de2b900f4d5ef95230a0b1277b59eb80dc7a059"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/bountifulfares/candles.json"
+hash = "7b28aa8e7089dda636e6270768ee0d319a82ab9e265aa74510300db4763fc357"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/bountifulfares/feldspar_lantern.json"
+hash = "54d8ca9b362c78401916f5a6fd9a456a1786892d61ec86831008dfd951f39359"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/bountifulfares/golden_apple.json"
+hash = "e2319ad2118d81abc397348d84875f7f2a2bcfd311ccb64afa1371cc95b75f3e"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/bountifulfares/jack_o_straw.json"
+hash = "3f8d886ffc46a80f4ddfb48c79813be647c21145bfa4dd39f8985529004bdf14"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/bountifulfares/prismarine_blossom.json"
+hash = "a25a4adcbc59f9a6bce362a85b0614f6d152b8106251e66292658bede3de6659"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/bountifulfares/solid_ceramic.json"
+hash = "afcb8b8dc635dfeab2ed8d1e74e0c399ec5123dd81ac71a9a2deba768c1a221b"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/bountifulfares/sponge_cake.json"
+hash = "6587b94b5804cc1ab987cb7874b86be437bd7e184cfd5da0e7cf6320f9f0f000"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/buzzier_bees/cupric_candles.json"
+hash = "2a8fd94f680e0ad3aa03b15a6e52287c6b384f1965be1a6e005c2b4d701d92ed"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/buzzier_bees/ender_candles.json"
+hash = "90aeacd3bf888adcf2328c667fba711e071b7795f506be47617fb6ea6c9b60b2"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/buzzier_bees/honey_lamp.json"
+hash = "b24e1942b37273fea8ffb598a256a27d4c743b0fd5453c29a7cd9ba1848244bd"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/buzzier_bees/soul_candles.json"
+hash = "1924060fb504e6c36ac8a59a442c4bcf030e7695500bc63caf040918f9cd46c2"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/caverns_and_chasms/coal.json"
+hash = "d1f952ecc91a580a20a5237bc808abe5c16dd5803667100b0951bb0b482ea112"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/caverns_and_chasms/sparkler.json"
+hash = "9c57b76541b7235da2fe2e63f1b50c81e4c445b763a9bda7e1b600ee6816f78f"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/caverns_and_chasms/sparklers/black.json"
+hash = "34fa18133fa44e65a2c2d76c9fb2b5f5b12c2c41d259b4b3fb13db9b1f62b284"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/caverns_and_chasms/sparklers/blue.json"
+hash = "1275f8635a291c5a142dbdf4b7302150626ac6c2aea0cb9f1da959138cb944ff"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/caverns_and_chasms/sparklers/brown.json"
+hash = "7b244575d1563073fd7345df32ee789e19789f0ea90be478563e60c703c005b9"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/caverns_and_chasms/sparklers/cyan.json"
+hash = "dde41dda7bf5715c854a2d72eaf721aa4a33b0c0d6b881823e8611dd63c2d32e"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/caverns_and_chasms/sparklers/gray.json"
+hash = "2f61fdb5dec7014ee87979a81e426276d8509ce17e6408063801213d100fd9c4"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/caverns_and_chasms/sparklers/green.json"
+hash = "fc8a22318b17a7d1bba83bba522ff9a158b26816929cac58f8e95d0c46ef0850"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/caverns_and_chasms/sparklers/light_blue.json"
+hash = "aba7776c0cdc9ab0480d118a5e12ce0984823a1b594317be62f570c26f43012b"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/caverns_and_chasms/sparklers/light_gray.json"
+hash = "7c0794383e58133d6f3f21a6523a5dd4e50afce3c5145a0609fb27b9013241b4"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/caverns_and_chasms/sparklers/lime.json"
+hash = "b2d9b7b4fbecbd63b1a9224d289a08fe9c7bff0c745f0e1e6c70f068c0a0bb6c"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/caverns_and_chasms/sparklers/magenta.json"
+hash = "c7884b1bdb98001c4ab1300cd1525b170e6c1ef72b47efc12a671623822e06b6"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/caverns_and_chasms/sparklers/orange.json"
+hash = "65b367e33f022aff96e2b18f438eb6f5e5369a7a24c12227b0dee2d115489ec8"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/caverns_and_chasms/sparklers/pink.json"
+hash = "2691eeb0a9836031a4d545badba0fe9acce32c0d1565f9b75527227b1f6d6d53"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/caverns_and_chasms/sparklers/purple.json"
+hash = "e267dccfa61bd155beca17f95e7148b45fc6dc5b4d19b59e7fd7d0d52eacec83"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/caverns_and_chasms/sparklers/red.json"
+hash = "a7610d5dd5e379a071314c5f059dcc2be7dc8b3e8deab4a5e55e1b889daaad89"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/caverns_and_chasms/sparklers/white.json"
+hash = "c7bb37b92d644bbb7a34b649d889f32cc08b82472261b3fe248c0056d11f3849"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/caverns_and_chasms/sparklers/yellow.json"
+hash = "37354cebc2917de7c880a77b61da012de4295eb86b11996fbea721e654d7680e"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/caverns_and_chasms/tin_lights.json"
+hash = "a84658361b67f0cf81471cad6ec4920d138b66bd41c320e910352742d6fa02c3"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/cider/berry_good_glow_berry_basket.json"
+hash = "7185067058e79adfbeb45844b9ccbb68e10b490919f1551c9f58ecafdb9950fc"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/cider/chimes_amethyst.json"
+hash = "e0ed1bb6db133e3e0bdeb4569ce86014ff5500637a2fcbde0d8a7675dcde3e31"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/cider/clayworks_kiln.json"
+hash = "5be892199aeabd83e6dc87577636e294fc73afae69f71f5d6fc42b00be35e9c5"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/cider/dimensional_tears.json"
+hash = "cb11cabea714bbbb685da83a4ac33aa8aaf74ecf4b453e355c17748b90467d38"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/cider/dimstone.json"
+hash = "278d4869dcdee2640d38d6c4a3a95e62108e59c718f161117cb3d1a9b865c883"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/cider/embers_and_icicles_ice_crystal.json"
+hash = "0a417e3d52cff183f5b8b580a0f129ce49ae4078ba60ffd010876f42c5ad7b9d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/cider/exposure_flash.json"
+hash = "6fb9e8bfd96eac48e23b2a418ff8b708524fd83a6f88535babb9ae71df3021be"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/cider/farmersdelight_brown_mushroom_colony.json"
+hash = "3b325ded075dff846de13b09eb71a5851a087cfcbcd6fec9cbb1fc52c16315b3"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/cider/glowlight_lights.json"
+hash = "0abda191af8d8821218c6102eb8733a8a06e1866eadd004642f81d8cb7907037"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/cider/glowstone_bricks.json"
+hash = "2cb540053456ab04bc3ece561782fc93357fe6d938bba7fa4797ee71ab73d2f5"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/cider/luminous_fungus_colony.json"
+hash = "14e7e66aad36fbc019070595e9ed2834d5675eb778608ef0867c1cc943fe1889"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/cider/luminous_prismarine_wall.json"
+hash = "b59c69c854e84f3a5b24f26e8d8e2624d8be4b94a68f0cc79baec721436f7a38"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/cider/lumisene_cauldron.json"
+hash = "40b8fbdeba3e1f8852dd15e6d5d7f866a9ee6846d825fc4e9ee376c6ae4fcf58"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/cider/modestmining_forge.json"
+hash = "57c4e471085f65db437b62ccaea66050ce047525e368727cec8a0d5c4862e41b"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/cider/redomesticate_wayward_lantern.json"
+hash = "248330c3b925484a3241746fe5e4f5c03c8faf5d6ac0a641a76a1de699584c40"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/cider/sulfur_candles.json"
+hash = "e00e1ba84285e0267baab21d6ba695f5fe954d010426f15b94971b6518c6ea2d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/cider/toil_and_trouble_cauldron.json"
+hash = "f9e53d7393f7824969edbcc9fe3b14769a2a555b80d681c185ee49b488e02aa9"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/cider/torchflower.json"
+hash = "a2df1b0fb4455342da5030d8fd17201a464bf2bcb3fe94e9887dfb36b30209bf"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/cider/vista_television.json"
+hash = "0f8a89cacf21026ffdb1c29a7e732d155521f0b426982321f56082c6bcd2193d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/clutternomore/crying_obsidian.json"
+hash = "7cdb06a1a7feb6f213f3040411fe169556416e56903ed118ec82e9995ecb4d2e"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/clutternomore/dimstone.json"
+hash = "022c725250f31d995721e1ae690435aadc75b3c622a7e5c0da7349559055e669"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/clutternomore/glowstone.json"
+hash = "a34f4abb8f4505354d8aad02c27ae9cbb2e255af9383febf2fa485c9b9073592"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/clutternomore/luminous_prismarine.json"
+hash = "22ee608af884b6668a76684042d32fb70b5d56d79f6a190847e2f73c5f78bf34"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/create/blaze_burner.json"
+hash = "8f3d74031b77c8de139d1aa27d01fa8ead9a324076271dcfd7d8ff0c41099eb5"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/create/blaze_burner_seething.json"
+hash = "884cf5592d3626ce21960a871d7108c7bfb60b5b6499dce1416aa0a879afa294"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/create/elevator_contact.json"
+hash = "54e798a37b0dfa68c2627fe0a0851930e34094cfa1bb43e1615ab2a351fac600"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/create/lit_blaze_burner.json"
+hash = "3b28039f0ad992c42a950b2325cd98a3089a8e113e3b1fd908fc880bdc882d6d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/create/nixie_tube.json"
+hash = "21daa1bea26477fa185aefa7d951cec13e34e795032fd566178662bc1f789cc8"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/create/nixie_tubes/black.json"
+hash = "cd97dc65e6413685dff614334c8d75d88c12900ccf74cd157e3b78c6af8fd7ef"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/create/nixie_tubes/blue.json"
+hash = "25ccf9e76aa9e5f119332439919f29aaf4738255b4fd27c9f4dd1e325dde30ef"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/create/nixie_tubes/brown.json"
+hash = "5b25ecda5a767298eba9f28d2a7a1b65758e8d854e719edb3d102298b694f775"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/create/nixie_tubes/cyan.json"
+hash = "5668df2404470130ba524d2033dd1511100751535f5a950a57f6d8fb38fed80e"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/create/nixie_tubes/gray.json"
+hash = "44316ea5e6eb0393f23b8c569ab87dabb8d5dd2a350d7efc14e9c62b103192d0"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/create/nixie_tubes/green.json"
+hash = "d3793a9b106000e92b103976df38375fcea79fc132dbed76c74a5f5ce789a756"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/create/nixie_tubes/light_blue.json"
+hash = "8019cfc4162f1c65a719ed02aa55062960a2a0aa4a244c3828bffbfde367c134"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/create/nixie_tubes/light_gray.json"
+hash = "b94391991a2033ff22afbf22f40ff1e70426acde0fc86e4e5840f2079e6e9e56"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/create/nixie_tubes/lime.json"
+hash = "e11847fdc981d25ff540f46bc64570cfd02833eb460a8c50eb74e5a6fe42703a"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/create/nixie_tubes/magenta.json"
+hash = "c1346a6539f5887a0eabb43eff9b451977fd38c94654efde81b3b3532d216ba0"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/create/nixie_tubes/orange.json"
+hash = "51db46d060bdb36f1c536d38dcf9a78effb6317c5eed7879c0ffc663b8b03c88"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/create/nixie_tubes/pink.json"
+hash = "e9da8b29aafab645e84724ed42038091ecc349dafe943a5bc876397ce1318ed9"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/create/nixie_tubes/purple.json"
+hash = "81246a186590f41af502284c17e319a0eb39523be32f28bcdff8be2676871269"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/create/nixie_tubes/red.json"
+hash = "a35f8bac4a8598023fd1ed984a37e448dc0bdc5f1324dc1ac60eb327f98482e3"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/create/nixie_tubes/white.json"
+hash = "81c71e9cbd68d486a1aebd15e2a658e437e5aca339d787291d12bbbb7cffddc2"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/create/nixie_tubes/yellow.json"
+hash = "5c6789687f3ec1990d0f6eddd1447a55ca37d769555c4feef969a06bd4cd4373"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/create/rose_quartz_lamp.json"
+hash = "f7beda7ef9d607b7197beaf35a75e118ab3ed05e3ef7ba9b19c75656379900fc"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/environmental/dwarf_spruce_cupric_torch.json"
+hash = "4e3f4fd4b738e4b2d231661d40f4b9970fa94adfcea708e8e973804b8342e7c7"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/environmental/dwarf_spruce_ender_torch.json"
+hash = "045be016efcb6018da5d3e7332b825d93a858226042e5738ba30f7f1d5a35a37"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/environmental/dwarf_spruce_redstone_torch.json"
+hash = "d69880a7f20d6d25b71f95c78e942d9f9a96db5fcf49de7184262c697ed123c1"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/environmental/dwarf_spruce_soul_torch.json"
+hash = "956f4c51be7a0fa5e09f62c8d23b18e2de31d14643925122bc26caf602a6b101"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/environmental/dwarf_spruce_star.json"
+hash = "294d3be41604c66671a1610be87498b16ce60fbd98e392cb097e94d3238f7128"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/environmental/dwarf_spruce_torch.json"
+hash = "dcee29ab4542a2db6a5a05849f638d89e719ba39bdc5a6c25d5ece26f4a2e82d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/etcetera/light_bulb.json"
+hash = "b4b0f0c698351572ab567003e4c6c0f847db036d4078f163bd09ac1852528979"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/etcetera/squid_lamp.json"
+hash = "22b287677ca267ef869d1a66fd048b43a62175f53fda7238287930ea94d79659"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/etcetera/tinted_light_bulb.json"
+hash = "9538c74faa7452b4a200cc4b427aeb94e86a150cb476abb652af905e5380d213"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/frame_changer/crying_obsidian.json"
+hash = "63e10c1994990654899a9b272137edbbcfb7ae13d2043c30d895eb1c7a5a0b85"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/infernalexp/dimstone.json"
+hash = "e6d640aff84653f013a0357c9ac9b8217cc86f76afb905448a04a2dbec541a82"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/infernalexp/glowlight.json"
+hash = "d6037e4cc2dce00dd5c4e6638fa3e5544d10394f0b3c9ac543b49dfa0082b707"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/infernalexp/glowstone.json"
+hash = "7adbc88267a7ddd8deef0e97b72ef0e7d4fd9e5c64e829630ed79175fc184a8a"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/infernalexp/luminous_fungus.json"
+hash = "9f8b4cabe94139a044a49b6617f268dc179f0cea0f0210f51c3e8fdad1462813"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/infernalexp/shroomblight.json"
+hash = "2e560cc608a0afba8bb15fe9911bbbca6f5ba44973ee93d60a54d7547969dc69"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/infernalexp/shroombright.json"
+hash = "0c552b4e1b12615a35f2d7e047e76c0908e55bade723022d984f695f48f626ef"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/infernalexp/shroomlight.json"
+hash = "92b286c6168265a02c774904e4accb3525e6e508e7da0881fffb00285a5f6f43"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/infernalexp/shroomnight.json"
+hash = "29d61a2283a345871b5ef020915148fe217748871b9b8e62b70bf937e62a172c"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/mynethersdelight/bullet_pepper.json"
+hash = "daf271af1576bd5a931d0ed50e9f54663160805c217f22a685eb0c090651b8a4"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/mynethersdelight/ghasta_with_cream.json"
+hash = "21070cafe76b3acdffdcf7d06d7e57d979a24b37b38b5fb7830b72fc30f92ffb"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/mynethersdelight/magma_cake.json"
+hash = "8f35731b0a2b29609e79c03fe4392c130d91bd04e6a7e12e8d40cb3b6acb495a"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/mynethersdelight/nether_stove.json"
+hash = "2dffcf2c6d08efa1dcf7dbfa9d8f4b093ffbd5c1272db1b18d24c80bcca15886"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/mynethersdelight/nether_stove_soul.json"
+hash = "de49eb3ae858fb959f738df0099d3a44925315a1298664da1c8dbe9649caad8f"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/mynethersdelight/powdery_torch.json"
+hash = "0575575d88b698a71cec9f11824d1566a870b660fb97f6e917a804eb50a9e220"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/mynethersdelight/warped_fungus_colony.json"
+hash = "f0b0c2b9a95c9d21e45eab2879aead0aa64eff0d2984590518a2800afc7cc77d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/nomansland/monster_anchor.json"
+hash = "7ea340f785b026e0fbcf38ef9f902c3c29740e7983007694dc79dbbce61f1ca9"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/nomansland/quartzite.json"
+hash = "b3ee6d00a478d3603193be5a6aab3e37814610fba2d8584207f03e6953a89ecc"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/pale_cupric_jack_o_lantern.json"
@@ -24480,6 +25024,162 @@ hash = "c74019da6b270a8d1a4a1267489244f4fa07ebb86032774c26ccfa4a2325dc82"
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/pale_soul_jack_o_lantern.json"
 hash = "f2f95d157253bdba5f2025ba6926db498035e972b2e232de881d225d5fa64a81"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/piglinproliferation/soul_fire_ring.json"
+hash = "6890df93f3e9c9e8d3e718c4b3858db45cf3294c73da88dfd8a5ac912aed61f6"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/piglinproliferation/stone_fire_ring.json"
+hash = "b07707cee14deb60433f70031b117ded32337169530c056760692e61407f710a"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/quark/black_corundum.json"
+hash = "5e9bfe0d8d2d29d5fd78e0096ba1340fa5dc36f20764f21de5c94283ccdac6b0"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/quark/corundum_panes/blue.json"
+hash = "5d697cce68b99fd135ca3c2090505c00f2d49c89dcc38a468165da3111179eda"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/quark/corundum_panes/green.json"
+hash = "c01ef16faa22943eace5e108572a6fdb713283d8ac7f39120980d154daaa7b9f"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/quark/corundum_panes/indigo.json"
+hash = "1e3bd222489087d3d775102a4448d640e8e3d90b8132c600f0d83ddb95ec7b40"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/quark/corundum_panes/orange.json"
+hash = "97f4efcee73c35bfbd23dec6b4c7176a4a28bc912c26a5c6867205e9b145852d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/quark/corundum_panes/red.json"
+hash = "c888742a4c226a8699987644aff17bc8744266d8bcd8af69374a212628ab21a2"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/quark/corundum_panes/violet.json"
+hash = "568332cb36ef8a1d4f810e57349255cd709034405ba9aa65c2f57e6192bc0a49"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/quark/corundum_panes/white.json"
+hash = "5f6dc7366ccc4865f605f50b0cfa027fe080db97a787db94ffd4a7648a6e4527"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/quark/corundum_panes/yellow.json"
+hash = "21ed0f75534df80c268bb52ec71e86cc9e3ff5fc3fc491fe1d97a0e9d9654aa5"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/quark/grate.json"
+hash = "0e6c2bbbd338622b0ce0a3682605aca967028ca6e345eabf5b075d5e170d20e8"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/quark/magnet.json"
+hash = "7422eb0b7b74c56b2455d85bc2530b6b29de4ec663b58a88067a01ba32405017"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/quark/potted_cave_vines.json"
+hash = "e87f303404e54920a4da978af1f64648b66b26a1fbed5c5994ce37663237a2b0"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/quark/potted_glow_lichen_growth.json"
+hash = "17d4465b4daa08cf6e8d11891b78ef5988bac32f93170dd6968919efdd900190"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/quark/potted_glow_shroom.json"
+hash = "e71e685fa4dce202194d493301ba578ac98f91c972e7eec548d3679fb40223dc"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/quark/potted_sea_pickle.json"
+hash = "ca5e64585693b5288fb607d0a8f321a52f8e880d544cffbeb7500a50a4c04f90"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/snowyspirit/glow_lights_prismatic.json"
+hash = "44123be4ab86c7adde07dc7843268c2e96acc1ddab0fd3951627f3402a9f916a"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/spelunkery/glowstick.json"
+hash = "5cc1fdc0aa2956e7e98308c6815967b2c58734155e34d7d4d2143b477b373f61"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/spelunkery/glowsticks/black.json"
+hash = "f03c89ab10aa16f58ae9a6206b5bc0e8073ca0d26f7596a5587af469bfa54294"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/spelunkery/glowsticks/blue.json"
+hash = "0c122489f2590fe25582710e9c999aecdcb0f66db2e16a62e55873abc0373797"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/spelunkery/glowsticks/brown.json"
+hash = "4ce65a8f44efa29604126e67422b9c6f0c57bfc79a634a2f58780282fe544c73"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/spelunkery/glowsticks/cyan.json"
+hash = "717755911f2ac6305cc0eb4e09b1eacf73f2f992bbafa16886dbcbf964dd28be"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/spelunkery/glowsticks/gray.json"
+hash = "5f7518506c6f9bed9044a08c157d41727e4a5765ed9eb4b50cdd1229f450718b"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/spelunkery/glowsticks/green.json"
+hash = "adf09468afc46acfe394b941c112ffff38fd776af101c24f6a10ace657076002"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/spelunkery/glowsticks/light_blue.json"
+hash = "6c2acea4951c767e3d4d06502748aaa4673d6676ffeefebe35b0f78ab2e5b559"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/spelunkery/glowsticks/light_gray.json"
+hash = "16925e64f76ebe4e5d22af86e70698a848974e1545dcc9a59e78c2b5b0ad3f2d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/spelunkery/glowsticks/lime.json"
+hash = "209b2834aa874d5f573d7953e0184cf18f237dc62038a216c2aa84379ee2fece"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/spelunkery/glowsticks/magenta.json"
+hash = "bbd3738556bdd72e9346895945e1906ead8d32c35d5640a9874a738c89c2430e"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/spelunkery/glowsticks/orange.json"
+hash = "d014ecc6b6dc1d7bcff6f572bd3db66b9da3d924f29e14555207a6c815ad641b"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/spelunkery/glowsticks/pink.json"
+hash = "4cd4ffc9e31427d167ab39374cef8fba143ca94cb20c7d65a8f055bdde553bdb"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/spelunkery/glowsticks/purple.json"
+hash = "390e7feff369918fe959f0bb4c2d3571d2a1eef1311fc0fb21efeddac07f2792"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/spelunkery/glowsticks/red.json"
+hash = "b2ad8927d559748ec499c6ced11bced2c83514445cb04b370b4b1fc02a1717f5"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/spelunkery/glowsticks/white.json"
+hash = "4363ffe7d85f14047b64ee803d8fd8aa27eef23ce06d4614c5273e2862d3702a"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/spelunkery/glowsticks/yellow.json"
+hash = "c0e5e9db61fde55353e4a9931ece26294d3ff2fe337d37dc2d051f81b7d54aca"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/spelunkery/rough_cinnabar.json"
+hash = "fb4d4dfec2be099727a5fb2d10a9e18924f31384e5d5715a996efcbc0ed6e517"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/spelunkery/salt_lamp.json"
+hash = "2a2e3f073f2048d116a1262484df94ed28eb25d2878a2145125c3db4fccdc68b"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/stonezone/dimstone_tiles.json"
+hash = "d05764334991d79f28868672b2aa9468f8227c4758b16e69f1871c5679698eb5"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/stonezone/glowstone_tiles.json"
+hash = "8cb64461f4205d98d25e353ab41f92a88537b1d88c1fff1234251e758413d0ad"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/sulfur_brazier.json"
@@ -24504,6 +25204,118 @@ hash = "bf2a1733bc23d41009317c9addd88f8ab8292139ea7cadc861f468eabfe6aeed"
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/sulfur_lights.json"
 hash = "476e605f440b8f7a0cc3e46269ea6a8e5d61f99210fb68b5224404638027a64a"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/supplementaries/candle_holder_cupric.json"
+hash = "c35099d81a369ab08877e131bfa0eac0566ea027dafc9046a57aa98c4319a822"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/supplementaries/candle_holder_soul.json"
+hash = "761a193a7a5afc4297eb650a97ac5e1ab94fedfe36f9ce12517c15ba41bbdc3d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/supplementaries/candle_holders.json"
+hash = "18cfcde898ee29f695d21cbaa73cc35f18b7d0f1a346c4bf8662275ed8983cd8"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/supplementaries/fire_pit.json"
+hash = "b8ca721d44223a10f80dd216fcacca1bb59fd6bb1e74ca21492301e44910e47c"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/supplementaries/lavalogged.json"
+hash = "eec99dc1238b51614580db46fe64f0badec85c609c6f04e94c0d19a27c96bb5e"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/supplementaries/lumisene.json"
+hash = "d21277a7fff46d262e6657b7fb8a867f7380770480f0c3b128ea8730bd7bb4f5"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/supplementaries/redstone_illuminator.json"
+hash = "fe232b6dcc7c8f8e921457a8bb234e2e84e25754e1d8245a49f79720959eb225"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/supplementaries/sconce_glow.json"
+hash = "753d3169394d7020d6f803c4b8204006db7d40731a86594e7136f94e7f1ce55d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/supplementaries/stone_lamps.json"
+hash = "649e6b16009c4e4467fcc887627f6ac525fb7481b1ff894d278620ea217f97e4"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/suppsquared/copper_lantern.json"
+hash = "b366bd7514c5b639bf7fad5182d5837edc008c086a31aa01b57213beaaf88379"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/suppsquared/crimson_lantern.json"
+hash = "ef3956d8304026e6bf1dea948558900f652ea2698ab15c779faf2d23d1035590"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/suppsquared/gold_candle_holder_cupric.json"
+hash = "afa5352577a9265aca5d990403544b37e1c69b527b70842d65e1c2c65fc721eb"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/suppsquared/gold_candle_holder_soul.json"
+hash = "4f15115bf867f60f98a698685c2c702596de10a2acbc92fe92b63fb7d1d20d97"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/suppsquared/gold_candle_holders.json"
+hash = "c4f9627310e76f4cbbc6dc7d64f747049273d9e61e76fd73cc2d1ebb7cb57958"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/upgrade_aquatic/elder_prismarine_coral.json"
+hash = "c458c0d259fb8f25b91d8230d8d07b0ea843febca31ce92e60348da7824e4e0c"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/upgrade_aquatic/jelly_torches/blue.json"
+hash = "5336d735bb5dfa2f1dc3ea49fcb844375830e3e016d27349a501406ff0b6845a"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/upgrade_aquatic/jelly_torches/green.json"
+hash = "4076870e984563e4db1e431295c25541e68f08a76796f452826a1a096c82ae33"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/upgrade_aquatic/jelly_torches/orange.json"
+hash = "f20144c37a8acf515b03a74f5cc317d74f3bf55206463be16028c6b205abd165"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/upgrade_aquatic/jelly_torches/pink.json"
+hash = "00e2acdd8efe9f7a1c4600d8205fa1d610f87c33639680b81cf80c8e6b8b8213"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/upgrade_aquatic/jelly_torches/purple.json"
+hash = "bb346e9f9b3704762014cb49612e73608427f07cbcd2689d90825ffce5f7b76b"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/upgrade_aquatic/jelly_torches/red.json"
+hash = "415813ed3ce46ba77f95697e815b42421e5af2341a1b35f2840b12f11364ad0d"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/upgrade_aquatic/jelly_torches/white.json"
+hash = "b5a0f6abd75aa6deafe63d0c843ffb9117b94621dc331c3e99316adca71b0023"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/upgrade_aquatic/jelly_torches/yellow.json"
+hash = "4c45cfca6fec7f79853787db738c38e9de347b3a9f21e85117cade8786ce08e7"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/upgrade_aquatic/luminous_prismarine.json"
+hash = "09ba746364ad17aee6a5f83ce6efdad58f260a6209e597ab5510d87e5bdb003c"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/upgrade_aquatic/prismarine_coral.json"
+hash = "78f9646a2653d32710ef2ab1e96e1c6e646b5850c294818ad9f892a6f5ecc6fa"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/upgrade_aquatic/tooth_lantern.json"
+hash = "dc288ac6feedee9d00bcc27777822a477dc35b0f9bb5abce154dd2d1d530e713"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/vanilla_backport/creaking_heart.json"
+hash = "03240ef3ddedf067af68ff4d3a5925d1e8e1ddbbc562780eaa43356c3417d53e"
+
+[[files]]
+file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/colored_lights/vanilla_backport/resin_clump.json"
+hash = "44492b9d538dec33cbba370aa266c5769a9c63e061f72eff0fa5884385483f3d"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/spicedcider/polytone/global_expressions/pale_garden_fade.json"
@@ -26447,11 +27259,11 @@ hash = "a5ba22acd9109bf60703e9a2b980322e8afd9fb3349bc10baeb3edaa90dd127a"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/spicedcider/textures/gui/creative_tabs/building_icon.png"
-hash = "82ea09223aa4442146b43bc61fb8c9ee2b77489237e440de6ef5eb5a97d90de3"
+hash = "35377aa5f5ab7cbaf0048d5e27b16a9b8376deefff4b378d9bbdfae6186c7815"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/spicedcider/textures/gui/creative_tabs/colored_icon.png"
-hash = "4a71c1096e213b99bbf2e4096e0a5b2d3eb4fbb0c2c28a3e019bec50a2253971"
+hash = "1910cd3e70dd4e26d50af121c0f7d3dd858cec3989384ae461551183ebccedca"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/spicedcider/textures/gui/creative_tabs/combat_icon.png"
@@ -26487,7 +27299,7 @@ hash = "5b7648c69ed628d3ed0cf5c8d9c8842a40d65bbc4c274cbb2dc96bdca87814a6"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/spicedcider/textures/gui/creative_tabs/natural_icon.png"
-hash = "db61a7950b017390791debf49040cf1b22927d76bef43cb18c769a61d5716505"
+hash = "0b21364e73fcebd579860f7111e7ad2966cfc8afa865b59b4e55f2d3e7b73e85"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/spicedcider/textures/gui/creative_tabs/search_icon.png"

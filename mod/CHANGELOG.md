@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.5.1] - 2026-11-05
+
+### Fixed
+
+- Broken brushes can no longer brush armadillos.
+- Broken shears can no longer remove wolf armor.
+- Broken flint and steel can no longer ignite creepers.
+
 ## [1.5.0] - 2026-11-04
 
 ### Added
@@ -20,20 +28,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Sulfur fire: fire lit on sulfur burns blue. Standing in sulfur fire, or eating food cooked on a sulfur campfire,
   causes nausea
 - Sulfur versions of other mods' fire blocks:
-  - Supplementaries sconces and candle holders (plus Supp Squared's gold holders)
-  - Caverns & Chasms braziers
-  - Autumnity large jack o'lantern slices
-  - Environmental dwarf spruce torches
-  - Buzzier Bees candles and candle cakes
-  - Amendments skull candles
+    - Supplementaries sconces and candle holders (plus Supp Squared's gold holders)
+    - Caverns & Chasms braziers
+    - Autumnity large jack o'lantern slices
+    - Environmental dwarf spruce torches
+    - Buzzier Bees candles and candle cakes
+    - Amendments skull candles
 - Glowlight candles and candle cakes, with candle holders and skull candles (with Infernal Expansion and Buzzier Bees).
 - Option to let broken tools still cut on Farmer's Delight cutting boards *(off by default)*
 - Creaking eye particles under pale hanging moss in the dark (with Vanilla Backport)
 - Creakings are faster and harder-hitting (with Vanilla Backport) *(off by default)*
 - With Tiny Takeover Backport:
-  - Sniffers can dig up golden dandelions
-  - Golden dandelions give off golden specks
-  - Growing babies follow players holding a golden dandelion *(off by default)*
+    - Sniffers can dig up golden dandelions
+    - Golden dandelions give off golden specks
+    - Growing babies follow players holding a golden dandelion *(off by default)*
 
 ## [1.4.3] - 2026-11-04
 

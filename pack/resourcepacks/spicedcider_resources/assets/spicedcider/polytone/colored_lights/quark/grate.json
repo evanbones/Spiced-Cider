@@ -1,0 +1,11 @@
+{
+  "require_mods": "quark",
+  "targets": {
+    "id": "quark:grate",
+    "required": false
+  },
+  "colored_light": {
+    "color": "#FF6A1A",
+    "brightness": "object.blockStateValue('lavalogged') ? 1 : 0"
+  }
+}

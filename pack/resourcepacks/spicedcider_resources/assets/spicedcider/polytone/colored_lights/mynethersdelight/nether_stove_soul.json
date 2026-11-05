@@ -1,0 +1,11 @@
+{
+  "require_mods": "mynethersdelight",
+  "targets": {
+    "id": "mynethersdelight:nether_stove",
+    "required": false
+  },
+  "colored_light": {
+    "color": "#4FD8D8",
+    "brightness": "object.blockStateValue('soul') ? 1 : 0"
+  }
+}

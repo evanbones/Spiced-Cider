@@ -1,0 +1,8 @@
+{
+  "require_mods": "architects_palette",
+  "targets": "architects_palette:abyssaline(_bricks|_brick_slab|_tiles|_tile_slab|_pillar|_lamp)?",
+  "colored_light": {
+    "color": "#5A68FF",
+    "brightness": "object.blockStateValue('charged') ? 1 : 0"
+  }
+}

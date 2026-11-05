@@ -1,0 +1,11 @@
+{
+  "require_mods": "toil_and_trouble",
+  "targets": {
+    "id": "toil_and_trouble:cauldron",
+    "required": false
+  },
+  "colored_light": {
+    "color": "#FF6A1A",
+    "brightness": "object.blockStateValue('contents') == 'lava' ? 1 : 0"
+  }
+}

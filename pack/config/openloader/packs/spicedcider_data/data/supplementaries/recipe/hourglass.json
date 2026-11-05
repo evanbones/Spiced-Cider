@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "key": {
+    "0": {
+      "item": "minecraft:glass"
+    },
+    "1": {
+      "tag": "c:ingots/gold"
+    },
+    "S": {
+      "item": "modestmining:copper_screw"
+    }
+  },
+  "pattern": [
+    "010",
+    "S0S",
+    "010"
+  ],
+  "result": {
+    "id": "supplementaries:hourglass",
+    "count": 1
+  }
+}

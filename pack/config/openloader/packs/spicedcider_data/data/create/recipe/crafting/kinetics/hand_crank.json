@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "C": {
+      "tag": "minecraft:planks"
+    },
+    "A": {
+      "item": "alloyed:bronze_ingot"
+    },
+    "S": {
+      "item": "modestmining:copper_screw"
+    }
+  },
+  "pattern": [
+    "CCC",
+    " SA"
+  ],
+  "result": {
+    "id": "create:hand_crank",
+    "count": 1
+  }
+}

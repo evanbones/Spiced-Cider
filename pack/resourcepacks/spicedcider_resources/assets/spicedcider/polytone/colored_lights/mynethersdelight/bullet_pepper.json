@@ -1,0 +1,19 @@
+{
+  "require_mods": "mynethersdelight",
+  "targets": [
+    {
+      "id": "mynethersdelight:bullet_pepper",
+      "required": false
+    },
+    {
+      "id": "mynethersdelight:potted_bullet_pepper",
+      "required": false
+    },
+    {
+      "id": "mynethersdelight:bullet_pepper_crate",
+      "required": false
+    },
+    "mynethersdelight:powdery_(cannon|cane)"
+  ],
+  "colored_light": "#FF5A30"
+}
