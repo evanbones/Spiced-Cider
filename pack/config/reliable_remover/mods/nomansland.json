@@ -177,5 +177,19 @@
       "nomansland:stasis",
       "nomansland:long_stasis"
     ]
+  },
+  {
+    "action": "remove",
+    "items": [
+      "nomansland:ground_ivy"
+    ],
+    "replace_with": "wilderflowers:clovers"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "nomansland:white_flowerbed"
+    ],
+    "replace_with": "bountifulfares:chamomile_flowers"
   }
 ]

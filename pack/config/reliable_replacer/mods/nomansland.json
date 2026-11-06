@@ -142,5 +142,25 @@
       "nomansland:autumn_crocus"
     ],
     "output": "autumnity:autumn_crocus"
+  },
+  {
+    "inputs": [
+      "nomansland:ground_ivy"
+    ],
+    "output": "wilderflowers:clovers",
+    "randomize_properties": [
+      "facing",
+      "flower_amount"
+    ]
+  },
+  {
+    "inputs": [
+      "nomansland:white_flowerbed"
+    ],
+    "output": "bountifulfares:chamomile_flowers",
+    "randomize_properties": [
+      "facing",
+      "flower_amount"
+    ]
   }
 ]
