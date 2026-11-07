@@ -89,6 +89,7 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.BooleanValue tideSpawnEggs;
         public final ModConfigSpec.BooleanValue sulfurCavesRework;
         public final ModConfigSpec.BooleanValue brightCageLanterns;
+        public final ModConfigSpec.BooleanValue customWindowIcon;
 
         public Startup(ModConfigSpec.Builder builder) {
             blockBoxWoodVariants = builder
@@ -136,6 +137,10 @@ public class SpicedCiderConfig {
                     .translation("option.spicedcider.brightCageLanterns")
                     .define("brightCageLanterns", false);
 
+            customWindowIcon = builder
+                    .comment(tooltip("customWindowIcon"))
+                    .translation("option.spicedcider.customWindowIcon")
+                    .define("customWindowIcon", false);
         }
     }
 
@@ -551,10 +556,6 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.BooleanValue vistaMirrorFog;
         public final ModConfigSpec.IntValue vistaMirrorFogStart;
         public final ModConfigSpec.IntValue vistaMirrorFogEnd;
-        public final ModConfigSpec.DoubleValue vistaMirrorUpdateFps;
-        public final ModConfigSpec.DoubleValue vistaMirrorMinUpdateFps;
-        public final ModConfigSpec.DoubleValue vistaMirrorIdleUpdateFps;
-        public final ModConfigSpec.DoubleValue vistaMirrorThrottleBudgetMs;
 
         public final ModConfigSpec.IntValue cloudCoverFadeSeconds;
         public final ModConfigSpec.IntValue cloudCoverCommandFadeSeconds;
@@ -769,26 +770,6 @@ public class SpicedCiderConfig {
                     .comment(tooltip("vistaMirrorFogEnd"))
                     .translation("option.spicedcider.vistaMirrorFogEnd")
                     .defineInRange("vistaMirrorFogEnd", 90, 10, 100);
-
-            vistaMirrorUpdateFps = builder
-                    .comment(tooltip("vistaMirrorUpdateFps"))
-                    .translation("option.spicedcider.vistaMirrorUpdateFps")
-                    .defineInRange("vistaMirrorUpdateFps", 30.0, 1.0, 240.0);
-
-            vistaMirrorMinUpdateFps = builder
-                    .comment(tooltip("vistaMirrorMinUpdateFps"))
-                    .translation("option.spicedcider.vistaMirrorMinUpdateFps")
-                    .defineInRange("vistaMirrorMinUpdateFps", 4.0, 0.25, 240.0);
-
-            vistaMirrorIdleUpdateFps = builder
-                    .comment(tooltip("vistaMirrorIdleUpdateFps"))
-                    .translation("option.spicedcider.vistaMirrorIdleUpdateFps")
-                    .defineInRange("vistaMirrorIdleUpdateFps", 5.0, 0.25, 240.0);
-
-            vistaMirrorThrottleBudgetMs = builder
-                    .comment(tooltip("vistaMirrorThrottleBudgetMs"))
-                    .translation("option.spicedcider.vistaMirrorThrottleBudgetMs")
-                    .defineInRange("vistaMirrorThrottleBudgetMs", 3.5, 0.5, 1000.0);
 
             builder.pop();
             builder.push("weather");

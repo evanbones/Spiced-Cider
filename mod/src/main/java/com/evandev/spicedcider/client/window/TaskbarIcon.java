@@ -22,7 +22,7 @@ public final class TaskbarIcon {
     private static final int PID_APP_ID = 5;
 
     public static void sync(long glfwWindow) {
-        if (Util.getPlatform() != Util.OS.WINDOWS || glfwWindow == 0L) return;
+        if (Util.getPlatform() != Util.OS.WINDOWS || glfwWindow == 0L || !WindowIconConfig.enabled()) return;
         long hwnd = GLFWNativeWin32.glfwGetWin32Window(glfwWindow);
         if (hwnd == 0L) return;
         long big = User32.nSendMessage(hwnd, User32.WM_GETICON, ICON_BIG, 0L, User32.Functions.SendMessage);

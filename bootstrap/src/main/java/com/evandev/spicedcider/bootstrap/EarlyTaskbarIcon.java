@@ -8,7 +8,11 @@ import com.sun.jna.ptr.IntByReference;
 import net.neoforged.neoforgespi.earlywindow.GraphicsBootstrapper;
 
 import java.io.InputStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.Locale;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class EarlyTaskbarIcon implements GraphicsBootstrapper {
     private static final String APP_ID = "SpicedCider.Game";
@@ -20,6 +24,7 @@ public class EarlyTaskbarIcon implements GraphicsBootstrapper {
     private static final int GCL_HICONSM = -34;
     private static final int ICON_RESOURCE_VERSION = 0x00030000;
     private static final long TIMEOUT_MS = 60_000L;
+    private static final Pattern ENABLED_KEY = Pattern.compile("^\\s*customWindowIcon\\s*=\\s*(true|false)\\b");
 
     @Override
     public String name() {
@@ -29,6 +34,7 @@ public class EarlyTaskbarIcon implements GraphicsBootstrapper {
     @Override
     public void bootstrap(String[] arguments) {
         if (!System.getProperty("os.name", "").toLowerCase(Locale.ROOT).startsWith("windows")) return;
+        if (!enabled(gameDir(arguments))) return;
         try {
             Shell32.INSTANCE.SetCurrentProcessExplicitAppUserModelID(new WString(APP_ID));
         } catch (Throwable ignored) {
@@ -37,6 +43,26 @@ public class EarlyTaskbarIcon implements GraphicsBootstrapper {
         Thread thread = new Thread(EarlyTaskbarIcon::applyWhenWindowExists, "Cider Core early icon");
         thread.setDaemon(true);
         thread.start();
+    }
+
+    private static Path gameDir(String[] arguments) {
+        for (int i = 0; i + 1 < arguments.length; i++) {
+            if ("--gameDir".equals(arguments[i])) return Path.of(arguments[i + 1]);
+        }
+        return Path.of("");
+    }
+
+    private static boolean enabled(Path gameDir) {
+        try {
+            Path file = gameDir.resolve("config").resolve("spicedcider-startup.toml");
+            if (!Files.isRegularFile(file)) return false;
+            for (String line : Files.readAllLines(file)) {
+                Matcher m = ENABLED_KEY.matcher(line);
+                if (m.find()) return Boolean.parseBoolean(m.group(1));
+            }
+        } catch (Throwable ignored) {
+        }
+        return false;
     }
 
     private static void applyWhenWindowExists() {
