@@ -175,6 +175,8 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.BooleanValue backpackInventoryRows;
         public final ModConfigSpec.BooleanValue backpackAcceptAnything;
         public final ModConfigSpec.BooleanValue dustBunnySpawners;
+        public final ModConfigSpec.BooleanValue tapRedstone;
+        public final ModConfigSpec.BooleanValue tapFaucetFluids;
         public final ModConfigSpec.BooleanValue pineconesOnTrees;
         public final ModConfigSpec.BooleanValue copperGolemNoChest;
         public final ModConfigSpec.BooleanValue vanillaBackportLightTweaks;
@@ -272,6 +274,16 @@ public class SpicedCiderConfig {
                     .comment(tooltip("dustBunnySpawners"))
                     .translation("option.spicedcider.dustBunnySpawners")
                     .define("dustBunnySpawners", false);
+
+            tapRedstone = builder
+                    .comment(tooltip("tapRedstone"))
+                    .translation("option.spicedcider.tapRedstone")
+                    .define("tapRedstone", false);
+
+            tapFaucetFluids = builder
+                    .comment(tooltip("tapFaucetFluids"))
+                    .translation("option.spicedcider.tapFaucetFluids")
+                    .define("tapFaucetFluids", false);
 
             pineconesOnTrees = builder
                     .comment(tooltip("pineconesOnTrees"))

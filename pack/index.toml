@@ -998,11 +998,11 @@ hash = "ce8ab190281862b0554c92043c2bf8af106fbe4116bcd6dab433f6506781dbc0"
 
 [[files]]
 file = "config/livingwind-client.toml"
-hash = "6518f9e76d2b64870613f134e29124d7080e407af4ba01515e416e19a70ac154"
+hash = "b3016bc2977ce1c06e2054d93dbff54fc3d64a0580d196154e77d631131b97e0"
 
 [[files]]
 file = "config/livingwind-common.toml"
-hash = "e53e8ae688f313327e83fe6ed1c79480b2f9f32b829499979b10bf910ccdbcc4"
+hash = "767997f27dc686a3d0ef8c036cc8c85dfc9431c395d3a76feae0e02032a9b4ec"
 
 [[files]]
 file = "config/lmft.json"
@@ -5567,6 +5567,10 @@ hash = "b0aee6b754efe4d0c39f6dd0a9bf9470e08cca6452d2e29cb79346c743cc3536"
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/nomansland/tags/block/bonemealable_flowers.json"
 hash = "df01de14e886e534bf545cb7283dca552bdaccbe2038421cdadbdcc693545fdd"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/nomansland/tags/block/catches_drips.json"
+hash = "bf2b0fdef754aeb61fe2414bf1c10f0ee2d906f6e9c35cce0ae1f838a5370de5"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/nomansland/tags/block/heat_sources.json"
@@ -11706,7 +11710,7 @@ hash = "2edbf62b60165a7ebbea68d5babc9b1991c73ece3e00c57832d6e99529ed69ef"
 
 [[files]]
 file = "config/recreative/tab_layout.json"
-hash = "7b3a60e59ea8bba5bfdfeee12fc244c6b8884ee519ccba66db954a50f4f7b5f8"
+hash = "75fd2c372b0b0f2ce2a401107deac7687aa0d76244548a093347adecf2c0c65d"
 
 [[files]]
 file = "config/recreative/tab_order.json"
@@ -13658,7 +13662,7 @@ hash = "35cbbbee9094435965528b780ab95c89b951eff8c012067f7ec734b291eb0623"
 
 [[files]]
 file = "config/reliable_remover/mods/nomansland.json"
-hash = "752172ccc20b40c601596e73d1d5a4f9785bf34c723cf41afafa5cf4820b878f"
+hash = "01a4feed48964149f406360d3fb6505d2e4dd1199b28c77a0f7b30df2110b739"
 
 [[files]]
 file = "config/reliable_remover/mods/piglinproliferation.json"
@@ -13706,7 +13710,7 @@ hash = "636c92c18bc5826f8cc9f838ed5ea3fd8e43ccc048c036e6c8230f212becff31"
 
 [[files]]
 file = "config/reliable_remover/mods/supplementaries.json"
-hash = "4aefe5ebc4fd792b55398c908e6bbb16bdab6112785d6e4707bbd093ee6cc057"
+hash = "7f90f9a6872e07d3ef6cbadb96c40b328e0e31f2b327daad916a352505b58b7b"
 
 [[files]]
 file = "config/reliable_remover/mods/suppsquared.json"
@@ -13794,7 +13798,7 @@ hash = "d292d8ec4a068ac3c6523077536713fcc5451f4564fa34645cf93e7dee806d64"
 
 [[files]]
 file = "config/reliable_replacer/mods/nomansland.json"
-hash = "55ce1b88a9ca2a8bf73940c30dfe363a0da2e8ba5e84bad9d71d528c864b8ea8"
+hash = "0bb1be31ca62c155b5696ce74063c4b92c9abd60b6bda419dc274fa72b5efb98"
 
 [[files]]
 file = "config/reliable_replacer/mods/quark.json"
@@ -14626,7 +14630,7 @@ hash = "c9516063322549fc64c813ca2aea87b3dbb7c222ed302d526d22027d92a656bb"
 
 [[files]]
 file = "config/spicedcider-common.toml"
-hash = "9bd0d5734b263cc64e653c485f40a5bfcfeece222d6189c1f8b206fac708662c"
+hash = "0d9cec802a42036a5bbaeb4604600461c6d614702f2b281588dc5cdcee73f5a5"
 
 [[files]]
 file = "config/spicedcider-startup.toml"
@@ -14985,8 +14989,8 @@ file = "icon.png"
 hash = "079f5c8948d6ef6cbdf083e3f1029a562605f487be96f3728eeff588efadfde3"
 
 [[files]]
-file = "mods/LivingWind-NeoForge-1.21.1-v1.3.8.jar"
-hash = "aad440b3d59b95b6f228dd79eae6882e89184e6f306964f0b393e112d86d2b39"
+file = "mods/LivingWind-NeoForge-1.21.1-v1.4.0.jar"
+hash = "ce0c7dbdad57723b7041daf5b72539251fd7e6de74f15598dcaac24d18edfe71"
 
 [[files]]
 file = "mods/abnormals-delight.pw.toml"
@@ -15204,7 +15208,7 @@ metafile = true
 
 [[files]]
 file = "mods/cider-core.pw.toml"
-hash = "64d9c04cef43f92e5b6bd8a2357d7ad173e4d9931847281c5a06892f1c8962f3"
+hash = "84b34a6659348732061d5114892981cb89337e89e285e6e5a2c892ccf759284f"
 metafile = true
 
 [[files]]
@@ -15393,12 +15397,12 @@ metafile = true
 
 [[files]]
 file = "mods/experience-obliterator.pw.toml"
-hash = "f35b1ab14783111b1aa3ec54cfd3ab3ef01be361612f7073322bed7e0eec7a5a"
+hash = "f41405dee0eb24d09c1770e29003685b0b466ecdd9d99ba4d49e296070c64ab3"
 metafile = true
 
 [[files]]
 file = "mods/explorify.pw.toml"
-hash = "6adce6422e74091638dbd7872270ee58d9a22dc18340580f809cc50c739e0d4f"
+hash = "133a8fa53146424351e19d604b1d47a100797a3361b8cb3c2ee8971ee84f63b4"
 metafile = true
 
 [[files]]
@@ -15827,7 +15831,7 @@ metafile = true
 
 [[files]]
 file = "mods/polytone.pw.toml"
-hash = "17adf5afcb0c2f92ccd6d5818c5974500ae031e0c40395b34cda4fbcb738d3e6"
+hash = "a1154f83fb56311067825114deeabfc6d45e77fcad989170497524287f21286c"
 metafile = true
 
 [[files]]
@@ -15950,7 +15954,7 @@ hash = "5a40ebe5ab7def3d8ce5c99f9757c6c0370da7d694c4fabfddb31c4fb1e755d1"
 
 [[files]]
 file = "mods/sage-brush.pw.toml"
-hash = "1589a7674c1d068b6fc03ea863199bd4eb7af364abeef82c88163fdf88c1580c"
+hash = "626207a16068745d80938b392908229bf367323ee1b08c81f520262e128c4805"
 metafile = true
 
 [[files]]
@@ -16204,7 +16208,7 @@ metafile = true
 
 [[files]]
 file = "mods/whole-cloth.pw.toml"
-hash = "b0e67ef151fec51d1b4d2c22d5f1c2c7c7ded99e84504cab3af82b5e1c165472"
+hash = "1621252308cad8a113423fafd79b6982ae97018562bdd4862fdfcda177bc7a4e"
 metafile = true
 
 [[files]]
@@ -23609,7 +23613,7 @@ hash = "1fe78852f7ff03a4fa514360d7f17f4df4e2e4d051f21f56a2897ffc46d7b440"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/nomansland/lang/en_us.json"
-hash = "de289fb1a4f97e5b7ecbc1c5588e120e1d077c927ff1d3110ef1736303c6a4d6"
+hash = "e02bacaeb3701d40892acf9865f15a8c9548ee4133ce3cbbd2f31226a44305ce"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/nomansland/models/block/building/wooden_scaffolding_stable.json"
@@ -29721,7 +29725,7 @@ hash = "3100d2ead42b4460bb19c71fe02b688e2bc6b5577dcad13b503b820bc2698edd"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/supplementaries/lang/en_us.json"
-hash = "4d7aebb24b28cdee1b108e484d53f85593624f94562ca7f39b20ed4c010abbd6"
+hash = "939f53c50be813c1952bb0ad9a853bdd33d3a81a32b0678da89795461690de08"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/supplementaries/models/item/candle_holder_cupric.json"

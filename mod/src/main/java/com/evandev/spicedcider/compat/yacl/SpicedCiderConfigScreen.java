@@ -201,6 +201,10 @@ public class SpicedCiderConfigScreen {
                 toggle("whereWindsBlowNoBonemealGrass", common.whereWindsBlowNoBonemealGrass));
         group(groups, List.of("bettermineshafts", "spelunkery"),
                 toggle("dustBunnySpawners", common.dustBunnySpawners));
+        group(groups, List.of("nomansland"),
+                toggle("tapRedstone", common.tapRedstone));
+        group(groups, List.of("nomansland", "supplementaries"),
+                toggle("tapFaucetFluids", common.tapFaucetFluids));
         if (groups.isEmpty()) return null;
         return ConfigCategory.createBuilder()
                 .name(Component.translatable("category.spicedcider.compat"))

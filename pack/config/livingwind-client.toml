@@ -7,10 +7,7 @@
 	# Default: 0.12
 	# Range: 0.0 ~ 0.25
 	particleWindForce = 0.05
-	#Choose whether the particle ID list is a blacklist or whitelist.
-	#Allowed Values: BLACKLIST, WHITELIST
-	filterMode = "BLACKLIST"
-	#Your custom particle IDs (blacklist additions, or whitelist entries).
+	#Your extra particle blacklist IDs.
 	#Living Wind maintains built-in blacklist defaults separately; future updates never replace your custom entries.
 	filter = ["colored_lights:torch_glow", "nomansland:maple_syrup_droplet", "nomansland:maple_syrup_droplet_flat", "nomansland:resin_droplet", "nomansland:resin_droplet_flat", "nomansland:milk_droplet", "nomansland:milk_droplet_flat", "etcetera:dripping_rubber", "etcetera:falling_rubber", "etcetera:landing_rubber", "amendments:boiling_bubble"]
 	#Optional per-particle wind response multipliers, stored as modid:particle=multiplier.
@@ -70,6 +67,11 @@
 	# Default: 180
 	# Range: 20 ~ 600
 	maximumLifetimeTicks = 180
+	#Override ambient 1x1 pixel particle emitters per block as modid:block=TYPE.
+	#Types: GRASS, DUST, SAND, SNOW, LEAF, NETHER_DUST, NONE (disable).
+	#Built-in vanilla tag and mod compatibility defaults are used unless overridden.
+	#Choose blocks in the Ambient Pixel Block Emitters editor; missing mods are harmless.
+	blockEmitterOverrides = []
 
 #Subtle Breath-of-the-Wild-inspired visual wind lines; fully client-side.
 [windStreaks]
@@ -301,6 +303,18 @@
 	#This selection is independent of the Ambient Sounds wind-audio mode.
 	#Allowed Values: LIVING_WIND, DYNAMIC_SURROUNDINGS, BOTH
 	dynamicSurroundingsWindMode = "LIVING_WIND"
+	#Layer subtle, spatialized mono airflow and wind gusts over the full stereo wind soundscape. Turning toward the wind changes their direction. Stereo ambience remains unchanged.
+	directionalWind = true
+	#Strength of the quiet upwind spatial layer and its directional gust accents. Set to 0 for no directional layer (gusts stay centered only when directional wind is disabled).
+	# Default: 1.0
+	# Range: 0.0 ~ 3.0
+	directionalWindVolume = 1.0
+	#Choose which mod supplies wind audio when AmbiMod is installed.
+	#LIVING_WIND (default): only Living Wind wind. AMBI: only Ambi wind. BOTH: both wind soundtracks.
+	#Only Ambi's wind loop is affected. Its birds, weather, ocean, caves and other ambience stay enabled.
+	#This selection is independent of the Ambient Sounds and Dynamic Surroundings wind modes.
+	#Allowed Values: LIVING_WIND, AMBI, BOTH
+	ambiWindMode = "LIVING_WIND"
 
 #Reduce effective visual wind in enclosed spaces.
 [exposure]
@@ -326,3 +340,7 @@
 	#OFF: no overlay; SIMPLE: wind strength, direction and gust status; ALL: full diagnostic overlay.
 	#Allowed Values: OFF, SIMPLE, ALL
 	hudMode = "OFF"
+	#Diagnostic audio isolation for Living Wind only. NORMAL: regular stereo and directional mix; STEREO_ONLY: stereo wind beds, without extra accents; DIRECTIONAL_ONLY: spatial mono wind and gusts only.
+	#Reset to NORMAL after testing. This does not affect other ambience mods.
+	#Allowed Values: NORMAL, STEREO_ONLY, DIRECTIONAL_ONLY
+	windAudioDebugMode = "NORMAL"

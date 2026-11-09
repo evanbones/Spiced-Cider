@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.client.events;
 
+import com.evandev.spicedcider.client.renderer.TapStreamRenderer;
 import com.evandev.spicedcider.client.FireVariantClient;
 import com.evandev.spicedcider.client.MapIconProperty;
 import com.evandev.spicedcider.SpicedCider;
@@ -102,6 +103,9 @@ public class ClientModEvents {
         event.registerEntityRenderer(ModEntityTypes.STRAW_GOLEM.get(), StrawGolemRenderer::new);
         if (TideCompat.isLoaded()) {
             event.registerEntityRenderer(ModEntityTypes.GRAPPLING_HOOK.get(), GrapplingHookRenderer::new);
+        }
+        if (ModList.get().isLoaded("nomansland") && ModList.get().isLoaded("supplementaries")) {
+            TapStreamRenderer.register(event);
         }
     }
 

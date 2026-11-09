@@ -41,6 +41,7 @@ public class ModTags {
 
     public static class Blocks {
         public static final TagKey<Block> HANGS_FROM_CEILING = tag("hangs_from_ceiling");
+        public static final TagKey<Block> TAP_SUPPORTS = tag("tap_supports");
         public static final TagKey<Block> NEEDS_AXE_TO_HARVEST = tag("needs_axe_to_harvest");
         public static final TagKey<Block> NEEDS_HOE_TO_HARVEST = tag("needs_hoe_to_harvest");
         public static final TagKey<Block> CACAO_LOGS = tag("cacao_logs");

@@ -36,6 +36,40 @@
 	# Default: 2400
 	# Range: 200 ~ 12000
 	preStormLeadTicks = 2400
+	#Use separate background wind strength ranges for clear weather, rain and thunderstorms.
+	#OFF by default - the original weather bonuses and wind simulation remain unchanged.
+	#Gusts, pre-storm fronts, manual windy events and the global strength multiplier still apply separately.
+	useStrengthRanges = false
+	#Minimum ordinary wind strength in clear weather, before global scaling and gusts.
+	# Default: 0.05
+	# Range: 0.0 ~ 2.5
+	clearMinimumStrength = 0.05
+	#Maximum ordinary wind strength in clear weather. Set equal to the minimum for steady background wind.
+	# Default: 0.4
+	# Range: 0.0 ~ 2.5
+	clearMaximumStrength = 0.4
+	#Minimum ordinary wind strength during rain, before global scaling and gusts.
+	# Default: 0.3
+	# Range: 0.0 ~ 2.5
+	rainMinimumStrength = 0.3
+	#Maximum ordinary wind strength during rain. Set equal to the minimum for steady background wind.
+	# Default: 0.85
+	# Range: 0.0 ~ 2.5
+	rainMaximumStrength = 0.85
+	#Minimum ordinary wind strength during thunderstorms, before global scaling and gusts.
+	# Default: 0.65
+	# Range: 0.0 ~ 2.5
+	thunderMinimumStrength = 0.65
+	#Maximum ordinary wind strength during thunderstorms. Set equal to the minimum for steady background wind.
+	# Default: 1.35
+	# Range: 0.0 ~ 2.5
+	thunderMaximumStrength = 1.35
+	#Ordinary wind strength fluctuation (0 = steady, 1 = full natural variation).
+	#When custom weather ranges are enabled, this controls the movement inside each range.
+	#Does not suppress gusts, pre-storm fronts, commands, wind direction changes or weather transitions.
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	strengthFluctuation = 1.0
 
 #Occasional naturally windy periods independent of storms.
 [events]
@@ -229,3 +263,33 @@
 	# Default: 1.0
 	# Range: 0.0 ~ 5.0
 	droppedItemMultiplier = 1.0
+	#Check outdoor exposure for wind-affected entities. Disable to skip per-entity sky checks for better performance, but entities can then be pushed indoors or underground. Does not change particle or sound shelter behavior.
+	checkShelter = true
+	#Extra entity push multiplier during clear weather, applied on top of each entity type's own wind impact settings.
+	#0 = no entity push in clear weather, 1.0 = unchanged. Rain and thunder transitions blend smoothly. Only used if Entity Wind is enabled.
+	# Default: 1.0
+	# Range: 0.0 ~ 5.0
+	clearWeatherMultiplier = 1.0
+	#Extra entity push multiplier during rain (all affected entity types). 1.0 keeps the original strength.
+	#Applied only to entity wind, not Living Wind's shared wind strength or particle physics.
+	# Default: 1.0
+	# Range: 0.0 ~ 5.0
+	rainMultiplier = 1.0
+	#Extra entity push multiplier during thunderstorms (all affected entity types). 1.0 keeps the original strength.
+	#Works independently of the Weather page's wind strength ranges and blends during weather transitions.
+	# Default: 1.0
+	# Range: 0.0 ~ 5.0
+	thunderMultiplier = 1.0
+	#Extra projectile entity IDs exempt from wind movement. Built-in protections are applied separately. Only checked when entity and projectile wind are enabled.
+	projectileBlacklist = []
+	#Built-in projectile exemptions to disable after unlocking defaults in the editor. These are no longer protected from wind.
+	projectileBlacklistExceptions = []
+
+#Optional directional wind for deployed gliders from Gliders, Reliable Gliders, and Paraglider. Independent of Entity Wind; only affects actively gliding local players.
+[gliderWind]
+	#Let wind push an actively gliding player. Handles headwinds, tailwinds and sideways drift; prevents stacking with ordinary player Entity Wind.
+	enabled = true
+	#Strength of the glider-only wind effect. 0 disables movement, 1 is balanced; higher values are stronger. The effect is smooth and capped.
+	# Default: 1.0
+	# Range: 0.0 ~ 3.0
+	influence = 1.0

@@ -17,6 +17,10 @@
 	backpackAcceptAnything = true
 	#Half of the mineshaft side-room dungeon spawners spawn dust bunnies. Requires YUNG's Better Mineshafts and Spelunkery. Only affects newly generated terrain.
 	dustBunnySpawners = true
+	#A change in redstone power opens or closes a tap. Requires No Man's Land.
+	tapRedstone = true
+	#Taps drain and fill everything a Supplementaries faucet can, such as jars, beehives and modded cauldrons, and show a stream of liquid while pouring. Requires No Man's Land and Supplementaries.
+	tapFaucetFluids = true
 	#Trees with pinecone-growing logs generate with pinecones. Requires Environmental. Only affects newly generated terrain.
 	pineconesOnTrees = true
 	#Building a copper golem doesn't leave a copper chest behind. Requires Vanilla Backport.
