@@ -167,6 +167,8 @@ public class SpicedCiderConfigScreen {
         group(groups, List.of("environmental"),
                 toggle("oldWisteriaTrees", common.oldWisteriaTrees),
                 toggle("pineconesOnTrees", common.pineconesOnTrees));
+        group(groups, List.of("incrementalmining"),
+                toggle("incrementalMiningVanillaSpeed", common.incrementalMiningVanillaSpeed));
         group(groups, List.of("lodged"),
                 toggle("lodgedHideArrowDepth", client.lodgedHideArrowDepth),
                 toggle("lodgedHideBleedingRisk", client.lodgedHideBleedingRisk));

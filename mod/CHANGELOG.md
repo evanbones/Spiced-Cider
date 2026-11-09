@@ -5,6 +5,27 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.7.1] - 2026-11-09
+
+### Fixed
+
+- Fixed a crash with Offgrid 1.0.6.
+
+### Added
+
+- Re-added Incremental Mining integration.
+
+## [1.7.0] - 2026-11-08
+
+### Added
+
+- No Man's Land taps can be opened and closed with redstone (Redstone Taps option, off by default).
+- No Man's Land taps pour to and from everything a Supplementaries faucet can, such as jars, beehives and modded cauldrons, can hang on jars, and show a stream of liquid while pouring (Taps Pour Any Fluid option, off by default; needs Supplementaries).
+
+### Removed
+
+- Removed Incremental Mining integration.
+
 ## [1.6.3] - 2026-11-07
 
 ### Added

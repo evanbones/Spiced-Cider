@@ -174,6 +174,7 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.BooleanValue whereWindsBlowNoBonemealGrass;
         public final ModConfigSpec.BooleanValue backpackInventoryRows;
         public final ModConfigSpec.BooleanValue backpackAcceptAnything;
+        public final ModConfigSpec.BooleanValue incrementalMiningVanillaSpeed;
         public final ModConfigSpec.BooleanValue dustBunnySpawners;
         public final ModConfigSpec.BooleanValue tapRedstone;
         public final ModConfigSpec.BooleanValue tapFaucetFluids;
@@ -269,6 +270,11 @@ public class SpicedCiderConfig {
                     .comment(tooltip("backpackAcceptAnything"))
                     .translation("option.spicedcider.backpackAcceptAnything")
                     .define("backpackAcceptAnything", false);
+
+            incrementalMiningVanillaSpeed = builder
+                    .comment(tooltip("incrementalMiningVanillaSpeed"))
+                    .translation("option.spicedcider.incrementalMiningVanillaSpeed")
+                    .define("incrementalMiningVanillaSpeed", false);
 
             dustBunnySpawners = builder
                     .comment(tooltip("dustBunnySpawners"))
