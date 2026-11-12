@@ -1,0 +1,209 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
+      "name": "pool0",
+      "entries": [
+        {
+          "value": "minecraft:chests/village/village_plains_house",
+          "type": "minecraft:loot_table"
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "min": 1.0,
+        "max": 3.0,
+        "type": "minecraft:uniform"
+      },
+      "bonus_rolls": 0.0,
+      "name": "pool1",
+      "entries": [
+        {
+          "name": "minecraft:dark_oak_log",
+          "type": "minecraft:item"
+        },
+        {
+          "name": "minecraft:dark_oak_sapling",
+          "type": "minecraft:item"
+        },
+        {
+          "name": "minecraft:red_mushroom",
+          "type": "minecraft:item"
+        }
+      ],
+      "functions": [
+        {
+          "count": {
+            "min": 1.0,
+            "max": 3.0,
+            "type": "minecraft:uniform"
+          },
+          "add": false,
+          "function": "minecraft:set_count"
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "n": 2.0,
+        "p": 0.2,
+        "type": "minecraft:binomial"
+      },
+      "bonus_rolls": 0.0,
+      "name": "pool2",
+      "entries": [
+        {
+          "functions": [
+            {
+              "count": {
+                "min": 3.0,
+                "max": 7.0,
+                "type": "minecraft:uniform"
+              },
+              "add": false,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:raw_gold",
+          "weight": 10,
+          "type": "minecraft:item"
+        },
+        {
+          "name": "minecraft:golden_apple",
+          "weight": 5,
+          "type": "minecraft:item"
+        },
+        {
+          "name": "minecraft:music_disc_cat",
+          "type": "minecraft:item"
+        },
+        {
+          "name": "minecraft:music_disc_13",
+          "type": "minecraft:item"
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "type": "minecraft:uniform",
+        "min": 1,
+        "max": 3
+      },
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stick",
+          "weight": 4,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 2,
+                "max": 5
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "farmersdelight:straw",
+          "weight": 3,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 2,
+                "max": 5
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "farmersdelight:rope",
+          "weight": 3,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 3
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:torch",
+          "weight": 3,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 2,
+                "max": 4
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:flint",
+          "weight": 3,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 3
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "modestmining:coal_chunk",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 2,
+                "max": 5
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:empty",
+          "weight": 4
+        }
+      ]
+    },
+    {
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "spicedcider:travelers_pouch",
+          "weight": 35
+        },
+        {
+          "type": "minecraft:empty",
+          "weight": 65
+        }
+      ]
+    }
+  ]
+}

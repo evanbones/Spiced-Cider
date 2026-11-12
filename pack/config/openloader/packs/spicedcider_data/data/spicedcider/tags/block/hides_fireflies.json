@@ -1,0 +1,24 @@
+{
+  "values": [
+    "minecraft:short_grass",
+    "minecraft:tall_grass",
+    "minecraft:fern",
+    "minecraft:large_fern",
+    {
+      "id": "nomansland:grass_sprouts",
+      "required": false
+    },
+    {
+      "id": "nomansland:dried_grass",
+      "required": false
+    },
+    {
+      "id": "nomansland:frosted_grass",
+      "required": false
+    },
+    {
+      "id": "environmental:giant_tall_grass",
+      "required": false
+    }
+  ]
+}

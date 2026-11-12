@@ -20,12 +20,12 @@ import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParams;
 import org.jetbrains.annotations.NotNull;
 
-public class SeedPouchItem extends Item {
-    private static final ResourceKey<LootTable> CONTENTS = ResourceKey.create(Registries.LOOT_TABLE,
-            ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "gameplay/seed_pouch"));
+public class LootPouchItem extends Item {
+    private final ResourceKey<LootTable> contents;
 
-    public SeedPouchItem(Properties properties) {
+    public LootPouchItem(Properties properties, String table) {
         super(properties);
+        this.contents = ResourceKey.create(Registries.LOOT_TABLE, ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, table));
     }
 
     @Override
@@ -38,7 +38,7 @@ public class SeedPouchItem extends Item {
                     .withParameter(LootContextParams.THIS_ENTITY, player)
                     .withLuck(player.getLuck())
                     .create(LootContextParamSets.CHEST);
-            serverLevel.getServer().reloadableRegistries().getLootTable(CONTENTS).getRandomItems(params).forEach(item -> {
+            serverLevel.getServer().reloadableRegistries().getLootTable(this.contents).getRandomItems(params).forEach(item -> {
                 if (!player.getInventory().add(item)) player.drop(item, false);
             });
         }

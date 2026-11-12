@@ -246,7 +246,7 @@
               }
             }
           ],
-          "name": "minecraft:iron_ingot"
+          "name": "minecraft:raw_iron"
         },
         {
           "type": "minecraft:item",
@@ -261,53 +261,50 @@
               }
             }
           ],
-          "name": "minecraft:gold_ingot"
+          "name": "minecraft:raw_gold"
         },
         {
           "type": "minecraft:item",
           "weight": 1,
-          "name": "minecraft:diamond_sword",
+          "name": "spelunkery:rough_diamond_shard",
           "functions": [
             {
-              "function": "minecraft:set_damage",
-              "damage": {
+              "function": "minecraft:set_count",
+              "count": {
                 "type": "minecraft:uniform",
-                "min": 0.5,
-                "max": 0.9
-              },
-              "add": false
+                "min": 2,
+                "max": 4
+              }
             }
           ]
         },
         {
           "type": "minecraft:item",
           "weight": 1,
-          "name": "minecraft:diamond_axe",
+          "name": "spelunkery:rough_diamond_shard",
           "functions": [
             {
-              "function": "minecraft:set_damage",
-              "damage": {
+              "function": "minecraft:set_count",
+              "count": {
                 "type": "minecraft:uniform",
-                "min": 0.5,
-                "max": 0.9
-              },
-              "add": false
+                "min": 2,
+                "max": 4
+              }
             }
           ]
         },
         {
           "type": "minecraft:item",
           "weight": 1,
-          "name": "minecraft:diamond_shovel",
+          "name": "spelunkery:rough_diamond_shard",
           "functions": [
             {
-              "function": "minecraft:set_damage",
-              "damage": {
+              "function": "minecraft:set_count",
+              "count": {
                 "type": "minecraft:uniform",
-                "min": 0.5,
-                "max": 0.9
-              },
-              "add": false
+                "min": 2,
+                "max": 4
+              }
             }
           ]
         }
@@ -473,6 +470,160 @@
             }
           ],
           "name": "minecraft:potato"
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "type": "minecraft:uniform",
+        "min": 1,
+        "max": 3
+      },
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:cobblestone",
+          "weight": 4,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 2,
+                "max": 6
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:gravel",
+          "weight": 3,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 2,
+                "max": 5
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "nomansland:pebbles",
+          "weight": 3,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 2,
+                "max": 5
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:flint",
+          "weight": 3,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 3
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stick",
+          "weight": 3,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 2,
+                "max": 5
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:bone_meal",
+          "weight": 3,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 2,
+                "max": 4
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "supplementaries:ash",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 2,
+                "max": 5
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:cobweb",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 3
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "spicedcider:tin_can",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:empty",
+          "weight": 4
+        }
+      ]
+    },
+    {
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "spicedcider:travelers_pouch",
+          "weight": 25
+        },
+        {
+          "type": "minecraft:empty",
+          "weight": 75
         }
       ]
     }

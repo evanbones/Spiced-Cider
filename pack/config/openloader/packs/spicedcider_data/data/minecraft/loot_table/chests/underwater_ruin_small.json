@@ -1,0 +1,233 @@
+{
+  "type": "minecraft:chest",
+  "random_sequence": "minecraft:chests/underwater_ruin_small",
+  "pools": [
+    {
+      "rolls": {
+        "min": 2.0,
+        "max": 8.0,
+        "type": "minecraft:uniform"
+      },
+      "bonus_rolls": 0.0,
+      "name": "pool0",
+      "entries": [
+        {
+          "functions": [
+            {
+              "count": {
+                "min": 1.0,
+                "max": 4.0,
+                "type": "minecraft:uniform"
+              },
+              "add": false,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:coal",
+          "weight": 10,
+          "type": "minecraft:item"
+        },
+        {
+          "name": "minecraft:stone_axe",
+          "weight": 2,
+          "type": "minecraft:item"
+        },
+        {
+          "name": "minecraft:rotten_flesh",
+          "weight": 5,
+          "type": "minecraft:item"
+        },
+        {
+          "name": "minecraft:emerald",
+          "type": "minecraft:item"
+        },
+        {
+          "functions": [
+            {
+              "count": {
+                "min": 2.0,
+                "max": 3.0,
+                "type": "minecraft:uniform"
+              },
+              "add": false,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:wheat",
+          "weight": 10,
+          "type": "minecraft:item"
+        },
+        {
+          "name": "minecraft:iron_spear",
+          "weight": 2,
+          "type": "minecraft:item"
+        }
+      ]
+    },
+    {
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
+      "name": "pool1",
+      "entries": [
+        {
+          "name": "minecraft:leather_chestplate",
+          "type": "minecraft:item"
+        },
+        {
+          "name": "minecraft:golden_helmet",
+          "type": "minecraft:item"
+        },
+        {
+          "functions": [
+            {
+              "options": "#minecraft:on_random_loot",
+              "function": "minecraft:enchant_randomly"
+            }
+          ],
+          "name": "minecraft:fishing_rod",
+          "weight": 5,
+          "type": "minecraft:item"
+        },
+        {
+          "functions": [
+            {
+              "zoom": 1,
+              "skip_existing_chunks": false,
+              "decoration": "minecraft:red_x",
+              "function": "minecraft:exploration_map"
+            },
+            {
+              "name": {
+                "translate": "filled_map.buried_treasure"
+              },
+              "target": "item_name",
+              "function": "minecraft:set_name"
+            }
+          ],
+          "name": "minecraft:map",
+          "weight": 5,
+          "type": "minecraft:item"
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "type": "minecraft:uniform",
+        "min": 1,
+        "max": 3
+      },
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "farmersdelight:rope",
+          "weight": 4,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 2,
+                "max": 5
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:dried_kelp",
+          "weight": 4,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 2,
+                "max": 5
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:string",
+          "weight": 3,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 2,
+                "max": 4
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:paper",
+          "weight": 3,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 4
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "spelunkery:salt",
+          "weight": 3,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 3
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:prismarine_crystals",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 2
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:empty",
+          "weight": 4
+        }
+      ]
+    },
+    {
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "spicedcider:bait_can",
+          "weight": 35
+        },
+        {
+          "type": "minecraft:empty",
+          "weight": 65
+        }
+      ]
+    }
+  ]
+}

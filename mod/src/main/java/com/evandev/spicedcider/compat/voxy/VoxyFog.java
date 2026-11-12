@@ -26,6 +26,7 @@ import net.neoforged.neoforge.client.event.ViewportEvent;
 import net.neoforged.neoforge.common.Tags;
 
 import java.lang.ref.WeakReference;
+import java.util.Arrays;
 
 @EventBusSubscriber(modid = SpicedCider.MOD_ID, value = Dist.CLIENT)
 public final class VoxyFog {
@@ -47,8 +48,10 @@ public final class VoxyFog {
     private static float weather;
     private static float dust;
     private static float redSand;
-    private static float edgeTarget = -1.0F;
-    private static float edge = -1.0F;
+    private static final float[] edgeTarget = {-1.0F, -1.0F, -1.0F, -1.0F};
+    private static final float[] edge = {-1.0F, -1.0F, -1.0F, -1.0F};
+    private static final float[] edgeStretch = new float[4];
+    private static boolean applied;
     private static long lastNanos;
     private static WeakReference<ClientLevel> lastLevel = new WeakReference<>(null);
 
@@ -56,13 +59,29 @@ public final class VoxyFog {
         return SpicedCiderConfig.CLIENT_SPEC.isLoaded() && SpicedCiderConfig.CLIENT.voxyFogOverride.get();
     }
 
-    public static void receiveEdge(float distance) {
-        edgeTarget = distance;
+    public static void receiveEdge(float east, float west, float south, float north) {
+        edgeTarget[0] = east;
+        edgeTarget[1] = west;
+        edgeTarget[2] = south;
+        edgeTarget[3] = north;
+    }
+
+    public static float[] edgeStretch() {
+        for (int i = 0; i < 4; i++) {
+            float stretch = 0.0F;
+            if (applied && edge[i] >= 0.0F) {
+                float limited = Mth.clamp(edge[i] - EDGE_MARGIN, 16.0F, fogEnd);
+                stretch = fogEnd / limited - 1.0F;
+            }
+            edgeStretch[i] = stretch;
+        }
+        return edgeStretch;
     }
 
     public static void prepare(Camera camera, FogRenderer.FogMode mode, float farPlaneDistance, boolean thickFog, float partialTick) {
         if (mode != FogRenderer.FogMode.FOG_TERRAIN) return;
         pending = false;
+        applied = false;
 
         SpicedCiderConfig.Client config = SpicedCiderConfig.CLIENT;
         if (!SpicedCiderConfig.CLIENT_SPEC.isLoaded() || !config.voxyFogOverride.get()) return;
@@ -103,8 +122,9 @@ public final class VoxyFog {
             start = Mth.lerp(dust, start, Math.min(start, DUST_FOG_START));
         }
 
-        if (edge >= 0.0F) {
-            float limited = Math.min(end, edge - EDGE_MARGIN);
+        float nearestEdge = EdgeFogShaders.active() ? -1.0F : nearestEdge();
+        if (nearestEdge >= 0.0F) {
+            float limited = Math.min(end, nearestEdge - EDGE_MARGIN);
             if (limited < end) {
                 start *= Math.max(limited, 0.0F) / end;
                 end = limited;
@@ -120,6 +140,7 @@ public final class VoxyFog {
     public static void finish(FogRenderer.FogMode mode) {
         if (mode != FogRenderer.FogMode.FOG_TERRAIN || !pending) return;
         pending = false;
+        applied = true;
         RenderSystem.setShaderFogStart(fogStart);
         RenderSystem.setShaderFogEnd(fogEnd);
         RenderSystem.setShaderFogShape(FogShape.SPHERE);
@@ -169,15 +190,26 @@ public final class VoxyFog {
         return Math.max(-fogEnd * 2.0F, clamped - lead);
     }
 
-    private static void updateEdge(float seconds) {
-        if (edgeTarget < 0.0F) {
-            edge = edge < 0.0F ? -1.0F : edge + seconds * Math.max(edge, 64.0F) / EDGE_OPEN_SECONDS;
-            if (edge > VoxyBridge.lodDistance() * 2.0F) edge = -1.0F;
-            return;
+    private static float nearestEdge() {
+        float nearest = -1.0F;
+        for (float distance : edge) {
+            if (distance >= 0.0F && (nearest < 0.0F || distance < nearest)) nearest = distance;
         }
-        if (edge < 0.0F) edge = Math.max(edgeTarget, VoxyBridge.lodDistance());
-        float time = edgeTarget < edge ? EDGE_CLOSE_SECONDS : EDGE_OPEN_SECONDS;
-        edge += (edgeTarget - edge) * (1.0F - (float) Math.exp(-seconds / time));
+        return nearest;
+    }
+
+    private static void updateEdge(float seconds) {
+        float lodDistance = VoxyBridge.lodDistance();
+        for (int i = 0; i < 4; i++) {
+            if (edgeTarget[i] < 0.0F) {
+                edge[i] = edge[i] < 0.0F ? -1.0F : edge[i] + seconds * Math.max(edge[i], 64.0F) / EDGE_OPEN_SECONDS;
+                if (edge[i] > lodDistance * 2.0F) edge[i] = -1.0F;
+                continue;
+            }
+            if (edge[i] < 0.0F) edge[i] = Math.max(edgeTarget[i], lodDistance);
+            float time = edgeTarget[i] < edge[i] ? EDGE_CLOSE_SECONDS : EDGE_OPEN_SECONDS;
+            edge[i] += (edgeTarget[i] - edge[i]) * (1.0F - (float) Math.exp(-seconds / time));
+        }
     }
 
     private static void updateEnvironment(ClientLevel level, Camera camera, float partialTick) {
@@ -205,13 +237,13 @@ public final class VoxyFog {
 
         long now = System.nanoTime();
         if (lastLevel.get() != level || lastNanos == 0) {
-            if (lastLevel.get() != level) edgeTarget = -1.0F;
+            if (lastLevel.get() != level) Arrays.fill(edgeTarget, -1.0F);
             lastLevel = new WeakReference<>(level);
             underground = undergroundTarget;
             weather = weatherTarget;
             dust = dustTarget;
             redSand = redTarget;
-            edge = edgeTarget;
+            System.arraycopy(edgeTarget, 0, edge, 0, 4);
         } else {
             float seconds = Math.min((now - lastNanos) / 1.0E9F, 1.0F);
             float blend = 1.0F - (float) Math.exp(-seconds / TRANSITION_SECONDS);

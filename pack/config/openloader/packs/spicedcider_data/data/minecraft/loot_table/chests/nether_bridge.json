@@ -1,0 +1,300 @@
+{
+  "type": "minecraft:chest",
+  "random_sequence": "minecraft:chests/nether_bridge",
+  "pools": [
+    {
+      "rolls": {
+        "min": 2.0,
+        "max": 4.0,
+        "type": "minecraft:uniform"
+      },
+      "bonus_rolls": 0.0,
+      "name": "pool0",
+      "entries": [
+        {
+          "functions": [
+            {
+              "count": {
+                "min": 1.0,
+                "max": 3.0,
+                "type": "minecraft:uniform"
+              },
+              "add": false,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "spelunkery:rough_diamond",
+          "weight": 5,
+          "type": "minecraft:item"
+        },
+        {
+          "functions": [
+            {
+              "count": {
+                "min": 1.0,
+                "max": 5.0,
+                "type": "minecraft:uniform"
+              },
+              "add": false,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:raw_iron",
+          "weight": 5,
+          "type": "minecraft:item"
+        },
+        {
+          "functions": [
+            {
+              "count": {
+                "min": 1.0,
+                "max": 3.0,
+                "type": "minecraft:uniform"
+              },
+              "add": false,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:raw_gold",
+          "weight": 15,
+          "type": "minecraft:item"
+        },
+        {
+          "name": "minecraft:golden_sword",
+          "weight": 5,
+          "type": "minecraft:item"
+        },
+        {
+          "name": "minecraft:golden_chestplate",
+          "weight": 5,
+          "type": "minecraft:item"
+        },
+        {
+          "name": "spicedcider:fire_striker",
+          "weight": 5,
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 2,
+                "max": 5
+              }
+            }
+          ]
+        },
+        {
+          "functions": [
+            {
+              "count": {
+                "min": 3.0,
+                "max": 7.0,
+                "type": "minecraft:uniform"
+              },
+              "add": false,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:nether_wart",
+          "weight": 5,
+          "type": "minecraft:item"
+        },
+        {
+          "name": "minecraft:saddle",
+          "weight": 10,
+          "type": "minecraft:item"
+        },
+        {
+          "name": "minecraft:golden_horse_armor",
+          "weight": 8,
+          "type": "minecraft:item"
+        },
+        {
+          "name": "minecraft:iron_horse_armor",
+          "weight": 5,
+          "type": "minecraft:item"
+        },
+        {
+          "name": "minecraft:diamond_horse_armor",
+          "weight": 3,
+          "type": "minecraft:item"
+        },
+        {
+          "functions": [
+            {
+              "count": {
+                "min": 2.0,
+                "max": 4.0,
+                "type": "minecraft:uniform"
+              },
+              "add": false,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:obsidian",
+          "weight": 2,
+          "type": "minecraft:item"
+        },
+        {
+          "functions": [
+            {
+              "count": {
+                "min": 1.0,
+                "max": 5.0,
+                "type": "minecraft:uniform"
+              },
+              "add": false,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "caverns_and_chasms:raw_silver",
+          "weight": 5,
+          "type": "minecraft:item"
+        },
+        {
+          "name": "caverns_and_chasms:silver_horse_armor",
+          "weight": 6,
+          "type": "minecraft:item"
+        },
+        {
+          "name": "caverns_and_chasms:copper_horse_armor",
+          "weight": 5,
+          "type": "minecraft:item"
+        },
+        {
+          "name": "caverns_and_chasms:turquoise",
+          "type": "minecraft:item"
+        },
+        {
+          "name": "minecraft:copper_horse_armor",
+          "weight": 5,
+          "type": "minecraft:item"
+        },
+        {
+          "name": "quark:smithing_template_rune",
+          "weight": 8,
+          "type": "minecraft:item"
+        }
+      ]
+    },
+    {
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
+      "name": "pool1",
+      "entries": [
+        {
+          "weight": 14,
+          "type": "minecraft:empty"
+        },
+        {
+          "name": "minecraft:rib_armor_trim_smithing_template",
+          "type": "minecraft:item"
+        },
+        {
+          "name": "caverns_and_chasms:exile_armor_trim_smithing_template",
+          "type": "minecraft:item"
+        }
+      ]
+    },
+    {
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "value": "vista:inject/treasure_tapes",
+          "type": "minecraft:loot_table"
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "type": "minecraft:uniform",
+        "min": 1,
+        "max": 3
+      },
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "modestmining:coal_chunk",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 3,
+                "max": 8
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "create:cinder_flour",
+          "weight": 4,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 2,
+                "max": 5
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:quartz",
+          "weight": 3,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 3
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:glowstone_dust",
+          "weight": 3,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 3
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:blackstone",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 2,
+                "max": 5
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:empty",
+          "weight": 4
+        }
+      ]
+    }
+  ]
+}

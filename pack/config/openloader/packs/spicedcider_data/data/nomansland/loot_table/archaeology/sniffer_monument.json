@@ -1,0 +1,72 @@
+{
+  "type": "minecraft:archaeology",
+  "random_sequence": "minecraft:archaeology/ocean_ruin_warm",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
+      "name": "main",
+      "entries": [
+        {
+          "name": "minecraft:sniffer_egg",
+          "type": "minecraft:item"
+        },
+        {
+          "name": "minecraft:torchflower_seeds",
+          "weight": 2,
+          "type": "minecraft:item"
+        },
+        {
+          "name": "minecraft:pitcher_pod",
+          "weight": 2,
+          "type": "minecraft:item"
+        },
+        {
+          "name": "minecraft:melon_seeds",
+          "weight": 4,
+          "type": "minecraft:item"
+        },
+        {
+          "name": "minecraft:azalea",
+          "weight": 3,
+          "type": "minecraft:item"
+        },
+        {
+          "name": "minecraft:vine",
+          "weight": 2,
+          "type": "minecraft:item"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:amethyst_shard",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 2
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:bone_meal",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 2,
+                "max": 4
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

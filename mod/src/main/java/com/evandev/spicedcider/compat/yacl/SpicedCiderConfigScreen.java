@@ -97,6 +97,7 @@ public class SpicedCiderConfigScreen {
                         .option(toggle("bedScreenTips", client.bedScreenTips))
                         .option(toggle("moveRecipeBookButton", client.moveRecipeBookButton))
                         .option(toggle("hideOwnEffectParticles", client.hideOwnEffectParticles))
+                        .option(toggle("softerBlindnessAndDarkness", client.softerBlindnessAndDarkness))
                         .option(toggle("hideSmithingTemplateTooltips", client.hideSmithingTemplateTooltips))
                         .build())
                 .categoryIf(ModList.get().isLoaded("vista"), ConfigCategory.createBuilder()

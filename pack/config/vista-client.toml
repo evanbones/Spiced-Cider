@@ -117,7 +117,7 @@
 	audio_volume = 1.0
 
 [picture_tape]
-	#How a picture is fitted onto the TV screen when the two don't have the same shape. STRETCH: distorts the picture to fill the screen. CONTAIN: shows all of it, leaving bars on the two shorter sides. COVER: fills the screen, cropping whatever sticks out. FIT_WIDTH / FIT_HEIGHT: match that side of the screen and let the other one bar or crop
+	#How a picture is fitted onto the TV screen when the two don't have the same shape
 	#Allowed Values: STRETCH, FIT_WIDTH, FIT_HEIGHT, CONTAIN, COVER
 	scaling_mode = "CONTAIN"
 

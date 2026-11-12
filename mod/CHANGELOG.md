@@ -5,6 +5,36 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.8.1] - 2026-11-12
+
+### Added
+
+- Tin Can: left behind when a Can of Bait is opened.
+
+## [1.8.0] - 2026-11-12
+
+### Added
+
+- Grub, Minnow and Firefly: new fishing baits for Tide.
+- Traveler's Pouch, Witch's Pouch, and Can of Bait (pretty shamelessly ripped off of Raspberry Flavoured).
+- Biomes in the `spicedcider:has_thick_fog` tag are filled with close fog in the biome's fog colour. Biomes also in `spicedcider:has_glowing_fog` keep a visible tint in the dark.
+- Field Guide shows each Slime Time slime colour dropping its own colour of slimeball.
+- Softer Blindness and Darkness option: Blindness fog reaches farther and the Darkness pulse is weaker.
+
+### Changed
+
+- LoD edge fog only closes in toward the side where terrain is still ungenerated.
+
+### Fixed
+
+- EMI structure loot now includes loot placed through structure feature placeholders.
+- Fire Strikers are now used up when lighting campfires, candles, and candle holders, and count for item-used-on-block advancements.
+- Broken hoes and shovels no longer till, make paths, or harvest crops and grass in an area.
+
+### Removed
+
+- Fancy Menu symlink path workaround, fixed natively in Fancy Menu 3.10.0.
+
 ## [1.7.2] - 2026-11-11
 
 ### Changed

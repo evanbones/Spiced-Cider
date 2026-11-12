@@ -1,6 +1,13 @@
 {
   "id": "spicedcider:baits",
   "type": "remi:group",
+  "contents": [
+    "spicedcider:worm",
+    "spicedcider:golden_worm",
+    "spicedcider:grub",
+    "spicedcider:minnow",
+    "spicedcider:firefly"
+  ],
   "regex": "tide:(.+_)?bait",
   "enabled": true
 }

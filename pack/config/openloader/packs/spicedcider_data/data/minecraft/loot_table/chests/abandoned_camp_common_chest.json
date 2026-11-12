@@ -1,0 +1,721 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": {
+        "min": 4.0,
+        "max": 6.0,
+        "type": "minecraft:uniform"
+      },
+      "bonus_rolls": 0.0,
+      "name": "pool0",
+      "entries": [
+        {
+          "functions": [
+            {
+              "count": 4.0,
+              "add": false,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:arrow",
+          "type": "minecraft:item"
+        },
+        {
+          "functions": [
+            {
+              "count": 1.0,
+              "add": false,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:map",
+          "type": "minecraft:item"
+        },
+        {
+          "functions": [
+            {
+              "count": {
+                "min": 2.0,
+                "max": 4.0,
+                "type": "minecraft:uniform"
+              },
+              "add": false,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:bone",
+          "type": "minecraft:item"
+        },
+        {
+          "functions": [
+            {
+              "count": 1.0,
+              "add": false,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:cobweb",
+          "type": "minecraft:item"
+        },
+        {
+          "functions": [
+            {
+              "count": 1.0,
+              "add": false,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:compass",
+          "type": "minecraft:item"
+        },
+        {
+          "functions": [
+            {
+              "count": {
+                "min": 1.0,
+                "max": 2.0,
+                "type": "minecraft:uniform"
+              },
+              "add": false,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:map",
+          "type": "minecraft:item"
+        },
+        {
+          "functions": [
+            {
+              "count": {
+                "min": 2.0,
+                "max": 4.0,
+                "type": "minecraft:uniform"
+              },
+              "add": false,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:gunpowder",
+          "type": "minecraft:item"
+        },
+        {
+          "functions": [
+            {
+              "count": 1.0,
+              "add": false,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:fishing_rod",
+          "type": "minecraft:item"
+        },
+        {
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 2,
+                "max": 5
+              }
+            }
+          ],
+          "name": "spicedcider:fire_striker",
+          "type": "minecraft:item"
+        },
+        {
+          "functions": [
+            {
+              "count": {
+                "min": 1.0,
+                "max": 4.0,
+                "type": "minecraft:uniform"
+              },
+              "add": false,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:glass_bottle",
+          "type": "minecraft:item"
+        },
+        {
+          "functions": [
+            {
+              "count": {
+                "min": 1.0,
+                "max": 3.0,
+                "type": "minecraft:uniform"
+              },
+              "add": false,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:lead",
+          "type": "minecraft:item"
+        },
+        {
+          "functions": [
+            {
+              "count": {
+                "min": 1.0,
+                "max": 4.0,
+                "type": "minecraft:uniform"
+              },
+              "add": false,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:leather",
+          "type": "minecraft:item"
+        },
+        {
+          "functions": [
+            {
+              "count": 1.0,
+              "add": false,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:bundle",
+          "type": "minecraft:item"
+        },
+        {
+          "functions": [
+            {
+              "count": {
+                "min": 1.0,
+                "max": 4.0,
+                "type": "minecraft:uniform"
+              },
+              "add": false,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:rabbit_hide",
+          "type": "minecraft:item"
+        },
+        {
+          "functions": [
+            {
+              "count": 1.0,
+              "add": false,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:saddle",
+          "type": "minecraft:item"
+        },
+        {
+          "functions": [
+            {
+              "count": {
+                "min": 1.0,
+                "max": 3.0,
+                "type": "minecraft:uniform"
+              },
+              "add": false,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:white_candle",
+          "type": "minecraft:item"
+        }
+      ]
+    },
+    {
+      "rolls": 2.0,
+      "bonus_rolls": 0.0,
+      "name": "pool1",
+      "entries": [
+        {
+          "functions": [
+            {
+              "count": 1.0,
+              "add": false,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:bow",
+          "type": "minecraft:item"
+        },
+        {
+          "functions": [
+            {
+              "count": 1.0,
+              "add": false,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:bucket",
+          "type": "minecraft:item"
+        },
+        {
+          "functions": [
+            {
+              "count": 1.0,
+              "add": false,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:spyglass",
+          "type": "minecraft:item"
+        },
+        {
+          "functions": [
+            {
+              "count": 1.0,
+              "add": false,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:shears",
+          "type": "minecraft:item"
+        },
+        {
+          "functions": [
+            {
+              "count": 1.0,
+              "add": false,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:copper_spear",
+          "type": "minecraft:item"
+        },
+        {
+          "functions": [
+            {
+              "count": 1.0,
+              "add": false,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:copper_axe",
+          "type": "minecraft:item"
+        },
+        {
+          "functions": [
+            {
+              "count": 1.0,
+              "add": false,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:copper_boots",
+          "type": "minecraft:item"
+        },
+        {
+          "functions": [
+            {
+              "count": 1.0,
+              "add": false,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:copper_chestplate",
+          "type": "minecraft:item"
+        },
+        {
+          "functions": [
+            {
+              "count": 1.0,
+              "add": false,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:copper_leggings",
+          "type": "minecraft:item"
+        },
+        {
+          "functions": [
+            {
+              "count": 1.0,
+              "add": false,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:copper_sword",
+          "type": "minecraft:item"
+        },
+        {
+          "functions": [
+            {
+              "count": 1.0,
+              "add": false,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:copper_spear",
+          "type": "minecraft:item"
+        }
+      ]
+    },
+    {
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
+      "name": "pool2",
+      "entries": [
+        {
+          "conditions": [
+            {
+              "term": {
+                "predicate": {
+                  "biomes": "minecraft:bamboo_jungle"
+                },
+                "condition": "minecraft:location_check"
+              },
+              "condition": "minecraft:inverted"
+            }
+          ],
+          "functions": [
+            {
+              "zoom": 1,
+              "destination": "minecraft:on_abandoned_camp_bamboo_jungle",
+              "decoration": "minecraft:abandoned_camp",
+              "function": "minecraft:exploration_map"
+            },
+            {
+              "name": {
+                "translate": "filled_map.bamboo_camp_map"
+              },
+              "target": "item_name",
+              "function": "minecraft:set_name"
+            }
+          ],
+          "name": "minecraft:map",
+          "type": "minecraft:item"
+        },
+        {
+          "conditions": [
+            {
+              "term": {
+                "predicate": {
+                  "biomes": "minecraft:cherry_grove"
+                },
+                "condition": "minecraft:location_check"
+              },
+              "condition": "minecraft:inverted"
+            }
+          ],
+          "functions": [
+            {
+              "zoom": 1,
+              "destination": "minecraft:on_abandoned_camp_cherry_grove",
+              "decoration": "minecraft:abandoned_camp",
+              "function": "minecraft:exploration_map"
+            },
+            {
+              "name": {
+                "translate": "filled_map.cherry_grove_camp_map"
+              },
+              "target": "item_name",
+              "function": "minecraft:set_name"
+            }
+          ],
+          "name": "minecraft:map",
+          "type": "minecraft:item"
+        },
+        {
+          "conditions": [
+            {
+              "term": {
+                "predicate": {
+                  "biomes": "minecraft:birch_forest"
+                },
+                "condition": "minecraft:location_check"
+              },
+              "condition": "minecraft:inverted"
+            }
+          ],
+          "functions": [
+            {
+              "zoom": 1,
+              "destination": "minecraft:on_abandoned_camp_birch_forest",
+              "decoration": "minecraft:abandoned_camp",
+              "function": "minecraft:exploration_map"
+            },
+            {
+              "name": {
+                "translate": "filled_map.birch_forest_camp_map"
+              },
+              "target": "item_name",
+              "function": "minecraft:set_name"
+            }
+          ],
+          "name": "minecraft:map",
+          "type": "minecraft:item"
+        },
+        {
+          "conditions": [
+            {
+              "term": {
+                "predicate": {
+                  "biomes": "minecraft:dappled_forest"
+                },
+                "condition": "minecraft:location_check"
+              },
+              "condition": "minecraft:inverted"
+            }
+          ],
+          "functions": [
+            {
+              "zoom": 1,
+              "destination": "minecraft:on_abandoned_camp_dappled_forest",
+              "decoration": "minecraft:abandoned_camp",
+              "function": "minecraft:exploration_map"
+            },
+            {
+              "name": {
+                "translate": "filled_map.dappled_forest_camp_map"
+              },
+              "target": "item_name",
+              "function": "minecraft:set_name"
+            }
+          ],
+          "name": "minecraft:map",
+          "type": "minecraft:item"
+        },
+        {
+          "conditions": [
+            {
+              "term": {
+                "predicate": {
+                  "biomes": "minecraft:flower_forest"
+                },
+                "condition": "minecraft:location_check"
+              },
+              "condition": "minecraft:inverted"
+            }
+          ],
+          "functions": [
+            {
+              "zoom": 1,
+              "destination": "minecraft:on_abandoned_camp_flower_forest",
+              "decoration": "minecraft:abandoned_camp",
+              "function": "minecraft:exploration_map"
+            },
+            {
+              "name": {
+                "translate": "filled_map.flower_forest_camp_map"
+              },
+              "target": "item_name",
+              "function": "minecraft:set_name"
+            }
+          ],
+          "name": "minecraft:map",
+          "type": "minecraft:item"
+        },
+        {
+          "conditions": [
+            {
+              "term": {
+                "predicate": {
+                  "biomes": "minecraft:pale_garden"
+                },
+                "condition": "minecraft:location_check"
+              },
+              "condition": "minecraft:inverted"
+            }
+          ],
+          "functions": [
+            {
+              "zoom": 1,
+              "destination": "minecraft:on_abandoned_camp_pale_garden",
+              "decoration": "minecraft:abandoned_camp",
+              "function": "minecraft:exploration_map"
+            },
+            {
+              "name": {
+                "translate": "filled_map.pale_garden_camp_map"
+              },
+              "target": "item_name",
+              "function": "minecraft:set_name"
+            }
+          ],
+          "name": "minecraft:map",
+          "type": "minecraft:item"
+        },
+        {
+          "conditions": [
+            {
+              "term": {
+                "predicate": {
+                  "biomes": "minecraft:swamp"
+                },
+                "condition": "minecraft:location_check"
+              },
+              "condition": "minecraft:inverted"
+            }
+          ],
+          "functions": [
+            {
+              "zoom": 1,
+              "destination": "minecraft:on_abandoned_camp_swamp",
+              "decoration": "minecraft:abandoned_camp",
+              "function": "minecraft:exploration_map"
+            },
+            {
+              "name": {
+                "translate": "filled_map.swamp_camp_map"
+              },
+              "target": "item_name",
+              "function": "minecraft:set_name"
+            }
+          ],
+          "name": "minecraft:map",
+          "type": "minecraft:item"
+        },
+        {
+          "conditions": [
+            {
+              "term": {
+                "predicate": {
+                  "biomes": "minecraft:windswept_forest"
+                },
+                "condition": "minecraft:location_check"
+              },
+              "condition": "minecraft:inverted"
+            }
+          ],
+          "functions": [
+            {
+              "zoom": 1,
+              "destination": "minecraft:on_abandoned_camp_windswept_forest",
+              "decoration": "minecraft:abandoned_camp",
+              "function": "minecraft:exploration_map"
+            },
+            {
+              "name": {
+                "translate": "filled_map.windswept_forest_camp_map"
+              },
+              "target": "item_name",
+              "function": "minecraft:set_name"
+            }
+          ],
+          "name": "minecraft:map",
+          "type": "minecraft:item"
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "type": "minecraft:uniform",
+        "min": 1,
+        "max": 3
+      },
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stick",
+          "weight": 4,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 2,
+                "max": 5
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "farmersdelight:straw",
+          "weight": 3,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 2,
+                "max": 5
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "farmersdelight:rope",
+          "weight": 3,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 3
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:torch",
+          "weight": 3,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 2,
+                "max": 4
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:flint",
+          "weight": 3,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 3
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "modestmining:coal_chunk",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 2,
+                "max": 5
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:empty",
+          "weight": 4
+        }
+      ]
+    },
+    {
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "spicedcider:travelers_pouch",
+          "weight": 35
+        },
+        {
+          "type": "minecraft:empty",
+          "weight": 65
+        }
+      ]
+    }
+  ]
+}

@@ -561,6 +561,7 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.BooleanValue bedScreenTips;
         public final ModConfigSpec.BooleanValue moveRecipeBookButton;
         public final ModConfigSpec.BooleanValue hideOwnEffectParticles;
+        public final ModConfigSpec.BooleanValue softerBlindnessAndDarkness;
         public final ModConfigSpec.BooleanValue hideSmithingTemplateTooltips;
 
         public final ModConfigSpec.BooleanValue vistaMirrorPerfFixes;
@@ -749,6 +750,11 @@ public class SpicedCiderConfig {
                     .comment(tooltip("hideOwnEffectParticles"))
                     .translation("option.spicedcider.hideOwnEffectParticles")
                     .define("hideOwnEffectParticles", false);
+
+            softerBlindnessAndDarkness = builder
+                    .comment(tooltip("softerBlindnessAndDarkness"))
+                    .translation("option.spicedcider.softerBlindnessAndDarkness")
+                    .define("softerBlindnessAndDarkness", false);
 
             hideSmithingTemplateTooltips = builder
                     .comment(tooltip("hideSmithingTemplateTooltips"))

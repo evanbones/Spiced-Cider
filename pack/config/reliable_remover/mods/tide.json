@@ -271,5 +271,12 @@
       "tide:grilled_tuna"
     ],
     "replace_with": "tide:cooked_fish"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "tide:bait"
+    ],
+    "replace_with": "spicedcider:worm"
   }
 ]

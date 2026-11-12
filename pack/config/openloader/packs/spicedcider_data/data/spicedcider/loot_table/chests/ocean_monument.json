@@ -1,0 +1,196 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": {
+        "min": 4.0,
+        "max": 7.0,
+        "type": "minecraft:uniform"
+      },
+      "bonus_rolls": 0.0,
+      "name": "pool0",
+      "entries": [
+        {
+          "functions": [
+            {
+              "count": {
+                "min": 3.0,
+                "max": 8.0,
+                "type": "minecraft:uniform"
+              },
+              "add": false,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:prismarine_shard",
+          "weight": 20,
+          "type": "minecraft:item"
+        },
+        {
+          "functions": [
+            {
+              "count": {
+                "min": 2.0,
+                "max": 6.0,
+                "type": "minecraft:uniform"
+              },
+              "add": false,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:prismarine_crystals",
+          "weight": 16,
+          "type": "minecraft:item"
+        },
+        {
+          "functions": [
+            {
+              "count": {
+                "min": 4.0,
+                "max": 10.0,
+                "type": "minecraft:uniform"
+              },
+              "add": false,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:gold_nugget",
+          "weight": 14,
+          "type": "minecraft:item"
+        },
+        {
+          "value": "spicedcider:chests/ocean_monument/pearl",
+          "weight": 10,
+          "type": "minecraft:loot_table"
+        },
+        {
+          "value": "spicedcider:chests/ocean_monument/thrasher_tooth",
+          "weight": 8,
+          "type": "minecraft:loot_table"
+        },
+        {
+          "functions": [
+            {
+              "count": {
+                "min": 1.0,
+                "max": 4.0,
+                "type": "minecraft:uniform"
+              },
+              "add": false,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:sea_pickle",
+          "weight": 8,
+          "type": "minecraft:item"
+        },
+        {
+          "value": "spicedcider:chests/ocean_monument/prismarine_rod",
+          "weight": 6,
+          "type": "minecraft:loot_table"
+        },
+        {
+          "functions": [
+            {
+              "count": {
+                "min": 1.0,
+                "max": 3.0,
+                "type": "minecraft:uniform"
+              },
+              "add": false,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:raw_gold",
+          "weight": 6,
+          "type": "minecraft:item"
+        },
+        {
+          "functions": [
+            {
+              "count": {
+                "min": 1.0,
+                "max": 2.0,
+                "type": "minecraft:uniform"
+              },
+              "add": false,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:nautilus_shell",
+          "weight": 5,
+          "type": "minecraft:item"
+        },
+        {
+          "name": "minecraft:sponge",
+          "weight": 3,
+          "type": "minecraft:item"
+        }
+      ]
+    },
+    {
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
+      "name": "pool1",
+      "entries": [
+        {
+          "weight": 8,
+          "type": "minecraft:empty"
+        },
+        {
+          "functions": [
+            {
+              "count": {
+                "min": 1.0,
+                "max": 2.0,
+                "type": "minecraft:uniform"
+              },
+              "add": false,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "spelunkery:rough_diamond",
+          "weight": 3,
+          "type": "minecraft:item"
+        },
+        {
+          "name": "minecraft:heart_of_the_sea",
+          "weight": 2,
+          "type": "minecraft:item"
+        },
+        {
+          "functions": [
+            {
+              "damage": {
+                "min": 0.15,
+                "max": 0.6,
+                "type": "minecraft:uniform"
+              },
+              "add": false,
+              "function": "minecraft:set_damage"
+            }
+          ],
+          "name": "minecraft:trident",
+          "type": "minecraft:item"
+        }
+      ]
+    },
+    {
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
+      "name": "pool2",
+      "entries": [
+        {
+          "name": "minecraft:tide_armor_trim_smithing_template",
+          "type": "minecraft:item"
+        }
+      ],
+      "conditions": [
+        {
+          "chance": 0.1,
+          "condition": "minecraft:random_chance"
+        }
+      ]
+    }
+  ]
+}

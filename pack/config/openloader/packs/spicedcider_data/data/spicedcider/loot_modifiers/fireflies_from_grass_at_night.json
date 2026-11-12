@@ -1,0 +1,16 @@
+{
+  "type": "spicedcider:bonus_block_drop",
+  "conditions": [
+    {
+      "condition": "minecraft:time_check",
+      "period": 24000,
+      "value": {
+        "min": 13000,
+        "max": 23000
+      }
+    }
+  ],
+  "blocks": "spicedcider:hides_fireflies",
+  "item": "spicedcider:firefly",
+  "chance": 0.06
+}

@@ -1,0 +1,420 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": {
+        "min": 0.0,
+        "max": 1.0,
+        "type": "minecraft:uniform"
+      },
+      "bonus_rolls": 0.0,
+      "name": "pool0",
+      "entries": [
+        {
+          "name": "snowyspirit:music_disc_a_carol",
+          "type": "minecraft:item"
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "min": 12.0,
+        "max": 16.0,
+        "type": "minecraft:uniform"
+      },
+      "bonus_rolls": 0.0,
+      "name": "pool1",
+      "entries": [
+        {
+          "functions": [
+            {
+              "count": {
+                "min": 1.0,
+                "max": 4.0,
+                "type": "minecraft:uniform"
+              },
+              "add": false,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:cod",
+          "weight": 50,
+          "type": "minecraft:item"
+        },
+        {
+          "functions": [
+            {
+              "count": {
+                "min": 1.0,
+                "max": 3.0,
+                "type": "minecraft:uniform"
+              },
+              "add": false,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:salmon",
+          "weight": 25,
+          "type": "minecraft:item"
+        },
+        {
+          "functions": [
+            {
+              "count": {
+                "min": 1.0,
+                "max": 4.0,
+                "type": "minecraft:uniform"
+              },
+              "add": false,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:bone",
+          "weight": 25,
+          "type": "minecraft:item"
+        }
+      ]
+    },
+    {
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
+      "name": "pool2",
+      "entries": [
+        {
+          "functions": [
+            {
+              "damage": {
+                "min": 0.4,
+                "max": 0.6,
+                "type": "minecraft:uniform"
+              },
+              "add": false,
+              "function": "minecraft:set_damage"
+            }
+          ],
+          "name": "minecraft:fishing_rod",
+          "weight": 30,
+          "type": "minecraft:item"
+        },
+        {
+          "functions": [
+            {
+              "levels": {
+                "min": 10.0,
+                "max": 30.0,
+                "type": "minecraft:uniform"
+              },
+              "function": "minecraft:enchant_with_levels"
+            },
+            {
+              "damage": {
+                "min": 0.4,
+                "max": 0.6,
+                "type": "minecraft:uniform"
+              },
+              "add": false,
+              "function": "minecraft:set_damage"
+            }
+          ],
+          "name": "minecraft:fishing_rod",
+          "weight": 70,
+          "type": "minecraft:item"
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "min": 0.0,
+        "max": 1.0,
+        "type": "minecraft:uniform"
+      },
+      "bonus_rolls": 0.0,
+      "name": "pool3",
+      "entries": [
+        {
+          "functions": [
+            {
+              "levels": {
+                "min": 10.0,
+                "max": 30.0,
+                "type": "minecraft:uniform"
+              },
+              "function": "minecraft:enchant_with_levels"
+            },
+            {
+              "damage": {
+                "min": 0.4,
+                "max": 0.6,
+                "type": "minecraft:uniform"
+              },
+              "add": false,
+              "function": "minecraft:set_damage"
+            }
+          ],
+          "name": "minecraft:leather_boots",
+          "weight": 75,
+          "type": "minecraft:item"
+        },
+        {
+          "functions": [
+            {
+              "add": false,
+              "function": "minecraft:set_enchantments"
+            },
+            {
+              "levels": {
+                "min": 10.0,
+                "max": 30.0,
+                "type": "minecraft:uniform"
+              },
+              "function": "minecraft:enchant_with_levels"
+            },
+            {
+              "damage": {
+                "min": 0.2,
+                "max": 0.4,
+                "type": "minecraft:uniform"
+              },
+              "add": false,
+              "function": "minecraft:set_damage"
+            }
+          ],
+          "name": "minecraft:leather_boots",
+          "weight": 15,
+          "type": "minecraft:item"
+        },
+        {
+          "functions": [
+            {
+              "add": false,
+              "function": "minecraft:set_enchantments"
+            },
+            {
+              "levels": {
+                "min": 10.0,
+                "max": 30.0,
+                "type": "minecraft:uniform"
+              },
+              "function": "minecraft:enchant_with_levels"
+            },
+            {
+              "damage": {
+                "min": 0.2,
+                "max": 0.4,
+                "type": "minecraft:uniform"
+              },
+              "add": false,
+              "function": "minecraft:set_damage"
+            }
+          ],
+          "name": "minecraft:leather_boots",
+          "weight": 10,
+          "type": "minecraft:item"
+        }
+      ]
+    },
+    {
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
+      "name": "pool4",
+      "entries": [
+        {
+          "name": "minecraft:lead",
+          "type": "minecraft:item"
+        }
+      ]
+    },
+    {
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
+      "name": "pool5",
+      "entries": [
+        {
+          "name": "minecraft:cod_bucket",
+          "weight": 60,
+          "type": "minecraft:item"
+        },
+        {
+          "name": "minecraft:salmon_bucket",
+          "weight": 40,
+          "type": "minecraft:item"
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "min": 2.0,
+        "max": 4.0,
+        "type": "minecraft:uniform"
+      },
+      "bonus_rolls": 0.0,
+      "name": "pool6",
+      "entries": [
+        {
+          "conditions": [
+            {
+              "neoforge:conditions": {
+                "values": [
+                  {
+                    "flag": "flag",
+                    "type": "snowyspirit:flag"
+                  }
+                ],
+                "type": "neoforge:and"
+              },
+              "condition": "moonlight:load_conditions"
+            }
+          ],
+          "functions": [
+            {
+              "count": {
+                "min": 4.0,
+                "max": 8.0,
+                "type": "minecraft:uniform"
+              },
+              "add": false,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "snowyspirit:ginger",
+          "weight": 80,
+          "type": "minecraft:item"
+        },
+        {
+          "conditions": [
+            {
+              "neoforge:conditions": {
+                "values": [
+                  {
+                    "flag": "flag",
+                    "type": "snowyspirit:flag"
+                  }
+                ],
+                "type": "neoforge:and"
+              },
+              "condition": "moonlight:load_conditions"
+            }
+          ],
+          "functions": [
+            {
+              "count": {
+                "min": 2.0,
+                "max": 4.0,
+                "type": "minecraft:uniform"
+              },
+              "add": false,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "snowyspirit:candy_cane",
+          "weight": 20,
+          "type": "minecraft:item"
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "type": "minecraft:uniform",
+        "min": 1,
+        "max": 3
+      },
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:snowball",
+          "weight": 4,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 3,
+                "max": 8
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "neapolitan:ice_cubes",
+          "weight": 3,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 3
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "modestmining:coal_chunk",
+          "weight": 3,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 2,
+                "max": 5
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stick",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 2,
+                "max": 4
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:packed_ice",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 3
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:empty",
+          "weight": 4
+        }
+      ]
+    },
+    {
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "spicedcider:bait_can",
+          "weight": 40
+        },
+        {
+          "type": "minecraft:empty",
+          "weight": 60
+        }
+      ]
+    }
+  ]
+}

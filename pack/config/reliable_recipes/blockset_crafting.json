@@ -27,5 +27,21 @@
       "upgrade_aquatic:kelpy_cobblestone",
       "upgrade_aquatic:kelpy_stone_bricks"
     ]
+  },
+  {
+    "action": "replace_input",
+    "filter": {
+      "id": "abundant_atmosphere:shuffled_bricks_from_blocks"
+    },
+    "target": "minecraft:nether_bricks",
+    "replacement": "supplementaries:ash_bricks"
+  },
+  {
+    "action": "replace_input",
+    "filter": {
+      "id": "abundant_atmosphere:shuffled_bricks_from_items"
+    },
+    "target": "minecraft:nether_brick",
+    "replacement": "supplementaries:ash_brick"
   }
 ]

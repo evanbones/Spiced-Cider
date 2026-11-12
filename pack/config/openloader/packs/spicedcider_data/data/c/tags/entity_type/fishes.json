@@ -1,8 +1,32 @@
 {
-  "replace": false,
+  "replace": true,
   "values": [
+    "minecraft:cod",
+    "minecraft:salmon",
+    "minecraft:pufferfish",
+    "minecraft:tropical_fish",
+    {
+      "id": "caverns_and_chasms:cavefish",
+      "required": false
+    },
+    {
+      "id": "environmental:koi",
+      "required": false
+    },
     {
       "id": "nomansland:billhook_bass",
+      "required": false
+    },
+    {
+      "id": "upgrade_aquatic:pike",
+      "required": false
+    },
+    {
+      "id": "upgrade_aquatic:perch",
+      "required": false
+    },
+    {
+      "id": "upgrade_aquatic:lionfish",
       "required": false
     }
   ]

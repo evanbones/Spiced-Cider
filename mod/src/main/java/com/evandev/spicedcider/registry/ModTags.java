@@ -72,6 +72,8 @@ public class ModTags {
 
     public static class Biomes {
         public static final TagKey<Biome> RESTRICTED_SPAWNS = TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "restricted_spawns"));
+        public static final TagKey<Biome> HAS_GLOWING_FOG = TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "has_glowing_fog"));
+        public static final TagKey<Biome> HAS_THICK_FOG = TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "has_thick_fog"));
     }
 
     public static class EntityTypes {

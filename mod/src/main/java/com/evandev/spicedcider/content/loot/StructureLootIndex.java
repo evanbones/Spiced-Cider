@@ -27,6 +27,7 @@ import net.minecraft.tags.BiomeTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.BrushableBlock;
+import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 import net.minecraft.world.level.levelgen.structure.Structure;
@@ -52,6 +53,8 @@ public class StructureLootIndex {
     public static final TagKey<Structure> DISABLED = TagKey.create(Registries.STRUCTURE, ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "disabled"));
     public static final ResourceLocation DUNGEON = ResourceLocation.withDefaultNamespace("monster_room");
     public static final ResourceLocation DESERT_WELL = ResourceLocation.withDefaultNamespace("desert_well");
+    private static final String POT_FEATURE = "nomansland:pot_patch";
+    private static final ResourceLocation POT_ICON = ResourceLocation.fromNamespaceAndPath("nomansland", "living_urn");
     private static final List<String> IGNORED_PREFIXES = List.of("entities/", "blocks/", "gameplay/", "equipment/", "spawners/", "shearing/", "pots/");
 
     public record Source(ResourceLocation table, @Nullable ResourceLocation block) {
@@ -72,6 +75,9 @@ public class StructureLootIndex {
     private final RegistryOps<JsonElement> ops;
     private final Registry<StructureTemplatePool> pools;
     private final Registry<StructureProcessorList> processors;
+    private final Registry<PlacedFeature> placedFeatures;
+    private final Registry<ConfiguredFeature<?, ?>> configuredFeatures;
+    private final Map<ResourceLocation, Set<Source>> featureScans = new HashMap<>();
     private final Map<ResourceLocation, TemplateScan> templates = new HashMap<>();
     private final Map<ResourceLocation, Set<Source>> processorScans = new HashMap<>();
     private final Map<ResourceLocation, JsonElement> poolJson = new HashMap<>();
@@ -83,6 +89,8 @@ public class StructureLootIndex {
         this.ops = access.createSerializationContext(JsonOps.INSTANCE);
         this.pools = access.registryOrThrow(Registries.TEMPLATE_POOL);
         this.processors = access.registryOrThrow(Registries.PROCESSOR_LIST);
+        this.placedFeatures = access.registryOrThrow(Registries.PLACED_FEATURE);
+        this.configuredFeatures = access.registryOrThrow(Registries.CONFIGURED_FEATURE);
     }
 
     public static Index build(MinecraftServer server, Set<ResourceLocation> lootKeys) {
@@ -244,6 +252,7 @@ public class StructureLootIndex {
             if (id == null) return;
             if (lootKeys.contains(id)) sources.add(new Source(id, null));
             else if (pools.containsKey(id)) queue.add(id);
+            else if (placedFeatures.containsKey(id) || configuredFeatures.containsKey(id)) sources.addAll(feature(id));
         }
     }
 
@@ -256,6 +265,41 @@ public class StructureLootIndex {
             ResourceLocation id = ResourceLocation.tryParse(element.getAsString());
             if (id != null && lootKeys.contains(id)) into.add(id);
         }
+    }
+
+    private Set<Source> feature(ResourceLocation id) {
+        return featureScans.computeIfAbsent(id, key -> {
+            Set<Source> found = new LinkedHashSet<>();
+            JsonElement json = placedFeatures.getOptional(key).map(value -> encode(PlacedFeature.DIRECT_CODEC, value))
+                    .orElseGet(() -> configuredFeatures.getOptional(key).map(value -> encode(ConfiguredFeature.DIRECT_CODEC, value)).orElse(null));
+            if (json == null) return found;
+            Set<ResourceLocation> tables = new LinkedHashSet<>();
+            boolean pots = collectFeatureLoot(json, tables, new HashSet<>());
+            ResourceLocation icon = pots && BuiltInRegistries.ITEM.containsKey(POT_ICON) ? POT_ICON : null;
+            tables.forEach(table -> found.add(new Source(table, icon)));
+            return found;
+        });
+    }
+
+    private boolean collectFeatureLoot(JsonElement element, Set<ResourceLocation> tables, Set<ResourceLocation> visited) {
+        boolean pots = false;
+        if (element instanceof JsonObject object) {
+            for (Map.Entry<String, JsonElement> entry : object.entrySet()) pots |= collectFeatureLoot(entry.getValue(), tables, visited);
+        } else if (element instanceof JsonArray array) {
+            for (JsonElement child : array) pots |= collectFeatureLoot(child, tables, visited);
+        } else if (element != null && element.isJsonPrimitive() && element.getAsJsonPrimitive().isString()) {
+            String text = element.getAsString();
+            if (text.equals(POT_FEATURE)) return true;
+            ResourceLocation id = ResourceLocation.tryParse(text);
+            if (id == null) return false;
+            if (lootKeys.contains(id)) {
+                tables.add(id);
+            } else if (configuredFeatures.containsKey(id) && visited.add(id)) {
+                JsonElement json = configuredFeatures.getOptional(id).map(value -> encode(ConfiguredFeature.DIRECT_CODEC, value)).orElse(null);
+                if (json != null) pots |= collectFeatureLoot(json, tables, visited);
+            }
+        }
+        return pots;
     }
 
     private Set<Source> processorList(ResourceLocation id) {

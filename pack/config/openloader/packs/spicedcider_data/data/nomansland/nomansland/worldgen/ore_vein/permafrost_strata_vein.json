@@ -1,0 +1,118 @@
+{
+  "biomes": "#spicedcider:has_permafrost_strata",
+  "sample_biome_at_surface": false,
+  "spacing": 64,
+  "separation": 16,
+  "probability": 1.0,
+  "generation_order": 41,
+  "radius": {
+    "type": "uniform",
+    "min_inclusive": 32,
+    "max_inclusive": 56
+  },
+  "target_condition": {
+    "type": "matching_block_tag",
+    "tag": "nomansland:ore_vein_replaceable"
+  },
+  "min_height": {
+    "type": "constant",
+    "value": {
+      "absolute": -56
+    }
+  },
+  "max_height": {
+    "type": "constant",
+    "value": {
+      "absolute": 24
+    }
+  },
+  "vein_radius": {
+    "type": "constant",
+    "value": 52.0
+  },
+  "invert": true,
+  "inverted": true,
+  "filler": {
+    "state_provider": {
+      "type": "nomansland:strata_state_provider",
+      "layers": [
+        {
+          "data": {
+            "type": "minecraft:simple_state_provider",
+            "state": {
+              "Name": "quark:permafrost"
+            }
+          },
+          "height": 4
+        },
+        {
+          "data": {
+            "type": "minecraft:simple_state_provider",
+            "state": {
+              "Name": "minecraft:stone"
+            }
+          },
+          "height": 2
+        },
+        {
+          "data": {
+            "type": "minecraft:simple_state_provider",
+            "state": {
+              "Name": "quark:permafrost"
+            }
+          },
+          "height": 3
+        },
+        {
+          "data": {
+            "type": "minecraft:simple_state_provider",
+            "state": {
+              "Name": "minecraft:stone"
+            }
+          },
+          "height": 2
+        },
+        {
+          "data": {
+            "type": "minecraft:simple_state_provider",
+            "state": {
+              "Name": "quark:permafrost"
+            }
+          },
+          "height": 3
+        },
+        {
+          "data": {
+            "type": "minecraft:simple_state_provider",
+            "state": {
+              "Name": "minecraft:stone"
+            }
+          },
+          "height": 1
+        },
+        {
+          "data": {
+            "type": "minecraft:simple_state_provider",
+            "state": {
+              "Name": "quark:permafrost"
+            }
+          },
+          "height": 4
+        },
+        {
+          "data": {
+            "type": "minecraft:simple_state_provider",
+            "state": {
+              "Name": "minecraft:stone"
+            }
+          },
+          "height": 3
+        }
+      ],
+      "noise_intensity": 2.0,
+      "randomize": false
+    },
+    "probability": 1.0,
+    "incoherence": 0.0
+  }
+}

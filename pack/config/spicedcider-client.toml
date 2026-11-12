@@ -23,6 +23,8 @@
 	moveRecipeBookButton = true
 	#Hides your own potion effect particles in first person.
 	hideOwnEffectParticles = true
+	#Blindness fog reaches farther and the Darkness pulse is weaker, so both stay playable at night and underground.
+	softerBlindnessAndDarkness = true
 	#Removes the "Applies to" and "Ingredients" lines from smithing template tooltips.
 	hideSmithingTemplateTooltips = true
 

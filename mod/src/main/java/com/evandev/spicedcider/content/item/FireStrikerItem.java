@@ -1,5 +1,8 @@
 package com.evandev.spicedcider.content.item;
 
+import net.minecraft.advancements.CriteriaTriggers;
+import net.minecraft.core.BlockPos;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.player.Player;
@@ -20,7 +23,7 @@ public class FireStrikerItem extends Item {
     }
 
     @Override
-    public @NotNull InteractionResult useOn(UseOnContext context) {
+    public @NotNull InteractionResult onItemUseFirst(@NotNull ItemStack stack, UseOnContext context) {
         Player player = context.getPlayer();
         Level level = context.getLevel();
         ItemStack flint = new ItemStack(Items.FLINT_AND_STEEL);
@@ -38,12 +41,19 @@ public class FireStrikerItem extends Item {
         }
 
         if (success) {
+            awardUse(player, context.getClickedPos(), stack);
             if (player != null && !player.isCreative()) {
-                context.getItemInHand().shrink(1);
+                stack.shrink(1);
             }
             return InteractionResult.sidedSuccess(level.isClientSide());
         }
         return InteractionResult.PASS;
+    }
+
+    public static void awardUse(Player player, BlockPos pos, ItemStack stack) {
+        if (player instanceof ServerPlayer serverPlayer) {
+            CriteriaTriggers.ITEM_USED_ON_BLOCK.trigger(serverPlayer, pos, stack);
+        }
     }
 
     @Override

@@ -1,15 +1,14 @@
 {
   "biomes": "#quark:has_calcite_clusters",
   "sample_biome_at_surface": true,
-  "spacing": 128,
-  "separation": 64,
-  "probability": 0.5,
+  "spacing": 96,
+  "separation": 32,
+  "probability": 1.0,
   "generation_order": 33,
-
   "radius": {
     "type": "uniform",
-    "min_inclusive": 16,
-    "max_inclusive": 64
+    "min_inclusive": 56,
+    "max_inclusive": 88
   },
   "target_condition": {
     "type": "matching_block_tag",
@@ -18,23 +17,21 @@
   "min_height": {
     "type": "constant",
     "value": {
-      "above_bottom": 75
+      "above_bottom": 65
     }
   },
   "max_height": {
     "type": "constant",
     "value": {
-      "below_top": 64
+      "below_top": 160
     }
   },
-
   "vein_radius": {
     "type": "constant",
-    "value": 40.0
+    "value": 52.0
   },
   "invert": true,
   "inverted": true,
-
   "filler": {
     "state_provider": {
       "type": "nomansland:strata_state_provider",
@@ -42,56 +39,72 @@
         {
           "data": {
             "type": "minecraft:simple_state_provider",
-            "state": { "Name": "minecraft:calcite" }
+            "state": {
+              "Name": "minecraft:calcite"
+            }
           },
           "height": 4
         },
         {
           "data": {
             "type": "minecraft:simple_state_provider",
-            "state": { "Name": "minecraft:stone" }
+            "state": {
+              "Name": "minecraft:stone"
+            }
           },
           "height": 2
         },
         {
           "data": {
             "type": "minecraft:simple_state_provider",
-            "state": { "Name": "minecraft:calcite" }
+            "state": {
+              "Name": "minecraft:calcite"
+            }
           },
           "height": 3
         },
         {
           "data": {
             "type": "minecraft:simple_state_provider",
-            "state": { "Name": "minecraft:stone" }
+            "state": {
+              "Name": "minecraft:stone"
+            }
           },
           "height": 2
         },
         {
           "data": {
             "type": "minecraft:simple_state_provider",
-            "state": { "Name": "minecraft:calcite" }
+            "state": {
+              "Name": "minecraft:calcite"
+            }
           },
           "height": 3
         },
         {
           "data": {
             "type": "minecraft:simple_state_provider",
-            "state": { "Name": "minecraft:stone" }
+            "state": {
+              "Name": "minecraft:stone"
+            }
           },
           "height": 1
         },
         {
           "data": {
             "type": "minecraft:simple_state_provider",
-            "state": { "Name": "minecraft:calcite" }
+            "state": {
+              "Name": "minecraft:calcite"
+            }
           },
           "height": 4
         },
         {
           "data": {
             "type": "minecraft:simple_state_provider",
-            "state": { "Name": "minecraft:stone" }
+            "state": {
+              "Name": "minecraft:stone"
+            }
           },
           "height": 3
         }

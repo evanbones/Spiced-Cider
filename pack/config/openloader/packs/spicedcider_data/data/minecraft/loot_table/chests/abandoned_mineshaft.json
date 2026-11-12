@@ -63,7 +63,7 @@
               "function": "minecraft:set_count"
             }
           ],
-          "name": "minecraft:iron_ingot",
+          "name": "minecraft:raw_iron",
           "weight": 10
         },
         {
@@ -79,7 +79,7 @@
               "function": "minecraft:set_count"
             }
           ],
-          "name": "minecraft:gold_ingot",
+          "name": "minecraft:raw_gold",
           "weight": 5
         },
         {
@@ -318,6 +318,21 @@
         }
       ],
       "rolls": 3.0
+    },
+    {
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "spicedcider:travelers_pouch",
+          "weight": 20
+        },
+        {
+          "type": "minecraft:empty",
+          "weight": 80
+        }
+      ]
     }
   ],
   "random_sequence": "minecraft:chests/abandoned_mineshaft"

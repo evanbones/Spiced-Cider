@@ -8,7 +8,7 @@ import com.evandev.spicedcider.content.item.FireStrikerItem;
 import com.evandev.spicedcider.content.item.MischiefArmorItem;
 import com.evandev.spicedcider.content.item.PocketJukeboxItem;
 import com.evandev.spicedcider.content.item.RuinedPageItem;
-import com.evandev.spicedcider.content.item.SeedPouchItem;
+import com.evandev.spicedcider.content.item.LootPouchItem;
 import com.evandev.spicedcider.compat.architectspalette.ArchitectsPaletteCompat;
 import com.evandev.spicedcider.compat.farmersdelight.FarmersDelightCompat;
 import com.evandev.spicedcider.compat.tide.TideCompat;
@@ -122,13 +122,27 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> GOLDEN_WORM = ITEMS.register("golden_worm",
             () -> new Item(new Item.Properties().rarity(Rarity.UNCOMMON)));
+    public static final DeferredItem<Item> GRUB = ITEMS.register("grub",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> MINNOW = ITEMS.register("minnow",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> FIREFLY = ITEMS.register("firefly",
+            () -> new Item(new Item.Properties()));
     public static final DeferredItem<BlockItem> WORMY_DIRT = ITEMS.registerSimpleBlockItem(ModBlocks.WORMY_DIRT);
     public static final DeferredItem<BlockItem> GLOAMWOOD_SAPLING = ITEMS.registerSimpleBlockItem(ModBlocks.GLOAMWOOD_SAPLING);
     public static final DeferredItem<BlockItem> WORM_CRATE = ITEMS.registerSimpleBlockItem(ModBlocks.WORM_CRATE);
     public static final DeferredItem<Item> MAP_IN_A_BOTTLE = ITEMS.register("map_in_a_bottle",
             () -> new MapInABottleItem(new Item.Properties().stacksTo(16).rarity(Rarity.UNCOMMON)));
     public static final DeferredItem<Item> SEED_POUCH = ITEMS.register("seed_pouch",
-            () -> new SeedPouchItem(new Item.Properties().stacksTo(16)));
+            () -> new LootPouchItem(new Item.Properties().stacksTo(16), "gameplay/seed_pouch"));
+    public static final DeferredItem<Item> TRAVELERS_POUCH = ITEMS.register("travelers_pouch",
+            () -> new LootPouchItem(new Item.Properties().stacksTo(16), "gameplay/travelers_pouch"));
+    public static final DeferredItem<Item> WITCHS_POUCH = ITEMS.register("witchs_pouch",
+            () -> new LootPouchItem(new Item.Properties().stacksTo(16), "gameplay/witchs_pouch"));
+    public static final DeferredItem<Item> BAIT_CAN = ITEMS.register("bait_can",
+            () -> new LootPouchItem(new Item.Properties().stacksTo(16), "gameplay/bait_can"));
+    public static final DeferredItem<Item> TIN_CAN = ITEMS.register("tin_can",
+            () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> RUINED_PAGE = ITEMS.register("ruined_page",
             () -> new RuinedPageItem(new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON)));
     public static final DeferredItem<Item> GEODE = ITEMS.register("geode",

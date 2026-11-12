@@ -34,7 +34,9 @@ import com.evandev.spicedcider.weather.client.CloudCoverClient;
 import net.minecraft.client.renderer.BiomeColors;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.neoforged.neoforge.client.event.RegisterClientTooltipComponentFactoriesEvent;
+import net.minecraft.client.particle.AshParticle;
 import net.minecraft.client.particle.FlameParticle;
+import net.minecraft.client.particle.SuspendedParticle;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.Sheets;
 import net.minecraft.network.chat.Component;
@@ -126,6 +128,8 @@ public class ClientModEvents {
         event.registerSpriteSet(ModParticleTypes.GOLDEN_DANDELION.get(), GoldenDandelionParticle.Provider::new);
         event.registerSpriteSet(ModParticleTypes.SULFUR_FIRE_FLAME.get(), FlameParticle.Provider::new);
         event.registerSpriteSet(ModParticleTypes.SMALL_SULFUR_FIRE_FLAME.get(), FlameParticle.SmallFlameProvider::new);
+        event.registerSpriteSet(ModParticleTypes.SKULL_PIKE_ASH.get(), AshParticle.Provider::new);
+        event.registerSpriteSet(ModParticleTypes.SKULL_PIKE_SPORE.get(), SuspendedParticle.WarpedSporeProvider::new);
     }
 
     @SubscribeEvent

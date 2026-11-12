@@ -32,12 +32,15 @@ public class FirestarterCostMixin {
                                                       @Share("before") LocalRef<BlockState> before) {
         if (!event.isCanceled()) return;
         ItemStack stack = event.getItemStack();
-        if (stack.isEmpty() || stack.is(NMLTags.FIRESTARTERS)) return;
+        if (stack.isEmpty()) return;
+        boolean striker = stack.getItem() instanceof FireStrikerItem;
+        if (!striker && stack.is(NMLTags.FIRESTARTERS)) return;
         if (!stack.canPerformAction(ItemAbilities.FIRESTARTER_LIGHT) || stack.canPerformAction(ItemAbilities.SHOVEL_DOUSE)) return;
         if (event.getLevel().getBlockState(event.getPos()) == before.get()) return;
 
         Player player = event.getEntity();
-        if (stack.getItem() instanceof FireStrikerItem) {
+        if (striker) {
+            FireStrikerItem.awardUse(player, event.getPos(), stack);
             stack.consume(1, player);
         } else if (stack.isDamageableItem()) {
             stack.hurtAndBreak(1, player, LivingEntity.getSlotForHand(event.getHand()));

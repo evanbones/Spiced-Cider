@@ -1,3 +1,3 @@
-### Changed
+### Added
 
-- Lowered the required NeoForge version to 21.1.166.
+- Tin Can: left behind when a Can of Bait is opened.
