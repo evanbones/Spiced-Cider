@@ -110,5 +110,12 @@
       "mynethersdelight:powdery_torch"
     ],
     "replace_with": "minecraft:torch"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "mynethersdelight:hoglin_hide"
+    ],
+    "replace_with": "spicedcider:hide"
   }
 ]

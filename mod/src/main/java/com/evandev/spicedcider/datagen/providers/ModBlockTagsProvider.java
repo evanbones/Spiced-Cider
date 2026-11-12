@@ -40,7 +40,8 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                 .add(ModBlocks.WORMY_DIRT.get());
         this.tag(BlockTags.MINEABLE_WITH_AXE)
                 .add(ModBlocks.WORM_CRATE.get())
-                .add(ModBlocks.GOLDEN_WORM_CRATE.get());
+                .add(ModBlocks.GOLDEN_WORM_CRATE.get())
+                .add(ModBlocks.TANNING_RACK.get());
 
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.DEPOSIT.get())

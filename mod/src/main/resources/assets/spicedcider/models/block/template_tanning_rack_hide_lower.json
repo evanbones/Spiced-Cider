@@ -1,0 +1,42 @@
+{
+  "ambientocclusion": false,
+  "textures": {
+    "hide": "#hide",
+    "particle": "#hide"
+  },
+  "elements": [
+    {
+      "from": [
+        3,
+        4,
+        8
+      ],
+      "to": [
+        13,
+        16,
+        8
+      ],
+      "shade": true,
+      "faces": {
+        "north": {
+          "uv": [
+            3,
+            0,
+            13,
+            12
+          ],
+          "texture": "#hide"
+        },
+        "south": {
+          "uv": [
+            13,
+            0,
+            3,
+            12
+          ],
+          "texture": "#hide"
+        }
+      }
+    }
+  ]
+}

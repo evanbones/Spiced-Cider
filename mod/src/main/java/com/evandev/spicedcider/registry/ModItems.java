@@ -16,6 +16,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.*;
+import net.neoforged.fml.ModList;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import org.jetbrains.annotations.Nullable;
@@ -106,6 +107,16 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> TALLOW_BLOCK = ITEMS.register("tallow_block",
             () -> new BlockItem(ModBlocks.TALLOW_BLOCK.get(), new Item.Properties()));
+
+    public static final DeferredItem<Item> HIDE = ITEMS.register("hide",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> TANNING_RACK = ITEMS.register("tanning_rack",
+            () -> new DoubleHighBlockItem(ModBlocks.TANNING_RACK.get(), new Item.Properties()));
+
+    @Nullable
+    public static final DeferredItem<Item> MOURNFUL_CLAY_STATUE = clayStatue("mournful_clay_statue");
+    @Nullable
+    public static final DeferredItem<Item> CHEERFUL_CLAY_STATUE = clayStatue("cheerful_clay_statue");
 
     public static final DeferredItem<Item> LATEX_BUCKET = ITEMS.register("latex_bucket",
             () -> new BucketItem(ModFluids.LATEX.get(), new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1)));
@@ -270,6 +281,13 @@ public class ModItems {
     private static DeferredItem<Item> tideHook(String name) {
         return TideCompat.isLoaded()
                 ? ITEMS.register(name, () -> TideCompat.createHookItem(new Item.Properties(), "item.spicedcider." + name + ".desc"))
+                : null;
+    }
+
+    @Nullable
+    private static DeferredItem<Item> clayStatue(String name) {
+        return ModList.get().isLoaded("nomansland")
+                ? ITEMS.register(name, () -> new Item(new Item.Properties().stacksTo(16)))
                 : null;
     }
 }

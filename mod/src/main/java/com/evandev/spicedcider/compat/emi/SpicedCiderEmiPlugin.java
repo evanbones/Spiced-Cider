@@ -32,6 +32,7 @@ public class SpicedCiderEmiPlugin implements EmiPlugin {
             KilnBakingEmi.register(registry);
         }
         CauldronMixingEmiRecipe.register(registry);
+        TanningEmiRecipe.register(registry);
         LootEmiCategories.register(registry);
         if (SpicedCiderConfig.clientOr(SpicedCiderConfig.CLIENT.emiHideSmithingCategory, false)) {
             registry.removeRecipes(recipe -> recipe.getCategory() == VanillaEmiRecipeCategories.SMITHING);

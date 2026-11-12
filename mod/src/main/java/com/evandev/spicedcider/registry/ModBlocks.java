@@ -18,6 +18,7 @@ import com.evandev.spicedcider.content.block.LatexCauldronBlock;
 import com.evandev.spicedcider.content.block.PrismarineClusterBlock;
 import com.evandev.spicedcider.content.block.TallUnderwaterBrambleBlock;
 import com.evandev.spicedcider.content.block.TemporaryCobwebBlock;
+import com.evandev.spicedcider.content.block.TanningRackBlock;
 import com.evandev.spicedcider.content.block.TubewormBlock;
 import com.evandev.spicedcider.content.block.UnderwaterBrambleBlock;
 import com.evandev.spicedcider.content.block.VentBlock;
@@ -42,6 +43,7 @@ import net.minecraft.world.level.block.WallSignBlock;
 import net.minecraft.world.level.block.grower.TreeGrower;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.level.material.PushReaction;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import org.jetbrains.annotations.Nullable;
@@ -99,6 +101,10 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> GOLDEN_WORM_CRATE = BLOCKS.register("golden_worm_crate",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BARREL)));
+
+    public static final DeferredBlock<Block> TANNING_RACK = BLOCKS.register("tanning_rack",
+            () -> new TanningRackBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).strength(1.0F).sound(SoundType.WOOD)
+                    .noOcclusion().ignitedByLava().pushReaction(PushReaction.DESTROY)));
 
     @Nullable
     public static final DeferredBlock<Block> ORANGE_CRATE = fruitCrate("orange_crate");

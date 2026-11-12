@@ -296,6 +296,9 @@ public class SpicedCider {
                     ModItems.MEDIUM_PRISMARINE_BUD, ModItems.LARGE_PRISMARINE_BUD, ModItems.PRISMARINE_CLUSTER, ModItems.CHROMATIC_BRAMBLE,
                     ModItems.TALL_CHROMATIC_BRAMBLE, ModItems.ACHROMATIC_BRAMBLE, ModItems.TALL_ACHROMATIC_BRAMBLE).forEach(item -> event.accept(item.get(), vis));
         }
+        if (event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
+            event.insertAfter(new ItemStack(Items.LOOM), new ItemStack(ModItems.TANNING_RACK.get()), vis);
+        }
         if (event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS && ModItems.TWISTED_SIGN != null) {
             event.insertAfter(new ItemStack(Items.WARPED_HANGING_SIGN), new ItemStack(ModItems.TWISTED_SIGN.get()), vis);
             event.insertAfter(new ItemStack(ModItems.TWISTED_SIGN.get()), new ItemStack(ModItems.TWISTED_HANGING_SIGN.get()), vis);
@@ -324,6 +327,11 @@ public class SpicedCider {
             event.insertAfter(new ItemStack(ModItems.CAST_IRON_INGOT.get()), new ItemStack(ModItems.CAST_IRON_SHEET.get()), vis);
             event.insertAfter(new ItemStack(ModItems.CAST_IRON_SHEET.get()), new ItemStack(ModItems.BLAST_PROOF_PLATING.get()), vis);
             event.insertAfter(new ItemStack(Items.HONEYCOMB), new ItemStack(ModItems.TALLOW.get()), vis);
+            event.insertAfter(new ItemStack(Items.RABBIT_HIDE), new ItemStack(ModItems.HIDE.get()), vis);
+            if (ModItems.MOURNFUL_CLAY_STATUE != null) {
+                event.accept(ModItems.MOURNFUL_CLAY_STATUE.get(), vis);
+                event.accept(ModItems.CHEERFUL_CLAY_STATUE.get(), vis);
+            }
         }
         if (event.getTabKey() == CreativeModeTabs.COMBAT) {
             event.insertAfter(new ItemStack(Items.NETHERITE_AXE), new ItemStack(ModItems.INFERNITE_CLEAVER.get()), vis);

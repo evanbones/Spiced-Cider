@@ -1,0 +1,340 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "facing": "north",
+        "half": "lower"
+      },
+      "apply": {
+        "model": "spicedcider:block/tanning_rack_lower"
+      }
+    },
+    {
+      "when": {
+        "facing": "north",
+        "half": "lower",
+        "contents": "hide"
+      },
+      "apply": {
+        "model": "spicedcider:block/tanning_rack_hide_lower"
+      }
+    },
+    {
+      "when": {
+        "facing": "north",
+        "half": "lower",
+        "contents": "tanning"
+      },
+      "apply": {
+        "model": "spicedcider:block/tanning_rack_tanning_lower"
+      }
+    },
+    {
+      "when": {
+        "facing": "north",
+        "half": "lower",
+        "contents": "leather"
+      },
+      "apply": {
+        "model": "spicedcider:block/tanning_rack_leather_lower"
+      }
+    },
+    {
+      "when": {
+        "facing": "north",
+        "half": "upper"
+      },
+      "apply": {
+        "model": "spicedcider:block/tanning_rack_upper"
+      }
+    },
+    {
+      "when": {
+        "facing": "north",
+        "half": "upper",
+        "contents": "hide"
+      },
+      "apply": {
+        "model": "spicedcider:block/tanning_rack_hide_upper"
+      }
+    },
+    {
+      "when": {
+        "facing": "north",
+        "half": "upper",
+        "contents": "tanning"
+      },
+      "apply": {
+        "model": "spicedcider:block/tanning_rack_tanning_upper"
+      }
+    },
+    {
+      "when": {
+        "facing": "north",
+        "half": "upper",
+        "contents": "leather"
+      },
+      "apply": {
+        "model": "spicedcider:block/tanning_rack_leather_upper"
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "half": "lower"
+      },
+      "apply": {
+        "model": "spicedcider:block/tanning_rack_lower",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "half": "lower",
+        "contents": "hide"
+      },
+      "apply": {
+        "model": "spicedcider:block/tanning_rack_hide_lower",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "half": "lower",
+        "contents": "tanning"
+      },
+      "apply": {
+        "model": "spicedcider:block/tanning_rack_tanning_lower",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "half": "lower",
+        "contents": "leather"
+      },
+      "apply": {
+        "model": "spicedcider:block/tanning_rack_leather_lower",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "half": "upper"
+      },
+      "apply": {
+        "model": "spicedcider:block/tanning_rack_upper",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "half": "upper",
+        "contents": "hide"
+      },
+      "apply": {
+        "model": "spicedcider:block/tanning_rack_hide_upper",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "half": "upper",
+        "contents": "tanning"
+      },
+      "apply": {
+        "model": "spicedcider:block/tanning_rack_tanning_upper",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "half": "upper",
+        "contents": "leather"
+      },
+      "apply": {
+        "model": "spicedcider:block/tanning_rack_leather_upper",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "half": "lower"
+      },
+      "apply": {
+        "model": "spicedcider:block/tanning_rack_lower",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "half": "lower",
+        "contents": "hide"
+      },
+      "apply": {
+        "model": "spicedcider:block/tanning_rack_hide_lower",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "half": "lower",
+        "contents": "tanning"
+      },
+      "apply": {
+        "model": "spicedcider:block/tanning_rack_tanning_lower",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "half": "lower",
+        "contents": "leather"
+      },
+      "apply": {
+        "model": "spicedcider:block/tanning_rack_leather_lower",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "half": "upper"
+      },
+      "apply": {
+        "model": "spicedcider:block/tanning_rack_upper",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "half": "upper",
+        "contents": "hide"
+      },
+      "apply": {
+        "model": "spicedcider:block/tanning_rack_hide_upper",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "half": "upper",
+        "contents": "tanning"
+      },
+      "apply": {
+        "model": "spicedcider:block/tanning_rack_tanning_upper",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "half": "upper",
+        "contents": "leather"
+      },
+      "apply": {
+        "model": "spicedcider:block/tanning_rack_leather_upper",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "half": "lower"
+      },
+      "apply": {
+        "model": "spicedcider:block/tanning_rack_lower",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "half": "lower",
+        "contents": "hide"
+      },
+      "apply": {
+        "model": "spicedcider:block/tanning_rack_hide_lower",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "half": "lower",
+        "contents": "tanning"
+      },
+      "apply": {
+        "model": "spicedcider:block/tanning_rack_tanning_lower",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "half": "lower",
+        "contents": "leather"
+      },
+      "apply": {
+        "model": "spicedcider:block/tanning_rack_leather_lower",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "half": "upper"
+      },
+      "apply": {
+        "model": "spicedcider:block/tanning_rack_upper",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "half": "upper",
+        "contents": "hide"
+      },
+      "apply": {
+        "model": "spicedcider:block/tanning_rack_hide_upper",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "half": "upper",
+        "contents": "tanning"
+      },
+      "apply": {
+        "model": "spicedcider:block/tanning_rack_tanning_upper",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "half": "upper",
+        "contents": "leather"
+      },
+      "apply": {
+        "model": "spicedcider:block/tanning_rack_leather_upper",
+        "y": 270
+      }
+    }
+  ]
+}

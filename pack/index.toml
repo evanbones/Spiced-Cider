@@ -2437,6 +2437,14 @@ file = "config/openloader/packs/spicedcider_data/data/bountifulfares/tags/item/t
 hash = "287f269d3b4d65be47e05f632b054f9ab48f6722a7bb441ec149eb03e890c283"
 
 [[files]]
+file = "config/openloader/packs/spicedcider_data/data/buzzier_bees/loot_table/entities/grizzly_bear.json"
+hash = "a6f7db12a5b365fb4f7bfbd8b5ad12cd6eb77bc4d8c43ac94197927eae4a7885"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/buzzier_bees/loot_table/entities/moobloom.json"
+hash = "2716acec6c7b7bda19d4fa148162b491d2a526d6f9dc51920a3791204bb85634"
+
+[[files]]
 file = "config/openloader/packs/spicedcider_data/data/buzzier_bees/recipe/chiseled_honeycomb_bricks.json"
 hash = "a2fa488cf01e420982f93cf691fc33b09b72356327071b390c22318e1ac8f213"
 
@@ -4001,6 +4009,10 @@ file = "config/openloader/packs/spicedcider_data/data/environmental/loot_table/c
 hash = "5d7f4cc880b8445f73dd05925bb16764a500e7045c4e128a6cc528c0d3b5d2d5"
 
 [[files]]
+file = "config/openloader/packs/spicedcider_data/data/environmental/loot_table/entities/deer.json"
+hash = "719d361491e90beb595d68661728dedbb88521d3c89fb55fc7c8b6b50343ce12"
+
+[[files]]
 file = "config/openloader/packs/spicedcider_data/data/environmental/loot_table/entities/duck.json"
 hash = "26f446e01b54abfe217430be5cd4d991662df387e018b9c89060d98f4d80ea6a"
 
@@ -4010,11 +4022,27 @@ hash = "bc36abec9c0dbae35745fc14e23456d9690883fe04b0401d7008ecf46c91b800"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/environmental/loot_table/entities/reindeer.json"
-hash = "118ef6849ba066557b0d3f70371994d9d5fee160a8919cf066f7ddc90f6a7e58"
+hash = "a0e6235f7c79e44f20035ab6f21207e41719514d1583e3841efdd04187909c4a"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/environmental/loot_table/entities/tapir.json"
-hash = "8a2a0b7a18ee90a713c2f66dbd72f544ac9eff3fd8393a59f5de227859bd9e57"
+hash = "e26e7579e7384e1260721ca30db258de81384c74f04b6f4ff025e74e0ca54d57"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/environmental/loot_table/entities/yak.json"
+hash = "78dea498be52088ba2fe2841946487337553a758c5c9c3367874c06cc18cbbbe"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/environmental/loot_table/entities/zebra.json"
+hash = "05826ff3705bf89443ed2b0c8ceba819c4c1ef01248f7d8bd1b12362a1e294b1"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/environmental/loot_table/entities/zonkey.json"
+hash = "850b4e6e5a32a43353079ed05b002178c4da7b3d5ac78c035b05aaa3e7b6aab0"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/environmental/loot_table/entities/zorse.json"
+hash = "9d152c8340b9eca3c1346dec347c37ed7896298b5123b1551609b03e3f28542b"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/environmental/recipe/cattail_thatch.json"
@@ -4155,6 +4183,10 @@ hash = "35da7d03756db5cd2e8223d8faf2d577d300b7c74a56e86a59d7798b9edb93cc"
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/farmersdelight/loot_modifiers/add_loot_simple_dungeon.json"
 hash = "d194640491ae1a3d9ff432aea15f9823d3334b5aed0fe62beea8ee6809e6de68"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/farmersdelight/loot_modifiers/scavenging_leather.json"
+hash = "918a3ff750e0c21be09f64d2688e196dff939ef8b2c7e8f612518a6e73a9f76d"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/farmersdelight/loot_table/chests/fd_bastion_hoglin_stable.json"
@@ -4477,16 +4509,60 @@ file = "config/openloader/packs/spicedcider_data/data/minecraft/loot_table/chest
 hash = "b7c2e6e2663e56288b8dd84abc3fbf26d721bd2e2ccf19ae18afb92ab382afd8"
 
 [[files]]
+file = "config/openloader/packs/spicedcider_data/data/minecraft/loot_table/entities/cow.json"
+hash = "06a6b8cbacbcb0ed09a1f4417dbc249769870221c47ccbc69406a4a245f8620e"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/minecraft/loot_table/entities/donkey.json"
+hash = "c2c8ac92fce29f1dd4ce45ec9f8baa3314144d233ca7b835957c7106fbe1061a"
+
+[[files]]
 file = "config/openloader/packs/spicedcider_data/data/minecraft/loot_table/entities/evoker.json"
 hash = "a8868a74a291f06cc5f52e084c19e8efaf64d9249bcb47a28a8f4eb280ee6b8e"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/minecraft/loot_table/entities/goat.json"
+hash = "1ea7190837dcf6c907ed101364391e81ec19e44ccdc5b3983cdbca09cd3f3c03"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/minecraft/loot_table/entities/hoglin.json"
+hash = "c18759d48ed5f7ed1c20cd55e1d5ff0563aaff5f3a6f1452ead1578b4f928917"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/minecraft/loot_table/entities/horse.json"
+hash = "635c5b033a88b313991b8f4d89d3f33c7f8d43f03fe7df2fb717da1bb38130bb"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/minecraft/loot_table/entities/llama.json"
+hash = "17fcec73571e5f1f4601938357956481c632a7d0e326b399e978849b1cb37863"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/minecraft/loot_table/entities/mooshroom.json"
+hash = "3a48723ffffffd1bd038fc0d848d9b8ff18d7c606aae34d0c44412dd4883424a"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/minecraft/loot_table/entities/mule.json"
+hash = "8d7b73cc6d93f7b87d649f9e56ebf16b91f9fe71f47e05750696835e463272e2"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/minecraft/loot_table/entities/polar_bear.json"
+hash = "439f814e2024e766ebdba63a02b8c83a43806944d1ea3444add2771ee1b554e1"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/minecraft/loot_table/entities/silverfish.json"
 hash = "efa50e992b790e3ce4192215072d94df72797870a4cbe9ca4e0a26d2eaf317a9"
 
 [[files]]
+file = "config/openloader/packs/spicedcider_data/data/minecraft/loot_table/entities/trader_llama.json"
+hash = "cfecb47cae3a9b4ca664e6b16b4cbea1b20a2fde1fa8eea0c02380503a4e0f7f"
+
+[[files]]
 file = "config/openloader/packs/spicedcider_data/data/minecraft/loot_table/entities/vex.json"
 hash = "cfe7f12f70a109d606c44a31ec6b3ce4a53ef70cccee311cf0d2da7bd63b9332"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/minecraft/loot_table/entities/wolf.json"
+hash = "dfbaa55f11becaeba9d369bd0c9626b20c38f05133dac6a9cb8cb5e67dd11979"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/minecraft/loot_table/gameplay/fishing/junk.json"
@@ -4559,6 +4635,10 @@ hash = "c8de2d5ccc349022fd041ed65fdd037777ab62929db36ccf522c4fb984cca03d"
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/minecraft/recipe/jukebox.json"
 hash = "abbd90027ffe292c3a5ed4e302c50b541a61c63cec0f27e7e085062f1d997082"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/minecraft/recipe/leather.json"
+hash = "21b11674b18c3fb0d8292095cf7c12bca82ef4054ec3f1cd8d1e0222d1655629"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/minecraft/recipe/map.json"
@@ -5313,6 +5393,10 @@ file = "config/openloader/packs/spicedcider_data/data/modestmagic/recipe/enchant
 hash = "618b0fee3148810ec086046c3c1dac5d6deab1f98428e7d6daa44ca0536b5d9b"
 
 [[files]]
+file = "config/openloader/packs/spicedcider_data/data/modestmagic/recipe/infusing/cheerful_clay_statue.json"
+hash = "e520fff9e785826d49b430e4c9dbb9a1f8498d5eea5d1693e2f49a7a7666e093"
+
+[[files]]
 file = "config/openloader/packs/spicedcider_data/data/modestmagic/recipe/infusing/enchantment_tablet_enduring.json"
 hash = "362537e5ea0d19aa3a0adf63fcb7c4fe99e7a375d75515a5aebdbc556156796b"
 
@@ -5335,6 +5419,10 @@ hash = "735ff1760012e5cca7c29642e4b38edccf80a113ebe8f6791aefdbfed3c61c10"
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/modestmagic/recipe/infusing/magic_beans.json"
 hash = "0e44ba7929e210a96ddc643469f98ba7f2213d75d37eb78752057d8882207624"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/modestmagic/recipe/infusing/mournful_clay_statue.json"
+hash = "56a1741a0f0d710f32f554121ada02186ece8b2c8869ed1f312644d7ef88bc79"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/modestmagic/recipe/smithing/collar_amphibious.json"
@@ -5614,7 +5702,7 @@ hash = "0f0f3947c2db9f762f5799b14d01db1b0941f117f010d504488e3665068268e9"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/nomansland/loot_table/archaeology/alchemist_ruins.json"
-hash = "ee44192b22aac1159b2e7ccd8311aefadcd50db4baad84320fa6076bcaf24c76"
+hash = "697fa41d71db6164fd2726a294c7da3580c9a0efaec79f618c02ffecd4408256"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/nomansland/loot_table/archaeology/remains_dungeon.json"
@@ -5635,6 +5723,10 @@ hash = "30ce3b4961eb496a2eb60e44bfc7d70328095b11d1b404515f0bb73b1be6d0aa"
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/nomansland/loot_table/chests/alchemist_pot_alchemy.json"
 hash = "6b1870158af851475e7764b1e01ceee76a138974bcc5197e0900045b8259b128"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/nomansland/loot_table/chests/alchemist_pot_artisanship.json"
+hash = "f7c0b00459d77ff2de82191ac576327ef21fc4ee3c83a35043ec822d8cb2ea8f"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/nomansland/loot_table/chests/alchemist_pot_potions.json"
@@ -5658,7 +5750,11 @@ hash = "64762addeee57db45d2d1dbb5fc8e8419cb1c1d58a22960ec1bcdbdde7b41914"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/nomansland/loot_table/entities/deer.json"
-hash = "a415891125b0a05504bb595a7c6bcdf5bf733552264c0d59e84b1fe6cbb4816d"
+hash = "fdc5d4c82cf22cb5744dc54c1e17815311440cbae05cf4cfecacc7e2a3d55663"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/nomansland/loot_table/entities/moose.json"
+hash = "77a4d08e01cba3e257714976211ecd56838a785d9f766057e0167aef4b669407"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/nomansland/loot_table/gameplay/frienderman_gift.json"
@@ -6033,6 +6129,10 @@ file = "config/openloader/packs/spicedcider_data/data/quark/loot_modifiers/injec
 hash = "67befd9eac93addbcd1cc41c0fa34fd16c646287346df6e1092c4714610fc95f"
 
 [[files]]
+file = "config/openloader/packs/spicedcider_data/data/quark/loot_table/entities/foxhound.json"
+hash = "988a80a1a4f5c18d7d262bfedbfef37ce418d0b55e8a51110e6ec0737b8c16d6"
+
+[[files]]
 file = "config/openloader/packs/spicedcider_data/data/quark/recipe/building/crafting/chiseled_soul_sandstone.json"
 hash = "52827a32e332bd298df5565f2ca01c966d5fedecbc2a343af3b10f19af175279"
 
@@ -6323,6 +6423,10 @@ hash = "6bbffb987850c29b97c237fb2dd54d4c4ba63c35ce1bb14898fe2af2664ed89f"
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/spelunkery/recipe/lead_nugget_from_smelting.json"
 hash = "81f8235dd918b545ff695245a1b794724c2627dbbf751eef19c372ac4e7759cc"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spelunkery/recipe/leather.json"
+hash = "52bb29211f1fe19a0a94459dc35e9402db170f9b42cf75dfb74fc3cfecfa7e0a"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/spelunkery/recipe/mixing/rock_salt.json"
@@ -8097,6 +8201,10 @@ file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/craftin
 hash = "c6faeee982878bd65ae067db43347228cc5431ae5b2dfdf3be0377d252ef19a2"
 
 [[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/crafting/hide_from_rabbit_hide.json"
+hash = "dd055a7986d490e56e3ea9f9e804be4bf3214d152be5f45b2d6b35f25d708627"
+
+[[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/crafting/hoary_apple_crate.json"
 hash = "b0b57867715e588911b8b1c88bf58ba17143129275929012b471f83ee236b6d6"
 
@@ -8787,6 +8895,10 @@ hash = "b62528e7c5e8ca6af099c0fee8d351c1b18ab80ba741d264e9027362039a4bcf"
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/crafting/stone/tuff_tiles.json"
 hash = "9b8f3ca77f2b876ed1553a4acd0478fa1cbae730356a780acf18fff5b111712e"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/crafting/tanning_rack.json"
+hash = "d53a50ad7e3fa055602548f6182311fec7203b937dfaf1a380b67f25693d5992"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/crushed_metals/lead_ingot_from_blasting_crushed.json"
@@ -12046,7 +12158,7 @@ hash = "2edbf62b60165a7ebbea68d5babc9b1991c73ece3e00c57832d6e99529ed69ef"
 
 [[files]]
 file = "config/recreative/tab_layout.json"
-hash = "4f5710c9fb4ba537780406f298e9ee74425add0d50455574f11a48710b983483"
+hash = "dae26415d9ab9af091efc3cf37e223c3f1fec9911764dec4e3899a8d196f9489"
 
 [[files]]
 file = "config/recreative/tab_order.json"
@@ -13974,7 +14086,7 @@ hash = "795c435e6963e10f866a4f85d6e60d184318a19c08fba2940246d765da30de02"
 
 [[files]]
 file = "config/reliable_remover/mods/mynethersdelight.json"
-hash = "8b42ff0004d214d1134d7a4d536aa85f9890f62fb5bd222b00cb8677dd0f2a76"
+hash = "a4eb8092864eba33f51b5117ea313af233886bb35fff0cc2b6b525b2d8252e62"
 
 [[files]]
 file = "config/reliable_remover/mods/natures_spirit.json"
@@ -15544,7 +15656,7 @@ metafile = true
 
 [[files]]
 file = "mods/cider-core.pw.toml"
-hash = "4bf1e8138c6e67473f9d461e5d7b1897a9c84bc5ca2cc05cb354c08b1a4588cd"
+hash = "e5c6db2b3a90eeb1a78abc4f6b49dfe02286c08a7e8e9781e03cd75ca999f54b"
 metafile = true
 
 [[files]]
@@ -17815,6 +17927,10 @@ file = "resourcepacks/spicedcider_resources/assets/brushstrokes/lang/en_us.json"
 hash = "e5f98ecd62b905e3b1687f07f850c20e236e4b8f9b316decfeb7beecec91dae8"
 
 [[files]]
+file = "resourcepacks/spicedcider_resources/assets/brushstrokes/textures/item/wax_brush.png"
+hash = "1e4037bee82992461b6616b7518e1958f3c4df13f44c38d3c0c243ee25d41eb8"
+
+[[files]]
 file = "resourcepacks/spicedcider_resources/assets/buzzier_bees/lang/en_us.json"
 hash = "cf14717ed1dc4c4e0c6f89ed1b9cec20c88e8ac8303b50be08bf120880a39e2b"
 
@@ -20024,7 +20140,7 @@ hash = "aeddfb8c7424062ccf3f69a3999267f534b06496c8276af0d2736a20a2e34065"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/create/textures/item/super_glue.png"
-hash = "a01ba101228b430a75dd2b39c5cfbbd1db42a1881459322ee0c0456f1cb1adbc"
+hash = "446f7d15ad62c6631fe6607ecee038d6371c6e14d59cba16d2c153a55dced057"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/culturaldelights/lang/en_us.json"
@@ -20636,7 +20752,7 @@ hash = "654ef43330ed1eb91b15f3b707062940a96416080c07199ca814b8070d5ab63a"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/farmersdelight/lang/en_us.json"
-hash = "434178d0e0b5da792be20f5e17907b386e380f070b47b777a0465cce33ec88c9"
+hash = "fa3914e504f4e47ccb39c1071eda3f48314c2a85c25934202b107a2928ba0ba8"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/farmersdelight/models/block/pie_slice1.json"
@@ -20900,7 +21016,7 @@ hash = "37a89b8b897de55cb662047194fbf7e2b09cc68f8f3ed5f73bf962ca1a7d5c8d"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/item_descriptions/lang/en_us.json"
-hash = "e6f4071957c152e91feae2234f8f640724aa27bd2697be03800fde0383658e86"
+hash = "118dd6b9c815420f55b2c85374933080edc788a2a7e0775cf5fbca2d2dff63f0"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/jade/textures/gui/sprites/progress_base.png"
@@ -25272,7 +25388,7 @@ hash = "670882716a0791233b99900802687ced96de4254bf5042b33224c42856b85838"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/spelunkery/lang/en_us.json"
-hash = "4714b8f95bca260f9e0760b697a1bd29c85685c815d8bfdbae828374b27f82b1"
+hash = "a4b0ddf0a3fef3620df2880ee1378c6f3e3bf6a2ee35f874cb69ee4b92114454"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/spelunkery/textures/block/wooden_rail.png"
@@ -25324,7 +25440,7 @@ hash = "71341002dcc43dd8e4b8ac10e4ad84c6901b3b134037379ded7e18200558064a"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/spicedcider/lang/en_us.json"
-hash = "76b4d2a3eff96c864a69c9665c3a54cec4152e751046f8cc183b669358f4bf97"
+hash = "b07d8223eea778a5cbd144529c30b6c5e3731dd3ac99d66a019056e27e4f487c"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/spicedcider/models/block/cauldron_content_12.json"

@@ -1,0 +1,40 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "nomansland"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "quark"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "wilderflowers"
+    }
+  ],
+  "type": "modestmagic:infusing",
+  "base": {
+    "item": "minecraft:clay_ball"
+  },
+  "ingredients": [
+    {
+      "item": "modestmagic:stardust"
+    },
+    {
+      "item": "quark:bottled_cloud"
+    },
+    {
+      "item": "minecraft:sunflower"
+    },
+    {
+      "item": "wilderflowers:cheery_wildflowers"
+    }
+  ],
+  "results": [
+    {
+      "id": "spicedcider:cheerful_clay_statue",
+      "count": 1
+    }
+  ]
+}
