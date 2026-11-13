@@ -1,0 +1,24 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "modestmining"
+    }
+  ],
+  "type": "modestmining:forging_shaped",
+  "category": "equipment",
+  "key": {
+    "X": {
+      "tag": "c:ingots/electrum"
+    }
+  },
+  "pattern": [
+    "X X",
+    "XXX",
+    "XXX"
+  ],
+  "result": {
+    "id": "spicedcider:electrum_chestplate",
+    "count": 1
+  }
+}

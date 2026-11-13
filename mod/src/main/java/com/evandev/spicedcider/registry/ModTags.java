@@ -21,6 +21,7 @@ public class ModTags {
         public static final TagKey<Item> DESTROYED_WHEN_BROKEN = tag("destroyed_when_broken");
         public static final TagKey<Item> WAX_OR_TALLOW = tag("wax_or_tallow");
         public static final TagKey<Item> TANNABLE_HIDES = tag("tannable_hides");
+        public static final TagKey<Item> LARGE_TANNABLE_HIDES = tag("large_tannable_hides");
         public static final TagKey<Item> TANNING_AGENTS = tag("tanning_agents");
         public static final TagKey<Item> WORM_SEEKER_ITEMS = tag("worm_seeker_items");
         public static final TagKey<Item> BALLOONS = tag("balloons");

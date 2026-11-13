@@ -320,5 +320,29 @@
     },
     "target": "#c:foods/bread",
     "replacement": "#spicedcider:toastable_bread"
+  },
+  {
+    "action": "replace_input",
+    "filter": {
+      "id": "supplementaries:cannon"
+    },
+    "target": "#c:ingots/lead",
+    "replacement": "#c:ingots/cast_iron"
+  },
+  {
+    "action": "replace_input",
+    "filter": {
+      "id": "supplementaries:cannon_2"
+    },
+    "target": "#c:ingots/iron",
+    "replacement": "#c:ingots/cast_iron"
+  },
+  {
+    "action": "replace_input",
+    "filter": {
+      "id": "quark:tweaks/crafting/utility/misc/easy_hopper"
+    },
+    "target": "#c:ingots/iron",
+    "replacement": "#c:ingots/cast_iron"
   }
 ]

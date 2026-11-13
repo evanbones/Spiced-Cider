@@ -1,0 +1,31 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "modestmining"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "oooh_pinky"
+    }
+  ],
+  "type": "modestmining:forging_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "X": {
+      "item": "oooh_pinky:rose_gold_ingot"
+    }
+  },
+  "pattern": [
+    "XXX",
+    " # ",
+    " # "
+  ],
+  "result": {
+    "id": "oooh_pinky:rose_gold_pickaxe",
+    "count": 1
+  }
+}

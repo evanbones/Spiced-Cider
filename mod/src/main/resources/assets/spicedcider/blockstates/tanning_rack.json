@@ -42,6 +42,36 @@
     {
       "when": {
         "facing": "north",
+        "half": "lower",
+        "contents": "hoglin_hide"
+      },
+      "apply": {
+        "model": "spicedcider:block/tanning_rack_hoglin_hide_lower"
+      }
+    },
+    {
+      "when": {
+        "facing": "north",
+        "half": "lower",
+        "contents": "hoglin_tanning"
+      },
+      "apply": {
+        "model": "spicedcider:block/tanning_rack_hoglin_tanning_lower"
+      }
+    },
+    {
+      "when": {
+        "facing": "north",
+        "half": "lower",
+        "contents": "hoglin_leather"
+      },
+      "apply": {
+        "model": "spicedcider:block/tanning_rack_leather_lower"
+      }
+    },
+    {
+      "when": {
+        "facing": "north",
         "half": "upper"
       },
       "apply": {
@@ -73,6 +103,36 @@
         "facing": "north",
         "half": "upper",
         "contents": "leather"
+      },
+      "apply": {
+        "model": "spicedcider:block/tanning_rack_leather_upper"
+      }
+    },
+    {
+      "when": {
+        "facing": "north",
+        "half": "upper",
+        "contents": "hoglin_hide"
+      },
+      "apply": {
+        "model": "spicedcider:block/tanning_rack_hoglin_hide_upper"
+      }
+    },
+    {
+      "when": {
+        "facing": "north",
+        "half": "upper",
+        "contents": "hoglin_tanning"
+      },
+      "apply": {
+        "model": "spicedcider:block/tanning_rack_hoglin_tanning_upper"
+      }
+    },
+    {
+      "when": {
+        "facing": "north",
+        "half": "upper",
+        "contents": "hoglin_leather"
       },
       "apply": {
         "model": "spicedcider:block/tanning_rack_leather_upper"
@@ -124,6 +184,39 @@
     {
       "when": {
         "facing": "east",
+        "half": "lower",
+        "contents": "hoglin_hide"
+      },
+      "apply": {
+        "model": "spicedcider:block/tanning_rack_hoglin_hide_lower",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "half": "lower",
+        "contents": "hoglin_tanning"
+      },
+      "apply": {
+        "model": "spicedcider:block/tanning_rack_hoglin_tanning_lower",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "half": "lower",
+        "contents": "hoglin_leather"
+      },
+      "apply": {
+        "model": "spicedcider:block/tanning_rack_leather_lower",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
         "half": "upper"
       },
       "apply": {
@@ -158,6 +251,39 @@
         "facing": "east",
         "half": "upper",
         "contents": "leather"
+      },
+      "apply": {
+        "model": "spicedcider:block/tanning_rack_leather_upper",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "half": "upper",
+        "contents": "hoglin_hide"
+      },
+      "apply": {
+        "model": "spicedcider:block/tanning_rack_hoglin_hide_upper",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "half": "upper",
+        "contents": "hoglin_tanning"
+      },
+      "apply": {
+        "model": "spicedcider:block/tanning_rack_hoglin_tanning_upper",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "half": "upper",
+        "contents": "hoglin_leather"
       },
       "apply": {
         "model": "spicedcider:block/tanning_rack_leather_upper",
@@ -210,6 +336,39 @@
     {
       "when": {
         "facing": "south",
+        "half": "lower",
+        "contents": "hoglin_hide"
+      },
+      "apply": {
+        "model": "spicedcider:block/tanning_rack_hoglin_hide_lower",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "half": "lower",
+        "contents": "hoglin_tanning"
+      },
+      "apply": {
+        "model": "spicedcider:block/tanning_rack_hoglin_tanning_lower",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "half": "lower",
+        "contents": "hoglin_leather"
+      },
+      "apply": {
+        "model": "spicedcider:block/tanning_rack_leather_lower",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
         "half": "upper"
       },
       "apply": {
@@ -244,6 +403,39 @@
         "facing": "south",
         "half": "upper",
         "contents": "leather"
+      },
+      "apply": {
+        "model": "spicedcider:block/tanning_rack_leather_upper",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "half": "upper",
+        "contents": "hoglin_hide"
+      },
+      "apply": {
+        "model": "spicedcider:block/tanning_rack_hoglin_hide_upper",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "half": "upper",
+        "contents": "hoglin_tanning"
+      },
+      "apply": {
+        "model": "spicedcider:block/tanning_rack_hoglin_tanning_upper",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "half": "upper",
+        "contents": "hoglin_leather"
       },
       "apply": {
         "model": "spicedcider:block/tanning_rack_leather_upper",
@@ -296,6 +488,39 @@
     {
       "when": {
         "facing": "west",
+        "half": "lower",
+        "contents": "hoglin_hide"
+      },
+      "apply": {
+        "model": "spicedcider:block/tanning_rack_hoglin_hide_lower",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "half": "lower",
+        "contents": "hoglin_tanning"
+      },
+      "apply": {
+        "model": "spicedcider:block/tanning_rack_hoglin_tanning_lower",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "half": "lower",
+        "contents": "hoglin_leather"
+      },
+      "apply": {
+        "model": "spicedcider:block/tanning_rack_leather_lower",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
         "half": "upper"
       },
       "apply": {
@@ -330,6 +555,39 @@
         "facing": "west",
         "half": "upper",
         "contents": "leather"
+      },
+      "apply": {
+        "model": "spicedcider:block/tanning_rack_leather_upper",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "half": "upper",
+        "contents": "hoglin_hide"
+      },
+      "apply": {
+        "model": "spicedcider:block/tanning_rack_hoglin_hide_upper",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "half": "upper",
+        "contents": "hoglin_tanning"
+      },
+      "apply": {
+        "model": "spicedcider:block/tanning_rack_hoglin_tanning_upper",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "half": "upper",
+        "contents": "hoglin_leather"
       },
       "apply": {
         "model": "spicedcider:block/tanning_rack_leather_upper",

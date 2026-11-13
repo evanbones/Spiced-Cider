@@ -1,10 +1,4 @@
 {
-  "neoforge:conditions": [
-    {
-      "type": "neoforge:mod_loaded",
-      "modid": "abnormals_delight"
-    }
-  ],
   "type": "farmersdelight:add_item",
   "conditions": [
     {
@@ -22,7 +16,7 @@
       "condition": "minecraft:entity_properties",
       "entity": "this",
       "predicate": {
-        "type": "#abnormals_delight:scavenges_leather"
+        "type": "#spicedcider:scavenges_hide"
       }
     }
   ],

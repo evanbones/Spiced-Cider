@@ -1,0 +1,27 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "modestmining"
+    }
+  ],
+  "type": "modestmining:forging_shaped",
+  "category": "equipment",
+  "key": {
+    "X": {
+      "tag": "c:ingots/electrum"
+    },
+    "|": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "XX",
+    "X|",
+    " |"
+  ],
+  "result": {
+    "id": "spicedcider:electrum_axe",
+    "count": 1
+  }
+}

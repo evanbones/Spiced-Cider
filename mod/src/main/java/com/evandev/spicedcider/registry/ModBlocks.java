@@ -44,6 +44,7 @@ import net.minecraft.world.level.block.grower.TreeGrower;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
+import net.neoforged.fml.ModList;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import org.jetbrains.annotations.Nullable;
@@ -105,6 +106,11 @@ public class ModBlocks {
     public static final DeferredBlock<Block> TANNING_RACK = BLOCKS.register("tanning_rack",
             () -> new TanningRackBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).strength(1.0F).sound(SoundType.WOOD)
                     .noOcclusion().ignitedByLava().pushReaction(PushReaction.DESTROY)));
+
+    @Nullable
+    public static final DeferredBlock<Block> BONDED_HIDE = bondedHide("bonded_hide", MapColor.COLOR_BROWN, false);
+    @Nullable
+    public static final DeferredBlock<Block> BONDED_HOGLIN_HIDE = bondedHide("bonded_hoglin_hide", MapColor.TERRACOTTA_RED, true);
 
     @Nullable
     public static final DeferredBlock<Block> ORANGE_CRATE = fruitCrate("orange_crate");
@@ -288,6 +294,13 @@ public class ModBlocks {
 
     private static Fluid fluid(String namespace, String path) {
         return BuiltInRegistries.FLUID.get(ResourceLocation.fromNamespaceAndPath(namespace, path));
+    }
+
+    @Nullable
+    private static DeferredBlock<Block> bondedHide(String name, MapColor color, boolean hoglin) {
+        if (!ModList.get().isLoaded("quark") || hoglin && !ModList.get().isLoaded("mynethersdelight")) return null;
+        return BLOCKS.register(name, () -> new Block(BlockBehaviour.Properties.of().mapColor(color).strength(0.4F)
+                .sound(SoundType.WOOL).ignitedByLava()));
     }
 
     @Nullable

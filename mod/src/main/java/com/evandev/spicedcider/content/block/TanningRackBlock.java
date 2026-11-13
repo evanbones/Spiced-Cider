@@ -5,8 +5,10 @@ import com.evandev.spicedcider.registry.ModTags;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.particles.ItemParticleOption;
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -46,6 +48,8 @@ public class TanningRackBlock extends HorizontalDirectionalBlock {
     public static final EnumProperty<DoubleBlockHalf> HALF = BlockStateProperties.DOUBLE_BLOCK_HALF;
     public static final EnumProperty<Contents> CONTENTS = EnumProperty.create("contents", Contents.class);
     public static final int TANNING_TICKS = 2400;
+    public static final int LARGE_HIDE_LEATHER = 3;
+    private static final ResourceLocation HOGLIN_HIDE = ResourceLocation.fromNamespaceAndPath("mynethersdelight", "hoglin_hide");
 
     private static final VoxelShape SHAPE_NS = Block.box(0.0, 0.0, 6.0, 16.0, 16.0, 10.0);
     private static final VoxelShape SHAPE_EW = Block.box(6.0, 0.0, 0.0, 10.0, 16.0, 16.0);
@@ -119,19 +123,20 @@ public class TanningRackBlock extends HorizontalDirectionalBlock {
     @Override
     protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
         Contents contents = state.getValue(CONTENTS);
-        if (contents == Contents.EMPTY && stack.is(ModTags.Items.TANNABLE_HIDES)) {
+        boolean large = stack.is(ModTags.Items.LARGE_TANNABLE_HIDES);
+        if (contents == Contents.EMPTY && (large || stack.is(ModTags.Items.TANNABLE_HIDES))) {
             if (!level.isClientSide()) {
-                setContents(level, pos, state, Contents.HIDE);
+                setContents(level, pos, state, large ? Contents.HOGLIN_HIDE : Contents.HIDE);
                 level.playSound(null, pos, SoundEvents.ARMOR_EQUIP_LEATHER.value(), SoundSource.BLOCKS, 1.0F, 0.8F);
                 level.gameEvent(player, GameEvent.BLOCK_CHANGE, pos);
                 stack.consume(1, player);
             }
             return ItemInteractionResult.sidedSuccess(level.isClientSide());
         }
-        if (contents == Contents.HIDE && stack.is(ModTags.Items.TANNING_AGENTS)) {
+        if ((contents == Contents.HIDE || contents == Contents.HOGLIN_HIDE) && stack.is(ModTags.Items.TANNING_AGENTS)) {
             if (level instanceof ServerLevel serverLevel) {
                 BlockPos lower = lowerPos(pos, state);
-                setContents(level, pos, state, Contents.TANNING);
+                setContents(level, pos, state, contents == Contents.HIDE ? Contents.TANNING : Contents.HOGLIN_TANNING);
                 level.scheduleTick(lower, this, TANNING_TICKS);
                 level.playSound(null, pos, SoundEvents.BRUSH_GENERIC, SoundSource.BLOCKS, 1.0F, 0.9F);
                 serverLevel.sendParticles(new ItemParticleOption(ParticleTypes.ITEM, stack.copyWithCount(1)),
@@ -150,6 +155,8 @@ public class TanningRackBlock extends HorizontalDirectionalBlock {
         ItemStack taken = switch (contents) {
             case HIDE -> new ItemStack(ModItems.HIDE.get());
             case LEATHER -> new ItemStack(Items.LEATHER);
+            case HOGLIN_HIDE -> new ItemStack(BuiltInRegistries.ITEM.get(HOGLIN_HIDE));
+            case HOGLIN_LEATHER -> new ItemStack(Items.LEATHER, LARGE_HIDE_LEATHER);
             default -> ItemStack.EMPTY;
         };
         if (taken.isEmpty()) return InteractionResult.PASS;
@@ -164,14 +171,14 @@ public class TanningRackBlock extends HorizontalDirectionalBlock {
 
     @Override
     protected void tick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
-        if (state.getValue(HALF) != DoubleBlockHalf.LOWER || state.getValue(CONTENTS) != Contents.TANNING) return;
-        setContents(level, pos, state, Contents.LEATHER);
+        if (state.getValue(HALF) != DoubleBlockHalf.LOWER || !state.getValue(CONTENTS).isTanning()) return;
+        setContents(level, pos, state, state.getValue(CONTENTS) == Contents.TANNING ? Contents.LEATHER : Contents.HOGLIN_LEATHER);
         level.playSound(null, pos.above(), SoundEvents.ARMOR_EQUIP_LEATHER.value(), SoundSource.BLOCKS, 0.8F, 1.0F);
     }
 
     @Override
     public void animateTick(BlockState state, Level level, BlockPos pos, RandomSource random) {
-        if (state.getValue(CONTENTS) != Contents.TANNING || random.nextInt(6) != 0) return;
+        if (!state.getValue(CONTENTS).isTanning() || random.nextInt(6) != 0) return;
         boolean ns = state.getValue(FACING).getAxis() == Direction.Axis.Z;
         double along = 0.15 + random.nextDouble() * 0.7;
         double x = pos.getX() + (ns ? along : 0.5);
@@ -210,12 +217,19 @@ public class TanningRackBlock extends HorizontalDirectionalBlock {
         EMPTY("empty"),
         HIDE("hide"),
         TANNING("tanning"),
-        LEATHER("leather");
+        LEATHER("leather"),
+        HOGLIN_HIDE("hoglin_hide"),
+        HOGLIN_TANNING("hoglin_tanning"),
+        HOGLIN_LEATHER("hoglin_leather");
 
         private final String name;
 
         Contents(String name) {
             this.name = name;
+        }
+
+        public boolean isTanning() {
+            return this == TANNING || this == HOGLIN_TANNING;
         }
 
         @Override

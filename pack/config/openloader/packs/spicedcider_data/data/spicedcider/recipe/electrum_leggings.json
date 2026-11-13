@@ -1,0 +1,24 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "modestmining"
+    }
+  ],
+  "type": "modestmining:forging_shaped",
+  "category": "equipment",
+  "key": {
+    "X": {
+      "tag": "c:ingots/electrum"
+    }
+  },
+  "pattern": [
+    "XXX",
+    "X X",
+    "X X"
+  ],
+  "result": {
+    "id": "spicedcider:electrum_leggings",
+    "count": 1
+  }
+}

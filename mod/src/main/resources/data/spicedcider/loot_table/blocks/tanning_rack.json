@@ -91,6 +91,82 @@
           "name": "minecraft:leather"
         }
       ]
+    },
+    {
+      "bonus_rolls": 0.0,
+      "rolls": 1.0,
+      "conditions": [
+        {
+          "condition": "minecraft:block_state_property",
+          "block": "spicedcider:tanning_rack",
+          "properties": {
+            "half": "lower",
+            "contents": "hoglin_leather"
+          }
+        },
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:leather",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 3.0,
+              "add": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bonus_rolls": 0.0,
+      "rolls": 1.0,
+      "conditions": [
+        {
+          "condition": "minecraft:block_state_property",
+          "block": "spicedcider:tanning_rack",
+          "properties": {
+            "half": "lower",
+            "contents": "hoglin_hide"
+          }
+        },
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "spicedcider:blocks/tanning_rack_hoglin_hide"
+        }
+      ]
+    },
+    {
+      "bonus_rolls": 0.0,
+      "rolls": 1.0,
+      "conditions": [
+        {
+          "condition": "minecraft:block_state_property",
+          "block": "spicedcider:tanning_rack",
+          "properties": {
+            "half": "lower",
+            "contents": "hoglin_tanning"
+          }
+        },
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "spicedcider:blocks/tanning_rack_hoglin_hide"
+        }
+      ]
     }
   ],
   "random_sequence": "spicedcider:blocks/tanning_rack"

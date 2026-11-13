@@ -313,6 +313,8 @@ public class SpicedCider {
             event.accept(ModItems.GLOWSTONE_BRICK_WALL.get(), vis);
             event.accept(ModItems.CHISELED_GLOWSTONE_BRICKS.get(), vis);
             event.accept(ModItems.POLISHED_GLOWSTONE_PILLAR.get(), vis);
+            if (ModItems.BONDED_HIDE != null) event.accept(ModItems.BONDED_HIDE.get(), vis);
+            if (ModItems.BONDED_HOGLIN_HIDE != null) event.accept(ModItems.BONDED_HOGLIN_HIDE.get(), vis);
         }
         if (ModItems.POLISHED_GLOWSTONE_STAIRS != null && event.getTabKey().location().equals(InfernalExpansionCompat.TAB)) {
             ItemStack stairs = new ItemStack(ModItems.POLISHED_GLOWSTONE_STAIRS.get());

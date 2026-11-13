@@ -1,0 +1,30 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "modestmining"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "abnormals_delight"
+    }
+  ],
+  "type": "modestmining:forging_shaped",
+  "category": "equipment",
+  "key": {
+    "m": {
+      "tag": "c:ingots/silver"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "m",
+    "s"
+  ],
+  "result": {
+    "id": "abnormals_delight:silver_knife",
+    "count": 1
+  }
+}

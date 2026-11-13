@@ -11,8 +11,11 @@ import dev.emi.emi.api.render.EmiTexture;
 import dev.emi.emi.api.stack.EmiIngredient;
 import dev.emi.emi.api.stack.EmiStack;
 import dev.emi.emi.api.widget.WidgetHolder;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 
 import java.util.List;
@@ -24,13 +27,13 @@ public class TanningEmiRecipe extends BasicEmiRecipe {
     private final EmiIngredient hide;
     private final EmiIngredient agent;
 
-    private TanningEmiRecipe(EmiRecipeCategory category) {
-        super(category, ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "/tanning/leather"), WIDTH, HEIGHT);
-        this.hide = EmiIngredient.of(ModTags.Items.TANNABLE_HIDES);
+    private TanningEmiRecipe(EmiRecipeCategory category, String path, TagKey<Item> hides, int leather) {
+        super(category, ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "/tanning/" + path), WIDTH, HEIGHT);
+        this.hide = EmiIngredient.of(hides);
         this.agent = EmiIngredient.of(ModTags.Items.TANNING_AGENTS);
         this.inputs = List.of(hide, agent);
         this.catalysts = List.of(EmiStack.of(ModItems.TANNING_RACK.get()));
-        this.outputs = List.of(EmiStack.of(Items.LEATHER));
+        this.outputs = List.of(EmiStack.of(Items.LEATHER, leather));
     }
 
     public static void register(EmiRegistry registry) {
@@ -38,7 +41,10 @@ public class TanningEmiRecipe extends BasicEmiRecipe {
         EmiRecipeCategory category = new EmiRecipeCategory(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "tanning"), rack);
         registry.addCategory(category);
         registry.addWorkstation(category, rack);
-        registry.addRecipe(new TanningEmiRecipe(category));
+        registry.addRecipe(new TanningEmiRecipe(category, "leather", ModTags.Items.TANNABLE_HIDES, 1));
+        if (BuiltInRegistries.ITEM.getTag(ModTags.Items.LARGE_TANNABLE_HIDES).map(tag -> tag.size() > 0).orElse(false)) {
+            registry.addRecipe(new TanningEmiRecipe(category, "large_hide_leather", ModTags.Items.LARGE_TANNABLE_HIDES, TanningRackBlock.LARGE_HIDE_LEATHER));
+        }
     }
 
     @Override

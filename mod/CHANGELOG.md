@@ -5,6 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.9.1] - 2026-11-12
+
+### Added
+
+- Tanning Rack now also takes My Nether's Delight Hoglin Hide, which cures into 3 Leather at once.
+- Bonded Hide and Bonded Hoglin Hide (with Quark; Hoglin also needs My Nether's Delight): storage blocks of 9 hides, matching Quark's Bonded Leather.
+
+### Changed
+
+- The Tanning Rack inventory icon is now a 3D model of the rack.
+
 ## [1.9.0] - 2026-11-12
 
 ### Added

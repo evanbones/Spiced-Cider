@@ -16,7 +16,9 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.*;
+import net.minecraft.world.level.block.Block;
 import net.neoforged.fml.ModList;
+import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import org.jetbrains.annotations.Nullable;
@@ -112,6 +114,10 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> TANNING_RACK = ITEMS.register("tanning_rack",
             () -> new DoubleHighBlockItem(ModBlocks.TANNING_RACK.get(), new Item.Properties()));
+    @Nullable
+    public static final DeferredItem<Item> BONDED_HIDE = optionalBlockItem("bonded_hide", ModBlocks.BONDED_HIDE);
+    @Nullable
+    public static final DeferredItem<Item> BONDED_HOGLIN_HIDE = optionalBlockItem("bonded_hoglin_hide", ModBlocks.BONDED_HOGLIN_HIDE);
 
     @Nullable
     public static final DeferredItem<Item> MOURNFUL_CLAY_STATUE = clayStatue("mournful_clay_statue");
@@ -282,6 +288,11 @@ public class ModItems {
         return TideCompat.isLoaded()
                 ? ITEMS.register(name, () -> TideCompat.createHookItem(new Item.Properties(), "item.spicedcider." + name + ".desc"))
                 : null;
+    }
+
+    @Nullable
+    private static DeferredItem<Item> optionalBlockItem(String name, @Nullable DeferredBlock<Block> block) {
+        return block == null ? null : ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
 
     @Nullable

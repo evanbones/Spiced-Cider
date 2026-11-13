@@ -1,0 +1,27 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "modestmining"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "oooh_pinky"
+    }
+  ],
+  "type": "modestmining:forging_shaped",
+  "category": "misc",
+  "key": {
+    "X": {
+      "item": "oooh_pinky:rose_gold_ingot"
+    }
+  },
+  "pattern": [
+    "X X",
+    "X X"
+  ],
+  "result": {
+    "id": "oooh_pinky:rose_gold_boots",
+    "count": 1
+  }
+}
