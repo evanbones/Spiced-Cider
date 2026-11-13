@@ -1,0 +1,32 @@
+{
+  "parent": "spicedcider:spiced_cider/copper",
+  "display": {
+    "icon": {
+      "id": "create:copper_sheet"
+    },
+    "title": {
+      "text": "Sheet Happens"
+    },
+    "description": {
+      "text": "Flatten an Ingot into a Sheet with a Hammer or a Mechanical Press"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "has_sheet": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "#c:plates"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_sheet"
+    ]
+  ]
+}

@@ -7,15 +7,19 @@
   ],
   "type": "modestmining:forging_shaped",
   "category": "equipment",
+  "cooktime": 144,
   "key": {
-    "X": {
+    "S": {
+      "tag": "c:plates/electrum"
+    },
+    "I": {
       "tag": "c:ingots/electrum"
     }
   },
   "pattern": [
-    "XXX",
-    "X X",
-    "X X"
+    "SSS",
+    "I I",
+    "I I"
   ],
   "result": {
     "id": "spicedcider:electrum_leggings",

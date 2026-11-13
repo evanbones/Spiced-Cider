@@ -1,0 +1,31 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "modestmining"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    }
+  ],
+  "type": "modestmining:forging_shaped",
+  "category": "equipment",
+  "cooktime": 144,
+  "key": {
+    "S": {
+      "tag": "c:plates/gold"
+    },
+    "I": {
+      "tag": "c:ingots/gold"
+    }
+  },
+  "pattern": [
+    "S S",
+    "I I"
+  ],
+  "result": {
+    "id": "minecraft:golden_boots",
+    "count": 1
+  }
+}

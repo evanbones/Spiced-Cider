@@ -24,6 +24,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.EnumMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class ModItems {
@@ -104,6 +105,8 @@ public class ModItems {
             () -> new BlockItem(ModBlocks.CAST_IRON_BLOCK.get(), new Item.Properties()));
     public static final DeferredItem<Item> CAST_IRON_SHEET = ITEMS.register("cast_iron_sheet",
             () -> new Item(new Item.Properties()));
+    public static final Map<String, ResourceLocation> SHEET_INGOTS = sheetIngots();
+    public static final Map<String, DeferredItem<Item>> METAL_SHEETS = metalSheets();
 
     public static final DeferredItem<Item> TALLOW = ITEMS.register("tallow",
             () -> new Item(new Item.Properties()));
@@ -300,5 +303,31 @@ public class ModItems {
         return ModList.get().isLoaded("nomansland")
                 ? ITEMS.register(name, () -> new Item(new Item.Properties().stacksTo(16)))
                 : null;
+    }
+
+    private static Map<String, ResourceLocation> sheetIngots() {
+        Map<String, ResourceLocation> ingots = new LinkedHashMap<>();
+        ingots.put("tin", ResourceLocation.fromNamespaceAndPath("caverns_and_chasms", "tin_ingot"));
+        ingots.put("lead", ResourceLocation.fromNamespaceAndPath("modestmining", "lead_ingot"));
+        ingots.put("rose_gold", ResourceLocation.fromNamespaceAndPath("oooh_pinky", "rose_gold_ingot"));
+        ingots.put("silver", ResourceLocation.fromNamespaceAndPath("caverns_and_chasms", "silver_ingot"));
+        ingots.put("electrum", ResourceLocation.fromNamespaceAndPath("modestmining", "electrum_ingot"));
+        ingots.put("netherite", ResourceLocation.withDefaultNamespace("netherite_ingot"));
+        ingots.put("necromium", ResourceLocation.fromNamespaceAndPath("caverns_and_chasms", "necromium_ingot"));
+        ingots.put("prismarite", ResourceLocation.fromNamespaceAndPath("modestmining", "prismarite_ingot"));
+        ingots.put("valkyrium", ResourceLocation.fromNamespaceAndPath("modestmining", "valkyrium_ingot"));
+        return ingots;
+    }
+
+    private static Map<String, DeferredItem<Item>> metalSheets() {
+        Map<String, DeferredItem<Item>> sheets = new LinkedHashMap<>();
+        SHEET_INGOTS.forEach((metal, ingot) -> {
+            String mod = ingot.getNamespace();
+            if (!mod.equals("minecraft") && !ModList.get().isLoaded(mod)) return;
+            boolean fireResistant = metal.equals("netherite") || metal.equals("necromium");
+            sheets.put(metal, ITEMS.register(metal + "_sheet",
+                    () -> new Item(fireResistant ? new Item.Properties().fireResistant() : new Item.Properties())));
+        });
+        return sheets;
     }
 }

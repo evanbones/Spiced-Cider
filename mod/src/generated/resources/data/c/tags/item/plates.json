@@ -1,5 +1,42 @@
 {
+  "remove": [],
   "values": [
-    "spicedcider:cast_iron_sheet"
+    "spicedcider:cast_iron_sheet",
+    {
+      "id": "spicedcider:tin_sheet",
+      "required": false
+    },
+    {
+      "id": "spicedcider:lead_sheet",
+      "required": false
+    },
+    {
+      "id": "spicedcider:rose_gold_sheet",
+      "required": false
+    },
+    {
+      "id": "spicedcider:silver_sheet",
+      "required": false
+    },
+    {
+      "id": "spicedcider:electrum_sheet",
+      "required": false
+    },
+    {
+      "id": "spicedcider:netherite_sheet",
+      "required": false
+    },
+    {
+      "id": "spicedcider:necromium_sheet",
+      "required": false
+    },
+    {
+      "id": "spicedcider:prismarite_sheet",
+      "required": false
+    },
+    {
+      "id": "spicedcider:valkyrium_sheet",
+      "required": false
+    }
   ]
 }

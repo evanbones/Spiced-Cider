@@ -1,0 +1,37 @@
+{
+  "parent": "spicedcider:spiced_cider/tanning",
+  "display": {
+    "icon": {
+      "id": "minecraft:leather_chestplate"
+    },
+    "title": {
+      "text": "Skin in the Game"
+    },
+    "description": {
+      "text": "Stitch Leather into a piece of armor"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "has_leather_armor": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:leather_helmet",
+              "minecraft:leather_chestplate",
+              "minecraft:leather_leggings",
+              "minecraft:leather_boots"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_leather_armor"
+    ]
+  ]
+}

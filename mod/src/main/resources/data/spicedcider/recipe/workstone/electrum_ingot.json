@@ -1,0 +1,27 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "manual_labour"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "modestmining"
+    }
+  ],
+  "type": "manual_labour:workstone",
+  "ingredients": [
+    {
+      "item": "modestmining:electrum_ingot"
+    },
+    {
+      "tag": "manual_labour:hammers"
+    }
+  ],
+  "results": [
+    {
+      "chance": 0.75,
+      "id": "spicedcider:electrum_sheet"
+    }
+  ]
+}

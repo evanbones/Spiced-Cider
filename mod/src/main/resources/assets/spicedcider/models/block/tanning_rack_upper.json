@@ -1,5 +1,6 @@
 {
   "parent": "minecraft:block/block",
+  "render_type": "minecraft:cutout",
   "ambientocclusion": false,
   "textures": {
     "wood": "minecraft:block/stripped_spruce_log",

@@ -1,0 +1,25 @@
+{
+  "parent": "spicedcider:spiced_cider/crafting_table",
+  "display": {
+    "icon": {
+      "id": "minecraft:leather"
+    },
+    "title": {
+      "text": "Tan Lines"
+    },
+    "description": {
+      "text": "Cure a Hide into Leather on a Tanning Rack with some Tree Bark"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "tanned_hide": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "tanned_hide"
+    ]
+  ]
+}

@@ -328,6 +328,7 @@ public class SpicedCider {
             event.insertAfter(new ItemStack(Items.IRON_INGOT), new ItemStack(ModItems.CAST_IRON_INGOT.get()), vis);
             event.insertAfter(new ItemStack(ModItems.CAST_IRON_INGOT.get()), new ItemStack(ModItems.CAST_IRON_SHEET.get()), vis);
             event.insertAfter(new ItemStack(ModItems.CAST_IRON_SHEET.get()), new ItemStack(ModItems.BLAST_PROOF_PLATING.get()), vis);
+            ModItems.METAL_SHEETS.values().forEach(sheet -> event.accept(sheet.get(), vis));
             event.insertAfter(new ItemStack(Items.HONEYCOMB), new ItemStack(ModItems.TALLOW.get()), vis);
             event.insertAfter(new ItemStack(Items.RABBIT_HIDE), new ItemStack(ModItems.HIDE.get()), vis);
             if (ModItems.MOURNFUL_CLAY_STATUE != null) {

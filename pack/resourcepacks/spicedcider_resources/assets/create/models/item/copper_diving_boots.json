@@ -1,0 +1,26 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "create:item/copper_diving_boots"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "damage": 0.25
+      },
+      "model": "create:item/exposed_copper_diving_boots"
+    },
+    {
+      "predicate": {
+        "damage": 0.5
+      },
+      "model": "create:item/weathered_copper_diving_boots"
+    },
+    {
+      "predicate": {
+        "damage": 0.75
+      },
+      "model": "create:item/oxidized_copper_diving_boots"
+    }
+  ]
+}

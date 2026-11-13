@@ -1,0 +1,23 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "caverns_and_chasms"
+    }
+  ],
+  "type": "create:pressing",
+  "ingredients": [
+    {
+      "item": "caverns_and_chasms:necromium_ingot"
+    }
+  ],
+  "results": [
+    {
+      "id": "spicedcider:necromium_sheet"
+    }
+  ]
+}

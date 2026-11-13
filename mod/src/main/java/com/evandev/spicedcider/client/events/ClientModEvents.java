@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.client.events;
 
+import com.evandev.spicedcider.client.renderer.CopperPatina;
 import com.evandev.spicedcider.client.renderer.TapStreamRenderer;
 import com.evandev.spicedcider.client.FireVariantClient;
 import com.evandev.spicedcider.client.MapIconProperty;
@@ -31,6 +32,7 @@ import com.evandev.spicedcider.content.block.TubewormBlock;
 import com.evandev.spicedcider.registry.*;
 import com.evandev.spicedcider.resource.ResourceBaker;
 import com.evandev.spicedcider.weather.client.CloudCoverClient;
+import net.minecraft.server.packs.resources.ResourceManagerReloadListener;
 import net.minecraft.client.renderer.BiomeColors;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.neoforged.neoforge.client.event.RegisterClientTooltipComponentFactoriesEvent;
@@ -224,6 +226,7 @@ public class ClientModEvents {
     public static void registerClientReloadListeners(RegisterClientReloadListenersEvent event) {
         event.registerReloadListener(SpicedCider.RANDOM_NAME_GENERATOR);
         event.registerReloadListener(new BrokenTextureReloadListener());
+        event.registerReloadListener((ResourceManagerReloadListener) resourceManager -> CopperPatina.clearCache());
         CloudCoverClient.registerReloadListener(event);
         NetherHeatHaze.registerReloadListener(event);
     }

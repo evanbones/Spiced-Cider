@@ -1,8 +1,10 @@
 package com.evandev.spicedcider.content.block;
 
+import com.evandev.spicedcider.SpicedCider;
 import com.evandev.spicedcider.registry.ModItems;
 import com.evandev.spicedcider.registry.ModTags;
 import com.mojang.serialization.MapCodec;
+import net.minecraft.advancements.AdvancementHolder;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -10,6 +12,7 @@ import net.minecraft.core.particles.ItemParticleOption;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
@@ -50,6 +53,7 @@ public class TanningRackBlock extends HorizontalDirectionalBlock {
     public static final int TANNING_TICKS = 2400;
     public static final int LARGE_HIDE_LEATHER = 3;
     private static final ResourceLocation HOGLIN_HIDE = ResourceLocation.fromNamespaceAndPath("mynethersdelight", "hoglin_hide");
+    private static final ResourceLocation TANNING_ADVANCEMENT = ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "spiced_cider/tanning");
 
     private static final VoxelShape SHAPE_NS = Block.box(0.0, 0.0, 6.0, 16.0, 16.0, 10.0);
     private static final VoxelShape SHAPE_EW = Block.box(6.0, 0.0, 0.0, 10.0, 16.0, 16.0);
@@ -165,6 +169,7 @@ public class TanningRackBlock extends HorizontalDirectionalBlock {
             level.playSound(null, pos, SoundEvents.ITEM_PICKUP, SoundSource.PLAYERS, 0.4F, 1.0F);
             level.gameEvent(player, GameEvent.BLOCK_CHANGE, pos);
             if (!player.getInventory().add(taken)) player.drop(taken, false);
+            if ((contents == Contents.LEATHER || contents == Contents.HOGLIN_LEATHER) && player instanceof ServerPlayer serverPlayer) awardTanning(serverPlayer);
         }
         return InteractionResult.sidedSuccess(level.isClientSide());
     }
@@ -184,6 +189,11 @@ public class TanningRackBlock extends HorizontalDirectionalBlock {
         double x = pos.getX() + (ns ? along : 0.5);
         double z = pos.getZ() + (ns ? 0.5 : along);
         level.addParticle(ParticleTypes.FALLING_HONEY, x, pos.getY() + 0.1 + random.nextDouble() * 0.6, z, 0.0, 0.0, 0.0);
+    }
+
+    private static void awardTanning(ServerPlayer player) {
+        AdvancementHolder holder = player.server.getAdvancements().get(TANNING_ADVANCEMENT);
+        if (holder != null) player.getAdvancements().award(holder, "tanned_hide");
     }
 
     private static BlockPos lowerPos(BlockPos pos, BlockState state) {

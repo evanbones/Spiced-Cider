@@ -214,6 +214,11 @@ public class ModItemTagsProvider extends ItemTagsProvider {
                 .add(ModItems.CAST_IRON_SHEET.get());
         this.tag(ItemTags.create(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("c", "plates/cast_iron")))
                 .add(ModItems.CAST_IRON_SHEET.get());
+        ModItems.SHEET_INGOTS.keySet().forEach(metal -> {
+            net.minecraft.resources.ResourceLocation sheet = net.minecraft.resources.ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, metal + "_sheet");
+            this.tag(ItemTags.create(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("c", "plates"))).addOptional(sheet);
+            this.tag(ItemTags.create(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("c", "plates/" + metal))).addOptional(sheet);
+        });
 
         addTierItemTags();
     }

@@ -1,15 +1,31 @@
 {
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "modestmining"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "alloyed"
+    }
+  ],
   "type": "modestmining:forging_shaped",
+  "category": "equipment",
+  "cooktime": 144,
   "key": {
-    "X": {
+    "S": {
+      "tag": "c:plates/steel"
+    },
+    "I": {
       "tag": "c:ingots/steel"
     }
   },
   "pattern": [
-    "X X",
-    "X X"
+    "S S",
+    "I I"
   ],
   "result": {
-    "id": "alloyed:steel_boots"
+    "id": "alloyed:steel_boots",
+    "count": 1
   }
 }

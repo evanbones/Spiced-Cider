@@ -11,14 +11,18 @@
   ],
   "type": "modestmining:forging_shaped",
   "category": "equipment",
+  "cooktime": 144,
   "key": {
-    "X": {
+    "S": {
+      "tag": "c:plates/silver"
+    },
+    "I": {
       "tag": "c:ingots/silver"
     }
   },
   "pattern": [
-    "X X",
-    "X X"
+    "S S",
+    "I I"
   ],
   "result": {
     "id": "caverns_and_chasms:silver_boots",

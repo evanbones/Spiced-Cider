@@ -52,6 +52,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.CAST_IRON_INGOT.get());
         basicItem(ModItems.CAST_IRON_NUGGET.get());
         basicItem(ModItems.CAST_IRON_SHEET.get());
+        ModItems.SHEET_INGOTS.keySet().forEach(metal -> withExistingParent(metal + "_sheet", "item/generated")
+                .texture("layer0", modLoc("item/" + metal + "_sheet")));
         withExistingParent("cast_iron_block", modLoc("block/cast_iron_block"));
         basicItem(ModItems.TALLOW.get());
         basicItem(ModItems.WORM.get());

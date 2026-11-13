@@ -24,6 +24,45 @@
         "modestmining:throwing": 1
       },
       "model": "spicedcider:item/copper_javelin_throwing"
+    },
+    {
+      "predicate": {
+        "damage": 0.25
+      },
+      "model": "spicedcider:item/exposed_copper_javelin"
+    },
+    {
+      "predicate": {
+        "damage": 0.25,
+        "modestmining:throwing": 1
+      },
+      "model": "spicedcider:item/exposed_copper_javelin_throwing"
+    },
+    {
+      "predicate": {
+        "damage": 0.5
+      },
+      "model": "spicedcider:item/weathered_copper_javelin"
+    },
+    {
+      "predicate": {
+        "damage": 0.5,
+        "modestmining:throwing": 1
+      },
+      "model": "spicedcider:item/weathered_copper_javelin_throwing"
+    },
+    {
+      "predicate": {
+        "damage": 0.75
+      },
+      "model": "spicedcider:item/oxidized_copper_javelin"
+    },
+    {
+      "predicate": {
+        "damage": 0.75,
+        "modestmining:throwing": 1
+      },
+      "model": "spicedcider:item/oxidized_copper_javelin_throwing"
     }
   ]
 }

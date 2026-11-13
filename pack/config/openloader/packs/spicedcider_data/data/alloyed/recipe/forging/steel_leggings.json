@@ -1,16 +1,32 @@
 {
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "modestmining"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "alloyed"
+    }
+  ],
   "type": "modestmining:forging_shaped",
+  "category": "equipment",
+  "cooktime": 144,
   "key": {
-    "X": {
+    "S": {
+      "tag": "c:plates/steel"
+    },
+    "I": {
       "tag": "c:ingots/steel"
     }
   },
   "pattern": [
-    "XXX",
-    "X X",
-    "X X"
+    "SSS",
+    "I I",
+    "I I"
   ],
   "result": {
-    "id": "alloyed:steel_leggings"
+    "id": "alloyed:steel_leggings",
+    "count": 1
   }
 }

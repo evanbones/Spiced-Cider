@@ -7,15 +7,19 @@
   ],
   "type": "modestmining:forging_shaped",
   "category": "equipment",
+  "cooktime": 144,
   "key": {
-    "X": {
+    "S": {
+      "tag": "c:plates/electrum"
+    },
+    "I": {
       "tag": "c:ingots/electrum"
     }
   },
   "pattern": [
-    "X X",
-    "XXX",
-    "XXX"
+    "I I",
+    "SSS",
+    "ISI"
   ],
   "result": {
     "id": "spicedcider:electrum_chestplate",

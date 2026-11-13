@@ -1,0 +1,26 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "minecraft:item/shears"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "damage": 0.25
+      },
+      "model": "minecraft:item/exposed_shears"
+    },
+    {
+      "predicate": {
+        "damage": 0.5
+      },
+      "model": "minecraft:item/weathered_shears"
+    },
+    {
+      "predicate": {
+        "damage": 0.75
+      },
+      "model": "minecraft:item/oxidized_shears"
+    }
+  ]
+}

@@ -10,15 +10,19 @@
     }
   ],
   "type": "modestmining:forging_shaped",
-  "category": "misc",
+  "category": "equipment",
+  "cooktime": 144,
   "key": {
-    "X": {
-      "item": "oooh_pinky:rose_gold_ingot"
+    "S": {
+      "tag": "c:plates/rose_gold"
+    },
+    "I": {
+      "tag": "c:ingots/rose_gold"
     }
   },
   "pattern": [
-    "XXX",
-    "X X"
+    "SSS",
+    "I I"
   ],
   "result": {
     "id": "oooh_pinky:rose_gold_helmet",
