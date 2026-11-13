@@ -1,0 +1,25 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "caverns_and_chasms"
+    }
+  ],
+  "type": "create:mixing",
+  "heat_requirement": "heated",
+  "ingredients": [
+    {
+      "item": "caverns_and_chasms:tin_ingot"
+    }
+  ],
+  "results": [
+    {
+      "id": "spicedcider:molten_tin",
+      "amount": 250
+    }
+  ]
+}

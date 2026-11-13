@@ -108,6 +108,7 @@
     "offgrid.OverlaysEdgeContactMixin",
     "offgrid.PlacementProbeMoonlightMixin",
     "offgrid.SupportDirectionMixin",
+    "snowrealmagic.SnowLayerFallOnOverlayMixin",
     "farmersdelight.CuttingBoardBrokenToolMixin",
     "manuallabour.LadleBasinBrokenToolMixin",
     "manuallabour.MortarBrokenToolMixin",
@@ -201,6 +202,7 @@
     "supplementaries.SoapClearTrimMixin"
   ],
   "client": [
+    "minecraft.client.CameraMoltenFogMixin",
     "remi.EmiScreenManagerRightTabsMixin",
     "remi.CreativeModeTabGuiRightTabsMixin",
     "remi.ItemTabNavigationBarRightTabsMixin",
@@ -370,7 +372,6 @@
     "sodium.EdgeFogShaderLoaderMixin",
     "sodium.EdgeFogShaderInterfaceMixin",
     "roxy.FogRendererVoxyFogMixin",
-    "roxy.GameRendererWorldIconMixin",
     "roxy.VoxyRenderSystemGcMixin",
     "roxy.VoxySectionCacheMixin",
     "roxy.VoxyBakeTextureMixin",

@@ -5,7 +5,6 @@ import com.evandev.spicedcider.compat.vista.VistaFeeds;
 import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.evandev.spicedcider.weather.VisualWeather;
 import com.mojang.blaze3d.shaders.FogShape;
-import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.client.Camera;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.ClientLevel;
@@ -15,9 +14,11 @@ import net.minecraft.core.Holder;
 import net.minecraft.util.Mth;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LightLayer;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.material.FogType;
+import net.minecraft.world.level.material.FluidState;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.EventPriority;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -86,7 +87,7 @@ public final class VoxyFog {
         SpicedCiderConfig.Client config = SpicedCiderConfig.CLIENT;
         if (!SpicedCiderConfig.CLIENT_SPEC.isLoaded() || !config.voxyFogOverride.get()) return;
         if (VistaFeeds.mirrorFogActive()) return;
-        if (camera.getFluidInCamera() != FogType.NONE) return;
+        if (camera.getFluidInCamera() != FogType.NONE || inFluid(camera)) return;
         if (camera.getEntity() instanceof LivingEntity entity
                 && (entity.hasEffect(MobEffects.BLINDNESS) || entity.hasEffect(MobEffects.DARKNESS))) return;
 
@@ -137,15 +138,6 @@ public final class VoxyFog {
         pending = true;
     }
 
-    public static void finish(FogRenderer.FogMode mode) {
-        if (mode != FogRenderer.FogMode.FOG_TERRAIN || !pending) return;
-        pending = false;
-        applied = true;
-        RenderSystem.setShaderFogStart(fogStart);
-        RenderSystem.setShaderFogEnd(fogEnd);
-        RenderSystem.setShaderFogShape(FogShape.SPHERE);
-    }
-
     @SubscribeEvent(priority = EventPriority.HIGHEST)
     public static void onRenderFog(ViewportEvent.RenderFog event) {
         if (!pending || event.getMode() != FogRenderer.FogMode.FOG_TERRAIN) return;
@@ -157,7 +149,7 @@ public final class VoxyFog {
     @SubscribeEvent(priority = EventPriority.LOW)
     public static void onFogColor(ViewportEvent.ComputeFogColor event) {
         if (dust < 0.01F || !SpicedCiderConfig.CLIENT_SPEC.isLoaded() || !SpicedCiderConfig.CLIENT.voxyFogOverride.get()) return;
-        if (event.getCamera().getFluidInCamera() != FogType.NONE) return;
+        if (event.getCamera().getFluidInCamera() != FogType.NONE || inFluid(event.getCamera())) return;
         float red = event.getRed();
         float green = event.getGreen();
         float blue = event.getBlue();
@@ -175,12 +167,23 @@ public final class VoxyFog {
         return 0.2126F * red + 0.7152F * green + 0.0722F * blue;
     }
 
+    private static boolean inFluid(Camera camera) {
+        if (camera.getEntity() == null) return false;
+        Level level = camera.getEntity().level();
+        BlockPos pos = camera.getBlockPosition();
+        FluidState state = level.getFluidState(pos);
+        return !state.isEmpty() && camera.getPosition().y < pos.getY() + state.getHeight(level, pos);
+    }
+
     public static boolean capture(ViewportEvent.RenderFog event, boolean canceled) {
         if (!pending || event.getMode() != FogRenderer.FogMode.FOG_TERRAIN) return canceled;
         fogEnd = Math.max(event.getFarPlaneDistance(), 16.0F);
         fogStart = clampStart(event.getNearPlaneDistance());
         event.setNearPlaneDistance(fogStart);
         event.setFarPlaneDistance(fogEnd);
+        pending = false;
+        applied = true;
+        BundledRoxy.overrideTerrainFog(fogStart, fogEnd, event.getFogShape());
         return true;
     }
 

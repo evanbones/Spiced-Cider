@@ -111,6 +111,7 @@ public class SpicedCider {
         ModBuildingBlocks.register();
         ModPaleGardenBlocks.register();
         ModFireBlocks.register();
+        ModMoltenMetals.register();
         ModBlocks.BLOCKS.register(modEventBus);
         ModBlockEntities.BLOCK_ENTITIES.register(modEventBus);
         ModTreeFeatures.TRUNK_PLACERS.register(modEventBus);
@@ -171,6 +172,7 @@ public class SpicedCider {
         event.enqueueWork(TideCompat::registerFishingMediums);
         event.enqueueWork(IceCubes::registerDispenserBehavior);
         event.enqueueWork(LatexCauldronBlock::registerInteractions);
+        event.enqueueWork(ModMoltenMetals::registerInteractions);
         if (ModList.get().isLoaded("nomansland") && ModList.get().isLoaded("create")) {
             event.enqueueWork(NoMansLandCreate::registerOpenPipeEffects);
         }
@@ -252,6 +254,12 @@ public class SpicedCider {
             event.insertAfter(new ItemStack(ModItems.LATEX_BUCKET.get()), new ItemStack(ModItems.RESIN_BUCKET.get()), vis);
             event.insertAfter(new ItemStack(ModItems.RESIN_BUCKET.get()), new ItemStack(ModItems.MAPLE_SYRUP_BUCKET.get()), vis);
             event.insertAfter(new ItemStack(ModItems.MAPLE_SYRUP_BUCKET.get()), new ItemStack(ModItems.RESIN_OIL_BUCKET.get()), vis);
+            ItemStack previous = new ItemStack(Items.LAVA_BUCKET);
+            for (ModMoltenMetals.Entry entry : ModMoltenMetals.ENTRIES.values()) {
+                ItemStack bucket = new ItemStack(entry.bucket().get());
+                event.insertAfter(previous, bucket, vis);
+                previous = bucket;
+            }
         }
         if (event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
             event.insertAfter(new ItemStack(Items.ROOTED_DIRT), new ItemStack(ModItems.WORMY_DIRT.get()), vis);

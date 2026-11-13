@@ -1,0 +1,26 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    }
+  ],
+  "type": "create:mixing",
+  "heat_requirement": "superheated",
+  "ingredients": [
+    [
+      {
+        "tag": "c:raw_materials/iron"
+      },
+      {
+        "item": "create:crushed_raw_iron"
+      }
+    ]
+  ],
+  "results": [
+    {
+      "id": "spicedcider:molten_iron",
+      "amount": 375
+    }
+  ]
+}

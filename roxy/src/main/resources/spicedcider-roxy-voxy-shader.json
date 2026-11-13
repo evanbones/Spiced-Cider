@@ -1,0 +1,30 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "plugin": "com.moulberry.mixinconstraints.ConstraintsMixinPlugin",
+  "package": "com.evandev.spicedcider.roxy.mixin",
+  "compatibilityLevel": "JAVA_21",
+    "client": [
+        "RoxyIrisReloadMixin",
+        "RoxyLodEntityFrameMixin",
+        "RoxyLodIrisShaderMixin",
+        "RoxyLodIrisExtendedShaderMixin",
+        "RoxyLodColorwheelSourcesMixin",
+        "RoxyLodColorwheelProgramMixin",
+        "RoxyShaderResourceMixin",
+        "RoxySoftwareRasterizerMixin",
+        "RoxyFogRendererMixin",
+        "RoxyBetterFogVoxyBridgeMixin",
+        "RoxyFogWeatherMixin",
+        "RoxyFogDawnMixin",
+        "RoxyFogHorizonMixin",
+        "RoxyGameRendererMixin",
+        "RoxyGPUBoosterConfigMixin",
+        "RoxyIrisRenderTargetMixin",
+        "RoxyIrisLevelRendererMixin"
+  ],
+  "server": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

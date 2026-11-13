@@ -46,5 +46,31 @@
       "supplementaries:blackstone_tile_wall"
     ],
     "output": "stoneworks:blackstone_tile_wall"
+  },
+  {
+    "inputs": [
+      "supplementaries:copper_sconce",
+      "supplementaries:exposed_copper_sconce",
+      "supplementaries:weathered_copper_sconce",
+      "supplementaries:oxidized_copper_sconce",
+      "supplementaries:waxed_copper_sconce",
+      "supplementaries:waxed_exposed_copper_sconce",
+      "supplementaries:waxed_weathered_copper_sconce",
+      "supplementaries:waxed_oxidized_copper_sconce"
+    ],
+    "output": "supplementaries:sconce_green"
+  },
+  {
+    "inputs": [
+      "supplementaries:copper_wall_sconce",
+      "supplementaries:exposed_copper_wall_sconce",
+      "supplementaries:weathered_copper_wall_sconce",
+      "supplementaries:oxidized_copper_wall_sconce",
+      "supplementaries:waxed_copper_wall_sconce",
+      "supplementaries:waxed_exposed_copper_wall_sconce",
+      "supplementaries:waxed_weathered_copper_wall_sconce",
+      "supplementaries:waxed_oxidized_copper_wall_sconce"
+    ],
+    "output": "supplementaries:sconce_wall_green"
   }
 ]

@@ -1,0 +1,21 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    }
+  ],
+  "type": "create:mixing",
+  "heat_requirement": "superheated",
+  "ingredients": [
+    {
+      "item": "spicedcider:cast_iron_ingot"
+    }
+  ],
+  "results": [
+    {
+      "id": "spicedcider:molten_cast_iron",
+      "amount": 250
+    }
+  ]
+}

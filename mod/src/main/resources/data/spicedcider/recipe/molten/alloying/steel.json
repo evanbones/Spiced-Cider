@@ -1,0 +1,34 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "alloyed"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "modestmining"
+    }
+  ],
+  "type": "create:mixing",
+  "heat_requirement": "superheated",
+  "ingredients": [
+    {
+      "type": "neoforge:tag",
+      "tag": "c:molten_iron",
+      "amount": 750
+    },
+    {
+      "item": "modestmining:coke"
+    }
+  ],
+  "results": [
+    {
+      "id": "spicedcider:molten_steel",
+      "amount": 750
+    }
+  ]
+}

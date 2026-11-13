@@ -1,21 +1,24 @@
 package com.evandev.spicedcider.mixin.connectiblechains;
 
-import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
+import com.evandev.connectiblechains.client.ClientInitializer;
+import com.evandev.connectiblechains.client.render.entity.ChainKnotEntityRenderer;
+import com.evandev.connectiblechains.client.render.entity.model.ChainKnotEntityModel;
+import com.evandev.connectiblechains.client.render.entity.state.ChainKnotEntityRenderState;
+import com.evandev.connectiblechains.entity.ChainKnotEntity;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
+import com.llamalad7.mixinextras.sugar.Local;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.moulberry.mixinconstraints.annotations.IfModLoaded;
 import net.minecraft.client.model.LeashKnotModel;
-import com.evandev.connectiblechains.client.render.entity.model.ChainKnotEntityModel;
-import com.evandev.connectiblechains.client.render.entity.state.ChainKnotEntityRenderState;
-import com.evandev.connectiblechains.entity.ChainKnotEntity;
-import com.llamalad7.mixinextras.sugar.Local;
-import net.minecraft.world.phys.AABB;
 import net.minecraft.client.model.geom.ModelLayers;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.decoration.LeashFenceKnotEntity;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.phys.AABB;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
@@ -26,7 +29,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(targets = "com.evandev.connectiblechains.client.render.entity.ChainKnotEntityRenderer", remap = false)
 public class ChainKnotRendererLeadKnotMixin {
     @Unique
-    private static final ResourceLocation spicedcider$LEAD_KNOT = ResourceLocation.withDefaultNamespace("textures/entity/lead_knot.png");
+    private static final RenderType spicedcider$LEAD_KNOT = RenderType.entityCutout(ResourceLocation.withDefaultNamespace("textures/entity/lead_knot.png"));
 
     @Unique
     private LeashKnotModel<LeashFenceKnotEntity> spicedcider$leashKnot;
@@ -39,16 +42,17 @@ public class ChainKnotRendererLeadKnotMixin {
         this.spicedcider$leashKnot = new LeashKnotModel<>(context.bakeLayer(ModelLayers.LEASH_KNOT));
     }
 
-    @ModifyExpressionValue(method = "render(Lcom/evandev/connectiblechains/entity/ChainKnotEntity;Lcom/evandev/connectiblechains/client/render/entity/state/ChainKnotEntityRenderState;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;IF)V",
-            at = @At(value = "INVOKE", target = "Lcom/evandev/connectiblechains/client/render/entity/ChainKnotEntityRenderer;getKnotTexture(Lnet/minecraft/world/item/Item;)Lnet/minecraft/resources/ResourceLocation;"))
-    private ResourceLocation spicedcider$leadKnotTexture(ResourceLocation texture) {
+    @WrapOperation(method = "render(Lcom/evandev/connectiblechains/entity/ChainKnotEntity;FFLcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;I)V",
+            at = @At(value = "INVOKE", target = "Lcom/evandev/connectiblechains/client/render/entity/ChainKnotEntityRenderer;getKnotRenderType(Lnet/minecraft/world/item/Item;)Lnet/minecraft/client/renderer/RenderType;"))
+    private RenderType spicedcider$leadKnotRenderType(ChainKnotEntityRenderer renderer, Item item, Operation<RenderType> original) {
+        ResourceLocation texture = ClientInitializer.getInstance().getChainTextureManager().getKnotTexture(item);
         spicedcider$drawingLead = texture.getNamespace().equals("connectiblechains") && texture.getPath().endsWith("/lead_knot.png");
-        return spicedcider$drawingLead ? spicedcider$LEAD_KNOT : texture;
+        return spicedcider$drawingLead ? spicedcider$LEAD_KNOT : original.call(renderer, item);
     }
 
-    @WrapOperation(method = "render(Lcom/evandev/connectiblechains/entity/ChainKnotEntity;Lcom/evandev/connectiblechains/client/render/entity/state/ChainKnotEntityRenderState;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;IF)V",
+    @WrapOperation(method = "render(Lcom/evandev/connectiblechains/entity/ChainKnotEntity;FFLcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;I)V",
             at = @At(value = "INVOKE", target = "Lcom/evandev/connectiblechains/client/render/entity/model/ChainKnotEntityModel;renderToBuffer(Lcom/mojang/blaze3d/vertex/PoseStack;Lcom/mojang/blaze3d/vertex/VertexConsumer;III)V"))
-    private void spicedcider$leadKnotModel(ChainKnotEntityModel<?> model, PoseStack poseStack, VertexConsumer consumer, int light, int overlay, int color, Operation<Void> original, @Local(argsOnly = true) ChainKnotEntity knot, @Local(argsOnly = true) ChainKnotEntityRenderState state) {
+    private void spicedcider$leadKnotModel(ChainKnotEntityModel<?> model, PoseStack poseStack, VertexConsumer consumer, int light, int overlay, int color, Operation<Void> original, @Local(argsOnly = true) ChainKnotEntity knot, @Local ChainKnotEntityRenderState state) {
         if (!spicedcider$drawingLead || spicedcider$leashKnot == null) {
             original.call(model, poseStack, consumer, light, overlay, color);
             return;

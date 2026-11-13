@@ -1,0 +1,21 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "type": "neoforge:tag",
+      "tag": "c:molten_cast_iron",
+      "amount": 250
+    }
+  ],
+  "results": [
+    {
+      "id": "spicedcider:cast_iron_ingot"
+    }
+  ]
+}

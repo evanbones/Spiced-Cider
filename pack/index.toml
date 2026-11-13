@@ -522,7 +522,7 @@ hash = "6bccd9a5af80821fe4b83ea397da43adac0b8511bfb7d3b297c038f2b69da8f1"
 
 [[files]]
 file = "config/everycomp-entries.toml"
-hash = "f0c85a07d7d36a65ce63d37e8302b94624c1e3de8be5cb23e53c340cc90798c3"
+hash = "4ce52182c3fd9a71837640bf595b8494abfaa12c7cbf6d09ed641f4cb9138415"
 
 [[files]]
 file = "config/everycomp-hazardous.toml"
@@ -12290,7 +12290,7 @@ hash = "c9a43d4b0550aac595a400662161757488a7a9dfbaa6c117c706e5cd1bef2512"
 
 [[files]]
 file = "config/particular-common.toml"
-hash = "76ae61adc5595435c9016c7f37a4b69827f56fae1ae07c60c05e6540ffa3b8ca"
+hash = "f3eb4547207d9238efe2bd59f172706148126919edc1593541d7a1d476c3d98f"
 
 [[files]]
 file = "config/perception.yaml"
@@ -12358,7 +12358,7 @@ hash = "2edbf62b60165a7ebbea68d5babc9b1991c73ece3e00c57832d6e99529ed69ef"
 
 [[files]]
 file = "config/recreative/tab_layout.json"
-hash = "d1edb7339a9a1679c8fb37f3f53082823e25c14e6b121c33ee035622762ca257"
+hash = "6db4c1be8e688ef258737694adcf9e2dcbf024f71861fac0a4f85f5a0e39186f"
 
 [[files]]
 file = "config/recreative/tab_order.json"
@@ -14366,7 +14366,7 @@ hash = "636c92c18bc5826f8cc9f838ed5ea3fd8e43ccc048c036e6c8230f212becff31"
 
 [[files]]
 file = "config/reliable_remover/mods/supplementaries.json"
-hash = "7f90f9a6872e07d3ef6cbadb96c40b328e0e31f2b327daad916a352505b58b7b"
+hash = "9ea7dfa103bfc4baecca727c3a1d7815884cf603b3657de26d958500c4daf769"
 
 [[files]]
 file = "config/reliable_remover/mods/suppsquared.json"
@@ -14466,7 +14466,7 @@ hash = "ea480295c8a4ef914676954fc6e5c850f441fe52dda7561f95c5676a9b5f7ed9"
 
 [[files]]
 file = "config/reliable_replacer/mods/supplementaries.json"
-hash = "2e76cfb93029d6c21cc17872f722234db44e917bf9ef1cd1d90644158310c754"
+hash = "5adaf34539207a84391af2109f16deb37ca66f861c37a8b9094e3976ff035a6e"
 
 [[files]]
 file = "config/reliable_replacer/mods/upgrade_aquatic.json"
@@ -14989,6 +14989,10 @@ file = "config/remi/stack_groups/spicedcider_hammers.json"
 hash = "7994aa3db6057ba4ba989188772429023605eb8f81bdb86d8f1cbe72415e09e9"
 
 [[files]]
+file = "config/remi/stack_groups/spicedcider_molten_metal_buckets.json"
+hash = "00d265d5078b06d64451f0ca0dc0c23dc4edf5b14194952b4db4ae5637a14035"
+
+[[files]]
 file = "config/remi/stack_groups/spicedcider_pocket_jukeboxes.json"
 hash = "4b2e2307350c1e7cee6b20aaae2bb4bfd6e9b75afcd54d1b141cfe60ec53121f"
 
@@ -15330,11 +15334,11 @@ hash = "220386486b0d066f2fa344c6d2b63f41a28629176a2f8fdf4f33e2668a6b127a"
 
 [[files]]
 file = "config/supplementaries-client.toml"
-hash = "5f27b37ade66a2307181bc5be9f211dddcbe5a86e70ef73a6985600d660faaf6"
+hash = "ef91acd9cb29133606fe671438f1051b100ca40297bb9e5a1b93fb76815e80d3"
 
 [[files]]
 file = "config/supplementaries-common.toml"
-hash = "9932f0e830d1d76b72599443e952fb66d225f7fd96d316f4dfe1c4fb4a3ed291"
+hash = "771e8f1c4768060fbd590bf6a9cc5e7fed554cb785a68b8451ed0be8e007eaf3"
 
 [[files]]
 file = "config/suppsquared-common.toml"
@@ -15718,6 +15722,11 @@ hash = "187eafde5974beee1263538b462b7b8fe2fc8948c5d413980d9796d55928580b"
 metafile = true
 
 [[files]]
+file = "mods/asphodel-api.pw.toml"
+hash = "94c261fcbf57dc9a802a954b260c5e57d9bcf7de0c0c7738af10cd58d8ba70e6"
+metafile = true
+
+[[files]]
 file = "mods/asyncparticles.pw.toml"
 hash = "63ffd5c06e3dd114e945d57a995f36c118a6d009dd6bc99197a222101202977b"
 metafile = true
@@ -15864,7 +15873,7 @@ metafile = true
 
 [[files]]
 file = "mods/cider-core.pw.toml"
-hash = "284b90b892102d69f3600c50f3638f78e479ae8e97dc6db044a070ac561e82c5"
+hash = "50c3e16636aca5ea10a743869f3109f24da986f2d696e7f2b26194b48a9a4c35"
 metafile = true
 
 [[files]]
@@ -16028,7 +16037,7 @@ metafile = true
 
 [[files]]
 file = "mods/entityculling.pw.toml"
-hash = "426238488c9ffd843f661f8bc74aa8e585fa6b4d342c43c4ba4cb8451298b725"
+hash = "d518db51c2502b5b04d6ca4add6a2b3e862a0af15e7a65f0ab83180778adb604"
 metafile = true
 
 [[files]]
@@ -16112,7 +16121,7 @@ metafile = true
 
 [[files]]
 file = "mods/field-guide.pw.toml"
-hash = "62f27ad45a3ac3454fae7f54958aad35d9fd9c5860c6019d4f00651883dbfe36"
+hash = "67f683131723e7aafd462a9e59fab8fbe6c661ea5e8794443996a721ea6dc60f"
 metafile = true
 
 [[files]]
@@ -16212,7 +16221,7 @@ metafile = true
 
 [[files]]
 file = "mods/just-enough-effect-descriptions-jeed.pw.toml"
-hash = "fe1354d34df356e42dbea734d30c44b46a4484dcd68a23045927277dafefab9d"
+hash = "e869a63e93994ff0254ab63c7e5c14a713a0249fb06ed7c0ad35824ec31c8efc"
 metafile = true
 
 [[files]]
@@ -16332,7 +16341,7 @@ metafile = true
 
 [[files]]
 file = "mods/modest-meals.pw.toml"
-hash = "fdc3828bbb4a420aaa5d1bb59cd6e1dcc8623cfb893bc9df1405a5db4f6846e5"
+hash = "7056c87f907a4cdc16a1e2988c21c838934b263599ebfc7cfb99b64562fb2f24"
 metafile = true
 
 [[files]]
@@ -16342,7 +16351,7 @@ metafile = true
 
 [[files]]
 file = "mods/modulation.pw.toml"
-hash = "59d19f13b7a37e299896e3a3e1f84fa8ddb35b6ce3d15d3791d228e982c9f242"
+hash = "3e63fe5d340af25727d7e8777dc4d76a3ea7487d9d6048a8f64d4066bf80f4b6"
 metafile = true
 
 [[files]]
@@ -16457,7 +16466,7 @@ metafile = true
 
 [[files]]
 file = "mods/particular-reforged.pw.toml"
-hash = "383d9891f716981f418f6e2a97a5eeeee43912975d90d9ab4ffbfe98a832e40e"
+hash = "45d6f9ac203536d03136d75dff52c381daf72311af19bc12805a007b31c8f112"
 metafile = true
 
 [[files]]
@@ -16532,7 +16541,7 @@ metafile = true
 
 [[files]]
 file = "mods/reconnectible-chains.pw.toml"
-hash = "8fe741853924944b4bb7e8cf18822d39922a9bc85e1208cddfba509e1344a0a4"
+hash = "ff8a3f48dc5a384d781b8fb39f5895a07bbd325c024b2ac66dace4dc80aef8a0"
 metafile = true
 
 [[files]]
@@ -16566,7 +16575,7 @@ metafile = true
 
 [[files]]
 file = "mods/reliable-emi.pw.toml"
-hash = "65c9af50464bfe2d442458153bd311b8e5b7adbcf0e4c3484c407a55f199ad5a"
+hash = "b3f2568e7140b7c0ff660696602816c603f495757d7a0bbfe84cc3913e0cfc13"
 metafile = true
 
 [[files]]
@@ -16605,12 +16614,8 @@ hash = "27721caca5a03b743bf25888e1d984142948069dace31453f103f94f7f24d2ce"
 metafile = true
 
 [[files]]
-file = "mods/roxy-1.21.1-NeoForge-0.4.0.jar"
-hash = "5a40ebe5ab7def3d8ce5c99f9757c6c0370da7d694c4fabfddb31c4fb1e755d1"
-
-[[files]]
 file = "mods/sage-brush.pw.toml"
-hash = "626207a16068745d80938b392908229bf367323ee1b08c81f520262e128c4805"
+hash = "f340248eac635f0898004503e0139dab89e1e5032930dca2d2ed4ef69c8b10ed"
 metafile = true
 
 [[files]]
@@ -16720,7 +16725,7 @@ metafile = true
 
 [[files]]
 file = "mods/stone-zone.pw.toml"
-hash = "167761db9252fcbf08c0889a574cd25bb35e6080742c623c9472d973f679f8fa"
+hash = "92363483e4e1c76454eca8a7d6ac84103295676211e0d1100a949551e72d1003"
 metafile = true
 
 [[files]]
@@ -16745,7 +16750,7 @@ metafile = true
 
 [[files]]
 file = "mods/supplementaries.pw.toml"
-hash = "c7e7206384e1d5ab7caecc643dda50dae1886312e0aeca5aaef8852bb6b11b4e"
+hash = "0aca582fefc92a0823b002a5485476b808da7f6186ff236fded725906439c13d"
 metafile = true
 
 [[files]]
@@ -16774,13 +16779,18 @@ hash = "5ec92e03aeb8ab74d62783550ac85d92b5b2f411de98ec4dfd961dd79d2e0d52"
 metafile = true
 
 [[files]]
+file = "mods/toil-and-trouble.pw.toml"
+hash = "59578d8183a6caf96c4a83ce3a235728bf44cec8fe3774c2f6172b152d10e31f"
+metafile = true
+
+[[files]]
 file = "mods/tolerable-creepers.pw.toml"
 hash = "f188c5a23a7b16f29e8fbcbf497eb8101b7db42c2182feba49aceabe54965836"
 metafile = true
 
 [[files]]
-file = "mods/toomanyrecipeviewers-0.9.2+mc.21.1.jar"
-hash = "0db103a71c786e509ae8318b88a22ae0e8796b12d8b61bec223b084441054bc6"
+file = "mods/toomanyrecipeviewers-0.9.3-mc.21.1.jar"
+hash = "80fa9ad5edd14a410cac2a76bc1f8389b16c6e7e58cc63e62de7ec0f04a2f7ae"
 
 [[files]]
 file = "mods/toucan.pw.toml"
@@ -21292,7 +21302,7 @@ hash = "37a89b8b897de55cb662047194fbf7e2b09cc68f8f3ed5f73bf962ca1a7d5c8d"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/item_descriptions/lang/en_us.json"
-hash = "e51c275748b6e69c00815fa9708a771d16569fe3f3f73dc9b9ebb5ed70e2c9ef"
+hash = "aed08c64afe430c0374d401e41476b56a238f9d4a536cf71ba949e7dadc4aec1"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/jade/textures/gui/sprites/progress_base.png"
@@ -25120,7 +25130,7 @@ hash = "71341002dcc43dd8e4b8ac10e4ad84c6901b3b134037379ded7e18200558064a"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/spicedcider/lang/en_us.json"
-hash = "b9a13b5db2ce8414070d5f614948180508553b0b21d81a07c59c86ff14318780"
+hash = "3ab9f5646cc29225f2d8e0b9bf36e61615497fc7ef6b836c3c13b7b7b162903b"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/spicedcider/models/block/cauldron_content_12.json"

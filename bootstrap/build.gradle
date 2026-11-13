@@ -3,6 +3,7 @@ plugins {
 }
 
 evaluationDependsOn(":mod")
+evaluationDependsOn(":roxy")
 
 def modProject = project(":mod")
 def modId = modProject.mod_id
@@ -29,10 +30,41 @@ dependencies {
 }
 
 def modJar = modProject.tasks.named("jar")
+def roxyJar = project(":roxy").tasks.named("jar")
 def bundledName = "${modId}-${modVersion}-mod.jar"
+def ownServices = layout.projectDirectory.dir("src/main/services")
+def mergedServicesDir = layout.buildDirectory.dir("mergedServices")
+
+def mergeServices = tasks.register("mergeServices") {
+    def roxyArchive = roxyJar.flatMap { it.archiveFile }
+    inputs.file(roxyArchive)
+    inputs.dir(ownServices)
+    outputs.dir(mergedServicesDir)
+    doLast {
+        def merged = new TreeMap<String, LinkedHashSet<String>>()
+        def collect = { String name, String text ->
+            def lines = merged.computeIfAbsent(name) { new LinkedHashSet<String>() }
+            text.readLines().collect { it.trim() }.findAll { it && !it.startsWith("#") }.each { lines.add(it) }
+        }
+        ownServices.asFile.eachFile { collect(it.name, it.getText("UTF-8")) }
+        new java.util.zip.ZipFile(roxyArchive.get().asFile).withCloseable { zip ->
+            zip.entries().findAll { !it.directory && it.name.startsWith("META-INF/services/") }.each {
+                collect(it.name.substring("META-INF/services/".length()), zip.getInputStream(it).getText("UTF-8"))
+            }
+        }
+        def out = new File(mergedServicesDir.get().asFile, "META-INF/services")
+        out.deleteDir()
+        out.mkdirs()
+        merged.each { name, lines -> new File(out, name).setText(lines.join(System.lineSeparator()) + System.lineSeparator(), "UTF-8") }
+    }
+}
 
 jar {
     archiveFileName = "${modId}-${modVersion}.jar"
+    from(mergeServices)
+    from(roxyJar.map { zipTree(it.archiveFile) }) {
+        exclude "META-INF/MANIFEST.MF", "META-INF/services/**"
+    }
     into("META-INF/jarjar") {
         from(modJar)
         rename { bundledName }

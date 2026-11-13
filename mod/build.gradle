@@ -367,6 +367,7 @@ dependencies {
 
     // Voxy
     compileOnly "maven.modrinth:voxy:H3w2nVdU"
+    compileOnly project(":roxy")
 
     // Big Water
     compileOnly "maven.modrinth:big-water:pjxmFC9D"
@@ -396,7 +397,7 @@ dependencies {
     compileOnly "dev.architectury:architectury-neoforge:13.0.11"
 
     // Reconnectible Chains
-    compileOnly "maven.modrinth:reconnectible-chains:e4yVoAvP"
+    compileOnly "maven.modrinth:reconnectible-chains:SugYouss"
 
     // Abnormals
     compileOnly "maven.modrinth:environmental:5.0.1"
@@ -561,6 +562,15 @@ publishMods {
         accessToken = providers.environmentVariable("MODRINTH_TOKEN")
         projectId = "Fg6qWws8"
         minecraftVersions.add(project.minecraft_version)
+    }
+
+    curseforge {
+        accessToken = providers.environmentVariable("CURSEFORGE_TOKEN")
+        projectId = "1803441"
+        minecraftVersions.add(project.minecraft_version)
+        javaVersions.add(JavaVersion.VERSION_21)
+        clientRequired = true
+        serverRequired = true
     }
 }
 

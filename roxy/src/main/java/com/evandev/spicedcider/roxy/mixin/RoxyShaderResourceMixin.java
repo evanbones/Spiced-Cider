@@ -1,0 +1,103 @@
+package com.evandev.spicedcider.roxy.mixin;
+
+import net.minecraft.client.Minecraft;
+import net.minecraft.resources.ResourceLocation;
+import com.evandev.spicedcider.roxy.shader.RoxyAmdHiZShader;
+import com.evandev.spicedcider.roxy.shader.RoxyVoxyRequestShader;
+import com.evandev.spicedcider.roxy.shader.RoxyFogShader;
+import com.evandev.spicedcider.roxy.shader.RoxyTerrainFogShader;
+import com.evandev.spicedcider.roxy.shader.RoxyIceFaceCullingShader;
+import com.evandev.spicedcider.roxy.shader.RoxyModelTintShader;
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Unique;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Redirect;
+
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
+
+@Mixin(targets = "me.cortex.voxy.client.core.gl.shader.ShaderLoader$ShaderLoadingParser", remap = false)
+public final class RoxyShaderResourceMixin {
+    @Redirect(
+            method = "loadShaderAsset",
+            at = @At(
+                    value = "INVOKE",
+                    target = "Ljava/lang/Class;getResourceAsStream(Ljava/lang/String;)Ljava/io/InputStream;"
+            ),
+            remap = false
+    )
+    private static InputStream roxy$resolveShaderResource(Class<?> owner, String path) {
+        InputStream input = owner.getResourceAsStream(path);
+        if (input != null) return roxy$patchShaderResource(path, input);
+
+        input = roxy$openFromResourceManager(path);
+        if (input != null) return roxy$patchShaderResource(path, input);
+
+        try {
+            ClassLoader contextLoader = Thread.currentThread().getContextClassLoader();
+            Class<?> sodiumShaderLoader = Class.forName(
+                    "net.caffeinemc.mods.sodium.client.gl.shader.ShaderLoader",
+                    false,
+                    contextLoader
+            );
+            ClassLoader sodiumLoader = sodiumShaderLoader.getClassLoader();
+            if (sodiumLoader != null) {
+                input = sodiumLoader.getResourceAsStream(path);
+                if (input != null) return roxy$patchShaderResource(path, input);
+            }
+        } catch (ClassNotFoundException | LinkageError ignored) {
+        }
+
+        return roxy$patchShaderResource(
+                path,
+                RoxyShaderResourceMixin.class.getClassLoader().getResourceAsStream(path)
+        );
+    }
+
+    @Unique
+    private static InputStream roxy$patchShaderResource(String path, InputStream input) {
+        if (input == null) return input;
+
+        try {
+            String source = new String(input.readAllBytes(), StandardCharsets.UTF_8);
+            source = RoxyAmdHiZShader.patch(path, source);
+            source = RoxyVoxyRequestShader.patch(path, source);
+            source = RoxyFogShader.patch(path, source);
+            source = RoxyTerrainFogShader.patch(path, source);
+            source = RoxyIceFaceCullingShader.patch(path, source);
+            source = RoxyModelTintShader.patch(path, source);
+            if (path.endsWith("/assets/voxy/shaders/lod/quad_util.glsl")) {
+                source = source.replace(
+                        "quad.basePoint = (quadStart*lodScale)+vec3(baseSection<<5);",
+                        "quad.basePoint = (quadStart*lodScale)+vec3(baseSection<<5)-vec3(0.0, lodScale-1.0, 0.0);"
+                );
+            }
+            return new ByteArrayInputStream(source.getBytes(StandardCharsets.UTF_8));
+        } catch (IOException ignored) {
+            return input;
+        }
+    }
+
+    @Unique
+    private static InputStream roxy$openFromResourceManager(String path) {
+        if (!path.startsWith("/assets/")) return null;
+
+        String resourcePath = path.substring("/assets/".length());
+        int separator = resourcePath.indexOf('/');
+        if (separator <= 0 || separator == resourcePath.length() - 1) return null;
+
+        try {
+            Minecraft minecraft = Minecraft.getInstance();
+            if (minecraft == null || minecraft.getResourceManager() == null) return null;
+            ResourceLocation id = ResourceLocation.fromNamespaceAndPath(
+                    resourcePath.substring(0, separator),
+                    resourcePath.substring(separator + 1)
+            );
+            return minecraft.getResourceManager().open(id);
+        } catch (IOException | RuntimeException ignored) {
+            return null;
+        }
+    }
+}

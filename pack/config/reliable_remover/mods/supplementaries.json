@@ -123,5 +123,19 @@
     "items": [
       "supplementaries:turn_table"
     ]
+  },
+  {
+    "action": "remove",
+    "items": [
+      "supplementaries:copper_sconce",
+      "supplementaries:exposed_copper_sconce",
+      "supplementaries:weathered_copper_sconce",
+      "supplementaries:oxidized_copper_sconce",
+      "supplementaries:waxed_copper_sconce",
+      "supplementaries:waxed_exposed_copper_sconce",
+      "supplementaries:waxed_weathered_copper_sconce",
+      "supplementaries:waxed_oxidized_copper_sconce"
+    ],
+    "replace_with": "supplementaries:sconce_green"
   }
 ]

@@ -1,0 +1,32 @@
+modLoader = "javafml"
+loaderVersion = "[4,)"
+license = "MIT"
+
+[[mods]]
+modId = "roxy"
+version = "${roxy_version}"
+displayName = "Roxy (Cider Core)"
+authors = "RasaNovum, evanbones"
+description = "Loads the Voxy LoD rendering mod on NeoForge by bridging its Fabric entrypoints and APIs. Bundled with Cider Core."
+logoFile = "assets/roxy/icon.png"
+
+[[dependencies.roxy]]
+modId = "neoforge"
+type = "required"
+versionRange = "[21.1.224,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.roxy]]
+modId = "minecraft"
+type = "required"
+versionRange = "[1.21.1]"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.roxy]]
+modId = "sodium"
+type = "required"
+versionRange = "[0.6.13,)"
+ordering = "NONE"
+side = "CLIENT"

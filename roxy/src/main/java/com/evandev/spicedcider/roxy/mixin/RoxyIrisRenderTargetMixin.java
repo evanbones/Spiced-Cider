@@ -1,0 +1,21 @@
+package com.evandev.spicedcider.roxy.mixin;
+
+import com.moulberry.mixinconstraints.annotations.IfModLoaded;
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.injection.Constant;
+import org.spongepowered.asm.mixin.injection.ModifyConstant;
+
+@IfModLoaded("iris")
+@Mixin(
+        targets = "net.irisshaders.iris.shaderpack.properties.PackRenderTargetDirectives",
+        remap = false
+)
+public abstract class RoxyIrisRenderTargetMixin {
+    @ModifyConstant(
+            method = "<clinit>",
+            constant = @Constant(intValue = 16)
+    )
+    private static int roxy$includeVoxyAndColorwheelTargets(int value) {
+        return 20;
+    }
+}

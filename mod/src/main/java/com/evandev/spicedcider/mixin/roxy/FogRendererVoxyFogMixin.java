@@ -18,10 +18,4 @@ public class FogRendererVoxyFogMixin {
                                                    boolean shouldCreateFog, float partialTick, CallbackInfo ci) {
         VoxyFog.prepare(camera, fogMode, farPlaneDistance, shouldCreateFog, partialTick);
     }
-
-    @Inject(method = "setupFog", at = @At("TAIL"))
-    private static void spicedcider$applyVoxyFog(Camera camera, FogRenderer.FogMode fogMode, float farPlaneDistance,
-                                                 boolean shouldCreateFog, float partialTick, CallbackInfo ci) {
-        VoxyFog.finish(fogMode);
-    }
 }

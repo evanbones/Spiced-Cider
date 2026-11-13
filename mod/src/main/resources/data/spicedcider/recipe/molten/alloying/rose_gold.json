@@ -1,0 +1,32 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "oooh_pinky"
+    }
+  ],
+  "type": "create:mixing",
+  "heat_requirement": "heated",
+  "ingredients": [
+    {
+      "type": "neoforge:tag",
+      "tag": "c:molten_copper",
+      "amount": 250
+    },
+    {
+      "type": "neoforge:tag",
+      "tag": "c:molten_gold",
+      "amount": 750
+    }
+  ],
+  "results": [
+    {
+      "id": "spicedcider:molten_rose_gold",
+      "amount": 1000
+    }
+  ]
+}

@@ -1,0 +1,153 @@
+plugins {
+    id 'java-library'
+    id 'net.neoforged.moddev' version '2.0.141'
+}
+
+version = roxy_version
+group = "com.evandev.spicedcider"
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+
+repositories {
+    mavenCentral()
+    exclusiveContent {
+        forRepository {
+            maven {
+                name = "CaffeineMC"
+                url = "https://maven.caffeinemc.net/releases"
+            }
+        }
+        filter {
+            includeGroup "net.caffeinemc"
+        }
+    }
+    exclusiveContent {
+        forRepository {
+            maven {
+                name = "Sinytra"
+                url = "https://maven.su5ed.dev/releases"
+            }
+        }
+        filter {
+            includeGroupAndSubgroups "org.sinytra"
+        }
+    }
+    exclusiveContent {
+        forRepository {
+            maven {
+                name = "FabricMC"
+                url = "https://maven.fabricmc.net/"
+            }
+        }
+        filter {
+            includeGroup "net.fabricmc"
+        }
+    }
+}
+
+neoForge {
+    version = project.neo_version
+}
+
+configurations {
+    roxyIntermediary
+}
+
+dependencies {
+    compileOnly "net.caffeinemc:sodium-neoforge-mod:0.8.13+mc1.21.1"
+    compileOnly("net.neoforged.fancymodloader:loader:4.0.45") { transitive = false }
+    compileOnly("org.sinytra.forgified-fabric-api:fabric-api-base:0.4.42+d1308ded19") { transitive = false }
+    compileOnly "com.moulberry:mixinconstraints:1.1.0"
+    roxyIntermediary "net.fabricmc:intermediary:${minecraft_version}"
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+def mcVersion = minecraft_version
+def clientMappings = file("${gradle.gradleUserHomeDir}/caches/neoformruntime/artifacts/minecraft_${mcVersion}_client_mappings.txt")
+def classesDir = layout.buildDirectory.dir("classes/java/main/com/evandev/spicedcider")
+def embeddedHostClasses = [
+        "roxyhost/RoxyVoxyNeoForge.class",
+        "roxyhost/RoxyPalettedContainerFactory.class",
+        "roxyhost/RoxyChunkBoundaryMask.class",
+        "roxyhost/RoxyFogOptions.class",
+        "roxy/client/RoxyClientWarnings.class",
+        "roxy/client/RoxyClientWarnings\$Warning.class",
+        "roxy/client/RoxyWarningScreen.class"
+]
+
+processResources {
+    dependsOn(tasks.named("compileJava"))
+    def props = [roxy_version: project.version]
+    inputs.properties(props)
+    filesMatching("spicedcider_roxy/neoforge.mods.toml") {
+        expand(props)
+    }
+    from({ configurations.roxyIntermediary.files.collect { zipTree(it) } }) {
+        include "mappings/mappings.tiny"
+        eachFile { path = "spicedcider_roxy/mappings/intermediary-${mcVersion}.tiny" }
+        includeEmptyDirs = false
+    }
+    from(clientMappings) {
+        into "spicedcider_roxy/mappings"
+        rename { "client-${mcVersion}.txt" }
+    }
+    from(classesDir) {
+        include embeddedHostClasses
+        eachFile { path = "spicedcider_roxy/embedded/" + name.replace(".class", ".bin") }
+        includeEmptyDirs = false
+    }
+    doFirst {
+        if (!clientMappings.isFile()) {
+            throw new GradleException("Missing ${clientMappings}; run any :mod task once so NeoForm caches the client mappings")
+        }
+    }
+}
+
+def mainOutput = sourceSets.main.output
+
+def fabricStubsJar = tasks.register("fabricStubsJar", Jar) {
+    archiveFileName = "roxy-fabric-stubs.jar"
+    destinationDirectory = layout.buildDirectory.dir("stubs")
+    from(mainOutput.classesDirs) {
+        include "net/fabricmc/**"
+        exclude "net/fabricmc/fabric/api/client/command/**"
+    }
+    manifest {
+        attributes("FMLModType": "LIBRARY")
+    }
+}
+
+def fabricCommandStubsJar = tasks.register("fabricCommandStubsJar", Jar) {
+    archiveFileName = "roxy-fabric-command-stubs.jar"
+    destinationDirectory = layout.buildDirectory.dir("stubs")
+    from(mainOutput.classesDirs) {
+        include "net/fabricmc/fabric/api/client/command/**"
+    }
+    manifest {
+        attributes("FMLModType": "LIBRARY")
+    }
+}
+
+jar {
+    archiveBaseName = "spicedcider-roxy"
+    exclude "net/fabricmc/**"
+    exclude "com/evandev/spicedcider/roxyhost/**"
+    exclude "com/evandev/spicedcider/roxy/client/RoxyClientWarnings*.class"
+    exclude "com/evandev/spicedcider/roxy/client/RoxyWarningScreen.class"
+    from(fabricStubsJar) {
+        into "META-INF/jars"
+    }
+    from(fabricCommandStubsJar) {
+        into "META-INF/jars"
+    }
+    manifest {
+        attributes(
+                "FMLModType": "LIBRARY",
+                "Implementation-Title": "Roxy (Cider Core)",
+                "Implementation-Version": project.version
+        )
+    }
+}

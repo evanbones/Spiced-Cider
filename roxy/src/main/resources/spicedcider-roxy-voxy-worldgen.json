@@ -1,0 +1,20 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "plugin": "com.moulberry.mixinconstraints.ConstraintsMixinPlugin",
+  "package": "com.evandev.spicedcider.roxy.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "RoxyChunkyNeoForgeWorldMixin",
+    "RoxyChunksmithVoxyRadiusMixin",
+    "RoxyChunksmithVoxyTargetMixin",
+    "RoxyMinecraftLevelMixin"
+  ],
+  "client": [
+    "RoxyVoxyWorldgenSectionMixin",
+    "RoxyVoxyIngestSnapshotMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

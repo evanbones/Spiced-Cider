@@ -1,0 +1,36 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "alloyed"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "caverns_and_chasms"
+    }
+  ],
+  "type": "create:mixing",
+  "heat_requirement": "heated",
+  "ingredients": [
+    {
+      "type": "neoforge:tag",
+      "tag": "c:molten_copper",
+      "amount": 750
+    },
+    {
+      "type": "neoforge:tag",
+      "tag": "c:molten_tin",
+      "amount": 250
+    }
+  ],
+  "results": [
+    {
+      "id": "spicedcider:molten_bronze",
+      "amount": 1000
+    }
+  ]
+}
