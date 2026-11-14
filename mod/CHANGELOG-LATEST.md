@@ -1,15 +1,26 @@
 ### Added
 
-- Molten metal fluids and buckets for Copper, Tin, Lead, Gold, Silver, Bronze, Rose Gold, Electrum, Iron, Cast Iron, Steel, Netherite, Necromium, Prismarite and Valkyrium.
-- Create recipes for melting ingots and ores, casting ingots and mixing alloys from molten metal. 
-- Placed molten metal burns anything it touches and hardens into its storage block when it meets water.
-- Dispensers can pour Latex, Resin, Maple Syrup, Resin Oil, and molten metal buckets.
-- Cider Core now includes Roxy, so Voxy runs on NeoForge without installing Roxy separately. 
-  - It only turns on when Voxy is installed, and is disabled if Roxy itself is installed.
+- A built-in wind system *(off by default)*. 
+  - Wind direction, strength and gusts are shared by all players and follow the weather.
+  - Particles drift with the wind outdoors, and specks of grass, dust, sand and snow blow off exposed ground.
+  - Integration for Cirrus clouds, Where Winds Blow foliage, Amendments hanging blocks, Chimes, Particle Rain, Particular leaves, and Reliable Gliders.
+  - Create windmill bearings turn faster in strong wind and slower in calm air.
+  - Supplementaries wind vanes point with the wind and give a redstone signal for its strength.
+  - Adds the `/wind` command.
+
+### Changed
+
+- Netherite Sheet and netherite wolf armor are netherite coloured by default instead of red.
+- Hanging blocks and wind chimes no longer need Living Wind to move in the wind.
+- New Tanning Rack model and textures.
 
 ### Fixed
 
-- Fog inside modded fluids is no longer replaced by the LoD fog.
-- Falling onto Snow! Real Magic snow inside an Offgrid block no longer crashes the game.
-- Crash with Connectible Chains 2.5.1.
-- Clutter No More's shape indicator shows in EMI again when its config option is on.
+- Both halves of a Tanning Rack now update together when a hide is put on, rubbed, or taken off.
+- Drips from a curing hide on the upper half of a Tanning Rack now fall to the ground instead of stopping midair.
+- The Voxy Fog Start setting now works with Cirrus or No Man's Land installed.
+- Fixed recipe loading errors for the sulfur sconce and the sulfur and glowlight candle holders when Supplementaries isn't installed.
+
+### Removed
+
+- Removed Living Wind integration.

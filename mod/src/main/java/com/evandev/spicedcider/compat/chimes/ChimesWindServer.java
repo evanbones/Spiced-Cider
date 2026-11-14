@@ -6,9 +6,8 @@ import com.cicada.chimes.block.WindBellBlock;
 import com.cicada.chimes.block.WindChimeBlock;
 import com.cicada.chimes.block.entity.WindBellBE;
 import com.cicada.chimes.block.entity.WindChimeBE;
-import com.macatmovie.livingwind.api.WindApi;
+import com.evandev.spicedcider.wind.Wind;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.Mth;
@@ -28,7 +27,7 @@ public final class ChimesWindServer {
         if (state.hasProperty(ChimesStates.SILENCED) && state.getValue(ChimesStates.SILENCED)) return;
         if (chime.isSwinging && chime.interactTicks < 60) return;
         BlockPos pos = chime.getBlockPos();
-        if (!gust(level, pos, random) || !exposed(level, pos)) return;
+        if (!gust(level, pos, random) || !Wind.exposed(level, pos)) return;
         block.setChiming(state, level, pos);
     }
 
@@ -38,23 +37,14 @@ public final class ChimesWindServer {
         if (!(state.getBlock() instanceof WindBellBlock block)) return;
         if (bell.isSwinging && bell.chimeTicks < 60) return;
         BlockPos pos = bell.getBlockPos();
-        if (!gust(level, pos, random) || !exposed(level, pos)) return;
+        if (!gust(level, pos, random) || !Wind.exposed(level, pos)) return;
         block.chime(level, pos);
         level.playSound(null, pos.getX() + 0.5F, pos.getY(), pos.getZ() + 0.5F, ChimesSounds.GLASSCHIME, SoundSource.BLOCKS, 0.5F, 1.0F);
     }
 
     private static boolean gust(ServerLevel level, BlockPos pos, RandomSource random) {
-        float strength = WindApi.getAt(level, pos).strength() / BASELINE_STRENGTH;
+        float strength = Wind.sample(level, pos).strength() / BASELINE_STRENGTH;
         float chance = Mth.clamp(BASELINE_CHANCE * strength * strength * strength, 0.0F, MAX_CHANCE);
         return random.nextFloat() < chance;
-    }
-
-    private static boolean exposed(ServerLevel level, BlockPos pos) {
-        if (level.canSeeSky(pos)) return true;
-        int open = 0;
-        for (Direction direction : Direction.Plane.HORIZONTAL) {
-            if (level.getBlockState(pos.relative(direction)).isAir() && level.getBlockState(pos.relative(direction, 2)).isAir()) open++;
-        }
-        return open >= 2;
     }
 }

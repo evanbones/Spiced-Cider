@@ -175,3 +175,13 @@
 		# Default: 100
 		# Range: 10 ~ 2000
 		lodGenerationSendRate = 100
+
+	[features.wind]
+		#Adds wind that changes direction and strength through the day, picks up in rain and storms, and comes in gusts. It is shared by every player and moves particles, clouds and hanging blocks. Adds the /wind command. Requires a restart to add or remove the command.
+		wind = true
+		#Windmill bearings turn slower in calm air and faster in strong wind. Requires Create and the Wind option.
+		windCreateWindmills = true
+		#Wind vanes give a redstone signal that follows wind strength, and give none under shelter. Requires Supplementaries and the Wind option.
+		windVaneSignal = true
+		#Wind carries you while gliding: tailwinds speed you up, headwinds slow you down. Requires Reliable Gliders and the Wind option.
+		windGliders = true

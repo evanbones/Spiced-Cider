@@ -10,7 +10,6 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 
 @IfModLoaded("chimes")
-@IfModLoaded("livingwind")
 @Mixin(value = IronWindChimeBlock.class, remap = false)
 public class IronWindChimeSoundWindMixin {
 

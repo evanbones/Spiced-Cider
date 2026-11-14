@@ -1,19 +1,17 @@
 package com.evandev.spicedcider.weather.client;
 
 import com.evandev.spicedcider.SpicedCider;
-import com.evandev.spicedcider.compat.livingwind.LivingWindBridge;
+import com.evandev.spicedcider.wind.client.ClientWind;
 import net.minecraft.client.Minecraft;
 import net.minecraft.util.Mth;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.fml.ModList;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.ClientPlayerNetworkEvent;
 import net.neoforged.neoforge.client.event.ClientTickEvent;
 
 @EventBusSubscriber(modid = SpicedCider.MOD_ID, value = Dist.CLIENT)
 public final class CloudWind {
-    private static final boolean LIVING_WIND = ModList.get().isLoaded("livingwind");
     private static final double BLOCKS_PER_STRENGTH = 0.1;
     private static final double MIN_SPEED = 0.0075;
 
@@ -42,17 +40,17 @@ public final class CloudWind {
     @SubscribeEvent
     public static void onClientTick(ClientTickEvent.Post event) {
         Minecraft minecraft = Minecraft.getInstance();
-        if (!LIVING_WIND || minecraft.level == null || minecraft.isPaused()) return;
+        if (minecraft.level == null || minecraft.isPaused()) return;
         if (!active) {
-            if (!LivingWindBridge.hasWind()) return;
+            if (!ClientWind.active()) return;
             active = true;
         }
         prevX = x;
         prevZ = z;
-        float strength = LivingWindBridge.strength();
+        float strength = ClientWind.strength();
         double speed = Math.max(MIN_SPEED, strength * BLOCKS_PER_STRENGTH);
-        double dirX = strength > 1.0E-4F ? LivingWindBridge.windX() / strength : 1.0;
-        double dirZ = strength > 1.0E-4F ? LivingWindBridge.windZ() / strength : 0.0;
+        double dirX = ClientWind.directionX();
+        double dirZ = ClientWind.directionZ();
         x -= dirX * speed;
         z -= dirZ * speed;
     }

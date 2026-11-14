@@ -175,6 +175,14 @@ public final class VoxyFog {
         return !state.isEmpty() && camera.getPosition().y < pos.getY() + state.getHeight(level, pos);
     }
 
+    public static boolean appliedTerrainFog() {
+        return applied;
+    }
+
+    public static boolean controlsTerrainFog(ViewportEvent.RenderFog event) {
+        return pending && event.getMode() == FogRenderer.FogMode.FOG_TERRAIN;
+    }
+
     public static boolean capture(ViewportEvent.RenderFog event, boolean canceled) {
         if (!pending || event.getMode() != FogRenderer.FogMode.FOG_TERRAIN) return canceled;
         fogEnd = Math.max(event.getFarPlaneDistance(), 16.0F);

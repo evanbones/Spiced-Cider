@@ -32,6 +32,8 @@ import com.evandev.spicedcider.networking.LodHelloPayload;
 import com.evandev.spicedcider.lodgen.LodGen;
 import com.evandev.spicedcider.lodgen.client.LodClient;
 import com.evandev.spicedcider.networking.VoidTrailPayload;
+import com.evandev.spicedcider.networking.WindPayload;
+import com.evandev.spicedcider.wind.client.ClientWind;
 import com.evandev.spicedcider.compat.firevariants.FireVariantCompat;
 import com.evandev.spicedcider.registry.*;
 import com.evandev.spicedcider.util.ItemAbilityItemsCache;
@@ -372,6 +374,11 @@ public class SpicedCider {
                 CloudCoverPayload.TYPE,
                 CloudCoverPayload.CODEC,
                 (payload, context) -> context.enqueueWork(() -> CloudCoverClient.receive(payload.cover(), payload.fast()))
+        );
+        registrar.playToClient(
+                WindPayload.TYPE,
+                WindPayload.CODEC,
+                (payload, context) -> context.enqueueWork(() -> ClientWind.receive(payload))
         );
         registrar.playToClient(
                 LootDisplayPayload.TYPE,

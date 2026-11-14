@@ -381,7 +381,7 @@ dependencies {
     compileOnly "maven.modrinth:modernfix:7Jy58lnT"
 
     compileOnly fileTree("../pack/mods") { include "continuity-*.jar" }
-    compileOnly fileTree("../pack/mods") { include "LivingWind-*.jar" }
+    compileOnly "maven.modrinth:reliable-gliders:rW61WzQF"
     compileOnly fileTree("../pack/mods") { include "f3backport-*.jar" }
     compileOnly("fuzs.iteminteractions:iteminteractions-neoforge:21.1.4") { transitive = false }
     compileOnly("fuzs.puzzleslib:puzzleslib-neoforge:21.1.65") { transitive = false }
@@ -476,7 +476,6 @@ dependencies {
 
     // Alloyed
     runtimeOnly "maven.modrinth:create-alloyed:3.0.11+1.21.1-neoforge"
-
     compileOnly("com.simibubi.create:create-1.21.1:6.0.10-281:slim") {
         transitive = false
     }

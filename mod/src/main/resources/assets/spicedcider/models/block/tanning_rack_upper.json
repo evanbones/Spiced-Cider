@@ -1,108 +1,48 @@
 {
-  "parent": "minecraft:block/block",
-  "render_type": "minecraft:cutout",
-  "ambientocclusion": false,
-  "textures": {
-    "wood": "minecraft:block/stripped_spruce_log",
-    "end": "minecraft:block/stripped_spruce_log_top",
-    "particle": "minecraft:block/stripped_spruce_log"
-  },
-  "elements": [
-    {
-      "from": [
-        1,
-        0,
-        7
-      ],
-      "to": [
-        3,
-        13,
-        9
-      ],
-      "faces": {
-        "north": {
-          "texture": "#wood"
-        },
-        "south": {
-          "texture": "#wood"
-        },
-        "east": {
-          "texture": "#wood"
-        },
-        "west": {
-          "texture": "#wood"
-        },
-        "up": {
-          "texture": "#end"
-        },
-        "down": {
-          "texture": "#end"
-        }
-      }
-    },
-    {
-      "from": [
-        13,
-        0,
-        7
-      ],
-      "to": [
-        15,
-        13,
-        9
-      ],
-      "faces": {
-        "north": {
-          "texture": "#wood"
-        },
-        "south": {
-          "texture": "#wood"
-        },
-        "east": {
-          "texture": "#wood"
-        },
-        "west": {
-          "texture": "#wood"
-        },
-        "up": {
-          "texture": "#end"
-        },
-        "down": {
-          "texture": "#end"
-        }
-      }
-    },
-    {
-      "from": [
-        0,
-        13,
-        6.5
-      ],
-      "to": [
-        16,
-        15.5,
-        9.5
-      ],
-      "faces": {
-        "north": {
-          "texture": "#wood"
-        },
-        "south": {
-          "texture": "#wood"
-        },
-        "east": {
-          "texture": "#wood"
-        },
-        "west": {
-          "texture": "#wood"
-        },
-        "up": {
-          "texture": "#end"
-        },
-        "down": {
-          "texture": "#end"
-        }
-      }
-    }
-  ]
+	"format_version": "26.3",
+	"credit": "Made by Baileybun",
+	"parent": "minecraft:block/block",
+	"ambientocclusion": false,
+	"texture_size": [32, 32],
+	"textures": {
+		"0": "spicedcider:block/tanning_rack",
+		"particle": "#0"
+	},
+	"elements": [
+		{
+			"from": [14, 0, 6],
+			"to": [16, 16, 10],
+			"rotation": {"angle": 0, "axis": "y", "origin": [14, 0, 6]},
+			"faces": {
+				"north": {"uv": [1, 0, 2, 8], "texture": "#0"},
+				"east": {"uv": [0, 0, 2, 8], "texture": "#0"},
+				"south": {"uv": [0, 0, 1, 8], "texture": "#0"},
+				"west": {"uv": [2, 0, 4, 8], "texture": "#0"},
+				"up": {"uv": [6, 0, 5, 2], "texture": "#0"}
+			}
+		},
+		{
+			"from": [2, 12, 7],
+			"to": [14, 14, 9],
+			"rotation": {"angle": 0, "axis": "y", "origin": [2, 12, 7]},
+			"faces": {
+				"north": {"uv": [9, 0, 15, 1], "texture": "#0"},
+				"south": {"uv": [9, 0, 15, 1], "texture": "#0"},
+				"up": {"uv": [9, 0, 15, 1], "texture": "#0"},
+				"down": {"uv": [9, 0, 15, 1], "texture": "#0"}
+			}
+		},
+		{
+			"from": [0, 0, 6],
+			"to": [2, 16, 10],
+			"rotation": {"angle": 0, "axis": "y", "origin": [0, 0, 6]},
+			"faces": {
+				"north": {"uv": [0, 0, 1, 8], "texture": "#0"},
+				"east": {"uv": [2, 0, 4, 8], "texture": "#0"},
+				"south": {"uv": [1, 0, 2, 8], "texture": "#0"},
+				"west": {"uv": [0, 0, 2, 8], "texture": "#0"},
+				"up": {"uv": [6, 0, 5, 2], "texture": "#0"}
+			}
+		}
+	]
 }

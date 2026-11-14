@@ -41,6 +41,7 @@ public class SpicedCiderConfigScreen {
                 .category(ConfigCategory.createBuilder()
                         .name(Component.translatable("category.spicedcider.gameplay"))
                         .tooltip(Component.translatable("category.spicedcider.gameplay.tooltip"))
+                        .option(toggle("wind", common.wind))
                         .option(toggle("bedExplosionPrevention", common.bedExplosionPrevention))
                         .option(toggle("respawnAnchorExplosionPrevention", common.respawnAnchorExplosionPrevention))
                         .option(toggle("endCrystalPlaceAnywhere", common.endCrystalPlaceAnywhere))
@@ -115,6 +116,9 @@ public class SpicedCiderConfigScreen {
                         .option(intSlider("cloudCoverFadeSeconds", client.cloudCoverFadeSeconds, 1, 300, 1))
                         .option(intSlider("cloudCoverCommandFadeSeconds", client.cloudCoverCommandFadeSeconds, 0, 60, 1))
                         .option(toggle("sunDogs", client.sunDogs))
+                        .option(toggle("windParticles", client.windParticles))
+                        .option(intSlider("windParticleStrength", client.windParticleStrength, 0, 300, 5))
+                        .option(toggle("windMotes", client.windMotes))
                         .build())
                 .categoryIf(ModList.get().isLoaded("roxy"), ConfigCategory.createBuilder()
                         .name(Component.translatable("category.spicedcider.voxy"))
@@ -151,6 +155,7 @@ public class SpicedCiderConfigScreen {
                 toggle("clutterNoMoreShapeWheel", client.clutterNoMoreShapeWheel));
         group(groups, List.of("create"),
                 toggle("soulCampfireHaunting", common.soulCampfireHaunting),
+                toggle("windCreateWindmills", common.windCreateWindmills),
                 toggle("createHideItemDescriptions", client.createHideItemDescriptions));
         group(groups, List.of("culturaldelights"),
                 toggle("drinkIntoxication", startup.drinkIntoxication));
@@ -200,6 +205,10 @@ public class SpicedCiderConfigScreen {
                 toggle("goldenDandelionParticles", client.goldenDandelionParticles));
         group(groups, List.of("voicechat"),
                 toggle("voiceChatHideSingleplayerHud", client.voiceChatHideSingleplayerHud));
+        group(groups, List.of("reliable_gliders"),
+                toggle("windGliders", common.windGliders));
+        group(groups, List.of("supplementaries"),
+                toggle("windVaneSignal", common.windVaneSignal));
         group(groups, List.of("where_winds_blow"),
                 toggle("whereWindsBlowNoBonemealGrass", common.whereWindsBlowNoBonemealGrass));
         group(groups, List.of("bettermineshafts", "spelunkery"),

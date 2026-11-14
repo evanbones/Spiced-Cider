@@ -184,6 +184,10 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.BooleanValue creakingBuff;
         public final ModConfigSpec.BooleanValue goldenDandelionTempting;
         public final ModConfigSpec.BooleanValue oceanRuinPrismarineChests;
+        public final ModConfigSpec.BooleanValue wind;
+        public final ModConfigSpec.BooleanValue windCreateWindmills;
+        public final ModConfigSpec.BooleanValue windVaneSignal;
+        public final ModConfigSpec.BooleanValue windGliders;
 
         public final ModConfigSpec.BooleanValue bedExplosionPrevention;
         public final ModConfigSpec.BooleanValue respawnAnchorExplosionPrevention;
@@ -508,6 +512,29 @@ public class SpicedCiderConfig {
                             element -> element instanceof String id && ResourceLocation.tryParse(id) != null);
 
             builder.pop();
+            builder.push("wind");
+
+            wind = builder
+                    .comment(tooltip("wind"))
+                    .translation("option.spicedcider.wind")
+                    .define("wind", false);
+
+            windCreateWindmills = builder
+                    .comment(tooltip("windCreateWindmills"))
+                    .translation("option.spicedcider.windCreateWindmills")
+                    .define("windCreateWindmills", true);
+
+            windVaneSignal = builder
+                    .comment(tooltip("windVaneSignal"))
+                    .translation("option.spicedcider.windVaneSignal")
+                    .define("windVaneSignal", true);
+
+            windGliders = builder
+                    .comment(tooltip("windGliders"))
+                    .translation("option.spicedcider.windGliders")
+                    .define("windGliders", true);
+
+            builder.pop();
             builder.push("performance");
 
             disableRecipeBookTracking = builder
@@ -561,6 +588,9 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.BooleanValue bedScreenTips;
         public final ModConfigSpec.BooleanValue moveRecipeBookButton;
         public final ModConfigSpec.BooleanValue hideOwnEffectParticles;
+        public final ModConfigSpec.BooleanValue windParticles;
+        public final ModConfigSpec.IntValue windParticleStrength;
+        public final ModConfigSpec.BooleanValue windMotes;
         public final ModConfigSpec.BooleanValue softerBlindnessAndDarkness;
         public final ModConfigSpec.BooleanValue hideSmithingTemplateTooltips;
 
@@ -806,6 +836,21 @@ public class SpicedCiderConfig {
                     .comment(tooltip("sunDogs"))
                     .translation("option.spicedcider.sunDogs")
                     .define("sunDogs", true);
+
+            windParticles = builder
+                    .comment(tooltip("windParticles"))
+                    .translation("option.spicedcider.windParticles")
+                    .define("windParticles", true);
+
+            windParticleStrength = builder
+                    .comment(tooltip("windParticleStrength"))
+                    .translation("option.spicedcider.windParticleStrength")
+                    .defineInRange("windParticleStrength", 100, 0, 300);
+
+            windMotes = builder
+                    .comment(tooltip("windMotes"))
+                    .translation("option.spicedcider.windMotes")
+                    .define("windMotes", true);
 
             builder.pop();
             builder.push("voxy");

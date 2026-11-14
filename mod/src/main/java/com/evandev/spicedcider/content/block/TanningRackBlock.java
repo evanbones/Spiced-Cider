@@ -55,6 +55,7 @@ public class TanningRackBlock extends HorizontalDirectionalBlock {
     private static final ResourceLocation HOGLIN_HIDE = ResourceLocation.fromNamespaceAndPath("mynethersdelight", "hoglin_hide");
     private static final ResourceLocation TANNING_ADVANCEMENT = ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "spiced_cider/tanning");
 
+    private static final double DRIP_OFFSET = 0.14;
     private static final VoxelShape SHAPE_NS = Block.box(0.0, 0.0, 6.0, 16.0, 16.0, 10.0);
     private static final VoxelShape SHAPE_EW = Block.box(6.0, 0.0, 0.0, 10.0, 16.0, 16.0);
 
@@ -129,8 +130,8 @@ public class TanningRackBlock extends HorizontalDirectionalBlock {
         Contents contents = state.getValue(CONTENTS);
         boolean large = stack.is(ModTags.Items.LARGE_TANNABLE_HIDES);
         if (contents == Contents.EMPTY && (large || stack.is(ModTags.Items.TANNABLE_HIDES))) {
+            setContents(level, pos, state, large ? Contents.HOGLIN_HIDE : Contents.HIDE);
             if (!level.isClientSide()) {
-                setContents(level, pos, state, large ? Contents.HOGLIN_HIDE : Contents.HIDE);
                 level.playSound(null, pos, SoundEvents.ARMOR_EQUIP_LEATHER.value(), SoundSource.BLOCKS, 1.0F, 0.8F);
                 level.gameEvent(player, GameEvent.BLOCK_CHANGE, pos);
                 stack.consume(1, player);
@@ -138,10 +139,9 @@ public class TanningRackBlock extends HorizontalDirectionalBlock {
             return ItemInteractionResult.sidedSuccess(level.isClientSide());
         }
         if ((contents == Contents.HIDE || contents == Contents.HOGLIN_HIDE) && stack.is(ModTags.Items.TANNING_AGENTS)) {
+            setContents(level, pos, state, contents == Contents.HIDE ? Contents.TANNING : Contents.HOGLIN_TANNING);
             if (level instanceof ServerLevel serverLevel) {
-                BlockPos lower = lowerPos(pos, state);
-                setContents(level, pos, state, contents == Contents.HIDE ? Contents.TANNING : Contents.HOGLIN_TANNING);
-                level.scheduleTick(lower, this, TANNING_TICKS);
+                level.scheduleTick(lowerPos(pos, state), this, TANNING_TICKS);
                 level.playSound(null, pos, SoundEvents.BRUSH_GENERIC, SoundSource.BLOCKS, 1.0F, 0.9F);
                 serverLevel.sendParticles(new ItemParticleOption(ParticleTypes.ITEM, stack.copyWithCount(1)),
                         hit.getLocation().x, hit.getLocation().y, hit.getLocation().z, 8, 0.15, 0.15, 0.15, 0.05);
@@ -164,8 +164,8 @@ public class TanningRackBlock extends HorizontalDirectionalBlock {
             default -> ItemStack.EMPTY;
         };
         if (taken.isEmpty()) return InteractionResult.PASS;
+        setContents(level, pos, state, Contents.EMPTY);
         if (!level.isClientSide()) {
-            setContents(level, pos, state, Contents.EMPTY);
             level.playSound(null, pos, SoundEvents.ITEM_PICKUP, SoundSource.PLAYERS, 0.4F, 1.0F);
             level.gameEvent(player, GameEvent.BLOCK_CHANGE, pos);
             if (!player.getInventory().add(taken)) player.drop(taken, false);
@@ -186,9 +186,11 @@ public class TanningRackBlock extends HorizontalDirectionalBlock {
         if (!state.getValue(CONTENTS).isTanning() || random.nextInt(6) != 0) return;
         boolean ns = state.getValue(FACING).getAxis() == Direction.Axis.Z;
         double along = 0.15 + random.nextDouble() * 0.7;
-        double x = pos.getX() + (ns ? along : 0.5);
-        double z = pos.getZ() + (ns ? 0.5 : along);
-        level.addParticle(ParticleTypes.FALLING_HONEY, x, pos.getY() + 0.1 + random.nextDouble() * 0.6, z, 0.0, 0.0, 0.0);
+        double across = 0.5 + (random.nextBoolean() ? DRIP_OFFSET : -DRIP_OFFSET);
+        double x = pos.getX() + (ns ? along : across);
+        double z = pos.getZ() + (ns ? across : along);
+        double y = state.getValue(HALF) == DoubleBlockHalf.LOWER ? 0.65 + random.nextDouble() * 0.3 : random.nextDouble() * 0.7;
+        level.addParticle(ParticleTypes.FALLING_HONEY, x, pos.getY() + y, z, 0.0, 0.0, 0.0);
     }
 
     private static void awardTanning(ServerPlayer player) {

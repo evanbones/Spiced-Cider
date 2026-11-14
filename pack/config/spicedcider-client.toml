@@ -117,6 +117,14 @@
 	cloudCoverCommandFadeSeconds = 5
 	#Show the rare halos of light that sometimes form on either side of the sun.
 	sunDogs = true
+	#Smoke, leaves, snow and other particles drift with the wind when outdoors.
+	windParticles = true
+	#How strongly particles are pushed by the wind, as a percentage.
+	# Default: 100
+	# Range: 0 ~ 300
+	windParticleStrength = 100
+	#Tiny specks of grass, dust, sand and snow blow off exposed ground when it is windy.
+	windMotes = true
 
 [nether]
 	#Distant terrain in the Nether shimmers in the heat, more strongly and closer up near lava. Also scaled by the Distortion Effects accessibility option.

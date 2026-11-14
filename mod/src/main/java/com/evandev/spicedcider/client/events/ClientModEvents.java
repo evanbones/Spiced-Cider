@@ -12,6 +12,7 @@ import com.evandev.spicedcider.client.nether.NetherHeatHaze;
 import com.evandev.spicedcider.client.particle.CleaverSweepParticle;
 import com.evandev.spicedcider.client.particle.GoldenDandelionParticle;
 import com.evandev.spicedcider.client.particle.VentSmokeParticle;
+import com.evandev.spicedcider.client.particle.WindMoteParticle;
 import com.evandev.spicedcider.client.resource.BrokenTextureReloadListener;
 import com.evandev.spicedcider.client.music.PocketJukeboxClient;
 import com.evandev.spicedcider.client.renderer.PocketJukeboxTooltipRenderer;
@@ -131,6 +132,7 @@ public class ClientModEvents {
         event.registerSpriteSet(ModParticleTypes.SULFUR_FIRE_FLAME.get(), FlameParticle.Provider::new);
         event.registerSpriteSet(ModParticleTypes.SMALL_SULFUR_FIRE_FLAME.get(), FlameParticle.SmallFlameProvider::new);
         event.registerSpriteSet(ModParticleTypes.SKULL_PIKE_ASH.get(), AshParticle.Provider::new);
+        event.registerSpriteSet(ModParticleTypes.WIND_MOTE.get(), WindMoteParticle.Provider::new);
         event.registerSpriteSet(ModParticleTypes.SKULL_PIKE_SPORE.get(), SuspendedParticle.WarpedSporeProvider::new);
     }
 

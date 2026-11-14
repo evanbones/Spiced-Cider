@@ -1,13 +1,10 @@
 package com.evandev.spicedcider.compat.chimes;
 
-import com.macatmovie.livingwind.api.ClientWindApi;
-import com.macatmovie.livingwind.client.ClientWindState;
-import com.macatmovie.livingwind.client.WindShelter;
+import com.evandev.spicedcider.wind.client.ClientWind;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.Mth;
-import net.minecraft.world.level.Level;
 
 public final class ChimesWindClient {
     private static final float CALM_SOUND_STRENGTH = 0.05F;
@@ -29,15 +26,14 @@ public final class ChimesWindClient {
             long steps = Math.min(tick - lastTick, 20L);
             for (long i = 0; i < steps; i++) phase += rate;
             lastTick = tick;
-            rate = 0.4F + 1.6F * ClientWindApi.globalStrength();
+            rate = ClientWind.active() ? 0.4F + 1.6F * ClientWind.strength() : 1.0F;
         }
         return (float) (phase + rate * partialTicks) + pos.getX() * 7 + pos.getZ() * 13;
     }
 
     public static float strength(BlockPos pos) {
-        ClientLevel level = Minecraft.getInstance().level;
-        if (level == null || !ClientWindApi.hasWindState()) return BASELINE_STRENGTH;
-        return ClientWindState.strengthAtAltitude(pos.getY(), level.dimension() == Level.OVERWORLD) * WindShelter.exposureForStaticAnimation(pos);
+        if (!ClientWind.active()) return BASELINE_STRENGTH;
+        return ClientWind.exposedStrength(pos);
     }
 
     public static float amplitude(BlockPos pos) {

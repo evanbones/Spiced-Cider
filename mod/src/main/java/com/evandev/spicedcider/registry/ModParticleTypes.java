@@ -24,6 +24,8 @@ public class ModParticleTypes {
             () -> new SimpleParticleType(false));
     public static final DeferredHolder<ParticleType<?>, SimpleParticleType> SKULL_PIKE_ASH = PARTICLE_TYPES.register("skull_pike_ash",
             () -> new SimpleParticleType(false));
+    public static final DeferredHolder<ParticleType<?>, SimpleParticleType> WIND_MOTE = PARTICLE_TYPES.register("wind_mote",
+            () -> new SimpleParticleType(false));
     public static final DeferredHolder<ParticleType<?>, SimpleParticleType> SKULL_PIKE_SPORE = PARTICLE_TYPES.register("skull_pike_spore",
             () -> new SimpleParticleType(false));
 }

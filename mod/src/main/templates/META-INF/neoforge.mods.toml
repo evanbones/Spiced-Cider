@@ -313,7 +313,14 @@ ordering = "AFTER"
 side = "CLIENT"
 
 [[dependencies.${ mod_id }]]
-modId = "livingwind"
+modId = "reliable_gliders"
+type = "optional"
+versionRange = "*"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.${ mod_id }]]
+modId = "particlerain"
 type = "optional"
 versionRange = "*"
 ordering = "AFTER"

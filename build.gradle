@@ -13,6 +13,7 @@ def packToml = packDir.file("pack.toml").asFile
 def packwizExe = packDir.file("packwiz.exe").asFile
 def packwiz = System.getProperty("os.name").toLowerCase().contains("windows") && packwizExe.exists() ? packwizExe.absolutePath : "packwiz"
 def packVersion = pack_version
+def releaseConfig = layout.projectDirectory.file("pack-release.json").asFile
 def mrpack = layout.buildDirectory.file("pack/${pack_name.replace(' ', '-')}-${pack_version}.mrpack")
 
 var syncPackVersion = tasks.register("syncPackVersion") {
@@ -41,8 +42,127 @@ var exportPack = tasks.register("exportPack", Exec) {
     workingDir = packDir.asFile
     outputs.file(mrpack)
     outputs.upToDateWhen { false }
+    inputs.file(releaseConfig)
     doFirst { mrpack.get().asFile.parentFile.mkdirs() }
     commandLine packwiz, "modrinth", "export", "--output", mrpack.get().asFile.absolutePath
+    doLast {
+        def release = new JsonSlurper().parse(releaseConfig)
+        def removePatterns = release.remove.collect { String glob ->
+            [glob, java.util.regex.Pattern.compile(glob.split("\\*", -1).collect { java.util.regex.Pattern.quote(it) }.join(".*"))]
+        }
+        def unmatched = (release.remove + release.json.keySet()) as Set
+        def overridePath = { String name ->
+            def prefix = ["overrides/", "client-overrides/", "server-overrides/"].find { name.startsWith(it) }
+            prefix ? name.substring(prefix.length()) : null
+        }
+        def removed = { String path ->
+            def hit = removePatterns.find { it[1].matcher(path).matches() }
+            if (hit) unmatched.remove(hit[0])
+            hit != null
+        }
+        def out = mrpack.get().asFile
+        def raw = new File(out.path + ".raw")
+        raw.delete()
+        out.renameTo(raw)
+        new java.util.zip.ZipFile(raw).withCloseable { source ->
+            new java.util.zip.ZipOutputStream(out.newOutputStream()).withCloseable { zip ->
+                source.entries().findAll { !it.directory }.each { entry ->
+                    byte[] bytes = source.getInputStream(entry).bytes
+                    if (entry.name == "modrinth.index.json") {
+                        def index = new JsonSlurper().parse(bytes)
+                        index.files = index.files.findAll { !removed(it.path as String) }
+                        bytes = groovy.json.JsonOutput.prettyPrint(groovy.json.JsonOutput.toJson(index)).getBytes("UTF-8")
+                    } else {
+                        def path = overridePath(entry.name)
+                        if (path != null && removed(path)) return
+                        def patch = path != null ? release.json[path] : null
+                        if (patch != null) {
+                            unmatched.remove(path)
+                            def json = new JsonSlurper().parse(bytes)
+                            json.putAll(patch)
+                            bytes = groovy.json.JsonOutput.prettyPrint(groovy.json.JsonOutput.toJson(json)).getBytes("UTF-8")
+                        }
+                    }
+                    zip.putNextEntry(new java.util.zip.ZipEntry(entry.name))
+                    zip.write(bytes)
+                    zip.closeEntry()
+                }
+            }
+        }
+        raw.delete()
+        if (!unmatched.isEmpty()) {
+            throw new GradleException("pack-release.json entries matched nothing in the export: ${unmatched}")
+        }
+    }
+}
+
+def serverPack = layout.buildDirectory.file("pack/${pack_name.replace(' ', '-')}-${pack_version}-server.zip")
+def downloadCache = layout.buildDirectory.dir("pack/cache").get().asFile
+def serverPackFiles = layout.projectDirectory.dir("server-pack").asFile
+def serverExcludedJars = pack_server_excluded_jars.split(",").collect { it.trim() }.findAll { !it.isEmpty() }
+def serverExcludedOverrides = ["resourcepacks/", "shaderpacks/", "PW-GUI.exe", "packwiz.exe", "unsup.toml", "icon.png"]
+def neoInstallerUrl = "https://maven.neoforged.net/releases/net/neoforged/neoforge/${neo_version}/neoforge-${neo_version}-installer.jar"
+
+var exportServerPack = tasks.register("exportServerPack") {
+    group = "spiced cider"
+    dependsOn(exportPack)
+    inputs.files(mrpack)
+    inputs.dir(serverPackFiles)
+    outputs.file(serverPack)
+    doLast {
+        def fetch = { String url, String sha512 ->
+            def cached = new File(downloadCache, sha512 ?: url.md5())
+            if (!cached.exists()) {
+                cached.parentFile.mkdirs()
+                def tmp = new File(cached.path + ".part")
+                new URL(url).withInputStream { input -> tmp.withOutputStream { it << input } }
+                if (sha512 != null) {
+                    def actual = java.security.MessageDigest.getInstance("SHA-512").digest(tmp.bytes).encodeHex().toString()
+                    if (actual != sha512) {
+                        tmp.delete()
+                        throw new GradleException("Hash mismatch for ${url}")
+                    }
+                }
+                tmp.renameTo(cached)
+            }
+            cached
+        }
+        def excludedJar = { String path ->
+            def name = path.substring(path.lastIndexOf('/') + 1)
+            path.startsWith("mods/") && serverExcludedJars.any { name.startsWith(it) }
+        }
+        def out = serverPack.get().asFile
+        out.parentFile.mkdirs()
+        def written = [] as Set
+        new java.util.zip.ZipFile(mrpack.get().asFile).withCloseable { source ->
+            def index = new JsonSlurper().parse(source.getInputStream(source.getEntry("modrinth.index.json")))
+            new java.util.zip.ZipOutputStream(out.newOutputStream()).withCloseable { zip ->
+                def put = { String path, Closure writer ->
+                    if (!written.add(path)) return
+                    zip.putNextEntry(new java.util.zip.ZipEntry(path))
+                    writer(zip)
+                    zip.closeEntry()
+                }
+                index.files.findAll { it.env?.server != "unsupported" && !excludedJar(it.path) }.each { entry ->
+                    def file = fetch(entry.downloads[0] as String, entry.hashes.sha512 as String)
+                    put(entry.path as String) { it << file.bytes }
+                }
+                ["server-overrides/", "overrides/"].each { prefix ->
+                    source.entries().findAll { !it.directory && it.name.startsWith(prefix) }.each { entry ->
+                        def path = entry.name.substring(prefix.length())
+                        if (excludedJar(path) || serverExcludedOverrides.any { path.startsWith(it) }) return
+                        put(path) { stream -> source.getInputStream(entry).withCloseable { stream << it } }
+                    }
+                }
+                def installer = fetch(neoInstallerUrl, null)
+                put("neoforge-installer.jar") { it << installer.bytes }
+                serverPackFiles.listFiles().sort { it.name }.each { file ->
+                    put(file.name) { it << file.bytes }
+                }
+            }
+        }
+        logger.lifecycle("Server pack exported to ${out}")
+    }
 }
 
 def packSlug = pack_modrinth_slug
@@ -69,5 +189,5 @@ publishMods {
 }
 
 tasks.matching { it.name.startsWith("publish") }.configureEach {
-    dependsOn(exportPack)
+    dependsOn(exportPack, exportServerPack)
 }

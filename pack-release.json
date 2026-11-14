@@ -1,0 +1,19 @@
+{
+  "remove": [
+    "mods/packdev_toolkit-*",
+    "config/packdev_toolkit.json"
+  ],
+  "json": {
+    "config/remi/remi.json": {
+      "emiOnlyInRecipeBook": true
+    },
+    "config/reliable_remover.json": {
+      "enableEmiRemoval": false,
+      "enableJeiRemoval": false,
+      "enableRrvRemoval": false
+    },
+    "config/reliable_recipes.json": {
+      "devMode": false
+    }
+  }
+}

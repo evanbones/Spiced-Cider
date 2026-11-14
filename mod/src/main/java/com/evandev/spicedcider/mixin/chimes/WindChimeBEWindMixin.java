@@ -18,7 +18,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import java.util.List;
 
 @IfModLoaded("chimes")
-@IfModLoaded("livingwind")
 @Mixin(value = WindChimeBE.class, remap = false)
 public class WindChimeBEWindMixin {
 

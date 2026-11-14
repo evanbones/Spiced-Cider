@@ -2,6 +2,7 @@ package com.evandev.spicedcider.registry;
 
 import com.evandev.spicedcider.SpicedCider;
 import com.evandev.spicedcider.config.FeatureCondition;
+import com.evandev.spicedcider.config.SupplementariesFlagCondition;
 import com.mojang.serialization.MapCodec;
 import net.neoforged.neoforge.common.conditions.ICondition;
 import net.neoforged.neoforge.registries.DeferredHolder;
@@ -14,4 +15,7 @@ public class ModConditions {
 
     public static final DeferredHolder<MapCodec<? extends ICondition>, MapCodec<FeatureCondition>> FEATURE =
             CONDITION_CODECS.register("feature", () -> FeatureCondition.CODEC);
+
+    public static final DeferredHolder<MapCodec<? extends ICondition>, MapCodec<SupplementariesFlagCondition>> SUPPLEMENTARIES_FLAG =
+            CONDITION_CODECS.register("supplementaries_flag", () -> SupplementariesFlagCondition.CODEC);
 }
