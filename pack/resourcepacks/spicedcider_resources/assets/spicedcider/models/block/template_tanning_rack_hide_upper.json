@@ -1,0 +1,23 @@
+{
+	"render_type": "minecraft:cutout",
+	"ambientocclusion": false,
+	"texture_size": [32, 32],
+	"textures": {
+		"particle": "#hide"
+	},
+	"elements": [
+		{
+			"from": [2, 0, 8],
+			"to": [14, 12, 8],
+			"rotation": {"angle": 0, "axis": "y", "origin": [2, 5, 7]},
+			"faces": {
+				"north": {"uv": [0, 0, 6, 6], "texture": "#hide"},
+				"east": {"uv": [0, 0, 0, 0], "texture": "#hide"},
+				"south": {"uv": [0, 0, 6, 6], "texture": "#hide"},
+				"west": {"uv": [0, 0, 0, 0], "texture": "#hide"},
+				"up": {"uv": [0, 0, 0, 0], "texture": "#hide"},
+				"down": {"uv": [0, 0, 0, 0], "texture": "#hide"}
+			}
+		}
+	]
+}
