@@ -36,6 +36,20 @@ public final class EdgeFogShaders {
                         + (position.z > 0.0 ? SpicedCiderEdgeFog.z : SpicedCiderEdgeFog.w) * axes.y;
             }""";
 
+    public static final String CORE_UNIFORM = "SpicedCiderEdgeFog";
+    private static final String CORE_IMPORT = "#moj_import <fog.glsl>";
+    private static final String CORE_DISTANCE = "fog_distance(";
+    private static final String CORE_FUNCTION = """
+            #moj_import <fog.glsl>
+
+            uniform vec4 SpicedCiderEdgeFog;
+
+            float spicedcider_fog_distance(vec3 position, int shape) {
+                vec2 axes = position.xz * position.xz / max(dot(position.xz, position.xz), 0.0001);
+                return fog_distance(position, shape) * (1.0 + (position.x > 0.0 ? SpicedCiderEdgeFog.x : SpicedCiderEdgeFog.y) * axes.x
+                        + (position.z > 0.0 ? SpicedCiderEdgeFog.z : SpicedCiderEdgeFog.w) * axes.y);
+            }""";
+
     private static int cloudShadowProgram = -1;
     private static int cloudShadowLocation = -1;
     private static volatile boolean terrainPatched;
@@ -66,6 +80,22 @@ public final class EdgeFogShaders {
         return source
                 .replace(CLOUD_SHADOW_DECLARATION, CLOUD_SHADOW_FUNCTION)
                 .replace(CLOUD_SHADOW_DISTANCE, "(" + CLOUD_SHADOW_DISTANCE + " * spicedciderEdgeStretch(relative))");
+    }
+
+    public static String patchCore(String name, String source) {
+        if (source == null || !source.contains(CORE_IMPORT) || !source.contains(CORE_DISTANCE)) return source;
+        String path = name.startsWith("minecraft:") ? name.substring("minecraft:".length()) : name;
+        if (path.contains(":") || path.equals("rendertype_clouds") || !(path.startsWith("rendertype_") || path.equals("particle"))) {
+            return source;
+        }
+        return source
+                .replace(CORE_DISTANCE, "spicedcider_" + CORE_DISTANCE)
+                .replace(CORE_IMPORT, CORE_FUNCTION);
+    }
+
+    public static void bindCore(int location) {
+        float[] stretch = active() ? VoxyFog.edgeStretch() : new float[4];
+        GL20C.glUniform4f(location, stretch[0], stretch[1], stretch[2], stretch[3]);
     }
 
     public static void bindCloudShadow(int program) {
