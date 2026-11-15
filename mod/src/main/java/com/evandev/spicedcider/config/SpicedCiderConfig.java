@@ -14,6 +14,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 public class SpicedCiderConfig {
     private static final String LANG_PATH = "assets/spicedcider/lang/en_us.json";
@@ -157,6 +158,7 @@ public class SpicedCiderConfig {
                 "strawGolems",
                 "sputters",
                 "leafSticks",
+                "oreStoneDrops",
                 "fireStriker",
                 "deposits",
                 "wormyDirt",
@@ -165,6 +167,8 @@ public class SpicedCiderConfig {
                 "buildingBlocks",
                 "paleGardenPlants",
                 "snifferGoldenDandelions");
+
+        public static final Set<String> FEATURES_OFF_BY_DEFAULT = Set.of("oreStoneDrops");
 
         public final ModConfigSpec.BooleanValue oldWisteriaTrees;
         public final ModConfigSpec.BooleanValue slimeTimeDisableItemMerging;
@@ -332,7 +336,7 @@ public class SpicedCiderConfig {
                 features.put(feature, builder
                         .comment(tooltip(feature))
                         .translation("option.spicedcider." + feature)
-                        .define(feature, true));
+                        .define(feature, !FEATURES_OFF_BY_DEFAULT.contains(feature)));
             }
 
             builder.push("gameplay");

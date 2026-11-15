@@ -1,0 +1,56 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "spicedcider:feature",
+      "feature": "oreStoneDrops"
+    }
+  ],
+  "type": "spicedcider:ore_host_stone",
+  "conditions": [],
+  "hosts": [
+    {
+      "ores": "c:ores_in_ground/stone",
+      "block": "minecraft:stone"
+    },
+    {
+      "ores": "c:ores_in_ground/deepslate",
+      "block": "minecraft:deepslate"
+    },
+    {
+      "ores": "c:ores_in_ground/netherrack",
+      "block": "minecraft:netherrack"
+    },
+    {
+      "ores": "c:ores_in_ground/andesite",
+      "block": "minecraft:andesite"
+    },
+    {
+      "ores": "c:ores_in_ground/diorite",
+      "block": "minecraft:diorite"
+    },
+    {
+      "ores": "c:ores_in_ground/granite",
+      "block": "minecraft:granite"
+    },
+    {
+      "ores": "c:ores_in_ground/tuff",
+      "block": "minecraft:tuff"
+    },
+    {
+      "ores": "c:ores_in_ground/blackstone",
+      "block": "minecraft:blackstone"
+    },
+    {
+      "ores": "c:ores_in_ground/smooth_basalt",
+      "block": "minecraft:smooth_basalt"
+    },
+    {
+      "ores": "c:ores_in_ground/basalt",
+      "block": "minecraft:basalt"
+    },
+    {
+      "ores": "c:ores_in_ground/soul_soil",
+      "block": "minecraft:soul_soil"
+    }
+  ]
+}

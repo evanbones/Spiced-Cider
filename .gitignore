@@ -55,6 +55,7 @@ scripts/__pycache__/
 # Yosbr copies these defaults into config/ at runtime (the dev instance config/ is a symlink to pack/config)
 pack/config/voxy-config.json
 pack/config/sodium-options.json
+pack/config/particular-common.toml
 pack/config/sodium-extra-options.json
 pack/config/iris.properties
 pack/config/lambdynlights.toml

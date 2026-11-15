@@ -59,6 +59,8 @@
 	sputters = true
 	#Breaking leaves sometimes drops a stick. Takes effect after /reload.
 	leafSticks = true
+	#Mining an ore also drops the stone it sits in, such as deepslate or netherrack. Takes effect after /reload.
+	oreStoneDrops = true
 	#Two flint craft a single-use Fire Striker. Takes effect after /reload.
 	fireStriker = true
 	#Deposit ores generate underground, and geodes turn up in dungeon and Nether chests. Worldgen changes need a world restart and only affect new chunks.

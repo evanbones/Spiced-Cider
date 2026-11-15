@@ -17,6 +17,7 @@ import com.evandev.spicedcider.compat.controlify.ControlifySettings;
 import com.evandev.spicedcider.compat.lambdynlights.DynamicLightsSetting;
 import com.evandev.spicedcider.compat.musictweaks.MusicTweaksSettings;
 import com.evandev.spicedcider.compat.nomansland.NoMansLandSettings;
+import com.evandev.spicedcider.compat.particular.ParticularSettings;
 import com.evandev.spicedcider.compat.sodium.SodiumSetting;
 import com.evandev.spicedcider.client.nether.NetherSettings;
 import com.evandev.spicedcider.compat.voxy.VoxyFogSettings;
@@ -175,6 +176,9 @@ public final class SettingsPages {
                 cirrus ? CirrusSettings.aurora() : null,
                 ModList.get().isLoaded("nomansland") ? NoMansLandSettings.sunDogs() : null,
                 NetherSettings.mist()));
+        if (ModList.get().isLoaded("particular")) {
+            add(entries, category(screen, "particles", ParticularSettings.particles().toArray(Entry[]::new)));
+        }
         add(entries, category(screen, "post_processing",
                 NetherSettings.heatHaze(),
                 NetherSettings.ambientTint(),
@@ -245,6 +249,7 @@ public final class SettingsPages {
                 sodium("sodium:general.view_bobbing", o.bobView()),
                 vanilla(o.screenEffectScale()),
                 ModList.get().isLoaded("nomansland") ? NoMansLandSettings.invertedBellBlur() : null,
+                ModList.get().isLoaded("particular") ? ParticularSettings.screenShake() : null,
                 vanilla(o.fovEffectScale()),
                 vanilla(o.darknessEffectScale()),
                 vanilla(o.damageTiltStrength()),

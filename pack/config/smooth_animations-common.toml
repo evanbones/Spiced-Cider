@@ -1,0 +1,4 @@
+#Fixes entity bodies rotating choppily when head rotates
+smooth_rotations = true
+#Smooth transition for falling block entity to block transformation
+smooth_falling_block_landing = true

@@ -65,10 +65,17 @@ public class VentBlock extends RotatedPillarBlock implements SimpleWaterloggedBl
     @Override
     public void animateTick(@NotNull BlockState state, @NotNull Level level, @NotNull BlockPos pos, @NotNull RandomSource random) {
         if (state.getValue(AXIS) != Direction.Axis.Y || level.getBlockState(pos.above()).getBlock() instanceof VentBlock) return;
+        boolean waterlogged = state.getValue(WATERLOGGED);
         double x = pos.getX() + 0.5 + (random.nextDouble() - 0.5) * 0.3;
         double z = pos.getZ() + 0.5 + (random.nextDouble() - 0.5) * 0.3;
-        if (state.getValue(WATERLOGGED) && random.nextInt(3) == 0) level.addAlwaysVisibleParticle(ParticleTypes.BUBBLE_COLUMN_UP, x, pos.getY() + 1.0, z, 0.0, 0.04, 0.0);
-        level.addAlwaysVisibleParticle(this.smoke.get(), x, pos.getY() + 0.9, z, 0.0, 0.0, 0.0);
+        if (waterlogged && random.nextInt(3) == 0) level.addAlwaysVisibleParticle(ParticleTypes.BUBBLE_COLUMN_UP, x, pos.getY() + 1.0, z, 0.0, 0.04, 0.0);
+        int puffs = waterlogged ? 3 + random.nextInt(3) : 1;
+        for (int i = 0; i < puffs; i++) {
+            double px = pos.getX() + 0.5 + (random.nextDouble() - 0.5) * 0.35;
+            double pz = pos.getZ() + 0.5 + (random.nextDouble() - 0.5) * 0.35;
+            double py = pos.getY() + 0.9 + random.nextDouble() * 0.3;
+            level.addAlwaysVisibleParticle(this.smoke.get(), px, py, pz, (random.nextDouble() - 0.5) * 0.01, random.nextDouble() * 0.02, (random.nextDouble() - 0.5) * 0.01);
+        }
     }
 
     @Override
