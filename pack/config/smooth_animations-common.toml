@@ -2,3 +2,7 @@
 smooth_rotations = true
 #Smooth transition for falling block entity to block transformation
 smooth_falling_block_landing = true
+#Ghasts will swell up before shooting like they did before 1.3!! :0
+ghast_swell = true
+#Fixes withers shaking lika crazy left and right when pathfinding a far target
+wither_yaw_fix = true
