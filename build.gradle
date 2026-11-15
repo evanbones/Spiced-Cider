@@ -175,10 +175,13 @@ publishMods {
     modrinth {
         accessToken = providers.environmentVariable("MODRINTH_TOKEN")
         projectId = providers.provider {
+            def connection = new URL("https://api.modrinth.com/v2/project/${packSlug}").openConnection()
+            def token = System.getenv("MODRINTH_TOKEN")
+            if (token) connection.setRequestProperty("Authorization", token)
             try {
-                new JsonSlurper().parse(new URL("https://api.modrinth.com/v2/project/${packSlug}")).id as String
+                connection.inputStream.withCloseable { new JsonSlurper().parse(it).id as String }
             } catch (Exception ignored) {
-                throw new GradleException("Modrinth project '${packSlug}' does not exist yet")
+                throw new GradleException("Modrinth project '${packSlug}' was not found")
             }
         }
         minecraftVersions.add(minecraft_version)
