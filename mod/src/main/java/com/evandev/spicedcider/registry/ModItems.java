@@ -185,6 +185,14 @@ public class ModItems {
     public static final DeferredItem<BlockItem> ELDERBERRY_CRATE = ModBlocks.ELDERBERRY_CRATE != null ? ITEMS.registerSimpleBlockItem(ModBlocks.ELDERBERRY_CRATE) : null;
     @Nullable
     public static final DeferredItem<BlockItem> PASSION_FRUIT_CRATE = ModBlocks.PASSION_FRUIT_CRATE != null ? ITEMS.registerSimpleBlockItem(ModBlocks.PASSION_FRUIT_CRATE) : null;
+    @Nullable
+    public static final DeferredItem<BlockItem> PUFFBALL_MUSHROOM_CRATE = ModBlocks.PUFFBALL_MUSHROOM_CRATE != null ? ITEMS.registerSimpleBlockItem(ModBlocks.PUFFBALL_MUSHROOM_CRATE) : null;
+
+    static {
+        if (PUFFBALL_MUSHROOM_CRATE != null) {
+            ITEMS.addAlias(ResourceLocation.fromNamespaceAndPath("abundantdelight", "puffball_mushroom_crate"), PUFFBALL_MUSHROOM_CRATE.getId());
+        }
+    }
 
     public static final DeferredItem<BlockItem> CACAO_LOG = ITEMS.registerSimpleBlockItem(ModBlocks.CACAO_LOG);
     public static final DeferredItem<BlockItem> CACAO_WOOD = ITEMS.registerSimpleBlockItem(ModBlocks.CACAO_WOOD);

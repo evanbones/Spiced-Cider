@@ -1,0 +1,19 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "abundant_atmosphere"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "spicedcider:puffball_mushroom_crate"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "abundant_atmosphere:large_puffball_mushroom"
+  }
+}

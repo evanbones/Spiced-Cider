@@ -41,7 +41,8 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         this.tag(BlockTags.MINEABLE_WITH_AXE)
                 .add(ModBlocks.WORM_CRATE.get())
                 .add(ModBlocks.GOLDEN_WORM_CRATE.get())
-                .add(ModBlocks.TANNING_RACK.get());
+                .add(ModBlocks.TANNING_RACK.get())
+                .addOptional(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "puffball_mushroom_crate"));
 
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.DEPOSIT.get())

@@ -1,0 +1,25 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "abundant_atmosphere"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "fruit_crates",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "abundant_atmosphere:large_puffball_mushroom"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "spicedcider:puffball_mushroom_crate"
+  }
+}

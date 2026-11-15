@@ -377,6 +377,9 @@ itayfeder, used under its MIT license (included at `META-INF/licenses/nock_enoug
 Straw Golems are ported from [RE-Strawgolem](https://github.com/HeroBrianMack/RE-Strawgolem) by HeroBrianMack
 (model by Fr3nderman), used under its AGPLv3 license, with delivery fixes from max-champlin's pull request #5.
 
+The Puffball Mushroom Crate is ported from [Abundant Delight](https://modrinth.com/mod/abundant-delight) by Magafin,
+used under its MIT license (included at `META-INF/licenses/abundant_delight-LICENSE.txt`).
+
 Sparks for hitting unmineable blocks ported from Valcon by [Ivqry](https://github.com/ivqrydev).
 
 Nether effects are inspired by Jaden's Nether Expansion.

@@ -272,7 +272,7 @@ public class SpicedCider {
             event.accept(ModItems.BLACKSTONE_DEPOSIT.get(), vis);
             event.accept(ModItems.WORM_CRATE.get(), vis);
             event.accept(ModItems.GOLDEN_WORM_CRATE.get(), vis);
-            Stream.of(ModItems.ORANGE_CRATE, ModItems.PLUM_CRATE, ModItems.HOARY_APPLE_CRATE, ModItems.ELDERBERRY_CRATE, ModItems.PASSION_FRUIT_CRATE).filter(Objects::nonNull).forEach(item -> event.accept(item.get(), vis));
+            Stream.of(ModItems.ORANGE_CRATE, ModItems.PLUM_CRATE, ModItems.HOARY_APPLE_CRATE, ModItems.ELDERBERRY_CRATE, ModItems.PASSION_FRUIT_CRATE, ModItems.PUFFBALL_MUSHROOM_CRATE).filter(Objects::nonNull).forEach(item -> event.accept(item.get(), vis));
             Stream.of(ModItems.CACAO_LOG, ModItems.CACAO_WOOD, ModItems.STRIPPED_CACAO_LOG, ModItems.STRIPPED_CACAO_WOOD).forEach(item -> event.accept(item.get(), vis));
             event.accept(ModItems.CACAO_LEAVES.get(), vis);
             event.accept(ModItems.FLOWERING_CACAO_LEAVES.get(), vis);

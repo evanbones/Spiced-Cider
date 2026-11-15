@@ -1,3 +1,3 @@
-### Fixed
+### Added
 
-- Distant terrain on servers now reappears after joining from a new install, by a different server address, or after clearing Voxy's cache.
+- Puffball Mushroom Crate (from Abundant Delight, by Magafin), when Abundant Atmosphere is installed.

@@ -122,6 +122,16 @@ public class ModBlocks {
     public static final DeferredBlock<Block> ELDERBERRY_CRATE = fruitCrate("elderberry_crate");
     @Nullable
     public static final DeferredBlock<Block> PASSION_FRUIT_CRATE = fruitCrate("passion_fruit_crate");
+    @Nullable
+    public static final DeferredBlock<Block> PUFFBALL_MUSHROOM_CRATE = ModList.get().isLoaded("abundant_atmosphere")
+            ? BLOCKS.register("puffball_mushroom_crate", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BARREL)))
+            : null;
+
+    static {
+        if (PUFFBALL_MUSHROOM_CRATE != null) {
+            BLOCKS.addAlias(ResourceLocation.fromNamespaceAndPath("abundantdelight", "puffball_mushroom_crate"), PUFFBALL_MUSHROOM_CRATE.getId());
+        }
+    }
 
     public static final DeferredBlock<SaplingBlock> GLOAMWOOD_SAPLING = BLOCKS.register("gloamwood_sapling",
             () -> new SaplingBlock(new TreeGrower("gloamwood", Optional.empty(), Optional.of(ModTreeFeatures.GLOAMWOOD), Optional.empty()),
