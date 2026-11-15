@@ -616,8 +616,11 @@ def devJarName = "${mod_id}-${mod_version}-dev.jar"
 def bootstrapJar = project(":bootstrap").tasks.named("jar").flatMap { it.archiveFile }
 def minecraftVersion = minecraft_version
 
+def coreRequested = gradle.startParameter.taskNames.any { it.startsWith(":mod:") || it.startsWith("mod:") }
+
 tasks.matching { it.name.startsWith("publish") && it.name != "publishToMavenLocal" }.configureEach {
     dependsOn(":bootstrap:jar")
+    onlyIf("Cider Core only publishes when requested by path") { coreRequested }
 }
 
 tasks.register("deployToPack") {
