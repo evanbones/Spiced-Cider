@@ -19,5 +19,28 @@
       "enableEditMode": false,
       "showEditModeButton": false
     }
-  }
+  },
+  "zip": [
+    "resourcepacks/spicedcider_resources",
+    "config/openloader/packs/*"
+  ],
+  "replace": {
+    "config/resourcepackoverrides.json": [
+      [
+        "\"file/spicedcider_resources\"",
+        "\"file/spicedcider_resources.zip\""
+      ]
+    ],
+    "config/yosbr/options.txt": [
+      [
+        "\"file/spicedcider_resources\"",
+        "\"file/spicedcider_resources.zip\""
+      ]
+    ]
+  },
+  "client_only": [
+    "resourcepacks/*",
+    "shaderpacks/*",
+    "mods/continuity-*"
+  ]
 }

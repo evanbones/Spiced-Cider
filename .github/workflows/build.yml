@@ -30,7 +30,8 @@ jobs:
 
       - name: Stage Release Pack
         run: |
-          python3 scripts/stage_release.py pack _site --release pack-release.json
+          python3 -m pip install --quiet brotli
+          python3 scripts/stage_release.py pack _site --release pack-release.json --base-url https://evanbones.github.io/Spiced-Cider/
           cd _site
           packwiz refresh
 

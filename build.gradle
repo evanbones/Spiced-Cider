@@ -154,6 +154,21 @@ def unsupUrl = "https://cdn.modrinth.com/data/Rqwcr9qN/versions/qeqq6YGW/unsup-1
 def unsupSha512 = "b17c080f7dc4c14c11a9f1cdf60dd102ae346d842dab389619c7e3e4a13a1ec642039f74fd6f35b71336034a21a6764d28ccc8936740a8261720993beac3178a"
 def mcVersion = minecraft_version
 def neoVersion = neo_version
+def fetchUnsup = {
+    def unsup = new File(downloadCache, unsupSha512)
+    if (!unsup.exists()) {
+        unsup.parentFile.mkdirs()
+        def tmp = new File(unsup.path + ".part")
+        new URL(unsupUrl).withInputStream { input -> tmp.withOutputStream { it << input } }
+        def actual = java.security.MessageDigest.getInstance("SHA-512").digest(tmp.bytes).encodeHex().toString()
+        if (actual != unsupSha512) {
+            tmp.delete()
+            throw new GradleException("Hash mismatch for ${unsupUrl}")
+        }
+        tmp.renameTo(unsup)
+    }
+    unsup
+}
 
 tasks.register("exportInstance") {
     group = "spiced cider"
@@ -164,18 +179,7 @@ tasks.register("exportInstance") {
     inputs.property("neo", neoVersion)
     outputs.file(instanceZip)
     doLast {
-        def unsup = new File(downloadCache, unsupSha512)
-        if (!unsup.exists()) {
-            unsup.parentFile.mkdirs()
-            def tmp = new File(unsup.path + ".part")
-            new URL(unsupUrl).withInputStream { input -> tmp.withOutputStream { it << input } }
-            def actual = java.security.MessageDigest.getInstance("SHA-512").digest(tmp.bytes).encodeHex().toString()
-            if (actual != unsupSha512) {
-                tmp.delete()
-                throw new GradleException("Hash mismatch for ${unsupUrl}")
-            }
-            tmp.renameTo(unsup)
-        }
+        def unsup = fetchUnsup()
         def out = instanceZip.get().asFile
         out.parentFile.mkdirs()
         new java.util.zip.ZipOutputStream(out.newOutputStream()).withCloseable { zip ->
@@ -192,6 +196,36 @@ tasks.register("exportInstance") {
             put("minecraft/unsup.jar", unsup.bytes)
         }
         logger.lifecycle("Prism instance exported to ${out}")
+    }
+}
+
+def serverUpdaterZip = layout.buildDirectory.file("pack/${pack_name.replace(' ', '-')}-Server-Updater.zip")
+def serverUpdaterFiles = layout.projectDirectory.dir("server-updater").asFile
+evaluationDependsOn(":server-launcher")
+def launcherJar = project(":server-launcher").tasks.named("jar")
+
+tasks.register("exportServerUpdater") {
+    group = "spiced cider"
+    description = "Builds a server zip whose launcher installs and auto-updates the pack through unsup"
+    def launcherArchive = launcherJar.flatMap { it.archiveFile }
+    inputs.file(launcherArchive)
+    inputs.dir(serverUpdaterFiles)
+    outputs.file(serverUpdaterZip)
+    doLast {
+        def unsup = fetchUnsup()
+        def out = serverUpdaterZip.get().asFile
+        out.parentFile.mkdirs()
+        new java.util.zip.ZipOutputStream(out.newOutputStream()).withCloseable { zip ->
+            def put = { String path, byte[] bytes ->
+                zip.putNextEntry(new java.util.zip.ZipEntry(path))
+                zip.write(bytes)
+                zip.closeEntry()
+            }
+            serverUpdaterFiles.listFiles().sort { it.name }.each { put(it.name, it.bytes) }
+            put("unsup.jar", unsup.bytes)
+            put("spicedcider-server.jar", launcherArchive.get().asFile.bytes)
+        }
+        logger.lifecycle("Server updater exported to ${out}")
     }
 }
 
