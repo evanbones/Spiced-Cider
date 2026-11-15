@@ -18,10 +18,15 @@ import net.neoforged.neoforge.client.event.ClientTickEvent;
 import net.neoforged.neoforge.client.event.CustomizeGuiOverlayEvent;
 import net.neoforged.neoforge.network.PacketDistributor;
 
+import java.util.Objects;
+import java.util.Optional;
+import java.util.UUID;
+
 @EventBusSubscriber(modid = SpicedCider.MOD_ID, value = Dist.CLIENT)
 public final class LodClient {
     private static final int CHECK_INTERVAL = 20;
     private static int sentRadius = -1;
+    private static UUID sentStore;
     private static int ticks;
 
     public static void receive(LodChunkPayload payload) {
@@ -34,6 +39,7 @@ public final class LodClient {
     @SubscribeEvent
     public static void onLoggingIn(ClientPlayerNetworkEvent.LoggingIn event) {
         sentRadius = -1;
+        sentStore = null;
         sendRadius();
     }
 
@@ -43,10 +49,12 @@ public final class LodClient {
     }
 
     private static void sendRadius() {
-        int radius = VoxyIngest.available() ? VoxyBridge.lodRadiusChunks() : 0;
-        if (radius == sentRadius) return;
+        UUID store = VoxyIngest.available() ? VoxyBridge.storeId() : null;
+        int radius = store != null ? VoxyBridge.lodRadiusChunks() : 0;
+        if (radius == sentRadius && Objects.equals(store, sentStore)) return;
         sentRadius = radius;
-        PacketDistributor.sendToServer(new LodHelloPayload(radius));
+        sentStore = store;
+        PacketDistributor.sendToServer(new LodHelloPayload(radius, Optional.ofNullable(store)));
     }
 
     @SubscribeEvent

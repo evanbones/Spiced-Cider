@@ -3,6 +3,7 @@ name: Deploy Packwiz Instance
 on:
   push:
     branches: [ "main" ]
+  workflow_dispatch:
   pull_request:
     branches: [ "main" ]
 
@@ -27,20 +28,21 @@ jobs:
           go install github.com/packwiz/packwiz@latest
           echo "$(go env GOPATH)/bin" >> $GITHUB_PATH
 
-      - name: Refresh Packwiz Index
+      - name: Stage Release Pack
         run: |
-          cd pack
+          python3 scripts/stage_release.py pack _site --release pack-release.json
+          cd _site
           packwiz refresh
 
       - name: Upload Pack Artifact
-        if: github.event_name == 'push'
+        if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './pack'
+          path: './_site'
 
   deploy:
     needs: build
-    if: github.event_name == 'push'
+    if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     environment:
       name: github-pages

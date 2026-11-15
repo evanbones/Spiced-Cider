@@ -398,7 +398,7 @@ public class SpicedCider {
         registrar.playToServer(
                 LodHelloPayload.TYPE,
                 LodHelloPayload.CODEC,
-                (payload, context) -> context.enqueueWork(() -> LodGen.hello((ServerPlayer) context.player(), payload.radius()))
+                (payload, context) -> context.enqueueWork(() -> LodGen.hello((ServerPlayer) context.player(), payload.radius(), payload.store().orElse(null)))
         );
     }
 

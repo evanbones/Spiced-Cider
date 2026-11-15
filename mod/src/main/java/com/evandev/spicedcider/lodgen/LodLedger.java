@@ -29,6 +29,10 @@ public class LodLedger extends SavedData {
         return players.computeIfAbsent(player, uuid -> LongSets.synchronize(new LongOpenHashSet()));
     }
 
+    public void remove(UUID key) {
+        if (players.remove(key) != null) setDirty();
+    }
+
     public void clear(UUID player) {
         LongSet chunks = players.get(player);
         if (chunks != null) chunks.clear();

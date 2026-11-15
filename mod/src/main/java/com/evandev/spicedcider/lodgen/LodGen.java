@@ -11,6 +11,7 @@ import net.minecraft.util.Mth;
 import net.minecraft.world.level.ChunkPos;
 import org.jetbrains.annotations.Nullable;
 
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -24,6 +25,7 @@ public final class LodGen {
     private static final int BUILT_MARGIN = 2;
 
     private static final Map<UUID, Integer> players = new ConcurrentHashMap<>();
+    private static final Map<UUID, UUID> stores = new ConcurrentHashMap<>();
     private static final Map<UUID, LongSet> sent = new HashMap<>();
     @Nullable
     private static volatile LodEngine engine;
@@ -41,6 +43,7 @@ public final class LodGen {
         engine = null;
         if (running != null) running.stop();
         players.clear();
+        stores.clear();
         sent.clear();
         host = null;
         targets = List.of();
@@ -58,16 +61,32 @@ public final class LodGen {
         LodEdge.tick(server, targets);
     }
 
-    public static void hello(ServerPlayer player, int radius) {
-        if (radius > 0) {
-            players.put(player.getUUID(), radius);
+    public static void hello(ServerPlayer player, int radius, @Nullable UUID store) {
+        UUID uuid = player.getUUID();
+        boolean owner = !player.server.isDedicatedServer() && player.server.isSingleplayerOwner(player.getGameProfile());
+        if (owner) store = null;
+        if (store != null && !store.equals(stores.get(uuid))) {
+            for (ServerLevel level : player.server.getAllLevels()) LodLedger.get(level).remove(uuid);
+        }
+        UUID previous = store == null ? stores.remove(uuid) : stores.put(uuid, store);
+        if (previous != null && !previous.equals(store)) {
+            LodEngine running = engine;
+            if (running != null) {
+                running.delivery.forget(player.server, uuid);
+                running.reset(uuid);
+            }
+            LodEdge.forget(uuid);
+        }
+        if (radius > 0 && (store != null || owner)) {
+            players.put(uuid, radius);
         } else {
-            players.remove(player.getUUID());
+            players.remove(uuid);
         }
     }
 
     public static void forget(ServerPlayer player) {
         players.remove(player.getUUID());
+        stores.remove(player.getUUID());
         sent.remove(player.getUUID());
         LodEngine running = engine;
         if (running != null) running.delivery.forget(player.server, player.getUUID());
@@ -80,12 +99,12 @@ public final class LodGen {
 
     public static void chunkUnwatched(ServerPlayer player, ServerLevel level, ChunkPos pos) {
         LongSet chunks = sent.get(player.getUUID());
-        if (chunks != null && chunks.remove(pos.toLong())) LodLedger.get(level).chunks(player.getUUID()).add(pos.toLong());
+        if (chunks != null && chunks.remove(pos.toLong())) LodLedger.get(level).chunks(ledgerKey(player.getUUID())).add(pos.toLong());
     }
 
     public static void reset(ServerPlayer player) {
         for (ServerLevel level : player.server.getAllLevels()) {
-            LodLedger.get(level).clear(player.getUUID());
+            LodLedger.get(level).clear(ledgerKey(player.getUUID()));
         }
         LodEngine running = engine;
         if (running != null) running.reset(player.getUUID());
@@ -120,6 +139,11 @@ public final class LodGen {
         return String.format(Locale.ROOT, "LoD generation: %d chunks left, %.0f/s, %d done", left, running.rate(), running.completed());
     }
 
+    private static UUID ledgerKey(UUID player) {
+        UUID store = stores.get(player);
+        return store == null ? player : UUID.nameUUIDFromBytes((player + "/" + store).getBytes(StandardCharsets.UTF_8));
+    }
+
     static int threads() {
         int configured = SpicedCiderConfig.commonOr(SpicedCiderConfig.COMMON.lodGenerationThreads, 0);
         return configured > 0 ? configured : autoThreads();
@@ -147,7 +171,7 @@ public final class LodGen {
             ServerLevel level = player.serverLevel();
             ChunkPos pos = player.chunkPosition();
             int builtDistance = Mth.clamp(player.requestedViewDistance(), 2, server.getPlayerList().getViewDistance()) - BUILT_MARGIN;
-            next.add(new LodTarget(uuid, level, pos.x, pos.z, radius, builtDistance, isHost, LodLedger.get(level).chunks(uuid)));
+            next.add(new LodTarget(uuid, level, pos.x, pos.z, radius, builtDistance, isHost, LodLedger.get(level).chunks(ledgerKey(uuid))));
         }
         return next;
     }

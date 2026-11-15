@@ -2,6 +2,7 @@ package com.evandev.spicedcider.lodgen;
 
 import com.evandev.spicedcider.compat.voxy.VoxyIngest;
 import com.evandev.spicedcider.networking.LodChunkPayload;
+import it.unimi.dsi.fastutil.longs.LongSet;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
@@ -44,7 +45,7 @@ final class LodDelivery {
             if (target.host()) continue;
             if (payload == null) payload = new LodChunkPayload(level.dimension(), column.x(), column.z(), column.encode());
             Outgoing queue = outgoing.computeIfAbsent(target.player(), uuid -> new Outgoing());
-            queue.payloads.add(payload);
+            queue.payloads.add(new Pending(payload, target.done()));
             queue.size.incrementAndGet();
             target.done().add(pos);
         }
@@ -60,20 +61,20 @@ final class LodDelivery {
             ServerPlayer player = server.getPlayerList().getPlayer(entry.getKey());
             if (player == null) {
                 iterator.remove();
-                drop(server, entry.getKey(), entry.getValue());
+                drop(entry.getValue());
                 continue;
             }
             Outgoing queue = entry.getValue();
             queue.budget = Math.min(queue.budget + chunksPerSecond / 20.0, Math.max(1.0, chunksPerSecond / 20.0) * 2);
             while (queue.budget >= 1.0) {
-                LodChunkPayload payload = queue.payloads.poll();
-                if (payload == null) break;
+                Pending pending = queue.payloads.poll();
+                if (pending == null) break;
                 queue.size.decrementAndGet();
-                if (player.level().dimension() != payload.dimension()) {
-                    unmark(server, player.getUUID(), payload);
+                if (player.level().dimension() != pending.payload().dimension()) {
+                    pending.unmark();
                     continue;
                 }
-                PacketDistributor.sendToPlayer(player, payload);
+                PacketDistributor.sendToPlayer(player, pending.payload());
                 queue.budget -= 1.0;
             }
         }
@@ -81,26 +82,27 @@ final class LodDelivery {
 
     void forget(MinecraftServer server, UUID player) {
         Outgoing queue = outgoing.remove(player);
-        if (queue != null) drop(server, player, queue);
+        if (queue != null) drop(queue);
     }
 
-    private static void drop(MinecraftServer server, UUID player, Outgoing queue) {
-        LodChunkPayload payload;
-        while ((payload = queue.payloads.poll()) != null) unmark(server, player, payload);
-    }
-
-    private static void unmark(MinecraftServer server, UUID player, LodChunkPayload payload) {
-        ServerLevel level = server.getLevel(payload.dimension());
-        if (level != null) LodLedger.get(level).chunks(player).remove(ChunkPos.asLong(payload.x(), payload.z()));
+    private static void drop(Outgoing queue) {
+        Pending pending;
+        while ((pending = queue.payloads.poll()) != null) pending.unmark();
     }
 
     void clear(MinecraftServer server) {
-        outgoing.forEach((player, queue) -> drop(server, player, queue));
+        outgoing.values().forEach(LodDelivery::drop);
         outgoing.clear();
     }
 
+    private record Pending(LodChunkPayload payload, LongSet done) {
+        void unmark() {
+            done.remove(ChunkPos.asLong(payload.x(), payload.z()));
+        }
+    }
+
     private static final class Outgoing {
-        final Queue<LodChunkPayload> payloads = new ConcurrentLinkedQueue<>();
+        final Queue<Pending> payloads = new ConcurrentLinkedQueue<>();
         final AtomicInteger size = new AtomicInteger();
         double budget;
     }

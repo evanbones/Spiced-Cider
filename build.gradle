@@ -16,84 +16,33 @@ def packVersion = pack_version
 def releaseConfig = layout.projectDirectory.file("pack-release.json").asFile
 def mrpack = layout.buildDirectory.file("pack/${pack_name.replace(' ', '-')}-${pack_version}.mrpack")
 
-var syncPackVersion = tasks.register("syncPackVersion") {
+def releaseDir = layout.buildDirectory.dir("pack/release")
+def python = System.getProperty("os.name").toLowerCase().contains("windows") ? "python" : "python3"
+
+var stageRelease = tasks.register("stageRelease", Exec) {
     group = "spiced cider"
-    inputs.property("version", packVersion)
-    outputs.file(packToml)
-    doLast {
-        def text = packToml.getText("UTF-8")
-        def updated = text.replaceFirst(/(?m)^version = ".*"$/, "version = \"${packVersion}\"")
-        if (updated != text) {
-            packToml.setText(updated, "UTF-8")
-        }
-    }
+    description = "Copies pack/ to build/pack/release with pack-release.json applied"
+    inputs.file(releaseConfig)
+    outputs.upToDateWhen { false }
+    commandLine python, file("scripts/stage_release.py").absolutePath, packDir.asFile.absolutePath,
+            releaseDir.get().asFile.absolutePath, "--release", releaseConfig.absolutePath, "--version", packVersion
 }
 
-var refreshPack = tasks.register("refreshPack", Exec) {
+var refreshRelease = tasks.register("refreshRelease", Exec) {
     group = "spiced cider"
-    dependsOn(syncPackVersion)
-    workingDir = packDir.asFile
+    dependsOn(stageRelease)
+    workingDir = releaseDir.get().asFile
     commandLine packwiz, "refresh"
 }
 
 var exportPack = tasks.register("exportPack", Exec) {
     group = "spiced cider"
-    dependsOn(refreshPack)
-    workingDir = packDir.asFile
+    dependsOn(refreshRelease)
+    workingDir = releaseDir.get().asFile
     outputs.file(mrpack)
     outputs.upToDateWhen { false }
-    inputs.file(releaseConfig)
     doFirst { mrpack.get().asFile.parentFile.mkdirs() }
     commandLine packwiz, "modrinth", "export", "--output", mrpack.get().asFile.absolutePath
-    doLast {
-        def release = new JsonSlurper().parse(releaseConfig)
-        def removePatterns = release.remove.collect { String glob ->
-            [glob, java.util.regex.Pattern.compile(glob.split("\\*", -1).collect { java.util.regex.Pattern.quote(it) }.join(".*"))]
-        }
-        def unmatched = (release.remove + release.json.keySet()) as Set
-        def overridePath = { String name ->
-            def prefix = ["overrides/", "client-overrides/", "server-overrides/"].find { name.startsWith(it) }
-            prefix ? name.substring(prefix.length()) : null
-        }
-        def removed = { String path ->
-            def hit = removePatterns.find { it[1].matcher(path).matches() }
-            if (hit) unmatched.remove(hit[0])
-            hit != null
-        }
-        def out = mrpack.get().asFile
-        def raw = new File(out.path + ".raw")
-        raw.delete()
-        out.renameTo(raw)
-        new java.util.zip.ZipFile(raw).withCloseable { source ->
-            new java.util.zip.ZipOutputStream(out.newOutputStream()).withCloseable { zip ->
-                source.entries().findAll { !it.directory }.each { entry ->
-                    byte[] bytes = source.getInputStream(entry).bytes
-                    if (entry.name == "modrinth.index.json") {
-                        def index = new JsonSlurper().parse(bytes)
-                        index.files = index.files.findAll { !removed(it.path as String) }
-                        bytes = groovy.json.JsonOutput.prettyPrint(groovy.json.JsonOutput.toJson(index)).getBytes("UTF-8")
-                    } else {
-                        def path = overridePath(entry.name)
-                        if (path != null && removed(path)) return
-                        def patch = path != null ? release.json[path] : null
-                        if (patch != null) {
-                            unmatched.remove(path)
-                            def json = new JsonSlurper().parse(bytes)
-                            json.putAll(patch)
-                            bytes = groovy.json.JsonOutput.prettyPrint(groovy.json.JsonOutput.toJson(json)).getBytes("UTF-8")
-                        }
-                    }
-                    zip.putNextEntry(new java.util.zip.ZipEntry(entry.name))
-                    zip.write(bytes)
-                    zip.closeEntry()
-                }
-            }
-        }
-        raw.delete()
-        if (!unmatched.isEmpty()) {
-            throw new GradleException("pack-release.json entries matched nothing in the export: ${unmatched}")
-        }
-    }
 }
 
 def serverPack = layout.buildDirectory.file("pack/${pack_name.replace(' ', '-')}-${pack_version}-server.zip")
@@ -162,6 +111,54 @@ var exportServerPack = tasks.register("exportServerPack") {
             }
         }
         logger.lifecycle("Server pack exported to ${out}")
+    }
+}
+
+def instanceZip = layout.buildDirectory.file("pack/${pack_name.replace(' ', '-')}-Prism-Instance.zip")
+def instanceFiles = layout.projectDirectory.dir("instance").asFile
+def packIcon = new File(instanceFiles, "icon.png")
+def unsupUrl = "https://cdn.modrinth.com/data/Rqwcr9qN/versions/qeqq6YGW/unsup-1.2.0-pre4.jar"
+def unsupSha512 = "b17c080f7dc4c14c11a9f1cdf60dd102ae346d842dab389619c7e3e4a13a1ec642039f74fd6f35b71336034a21a6764d28ccc8936740a8261720993beac3178a"
+def mcVersion = minecraft_version
+def neoVersion = neo_version
+
+tasks.register("exportInstance") {
+    group = "spiced cider"
+    description = "Builds a Prism/MultiMC instance zip that installs and updates the pack through unsup"
+    inputs.dir(instanceFiles)
+    inputs.file(packIcon)
+    inputs.property("mc", mcVersion)
+    inputs.property("neo", neoVersion)
+    outputs.file(instanceZip)
+    doLast {
+        def unsup = new File(downloadCache, unsupSha512)
+        if (!unsup.exists()) {
+            unsup.parentFile.mkdirs()
+            def tmp = new File(unsup.path + ".part")
+            new URL(unsupUrl).withInputStream { input -> tmp.withOutputStream { it << input } }
+            def actual = java.security.MessageDigest.getInstance("SHA-512").digest(tmp.bytes).encodeHex().toString()
+            if (actual != unsupSha512) {
+                tmp.delete()
+                throw new GradleException("Hash mismatch for ${unsupUrl}")
+            }
+            tmp.renameTo(unsup)
+        }
+        def out = instanceZip.get().asFile
+        out.parentFile.mkdirs()
+        new java.util.zip.ZipOutputStream(out.newOutputStream()).withCloseable { zip ->
+            def put = { String path, byte[] bytes ->
+                zip.putNextEntry(new java.util.zip.ZipEntry(path))
+                zip.write(bytes)
+                zip.closeEntry()
+            }
+            put("instance.cfg", new File(instanceFiles, "instance.cfg").bytes)
+            put("mmc-pack.json", new File(instanceFiles, "mmc-pack.json").getText("UTF-8")
+                    .replace("@minecraft@", mcVersion).replace("@neoforge@", neoVersion).getBytes("UTF-8"))
+            put("spicedcider.png", packIcon.bytes)
+            put("minecraft/unsup.ini", new File(instanceFiles, "unsup.ini").bytes)
+            put("minecraft/unsup.jar", unsup.bytes)
+        }
+        logger.lifecycle("Prism instance exported to ${out}")
     }
 }
 
