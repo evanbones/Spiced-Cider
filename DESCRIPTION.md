@@ -35,8 +35,8 @@ on the following ideas:
 
 ## Art
 
-[Baileybun](https://modrinth.com/user/Baileybun) is the main artist for Spiced Cider. Additional textures contributed by
-[RareSauce](https://modrinth.com/user/RareSauce).
+[Baileybun](https://modrinth.com/user/Baileybun) is the main artist for Spiced Cider. Loading screen and logo created by 
+DayTheMagpie. Additional textures contributed by [RareSauce](https://modrinth.com/user/RareSauce).
 
 ## Resource Pack Credits
 
