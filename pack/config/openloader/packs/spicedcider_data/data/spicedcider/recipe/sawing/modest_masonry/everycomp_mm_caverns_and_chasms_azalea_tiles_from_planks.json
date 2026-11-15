@@ -1,0 +1,27 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "modestmasonry"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "everycomp"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "woodworks"
+    }
+  ],
+  "type": "woodworks:sawmill",
+  "group": "planks",
+  "ingredient": [
+    {
+      "item": "caverns_and_chasms:azalea_planks"
+    }
+  ],
+  "result": {
+    "id": "everycomp:mm/caverns_and_chasms/azalea_tiles",
+    "count": 1
+  }
+}

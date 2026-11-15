@@ -237,6 +237,7 @@ message. Ported from Valcon (thanks, Ivqry!).
 **Pack Tools**
 
 - Data-driven tool durability and mining speed overrides (`config/spicedcider/tool_stats.json`)
+- Resource packs listed in `config/spicedcider/resource_pack_downloads.json` are downloaded from Modrinth on launch when missing or outdated
 - Spawn control tags (`deny_spawn`, `deny_natural_spawn`, `restricted_spawns`) and a `spawn_equipment` data map
 - Structures tagged `spicedcider:disabled` never generate
 - Editable log filtering (`better_log4j_config.xml`)

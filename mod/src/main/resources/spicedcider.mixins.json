@@ -379,6 +379,8 @@
     "roxy.VoxyTranslucentEdgeFogMixin",
     "sodium.EdgeFogShaderLoaderMixin",
     "sodium.EdgeFogShaderInterfaceMixin",
+    "bettercloudshadows.CloudShadowEdgeFogSourceMixin",
+    "bettercloudshadows.CloudShadowEdgeFogUniformMixin",
     "roxy.FogRendererVoxyFogMixin",
     "roxy.VoxyRenderSystemGcMixin",
     "roxy.VoxySectionCacheMixin",

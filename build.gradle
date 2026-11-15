@@ -114,6 +114,39 @@ var exportServerPack = tasks.register("exportServerPack") {
     }
 }
 
+def curseforgeConfig = layout.projectDirectory.file("pack-curseforge.json").asFile
+def curseforgeDir = layout.buildDirectory.dir("pack/curseforge")
+def curseforgePack = layout.buildDirectory.file("pack/${pack_name.replace(' ', '-')}-${pack_version}-curseforge.zip")
+
+var stageCurseForge = tasks.register("stageCurseForge", Exec) {
+    group = "spiced cider"
+    description = "Copies the staged release to build/pack/curseforge with CurseForge metadata wherever CurseForge has the file"
+    dependsOn(refreshRelease)
+    inputs.file(curseforgeConfig)
+    outputs.upToDateWhen { false }
+    commandLine python, file("scripts/curseforge_convert.py").absolutePath, releaseDir.get().asFile.absolutePath,
+            curseforgeDir.get().asFile.absolutePath, "--config", curseforgeConfig.absolutePath,
+            "--cache", downloadCache.absolutePath, "--packwiz", packwiz
+}
+
+var refreshCurseForge = tasks.register("refreshCurseForge", Exec) {
+    group = "spiced cider"
+    dependsOn(stageCurseForge)
+    workingDir = curseforgeDir.get().asFile
+    commandLine packwiz, "refresh"
+}
+
+tasks.register("exportCurseForgePack", Exec) {
+    group = "spiced cider"
+    description = "Exports the CurseForge modpack zip; non-CurseForge files are bundled in overrides"
+    dependsOn(refreshCurseForge)
+    workingDir = curseforgeDir.get().asFile
+    outputs.file(curseforgePack)
+    outputs.upToDateWhen { false }
+    doFirst { curseforgePack.get().asFile.parentFile.mkdirs() }
+    commandLine packwiz, "curseforge", "export", "--output", curseforgePack.get().asFile.absolutePath
+}
+
 def instanceZip = layout.buildDirectory.file("pack/${pack_name.replace(' ', '-')}-Prism-Instance.zip")
 def instanceFiles = layout.projectDirectory.dir("instance").asFile
 def packIcon = new File(instanceFiles, "icon.png")

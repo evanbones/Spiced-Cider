@@ -1,0 +1,32 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "modestmasonry"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "woodworks"
+    }
+  ],
+  "type": "woodworks:sawmill",
+  "group": "logs",
+  "ingredient": [
+    {
+      "item": "minecraft:acacia_log"
+    },
+    {
+      "item": "minecraft:acacia_wood"
+    },
+    {
+      "item": "minecraft:stripped_acacia_log"
+    },
+    {
+      "item": "minecraft:stripped_acacia_wood"
+    }
+  ],
+  "result": {
+    "id": "modestmasonry:acacia_tiles",
+    "count": 4
+  }
+}

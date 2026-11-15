@@ -2,6 +2,7 @@ package com.evandev.spicedcider;
 
 import com.evandev.spicedcider.compat.continuity.ContinuityLazyModelWrapping;
 import com.evandev.spicedcider.compat.dynamiccrosshair.DynamicCrosshairCompat;
+import com.evandev.spicedcider.client.ResourcePackDownloader;
 import com.evandev.spicedcider.client.mixing.CauldronStirClient;
 import com.evandev.spicedcider.compat.voxy.VoxyFog;
 import com.evandev.spicedcider.compat.wherewindsblow.WhereWindsBlowLazyModelWrapping;
@@ -96,6 +97,7 @@ public class SpicedCider {
         modContainer.registerConfig(ModConfig.Type.CLIENT, SpicedCiderConfig.CLIENT_SPEC);
 
         if (FMLEnvironment.dist == Dist.CLIENT) {
+            ResourcePackDownloader.run(modContainer.getModInfo().getVersion().toString());
             ConfigScreenLoader.register(modContainer);
             if (ModList.get().isLoaded("continuity") && ModList.get().isLoaded("modernfix")) {
                 ContinuityLazyModelWrapping.register();

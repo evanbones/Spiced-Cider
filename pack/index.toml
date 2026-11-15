@@ -1,10 +1,6 @@
 hash-format = "sha256"
 
 [[files]]
-file = "config/CoroUtil/General.toml"
-hash = "6d46bdc090d4bb9bdfb660be4ca94075dc08e09d5fed84108eba92a422a23c49"
-
-[[files]]
 file = "config/DistantHorizons.toml"
 hash = "5a50a6372d4603291c63d9bbb373bd14e47d2840e233ca103970376f5fed42e1"
 
@@ -510,7 +506,7 @@ hash = "88b1db478a0ee9c37e9ec28335b204a966fe17e9ba0310bcf2caffd28b5589a5"
 
 [[files]]
 file = "config/everycomp-common.toml"
-hash = "6bccd9a5af80821fe4b83ea397da43adac0b8511bfb7d3b297c038f2b69da8f1"
+hash = "34dfcfffb35bb3ca20231636953943b54bf3a4955f37c58300122875d4db3357"
 
 [[files]]
 file = "config/everycomp-entries.toml"
@@ -3271,10 +3267,6 @@ hash = "6ce88b4b58c9be265df6e3e01a370720ed048d00818adb44df0e029182153724"
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/clutternomore/shape_map/loose_shapes.json"
 hash = "25d3ceaa60c8c2200df407dd454333ab2a8004be3024f6c08eea4297f6ca9121"
-
-[[files]]
-file = "config/openloader/packs/spicedcider_data/data/clutternomore/shape_map/modest_masonry_planks.json"
-hash = "b976ae47f7c19f8aa2bc4e35f1b7c3bcc61a414c07df2677c14b70aaa07a4c73"
 
 [[files]]
 file = "config/openloader/packs/spicedcider_data/data/clutternomore/shape_map/remove_quark_vertical_slabs.json"
@@ -10377,6 +10369,982 @@ file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/
 hash = "66560f627fad302d0b16efd3983e639dc0c1e2d50f2790c28e8ddf39530d5c6b"
 
 [[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_abundant_atmosphere_ashroot_boards_from_logs.json"
+hash = "df7971d4a507d906e7e6c891fe78f8e2d59c06e4451d828e71bc5047a808467e"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_abundant_atmosphere_ashroot_boards_from_planks.json"
+hash = "2f0e302f6cdb7723aa175337bcfab52db98d698fe2f4c2e0862ac03859161ec3"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_abundant_atmosphere_ashroot_pillar_from_logs.json"
+hash = "ef7c6dbdfd5ff414f0c673db874a134860e2e1e6fa13082d59efee4eeebd159a"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_abundant_atmosphere_ashroot_pillar_from_planks.json"
+hash = "fa95fb8d00ff24f32bc52c485de0c91cc0e0c6a70bcea7208964e8ccdb2fbb86"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_abundant_atmosphere_ashroot_tiles_from_logs.json"
+hash = "bedf8922b49dfa7c7eba64d5da7c2d2b79876b22bee365a77e7537d68cc0f1ed"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_abundant_atmosphere_ashroot_tiles_from_planks.json"
+hash = "1a0c2206fbf2015728b05b47724c04c67996674097463d4fd030de4cf31c6ff6"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_abundant_atmosphere_carved_ashroot_planks_from_logs.json"
+hash = "7ef22d15e04a419c635efc8ae90ad1ea208b31b0ecc6050a949b9754891a3383"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_abundant_atmosphere_carved_ashroot_planks_from_planks.json"
+hash = "3f88af4699cb0cdd32b428826c452fbd2d4696d050ce0ee23192b0581f494f85"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_abundant_atmosphere_carved_gourdrot_planks_from_logs.json"
+hash = "d0d2f54e92d06776af6bcc5da0990c035979a1eb40b328a4dc877bdb7617e312"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_abundant_atmosphere_carved_gourdrot_planks_from_planks.json"
+hash = "be7a426fdef0bec37266b23990a21a7cb73e9a70168647d81a0755b9cfb3b24d"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_abundant_atmosphere_carved_red_bamboo_planks_from_logs.json"
+hash = "6a37f76bcff8b5ec8c4bbac31fc6717cd58ab27f5402f885637ca9a3b73aab98"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_abundant_atmosphere_carved_red_bamboo_planks_from_planks.json"
+hash = "458417477d6afb30618d16b131c108b6536c3199054aec75d3cf8321bf592a3d"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_abundant_atmosphere_chiseled_ashroot_planks_from_logs.json"
+hash = "4d1352eebf50476d660e5fdb4c3f815edcf47cc9f31728e145fcde647881e853"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_abundant_atmosphere_chiseled_ashroot_planks_from_planks.json"
+hash = "dcb9ade74dbf6300cb0018552715454c3083302a19953871daa80cfac722fc1a"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_abundant_atmosphere_chiseled_gourdrot_planks_from_logs.json"
+hash = "28fedd2c3e323f0d0b73bfac4423d4f105d4add13fa5a1a137790f1449521d22"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_abundant_atmosphere_chiseled_gourdrot_planks_from_planks.json"
+hash = "20271115af9607666bf67bbfaa9da6a2d515081ecddcdd8cae9a59af7bcb8f4e"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_abundant_atmosphere_chiseled_red_bamboo_planks_from_logs.json"
+hash = "197257aa6b443a1bca666773dcfc83965253781f981c0158d4e64c41bbc7ed31"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_abundant_atmosphere_chiseled_red_bamboo_planks_from_planks.json"
+hash = "9d3ffdde92c87daeeb0c70ac3dcd379835bfb37bf0953c2e8206b04897a7eed8"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_abundant_atmosphere_gourdrot_boards_from_logs.json"
+hash = "a523e2cfd900287972d3d616648f69bfebef32192423a292e8234607313eb133"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_abundant_atmosphere_gourdrot_boards_from_planks.json"
+hash = "3303539cf8117d92dd24189f4e1254a693132375ee14e8541448180f04ad892e"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_abundant_atmosphere_gourdrot_pillar_from_logs.json"
+hash = "cff8c5f2588cf984392c7f6e6115426a55a7e4d5efe01fa66f7554661c547a30"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_abundant_atmosphere_gourdrot_pillar_from_planks.json"
+hash = "5a2df62e862b8162dd789edbc17ef1e624d9c70e968ff588745f50886c1eefd7"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_abundant_atmosphere_gourdrot_tiles_from_logs.json"
+hash = "ed02266e0fdcece98a0330df199c34a41ca5469b79b2c8246ece0eb7409d6ed1"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_abundant_atmosphere_gourdrot_tiles_from_planks.json"
+hash = "876a43ae3f4d6e65596a00d1c651a441a691742dee731c429b8f7cdda520ec00"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_abundant_atmosphere_red_bamboo_boards_from_logs.json"
+hash = "f6f97f8255300584d9915cf3f52d48e61fd724f935db32e6b64e82fa459bd9c3"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_abundant_atmosphere_red_bamboo_boards_from_planks.json"
+hash = "991b2295d8ccc59d0eed6a7084cfe35125af58339bdabb7a1826d5cc8a6cb38d"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_abundant_atmosphere_red_bamboo_pillar_from_logs.json"
+hash = "ac3705ef476b2cb018d35af11de3dd624d6f2821a59af6de2f3567a03c93e6c8"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_abundant_atmosphere_red_bamboo_pillar_from_planks.json"
+hash = "3fa6533554e47751c5343e4f9a44c61992405649414adcf3b5ff6f38d828c126"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_abundant_atmosphere_red_bamboo_tiles_from_logs.json"
+hash = "569d937c3f1200d90fe8712b6704680a5f1680b675e3743592e5be6f8b43b13d"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_abundant_atmosphere_red_bamboo_tiles_from_planks.json"
+hash = "655f421a43f6b8934a8cd2cac3e870e6600042ba72cf119026994d1bf345dc28"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_architects_palette_carved_twisted_planks_from_logs.json"
+hash = "d2f290bd7c435462eaa9d2d4d5ebb0a4721eb43797de7367f3b528ce171ae521"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_architects_palette_carved_twisted_planks_from_planks.json"
+hash = "33d71938a6328ea50d89b51aa1db9f0d74bb1bbd59925b160c2876895a7a8485"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_architects_palette_chiseled_twisted_planks_from_logs.json"
+hash = "6e7ccb03f71764f5f2f829991cb62c252b98cdf0818e99a1033ce73a21fba2b6"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_architects_palette_chiseled_twisted_planks_from_planks.json"
+hash = "5e7b122ac3f22ee72046c5e100919dec1da8506ebe7f7fe7b3080643eff9361c"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_architects_palette_twisted_boards_from_logs.json"
+hash = "0dbb71d46ce1fa6d43018a87e813fac5827a25f1a378ef0b806ae446209beba0"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_architects_palette_twisted_boards_from_planks.json"
+hash = "701da6d9c0ce17a078bd1cdc4c7d9f8c07b38aa8e365c3fc70cacf56aefb2bcd"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_architects_palette_twisted_pillar_from_logs.json"
+hash = "c7c2d57d622221b72a23525abc08833266ecd6bae99e4086fc433ed1a5f0e1eb"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_architects_palette_twisted_pillar_from_planks.json"
+hash = "1ce8f6be464eca51b1d3f98ca7a22336be50dfa1fbba745b528c7c4edb8c96bf"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_architects_palette_twisted_tiles_from_logs.json"
+hash = "cc71120d5159046ad2bcd5d83771d1d121ffe843c34822d83697bd2d70da04b4"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_architects_palette_twisted_tiles_from_planks.json"
+hash = "ed5fa4c3db88654d5df47d4fc6252add75404090e04057ac22eaa077b1f6a7d4"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_bountifulfares_carved_hoary_planks_from_logs.json"
+hash = "1aa6fb69842453a48afb0237dbcd00769e500b7a4d3deff507dad7f83329e7bc"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_bountifulfares_carved_hoary_planks_from_planks.json"
+hash = "40e1cc9dd608863720614bf000918232906e6040c46cb534449103c6261c1cee"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_bountifulfares_chiseled_hoary_planks_from_logs.json"
+hash = "f259605654364f98a391fbe295373e5efb706e5a1af2eb2e06523a93802e260a"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_bountifulfares_chiseled_hoary_planks_from_planks.json"
+hash = "8443c7a6655998a1c3d7ae91a55a19594f4c60040fb0dc3a196cd473e2782a92"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_bountifulfares_hoary_boards_from_logs.json"
+hash = "4b134a495f6be5a435c5c77fa97bcd2e0695bc368f668e547c33936cdfcc2622"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_bountifulfares_hoary_boards_from_planks.json"
+hash = "74097ebeac48445202be0fccc99f24510d89520aa639a3e0394a426df056646b"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_bountifulfares_hoary_pillar_from_logs.json"
+hash = "386e92bfe842859e4e68c1fded2d857b2e5f7c741e00cea969d90e2375c0d5a2"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_bountifulfares_hoary_pillar_from_planks.json"
+hash = "10b642770bb81b7c004dadfb6b41b50f15328f8235603983107941aa80dcdca6"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_bountifulfares_hoary_tiles_from_logs.json"
+hash = "c9655caac8a87fc850aece4db9023da38e1ade1778f9fbddac74db3a6b68f700"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_bountifulfares_hoary_tiles_from_planks.json"
+hash = "4fd3b066df8c11acf8368455fc5bddc5bd348688821cac5f016d62c232810fac"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_caverns_and_chasms_azalea_pillar_from_logs.json"
+hash = "1cb19c05d72fca0c4b0b3e0b37b5b327419fe41bdf86a61a71aa109d613696ba"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_caverns_and_chasms_azalea_pillar_from_planks.json"
+hash = "c97985fec0b5bd4af5bbef05a109fb63a3135efc22f19e9af5c61d4360010dfe"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_caverns_and_chasms_azalea_tiles_from_logs.json"
+hash = "957f00d6fd5a647cf6b57f0c5be3b783bd93d7314bd18cf77be196f97b7b6d34"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_caverns_and_chasms_azalea_tiles_from_planks.json"
+hash = "95bddb409dd444f8a7cc5a8c87165e8f5f70c7ffdd662c3f7f9a3390633f2769"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_caverns_and_chasms_carved_azalea_planks_from_logs.json"
+hash = "c3d9f7252d175395f8f5f8af998af1c7de18f3a60bfaffca40f9f1d1cb3c3e18"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_caverns_and_chasms_carved_azalea_planks_from_planks.json"
+hash = "a892006727fad6e068199b517af1a30031e5e44014fb84c7fd9a81aef98cf776"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_caverns_and_chasms_chiseled_azalea_planks_from_logs.json"
+hash = "d871c2dab3bc6600f6911ce72a6ebe4092999a8a5a25374c98dcdf7f6edc2fd9"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_caverns_and_chasms_chiseled_azalea_planks_from_planks.json"
+hash = "5fd363613705ee8f4b0ea909a693cca85c195803422b8af8ac7a821c8849c54b"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_culturaldelights_beanstalk_boards_from_logs.json"
+hash = "752278380ae9e2bbcdfc223678b75e95ea6881d18c5155c3c0bb0db9c39e7a1f"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_culturaldelights_beanstalk_boards_from_planks.json"
+hash = "a6d09b1b6d00742c531d996fbd3d543abd899a7d807b91a4ab42a6b6811a89f1"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_culturaldelights_beanstalk_pillar_from_logs.json"
+hash = "19cab5fd9f9f926d492e98f9193d4505558026c2620f8343dec86b7e1c9b4c09"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_culturaldelights_beanstalk_pillar_from_planks.json"
+hash = "8c5de14d63f231d1f84e32a16d9f3a7f374fc7b7a4d24b4d690269bc1796b554"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_culturaldelights_beanstalk_tiles_from_logs.json"
+hash = "46e8d490ede9cb7ccda4e1e67096fe76e90ba36b51f97cc548fb0c916c815e17"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_culturaldelights_beanstalk_tiles_from_planks.json"
+hash = "19a7d36331b0e533ad0426e089c81a118368e8a46497646104472b930019e6ce"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_culturaldelights_carved_beanstalk_planks_from_logs.json"
+hash = "eed67cb8fc2f3646181e1c79913be93b691d4bf891ef830adff027a5db4bbb1c"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_culturaldelights_carved_beanstalk_planks_from_planks.json"
+hash = "71bf76dd6600d63e3564c7749badc179b879e608fd3b966bd7f72b1a0ba21363"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_culturaldelights_chiseled_beanstalk_planks_from_logs.json"
+hash = "f8269d2626fc7266cf0d7ae6cf1c69462b9bb76bd24fde5a0592f91f61bd61cf"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_culturaldelights_chiseled_beanstalk_planks_from_planks.json"
+hash = "399be95e09072592a69dba1215dc50dd9c53b3151dda5b27b767819882b73c52"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_environmental_carved_wisteria_planks_from_logs.json"
+hash = "a9ba78898fbbc346617ee9c09f2745e795ee6a5709cd352608222b3c83cbd854"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_environmental_carved_wisteria_planks_from_planks.json"
+hash = "64680c68f87f4194365ff612dad3e405ea438f634b3f18e32bb934861ad8d4ae"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_environmental_chiseled_wisteria_planks_from_logs.json"
+hash = "906398b62ef7fdb3fb87ae3cdd118e8064ea147e3f2945926955d33391cb9023"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_environmental_chiseled_wisteria_planks_from_planks.json"
+hash = "56948eae7fcde727dff56a9f896ebd1fda097405ec2d461b499a18ee7a56f2b7"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_environmental_wisteria_pillar_from_logs.json"
+hash = "64ff2f7d240e55991891e245873c23cfa77c4176b08431c04fac021c96e13127"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_environmental_wisteria_pillar_from_planks.json"
+hash = "36f02ae08e99da5d1767f35c59c2a9dbbcf099d2c66082888128aa775ceea1a6"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_environmental_wisteria_tiles_from_logs.json"
+hash = "fabf25b7fdf9359e0f46a7c7ca80bea7fa660ccf3bcedf966f4213b2dc31db91"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_environmental_wisteria_tiles_from_planks.json"
+hash = "4486a25255053ac19d5ca3b8c6c3e27a5f1a4e2cf96e41315dcdc0e90f5e827d"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_infernalexp_carved_luminous_planks_from_logs.json"
+hash = "e3faad206de0b5c6db015108b2b28d8f6b29359a4737a260bf33f1bb3a996bca"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_infernalexp_carved_luminous_planks_from_planks.json"
+hash = "3146a862c7e2e4e3159f7e77bc9a1b3948988b05653469fa02fd7a0cbad4a6fa"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_infernalexp_chiseled_luminous_planks_from_logs.json"
+hash = "ac5f621d18dcd3bcaac9d3333777c93ffd06ce4d857e55e9baa40553d322ba56"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_infernalexp_chiseled_luminous_planks_from_planks.json"
+hash = "6259afa4fe024f219be6d6cade69c817bacc42a89f0a5d2a85d3c38d41fe43ff"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_infernalexp_luminous_boards_from_logs.json"
+hash = "4754ab4d93fe7659f7f6930916aefea3057f53d76b4248ea7869bad39d54d127"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_infernalexp_luminous_boards_from_planks.json"
+hash = "6b3bab29d15b0d73d7ec45378526d7144b2e9d3b5fac79ade39967234cf3a88c"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_infernalexp_luminous_pillar_from_logs.json"
+hash = "d20da26254747889aaf957531f87b921a94f7b79a8920dd34cbf0df798400c1f"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_infernalexp_luminous_pillar_from_planks.json"
+hash = "499c340cae43d97dac96b8348c9235e2c34192ef6f43e66fd4ad72a3a729b78a"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_infernalexp_luminous_tiles_from_logs.json"
+hash = "acb3073de6d03801321c9c0aedb33e4c2b0ab1e272e08232c909e37ecadd85c9"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_infernalexp_luminous_tiles_from_planks.json"
+hash = "d7ed9cd23ae59845f6311ec1c75723372dd2a40d81e7fee27a1845b0e4ad0cce"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_minecraft_bamboo_boards_from_logs.json"
+hash = "fe5654cf15e8c048cb0a07968e470229e0f849f100751d439a498a9a4be33fb7"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_minecraft_bamboo_boards_from_planks.json"
+hash = "42f254d27b91a591eb10029b2680e85da2d2a5df58702b991b55ebce8665ef7a"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_minecraft_bamboo_pillar_from_logs.json"
+hash = "c4391d4bedc66392ebc3709e43f6015c6eecd6eda98c64e295dcb32588aad84c"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_minecraft_bamboo_pillar_from_planks.json"
+hash = "ab020f723e177a4b20ca5b78d16eb0e5ec3dd9a992b36cb7428f0a1220213efe"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_minecraft_bamboo_tiles_from_logs.json"
+hash = "b141b9f77b8996b8398f60d64267c3ce07c9f8b9cf041461f0ff0d804c6b1400"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_minecraft_bamboo_tiles_from_planks.json"
+hash = "ff4bc042f3157515e8237b5523e7fd3101e59db2bab5cd99301484c7f276b944"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_minecraft_carved_bamboo_planks_from_logs.json"
+hash = "363bca8fb8151e7c355f9929ceee6577ee3f51b08efed564803e148af6e81e75"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_minecraft_carved_bamboo_planks_from_planks.json"
+hash = "866f368728b79bcd0f6640a09b5d4a09ea8d45b8cfb7af19080abebdca7e636d"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_minecraft_carved_cherry_planks_from_logs.json"
+hash = "a8af7d3346dc852d0ce4e742fdaae85bba4a2755432fac049bc9722c370eb0c2"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_minecraft_carved_cherry_planks_from_planks.json"
+hash = "7016a1f66f47a5265f5a44e3e3cd88f9998df3c3a5cfd382979a05919cfa6a6b"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_minecraft_carved_pale_oak_planks_from_logs.json"
+hash = "2768456297c128fc42f9f83197023f4bf22039876b21ca459cc62b87fed2ef1d"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_minecraft_carved_pale_oak_planks_from_planks.json"
+hash = "fafb31842dec677979650b1a221684a8d1155d5634727d8f1aa355b72105be73"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_minecraft_cherry_pillar_from_logs.json"
+hash = "d424f6dc6cb14b6fcff45372c8e8b1218424b117c4ac664225c147e453c3ee95"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_minecraft_cherry_pillar_from_planks.json"
+hash = "cbacb28892e1901e0c27c52e066c93aced58386554872316e1c3b4129a8a4f99"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_minecraft_cherry_tiles_from_logs.json"
+hash = "db4d7add0e388e908dc99f0bf8e7c1240e7db574c7f52195c7de6ff5f4948471"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_minecraft_cherry_tiles_from_planks.json"
+hash = "d1a6cfdee3d941dff3cc04d352fb040e3f176a14b6f4a53801df7d94cc02d4e3"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_minecraft_chiseled_bamboo_planks_from_logs.json"
+hash = "0ac17831a8050f5d071e63c96dcf4bb94daa3eb538cc0b0f69763d0232cc16f8"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_minecraft_chiseled_bamboo_planks_from_planks.json"
+hash = "29415e3f7a59276c116ff9bf563cfb9c8eedb7d9938085902d5d539a40fbaf94"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_minecraft_chiseled_cherry_planks_from_logs.json"
+hash = "ae3c84142ed246e18e2220c7f33e6deb6e27762953cfec8e78b0fe82f4808b67"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_minecraft_chiseled_cherry_planks_from_planks.json"
+hash = "68019d68b7b387b488ef4ef0bcb418b22a613f8b8dcf138b717b48ae43cf1517"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_minecraft_chiseled_pale_oak_planks_from_logs.json"
+hash = "2d68f1e528920fcdbcb2b3726b5c421be5ad113e1d33a5a18a61f4f5f6d1571b"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_minecraft_chiseled_pale_oak_planks_from_planks.json"
+hash = "0cd5a3610eefa2b7237b9e1bf99ac25413647f98e5060fe0af275490606e4cab"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_minecraft_pale_oak_boards_from_logs.json"
+hash = "f7e8ffbb81bb0e255d26d85b3021615914103ba945dae4f2ef5a7dfcf9e6e516"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_minecraft_pale_oak_boards_from_planks.json"
+hash = "4521f02e255b65f17bb78c3bf98c952c6a5bb7ae363c606cdcb7deeff0e101b2"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_minecraft_pale_oak_pillar_from_logs.json"
+hash = "e603753af6c8373918a7014a3e3f8a76777e686b2ca6bbb9f87adb806b9785a5"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_minecraft_pale_oak_pillar_from_planks.json"
+hash = "0733f30a499ced09a4a3e74aa433ff51b1fa90bcf219557ff88acc52255e8f45"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_minecraft_pale_oak_tiles_from_logs.json"
+hash = "43e62b60f2a1bb1c069751d0b52c04efb9825027156536719cead35621b40658"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_minecraft_pale_oak_tiles_from_planks.json"
+hash = "b363ff7e739d14e94e2c895ad755f5283bc985d3cdf851726f98fa81d6dbdeb2"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_mynethersdelight_carved_powdery_planks_from_logs.json"
+hash = "e38c83c02726e5954e3567e32da85d93899f9ea8d51e1c4de4a0c13b0afc48c8"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_mynethersdelight_carved_powdery_planks_from_planks.json"
+hash = "2c4f9a3368052b36794789bb9b58949fb2a225f83333b472e583ebd6ef12951f"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_mynethersdelight_chiseled_powdery_planks_from_logs.json"
+hash = "113470291883220e749d849108c7867ec569094b1bfa1f2d292b8e808049bde2"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_mynethersdelight_chiseled_powdery_planks_from_planks.json"
+hash = "3575cba3a314446c3893cfa31d25aba137a2b60dd33db0639e7268fc76f65cda"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_mynethersdelight_powdery_boards_from_logs.json"
+hash = "a921df8154b4225e923a23e564f2719bdd196537ce32ee089afc98f3755a849b"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_mynethersdelight_powdery_boards_from_planks.json"
+hash = "9cd4cb01a61e460f75cbe53b3d3aa71a89d0e2ca70e44450016f205e2b2b614b"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_mynethersdelight_powdery_pillar_from_logs.json"
+hash = "632f642d42e1acd909961c7d2797b02ca4c2d29ffa13152c7dcd1c3f309eadd6"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_mynethersdelight_powdery_pillar_from_planks.json"
+hash = "867faf7c310d234234a3b6af268b104126143681712b2d10c4102a0632977470"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_mynethersdelight_powdery_tiles_from_logs.json"
+hash = "779326f19b9c0f73738b5827f5564eb893b3bdd2b579e6f1630ddf6464099747"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_mynethersdelight_powdery_tiles_from_planks.json"
+hash = "609f3af23c4dad8517967845c7a8462a180485a569d5d72ecc8e5a429026412f"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_nomansland_carved_maple_planks_from_logs.json"
+hash = "67ffbe778c2123dfeb6e4195b4020c0be6760a892b89d9983007c8c00e743497"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_nomansland_carved_maple_planks_from_planks.json"
+hash = "6ff04c11b1b13de563eb6cfcfa67f74bbe542d521f6f655ebeb5a1656732f9dd"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_nomansland_carved_pine_planks_from_logs.json"
+hash = "f7b99a39e380e02a8c583981c98cd7fe4ae9d00a61feca3d8130ae35fda75031"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_nomansland_carved_pine_planks_from_planks.json"
+hash = "4de3805432b2346871b6d143dd7b623b04e161878b4faa91667aad66828b6d55"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_nomansland_carved_walnut_planks_from_logs.json"
+hash = "8048b630f86999fab6de03117ba1daef83bde8b9d2cc0033a52a775164273aa2"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_nomansland_carved_walnut_planks_from_planks.json"
+hash = "fa1778aa11ec9e1d60565df106e2d8dd58d81f3ec1f97880ad5a87b5815fc498"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_nomansland_carved_willow_planks_from_logs.json"
+hash = "9cd07929f82a1873a1117bb9e299b59a07196babbd5cc1c83b909fbe17200650"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_nomansland_carved_willow_planks_from_planks.json"
+hash = "eeb6a883144dfd854112f0f7a0e631399cfa9a2a203d55dcb0f8302560829936"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_nomansland_chiseled_maple_planks_from_logs.json"
+hash = "49aa5815197532c106695b2a2e695d791a12e98abd085450af8ec561c4c5ad44"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_nomansland_chiseled_maple_planks_from_planks.json"
+hash = "0287dde88670d5a32b8bd5ba34ae1ee9b3d669e85411707d14f4dcbc43daa40d"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_nomansland_chiseled_pine_planks_from_logs.json"
+hash = "ae611f924b22ee3b9b771b18b12313e6857df950f7cd117bc30ef8db0fce92d5"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_nomansland_chiseled_pine_planks_from_planks.json"
+hash = "4e53183fcbbd7f78ce9ca13bcc46388119ec0d94f1ac64059754bbf283cd9f2d"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_nomansland_chiseled_walnut_planks_from_logs.json"
+hash = "691519638082b784e5180749124f57e7339cded8414d94a1bb5d04105e1aa415"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_nomansland_chiseled_walnut_planks_from_planks.json"
+hash = "af49a41a2a238954e5120bc04b061d4147bd3f6311f8b937ce4ffc35924f4529"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_nomansland_chiseled_willow_planks_from_logs.json"
+hash = "a0b3c4aa742925044efd6fe35a1cf8f36f4a298d1bc974788f28d506fd10bfaa"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_nomansland_chiseled_willow_planks_from_planks.json"
+hash = "a0662c9893d6f35988c6b50dc20f4b604d4d2ba593615cd5fc6124af24256a33"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_nomansland_maple_boards_from_logs.json"
+hash = "71bdcb8f0493cb3b499f169d0663e3f0d6561161dbbe84eaef826864347c74d0"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_nomansland_maple_boards_from_planks.json"
+hash = "12437d93d8dca11a57f6f060ae4c40cdf2e1f0e49b36e0d7ebaa572c0465dad4"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_nomansland_maple_pillar_from_logs.json"
+hash = "c6c53f7247e2a66a4bd7c89d187d96bb6137777425c1bdc14d8795a0b1209c57"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_nomansland_maple_pillar_from_planks.json"
+hash = "fd53bd1fbf0418a8e53e2f166341c14c0bbd0b866645ef41b5914859b4b32269"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_nomansland_maple_tiles_from_logs.json"
+hash = "debfdda76291ad36c6b2cc17b782792d3a0e8c4e4b1cf0dd126517941844251d"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_nomansland_maple_tiles_from_planks.json"
+hash = "8d7c82d219f976b43f8fced3902b4abc7fee0fddf7b903c731e8f0802e5602c4"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_nomansland_pine_boards_from_logs.json"
+hash = "e972db1ced5ca4128b6a14752c0c5ff1533ec4043782f5a07e7bc19e337e3e75"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_nomansland_pine_boards_from_planks.json"
+hash = "9a5f98e9ce39a563786ba046019e2d7dd055d517a1969b14ddbb3ed694061759"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_nomansland_pine_pillar_from_logs.json"
+hash = "2eb3aec4ac843fd71f9332b50a805bddd8634bf63a504121d73f0ef8b5208a0e"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_nomansland_pine_pillar_from_planks.json"
+hash = "5d55c8fed5c3c63853b5d1e7fb204ba8f51408645fba15b8f3ce9c1bc1ab1444"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_nomansland_pine_tiles_from_logs.json"
+hash = "332d41bca1254845769239a74720b2c071041a53315d62065ac0d30e031028dc"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_nomansland_pine_tiles_from_planks.json"
+hash = "638d0129bcb512afc64059ee15e4fe3f293d99908ae54df19aca95db89cec9b1"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_nomansland_walnut_boards_from_logs.json"
+hash = "06052c6292dfe308efb7289047a339b305c597e6fb66b18b32e7aa6a7ebd1781"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_nomansland_walnut_boards_from_planks.json"
+hash = "adcf0195bfe4fed850641fcaa005d78fa4d067d5127e0cc7a7107f7abf8bcae2"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_nomansland_walnut_pillar_from_logs.json"
+hash = "eaff252837fa338996f73eff91eb4535839cc0238de1e50cd58bce2ba72e56e6"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_nomansland_walnut_pillar_from_planks.json"
+hash = "6ff9b485728a6bb4a5500d6ccd578a08bde61a1d0eb04df5b6d2ea48b52a9233"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_nomansland_walnut_tiles_from_logs.json"
+hash = "abb42b019f8781ab88d7e72f50a6aee63bd2246b436cf632c93c62d7136a7a6d"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_nomansland_walnut_tiles_from_planks.json"
+hash = "1a3f0e9dd935730e5ef217b4b56c108f538df7572b95c0b2cac1c08e9047f27f"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_nomansland_willow_boards_from_logs.json"
+hash = "6d70b1a090e3f572c5961c39be23f79dc56b3023631e0f86c209bf910e55d871"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_nomansland_willow_boards_from_planks.json"
+hash = "bb6c66dabb356ec00fc7f519ed367c73285a241b15fea01c9b235012e678dd7a"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_nomansland_willow_pillar_from_logs.json"
+hash = "28e1b7e5251c145aef1512ff53ea9a5aea9280b13ddc02427339010e578b8100"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_nomansland_willow_pillar_from_planks.json"
+hash = "bbb190351da8194d3e0dfb53731ee51b1f7de38ee154f512c21be21e8c6e4b40"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_nomansland_willow_tiles_from_logs.json"
+hash = "97e9ff5646d9552c876de39585f433f316b6cfab2e1620e90c655de716ea8998"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_nomansland_willow_tiles_from_planks.json"
+hash = "d19f42ebb68fce6a5ef2c99f609d87281e634dd258ff6a7d6372a8e508545744"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_upgrade_aquatic_carved_driftwood_planks_from_logs.json"
+hash = "e6345b861ac33b18c4014f252a7507b98b6a72b1b360b0240822a3a0d3fcb521"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_upgrade_aquatic_carved_driftwood_planks_from_planks.json"
+hash = "5b4b278c7b469985eb7a6603617462cd0b40d09ad1eeb8e6df7847e94b1fe27f"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_upgrade_aquatic_chiseled_driftwood_planks_from_logs.json"
+hash = "345d923cd7d1968e242f266881b21a781848842870ae9f825613913e22c7765b"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_upgrade_aquatic_chiseled_driftwood_planks_from_planks.json"
+hash = "7cdf40416e08d852c6066f5e32e1e234475e223d2a560d20521853d4fbb10832"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_upgrade_aquatic_driftwood_pillar_from_logs.json"
+hash = "de8ea5c87feea7199800583fc6bad08b5e0f5acf68e3e75b499ec109607ffa6e"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_upgrade_aquatic_driftwood_pillar_from_planks.json"
+hash = "87875d7963d3b6ec01744af737c1bd5520aea1a53e783fc7d8b1756261122562"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_upgrade_aquatic_driftwood_tiles_from_logs.json"
+hash = "2f4106e622b1dd0b96491efb37ad42ef771e289651a8de06b857b797d13fafd0"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/everycomp_mm_upgrade_aquatic_driftwood_tiles_from_planks.json"
+hash = "3fbf96d93ab521de878fa11cf600e95237bebb53f37431eabc6b0b74b6c33323"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/modestmasonry_acacia_pillar_from_logs.json"
+hash = "8de6360f9bbd872157958408436da1a2e2708534d1472feac65a646f48c0c75b"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/modestmasonry_acacia_pillar_from_planks.json"
+hash = "01eb4da32ff5d13e615877d54c171772ed53b7f860bd5f59ca76d3904f0b6e31"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/modestmasonry_acacia_tiles_from_logs.json"
+hash = "3c686ec6f44cd61844ca1b3533314f627303c6aa435662bb1c868e2617b7e8a8"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/modestmasonry_acacia_tiles_from_planks.json"
+hash = "43d1351e90ba187bda4426de451b336f53becebd05898c552bf424e094cef43b"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/modestmasonry_birch_pillar_from_logs.json"
+hash = "50d1103f94e4aed17d8480e8c3e0e602907501cdd864df6045f8347f057e992f"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/modestmasonry_birch_pillar_from_planks.json"
+hash = "1404524b1fe57eb72ad7ebc123fd1bbaac4686823f6ac54a238a3457e24f8ef5"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/modestmasonry_birch_tiles_from_logs.json"
+hash = "94d0dcb70f9cbc970fa86bab883287416691bb39af8b6a74bd36ec309c031bcb"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/modestmasonry_birch_tiles_from_planks.json"
+hash = "d40893438afc9f511925d57325a9e5da7f9930f1d04b14b3129ce672d854780b"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/modestmasonry_carved_acacia_planks_from_logs.json"
+hash = "3598bf535446ca4e0734d8e490f381198f04ec8e9c6630128755f186135f3954"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/modestmasonry_carved_acacia_planks_from_planks.json"
+hash = "bf782c27955aa68368f8bd416404d55839a74b029de72198025ae5d0c2dd4664"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/modestmasonry_carved_birch_planks_from_logs.json"
+hash = "86bfed1dda425dbe4a5392b55425246e28a4bc9178d9d060c5a3bdb08d39276a"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/modestmasonry_carved_birch_planks_from_planks.json"
+hash = "719da5eff762bd2e666c70f03967ab028596bca517806207fa66ef8a13d50466"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/modestmasonry_carved_crimson_planks_from_logs.json"
+hash = "7813cd3e7d2c031dd918919d7e9b80ac22e2f1500aefd2e175c468c20b9f1d7b"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/modestmasonry_carved_crimson_planks_from_planks.json"
+hash = "4c16ef65cc99c98cade26b61295e2431c1141c57fa6494099c6f050eeb258d82"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/modestmasonry_carved_dark_oak_planks_from_logs.json"
+hash = "c78b5eb11583219e353f18f3059c1807b6240214c99ff122db883d93ecef41a1"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/modestmasonry_carved_dark_oak_planks_from_planks.json"
+hash = "6eb7716b05bb68fd490a730e2a16d130c603079f92e134da95c7e78953d54339"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/modestmasonry_carved_jungle_planks_from_logs.json"
+hash = "bea93d4358039d655e84a4165d9749df4b0139050f3fd8a6e7b704762f9ea591"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/modestmasonry_carved_jungle_planks_from_planks.json"
+hash = "803f28e0a2b058f854f99dd5ba4f3f6ed2cf768123dfb2df574eff38b3e8e45b"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/modestmasonry_carved_mangrove_planks_from_logs.json"
+hash = "845fc715b626195884cfa361cbca6bdb0b952657cf490d666852e845e4375333"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/modestmasonry_carved_mangrove_planks_from_planks.json"
+hash = "dcec58d1fc743a6ffe26ce98544fae0ead37a5046f1a02506c57e23b864a5a1b"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/modestmasonry_carved_oak_planks_from_logs.json"
+hash = "415c14fcf695a242741ab4ab10a8002b3189e02a8e99079d14ca5a8c1f4fd972"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/modestmasonry_carved_oak_planks_from_planks.json"
+hash = "770adc88ea3af6ea9cd0e6938439f1e3bd8469cf80dcc3deb2fa8854c299df87"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/modestmasonry_carved_spruce_planks_from_logs.json"
+hash = "00a4372d1e65522fd04c4b64fe24645c39235811fffca1b5ac0c2ca7285204d7"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/modestmasonry_carved_spruce_planks_from_planks.json"
+hash = "6fcb0656236fb386466549a52d50acf182190b3a4dd5fc1a00cd2fd916f5e0ec"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/modestmasonry_carved_warped_planks_from_logs.json"
+hash = "83eb73861a8e2c5beed8d481005cc5c9f98deb51158535db2b31574b11e72ddc"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/modestmasonry_carved_warped_planks_from_planks.json"
+hash = "3ca45d9ac666a07bb6409ae96fc41d7eb1018beb2a93e842e5081496a0a635f3"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/modestmasonry_chiseled_acacia_planks_from_logs.json"
+hash = "eaf557ec9f96dc0e6cfd4cc79ee2fb3510388c05c29fcaad930553ea52162291"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/modestmasonry_chiseled_acacia_planks_from_planks.json"
+hash = "bdeddd2a79aca8a7696589c87aa94ab9705a132b547bd02d5cdba4ceb1683c30"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/modestmasonry_chiseled_birch_planks_from_logs.json"
+hash = "e1352318370f6f9533dd30be1ac24f0406b70b489d76153ef0e88211461bf288"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/modestmasonry_chiseled_birch_planks_from_planks.json"
+hash = "eaee60806aa134636534666b082651277c7997d3ba429f939f80fa0627509c8c"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/modestmasonry_chiseled_crimson_planks_from_logs.json"
+hash = "98f6978b22e1c40554205cd95a826bb24927ad374eaeeedba547dfc1152a810e"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/modestmasonry_chiseled_crimson_planks_from_planks.json"
+hash = "dea4f300dc447a6f1a66bbe67525e370450de82304970fa9c410565717786ff4"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/modestmasonry_chiseled_dark_oak_planks_from_logs.json"
+hash = "abb05dec7adcb295324a65d338b45d9b2827fb6174d94c85dbc8eea6b2efb889"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/modestmasonry_chiseled_dark_oak_planks_from_planks.json"
+hash = "44e097f77cab6bf4927a756d9da3090de07a8e39f5f59e7e58e5a8b06ba1b855"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/modestmasonry_chiseled_jungle_planks_from_logs.json"
+hash = "d53b8dd36179020b44ccb1b13b97568d1d003c2cbbdc888b9f7e822f386584c9"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/modestmasonry_chiseled_jungle_planks_from_planks.json"
+hash = "23a21ef2930a0215dac54e72c32ea6afb6573f59f97870d629e2dbdb578b98c4"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/modestmasonry_chiseled_mangrove_planks_from_logs.json"
+hash = "b41f3eca9aa0cf5aba26ec6a453a1525f963f21631ec5fb9879a81b1f7df135a"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/modestmasonry_chiseled_mangrove_planks_from_planks.json"
+hash = "b3c993555671746ccac34c5ac121439e29c7ded7c4201cde0958702843eb87f9"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/modestmasonry_chiseled_oak_planks_from_logs.json"
+hash = "0628094b1b9986cdb5d333ef85a67068747d5b0688145479984499268f602f90"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/modestmasonry_chiseled_oak_planks_from_planks.json"
+hash = "835953062c3cc19b650db49ff8b5bf9c1ecdd37de874c9cc90f90a833def899c"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/modestmasonry_chiseled_spruce_planks_from_logs.json"
+hash = "75c99e840b75a59088dcd6b569a8115a6e40cec007a75a2a398515a9c702d243"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/modestmasonry_chiseled_spruce_planks_from_planks.json"
+hash = "2aa69fb92728b09e3b2467e55624cd01a1cf02ff25979361c5d61a01dfe67ef2"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/modestmasonry_chiseled_warped_planks_from_logs.json"
+hash = "cde145190fe38b6a260f0331204692e311d469d8ec755f7c4f85b4815614a430"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/modestmasonry_chiseled_warped_planks_from_planks.json"
+hash = "d1cbb45d3bbb53921ba973f94998b724115ac1aec9c10fa61116ed6d92a777c4"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/modestmasonry_crimson_pillar_from_logs.json"
+hash = "c6a85514b111ac87a5a0303c48becb05af18965d914b4d012f84ed39703a66da"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/modestmasonry_crimson_pillar_from_planks.json"
+hash = "e8f090f9a62bfb1a7470fc4d2a19ebee4b04aa3f894f4a7ff90fa3de1117786c"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/modestmasonry_crimson_tiles_from_logs.json"
+hash = "c0402b684ea3bdb650849c37291eeaf0758f366ee4ab61c03d8c5c1c5b6f60f5"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/modestmasonry_crimson_tiles_from_planks.json"
+hash = "974ff5f192032f0ac6dbc15bc09b70c5a52f6275dc5517e3d0e86dac92a5f1ee"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/modestmasonry_dark_oak_pillar_from_logs.json"
+hash = "0ae92356a43d383e7cbc35d0f30e814b7d05638c67004892348cefe897ed1c4c"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/modestmasonry_dark_oak_pillar_from_planks.json"
+hash = "1532911eba7a1906f9096f6c2412d9c6d5798a8f1970ec32656ffad078684b5b"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/modestmasonry_dark_oak_tiles_from_logs.json"
+hash = "2278931f94863d0639df6263bbf62c5e7888fb889ae61f5080bde8b5ba66f0ef"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/modestmasonry_dark_oak_tiles_from_planks.json"
+hash = "e133424d165244ceaef8486e7ee13df3b5afb9eb89f3cc5865e6671db5b538f7"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/modestmasonry_jungle_pillar_from_logs.json"
+hash = "8f6c83aa5aa90f535b8cb0f6c35d85798df805a68443e68c2c073f1fbbeca06a"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/modestmasonry_jungle_pillar_from_planks.json"
+hash = "10f8ccc083680c57731cdedf9110008544d61fd116da6bfe97331505862c18c6"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/modestmasonry_jungle_tiles_from_logs.json"
+hash = "7319ace00dbe74c0635d7cde07f035a8ec83950723fd2eb3bf81cb2dde9040f8"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/modestmasonry_jungle_tiles_from_planks.json"
+hash = "46747fba63a83ce9b77969ec4fcc300be8281a7ef7a1577e4388593046604ed5"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/modestmasonry_mangrove_pillar_from_logs.json"
+hash = "f1fa35a80713792fed985e1bedfcf7b26a5d89f634f1ce1e32f43d8181439dca"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/modestmasonry_mangrove_pillar_from_planks.json"
+hash = "e7d30c8cd0a60ca639082f97bbf52c18142a0b16bf87f6d3d35f67a2499c6288"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/modestmasonry_mangrove_tiles_from_logs.json"
+hash = "116f99a90b8c20ba569c49277f41af315f30b7ebdb5146c501b839acb6b6e5fd"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/modestmasonry_mangrove_tiles_from_planks.json"
+hash = "b543b45162b397ed74444d48a1710e9f485088dc71174f6c9b0e77772259a90b"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/modestmasonry_oak_pillar_from_logs.json"
+hash = "c0f5215d4c7e8112760f79c34222d51d0fd4500e24b0401771eaeab64a1e3a76"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/modestmasonry_oak_pillar_from_planks.json"
+hash = "161ccdd2f8441b12d55047cbdbca37c0cc85c16b668256ec2c72bc28cbce73f2"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/modestmasonry_oak_tiles_from_logs.json"
+hash = "7b50ad58da66599b336b70efa1b80b5ffe8bca1d169f73bf53132cbcd53b49fc"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/modestmasonry_oak_tiles_from_planks.json"
+hash = "e25d70a3c85a60b873a80d2ddf38aa3c4daab21e62acf0c96596bd5a5749a82c"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/modestmasonry_spruce_pillar_from_logs.json"
+hash = "6cbb41f5d8f64c3a97fff6216015bd4fbdd65e5266c0810c6374db328453dc2f"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/modestmasonry_spruce_pillar_from_planks.json"
+hash = "662f646f4c36b7afe80c9c4d68c12af4a168220b3626629b83debbfc673cc7d4"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/modestmasonry_spruce_tiles_from_logs.json"
+hash = "73b00750df1fca934e727bfacd7b25e493c2b7991697a091e77b93985827bbf3"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/modestmasonry_spruce_tiles_from_planks.json"
+hash = "4a21b87b1040d3c27e5fb50e30f67cb1b8d953d2994d596bc58bef9ca9b49f09"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/modestmasonry_warped_pillar_from_logs.json"
+hash = "1f123325742bfdb06d12e0447197932d8bef8dfa6242b9ebcc59b85db65d484c"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/modestmasonry_warped_pillar_from_planks.json"
+hash = "cbb9dba01d1e7fc1dbf0a8404f95ce697430d18742ce912d5ecc59f66f82b974"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/modestmasonry_warped_tiles_from_logs.json"
+hash = "3d36b19f93a4159bd4e1f00954338ce7a01d5d8ec70dbb1d82405f341ac3c077"
+
+[[files]]
+file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/modest_masonry/modestmasonry_warped_tiles_from_planks.json"
+hash = "8660d2e4ee4837b6561e17e7f7ef35e8a55fcd9f3079c971365c4a72f60e5bc6"
+
+[[files]]
 file = "config/openloader/packs/spicedcider_data/data/spicedcider/recipe/sawing/pale_oak_pressure_plate_from_logs.json"
 hash = "7f8f7a37875d1bbe06edb5c2f489f8f83b5ec4a3822e1e20d7e3c29b4a2c7420"
 
@@ -12282,7 +13250,7 @@ hash = "2edbf62b60165a7ebbea68d5babc9b1991c73ece3e00c57832d6e99529ed69ef"
 
 [[files]]
 file = "config/recreative/tab_layout.json"
-hash = "3ef4ef6a2fd5badea4b637ba9a484a3e07dcbfe8a48c23b5620885f963a13a5b"
+hash = "cccfa998e7eeb0e7fe1e0e0393b062db4eed546ab5f71c499b670587c218d2ab"
 
 [[files]]
 file = "config/recreative/tab_order.json"
@@ -15562,7 +16530,7 @@ hash = "a6129541e6767b3d7207befbf8203669c3b52e927b9d2b18f105e384a70af685"
 
 [[files]]
 file = "icon.png"
-hash = "079f5c8948d6ef6cbdf083e3f1029a562605f487be96f3728eeff588efadfde3"
+hash = "0577e4a8b49cb9d1d12866a81c5ee99031e1feeb3c7cd004930a4f74c39113f8"
 
 [[files]]
 file = "mods/abnormals-delight.pw.toml"
@@ -15780,7 +16748,7 @@ metafile = true
 
 [[files]]
 file = "mods/cider-core.pw.toml"
-hash = "681f284c11fd0102ea445d7c5cdad370aaa399b9a846119fdd1d653f68a47a6e"
+hash = "33490e6fb19bcca291922b4127b2dfde4f178a94e7d50f793f930da9bf7b38b8"
 metafile = true
 
 [[files]]
@@ -21192,7 +22160,7 @@ hash = "37a89b8b897de55cb662047194fbf7e2b09cc68f8f3ed5f73bf962ca1a7d5c8d"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/item_descriptions/lang/en_us.json"
-hash = "aed08c64afe430c0374d401e41476b56a238f9d4a536cf71ba949e7dadc4aec1"
+hash = "04714c0ebfd2e4185f09f4ea55b877cad2c83d27395d9816fac117e630bc8b0c"
 
 [[files]]
 file = "resourcepacks/spicedcider_resources/assets/jade/textures/gui/sprites/progress_base.png"

@@ -1,0 +1,32 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "modestmasonry"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "woodworks"
+    }
+  ],
+  "type": "woodworks:sawmill",
+  "group": "logs",
+  "ingredient": [
+    {
+      "item": "minecraft:birch_log"
+    },
+    {
+      "item": "minecraft:birch_wood"
+    },
+    {
+      "item": "minecraft:stripped_birch_log"
+    },
+    {
+      "item": "minecraft:stripped_birch_wood"
+    }
+  ],
+  "result": {
+    "id": "modestmasonry:birch_pillar",
+    "count": 4
+  }
+}

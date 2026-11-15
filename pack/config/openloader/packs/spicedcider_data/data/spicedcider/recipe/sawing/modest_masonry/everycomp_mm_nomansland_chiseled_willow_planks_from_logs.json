@@ -1,0 +1,36 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "modestmasonry"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "everycomp"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "woodworks"
+    }
+  ],
+  "type": "woodworks:sawmill",
+  "group": "logs",
+  "ingredient": [
+    {
+      "item": "nomansland:willow_log"
+    },
+    {
+      "item": "nomansland:willow_wood"
+    },
+    {
+      "item": "nomansland:stripped_willow_log"
+    },
+    {
+      "item": "nomansland:stripped_willow_wood"
+    }
+  ],
+  "result": {
+    "id": "everycomp:mm/nomansland/chiseled_willow_planks",
+    "count": 4
+  }
+}
