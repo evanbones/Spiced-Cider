@@ -147,6 +147,10 @@ and moss needs a hoe. Separately, leaves drop sticks more commonly and two flint
 Emptying a composter can pop out worms, and wormy dirt generates underground. Deposit ores generate underground and
 drop geodes, which also turn up in dungeon and Nether chests. With Tide, worms work as bait and geodes can be fished up.
 
+**Rich Gravel**
+
+Rich gravel generates in gravel patches and drops several flint.
+
 **Fruit Trees**
 
 Bountiful Fares style cacao, pear, and avocado trees whose flowering leaves grow cacao pods and hanging fruit. Pears
@@ -231,6 +235,7 @@ message. Ported from Valcon (thanks, Ivqry!).
 - Gameplay tips instead of chat while sleeping *(off by default)*
 - Recipe book button moved beside the crafting grid *(off by default)*
 - Your own potion particles are hidden in first person *(off by default)*
+- No armor bar on the HUD *(off by default)*
 - Smithing template tooltips without the "Applies to" lines *(off by default)*
 - Optional custom window title, and taskbar icon on Windows
 

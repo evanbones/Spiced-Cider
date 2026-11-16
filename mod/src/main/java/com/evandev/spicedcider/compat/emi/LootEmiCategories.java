@@ -44,6 +44,7 @@ public class LootEmiCategories {
         if (enabled(SpicedCiderConfig.CLIENT.emiSniffingCategory)) registerSniffer(registry, tables);
         if (enabled(SpicedCiderConfig.CLIENT.emiArchaeologyCategory)) registerArchaeology(registry, tables);
         if (enabled(SpicedCiderConfig.CLIENT.emiStructureLootCategory)) registerStructures(registry, tables);
+        if (enabled(SpicedCiderConfig.CLIENT.emiUrnLootCategory)) registerUrns(registry, tables);
     }
 
     private static boolean enabled(ModConfigSpec.BooleanValue value) {
@@ -144,6 +145,26 @@ public class LootEmiCategories {
                 registry.addRecipe(new StructureLootEmiRecipe(category,
                         LootEmiRecipe.pageId(id("/structure_loot/" + group.first().getNamespace() + "/" + group.first().getPath()), page),
                         LootEmiRecipe.pageTitle(group.title(), page, pages.size()), containers, pages.get(page)));
+            }
+        }
+    }
+
+    private static void registerUrns(EmiRegistry registry, List<Table> tables) {
+        List<Table> urns = of(tables, LootDisplays.BLOCK_LOOT);
+        Item urn = BuiltInRegistries.ITEM.get(LootDisplays.URN);
+        if (urns.isEmpty() || urn == Items.AIR) return;
+        EmiRecipeCategory category = category(registry, "urn_loot", EmiStack.of(urn), EmiStack.of(urn));
+        List<ItemStack> containers = List.of(new ItemStack(urn));
+        for (Table table : urns) {
+            List<Drop> drops = LootEmiRecipe.visible(table.drops());
+            if (drops.isEmpty()) continue;
+            String tier = table.id().getPath().substring(table.id().getPath().lastIndexOf('/') + 1);
+            Component title = Component.translatable("emi.spicedcider.urn_loot." + tier);
+            List<List<Drop>> pages = LootEmiRecipe.pages(drops, StructureLootEmiRecipe.COLUMNS);
+            for (int page = 0; page < pages.size(); page++) {
+                registry.addRecipe(new StructureLootEmiRecipe(category,
+                        LootEmiRecipe.pageId(id("/urn_loot/" + tier), page),
+                        LootEmiRecipe.pageTitle(title, page, pages.size()), containers, pages.get(page)));
             }
         }
     }

@@ -1,4 +1,5 @@
 {
+  "parent": "spicedcider:industry/root",
   "criteria": {
     "summoned_snow_golem": {
       "trigger": "minecraft:summoned_entity",
@@ -28,6 +29,5 @@
     "title": "Do You Want to Build a Snowman?",
     "description": "Bring a Snow Golem to life",
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
-  },
-  "reliable_advancements:tab_member": true
+  }
 }

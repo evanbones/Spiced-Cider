@@ -1,0 +1,23 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "alloyed"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "farmersdelight"
+    }
+  ],
+  "type": "spicedcider:anvil_smithing",
+  "base": {
+    "item": "alloyed:steel_knife"
+  },
+  "addition": {
+    "tag": "c:plates/diamond"
+  },
+  "result": {
+    "count": 1,
+    "id": "farmersdelight:diamond_knife"
+  }
+}

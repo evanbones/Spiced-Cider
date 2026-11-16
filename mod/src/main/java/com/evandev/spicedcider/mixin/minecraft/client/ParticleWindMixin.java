@@ -25,12 +25,20 @@ public class ParticleWindMixin implements WindBlown {
     @Shadow
     protected boolean onGround;
 
+    @Shadow
+    protected boolean hasPhysics;
+
     @Unique
     private float spicedcider$windResponse;
 
     @Override
     public void spicedcider$setWindResponse(float response) {
         spicedcider$windResponse = response;
+    }
+
+    @Override
+    public boolean spicedcider$hasPhysics() {
+        return hasPhysics;
     }
 
     @WrapMethod(method = "move")

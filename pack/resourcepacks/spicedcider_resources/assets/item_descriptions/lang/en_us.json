@@ -1,6 +1,6 @@
 {
   "effect.minecraft.nausea.description": "An effect that causes you to become disoriented.",
-  "lore.minecraft.rabbit_hide": "A small, thin hide, dropped by Rabbits and Foxes. Killing one with a Knife yields an extra Small Hide. Stitched together, they make a full Hide.",
+  "lore.minecraft.rabbit_hide": "A small, thin hide, dropped by Rabbits and Foxes. Killing one with a Knife yields an extra Small Hide. Stitched together, they make a full Hide, or one can be cured on a Tanning Rack.",
   "lore.minecraft.honeycomb_block": "A solid block of Beeswax.",
   "tag.c.waxed.description": "A block that has since been waxed with Beeswax to prevent it from aging. It can be scraped off with an Axe.",
   "lore.minecraft.honeycomb": "Wax harvested from beehives with Shears. Used to wax Copper, treat wood, and make Candles.",
@@ -20,6 +20,8 @@
   "lore.minecraft.big_dripleaf": "A block that can be used as a temporary platform. When it receives Flux Power, it is forced up.",
   "lore.minecraft.big_dripleaf_stem": "A block that can be used as a temporary platform. When it receives Flux Power, it is forced up.",
   "lore.minecraft.blaze_powder": "A brewing ingredient for Cauldron potions.",
+  "lore.minecraft.brown_mushroom": "An item that can be used to make Mushroom Stew. It can be planted on any solid block, where it slowly spreads.",
+  "lore.minecraft.red_mushroom": "An item that can be used to make Mushroom Stew. It can be planted on any solid block, where it slowly spreads.",
   "lore.minecraft.blaze_rod": "An item that can be used to craft Blaze Powder. Dropped by Blazes.",
   "lore.minecraft.calibrated_sculk_sensor": "An improved Sculk Sensor that can be tuned via Flux Power.",
   "lore.minecraft.carved_pumpkin": "A block that can be worn to safely look at Wanderers, or used to build Snow and Iron Golems.",
@@ -160,7 +162,7 @@
   "tag.c.foods.raw_fish.description": "A raw fish that can be eaten as is, but heals more once cooked.",
   "tag.c.foods.cookie.description": "A cookie that makes a small snack.",
   "tag.c.foods.golden.description": "A food that has been gilded. It heals a great deal and grants powerful effects.",
-  "lore.minecraft.apple": "A fruit that drops from Oak Leaves. It makes a small snack.",
+  "lore.minecraft.apple": "A fruit picked from Apple Trees. It makes a small snack.",
   "lore.minecraft.baked_potato": "A potato cooked until fluffy. A simple, filling food.",
   "lore.minecraft.beetroot_soup": "A filling soup.",
   "lore.minecraft.bread": "A loaf baked from Wheat. A simple, filling food.",
@@ -177,7 +179,9 @@
   "entity.minecraft.husk.description": "An undead hostile mob found in Deserts that doesn't burn in sunlight. Its hits slow your stamina recovery.",
   "entity.minecraft.creeper.description": "A hostile mob that sneaks up and explodes. On the surface its blasts don't break blocks, and it leaves behind a spore cloud that spawns Creepies.",
   "lore.minecraft.crafting_table": "A block that allows you to craft recipes requiring a 3x3 grid.",
-  "lore.minecraft.flint": "A crafting material for Flint tools, Arrows and Flint and Steel. Drops from Pebbles and Gravel.",
+  "lore.minecraft.flint": "A crafting material for Flint tools, Arrows and Flint and Steel. Drops from Pebbles and Rich Gravel, or from Gravel broken with a Hammer.",
+  "lore.minecraft.gravel": "A loose block that falls when nothing holds it up. Breaking it with a Hammer knocks out Flint. Gravel patches often hide Rich Gravel.",
+  "tag.c.gravels.description": "A loose block that falls when nothing holds it up.",
   "tag.minecraft.logs.description": "A block that can be used to craft Planks, or smelted to make Charcoal. Needs an axe to harvest.",
   "tag.minecraft.crimson_stems.description": "A mushroom block that can be stripped or made into Planks. Needs an axe to harvest.",
   "tag.minecraft.warped_stems.description": "A mushroom block that can be stripped or made into Planks. Needs an axe to harvest.",
@@ -255,5 +259,8 @@
   "lore.minecraft.wild_armor_trim_smithing_template": "Found in Jungle Temple chests. Overgrown with vines and leaves. Keep it in a Styling Table to trim armor and tools; it's never used up.",
   "lore.minecraft.beetroot": "A sweet root vegetable. It can be eaten, or milled into Sugar.",
   "lore.minecraft.beetroot_seeds": "A seed that can be planted to grow Beets.",
-  "tag.c.seeds.beetroot.description": "An item that can be planted to grow Beets."
+  "tag.c.seeds.beetroot.description": "An item that can be planted to grow Beets.",
+  "lore.minecraft.bamboo": "A fast-growing stalk found in jungles. Needs an axe to harvest.",
+  "lore.abundant_atmosphere.red_bamboo": "A fast-growing red stalk. Needs an axe to harvest.",
+  "lore.mynethersdelight.powdery_cane": "An invasive crop in Crimson Forests. Its Berries are explosive on contact, try cutting the red stem. Needs an axe to harvest."
 }

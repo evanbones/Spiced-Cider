@@ -5,6 +5,63 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.0.0] - 2026-11-16
+
+### Added
+
+- Rich gravel: generates in gravel patches and drops 2-3 flint (more with Fortune).
+- Placed sticks:
+    - Sneak and use a stick on the ground to lay it down. Sticks generate scattered on forest floors.
+- `spicedcider:field_guide_scan` advancement trigger, fired by a successful Field Guide scan.
+- Picture Mode clouds: everything past the loaded chunks is covered by drifting clouds while Picture Mode is open.
+- Added Foliage Sway (Where Winds Blow) and Godrays (Sunbathing Godrays) toggles on the Video page.
+- Added a Footsteps volume slider (Presence Footsteps) under Audio > Volume.
+- Hide Armor Bar option (off by default) removes the armor bar from the HUD.
+- Tree Chopping Stamina option (off by default): each Treeliable chop costs Modest Meals stamina.
+- `spicedcider:workstone_process` advancement trigger, fired when an item is processed on a Manual Labour Workstone.
+- Small Hides can be cured on the Tanning Rack.
+- `spicedcider:campfire_lit` advancement trigger, fired when a player lights an unlit campfire by any means.
+- Diamond Sheet, pressed or hammered from a Diamond.
+- Calmer Herd Panic option (off by default): Big Brain herd panic runs at a normal panic speed.
+- Matching Held Light Colours option (off by default): held and dropped light-giving blocks use their placed Polytone
+  light colour, sized by LambDynamicLights.
+- Mint Seeds and a Mint crop (with Cultural Delights): grown plants can be picked for Mint repeatedly.
+- Urn Loot EMI category (off by default) showing what Supplementaries urns can hold.
+
+### Changed
+
+- Hanging fruit (Bountiful Fares fruits, pears, avocados) swing from their stems in the wind like lanterns (Swaying
+  Hanging Fruit option, on by default; needs Wind).
+- Leaves drop sticks more often, and hanging wisteria and willow leaves drop them too.
+- The shape wheel now shows a mouse cursor you can point with, and it animates smoother.
+- Leaves cleared by Treeliable tree felling no longer drop sticks.
+- Cast Iron ingot forging now gives 4 ingots.
+- The Tanning Rack cures in one minute, and a Hide gives 4 Leather (Hoglin Hide 6).
+- Grappling hooks are made from iron instead of copper.
+- Tide's "When Applied" tooltip line is followed by an indented effect line.
+- Copper javelins are made at a crafting table instead of the Forge.
+
+### Fixed
+
+- Players and the world spawn no longer spawn on top of leaves (No Leaf Spawns option, on by default).
+- Bowls (and other containers) left over after eating now stack with regular ones when a mod changes their stack size.
+- NexusLib cape changes no longer throw errors on dedicated servers.
+- Picture Mode with Sodium: terrain no longer goes missing when panning or zooming, or behind hills from the player's
+  point of view, and Sunbathing's godrays, lens flare and depth of field are turned off while it's open.
+- Startup no longer crashes with Ecliptic Seasons installed.
+- Bundles hold at most 64 items when a mod raises stack sizes.
+- Shift-clicking a crafting result in the inventory while wearing a backpack crafts the full stack again.
+- Broken copper tools look fully oxidized instead of brand new.
+- Copper javelins match the other copper tools.
+- Coarse Dirt can be tilled into Dirt with a hoe even when a block sits on top of it.
+- The Tanning Rack item model no longer shows a hide.
+- Dynamic Crosshair no longer flashes the incorrect-tool marker the moment a block breaks.
+- Tools and armor whose repair ingot was removed by Reliable Remover can be repaired with any ingot in the matching
+  `c:ingots` tag.
+- Fixed the locator bar markers drawing behind the locator/experience bar.
+- Fixed a ghost crate staying behind after catching a crate while fishing (Smooth Animations).
+- Polytone torch glows no longer drift in the wind.****
+
 ## [1.13.5] - 2026-11-15
 
 ### Fixed
@@ -15,14 +72,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-- Mobs, items and particles now fade into the distance fog properly while far terrain is still generating, instead of standing out brightly.
+- Mobs, items and particles now fade into the distance fog properly while far terrain is still generating, instead of
+  standing out brightly.
 
 ## [1.13.3] - 2026-11-15
 
 ### Added
 
 - Resource pack downloads on launch.
-  - Packs listed in `config/spicedcider/resource_pack_downloads.json` are fetched from Modrinth during loading when missing or outdated.
+    - Packs listed in `config/spicedcider/resource_pack_downloads.json` are fetched from Modrinth during loading when
+      missing or outdated.
 
 ### Fixed
 
@@ -38,15 +97,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-- Distant terrain on servers now reappears after joining from a new install, by a different server address, or after clearing Voxy's cache.
+- Distant terrain on servers now reappears after joining from a new install, by a different server address, or after
+  clearing Voxy's cache.
 
 ## [1.13.0] - 2026-11-14
 
 ### Added
 
-- Video settings now have a Particles group for toggling splashes, waterfalls, ripples, bubbles, falling leaves, pollen, embers, cold breath and other ambient particles.
+- Video settings now have a Particles group for toggling splashes, waterfalls, ripples, bubbles, falling leaves, pollen,
+  embers, cold breath and other ambient particles.
 - Accessibility > Motion now has a Screen Shake toggle.
-- Mining an ore now also drops the stone it's in, such as deepslate, netherrack, tuff, or basalt (Stone from Ores option).
+- Mining an ore now also drops the stone it's in, such as deepslate, netherrack, tuff, or basalt (Stone from Ores
+  option).
 
 ### Fixed
 
@@ -61,12 +123,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - A built-in wind system *(off by default)*.
-  - Wind direction, strength and gusts are shared by all players and follow the weather.
-  - Particles drift with the wind outdoors, and specks of grass, dust, sand and snow blow off exposed ground.
-  - Integration for Cirrus clouds, Where Winds Blow foliage, Amendments hanging blocks, Chimes, Particle Rain, Particular leaves, and Reliable Gliders.
-  - Create windmill bearings turn faster in strong wind and slower in calm air.
-  - Supplementaries wind vanes point with the wind and give a redstone signal for its strength.
-  - Adds the `/wind` command.
+    - Wind direction, strength and gusts are shared by all players and follow the weather.
+    - Particles drift with the wind outdoors, and specks of grass, dust, sand and snow blow off exposed ground.
+    - Integration for Cirrus clouds, Where Winds Blow foliage, Amendments hanging blocks, Chimes, Particle Rain,
+      Particular leaves, and Reliable Gliders.
+    - Create windmill bearings turn faster in strong wind and slower in calm air.
+    - Supplementaries wind vanes point with the wind and give a redstone signal for its strength.
+    - Adds the `/wind` command.
 
 ### Changed
 
@@ -79,7 +142,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Both halves of a Tanning Rack now update together when a hide is put on, rubbed, or taken off.
 - Drips from a curing hide on the upper half of a Tanning Rack now fall to the ground instead of stopping midair.
 - The Voxy Fog Start setting now works with Cirrus or No Man's Land installed.
-- Fixed recipe loading errors for the sulfur sconce and the sulfur and glowlight candle holders when Supplementaries isn't installed.
+- Fixed recipe loading errors for the sulfur sconce and the sulfur and glowlight candle holders when Supplementaries
+  isn't installed.
 
 ### Removed
 
@@ -89,12 +153,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Molten metal fluids and buckets for Copper, Tin, Lead, Gold, Silver, Bronze, Rose Gold, Electrum, Iron, Cast Iron, Steel, Netherite, Necromium, Prismarite and Valkyrium.
+- Molten metal fluids and buckets for Copper, Tin, Lead, Gold, Silver, Bronze, Rose Gold, Electrum, Iron, Cast Iron,
+  Steel, Netherite, Necromium, Prismarite and Valkyrium.
 - Create recipes for melting ingots and ores, casting ingots and mixing alloys from molten metal.
 - Placed molten metal burns anything it touches and hardens into its storage block when it meets water.
 - Dispensers can pour Latex, Resin, Maple Syrup, Resin Oil, and molten metal buckets.
 - Cider Core now includes Roxy, so Voxy runs on NeoForge without installing Roxy separately.
-  - It only turns on when Voxy is installed, and is disabled if Roxy itself is installed.
+    - It only turns on when Voxy is installed, and is disabled if Roxy itself is installed.
 
 ### Fixed
 
@@ -126,7 +191,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Tanning Rack now also takes My Nether's Delight Hoglin Hide, which cures into 3 Leather at once.
-- Bonded Hide and Bonded Hoglin Hide (with Quark; Hoglin also needs My Nether's Delight): storage blocks of 9 hides, matching Quark's Bonded Leather.
+- Bonded Hide and Bonded Hoglin Hide (with Quark; Hoglin also needs My Nether's Delight): storage blocks of 9 hides,
+  matching Quark's Bonded Leather.
 
 ### Changed
 
@@ -137,8 +203,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Hide: raw animal skin, tanned into Leather.
-- Tanning Rack: a two-block-tall frame. Stretch a Hide on it, rub in Tree Bark, and it cures into Leather. Has its own Tanning category in EMI.
-- Mournful and Cheerful Clay Statues (with No Man's Land): offer one to the Friend Moon and he makes it rain or clears the sky.
+- Tanning Rack: a two-block-tall frame. Stretch a Hide on it, rub in Tree Bark, and it cures into Leather. Has its own
+  Tanning category in EMI.
+- Mournful and Cheerful Clay Statues (with No Man's Land): offer one to the Friend Moon and he makes it rain or clears
+  the sky.
 
 ## [1.8.1] - 2026-11-12
 
@@ -152,7 +220,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Grub, Minnow and Firefly: new fishing baits for Tide.
 - Traveler's Pouch, Witch's Pouch, and Can of Bait (pretty shamelessly ripped off of Raspberry Flavoured).
-- Biomes in the `spicedcider:has_thick_fog` tag are filled with close fog in the biome's fog colour. Biomes also in `spicedcider:has_glowing_fog` keep a visible tint in the dark.
+- Biomes in the `spicedcider:has_thick_fog` tag are filled with close fog in the biome's fog colour. Biomes also in
+  `spicedcider:has_glowing_fog` keep a visible tint in the dark.
 - Field Guide shows each Slime Time slime colour dropping its own colour of slimeball.
 - Softer Blindness and Darkness option: Blindness fog reaches farther and the Darkness pulse is weaker.
 
@@ -163,7 +232,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 - EMI structure loot now includes loot placed through structure feature placeholders.
-- Fire Strikers are now used up when lighting campfires, candles, and candle holders, and count for item-used-on-block advancements.
+- Fire Strikers are now used up when lighting campfires, candles, and candle holders, and count for item-used-on-block
+  advancements.
 - Broken hoes and shovels no longer till, make paths, or harvest crops and grass in an area.
 
 ### Removed
@@ -191,7 +261,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - No Man's Land taps can be opened and closed with redstone (Redstone Taps option, off by default).
-- No Man's Land taps pour to and from everything a Supplementaries faucet can, such as jars, beehives and modded cauldrons, can hang on jars, and show a stream of liquid while pouring (Taps Pour Any Fluid option, off by default; needs Supplementaries).
+- No Man's Land taps pour to and from everything a Supplementaries faucet can, such as jars, beehives and modded
+  cauldrons, can hang on jars, and show a stream of liquid while pouring (Taps Pour Any Fluid option, off by default;
+  needs Supplementaries).
 
 ### Removed
 

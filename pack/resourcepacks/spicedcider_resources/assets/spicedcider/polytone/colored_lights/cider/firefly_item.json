@@ -1,0 +1,12 @@
+{
+  "require_config": "colored_lights:item_lights",
+  "target_type": "item",
+  "targets": [
+    "spicedcider:firefly"
+  ],
+  "colored_light": {
+    "color": "#D4F25A",
+    "radius": 5,
+    "brightness": "o.inWater() ? 0 : 1"
+  }
+}

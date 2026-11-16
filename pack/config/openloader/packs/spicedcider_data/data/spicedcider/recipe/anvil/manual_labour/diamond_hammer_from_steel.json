@@ -1,0 +1,23 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "manual_labour"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "alloyed"
+    }
+  ],
+  "type": "spicedcider:anvil_smithing",
+  "base": {
+    "item": "spicedcider:steel_hammer"
+  },
+  "addition": {
+    "tag": "c:plates/diamond"
+  },
+  "result": {
+    "count": 1,
+    "id": "manual_labour:diamond_hammer"
+  }
+}

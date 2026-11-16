@@ -1,0 +1,26 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "snowyspirit:flag",
+      "flag": "wreath"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " # ",
+    "#B#",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "tag": "minecraft:leaves"
+    },
+    "B": {
+      "item": "minecraft:sweet_berries"
+    }
+  },
+  "result": {
+    "id": "snowyspirit:wreath",
+    "count": 1
+  }
+}

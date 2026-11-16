@@ -10,8 +10,8 @@
 	"Allow mobs to open fence gates if they are already able to open doors" = true
 	#Any mob id input in this list will not open fence gates if they're already able to open doors
 	"Fence Gate Opening Blacklist" = ["minecraft:husk", "minecraft:zombie", "minecraft:vindicator", "minecraft:drowned"]
-	"Enable new bow ai?" = true
-	"Enable bow attacking mobs to shoot faster if the attacker is closer (deals less damage)" = true
+	"Enable new bow ai?" = false
+	"Enable bow attacking mobs to shoot faster if the attacker is closer (deals less damage)" = false
 	"Mobs that don't have the new bow ai" = []
 	"Enable jumping ai" = true
 	"Jump only if a mob is actively targeting another mob" = false

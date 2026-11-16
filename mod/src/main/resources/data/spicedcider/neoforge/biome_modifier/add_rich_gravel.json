@@ -1,0 +1,15 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "spicedcider:feature",
+      "feature": "richGravel"
+    }
+  ],
+  "type": "neoforge:add_features",
+  "biomes": "#minecraft:is_overworld",
+  "features": [
+    "spicedcider:ore_rich_gravel_buried",
+    "spicedcider:ore_rich_gravel_surface"
+  ],
+  "step": "fluid_springs"
+}

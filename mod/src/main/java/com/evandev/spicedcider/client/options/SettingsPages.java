@@ -18,6 +18,9 @@ import com.evandev.spicedcider.compat.lambdynlights.DynamicLightsSetting;
 import com.evandev.spicedcider.compat.musictweaks.MusicTweaksSettings;
 import com.evandev.spicedcider.compat.nomansland.NoMansLandSettings;
 import com.evandev.spicedcider.compat.particular.ParticularSettings;
+import com.evandev.spicedcider.compat.polytone.GodraysSettings;
+import com.evandev.spicedcider.compat.presencefootsteps.FootstepsVolumeSetting;
+import com.evandev.spicedcider.compat.wherewindsblow.FoliageSwaySettings;
 import com.evandev.spicedcider.compat.sodium.SodiumSetting;
 import com.evandev.spicedcider.client.nether.NetherSettings;
 import com.evandev.spicedcider.compat.voxy.VoxyFogSettings;
@@ -129,6 +132,9 @@ public final class SettingsPages {
         for (SoundSource source : SoundSource.values()) {
             volumes.add(vanilla(o.getSoundSourceOptionInstance(source)));
         }
+        if (ModList.get().isLoaded("presencefootsteps")) {
+            volumes.add(FootstepsVolumeSetting.create());
+        }
         List<Entry> entries = new ArrayList<>();
         add(entries, category(screen, "volume", volumes.toArray(Entry[]::new)));
         if (ModList.get().isLoaded("music_tweaks")) {
@@ -175,11 +181,13 @@ public final class SettingsPages {
                 cirrus ? CirrusSettings.shootingStars() : null,
                 cirrus ? CirrusSettings.aurora() : null,
                 ModList.get().isLoaded("nomansland") ? NoMansLandSettings.sunDogs() : null,
+                ModList.get().isLoaded("where_winds_blow") ? FoliageSwaySettings.foliageSway() : null,
                 NetherSettings.mist()));
         if (ModList.get().isLoaded("particular")) {
             add(entries, category(screen, "particles", ParticularSettings.particles().toArray(Entry[]::new)));
         }
         add(entries, category(screen, "post_processing",
+                ModList.get().isLoaded("polytone") ? GodraysSettings.godrays() : null,
                 NetherSettings.heatHaze(),
                 NetherSettings.ambientTint(),
                 sodium("sodium:quality.vignette", null)));

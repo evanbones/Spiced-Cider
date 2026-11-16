@@ -50,8 +50,10 @@ public class TanningRackBlock extends HorizontalDirectionalBlock {
     public static final MapCodec<TanningRackBlock> CODEC = simpleCodec(TanningRackBlock::new);
     public static final EnumProperty<DoubleBlockHalf> HALF = BlockStateProperties.DOUBLE_BLOCK_HALF;
     public static final EnumProperty<Contents> CONTENTS = EnumProperty.create("contents", Contents.class);
-    public static final int TANNING_TICKS = 2400;
-    public static final int LARGE_HIDE_LEATHER = 3;
+    public static final int TANNING_TICKS = 1200;
+    public static final int HIDE_LEATHER = 4;
+    public static final int SMALL_HIDE_LEATHER = 1;
+    public static final int LARGE_HIDE_LEATHER = 6;
     private static final ResourceLocation HOGLIN_HIDE = ResourceLocation.fromNamespaceAndPath("mynethersdelight", "hoglin_hide");
     private static final ResourceLocation TANNING_ADVANCEMENT = ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "spiced_cider/tanning");
 
@@ -128,9 +130,11 @@ public class TanningRackBlock extends HorizontalDirectionalBlock {
     @Override
     protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
         Contents contents = state.getValue(CONTENTS);
-        boolean large = stack.is(ModTags.Items.LARGE_TANNABLE_HIDES);
-        if (contents == Contents.EMPTY && (large || stack.is(ModTags.Items.TANNABLE_HIDES))) {
-            setContents(level, pos, state, large ? Contents.HOGLIN_HIDE : Contents.HIDE);
+        Contents hung = stack.is(ModTags.Items.LARGE_TANNABLE_HIDES) ? Contents.HOGLIN_HIDE
+                : stack.is(ModTags.Items.TANNABLE_HIDES) ? Contents.HIDE
+                : stack.is(ModTags.Items.SMALL_TANNABLE_HIDES) ? Contents.SMALL_HIDE : null;
+        if (contents == Contents.EMPTY && hung != null) {
+            setContents(level, pos, state, hung);
             if (!level.isClientSide()) {
                 level.playSound(null, pos, SoundEvents.ARMOR_EQUIP_LEATHER.value(), SoundSource.BLOCKS, 1.0F, 0.8F);
                 level.gameEvent(player, GameEvent.BLOCK_CHANGE, pos);
@@ -138,8 +142,8 @@ public class TanningRackBlock extends HorizontalDirectionalBlock {
             }
             return ItemInteractionResult.sidedSuccess(level.isClientSide());
         }
-        if ((contents == Contents.HIDE || contents == Contents.HOGLIN_HIDE) && stack.is(ModTags.Items.TANNING_AGENTS)) {
-            setContents(level, pos, state, contents == Contents.HIDE ? Contents.TANNING : Contents.HOGLIN_TANNING);
+        if (contents.isHide() && stack.is(ModTags.Items.TANNING_AGENTS)) {
+            setContents(level, pos, state, contents.next());
             if (level instanceof ServerLevel serverLevel) {
                 level.scheduleTick(lowerPos(pos, state), this, TANNING_TICKS);
                 level.playSound(null, pos, SoundEvents.BRUSH_GENERIC, SoundSource.BLOCKS, 1.0F, 0.9F);
@@ -158,7 +162,9 @@ public class TanningRackBlock extends HorizontalDirectionalBlock {
         Contents contents = state.getValue(CONTENTS);
         ItemStack taken = switch (contents) {
             case HIDE -> new ItemStack(ModItems.HIDE.get());
-            case LEATHER -> new ItemStack(Items.LEATHER);
+            case LEATHER -> new ItemStack(Items.LEATHER, HIDE_LEATHER);
+            case SMALL_HIDE -> new ItemStack(Items.RABBIT_HIDE);
+            case SMALL_LEATHER -> new ItemStack(Items.LEATHER, SMALL_HIDE_LEATHER);
             case HOGLIN_HIDE -> new ItemStack(BuiltInRegistries.ITEM.get(HOGLIN_HIDE));
             case HOGLIN_LEATHER -> new ItemStack(Items.LEATHER, LARGE_HIDE_LEATHER);
             default -> ItemStack.EMPTY;
@@ -169,7 +175,7 @@ public class TanningRackBlock extends HorizontalDirectionalBlock {
             level.playSound(null, pos, SoundEvents.ITEM_PICKUP, SoundSource.PLAYERS, 0.4F, 1.0F);
             level.gameEvent(player, GameEvent.BLOCK_CHANGE, pos);
             if (!player.getInventory().add(taken)) player.drop(taken, false);
-            if ((contents == Contents.LEATHER || contents == Contents.HOGLIN_LEATHER) && player instanceof ServerPlayer serverPlayer) awardTanning(serverPlayer);
+            if (contents.isLeather() && player instanceof ServerPlayer serverPlayer) awardTanning(serverPlayer);
         }
         return InteractionResult.sidedSuccess(level.isClientSide());
     }
@@ -177,7 +183,7 @@ public class TanningRackBlock extends HorizontalDirectionalBlock {
     @Override
     protected void tick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
         if (state.getValue(HALF) != DoubleBlockHalf.LOWER || !state.getValue(CONTENTS).isTanning()) return;
-        setContents(level, pos, state, state.getValue(CONTENTS) == Contents.TANNING ? Contents.LEATHER : Contents.HOGLIN_LEATHER);
+        setContents(level, pos, state, state.getValue(CONTENTS).next());
         level.playSound(null, pos.above(), SoundEvents.ARMOR_EQUIP_LEATHER.value(), SoundSource.BLOCKS, 0.8F, 1.0F);
     }
 
@@ -232,7 +238,10 @@ public class TanningRackBlock extends HorizontalDirectionalBlock {
         LEATHER("leather"),
         HOGLIN_HIDE("hoglin_hide"),
         HOGLIN_TANNING("hoglin_tanning"),
-        HOGLIN_LEATHER("hoglin_leather");
+        HOGLIN_LEATHER("hoglin_leather"),
+        SMALL_HIDE("small_hide"),
+        SMALL_TANNING("small_tanning"),
+        SMALL_LEATHER("small_leather");
 
         private final String name;
 
@@ -241,7 +250,27 @@ public class TanningRackBlock extends HorizontalDirectionalBlock {
         }
 
         public boolean isTanning() {
-            return this == TANNING || this == HOGLIN_TANNING;
+            return this == TANNING || this == HOGLIN_TANNING || this == SMALL_TANNING;
+        }
+
+        public boolean isHide() {
+            return this == HIDE || this == HOGLIN_HIDE || this == SMALL_HIDE;
+        }
+
+        public boolean isLeather() {
+            return this == LEATHER || this == HOGLIN_LEATHER || this == SMALL_LEATHER;
+        }
+
+        public Contents next() {
+            return switch (this) {
+                case HIDE -> TANNING;
+                case TANNING -> LEATHER;
+                case HOGLIN_HIDE -> HOGLIN_TANNING;
+                case HOGLIN_TANNING -> HOGLIN_LEATHER;
+                case SMALL_HIDE -> SMALL_TANNING;
+                case SMALL_TANNING -> SMALL_LEATHER;
+                default -> this;
+            };
         }
 
         @Override

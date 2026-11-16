@@ -1,0 +1,36 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:bamboo",
+    "minecraft:bamboo_sapling",
+    "#minecraft:bamboo_blocks",
+    {
+      "id": "abundant_atmosphere:red_bamboo",
+      "required": false
+    },
+    {
+      "id": "abundant_atmosphere:red_bamboo_sapling",
+      "required": false
+    },
+    {
+      "id": "abundant_atmosphere:red_bamboo_block",
+      "required": false
+    },
+    {
+      "id": "abundant_atmosphere:stripped_red_bamboo_block",
+      "required": false
+    },
+    {
+      "id": "#culturaldelights:beanstalks",
+      "required": false
+    },
+    {
+      "id": "mynethersdelight:powdery_cane",
+      "required": false
+    },
+    {
+      "id": "#mynethersdelight:powdery_blocks",
+      "required": false
+    }
+  ]
+}

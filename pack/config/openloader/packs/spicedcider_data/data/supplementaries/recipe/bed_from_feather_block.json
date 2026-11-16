@@ -1,0 +1,35 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "supplementaries:flag",
+      "flag": "feather_block"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "wholecloth"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "bed",
+  "key": {
+    "C": {
+      "item": "wholecloth:cloth_scrap"
+    },
+    "#": {
+      "item": "supplementaries:feather_block"
+    },
+    "X": {
+      "tag": "minecraft:planks"
+    }
+  },
+  "pattern": [
+    "CCC",
+    "###",
+    "XXX"
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:white_bed"
+  }
+}

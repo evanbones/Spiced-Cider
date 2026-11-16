@@ -2,7 +2,6 @@ package com.evandev.spicedcider.registry;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
@@ -12,7 +11,6 @@ import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.WallBlock;
-import net.minecraft.world.level.EmptyBlockGetter;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.MapColor;
@@ -89,7 +87,7 @@ public final class ModBuildingBlocks {
         Block source = lookup(def.properties());
         BlockState sourceState = source.defaultBlockState();
         int light = sourceState.getLightEmission();
-        MapColor mapColor = sourceState.getMapColor(EmptyBlockGetter.INSTANCE, BlockPos.ZERO);
+        MapColor mapColor = source.defaultMapColor();
         BlockBehaviour.Properties properties = BlockBehaviour.Properties.ofFullCopy(source)
                 .lightLevel(state -> light)
                 .mapColor(mapColor);

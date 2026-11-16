@@ -23,10 +23,16 @@
 	moveRecipeBookButton = true
 	#Hides your own potion effect particles in first person.
 	hideOwnEffectParticles = true
+	#Removes the armor bar from the HUD.
+	hideArmorBar = true
 	#Blindness fog reaches farther and the Darkness pulse is weaker, so both stay playable at night and underground.
 	softerBlindnessAndDarkness = true
 	#Removes the "Applies to" and "Ingredients" lines from smithing template tooltips.
 	hideSmithingTemplateTooltips = true
+	#While Picture Mode is open, everything past the loaded chunks is covered by a drifting sea of clouds instead of see-through distant terrain. Requires Picture Mode.
+	pictureModeClouds = true
+	#Held and dropped light-giving blocks glow the same colour as when they're placed. Requires Polytone.
+	matchHeldLightColors = true
 
 [vista]
 	#Applies performance fixes to Vista's mirror/TV reflection rendering (better culling, better shared-states, re-render throttling). Requires Vista (obviously).
@@ -81,6 +87,8 @@
 	carvingWheel = true
 	#Golden dandelions give off drifting golden specks. Requires Tiny Takeover Backport.
 	goldenDandelionParticles = true
+	#Adds an EMI category for what cave urns can hold when broken. Requires EMI and Supplementaries. Reload EMI or rejoin the world to apply.
+	emiUrnLootCategory = true
 
 [voxy]
 	#Replaces the terrain fog with configurable start and end distances that cover Voxy's LoD terrain, plus weather and cave fog. Disable to use Roxy's own fog.
@@ -125,6 +133,8 @@
 	windParticleStrength = 100
 	#Tiny specks of grass, dust, sand and snow blow off exposed ground when it is windy.
 	windMotes = true
+	#Fruit hanging from tree leaves swings in the wind. Requires the Wind option.
+	hangingFruitSway = true
 
 [nether]
 	#Distant terrain in the Nether shimmers in the heat, more strongly and closer up near lava. Also scaled by the Distortion Effects accessibility option.

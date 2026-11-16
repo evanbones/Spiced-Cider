@@ -59,6 +59,7 @@ public class SpicedCiderConfigScreen {
                         .option(toggle("blockDyeing", common.blockDyeing))
                         .option(toggle("composterWorms", common.composterWorms))
                         .option(toggle("azaleaTreePrevention", common.azaleaTreePrevention))
+                        .option(toggle("noLeafSpawns", common.noLeafSpawns))
                         .option(toggle("zombieTorches", common.zombieTorches))
                         .option(toggle("piglinWeaponSwap", common.piglinWeaponSwap))
                         .option(toggle("throwablePotionCooldown", common.throwablePotionCooldown))
@@ -98,8 +99,10 @@ public class SpicedCiderConfigScreen {
                         .option(toggle("bedScreenTips", client.bedScreenTips))
                         .option(toggle("moveRecipeBookButton", client.moveRecipeBookButton))
                         .option(toggle("hideOwnEffectParticles", client.hideOwnEffectParticles))
+                        .option(toggle("hideArmorBar", client.hideArmorBar))
                         .option(toggle("softerBlindnessAndDarkness", client.softerBlindnessAndDarkness))
                         .option(toggle("hideSmithingTemplateTooltips", client.hideSmithingTemplateTooltips))
+                        .option(toggle("pictureModeClouds", client.pictureModeClouds))
                         .build())
                 .categoryIf(ModList.get().isLoaded("vista"), ConfigCategory.createBuilder()
                         .name(Component.translatable("category.spicedcider.vista"))
@@ -119,6 +122,7 @@ public class SpicedCiderConfigScreen {
                         .option(toggle("windParticles", client.windParticles))
                         .option(intSlider("windParticleStrength", client.windParticleStrength, 0, 300, 5))
                         .option(toggle("windMotes", client.windMotes))
+                        .option(toggle("hangingFruitSway", client.hangingFruitSway))
                         .build())
                 .categoryIf(ModList.get().isLoaded("roxy"), ConfigCategory.createBuilder()
                         .name(Component.translatable("category.spicedcider.voxy"))
@@ -147,6 +151,8 @@ public class SpicedCiderConfigScreen {
         List<OptionGroup> groups = new ArrayList<>();
         group(groups, List.of("architects_palette"),
                 toggle("brightCageLanterns", startup.brightCageLanterns));
+        group(groups, List.of("bigbrain"),
+                toggle("calmerHerdPanic", common.calmerHerdPanic));
         group(groups, List.of("blockbox", "everycomp", "moonlight"),
                 toggle("blockBoxWoodVariants", startup.blockBoxWoodVariants));
         group(groups, List.of("caverns_and_chasms"),
@@ -167,6 +173,7 @@ public class SpicedCiderConfigScreen {
                 toggle("emiSniffingCategory", client.emiSniffingCategory),
                 toggle("emiArchaeologyCategory", client.emiArchaeologyCategory),
                 toggle("emiStructureLootCategory", client.emiStructureLootCategory),
+                mods.isLoaded("supplementaries") ? toggle("emiUrnLootCategory", client.emiUrnLootCategory) : null,
                 mods.isLoaded("nomansland") ? toggle("emiTappingCategory", client.emiTappingCategory) : null,
                 mods.isLoaded("spelunkery") ? toggle("emiSluicingCategory", client.emiSluicingCategory) : null,
                 mods.isLoaded("create") ? toggle("emiCreateFanRework", client.emiCreateFanRework) : null);
@@ -189,6 +196,8 @@ public class SpicedCiderConfigScreen {
         group(groups, List.of("reliable_backpacks"),
                 toggle("backpackInventoryRows", common.backpackInventoryRows),
                 toggle("backpackAcceptAnything", common.backpackAcceptAnything));
+        group(groups, List.of("polytone", "lambdynlights"),
+                toggle("matchHeldLightColors", client.matchHeldLightColors));
         group(groups, List.of("remi"),
                 toggle("remiRightSideTabs", client.remiRightSideTabs));
         group(groups, List.of("slime_time"),
@@ -204,6 +213,8 @@ public class SpicedCiderConfigScreen {
         group(groups, List.of("tiny_takeover_backport"),
                 toggle("goldenDandelionTempting", common.goldenDandelionTempting),
                 toggle("goldenDandelionParticles", client.goldenDandelionParticles));
+        group(groups, List.of("treeliable", "modest_meals"),
+                toggle("treeChoppingStamina", common.treeChoppingStamina));
         group(groups, List.of("voicechat"),
                 toggle("voiceChatHideSingleplayerHud", client.voiceChatHideSingleplayerHud));
         group(groups, List.of("reliable_gliders"),

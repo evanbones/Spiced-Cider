@@ -17,6 +17,7 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.item.ItemNameBlockItem;
 import net.neoforged.fml.ModList;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -148,7 +149,12 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> FIREFLY = ITEMS.register("firefly",
             () -> new Item(new Item.Properties()));
+    @Nullable
+    public static final DeferredItem<Item> MINT_SEEDS = ModBlocks.MINT_CROP != null
+            ? ITEMS.register("mint_seeds", () -> new ItemNameBlockItem(ModBlocks.MINT_CROP.get(), new Item.Properties()))
+            : null;
     public static final DeferredItem<BlockItem> WORMY_DIRT = ITEMS.registerSimpleBlockItem(ModBlocks.WORMY_DIRT);
+    public static final DeferredItem<BlockItem> RICH_GRAVEL = ITEMS.registerSimpleBlockItem(ModBlocks.RICH_GRAVEL);
     public static final DeferredItem<BlockItem> GLOAMWOOD_SAPLING = ITEMS.registerSimpleBlockItem(ModBlocks.GLOAMWOOD_SAPLING);
     public static final DeferredItem<BlockItem> WORM_CRATE = ITEMS.registerSimpleBlockItem(ModBlocks.WORM_CRATE);
     public static final DeferredItem<Item> MAP_IN_A_BOTTLE = ITEMS.register("map_in_a_bottle",
@@ -320,6 +326,7 @@ public class ModItems {
         ingots.put("rose_gold", ResourceLocation.fromNamespaceAndPath("oooh_pinky", "rose_gold_ingot"));
         ingots.put("silver", ResourceLocation.fromNamespaceAndPath("caverns_and_chasms", "silver_ingot"));
         ingots.put("electrum", ResourceLocation.fromNamespaceAndPath("modestmining", "electrum_ingot"));
+        ingots.put("diamond", ResourceLocation.withDefaultNamespace("diamond"));
         ingots.put("netherite", ResourceLocation.withDefaultNamespace("netherite_ingot"));
         ingots.put("necromium", ResourceLocation.fromNamespaceAndPath("caverns_and_chasms", "necromium_ingot"));
         ingots.put("prismarite", ResourceLocation.fromNamespaceAndPath("modestmining", "prismarite_ingot"));

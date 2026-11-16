@@ -1,0 +1,19 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "modestmining"
+    }
+  ],
+  "type": "spicedcider:anvil_smithing",
+  "base": {
+    "item": "modestmining:steel_javelin"
+  },
+  "addition": {
+    "tag": "c:plates/diamond"
+  },
+  "result": {
+    "count": 1,
+    "id": "modestmining:diamond_javelin"
+  }
+}

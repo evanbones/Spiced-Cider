@@ -30,6 +30,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlockWithItem(ModBlocks.CAST_IRON_BLOCK.get(), cubeAll(ModBlocks.CAST_IRON_BLOCK.get()));
         simpleBlockWithItem(ModBlocks.TALLOW_BLOCK.get(), cubeAll(ModBlocks.TALLOW_BLOCK.get()));
         simpleBlockWithItem(ModBlocks.WORMY_DIRT.get(), cubeAll(ModBlocks.WORMY_DIRT.get()));
+        simpleBlockWithItem(ModBlocks.RICH_GRAVEL.get(), cubeAll(ModBlocks.RICH_GRAVEL.get()));
         simpleBlockWithItem(ModBlocks.DEPOSIT.get(), cubeAll(ModBlocks.DEPOSIT.get()));
         simpleBlockWithItem(ModBlocks.DEEPSLATE_DEPOSIT.get(), cubeAll(ModBlocks.DEEPSLATE_DEPOSIT.get()));
         simpleBlockWithItem(ModBlocks.BLACKSTONE_DEPOSIT.get(), cubeAll(ModBlocks.BLACKSTONE_DEPOSIT.get()));

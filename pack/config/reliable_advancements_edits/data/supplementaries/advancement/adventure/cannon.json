@@ -1,0 +1,25 @@
+{
+  "parent": "spicedcider:adventure/glider",
+  "display": {
+    "icon": {
+      "id": "supplementaries:cannon"
+    },
+    "title": {
+      "text": "Up Up and Away"
+    },
+    "description": {
+      "text": "Shoot yourself out of a Cannon"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "unlock": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "unlock"
+    ]
+  ]
+}

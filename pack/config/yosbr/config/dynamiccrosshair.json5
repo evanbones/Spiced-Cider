@@ -110,16 +110,16 @@
 	"crosshairModifiers": {
 		"modCorrectTool": {
 			"style": "dynamiccrosshair:crosshair/dot",
-			"overrideColor": false,
-			"customColor": -5588020,
-			"enableBlend": true,
+			"overrideColor": true,
+			"customColor": -16711936,
+			"enableBlend": false,
 			"coalesce": true
 		},
 		"modIncorrectTool": {
 			"style": "dynamiccrosshair:crosshair/cross-open-diagonal",
-			"overrideColor": false,
-			"customColor": -5588020,
-			"enableBlend": true,
+			"overrideColor": true,
+			"customColor": -65536,
+			"enableBlend": false,
 			"coalesce": true
 		}
 	},

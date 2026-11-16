@@ -47,8 +47,7 @@
   {
     "action": "remove",
     "items": [
-      "neapolitan:mint_leaves",
-      "neapolitan:mint_sprout"
+      "neapolitan:mint_leaves"
     ],
     "replace_with": "culturaldelights:mint"
   },
@@ -57,5 +56,12 @@
     "items": [
       "neapolitan:strawberry_bean_bonbons"
     ]
+  },
+  {
+    "action": "remove",
+    "items": [
+      "neapolitan:mint_sprout"
+    ],
+    "replace_with": "spicedcider:mint_seeds"
   }
 ]

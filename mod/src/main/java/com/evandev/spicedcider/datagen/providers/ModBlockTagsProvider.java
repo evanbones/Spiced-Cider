@@ -37,7 +37,8 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                 .addOptional(ResourceLocation.fromNamespaceAndPath("caverns_and_chasms", "tuff_tile_slab"));
 
         this.tag(BlockTags.MINEABLE_WITH_SHOVEL)
-                .add(ModBlocks.WORMY_DIRT.get());
+                .add(ModBlocks.WORMY_DIRT.get())
+                .add(ModBlocks.RICH_GRAVEL.get());
         this.tag(BlockTags.MINEABLE_WITH_AXE)
                 .add(ModBlocks.WORM_CRATE.get())
                 .add(ModBlocks.GOLDEN_WORM_CRATE.get())
@@ -190,7 +191,7 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         optional(ModTags.Blocks.PALE_GOLEM_HEADS, paleJacks);
         this.tag(BlockTags.SMALL_FLOWERS).add(ModPaleGardenBlocks.PALE_ROSE.get());
         this.tag(BlockTags.SWORD_EFFICIENT).add(ModPaleGardenBlocks.PALE_BUSH.get(), ModPaleGardenBlocks.TALL_PALE_BUSH.get());
-        this.tag(BlockTags.REPLACEABLE_BY_TREES).add(ModPaleGardenBlocks.PALE_BUSH.get(), ModPaleGardenBlocks.TALL_PALE_BUSH.get());
+        this.tag(BlockTags.REPLACEABLE_BY_TREES).add(ModPaleGardenBlocks.PALE_BUSH.get(), ModPaleGardenBlocks.TALL_PALE_BUSH.get(), ModBlocks.PLACED_STICK.get());
         this.tag(BlockTags.FLOWER_POTS).add(ModPaleGardenBlocks.POTS.stream().map(DeferredBlock::get).toArray(Block[]::new));
         this.tag(BlockTags.FLOWER_POTS).addOptional(ResourceLocation.fromNamespaceAndPath("spicedcider", "potted_cactus_flower"));
         this.tag(BlockTags.FIRE).add(ModFireBlocks.SULFUR_FIRE.get());

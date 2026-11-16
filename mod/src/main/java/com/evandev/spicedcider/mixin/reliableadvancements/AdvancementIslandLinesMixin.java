@@ -19,7 +19,7 @@ import java.util.Set;
 public class AdvancementIslandLinesMixin {
 
     @Unique
-    private static final Set<ResourceLocation> spicedcider$ISLAND_ROOTS = Set.of(
+    private static final Set<ResourceLocation> spicedcider$TOP_DOWN_ROOTS = Set.of(
             ResourceLocation.fromNamespaceAndPath("spicedcider", "adventure/root"),
             ResourceLocation.fromNamespaceAndPath("spicedcider", "husbandry/root"),
             ResourceLocation.fromNamespaceAndPath("spicedcider", "industry/root")
@@ -29,10 +29,10 @@ public class AdvancementIslandLinesMixin {
     private ConnectionRouter.Side incomingSide;
 
     @WrapOperation(method = "drawConnectivity", at = @At(value = "INVOKE", target = "Lcom/evandev/reliable_advancements/gui/EnhancedAdvancementWidget;drawConnection(Lnet/minecraft/client/gui/GuiGraphics;Lcom/evandev/reliable_advancements/gui/EnhancedAdvancementWidget;IIZ)V"))
-    private void spicedcider$skipIslandRootLines(EnhancedAdvancementWidget self, GuiGraphics guiGraphics, EnhancedAdvancementWidget parent, int scrollX, int scrollY, boolean drawInside, Operation<Void> original) {
-        if (spicedcider$ISLAND_ROOTS.contains(parent.getAdvancement().holder().id())) {
-            this.incomingSide = ConnectionRouter.Side.LEFT;
-            return;
+    private void spicedcider$topDownRootLines(EnhancedAdvancementWidget self, GuiGraphics guiGraphics, EnhancedAdvancementWidget parent, int scrollX, int scrollY, boolean drawInside, Operation<Void> original) {
+        ResourceLocation parentId = parent.getAdvancement().holder().id();
+        if (spicedcider$TOP_DOWN_ROOTS.contains(parentId)) {
+            ((AdvancementIslandLinesMixin) (Object) parent).incomingSide = ConnectionRouter.Side.TOP;
         }
         original.call(self, guiGraphics, parent, scrollX, scrollY, drawInside);
     }

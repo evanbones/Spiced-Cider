@@ -51,6 +51,7 @@ public class SpicedCiderCrosshairApi implements DynamicCrosshairApi {
         if (interactionType != InteractionType.TOOL && interactionType != InteractionType.USABLE_TOOL && !knife) return null;
 
         BlockState state = context.getBlockState();
+        if (state.isAir()) return new Crosshair(interactionType);
         boolean alreadyUsable = interactionType == InteractionType.USABLE_TOOL;
         boolean newlyUsable = !alreadyUsable && isUsable(context, stack, state, knife);
         boolean shearable = stack.canPerformAction(ItemAbilities.SHEARS_DIG) && state.is(MINEABLE_WITH_SHEARS);

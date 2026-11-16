@@ -1,0 +1,14 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "spicedcider:feature",
+      "feature": "placedSticks"
+    }
+  ],
+  "type": "neoforge:add_features",
+  "biomes": "#spicedcider:has_feature/placed_sticks",
+  "features": [
+    "spicedcider:placed_sticks"
+  ],
+  "step": "vegetal_decoration"
+}

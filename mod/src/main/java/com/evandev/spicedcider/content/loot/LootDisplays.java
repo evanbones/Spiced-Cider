@@ -62,6 +62,9 @@ public class LootDisplays {
     public static final String SNIFFER = "sniffer";
     public static final String ARCHAEOLOGY = "archaeology";
     public static final String STRUCTURE_LOOT = "structure";
+    public static final String BLOCK_LOOT = "block";
+    public static final ResourceLocation URN = ResourceLocation.fromNamespaceAndPath("supplementaries", "urn");
+    public static final List<String> URN_TIERS = List.of("common", "uncommon", "rare", "epic");
     private static final int SAMPLES = 16;
     private static final int MAX_DEPTH = 4;
     private static final Map<String, ResourceLocation> ITEM_MODIFIERS = Map.of(
@@ -147,6 +150,10 @@ public class LootDisplays {
         StructureLootIndex.Index index = structureIndex(server, sampler.keys);
         index.archaeology().forEach((structure, sources) -> addStructure(tables, ARCHAEOLOGY, structure, sources, sampler, injections));
         index.chests().forEach((structure, sources) -> addStructure(tables, STRUCTURE_LOOT, structure, sources, sampler, injections));
+        for (String tier : URN_TIERS) {
+            ResourceLocation table = URN.withPath("loot/urn_loot/" + tier);
+            addTable(tables, BLOCK_LOOT, table, List.of(URN), sampler, injections, List.of(table));
+        }
 
         builtFor = holder;
         built = new LootDisplayPayload(tables);

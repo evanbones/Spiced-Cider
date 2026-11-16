@@ -313,6 +313,8 @@ dependencies {
 
     // Tide
     compileOnly "maven.modrinth:tide:1ki6UyqV"
+    compileOnly "maven.modrinth:FllppLY0:pcGnSTx8"
+    compileOnly "maven.modrinth:93YCaBJj:8jogbFkE"
     runtimeOnly "maven.modrinth:tide:1ki6UyqV"
     runtimeOnly "me.shedaniel.cloth:cloth-config-neoforge:15.0.140"
 
@@ -346,6 +348,8 @@ dependencies {
     compileOnly "maven.modrinth:mixed-litter:79yyzlTc"
     runtimeOnly "maven.modrinth:mixed-litter:79yyzlTc"
 
+    compileOnly "maven.modrinth:JIEwmDVI:f3SxKzof"
+
     // Cirrus
     compileOnly "maven.modrinth:SJDzFJH7:VHN0gvNp"
 
@@ -369,6 +373,7 @@ dependencies {
 
     // Voxy
     compileOnly "maven.modrinth:voxy:H3w2nVdU"
+    compileOnly "maven.modrinth:kFU5UCQz:GoEQFc6b"
     compileOnly project(":roxy")
 
     // Big Water

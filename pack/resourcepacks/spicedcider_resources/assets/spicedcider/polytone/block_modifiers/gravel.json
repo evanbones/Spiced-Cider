@@ -2,6 +2,10 @@
   "targets": [
     "minecraft:gravel",
     {
+      "id": "spicedcider:rich_gravel",
+      "required": false
+    },
+    {
       "id": "supplementaries:raked_gravel",
       "required": false
     },

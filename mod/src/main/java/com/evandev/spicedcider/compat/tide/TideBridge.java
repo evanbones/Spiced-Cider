@@ -1,6 +1,7 @@
 package com.evandev.spicedcider.compat.tide;
 
 import com.li64.tide.data.fishing.mediums.FishingMedium;
+import com.li64.tide.data.item.TideDataComponents;
 import com.li64.tide.data.rods.CustomRodManager;
 import com.li64.tide.registries.items.FishingHookItem;
 import com.li64.tide.registries.items.FishingLineItem;
@@ -35,5 +36,9 @@ final class TideBridge {
 
     static String getLineColor(ItemStack line) {
         return FishingLineItem.getColor(line);
+    }
+
+    static void stripBucketableMarker(ItemStack stack) {
+        stack.remove(TideDataComponents.IS_BUCKETABLE);
     }
 }

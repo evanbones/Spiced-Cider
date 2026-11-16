@@ -220,6 +220,11 @@ public class ModItemTagsProvider extends ItemTagsProvider {
             this.tag(ItemTags.create(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("c", "plates/" + metal))).addOptional(sheet);
         });
 
+        net.minecraft.resources.ResourceLocation mintSeeds = net.minecraft.resources.ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "mint_seeds");
+        for (String tag : java.util.List.of("c:seeds", "c:seeds/mint", "minecraft:chicken_food", "minecraft:parrot_food", "quark:seed_pouch_holdable")) {
+            this.tag(ItemTags.create(net.minecraft.resources.ResourceLocation.parse(tag))).addOptional(mintSeeds);
+        }
+
         addTierItemTags();
     }
 

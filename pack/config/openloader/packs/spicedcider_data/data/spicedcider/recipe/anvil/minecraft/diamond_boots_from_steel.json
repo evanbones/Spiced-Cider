@@ -1,0 +1,19 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "alloyed"
+    }
+  ],
+  "type": "spicedcider:anvil_smithing",
+  "base": {
+    "item": "alloyed:steel_boots"
+  },
+  "addition": {
+    "tag": "c:plates/diamond"
+  },
+  "result": {
+    "count": 1,
+    "id": "minecraft:diamond_boots"
+  }
+}

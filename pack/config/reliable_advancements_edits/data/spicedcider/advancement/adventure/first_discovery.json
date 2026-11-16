@@ -8,18 +8,18 @@
       "text": "Aha!"
     },
     "description": {
-      "text": "Scan a creature with your Field Guide"
+      "text": "Scan something with a Lens or Spyglass"
     },
     "frame": "task"
   },
   "criteria": {
-    "unlock": {
-      "trigger": "fieldguide:entry_unlocked"
+    "scan": {
+      "trigger": "spicedcider:field_guide_scan"
     }
   },
   "requirements": [
     [
-      "unlock"
+      "scan"
     ]
   ]
 }

@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.content.loot;
 
+import com.evandev.spicedcider.compat.treeliable.LeafFelling;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
@@ -41,6 +42,11 @@ public class BonusBlockDropLootModifier extends LootModifier {
     protected @NotNull ObjectArrayList<ItemStack> doApply(@NotNull ObjectArrayList<ItemStack> generatedLoot, LootContext context) {
         BlockState state = context.getParamOrNull(LootContextParams.BLOCK_STATE);
         if (state == null || !state.is(blocks)) {
+            return generatedLoot;
+        }
+
+        if (LeafFelling.active()) {
+            generatedLoot.removeIf(stack -> stack.is(item));
             return generatedLoot;
         }
 

@@ -44,7 +44,7 @@ public abstract class InventoryMenuBackpackMixin extends RecipeBookMenu<Crafting
 
     @WrapMethod(method = "quickMoveStack")
     private ItemStack spicedcider$quickMoveWithBackpack(Player player, int index, Operation<ItemStack> original) {
-        if (this.spicedcider$backpack == null || !this.spicedcider$backpack.isOpen()) {
+        if (this.spicedcider$backpack == null || !this.spicedcider$backpack.isOpen() || index == InventoryMenu.RESULT_SLOT) {
             return original.call(player, index);
         }
 
@@ -57,13 +57,7 @@ public abstract class InventoryMenuBackpackMixin extends RecipeBookMenu<Crafting
         int first = WornBackpackSlot.FIRST;
         int end = WornBackpackSlot.END;
 
-        if (index == InventoryMenu.RESULT_SLOT) {
-            if (!this.moveItemStackTo(stack, InventoryMenu.INV_SLOT_START, InventoryMenu.USE_ROW_SLOT_END, true)
-                    && !this.moveItemStackTo(stack, first, end, true)) {
-                return ItemStack.EMPTY;
-            }
-            slot.onQuickCraft(stack, copy);
-        } else if (index < InventoryMenu.INV_SLOT_START) {
+        if (index < InventoryMenu.INV_SLOT_START) {
             if (!this.moveItemStackTo(stack, InventoryMenu.INV_SLOT_START, InventoryMenu.USE_ROW_SLOT_END, false)
                     && !this.moveItemStackTo(stack, first, end, false)) {
                 return ItemStack.EMPTY;
@@ -98,9 +92,6 @@ public abstract class InventoryMenuBackpackMixin extends RecipeBookMenu<Crafting
         if (stack.getCount() == copy.getCount()) return ItemStack.EMPTY;
 
         slot.onTake(player, stack);
-        if (index == InventoryMenu.RESULT_SLOT) {
-            player.drop(stack, false);
-        }
         return copy;
     }
 }

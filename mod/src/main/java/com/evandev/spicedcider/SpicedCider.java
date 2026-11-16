@@ -5,6 +5,7 @@ import com.evandev.spicedcider.compat.dynamiccrosshair.DynamicCrosshairCompat;
 import com.evandev.spicedcider.client.ResourcePackDownloader;
 import com.evandev.spicedcider.client.mixing.CauldronStirClient;
 import com.evandev.spicedcider.compat.voxy.VoxyFog;
+import com.evandev.spicedcider.compat.modernfix.HangingFruitLazyModelWrapping;
 import com.evandev.spicedcider.compat.wherewindsblow.WhereWindsBlowLazyModelWrapping;
 import com.evandev.spicedcider.compat.everycompat.BlockBoxEveryCompatLoader;
 import com.evandev.spicedcider.compat.infernalexp.InfernalExpansionCompat;
@@ -16,6 +17,7 @@ import com.evandev.spicedcider.config.LogReconfiguration;
 import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.evandev.spicedcider.compat.nomansland.NoMansLandCreate;
 import com.evandev.spicedcider.compat.toilandtrouble.ToilAndTroubleCapabilities;
+import com.evandev.spicedcider.compat.treeliable.ChopStamina;
 import com.evandev.spicedcider.compat.everycompat.ChestCapabilities;
 import com.evandev.spicedcider.content.block.LatexCauldronBlock;
 import com.evandev.spicedcider.content.item.BalloonItem;
@@ -102,6 +104,9 @@ public class SpicedCider {
             if (ModList.get().isLoaded("continuity") && ModList.get().isLoaded("modernfix")) {
                 ContinuityLazyModelWrapping.register();
             }
+            if (ModList.get().isLoaded("modernfix")) {
+                HangingFruitLazyModelWrapping.register();
+            }
             if (ModList.get().isLoaded("where_winds_blow") && ModList.get().isLoaded("modernfix")) {
                 WhereWindsBlowLazyModelWrapping.register();
             }
@@ -137,10 +142,12 @@ public class SpicedCider {
         ModMapDecorationTypes.MAP_DECORATION_TYPES.register(modEventBus);
         ModLootModifiers.LOOT_MODIFIER_SERIALIZERS.register(modEventBus);
         ModLootConditions.LOOT_CONDITION_TYPES.register(modEventBus);
+        ModCriteria.TRIGGERS.register(modEventBus);
         ModConditions.CONDITION_CODECS.register(modEventBus);
         ModDataComponents.DATA_COMPONENTS.register(modEventBus);
         if (ModList.get().isLoaded("iteminteractions")) ItemInteractionsCompat.register(modEventBus);
         if (ModList.get().isLoaded("toil_and_trouble")) modEventBus.addListener(ToilAndTroubleCapabilities::register);
+        if (ModList.get().isLoaded("treeliable") && ModList.get().isLoaded("modest_meals")) ChopStamina.register();
         modEventBus.addListener(EventPriority.LOWEST, ChestCapabilities::register);
         ModFluidTypes.FLUID_TYPES.register(modEventBus);
         ModFluids.FLUIDS.register(modEventBus);
@@ -240,6 +247,7 @@ public class SpicedCider {
             event.accept(ModItems.GRUB.get(), vis);
             event.accept(ModItems.MINNOW.get(), vis);
             event.accept(ModItems.FIREFLY.get(), vis);
+            if (ModItems.MINT_SEEDS != null) event.accept(ModItems.MINT_SEEDS.get(), vis);
             event.accept(ModItems.GOLDEN_WORM.get(), vis);
             event.accept(ModItems.TIN_CAN.get(), vis);
             event.accept(ModItems.GEODE.get(), vis);
@@ -267,6 +275,7 @@ public class SpicedCider {
         }
         if (event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
             event.insertAfter(new ItemStack(Items.ROOTED_DIRT), new ItemStack(ModItems.WORMY_DIRT.get()), vis);
+            event.insertAfter(new ItemStack(Items.GRAVEL), new ItemStack(ModItems.RICH_GRAVEL.get()), vis);
             event.insertAfter(new ItemStack(Items.FLOWERING_AZALEA), new ItemStack(ModItems.GLOAMWOOD_SAPLING.get()), vis);
             event.insertAfter(new ItemStack(Items.HONEYCOMB_BLOCK), new ItemStack(ModItems.TALLOW_BLOCK.get()), vis);
             event.accept(ModItems.DEPOSIT.get(), vis);

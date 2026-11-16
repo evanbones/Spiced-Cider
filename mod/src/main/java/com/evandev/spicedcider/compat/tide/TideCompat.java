@@ -45,4 +45,8 @@ public final class TideCompat {
     public static String getLineColor(ItemStack line) {
         return isLoaded() ? TideBridge.getLineColor(line) : DEFAULT_LINE_COLOR;
     }
+
+    public static void stripBucketableMarker(ItemStack stack) {
+        if (isLoaded() && !stack.isEmpty()) TideBridge.stripBucketableMarker(stack);
+    }
 }

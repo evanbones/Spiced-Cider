@@ -1,0 +1,39 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "wholecloth"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "bed",
+  "key": {
+    "C": {
+      "item": "wholecloth:cloth_scrap"
+    },
+    "#": [
+      {
+        "item": "minecraft:gray_wool"
+      },
+      {
+        "item": "wholecloth:gray_cloth_scrap_block"
+      },
+      {
+        "item": "wholecloth:cloth_scrap_block"
+      }
+    ],
+    "X": {
+      "tag": "minecraft:planks"
+    }
+  },
+  "pattern": [
+    "CCC",
+    "###",
+    "XXX"
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:gray_bed"
+  }
+}

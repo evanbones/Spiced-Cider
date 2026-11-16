@@ -41,7 +41,8 @@ public class TanningEmiRecipe extends BasicEmiRecipe {
         EmiRecipeCategory category = new EmiRecipeCategory(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "tanning"), rack);
         registry.addCategory(category);
         registry.addWorkstation(category, rack);
-        registry.addRecipe(new TanningEmiRecipe(category, "leather", ModTags.Items.TANNABLE_HIDES, 1));
+        registry.addRecipe(new TanningEmiRecipe(category, "leather", ModTags.Items.TANNABLE_HIDES, TanningRackBlock.HIDE_LEATHER));
+        registry.addRecipe(new TanningEmiRecipe(category, "small_hide_leather", ModTags.Items.SMALL_TANNABLE_HIDES, TanningRackBlock.SMALL_HIDE_LEATHER));
         if (BuiltInRegistries.ITEM.getTag(ModTags.Items.LARGE_TANNABLE_HIDES).map(tag -> tag.size() > 0).orElse(false)) {
             registry.addRecipe(new TanningEmiRecipe(category, "large_hide_leather", ModTags.Items.LARGE_TANNABLE_HIDES, TanningRackBlock.LARGE_HIDE_LEATHER));
         }
@@ -53,7 +54,7 @@ public class TanningEmiRecipe extends BasicEmiRecipe {
         widgets.addTexture(EmiTexture.PLUS, 21, 8);
         widgets.addSlot(agent, 34, 4);
         widgets.addFillingArrow(58, 5, TanningRackBlock.TANNING_TICKS * 50)
-                .tooltipText(List.of(Component.translatable("emi.spicedcider.tanning.time", TanningRackBlock.TANNING_TICKS / 1200)));
+                .tooltipText(List.of(Component.translatable("emi.spicedcider.tanning.time", TanningRackBlock.TANNING_TICKS / 20)));
         widgets.addSlot(outputs.getFirst(), WIDTH - 26, 0).large(true).recipeContext(this);
     }
 }

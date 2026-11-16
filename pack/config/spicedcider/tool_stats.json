@@ -6,8 +6,15 @@
       "items": [
         "modestmining:flint_.+",
         "farmersdelight:flint_knife",
-        "manual_labour:flint_hammer",
         "minecraft:flint_and_steel"
+      ]
+    },
+    "flint_mallet": {
+      "durability": 150,
+      "speed": 3.5,
+      "incorrect": "minecraft:incorrect_for_wooden_tool",
+      "items": [
+        "manual_labour:flint_hammer"
       ]
     },
     "gold": {
@@ -128,6 +135,10 @@
         "modestmining:valkyrium_(sword|shovel|pickaxe|axe|hoe|knife|javelin|hammer)",
         "?spicedcider:valkyrium_hammer"
       ]
+    },
+    "pestle": {
+      "durability": 300,
+      "items": ["manual_labour:pestle"]
     }
   },
   "armor": {

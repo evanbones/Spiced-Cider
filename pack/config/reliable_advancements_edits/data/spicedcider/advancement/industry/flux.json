@@ -2,13 +2,13 @@
   "parent": "spicedcider:industry/root",
   "display": {
     "icon": {
-      "id": "minecraft:redstone"
+      "id": "spelunkery:rough_cinnabar"
     },
     "title": {
       "text": "Flux Capacitor"
     },
     "description": {
-      "text": "Mine Flux Ore with a Steel Pickaxe"
+      "text": "Mine Flux Ore with a Bronze Pickaxe"
     },
     "frame": "task"
   },
@@ -18,7 +18,11 @@
       "conditions": {
         "items": [
           {
-            "items": "minecraft:redstone"
+            "items": [
+              "spelunkery:rough_cinnabar",
+              "spelunkery:rough_cinnabar_shard",
+              "minecraft:redstone"
+            ]
           }
         ]
       }

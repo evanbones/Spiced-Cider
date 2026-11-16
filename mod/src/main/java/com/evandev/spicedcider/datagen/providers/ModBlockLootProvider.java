@@ -49,6 +49,7 @@ public class ModBlockLootProvider extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.WORM_CRATE.get());
         this.dropSelf(ModBlocks.GOLDEN_WORM_CRATE.get());
         this.add(ModBlocks.WORMY_DIRT.get(), this::createWormyDirtTable);
+        this.add(ModBlocks.RICH_GRAVEL.get(), this::createRichGravelTable);
         this.add(ModBlocks.DEPOSIT.get(), block -> this.createDepositTable(block, ModItems.GEODE.get()));
         this.add(ModBlocks.DEEPSLATE_DEPOSIT.get(), block -> this.createDepositTable(block, ModItems.DEEPSLATE_GEODE.get()));
         this.add(ModBlocks.BLACKSTONE_DEPOSIT.get(), block -> this.createDepositTable(block, ModItems.BLACKSTONE_GEODE.get()));
@@ -124,6 +125,13 @@ public class ModBlockLootProvider extends BlockLootSubProvider {
                 .apply(ApplyBonusCount.addUniformBonusCount(enchantments.getOrThrow(Enchantments.FORTUNE)))));
     }
 
+    private LootTable.Builder createRichGravelTable(Block block) {
+        HolderLookup.RegistryLookup<Enchantment> enchantments = this.registries.lookupOrThrow(Registries.ENCHANTMENT);
+        return this.createSilkTouchDispatchTable(block, this.applyExplosionDecay(block, LootItem.lootTableItem(Items.FLINT)
+                .apply(SetItemCountFunction.setCount(UniformGenerator.between(2.0F, 3.0F)))
+                .apply(ApplyBonusCount.addOreBonusCount(enchantments.getOrThrow(Enchantments.FORTUNE)))));
+    }
+
     private LootTable.Builder createWormyDirtTable(Block block) {
         HolderLookup.RegistryLookup<Enchantment> enchantments = this.registries.lookupOrThrow(Registries.ENCHANTMENT);
         return LootTable.lootTable()
@@ -145,6 +153,7 @@ public class ModBlockLootProvider extends BlockLootSubProvider {
     protected @NotNull Iterable<Block> getKnownBlocks() {
         List<Block> blocks = new ArrayList<>(List.of(ModBlocks.CAST_IRON_BLOCK.get(), ModBlocks.TALLOW_BLOCK.get()));
         blocks.add(ModBlocks.WORMY_DIRT.get());
+        blocks.add(ModBlocks.RICH_GRAVEL.get());
         blocks.add(ModBlocks.DEPOSIT.get());
         blocks.add(ModBlocks.DEEPSLATE_DEPOSIT.get());
         blocks.add(ModBlocks.BLACKSTONE_DEPOSIT.get());

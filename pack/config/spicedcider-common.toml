@@ -27,6 +27,8 @@
 	pineconesOnTrees = true
 	#Building a copper golem doesn't leave a copper chest behind. Requires Vanilla Backport.
 	copperGolemNoChest = true
+	#Each Treeliable chop costs half a bolt of Modest Meals stamina. Without stamina, logs break normally without counting as a chop. Requires Treeliable and Modest Meals.
+	treeChoppingStamina = true
 	#Awake creaking hearts and resin clumps give off light, creaking eyes always glow, and eyeblossoms open in dim light at any time of day. Requires Vanilla Backport.
 	vanillaBackportLightTweaks = true
 	#The creaking moves a little faster and hits twice as hard. Requires Vanilla Backport.
@@ -35,6 +37,8 @@
 	goldenDandelionTempting = true
 	#Ocean ruins generate prismarine chests instead of regular chests. Requires Quark. Only affects newly generated terrain.
 	oceanRuinPrismarineChests = true
+	#Animals that flee after seeing one of their herd hurt run at a normal panic speed instead of sprinting away. Requires Big Brain.
+	calmerHerdPanic = true
 
 [features]
 	#Combine a named name tag with an item in the crafting grid to rename it. Takes effect after /reload.
@@ -77,6 +81,10 @@
 	paleGardenPlants = true
 	#Sniffers can dig up golden dandelions. Requires Tiny Takeover Backport. Takes effect after /reload.
 	snifferGoldenDandelions = true
+	#Sneak and use a stick on the ground to lay it down. Sticks also lie scattered on forest floors in newly generated terrain.
+	placedSticks = true
+	#Rich gravel, which drops several flint, generates in gravel patches. Needs a world restart and only affects new chunks.
+	richGravel = true
 
 	[features.gameplay]
 		#Beds don't explode outside the Overworld; instead they show a message and wake sleeping villagers.
@@ -127,6 +135,8 @@
 		paleOakGrowsGloomwood = true
 		#Broken tools can still be used to cut ingredients on cutting boards.
 		brokenToolsOnCuttingBoards = false
+		#Players and the world spawn are never placed on top of leaves.
+		noLeafSpawns = true
 
 	[features.voidWater]
 		#Fluids at the bottom of the world spill into the void as fading trails you can swim in. Takes effect when a world is next loaded.

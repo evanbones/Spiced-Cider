@@ -51,6 +51,11 @@ ordering = "AFTER"
 side = "BOTH"
 
 [[dependencies.${ mod_id }]]
+modId = "smooth_animations"
+type = "optional"
+side = "CLIENT"
+
+[[dependencies.${ mod_id }]]
 modId = "tide"
 type = "optional"
 versionRange = "[2.1,)"
@@ -122,6 +127,13 @@ side = "BOTH"
 
 [[dependencies.${ mod_id }]]
 modId = "fieldguide"
+type = "optional"
+versionRange = "*"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.${ mod_id }]]
+modId = "bigbrain"
 type = "optional"
 versionRange = "*"
 ordering = "AFTER"

@@ -16,7 +16,7 @@ public class ParticleEngineWindMixin {
     private Particle spicedcider$windResponse(ParticleOptions options, double x, double y, double z, double xSpeed, double ySpeed, double zSpeed, Operation<Particle> original) {
         if (WindParticles.thinned(options.getType())) return null;
         Particle particle = original.call(options, x, y, z, xSpeed, ySpeed, zSpeed);
-        if (particle != null) ((WindBlown) particle).spicedcider$setWindResponse(WindParticles.response(options.getType()));
+        if (particle instanceof WindBlown blown) blown.spicedcider$setWindResponse(WindParticles.response(options.getType(), particle, blown.spicedcider$hasPhysics()));
         return particle;
     }
 }

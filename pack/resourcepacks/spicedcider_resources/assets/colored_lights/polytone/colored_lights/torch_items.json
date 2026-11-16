@@ -1,0 +1,13 @@
+{
+  "require_config": "colored_lights:item_lights",
+  "target_type": "item",
+  "targets": [
+    "minecraft:torch",
+    "minecraft:lantern"
+  ],
+  "colored_light": {
+    "color": "#FFB55C",
+    "radius": 6,
+    "brightness": "o.inWater() ? 0 : 1"
+  }
+}

@@ -95,9 +95,10 @@
   {
     "action": "remove",
     "items": [
-      "spelunkery:diamond_shard"
+      "spelunkery:diamond_shard",
+      "modestmining:diamond_shard"
     ],
-    "replace_with": "modestmining:diamond_shard"
+    "replace_with": "spelunkery:rough_diamond_shard"
   },
   {
     "action": "remove",

@@ -1,0 +1,36 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "wholecloth"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "bed",
+  "key": {
+    "C": {
+      "item": "wholecloth:cloth_scrap"
+    },
+    "#": [
+      {
+        "item": "minecraft:orange_wool"
+      },
+      {
+        "item": "wholecloth:orange_cloth_scrap_block"
+      }
+    ],
+    "X": {
+      "tag": "minecraft:planks"
+    }
+  },
+  "pattern": [
+    "CCC",
+    "###",
+    "XXX"
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:orange_bed"
+  }
+}

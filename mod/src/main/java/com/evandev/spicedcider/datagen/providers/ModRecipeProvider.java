@@ -47,10 +47,10 @@ public class ModRecipeProvider extends RecipeProvider {
         RecipeOutput buildingOutput = output.withConditions(new FeatureCondition("buildingBlocks"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.GRAPPLING_HOOK.get())
-                .pattern(" C")
-                .pattern("CC")
-                .define('C', Tags.Items.INGOTS_COPPER)
-                .unlockedBy("has_copper_ingot", has(Tags.Items.INGOTS_COPPER))
+                .pattern(" I ")
+                .pattern("III")
+                .define('I', Tags.Items.INGOTS_IRON)
+                .unlockedBy("has_iron_ingot", has(Tags.Items.INGOTS_IRON))
                 .save(grapplingOutput);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.TOOLS, ModItems.STICKY_GRAPPLING_HOOK.get())

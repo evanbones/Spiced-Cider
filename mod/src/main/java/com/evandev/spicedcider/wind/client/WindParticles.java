@@ -1,12 +1,14 @@
 package com.evandev.spicedcider.wind.client;
 
 import com.evandev.spicedcider.SpicedCider;
+import net.minecraft.client.particle.Particle;
 import net.minecraft.core.Holder;
 import net.minecraft.core.particles.ParticleType;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
+import net.neoforged.fml.ModList;
 
 import java.util.IdentityHashMap;
 import java.util.Map;
@@ -18,6 +20,8 @@ public final class WindParticles {
     public static final TagKey<ParticleType<?>> SHED = tag("wind_shed");
     private static final float LIGHT_RESPONSE = 1.8F;
 
+    private static final Class<?> POLYTONE_PARTICLE = polytoneParticle();
+
     private static volatile Map<ParticleType<?>, Float> responses = Map.of();
     private static volatile Map<ParticleType<?>, Boolean> shed = Map.of();
     private static volatile boolean enabled;
@@ -25,6 +29,13 @@ public final class WindParticles {
 
     public static float response(ParticleType<?> type) {
         return responses.getOrDefault(type, 1.0F);
+    }
+
+    public static float response(ParticleType<?> type, Particle particle, boolean hasPhysics) {
+        Float tagged = responses.get(type);
+        if (tagged != null) return tagged;
+        if (!hasPhysics && POLYTONE_PARTICLE != null && POLYTONE_PARTICLE.isInstance(particle)) return 0.0F;
+        return 1.0F;
     }
 
     public static boolean thinned(ParticleType<?> type) {
@@ -52,6 +63,15 @@ public final class WindParticles {
         for (Holder<ParticleType<?>> holder : BuiltInRegistries.PARTICLE_TYPE.getTagOrEmpty(SHED)) nextShed.put(holder.value(), Boolean.TRUE);
         responses = next;
         shed = nextShed;
+    }
+
+    private static Class<?> polytoneParticle() {
+        if (!ModList.get().isLoaded("polytone")) return null;
+        try {
+            return Class.forName("net.mehvahdjukaar.polytone.content.particle.custom.CustomParticleInstance", false, WindParticles.class.getClassLoader());
+        } catch (ClassNotFoundException e) {
+            return null;
+        }
     }
 
     private static TagKey<ParticleType<?>> tag(String path) {

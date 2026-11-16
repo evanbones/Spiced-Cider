@@ -28,6 +28,9 @@ public class ControllerShapeHoldMixin {
         Minecraft minecraft = Minecraft.getInstance();
         if (minecraft.player == null || minecraft.screen != null) return;
         InteractionHand hand = ClutterNoMoreClient.shapeHand(minecraft);
-        if (hand != null) ClutterNoMoreClientAccessor.spicedcider$setOverlay(new ShapeSwitcherOverlay(minecraft, hand, true));
+        if (hand == null) return;
+        ShapeSwitcherOverlay overlay = new ShapeSwitcherOverlay(minecraft, hand, true);
+        ClutterNoMoreClientAccessor.spicedcider$setOverlay(overlay);
+        ShapeWheel.adopt(overlay, false);
     }
 }

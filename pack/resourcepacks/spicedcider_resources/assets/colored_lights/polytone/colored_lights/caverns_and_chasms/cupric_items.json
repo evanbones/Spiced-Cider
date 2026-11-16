@@ -1,0 +1,14 @@
+{
+  "require_config": "colored_lights:item_lights",
+  "require_mods": "caverns_and_chasms",
+  "target_type": "item",
+  "targets": [
+    "caverns_and_chasms:cupric_torch",
+    "caverns_and_chasms:cupric_lantern"
+  ],
+  "colored_light": {
+    "color": "#5FE3A1",
+    "radius": 6,
+    "brightness": "o.inWater() ? 0 : 1"
+  }
+}

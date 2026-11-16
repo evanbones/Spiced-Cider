@@ -13,6 +13,15 @@
     "minecraft:bow",
     "minecraft:crossbow",
     "minecraft:shield",
+    "#minecraft:compasses",
+    {
+      "id": "supplementaries:quiver",
+      "required": false
+    },
+    {
+      "id": "map_atlases:atlas",
+      "required": false
+    },
     {
       "id": "reliable_gliders:glider",
       "required": false

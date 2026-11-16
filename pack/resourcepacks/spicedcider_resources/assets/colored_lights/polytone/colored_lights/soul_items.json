@@ -1,0 +1,13 @@
+{
+  "require_config": "colored_lights:item_lights",
+  "target_type": "item",
+  "targets": [
+    "minecraft:soul_torch",
+    "minecraft:soul_lantern"
+  ],
+  "colored_light": {
+    "color": "#4FD8D8",
+    "radius": 6,
+    "brightness": "o.inWater() ? 0 : 1"
+  }
+}

@@ -5,6 +5,7 @@ import com.evandev.spicedcider.compat.architectspalette.ArchitectsPaletteCompat;
 import com.evandev.spicedcider.compat.bountifulfares.BountifulFaresCompat;
 import com.evandev.spicedcider.compat.farmersdelight.FarmersDelightCompat;
 import com.evandev.spicedcider.compat.infernalexp.InfernalExpansionCompat;
+import com.evandev.spicedcider.content.block.PlacedStickBlock;
 import com.evandev.spicedcider.content.block.AlgalBlock;
 import com.evandev.spicedcider.content.block.BuddingPrismarineBlock;
 import com.evandev.spicedcider.content.block.CacaoPodBlock;
@@ -22,6 +23,7 @@ import com.evandev.spicedcider.content.block.TanningRackBlock;
 import com.evandev.spicedcider.content.block.TubewormBlock;
 import com.evandev.spicedcider.content.block.UnderwaterBrambleBlock;
 import com.evandev.spicedcider.content.block.VentBlock;
+import com.evandev.spicedcider.content.block.MintCropBlock;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.ColorRGBA;
 import net.minecraft.world.level.block.Block;
@@ -53,6 +55,17 @@ import java.util.Optional;
 
 public class ModBlocks {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(SpicedCider.MOD_ID);
+
+    public static final DeferredBlock<Block> PLACED_STICK = BLOCKS.register("placed_stick",
+            () -> new PlacedStickBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).noCollission().instabreak()
+                    .sound(SoundType.WOOD).pushReaction(PushReaction.DESTROY).ignitedByLava()));
+
+    @Nullable
+    public static final DeferredBlock<Block> MINT_CROP = ModList.get().isLoaded("culturaldelights")
+            ? BLOCKS.register("mint_crop", () -> new MintCropBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.PLANT).noCollission().randomTicks().instabreak().sound(SoundType.CROP)
+                    .pushReaction(PushReaction.DESTROY)))
+            : null;
 
     public static final DeferredBlock<Block> TEMPORARY_COBWEB = BLOCKS.register("temporary_cobweb",
             () -> new TemporaryCobwebBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBWEB)));
@@ -87,6 +100,9 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> WORMY_DIRT = BLOCKS.register("wormy_dirt",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DIRT)));
+
+    public static final DeferredBlock<Block> RICH_GRAVEL = BLOCKS.register("rich_gravel",
+            () -> new ColoredFallingBlock(new ColorRGBA(-8356741), BlockBehaviour.Properties.ofFullCopy(Blocks.GRAVEL)));
 
     public static final DeferredBlock<Block> DEPOSIT = BLOCKS.register("deposit",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).strength(3.0F).requiresCorrectToolForDrops()));

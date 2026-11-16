@@ -11,11 +11,11 @@
   ],
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_copper_ingot": {
+    "has_iron_ingot": {
       "conditions": {
         "items": [
           {
-            "items": "#c:ingots/copper"
+            "items": "#c:ingots/iron"
           }
         ]
       },
@@ -31,7 +31,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_copper_ingot"
+      "has_iron_ingot"
     ]
   ],
   "rewards": {

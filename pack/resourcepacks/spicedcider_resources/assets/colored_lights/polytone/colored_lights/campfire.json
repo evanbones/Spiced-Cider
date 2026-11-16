@@ -1,0 +1,7 @@
+{
+  "targets": "minecraft:campfire",
+  "colored_light": {
+    "color": "#FFA14E",
+    "brightness": "object.blockStateValue('lit') ? 1 : 0"
+  }
+}

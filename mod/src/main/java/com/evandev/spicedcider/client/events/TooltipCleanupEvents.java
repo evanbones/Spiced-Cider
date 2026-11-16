@@ -22,11 +22,25 @@ public class TooltipCleanupEvents {
             "tooltip.farmersdelight.placeable"
     );
 
+    private static final Set<String> INDENTED_HEADER_KEYS = Set.of(
+            "text.tide.accessory_tooltip.prefix"
+    );
+
     @SubscribeEvent(priority = EventPriority.LOWEST)
     public static void onItemTooltip(ItemTooltipEvent event) {
         List<Component> tooltip = event.getToolTip();
         if (tooltip.size() > 1) {
             tooltip.subList(1, tooltip.size()).removeIf(TooltipCleanupEvents::isHidden);
+        }
+        indentAfterHeaders(tooltip);
+    }
+
+    private static void indentAfterHeaders(List<Component> tooltip) {
+        for (int i = 1; i < tooltip.size() - 1; i++) {
+            if (tooltip.get(i).getContents() instanceof TranslatableContents contents && INDENTED_HEADER_KEYS.contains(contents.getKey())) {
+                Component next = tooltip.get(i + 1);
+                if (!next.getString().startsWith(" ")) tooltip.set(i + 1, Component.literal(" ").withStyle(next.getStyle()).append(next));
+            }
         }
     }
 

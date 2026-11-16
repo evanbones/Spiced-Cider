@@ -8,23 +8,21 @@
       "text": "Crack Open a Cold One"
     },
     "description": {
-      "text": "Find a Geode and crack it open on a Workstone"
+      "text": "Crack a Geode open with a Hammer on a Workstone"
     },
     "frame": "task"
   },
   "criteria": {
     "geode": {
-      "trigger": "minecraft:inventory_changed",
+      "trigger": "spicedcider:workstone_process",
       "conditions": {
-        "items": [
-          {
-            "items": [
-              "spicedcider:geode",
-              "spicedcider:deepslate_geode",
-              "spicedcider:blackstone_geode"
-            ]
-          }
-        ]
+        "item": {
+          "items": [
+            "spicedcider:geode",
+            "spicedcider:deepslate_geode",
+            "spicedcider:blackstone_geode"
+          ]
+        }
       }
     }
   },

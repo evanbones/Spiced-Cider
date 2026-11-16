@@ -19,21 +19,21 @@
       "enabled": false
     },
     "default": {
-      "scale": 2,
+      "scale": 0,
       "xhot": 0,
       "yhot": 0,
       "enabled": true
     },
     "pointer": {
-      "scale": 2,
-      "xhot": 2,
+      "scale": 0,
+      "xhot": 1,
       "yhot": 0,
       "enabled": true
     },
     "grabbing": {
-      "scale": 2,
-      "xhot": 2,
-      "yhot": 1,
+      "scale": 0,
+      "xhot": 1,
+      "yhot": 0,
       "enabled": true
     },
     "busy": {
@@ -43,15 +43,15 @@
       "enabled": false
     },
     "shift": {
-      "scale": 2,
-      "xhot": 2,
+      "scale": 0,
+      "xhot": 1,
       "yhot": 0,
       "enabled": true
     },
     "text": {
-      "scale": 2,
-      "xhot": 3,
-      "yhot": 4,
+      "scale": 0,
+      "xhot": 1,
+      "yhot": 2,
       "enabled": true
     },
     "resize_nwse": {
