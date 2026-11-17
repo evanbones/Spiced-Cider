@@ -5,6 +5,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.1.1] - 2026-11-17
+
+### Removed
+
+- Removed Spelunkery's stone, deepslate, netherrack, magma, blackstone, and basalt pebbles.
+
+### Changed
+
+- Lodestones have one recipe instead of two.
+
+### Fixed
+
+- Stairs, slabs and walls of removed blocks showing in EMI when playing on a server.
+- Opening a profile's settings in the controller settings while no controller is in use no longer crashes the game.
+- Fixed Forge block texture.
+
 ## [2.1.0] - 2026-11-17
 
 ### Added
