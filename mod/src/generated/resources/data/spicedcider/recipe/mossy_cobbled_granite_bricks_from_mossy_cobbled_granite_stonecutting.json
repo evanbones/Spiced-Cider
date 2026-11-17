@@ -1,0 +1,20 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "stoneworks"
+    },
+    {
+      "type": "spicedcider:feature",
+      "feature": "buildingBlocks"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "stoneworks:mossy_cobbled_granite"
+  },
+  "result": {
+    "count": 1,
+    "id": "spicedcider:mossy_cobbled_granite_bricks"
+  }
+}

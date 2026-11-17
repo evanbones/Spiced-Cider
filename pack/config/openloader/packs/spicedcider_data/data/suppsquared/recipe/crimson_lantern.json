@@ -1,0 +1,31 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "suppsquared"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "group": "crimson_lantern",
+  "category": "misc",
+  "pattern": [
+    "212",
+    "232",
+    "212"
+  ],
+  "key": {
+    "1": {
+      "tag": "c:ingots/gold"
+    },
+    "2": {
+      "item": "minecraft:paper"
+    },
+    "3": {
+      "item": "minecraft:shroomlight"
+    }
+  },
+  "result": {
+    "id": "suppsquared:crimson_lantern",
+    "count": 4
+  }
+}

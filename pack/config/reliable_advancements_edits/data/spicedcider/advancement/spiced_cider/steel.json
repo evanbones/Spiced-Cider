@@ -1,5 +1,5 @@
 {
-  "parent": "spicedcider:spiced_cider/bronze",
+  "parent": "spicedcider:spiced_cider/iron",
   "display": {
     "icon": {
       "id": "alloyed:steel_ingot"
@@ -28,10 +28,5 @@
     [
       "has_steel_ingot"
     ]
-  ],
-  "rewards": {
-    "loot": [
-      "spicedcider:advancement/spiced_cider_steel"
-    ]
-  }
+  ]
 }

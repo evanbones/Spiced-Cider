@@ -133,6 +133,27 @@ ordering = "AFTER"
 side = "BOTH"
 
 [[dependencies.${ mod_id }]]
+modId = "adaptedmobs"
+type = "optional"
+versionRange = "*"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.${ mod_id }]]
+modId = "chalk"
+type = "optional"
+versionRange = "*"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.${ mod_id }]]
+modId = "world_host"
+type = "optional"
+versionRange = "*"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.${ mod_id }]]
 modId = "bigbrain"
 type = "optional"
 versionRange = "*"

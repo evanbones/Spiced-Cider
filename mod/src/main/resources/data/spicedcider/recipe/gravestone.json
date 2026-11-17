@@ -1,0 +1,27 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "spicedcider:feature",
+      "feature": "gravestones"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:bone"
+    },
+    "C": {
+      "tag": "c:cobblestones"
+    }
+  },
+  "pattern": [
+    " C ",
+    "CBC",
+    "CCC"
+  ],
+  "result": {
+    "count": 1,
+    "id": "spicedcider:gravestone"
+  }
+}

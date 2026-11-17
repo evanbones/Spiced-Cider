@@ -33,6 +33,8 @@
 	pictureModeClouds = true
 	#Held and dropped light-giving blocks glow the same colour as when they're placed. Requires Polytone.
 	matchHeldLightColors = true
+	#Lanterns and other lights hung from chains and ropes glow the same colour as when they're placed. Requires Polytone.
+	matchChainLightColors = true
 
 [vista]
 	#Applies performance fixes to Vista's mirror/TV reflection rendering (better culling, better shared-states, re-render throttling). Requires Vista (obviously).
@@ -75,6 +77,10 @@
 	emiStructureLootCategory = true
 	#When the creative tab panel is on the right side of the item list, its tabs are drawn on the right edge too. Requires REMI.
 	remiRightSideTabs = true
+	#Advancements listed in config/spicedcider/index_unlocks.json reveal groups of items in the EMI index, and can keep the creative tabs hidden until one is earned.
+	emiDiscoveryIndexUnlocks = true
+	#EMI shows Spelunkery's rough diamonds and emeralds being polished on a regular grindstone instead of the Diamond Grindstone. Pair with grindstone_polishing loot tables for them.
+	roughGemsOnGrindstone = true
 	#Removes the smithing table category from EMI. Requires EMI.
 	emiHideSmithingCategory = true
 	#EMI shows haunting under a soul campfire instead of an encased fan, and hides the fan washing, smoking and blasting categories. Requires EMI and Create.
@@ -89,6 +95,8 @@
 	goldenDandelionParticles = true
 	#Adds an EMI category for what cave urns can hold when broken. Requires EMI and Supplementaries. Reload EMI or rejoin the world to apply.
 	emiUrnLootCategory = true
+	#Your graves show on the locator bar as tombstone icons, even in singleplayer. Requires Vanilla Backport.
+	graveLocatorBar = true
 
 [voxy]
 	#Replaces the terrain fog with configurable start and end distances that cover Voxy's LoD terrain, plus weather and cave fog. Disable to use Roxy's own fog.
@@ -135,6 +143,8 @@
 	windMotes = true
 	#Fruit hanging from tree leaves swings in the wind. Requires the Wind option.
 	hangingFruitSway = true
+	#Lanterns, banners and buntings hung from chains and ropes sway in the wind. Requires the Wind option.
+	chainDecorationSway = true
 
 [nether]
 	#Distant terrain in the Nether shimmers in the heat, more strongly and closer up near lava. Also scaled by the Distortion Effects accessibility option.

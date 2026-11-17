@@ -1,6 +1,7 @@
 package com.evandev.spicedcider.registry;
 
 import com.evandev.spicedcider.SpicedCider;
+import com.evandev.spicedcider.content.block.entity.GraveBlockEntity;
 import com.evandev.spicedcider.content.block.entity.TubewormBlockEntity;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -12,4 +13,7 @@ public class ModBlockEntities {
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<TubewormBlockEntity>> TUBEWORM = BLOCK_ENTITIES.register("tubeworm",
             () -> BlockEntityType.Builder.of(TubewormBlockEntity::new, ModBlocks.TUBEWORM.get()).build(null));
+
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<GraveBlockEntity>> GRAVE = BLOCK_ENTITIES.register("grave",
+            () -> BlockEntityType.Builder.of(GraveBlockEntity::new, ModBlocks.GRAVE.get()).build(null));
 }

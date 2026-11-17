@@ -1,0 +1,30 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "bountifulfares"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "III",
+    "FTF",
+    "III"
+  ],
+  "key": {
+    "F": {
+      "item": "bountifulfares:feldspar"
+    },
+    "I": {
+      "item": "minecraft:iron_nugget"
+    },
+    "T": {
+      "item": "minecraft:torch"
+    }
+  },
+  "result": {
+    "id": "bountifulfares:feldspar_lantern",
+    "count": 4
+  }
+}

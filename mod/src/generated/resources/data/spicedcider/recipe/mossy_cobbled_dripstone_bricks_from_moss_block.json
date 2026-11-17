@@ -1,0 +1,22 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "spicedcider:feature",
+      "feature": "buildingBlocks"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "spicedcider:cobbled_dripstone_bricks"
+    },
+    {
+      "item": "minecraft:moss_block"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "spicedcider:mossy_cobbled_dripstone_bricks"
+  }
+}

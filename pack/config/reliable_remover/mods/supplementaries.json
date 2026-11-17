@@ -136,5 +136,19 @@
       "supplementaries:waxed_oxidized_copper_sconce"
     ],
     "replace_with": "supplementaries:sconce_green"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "supplementaries:gravel_bricks"
+    ],
+    "replace_with": "nomansland:cobblestone_bricks"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "supplementaries:suspicious_gravel_bricks"
+    ],
+    "replace_with": "nomansland:cobblestone_bricks"
   }
 ]

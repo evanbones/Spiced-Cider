@@ -7,9 +7,13 @@ import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.tags.TagKey;
+import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.TieredItem;
+import net.minecraft.world.item.component.ItemAttributeModifiers;
 import net.minecraft.world.item.component.Tool;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.bus.api.EventPriority;
@@ -41,13 +45,36 @@ public class ToolStatsEvents {
 
             ToolStats.Stats stats = found.get();
             Tool tool = retunedTool(item, stats);
+            ItemAttributeModifiers armor = retunedArmor(item, stats);
             event.modify(item, builder -> {
                 builder.set(DataComponents.MAX_DAMAGE, stats.durability());
                 if (tool != null) builder.set(DataComponents.TOOL, tool);
+                if (armor != null) builder.set(DataComponents.ATTRIBUTE_MODIFIERS, armor);
             });
             modified++;
         }
         SpicedCider.LOGGER.info("Tool stats: modified {} items", modified);
+    }
+
+    private static ItemAttributeModifiers retunedArmor(Item item, ToolStats.Stats stats) {
+        if (!(item instanceof ArmorItem armorItem)) return null;
+        Integer defense = stats.defense().get(armorItem.getType().getName());
+        if (defense == null && stats.toughness().isEmpty()) return null;
+
+        ItemAttributeModifiers base = item.components().getOrDefault(DataComponents.ATTRIBUTE_MODIFIERS, ItemAttributeModifiers.EMPTY);
+        if (base.modifiers().isEmpty()) base = item.getDefaultAttributeModifiers();
+
+        ItemAttributeModifiers.Builder builder = ItemAttributeModifiers.builder();
+        for (ItemAttributeModifiers.Entry entry : base.modifiers()) {
+            AttributeModifier modifier = entry.modifier();
+            if (defense != null && entry.attribute().is(Attributes.ARMOR)) {
+                modifier = new AttributeModifier(modifier.id(), defense, modifier.operation());
+            } else if (stats.toughness().isPresent() && entry.attribute().is(Attributes.ARMOR_TOUGHNESS)) {
+                modifier = new AttributeModifier(modifier.id(), stats.toughness().get(), modifier.operation());
+            }
+            builder.add(entry.attribute(), modifier, entry.slot());
+        }
+        return builder.build();
     }
 
     private static Tool retunedTool(Item item, ToolStats.Stats stats) {

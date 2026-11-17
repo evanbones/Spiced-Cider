@@ -21,12 +21,20 @@ public final class HeldLightColors {
     @Nullable
     public static PointLightProvider<Entity> blockColored(ColoredLightsManager manager, ItemStack stack) {
         if (!(stack.getItem() instanceof BlockItem blockItem)) return null;
-        List<ColoredLightsManager.BlockRule> rules = manager.getBlockLights(blockItem.getBlock());
-        if (rules == null || rules.isEmpty()) return null;
         BlockState state = blockItem.getBlock().defaultBlockState();
+        BlockState ruleState = state;
+        List<ColoredLightsManager.BlockRule> rules = manager.getBlockLights(blockItem.getBlock());
+        if (rules == null || rules.isEmpty()) {
+            ruleState = manager.lightStateOf(state);
+            if (ruleState == state) return null;
+            rules = manager.getBlockLights(ruleState.getBlock());
+            if (rules == null || rules.isEmpty()) return null;
+        }
         if (luminance(stack, state, false) <= 0) return null;
+        List<ColoredLightsManager.BlockRule> matched = rules;
+        BlockState matchState = ruleState;
         return (entity, level) -> {
-            ResolvedPointLight source = blockLight(manager, rules, state, entity, level);
+            ResolvedPointLight source = blockLight(manager, matched, matchState, entity, level);
             if (source == null) return new ResolvedPointLight(0xFFFFFF, 0F, 0F);
             int radius = luminance(stack, state, entity.isUnderWater());
             float brightness = source.brightness() > 0F ? source.brightness() : 1F;

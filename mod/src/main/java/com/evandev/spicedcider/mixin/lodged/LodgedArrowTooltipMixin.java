@@ -1,6 +1,8 @@
 package com.evandev.spicedcider.mixin.lodged;
 
+import com.evandev.spicedcider.compat.lodged.TamedArrowPullingClient;
 import com.evandev.spicedcider.config.SpicedCiderConfig;
+import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import com.moulberry.mixinconstraints.annotations.IfModLoaded;
@@ -27,5 +29,13 @@ public class LodgedArrowTooltipMixin {
     )
     private static boolean spicedcider$hideBleedingRisk(List<Object> list, Object line, Operation<Boolean> original) {
         return !SpicedCiderConfig.CLIENT.lodgedHideBleedingRisk.get() && original.call(list, line);
+    }
+
+    @ModifyExpressionValue(
+            method = "renderArrowRemovalTooltip(Lnet/minecraft/client/gui/GuiGraphics;Lcom/jvn/lodged/client/InventoryArrowTooltips$HoveredArrow;IID)V",
+            at = @At(value = "CONSTANT", args = "stringValue=tooltip.lodged.arrow_removal.click")
+    )
+    private static String spicedcider$worldPullHint(String key) {
+        return TamedArrowPullingClient.renderingWorldTooltip() ? "tooltip.spicedcider.lodged_tamed_arrow.pull" : key;
     }
 }

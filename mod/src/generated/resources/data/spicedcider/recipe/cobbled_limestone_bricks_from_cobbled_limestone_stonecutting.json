@@ -1,0 +1,20 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "quark"
+    },
+    {
+      "type": "spicedcider:feature",
+      "feature": "buildingBlocks"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "spicedcider:cobbled_limestone"
+  },
+  "result": {
+    "count": 1,
+    "id": "spicedcider:cobbled_limestone_bricks"
+  }
+}

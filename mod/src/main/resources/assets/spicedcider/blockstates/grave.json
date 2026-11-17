@@ -1,0 +1,49 @@
+{
+  "variants": {
+    "damage=0,facing=north": {
+      "model": "spicedcider:block/gravestone"
+    },
+    "damage=0,facing=east": {
+      "model": "spicedcider:block/gravestone",
+      "y": 90
+    },
+    "damage=0,facing=south": {
+      "model": "spicedcider:block/gravestone",
+      "y": 180
+    },
+    "damage=0,facing=west": {
+      "model": "spicedcider:block/gravestone",
+      "y": 270
+    },
+    "damage=1,facing=north": {
+      "model": "spicedcider:block/gravestone_chipped"
+    },
+    "damage=1,facing=east": {
+      "model": "spicedcider:block/gravestone_chipped",
+      "y": 90
+    },
+    "damage=1,facing=south": {
+      "model": "spicedcider:block/gravestone_chipped",
+      "y": 180
+    },
+    "damage=1,facing=west": {
+      "model": "spicedcider:block/gravestone_chipped",
+      "y": 270
+    },
+    "damage=2,facing=north": {
+      "model": "spicedcider:block/gravestone_damaged"
+    },
+    "damage=2,facing=east": {
+      "model": "spicedcider:block/gravestone_damaged",
+      "y": 90
+    },
+    "damage=2,facing=south": {
+      "model": "spicedcider:block/gravestone_damaged",
+      "y": 180
+    },
+    "damage=2,facing=west": {
+      "model": "spicedcider:block/gravestone_damaged",
+      "y": 270
+    }
+  }
+}

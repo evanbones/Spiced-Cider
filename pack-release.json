@@ -21,7 +21,7 @@
     "resourcepacks/spicedcider_resources",
     "config/openloader/packs/*"
   ],
-  "replace": {
+  "zip_replace": {
     "config/resourcepackoverrides.json": [
       [
         "\"file/spicedcider_resources\"",

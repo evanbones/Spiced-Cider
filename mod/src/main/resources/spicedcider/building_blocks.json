@@ -6114,5 +6114,2824 @@
    "nomansland"
   ],
   "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cobbled_andesite_bricks",
+  "kind": "CUBE",
+  "mod": null,
+  "properties": "minecraft:andesite",
+  "parent": null,
+  "side": "spicedcider:block/cobbled_andesite_bricks",
+  "top": "spicedcider:block/cobbled_andesite_bricks",
+  "bottom": "spicedcider:block/cobbled_andesite_bricks",
+  "craft": "TILES",
+  "craftFrom": "stoneworks:cobbled_andesite",
+  "cut": [
+   "stoneworks:cobbled_andesite"
+  ],
+  "requires": [
+   "stoneworks"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cobbled_andesite_brick_stairs",
+  "kind": "STAIRS",
+  "mod": null,
+  "properties": "minecraft:andesite",
+  "parent": "spicedcider:cobbled_andesite_bricks",
+  "side": "spicedcider:block/cobbled_andesite_bricks",
+  "top": "spicedcider:block/cobbled_andesite_bricks",
+  "bottom": "spicedcider:block/cobbled_andesite_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:cobbled_andesite_bricks",
+  "cut": [
+   "spicedcider:cobbled_andesite_bricks"
+  ],
+  "requires": [
+   "stoneworks"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cobbled_andesite_brick_slab",
+  "kind": "SLAB",
+  "mod": null,
+  "properties": "minecraft:andesite",
+  "parent": "spicedcider:cobbled_andesite_bricks",
+  "side": "spicedcider:block/cobbled_andesite_bricks",
+  "top": "spicedcider:block/cobbled_andesite_bricks",
+  "bottom": "spicedcider:block/cobbled_andesite_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:cobbled_andesite_bricks",
+  "cut": [
+   "spicedcider:cobbled_andesite_bricks"
+  ],
+  "requires": [
+   "stoneworks"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cobbled_andesite_brick_wall",
+  "kind": "WALL",
+  "mod": null,
+  "properties": "minecraft:andesite",
+  "parent": "spicedcider:cobbled_andesite_bricks",
+  "side": "spicedcider:block/cobbled_andesite_bricks",
+  "top": "spicedcider:block/cobbled_andesite_bricks",
+  "bottom": "spicedcider:block/cobbled_andesite_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:cobbled_andesite_bricks",
+  "cut": [
+   "spicedcider:cobbled_andesite_bricks"
+  ],
+  "requires": [
+   "stoneworks"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_andesite_bricks",
+  "kind": "CUBE",
+  "mod": null,
+  "properties": "minecraft:andesite",
+  "parent": null,
+  "side": "spicedcider:block/mossy_cobbled_andesite_bricks",
+  "top": "spicedcider:block/mossy_cobbled_andesite_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_andesite_bricks",
+  "craft": "MOSSY",
+  "craftFrom": "spicedcider:cobbled_andesite_bricks",
+  "gridFrom": "stoneworks:mossy_cobbled_andesite",
+  "cut": [
+   "stoneworks:mossy_cobbled_andesite"
+  ],
+  "requires": [
+   "stoneworks"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_andesite_brick_stairs",
+  "kind": "STAIRS",
+  "mod": null,
+  "properties": "minecraft:andesite",
+  "parent": "spicedcider:mossy_cobbled_andesite_bricks",
+  "side": "spicedcider:block/mossy_cobbled_andesite_bricks",
+  "top": "spicedcider:block/mossy_cobbled_andesite_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_andesite_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:mossy_cobbled_andesite_bricks",
+  "cut": [
+   "spicedcider:mossy_cobbled_andesite_bricks"
+  ],
+  "requires": [
+   "stoneworks"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_andesite_brick_slab",
+  "kind": "SLAB",
+  "mod": null,
+  "properties": "minecraft:andesite",
+  "parent": "spicedcider:mossy_cobbled_andesite_bricks",
+  "side": "spicedcider:block/mossy_cobbled_andesite_bricks",
+  "top": "spicedcider:block/mossy_cobbled_andesite_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_andesite_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:mossy_cobbled_andesite_bricks",
+  "cut": [
+   "spicedcider:mossy_cobbled_andesite_bricks"
+  ],
+  "requires": [
+   "stoneworks"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_andesite_brick_wall",
+  "kind": "WALL",
+  "mod": null,
+  "properties": "minecraft:andesite",
+  "parent": "spicedcider:mossy_cobbled_andesite_bricks",
+  "side": "spicedcider:block/mossy_cobbled_andesite_bricks",
+  "top": "spicedcider:block/mossy_cobbled_andesite_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_andesite_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:mossy_cobbled_andesite_bricks",
+  "cut": [
+   "spicedcider:mossy_cobbled_andesite_bricks"
+  ],
+  "requires": [
+   "stoneworks"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cobbled_basalt_bricks",
+  "kind": "CUBE",
+  "mod": null,
+  "properties": "minecraft:basalt",
+  "parent": null,
+  "side": "spicedcider:block/cobbled_basalt_bricks",
+  "top": "spicedcider:block/cobbled_basalt_bricks",
+  "bottom": "spicedcider:block/cobbled_basalt_bricks",
+  "craft": "TILES",
+  "craftFrom": "stoneworks:cobbled_basalt",
+  "cut": [
+   "stoneworks:cobbled_basalt"
+  ],
+  "requires": [
+   "stoneworks"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cobbled_basalt_brick_stairs",
+  "kind": "STAIRS",
+  "mod": null,
+  "properties": "minecraft:basalt",
+  "parent": "spicedcider:cobbled_basalt_bricks",
+  "side": "spicedcider:block/cobbled_basalt_bricks",
+  "top": "spicedcider:block/cobbled_basalt_bricks",
+  "bottom": "spicedcider:block/cobbled_basalt_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:cobbled_basalt_bricks",
+  "cut": [
+   "spicedcider:cobbled_basalt_bricks"
+  ],
+  "requires": [
+   "stoneworks"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cobbled_basalt_brick_slab",
+  "kind": "SLAB",
+  "mod": null,
+  "properties": "minecraft:basalt",
+  "parent": "spicedcider:cobbled_basalt_bricks",
+  "side": "spicedcider:block/cobbled_basalt_bricks",
+  "top": "spicedcider:block/cobbled_basalt_bricks",
+  "bottom": "spicedcider:block/cobbled_basalt_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:cobbled_basalt_bricks",
+  "cut": [
+   "spicedcider:cobbled_basalt_bricks"
+  ],
+  "requires": [
+   "stoneworks"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cobbled_basalt_brick_wall",
+  "kind": "WALL",
+  "mod": null,
+  "properties": "minecraft:basalt",
+  "parent": "spicedcider:cobbled_basalt_bricks",
+  "side": "spicedcider:block/cobbled_basalt_bricks",
+  "top": "spicedcider:block/cobbled_basalt_bricks",
+  "bottom": "spicedcider:block/cobbled_basalt_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:cobbled_basalt_bricks",
+  "cut": [
+   "spicedcider:cobbled_basalt_bricks"
+  ],
+  "requires": [
+   "stoneworks"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_basalt_bricks",
+  "kind": "CUBE",
+  "mod": null,
+  "properties": "minecraft:basalt",
+  "parent": null,
+  "side": "spicedcider:block/mossy_cobbled_basalt_bricks",
+  "top": "spicedcider:block/mossy_cobbled_basalt_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_basalt_bricks",
+  "craft": "MOSSY",
+  "craftFrom": "spicedcider:cobbled_basalt_bricks",
+  "gridFrom": "stoneworks:mossy_cobbled_basalt",
+  "cut": [
+   "stoneworks:mossy_cobbled_basalt"
+  ],
+  "requires": [
+   "stoneworks"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_basalt_brick_stairs",
+  "kind": "STAIRS",
+  "mod": null,
+  "properties": "minecraft:basalt",
+  "parent": "spicedcider:mossy_cobbled_basalt_bricks",
+  "side": "spicedcider:block/mossy_cobbled_basalt_bricks",
+  "top": "spicedcider:block/mossy_cobbled_basalt_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_basalt_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:mossy_cobbled_basalt_bricks",
+  "cut": [
+   "spicedcider:mossy_cobbled_basalt_bricks"
+  ],
+  "requires": [
+   "stoneworks"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_basalt_brick_slab",
+  "kind": "SLAB",
+  "mod": null,
+  "properties": "minecraft:basalt",
+  "parent": "spicedcider:mossy_cobbled_basalt_bricks",
+  "side": "spicedcider:block/mossy_cobbled_basalt_bricks",
+  "top": "spicedcider:block/mossy_cobbled_basalt_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_basalt_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:mossy_cobbled_basalt_bricks",
+  "cut": [
+   "spicedcider:mossy_cobbled_basalt_bricks"
+  ],
+  "requires": [
+   "stoneworks"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_basalt_brick_wall",
+  "kind": "WALL",
+  "mod": null,
+  "properties": "minecraft:basalt",
+  "parent": "spicedcider:mossy_cobbled_basalt_bricks",
+  "side": "spicedcider:block/mossy_cobbled_basalt_bricks",
+  "top": "spicedcider:block/mossy_cobbled_basalt_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_basalt_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:mossy_cobbled_basalt_bricks",
+  "cut": [
+   "spicedcider:mossy_cobbled_basalt_bricks"
+  ],
+  "requires": [
+   "stoneworks"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cobbled_blackstone_bricks",
+  "kind": "CUBE",
+  "mod": null,
+  "properties": "minecraft:blackstone",
+  "parent": null,
+  "side": "spicedcider:block/cobbled_blackstone_bricks",
+  "top": "spicedcider:block/cobbled_blackstone_bricks",
+  "bottom": "spicedcider:block/cobbled_blackstone_bricks",
+  "craft": "TILES",
+  "craftFrom": "stoneworks:cobbled_blackstone",
+  "cut": [
+   "stoneworks:cobbled_blackstone"
+  ],
+  "requires": [
+   "stoneworks"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cobbled_blackstone_brick_stairs",
+  "kind": "STAIRS",
+  "mod": null,
+  "properties": "minecraft:blackstone",
+  "parent": "spicedcider:cobbled_blackstone_bricks",
+  "side": "spicedcider:block/cobbled_blackstone_bricks",
+  "top": "spicedcider:block/cobbled_blackstone_bricks",
+  "bottom": "spicedcider:block/cobbled_blackstone_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:cobbled_blackstone_bricks",
+  "cut": [
+   "spicedcider:cobbled_blackstone_bricks"
+  ],
+  "requires": [
+   "stoneworks"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cobbled_blackstone_brick_slab",
+  "kind": "SLAB",
+  "mod": null,
+  "properties": "minecraft:blackstone",
+  "parent": "spicedcider:cobbled_blackstone_bricks",
+  "side": "spicedcider:block/cobbled_blackstone_bricks",
+  "top": "spicedcider:block/cobbled_blackstone_bricks",
+  "bottom": "spicedcider:block/cobbled_blackstone_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:cobbled_blackstone_bricks",
+  "cut": [
+   "spicedcider:cobbled_blackstone_bricks"
+  ],
+  "requires": [
+   "stoneworks"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cobbled_blackstone_brick_wall",
+  "kind": "WALL",
+  "mod": null,
+  "properties": "minecraft:blackstone",
+  "parent": "spicedcider:cobbled_blackstone_bricks",
+  "side": "spicedcider:block/cobbled_blackstone_bricks",
+  "top": "spicedcider:block/cobbled_blackstone_bricks",
+  "bottom": "spicedcider:block/cobbled_blackstone_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:cobbled_blackstone_bricks",
+  "cut": [
+   "spicedcider:cobbled_blackstone_bricks"
+  ],
+  "requires": [
+   "stoneworks"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_blackstone_bricks",
+  "kind": "CUBE",
+  "mod": null,
+  "properties": "minecraft:blackstone",
+  "parent": null,
+  "side": "spicedcider:block/mossy_cobbled_blackstone_bricks",
+  "top": "spicedcider:block/mossy_cobbled_blackstone_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_blackstone_bricks",
+  "craft": "MOSSY",
+  "craftFrom": "spicedcider:cobbled_blackstone_bricks",
+  "gridFrom": "stoneworks:mossy_cobbled_blackstone",
+  "cut": [
+   "stoneworks:mossy_cobbled_blackstone"
+  ],
+  "requires": [
+   "stoneworks"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_blackstone_brick_stairs",
+  "kind": "STAIRS",
+  "mod": null,
+  "properties": "minecraft:blackstone",
+  "parent": "spicedcider:mossy_cobbled_blackstone_bricks",
+  "side": "spicedcider:block/mossy_cobbled_blackstone_bricks",
+  "top": "spicedcider:block/mossy_cobbled_blackstone_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_blackstone_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:mossy_cobbled_blackstone_bricks",
+  "cut": [
+   "spicedcider:mossy_cobbled_blackstone_bricks"
+  ],
+  "requires": [
+   "stoneworks"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_blackstone_brick_slab",
+  "kind": "SLAB",
+  "mod": null,
+  "properties": "minecraft:blackstone",
+  "parent": "spicedcider:mossy_cobbled_blackstone_bricks",
+  "side": "spicedcider:block/mossy_cobbled_blackstone_bricks",
+  "top": "spicedcider:block/mossy_cobbled_blackstone_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_blackstone_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:mossy_cobbled_blackstone_bricks",
+  "cut": [
+   "spicedcider:mossy_cobbled_blackstone_bricks"
+  ],
+  "requires": [
+   "stoneworks"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_blackstone_brick_wall",
+  "kind": "WALL",
+  "mod": null,
+  "properties": "minecraft:blackstone",
+  "parent": "spicedcider:mossy_cobbled_blackstone_bricks",
+  "side": "spicedcider:block/mossy_cobbled_blackstone_bricks",
+  "top": "spicedcider:block/mossy_cobbled_blackstone_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_blackstone_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:mossy_cobbled_blackstone_bricks",
+  "cut": [
+   "spicedcider:mossy_cobbled_blackstone_bricks"
+  ],
+  "requires": [
+   "stoneworks"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cobbled_calcite_bricks",
+  "kind": "CUBE",
+  "mod": null,
+  "properties": "minecraft:calcite",
+  "parent": null,
+  "side": "spicedcider:block/cobbled_calcite_bricks",
+  "top": "spicedcider:block/cobbled_calcite_bricks",
+  "bottom": "spicedcider:block/cobbled_calcite_bricks",
+  "craft": "TILES",
+  "craftFrom": "stoneworks:cobbled_calcite",
+  "cut": [
+   "stoneworks:cobbled_calcite"
+  ],
+  "requires": [
+   "stoneworks"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cobbled_calcite_brick_stairs",
+  "kind": "STAIRS",
+  "mod": null,
+  "properties": "minecraft:calcite",
+  "parent": "spicedcider:cobbled_calcite_bricks",
+  "side": "spicedcider:block/cobbled_calcite_bricks",
+  "top": "spicedcider:block/cobbled_calcite_bricks",
+  "bottom": "spicedcider:block/cobbled_calcite_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:cobbled_calcite_bricks",
+  "cut": [
+   "spicedcider:cobbled_calcite_bricks"
+  ],
+  "requires": [
+   "stoneworks"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cobbled_calcite_brick_slab",
+  "kind": "SLAB",
+  "mod": null,
+  "properties": "minecraft:calcite",
+  "parent": "spicedcider:cobbled_calcite_bricks",
+  "side": "spicedcider:block/cobbled_calcite_bricks",
+  "top": "spicedcider:block/cobbled_calcite_bricks",
+  "bottom": "spicedcider:block/cobbled_calcite_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:cobbled_calcite_bricks",
+  "cut": [
+   "spicedcider:cobbled_calcite_bricks"
+  ],
+  "requires": [
+   "stoneworks"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cobbled_calcite_brick_wall",
+  "kind": "WALL",
+  "mod": null,
+  "properties": "minecraft:calcite",
+  "parent": "spicedcider:cobbled_calcite_bricks",
+  "side": "spicedcider:block/cobbled_calcite_bricks",
+  "top": "spicedcider:block/cobbled_calcite_bricks",
+  "bottom": "spicedcider:block/cobbled_calcite_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:cobbled_calcite_bricks",
+  "cut": [
+   "spicedcider:cobbled_calcite_bricks"
+  ],
+  "requires": [
+   "stoneworks"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_calcite_bricks",
+  "kind": "CUBE",
+  "mod": null,
+  "properties": "minecraft:calcite",
+  "parent": null,
+  "side": "spicedcider:block/mossy_cobbled_calcite_bricks",
+  "top": "spicedcider:block/mossy_cobbled_calcite_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_calcite_bricks",
+  "craft": "MOSSY",
+  "craftFrom": "spicedcider:cobbled_calcite_bricks",
+  "gridFrom": "stoneworks:mossy_cobbled_calcite",
+  "cut": [
+   "stoneworks:mossy_cobbled_calcite"
+  ],
+  "requires": [
+   "stoneworks"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_calcite_brick_stairs",
+  "kind": "STAIRS",
+  "mod": null,
+  "properties": "minecraft:calcite",
+  "parent": "spicedcider:mossy_cobbled_calcite_bricks",
+  "side": "spicedcider:block/mossy_cobbled_calcite_bricks",
+  "top": "spicedcider:block/mossy_cobbled_calcite_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_calcite_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:mossy_cobbled_calcite_bricks",
+  "cut": [
+   "spicedcider:mossy_cobbled_calcite_bricks"
+  ],
+  "requires": [
+   "stoneworks"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_calcite_brick_slab",
+  "kind": "SLAB",
+  "mod": null,
+  "properties": "minecraft:calcite",
+  "parent": "spicedcider:mossy_cobbled_calcite_bricks",
+  "side": "spicedcider:block/mossy_cobbled_calcite_bricks",
+  "top": "spicedcider:block/mossy_cobbled_calcite_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_calcite_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:mossy_cobbled_calcite_bricks",
+  "cut": [
+   "spicedcider:mossy_cobbled_calcite_bricks"
+  ],
+  "requires": [
+   "stoneworks"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_calcite_brick_wall",
+  "kind": "WALL",
+  "mod": null,
+  "properties": "minecraft:calcite",
+  "parent": "spicedcider:mossy_cobbled_calcite_bricks",
+  "side": "spicedcider:block/mossy_cobbled_calcite_bricks",
+  "top": "spicedcider:block/mossy_cobbled_calcite_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_calcite_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:mossy_cobbled_calcite_bricks",
+  "cut": [
+   "spicedcider:mossy_cobbled_calcite_bricks"
+  ],
+  "requires": [
+   "stoneworks"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cobbled_diorite_bricks",
+  "kind": "CUBE",
+  "mod": null,
+  "properties": "minecraft:diorite",
+  "parent": null,
+  "side": "spicedcider:block/cobbled_diorite_bricks",
+  "top": "spicedcider:block/cobbled_diorite_bricks",
+  "bottom": "spicedcider:block/cobbled_diorite_bricks",
+  "craft": "TILES",
+  "craftFrom": "stoneworks:cobbled_diorite",
+  "cut": [
+   "stoneworks:cobbled_diorite"
+  ],
+  "requires": [
+   "stoneworks"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cobbled_diorite_brick_stairs",
+  "kind": "STAIRS",
+  "mod": null,
+  "properties": "minecraft:diorite",
+  "parent": "spicedcider:cobbled_diorite_bricks",
+  "side": "spicedcider:block/cobbled_diorite_bricks",
+  "top": "spicedcider:block/cobbled_diorite_bricks",
+  "bottom": "spicedcider:block/cobbled_diorite_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:cobbled_diorite_bricks",
+  "cut": [
+   "spicedcider:cobbled_diorite_bricks"
+  ],
+  "requires": [
+   "stoneworks"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cobbled_diorite_brick_slab",
+  "kind": "SLAB",
+  "mod": null,
+  "properties": "minecraft:diorite",
+  "parent": "spicedcider:cobbled_diorite_bricks",
+  "side": "spicedcider:block/cobbled_diorite_bricks",
+  "top": "spicedcider:block/cobbled_diorite_bricks",
+  "bottom": "spicedcider:block/cobbled_diorite_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:cobbled_diorite_bricks",
+  "cut": [
+   "spicedcider:cobbled_diorite_bricks"
+  ],
+  "requires": [
+   "stoneworks"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cobbled_diorite_brick_wall",
+  "kind": "WALL",
+  "mod": null,
+  "properties": "minecraft:diorite",
+  "parent": "spicedcider:cobbled_diorite_bricks",
+  "side": "spicedcider:block/cobbled_diorite_bricks",
+  "top": "spicedcider:block/cobbled_diorite_bricks",
+  "bottom": "spicedcider:block/cobbled_diorite_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:cobbled_diorite_bricks",
+  "cut": [
+   "spicedcider:cobbled_diorite_bricks"
+  ],
+  "requires": [
+   "stoneworks"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_diorite_bricks",
+  "kind": "CUBE",
+  "mod": null,
+  "properties": "minecraft:diorite",
+  "parent": null,
+  "side": "spicedcider:block/mossy_cobbled_diorite_bricks",
+  "top": "spicedcider:block/mossy_cobbled_diorite_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_diorite_bricks",
+  "craft": "MOSSY",
+  "craftFrom": "spicedcider:cobbled_diorite_bricks",
+  "gridFrom": "stoneworks:mossy_cobbled_diorite",
+  "cut": [
+   "stoneworks:mossy_cobbled_diorite"
+  ],
+  "requires": [
+   "stoneworks"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_diorite_brick_stairs",
+  "kind": "STAIRS",
+  "mod": null,
+  "properties": "minecraft:diorite",
+  "parent": "spicedcider:mossy_cobbled_diorite_bricks",
+  "side": "spicedcider:block/mossy_cobbled_diorite_bricks",
+  "top": "spicedcider:block/mossy_cobbled_diorite_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_diorite_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:mossy_cobbled_diorite_bricks",
+  "cut": [
+   "spicedcider:mossy_cobbled_diorite_bricks"
+  ],
+  "requires": [
+   "stoneworks"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_diorite_brick_slab",
+  "kind": "SLAB",
+  "mod": null,
+  "properties": "minecraft:diorite",
+  "parent": "spicedcider:mossy_cobbled_diorite_bricks",
+  "side": "spicedcider:block/mossy_cobbled_diorite_bricks",
+  "top": "spicedcider:block/mossy_cobbled_diorite_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_diorite_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:mossy_cobbled_diorite_bricks",
+  "cut": [
+   "spicedcider:mossy_cobbled_diorite_bricks"
+  ],
+  "requires": [
+   "stoneworks"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_diorite_brick_wall",
+  "kind": "WALL",
+  "mod": null,
+  "properties": "minecraft:diorite",
+  "parent": "spicedcider:mossy_cobbled_diorite_bricks",
+  "side": "spicedcider:block/mossy_cobbled_diorite_bricks",
+  "top": "spicedcider:block/mossy_cobbled_diorite_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_diorite_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:mossy_cobbled_diorite_bricks",
+  "cut": [
+   "spicedcider:mossy_cobbled_diorite_bricks"
+  ],
+  "requires": [
+   "stoneworks"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cobbled_granite_bricks",
+  "kind": "CUBE",
+  "mod": null,
+  "properties": "minecraft:granite",
+  "parent": null,
+  "side": "spicedcider:block/cobbled_granite_bricks",
+  "top": "spicedcider:block/cobbled_granite_bricks",
+  "bottom": "spicedcider:block/cobbled_granite_bricks",
+  "craft": "TILES",
+  "craftFrom": "stoneworks:cobbled_granite",
+  "cut": [
+   "stoneworks:cobbled_granite"
+  ],
+  "requires": [
+   "stoneworks"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cobbled_granite_brick_stairs",
+  "kind": "STAIRS",
+  "mod": null,
+  "properties": "minecraft:granite",
+  "parent": "spicedcider:cobbled_granite_bricks",
+  "side": "spicedcider:block/cobbled_granite_bricks",
+  "top": "spicedcider:block/cobbled_granite_bricks",
+  "bottom": "spicedcider:block/cobbled_granite_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:cobbled_granite_bricks",
+  "cut": [
+   "spicedcider:cobbled_granite_bricks"
+  ],
+  "requires": [
+   "stoneworks"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cobbled_granite_brick_slab",
+  "kind": "SLAB",
+  "mod": null,
+  "properties": "minecraft:granite",
+  "parent": "spicedcider:cobbled_granite_bricks",
+  "side": "spicedcider:block/cobbled_granite_bricks",
+  "top": "spicedcider:block/cobbled_granite_bricks",
+  "bottom": "spicedcider:block/cobbled_granite_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:cobbled_granite_bricks",
+  "cut": [
+   "spicedcider:cobbled_granite_bricks"
+  ],
+  "requires": [
+   "stoneworks"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cobbled_granite_brick_wall",
+  "kind": "WALL",
+  "mod": null,
+  "properties": "minecraft:granite",
+  "parent": "spicedcider:cobbled_granite_bricks",
+  "side": "spicedcider:block/cobbled_granite_bricks",
+  "top": "spicedcider:block/cobbled_granite_bricks",
+  "bottom": "spicedcider:block/cobbled_granite_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:cobbled_granite_bricks",
+  "cut": [
+   "spicedcider:cobbled_granite_bricks"
+  ],
+  "requires": [
+   "stoneworks"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_granite_bricks",
+  "kind": "CUBE",
+  "mod": null,
+  "properties": "minecraft:granite",
+  "parent": null,
+  "side": "spicedcider:block/mossy_cobbled_granite_bricks",
+  "top": "spicedcider:block/mossy_cobbled_granite_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_granite_bricks",
+  "craft": "MOSSY",
+  "craftFrom": "spicedcider:cobbled_granite_bricks",
+  "gridFrom": "stoneworks:mossy_cobbled_granite",
+  "cut": [
+   "stoneworks:mossy_cobbled_granite"
+  ],
+  "requires": [
+   "stoneworks"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_granite_brick_stairs",
+  "kind": "STAIRS",
+  "mod": null,
+  "properties": "minecraft:granite",
+  "parent": "spicedcider:mossy_cobbled_granite_bricks",
+  "side": "spicedcider:block/mossy_cobbled_granite_bricks",
+  "top": "spicedcider:block/mossy_cobbled_granite_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_granite_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:mossy_cobbled_granite_bricks",
+  "cut": [
+   "spicedcider:mossy_cobbled_granite_bricks"
+  ],
+  "requires": [
+   "stoneworks"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_granite_brick_slab",
+  "kind": "SLAB",
+  "mod": null,
+  "properties": "minecraft:granite",
+  "parent": "spicedcider:mossy_cobbled_granite_bricks",
+  "side": "spicedcider:block/mossy_cobbled_granite_bricks",
+  "top": "spicedcider:block/mossy_cobbled_granite_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_granite_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:mossy_cobbled_granite_bricks",
+  "cut": [
+   "spicedcider:mossy_cobbled_granite_bricks"
+  ],
+  "requires": [
+   "stoneworks"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_granite_brick_wall",
+  "kind": "WALL",
+  "mod": null,
+  "properties": "minecraft:granite",
+  "parent": "spicedcider:mossy_cobbled_granite_bricks",
+  "side": "spicedcider:block/mossy_cobbled_granite_bricks",
+  "top": "spicedcider:block/mossy_cobbled_granite_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_granite_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:mossy_cobbled_granite_bricks",
+  "cut": [
+   "spicedcider:mossy_cobbled_granite_bricks"
+  ],
+  "requires": [
+   "stoneworks"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cobbled_netherrack_bricks",
+  "kind": "CUBE",
+  "mod": null,
+  "properties": "minecraft:netherrack",
+  "parent": null,
+  "side": "spicedcider:block/cobbled_netherrack_bricks",
+  "top": "spicedcider:block/cobbled_netherrack_bricks",
+  "bottom": "spicedcider:block/cobbled_netherrack_bricks",
+  "craft": "TILES",
+  "craftFrom": "stoneworks:cobbled_netherrack",
+  "cut": [
+   "stoneworks:cobbled_netherrack"
+  ],
+  "requires": [
+   "stoneworks"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cobbled_netherrack_brick_stairs",
+  "kind": "STAIRS",
+  "mod": null,
+  "properties": "minecraft:netherrack",
+  "parent": "spicedcider:cobbled_netherrack_bricks",
+  "side": "spicedcider:block/cobbled_netherrack_bricks",
+  "top": "spicedcider:block/cobbled_netherrack_bricks",
+  "bottom": "spicedcider:block/cobbled_netherrack_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:cobbled_netherrack_bricks",
+  "cut": [
+   "spicedcider:cobbled_netherrack_bricks"
+  ],
+  "requires": [
+   "stoneworks"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cobbled_netherrack_brick_slab",
+  "kind": "SLAB",
+  "mod": null,
+  "properties": "minecraft:netherrack",
+  "parent": "spicedcider:cobbled_netherrack_bricks",
+  "side": "spicedcider:block/cobbled_netherrack_bricks",
+  "top": "spicedcider:block/cobbled_netherrack_bricks",
+  "bottom": "spicedcider:block/cobbled_netherrack_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:cobbled_netherrack_bricks",
+  "cut": [
+   "spicedcider:cobbled_netherrack_bricks"
+  ],
+  "requires": [
+   "stoneworks"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cobbled_netherrack_brick_wall",
+  "kind": "WALL",
+  "mod": null,
+  "properties": "minecraft:netherrack",
+  "parent": "spicedcider:cobbled_netherrack_bricks",
+  "side": "spicedcider:block/cobbled_netherrack_bricks",
+  "top": "spicedcider:block/cobbled_netherrack_bricks",
+  "bottom": "spicedcider:block/cobbled_netherrack_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:cobbled_netherrack_bricks",
+  "cut": [
+   "spicedcider:cobbled_netherrack_bricks"
+  ],
+  "requires": [
+   "stoneworks"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_netherrack_bricks",
+  "kind": "CUBE",
+  "mod": null,
+  "properties": "minecraft:netherrack",
+  "parent": null,
+  "side": "spicedcider:block/mossy_cobbled_netherrack_bricks",
+  "top": "spicedcider:block/mossy_cobbled_netherrack_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_netherrack_bricks",
+  "craft": "MOSSY",
+  "craftFrom": "spicedcider:cobbled_netherrack_bricks",
+  "gridFrom": "stoneworks:mossy_cobbled_netherrack",
+  "cut": [
+   "stoneworks:mossy_cobbled_netherrack"
+  ],
+  "requires": [
+   "stoneworks"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_netherrack_brick_stairs",
+  "kind": "STAIRS",
+  "mod": null,
+  "properties": "minecraft:netherrack",
+  "parent": "spicedcider:mossy_cobbled_netherrack_bricks",
+  "side": "spicedcider:block/mossy_cobbled_netherrack_bricks",
+  "top": "spicedcider:block/mossy_cobbled_netherrack_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_netherrack_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:mossy_cobbled_netherrack_bricks",
+  "cut": [
+   "spicedcider:mossy_cobbled_netherrack_bricks"
+  ],
+  "requires": [
+   "stoneworks"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_netherrack_brick_slab",
+  "kind": "SLAB",
+  "mod": null,
+  "properties": "minecraft:netherrack",
+  "parent": "spicedcider:mossy_cobbled_netherrack_bricks",
+  "side": "spicedcider:block/mossy_cobbled_netherrack_bricks",
+  "top": "spicedcider:block/mossy_cobbled_netherrack_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_netherrack_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:mossy_cobbled_netherrack_bricks",
+  "cut": [
+   "spicedcider:mossy_cobbled_netherrack_bricks"
+  ],
+  "requires": [
+   "stoneworks"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_netherrack_brick_wall",
+  "kind": "WALL",
+  "mod": null,
+  "properties": "minecraft:netherrack",
+  "parent": "spicedcider:mossy_cobbled_netherrack_bricks",
+  "side": "spicedcider:block/mossy_cobbled_netherrack_bricks",
+  "top": "spicedcider:block/mossy_cobbled_netherrack_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_netherrack_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:mossy_cobbled_netherrack_bricks",
+  "cut": [
+   "spicedcider:mossy_cobbled_netherrack_bricks"
+  ],
+  "requires": [
+   "stoneworks"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cobbled_tuff_bricks",
+  "kind": "CUBE",
+  "mod": null,
+  "properties": "minecraft:tuff",
+  "parent": null,
+  "side": "spicedcider:block/cobbled_tuff_bricks",
+  "top": "spicedcider:block/cobbled_tuff_bricks",
+  "bottom": "spicedcider:block/cobbled_tuff_bricks",
+  "craft": "TILES",
+  "craftFrom": "stoneworks:cobbled_tuff",
+  "cut": [
+   "stoneworks:cobbled_tuff"
+  ],
+  "requires": [
+   "stoneworks"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cobbled_tuff_brick_stairs",
+  "kind": "STAIRS",
+  "mod": null,
+  "properties": "minecraft:tuff",
+  "parent": "spicedcider:cobbled_tuff_bricks",
+  "side": "spicedcider:block/cobbled_tuff_bricks",
+  "top": "spicedcider:block/cobbled_tuff_bricks",
+  "bottom": "spicedcider:block/cobbled_tuff_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:cobbled_tuff_bricks",
+  "cut": [
+   "spicedcider:cobbled_tuff_bricks"
+  ],
+  "requires": [
+   "stoneworks"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cobbled_tuff_brick_slab",
+  "kind": "SLAB",
+  "mod": null,
+  "properties": "minecraft:tuff",
+  "parent": "spicedcider:cobbled_tuff_bricks",
+  "side": "spicedcider:block/cobbled_tuff_bricks",
+  "top": "spicedcider:block/cobbled_tuff_bricks",
+  "bottom": "spicedcider:block/cobbled_tuff_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:cobbled_tuff_bricks",
+  "cut": [
+   "spicedcider:cobbled_tuff_bricks"
+  ],
+  "requires": [
+   "stoneworks"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cobbled_tuff_brick_wall",
+  "kind": "WALL",
+  "mod": null,
+  "properties": "minecraft:tuff",
+  "parent": "spicedcider:cobbled_tuff_bricks",
+  "side": "spicedcider:block/cobbled_tuff_bricks",
+  "top": "spicedcider:block/cobbled_tuff_bricks",
+  "bottom": "spicedcider:block/cobbled_tuff_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:cobbled_tuff_bricks",
+  "cut": [
+   "spicedcider:cobbled_tuff_bricks"
+  ],
+  "requires": [
+   "stoneworks"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_tuff_bricks",
+  "kind": "CUBE",
+  "mod": null,
+  "properties": "minecraft:tuff",
+  "parent": null,
+  "side": "spicedcider:block/mossy_cobbled_tuff_bricks",
+  "top": "spicedcider:block/mossy_cobbled_tuff_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_tuff_bricks",
+  "craft": "MOSSY",
+  "craftFrom": "spicedcider:cobbled_tuff_bricks",
+  "gridFrom": "stoneworks:mossy_cobbled_tuff",
+  "cut": [
+   "stoneworks:mossy_cobbled_tuff"
+  ],
+  "requires": [
+   "stoneworks"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_tuff_brick_stairs",
+  "kind": "STAIRS",
+  "mod": null,
+  "properties": "minecraft:tuff",
+  "parent": "spicedcider:mossy_cobbled_tuff_bricks",
+  "side": "spicedcider:block/mossy_cobbled_tuff_bricks",
+  "top": "spicedcider:block/mossy_cobbled_tuff_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_tuff_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:mossy_cobbled_tuff_bricks",
+  "cut": [
+   "spicedcider:mossy_cobbled_tuff_bricks"
+  ],
+  "requires": [
+   "stoneworks"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_tuff_brick_slab",
+  "kind": "SLAB",
+  "mod": null,
+  "properties": "minecraft:tuff",
+  "parent": "spicedcider:mossy_cobbled_tuff_bricks",
+  "side": "spicedcider:block/mossy_cobbled_tuff_bricks",
+  "top": "spicedcider:block/mossy_cobbled_tuff_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_tuff_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:mossy_cobbled_tuff_bricks",
+  "cut": [
+   "spicedcider:mossy_cobbled_tuff_bricks"
+  ],
+  "requires": [
+   "stoneworks"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_tuff_brick_wall",
+  "kind": "WALL",
+  "mod": null,
+  "properties": "minecraft:tuff",
+  "parent": "spicedcider:mossy_cobbled_tuff_bricks",
+  "side": "spicedcider:block/mossy_cobbled_tuff_bricks",
+  "top": "spicedcider:block/mossy_cobbled_tuff_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_tuff_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:mossy_cobbled_tuff_bricks",
+  "cut": [
+   "spicedcider:mossy_cobbled_tuff_bricks"
+  ],
+  "requires": [
+   "stoneworks"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cobbled_dimstone_bricks",
+  "kind": "CUBE",
+  "mod": "infernalexp",
+  "properties": "infernalexp:dimstone",
+  "parent": null,
+  "side": "spicedcider:block/cobbled_dimstone_bricks",
+  "top": "spicedcider:block/cobbled_dimstone_bricks",
+  "bottom": "spicedcider:block/cobbled_dimstone_bricks",
+  "craft": "TILES",
+  "craftFrom": "spicedcider:cobbled_dimstone",
+  "cut": [
+   "spicedcider:cobbled_dimstone"
+  ],
+  "requires": [
+   "infernalexp"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cobbled_dimstone_brick_stairs",
+  "kind": "STAIRS",
+  "mod": "infernalexp",
+  "properties": "infernalexp:dimstone",
+  "parent": "spicedcider:cobbled_dimstone_bricks",
+  "side": "spicedcider:block/cobbled_dimstone_bricks",
+  "top": "spicedcider:block/cobbled_dimstone_bricks",
+  "bottom": "spicedcider:block/cobbled_dimstone_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:cobbled_dimstone_bricks",
+  "cut": [
+   "spicedcider:cobbled_dimstone_bricks"
+  ],
+  "requires": [
+   "infernalexp"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cobbled_dimstone_brick_slab",
+  "kind": "SLAB",
+  "mod": "infernalexp",
+  "properties": "infernalexp:dimstone",
+  "parent": "spicedcider:cobbled_dimstone_bricks",
+  "side": "spicedcider:block/cobbled_dimstone_bricks",
+  "top": "spicedcider:block/cobbled_dimstone_bricks",
+  "bottom": "spicedcider:block/cobbled_dimstone_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:cobbled_dimstone_bricks",
+  "cut": [
+   "spicedcider:cobbled_dimstone_bricks"
+  ],
+  "requires": [
+   "infernalexp"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cobbled_dimstone_brick_wall",
+  "kind": "WALL",
+  "mod": "infernalexp",
+  "properties": "infernalexp:dimstone",
+  "parent": "spicedcider:cobbled_dimstone_bricks",
+  "side": "spicedcider:block/cobbled_dimstone_bricks",
+  "top": "spicedcider:block/cobbled_dimstone_bricks",
+  "bottom": "spicedcider:block/cobbled_dimstone_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:cobbled_dimstone_bricks",
+  "cut": [
+   "spicedcider:cobbled_dimstone_bricks"
+  ],
+  "requires": [
+   "infernalexp"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_dimstone_bricks",
+  "kind": "CUBE",
+  "mod": "infernalexp",
+  "properties": "infernalexp:dimstone",
+  "parent": null,
+  "side": "spicedcider:block/mossy_cobbled_dimstone_bricks",
+  "top": "spicedcider:block/mossy_cobbled_dimstone_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_dimstone_bricks",
+  "craft": "MOSSY",
+  "craftFrom": "spicedcider:cobbled_dimstone_bricks",
+  "gridFrom": "spicedcider:mossy_cobbled_dimstone",
+  "cut": [
+   "spicedcider:mossy_cobbled_dimstone"
+  ],
+  "requires": [
+   "infernalexp"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_dimstone_brick_stairs",
+  "kind": "STAIRS",
+  "mod": "infernalexp",
+  "properties": "infernalexp:dimstone",
+  "parent": "spicedcider:mossy_cobbled_dimstone_bricks",
+  "side": "spicedcider:block/mossy_cobbled_dimstone_bricks",
+  "top": "spicedcider:block/mossy_cobbled_dimstone_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_dimstone_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:mossy_cobbled_dimstone_bricks",
+  "cut": [
+   "spicedcider:mossy_cobbled_dimstone_bricks"
+  ],
+  "requires": [
+   "infernalexp"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_dimstone_brick_slab",
+  "kind": "SLAB",
+  "mod": "infernalexp",
+  "properties": "infernalexp:dimstone",
+  "parent": "spicedcider:mossy_cobbled_dimstone_bricks",
+  "side": "spicedcider:block/mossy_cobbled_dimstone_bricks",
+  "top": "spicedcider:block/mossy_cobbled_dimstone_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_dimstone_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:mossy_cobbled_dimstone_bricks",
+  "cut": [
+   "spicedcider:mossy_cobbled_dimstone_bricks"
+  ],
+  "requires": [
+   "infernalexp"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_dimstone_brick_wall",
+  "kind": "WALL",
+  "mod": "infernalexp",
+  "properties": "infernalexp:dimstone",
+  "parent": "spicedcider:mossy_cobbled_dimstone_bricks",
+  "side": "spicedcider:block/mossy_cobbled_dimstone_bricks",
+  "top": "spicedcider:block/mossy_cobbled_dimstone_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_dimstone_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:mossy_cobbled_dimstone_bricks",
+  "cut": [
+   "spicedcider:mossy_cobbled_dimstone_bricks"
+  ],
+  "requires": [
+   "infernalexp"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cobbled_dripstone_bricks",
+  "kind": "CUBE",
+  "mod": null,
+  "properties": "minecraft:dripstone_block",
+  "parent": null,
+  "side": "spicedcider:block/cobbled_dripstone_bricks",
+  "top": "spicedcider:block/cobbled_dripstone_bricks",
+  "bottom": "spicedcider:block/cobbled_dripstone_bricks",
+  "craft": "TILES",
+  "craftFrom": "spicedcider:cobbled_dripstone",
+  "cut": [
+   "spicedcider:cobbled_dripstone"
+  ],
+  "requires": [],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cobbled_dripstone_brick_stairs",
+  "kind": "STAIRS",
+  "mod": null,
+  "properties": "minecraft:dripstone_block",
+  "parent": "spicedcider:cobbled_dripstone_bricks",
+  "side": "spicedcider:block/cobbled_dripstone_bricks",
+  "top": "spicedcider:block/cobbled_dripstone_bricks",
+  "bottom": "spicedcider:block/cobbled_dripstone_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:cobbled_dripstone_bricks",
+  "cut": [
+   "spicedcider:cobbled_dripstone_bricks"
+  ],
+  "requires": [],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cobbled_dripstone_brick_slab",
+  "kind": "SLAB",
+  "mod": null,
+  "properties": "minecraft:dripstone_block",
+  "parent": "spicedcider:cobbled_dripstone_bricks",
+  "side": "spicedcider:block/cobbled_dripstone_bricks",
+  "top": "spicedcider:block/cobbled_dripstone_bricks",
+  "bottom": "spicedcider:block/cobbled_dripstone_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:cobbled_dripstone_bricks",
+  "cut": [
+   "spicedcider:cobbled_dripstone_bricks"
+  ],
+  "requires": [],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cobbled_dripstone_brick_wall",
+  "kind": "WALL",
+  "mod": null,
+  "properties": "minecraft:dripstone_block",
+  "parent": "spicedcider:cobbled_dripstone_bricks",
+  "side": "spicedcider:block/cobbled_dripstone_bricks",
+  "top": "spicedcider:block/cobbled_dripstone_bricks",
+  "bottom": "spicedcider:block/cobbled_dripstone_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:cobbled_dripstone_bricks",
+  "cut": [
+   "spicedcider:cobbled_dripstone_bricks"
+  ],
+  "requires": [],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_dripstone_bricks",
+  "kind": "CUBE",
+  "mod": null,
+  "properties": "minecraft:dripstone_block",
+  "parent": null,
+  "side": "spicedcider:block/mossy_cobbled_dripstone_bricks",
+  "top": "spicedcider:block/mossy_cobbled_dripstone_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_dripstone_bricks",
+  "craft": "MOSSY",
+  "craftFrom": "spicedcider:cobbled_dripstone_bricks",
+  "gridFrom": "spicedcider:mossy_cobbled_dripstone",
+  "cut": [
+   "spicedcider:mossy_cobbled_dripstone"
+  ],
+  "requires": [],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_dripstone_brick_stairs",
+  "kind": "STAIRS",
+  "mod": null,
+  "properties": "minecraft:dripstone_block",
+  "parent": "spicedcider:mossy_cobbled_dripstone_bricks",
+  "side": "spicedcider:block/mossy_cobbled_dripstone_bricks",
+  "top": "spicedcider:block/mossy_cobbled_dripstone_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_dripstone_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:mossy_cobbled_dripstone_bricks",
+  "cut": [
+   "spicedcider:mossy_cobbled_dripstone_bricks"
+  ],
+  "requires": [],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_dripstone_brick_slab",
+  "kind": "SLAB",
+  "mod": null,
+  "properties": "minecraft:dripstone_block",
+  "parent": "spicedcider:mossy_cobbled_dripstone_bricks",
+  "side": "spicedcider:block/mossy_cobbled_dripstone_bricks",
+  "top": "spicedcider:block/mossy_cobbled_dripstone_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_dripstone_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:mossy_cobbled_dripstone_bricks",
+  "cut": [
+   "spicedcider:mossy_cobbled_dripstone_bricks"
+  ],
+  "requires": [],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_dripstone_brick_wall",
+  "kind": "WALL",
+  "mod": null,
+  "properties": "minecraft:dripstone_block",
+  "parent": "spicedcider:mossy_cobbled_dripstone_bricks",
+  "side": "spicedcider:block/mossy_cobbled_dripstone_bricks",
+  "top": "spicedcider:block/mossy_cobbled_dripstone_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_dripstone_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:mossy_cobbled_dripstone_bricks",
+  "cut": [
+   "spicedcider:mossy_cobbled_dripstone_bricks"
+  ],
+  "requires": [],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cobbled_dullstone_bricks",
+  "kind": "CUBE",
+  "mod": "infernalexp",
+  "properties": "infernalexp:dullstone",
+  "parent": null,
+  "side": "spicedcider:block/cobbled_dullstone_bricks",
+  "top": "spicedcider:block/cobbled_dullstone_bricks",
+  "bottom": "spicedcider:block/cobbled_dullstone_bricks",
+  "craft": "TILES",
+  "craftFrom": "spicedcider:cobbled_dullstone",
+  "cut": [
+   "spicedcider:cobbled_dullstone"
+  ],
+  "requires": [
+   "infernalexp"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cobbled_dullstone_brick_stairs",
+  "kind": "STAIRS",
+  "mod": "infernalexp",
+  "properties": "infernalexp:dullstone",
+  "parent": "spicedcider:cobbled_dullstone_bricks",
+  "side": "spicedcider:block/cobbled_dullstone_bricks",
+  "top": "spicedcider:block/cobbled_dullstone_bricks",
+  "bottom": "spicedcider:block/cobbled_dullstone_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:cobbled_dullstone_bricks",
+  "cut": [
+   "spicedcider:cobbled_dullstone_bricks"
+  ],
+  "requires": [
+   "infernalexp"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cobbled_dullstone_brick_slab",
+  "kind": "SLAB",
+  "mod": "infernalexp",
+  "properties": "infernalexp:dullstone",
+  "parent": "spicedcider:cobbled_dullstone_bricks",
+  "side": "spicedcider:block/cobbled_dullstone_bricks",
+  "top": "spicedcider:block/cobbled_dullstone_bricks",
+  "bottom": "spicedcider:block/cobbled_dullstone_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:cobbled_dullstone_bricks",
+  "cut": [
+   "spicedcider:cobbled_dullstone_bricks"
+  ],
+  "requires": [
+   "infernalexp"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cobbled_dullstone_brick_wall",
+  "kind": "WALL",
+  "mod": "infernalexp",
+  "properties": "infernalexp:dullstone",
+  "parent": "spicedcider:cobbled_dullstone_bricks",
+  "side": "spicedcider:block/cobbled_dullstone_bricks",
+  "top": "spicedcider:block/cobbled_dullstone_bricks",
+  "bottom": "spicedcider:block/cobbled_dullstone_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:cobbled_dullstone_bricks",
+  "cut": [
+   "spicedcider:cobbled_dullstone_bricks"
+  ],
+  "requires": [
+   "infernalexp"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_dullstone_bricks",
+  "kind": "CUBE",
+  "mod": "infernalexp",
+  "properties": "infernalexp:dullstone",
+  "parent": null,
+  "side": "spicedcider:block/mossy_cobbled_dullstone_bricks",
+  "top": "spicedcider:block/mossy_cobbled_dullstone_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_dullstone_bricks",
+  "craft": "MOSSY",
+  "craftFrom": "spicedcider:cobbled_dullstone_bricks",
+  "gridFrom": "spicedcider:mossy_cobbled_dullstone",
+  "cut": [
+   "spicedcider:mossy_cobbled_dullstone"
+  ],
+  "requires": [
+   "infernalexp"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_dullstone_brick_stairs",
+  "kind": "STAIRS",
+  "mod": "infernalexp",
+  "properties": "infernalexp:dullstone",
+  "parent": "spicedcider:mossy_cobbled_dullstone_bricks",
+  "side": "spicedcider:block/mossy_cobbled_dullstone_bricks",
+  "top": "spicedcider:block/mossy_cobbled_dullstone_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_dullstone_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:mossy_cobbled_dullstone_bricks",
+  "cut": [
+   "spicedcider:mossy_cobbled_dullstone_bricks"
+  ],
+  "requires": [
+   "infernalexp"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_dullstone_brick_slab",
+  "kind": "SLAB",
+  "mod": "infernalexp",
+  "properties": "infernalexp:dullstone",
+  "parent": "spicedcider:mossy_cobbled_dullstone_bricks",
+  "side": "spicedcider:block/mossy_cobbled_dullstone_bricks",
+  "top": "spicedcider:block/mossy_cobbled_dullstone_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_dullstone_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:mossy_cobbled_dullstone_bricks",
+  "cut": [
+   "spicedcider:mossy_cobbled_dullstone_bricks"
+  ],
+  "requires": [
+   "infernalexp"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_dullstone_brick_wall",
+  "kind": "WALL",
+  "mod": "infernalexp",
+  "properties": "infernalexp:dullstone",
+  "parent": "spicedcider:mossy_cobbled_dullstone_bricks",
+  "side": "spicedcider:block/mossy_cobbled_dullstone_bricks",
+  "top": "spicedcider:block/mossy_cobbled_dullstone_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_dullstone_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:mossy_cobbled_dullstone_bricks",
+  "cut": [
+   "spicedcider:mossy_cobbled_dullstone_bricks"
+  ],
+  "requires": [
+   "infernalexp"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cobbled_jasper_bricks",
+  "kind": "CUBE",
+  "mod": "quark",
+  "properties": "quark:jasper",
+  "parent": null,
+  "side": "spicedcider:block/cobbled_jasper_bricks",
+  "top": "spicedcider:block/cobbled_jasper_bricks",
+  "bottom": "spicedcider:block/cobbled_jasper_bricks",
+  "craft": "TILES",
+  "craftFrom": "spicedcider:cobbled_jasper",
+  "cut": [
+   "spicedcider:cobbled_jasper"
+  ],
+  "requires": [
+   "quark"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cobbled_jasper_brick_stairs",
+  "kind": "STAIRS",
+  "mod": "quark",
+  "properties": "quark:jasper",
+  "parent": "spicedcider:cobbled_jasper_bricks",
+  "side": "spicedcider:block/cobbled_jasper_bricks",
+  "top": "spicedcider:block/cobbled_jasper_bricks",
+  "bottom": "spicedcider:block/cobbled_jasper_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:cobbled_jasper_bricks",
+  "cut": [
+   "spicedcider:cobbled_jasper_bricks"
+  ],
+  "requires": [
+   "quark"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cobbled_jasper_brick_slab",
+  "kind": "SLAB",
+  "mod": "quark",
+  "properties": "quark:jasper",
+  "parent": "spicedcider:cobbled_jasper_bricks",
+  "side": "spicedcider:block/cobbled_jasper_bricks",
+  "top": "spicedcider:block/cobbled_jasper_bricks",
+  "bottom": "spicedcider:block/cobbled_jasper_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:cobbled_jasper_bricks",
+  "cut": [
+   "spicedcider:cobbled_jasper_bricks"
+  ],
+  "requires": [
+   "quark"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cobbled_jasper_brick_wall",
+  "kind": "WALL",
+  "mod": "quark",
+  "properties": "quark:jasper",
+  "parent": "spicedcider:cobbled_jasper_bricks",
+  "side": "spicedcider:block/cobbled_jasper_bricks",
+  "top": "spicedcider:block/cobbled_jasper_bricks",
+  "bottom": "spicedcider:block/cobbled_jasper_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:cobbled_jasper_bricks",
+  "cut": [
+   "spicedcider:cobbled_jasper_bricks"
+  ],
+  "requires": [
+   "quark"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_jasper_bricks",
+  "kind": "CUBE",
+  "mod": "quark",
+  "properties": "quark:jasper",
+  "parent": null,
+  "side": "spicedcider:block/mossy_cobbled_jasper_bricks",
+  "top": "spicedcider:block/mossy_cobbled_jasper_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_jasper_bricks",
+  "craft": "MOSSY",
+  "craftFrom": "spicedcider:cobbled_jasper_bricks",
+  "gridFrom": "spicedcider:mossy_cobbled_jasper",
+  "cut": [
+   "spicedcider:mossy_cobbled_jasper"
+  ],
+  "requires": [
+   "quark"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_jasper_brick_stairs",
+  "kind": "STAIRS",
+  "mod": "quark",
+  "properties": "quark:jasper",
+  "parent": "spicedcider:mossy_cobbled_jasper_bricks",
+  "side": "spicedcider:block/mossy_cobbled_jasper_bricks",
+  "top": "spicedcider:block/mossy_cobbled_jasper_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_jasper_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:mossy_cobbled_jasper_bricks",
+  "cut": [
+   "spicedcider:mossy_cobbled_jasper_bricks"
+  ],
+  "requires": [
+   "quark"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_jasper_brick_slab",
+  "kind": "SLAB",
+  "mod": "quark",
+  "properties": "quark:jasper",
+  "parent": "spicedcider:mossy_cobbled_jasper_bricks",
+  "side": "spicedcider:block/mossy_cobbled_jasper_bricks",
+  "top": "spicedcider:block/mossy_cobbled_jasper_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_jasper_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:mossy_cobbled_jasper_bricks",
+  "cut": [
+   "spicedcider:mossy_cobbled_jasper_bricks"
+  ],
+  "requires": [
+   "quark"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_jasper_brick_wall",
+  "kind": "WALL",
+  "mod": "quark",
+  "properties": "quark:jasper",
+  "parent": "spicedcider:mossy_cobbled_jasper_bricks",
+  "side": "spicedcider:block/mossy_cobbled_jasper_bricks",
+  "top": "spicedcider:block/mossy_cobbled_jasper_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_jasper_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:mossy_cobbled_jasper_bricks",
+  "cut": [
+   "spicedcider:mossy_cobbled_jasper_bricks"
+  ],
+  "requires": [
+   "quark"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cobbled_limestone_bricks",
+  "kind": "CUBE",
+  "mod": "quark",
+  "properties": "quark:limestone",
+  "parent": null,
+  "side": "spicedcider:block/cobbled_limestone_bricks",
+  "top": "spicedcider:block/cobbled_limestone_bricks",
+  "bottom": "spicedcider:block/cobbled_limestone_bricks",
+  "craft": "TILES",
+  "craftFrom": "spicedcider:cobbled_limestone",
+  "cut": [
+   "spicedcider:cobbled_limestone"
+  ],
+  "requires": [
+   "quark"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cobbled_limestone_brick_stairs",
+  "kind": "STAIRS",
+  "mod": "quark",
+  "properties": "quark:limestone",
+  "parent": "spicedcider:cobbled_limestone_bricks",
+  "side": "spicedcider:block/cobbled_limestone_bricks",
+  "top": "spicedcider:block/cobbled_limestone_bricks",
+  "bottom": "spicedcider:block/cobbled_limestone_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:cobbled_limestone_bricks",
+  "cut": [
+   "spicedcider:cobbled_limestone_bricks"
+  ],
+  "requires": [
+   "quark"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cobbled_limestone_brick_slab",
+  "kind": "SLAB",
+  "mod": "quark",
+  "properties": "quark:limestone",
+  "parent": "spicedcider:cobbled_limestone_bricks",
+  "side": "spicedcider:block/cobbled_limestone_bricks",
+  "top": "spicedcider:block/cobbled_limestone_bricks",
+  "bottom": "spicedcider:block/cobbled_limestone_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:cobbled_limestone_bricks",
+  "cut": [
+   "spicedcider:cobbled_limestone_bricks"
+  ],
+  "requires": [
+   "quark"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cobbled_limestone_brick_wall",
+  "kind": "WALL",
+  "mod": "quark",
+  "properties": "quark:limestone",
+  "parent": "spicedcider:cobbled_limestone_bricks",
+  "side": "spicedcider:block/cobbled_limestone_bricks",
+  "top": "spicedcider:block/cobbled_limestone_bricks",
+  "bottom": "spicedcider:block/cobbled_limestone_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:cobbled_limestone_bricks",
+  "cut": [
+   "spicedcider:cobbled_limestone_bricks"
+  ],
+  "requires": [
+   "quark"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_limestone_bricks",
+  "kind": "CUBE",
+  "mod": "quark",
+  "properties": "quark:limestone",
+  "parent": null,
+  "side": "spicedcider:block/mossy_cobbled_limestone_bricks",
+  "top": "spicedcider:block/mossy_cobbled_limestone_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_limestone_bricks",
+  "craft": "MOSSY",
+  "craftFrom": "spicedcider:cobbled_limestone_bricks",
+  "gridFrom": "spicedcider:mossy_cobbled_limestone",
+  "cut": [
+   "spicedcider:mossy_cobbled_limestone"
+  ],
+  "requires": [
+   "quark"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_limestone_brick_stairs",
+  "kind": "STAIRS",
+  "mod": "quark",
+  "properties": "quark:limestone",
+  "parent": "spicedcider:mossy_cobbled_limestone_bricks",
+  "side": "spicedcider:block/mossy_cobbled_limestone_bricks",
+  "top": "spicedcider:block/mossy_cobbled_limestone_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_limestone_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:mossy_cobbled_limestone_bricks",
+  "cut": [
+   "spicedcider:mossy_cobbled_limestone_bricks"
+  ],
+  "requires": [
+   "quark"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_limestone_brick_slab",
+  "kind": "SLAB",
+  "mod": "quark",
+  "properties": "quark:limestone",
+  "parent": "spicedcider:mossy_cobbled_limestone_bricks",
+  "side": "spicedcider:block/mossy_cobbled_limestone_bricks",
+  "top": "spicedcider:block/mossy_cobbled_limestone_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_limestone_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:mossy_cobbled_limestone_bricks",
+  "cut": [
+   "spicedcider:mossy_cobbled_limestone_bricks"
+  ],
+  "requires": [
+   "quark"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_limestone_brick_wall",
+  "kind": "WALL",
+  "mod": "quark",
+  "properties": "quark:limestone",
+  "parent": "spicedcider:mossy_cobbled_limestone_bricks",
+  "side": "spicedcider:block/mossy_cobbled_limestone_bricks",
+  "top": "spicedcider:block/mossy_cobbled_limestone_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_limestone_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:mossy_cobbled_limestone_bricks",
+  "cut": [
+   "spicedcider:mossy_cobbled_limestone_bricks"
+  ],
+  "requires": [
+   "quark"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cobbled_permafrost_bricks",
+  "kind": "CUBE",
+  "mod": "quark",
+  "properties": "quark:permafrost",
+  "parent": null,
+  "side": "spicedcider:block/cobbled_permafrost_bricks",
+  "top": "spicedcider:block/cobbled_permafrost_bricks",
+  "bottom": "spicedcider:block/cobbled_permafrost_bricks",
+  "craft": "TILES",
+  "craftFrom": "spicedcider:cobbled_permafrost",
+  "cut": [
+   "spicedcider:cobbled_permafrost"
+  ],
+  "requires": [
+   "quark"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cobbled_permafrost_brick_stairs",
+  "kind": "STAIRS",
+  "mod": "quark",
+  "properties": "quark:permafrost",
+  "parent": "spicedcider:cobbled_permafrost_bricks",
+  "side": "spicedcider:block/cobbled_permafrost_bricks",
+  "top": "spicedcider:block/cobbled_permafrost_bricks",
+  "bottom": "spicedcider:block/cobbled_permafrost_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:cobbled_permafrost_bricks",
+  "cut": [
+   "spicedcider:cobbled_permafrost_bricks"
+  ],
+  "requires": [
+   "quark"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cobbled_permafrost_brick_slab",
+  "kind": "SLAB",
+  "mod": "quark",
+  "properties": "quark:permafrost",
+  "parent": "spicedcider:cobbled_permafrost_bricks",
+  "side": "spicedcider:block/cobbled_permafrost_bricks",
+  "top": "spicedcider:block/cobbled_permafrost_bricks",
+  "bottom": "spicedcider:block/cobbled_permafrost_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:cobbled_permafrost_bricks",
+  "cut": [
+   "spicedcider:cobbled_permafrost_bricks"
+  ],
+  "requires": [
+   "quark"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cobbled_permafrost_brick_wall",
+  "kind": "WALL",
+  "mod": "quark",
+  "properties": "quark:permafrost",
+  "parent": "spicedcider:cobbled_permafrost_bricks",
+  "side": "spicedcider:block/cobbled_permafrost_bricks",
+  "top": "spicedcider:block/cobbled_permafrost_bricks",
+  "bottom": "spicedcider:block/cobbled_permafrost_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:cobbled_permafrost_bricks",
+  "cut": [
+   "spicedcider:cobbled_permafrost_bricks"
+  ],
+  "requires": [
+   "quark"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_permafrost_bricks",
+  "kind": "CUBE",
+  "mod": "quark",
+  "properties": "quark:permafrost",
+  "parent": null,
+  "side": "spicedcider:block/mossy_cobbled_permafrost_bricks",
+  "top": "spicedcider:block/mossy_cobbled_permafrost_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_permafrost_bricks",
+  "craft": "MOSSY",
+  "craftFrom": "spicedcider:cobbled_permafrost_bricks",
+  "gridFrom": "spicedcider:mossy_cobbled_permafrost",
+  "cut": [
+   "spicedcider:mossy_cobbled_permafrost"
+  ],
+  "requires": [
+   "quark"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_permafrost_brick_stairs",
+  "kind": "STAIRS",
+  "mod": "quark",
+  "properties": "quark:permafrost",
+  "parent": "spicedcider:mossy_cobbled_permafrost_bricks",
+  "side": "spicedcider:block/mossy_cobbled_permafrost_bricks",
+  "top": "spicedcider:block/mossy_cobbled_permafrost_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_permafrost_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:mossy_cobbled_permafrost_bricks",
+  "cut": [
+   "spicedcider:mossy_cobbled_permafrost_bricks"
+  ],
+  "requires": [
+   "quark"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_permafrost_brick_slab",
+  "kind": "SLAB",
+  "mod": "quark",
+  "properties": "quark:permafrost",
+  "parent": "spicedcider:mossy_cobbled_permafrost_bricks",
+  "side": "spicedcider:block/mossy_cobbled_permafrost_bricks",
+  "top": "spicedcider:block/mossy_cobbled_permafrost_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_permafrost_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:mossy_cobbled_permafrost_bricks",
+  "cut": [
+   "spicedcider:mossy_cobbled_permafrost_bricks"
+  ],
+  "requires": [
+   "quark"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_permafrost_brick_wall",
+  "kind": "WALL",
+  "mod": "quark",
+  "properties": "quark:permafrost",
+  "parent": "spicedcider:mossy_cobbled_permafrost_bricks",
+  "side": "spicedcider:block/mossy_cobbled_permafrost_bricks",
+  "top": "spicedcider:block/mossy_cobbled_permafrost_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_permafrost_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:mossy_cobbled_permafrost_bricks",
+  "cut": [
+   "spicedcider:mossy_cobbled_permafrost_bricks"
+  ],
+  "requires": [
+   "quark"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cobbled_shale_bricks",
+  "kind": "CUBE",
+  "mod": "quark",
+  "properties": "quark:shale",
+  "parent": null,
+  "side": "spicedcider:block/cobbled_shale_bricks",
+  "top": "spicedcider:block/cobbled_shale_bricks",
+  "bottom": "spicedcider:block/cobbled_shale_bricks",
+  "craft": "TILES",
+  "craftFrom": "spicedcider:cobbled_shale",
+  "cut": [
+   "spicedcider:cobbled_shale"
+  ],
+  "requires": [
+   "quark"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cobbled_shale_brick_stairs",
+  "kind": "STAIRS",
+  "mod": "quark",
+  "properties": "quark:shale",
+  "parent": "spicedcider:cobbled_shale_bricks",
+  "side": "spicedcider:block/cobbled_shale_bricks",
+  "top": "spicedcider:block/cobbled_shale_bricks",
+  "bottom": "spicedcider:block/cobbled_shale_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:cobbled_shale_bricks",
+  "cut": [
+   "spicedcider:cobbled_shale_bricks"
+  ],
+  "requires": [
+   "quark"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cobbled_shale_brick_slab",
+  "kind": "SLAB",
+  "mod": "quark",
+  "properties": "quark:shale",
+  "parent": "spicedcider:cobbled_shale_bricks",
+  "side": "spicedcider:block/cobbled_shale_bricks",
+  "top": "spicedcider:block/cobbled_shale_bricks",
+  "bottom": "spicedcider:block/cobbled_shale_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:cobbled_shale_bricks",
+  "cut": [
+   "spicedcider:cobbled_shale_bricks"
+  ],
+  "requires": [
+   "quark"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cobbled_shale_brick_wall",
+  "kind": "WALL",
+  "mod": "quark",
+  "properties": "quark:shale",
+  "parent": "spicedcider:cobbled_shale_bricks",
+  "side": "spicedcider:block/cobbled_shale_bricks",
+  "top": "spicedcider:block/cobbled_shale_bricks",
+  "bottom": "spicedcider:block/cobbled_shale_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:cobbled_shale_bricks",
+  "cut": [
+   "spicedcider:cobbled_shale_bricks"
+  ],
+  "requires": [
+   "quark"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_shale_bricks",
+  "kind": "CUBE",
+  "mod": "quark",
+  "properties": "quark:shale",
+  "parent": null,
+  "side": "spicedcider:block/mossy_cobbled_shale_bricks",
+  "top": "spicedcider:block/mossy_cobbled_shale_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_shale_bricks",
+  "craft": "MOSSY",
+  "craftFrom": "spicedcider:cobbled_shale_bricks",
+  "gridFrom": "spicedcider:mossy_cobbled_shale",
+  "cut": [
+   "spicedcider:mossy_cobbled_shale"
+  ],
+  "requires": [
+   "quark"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_shale_brick_stairs",
+  "kind": "STAIRS",
+  "mod": "quark",
+  "properties": "quark:shale",
+  "parent": "spicedcider:mossy_cobbled_shale_bricks",
+  "side": "spicedcider:block/mossy_cobbled_shale_bricks",
+  "top": "spicedcider:block/mossy_cobbled_shale_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_shale_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:mossy_cobbled_shale_bricks",
+  "cut": [
+   "spicedcider:mossy_cobbled_shale_bricks"
+  ],
+  "requires": [
+   "quark"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_shale_brick_slab",
+  "kind": "SLAB",
+  "mod": "quark",
+  "properties": "quark:shale",
+  "parent": "spicedcider:mossy_cobbled_shale_bricks",
+  "side": "spicedcider:block/mossy_cobbled_shale_bricks",
+  "top": "spicedcider:block/mossy_cobbled_shale_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_shale_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:mossy_cobbled_shale_bricks",
+  "cut": [
+   "spicedcider:mossy_cobbled_shale_bricks"
+  ],
+  "requires": [
+   "quark"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_shale_brick_wall",
+  "kind": "WALL",
+  "mod": "quark",
+  "properties": "quark:shale",
+  "parent": "spicedcider:mossy_cobbled_shale_bricks",
+  "side": "spicedcider:block/mossy_cobbled_shale_bricks",
+  "top": "spicedcider:block/mossy_cobbled_shale_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_shale_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:mossy_cobbled_shale_bricks",
+  "cut": [
+   "spicedcider:mossy_cobbled_shale_bricks"
+  ],
+  "requires": [
+   "quark"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cobbled_siltstone_bricks",
+  "kind": "CUBE",
+  "mod": "nomansland",
+  "properties": "nomansland:siltstone",
+  "parent": null,
+  "side": "spicedcider:block/cobbled_siltstone_bricks",
+  "top": "spicedcider:block/cobbled_siltstone_bricks",
+  "bottom": "spicedcider:block/cobbled_siltstone_bricks",
+  "craft": "TILES",
+  "craftFrom": "spicedcider:cobbled_siltstone",
+  "cut": [
+   "spicedcider:cobbled_siltstone"
+  ],
+  "requires": [
+   "nomansland"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cobbled_siltstone_brick_stairs",
+  "kind": "STAIRS",
+  "mod": "nomansland",
+  "properties": "nomansland:siltstone",
+  "parent": "spicedcider:cobbled_siltstone_bricks",
+  "side": "spicedcider:block/cobbled_siltstone_bricks",
+  "top": "spicedcider:block/cobbled_siltstone_bricks",
+  "bottom": "spicedcider:block/cobbled_siltstone_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:cobbled_siltstone_bricks",
+  "cut": [
+   "spicedcider:cobbled_siltstone_bricks"
+  ],
+  "requires": [
+   "nomansland"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cobbled_siltstone_brick_slab",
+  "kind": "SLAB",
+  "mod": "nomansland",
+  "properties": "nomansland:siltstone",
+  "parent": "spicedcider:cobbled_siltstone_bricks",
+  "side": "spicedcider:block/cobbled_siltstone_bricks",
+  "top": "spicedcider:block/cobbled_siltstone_bricks",
+  "bottom": "spicedcider:block/cobbled_siltstone_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:cobbled_siltstone_bricks",
+  "cut": [
+   "spicedcider:cobbled_siltstone_bricks"
+  ],
+  "requires": [
+   "nomansland"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cobbled_siltstone_brick_wall",
+  "kind": "WALL",
+  "mod": "nomansland",
+  "properties": "nomansland:siltstone",
+  "parent": "spicedcider:cobbled_siltstone_bricks",
+  "side": "spicedcider:block/cobbled_siltstone_bricks",
+  "top": "spicedcider:block/cobbled_siltstone_bricks",
+  "bottom": "spicedcider:block/cobbled_siltstone_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:cobbled_siltstone_bricks",
+  "cut": [
+   "spicedcider:cobbled_siltstone_bricks"
+  ],
+  "requires": [
+   "nomansland"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_siltstone_bricks",
+  "kind": "CUBE",
+  "mod": "nomansland",
+  "properties": "nomansland:siltstone",
+  "parent": null,
+  "side": "spicedcider:block/mossy_cobbled_siltstone_bricks",
+  "top": "spicedcider:block/mossy_cobbled_siltstone_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_siltstone_bricks",
+  "craft": "MOSSY",
+  "craftFrom": "spicedcider:cobbled_siltstone_bricks",
+  "gridFrom": "spicedcider:mossy_cobbled_siltstone",
+  "cut": [
+   "spicedcider:mossy_cobbled_siltstone"
+  ],
+  "requires": [
+   "nomansland"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_siltstone_brick_stairs",
+  "kind": "STAIRS",
+  "mod": "nomansland",
+  "properties": "nomansland:siltstone",
+  "parent": "spicedcider:mossy_cobbled_siltstone_bricks",
+  "side": "spicedcider:block/mossy_cobbled_siltstone_bricks",
+  "top": "spicedcider:block/mossy_cobbled_siltstone_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_siltstone_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:mossy_cobbled_siltstone_bricks",
+  "cut": [
+   "spicedcider:mossy_cobbled_siltstone_bricks"
+  ],
+  "requires": [
+   "nomansland"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_siltstone_brick_slab",
+  "kind": "SLAB",
+  "mod": "nomansland",
+  "properties": "nomansland:siltstone",
+  "parent": "spicedcider:mossy_cobbled_siltstone_bricks",
+  "side": "spicedcider:block/mossy_cobbled_siltstone_bricks",
+  "top": "spicedcider:block/mossy_cobbled_siltstone_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_siltstone_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:mossy_cobbled_siltstone_bricks",
+  "cut": [
+   "spicedcider:mossy_cobbled_siltstone_bricks"
+  ],
+  "requires": [
+   "nomansland"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_siltstone_brick_wall",
+  "kind": "WALL",
+  "mod": "nomansland",
+  "properties": "nomansland:siltstone",
+  "parent": "spicedcider:mossy_cobbled_siltstone_bricks",
+  "side": "spicedcider:block/mossy_cobbled_siltstone_bricks",
+  "top": "spicedcider:block/mossy_cobbled_siltstone_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_siltstone_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:mossy_cobbled_siltstone_bricks",
+  "cut": [
+   "spicedcider:mossy_cobbled_siltstone_bricks"
+  ],
+  "requires": [
+   "nomansland"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cobbled_sugilite_bricks",
+  "kind": "CUBE",
+  "mod": "caverns_and_chasms",
+  "properties": "caverns_and_chasms:sugilite",
+  "parent": null,
+  "side": "spicedcider:block/cobbled_sugilite_bricks",
+  "top": "spicedcider:block/cobbled_sugilite_bricks",
+  "bottom": "spicedcider:block/cobbled_sugilite_bricks",
+  "craft": "TILES",
+  "craftFrom": "spicedcider:cobbled_sugilite",
+  "cut": [
+   "spicedcider:cobbled_sugilite"
+  ],
+  "requires": [
+   "caverns_and_chasms"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cobbled_sugilite_brick_stairs",
+  "kind": "STAIRS",
+  "mod": "caverns_and_chasms",
+  "properties": "caverns_and_chasms:sugilite",
+  "parent": "spicedcider:cobbled_sugilite_bricks",
+  "side": "spicedcider:block/cobbled_sugilite_bricks",
+  "top": "spicedcider:block/cobbled_sugilite_bricks",
+  "bottom": "spicedcider:block/cobbled_sugilite_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:cobbled_sugilite_bricks",
+  "cut": [
+   "spicedcider:cobbled_sugilite_bricks"
+  ],
+  "requires": [
+   "caverns_and_chasms"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cobbled_sugilite_brick_slab",
+  "kind": "SLAB",
+  "mod": "caverns_and_chasms",
+  "properties": "caverns_and_chasms:sugilite",
+  "parent": "spicedcider:cobbled_sugilite_bricks",
+  "side": "spicedcider:block/cobbled_sugilite_bricks",
+  "top": "spicedcider:block/cobbled_sugilite_bricks",
+  "bottom": "spicedcider:block/cobbled_sugilite_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:cobbled_sugilite_bricks",
+  "cut": [
+   "spicedcider:cobbled_sugilite_bricks"
+  ],
+  "requires": [
+   "caverns_and_chasms"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cobbled_sugilite_brick_wall",
+  "kind": "WALL",
+  "mod": "caverns_and_chasms",
+  "properties": "caverns_and_chasms:sugilite",
+  "parent": "spicedcider:cobbled_sugilite_bricks",
+  "side": "spicedcider:block/cobbled_sugilite_bricks",
+  "top": "spicedcider:block/cobbled_sugilite_bricks",
+  "bottom": "spicedcider:block/cobbled_sugilite_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:cobbled_sugilite_bricks",
+  "cut": [
+   "spicedcider:cobbled_sugilite_bricks"
+  ],
+  "requires": [
+   "caverns_and_chasms"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_sugilite_bricks",
+  "kind": "CUBE",
+  "mod": "caverns_and_chasms",
+  "properties": "caverns_and_chasms:sugilite",
+  "parent": null,
+  "side": "spicedcider:block/mossy_cobbled_sugilite_bricks",
+  "top": "spicedcider:block/mossy_cobbled_sugilite_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_sugilite_bricks",
+  "craft": "MOSSY",
+  "craftFrom": "spicedcider:cobbled_sugilite_bricks",
+  "gridFrom": "spicedcider:mossy_cobbled_sugilite",
+  "cut": [
+   "spicedcider:mossy_cobbled_sugilite"
+  ],
+  "requires": [
+   "caverns_and_chasms"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_sugilite_brick_stairs",
+  "kind": "STAIRS",
+  "mod": "caverns_and_chasms",
+  "properties": "caverns_and_chasms:sugilite",
+  "parent": "spicedcider:mossy_cobbled_sugilite_bricks",
+  "side": "spicedcider:block/mossy_cobbled_sugilite_bricks",
+  "top": "spicedcider:block/mossy_cobbled_sugilite_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_sugilite_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:mossy_cobbled_sugilite_bricks",
+  "cut": [
+   "spicedcider:mossy_cobbled_sugilite_bricks"
+  ],
+  "requires": [
+   "caverns_and_chasms"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_sugilite_brick_slab",
+  "kind": "SLAB",
+  "mod": "caverns_and_chasms",
+  "properties": "caverns_and_chasms:sugilite",
+  "parent": "spicedcider:mossy_cobbled_sugilite_bricks",
+  "side": "spicedcider:block/mossy_cobbled_sugilite_bricks",
+  "top": "spicedcider:block/mossy_cobbled_sugilite_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_sugilite_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:mossy_cobbled_sugilite_bricks",
+  "cut": [
+   "spicedcider:mossy_cobbled_sugilite_bricks"
+  ],
+  "requires": [
+   "caverns_and_chasms"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_sugilite_brick_wall",
+  "kind": "WALL",
+  "mod": "caverns_and_chasms",
+  "properties": "caverns_and_chasms:sugilite",
+  "parent": "spicedcider:mossy_cobbled_sugilite_bricks",
+  "side": "spicedcider:block/mossy_cobbled_sugilite_bricks",
+  "top": "spicedcider:block/mossy_cobbled_sugilite_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_sugilite_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:mossy_cobbled_sugilite_bricks",
+  "cut": [
+   "spicedcider:mossy_cobbled_sugilite_bricks"
+  ],
+  "requires": [
+   "caverns_and_chasms"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cobbled_sulfur_bricks",
+  "kind": "CUBE",
+  "mod": "vanillabackport",
+  "properties": "minecraft:sulfur",
+  "parent": null,
+  "side": "spicedcider:block/cobbled_sulfur_bricks",
+  "top": "spicedcider:block/cobbled_sulfur_bricks",
+  "bottom": "spicedcider:block/cobbled_sulfur_bricks",
+  "craft": "TILES",
+  "craftFrom": "spicedcider:cobbled_sulfur",
+  "cut": [
+   "spicedcider:cobbled_sulfur"
+  ],
+  "requires": [
+   "vanillabackport"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cobbled_sulfur_brick_stairs",
+  "kind": "STAIRS",
+  "mod": "vanillabackport",
+  "properties": "minecraft:sulfur",
+  "parent": "spicedcider:cobbled_sulfur_bricks",
+  "side": "spicedcider:block/cobbled_sulfur_bricks",
+  "top": "spicedcider:block/cobbled_sulfur_bricks",
+  "bottom": "spicedcider:block/cobbled_sulfur_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:cobbled_sulfur_bricks",
+  "cut": [
+   "spicedcider:cobbled_sulfur_bricks"
+  ],
+  "requires": [
+   "vanillabackport"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cobbled_sulfur_brick_slab",
+  "kind": "SLAB",
+  "mod": "vanillabackport",
+  "properties": "minecraft:sulfur",
+  "parent": "spicedcider:cobbled_sulfur_bricks",
+  "side": "spicedcider:block/cobbled_sulfur_bricks",
+  "top": "spicedcider:block/cobbled_sulfur_bricks",
+  "bottom": "spicedcider:block/cobbled_sulfur_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:cobbled_sulfur_bricks",
+  "cut": [
+   "spicedcider:cobbled_sulfur_bricks"
+  ],
+  "requires": [
+   "vanillabackport"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:cobbled_sulfur_brick_wall",
+  "kind": "WALL",
+  "mod": "vanillabackport",
+  "properties": "minecraft:sulfur",
+  "parent": "spicedcider:cobbled_sulfur_bricks",
+  "side": "spicedcider:block/cobbled_sulfur_bricks",
+  "top": "spicedcider:block/cobbled_sulfur_bricks",
+  "bottom": "spicedcider:block/cobbled_sulfur_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:cobbled_sulfur_bricks",
+  "cut": [
+   "spicedcider:cobbled_sulfur_bricks"
+  ],
+  "requires": [
+   "vanillabackport"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_sulfur_bricks",
+  "kind": "CUBE",
+  "mod": "vanillabackport",
+  "properties": "minecraft:sulfur",
+  "parent": null,
+  "side": "spicedcider:block/mossy_cobbled_sulfur_bricks",
+  "top": "spicedcider:block/mossy_cobbled_sulfur_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_sulfur_bricks",
+  "craft": "MOSSY",
+  "craftFrom": "spicedcider:cobbled_sulfur_bricks",
+  "gridFrom": "spicedcider:mossy_cobbled_sulfur",
+  "cut": [
+   "spicedcider:mossy_cobbled_sulfur"
+  ],
+  "requires": [
+   "vanillabackport"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_sulfur_brick_stairs",
+  "kind": "STAIRS",
+  "mod": "vanillabackport",
+  "properties": "minecraft:sulfur",
+  "parent": "spicedcider:mossy_cobbled_sulfur_bricks",
+  "side": "spicedcider:block/mossy_cobbled_sulfur_bricks",
+  "top": "spicedcider:block/mossy_cobbled_sulfur_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_sulfur_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:mossy_cobbled_sulfur_bricks",
+  "cut": [
+   "spicedcider:mossy_cobbled_sulfur_bricks"
+  ],
+  "requires": [
+   "vanillabackport"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_sulfur_brick_slab",
+  "kind": "SLAB",
+  "mod": "vanillabackport",
+  "properties": "minecraft:sulfur",
+  "parent": "spicedcider:mossy_cobbled_sulfur_bricks",
+  "side": "spicedcider:block/mossy_cobbled_sulfur_bricks",
+  "top": "spicedcider:block/mossy_cobbled_sulfur_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_sulfur_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:mossy_cobbled_sulfur_bricks",
+  "cut": [
+   "spicedcider:mossy_cobbled_sulfur_bricks"
+  ],
+  "requires": [
+   "vanillabackport"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_sulfur_brick_wall",
+  "kind": "WALL",
+  "mod": "vanillabackport",
+  "properties": "minecraft:sulfur",
+  "parent": "spicedcider:mossy_cobbled_sulfur_bricks",
+  "side": "spicedcider:block/mossy_cobbled_sulfur_bricks",
+  "top": "spicedcider:block/mossy_cobbled_sulfur_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_sulfur_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:mossy_cobbled_sulfur_bricks",
+  "cut": [
+   "spicedcider:mossy_cobbled_sulfur_bricks"
+  ],
+  "requires": [
+   "vanillabackport"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_deepslate_bricks",
+  "kind": "CUBE",
+  "mod": "nomansland",
+  "properties": "minecraft:cobbled_deepslate",
+  "parent": null,
+  "side": "spicedcider:block/mossy_cobbled_deepslate_bricks",
+  "top": "spicedcider:block/mossy_cobbled_deepslate_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_deepslate_bricks",
+  "craft": "MOSSY",
+  "craftFrom": "nomansland:cobbled_deepslate_bricks",
+  "gridFrom": "stoneworks:mossy_cobbled_deepslate",
+  "cut": [
+   "stoneworks:mossy_cobbled_deepslate"
+  ],
+  "requires": [
+   "nomansland",
+   "stoneworks"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_deepslate_brick_stairs",
+  "kind": "STAIRS",
+  "mod": "nomansland",
+  "properties": "minecraft:cobbled_deepslate",
+  "parent": "spicedcider:mossy_cobbled_deepslate_bricks",
+  "side": "spicedcider:block/mossy_cobbled_deepslate_bricks",
+  "top": "spicedcider:block/mossy_cobbled_deepslate_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_deepslate_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:mossy_cobbled_deepslate_bricks",
+  "cut": [
+   "spicedcider:mossy_cobbled_deepslate_bricks"
+  ],
+  "requires": [
+   "nomansland",
+   "stoneworks"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_deepslate_brick_slab",
+  "kind": "SLAB",
+  "mod": "nomansland",
+  "properties": "minecraft:cobbled_deepslate",
+  "parent": "spicedcider:mossy_cobbled_deepslate_bricks",
+  "side": "spicedcider:block/mossy_cobbled_deepslate_bricks",
+  "top": "spicedcider:block/mossy_cobbled_deepslate_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_deepslate_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:mossy_cobbled_deepslate_bricks",
+  "cut": [
+   "spicedcider:mossy_cobbled_deepslate_bricks"
+  ],
+  "requires": [
+   "nomansland",
+   "stoneworks"
+  ],
+  "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:mossy_cobbled_deepslate_brick_wall",
+  "kind": "WALL",
+  "mod": "nomansland",
+  "properties": "minecraft:cobbled_deepslate",
+  "parent": "spicedcider:mossy_cobbled_deepslate_bricks",
+  "side": "spicedcider:block/mossy_cobbled_deepslate_bricks",
+  "top": "spicedcider:block/mossy_cobbled_deepslate_bricks",
+  "bottom": "spicedcider:block/mossy_cobbled_deepslate_bricks",
+  "craft": "SHAPE",
+  "craftFrom": "spicedcider:mossy_cobbled_deepslate_bricks",
+  "cut": [
+   "spicedcider:mossy_cobbled_deepslate_bricks"
+  ],
+  "requires": [
+   "nomansland",
+   "stoneworks"
+  ],
+  "tool": "pickaxe"
  }
 ]

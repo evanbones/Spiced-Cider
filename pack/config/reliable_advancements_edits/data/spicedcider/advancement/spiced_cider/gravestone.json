@@ -1,0 +1,32 @@
+{
+  "parent": "spicedcider:spiced_cider/cobblestone",
+  "display": {
+    "icon": {
+      "id": "spicedcider:gravestone"
+    },
+    "title": {
+      "text": "Grave Matters"
+    },
+    "description": {
+      "text": "Carve a Gravestone and carry it, so your belongings wait for you if you fall"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "has_gravestone": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "spicedcider:gravestone"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_gravestone"
+    ]
+  ]
+}

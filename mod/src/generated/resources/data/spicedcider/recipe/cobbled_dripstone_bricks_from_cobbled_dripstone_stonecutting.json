@@ -1,0 +1,16 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "spicedcider:feature",
+      "feature": "buildingBlocks"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "spicedcider:cobbled_dripstone"
+  },
+  "result": {
+    "count": 1,
+    "id": "spicedcider:cobbled_dripstone_bricks"
+  }
+}

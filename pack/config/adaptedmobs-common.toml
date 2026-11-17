@@ -18,7 +18,7 @@
 
 ["Support Creeper"]
 	#Determines if Support Creepers should spawn
-	"Spawn Support Creepers" = true
+	"Spawn Support Creepers" = false
 	#Determines how often do Support Creepers spawn
 	# Default: 20
 	# Range: 0 ~ 100
@@ -38,11 +38,11 @@
 	#Determines how often do Rocket Creepers spawn
 	# Default: 25
 	# Range: 0 ~ 100
-	"Rocket Creeper Spawn Weight" = 25
+	"Rocket Creeper Spawn Weight" = 12
 	#Determines how often do Rocket Creepers spawn in extra biomes
 	# Default: 50
 	# Range: 0 ~ 100
-	"Rocket Creeper Extra Spawn Weight" = 50
+	"Rocket Creeper Extra Spawn Weight" = 25
 	#Requires Tolerable Creepers. Prevents Rocket Creeper explosions from damaging blocks and spawns a Rocket Creeper spore cloud instead
 	"Prevent Rocket Creeper Block Damage" = true
 	#Requires Tolerable Creepers. Halves the damage Rocket Creeper explosions deal to entities

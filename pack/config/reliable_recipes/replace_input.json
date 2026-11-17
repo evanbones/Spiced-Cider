@@ -100,6 +100,14 @@
   {
     "action": "replace_input",
     "filter": {
+      "id": "vanillabackport:bundle"
+    },
+    "target": "minecraft:string",
+    "replacement": "farmersdelight:rope"
+  },
+  {
+    "action": "replace_input",
+    "filter": {
       "id": "create:crafting/kinetics/sticky_mechanical_piston"
     },
     "target": "#c:slimeballs",
@@ -168,6 +176,22 @@
     },
     "target": "#c:ingots/iron",
     "replacement": "#c:ingots/cast_iron"
+  },
+  {
+    "action": "replace_input",
+    "filter": {
+      "id": "create:crafting/kinetics/metal_bracket"
+    },
+    "target": "#c:ingots/iron",
+    "replacement": "#c:ingots/cast_iron"
+  },
+  {
+    "action": "replace_input",
+    "filter": {
+      "id": "create:crafting/kinetics/metal_bracket"
+    },
+    "target": "#c:nuggets/iron",
+    "replacement": "#c:nuggets/cast_iron"
   },
   {
     "action": "replace_input",

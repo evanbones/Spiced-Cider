@@ -120,5 +120,33 @@
       "clutternomore:blockbox/golden_brick_step"
     ],
     "replace_with": "clutternomore:caverns_and_chasms/gold_brick_step"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "clutternomore:environmental/dirt_brick_step"
+    ],
+    "replace_with": "clutternomore:mud_brick_step"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "clutternomore:environmental/vertical_dirt_brick_slab"
+    ],
+    "replace_with": "clutternomore:vertical_mud_brick_slab"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "clutternomore:environmental/dirt_tile_step"
+    ],
+    "replace_with": "clutternomore:mud_brick_step"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "clutternomore:environmental/vertical_dirt_tile_slab"
+    ],
+    "replace_with": "clutternomore:vertical_mud_brick_slab"
   }
 ]

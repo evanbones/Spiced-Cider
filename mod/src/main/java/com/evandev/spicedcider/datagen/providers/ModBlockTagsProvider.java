@@ -48,7 +48,8 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.DEPOSIT.get())
                 .add(ModBlocks.DEEPSLATE_DEPOSIT.get())
-                .add(ModBlocks.BLACKSTONE_DEPOSIT.get());
+                .add(ModBlocks.BLACKSTONE_DEPOSIT.get())
+                .add(ModBlocks.GRAVESTONE.get());
 
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(ModBlocks.LATEX_CAULDRON.get(), ModBlocks.CHOCOLATE_CAULDRON.get(),
                 ModBlocks.SPRING_WATER_CAULDRON.get(), ModBlocks.LUMISENE_CAULDRON.get());

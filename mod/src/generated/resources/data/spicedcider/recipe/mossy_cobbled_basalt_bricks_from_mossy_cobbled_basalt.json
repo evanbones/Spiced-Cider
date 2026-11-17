@@ -1,0 +1,27 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "stoneworks"
+    },
+    {
+      "type": "spicedcider:feature",
+      "feature": "buildingBlocks"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "stoneworks:mossy_cobbled_basalt"
+    }
+  },
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "result": {
+    "count": 4,
+    "id": "spicedcider:mossy_cobbled_basalt_bricks"
+  }
+}

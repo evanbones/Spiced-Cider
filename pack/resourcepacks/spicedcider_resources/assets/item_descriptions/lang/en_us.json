@@ -1,5 +1,7 @@
 {
   "effect.minecraft.nausea.description": "An effect that causes you to become disoriented.",
+  "lore.minecraft.leather": "Cured hide used for armor and books. Hides turn into Leather on a Tanning Rack.",
+  "entity.minecraft.cow.description": "A passive mob found in grassy biomes that can be milked using a bucket. Drops Hide.",
   "lore.minecraft.rabbit_hide": "A small, thin hide, dropped by Rabbits and Foxes. Killing one with a Knife yields an extra Small Hide. Stitched together, they make a full Hide, or one can be cured on a Tanning Rack.",
   "lore.minecraft.honeycomb_block": "A solid block of Beeswax.",
   "tag.c.waxed.description": "A block that has since been waxed with Beeswax to prevent it from aging. It can be scraped off with an Axe.",
@@ -77,7 +79,7 @@
   "tag.c.storage_blocks.description": "A compact block of nine of a material. Handy for storage, and can be crafted back at any time.",
   "tag.c.bookshelves.description": "A decorative block packed with Books. Drops its Books when broken without Silk Touch.",
   "tag.c.barrels.description": "A storage block that can be opened even when covered.",
-  "tag.c.ores.iron.description": "An ore that can be mined with a Copper Pickaxe or better to collect Raw Iron. It's more common in mountains.",
+  "tag.c.ores.iron.description": "An ore that can be mined with a Bronze Pickaxe or better to collect Raw Iron. It's more common in mountains.",
   "tag.c.ores.gold.description": "An ore that can be mined with a Bronze Pickaxe or better to collect Raw Gold. It's more common in badlands.",
   "tag.c.ores.diamond.description": "An ore that can be mined with a Steel Pickaxe or better to collect Diamonds.",
   "tag.c.ores.tin.description": "An ore that can be mined with a Copper Pickaxe or better to collect Raw Tin. It's more common in mountains.",
@@ -95,8 +97,8 @@
   "tag.minecraft.hoes.description": "A tool that can be used to till soil and plant crops. It harvests vegetation in a 3-wide area, or 5-wide for Diamond tier and above.",
   "tag.c.fence_gates.description": "A block that connects to fences, but can be opened like a door. Gates stacked on top of each other open together.",
   "tag.c.fence_gates.wooden.description": "A block that connects to fences, but can be opened like a door. Gates stacked on top of each other open together.",
-  "lore.minecraft.iron_ore": "An ore that can be mined with a Copper Pickaxe or better to collect Raw Iron. It's more common in mountains.",
-  "lore.minecraft.deepslate_iron_ore": "An ore that can be mined with a Copper Pickaxe or better to collect Raw Iron. It's more common in mountains.",
+  "lore.minecraft.iron_ore": "An ore that can be mined with a Bronze Pickaxe or better to collect Raw Iron. It's more common in mountains.",
+  "lore.minecraft.deepslate_iron_ore": "An ore that can be mined with a Bronze Pickaxe or better to collect Raw Iron. It's more common in mountains.",
   "lore.minecraft.gold_ore": "An ore that can be mined with a Bronze Pickaxe or better to collect Raw Gold. It's more common in badlands.",
   "lore.minecraft.deepslate_gold_ore": "An ore that can be mined with a Bronze Pickaxe or better to collect Raw Gold. It's more common in badlands.",
   "lore.minecraft.diamond_ore": "An ore that can be mined with a Steel Pickaxe or better to collect Diamonds. It's a rare find.",
@@ -262,5 +264,13 @@
   "tag.c.seeds.beetroot.description": "An item that can be planted to grow Beets.",
   "lore.minecraft.bamboo": "A fast-growing stalk found in jungles. Needs an axe to harvest.",
   "lore.abundant_atmosphere.red_bamboo": "A fast-growing red stalk. Needs an axe to harvest.",
-  "lore.mynethersdelight.powdery_cane": "An invasive crop in Crimson Forests. Its Berries are explosive on contact, try cutting the red stem. Needs an axe to harvest."
+  "lore.mynethersdelight.powdery_cane": "An invasive crop in Crimson Forests. Its Berries are explosive on contact, try cutting the red stem. Needs an axe to harvest.",
+  "lore.minecraft.short_grass": "A common plant. Breaking it with a Hoe sometimes turns up Wheat Seeds or Grass Seeds; any other tool finds nothing.",
+  "lore.minecraft.tall_grass": "An overgrown grass. Breaking it with a Hoe sometimes turns up Wheat Seeds or Grass Seeds; any other tool finds nothing.",
+  "lore.minecraft.wheat_seeds": "Plant on Farmland to grow Wheat. Found by breaking grass with a Hoe.",
+  "lore.minecraft.cobblestone": "A common crafting material made by breaking up Stone with a Hammer on a Workstone.",
+  "lore.minecraft.cobbled_deepslate": "A common crafting material made by breaking up Deepslate with a Hammer on a Workstone.",
+  "tag.c.cobblestones.description": "A common crafting material made by breaking up stone with a Hammer on a Workstone.",
+  "tag.c.cobblestones.deepslate.description": "A common crafting material made by breaking up Deepslate with a Hammer on a Workstone.",
+  "lore.minecraft.deepslate": "A dark stone from the depths of the world."
 }

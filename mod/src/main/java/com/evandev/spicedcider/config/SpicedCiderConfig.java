@@ -91,6 +91,7 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.BooleanValue sulfurCavesRework;
         public final ModConfigSpec.BooleanValue brightCageLanterns;
         public final ModConfigSpec.BooleanValue customWindowIcon;
+        public final ModConfigSpec.BooleanValue emiDiscoveryIndexOnly;
 
         public Startup(ModConfigSpec.Builder builder) {
             blockBoxWoodVariants = builder
@@ -142,6 +143,11 @@ public class SpicedCiderConfig {
                     .comment(tooltip("customWindowIcon"))
                     .translation("option.spicedcider.customWindowIcon")
                     .define("customWindowIcon", false);
+
+            emiDiscoveryIndexOnly = builder
+                    .comment(tooltip("emiDiscoveryIndexOnly"))
+                    .translation("option.spicedcider.emiDiscoveryIndexOnly")
+                    .define("emiDiscoveryIndexOnly", false);
         }
     }
 
@@ -157,6 +163,7 @@ public class SpicedCiderConfig {
                 "grapplingHooks",
                 "strawGolems",
                 "sputters",
+                "sporals",
                 "leafSticks",
                 "placedSticks",
                 "oreStoneDrops",
@@ -164,18 +171,20 @@ public class SpicedCiderConfig {
                 "deposits",
                 "wormyDirt",
                 "richGravel",
+                "gravestones",
                 "fruitTrees",
                 "oceanDepths",
                 "buildingBlocks",
                 "paleGardenPlants",
                 "snifferGoldenDandelions");
 
-        public static final Set<String> FEATURES_OFF_BY_DEFAULT = Set.of("oreStoneDrops");
+        public static final Set<String> FEATURES_OFF_BY_DEFAULT = Set.of("oreStoneDrops", "sporals");
 
         public final ModConfigSpec.BooleanValue oldWisteriaTrees;
         public final ModConfigSpec.BooleanValue slimeTimeDisableItemMerging;
         public final ModConfigSpec.BooleanValue easyAnvilsFreeRepairs;
         public final ModConfigSpec.BooleanValue fireRingNoPotions;
+        public final ModConfigSpec.BooleanValue lodgedTamedArrowPulling;
         public final ModConfigSpec.BooleanValue copperGolemBuildingDisabled;
         public final ModConfigSpec.BooleanValue whereWindsBlowNoBonemealGrass;
         public final ModConfigSpec.BooleanValue backpackInventoryRows;
@@ -188,6 +197,8 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.BooleanValue copperGolemNoChest;
         public final ModConfigSpec.BooleanValue treeChoppingStamina;
         public final ModConfigSpec.BooleanValue calmerHerdPanic;
+        public final ModConfigSpec.BooleanValue weakerLeapers;
+        public final ModConfigSpec.BooleanValue chalkSymbolsAboveHotbar;
         public final ModConfigSpec.BooleanValue vanillaBackportLightTweaks;
         public final ModConfigSpec.BooleanValue creakingBuff;
         public final ModConfigSpec.BooleanValue goldenDandelionTempting;
@@ -208,6 +219,7 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.BooleanValue removeQuasiConnectivity;
         public final ModConfigSpec.BooleanValue harmlessGhastFireballs;
         public final ModConfigSpec.BooleanValue logsNeedAxe;
+        public final ModConfigSpec.BooleanValue hammersCannotMine;
         public final ModConfigSpec.BooleanValue treeBark;
         public final ModConfigSpec.BooleanValue mossNeedsHoe;
         public final ModConfigSpec.BooleanValue blockDyeing;
@@ -218,6 +230,7 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.BooleanValue piglinWeaponSwap;
         public final ModConfigSpec.BooleanValue soulCampfireHaunting;
         public final ModConfigSpec.BooleanValue throwablePotionCooldown;
+        public final ModConfigSpec.BooleanValue privateAdvancementMessages;
         public final ModConfigSpec.BooleanValue accurateSignHitboxes;
         public final ModConfigSpec.BooleanValue iglooBasementRemoval;
         public final ModConfigSpec.BooleanValue noVanillaCocoaPods;
@@ -231,6 +244,13 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.IntValue caveMapsFixedHeight;
         public final ModConfigSpec.ConfigValue<List<? extends String>> caveMapsFixedHeights;
         public final ModConfigSpec.ConfigValue<List<? extends String>> caveMapsCreationHeightDimensions;
+        public final ModConfigSpec.BooleanValue gravestoneDecayWithTime;
+        public final ModConfigSpec.BooleanValue gravestoneDecayWithDeaths;
+        public final ModConfigSpec.IntValue gravestoneDecayHours;
+        public final ModConfigSpec.IntValue gravestoneDamageToBreak;
+        public final ModConfigSpec.BooleanValue gravestoneStoreExperience;
+        public final ModConfigSpec.BooleanValue gravestoneKeepAllExperience;
+        public final ModConfigSpec.BooleanValue gravestoneExperienceDecay;
 
         public final Map<String, ModConfigSpec.BooleanValue> features = new LinkedHashMap<>();
 
@@ -263,6 +283,11 @@ public class SpicedCiderConfig {
                     .comment(tooltip("fireRingNoPotions"))
                     .translation("option.spicedcider.fireRingNoPotions")
                     .define("fireRingNoPotions", false);
+
+            lodgedTamedArrowPulling = builder
+                    .comment(tooltip("lodgedTamedArrowPulling"))
+                    .translation("option.spicedcider.lodgedTamedArrowPulling")
+                    .define("lodgedTamedArrowPulling", false);
 
             copperGolemBuildingDisabled = builder
                     .comment(tooltip("copperGolemBuildingDisabled"))
@@ -323,6 +348,16 @@ public class SpicedCiderConfig {
                     .comment(tooltip("calmerHerdPanic"))
                     .translation("option.spicedcider.calmerHerdPanic")
                     .define("calmerHerdPanic", false);
+
+            weakerLeapers = builder
+                    .comment(tooltip("weakerLeapers"))
+                    .translation("option.spicedcider.weakerLeapers")
+                    .define("weakerLeapers", false);
+
+            chalkSymbolsAboveHotbar = builder
+                    .comment(tooltip("chalkSymbolsAboveHotbar"))
+                    .translation("option.spicedcider.chalkSymbolsAboveHotbar")
+                    .define("chalkSymbolsAboveHotbar", false);
 
             vanillaBackportLightTweaks = builder
                     .comment(tooltip("vanillaBackportLightTweaks"))
@@ -411,6 +446,11 @@ public class SpicedCiderConfig {
                     .translation("option.spicedcider.logsNeedAxe")
                     .define("logsNeedAxe", false);
 
+            hammersCannotMine = builder
+                    .comment(tooltip("hammersCannotMine"))
+                    .translation("option.spicedcider.hammersCannotMine")
+                    .define("hammersCannotMine", false);
+
             treeBark = builder
                     .comment(tooltip("treeBark"))
                     .translation("option.spicedcider.treeBark")
@@ -460,6 +500,11 @@ public class SpicedCiderConfig {
                     .comment(tooltip("throwablePotionCooldown"))
                     .translation("option.spicedcider.throwablePotionCooldown")
                     .define("throwablePotionCooldown", false);
+
+            privateAdvancementMessages = builder
+                    .comment(tooltip("privateAdvancementMessages"))
+                    .translation("option.spicedcider.privateAdvancementMessages")
+                    .define("privateAdvancementMessages", false);
 
             accurateSignHitboxes = builder
                     .comment(tooltip("accurateSignHitboxes"))
@@ -534,6 +579,44 @@ public class SpicedCiderConfig {
                     .translation("option.spicedcider.caveMapsCreationHeightDimensions")
                     .defineListAllowEmpty("caveMapsCreationHeightDimensions", List.of(), () -> "minecraft:the_nether",
                             element -> element instanceof String id && ResourceLocation.tryParse(id) != null);
+
+            builder.pop();
+            builder.push("graves");
+
+            gravestoneDecayWithTime = builder
+                    .comment(tooltip("gravestoneDecayWithTime"))
+                    .translation("option.spicedcider.gravestoneDecayWithTime")
+                    .define("gravestoneDecayWithTime", true);
+
+            gravestoneDecayWithDeaths = builder
+                    .comment(tooltip("gravestoneDecayWithDeaths"))
+                    .translation("option.spicedcider.gravestoneDecayWithDeaths")
+                    .define("gravestoneDecayWithDeaths", true);
+
+            gravestoneDecayHours = builder
+                    .comment(tooltip("gravestoneDecayHours"))
+                    .translation("option.spicedcider.gravestoneDecayHours")
+                    .defineInRange("gravestoneDecayHours", 8, 1, 168);
+
+            gravestoneDamageToBreak = builder
+                    .comment(tooltip("gravestoneDamageToBreak"))
+                    .translation("option.spicedcider.gravestoneDamageToBreak")
+                    .defineInRange("gravestoneDamageToBreak", 3, 1, 20);
+
+            gravestoneStoreExperience = builder
+                    .comment(tooltip("gravestoneStoreExperience"))
+                    .translation("option.spicedcider.gravestoneStoreExperience")
+                    .define("gravestoneStoreExperience", true);
+
+            gravestoneKeepAllExperience = builder
+                    .comment(tooltip("gravestoneKeepAllExperience"))
+                    .translation("option.spicedcider.gravestoneKeepAllExperience")
+                    .define("gravestoneKeepAllExperience", false);
+
+            gravestoneExperienceDecay = builder
+                    .comment(tooltip("gravestoneExperienceDecay"))
+                    .translation("option.spicedcider.gravestoneExperienceDecay")
+                    .define("gravestoneExperienceDecay", false);
 
             builder.pop();
             builder.push("wind");
@@ -614,6 +697,8 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.BooleanValue hideOwnEffectParticles;
         public final ModConfigSpec.BooleanValue hideArmorBar;
         public final ModConfigSpec.BooleanValue matchHeldLightColors;
+        public final ModConfigSpec.BooleanValue matchChainLightColors;
+        public final ModConfigSpec.BooleanValue chainDecorationSway;
         public final ModConfigSpec.BooleanValue windParticles;
         public final ModConfigSpec.IntValue windParticleStrength;
         public final ModConfigSpec.BooleanValue windMotes;
@@ -648,10 +733,13 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.BooleanValue voiceChatHideSingleplayerHud;
         public final ModConfigSpec.BooleanValue clutterNoMoreShapeWheel;
         public final ModConfigSpec.BooleanValue remiRightSideTabs;
+        public final ModConfigSpec.BooleanValue emiDiscoveryIndexUnlocks;
+        public final ModConfigSpec.BooleanValue roughGemsOnGrindstone;
         public final ModConfigSpec.BooleanValue emiHideSmithingCategory;
         public final ModConfigSpec.BooleanValue emiCreateFanRework;
         public final ModConfigSpec.BooleanValue createHideItemDescriptions;
         public final ModConfigSpec.BooleanValue quarkHideHints;
+        public final ModConfigSpec.BooleanValue graveLocatorBar;
         public final ModConfigSpec.BooleanValue goldenDandelionParticles;
         public final ModConfigSpec.BooleanValue carvingWheel;
         public final ModConfigSpec.BooleanValue emiTappingCategory;
@@ -725,6 +813,16 @@ public class SpicedCiderConfig {
                     .translation("option.spicedcider.remiRightSideTabs")
                     .define("remiRightSideTabs", false);
 
+            emiDiscoveryIndexUnlocks = builder
+                    .comment(tooltip("emiDiscoveryIndexUnlocks"))
+                    .translation("option.spicedcider.emiDiscoveryIndexUnlocks")
+                    .define("emiDiscoveryIndexUnlocks", false);
+
+            roughGemsOnGrindstone = builder
+                    .comment(tooltip("roughGemsOnGrindstone"))
+                    .translation("option.spicedcider.roughGemsOnGrindstone")
+                    .define("roughGemsOnGrindstone", false);
+
             emiHideSmithingCategory = builder
                     .comment(tooltip("emiHideSmithingCategory"))
                     .translation("option.spicedcider.emiHideSmithingCategory")
@@ -744,6 +842,11 @@ public class SpicedCiderConfig {
                     .comment(tooltip("quarkHideHints"))
                     .translation("option.spicedcider.quarkHideHints")
                     .define("quarkHideHints", false);
+
+            graveLocatorBar = builder
+                    .comment(tooltip("graveLocatorBar"))
+                    .translation("option.spicedcider.graveLocatorBar")
+                    .define("graveLocatorBar", false);
 
             goldenDandelionParticles = builder
                     .comment(tooltip("goldenDandelionParticles"))
@@ -826,6 +929,11 @@ public class SpicedCiderConfig {
                     .translation("option.spicedcider.matchHeldLightColors")
                     .define("matchHeldLightColors", false);
 
+            matchChainLightColors = builder
+                    .comment(tooltip("matchChainLightColors"))
+                    .translation("option.spicedcider.matchChainLightColors")
+                    .define("matchChainLightColors", false);
+
             softerBlindnessAndDarkness = builder
                     .comment(tooltip("softerBlindnessAndDarkness"))
                     .translation("option.spicedcider.softerBlindnessAndDarkness")
@@ -906,6 +1014,11 @@ public class SpicedCiderConfig {
                     .comment(tooltip("hangingFruitSway"))
                     .translation("option.spicedcider.hangingFruitSway")
                     .define("hangingFruitSway", true);
+
+            chainDecorationSway = builder
+                    .comment(tooltip("chainDecorationSway"))
+                    .translation("option.spicedcider.chainDecorationSway")
+                    .define("chainDecorationSway", true);
 
             builder.pop();
             builder.push("voxy");

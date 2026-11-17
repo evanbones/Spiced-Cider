@@ -7,6 +7,8 @@
 	easyAnvilsFreeRepairs = true
 	#Fire rings no longer take potions to spread their effects. Requires Piglin Proliferation.
 	fireRingNoPotions = true
+	#Look at an arrow stuck in a tamed animal to highlight it, then right-click to pull it out. Uses the same removal chances as pulling arrows out of yourself. Requires Lodged.
+	lodgedTamedArrowPulling = true
 	#Stops copper golems from being built out of blocks. Requires Caverns & Chasms.
 	copperGolemBuildingDisabled = true
 	#Bonemeal no longer turns grass into overgrown grass. Requires Where Winds Blow.
@@ -39,6 +41,10 @@
 	oceanRuinPrismarineChests = true
 	#Animals that flee after seeing one of their herd hurt run at a normal panic speed instead of sprinting away. Requires Big Brain.
 	calmerHerdPanic = true
+	#Leapers deal a third less explosion damage. Requires Adapted Mobs.
+	weakerLeapers = true
+	#Learning a new chalk symbol shows its message above the hotbar instead of in chat. Requires Chalk.
+	chalkSymbolsAboveHotbar = false
 
 [features]
 	#Combine a named name tag with an item in the crafting grid to rename it. Takes effect after /reload.
@@ -61,6 +67,8 @@
 	strawGolems = true
 	#Sputters can be built from a barrel and a carved pumpkin.
 	sputters = true
+	#Sporals spawn in lush caves, swamps and jungles, where they follow other monsters and give them speed and strength.
+	sporals = true
 	#Breaking leaves sometimes drops a stick. Takes effect after /reload.
 	leafSticks = true
 	#Mining an ore also drops the stone it sits in, such as deepslate or netherrack. Takes effect after /reload.
@@ -85,6 +93,8 @@
 	placedSticks = true
 	#Rich gravel, which drops several flint, generates in gravel patches. Needs a world restart and only affects new chunks.
 	richGravel = true
+	#Gravestones can be crafted. Carry one and your items and experience go into a grave where you die. Takes effect after /reload.
+	gravestones = true
 
 	[features.gameplay]
 		#Beds don't explode outside the Overworld; instead they show a message and wake sleeping villagers.
@@ -107,6 +117,8 @@
 		harmlessGhastFireballs = true
 		#Blocks tagged spicedcider:needs_axe_to_harvest (logs) only drop when broken with an axe.
 		logsNeedAxe = true
+		#Hammers (c:tools/hammer) break blocks at hand speed and don't count as the right tool for drops.
+		hammersCannotMine = true
 		#Stripping a log with an axe drops Tree Bark, which can be used on a stripped log to restore it.
 		treeBark = true
 		#Blocks tagged spicedcider:needs_hoe_to_harvest (moss) only drop when broken with a hoe.
@@ -125,6 +137,8 @@
 		soulCampfireHaunting = true
 		#Splash potions have a 10 second cooldown and lingering potions a 5 second cooldown.
 		throwablePotionCooldown = true
+		#Advancement chat messages are only shown to the player who earned them.
+		privateAdvancementMessages = true
 		#Sign hitboxes follow the sign's model and rotation.
 		accurateSignHitboxes = true
 		#Igloos generate without their basement.
@@ -197,3 +211,23 @@
 		windVaneSignal = true
 		#Wind carries you while gliding: tailwinds speed you up, headwinds slow you down. Requires Reliable Gliders and the Wind option.
 		windGliders = true
+
+	[features.graves]
+		#Graves wear down as time passes in the world and eventually break open, spilling their contents. Spilled items never despawn.
+		gravestoneDecayWithTime = true
+		#Each later death of a grave's owner wears down their older graves.
+		gravestoneDecayWithDeaths = true
+		#Hours of world time between each stage of a grave crumbling. Only counts while the world is running.
+		# Default: 8
+		# Range: 1 ~ 168
+		gravestoneDecayHours = 8
+		#How many times a grave can wear down before it breaks open.
+		# Default: 3
+		# Range: 1 ~ 20
+		gravestoneDamageToBreak = 3
+		#Graves hold the experience you would have dropped on death.
+		gravestoneStoreExperience = true
+		#Graves hold all of your experience instead of only what you would have dropped.
+		gravestoneKeepAllExperience = false
+		#A worn grave gives back less experience: half at the second stage, a third at the last.
+		gravestoneExperienceDecay = false

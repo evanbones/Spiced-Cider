@@ -34,7 +34,8 @@ public final class ModBuildingBlocks {
 
     public record Def(String id, Kind kind, @Nullable String mod, String properties, @Nullable String parent,
                       String side, String top, String bottom, Craft craft, @Nullable String craftFrom,
-                      List<String> cut, List<String> requires, String tool, @Nullable String needs) {
+                      List<String> cut, List<String> requires, String tool, @Nullable String needs,
+                      @Nullable String gridFrom) {
         public String path() {
             return ResourceLocation.parse(id).getPath();
         }

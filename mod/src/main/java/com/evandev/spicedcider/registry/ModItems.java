@@ -118,6 +118,8 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> TANNING_RACK = ITEMS.register("tanning_rack",
             () -> new DoubleHighBlockItem(ModBlocks.TANNING_RACK.get(), new Item.Properties()));
+    public static final DeferredItem<Item> GRAVESTONE = ITEMS.register("gravestone",
+            () -> new BlockItem(ModBlocks.GRAVESTONE.get(), new Item.Properties()));
     @Nullable
     public static final DeferredItem<Item> BONDED_HIDE = optionalBlockItem("bonded_hide", ModBlocks.BONDED_HIDE);
     @Nullable

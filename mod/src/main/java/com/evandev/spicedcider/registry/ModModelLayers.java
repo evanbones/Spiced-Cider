@@ -20,4 +20,7 @@ public class ModModelLayers {
     public static final ModelLayerLocation STRAW_GOLEM = new ModelLayerLocation(
             ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "straw_golem"), "main"
     );
+    public static final ModelLayerLocation SPORAL = new ModelLayerLocation(
+            ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "sporal"), "main"
+    );
 }

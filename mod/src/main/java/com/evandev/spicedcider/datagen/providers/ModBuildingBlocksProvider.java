@@ -350,6 +350,10 @@ public class ModBuildingBlocksProvider implements DataProvider {
             case NONE -> {
             }
         }
+        if (def.gridFrom() != null) {
+            String gridPath = def.gridFrom().substring(def.gridFrom().indexOf(':') + 1);
+            shaped(def, def.path() + "_from_" + gridPath, 4, def.gridFrom(), "##", "##");
+        }
         int count = def.kind() == Kind.SLAB ? 2 : 1;
         for (String source : def.cut()) {
             JsonObject json = new JsonObject();

@@ -1,0 +1,30 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "nomansland"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "stoneworks"
+    },
+    {
+      "type": "spicedcider:feature",
+      "feature": "buildingBlocks"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "nomansland:cobbled_deepslate_bricks"
+    },
+    {
+      "item": "minecraft:moss_block"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "spicedcider:mossy_cobbled_deepslate_bricks"
+  }
+}

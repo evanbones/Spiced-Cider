@@ -1,0 +1,16 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "spicedcider:feature",
+      "feature": "sporals"
+    }
+  ],
+  "type": "neoforge:add_spawns",
+  "biomes": "#spicedcider:sporal_spawns",
+  "spawners": {
+    "type": "spicedcider:sporal",
+    "weight": 30,
+    "minCount": 1,
+    "maxCount": 2
+  }
+}

@@ -20,6 +20,8 @@ import com.evandev.spicedcider.content.block.PrismarineClusterBlock;
 import com.evandev.spicedcider.content.block.TallUnderwaterBrambleBlock;
 import com.evandev.spicedcider.content.block.TemporaryCobwebBlock;
 import com.evandev.spicedcider.content.block.TanningRackBlock;
+import com.evandev.spicedcider.content.block.GraveBlock;
+import com.evandev.spicedcider.content.block.GravestoneBlock;
 import com.evandev.spicedcider.content.block.TubewormBlock;
 import com.evandev.spicedcider.content.block.UnderwaterBrambleBlock;
 import com.evandev.spicedcider.content.block.VentBlock;
@@ -122,6 +124,12 @@ public class ModBlocks {
     public static final DeferredBlock<Block> TANNING_RACK = BLOCKS.register("tanning_rack",
             () -> new TanningRackBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).strength(1.0F).sound(SoundType.WOOD)
                     .noOcclusion().ignitedByLava().pushReaction(PushReaction.DESTROY)));
+
+    public static final DeferredBlock<Block> GRAVESTONE = BLOCKS.register("gravestone",
+            () -> new GravestoneBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).strength(2.0F, 6.0F).noOcclusion().requiresCorrectToolForDrops()));
+
+    public static final DeferredBlock<GraveBlock> GRAVE = BLOCKS.register("grave",
+            () -> new GraveBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).strength(-1.0F, 3600000.0F).noOcclusion().noLootTable().pushReaction(PushReaction.BLOCK)));
 
     @Nullable
     public static final DeferredBlock<Block> BONDED_HIDE = bondedHide("bonded_hide", MapColor.COLOR_BROWN, false);

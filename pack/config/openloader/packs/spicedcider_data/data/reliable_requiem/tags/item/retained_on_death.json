@@ -14,6 +14,7 @@
     "minecraft:crossbow",
     "minecraft:shield",
     "#minecraft:compasses",
+    "#c:buckets",
     {
       "id": "supplementaries:quiver",
       "required": false
@@ -24,6 +25,262 @@
     },
     {
       "id": "reliable_gliders:glider",
+      "required": false
+    },
+    {
+      "id": "infernalexp:strider_bucket",
+      "required": false
+    },
+    {
+      "id": "quark:crab_bucket",
+      "required": false
+    },
+    {
+      "id": "minecraft:sulfur_cube_bucket",
+      "required": false
+    },
+    {
+      "id": "tide:rainbow_trout_bucket",
+      "required": false
+    },
+    {
+      "id": "tide:brook_trout_bucket",
+      "required": false
+    },
+    {
+      "id": "tide:white_crappie_bucket",
+      "required": false
+    },
+    {
+      "id": "tide:black_crappie_bucket",
+      "required": false
+    },
+    {
+      "id": "tide:carp_bucket",
+      "required": false
+    },
+    {
+      "id": "tide:guppy_bucket",
+      "required": false
+    },
+    {
+      "id": "tide:bluegill_bucket",
+      "required": false
+    },
+    {
+      "id": "tide:catfish_bucket",
+      "required": false
+    },
+    {
+      "id": "tide:walleye_bucket",
+      "required": false
+    },
+    {
+      "id": "tide:arapaima_bucket",
+      "required": false
+    },
+    {
+      "id": "tide:sturgeon_bucket",
+      "required": false
+    },
+    {
+      "id": "tide:mooneye_bucket",
+      "required": false
+    },
+    {
+      "id": "tide:red_snapper_bucket",
+      "required": false
+    },
+    {
+      "id": "tide:flounder_bucket",
+      "required": false
+    },
+    {
+      "id": "tide:anchovy_bucket",
+      "required": false
+    },
+    {
+      "id": "tide:tuna_bucket",
+      "required": false
+    },
+    {
+      "id": "tide:mackerel_bucket",
+      "required": false
+    },
+    {
+      "id": "tide:snook_bucket",
+      "required": false
+    },
+    {
+      "id": "tide:angelfish_bucket",
+      "required": false
+    },
+    {
+      "id": "tide:mahi_mahi_bucket",
+      "required": false
+    },
+    {
+      "id": "tide:sailfish_bucket",
+      "required": false
+    },
+    {
+      "id": "tide:swordfish_bucket",
+      "required": false
+    },
+    {
+      "id": "tide:manta_ray_bucket",
+      "required": false
+    },
+    {
+      "id": "tide:coelacanth_bucket",
+      "required": false
+    },
+    {
+      "id": "tide:cave_eel_bucket",
+      "required": false
+    },
+    {
+      "id": "tide:deep_grouper_bucket",
+      "required": false
+    },
+    {
+      "id": "tide:anglerfish_bucket",
+      "required": false
+    },
+    {
+      "id": "tide:devils_hole_pupfish_bucket",
+      "required": false
+    },
+    {
+      "id": "tide:magma_mackerel_bucket",
+      "required": false
+    },
+    {
+      "id": "tide:ember_koi_bucket",
+      "required": false
+    },
+    {
+      "id": "tide:ash_perch_bucket",
+      "required": false
+    },
+    {
+      "id": "tide:obsidian_pike_bucket",
+      "required": false
+    },
+    {
+      "id": "tide:inferno_guppy_bucket",
+      "required": false
+    },
+    {
+      "id": "tide:warped_guppy_bucket",
+      "required": false
+    },
+    {
+      "id": "tide:crimson_fangjaw_bucket",
+      "required": false
+    },
+    {
+      "id": "tide:soulscale_bucket",
+      "required": false
+    },
+    {
+      "id": "tide:witherfin_bucket",
+      "required": false
+    },
+    {
+      "id": "tide:blazing_swordfish_bucket",
+      "required": false
+    },
+    {
+      "id": "tide:pale_clubfish_bucket",
+      "required": false
+    },
+    {
+      "id": "tide:violet_carp_bucket",
+      "required": false
+    },
+    {
+      "id": "tide:snatcher_squid_bucket",
+      "required": false
+    },
+    {
+      "id": "nomansland:billhook_bass_bucket",
+      "required": false
+    },
+    {
+      "id": "caverns_and_chasms:cavefish_bucket",
+      "required": false
+    },
+    {
+      "id": "spicedcider:resin_bucket",
+      "required": false
+    },
+    {
+      "id": "spicedcider:maple_syrup_bucket",
+      "required": false
+    },
+    {
+      "id": "spicedcider:resin_oil_bucket",
+      "required": false
+    },
+    {
+      "id": "spicedcider:molten_copper_bucket",
+      "required": false
+    },
+    {
+      "id": "spicedcider:molten_tin_bucket",
+      "required": false
+    },
+    {
+      "id": "spicedcider:molten_lead_bucket",
+      "required": false
+    },
+    {
+      "id": "spicedcider:molten_gold_bucket",
+      "required": false
+    },
+    {
+      "id": "spicedcider:molten_silver_bucket",
+      "required": false
+    },
+    {
+      "id": "spicedcider:molten_bronze_bucket",
+      "required": false
+    },
+    {
+      "id": "spicedcider:molten_rose_gold_bucket",
+      "required": false
+    },
+    {
+      "id": "spicedcider:molten_electrum_bucket",
+      "required": false
+    },
+    {
+      "id": "spicedcider:molten_iron_bucket",
+      "required": false
+    },
+    {
+      "id": "spicedcider:molten_cast_iron_bucket",
+      "required": false
+    },
+    {
+      "id": "spicedcider:molten_steel_bucket",
+      "required": false
+    },
+    {
+      "id": "spicedcider:molten_netherite_bucket",
+      "required": false
+    },
+    {
+      "id": "spicedcider:molten_necromium_bucket",
+      "required": false
+    },
+    {
+      "id": "spicedcider:molten_prismarite_bucket",
+      "required": false
+    },
+    {
+      "id": "spicedcider:molten_valkyrium_bucket",
       "required": false
     }
   ]

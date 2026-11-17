@@ -411,7 +411,7 @@ element {
 }
 
 element {
-  interactable = false
+  interactable = true
   source = [source:web]https://raw.githubusercontent.com/evanbones/Spiced-Cider/refs/heads/main/CHANGELOG-LATEST.md
   source_mode = resource
   shadow = true

@@ -5,6 +5,64 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.2.0] - 2026-11-17
+
+### Added
+
+- Option to stop hammers mining blocks at pickaxe speed or harvesting pickaxe blocks (off by default).
+- Lights hung from Reconnectible Chains chains and ropes take their Polytone coloured light (off by default).
+- Lanterns, banners and buntings hung from Reconnectible Chains chains and ropes sway in the wind.
+- Cobbled bricks and mossy cobbled bricks, with stairs, slabs and walls, for every Stoneworks and Cider Core cobbled
+  stone, plus mossy cobbled deepslate bricks.
+- Fireflies give off light when held (LambDynamicLights).
+- More lanterns can hang from Reconnectible Chains chains and ropes.
+
+### Changed
+
+- Mossy cobbled stones use vanilla-style moss.
+
+### Fixed
+
+- Farmer's Delight style foods that also set a vanilla bowl return gave back two bowls when eaten from a stack.
+- Smooth Animations no longer crashes on launch alongside Upgrade Aquatic.
+- Fixed a crash when Simple Voice Chat reconnects while another player's name tag is on screen.
+- With Raised installed, Quark's hotbar switcher only lifted Vanilla Backport's locator bar.
+
+## [2.1.0] - 2026-11-16
+
+### Added
+
+- Gravestones: carry one and, when you die, your items and experience go into a grave that anyone can open.
+- Option to show advancement chat messages only to the player who earned them (off by default).
+- EMI Discovery index-only option, where recipe and usage pages always show every item (off by default).
+- EMI Discovery advancement unlocks: `config/spicedcider/index_unlocks.json` reveals groups of items when an advancement
+  is earned and can hide Reliable EMI's creative tabs until one is (off by default).
+- Option to show Spelunkery's rough diamond and emerald polishing on the regular grindstone in EMI (off by default).
+- `tool_stats.json` armor entries accept `defense` (per piece) and `toughness`.
+- Sporals, flowering mobs that follow other monsters and give them speed and strength (off by default). Ported from
+  Adapted Mobs.
+- Option to show your graves on Vanilla Backport's locator bar (off by default).
+- Option for Adapted Mobs Leapers to deal less explosion damage (off by default).
+- Option to show Chalk's new-symbol message above the hotbar instead of in chat (off by default).
+- Option to pull Lodged arrows out of tamed animals.
+    - Looking at an arrow outlines it with its removal chance, and right-clicking pulls it (off by default).
+
+### Fixed
+
+- Respawn anchors no longer show the crying obsidian tooltip line from Dimensional Tears.
+- Falling snow layers no longer lose snow or leave ghost blocks when Personality and Snow! Real Magic are both
+  installed.
+- The disconnect screen no longer pushes the Back button off-screen when a server sends a long message, and Esc now
+  returns to the server list.
+- Removed a startup error from Controlify's FancyMenu action.
+- Vanilla Backport's locator bar now hides with F1.
+- Held blocks that borrow another block's Polytone light colour, like the redstone lantern, now glow in that colour.
+- World Host popups no longer show a raw web page when its server is down.
+
+### Removed
+
+- The Snowy Spirit glow light fix, now included in Snowy Spirit.
+
 ## [2.0.0] - 2026-11-16
 
 ### Added

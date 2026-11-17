@@ -3,7 +3,7 @@
 	#Default Value: 0.25
 	# Default: 0.25
 	# Range: 0.0 ~ 1.0
-	repair_with_material_restored_durability = 0.25
+	repair_with_material_restored_durability = 0.5
 	#The additional cost in levels for combining an item with another item of the same kind when the first item is not fully repaired.
 	#Default Value: 2
 	# Default: 2
@@ -65,7 +65,7 @@
 	#Default Value: 0.05
 	# Default: 0.05
 	# Range: 0.0 ~ 1.0
-	anvil_break_chance = 0.05
+	anvil_break_chance = 0.0
 	#Solely renaming items in an anvil will never cause the anvil to break.
 	#Default Value: true
 	risk_free_anvil_renaming = true
@@ -77,7 +77,7 @@
 	renaming_supports_formatting = true
 	#Allow using iron blocks to repair an anvil by one damage stage. Can be automated using dispensers.
 	#Default Value: true
-	anvil_repairing = true
+	anvil_repairing = false
 	#Mobs that have a custom name drop a name tag with that name on death.
 	#Default Value: false
 	name_tags_drop_from_mobs = true

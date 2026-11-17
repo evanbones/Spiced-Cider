@@ -15,6 +15,7 @@ import net.minecraft.world.level.levelgen.structure.Structure;
 public class ModTags {
     public static class Items {
         public static final TagKey<Item> HAMMERS = tag("hammers");
+        public static final TagKey<Item> HAMMER_TOOLS = tag("c", "tools/hammer");
         public static final TagKey<Item> TIDE_HOOKS = tag("tide", "hooks");
 
         public static final TagKey<Item> KEPT_WHEN_BROKEN = tag("kept_when_broken");
@@ -78,6 +79,8 @@ public class ModTags {
         public static final TagKey<Biome> RESTRICTED_SPAWNS = TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "restricted_spawns"));
         public static final TagKey<Biome> HAS_GLOWING_FOG = TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "has_glowing_fog"));
         public static final TagKey<Biome> HAS_THICK_FOG = TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "has_thick_fog"));
+        public static final TagKey<Biome> PINK_SPORAL_SPAWNS = TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "pink_sporal_spawns"));
+        public static final TagKey<Biome> WHITE_SPORAL_SPAWNS = TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "white_sporal_spawns"));
     }
 
     public static class EntityTypes {

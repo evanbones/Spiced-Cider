@@ -2,6 +2,8 @@ package com.evandev.spicedcider;
 
 import com.evandev.spicedcider.compat.continuity.ContinuityLazyModelWrapping;
 import com.evandev.spicedcider.compat.dynamiccrosshair.DynamicCrosshairCompat;
+import com.evandev.spicedcider.compat.lodged.TamedArrowPulling;
+import com.evandev.spicedcider.compat.lodged.TamedArrowPullingClient;
 import com.evandev.spicedcider.client.ResourcePackDownloader;
 import com.evandev.spicedcider.client.mixing.CauldronStirClient;
 import com.evandev.spicedcider.compat.voxy.VoxyFog;
@@ -22,6 +24,7 @@ import com.evandev.spicedcider.compat.everycompat.ChestCapabilities;
 import com.evandev.spicedcider.content.block.LatexCauldronBlock;
 import com.evandev.spicedcider.content.item.BalloonItem;
 import com.evandev.spicedcider.content.handler.SpawnControlEvents;
+import com.evandev.spicedcider.content.handler.SporalEvents;
 import com.evandev.spicedcider.content.handler.SputterEvents;
 import com.evandev.spicedcider.content.handler.StrawGolemEvents;
 import com.evandev.spicedcider.namingunconvention.RandomNameGenerator;
@@ -30,8 +33,11 @@ import com.evandev.spicedcider.networking.CloudCoverPayload;
 import com.evandev.spicedcider.networking.LootDisplayPayload;
 import com.evandev.spicedcider.content.loot.LootDisplays;
 import com.evandev.spicedcider.networking.GenerationEdgePayload;
+import com.evandev.spicedcider.networking.GravePositionsPayload;
+import com.evandev.spicedcider.client.gravestone.ClientGraves;
 import com.evandev.spicedcider.networking.LodChunkPayload;
 import com.evandev.spicedcider.networking.LodHelloPayload;
+import com.evandev.spicedcider.networking.PullTamedArrowPayload;
 import com.evandev.spicedcider.lodgen.LodGen;
 import com.evandev.spicedcider.lodgen.client.LodClient;
 import com.evandev.spicedcider.networking.VoidTrailPayload;
@@ -113,6 +119,9 @@ public class SpicedCider {
             if (ModList.get().isLoaded("dynamiccrosshair")) {
                 DynamicCrosshairCompat.register(modEventBus);
             }
+            if (ModList.get().isLoaded("lodged")) {
+                TamedArrowPullingClient.register();
+            }
         }
 
         ModEntityTypes.ENTITY_TYPES.register(modEventBus);
@@ -156,6 +165,9 @@ public class SpicedCider {
         modEventBus.addListener(SpicedCider::addSignBlocks);
         modEventBus.addListener(SpicedCider::commonSetup);
         modEventBus.addListener(SpawnControlEvents::registerSpawnPlacements);
+        modEventBus.addListener(SporalEvents::registerAttributes);
+        modEventBus.addListener(SporalEvents::registerSpawnPlacements);
+        modEventBus.addListener(SporalEvents::addToCreativeTab);
         modEventBus.addListener(SputterEvents::registerAttributes);
         modEventBus.addListener(SputterEvents::addToCreativeTab);
         modEventBus.addListener(StrawGolemEvents::registerAttributes);
@@ -319,6 +331,7 @@ public class SpicedCider {
         }
         if (event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
             event.insertAfter(new ItemStack(Items.LOOM), new ItemStack(ModItems.TANNING_RACK.get()), vis);
+            event.insertAfter(new ItemStack(Items.LODESTONE), new ItemStack(ModItems.GRAVESTONE.get()), vis);
         }
         if (event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS && ModItems.TWISTED_SIGN != null) {
             event.insertAfter(new ItemStack(Items.WARPED_HANGING_SIGN), new ItemStack(ModItems.TWISTED_SIGN.get()), vis);
@@ -405,6 +418,20 @@ public class SpicedCider {
                 LodChunkPayload.TYPE,
                 LodChunkPayload.CODEC,
                 (payload, context) -> context.enqueueWork(() -> LodClient.receive(payload))
+        );
+        registrar.playToClient(
+                GravePositionsPayload.TYPE,
+                GravePositionsPayload.CODEC,
+                (payload, context) -> context.enqueueWork(() -> ClientGraves.receive(payload.positions()))
+        );
+        registrar.playToServer(
+                PullTamedArrowPayload.TYPE,
+                PullTamedArrowPayload.CODEC,
+                (payload, context) -> context.enqueueWork(() -> {
+                    if (ModList.get().isLoaded("lodged")) {
+                        TamedArrowPulling.handle((ServerPlayer) context.player(), payload.entityId(), payload.arrowIndex());
+                    }
+                })
         );
         registrar.playToServer(
                 LodHelloPayload.TYPE,

@@ -1,0 +1,20 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "quark"
+    },
+    {
+      "type": "spicedcider:feature",
+      "feature": "buildingBlocks"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "spicedcider:mossy_cobbled_jasper_bricks"
+  },
+  "result": {
+    "count": 1,
+    "id": "spicedcider:mossy_cobbled_jasper_brick_wall"
+  }
+}

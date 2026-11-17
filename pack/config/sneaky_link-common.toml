@@ -1,0 +1,15 @@
+[changes]
+	#Horizontal radius within which the player picks up item entities
+	# Default: 3.0
+	# Range: 0.0 ~ 8.0
+	"Collection radius" = 3.0
+	#Amount of blocks below the player where sneaking picks up item entities
+	# Default: 2.0
+	# Range: 0.0 ~ 8.0
+	"Collection depth" = 2.0
+	#Amount of blocks above the player where sneaking picks up item entities
+	# Default: 0.0
+	# Range: 0.0 ~ 8.0
+	"Collection height" = 0.0
+	#Pick up item entities regardless of their cooldown after being dropped from a player's inventory
+	"Ignore pickup delay" = false

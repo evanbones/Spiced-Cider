@@ -6,3 +6,13 @@ smooth_falling_block_landing = true
 ghast_swell = true
 #Fixes withers shaking lika crazy left and right when pathfinding a far target
 wither_yaw_fix = true
+#Ghast fireballs come out of the mouth instead of its eyes
+ghast_mouth_fireball = true
+#Fixes many issues with wither model like offcentered head, tail, heads not aiming from the right side or being interpolated
+wither_model_fix = true
+#Fixes sheep and drowned head pitch anim not being interpolated
+pitch_lerp_fix = true
+#Draws a purple debug box where the integrated server has each entity. Render might jitter a as it's not interpolated
+debug_server_hitboxes = false
+#Sends entity positions AFTER they move instead ov before like vanilla does. This makes the server and client agree on their position EXACTLY (instead of being 1 tick behind). Projectiles and similar are unaffected and still client driven. Default off as it could be a bit more invasive, turn on for perfect sync
+zero_tick_entity_sync = false

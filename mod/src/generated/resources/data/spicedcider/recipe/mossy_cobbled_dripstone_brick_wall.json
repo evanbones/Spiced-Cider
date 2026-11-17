@@ -1,0 +1,23 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "spicedcider:feature",
+      "feature": "buildingBlocks"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "spicedcider:mossy_cobbled_dripstone_bricks"
+    }
+  },
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "result": {
+    "count": 6,
+    "id": "spicedcider:mossy_cobbled_dripstone_brick_wall"
+  }
+}

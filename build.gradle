@@ -35,10 +35,28 @@ var refreshRelease = tasks.register("refreshRelease", Exec) {
     commandLine packwiz, "refresh"
 }
 
+def modrinthDir = layout.buildDirectory.dir("pack/modrinth")
+
+var stageModrinth = tasks.register("stageModrinth", Exec) {
+    group = "spiced cider"
+    description = "Copies pack/ to build/pack/modrinth with pack-release.json applied, leaving folders unzipped"
+    inputs.file(releaseConfig)
+    outputs.upToDateWhen { false }
+    commandLine python, file("scripts/stage_release.py").absolutePath, packDir.asFile.absolutePath,
+            modrinthDir.get().asFile.absolutePath, "--release", releaseConfig.absolutePath, "--version", packVersion, "--no-zip"
+}
+
+var refreshModrinth = tasks.register("refreshModrinth", Exec) {
+    group = "spiced cider"
+    dependsOn(stageModrinth)
+    workingDir = modrinthDir.get().asFile
+    commandLine packwiz, "refresh"
+}
+
 var exportPack = tasks.register("exportPack", Exec) {
     group = "spiced cider"
-    dependsOn(refreshRelease)
-    workingDir = releaseDir.get().asFile
+    dependsOn(refreshModrinth)
+    workingDir = modrinthDir.get().asFile
     outputs.file(mrpack)
     outputs.upToDateWhen { false }
     doFirst { mrpack.get().asFile.parentFile.mkdirs() }

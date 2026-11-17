@@ -1,0 +1,30 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "quark"
+    },
+    {
+      "type": "zeta:flag",
+      "flag": "minecart_upgrade"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "spicedcider:cast_iron_ingot"
+    },
+    "C": {
+      "tag": "c:chests/wooden"
+    }
+  },
+  "pattern": [
+    "#C#",
+    "###"
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:chest_minecart"
+  }
+}

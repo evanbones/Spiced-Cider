@@ -1,6 +1,7 @@
 package com.evandev.spicedcider.client.events;
 
 import com.evandev.spicedcider.client.renderer.CopperPatina;
+import com.evandev.spicedcider.client.renderer.GraveRenderer;
 import com.evandev.spicedcider.client.renderer.TapStreamRenderer;
 import com.evandev.spicedcider.client.FireVariantClient;
 import com.evandev.spicedcider.client.MapIconProperty;
@@ -17,9 +18,12 @@ import com.evandev.spicedcider.client.resource.BrokenTextureReloadListener;
 import com.evandev.spicedcider.client.music.PocketJukeboxClient;
 import com.evandev.spicedcider.client.renderer.PocketJukeboxTooltipRenderer;
 import com.evandev.spicedcider.client.renderer.balloon.BalloonRenderer;
+import com.evandev.spicedcider.client.models.sporal.SporalModel;
+import com.evandev.spicedcider.compat.vanillabackport.GraveWaypointProvider;
 import com.evandev.spicedcider.client.models.sputter.SputterArrowfulModel;
 import com.evandev.spicedcider.client.models.sputter.SputterModel;
 import com.evandev.spicedcider.client.models.strawgolem.StrawGolemModel;
+import com.evandev.spicedcider.client.renderer.sporal.SporalRenderer;
 import com.evandev.spicedcider.client.renderer.sputter.SputterRenderer;
 import com.evandev.spicedcider.client.renderer.strawgolem.StrawGolemRenderer;
 import com.evandev.spicedcider.content.block.FruitLogBlock;
@@ -105,7 +109,9 @@ public class ClientModEvents {
         event.registerEntityRenderer(ModEntityTypes.COBWEB_PROJECTILE.get(), CobwebProjectileRenderer::new);
         event.registerEntityRenderer(ModEntityTypes.BALLOON.get(), BalloonRenderer::new);
         event.registerEntityRenderer(ModEntityTypes.SPUTTER.get(), SputterRenderer::new);
+        event.registerEntityRenderer(ModEntityTypes.SPORAL.get(), SporalRenderer::new);
         event.registerEntityRenderer(ModEntityTypes.STRAW_GOLEM.get(), StrawGolemRenderer::new);
+        event.registerBlockEntityRenderer(ModBlockEntities.GRAVE.get(), GraveRenderer::new);
         if (TideCompat.isLoaded()) {
             event.registerEntityRenderer(ModEntityTypes.GRAPPLING_HOOK.get(), GrapplingHookRenderer::new);
         }
@@ -119,6 +125,7 @@ public class ClientModEvents {
         event.registerLayerDefinition(ModModelLayers.COBWEB_PROJECTILE, CobwebProjectileModel::createBodyLayer);
         event.registerLayerDefinition(ModModelLayers.BALLOON, BalloonRenderer::createBodyLayer);
         event.registerLayerDefinition(ModModelLayers.SPUTTER, SputterModel::createBodyLayer);
+        event.registerLayerDefinition(ModModelLayers.SPORAL, SporalModel::createBodyLayer);
         event.registerLayerDefinition(ModModelLayers.SPUTTER_ARROWFUL, SputterArrowfulModel::createBodyLayer);
         event.registerLayerDefinition(ModModelLayers.STRAW_GOLEM, StrawGolemModel::createBodyLayer);
     }
@@ -248,6 +255,9 @@ public class ClientModEvents {
             LodDebugEntry.register();
         }
         PonderCompat.register();
+        if (ModList.get().isLoaded("vanillabackport")) {
+            GraveWaypointProvider.register();
+        }
         event.enqueueWork(() -> {
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.TEMPORARY_COBWEB.get(), RenderType.cutout());
             if (ModList.get().isLoaded("toil_and_trouble")) {

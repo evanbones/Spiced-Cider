@@ -32,6 +32,7 @@
     "copper": {
       "durability": 350,
       "speed": 5.0,
+      "incorrect": "minecraft:incorrect_for_copper_tool",
       "items": [
         "minecraft:copper_(sword|shovel|pickaxe|axe|hoe|spear)",
         "minecraft:shears",
@@ -143,7 +144,8 @@
   },
   "armor": {
     "leather": {
-      "durability": 125,
+      "durability": 250,
+      "defense": { "helmet": 2, "chestplate": 4, "leggings": 3, "boots": 1 },
       "items": ["minecraft:leather_.+"]
     },
     "gold": {

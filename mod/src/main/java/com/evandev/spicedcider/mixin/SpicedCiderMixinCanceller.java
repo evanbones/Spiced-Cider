@@ -1,6 +1,7 @@
 package com.evandev.spicedcider.mixin;
 
 import com.bawnorton.mixinsquared.api.MixinCanceller;
+import com.evandev.spicedcider.config.EarlyStartupConfig;
 import net.neoforged.fml.loading.LoadingModList;
 
 import java.util.List;
@@ -14,6 +15,27 @@ public class SpicedCiderMixinCanceller implements MixinCanceller {
             "com.blackgear.vanillabackport.core.mixin.client.music_toast.ToastComponentMixin",
             "com.blackgear.vanillabackport.core.mixin.client.music_on_pause.MinecraftMixin",
             "com.blackgear.vanillabackport.core.mixin.client.game_options.SoundOptionsScreenMixin"
+    );
+
+    private static final Set<String> PERSONALITY_SNOW_GRAVITY_MIXINS = Set.of(
+            "com.teamabnormals.personality.core.mixin.SnowLayerBlockMixin",
+            "com.teamabnormals.personality.core.mixin.FallingBlockMixin",
+            "com.teamabnormals.personality.core.mixin.BlueprintFallingBlockEntityMixin"
+    );
+
+    private static final Set<String> EMI_DISCOVERY_RECIPE_MIXINS = Set.of(
+            "net.funkpla.emi_discovery.mixin.emi.EmiApiMixin",
+            "net.funkpla.emi_discovery.mixin.emi.EmiIngredientRecipeMixin",
+            "net.funkpla.emi_discovery.mixin.emi.EmiScreenManagerMixin",
+            "net.funkpla.emi_discovery.mixin.emi.EmiSmithingTrimRecipeMixin",
+            "net.funkpla.emi_discovery.mixin.emi.IngredientTooltipComponentMixin",
+            "net.funkpla.emi_discovery.mixin.emi.ItemEmiStackMixin",
+            "net.funkpla.emi_discovery.mixin.emi.ListEmiIngredientMixin",
+            "net.funkpla.emi_discovery.mixin.emi.PageSlotWidgetMixin",
+            "net.funkpla.emi_discovery.mixin.emi.RecipeScreenMixin",
+            "net.funkpla.emi_discovery.mixin.emi.SlotWidgetMixin",
+            "net.funkpla.emi_discovery.mixin.emi.TagEmiIngredientMixin",
+            "net.funkpla.emi_discovery.mixin.emi.TagTooltipComponentMixin"
     );
 
     @Override
@@ -30,6 +52,18 @@ public class SpicedCiderMixinCanceller implements MixinCanceller {
 
         if ("tech.thatgravyboat.vanity.neoforge.mixin.geckolib.HumanoidArmorLayerMixin".equals(mixinClassName)) {
             return LoadingModList.get().getModFileById("geckolib") == null;
+        }
+
+        if (PERSONALITY_SNOW_GRAVITY_MIXINS.contains(mixinClassName)) {
+            return LoadingModList.get().getModFileById("snowrealmagic") != null;
+        }
+
+        if (EMI_DISCOVERY_RECIPE_MIXINS.contains(mixinClassName)) {
+            return EarlyStartupConfig.get("emiDiscoveryIndexOnly");
+        }
+
+        if ("net.mehvahdjukaar.smooth_animations.mixins.DrownedRendererMixin".equals(mixinClassName)) {
+            return LoadingModList.get().getModFileById("upgrade_aquatic") != null;
         }
 
         if (VANILLA_BACKPORT_MUSIC_MIXINS.contains(mixinClassName)) {

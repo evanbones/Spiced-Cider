@@ -27,7 +27,8 @@ import java.util.regex.PatternSyntaxException;
 
 public final class ToolStats {
 
-    public record Stats(int durability, Optional<Float> speed, Optional<ResourceLocation> incorrect) {
+    public record Stats(int durability, Optional<Float> speed, Optional<ResourceLocation> incorrect,
+                        Map<String, Integer> defense, Optional<Float> toughness) {
     }
 
     private record Entry(Stats stats, Set<ResourceLocation> ids, List<Pattern> patterns) {
@@ -152,6 +153,13 @@ public final class ToolStats {
         int durability = obj.get("durability").getAsInt();
         Optional<Float> speed = allowSpeed && obj.has("speed") ? Optional.of(obj.get("speed").getAsFloat()) : Optional.empty();
         Optional<ResourceLocation> incorrect = allowSpeed && obj.has("incorrect") ? Optional.ofNullable(ResourceLocation.tryParse(obj.get("incorrect").getAsString())) : Optional.empty();
-        return new Stats(durability, speed, incorrect);
+        Map<String, Integer> defense = new HashMap<>();
+        if (!allowSpeed && obj.has("defense")) {
+            for (Map.Entry<String, JsonElement> e : obj.getAsJsonObject("defense").entrySet()) {
+                defense.put(e.getKey(), e.getValue().getAsInt());
+            }
+        }
+        Optional<Float> toughness = !allowSpeed && obj.has("toughness") ? Optional.of(obj.get("toughness").getAsFloat()) : Optional.empty();
+        return new Stats(durability, speed, incorrect, Map.copyOf(defense), toughness);
     }
 }

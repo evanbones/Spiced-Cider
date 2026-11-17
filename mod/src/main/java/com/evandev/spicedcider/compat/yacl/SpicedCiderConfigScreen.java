@@ -54,6 +54,7 @@ public class SpicedCiderConfigScreen {
                         .option(toggle("removeQuasiConnectivity", common.removeQuasiConnectivity))
                         .option(toggle("harmlessGhastFireballs", common.harmlessGhastFireballs))
                         .option(toggle("logsNeedAxe", common.logsNeedAxe))
+                        .option(toggle("hammersCannotMine", common.hammersCannotMine))
                         .option(toggle("treeBark", common.treeBark))
                         .option(toggle("mossNeedsHoe", common.mossNeedsHoe))
                         .option(toggle("blockDyeing", common.blockDyeing))
@@ -63,6 +64,7 @@ public class SpicedCiderConfigScreen {
                         .option(toggle("zombieTorches", common.zombieTorches))
                         .option(toggle("piglinWeaponSwap", common.piglinWeaponSwap))
                         .option(toggle("throwablePotionCooldown", common.throwablePotionCooldown))
+                        .option(toggle("privateAdvancementMessages", common.privateAdvancementMessages))
                         .option(toggle("accurateSignHitboxes", common.accurateSignHitboxes))
                         .option(toggle("iglooBasementRemoval", common.iglooBasementRemoval))
                         .option(toggle("leavesNotSuffocating", startup.leavesNotSuffocating))
@@ -75,6 +77,13 @@ public class SpicedCiderConfigScreen {
                         .option(toggle("caveMaps", common.caveMaps))
                         .option(toggle("caveMapsUseCreationHeight", common.caveMapsUseCreationHeight))
                         .option(intSlider("caveMapsFixedHeight", common.caveMapsFixedHeight, -64, 320, 1))
+                        .option(toggle("gravestoneDecayWithTime", common.gravestoneDecayWithTime))
+                        .option(toggle("gravestoneDecayWithDeaths", common.gravestoneDecayWithDeaths))
+                        .option(intSlider("gravestoneDecayHours", common.gravestoneDecayHours, 1, 168, 1))
+                        .option(intSlider("gravestoneDamageToBreak", common.gravestoneDamageToBreak, 1, 20, 1))
+                        .option(toggle("gravestoneStoreExperience", common.gravestoneStoreExperience))
+                        .option(toggle("gravestoneKeepAllExperience", common.gravestoneKeepAllExperience))
+                        .option(toggle("gravestoneExperienceDecay", common.gravestoneExperienceDecay))
                         .build())
                 .category(features(common))
                 .categoryIf(compat != null, compat)
@@ -123,6 +132,7 @@ public class SpicedCiderConfigScreen {
                         .option(intSlider("windParticleStrength", client.windParticleStrength, 0, 300, 5))
                         .option(toggle("windMotes", client.windMotes))
                         .option(toggle("hangingFruitSway", client.hangingFruitSway))
+                        .optionIf(ModList.get().isLoaded("connectiblechains"), toggle("chainDecorationSway", client.chainDecorationSway))
                         .build())
                 .categoryIf(ModList.get().isLoaded("roxy"), ConfigCategory.createBuilder()
                         .name(Component.translatable("category.spicedcider.voxy"))
@@ -149,6 +159,8 @@ public class SpicedCiderConfigScreen {
     private static ConfigCategory compat(SpicedCiderConfig.Startup startup, SpicedCiderConfig.Common common, SpicedCiderConfig.Client client) {
         ModList mods = ModList.get();
         List<OptionGroup> groups = new ArrayList<>();
+        group(groups, List.of("adaptedmobs"),
+                toggle("weakerLeapers", common.weakerLeapers));
         group(groups, List.of("architects_palette"),
                 toggle("brightCageLanterns", startup.brightCageLanterns));
         group(groups, List.of("bigbrain"),
@@ -157,6 +169,8 @@ public class SpicedCiderConfigScreen {
                 toggle("blockBoxWoodVariants", startup.blockBoxWoodVariants));
         group(groups, List.of("caverns_and_chasms"),
                 toggle("copperGolemBuildingDisabled", common.copperGolemBuildingDisabled));
+        group(groups, List.of("chalk"),
+                toggle("chalkSymbolsAboveHotbar", common.chalkSymbolsAboveHotbar));
         group(groups, List.of("clutternomore"),
                 toggle("clutterNoMoreShapeWheel", client.clutterNoMoreShapeWheel));
         group(groups, List.of("create"),
@@ -184,7 +198,8 @@ public class SpicedCiderConfigScreen {
                 toggle("incrementalMiningVanillaSpeed", common.incrementalMiningVanillaSpeed));
         group(groups, List.of("lodged"),
                 toggle("lodgedHideArrowDepth", client.lodgedHideArrowDepth),
-                toggle("lodgedHideBleedingRisk", client.lodgedHideBleedingRisk));
+                toggle("lodgedHideBleedingRisk", client.lodgedHideBleedingRisk),
+                toggle("lodgedTamedArrowPulling", common.lodgedTamedArrowPulling));
         group(groups, List.of("nomansland"),
                 toggle("carvingWheel", client.carvingWheel),
                 toggle("tapRedstone", common.tapRedstone));
@@ -198,8 +213,13 @@ public class SpicedCiderConfigScreen {
                 toggle("backpackAcceptAnything", common.backpackAcceptAnything));
         group(groups, List.of("polytone", "lambdynlights"),
                 toggle("matchHeldLightColors", client.matchHeldLightColors));
+        group(groups, List.of("polytone", "connectiblechains"),
+                toggle("matchChainLightColors", client.matchChainLightColors));
         group(groups, List.of("remi"),
                 toggle("remiRightSideTabs", client.remiRightSideTabs));
+        group(groups, List.of("emi_discovery"),
+                toggle("emiDiscoveryIndexOnly", startup.emiDiscoveryIndexOnly),
+                toggle("emiDiscoveryIndexUnlocks", client.emiDiscoveryIndexUnlocks));
         group(groups, List.of("slime_time"),
                 toggle("slimeTimeDisableItemMerging", common.slimeTimeDisableItemMerging));
         group(groups, List.of("tide"),
@@ -209,7 +229,8 @@ public class SpicedCiderConfigScreen {
                 toggle("vanillaBackportLightTweaks", common.vanillaBackportLightTweaks),
                 toggle("creakingBuff", common.creakingBuff),
                 toggle("copperGolemNoChest", common.copperGolemNoChest),
-                toggle("paleOakGrowsGloomwood", common.paleOakGrowsGloomwood));
+                toggle("paleOakGrowsGloomwood", common.paleOakGrowsGloomwood),
+                toggle("graveLocatorBar", client.graveLocatorBar));
         group(groups, List.of("tiny_takeover_backport"),
                 toggle("goldenDandelionTempting", common.goldenDandelionTempting),
                 toggle("goldenDandelionParticles", client.goldenDandelionParticles));
@@ -219,6 +240,8 @@ public class SpicedCiderConfigScreen {
                 toggle("voiceChatHideSingleplayerHud", client.voiceChatHideSingleplayerHud));
         group(groups, List.of("reliable_gliders"),
                 toggle("windGliders", common.windGliders));
+        group(groups, List.of("spelunkery", "emi"),
+                toggle("roughGemsOnGrindstone", client.roughGemsOnGrindstone));
         group(groups, List.of("supplementaries"),
                 toggle("windVaneSignal", common.windVaneSignal));
         group(groups, List.of("where_winds_blow"),
