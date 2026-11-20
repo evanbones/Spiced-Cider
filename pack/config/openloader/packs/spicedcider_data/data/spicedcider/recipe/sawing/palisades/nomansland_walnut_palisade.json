@@ -1,0 +1,29 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "bountifulfares"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "nomansland"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "woodworks"
+    }
+  ],
+  "type": "woodworks:sawmill",
+  "ingredient": [
+    {
+      "item": "bountifulfares:walnut_log"
+    },
+    {
+      "item": "bountifulfares:walnut_wood"
+    }
+  ],
+  "result": {
+    "id": "nomansland:walnut_palisade",
+    "count": 2
+  }
+}

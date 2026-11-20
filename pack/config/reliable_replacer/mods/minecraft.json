@@ -9,7 +9,7 @@
     "inputs": [
       "minecraft:brewing_stand"
     ],
-    "output": "toil_and_trouble:cauldron"
+    "output": "create:basin"
   },
   {
     "inputs": [
@@ -22,6 +22,12 @@
       "minecraft:deepslate_lapis_ore"
     ],
     "output": "minecraft:deepslate"
+  },
+  {
+    "inputs": [
+      "minecraft:lapis_block"
+    ],
+    "output": "quark:shale"
   },
   {
     "inputs": [
@@ -113,5 +119,29 @@
       "minecraft:nether_brick_fence"
     ],
     "output": "quark:gold_bars"
+  },
+  {
+    "inputs": [
+      "amendments:dye_cauldron",
+      "amendments:liquid_cauldron",
+      "dimensional_tears:dimensional_tears_cauldron",
+      "neapolitan:milk_cauldron",
+      "neapolitan:vanilla_milkshake_cauldron",
+      "neapolitan:chocolate_milkshake_cauldron",
+      "neapolitan:strawberry_milkshake_cauldron",
+      "neapolitan:banana_milkshake_cauldron",
+      "neapolitan:mint_milkshake_cauldron",
+      "neapolitan:adzuki_milkshake_cauldron",
+      "nomansland:resin_cauldron",
+      "nomansland:resin_oil_cauldron",
+      "nomansland:honey_cauldron",
+      "nomansland:milk_cauldron",
+      "nomansland:maple_syrup_cauldron",
+      "minecraft:cauldron",
+      "minecraft:water_cauldron",
+      "minecraft:lava_cauldron",
+      "minecraft:powder_snow_cauldron"
+    ],
+    "output": "create:basin"
   }
 ]

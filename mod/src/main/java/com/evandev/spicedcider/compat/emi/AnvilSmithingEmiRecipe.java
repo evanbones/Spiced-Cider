@@ -9,7 +9,6 @@ import com.evandev.spicedcider.registry.ModRecipeSerializers;
 import dev.emi.emi.api.EmiRegistry;
 import dev.emi.emi.api.recipe.EmiRecipe;
 import dev.emi.emi.api.recipe.EmiRecipeCategory;
-import dev.emi.emi.api.recipe.VanillaEmiRecipeCategories;
 import dev.emi.emi.api.render.EmiTexture;
 import dev.emi.emi.api.stack.EmiIngredient;
 import dev.emi.emi.api.stack.EmiStack;
@@ -32,6 +31,8 @@ import java.util.Random;
 import java.util.function.BiFunction;
 
 public class AnvilSmithingEmiRecipe implements EmiRecipe {
+
+    public static final EmiRecipeCategory CATEGORY = new EmiRecipeCategory(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "anvil_smithing"), EmiStack.of(Items.ANVIL));
     private final ResourceLocation id;
     private final List<ItemStack> bases;
     private final EmiIngredient addition;
@@ -58,6 +59,10 @@ public class AnvilSmithingEmiRecipe implements EmiRecipe {
     }
 
     public static void register(EmiRegistry registry) {
+        registry.addCategory(CATEGORY);
+        registry.addWorkstation(CATEGORY, EmiStack.of(Items.ANVIL));
+        registry.addWorkstation(CATEGORY, EmiStack.of(Items.CHIPPED_ANVIL));
+        registry.addWorkstation(CATEGORY, EmiStack.of(Items.DAMAGED_ANVIL));
         Level level = Minecraft.getInstance().level;
         if (level == null) return;
 
@@ -103,7 +108,7 @@ public class AnvilSmithingEmiRecipe implements EmiRecipe {
 
     @Override
     public EmiRecipeCategory getCategory() {
-        return VanillaEmiRecipeCategories.ANVIL_REPAIRING;
+        return CATEGORY;
     }
 
     @Override

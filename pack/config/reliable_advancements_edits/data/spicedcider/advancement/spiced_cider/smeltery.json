@@ -1,0 +1,32 @@
+{
+  "parent": "spicedcider:spiced_cider/steel",
+  "display": {
+    "icon": {
+      "id": "spicedcider:smeltery"
+    },
+    "title": {
+      "text": "Hot Stuff"
+    },
+    "description": {
+      "text": "Build a Smeltery to melt and alloy metal in bulk"
+    },
+    "frame": "goal"
+  },
+  "criteria": {
+    "has_item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "spicedcider:smeltery"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_item"
+    ]
+  ]
+}

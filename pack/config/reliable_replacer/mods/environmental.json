@@ -166,5 +166,19 @@
       "environmental:dirt_tile_wall"
     ],
     "output": "minecraft:mud_brick_wall"
+  },
+  {
+    "inputs": [
+      "environmental:cattail_sprout",
+      "environmental:cattail",
+      "environmental:cattail_stalk"
+    ],
+    "output": "minecraft:air"
+  },
+  {
+    "inputs": [
+      "environmental:potted_cattail"
+    ],
+    "output": "minecraft:flower_pot"
   }
 ]

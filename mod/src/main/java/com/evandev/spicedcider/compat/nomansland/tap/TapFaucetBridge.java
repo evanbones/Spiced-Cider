@@ -2,6 +2,7 @@ package com.evandev.spicedcider.compat.nomansland.tap;
 
 import com.evandev.spicedcider.SpicedCider;
 import com.evandev.spicedcider.config.SpicedCiderConfig;
+import com.evandev.spicedcider.registry.ModTags;
 import com.evandev.spicedcider.mixin.nomansland.TapBlockEntityInvoker;
 import com.farcr.nomansland.common.block.tap.TapBlock;
 import com.farcr.nomansland.common.blockentity.TapBlockEntity;
@@ -166,7 +167,10 @@ public class TapFaucetBridge {
     public static void showStream(TapBlockEntity tap, TapFluidState fluids, Level level, BlockPos pos, BlockPos target, Fluid fluid) {
         if (!enabled() || fluid == Fluids.EMPTY) return;
         SoftFluidStack soft = SoftFluidStack.fromFluid(fluid, 1, level.registryAccess());
-        if (!soft.isEmpty()) showStream(tap, fluids, level, pos, target, soft, INTERVAL);
+        if (soft.isEmpty()) return;
+        BlockState state = level.getBlockState(pos);
+        boolean fast = state.hasProperty(TapBlock.FACING) && level.getBlockState(TapBlock.getSourcePos(pos, state)).is(ModTags.Blocks.FAST_POUR_SOURCES);
+        showStream(tap, fluids, level, pos, target, soft, fast ? 0 : INTERVAL);
     }
 
     public static void showCauldronStream(TapBlockEntity tap, TapFluidState fluids, Level level, BlockPos pos, BlockPos target, Block cauldron) {

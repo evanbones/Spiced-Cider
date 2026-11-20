@@ -1,0 +1,25 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "abundant_atmosphere"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "woodworks"
+    }
+  ],
+  "type": "woodworks:sawmill",
+  "ingredient": [
+    {
+      "item": "abundant_atmosphere:stripped_ashroot_log"
+    },
+    {
+      "item": "abundant_atmosphere:stripped_ashroot_wood"
+    }
+  ],
+  "result": {
+    "id": "abundant_atmosphere:stripped_ashroot_palisade",
+    "count": 2
+  }
+}

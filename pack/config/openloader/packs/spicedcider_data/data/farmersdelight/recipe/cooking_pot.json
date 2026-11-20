@@ -1,27 +1,40 @@
 {
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "farmersdelight"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "manual_labour"
+    }
+  ],
   "type": "minecraft:crafting_shaped",
   "category": "misc",
+  "pattern": [
+    "bSb",
+    "PWP",
+    " V "
+  ],
   "key": {
+    "b": {
+      "item": "minecraft:brick"
+    },
     "S": {
-      "tag": "minecraft:shovels"
+      "item": "manual_labour:ladle"
+    },
+    "P": {
+      "tag": "c:plates/cast_iron"
     },
     "W": {
       "tag": "c:buckets/water"
     },
-    "b": {
-      "item": "minecraft:brick"
-    },
-    "i": {
-      "tag": "c:ingots/iron"
+    "V": {
+      "item": "spicedcider:cast_iron_vessel"
     }
   },
-  "pattern": [
-    "bSb",
-    "iWi",
-    "iii"
-  ],
   "result": {
-    "count": 1,
-    "id": "farmersdelight:cooking_pot"
+    "id": "farmersdelight:cooking_pot",
+    "count": 1
   }
 }

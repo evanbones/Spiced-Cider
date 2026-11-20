@@ -22,7 +22,7 @@ public class ImageSampler {
                 SpicedCider.LOGGER.error("Failed to find noise texture at: {}", path);
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            SpicedCider.LOGGER.error("Failed to read noise texture at: {}", path, e);
         }
 
         if (image == null) {

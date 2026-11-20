@@ -1,0 +1,36 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "upgrade_aquatic"
+    }
+  ],
+  "type": "spicedcider:dead_tree",
+  "config": {
+    "trunk": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "upgrade_aquatic:driftwood_log",
+        "Properties": {
+          "axis": "y"
+        }
+      }
+    },
+    "branch": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "spicedcider:dead_wood_branch",
+        "Properties": {
+          "facing": "north"
+        }
+      }
+    },
+    "height": {
+      "type": "minecraft:uniform",
+      "min_inclusive": 3,
+      "max_inclusive": 6
+    },
+    "branch_chance": 0.35,
+    "ground": "#minecraft:sand"
+  }
+}

@@ -18,6 +18,7 @@ import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -40,6 +41,8 @@ public final class ToolStats {
     private final Map<ResourceLocation, Stats> overrides = new HashMap<>();
     private final List<Entry> tools = new ArrayList<>();
     private final List<Entry> armor = new ArrayList<>();
+    private final Map<ResourceLocation, Float> damageIds = new HashMap<>();
+    private final Map<Pattern, Float> damagePatterns = new LinkedHashMap<>();
     private final Set<ResourceLocation> requiredIds = new HashSet<>();
     private final Set<ResourceLocation> optionalIds = new HashSet<>();
 
@@ -54,7 +57,18 @@ public final class ToolStats {
     }
 
     public boolean isEmpty() {
-        return overrides.isEmpty() && tools.isEmpty() && armor.isEmpty();
+        return overrides.isEmpty() && tools.isEmpty() && armor.isEmpty() && damageIds.isEmpty() && damagePatterns.isEmpty();
+    }
+
+    public Optional<Float> attackDamage(Item item) {
+        ResourceLocation id = BuiltInRegistries.ITEM.getKey(item);
+        Float exact = damageIds.get(id);
+        if (exact != null) return Optional.of(exact);
+        String text = id.toString();
+        for (Map.Entry<Pattern, Float> e : damagePatterns.entrySet()) {
+            if (e.getKey().matcher(text).matches()) return Optional.of(e.getValue());
+        }
+        return Optional.empty();
     }
 
     public Optional<Stats> lookup(Item item) {
@@ -98,6 +112,16 @@ public final class ToolStats {
             JsonObject root = JsonParser.parseString(Files.readString(FILE, StandardCharsets.UTF_8)).getAsJsonObject();
             stats.readSection(root, "tools", stats.tools, true);
             stats.readSection(root, "armor", stats.armor, false);
+            if (root.has("attack_damage")) {
+                for (Map.Entry<String, JsonElement> e : root.getAsJsonObject("attack_damage").entrySet()) {
+                    Set<ResourceLocation> ids = new HashSet<>();
+                    List<Pattern> patterns = new ArrayList<>();
+                    stats.readMatcher("attack_damage", e.getKey(), ids, patterns);
+                    float value = e.getValue().getAsFloat();
+                    ids.forEach(id -> stats.damageIds.put(id, value));
+                    patterns.forEach(pattern -> stats.damagePatterns.put(pattern, value));
+                }
+            }
             if (root.has("items")) {
                 for (Map.Entry<String, JsonElement> e : root.getAsJsonObject("items").entrySet()) {
                     String key = e.getKey();

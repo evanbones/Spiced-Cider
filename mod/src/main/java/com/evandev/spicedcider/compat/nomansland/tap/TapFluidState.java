@@ -10,6 +10,11 @@ public class TapFluidState {
     SoftFluidStack stream;
     float streamLength;
 
+    public void show(@Nullable SoftFluidStack stream, float length) {
+        this.stream = stream;
+        this.streamLength = length;
+    }
+
     @Nullable
     public SoftFluidStack stream() {
         return stream;

@@ -5,10 +5,13 @@ import com.evandev.spicedcider.content.worldgen.BiomeClearancePlacement;
 import com.evandev.spicedcider.content.worldgen.CacaoTrunkPlacer;
 import com.evandev.spicedcider.content.worldgen.CaveRootFeature;
 import com.evandev.spicedcider.content.worldgen.ConnectLogsDecorator;
+import com.evandev.spicedcider.content.worldgen.DeadTreeFeature;
 import com.evandev.spicedcider.content.worldgen.HydrothermalVentFeature;
 import com.evandev.spicedcider.content.worldgen.PrismarineSpikeFeature;
 import com.evandev.spicedcider.content.worldgen.SpindlyTrunkPlacer;
+import com.evandev.spicedcider.content.worldgen.SpringPoolFeature;
 import com.evandev.spicedcider.content.worldgen.StripeFeature;
+import com.evandev.spicedcider.content.worldgen.StrippedDriftwoodFeature;
 import com.evandev.spicedcider.content.worldgen.TrunkCreakingHeartDecorator;
 import com.evandev.spicedcider.content.worldgen.TrunkShootsDecorator;
 import com.evandev.spicedcider.content.worldgen.TubewormPatchFeature;
@@ -50,6 +53,9 @@ public class ModTreeFeatures {
     public static final DeferredHolder<Feature<?>, PrismarineSpikeFeature> PRISMARINE_SPIKE = FEATURES.register("prismarine_spike", PrismarineSpikeFeature::new);
     public static final DeferredHolder<Feature<?>, TubewormPatchFeature> TUBEWORM_PATCH = FEATURES.register("tubeworm_patch", TubewormPatchFeature::new);
     public static final DeferredHolder<Feature<?>, UnderwaterPlantFeature> UNDERWATER_PLANT = FEATURES.register("underwater_plant", UnderwaterPlantFeature::new);
+    public static final DeferredHolder<Feature<?>, SpringPoolFeature> SPRING_POOL = FEATURES.register("spring_pool", SpringPoolFeature::new);
+    public static final DeferredHolder<Feature<?>, DeadTreeFeature> DEAD_TREE = FEATURES.register("dead_tree", DeadTreeFeature::new);
+    public static final DeferredHolder<Feature<?>, StrippedDriftwoodFeature> STRIPPED_DRIFTWOOD = FEATURES.register("stripped_driftwood", StrippedDriftwoodFeature::new);
 
     public static final DeferredHolder<PlacementModifierType<?>, PlacementModifierType<BiomeClearancePlacement>> BIOME_CLEARANCE = PLACEMENT_MODIFIERS.register("biome_clearance",
             () -> () -> BiomeClearancePlacement.CODEC);

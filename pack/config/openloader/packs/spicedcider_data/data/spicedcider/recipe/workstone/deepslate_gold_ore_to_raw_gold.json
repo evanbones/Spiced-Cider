@@ -1,0 +1,39 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "manual_labour"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "spelunkery"
+    }
+  ],
+  "type": "manual_labour:workstone",
+  "ingredients": [
+    {
+      "item": "minecraft:deepslate_gold_ore"
+    },
+    {
+      "tag": "manual_labour:hammers"
+    }
+  ],
+  "results": [
+    {
+      "id": "minecraft:raw_gold"
+    },
+    {
+      "id": "minecraft:raw_gold",
+      "chance": 0.5
+    },
+    {
+      "id": "spelunkery:raw_gold_nugget",
+      "count": 2
+    },
+    {
+      "id": "spelunkery:raw_gold_nugget",
+      "count": 2,
+      "chance": 0.5
+    }
+  ]
+}

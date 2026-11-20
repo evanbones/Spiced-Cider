@@ -2,19 +2,19 @@
   "neoforge:conditions": [
     {
       "type": "neoforge:mod_loaded",
-      "modid": "caverns_and_chasms"
+      "modid": "spelunkery"
     }
   ],
   "type": "create:milling",
   "ingredients": [
     {
-      "item": "caverns_and_chasms:depth_gauge"
+      "item": "spelunkery:depth_gauge"
     }
   ],
   "processing_time": 200,
   "results": [
     {
-      "id": "caverns_and_chasms:silver_nugget",
+      "id": "minecraft:copper_nugget",
       "count": 8
     },
     {

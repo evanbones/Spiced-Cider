@@ -1,0 +1,43 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "manual_labour"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "modestmining"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "spelunkery"
+    }
+  ],
+  "type": "manual_labour:workstone",
+  "ingredients": [
+    {
+      "item": "modestmining:deepslate_lead_ore"
+    },
+    {
+      "tag": "manual_labour:hammers"
+    }
+  ],
+  "results": [
+    {
+      "id": "modestmining:raw_lead"
+    },
+    {
+      "id": "modestmining:raw_lead",
+      "chance": 0.5
+    },
+    {
+      "id": "spelunkery:raw_lead_nugget",
+      "count": 2
+    },
+    {
+      "id": "spelunkery:raw_lead_nugget",
+      "count": 2,
+      "chance": 0.5
+    }
+  ]
+}

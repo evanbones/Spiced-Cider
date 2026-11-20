@@ -44,7 +44,7 @@ public final class PonderSubstitutes {
         Map<String, String> map = new LinkedHashMap<>();
         map.put("create:creative_motor", "create:shaft");
         map.put("create:analog_lever", "minecraft:lever");
-        map.put("create:mechanical_drill", "create:mechanical_saw");
+        map.put("create:mechanical_drill", "create:deployer");
         map.put("create:mechanical_harvester", "create:deployer");
         map.put("create:mechanical_plough", "create:deployer");
         map.put("create:creative_fluid_tank", "create:fluid_tank");

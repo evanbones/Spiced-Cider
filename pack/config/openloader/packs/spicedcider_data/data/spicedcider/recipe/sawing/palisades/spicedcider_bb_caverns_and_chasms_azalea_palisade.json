@@ -1,0 +1,30 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "caverns_and_chasms"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "moonlight"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "woodworks"
+    }
+  ],
+  "type": "woodworks:sawmill",
+  "ingredient": {
+    "type": "moonlight:block_type_swap",
+    "ingredient": {
+      "item": "minecraft:oak_log"
+    },
+    "block_type": "minecraft:wood_type",
+    "from": "minecraft:oak",
+    "to": "caverns_and_chasms:azalea"
+  },
+  "result": {
+    "id": "spicedcider:bb/caverns_and_chasms/azalea_palisade",
+    "count": 2
+  }
+}

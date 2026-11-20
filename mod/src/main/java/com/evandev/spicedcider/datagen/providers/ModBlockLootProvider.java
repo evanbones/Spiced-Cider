@@ -1,6 +1,7 @@
 package com.evandev.spicedcider.datagen.providers;
 
 import com.evandev.spicedcider.content.block.CacaoPodBlock;
+import com.evandev.spicedcider.content.block.RichGravelBlock;
 import com.evandev.spicedcider.registry.ModBlocks;
 import com.evandev.spicedcider.registry.ModFireBlocks;
 import com.evandev.spicedcider.registry.ModPaleGardenBlocks;
@@ -127,7 +128,9 @@ public class ModBlockLootProvider extends BlockLootSubProvider {
 
     private LootTable.Builder createRichGravelTable(Block block) {
         HolderLookup.RegistryLookup<Enchantment> enchantments = this.registries.lookupOrThrow(Registries.ENCHANTMENT);
-        return this.createSilkTouchDispatchTable(block, this.applyExplosionDecay(block, LootItem.lootTableItem(Items.FLINT)
+        return this.createSelfDropDispatchTable(block, this.hasSilkTouch().or(LootItemBlockStatePropertyCondition.hasBlockStateProperties(block)
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(RichGravelBlock.PLACED, true))),
+                this.applyExplosionDecay(block, LootItem.lootTableItem(Items.FLINT)
                 .apply(SetItemCountFunction.setCount(UniformGenerator.between(2.0F, 3.0F)))
                 .apply(ApplyBonusCount.addOreBonusCount(enchantments.getOrThrow(Enchantments.FORTUNE)))));
     }

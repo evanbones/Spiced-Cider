@@ -39,8 +39,10 @@ public final class PetArmorUtil {
         ItemStack armor = pet.getItemBySlot(EquipmentSlot.BODY);
         int damageBefore = armor.getDamageValue();
         int maxDamage = armor.getMaxDamage();
+        ItemStack particleItem = crackParticleItem(armor);
 
         armor.hurtAndBreak(Mth.ceil(damageAmount), pet, EquipmentSlot.BODY);
+        if (armor.isEmpty() || particleItem.isEmpty()) return;
 
         Crackiness.Level before = Crackiness.WOLF_ARMOR.byDamage(damageBefore, maxDamage);
         Crackiness.Level after = Crackiness.WOLF_ARMOR.byDamage(pet.getItemBySlot(EquipmentSlot.BODY));
@@ -48,7 +50,7 @@ public final class PetArmorUtil {
             pet.playSound(SoundEvents.WOLF_ARMOR_CRACK);
             if (pet.level() instanceof ServerLevel serverLevel) {
                 serverLevel.sendParticles(
-                        new ItemParticleOption(ParticleTypes.ITEM, crackParticleItem(armor)),
+                        new ItemParticleOption(ParticleTypes.ITEM, particleItem),
                         pet.getX(),
                         pet.getY() + 1.0,
                         pet.getZ(),

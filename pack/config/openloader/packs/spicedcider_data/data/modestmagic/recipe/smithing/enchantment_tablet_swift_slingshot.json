@@ -1,0 +1,18 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "modestmagic"
+    }
+  ],
+  "type": "modestmagic:tablet_smithing",
+  "template": {
+    "item": "modestmagic:enchantment_tablet_swift"
+  },
+  "base": {
+    "tag": "spicedcider:enchantable/quick_draw"
+  },
+  "enchantments": [
+    "spicedcider:quick_draw"
+  ]
+}

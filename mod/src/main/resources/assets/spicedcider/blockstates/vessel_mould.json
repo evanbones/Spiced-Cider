@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "spicedcider:block/vessel_mould"
+    },
+    "facing=east": {
+      "model": "spicedcider:block/vessel_mould",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "spicedcider:block/vessel_mould",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "spicedcider:block/vessel_mould",
+      "y": 270
+    }
+  }
+}

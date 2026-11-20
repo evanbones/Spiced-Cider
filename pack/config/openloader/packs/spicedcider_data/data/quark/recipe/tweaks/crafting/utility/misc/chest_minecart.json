@@ -11,20 +11,23 @@
   ],
   "type": "minecraft:crafting_shaped",
   "category": "misc",
+  "pattern": [
+    "PCP",
+    " F "
+  ],
   "key": {
-    "#": {
-      "item": "spicedcider:cast_iron_ingot"
+    "P": {
+      "tag": "c:plates/cast_iron"
     },
     "C": {
       "tag": "c:chests/wooden"
+    },
+    "F": {
+      "item": "spicedcider:cast_iron_frame"
     }
   },
-  "pattern": [
-    "#C#",
-    "###"
-  ],
   "result": {
-    "count": 1,
-    "id": "minecraft:chest_minecart"
+    "id": "minecraft:chest_minecart",
+    "count": 1
   }
 }

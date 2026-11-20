@@ -1,5 +1,10 @@
 package com.evandev.spicedcider.compat.ponder.scenes;
 
+import com.evandev.spicedcider.SpicedCider;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.material.Fluid;
+import net.neoforged.neoforge.fluids.FluidStack;
 import net.createmod.catnip.math.Pointing;
 import net.createmod.ponder.api.PonderPalette;
 import net.createmod.ponder.api.scene.SceneBuilder;
@@ -11,7 +16,6 @@ import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
-import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.phys.Vec3;
 
@@ -24,8 +28,8 @@ public class PackScenes {
         scene.idle(10);
 
         BlockPos tap = util.grid().at(2, 2, 1);
-        BlockPos cauldron = util.grid().at(2, 1, 1);
-        scene.world().showSection(util.select().layersFrom(1).substract(util.select().position(tap)).substract(util.select().position(cauldron)), Direction.DOWN);
+        BlockPos basin = util.grid().at(2, 1, 1);
+        scene.world().showSection(util.select().layersFrom(1).substract(util.select().position(tap)).substract(util.select().position(basin)), Direction.DOWN);
         scene.idle(15);
 
         scene.world().showSection(util.select().position(tap), Direction.SOUTH);
@@ -45,28 +49,25 @@ public class PackScenes {
                 .placeNearTarget();
         scene.idle(90);
 
-        scene.world().showSection(util.select().position(cauldron), Direction.DOWN);
+        scene.world().showSection(util.select().position(basin), Direction.DOWN);
         scene.idle(10);
         scene.overlay().showText(80)
                 .attachKeyFrame()
-                .text("Place a Cauldron up to 3 blocks below the tap to catch what drips out")
-                .pointAt(util.vector().centerOf(cauldron))
+                .text("Place a Basin up to 3 blocks below the tap to catch what drips out")
+                .pointAt(util.vector().centerOf(basin))
                 .placeNearTarget();
         scene.idle(60);
 
-        BlockState syrup = SceneHelper.block("nomansland:maple_syrup_cauldron");
-        Property<?> level = syrup.getBlock().getStateDefinition().getProperty("level");
-        for (int i = 1; i <= 4; i++) {
+        Fluid syrup = BuiltInRegistries.FLUID.get(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "maple_syrup"));
+        for (int i = 1; i <= 3; i++) {
             drip(scene, util, tap);
             scene.idle(10);
-            if (level instanceof IntegerProperty levels && levels.getPossibleValues().contains(i)) {
-                scene.world().setBlock(cauldron, syrup.setValue(levels, i), false);
-            }
+            BasinScenes.setFluid(scene, basin, new FluidStack(syrup, i * 333));
             scene.idle(10);
         }
         scene.overlay().showText(80)
-                .text("Over time the cauldron slowly fills up")
-                .pointAt(util.vector().centerOf(cauldron))
+                .text("Over time the Basin slowly fills up")
+                .pointAt(util.vector().centerOf(basin))
                 .placeNearTarget();
         scene.idle(90);
 
@@ -84,8 +85,8 @@ public class PackScenes {
         scene.idle(90);
 
         scene.overlay().showText(80)
-                .text("Mortars and Basins can catch the drips as well")
-                .pointAt(util.vector().centerOf(cauldron))
+                .text("Mortars and Fluid Tanks can catch the drips as well")
+                .pointAt(util.vector().centerOf(basin))
                 .placeNearTarget();
         scene.idle(90);
 
@@ -163,69 +164,7 @@ public class PackScenes {
         scene.markAsFinished();
     }
 
-    public static void dripstoneFarm(SceneBuilder scene, SceneBuildingUtil util) {
-        scene.title("dripstone_farm", "Collecting fluids with Pointed Dripstone");
-        scene.configureBasePlate(0, 0, 5);
-        scene.showBasePlate();
-        scene.idle(10);
 
-        BlockPos waterTip = util.grid().at(1, 2, 1);
-        BlockPos lavaTip = util.grid().at(3, 2, 1);
-        BlockPos waterCauldron = util.grid().at(1, 1, 1);
-        BlockPos lavaCauldron = util.grid().at(3, 1, 1);
-        scene.world().showSection(util.select().fromTo(1, 2, 1, 1, 3, 1).add(util.select().fromTo(3, 2, 1, 3, 3, 1)), Direction.DOWN);
-        scene.idle(15);
-        scene.overlay().showText(80)
-                .attachKeyFrame()
-                .text("Pointed Dripstone hanging under a block drips whatever fluid sits on top of that block")
-                .pointAt(util.vector().centerOf(waterTip))
-                .placeNearTarget();
-        scene.idle(90);
-
-        scene.world().showSection(util.select().position(1, 4, 1).add(util.select().position(3, 4, 1)), Direction.DOWN);
-        scene.world().showSection(util.select().position(waterCauldron).add(util.select().position(lavaCauldron)), Direction.DOWN);
-        scene.idle(15);
-        scene.overlay().showText(80)
-                .attachKeyFrame()
-                .text("Place a Cauldron below the tip to catch the drips")
-                .pointAt(util.vector().centerOf(waterCauldron))
-                .placeNearTarget();
-        scene.idle(60);
-
-        BlockState water = SceneHelper.block("minecraft:water_cauldron");
-        Property<?> waterLevel = water.getBlock().getStateDefinition().getProperty("level");
-        for (int i = 1; i <= 3; i++) {
-            emitDrip(scene, util, waterTip, ParticleTypes.DRIPPING_DRIPSTONE_WATER);
-            scene.idle(10);
-            if (waterLevel instanceof IntegerProperty levels) {
-                scene.world().setBlock(waterCauldron, water.setValue(levels, i), false);
-            }
-            scene.idle(10);
-        }
-        scene.overlay().showText(80)
-                .text("Water fills the Cauldron one level at a time")
-                .pointAt(util.vector().centerOf(waterCauldron))
-                .placeNearTarget();
-        scene.idle(90);
-
-        for (int i = 0; i < 3; i++) {
-            emitDrip(scene, util, lavaTip, ParticleTypes.DRIPPING_DRIPSTONE_LAVA);
-            scene.idle(20);
-        }
-        scene.world().setBlock(lavaCauldron, SceneHelper.block("minecraft:lava_cauldron"), false);
-        scene.overlay().showText(80)
-                .text("Lava drips far more slowly, but fills the Cauldron in one go")
-                .pointAt(util.vector().centerOf(lavaCauldron))
-                .placeNearTarget();
-        scene.idle(90);
-
-        scene.overlay().showText(80)
-                .text("The Cauldron can sit up to 10 blocks below the tip")
-                .pointAt(util.vector().centerOf(waterTip))
-                .placeNearTarget();
-        scene.idle(90);
-        scene.markAsFinished();
-    }
 
     public static void weepingObsidian(SceneBuilder scene, SceneBuildingUtil util) {
         scene.title("weeping_obsidian", "Collecting Dimensional Tears");
@@ -234,7 +173,7 @@ public class PackScenes {
         scene.idle(10);
 
         BlockPos obsidian = util.grid().at(2, 4, 2);
-        BlockPos cauldron = util.grid().at(2, 1, 2);
+        BlockPos basin = util.grid().at(2, 1, 2);
         scene.world().showSection(util.select().position(obsidian), Direction.DOWN);
         scene.idle(15);
         scene.overlay().showText(80)
@@ -244,28 +183,25 @@ public class PackScenes {
                 .placeNearTarget();
         scene.idle(90);
 
-        scene.world().showSection(util.select().position(cauldron), Direction.DOWN);
+        scene.world().showSection(util.select().position(basin), Direction.DOWN);
         scene.idle(10);
         scene.overlay().showText(80)
                 .attachKeyFrame()
-                .text("A Cauldron below it catches the Tears, as long as there is only air in between")
-                .pointAt(util.vector().centerOf(cauldron))
+                .text("A Basin below it catches the Tears, as long as there is only air in between")
+                .pointAt(util.vector().centerOf(basin))
                 .placeNearTarget();
         scene.idle(60);
 
-        BlockState tears = SceneHelper.block("dimensional_tears:dimensional_tears_cauldron");
-        Property<?> level = tears.getBlock().getStateDefinition().getProperty("level");
+        Fluid tears = BuiltInRegistries.FLUID.get(ResourceLocation.fromNamespaceAndPath("dimensional_tears", "dimensional_tears"));
         for (int i = 1; i <= 3; i++) {
             emitDrip(scene, util, obsidian, ParticleTypes.DRIPPING_OBSIDIAN_TEAR);
             scene.idle(15);
-            if (level instanceof IntegerProperty levels && levels.getPossibleValues().contains(i)) {
-                scene.world().setBlock(cauldron, tears.setValue(levels, i), false);
-            }
+            BasinScenes.setFluid(scene, basin, new FluidStack(tears, i * 250));
             scene.idle(10);
         }
         scene.overlay().showText(80)
                 .text("Collect them with a Glass Bottle or a Bucket")
-                .pointAt(util.vector().centerOf(cauldron))
+                .pointAt(util.vector().centerOf(basin))
                 .placeNearTarget();
         scene.idle(90);
 
@@ -277,53 +213,7 @@ public class PackScenes {
         scene.markAsFinished();
     }
 
-    public static void saltSpikes(SceneBuilder scene, SceneBuildingUtil util) {
-        scene.title("salt_spikes", "Growing Salt Spikes");
-        scene.configureBasePlate(0, 0, 5);
-        scene.showBasePlate();
-        scene.idle(10);
 
-        BlockPos salt = util.grid().at(2, 4, 2);
-        BlockPos tip = util.grid().at(2, 3, 2);
-        BlockPos spike = util.grid().at(2, 1, 2);
-        scene.world().showSection(util.select().fromTo(2, 3, 2, 2, 4, 2), Direction.DOWN);
-        scene.idle(15);
-        scene.overlay().showText(80)
-                .attachKeyFrame()
-                .text("Hang Pointed Dripstone under a block of Rock Salt")
-                .pointAt(util.vector().centerOf(salt))
-                .placeNearTarget();
-        scene.idle(90);
-
-        scene.world().showSection(util.select().position(2, 5, 2), Direction.DOWN);
-        scene.idle(10);
-        scene.overlay().showText(80)
-                .attachKeyFrame()
-                .text("With Water on top of the Rock Salt, the dripstone starts to drip")
-                .pointAt(util.vector().centerOf(2, 5, 2))
-                .placeNearTarget();
-        scene.idle(60);
-
-        for (int i = 0; i < 3; i++) {
-            emitDrip(scene, util, tip, ParticleTypes.DRIPPING_DRIPSTONE_WATER);
-            scene.idle(15);
-        }
-        scene.world().setBlock(spike, withFacing(SceneHelper.block("culturaldelights:salt_spike"), Direction.UP), false);
-        scene.world().showSection(util.select().position(spike), Direction.UP);
-        scene.idle(10);
-        scene.overlay().showText(80)
-                .text("Over time a Salt Spike grows on the floor below the tip")
-                .pointAt(util.vector().centerOf(spike))
-                .placeNearTarget();
-        scene.idle(90);
-
-        scene.overlay().showText(80)
-                .text("Only one spike grows under each tip until it is broken")
-                .pointAt(util.vector().centerOf(spike))
-                .placeNearTarget();
-        scene.idle(90);
-        scene.markAsFinished();
-    }
 
     private static void emitDrip(SceneBuilder scene, SceneBuildingUtil util, BlockPos from, ParticleOptions particle) {
         Vec3 tip = util.vector().centerOf(from).add(0, -0.55, 0);

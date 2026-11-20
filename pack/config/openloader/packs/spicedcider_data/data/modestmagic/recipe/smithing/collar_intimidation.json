@@ -3,11 +3,19 @@
     {
       "type": "neoforge:mod_loaded",
       "modid": "redomesticate"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "modestmagic"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "spicedcider"
     }
   ],
   "type": "modestmagic:tablet_smithing",
   "template": {
-    "item": "modestmagic:enchantment_tablet_serrated"
+    "item": "spicedcider:enchantment_tablet_beastly"
   },
   "base": {
     "item": "redomesticate:collar_tag"

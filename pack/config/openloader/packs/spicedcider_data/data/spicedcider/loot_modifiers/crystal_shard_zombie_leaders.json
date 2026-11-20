@@ -1,0 +1,27 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "reliable_requiem"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "zombieimprovements"
+    }
+  ],
+  "type": "neoforge:add_table",
+  "conditions": [
+    {
+      "condition": "minecraft:killed_by_player"
+    },
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "type": "#minecraft:zombies",
+        "nbt": "{\"neoforge:attachments\":{\"zombieimprovements:leader\":{leader:1b}}}"
+      }
+    }
+  ],
+  "table": "spicedcider:inject/crystal_shard_leader"
+}

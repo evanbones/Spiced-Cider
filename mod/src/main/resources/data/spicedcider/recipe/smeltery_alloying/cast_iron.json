@@ -1,0 +1,21 @@
+{
+  "type": "spicedcider:smeltery_alloying",
+  "fluids": [
+    {
+      "tag": "c:molten_iron",
+      "amount": 500
+    }
+  ],
+  "items": [
+    {
+      "tag": "minecraft:coals"
+    },
+    {
+      "tag": "minecraft:coals"
+    }
+  ],
+  "result": {
+    "id": "spicedcider:molten_cast_iron",
+    "amount": 500
+  }
+}

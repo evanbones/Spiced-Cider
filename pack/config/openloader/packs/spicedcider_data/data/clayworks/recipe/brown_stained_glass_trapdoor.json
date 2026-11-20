@@ -1,0 +1,23 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "clayworks:brown_stained_glass_trapdoor"
+    }
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:brown_stained_glass"
+    }
+  },
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "result": {
+    "id": "clayworks:brown_stained_glass_trapdoor",
+    "count": 1
+  },
+  "category": "redstone",
+  "type": "minecraft:crafting_shaped"
+}

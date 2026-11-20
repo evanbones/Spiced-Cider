@@ -1,0 +1,23 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "create:spruce_window_pane"
+    }
+  ],
+  "key": {
+    "#": {
+      "item": "create:spruce_window"
+    }
+  },
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "result": {
+    "id": "create:spruce_window_pane",
+    "count": 16
+  },
+  "category": "building",
+  "type": "minecraft:crafting_shaped"
+}

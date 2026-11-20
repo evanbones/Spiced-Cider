@@ -144,8 +144,9 @@ key_Take Panorama Screenshot:key.keyboard.unknown
 key_auditory.sound_reload_key:key.keyboard.unknown
 key_key.picturemode.open:key.keyboard.p
 key_key.configured.open_mod_list:key.keyboard.unknown
-key_key.personality.crawl:key.keyboard.c
-key_key.personality.sit:key.keyboard.y
+key_key.personality.crawl:key.keyboard.unknown
+key_key.personality.sit:key.keyboard.unknown
+key_quark.keybind.change_hotbar:key.keyboard.y
 key_key.jade.config:key.keyboard.unknown
 key_key.jade.show_overlay:key.keyboard.unknown
 key_key.jade.toggle_liquid:key.keyboard.unknown
@@ -159,14 +160,12 @@ key_key.screenshot_viewer.open_screenshots_screen:key.keyboard.unknown
 key_key.presencefootsteps.settings:key.keyboard.unknown
 key_key.presencefootsteps.toggle:key.keyboard.unknown
 key_key.entityculling.toggle:key.keyboard.unknown
-key_key.lodged.remove_shield_arrow:key.keyboard.unknown
 key_key.dungeonconfig.open:key.keyboard.unknown
 key_key.hide_icons:key.keyboard.unknown
 key_key.disable_voice_chat:key.keyboard.unknown
 key_key.mute_microphone:key.keyboard.n
 key_key.map_atlases.place_pin:key.keyboard.u
 key_supplementaries.keybind.quiver:key.keyboard.x
-key_key.lodged.use_bandage:key.keyboard.h
 key_create.keyinfo.toolbelt:key.keyboard.i
 soundCategory_master:1.0
 soundCategory_music:0.7007042253521126
@@ -185,5 +184,7 @@ modelPart_right_sleeve:true
 modelPart_left_pants_leg:true
 modelPart_right_pants_leg:true
 modelPart_hat:true
-key_key.spyglass-improvements.use:key.keyboard.unknown
+key_key.spyglass-improvements.use:key.keyboard.z
 key_quark.keybind.variant_selector:key.keyboard.unknown
+key_key.parcool.crawl:key.keyboard.unknown
+key_key.spicedcider.cycle_stance:key.keyboard.c

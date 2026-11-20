@@ -1,27 +1,29 @@
 {
   "neoforge:conditions": [
     {
-      "type": "neoforge:not",
-      "value": {
-        "type": "neoforge:tag_empty",
-        "tag": "c:ores/lead"
-      }
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "modestmining"
     }
   ],
   "type": "create:crushing",
   "ingredients": [
     {
-      "tag": "c:ores/lead"
+      "item": "modestmining:lead_ore"
     }
   ],
-  "processing_time": 400,
+  "processing_time": 250,
   "results": [
     {
-      "id": "create:crushed_raw_lead"
+      "id": "create:crushed_raw_lead",
+      "count": 2
     },
     {
-      "chance": 0.75,
-      "id": "create:crushed_raw_lead"
+      "id": "create:crushed_raw_lead",
+      "chance": 0.75
     },
     {
       "id": "create:crushed_raw_silver",

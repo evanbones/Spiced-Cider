@@ -1,26 +1,27 @@
 {
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "environmental"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "modestmagic"
+    }
+  ],
   "type": "modestmagic:infusing",
   "base": {
     "item": "modestmagic:enchantment_tablet"
   },
   "ingredients": [
     {
-      "item": "modestmagic:stardust"
-    },
-    {
-      "item": "modestmagic:stardust"
+      "item": "minecraft:glistering_melon_slice"
     },
     {
       "item": "environmental:truffle"
     },
     {
-      "item": "environmental:truffle"
-    },
-    {
-      "item": "minecraft:diamond"
-    },
-    {
-      "item": "minecraft:diamond"
+      "item": "modestmagic:stardust"
     }
   ],
   "results": [

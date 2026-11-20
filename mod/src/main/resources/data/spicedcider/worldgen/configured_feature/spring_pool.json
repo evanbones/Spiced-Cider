@@ -1,0 +1,78 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "spelunkery"
+    }
+  ],
+  "type": "spicedcider:spring_pool",
+  "config": {
+    "fluid": {
+      "Name": "spelunkery:spring_water",
+      "Properties": {
+        "level": "0"
+      }
+    },
+    "wall": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "minecraft:stone"
+      }
+    },
+    "bed": {
+      "type": "minecraft:weighted_state_provider",
+      "entries": [
+        {
+          "weight": 3,
+          "data": {
+            "Name": "minecraft:gravel"
+          }
+        },
+        {
+          "weight": 2,
+          "data": {
+            "Name": "minecraft:clay"
+          }
+        },
+        {
+          "weight": 1,
+          "data": {
+            "Name": "minecraft:mossy_cobblestone"
+          }
+        }
+      ]
+    },
+    "shore": {
+      "type": "minecraft:weighted_state_provider",
+      "entries": [
+        {
+          "weight": 4,
+          "data": {
+            "Name": "minecraft:gravel"
+          }
+        },
+        {
+          "weight": 3,
+          "data": {
+            "Name": "minecraft:moss_block"
+          }
+        },
+        {
+          "weight": 2,
+          "data": {
+            "Name": "minecraft:mossy_cobblestone"
+          }
+        },
+        {
+          "weight": 1,
+          "data": {
+            "Name": "minecraft:coarse_dirt"
+          }
+        }
+      ]
+    },
+    "ground": "#spicedcider:spring_pool_ground",
+    "bed_chance": 0.7,
+    "shore_chance": 0.35
+  }
+}

@@ -23,7 +23,7 @@ on the following ideas:
   must-have enchantments.
 
 - **Removed & Replaced:** Villagers, villages and trading are gone. Experience and enchanting tables made way for
-  Enchantment Tablets, brewing stands for cauldron brewing, and the smithing table for the Anvil and Styling Table.
+  Enchantment Tablets, brewing stands for brewing in a Basin, and the smithing table for the Anvil and Styling Table.
 
 ## License
 

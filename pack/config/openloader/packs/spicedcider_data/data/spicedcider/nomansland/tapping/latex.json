@@ -13,7 +13,10 @@
     "tree": {}
   },
   "output": {
-    "cauldron": "spicedcider:latex_cauldron"
+    "fluid": {
+      "id": "spicedcider:latex",
+      "amount": 250
+    }
   },
   "interval": {
     "type": "minecraft:uniform",

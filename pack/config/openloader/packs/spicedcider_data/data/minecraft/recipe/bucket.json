@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "I I",
+    " P "
+  ],
+  "key": {
+    "I": {
+      "tag": "c:ingots/tin"
+    },
+    "P": {
+      "tag": "c:plates/tin"
+    }
+  },
+  "result": {
+    "id": "minecraft:bucket",
+    "count": 1
+  }
+}

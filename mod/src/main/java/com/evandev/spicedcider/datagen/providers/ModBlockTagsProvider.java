@@ -43,18 +43,17 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                 .add(ModBlocks.WORM_CRATE.get())
                 .add(ModBlocks.GOLDEN_WORM_CRATE.get())
                 .add(ModBlocks.TANNING_RACK.get())
+                .add(ModBlocks.DEAD_WOOD_BRANCH.get())
                 .addOptional(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "puffball_mushroom_crate"));
 
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.DEPOSIT.get())
                 .add(ModBlocks.DEEPSLATE_DEPOSIT.get())
                 .add(ModBlocks.BLACKSTONE_DEPOSIT.get())
-                .add(ModBlocks.GRAVESTONE.get());
-
-        this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(ModBlocks.LATEX_CAULDRON.get(), ModBlocks.CHOCOLATE_CAULDRON.get(),
-                ModBlocks.SPRING_WATER_CAULDRON.get(), ModBlocks.LUMISENE_CAULDRON.get());
-        this.tag(BlockTags.CAULDRONS).add(ModBlocks.LATEX_CAULDRON.get(), ModBlocks.CHOCOLATE_CAULDRON.get(),
-                ModBlocks.SPRING_WATER_CAULDRON.get(), ModBlocks.LUMISENE_CAULDRON.get());
+                .add(ModBlocks.GRAVESTONE.get())
+                .add(ModBlocks.CRUCIBLE.get())
+                .add(ModBlocks.SMELTERY.get());
+        ModBlocks.MOULDS.values().forEach(mould -> this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(mould.get()));
 
         this.tag(BlockTags.NEEDS_STONE_TOOL)
                 .add(ModBlocks.CAST_IRON_BLOCK.get());

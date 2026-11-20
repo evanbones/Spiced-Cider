@@ -22,6 +22,7 @@ import java.util.Queue;
 import java.util.function.BiPredicate;
 
 public class StrawGolemSenses {
+    private static final double MAX_REACH_UP = 2.0;
 
     public static boolean canSee(Entity entity, BlockPos pos) {
         if (Math.abs(entity.getY() - pos.getY()) > StrawGolem.SEARCH_RANGE_VERTICAL) {
@@ -39,6 +40,13 @@ public class StrawGolemSenses {
 
     public static boolean canReach(Mob mob, BlockPos pos) {
         return pos.closerToCenterThan(mob.position(), StrawGolem.REACH);
+    }
+
+    public static boolean canReachPlant(Mob mob, BlockPos pos) {
+        double dx = pos.getX() + 0.5 - mob.getX();
+        double dz = pos.getZ() + 0.5 - mob.getZ();
+        double dy = pos.getY() - mob.getY();
+        return dx * dx + dz * dz <= StrawGolem.REACH * StrawGolem.REACH && dy >= -1.0 && dy <= MAX_REACH_UP;
     }
 
     @Nullable

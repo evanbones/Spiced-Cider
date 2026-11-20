@@ -2,17 +2,17 @@
   "neoforge:conditions": [
     {
       "type": "neoforge:mod_loaded",
-      "modid": "caverns_and_chasms"
+      "modid": "manual_labour"
     },
     {
       "type": "neoforge:mod_loaded",
-      "modid": "manual_labour"
+      "modid": "caverns_and_chasms"
     }
   ],
   "type": "manual_labour:workstone",
   "ingredients": [
     {
-      "tag": "c:ores/tin"
+      "item": "caverns_and_chasms:tin_ore"
     },
     {
       "tag": "manual_labour:hammers"
@@ -24,7 +24,7 @@
     },
     {
       "id": "caverns_and_chasms:raw_tin",
-      "chance": 0.35
+      "chance": 0.5
     }
   ]
 }

@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "facing=east": [
+      {"model": "spicedcider:block/dead_wood_branch", "y": 90},
+      {"model": "spicedcider:block/dead_wood_branch_2", "y": 90}
+    ],
+    "facing=north": [
+      {"model": "spicedcider:block/dead_wood_branch"},
+      {"model": "spicedcider:block/dead_wood_branch_2"}
+    ],
+    "facing=south": [
+      {"model": "spicedcider:block/dead_wood_branch", "y": 180},
+      {"model": "spicedcider:block/dead_wood_branch_2", "y": 180}
+    ],
+    "facing=west": [
+      {"model": "spicedcider:block/dead_wood_branch", "y": 270},
+      {"model": "spicedcider:block/dead_wood_branch_2", "y": 270}
+    ]
+  }
+}

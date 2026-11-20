@@ -1,10 +1,4 @@
 {
-  "fabric:load_conditions": [
-    {
-      "condition": "supplementaries:flag",
-      "flag": "cage"
-    }
-  ],
   "neoforge:conditions": [
     {
       "type": "supplementaries:flag",
@@ -13,19 +7,18 @@
   ],
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "111",
-    "2 2",
-    "000"
+    "BFB",
+    "SSS"
   ],
   "key": {
-    "0": {
-      "tag": "minecraft:wooden_slabs"
-    },
-    "1": {
-      "item": "spicedcider:cast_iron_ingot"
-    },
-    "2": {
+    "B": {
       "item": "minecraft:iron_bars"
+    },
+    "F": {
+      "item": "spicedcider:cast_iron_frame"
+    },
+    "S": {
+      "tag": "minecraft:wooden_slabs"
     }
   },
   "result": {

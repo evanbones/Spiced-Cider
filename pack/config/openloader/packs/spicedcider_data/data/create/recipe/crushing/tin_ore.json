@@ -1,27 +1,29 @@
 {
   "neoforge:conditions": [
     {
-      "type": "neoforge:not",
-      "value": {
-        "type": "neoforge:tag_empty",
-        "tag": "c:ores/tin"
-      }
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "caverns_and_chasms"
     }
   ],
   "type": "create:crushing",
   "ingredients": [
     {
-      "tag": "c:ores/tin"
+      "item": "caverns_and_chasms:tin_ore"
     }
   ],
-  "processing_time": 400,
+  "processing_time": 250,
   "results": [
     {
-      "id": "create:crushed_raw_tin"
+      "id": "create:crushed_raw_tin",
+      "count": 2
     },
     {
-      "chance": 0.75,
-      "id": "create:crushed_raw_tin"
+      "id": "create:crushed_raw_tin",
+      "chance": 0.75
     }
   ]
 }

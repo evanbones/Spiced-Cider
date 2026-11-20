@@ -1,0 +1,24 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "upgrade_aquatic:driftwood_trapdoor"
+    }
+  ],
+  "key": {
+    "#": {
+      "item": "upgrade_aquatic:driftwood_planks"
+    }
+  },
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "result": {
+    "id": "upgrade_aquatic:driftwood_trapdoor",
+    "count": 6
+  },
+  "group": "wooden_trapdoor",
+  "category": "redstone",
+  "type": "minecraft:crafting_shaped"
+}

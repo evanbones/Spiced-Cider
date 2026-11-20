@@ -12,7 +12,7 @@
   "type": "manual_labour:workstone",
   "ingredients": [
     {
-      "tag": "c:ores/lead"
+      "item": "modestmining:lead_ore"
     },
     {
       "tag": "manual_labour:hammers"
@@ -24,7 +24,7 @@
     },
     {
       "id": "modestmining:raw_lead",
-      "chance": 0.35
+      "chance": 0.5
     }
   ]
 }

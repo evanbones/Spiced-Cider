@@ -1,0 +1,26 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "moonlight"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "woodworks"
+    }
+  ],
+  "type": "woodworks:sawmill",
+  "ingredient": {
+    "type": "moonlight:block_type_swap",
+    "ingredient": {
+      "item": "minecraft:oak_log"
+    },
+    "block_type": "minecraft:wood_type",
+    "from": "minecraft:oak",
+    "to": "minecraft:pale_oak"
+  },
+  "result": {
+    "id": "spicedcider:bb/minecraft/pale_oak_palisade",
+    "count": 2
+  }
+}

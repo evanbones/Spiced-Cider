@@ -2,13 +2,11 @@ plugins {
     id 'java'
 }
 
-version = "1.0.0"
-
 java.toolchain.languageVersion = JavaLanguageVersion.of(21)
 
 jar {
     archiveFileName = "spicedcider-server.jar"
     manifest {
-        attributes("Main-Class": "com.evandev.spicedcider.server.Launcher")
+        attributes("Main-Class": "com.evandev.spicedcider.server.Launcher", "Implementation-Version": project.version)
     }
 }

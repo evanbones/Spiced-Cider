@@ -1,7 +1,9 @@
 package com.evandev.spicedcider.entities.strawgolem.goals;
 
+import com.evandev.spicedcider.compat.bountifulfares.TrellisHarvesting;
 import com.evandev.spicedcider.entities.strawgolem.StrawGolem;
 import com.evandev.spicedcider.entities.strawgolem.StrawGolemSenses;
+import com.evandev.spicedcider.registry.ModTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.component.DataComponents;
@@ -18,11 +20,13 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.BushBlock;
 import net.minecraft.world.level.block.CropBlock;
 import net.minecraft.world.level.block.StemBlock;
+import net.minecraft.world.level.block.SugarCaneBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.level.storage.loot.LootParams;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParams;
+import net.neoforged.fml.ModList;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Collections;
@@ -32,8 +36,11 @@ import java.util.function.BiPredicate;
 
 public class GolemHarvestGoal extends GolemMoveToBlockGoal {
     private static final int SEARCH_COOLDOWN = 40;
+    private static final int MAX_PLANT_HEIGHT = 3;
+    private static final boolean TRELLISES = ModList.get().isLoaded("bountifulfares");
 
-    private final BiPredicate<StrawGolem, BlockPos> predicate = (golem, pos) -> isGrownPlant(golem.level(), pos) && StrawGolemSenses.canPath(golem, pos);
+    private final BiPredicate<StrawGolem, BlockPos> predicate = (golem, pos) -> isGrownPlant(golem.level(), pos)
+            && StrawGolemSenses.canPath(golem, standPos(golem.level(), pos));
     @Nullable
     private Queue<BlockPos> queue;
     private int harvestTimer;
@@ -51,16 +58,35 @@ public class GolemHarvestGoal extends GolemMoveToBlockGoal {
     }
 
     @Override
+    protected void moveMobToBlock() {
+        BlockPos stand = standPos(golem.level(), blockPos);
+        mob.getNavigation().moveTo(stand.getX() + 0.5, stand.getY(), stand.getZ() + 0.5, 0, speedModifier);
+    }
+
+    private static BlockPos standPos(Level level, BlockPos pos) {
+        BlockPos stand = pos;
+        for (int i = 0; i < MAX_PLANT_HEIGHT && isPlantColumn(level.getBlockState(stand.below())); i++) {
+            stand = stand.below();
+        }
+        return stand;
+    }
+
+    private static boolean isPlantColumn(BlockState state) {
+        Block block = state.getBlock();
+        return block instanceof CropBlock || block instanceof SugarCaneBlock || (TRELLISES && TrellisHarvesting.isTrellis(state));
+    }
+
+    @Override
     public void tick() {
         super.tick();
-        if (item == null && StrawGolemSenses.canReach(mob, blockPos)) {
+        if (item == null && StrawGolemSenses.canReachPlant(mob, blockPos)) {
             item = harvest();
             golem.setPickupStatus(item);
             golem.getNavigation().stop();
         } else if (item != null && !item.isEmpty()) {
             golem.getLookControl().setLookAt(blockPos.getCenter().x, blockPos.getCenter().y, blockPos.getCenter().z, 180, 180);
             harvestTimer++;
-            if (harvestTimer == 20 && predicate.test(golem, blockPos) && StrawGolemSenses.canReach(mob, blockPos)) {
+            if (harvestTimer == 20 && predicate.test(golem, blockPos) && StrawGolemSenses.canReachPlant(mob, blockPos)) {
                 item = harvest();
                 resetBlock(golem.level());
                 golem.setItemSlot(EquipmentSlot.MAINHAND, item);
@@ -122,16 +148,29 @@ public class GolemHarvestGoal extends GolemMoveToBlockGoal {
         if (block instanceof CropBlock crop) {
             return crop.isMaxAge(state);
         }
+        if (block instanceof SugarCaneBlock) {
+            return level.getBlockState(pos.below()).is(block) && !level.getBlockState(pos.below(2)).is(block);
+        }
+        if (TRELLISES && TrellisHarvesting.isTrellis(state)) {
+            return TrellisHarvesting.isGrown(level, pos);
+        }
+        if (state.is(ModTags.Blocks.STRAW_GOLEM_CROPS) && !(block instanceof StemBlock) && isMaxAge(state)) {
+            return true;
+        }
         if (block instanceof BushBlock && !(block instanceof StemBlock)) {
-            for (Property<?> property : state.getProperties()) {
-                if (property instanceof IntegerProperty age && property.getName().equals("age")
-                        && state.getValue(age) >= Collections.max(age.getPossibleValues())) {
-                    return true;
-                }
-            }
-            return false;
+            return isMaxAge(state);
         }
         return (block == Blocks.PUMPKIN || block == Blocks.MELON) && attachedStem(level, pos) != null;
+    }
+
+    private static boolean isMaxAge(BlockState state) {
+        for (Property<?> property : state.getProperties()) {
+            if (property instanceof IntegerProperty age && property.getName().equals("age")
+                    && state.getValue(age) >= Collections.max(age.getPossibleValues())) {
+                return true;
+            }
+        }
+        return false;
     }
 
     @Nullable
@@ -150,6 +189,9 @@ public class GolemHarvestGoal extends GolemMoveToBlockGoal {
             return ItemStack.EMPTY;
         }
         BlockState state = level.getBlockState(blockPos);
+        if (TRELLISES && TrellisHarvesting.isTrellis(state)) {
+            return TrellisHarvesting.produce(level, blockPos, golem.getRandom());
+        }
         LootParams.Builder builder = new LootParams.Builder(level)
                 .withParameter(LootContextParams.TOOL, ItemStack.EMPTY)
                 .withParameter(LootContextParams.ORIGIN, mob.position());
@@ -160,6 +202,15 @@ public class GolemHarvestGoal extends GolemMoveToBlockGoal {
 
     private void resetBlock(Level level) {
         BlockState state = level.getBlockState(blockPos);
+        if (TRELLISES && TrellisHarvesting.isTrellis(state)) {
+            TrellisHarvesting.pick(level, blockPos);
+            return;
+        }
+        if (state.getBlock() instanceof SugarCaneBlock) {
+            level.playSound(null, blockPos, state.getSoundType().getBreakSound(), SoundSource.BLOCKS);
+            level.setBlockAndUpdate(blockPos, Blocks.AIR.defaultBlockState());
+            return;
+        }
         for (Property<?> property : state.getProperties()) {
             if (property.getName().equalsIgnoreCase("age") && property instanceof IntegerProperty age) {
                 level.playSound(null, blockPos, state.getSoundType().getBreakSound(), SoundSource.BLOCKS);

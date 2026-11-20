@@ -1,7 +1,6 @@
 package com.evandev.spicedcider.mixin;
 
 import com.bawnorton.mixinsquared.api.MixinCanceller;
-import com.evandev.spicedcider.config.EarlyStartupConfig;
 import net.neoforged.fml.loading.LoadingModList;
 
 import java.util.List;
@@ -23,21 +22,6 @@ public class SpicedCiderMixinCanceller implements MixinCanceller {
             "com.teamabnormals.personality.core.mixin.BlueprintFallingBlockEntityMixin"
     );
 
-    private static final Set<String> EMI_DISCOVERY_RECIPE_MIXINS = Set.of(
-            "net.funkpla.emi_discovery.mixin.emi.EmiApiMixin",
-            "net.funkpla.emi_discovery.mixin.emi.EmiIngredientRecipeMixin",
-            "net.funkpla.emi_discovery.mixin.emi.EmiScreenManagerMixin",
-            "net.funkpla.emi_discovery.mixin.emi.EmiSmithingTrimRecipeMixin",
-            "net.funkpla.emi_discovery.mixin.emi.IngredientTooltipComponentMixin",
-            "net.funkpla.emi_discovery.mixin.emi.ItemEmiStackMixin",
-            "net.funkpla.emi_discovery.mixin.emi.ListEmiIngredientMixin",
-            "net.funkpla.emi_discovery.mixin.emi.PageSlotWidgetMixin",
-            "net.funkpla.emi_discovery.mixin.emi.RecipeScreenMixin",
-            "net.funkpla.emi_discovery.mixin.emi.SlotWidgetMixin",
-            "net.funkpla.emi_discovery.mixin.emi.TagEmiIngredientMixin",
-            "net.funkpla.emi_discovery.mixin.emi.TagTooltipComponentMixin"
-    );
-
     @Override
     public boolean shouldCancel(List<String> targetClassNames, String mixinClassName) {
 
@@ -56,10 +40,6 @@ public class SpicedCiderMixinCanceller implements MixinCanceller {
 
         if (PERSONALITY_SNOW_GRAVITY_MIXINS.contains(mixinClassName)) {
             return LoadingModList.get().getModFileById("snowrealmagic") != null;
-        }
-
-        if (EMI_DISCOVERY_RECIPE_MIXINS.contains(mixinClassName)) {
-            return EarlyStartupConfig.get("emiDiscoveryIndexOnly");
         }
 
         if ("net.mehvahdjukaar.smooth_animations.mixins.DrownedRendererMixin".equals(mixinClassName)) {

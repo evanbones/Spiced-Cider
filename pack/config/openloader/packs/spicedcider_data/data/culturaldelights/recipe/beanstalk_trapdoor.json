@@ -1,0 +1,24 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "culturaldelights:beanstalk_trapdoor"
+    }
+  ],
+  "key": {
+    "#": {
+      "item": "culturaldelights:beanstalk_planks"
+    }
+  },
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "result": {
+    "id": "culturaldelights:beanstalk_trapdoor",
+    "count": 6
+  },
+  "group": "wooden_trapdoor",
+  "category": "redstone",
+  "type": "minecraft:crafting_shaped"
+}

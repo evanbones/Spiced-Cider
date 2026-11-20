@@ -1,0 +1,24 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "alloyed"
+    }
+  ],
+  "type": "spicedcider:smeltery_alloying",
+  "fluids": [
+    {
+      "tag": "c:molten_cast_iron",
+      "amount": 750
+    }
+  ],
+  "items": [
+    {
+      "item": "minecraft:blaze_powder"
+    }
+  ],
+  "result": {
+    "id": "spicedcider:molten_steel",
+    "amount": 750
+  }
+}

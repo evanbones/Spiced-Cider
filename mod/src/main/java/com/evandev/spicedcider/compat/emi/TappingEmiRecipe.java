@@ -30,7 +30,6 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.material.Fluids;
 import net.neoforged.neoforge.client.model.data.ModelData;
 import net.neoforged.neoforge.fluids.CauldronFluidContent;
@@ -45,10 +44,11 @@ public class TappingEmiRecipe extends BasicEmiRecipe {
     private static final int WIDTH = 134;
     private static final int SCENE_HEIGHT = 58;
 
+    private static final List<ResourceLocation> CATCHERS = List.of(ResourceLocation.fromNamespaceAndPath("create", "basin"),
+            ResourceLocation.fromNamespaceAndPath("manual_labour", "mortar"));
     private final List<BlockState> sources;
     private final boolean tree;
     private final BlockState receiver;
-    private final IntegerProperty receiverLevel;
 
     private TappingEmiRecipe(EmiRecipeCategory category, ResourceLocation id, List<BlockState> sources, boolean tree,
                              EmiStack output, BlockState receiver) {
@@ -56,7 +56,6 @@ public class TappingEmiRecipe extends BasicEmiRecipe {
         this.sources = sources;
         this.tree = tree;
         this.receiver = receiver;
-        this.receiverLevel = receiver != null && receiver.getBlock().getStateDefinition().getProperty("level") instanceof IntegerProperty level ? level : null;
         this.inputs = List.of(EmiIngredient.of(sources.stream().map(state -> EmiStack.of(state.getBlock())).distinct().toList()));
         this.outputs = List.of(output);
     }
@@ -82,10 +81,9 @@ public class TappingEmiRecipe extends BasicEmiRecipe {
 
             TapInteraction.Output out = interaction.output().get();
             EmiStack output;
-            BlockState receiver = null;
+            BlockState receiver = catcher();
             if (out.cauldron().isPresent()) {
                 Block cauldron = out.cauldron().get();
-                receiver = cauldron.defaultBlockState();
                 CauldronFluidContent content = CauldronFluidContent.getForBlock(cauldron);
                 if (content != null && content.fluid != Fluids.EMPTY) {
                     output = EmiStack.of(content.fluid, content.totalAmount / content.maxLevel);
@@ -144,16 +142,16 @@ public class TappingEmiRecipe extends BasicEmiRecipe {
         if (tree) renderBlock(graphics, source, 0, 0, 0);
         renderBlock(graphics, source, 0, 1, 0);
         renderBlock(graphics, tap, 0, 1, 1);
-        if (receiver != null) renderBlock(graphics, receiverState(time), 0, 0, 1);
+        if (receiver != null) renderBlock(graphics, receiver, 0, 0, 1);
         graphics.flush();
         pose.popPose();
     }
 
-    private BlockState receiverState(long time) {
-        if (receiverLevel == null) return receiver;
-        List<Integer> levels = new ArrayList<>(receiverLevel.getPossibleValues());
-        int step = (int) (time / 1000 % (levels.size() + 1));
-        return step == 0 ? Blocks.CAULDRON.defaultBlockState() : receiver.setValue(receiverLevel, levels.get(step - 1));
+    private static BlockState catcher() {
+        for (ResourceLocation id : CATCHERS) {
+            if (BuiltInRegistries.BLOCK.containsKey(id)) return BuiltInRegistries.BLOCK.get(id).defaultBlockState();
+        }
+        return null;
     }
 
     private static void renderBlock(GuiGraphics graphics, BlockState state, int x, int y, int z) {

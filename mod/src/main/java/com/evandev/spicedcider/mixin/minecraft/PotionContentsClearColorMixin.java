@@ -1,6 +1,6 @@
 package com.evandev.spicedcider.mixin.minecraft;
 
-import com.evandev.spicedcider.content.brewing.CauldronBrewing;
+import com.evandev.spicedcider.content.brewing.Brewing;
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import net.minecraft.core.Holder;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -31,14 +31,14 @@ public class PotionContentsClearColorMixin {
 
     @ModifyReturnValue(method = "getColor()I", at = @At("RETURN"))
     private int spicedcider$clearColor(int color) {
-        if (this.customColor.isEmpty() && this.customEffects.isEmpty() && CauldronBrewing.isClear(this.potion)) {
-            return CauldronBrewing.CLEAR_COLOR;
+        if (this.customColor.isEmpty() && this.customEffects.isEmpty() && Brewing.isClear(this.potion)) {
+            return Brewing.CLEAR_COLOR;
         }
         return color;
     }
 
     @ModifyReturnValue(method = "getColor(Lnet/minecraft/core/Holder;)I", at = @At("RETURN"))
     private static int spicedcider$clearColor(int color, Holder<Potion> potion) {
-        return CauldronBrewing.isClear(Optional.of(potion)) ? CauldronBrewing.CLEAR_COLOR : color;
+        return Brewing.isClear(Optional.of(potion)) ? Brewing.CLEAR_COLOR : color;
     }
 }

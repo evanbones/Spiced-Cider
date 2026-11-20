@@ -1,0 +1,41 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "caverns_and_chasms"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "modestmining"
+    }
+  ],
+  "type": "spicedcider:smeltery_alloying",
+  "fluids": [
+    {
+      "tag": "c:molten_gold",
+      "amount": 500
+    },
+    {
+      "tag": "c:molten_silver",
+      "amount": 500
+    }
+  ],
+  "items": [
+    {
+      "item": "modestmining:meteoric_scrap"
+    },
+    {
+      "item": "modestmining:meteoric_scrap"
+    },
+    {
+      "item": "modestmining:meteoric_scrap"
+    },
+    {
+      "item": "modestmining:meteoric_scrap"
+    }
+  ],
+  "result": {
+    "id": "spicedcider:molten_valkyrium",
+    "amount": 250
+  }
+}

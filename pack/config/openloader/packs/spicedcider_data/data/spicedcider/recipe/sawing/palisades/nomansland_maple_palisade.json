@@ -1,0 +1,25 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "nomansland"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "woodworks"
+    }
+  ],
+  "type": "woodworks:sawmill",
+  "ingredient": [
+    {
+      "item": "nomansland:maple_log"
+    },
+    {
+      "item": "nomansland:maple_wood"
+    }
+  ],
+  "result": {
+    "id": "nomansland:maple_palisade",
+    "count": 2
+  }
+}

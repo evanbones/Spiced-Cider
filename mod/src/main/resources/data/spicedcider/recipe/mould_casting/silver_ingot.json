@@ -1,0 +1,18 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "caverns_and_chasms"
+    }
+  ],
+  "type": "spicedcider:mould_casting",
+  "shape": "ingot",
+  "fluid": {
+    "tag": "c:molten_silver",
+    "amount": 250
+  },
+  "result": {
+    "id": "caverns_and_chasms:silver_ingot",
+    "count": 1
+  }
+}

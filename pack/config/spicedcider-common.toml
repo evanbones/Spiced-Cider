@@ -7,8 +7,8 @@
 	easyAnvilsFreeRepairs = true
 	#Fire rings no longer take potions to spread their effects. Requires Piglin Proliferation.
 	fireRingNoPotions = true
-	#Look at an arrow stuck in a tamed animal to highlight it, then right-click to pull it out. Uses the same removal chances as pulling arrows out of yourself. Requires Lodged.
-	lodgedTamedArrowPulling = true
+	#Cleaning out an empty Pot of Witch Stew leaves a Create Basin instead of a Cauldron. Requires No Man's Land and Create.
+	witchStewBasin = true
 	#Stops copper golems from being built out of blocks. Requires Caverns & Chasms.
 	copperGolemBuildingDisabled = true
 	#Bonemeal no longer turns grass into overgrown grass. Requires Where Winds Blow.
@@ -23,14 +23,22 @@
 	dustBunnySpawners = true
 	#A change in redstone power opens or closes a tap. Requires No Man's Land.
 	tapRedstone = true
-	#Taps drain and fill everything a Supplementaries faucet can, such as jars, beehives and modded cauldrons, and show a stream of liquid while pouring. Requires No Man's Land and Supplementaries.
+	#Taps drain and fill everything a Supplementaries faucet can, such as jars, beehives and basins, and show a stream of liquid while pouring. Requires No Man's Land and Supplementaries.
 	tapFaucetFluids = true
 	#Trees with pinecone-growing logs generate with pinecones. Requires Environmental. Only affects newly generated terrain.
 	pineconesOnTrees = true
 	#Building a copper golem doesn't leave a copper chest behind. Requires Vanilla Backport.
 	copperGolemNoChest = true
+	#Jack-o'-Straws can be placed facing any of 16 directions, like heads. Requires Bountiful Fares.
+	jackOStrawRotation = true
 	#Each Treeliable chop costs half a bolt of Modest Meals stamina. Without stamina, logs break normally without counting as a chop. Requires Treeliable and Modest Meals.
 	treeChoppingStamina = true
+	#Stamina recovers twice as fast while sitting with Personality. Requires Personality and Modest Meals.
+	sittingStaminaRegen = true
+	#Animals and mobs can sit on Quark stools like on Create seats: walk or lead them onto one, or right-click it while holding a lead. Seated mobs work with Stock Tickers and other seat features. Requires Quark and Create.
+	quarkStoolSeats = true
+	#Campfires, Fire, Magma Blocks and other cooking heat sources under a Basin count as heated for mixing and brewing, so heated recipes don't need a Blaze Burner. Superheated recipes still do. Requires Create.
+	basinCampfireHeat = true
 	#Awake creaking hearts and resin clumps give off light, creaking eyes always glow, and eyeblossoms open in dim light at any time of day. Requires Vanilla Backport.
 	vanillaBackportLightTweaks = true
 	#The creaking moves a little faster and hits twice as hard. Requires Vanilla Backport.
@@ -39,12 +47,16 @@
 	goldenDandelionTempting = true
 	#Ocean ruins generate prismarine chests instead of regular chests. Requires Quark. Only affects newly generated terrain.
 	oceanRuinPrismarineChests = true
-	#Animals that flee after seeing one of their herd hurt run at a normal panic speed instead of sprinting away. Requires Big Brain.
+	#Animals that flee after seeing one of their herd hurt run at a normal panic speed instead of sprinting away, and calm down 10 seconds later. Requires Big Brain.
 	calmerHerdPanic = true
 	#Leapers deal a third less explosion damage. Requires Adapted Mobs.
 	weakerLeapers = true
 	#Learning a new chalk symbol shows its message above the hotbar instead of in chat. Requires Chalk.
 	chalkSymbolsAboveHotbar = false
+	#Personality's crawl key does nothing, so crawling is left to ParCool or another crawl mod. Sitting still works. Requires Personality.
+	personalityNoCrawl = true
+	#Rabbits don't run from players who are sneaking.
+	sneakUpOnRabbits = true
 
 [features]
 	#Combine a named name tag with an item in the crafting grid to rename it. Takes effect after /reload.
@@ -73,14 +85,18 @@
 	leafSticks = true
 	#Mining an ore also drops the stone it sits in, such as deepslate or netherrack. Takes effect after /reload.
 	oreStoneDrops = true
+	#Netherite pickaxes, shovels, axes, hoes and hammers drop the smelted form of what they mine, except ores, raw metals, logs and crops. Silk Touch turns it off. Takes effect after /reload.
+	autoSmelting = true
+	#Arrows stuck in players and mobs can be pulled back out: your own by clicking them on your player model in the inventory, and a tamed animal's by looking at one and right-clicking. Pulls from the head are riskiest; a failed pull breaks the arrow and deals a little damage. Arrows that can be picked up stay in until pulled and drop when the mob dies. Mobs show stuck arrows with Entity Pin Cushions.
+	stuckArrows = true
+	#Potions and water bottles used in a crafting or mixing recipe leave their empty Glass Bottle behind.
+	bottleCraftingRemainder = true
 	#Two flint craft a single-use Fire Striker. Takes effect after /reload.
 	fireStriker = true
 	#Deposit ores generate underground, and geodes turn up in dungeon and Nether chests. Worldgen changes need a world restart and only affect new chunks.
 	deposits = true
 	#Wormy dirt generates underground. Needs a world restart and only affects new chunks.
 	wormyDirt = true
-	#Cacao and pear trees generate in the world. Needs a world restart and only affects new chunks.
-	fruitTrees = true
 	#Algae, chromarine and achromarine reefs and brambles, and hydrothermal vents generate in oceans. Needs a world restart and only affects new chunks.
 	oceanDepths = true
 	#Recipes for the extra stairs, slabs, walls and other building blocks. Takes effect after /reload.
@@ -95,6 +111,14 @@
 	richGravel = true
 	#Gravestones can be crafted. Carry one and your items and experience go into a grave where you die. Takes effect after /reload.
 	gravestones = true
+	#Small, shallow pools of spring water form on mountainsides. Requires Spelunkery. Needs a world restart and only affects new chunks.
+	springPools = true
+	#Cacao trees generate in jungles. Needs a world restart and only affects new chunks.
+	cacaoTrees = true
+	#Pear trees generate in autumnal forests. Needs a world restart and only affects new chunks.
+	pearTrees = true
+	#With Upgrade Aquatic, a few bare dead trees with jutting branches stand in deserts. Needs a world restart and only affects new chunks.
+	deadTrees = true
 
 	[features.gameplay]
 		#Beds don't explode outside the Overworld; instead they show a message and wake sleeping villagers.
@@ -131,6 +155,8 @@
 		azaleaTreePrevention = true
 		#Zombies sometimes spawn holding a torch.
 		zombieTorches = true
+		#Brown mushrooms and mushroom colonies no longer give off a faint light. Already placed mushrooms update when their chunk relights.
+		darkMushrooms = true
 		#Piglins spawn with Piglin Broadswords and Battleaxes instead of golden swords and axes.
 		piglinWeaponSwap = true
 		#Soul campfires haunt items using Create's haunting recipes. Requires Create.
@@ -141,6 +167,10 @@
 		privateAdvancementMessages = true
 		#Sign hitboxes follow the sign's model and rotation.
 		accurateSignHitboxes = true
+		#How many items a bundle holds. 64 is the vanilla amount.
+		# Default: 64
+		# Range: 1 ~ 1024
+		bundleCapacity = 128
 		#Igloos generate without their basement.
 		iglooBasementRemoval = true
 		#Cocoa pods can't be placed and break off logs. Cacao trees grow their own pods.
@@ -151,6 +181,8 @@
 		brokenToolsOnCuttingBoards = false
 		#Players and the world spawn are never placed on top of leaves.
 		noLeafSpawns = true
+		#Players walk up full blocks without jumping, except while sneaking.
+		stepUp = true
 
 	[features.voidWater]
 		#Fluids at the bottom of the world spill into the void as fading trails you can swim in. Takes effect when a world is next loaded.
@@ -231,3 +263,15 @@
 		gravestoneKeepAllExperience = false
 		#A worn grave gives back less experience: half at the second stage, a third at the last.
 		gravestoneExperienceDecay = false
+
+	[features.horses]
+		#Every horse gets the same speed and jump strength instead of random ones. Applies to entities in the spicedcider:static_horse_stats tag.
+		staticHorseStats = true
+		#Movement speed given to every horse when Fixed Horse Stats is on. 0.3375 is the fastest a vanilla horse can be.
+		# Default: 0.3375
+		# Range: 0.05 ~ 1.0
+		staticHorseSpeed = 0.3375
+		#Jump strength given to every horse when Fixed Horse Stats is on. 1.0 is the highest a vanilla horse can jump, about 5 blocks.
+		# Default: 1.0
+		# Range: 0.1 ~ 2.0
+		staticHorseJump = 1.0

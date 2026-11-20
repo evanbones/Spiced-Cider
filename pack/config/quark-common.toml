@@ -608,13 +608,13 @@
 
 	[tweaks.gold_tools_have_fortune]
 		#Allowed values: [0,)
-		"Fortune Level" = 2
+		"Fortune Level" = 1
 		#Allowed values: [0,4]
 		"Harvest Level" = 2
 		"Display Baked Enchantments In Tooltip" = true
 		"Italic Tooltip" = true
 		#Enchantments other than Gold's Fortune/Looting to bake into items. Format is "item+enchant@level", such as "minecraft:stick+minecraft:sharpness@10".
-		"Item Enchantments" = ["oooh_pinky:rose_gold_pickaxe+minecraft:silk_touch@1", "oooh_pinky:rose_gold_shovel+minecraft:silk_touch@1", "oooh_pinky:rose_gold_axe+minecraft:silk_touch@1", "oooh_pinky:rose_gold_hoe+minecraft:silk_touch@1", "oooh_pinky:rose_gold_knife+minecraft:silk_touch@1", "spicedcider:rose_gold_hammer+minecraft:silk_touch@1"]
+		"Item Enchantments" = ["oooh_pinky:rose_gold_pickaxe+minecraft:silk_touch@1", "oooh_pinky:rose_gold_shovel+minecraft:silk_touch@1", "oooh_pinky:rose_gold_axe+minecraft:silk_touch@1", "oooh_pinky:rose_gold_hoe+minecraft:silk_touch@1", "oooh_pinky:rose_gold_knife+minecraft:silk_touch@1", "spicedcider:rose_gold_hammer+minecraft:silk_touch@1", "minecraft:leather_helmet+minecraft:feather_falling@1", "minecraft:leather_chestplate+minecraft:feather_falling@2", "minecraft:leather_leggings+minecraft:feather_falling@3", "minecraft:leather_boots+minecraft:feather_falling@4", "minecraft:golden_helmet+minecraft:fire_protection@1", "minecraft:golden_chestplate+minecraft:fire_protection@2", "minecraft:golden_leggings+minecraft:fire_protection@2", "minecraft:golden_boots+minecraft:fire_protection@1", "minecraft:netherite_helmet+minecraft:fire_protection@3", "minecraft:netherite_chestplate+minecraft:fire_protection@4", "minecraft:netherite_leggings+minecraft:fire_protection@4", "minecraft:netherite_boots+minecraft:fire_protection@3", "minecraft:diamond_helmet+minecraft:projectile_protection@2", "minecraft:diamond_chestplate+minecraft:projectile_protection@3", "minecraft:diamond_leggings+minecraft:projectile_protection@3", "minecraft:diamond_boots+minecraft:projectile_protection@2", "minecraft:turtle_helmet+minecraft:aqua_affinity@1", "minecraft:netherite_pickaxe+minecraft:fire_aspect@1", "minecraft:netherite_shovel+minecraft:fire_aspect@1", "minecraft:netherite_hoe+minecraft:fire_aspect@1", "minecraft:netherite_axe+minecraft:fire_aspect@2", "minecraft:netherite_sword+minecraft:fire_aspect@2", "farmersdelight:netherite_knife+minecraft:fire_aspect@2", "manual_labour:netherite_hammer+minecraft:fire_aspect@1", "spicedcider:infernite_cleaver+minecraft:fire_aspect@2", "minecraft:golden_axe+minecraft:looting@1", "farmersdelight:golden_knife+minecraft:looting@1", "minecraft:crossbow+minecraft:power@2", "minecraft:trident+minecraft:loyalty@3", "minecraft:netherite_horse_armor+allurement:obedience@1", "caverns_and_chasms:necromium_horse_armor+allurement:obedience@1"]
 
 	[tweaks.grab_chickens]
 		"Needs No Helmet" = true

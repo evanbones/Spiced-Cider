@@ -1,0 +1,21 @@
+{
+  "type": "manual_labour:workstone",
+  "ingredients": [
+    [
+      {
+        "item": "abundant_atmosphere:nether_brick_door"
+      },
+      {
+        "item": "abundant_atmosphere:nether_brick_trapdoor"
+      }
+    ],
+    {
+      "tag": "manual_labour:hammers"
+    }
+  ],
+  "results": [
+    {
+      "id": "minecraft:nether_bricks"
+    }
+  ]
+}

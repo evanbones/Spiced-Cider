@@ -62,7 +62,7 @@ public record AnvilSmithingRecipe(Ingredient base, Ingredient addition, ItemStac
 
     @Override
     public @NotNull ItemStack getResultItem(HolderLookup.@NotNull Provider registries) {
-        return this.result;
+        return this.result.copy();
     }
 
     @Override

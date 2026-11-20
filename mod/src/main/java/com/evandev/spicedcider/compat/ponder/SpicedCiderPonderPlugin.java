@@ -1,6 +1,8 @@
 package com.evandev.spicedcider.compat.ponder;
 
 import com.evandev.spicedcider.SpicedCider;
+import com.evandev.spicedcider.compat.ponder.scenes.BasinScenes;
+import com.evandev.spicedcider.compat.ponder.scenes.CastingScenes;
 import com.evandev.spicedcider.compat.ponder.scenes.GolemScenes;
 import com.evandev.spicedcider.compat.ponder.scenes.MultiblockScenes;
 import com.evandev.spicedcider.compat.ponder.scenes.PackScenes;
@@ -83,15 +85,22 @@ public class SpicedCiderPonderPlugin implements PonderPlugin {
                 .addStoryBoard("misc/tapping", PackScenes::tapping);
         components(helper, "farmersdelight:cooking_pot", "farmersdelight:stove", "farmersdelight:skillet")
                 .addStoryBoard("misc/cooking_pot", PackScenes::cookingPot);
-        components(helper, "minecraft:pointed_dripstone")
-                .addStoryBoard("misc/dripstone_farm", PackScenes::dripstoneFarm);
+        components(helper, "minecraft:pointed_dripstone", "minecraft:lava_bucket")
+                .addStoryBoard("misc/dripstone_lava_farm", BasinScenes::dripstoneLavaFarm);
+        components(helper, "minecraft:pointed_dripstone", "spelunkery:salt", "culturaldelights:salt_block", "culturaldelights:salt_spike")
+                .addStoryBoard("misc/dripstone_salt_farm", BasinScenes::dripstoneSaltFarm);
         components(helper, "minecraft:crying_obsidian", "frame_changer:crying_obsidian_bricks", "frame_changer:crying_polished_obsidian",
                 "frame_changer:crying_obsidian_pillar", "frame_changer:crying_chiseled_obsidian")
                 .addStoryBoard("misc/weeping_obsidian", PackScenes::weepingObsidian);
-        components(helper, "culturaldelights:salt_block", "culturaldelights:salt_spike")
-                .addStoryBoard("misc/salt_spikes", PackScenes::saltSpikes);
-        components(helper, "minecraft:cauldron", "minecraft:nether_wart")
-                .addStoryBoard("misc/cauldron_brewing", ProcessScenes::cauldronBrewing);
+        components(helper, "create:basin", "manual_labour:ladle", "minecraft:nether_wart")
+                .addStoryBoard("misc/basin_brewing", BasinScenes::basinBrewing);
+        components(helper, "create:basin", "manual_labour:ladle")
+                .addStoryBoard("misc/ladle_mixing", BasinScenes::ladleMixing);
+        components(helper, "spicedcider:crucible", "spicedcider:ingot_mould", "spicedcider:plate_mould", "spicedcider:vessel_mould",
+                "spicedcider:frame_mould", "spicedcider:pipe_mould")
+                .addStoryBoard("casting/crucible", CastingScenes::crucible);
+        components(helper, "spicedcider:smeltery")
+                .addStoryBoard("casting/smeltery", CastingScenes::smeltery);
         components(helper, "exposure:lightroom", "exposure:developed_black_and_white_film", "exposure:developed_color_film", "exposure:photograph")
                 .addStoryBoard("misc/lightroom", ProcessScenes::lightroom);
         components(helper, "exposure:black_and_white_film", "exposure:color_film", "exposure:high_sensitivity_black_and_white_film",

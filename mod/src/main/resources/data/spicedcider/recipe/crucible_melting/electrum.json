@@ -1,0 +1,27 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "caverns_and_chasms"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "modestmining"
+    }
+  ],
+  "type": "spicedcider:crucible_melting",
+  "ingredients": [
+    {
+      "item": "minecraft:gold_ingot"
+    },
+    {
+      "item": "caverns_and_chasms:silver_ingot"
+    }
+  ],
+  "result": {
+    "id": "spicedcider:molten_electrum",
+    "amount": 500
+  },
+  "heat": "low",
+  "time": 200
+}

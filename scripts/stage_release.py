@@ -33,22 +33,6 @@ def pw_target(path: Path, rel: str) -> str | None:
     return f"{parent}/{match.group(1)}" if parent else match.group(1)
 
 
-def zip_dir(src: Path, dest: Path) -> None:
-    entries = sorted(src.rglob("*"), key=lambda p: p.relative_to(src).as_posix())
-    with zipfile.ZipFile(dest, "w") as zf:
-        for entry in entries:
-            name = entry.relative_to(src).as_posix()
-            if entry.is_dir():
-                info = zipfile.ZipInfo(name + "/", ZIP_DATE)
-                info.external_attr = 0o40755 << 16
-                zf.writestr(info, b"")
-            else:
-                info = zipfile.ZipInfo(name, ZIP_DATE)
-                info.external_attr = 0o100644 << 16
-                info.compress_type = zipfile.ZIP_DEFLATED
-                zf.writestr(info, entry.read_bytes(), compresslevel=9)
-
-
 def host_client_only(out: Path, rel: str, base_url: str) -> None:
     source = out / rel
     hosted = out / HOSTED_DIR / rel
@@ -95,7 +79,6 @@ def main() -> int:
     parser.add_argument("--release", required=True)
     parser.add_argument("--version")
     parser.add_argument("--base-url")
-    parser.add_argument("--no-zip", action="store_true")
     args = parser.parse_args()
 
     pack = Path(args.pack).resolve()
@@ -110,9 +93,7 @@ def main() -> int:
         for name in dirs:
             os.chmod(os.path.join(root, name), stat.S_IWRITE | stat.S_IREAD | stat.S_IEXEC)
 
-    zips = [] if args.no_zip else release.get("zip", [])
-    zip_replace = {} if args.no_zip else release.get("zip_replace", {})
-    unmatched = set(release.get("remove", [])) | set(release.get("json", {})) | set(zips) | set(zip_replace)
+    unmatched = set(release.get("remove", [])) | set(release.get("json", {}))
 
     for path in sorted(p for p in out.rglob("*") if p.is_file()):
         rel = path.relative_to(out).as_posix()
@@ -132,25 +113,6 @@ def main() -> int:
         data = json.loads(path.read_text(encoding="utf-8-sig"))
         data.update(patch)
         path.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8")
-        unmatched.discard(rel)
-
-    for pattern in zips:
-        for folder in sorted(p for p in out.glob(pattern) if p.is_dir()):
-            unmatched.discard(pattern)
-            zip_dir(folder, folder.with_name(folder.name + ".zip"))
-            shutil.rmtree(folder, onerror=make_writable)
-
-    for rel, pairs in zip_replace.items():
-        path = out / rel
-        if not path.is_file():
-            continue
-        text = path.read_text(encoding="utf-8")
-        for old, new in pairs:
-            if old not in text:
-                print(f"pack-release.json zip_replace '{old}' not found in {rel}", file=sys.stderr)
-                return 1
-            text = text.replace(old, new)
-        path.write_text(text, encoding="utf-8")
         unmatched.discard(rel)
 
     if args.base_url:

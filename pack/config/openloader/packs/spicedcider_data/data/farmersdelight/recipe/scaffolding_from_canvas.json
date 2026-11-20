@@ -1,0 +1,32 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "farmersdelight"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "farmersdelight:canvas"
+    },
+    "b": [
+      {
+        "item": "minecraft:bamboo"
+      },
+      {
+        "item": "abundant_atmosphere:red_bamboo"
+      }
+    ]
+  },
+  "pattern": [
+    "b#b",
+    "b b",
+    "b b"
+  ],
+  "result": {
+    "count": 6,
+    "id": "minecraft:scaffolding"
+  }
+}

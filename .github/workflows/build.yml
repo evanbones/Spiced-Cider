@@ -1,4 +1,4 @@
-name: Deploy Packwiz Instance
+name: Release
 
 on:
   push:
@@ -8,16 +8,63 @@ on:
     branches: [ "main" ]
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
 concurrency:
-  group: "pages"
+  group: "release"
   cancel-in-progress: false
 
+env:
+  MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
+  CURSEFORGE_TOKEN: ${{ secrets.CURSEFORGE_TOKEN }}
+
 jobs:
-  build:
+  core:
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.check.outputs.version }}
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Check Cider Core Version
+        id: check
+        run: |
+          mod_version=$(grep '^version=' gradle.properties | cut -d= -f2 | tr -d '\r')
+          mc_version=$(grep '^minecraft_version=' gradle.properties | cut -d= -f2 | tr -d '\r')
+          version="${mod_version}+${mc_version}"
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+          status=$(curl -s -o /dev/null -w '%{http_code}' -H "Authorization: $MODRINTH_TOKEN" "https://api.modrinth.com/v2/project/cider-core/version/$version")
+          if [ "$status" = "200" ]; then
+            echo "publish=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::Cider Core $version is already on Modrinth; bump version in gradle.properties to publish a new one"
+          else
+            echo "publish=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Setup Java
+        if: steps.check.outputs.publish == 'true'
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+
+      - name: Setup Gradle
+        if: steps.check.outputs.publish == 'true'
+        uses: gradle/actions/setup-gradle@v4
+
+      - name: Publish Cider Core
+        if: steps.check.outputs.publish == 'true'
+        run: |
+          chmod +x gradlew
+          ./gradlew :mod:publishMods --stacktrace
+
+  pack:
+    needs: core
+    if: always() && (needs.core.result == 'success' || github.event_name == 'pull_request')
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
@@ -27,6 +74,44 @@ jobs:
         run: |
           go install github.com/packwiz/packwiz@latest
           echo "$(go env GOPATH)/bin" >> $GITHUB_PATH
+
+      - name: Setup Java
+        if: github.event_name != 'pull_request'
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+
+      - name: Setup Gradle
+        if: github.event_name != 'pull_request'
+        uses: gradle/actions/setup-gradle@v4
+
+      - name: Update Cider Core In Pack
+        if: github.event_name != 'pull_request'
+        run: |
+          chmod +x gradlew
+          ./gradlew :mod:useModrinthCiderCore -Pcider_core_version=${{ needs.core.outputs.version }} --stacktrace
+          python3 scripts/patch_pack_index.py pack
+          git add -A pack
+          if ! git diff --cached --quiet; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+            git commit -m "Update Cider Core to ${{ needs.core.outputs.version }}"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+
+      - name: Publish Modpack
+        if: github.event_name != 'pull_request'
+        run: |
+          pack_version=$(grep '^version=' gradle.properties | cut -d= -f2 | tr -d '\r')
+          slug=$(grep '^pack_modrinth_slug=' gradle.properties | cut -d= -f2 | tr -d '\r')
+          status=$(curl -s -o /dev/null -w '%{http_code}' -H "Authorization: $MODRINTH_TOKEN" "https://api.modrinth.com/v2/project/$slug/version/$pack_version")
+          if [ "$status" = "200" ]; then
+            echo "::notice::Spiced Cider $pack_version is already on Modrinth; bump version in gradle.properties to publish a new one"
+          else
+            ./gradlew :publishMods --stacktrace
+          fi
 
       - name: Stage Release Pack
         run: |
@@ -42,8 +127,8 @@ jobs:
           path: './_site'
 
   deploy:
-    needs: build
-    if: github.event_name != 'pull_request'
+    needs: pack
+    if: always() && needs.pack.result == 'success' && github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     environment:
       name: github-pages

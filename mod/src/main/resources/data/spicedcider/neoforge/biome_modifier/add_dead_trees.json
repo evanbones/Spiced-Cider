@@ -1,0 +1,16 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "upgrade_aquatic"
+    },
+    {
+      "type": "spicedcider:feature",
+      "feature": "deadTrees"
+    }
+  ],
+  "type": "neoforge:add_features",
+  "biomes": "#spicedcider:has_feature/dead_trees",
+  "features": "spicedcider:dead_trees",
+  "step": "vegetal_decoration"
+}

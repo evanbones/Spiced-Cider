@@ -1,0 +1,26 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "modestmagic"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "spicedcider"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "supplementaries"
+    }
+  ],
+  "type": "modestmagic:tablet_smithing",
+  "template": {
+    "item": "spicedcider:enchantment_tablet_otherworldly"
+  },
+  "base": {
+    "tag": "supplementaries:enchantable/stasis"
+  },
+  "enchantments": [
+    "supplementaries:stasis"
+  ]
+}

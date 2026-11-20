@@ -1,6 +1,7 @@
 package com.evandev.spicedcider.client.options;
 
 import com.evandev.spicedcider.client.options.entry.ButtonEntry;
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.evandev.spicedcider.client.options.entry.CategoryEntry;
 import com.evandev.spicedcider.client.options.entry.Entry;
 import com.evandev.spicedcider.client.options.entry.KeyEntry;
@@ -215,7 +216,7 @@ public final class SettingsPages {
         add(entries, category(screen, "movement_options",
                 vanilla(o.toggleCrouch()),
                 vanilla(o.toggleSprint()),
-                vanilla(o.autoJump())));
+                SpicedCiderConfig.commonOr(SpicedCiderConfig.COMMON.stepUp, false) ? vanilla(StepUpOption.get()) : vanilla(o.autoJump())));
         if (ModList.get().isLoaded("controlify")) {
             entries.add(ControlifySettings.settingsCategory(screen));
         }

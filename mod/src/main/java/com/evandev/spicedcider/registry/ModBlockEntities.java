@@ -3,6 +3,10 @@ package com.evandev.spicedcider.registry;
 import com.evandev.spicedcider.SpicedCider;
 import com.evandev.spicedcider.content.block.entity.GraveBlockEntity;
 import com.evandev.spicedcider.content.block.entity.TubewormBlockEntity;
+import com.evandev.spicedcider.content.casting.CrucibleBlockEntity;
+import com.evandev.spicedcider.content.casting.MouldBlockEntity;
+import com.evandev.spicedcider.content.casting.smeltery.SmelteryBlockEntity;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.neoforged.neoforge.registries.DeferredHolder;
@@ -16,4 +20,13 @@ public class ModBlockEntities {
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<GraveBlockEntity>> GRAVE = BLOCK_ENTITIES.register("grave",
             () -> BlockEntityType.Builder.of(GraveBlockEntity::new, ModBlocks.GRAVE.get()).build(null));
+
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<CrucibleBlockEntity>> CRUCIBLE = BLOCK_ENTITIES.register("crucible",
+            () -> BlockEntityType.Builder.of(CrucibleBlockEntity::new, ModBlocks.CRUCIBLE.get()).build(null));
+
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<MouldBlockEntity>> MOULD = BLOCK_ENTITIES.register("mould",
+            () -> BlockEntityType.Builder.of(MouldBlockEntity::new, ModBlocks.MOULDS.values().stream().map(block -> (Block) block.get()).toArray(Block[]::new)).build(null));
+
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<SmelteryBlockEntity>> SMELTERY = BLOCK_ENTITIES.register("smeltery",
+            () -> BlockEntityType.Builder.of(SmelteryBlockEntity::new, ModBlocks.SMELTERY.get()).build(null));
 }

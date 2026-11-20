@@ -1,0 +1,20 @@
+{
+  "values": [
+    "minecraft:lava",
+    "minecraft:magma_block",
+    "minecraft:fire",
+    "minecraft:soul_fire",
+    {
+      "id": "supplementaries:fire_pit",
+      "required": false
+    },
+    {
+      "id": "piglinproliferation:stone_fire_ring",
+      "required": false
+    },
+    {
+      "id": "piglinproliferation:blackstone_soul_fire_ring",
+      "required": false
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "parent": "spicedcider:husbandry/intoxication",
+  "display": {
+    "hidden": true,
+    "icon": {
+      "id": "culturaldelights:apple_cider"
+    },
+    "title": "Crossfaded",
+    "description": "Be at Peace and Intoxicated at the same time",
+    "frame": "task"
+  },
+  "criteria": {
+    "crossfaded": {
+      "trigger": "minecraft:effects_changed",
+      "conditions": {
+        "effects": {
+          "culturaldelights:intoxication": {},
+          "nirvana:peace": {}
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "crossfaded"
+    ]
+  ],
+  "parents": [
+    "spicedcider:husbandry/intoxication"
+  ]
+}

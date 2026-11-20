@@ -199,6 +199,7 @@
       "infernalexp:luminous_planks_from_hyphae",
       "infernalexp:luminous_planks_from_stripped_hyphae",
       "minecraft:chiseled_tuff_from_tuff_stonecutting",
+      "minecraft:scaffolding",
       "modestmining:bronze_block",
       "modestmining:charcoal_chunk",
       "modestmining:coal_chunk",
@@ -231,6 +232,7 @@
       "nomansland:building/siltstone_bricks_from_siltstone_stonecutting",
       "nomansland:lectern",
       "nomansland:magenta_dye_from_autumn_crocus",
+      "nomansland:scaffolding",
       "quark:building/crafting/compressed/beetroot_crate",
       "quark:building/crafting/compressed/beetroot_crateuncompress",
       "quark:building/crafting/compressed/berry_sack",
@@ -261,6 +263,13 @@
       "clayworks:cracked_stone_bricks_from_baking",
       "clayworks:cracked_deepslate_bricks_from_baking",
       "clayworks:cracked_polished_blackstone_bricks_from_baking"
+    ]
+  },
+  {
+    "action": "remove_from_tag",
+    "tag": "c:dyed/green",
+    "id": [
+      "minecraft:gray_cushion"
     ]
   }
 ]
