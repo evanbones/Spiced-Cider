@@ -215,8 +215,6 @@ public class SpicedCiderConfigScreen {
                 toggle("carvingWheel", client.carvingWheel),
                 toggle("tapRedstone", common.tapRedstone),
                 toggle("witchStewBasin", common.witchStewBasin));
-        group(groups, List.of("parcool"),
-                toggle("parcoolDoubleTapSharedKeys", client.parcoolDoubleTapSharedKeys));
         group(groups, List.of("piglinproliferation"),
                 toggle("fireRingNoPotions", common.fireRingNoPotions));
         group(groups, List.of("quark"),

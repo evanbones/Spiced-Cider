@@ -44,11 +44,7 @@ public final class KeyLayout {
             "quark.keybind.variant_selector",
             "treeliable.key.cycle_sneak_behavior",
             "key.immersiveoverlays.toggle",
-            "key.exposure.camera_controls",
-            "key.parcool.fast_move",
-            "key.parcool.hide_in_block",
-            "key.parcool.open_setting_skilltree",
-            "key.parcool.enable"
+            "key.exposure.camera_controls"
     );
 
     private static final Set<String> HIDDEN_ACTIVE = Set.of("create.keyinfo.shift_modifier", "create.keyinfo.ctrl_modifier", "create.keyinfo.alt_modifier");
@@ -58,9 +54,7 @@ public final class KeyLayout {
             Set.of("key.sprint", "create.keyinfo.ctrl_modifier"),
             Set.of("key.clutternomore.change_block_shape", "create.keyinfo.toolmenu", "create.keyinfo.alt_modifier"),
             Set.of("key.forward", "key.ponder.ponder"),
-            Set.of("key.reliable_remover.emi_delete", "key.reliable_remover.jei_delete"),
-            Set.of("key.use", "key.parcool.hang", "key.parcool.slide_down"),
-            Set.of("key.parcool.dodge", "key.parcool.breakfall", "key.parcool.horizontal_wall_run")
+            Set.of("key.reliable_remover.emi_delete", "key.reliable_remover.jei_delete")
     );
 
     private static final List<String> HIDDEN_PREFIXES = List.of(
@@ -75,8 +69,8 @@ public final class KeyLayout {
 
     static {
         group("movement", "key.forward", "key.left", "key.back", "key.right", "key.jump", "key.sneak", "key.sprint",
-                "key.spicedcider.cycle_stance", "key.personality.sit", "key.parcool.crawl", "key.parcool.hang", "key.parcool.slide_down", "key.parcool.dodge",
-                "key.parcool.breakfall", "key.parcool.horizontal_wall_run", "quark.keybind.autorun", "key.reliable_gliders.deploy");
+                "key.spicedcider.cycle_stance", "key.personality.sit", "key.personality.crawl",
+                "quark.keybind.autorun", "key.reliable_gliders.deploy");
         group("gameplay", "key.attack", "key.use", "key.pickItem", "key.swapOffhand", "key.drop",
                 "key.clutternomore.change_block_shape", "supplementaries.keybind.quiver",
                 "treeliable.key.toggle_chopping", "create.keyinfo.toolmenu", "create.keyinfo.toolbelt",

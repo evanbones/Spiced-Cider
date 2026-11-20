@@ -22,7 +22,6 @@ public class InputBindingRadialIconMixin {
             "key.fieldguide.open", "fieldguide:item/field_guide",
             "key.map_atlases.open_minimap", "map_atlases:item/atlas",
             "key.personality.sit", "quark:item/red_stool",
-            "key.parcool.crawl", "minecraft:item/leather_boots",
             "supplementaries.keybind.quiver", "supplementaries:item/quiver",
             "key.advancements", "minecraft:item/book"
     );

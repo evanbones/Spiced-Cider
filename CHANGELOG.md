@@ -1,3 +1,10 @@
+## [3.0.1] - 2026-11-20
+
+### Changed
+
+- ParCool is replaced by Get Over It again: hold jump against a two-block ledge to climb up it.
+- Personality's crawl is back, on the Change Stance key.
+
 ## [3.0.0] - 2026-11-20
 
 ### Added

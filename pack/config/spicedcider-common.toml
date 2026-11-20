@@ -53,8 +53,8 @@
 	weakerLeapers = true
 	#Learning a new chalk symbol shows its message above the hotbar instead of in chat. Requires Chalk.
 	chalkSymbolsAboveHotbar = false
-	#Personality's crawl key does nothing, so crawling is left to ParCool or another crawl mod. Sitting still works. Requires Personality.
-	personalityNoCrawl = true
+	#Personality's crawl key does nothing, so crawling is left to another crawl mod. Sitting still works. Requires Personality.
+	personalityNoCrawl = false
 	#Rabbits don't run from players who are sneaking.
 	sneakUpOnRabbits = true
 

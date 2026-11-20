@@ -817,7 +817,6 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.BooleanValue graveLocatorBar;
         public final ModConfigSpec.BooleanValue goldenDandelionParticles;
         public final ModConfigSpec.BooleanValue carvingWheel;
-        public final ModConfigSpec.BooleanValue parcoolDoubleTapSharedKeys;
         public final ModConfigSpec.BooleanValue jadeNeedsSpyglassOrMonocle;
         public final ModConfigSpec.BooleanValue stepUpEnabled;
         public final ModConfigSpec.BooleanValue emiTappingCategory;
@@ -920,11 +919,6 @@ public class SpicedCiderConfig {
                     .comment(tooltip("carvingWheel"))
                     .translation("option.spicedcider.carvingWheel")
                     .define("carvingWheel", false);
-
-            parcoolDoubleTapSharedKeys = builder
-                    .comment(tooltip("parcoolDoubleTapSharedKeys"))
-                    .translation("option.spicedcider.parcoolDoubleTapSharedKeys")
-                    .define("parcoolDoubleTapSharedKeys", false);
 
             jadeNeedsSpyglassOrMonocle = builder
                     .comment(tooltip("jadeNeedsSpyglassOrMonocle"))
