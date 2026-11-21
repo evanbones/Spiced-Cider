@@ -8,12 +8,13 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "pattern": [
-    " V",
-    "/ "
+    " SS",
+    " SS",
+    "/  "
   ],
   "key": {
-    "V": {
-      "item": "spicedcider:cast_iron_vessel"
+    "S": {
+      "tag": "c:plates/cast_iron"
     },
     "/": {
       "item": "minecraft:brick"

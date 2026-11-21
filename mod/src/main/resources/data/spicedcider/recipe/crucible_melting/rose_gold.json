@@ -7,18 +7,38 @@
   ],
   "type": "spicedcider:crucible_melting",
   "ingredients": [
-    {
-      "item": "minecraft:copper_ingot"
-    },
-    {
-      "item": "minecraft:gold_ingot"
-    },
-    {
-      "item": "minecraft:gold_ingot"
-    },
-    {
-      "item": "minecraft:gold_ingot"
-    }
+    [
+      {
+        "tag": "c:ingots/copper"
+      },
+      {
+        "tag": "c:raw_materials/copper"
+      }
+    ],
+    [
+      {
+        "tag": "c:ingots/gold"
+      },
+      {
+        "tag": "c:raw_materials/gold"
+      }
+    ],
+    [
+      {
+        "tag": "c:ingots/gold"
+      },
+      {
+        "tag": "c:raw_materials/gold"
+      }
+    ],
+    [
+      {
+        "tag": "c:ingots/gold"
+      },
+      {
+        "tag": "c:raw_materials/gold"
+      }
+    ]
   ],
   "result": {
     "id": "spicedcider:molten_rose_gold",

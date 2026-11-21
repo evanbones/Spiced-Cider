@@ -46,7 +46,7 @@ public class CrucibleBlock extends BaseEntityBlock {
     public static final MapCodec<CrucibleBlock> CODEC = simpleCodec(CrucibleBlock::new);
     public static final BooleanProperty SEATED = BooleanProperty.create("seated");
     public static final TagKey<Block> SEATS = TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "crucible_seats"));
-    public static final float SEAT_DROP = 9.0F / 16.0F;
+    public static final float SEAT_DROP = 13.0F / 16.0F;
     private static final VoxelShape SHAPE = Shapes.or(Block.box(5.0, 0.0, 5.0, 11.0, 12.0, 11.0), Block.box(4.5, 12.0, 4.5, 11.5, 14.0, 11.5));
     private static final VoxelShape SEATED_SHAPE = SHAPE.move(0.0, -SEAT_DROP, 0.0);
 

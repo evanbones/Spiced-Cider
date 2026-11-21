@@ -25,6 +25,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
+import com.evandev.spicedcider.client.CruciblePourLock;
 import net.neoforged.neoforge.capabilities.Capabilities;
 import net.neoforged.neoforge.fluids.FluidStack;
 import net.neoforged.neoforge.fluids.SimpleFluidContent;
@@ -34,8 +35,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 public class CrucibleItem extends BlockItem {
-    public static final int POUR_RATE = 50;
-    public static final int POUR_INTERVAL = 2;
+    public static final int POUR_RATE = 25;
 
     public CrucibleItem(Block block, Properties properties) {
         super(block, properties);
@@ -58,19 +58,37 @@ public class CrucibleItem extends BlockItem {
         return level.getCapability(Capabilities.FluidHandler.BLOCK, pos, side);
     }
 
+    private static boolean canPour(FluidStack fluid, @Nullable IFluidHandler handler) {
+        return handler != null && !fluid.isEmpty() && handler.fill(fluid.copyWithAmount(Math.min(POUR_RATE, fluid.getAmount())), IFluidHandler.FluidAction.SIMULATE) > 0;
+    }
+
     @Override
     public InteractionResult useOn(UseOnContext context) {
-        FluidStack fluid = fluid(context.getItemInHand());
         Player player = context.getPlayer();
-        if (!fluid.isEmpty() && player != null && !player.isSecondaryUseActive()) {
-            IFluidHandler handler = target(context.getLevel(), context.getClickedPos(), context.getClickedFace());
-            if (handler != null && handler.fill(fluid.copyWithAmount(Math.min(POUR_RATE, fluid.getAmount())), IFluidHandler.FluidAction.SIMULATE) > 0) {
+        Level level = context.getLevel();
+        if (player != null && !player.isSecondaryUseActive()) {
+            if (level.isClientSide() && CruciblePourLock.isLocked()) {
+                return InteractionResult.FAIL;
+            }
+            IFluidHandler handler = target(level, context.getClickedPos(), context.getClickedFace());
+            if (handler != null) {
+                if (!canPour(fluid(context.getItemInHand()), handler)) {
+                    return InteractionResult.FAIL;
+                }
                 player.startUsingItem(context.getHand());
-                context.getLevel().playSound(player, context.getClickedPos(), SoundEvents.BUCKET_EMPTY_LAVA, SoundSource.BLOCKS, 0.6F, 1.2F);
+                if (level.isClientSide()) {
+                    CruciblePourLock.lock();
+                }
+                level.playSound(player, context.getClickedPos(), SoundEvents.BUCKET_EMPTY_LAVA, SoundSource.BLOCKS, 0.6F, 1.2F);
                 return InteractionResult.CONSUME;
             }
         }
         return super.useOn(context);
+    }
+
+    @Override
+    public boolean shouldCauseReequipAnimation(ItemStack oldStack, ItemStack newStack, boolean slotChanged) {
+        return slotChanged || !ItemStack.isSameItem(oldStack, newStack);
     }
 
     @Override
@@ -85,27 +103,23 @@ public class CrucibleItem extends BlockItem {
 
     @Override
     public void onUseTick(Level level, LivingEntity entity, ItemStack stack, int remaining) {
-        if (level.isClientSide() || (72000 - remaining) % POUR_INTERVAL != 0) {
-            return;
-        }
         FluidStack fluid = fluid(stack);
         BlockHitResult hit = pick(level, entity);
         IFluidHandler handler = fluid.isEmpty() || hit == null ? null : target(level, hit.getBlockPos(), hit.getDirection());
-        if (handler == null) {
+        if (!canPour(fluid, handler)) {
             entity.stopUsingItem();
+            return;
+        }
+        if (level.isClientSide()) {
             return;
         }
         int filled = handler.fill(fluid.copyWithAmount(Math.min(POUR_RATE, fluid.getAmount())), IFluidHandler.FluidAction.EXECUTE);
-        if (filled <= 0) {
-            entity.stopUsingItem();
-            return;
-        }
         fluid.shrink(filled);
         setFluid(stack, fluid);
         if (level instanceof ServerLevel server) {
             Vec3 from = entity.getEyePosition().add(entity.getLookAngle().scale(0.6)).add(0.0, -0.35, 0.0);
             Vec3 to = hit.getLocation();
-            for (int i = 0; i < 3; i++) {
+            for (int i = 0; i < 2; i++) {
                 double t = level.random.nextDouble();
                 server.sendParticles(ParticleTypes.FALLING_LAVA, from.x + (to.x - from.x) * t, from.y + (to.y - from.y) * t, from.z + (to.z - from.z) * t, 1, 0.02, 0.02, 0.02, 0.0);
             }

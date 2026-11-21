@@ -96,8 +96,7 @@ public class SpicedCiderPonderPlugin implements PonderPlugin {
                 .addStoryBoard("misc/basin_brewing", BasinScenes::basinBrewing);
         components(helper, "create:basin", "manual_labour:ladle")
                 .addStoryBoard("misc/ladle_mixing", BasinScenes::ladleMixing);
-        components(helper, "spicedcider:crucible", "spicedcider:ingot_mould", "spicedcider:plate_mould", "spicedcider:vessel_mould",
-                "spicedcider:frame_mould", "spicedcider:pipe_mould")
+        components(helper, "spicedcider:crucible", "spicedcider:ingot_mould", "spicedcider:plate_mould")
                 .addStoryBoard("casting/crucible", CastingScenes::crucible);
         components(helper, "spicedcider:smeltery")
                 .addStoryBoard("casting/smeltery", CastingScenes::smeltery);

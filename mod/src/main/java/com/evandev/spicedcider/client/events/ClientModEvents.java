@@ -109,6 +109,7 @@ public class ClientModEvents {
     @SubscribeEvent
     public static void registerScreens(net.neoforged.neoforge.client.event.RegisterMenuScreensEvent event) {
         event.register(com.evandev.spicedcider.registry.ModMenuTypes.SMELTERY.get(), com.evandev.spicedcider.client.screen.SmelteryScreen::new);
+        event.register(com.evandev.spicedcider.registry.ModMenuTypes.FISH_TRAP.get(), com.evandev.spicedcider.client.screen.FishTrapScreen::new);
     }
 
     @SubscribeEvent
@@ -281,7 +282,7 @@ public class ClientModEvents {
             Stream.of(ModPaleGardenBlocks.PALE_ROSE, ModPaleGardenBlocks.PALE_BUSH, ModPaleGardenBlocks.TALL_PALE_BUSH)
                     .forEach(block -> ItemBlockRenderTypes.setRenderLayer(block.get(), RenderType.cutout()));
             ModPaleGardenBlocks.POTS.forEach(block -> ItemBlockRenderTypes.setRenderLayer(block.get(), RenderType.cutout()));
-            Stream.of(ModFireBlocks.SULFUR_FIRE, ModFireBlocks.SULFUR_TORCH, ModFireBlocks.SULFUR_WALL_TORCH, ModFireBlocks.SULFUR_LANTERN, ModFireBlocks.SULFUR_CAMPFIRE)
+            Stream.of(ModFireBlocks.SULFUR_FIRE, ModFireBlocks.SULFUR_TORCH, ModFireBlocks.SULFUR_WALL_TORCH, ModFireBlocks.SULFUR_LANTERN, ModFireBlocks.SULFUR_CAMPFIRE, ModBlocks.TIN_LANTERN)
                     .forEach(block -> ItemBlockRenderTypes.setRenderLayer(block.get(), RenderType.cutout()));
             FireVariantClient.setup();
             Stream.of(ModBlocks.CACAO_LEAVES, ModBlocks.FLOWERING_CACAO_LEAVES, ModBlocks.CACAO_LOG, ModBlocks.CACAO_WOOD, ModBlocks.STRIPPED_CACAO_LOG,

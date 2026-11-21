@@ -1,0 +1,26 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "modestmining"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:storage_blocks/raw_lead"
+      }
+    }
+  ],
+  "type": "spicedcider:smeltery_melting",
+  "ingredients": [
+    {
+      "tag": "c:storage_blocks/raw_lead"
+    }
+  ],
+  "result": {
+    "id": "spicedcider:molten_lead",
+    "amount": 3375
+  },
+  "time": 600
+}

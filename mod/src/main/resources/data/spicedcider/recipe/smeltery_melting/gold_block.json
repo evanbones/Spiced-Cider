@@ -1,0 +1,22 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:storage_blocks/gold"
+      }
+    }
+  ],
+  "type": "spicedcider:smeltery_melting",
+  "ingredients": [
+    {
+      "tag": "c:storage_blocks/gold"
+    }
+  ],
+  "result": {
+    "id": "spicedcider:molten_gold",
+    "amount": 2250
+  },
+  "time": 600
+}

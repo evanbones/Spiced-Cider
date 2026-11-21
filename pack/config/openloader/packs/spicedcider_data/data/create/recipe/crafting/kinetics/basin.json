@@ -8,15 +8,15 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "pattern": [
-    "P P",
-    "PVP"
+    "S S",
+    "SIS"
   ],
   "key": {
-    "P": {
+    "S": {
       "tag": "c:plates/cast_iron"
     },
-    "V": {
-      "item": "spicedcider:cast_iron_vessel"
+    "I": {
+      "item": "spicedcider:cast_iron_ingot"
     }
   },
   "result": {

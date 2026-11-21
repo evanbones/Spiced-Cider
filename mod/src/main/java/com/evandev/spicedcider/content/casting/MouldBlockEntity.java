@@ -26,6 +26,8 @@ public class MouldBlockEntity extends BlockEntity {
     private FluidStack fluid = FluidStack.EMPTY;
     private ItemStack result = ItemStack.EMPTY;
     private int cooling;
+    private float shown;
+    private float shownO;
     @Nullable
     private RecipeHolder<MouldCastingRecipe> recipe;
 
@@ -159,6 +161,14 @@ public class MouldBlockEntity extends BlockEntity {
     }
 
     public static void tick(Level level, BlockPos pos, BlockState state, MouldBlockEntity mould) {
+        if (level.isClientSide()) {
+            mould.shownO = mould.shown;
+            float target = mould.fluid.getAmount();
+            mould.shown = target <= mould.shown ? target : Math.min(target, mould.shown + Math.max(4.0F, (target - mould.shown) * 0.25F));
+            if (target <= 0.0F) {
+                mould.shownO = 0.0F;
+            }
+        }
         if (mould.fluid.isEmpty()) {
             mould.cooling = 0;
             return;
@@ -197,6 +207,19 @@ public class MouldBlockEntity extends BlockEntity {
             return 0.0F;
         }
         return Math.min(1.0F, (this.cooling + partialTick) / holder.value().time());
+    }
+
+    public float displayFill(float partialTick) {
+        RecipeHolder<MouldCastingRecipe> holder = recipe();
+        if (holder == null) {
+            return 0.0F;
+        }
+        return Math.min(1.0F, (this.shownO + (this.shown - this.shownO) * partialTick) / holder.value().amount());
+    }
+
+    public ItemStack coolingOutput() {
+        RecipeHolder<MouldCastingRecipe> holder = recipe();
+        return holder == null ? ItemStack.EMPTY : holder.value().result();
     }
 
     public float fillFraction() {

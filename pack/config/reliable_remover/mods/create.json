@@ -548,5 +548,11 @@
       "create:weathered_iron_window_pane"
     ],
     "replace_with": "create:industrial_iron_window_pane"
+  },
+  {
+    "action": "remove_enchantment",
+    "enchantments": [
+      "create:potato_recovery"
+    ]
   }
 ]

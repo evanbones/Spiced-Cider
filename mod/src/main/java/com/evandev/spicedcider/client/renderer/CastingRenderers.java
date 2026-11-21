@@ -51,22 +51,30 @@ public class CastingRenderers {
             poseStack.translate(0.5F, 0.0F, 0.5F);
             poseStack.mulPose(Axis.YP.rotationDegrees(180.0F - mould.getBlockState().getValue(MouldBlock.FACING).toYRot()));
             poseStack.translate(-0.5F, 0.0F, -0.5F);
-            FluidStack fluid = mould.getFluid();
-            if (!fluid.isEmpty()) {
-                float height = MouldBlock.FLOOR + 0.1F + (MouldBlock.RIM - MouldBlock.FLOOR - 0.5F) * mould.fillFraction();
-                float shade = 1.0F - 0.55F * mould.coolingFraction(partialTick);
-                for (MouldShape.Cavity cavity : mould.shape().cavities()) {
-                    surface(poseStack, buffers, fluid, cavity.minX(), cavity.minZ(), cavity.maxX(), cavity.maxZ(), height, light, shade);
-                }
-            }
+            float cooling = mould.coolingFraction(partialTick);
+            int itemAlpha = Math.round(255.0F * cooling);
+            int fluidAlpha = cooling > 0.75F ? Math.round(255.0F * (1.0F - cooling) * 4.0F) : 255;
             ItemStack result = mould.getResult();
+            MultiBufferSource itemBuffers = buffers;
+            if (result.isEmpty() && itemAlpha > 0) {
+                result = mould.coolingOutput();
+                itemBuffers = new CoolingItemBuffer(buffers, itemAlpha, fluidAlpha);
+            }
             if (!result.isEmpty()) {
                 poseStack.pushPose();
-                poseStack.translate(0.5, (MouldBlock.FLOOR + 0.6F) / 16.0F, 0.5);
+                poseStack.translate(0.5F, (MouldBlock.RIM - 0.55F) / 16.0F, 0.5F);
+                poseStack.mulPose(Axis.YP.rotationDegrees(180.0F));
                 poseStack.mulPose(Axis.XP.rotationDegrees(90.0F));
-                poseStack.scale(0.5F, 0.5F, 0.5F);
-                this.items.renderStatic(result, ItemDisplayContext.FIXED, light, OverlayTexture.NO_OVERLAY, poseStack, buffers, mould.getLevel(), (int) mould.getBlockPos().asLong());
+                poseStack.scale(0.75F, 0.75F, 0.08F);
+                this.items.renderStatic(result, ItemDisplayContext.FIXED, light, OverlayTexture.NO_OVERLAY, poseStack, itemBuffers, mould.getLevel(), (int) mould.getBlockPos().asLong());
                 poseStack.popPose();
+            }
+            FluidStack fluid = mould.getFluid();
+            if (!fluid.isEmpty() && fluidAlpha > 0) {
+                float height = MouldBlock.FLOOR + 0.1F + (MouldBlock.RIM - MouldBlock.FLOOR - 0.5F) * mould.displayFill(partialTick);
+                for (MouldShape.Cavity cavity : mould.shape().cavities()) {
+                    surface(poseStack, buffers, fluid, cavity.minX(), cavity.minZ(), cavity.maxX(), cavity.maxZ(), height, light, 1.0F, fluidAlpha);
+                }
             }
             poseStack.popPose();
         }
@@ -178,11 +186,15 @@ public class CastingRenderers {
     }
 
     private static void surface(PoseStack poseStack, MultiBufferSource buffers, FluidStack fluid, float minX, float minZ, float maxX, float maxZ, float height, int light, float shade) {
+        surface(poseStack, buffers, fluid, minX, minZ, maxX, maxZ, height, light, shade, 255);
+    }
+
+    private static void surface(PoseStack poseStack, MultiBufferSource buffers, FluidStack fluid, float minX, float minZ, float maxX, float maxZ, float height, int light, float shade, int alpha) {
         IClientFluidTypeExtensions extensions = IClientFluidTypeExtensions.of(fluid.getFluid());
         TextureAtlasSprite sprite = Minecraft.getInstance().getTextureAtlas(InventoryMenu.BLOCK_ATLAS).apply(extensions.getStillTexture(fluid));
         int tint = extensions.getTintColor(fluid);
-        int color = 0xFF000000 | ((int) (((tint >> 16) & 0xFF) * shade) << 16) | ((int) (((tint >> 8) & 0xFF) * shade) << 8) | (int) ((tint & 0xFF) * shade);
-        int glow = Math.round(fluid.getFluid().getFluidType().getLightLevel(fluid) * shade);
+        int color = (alpha << 24) | ((int) (((tint >> 16) & 0xFF) * shade) << 16) | ((int) (((tint >> 8) & 0xFF) * shade) << 8) | (int) ((tint & 0xFF) * shade);
+        int glow = Math.round(fluid.getFluid().getFluidType().getLightLevel(fluid) * shade * alpha / 255.0F);
         int packed = LightTexture.pack(Math.max(LightTexture.block(light), glow), LightTexture.sky(light));
         VertexConsumer consumer = buffers.getBuffer(RenderType.entityTranslucentCull(InventoryMenu.BLOCK_ATLAS));
         PoseStack.Pose pose = poseStack.last();

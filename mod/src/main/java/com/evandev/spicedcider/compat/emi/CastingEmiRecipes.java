@@ -2,6 +2,7 @@ package com.evandev.spicedcider.compat.emi;
 
 import com.evandev.spicedcider.SpicedCider;
 import com.evandev.spicedcider.content.casting.CastingHeat;
+import com.evandev.spicedcider.content.casting.CrucibleBlockEntity;
 import com.evandev.spicedcider.content.casting.CrucibleMeltingRecipe;
 import com.evandev.spicedcider.content.casting.MouldCastingRecipe;
 import com.evandev.spicedcider.content.casting.MouldShape;
@@ -13,12 +14,20 @@ import dev.emi.emi.api.EmiRegistry;
 import dev.emi.emi.api.neoforge.NeoForgeEmiIngredient;
 import dev.emi.emi.api.recipe.BasicEmiRecipe;
 import dev.emi.emi.api.recipe.EmiRecipeCategory;
-import dev.emi.emi.api.render.EmiTexture;
 import dev.emi.emi.api.stack.EmiIngredient;
 import dev.emi.emi.api.stack.EmiStack;
-import dev.emi.emi.api.widget.TextWidget;
+import dev.emi.emi.api.widget.TankWidget;
 import dev.emi.emi.api.widget.WidgetHolder;
+import net.minecraft.ChatFormatting;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.material.Fluids;
+import net.neoforged.neoforge.fluids.crafting.SizedFluidIngredient;
 import net.minecraft.world.item.crafting.RecipeHolder;
 
 import java.util.ArrayList;
@@ -60,60 +69,110 @@ public class CastingEmiRecipes {
         }
     }
 
-    private static class Melting extends BasicEmiRecipe {
-        private static final int WIDTH = 108;
-        private static final int ARROW_X = (WIDTH - 24) / 2;
-        private final CastingHeat heat;
-        private final boolean showHeat;
-        private final int ticks;
-        private final int contentHeight;
+    private static final int TANK = 34;
 
-        Melting(EmiRecipeCategory category, ResourceLocation id, CrucibleMeltingRecipe recipe, boolean showHeat) {
-            super(category, id, WIDTH, height(recipe, showHeat));
+    private static TankWidget tank(WidgetHolder widgets, EmiIngredient stack, int x, int y, int width, int height, int capacity, int marks) {
+        widgets.addDrawable(x, y, width, height, (graphics, mouseX, mouseY, delta) -> {
+            graphics.fill(0, 0, width - 1, 1, 0xFF373737);
+            graphics.fill(0, 0, 1, height - 1, 0xFF373737);
+            graphics.fill(1, height - 1, width, height, 0xFFFFFFFF);
+            graphics.fill(width - 1, 1, width, height, 0xFFFFFFFF);
+            graphics.fill(1, 1, width - 1, height - 1, 0xFF8B8B8B);
+        });
+        TankWidget widget = widgets.addTank(stack, x, y, width, height, capacity);
+        widget.drawBack(false);
+        if (marks > 1) {
+            widgets.addDrawable(x, y, width, height, (graphics, mouseX, mouseY, delta) -> {
+                for (int i = 1; i < marks; i++) {
+                    int lineY = height - 1 - (height - 2) * i / marks;
+                    graphics.fill(1, lineY, i % 2 == 0 ? width / 2 : width / 3, lineY + 1, 0x80373737);
+                }
+            });
+        }
+        return widget;
+    }
+
+    private static String seconds(int ticks) {
+        float value = ticks / 20.0F;
+        return value == Math.floor(value) ? String.valueOf((int) value) : String.format("%.1f", value);
+    }
+
+    private static EmiIngredient heatSources(CastingHeat heat) {
+        List<EmiStack> stacks = new ArrayList<>();
+        List<TagKey<Block>> tags = heat == CastingHeat.HIGH ? List.of(CastingHeat.HIGH_HEAT) : List.of(CastingHeat.LOW_HEAT, CastingHeat.HIGH_HEAT);
+        for (TagKey<Block> tag : tags) {
+            BuiltInRegistries.BLOCK.getTag(tag).ifPresent(set -> set.forEach(holder -> {
+                Item item = holder.value().asItem();
+                if (item != Items.AIR) {
+                    EmiStack stack = EmiStack.of(item);
+                    if (!stacks.contains(stack)) {
+                        stacks.add(stack);
+                    }
+                }
+            }));
+        }
+        BuiltInRegistries.ITEM.getOptional(ResourceLocation.fromNamespaceAndPath("create", "blaze_burner")).ifPresent(item -> stacks.add(EmiStack.of(item)));
+        stacks.add(EmiStack.of(Fluids.LAVA, 1000));
+        return EmiIngredient.of(stacks);
+    }
+
+    private static class Melting extends BasicEmiRecipe {
+        private static final int WIDTH = 128;
+        private static final int HEIGHT = TANK;
+        private static final int ARROW_X = 42;
+        private static final int TANK_X = 72;
+        private final CastingHeat heat;
+        private final boolean crucible;
+        private final int ticks;
+        private final int capacity;
+        private final int fuel;
+
+        Melting(EmiRecipeCategory category, ResourceLocation id, CrucibleMeltingRecipe recipe, boolean crucible) {
+            super(category, id, WIDTH, HEIGHT);
             this.inputs = recipe.ingredients().stream().map(EmiIngredient::of).toList();
             this.outputs = List.of(EmiStack.of(recipe.result().getFluid(), recipe.result().getAmount()));
             this.heat = recipe.heat();
-            this.showHeat = showHeat;
-            this.ticks = showHeat ? recipe.time() : SmelteryBlockEntity.meltTime(recipe);
-            this.contentHeight = contentHeight(recipe.ingredients().size());
-        }
-
-        private static int contentHeight(int inputs) {
-            return Math.max(((inputs + 1) / 2) * 18, 26);
-        }
-
-        private static int height(CrucibleMeltingRecipe recipe, boolean showHeat) {
-            return contentHeight(recipe.ingredients().size()) + (showHeat ? 13 : 0);
+            this.crucible = crucible;
+            this.ticks = crucible ? recipe.time() : SmelteryBlockEntity.meltTime(recipe);
+            this.capacity = crucible ? CrucibleBlockEntity.CAPACITY : Math.max(1000, recipe.result().getAmount());
+            this.fuel = SmelteryBlockEntity.fuelCost(recipe.result());
+            if (crucible) {
+                this.catalysts = List.of(heatSources(this.heat));
+            }
         }
 
         @Override
         public void addWidgets(WidgetHolder widgets) {
+            int top = 0;
             int count = this.inputs.size();
             int rows = (count + 1) / 2;
-            int top = (this.contentHeight - rows * 18) / 2;
+            int inputY = top + (TANK - rows * 18) / 2;
             for (int i = 0; i < count; i++) {
-                int column = count == 1 ? 1 : i % 2;
-                widgets.addSlot(this.inputs.get(i), ARROW_X - 42 + column * 18, top + (i / 2) * 18);
+                int x = count == 1 ? 9 : (i % 2) * 18;
+                widgets.addSlot(this.inputs.get(i), x, inputY + (i / 2) * 18);
             }
-            widgets.addFillingArrow(ARROW_X, (this.contentHeight - 17) / 2, this.ticks * 50);
-            widgets.addSlot(this.outputs.getFirst(), ARROW_X + 30, (this.contentHeight - 26) / 2).large(true).recipeContext(this);
-            if (this.showHeat) {
-                widgets.addText(this.heat.displayName(), WIDTH / 2, this.contentHeight + 4, 0xFF404040, false)
-                        .horizontalAlign(TextWidget.Alignment.CENTER);
+            int arrowY = top + (TANK - 17) / 2;
+            widgets.addFillingArrow(ARROW_X, arrowY, this.ticks * 50);
+            widgets.addTooltipText(List.of(Component.translatable("spicedcider.emi.melt_time", seconds(this.ticks))), ARROW_X, arrowY, 24, 17);
+            tank(widgets, this.outputs.getFirst(), TANK_X, top, TANK, TANK, this.capacity, this.capacity / 250).recipeContext(this);
+            if (this.crucible) {
+                widgets.addSlot(this.catalysts.getFirst(), TANK_X + TANK + 4, top + (TANK - 18) / 2).catalyst(true)
+                        .appendTooltip(this.heat.displayName().copy().withStyle(ChatFormatting.GOLD));
+            } else {
+                tank(widgets, EmiIngredient.of(SmelteryBlockEntity.FUELS, this.fuel), TANK_X + TANK + 4, top, 14, TANK, Math.max(this.fuel, 100), 0)
+                        .appendTooltip(Component.translatable("spicedcider.emi.fuel", this.fuel).withStyle(ChatFormatting.GOLD));
             }
         }
     }
 
     private static class Alloying extends BasicEmiRecipe {
-        private static final int WIDTH = 140;
-        private static final int COLUMNS = 4;
-        private static final int ARROW_X = COLUMNS * 18 + 8;
+        private static final int HEIGHT = TANK;
         private final int fluidCount;
         private final int itemCount;
-        private final int contentHeight;
+        private final int capacity;
 
         Alloying(EmiRecipeCategory category, ResourceLocation id, SmelteryAlloyingRecipe recipe) {
-            super(category, id, WIDTH, contentHeight(recipe.items().size()));
+            super(category, id, width(recipe), HEIGHT);
             List<EmiIngredient> list = new ArrayList<>();
             recipe.fluids().forEach(fluid -> list.add(NeoForgeEmiIngredient.of(fluid)));
             recipe.items().forEach(item -> list.add(EmiIngredient.of(item)));
@@ -121,54 +180,60 @@ public class CastingEmiRecipes {
             this.outputs = List.of(EmiStack.of(recipe.result().getFluid(), recipe.result().getAmount()));
             this.fluidCount = recipe.fluids().size();
             this.itemCount = recipe.items().size();
-            this.contentHeight = contentHeight(this.itemCount);
+            int max = recipe.result().getAmount();
+            for (SizedFluidIngredient fluid : recipe.fluids()) {
+                max = Math.max(max, fluid.amount());
+            }
+            this.capacity = max;
         }
 
-        private static int inputHeight(int items) {
-            return items == 0 ? 18 : 18 + 6 + ((items + COLUMNS - 1) / COLUMNS) * 18;
+        private static int itemColumns(int items) {
+            return (items + 1) / 2;
         }
 
-        private static int contentHeight(int items) {
-            return Math.max(inputHeight(items), 36);
+        private static int width(SmelteryAlloyingRecipe recipe) {
+            return recipe.fluids().size() * 18 + itemColumns(recipe.items().size()) * 18 + 4 + 24 + 6 + TANK;
         }
 
         @Override
         public void addWidgets(WidgetHolder widgets) {
-            int top = (this.contentHeight - inputHeight(this.itemCount)) / 2;
+            int top = 0;
             for (int i = 0; i < this.fluidCount; i++) {
-                widgets.addSlot(this.inputs.get(i), i * 18, top);
+                tank(widgets, this.inputs.get(i), i * 18, top, 16, TANK, this.capacity, 0);
             }
-            if (this.itemCount > 0) {
-                int dividerY = top + 20;
-                widgets.addDrawable(1, dividerY, COLUMNS * 18 - 2, 1, (graphics, mouseX, mouseY, delta) -> graphics.fill(0, 0, COLUMNS * 18 - 2, 1, 0xFF8B8B8B));
-                for (int i = 0; i < this.itemCount; i++) {
-                    widgets.addSlot(this.inputs.get(this.fluidCount + i), (i % COLUMNS) * 18, top + 24 + (i / COLUMNS) * 18);
-                }
+            int x = this.fluidCount * 18;
+            int rows = Math.min(2, this.itemCount);
+            int itemY = top + (TANK - rows * 18) / 2;
+            for (int i = 0; i < this.itemCount; i++) {
+                widgets.addSlot(this.inputs.get(this.fluidCount + i), x + (i / 2) * 18, itemY + (i % 2) * 18);
             }
-            int arrowY = (this.contentHeight - 33) / 2;
-            widgets.addFillingArrow(ARROW_X, arrowY, 2000);
-            widgets.addTexture(EmiTexture.EMPTY_FLAME, ARROW_X + 5, arrowY + 19);
-            widgets.addAnimatedTexture(EmiTexture.FULL_FLAME, ARROW_X + 5, arrowY + 19, 4000, false, true, true);
-            widgets.addSlot(this.outputs.getFirst(), ARROW_X + 32, (this.contentHeight - 26) / 2).large(true).recipeContext(this);
+            int arrowX = x + itemColumns(this.itemCount) * 18 + 4;
+            int arrowY = top + (TANK - 17) / 2;
+            widgets.addFillingArrow(arrowX, arrowY, 2000);
+            tank(widgets, this.outputs.getFirst(), arrowX + 30, top, TANK, TANK, this.capacity, 0).recipeContext(this);
         }
     }
 
     private static class Casting extends BasicEmiRecipe {
-        private static final int WIDTH = 96;
+        private static final int WIDTH = 104;
+        private static final int HEIGHT = 34;
+        private final int ticks;
 
         Casting(EmiRecipeCategory category, ResourceLocation id, MouldCastingRecipe recipe) {
-            super(category, id, WIDTH, 18);
+            super(category, id, WIDTH, HEIGHT);
             this.inputs = List.of(NeoForgeEmiIngredient.of(recipe.fluid()));
             this.catalysts = List.of(EmiStack.of(ModItems.MOULDS.get(recipe.shape()).get()));
             this.outputs = List.of(EmiStack.of(recipe.result()));
+            this.ticks = recipe.time();
         }
 
         @Override
         public void addWidgets(WidgetHolder widgets) {
-            widgets.addSlot(this.inputs.getFirst(), 0, 0);
-            widgets.addSlot(this.catalysts.getFirst(), 20, 0).catalyst(true);
-            widgets.addTexture(EmiTexture.EMPTY_ARROW, 44, 1);
-            widgets.addSlot(this.outputs.getFirst(), WIDTH - 18, 0).recipeContext(this);
+            tank(widgets, this.inputs.getFirst(), 0, 0, 16, TANK, Math.max(1, (int) this.inputs.getFirst().getAmount()), 0);
+            widgets.addSlot(this.catalysts.getFirst(), 22, 8).catalyst(true);
+            widgets.addFillingArrow(44, 9, this.ticks * 50);
+            widgets.addTooltipText(List.of(Component.translatable("spicedcider.emi.cool_time", seconds(this.ticks))), 44, 9, 24, 17);
+            widgets.addSlot(this.outputs.getFirst(), 74, 4).large(true).recipeContext(this);
         }
     }
 }

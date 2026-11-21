@@ -11,18 +11,38 @@
   ],
   "type": "spicedcider:crucible_melting",
   "ingredients": [
-    {
-      "item": "minecraft:copper_ingot"
-    },
-    {
-      "item": "minecraft:copper_ingot"
-    },
-    {
-      "item": "minecraft:copper_ingot"
-    },
-    {
-      "item": "caverns_and_chasms:tin_ingot"
-    }
+    [
+      {
+        "tag": "c:ingots/copper"
+      },
+      {
+        "tag": "c:raw_materials/copper"
+      }
+    ],
+    [
+      {
+        "tag": "c:ingots/copper"
+      },
+      {
+        "tag": "c:raw_materials/copper"
+      }
+    ],
+    [
+      {
+        "tag": "c:ingots/copper"
+      },
+      {
+        "tag": "c:raw_materials/copper"
+      }
+    ],
+    [
+      {
+        "tag": "c:ingots/tin"
+      },
+      {
+        "tag": "c:raw_materials/tin"
+      }
+    ]
   ],
   "result": {
     "id": "spicedcider:molten_bronze",

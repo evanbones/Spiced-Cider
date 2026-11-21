@@ -122,6 +122,12 @@ the official Bedrock edition addon.
 Adds a Grappling Hook and a Sticky Grappling Hook. Attach one to a Tide fishing rod to grapple instead of fish.
 Requires Tide. Ported from Raspberry Core/There's Always A Bigger Fish.
 
+**Fish Trap**
+
+Place it underwater with bait and it slowly catches fish from that biome. More surrounding water means more catches,
+and better bait brings in more fish at once. Uses Tide's fish when Tide is installed. Adapted from There's Always A
+Bigger Fish, with the model and textures from Fisherman's Trap.
+
 **Golems**
 
 - Straw Golems: build one with a hay bale and a carved pumpkin, and it harvests nearby crops into a container. Adapted
@@ -258,6 +264,7 @@ message. Ported from Valcon (thanks, Ivqry!).
 - Hammers can't mine blocks, so they don't replace a pickaxe *(off by default)*
 - Azaleas can't be bonemealed into trees *(off by default)*
 - Players step up full blocks without jumping, with a Step Up toggle in place of Auto-Jump *(off by default)*
+- The camera glides up steps and slabs instead of snapping *(off by default)*
 - Zombies sometimes carry a torch *(off by default)*
 - Brown mushrooms and mushroom colonies don't give off light *(off by default)*
 - Piglins spawn with Piglin Broadswords and Battleaxes instead of golden weapons *(off by default)*
@@ -279,6 +286,8 @@ message. Ported from Valcon (thanks, Ivqry!).
 - Mobs can sit on Quark stools like Create seats, including as Stock Ticker keepers *(off by default)*
 - Sitting with Personality doubles Modest Meals stamina recovery *(off by default)*
 - Personality's crawl can be switched off, leaving crawling to another mod *(off by default)*
+- Get Over It only climbs ledges taller than a jump that you face, climbs faster and lands you on top, and can cost Modest Meals stamina *(off by default)*
+- Food doesn't list or give effects removed by Reliable Remover
 - Optional custom window title, and taskbar icon on Windows
 
 **Pack Tools**
@@ -438,6 +447,11 @@ Nether effects are inspired by Jaden's Nether Expansion.
 
 Grappling Hooks are modified from [Bigger Fish](https://modrinth.com/mod/always-a-bigger-fish), created by Cassian and
 implemented by Kobber (originally ported from Raspberry Core).
+
+The Fish Trap is adapted from [Bigger Fish](https://modrinth.com/mod/always-a-bigger-fish) by Cassian, used under its
+MIT code license (included at `META-INF/licenses/bigger_fish-LICENSE.txt`). Its model, textures and GUI are from
+[Fisherman's Trap](https://modrinth.com/mod/fishermens-trap) by Uraneptus (assets by toomanykitkats), used under its MIT
+license (included at `META-INF/licenses/fishermens_trap-LICENSE.txt`).
 
 ---
 
