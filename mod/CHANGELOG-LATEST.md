@@ -21,10 +21,11 @@
 - Smeltery melting for every metal's storage block (2250 mB) and raw ore block (3375 mB), when those tags have entries.
 - Fall Damage Reduction: every fall deals a set amount less damage to players (off by default).
 - No Bundles in Bundles: bundles can't be put inside other bundles (off by default).
-- Offgrid: Crucibles, beds and pet beds can be placed on slabs and other lower surfaces, and sleepers lie at the bed's height.
+- Offgrid: Crucibles, beds, and pet beds can be placed on slabs and other lower surfaces, and sleepers lie at the bed's
+  height.
 - Unfired Moulds can be fired in a Clayworks Kiln.
-- Crucibles sit down inside Block Box braziers (`spicedcider:crucible_shallow_seats`) with flames around them, and clicking a
-  brazier's side with a Crucible drops it into the bowl.
+- Crucibles sit down inside Block Box braziers (`spicedcider:crucible_shallow_seats`) with flames around them, and
+  clicking a brazier's side with a Crucible drops it into the bowl.
 - `spicedcider:crafting_shapeless_keeping` recipe type: a shapeless recipe that hands back its `keep` ingredient.
 
 ### Changed
@@ -58,8 +59,8 @@
 - Stripped Avocado and Pear Log tops show stripped wood instead of bark.
 - Fruit log items are drawn at the same size as Bountiful Fares fruit logs.
 - Crucibles alloy with molten metal already in their tank, e.g. 750 mB of molten copper and a tin ingot make bronze.
-- Startup crash with Reconnectible Chains older than 2.6.0 or My Nether's Delight older than 1.10.4 (their compatibility now
-  needs those versions).
+- Startup crash with Reconnectible Chains older than 2.6.0 or My Nether's Delight older than 1.10.4 (their compatibility
+  now requires those versions).
 - EMI crucible heat sources no longer list blocks under another block's item (a Lava Cauldron showed as a Cauldron).
 - FancyMenu text elements show long texts instead of a "Text too long" error.
 - Arrows stuck in a moving player no longer jitter between body parts.
@@ -72,3 +73,4 @@
 - The Change Stance key (Personality's own Sit and Crawl keys do the same).
 - The Modulation threat-glow and Vista fog-buffer patches, which Modulation now does natively (Reveal Targeting Monsters
   option; Improved Fog per-viewport buffers).
+- Removed the Offgrid patches that Offgrid now does natively.
