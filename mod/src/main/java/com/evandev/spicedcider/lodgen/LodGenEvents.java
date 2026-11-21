@@ -79,8 +79,9 @@ public class LodGenEvents {
             count++;
             int remaining = LodGen.remaining(player.getUUID());
             int queued = LodGen.queued(player.getUUID());
-            source.sendSuccess(() -> Component.literal(String.format(Locale.ROOT, "  %s: %s left, %d queued",
-                    player.getGameProfile().getName(), remaining < 0 ? "?" : Integer.toString(remaining), queued)), false);
+            String pacing = LodGen.pacing(player.getUUID());
+            source.sendSuccess(() -> Component.literal(String.format(Locale.ROOT, "  %s: %s left, %d queued, %s",
+                    player.getGameProfile().getName(), remaining < 0 ? "?" : Integer.toString(remaining), queued, pacing)), false);
         }
         return count;
     }

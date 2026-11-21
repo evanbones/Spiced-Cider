@@ -119,6 +119,16 @@ public final class LodGen {
         return running == null ? -1 : running.remaining(player);
     }
 
+    public static void ack(ServerPlayer player) {
+        LodEngine running = engine;
+        if (running != null) running.delivery.ack(player.getUUID());
+    }
+
+    public static String pacing(UUID player) {
+        LodEngine running = engine;
+        return running == null ? "idle" : running.delivery.pacing(player);
+    }
+
     public static int queued(UUID player) {
         LodEngine running = engine;
         return running == null ? 0 : running.delivery.queued(player);

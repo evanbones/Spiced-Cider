@@ -5,7 +5,9 @@ import com.evandev.spicedcider.compat.voxy.VoxyBridge;
 import com.evandev.spicedcider.compat.voxy.VoxyIngest;
 import com.evandev.spicedcider.lodgen.LodColumn;
 import com.evandev.spicedcider.lodgen.LodGen;
+import com.evandev.spicedcider.networking.LodAckPayload;
 import com.evandev.spicedcider.networking.LodChunkPayload;
+import net.neoforged.neoforge.network.handling.IPayloadContext;
 import com.evandev.spicedcider.networking.LodHelloPayload;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.ClientLevel;
@@ -28,6 +30,10 @@ public final class LodClient {
     private static int sentRadius = -1;
     private static UUID sentStore;
     private static int ticks;
+
+    public static void acknowledge(IPayloadContext context) {
+        if (context.listener().hasChannel(LodAckPayload.TYPE)) context.reply(LodAckPayload.INSTANCE);
+    }
 
     public static void receive(LodChunkPayload payload) {
         ClientLevel level = Minecraft.getInstance().level;

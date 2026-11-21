@@ -1,6 +1,7 @@
 package com.evandev.spicedcider.lodgen;
 
 import com.evandev.spicedcider.compat.voxy.VoxyIngest;
+import com.evandev.spicedcider.networking.LodAckPayload;
 import com.evandev.spicedcider.networking.LodChunkPayload;
 import it.unimi.dsi.fastutil.longs.LongSet;
 import net.minecraft.server.MinecraftServer;
@@ -65,8 +66,9 @@ final class LodDelivery {
                 continue;
             }
             Outgoing queue = entry.getValue();
+            boolean paced = player.connection.hasChannel(LodAckPayload.TYPE);
             queue.budget = Math.min(queue.budget + chunksPerSecond / 20.0, Math.max(1.0, chunksPerSecond / 20.0) * 2);
-            while (queue.budget >= 1.0) {
+            while (queue.budget >= 1.0 && (!paced || queue.pacer.canSend())) {
                 Pending pending = queue.payloads.poll();
                 if (pending == null) break;
                 queue.size.decrementAndGet();
@@ -75,9 +77,20 @@ final class LodDelivery {
                     continue;
                 }
                 PacketDistributor.sendToPlayer(player, pending.payload());
+                if (paced) queue.pacer.sent();
                 queue.budget -= 1.0;
             }
         }
+    }
+
+    void ack(UUID player) {
+        Outgoing queue = outgoing.get(player);
+        if (queue != null) queue.pacer.ack();
+    }
+
+    String pacing(UUID player) {
+        Outgoing queue = outgoing.get(player);
+        return queue == null ? "idle" : queue.pacer.describe();
     }
 
     void forget(MinecraftServer server, UUID player) {
@@ -104,6 +117,7 @@ final class LodDelivery {
     private static final class Outgoing {
         final Queue<Pending> payloads = new ConcurrentLinkedQueue<>();
         final AtomicInteger size = new AtomicInteger();
+        final LodPacer pacer = new LodPacer();
         double budget;
     }
 }
