@@ -180,14 +180,6 @@
   {
     "action": "replace_input",
     "filter": {
-      "id": "modestmagic:infusing/totem_of_undying"
-    },
-    "target": "minecraft:experience_bottle",
-    "replacement": "reliable_requiem:crystal_heart"
-  },
-  {
-    "action": "replace_input",
-    "filter": {
       "id": "create:crafting/kinetics/rope_pulley"
     },
     "target": "#c:plates/iron",

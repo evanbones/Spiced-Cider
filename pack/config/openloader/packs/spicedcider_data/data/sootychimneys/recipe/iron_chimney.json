@@ -1,0 +1,29 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "sootychimneys"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "group": "iron_chimney",
+  "key": {
+    "C": {
+      "tag": "minecraft:coals"
+    },
+    "I": {
+      "tag": "c:ingots/cast_iron"
+    },
+    "N": {
+      "tag": "c:nuggets/cast_iron"
+    }
+  },
+  "pattern": [
+    "I I",
+    "N N",
+    "ICI"
+  ],
+  "result": {
+    "id": "sootychimneys:iron_chimney"
+  }
+}
