@@ -4,6 +4,7 @@ import dev.tazer.offgrid.world.Offsets;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BedPart;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -23,7 +24,14 @@ public class OffgridBeds {
         return true;
     }
 
-    private static double supportTop(ServerLevel level, BlockPos pos) {
+    public static boolean otherHalfSinks(Level level, BlockPos pos, BlockState state) {
+        if (!state.hasProperty(BlockStateProperties.BED_PART) || !state.hasProperty(BlockStateProperties.HORIZONTAL_FACING)) return true;
+        Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+        BlockPos other = state.getValue(BlockStateProperties.BED_PART) == BedPart.FOOT ? pos.relative(facing) : pos.relative(facing.getOpposite());
+        return Math.abs(supportTop(level, pos) - supportTop(level, other)) <= 1.0E-4;
+    }
+
+    private static double supportTop(Level level, BlockPos pos) {
         BlockPos below = pos.below();
         VoxelShape shape = level.getBlockState(below).getCollisionShape(level, below);
         return shape.isEmpty() ? 0.0 : shape.max(Direction.Axis.Y);

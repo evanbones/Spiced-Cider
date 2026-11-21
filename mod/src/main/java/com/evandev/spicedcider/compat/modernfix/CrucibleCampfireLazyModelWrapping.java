@@ -11,10 +11,10 @@ import org.embeddedt.modernfix.ModernFixClient;
 import org.embeddedt.modernfix.api.entrypoint.ModernFixClientIntegration;
 import org.embeddedt.modernfix.duck.IExtendedModelBakery;
 
-import java.util.Set;
+import java.util.Map;
 
 public final class CrucibleCampfireLazyModelWrapping implements ModernFixClientIntegration {
-    private Set<ModelResourceLocation> locations;
+    private Map<ModelResourceLocation, Float> locations;
 
     public static void register() {
         ModernFixClient.CLIENT_INTEGRATIONS.add(new CrucibleCampfireLazyModelWrapping());
@@ -28,6 +28,7 @@ public final class CrucibleCampfireLazyModelWrapping implements ModernFixClientI
     public BakedModel onBakedModelLoad(ModelResourceLocation location, UnbakedModel unbaked, BakedModel baked, ModelState state, ModelBakery bakery, ModelBakery.TextureGetter textures) {
         if (baked == null || baked instanceof CrucibleCampfireModel || !bakesLazily(bakery)) return baked;
         if (locations == null) locations = CrucibleCampfires.modelLocations();
-        return locations.contains(location) ? new CrucibleCampfireModel(baked) : baked;
+        Float bottom = locations.get(location);
+        return bottom == null ? baked : CrucibleCampfires.wrap(baked, bottom);
     }
 }

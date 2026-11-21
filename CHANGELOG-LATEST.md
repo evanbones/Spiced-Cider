@@ -17,6 +17,9 @@
 - Crucibles, beds and pet beds can be placed on slabs.
 - Unfired Moulds can be fired in a Kiln.
 - Deepslate ores have top textures that match the deepslate around them.
+- Pyres and Soul Pyres: cast iron fire bowls that stand on the ground or hang from chains.
+    - Crucibles can also be set inside them.
+- Blocks of Bronze, Cast Iron, Lead, Electrum, Prismarite, and Valkyrium can be used as beacon base blocks.
 
 ### Changed
 
@@ -88,6 +91,12 @@
 - The quiver key is unbound by default, and Voice Chat uses V and G.
 - The minimap no longer shows coordinates or the biome name by default.
 - The Fullscreen Mode video setting lets you pick Borderless or Fullscreen.
+- Molten metal in a Crucible rises smoothly as it melts, and the items inside shrink and sink.
+- The Depth Gauge is made from 4 Lead Ingots and Cinnabar and has a new texture.
+- Making a Slice Map gives the Depth Gauge back.
+- The Relayer is made with silver nuggets.
+- Deepslate Tin Ore matches Tin Ore.
+- Retextured the Gourdrot, Hoary, Wisteria, Walnut, and Azalea Shutters (thanks, @CamKamblam!).
 
 ### Fixed
 
@@ -117,6 +126,10 @@
 - Avocado, Pear and Cacao logs are the same size as other fruit logs in the inventory.
 - The Lime Bed item sits level with the other beds.
 - Molten metal already in a Crucible counts toward alloys.
+- Pigs can be bred again.
+- The Crucible's heat sources no longer list Cauldrons.
+- The changelog screen shows the whole changelog.
+- Arrows stuck in players no longer jitter as they move.
 
 ### Removed
 

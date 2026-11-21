@@ -154,23 +154,26 @@ public class CastingRenderers {
 
         @Override
         public void render(CrucibleBlockEntity crucible, float partialTick, PoseStack poseStack, MultiBufferSource buffers, int light, int overlay) {
-            FluidStack fluid = crucible.getFluid();
+            FluidStack fluid = crucible.displayFluid();
             poseStack.pushPose();
             poseStack.translate(0.0F, -CrucibleBlock.drop(crucible.getBlockState()), 0.0F);
-            float surface = 7.0F + 6.5F * fluid.getAmount() / CrucibleBlockEntity.CAPACITY;
-            if (!fluid.isEmpty()) {
+            float amount = crucible.displayAmount(partialTick);
+            float surface = 7.0F + 6.5F * amount / CrucibleBlockEntity.CAPACITY;
+            if (!fluid.isEmpty() && amount > 0.5F) {
                 surface(poseStack, buffers, fluid, 5.5F, 5.5F, 10.5F, 10.5F, surface, light, 1.0F);
             }
+            float melt = crucible.meltFraction();
             int index = 0;
             for (ItemStack stack : crucible.getInputs()) {
                 if (stack.isEmpty()) {
                     continue;
                 }
                 poseStack.pushPose();
-                poseStack.translate(0.5, (surface + 0.3F + index * 0.6F) / 16.0F, 0.5);
+                float scale = 0.22F * (1.0F - 0.7F * melt);
+                poseStack.translate(0.5, (surface + 0.3F + index * 0.6F * (1.0F - melt) - 1.2F * melt) / 16.0F, 0.5);
                 poseStack.mulPose(Axis.YP.rotationDegrees(index * 67.0F));
                 poseStack.mulPose(Axis.XP.rotationDegrees(90.0F));
-                poseStack.scale(0.22F, 0.22F, 0.22F);
+                poseStack.scale(scale, scale, scale);
                 this.items.renderStatic(stack, ItemDisplayContext.FIXED, light, OverlayTexture.NO_OVERLAY, poseStack, buffers, crucible.getLevel(), (int) crucible.getBlockPos().asLong() + index);
                 poseStack.popPose();
                 index++;

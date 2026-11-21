@@ -23,8 +23,8 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.material.Fluids;
 import net.neoforged.neoforge.fluids.crafting.SizedFluidIngredient;
@@ -103,7 +103,7 @@ public class CastingEmiRecipes {
         for (TagKey<Block> tag : tags) {
             BuiltInRegistries.BLOCK.getTag(tag).ifPresent(set -> set.forEach(holder -> {
                 Item item = holder.value().asItem();
-                if (item != Items.AIR) {
+                if (item instanceof BlockItem blockItem && blockItem.getBlock() == holder.value()) {
                     EmiStack stack = EmiStack.of(item);
                     if (!stacks.contains(stack)) {
                         stacks.add(stack);

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "tools",
+  "pattern": [
+    " # ",
+    "#X#",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "tag": "c:ingots/lead"
+    },
+    "X": {
+      "item": "spelunkery:cinnabar"
+    }
+  },
+  "result": {
+    "id": "spelunkery:depth_gauge",
+    "count": 1
+  }
+}

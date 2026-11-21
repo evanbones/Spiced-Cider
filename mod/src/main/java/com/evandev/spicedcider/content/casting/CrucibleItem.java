@@ -18,6 +18,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.item.component.ItemContainerContents;
+import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.level.Level;
@@ -60,6 +61,20 @@ public class CrucibleItem extends BlockItem {
 
     private static boolean canPour(FluidStack fluid, @Nullable IFluidHandler handler) {
         return handler != null && !fluid.isEmpty() && handler.fill(fluid.copyWithAmount(Math.min(POUR_RATE, fluid.getAmount())), IFluidHandler.FluidAction.SIMULATE) > 0;
+    }
+
+    @Override
+    public @Nullable BlockPlaceContext updatePlacementContext(BlockPlaceContext context) {
+        Direction face = context.getClickedFace();
+        if (face.getAxis().isHorizontal() && !context.replacingClickedOnBlock()) {
+            BlockPos seat = context.getClickedPos().relative(face.getOpposite());
+            if (context.getLevel().getBlockState(seat).is(CrucibleBlock.SHALLOW_SEATS)) {
+                BlockPos above = seat.above();
+                if (!context.getLevel().getBlockState(above).canBeReplaced()) return null;
+                return BlockPlaceContext.at(context, above, Direction.UP);
+            }
+        }
+        return super.updatePlacementContext(context);
     }
 
     @Override

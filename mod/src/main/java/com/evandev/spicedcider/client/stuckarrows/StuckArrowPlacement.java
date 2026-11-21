@@ -21,6 +21,10 @@ import org.joml.Vector3f;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.WeakHashMap;
+import java.util.Objects;
+import java.util.Map;
+import java.util.HashMap;
 
 public final class StuckArrowPlacement {
     private static final float MODEL_PIVOT_Y = 1.501F;
@@ -40,6 +44,11 @@ public final class StuckArrowPlacement {
     private record Part(ModelPart part, Matrix4f pose) {
     }
 
+    private record Resolved(List<Float> hit, @Nullable ModelPart part, Vector3f point, Vector3f direction) {
+    }
+
+    private static final Map<LivingEntity, Map<EntityModel<?>, Map<Integer, Resolved>>> RESOLVED = new WeakHashMap<>();
+
     public static boolean render(RenderLayer<?, ?> layer, PoseStack poseStack, MultiBufferSource buffer, int light,
                                  LivingEntity entity, Drawer drawer) {
         if (!entity.hasData(ModAttachments.STUCK_ARROWS)) return false;
@@ -48,7 +57,24 @@ public final class StuckArrowPlacement {
         EntityModel<?> model = layer.getParentModel();
         List<Part> parts = parts(model);
         boolean worldSize = !StuckArrowsClient.isInventoryModel(entity);
+        Map<Integer, Resolved> cache = RESOLVED.computeIfAbsent(entity, key -> new WeakHashMap<>()).computeIfAbsent(model, key -> new HashMap<>());
         for (StuckArrowSlots.Slot slot : slots.slots()) {
+            Resolved resolved = cache.get(slot.index());
+            if (resolved != null && Objects.equals(resolved.hit(), slot.hit())) {
+                Part current = null;
+                if (resolved.part() != null) {
+                    for (Part part : parts) {
+                        if (part.part == resolved.part()) {
+                            current = part;
+                            break;
+                        }
+                    }
+                }
+                if (resolved.part() == null || current != null) {
+                    draw(poseStack, buffer, light, entity, slot, model, current, new Vector3f(resolved.point()), new Vector3f(resolved.direction()), worldSize, drawer);
+                    continue;
+                }
+            }
             Vector3f origin = new Vector3f();
             Vector3f direction = new Vector3f();
             bodyRay(entity, slot, origin, direction);
@@ -109,28 +135,37 @@ public final class StuckArrowPlacement {
                 }
             }
 
-            poseStack.pushPose();
+            Vector3f point;
             if (best != null) {
-                poseStack.last().pose().mul(best.pose);
-                poseStack.last().normal().mul(new Matrix3f(best.pose).normal());
-                poseStack.translate(bestPoint.x, bestPoint.y, bestPoint.z);
+                point = bestPoint;
             } else {
                 bestDirection = modelDirection;
-                Vector3f point = new Vector3f(modelDirection).mul(START_OUTSIDE + FALLBACK_DEPTH).add(modelOrigin);
-                poseStack.translate(point.x, point.y, point.z);
+                point = new Vector3f(modelDirection).mul(START_OUTSIDE + FALLBACK_DEPTH).add(modelOrigin);
             }
-            if (worldSize) {
-                float size = new Vector3f(1.0F, 0.0F, 0.0F).mulDirection(poseStack.last().pose()).length();
-                if (size > 1.0E-4F) poseStack.scale(1.0F / size, 1.0F / size, 1.0F / size);
-            }
-            Vector3f arrow = bestDirection.normalize();
-            int part = best != null ? StuckArrowParts.classify(model, best.part) : StuckArrows.BODY;
-            StuckArrowsClient.record(entity, slot.index(), part, poseStack.last(), arrow.x, arrow.y, arrow.z, light,
-                    (pose, source, packedLight) -> drawer.draw(pose, source, packedLight, arrow.x, arrow.y, arrow.z));
-            drawer.draw(poseStack, buffer, light, arrow.x, arrow.y, arrow.z);
-            poseStack.popPose();
+            cache.put(slot.index(), new Resolved(slot.hit(), best == null ? null : best.part, new Vector3f(point), new Vector3f(bestDirection)));
+            draw(poseStack, buffer, light, entity, slot, model, best, point, bestDirection, worldSize, drawer);
         }
         return true;
+    }
+
+    private static void draw(PoseStack poseStack, MultiBufferSource buffer, int light, LivingEntity entity, StuckArrowSlots.Slot slot,
+                             EntityModel<?> model, @Nullable Part best, Vector3f point, Vector3f direction, boolean worldSize, Drawer drawer) {
+        poseStack.pushPose();
+        if (best != null) {
+            poseStack.last().pose().mul(best.pose);
+            poseStack.last().normal().mul(new Matrix3f(best.pose).normal());
+        }
+        poseStack.translate(point.x, point.y, point.z);
+        if (worldSize) {
+            float size = new Vector3f(1.0F, 0.0F, 0.0F).mulDirection(poseStack.last().pose()).length();
+            if (size > 1.0E-4F) poseStack.scale(1.0F / size, 1.0F / size, 1.0F / size);
+        }
+        Vector3f arrow = direction.normalize();
+        int part = best != null ? StuckArrowParts.classify(model, best.part) : StuckArrows.BODY;
+        StuckArrowsClient.record(entity, slot.index(), part, poseStack.last(), arrow.x, arrow.y, arrow.z, light,
+                (pose, source, packedLight) -> drawer.draw(pose, source, packedLight, arrow.x, arrow.y, arrow.z));
+        drawer.draw(poseStack, buffer, light, arrow.x, arrow.y, arrow.z);
+        poseStack.popPose();
     }
 
     private static void bodyRay(LivingEntity entity, StuckArrowSlots.Slot slot, Vector3f origin, Vector3f direction) {

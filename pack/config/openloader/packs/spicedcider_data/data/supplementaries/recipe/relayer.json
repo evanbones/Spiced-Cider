@@ -1,0 +1,29 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "supplementaries:flag",
+      "flag": "relayer"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "pattern": [
+    "1N1",
+    "##1",
+    "1N1"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:redstone"
+    },
+    "1": {
+      "item": "minecraft:cobblestone"
+    },
+    "N": {
+      "tag": "c:nuggets/silver"
+    }
+  },
+  "result": {
+    "id": "supplementaries:relayer"
+  }
+}

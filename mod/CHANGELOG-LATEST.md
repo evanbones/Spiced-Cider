@@ -23,6 +23,9 @@
 - No Bundles in Bundles: bundles can't be put inside other bundles (off by default).
 - Offgrid: Crucibles, beds and pet beds can be placed on slabs and other lower surfaces, and sleepers lie at the bed's height.
 - Unfired Moulds can be fired in a Clayworks Kiln.
+- Crucibles sit down inside Block Box braziers (`spicedcider:crucible_shallow_seats`) with flames around them, and clicking a
+  brazier's side with a Crucible drops it into the bowl.
+- `spicedcider:crafting_shapeless_keeping` recipe type: a shapeless recipe that hands back its `keep` ingredient.
 
 ### Changed
 
@@ -39,6 +42,7 @@
 - Step Up only works while sprinting.
 - Drink Intoxication also removes Intoxication from Cultural Delights apple cider.
 - Settings screen: the Video page shows Cubes Without Borders' Fullscreen Mode option when it is installed.
+- Crucible fluid rises smoothly while metal melts, and the items in it shrink and sink as they melt.
 
 ### Fixed
 
@@ -56,6 +60,10 @@
 - Crucibles alloy with molten metal already in their tank, e.g. 750 mB of molten copper and a tin ingot make bronze.
 - Startup crash with Reconnectible Chains older than 2.6.0 or My Nether's Delight older than 1.10.4 (their compatibility now
   needs those versions).
+- EMI crucible heat sources no longer list blocks under another block's item (a Lava Cauldron showed as a Cauldron).
+- FancyMenu text elements show long texts instead of a "Text too long" error.
+- Offgrid: a bed whose other half isn't over the same kind of surface is placed normally instead of vanishing.
+- Arrows stuck in a moving player no longer jitter between body parts.
 
 ### Removed
 
@@ -63,3 +71,5 @@
   shapes and recipes.
 - Lead Pipes and Buckets are no longer cast.
 - The Change Stance key (Personality's own Sit and Crawl keys do the same).
+- The Modulation threat-glow and Vista fog-buffer patches, which Modulation now does natively (Reveal Targeting Monsters
+  option; Improved Fog per-viewport buffers).

@@ -55,6 +55,11 @@ public class CrucibleBlockEntity extends BlockEntity {
     private FluidStack fluid = FluidStack.EMPTY;
     private int meltProgress;
     private int meltTotal;
+    private FluidStack meltFluid = FluidStack.EMPTY;
+    private int meltFinal;
+    private float shown;
+    private float shownO;
+    private boolean shownReady;
     private CastingHeat heat = CastingHeat.NONE;
 
     private final IItemHandler automation = new IItemHandler() {
@@ -168,12 +173,25 @@ public class CrucibleBlockEntity extends BlockEntity {
     private void tickMelting(Level level, BlockPos pos) {
         Match match = this.heat == CastingHeat.NONE || !hasInputs() ? null : find(level);
         if (match == null) {
+            boolean wasMelting = this.meltTotal > 0;
             this.meltProgress = 0;
             this.meltTotal = 0;
+            this.meltFluid = FluidStack.EMPTY;
+            if (wasMelting) {
+                changed();
+            }
             return;
         }
+        FluidStack result = match.recipe().value().result();
+        int last = match.drained() > 0 ? 0 : this.fluid.getAmount();
+        boolean started = this.meltTotal != match.recipe().value().time() || this.meltFinal != last + result.getAmount() || !FluidStack.isSameFluidSameComponents(this.meltFluid, result);
         this.meltTotal = match.recipe().value().time();
+        this.meltFluid = result.copy();
+        this.meltFinal = last + result.getAmount();
         this.meltProgress++;
+        if (started) {
+            changed();
+        }
         if (level instanceof ServerLevel server && this.meltProgress % 20 == 0) {
             server.sendParticles(ParticleTypes.SMOKE, pos.getX() + 0.5, pos.getY() + 0.85, pos.getZ() + 0.5, 2, 0.08, 0.02, 0.08, 0.0);
         }
@@ -189,7 +207,8 @@ public class CrucibleBlockEntity extends BlockEntity {
         if (match.drained() > 0) {
             this.fluid = FluidStack.EMPTY;
         }
-        FluidStack result = match.recipe().value().result();
+        this.meltTotal = 0;
+        this.meltFluid = FluidStack.EMPTY;
         if (this.fluid.isEmpty()) {
             this.fluid = result.copy();
         } else {
@@ -197,6 +216,38 @@ public class CrucibleBlockEntity extends BlockEntity {
         }
         level.playSound(null, pos, SoundEvents.LAVA_POP, SoundSource.BLOCKS, 0.6F, 0.9F + level.random.nextFloat() * 0.2F);
         changed();
+    }
+
+    public static void clientTick(Level level, BlockPos pos, BlockState state, CrucibleBlockEntity crucible) {
+        if (crucible.meltTotal > 0 && crucible.meltProgress < crucible.meltTotal) {
+            crucible.meltProgress++;
+        }
+        float target = crucible.fluid.getAmount();
+        if (crucible.meltTotal > 0) {
+            target += (crucible.meltFinal - target) * crucible.meltFraction();
+        }
+        if (!crucible.shownReady) {
+            crucible.shownReady = true;
+            crucible.shown = target;
+        }
+        crucible.shownO = crucible.shown;
+        float step = Math.max(2.0F, Math.abs(target - crucible.shown) * 0.2F);
+        crucible.shown = crucible.shown < target ? Math.min(target, crucible.shown + step) : Math.max(target, crucible.shown - step);
+    }
+
+    public float meltFraction() {
+        return this.meltTotal <= 0 ? 0.0F : Math.min(1.0F, (float) this.meltProgress / this.meltTotal);
+    }
+
+    public float displayAmount(float partialTick) {
+        return this.shownO + (this.shown - this.shownO) * partialTick;
+    }
+
+    public FluidStack displayFluid() {
+        if (this.fluid.isEmpty() || this.meltTotal > 0 && !this.meltFluid.isEmpty() && meltFraction() > 0.5F) {
+            return this.meltFluid.isEmpty() ? this.fluid : this.meltFluid;
+        }
+        return this.fluid;
     }
 
     private record Match(RecipeHolder<CrucibleMeltingRecipe> recipe, int[] slots, int drained) {
@@ -358,6 +409,9 @@ public class CrucibleBlockEntity extends BlockEntity {
         }
         this.fluid = tag.contains("Fluid") ? FluidStack.parseOptional(registries, tag.getCompound("Fluid")) : FluidStack.EMPTY;
         this.meltProgress = tag.getInt("MeltProgress");
+        this.meltTotal = tag.getInt("MeltTotal");
+        this.meltFinal = tag.getInt("MeltFinal");
+        this.meltFluid = tag.contains("MeltFluid") ? FluidStack.parseOptional(registries, tag.getCompound("MeltFluid")) : FluidStack.EMPTY;
     }
 
     @Override
@@ -368,6 +422,11 @@ public class CrucibleBlockEntity extends BlockEntity {
             tag.put("Fluid", this.fluid.save(registries));
         }
         tag.putInt("MeltProgress", this.meltProgress);
+        tag.putInt("MeltTotal", this.meltTotal);
+        tag.putInt("MeltFinal", this.meltFinal);
+        if (!this.meltFluid.isEmpty()) {
+            tag.put("MeltFluid", this.meltFluid.save(registries));
+        }
     }
 
     @Override

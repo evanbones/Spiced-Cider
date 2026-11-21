@@ -16,7 +16,7 @@ import org.spongepowered.asm.mixin.injection.At;
 public class PlacementCrucibleSeatMixin {
     @WrapOperation(method = "decide", at = @At(value = "INVOKE", target = "Ldev/tazer/offgrid/world/Overlays;canOffset(Lnet/minecraft/world/level/block/state/BlockState;)Z"))
     private static boolean spicedcider$seatCrucibleOnGrid(BlockState state, Operation<Boolean> original, @Local(argsOnly = true) BlockPlaceContext context) {
-        if (state != null && state.getBlock() instanceof CrucibleBlock && context.getLevel().getBlockState(context.getClickedPos().below()).is(CrucibleBlock.SEATS)) {
+        if (state != null && state.getBlock() instanceof CrucibleBlock && CrucibleBlock.isSeat(context.getLevel().getBlockState(context.getClickedPos().below()))) {
             return false;
         }
         return original.call(state);

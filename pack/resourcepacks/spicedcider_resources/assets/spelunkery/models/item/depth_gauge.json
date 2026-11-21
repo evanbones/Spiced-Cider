@@ -1,0 +1,296 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "spelunkery:item/depth_gauge/lead_16"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "spelunkery:depth": 0.0
+      },
+      "model": "spelunkery:item/depth_gauge/lead_00"
+    },
+    {
+      "predicate": {
+        "spelunkery:depth": 0.0208
+      },
+      "model": "spelunkery:item/depth_gauge/lead_01"
+    },
+    {
+      "predicate": {
+        "spelunkery:depth": 0.0417
+      },
+      "model": "spelunkery:item/depth_gauge/lead_02"
+    },
+    {
+      "predicate": {
+        "spelunkery:depth": 0.0625
+      },
+      "model": "spelunkery:item/depth_gauge/lead_03"
+    },
+    {
+      "predicate": {
+        "spelunkery:depth": 0.0833
+      },
+      "model": "spelunkery:item/depth_gauge/lead_04"
+    },
+    {
+      "predicate": {
+        "spelunkery:depth": 0.1042
+      },
+      "model": "spelunkery:item/depth_gauge/lead_05"
+    },
+    {
+      "predicate": {
+        "spelunkery:depth": 0.125
+      },
+      "model": "spelunkery:item/depth_gauge/lead_06"
+    },
+    {
+      "predicate": {
+        "spelunkery:depth": 0.1458
+      },
+      "model": "spelunkery:item/depth_gauge/lead_07"
+    },
+    {
+      "predicate": {
+        "spelunkery:depth": 0.1667
+      },
+      "model": "spelunkery:item/depth_gauge/lead_08"
+    },
+    {
+      "predicate": {
+        "spelunkery:depth": 0.1875
+      },
+      "model": "spelunkery:item/depth_gauge/lead_09"
+    },
+    {
+      "predicate": {
+        "spelunkery:depth": 0.2083
+      },
+      "model": "spelunkery:item/depth_gauge/lead_10"
+    },
+    {
+      "predicate": {
+        "spelunkery:depth": 0.2292
+      },
+      "model": "spelunkery:item/depth_gauge/lead_11"
+    },
+    {
+      "predicate": {
+        "spelunkery:depth": 0.25
+      },
+      "model": "spelunkery:item/depth_gauge/lead_12"
+    },
+    {
+      "predicate": {
+        "spelunkery:depth": 0.2708
+      },
+      "model": "spelunkery:item/depth_gauge/lead_13"
+    },
+    {
+      "predicate": {
+        "spelunkery:depth": 0.2917
+      },
+      "model": "spelunkery:item/depth_gauge/lead_14"
+    },
+    {
+      "predicate": {
+        "spelunkery:depth": 0.3125
+      },
+      "model": "spelunkery:item/depth_gauge/lead_15"
+    },
+    {
+      "predicate": {
+        "spelunkery:depth": 0.3333
+      },
+      "model": "spelunkery:item/depth_gauge/lead_16"
+    },
+    {
+      "predicate": {
+        "spelunkery:depth": 0.3542
+      },
+      "model": "spelunkery:item/depth_gauge/lead_17"
+    },
+    {
+      "predicate": {
+        "spelunkery:depth": 0.375
+      },
+      "model": "spelunkery:item/depth_gauge/lead_18"
+    },
+    {
+      "predicate": {
+        "spelunkery:depth": 0.3958
+      },
+      "model": "spelunkery:item/depth_gauge/lead_19"
+    },
+    {
+      "predicate": {
+        "spelunkery:depth": 0.4167
+      },
+      "model": "spelunkery:item/depth_gauge/lead_20"
+    },
+    {
+      "predicate": {
+        "spelunkery:depth": 0.4375
+      },
+      "model": "spelunkery:item/depth_gauge/lead_21"
+    },
+    {
+      "predicate": {
+        "spelunkery:depth": 0.4583
+      },
+      "model": "spelunkery:item/depth_gauge/lead_22"
+    },
+    {
+      "predicate": {
+        "spelunkery:depth": 0.4792
+      },
+      "model": "spelunkery:item/depth_gauge/lead_23"
+    },
+    {
+      "predicate": {
+        "spelunkery:depth": 0.5
+      },
+      "model": "spelunkery:item/depth_gauge/lead_24"
+    },
+    {
+      "predicate": {
+        "spelunkery:depth": 0.5208
+      },
+      "model": "spelunkery:item/depth_gauge/lead_25"
+    },
+    {
+      "predicate": {
+        "spelunkery:depth": 0.5417
+      },
+      "model": "spelunkery:item/depth_gauge/lead_26"
+    },
+    {
+      "predicate": {
+        "spelunkery:depth": 0.5625
+      },
+      "model": "spelunkery:item/depth_gauge/lead_27"
+    },
+    {
+      "predicate": {
+        "spelunkery:depth": 0.5833
+      },
+      "model": "spelunkery:item/depth_gauge/lead_28"
+    },
+    {
+      "predicate": {
+        "spelunkery:depth": 0.6042
+      },
+      "model": "spelunkery:item/depth_gauge/lead_29"
+    },
+    {
+      "predicate": {
+        "spelunkery:depth": 0.625
+      },
+      "model": "spelunkery:item/depth_gauge/lead_30"
+    },
+    {
+      "predicate": {
+        "spelunkery:depth": 0.6458
+      },
+      "model": "spelunkery:item/depth_gauge/lead_31"
+    },
+    {
+      "predicate": {
+        "spelunkery:depth": 0.6667
+      },
+      "model": "spelunkery:item/depth_gauge/lead_32"
+    },
+    {
+      "predicate": {
+        "spelunkery:depth": 0.6875
+      },
+      "model": "spelunkery:item/depth_gauge/lead_33"
+    },
+    {
+      "predicate": {
+        "spelunkery:depth": 0.7083
+      },
+      "model": "spelunkery:item/depth_gauge/lead_34"
+    },
+    {
+      "predicate": {
+        "spelunkery:depth": 0.7292
+      },
+      "model": "spelunkery:item/depth_gauge/lead_35"
+    },
+    {
+      "predicate": {
+        "spelunkery:depth": 0.75
+      },
+      "model": "spelunkery:item/depth_gauge/lead_36"
+    },
+    {
+      "predicate": {
+        "spelunkery:depth": 0.7708
+      },
+      "model": "spelunkery:item/depth_gauge/lead_37"
+    },
+    {
+      "predicate": {
+        "spelunkery:depth": 0.7917
+      },
+      "model": "spelunkery:item/depth_gauge/lead_38"
+    },
+    {
+      "predicate": {
+        "spelunkery:depth": 0.8125
+      },
+      "model": "spelunkery:item/depth_gauge/lead_39"
+    },
+    {
+      "predicate": {
+        "spelunkery:depth": 0.8333
+      },
+      "model": "spelunkery:item/depth_gauge/lead_40"
+    },
+    {
+      "predicate": {
+        "spelunkery:depth": 0.8542
+      },
+      "model": "spelunkery:item/depth_gauge/lead_41"
+    },
+    {
+      "predicate": {
+        "spelunkery:depth": 0.875
+      },
+      "model": "spelunkery:item/depth_gauge/lead_42"
+    },
+    {
+      "predicate": {
+        "spelunkery:depth": 0.8958
+      },
+      "model": "spelunkery:item/depth_gauge/lead_43"
+    },
+    {
+      "predicate": {
+        "spelunkery:depth": 0.9167
+      },
+      "model": "spelunkery:item/depth_gauge/lead_44"
+    },
+    {
+      "predicate": {
+        "spelunkery:depth": 0.9375
+      },
+      "model": "spelunkery:item/depth_gauge/lead_45"
+    },
+    {
+      "predicate": {
+        "spelunkery:depth": 0.9583
+      },
+      "model": "spelunkery:item/depth_gauge/lead_46"
+    },
+    {
+      "predicate": {
+        "spelunkery:depth": 0.9792
+      },
+      "model": "spelunkery:item/depth_gauge/lead_47"
+    }
+  ]
+}

@@ -8,7 +8,6 @@ import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -32,12 +31,6 @@ public class ThreatGlowEvents {
         Vec3 bed = Vec3.atBottomCenterOf(event.getPos());
         AABB box = new AABB(bed.x - 8.0, bed.y - 5.0, bed.z - 8.0, bed.x + 8.0, bed.y + 5.0, bed.z + 8.0);
         glow(player.level().getEntitiesOfClass(Monster.class, box, monster -> monster.isPreventingPlayerRest(player)));
-    }
-
-    public static void glowTargeting(Level level, Player player) {
-        if (level.isClientSide() || !enabled()) return;
-        AABB box = player.getBoundingBox().inflate(16.0);
-        glow(level.getEntitiesOfClass(Mob.class, box, mob -> mob.isAlive() && mob.getTarget() == player));
     }
 
     private static void glow(List<? extends Mob> mobs) {
