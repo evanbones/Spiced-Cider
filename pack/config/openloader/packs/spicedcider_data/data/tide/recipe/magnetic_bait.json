@@ -3,22 +3,19 @@
   "category": "misc",
   "key": {
     "#": {
-      "item": "tide:bait"
+      "item": "spicedcider:worm"
     },
     "I": {
-      "item": "minecraft:iron_nugget"
+      "tag": "c:nuggets/tin"
     },
-    "P": {
-      "tag": "c:gems/prismarine"
-    },
-    "R": {
-      "tag": "c:dusts/redstone"
+    "F": {
+      "tag": "c:gems/cinnabar"
     }
   },
   "pattern": [
-    " #R",
+    "F#F",
     "I#I",
-    " P "
+    " I "
   ],
   "result": {
     "count": 4,

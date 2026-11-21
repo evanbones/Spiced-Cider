@@ -46,6 +46,8 @@
   and EMI now shows anvil repair recipes for javelins.
 - Ice broken by landing on it (Break My Fall) melts into water like ice broken by hand.
 - Cultural Delights vat recipes give back the glass bottles from water bottles.
+- Stripped Avocado and Pear Log tops show stripped wood instead of bark.
+- Fruit log items are drawn at the same size as Bountiful Fares fruit logs.
 
 ### Removed
 

@@ -12,6 +12,7 @@
 - Copper Screws and Lead Pipes can be melted down in a Crucible or Smeltery.
 - Moulds are grouped together in EMI.
 - Blocks of metal and blocks of raw ore can be melted in a Smeltery.
+- Disarming, Illuminating and Leaping can be put on Tongue Whips with Pulling, Hallowed and Flinging Tablets.
 
 ### Changed
 
@@ -66,6 +67,22 @@
 - Crushing raw ore always gives 2 crushed ore, and 16 from a block of raw ore.
 - Precision Mechanisms and Bronze Movements always succeed in sequenced assembly.
 - Candle holders all now use flat item icons.
+- Panels are made from 4 planks in a square and make 4.
+- Stripped logs have their own group in EMI.
+- Anvil recipes are listed after Crafting in EMI.
+- Heaven Portal chests can hold Pulling, Hallowed and Flinging Tablets.
+- Pulling Tablets are infused from 2 Item Magnets, a Lead and 2 Glowsilk String.
+- Magnetic Bait is made with Flux Gems and Tin Nuggets instead of Flux Dust, Prismarine Crystals and Iron Nuggets.
+- Lucky Bait is made from 4 Worms, 4 Tin Nuggets and a Rabbit's Foot, and makes 8.
+- Lucky and Magnetic Bait come in tin cans, like the Can of Bait.
+- Cans of Bait are grouped with the other baits in EMI.
+- Magnets are made with Flux Gems instead of Flux Dust and blue dye.
+- Bastion treasure chests always hold one or two Enchantment Tablets, which can be any tablet.
+- Nether fortresses, bastions and nether dungeons can give Heavy, Flinging, Hallowed and Pulling Tablets too.
+- Molten Fortress chests hold more loot and fewer saddles and horse armour, and can give tablets, raw nuggets and Nether supplies.
+- Nether fortress chests have fewer saddles and horse armour.
+- Small nether dungeons give Glowcoke instead of coal.
+- Bastions no longer give prismarine crystals.
 
 ### Fixed
 
@@ -91,6 +108,9 @@
 - Twisted wood no longer shows up in EMI before you reach the Nether.
 - The Walnut Shelf texture matches walnut planks.
 - The high memory usage warning no longer appears in chat.
+- Stripped Avocado and Pear Log tops no longer show bark.
+- Avocado, Pear and Cacao logs are the same size as other fruit logs in the inventory.
+- The Lime Bed item sits level with the other beds.
 
 ### Removed
 
@@ -100,3 +120,5 @@
 - Buckets can no longer be cast in a mould.
 - Mods button from the pause menu.
 - The Compression Blast Miner.
+- The Glowsilk Bow.
+- The Pulley.

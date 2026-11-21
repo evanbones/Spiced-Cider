@@ -1,0 +1,24 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "everycomp"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "wooden_boards",
+  "key": {
+    "#": {
+      "item": "minecraft:pale_oak_planks"
+    }
+  },
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "result": {
+    "count": 4,
+    "id": "everycomp:mm/minecraft/pale_oak_boards"
+  }
+}

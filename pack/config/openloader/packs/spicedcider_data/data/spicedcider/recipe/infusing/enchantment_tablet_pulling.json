@@ -10,7 +10,11 @@
     },
     {
       "type": "neoforge:mod_loaded",
-      "modid": "tide"
+      "modid": "spelunkery"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "infernalexp"
     }
   ],
   "type": "modestmagic:infusing",
@@ -19,16 +23,19 @@
   },
   "ingredients": [
     {
-      "item": "tide:magnetic_bait"
+      "item": "spelunkery:item_magnet"
     },
     {
-      "item": "tide:magnetic_bait"
+      "item": "spelunkery:item_magnet"
     },
     {
-      "item": "spicedcider:worm"
+      "item": "minecraft:lead"
     },
     {
-      "item": "spicedcider:worm"
+      "item": "infernalexp:glowsilk_string"
+    },
+    {
+      "item": "infernalexp:glowsilk_string"
     }
   ],
   "results": [

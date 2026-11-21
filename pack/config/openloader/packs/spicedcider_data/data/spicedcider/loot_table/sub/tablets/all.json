@@ -1,0 +1,106 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "modestmagic"
+    }
+  ],
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "modestmagic:enchantment_tablet_aquatic",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "modestmagic:enchantment_tablet_cyclic",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "modestmagic:enchantment_tablet_everlasting",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "modestmagic:enchantment_tablet_flinging",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "modestmagic:enchantment_tablet_glacial",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "modestmagic:enchantment_tablet_hallowed",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "modestmagic:enchantment_tablet_haunted",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "modestmagic:enchantment_tablet_heavy",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "modestmagic:enchantment_tablet_infested",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "modestmagic:enchantment_tablet_recollection",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "modestmagic:enchantment_tablet_swift",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "modestmagic:enchantment_tablet_puncturing",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "modestmagic:enchantment_tablet_enduring",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "spicedcider:enchantment_tablet_beastly",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "spicedcider:enchantment_tablet_otherworldly",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "spicedcider:enchantment_tablet_pulling",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "spicedcider:enchantment_tablet_silent",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "modestmagic:enchantment_tablet",
+          "weight": 2
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "spicedcider:worm"
+    },
+    "N": {
+      "tag": "c:nuggets/tin"
+    },
+    "R": {
+      "item": "minecraft:rabbit_foot"
+    }
+  },
+  "pattern": [
+    "N#N",
+    "#R#",
+    "N#N"
+  ],
+  "result": {
+    "count": 8,
+    "id": "tide:lucky_bait"
+  }
+}
