@@ -43,6 +43,7 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                 .add(ModBlocks.WORM_CRATE.get())
                 .add(ModBlocks.GOLDEN_WORM_CRATE.get())
                 .add(ModBlocks.TANNING_RACK.get())
+                .add(ModBlocks.FISH_TRAP.get())
                 .add(ModBlocks.DEAD_WOOD_BRANCH.get())
                 .addOptional(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "puffball_mushroom_crate"));
 
@@ -198,6 +199,7 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         this.tag(BlockTags.CAMPFIRES).add(ModFireBlocks.SULFUR_CAMPFIRE.get());
         this.tag(BlockTags.MINEABLE_WITH_AXE).add(ModFireBlocks.SULFUR_CAMPFIRE.get());
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(ModFireBlocks.SULFUR_LANTERN.get());
+        this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(ModBlocks.TIN_LANTERN.get());
         this.tag(BlockTags.WALL_POST_OVERRIDE).add(ModFireBlocks.SULFUR_TORCH.get());
     }
 

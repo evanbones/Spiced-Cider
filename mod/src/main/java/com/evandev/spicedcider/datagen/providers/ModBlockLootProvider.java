@@ -82,6 +82,7 @@ public class ModBlockLootProvider extends BlockLootSubProvider {
         ModPaleGardenBlocks.POTS.forEach(pot -> this.dropPottedContents(pot.get()));
         this.dropSelf(ModFireBlocks.SULFUR_TORCH.get());
         this.dropSelf(ModFireBlocks.SULFUR_LANTERN.get());
+        this.dropSelf(ModBlocks.TIN_LANTERN.get());
         this.add(ModFireBlocks.SULFUR_CAMPFIRE.get(), block -> this.createSilkTouchDispatchTable(block,
                 this.applyExplosionCondition(block, LootItem.lootTableItem(Items.CHARCOAL).apply(SetItemCountFunction.setCount(ConstantValue.exactly(2.0F))))));
         this.dropSelf(ModBlocks.ALGAL_SAND.get());
@@ -197,6 +198,7 @@ public class ModBlockLootProvider extends BlockLootSubProvider {
         Stream.of(ModPaleGardenBlocks.PALE_ROSE, ModPaleGardenBlocks.PALE_BUSH, ModPaleGardenBlocks.TALL_PALE_BUSH).forEach(block -> blocks.add(block.get()));
         ModPaleGardenBlocks.POTS.forEach(pot -> blocks.add(pot.get()));
         Stream.of(ModFireBlocks.SULFUR_TORCH, ModFireBlocks.SULFUR_LANTERN, ModFireBlocks.SULFUR_CAMPFIRE).forEach(block -> blocks.add(block.get()));
+        blocks.add(ModBlocks.TIN_LANTERN.get());
         return blocks;
     }
 }

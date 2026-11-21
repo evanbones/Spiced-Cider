@@ -37,6 +37,9 @@ public class SpicedCiderEmiPlugin implements EmiPlugin {
             LadleMixingEmiRecipe.register(registry);
         }
         CastingEmiRecipes.register(registry);
+        if (ModList.get().isLoaded("modestmining")) {
+            JavelinRepairEmiRecipes.register(registry);
+        }
         TanningEmiRecipe.register(registry);
         LootEmiCategories.register(registry);
         if (SpicedCiderConfig.clientOr(SpicedCiderConfig.CLIENT.emiHideSmithingCategory, false)) {

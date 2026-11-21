@@ -110,10 +110,6 @@ public class ModItems {
             () -> new BlockItem(ModBlocks.CAST_IRON_BLOCK.get(), new Item.Properties()));
     public static final DeferredItem<Item> CAST_IRON_SHEET = ITEMS.register("cast_iron_sheet",
             () -> new Item(new Item.Properties()));
-    public static final DeferredItem<Item> CAST_IRON_VESSEL = ITEMS.register("cast_iron_vessel",
-            () -> new Item(new Item.Properties()));
-    public static final DeferredItem<Item> CAST_IRON_FRAME = ITEMS.register("cast_iron_frame",
-            () -> new Item(new Item.Properties()));
     @Nullable
     public static final DeferredItem<Item> LEAD_PIPE = ModList.get().isLoaded("modestmining")
             ? ITEMS.register("lead_pipe", () -> new Item(new Item.Properties()))
@@ -169,6 +165,8 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> FIREFLY = ITEMS.register("firefly",
             () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> FISH_TRAP = ITEMS.register("fish_trap",
+            () -> new BlockItem(ModBlocks.FISH_TRAP.get(), new Item.Properties()));
     @Nullable
     public static final DeferredItem<Item> MINT_SEEDS = ModBlocks.MINT_CROP != null
             ? ITEMS.register("mint_seeds", () -> new ItemNameBlockItem(ModBlocks.MINT_CROP.get(), new Item.Properties()))
@@ -202,6 +200,7 @@ public class ModItems {
     public static final DeferredItem<BlockItem> DEEPSLATE_DEPOSIT = ITEMS.registerSimpleBlockItem(ModBlocks.DEEPSLATE_DEPOSIT);
     public static final DeferredItem<BlockItem> BLACKSTONE_DEPOSIT = ITEMS.registerSimpleBlockItem(ModBlocks.BLACKSTONE_DEPOSIT);
     public static final DeferredItem<BlockItem> GOLDEN_WORM_CRATE = ITEMS.registerSimpleBlockItem(ModBlocks.GOLDEN_WORM_CRATE);
+    public static final DeferredItem<BlockItem> TIN_LANTERN = ITEMS.registerSimpleBlockItem(ModBlocks.TIN_LANTERN);
     @Nullable
     public static final DeferredItem<BlockItem> ORANGE_CRATE = ModBlocks.ORANGE_CRATE != null ? ITEMS.registerSimpleBlockItem(ModBlocks.ORANGE_CRATE) : null;
     @Nullable

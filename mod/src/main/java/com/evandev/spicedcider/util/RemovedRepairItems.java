@@ -9,6 +9,9 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public final class RemovedRepairItems {
 
     public static boolean accepts(Ingredient ingredient, ItemStack repair) {
@@ -20,6 +23,23 @@ public final class RemovedRepairItems {
             if (tag != null && repair.is(tag) && !ReliableRemoverCompat.isRemoved(repair.getItem())) return true;
         }
         return false;
+    }
+
+    public static List<ItemStack> displayItems(Ingredient ingredient) {
+        List<ItemStack> result = new ArrayList<>();
+        for (ItemStack stack : ingredient.getItems()) {
+            Item item = stack.getItem();
+            if (!ReliableRemoverCompat.isRemoved(item)) {
+                result.add(stack);
+                continue;
+            }
+            TagKey<Item> tag = unifiedTag(BuiltInRegistries.ITEM.getKey(item));
+            if (tag == null) continue;
+            BuiltInRegistries.ITEM.getTagOrEmpty(tag).forEach(holder -> {
+                if (!ReliableRemoverCompat.isRemoved(holder.value())) result.add(new ItemStack(holder));
+            });
+        }
+        return result;
     }
 
     private static TagKey<Item> unifiedTag(ResourceLocation id) {

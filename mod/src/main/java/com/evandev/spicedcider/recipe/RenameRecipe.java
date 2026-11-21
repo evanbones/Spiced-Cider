@@ -69,7 +69,7 @@ public class RenameRecipe extends CustomRecipe {
                         }
                         hasTarget = true;
                     } else {
-                        if (hasNameTag) {
+                        if (hasNameTag || !itemStack.has(DataComponents.CUSTOM_NAME)) {
                             return false;
                         }
                         hasNameTag = true;

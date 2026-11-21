@@ -5,6 +5,8 @@
 	oldWisteriaTrees = true
 	#Anvil repairs and renames cost no experience. Requires Easy Anvils.
 	easyAnvilsFreeRepairs = true
+	#Fully repairing a tool in an anvil takes as much material as crafting its head: one for shovels, two for swords and hoes, three for pickaxes and axes. Requires Easy Anvils.
+	toolRepairMaterialCounts = true
 	#Fire rings no longer take potions to spread their effects. Requires Piglin Proliferation.
 	fireRingNoPotions = true
 	#Cleaning out an empty Pot of Witch Stew leaves a Create Basin instead of a Cauldron. Requires No Man's Land and Create.
@@ -33,6 +35,10 @@
 	jackOStrawRotation = true
 	#Each Treeliable chop costs half a bolt of Modest Meals stamina. Without stamina, logs break normally without counting as a chop. Requires Treeliable and Modest Meals.
 	treeChoppingStamina = true
+	#Get Over It only pulls you up ledges taller than a jump (about two blocks) that you are looking at and walking into, climbs faster, and lands you on top. Requires Get Over It.
+	ledgeClimbRework = true
+	#Pulling yourself up a ledge costs a bolt of Modest Meals stamina, and you can't climb while exhausted. Requires Get Over It and Modest Meals.
+	ledgeClimbStamina = true
 	#Stamina recovers twice as fast while sitting with Personality. Requires Personality and Modest Meals.
 	sittingStaminaRegen = true
 	#Animals and mobs can sit on Quark stools like on Create seats: walk or lead them onto one, or right-click it while holding a lead. Seated mobs work with Stock Tickers and other seat features. Requires Quark and Create.
@@ -217,6 +223,8 @@
 		disableRecipeBookTracking = true
 		#Runs /locate biome searches, structure locating and map biome previews across several threads.
 		parallelLocate = true
+		#Monsters that stop you from sleeping, or from opening loot chests while they hunt you, glow briefly so you can find them.
+		revealThreateningMonsters = true
 
 	[features.lod]
 		#Generates terrain beyond your render distance in the background so it can be drawn in the distance, out to your Distant Terrain Range. The chunks are never saved, so the world folder doesn't grow.

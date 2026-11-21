@@ -6,6 +6,7 @@ import com.evandev.spicedcider.content.block.entity.TubewormBlockEntity;
 import com.evandev.spicedcider.content.casting.CrucibleBlockEntity;
 import com.evandev.spicedcider.content.casting.MouldBlockEntity;
 import com.evandev.spicedcider.content.casting.smeltery.SmelteryBlockEntity;
+import com.evandev.spicedcider.content.fishtrap.FishTrapBlockEntity;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -29,4 +30,7 @@ public class ModBlockEntities {
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<SmelteryBlockEntity>> SMELTERY = BLOCK_ENTITIES.register("smeltery",
             () -> BlockEntityType.Builder.of(SmelteryBlockEntity::new, ModBlocks.SMELTERY.get()).build(null));
+
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<FishTrapBlockEntity>> FISH_TRAP = BLOCK_ENTITIES.register("fish_trap",
+            () -> BlockEntityType.Builder.of(FishTrapBlockEntity::new, ModBlocks.FISH_TRAP.get()).build(null));
 }

@@ -1043,5 +1043,14 @@
       "caverns_and_chasms:azalea_boards"
     ],
     "replace_with": "everycomp:mm/caverns_and_chasms/azalea_boards"
+  },
+  {
+    "action": "remove_enchantment",
+    "enchantments": [
+      "caverns_and_chasms:conceal",
+      "caverns_and_chasms:extending",
+      "caverns_and_chasms:obscurity",
+      "caverns_and_chasms:sky_set"
+    ]
   }
 ]
