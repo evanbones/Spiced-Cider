@@ -206,7 +206,7 @@ public class ModPonderSchematicProvider implements DataProvider {
         Schematic schematic = new Schematic(5)
                 .fill(2, 1, 2, 2, 4, 2, "nomansland:maple_log", "axis", "y")
                 .set(2, 2, 1, "nomansland:tap", "facing", "north", "closed", "false")
-                .set(2, 1, 1, "minecraft:cauldron");
+                .set(2, 1, 1, "create:basin", "facing", "down");
         for (int y = 4; y <= 5; y++) {
             int radius = y == 4 ? 2 : 1;
             for (int x = 2 - radius; x <= 2 + radius; x++) {
@@ -230,35 +230,57 @@ public class ModPonderSchematicProvider implements DataProvider {
                 .set(4, 3, 2, "farmersdelight:cooking_pot", "facing", "north", "support", "none");
     }
 
-    private static Schematic dripstoneFarm() {
+    private static Schematic dripstoneLavaFarm() {
         return new Schematic(5)
-                .set(1, 4, 1, "minecraft:water")
-                .set(1, 3, 1, "minecraft:dripstone_block")
-                .set(1, 2, 1, "minecraft:pointed_dripstone", "thickness", "tip", "vertical_direction", "down")
-                .set(1, 1, 1, "minecraft:cauldron")
-                .set(3, 4, 1, "minecraft:lava")
-                .set(3, 3, 1, "minecraft:dripstone_block")
-                .set(3, 2, 1, "minecraft:pointed_dripstone", "thickness", "tip", "vertical_direction", "down")
-                .set(3, 1, 1, "minecraft:cauldron");
+                .set(2, 5, 2, "minecraft:lava")
+                .set(2, 4, 2, "minecraft:dripstone_block")
+                .set(2, 3, 2, "minecraft:pointed_dripstone", "thickness", "tip", "vertical_direction", "down")
+                .set(2, 1, 2, "create:basin", "facing", "down");
+    }
+
+    private static Schematic dripstoneSaltFarm() {
+        return new Schematic(5)
+                .set(1, 5, 2, "minecraft:water")
+                .set(1, 4, 2, "minecraft:dripstone_block")
+                .set(1, 3, 2, "minecraft:pointed_dripstone", "thickness", "tip", "vertical_direction", "down")
+                .set(1, 2, 2, "create:basin", "facing", "down")
+                .set(1, 1, 2, "minecraft:campfire", "facing", "north", "lit", "true")
+                .set(3, 5, 2, "minecraft:water")
+                .set(3, 4, 2, "culturaldelights:salt_block")
+                .set(3, 3, 2, "minecraft:pointed_dripstone", "thickness", "tip", "vertical_direction", "down");
+    }
+
+    private static Schematic crucible() {
+        return new Schematic(5)
+                .set(1, 1, 2, "minecraft:campfire", "facing", "north", "lit", "true")
+                .set(1, 2, 2, "spicedcider:crucible", "seated", "true")
+                .set(3, 1, 1, "spicedcider:ingot_mould", "facing", "north");
+    }
+
+    private static Schematic smeltery() {
+        Schematic schematic = new Schematic(6);
+        for (int i = 0; i < 8; i++) {
+            boolean right = (i & 1) != 0;
+            boolean top = (i & 2) != 0;
+            boolean back = (i & 4) != 0;
+            schematic.set(2 + (right ? 1 : 0), 1 + (top ? 1 : 0), 2 + (back ? 1 : 0), "spicedcider:smeltery",
+                    "facing", "north", "right", String.valueOf(right), "top", String.valueOf(top), "back", String.valueOf(back));
+        }
+        return schematic
+                .set(1, 2, 2, "nomansland:tap", "facing", "west", "closed", "false")
+                .set(1, 1, 2, "spicedcider:ingot_mould", "facing", "north");
     }
 
     private static Schematic weepingObsidian() {
         return new Schematic(5)
                 .set(2, 4, 2, "minecraft:crying_obsidian")
-                .set(2, 1, 2, "minecraft:cauldron");
+                .set(2, 1, 2, "create:basin", "facing", "down");
     }
 
-    private static Schematic saltSpikes() {
-        return new Schematic(5)
-                .set(2, 5, 2, "minecraft:water")
-                .set(2, 4, 2, "culturaldelights:salt_block")
-                .set(2, 3, 2, "minecraft:pointed_dripstone", "thickness", "tip", "vertical_direction", "down");
-    }
-
-    private static Schematic cauldronBrewing() {
+    private static Schematic basinOnCampfire() {
         return new Schematic(5)
                 .set(2, 1, 2, "minecraft:campfire", "facing", "north", "lit", "true")
-                .set(2, 2, 2, "toil_and_trouble:cauldron", "contents", "water", "potion_quantity", "3", "heated", "true", "brewing", "false");
+                .set(2, 2, 2, "create:basin", "facing", "down");
     }
 
     private static Schematic lightroom() {
@@ -299,10 +321,13 @@ public class ModPonderSchematicProvider implements DataProvider {
         schematics.put("redstone/note_block", noteBlock());
         schematics.put("misc/tapping", tapping());
         schematics.put("misc/cooking_pot", cookingPot());
-        schematics.put("misc/dripstone_farm", dripstoneFarm());
+        schematics.put("misc/dripstone_lava_farm", dripstoneLavaFarm());
+        schematics.put("misc/dripstone_salt_farm", dripstoneSaltFarm());
         schematics.put("misc/weeping_obsidian", weepingObsidian());
-        schematics.put("misc/salt_spikes", saltSpikes());
-        schematics.put("misc/cauldron_brewing", cauldronBrewing());
+        schematics.put("casting/crucible", crucible());
+        schematics.put("casting/smeltery", smeltery());
+        schematics.put("misc/basin_brewing", basinOnCampfire());
+        schematics.put("misc/ladle_mixing", basinOnCampfire());
         schematics.put("misc/lightroom", lightroom());
         schematics.put("misc/film_developing", filmDeveloping());
         return CompletableFuture.allOf(schematics.entrySet().stream()

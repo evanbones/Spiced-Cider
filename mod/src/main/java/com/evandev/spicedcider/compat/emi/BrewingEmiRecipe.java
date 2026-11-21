@@ -1,14 +1,12 @@
 package com.evandev.spicedcider.compat.emi;
 
-import cc.cassian.cauldrons.registry.CauldronModItems;
 import com.evandev.spicedcider.SpicedCider;
-import com.evandev.spicedcider.content.brewing.CauldronBrewing;
+import com.evandev.spicedcider.content.brewing.Brewing;
 import com.evandev.spicedcider.registry.ModDataMaps;
 import dev.emi.emi.api.EmiRegistry;
 import dev.emi.emi.api.recipe.BasicEmiRecipe;
 import dev.emi.emi.api.recipe.EmiRecipeCategory;
 import dev.emi.emi.api.render.EmiTexture;
-import dev.emi.emi.api.stack.Comparison;
 import dev.emi.emi.api.stack.EmiIngredient;
 import dev.emi.emi.api.stack.EmiStack;
 import dev.emi.emi.api.widget.SlotWidget;
@@ -38,8 +36,9 @@ public class BrewingEmiRecipe extends BasicEmiRecipe {
     private static final int WIDTH = 134;
     private static final int SLOT = 18;
     private static final int PER_ROW = 3;
-    private static final TagKey<Item> SPLASH = TagKey.create(BuiltInRegistries.ITEM.key(), ResourceLocation.fromNamespaceAndPath("toil_and_trouble", "creates_splash_potions"));
-    private static final TagKey<Item> LINGERING = TagKey.create(BuiltInRegistries.ITEM.key(), ResourceLocation.fromNamespaceAndPath("toil_and_trouble", "creates_lingering_potions"));
+    private static final TagKey<Item> SPLASH = Brewing.MAKES_SPLASH;
+    private static final TagKey<Item> LINGERING = Brewing.MAKES_LINGERING;
+    private static final TagKey<Item> SPOONS = TagKey.create(BuiltInRegistries.ITEM.key(), ResourceLocation.fromNamespaceAndPath("manual_labour", "ladles"));
 
     private final EmiStack base;
     private final List<Entry> entries;
@@ -67,12 +66,11 @@ public class BrewingEmiRecipe extends BasicEmiRecipe {
     }
 
     public static void register(EmiRegistry registry) {
-        registry.setDefaultComparison(CauldronModItems.CAULDRON_CONTENTS, Comparison.compareData(stack -> stack.getItemStack().getOrDefault(DataComponents.POTION_CONTENTS, PotionContents.EMPTY).potion()));
-        EmiStack cauldron = EmiStack.of(Items.CAULDRON);
-        EmiRecipeCategory category = new EmiRecipeCategory(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "cauldron_brewing"),
+        EmiRecipeCategory category = new EmiRecipeCategory(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "basin_brewing"),
                 EmiStack.of(PotionContents.createItemStack(Items.POTION, Potions.SWIFTNESS)));
         registry.addCategory(category);
-        registry.addWorkstation(category, cauldron);
+        registry.addWorkstation(category, EmiStack.of(BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath("create", "basin"))));
+        registry.addWorkstation(category, EmiIngredient.of(SPOONS));
 
         EmiStack clear = EmiStack.of(PotionContents.createItemStack(Items.POTION, Potions.AWKWARD));
         Map<ResourceKey<Potion>, List<Map.Entry<Item, ModDataMaps.BrewingIngredient>>> byPotion = new LinkedHashMap<>();
@@ -99,8 +97,7 @@ public class BrewingEmiRecipe extends BasicEmiRecipe {
                     List<EmiStack> outputs = List.of(EmiStack.of(PotionContents.createItemStack(Items.POTION, potion)),
                             EmiStack.of(PotionContents.createItemStack(Items.SPLASH_POTION, potion)),
                             EmiStack.of(PotionContents.createItemStack(Items.LINGERING_POTION, potion)),
-                            EmiStack.of(PotionContents.createItemStack(Items.TIPPED_ARROW, potion)),
-                            EmiStack.of(PotionContents.createItemStack(CauldronModItems.CAULDRON_CONTENTS, potion)));
+                            EmiStack.of(PotionContents.createItemStack(Items.TIPPED_ARROW, potion)));
                     ResourceLocation id = ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID,
                             "/brewing/" + entry.getKey().location().getNamespace() + "/" + entry.getKey().location().getPath());
                     registry.addRecipe(new BrewingEmiRecipe(category, id, clear, entries, outputs, null));
@@ -124,7 +121,7 @@ public class BrewingEmiRecipe extends BasicEmiRecipe {
 
     private static ItemStack brewed(Item item, Holder<Potion> potion, int seconds, int potency) {
         ItemStack stack = new ItemStack(item);
-        stack.set(DataComponents.POTION_CONTENTS, new PotionContents(Optional.of(potion), Optional.empty(), CauldronBrewing.effects(potion, seconds, potency)));
+        stack.set(DataComponents.POTION_CONTENTS, new PotionContents(Optional.of(potion), Optional.empty(), Brewing.effects(potion, seconds, potency)));
         return stack;
     }
 

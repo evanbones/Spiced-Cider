@@ -1,0 +1,25 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "blockbox"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "woodworks"
+    }
+  ],
+  "type": "woodworks:sawmill",
+  "ingredient": [
+    {
+      "item": "minecraft:birch_log"
+    },
+    {
+      "item": "minecraft:birch_wood"
+    }
+  ],
+  "result": {
+    "id": "blockbox:birch_palisade",
+    "count": 2
+  }
+}

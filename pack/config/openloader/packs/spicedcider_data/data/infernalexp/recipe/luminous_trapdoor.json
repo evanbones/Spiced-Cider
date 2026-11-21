@@ -1,0 +1,24 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "infernalexp:luminous_trapdoor"
+    }
+  ],
+  "key": {
+    "#": {
+      "item": "infernalexp:luminous_planks"
+    }
+  },
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "result": {
+    "id": "infernalexp:luminous_trapdoor",
+    "count": 6
+  },
+  "group": "luminous_trapdoor",
+  "category": "redstone",
+  "type": "minecraft:crafting_shaped"
+}

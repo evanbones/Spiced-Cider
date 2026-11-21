@@ -6,15 +6,13 @@ plugins {
     id 'co.uzzu.dotenv.gradle' version "4.0.0"
 }
 
-version = pack_version
-
 def packDir = layout.projectDirectory.dir("pack")
 def packToml = packDir.file("pack.toml").asFile
 def packwizExe = packDir.file("packwiz.exe").asFile
 def packwiz = System.getProperty("os.name").toLowerCase().contains("windows") && packwizExe.exists() ? packwizExe.absolutePath : "packwiz"
-def packVersion = pack_version
+def packVersion = version.toString()
 def releaseConfig = layout.projectDirectory.file("pack-release.json").asFile
-def mrpack = layout.buildDirectory.file("pack/${pack_name.replace(' ', '-')}-${pack_version}.mrpack")
+def mrpack = layout.buildDirectory.file("pack/${pack_name.replace(' ', '-')}-${packVersion}.mrpack")
 
 def releaseDir = layout.buildDirectory.dir("pack/release")
 def python = System.getProperty("os.name").toLowerCase().contains("windows") ? "python" : "python3"
@@ -35,35 +33,17 @@ var refreshRelease = tasks.register("refreshRelease", Exec) {
     commandLine packwiz, "refresh"
 }
 
-def modrinthDir = layout.buildDirectory.dir("pack/modrinth")
-
-var stageModrinth = tasks.register("stageModrinth", Exec) {
-    group = "spiced cider"
-    description = "Copies pack/ to build/pack/modrinth with pack-release.json applied, leaving folders unzipped"
-    inputs.file(releaseConfig)
-    outputs.upToDateWhen { false }
-    commandLine python, file("scripts/stage_release.py").absolutePath, packDir.asFile.absolutePath,
-            modrinthDir.get().asFile.absolutePath, "--release", releaseConfig.absolutePath, "--version", packVersion, "--no-zip"
-}
-
-var refreshModrinth = tasks.register("refreshModrinth", Exec) {
-    group = "spiced cider"
-    dependsOn(stageModrinth)
-    workingDir = modrinthDir.get().asFile
-    commandLine packwiz, "refresh"
-}
-
 var exportPack = tasks.register("exportPack", Exec) {
     group = "spiced cider"
-    dependsOn(refreshModrinth)
-    workingDir = modrinthDir.get().asFile
+    dependsOn(refreshRelease)
+    workingDir = releaseDir.get().asFile
     outputs.file(mrpack)
     outputs.upToDateWhen { false }
     doFirst { mrpack.get().asFile.parentFile.mkdirs() }
     commandLine packwiz, "modrinth", "export", "--output", mrpack.get().asFile.absolutePath
 }
 
-def serverPack = layout.buildDirectory.file("pack/${pack_name.replace(' ', '-')}-${pack_version}-server.zip")
+def serverPack = layout.buildDirectory.file("pack/${pack_name.replace(' ', '-')}-${packVersion}-server.zip")
 def downloadCache = layout.buildDirectory.dir("pack/cache").get().asFile
 def serverPackFiles = layout.projectDirectory.dir("server-pack").asFile
 def serverExcludedJars = pack_server_excluded_jars.split(",").collect { it.trim() }.findAll { !it.isEmpty() }
@@ -134,7 +114,7 @@ var exportServerPack = tasks.register("exportServerPack") {
 
 def curseforgeConfig = layout.projectDirectory.file("pack-curseforge.json").asFile
 def curseforgeDir = layout.buildDirectory.dir("pack/curseforge")
-def curseforgePack = layout.buildDirectory.file("pack/${pack_name.replace(' ', '-')}-${pack_version}-curseforge.zip")
+def curseforgePack = layout.buildDirectory.file("pack/${pack_name.replace(' ', '-')}-${packVersion}-curseforge.zip")
 
 var stageCurseForge = tasks.register("stageCurseForge", Exec) {
     group = "spiced cider"
@@ -251,6 +231,7 @@ def packSlug = pack_modrinth_slug
 
 publishMods {
     file = mrpack
+    dryRun = providers.gradleProperty("dry_run").isPresent()
     changelog = file("CHANGELOG-LATEST.md").exists() ? file("CHANGELOG-LATEST.md").text : ""
     type = STABLE
     version = packVersion

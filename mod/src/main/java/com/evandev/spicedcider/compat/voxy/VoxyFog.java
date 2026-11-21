@@ -1,6 +1,7 @@
 package com.evandev.spicedcider.compat.voxy;
 
 import com.evandev.spicedcider.SpicedCider;
+import com.evandev.spicedcider.compat.picturemode.PictureModeClouds;
 import com.evandev.spicedcider.compat.vista.VistaFeeds;
 import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.evandev.spicedcider.weather.VisualWeather;
@@ -87,6 +88,7 @@ public final class VoxyFog {
         SpicedCiderConfig.Client config = SpicedCiderConfig.CLIENT;
         if (!SpicedCiderConfig.CLIENT_SPEC.isLoaded() || !config.voxyFogOverride.get()) return;
         if (VistaFeeds.mirrorFogActive()) return;
+        if (PictureModeClouds.active()) return;
         if (camera.getFluidInCamera() != FogType.NONE || inFluid(camera)) return;
         if (camera.getEntity() instanceof LivingEntity entity
                 && (entity.hasEffect(MobEffects.BLINDNESS) || entity.hasEffect(MobEffects.DARKNESS))) return;

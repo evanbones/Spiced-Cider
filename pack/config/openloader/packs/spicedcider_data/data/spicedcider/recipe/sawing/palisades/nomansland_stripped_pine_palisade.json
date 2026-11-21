@@ -1,0 +1,25 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "nomansland"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "woodworks"
+    }
+  ],
+  "type": "woodworks:sawmill",
+  "ingredient": [
+    {
+      "item": "nomansland:stripped_pine_log"
+    },
+    {
+      "item": "nomansland:stripped_pine_wood"
+    }
+  ],
+  "result": {
+    "id": "nomansland:stripped_pine_palisade",
+    "count": 2
+  }
+}

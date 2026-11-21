@@ -1,0 +1,33 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "quark"
+    },
+    {
+      "type": "zeta:flag",
+      "flag": "easy_hopper"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PWP",
+    " V "
+  ],
+  "key": {
+    "P": {
+      "tag": "c:plates/cast_iron"
+    },
+    "W": {
+      "tag": "minecraft:logs"
+    },
+    "V": {
+      "item": "spicedcider:cast_iron_vessel"
+    }
+  },
+  "result": {
+    "id": "minecraft:hopper",
+    "count": 1
+  }
+}

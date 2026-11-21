@@ -1,0 +1,23 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "create:ornate_iron_window_pane"
+    }
+  ],
+  "key": {
+    "#": {
+      "item": "create:ornate_iron_window"
+    }
+  },
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "result": {
+    "id": "create:ornate_iron_window_pane",
+    "count": 16
+  },
+  "category": "building",
+  "type": "minecraft:crafting_shaped"
+}

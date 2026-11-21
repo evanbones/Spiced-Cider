@@ -47,7 +47,9 @@ public class ModTags {
     public static class Blocks {
         public static final TagKey<Block> HANGS_FROM_CEILING = tag("hangs_from_ceiling");
         public static final TagKey<Block> TAP_SUPPORTS = tag("tap_supports");
+        public static final TagKey<Block> FAST_POUR_SOURCES = tag("fast_pour_sources");
         public static final TagKey<Block> NEEDS_AXE_TO_HARVEST = tag("needs_axe_to_harvest");
+        public static final TagKey<Block> DROPS_BARK_WHEN_STRIPPED = tag("drops_bark_when_stripped");
         public static final TagKey<Block> NEEDS_HOE_TO_HARVEST = tag("needs_hoe_to_harvest");
         public static final TagKey<Block> CACAO_LOGS = tag("cacao_logs");
         public static final TagKey<Block> CACAO_LEAVES = tag("cacao_leaves");
@@ -89,6 +91,7 @@ public class ModTags {
         public static final TagKey<EntityType<?>> WORM_SEEKERS = tag("worm_seekers");
         public static final TagKey<EntityType<?>> ALLOWED_IN_RESTRICTED_BIOMES = tag("allowed_in_restricted_biomes");
         public static final TagKey<EntityType<?>> BALLOON_UNATTACHABLE = tag("balloon_unattachable");
+        public static final TagKey<EntityType<?>> STATIC_HORSE_STATS = tag("static_horse_stats");
 
         private static TagKey<EntityType<?>> tag(String name) {
             return TagKey.create(Registries.ENTITY_TYPE, ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, name));

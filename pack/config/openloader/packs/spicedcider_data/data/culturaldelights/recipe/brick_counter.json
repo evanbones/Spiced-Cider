@@ -1,0 +1,27 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "culturaldelights"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "II",
+    "##",
+    "##"
+  ],
+  "key": {
+    "I": {
+      "tag": "c:ingots/cast_iron"
+    },
+    "#": {
+      "tag": "c:bricks/normal"
+    }
+  },
+  "result": {
+    "id": "culturaldelights:brick_counter",
+    "count": 4
+  }
+}

@@ -11,20 +11,23 @@
   ],
   "type": "minecraft:crafting_shaped",
   "category": "misc",
+  "pattern": [
+    "PXP",
+    " F "
+  ],
   "key": {
-    "#": {
-      "item": "spicedcider:cast_iron_ingot"
+    "P": {
+      "tag": "c:plates/cast_iron"
     },
     "X": {
       "item": "minecraft:furnace"
+    },
+    "F": {
+      "item": "spicedcider:cast_iron_frame"
     }
   },
-  "pattern": [
-    "#X#",
-    "###"
-  ],
   "result": {
-    "count": 1,
-    "id": "minecraft:furnace_minecart"
+    "id": "minecraft:furnace_minecart",
+    "count": 1
   }
 }

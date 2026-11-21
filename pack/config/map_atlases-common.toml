@@ -15,7 +15,7 @@
 	enable_empty_map_entry_and_fill = true
 	#Locations of where an atlas will be scanned for. By default only hotbar will be scanned
 	#Allowed Values: MAIN_HAND, HOTBAR, HANDS, HOTBAR_AND_HANDS, INVENTORY
-	activation_locations = "HOTBAR_AND_HANDS"
+	activation_locations = "INVENTORY"
 	#Allows players in creative to teleport using the atlas. Hold shift and press anywhere
 	creative_teleport = true
 	#Marker id associated with the red pin button on the atlas screen. Set to empty string to disable

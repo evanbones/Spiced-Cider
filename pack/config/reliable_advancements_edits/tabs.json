@@ -12,7 +12,7 @@
       ],
       "positions": {
         "spicedcider:spiced_cider/all_metals": [
-          840,
+          882,
           90
         ],
         "spicedcider:spiced_cider/all_tablets": [
@@ -45,7 +45,7 @@
         ],
         "spicedcider:spiced_cider/cast_iron": [
           588,
-          30
+          90
         ],
         "spicedcider:spiced_cider/cobblestone": [
           252,
@@ -68,19 +68,23 @@
           90
         ],
         "spicedcider:spiced_cider/diamond": [
-          672,
+          714,
           90
         ],
         "spicedcider:spiced_cider/diamond_armor": [
-          756,
+          798,
           120
         ],
         "spicedcider:spiced_cider/diamond_pickaxe": [
-          714,
+          756,
           90
         ],
         "spicedcider:spiced_cider/electrum": [
           504,
+          180
+        ],
+        "spicedcider:spiced_cider/electrum_lance": [
+          546,
           180
         ],
         "spicedcider:spiced_cider/enchanted_tablet": [
@@ -100,7 +104,7 @@
           90
         ],
         "spicedcider:spiced_cider/flint_and_steel": [
-          630,
+          672,
           60
         ],
         "spicedcider:spiced_cider/flint_hammer": [
@@ -164,15 +168,15 @@
           90
         ],
         "spicedcider:spiced_cider/meteorite": [
-          756,
+          798,
           90
         ],
         "spicedcider:spiced_cider/pearl": [
-          714,
+          756,
           60
         ],
         "spicedcider:spiced_cider/prismarite": [
-          756,
+          798,
           60
         ],
         "spicedcider:spiced_cider/root": [
@@ -200,15 +204,15 @@
           150
         ],
         "spicedcider:spiced_cider/steel": [
-          588,
+          630,
           90
         ],
         "spicedcider:spiced_cider/steel_armor": [
-          672,
+          714,
           120
         ],
         "spicedcider:spiced_cider/steel_pickaxe": [
-          630,
+          672,
           90
         ],
         "spicedcider:spiced_cider/tanning": [
@@ -224,11 +228,23 @@
           120
         ],
         "spicedcider:spiced_cider/valkyrium": [
-          798,
+          840,
           90
         ],
         "spicedcider:spiced_cider/workstone": [
           252,
+          120
+        ],
+        "spicedcider:spiced_cider/crucible": [
+          462,
+          60
+        ],
+        "spicedcider:spiced_cider/lead_pipe": [
+          504,
+          60
+        ],
+        "spicedcider:spiced_cider/smeltery": [
+          672,
           120
         ]
       }
@@ -549,6 +565,10 @@
           330,
           210
         ],
+        "spicedcider:husbandry/crossfaded": [
+          330,
+          252
+        ],
         "spicedcider:husbandry/pickle": [
           360,
           168
@@ -560,6 +580,10 @@
         "spicedcider:husbandry/cheese": [
           300,
           168
+        ],
+        "spicedcider:husbandry/spiced_cider": [
+          390,
+          210
         ],
         "spicedcider:husbandry/salt_farm": [
           390,
@@ -635,10 +659,6 @@
         ],
         "spicedcider:husbandry/breed_all": [
           630,
-          84
-        ],
-        "spicedcider:husbandry/yak_pants": [
-          660,
           84
         ],
         "spicedcider:husbandry/snail_diet": [
@@ -769,6 +789,10 @@
           1020,
           84
         ],
+        "spicedcider:husbandry/one_piece": [
+          1062,
+          84
+        ],
         "spicedcider:husbandry/home_is_where_the_bed_is": [
           1020,
           126
@@ -839,10 +863,6 @@
         "spicedcider:industry/crushing_maxed": [
           900,
           210
-        ],
-        "spicedcider:industry/saw": [
-          780,
-          126
         ],
         "spicedcider:industry/contraption_actors": [
           780,
@@ -1123,81 +1143,61 @@
           168,
           180
         ],
-        "spicedcider:nether/crimson_forest": [
+        "spicedcider:nether/glowstone": [
           210,
           180
         ],
-        "spicedcider:nether/warped_forest": [
-          252,
-          180
-        ],
-        "spicedcider:nether/soul_sand_valley": [
-          294,
-          180
-        ],
-        "spicedcider:nether/basalt_deltas": [
-          336,
-          180
-        ],
-        "spicedcider:nether/glowstone_canyon": [
-          378,
-          180
-        ],
-        "spicedcider:nether/glowstone": [
-          420,
-          180
-        ],
         "spicedcider:nether/respawn_anchor": [
-          462,
+          252,
           180
         ],
         "spicedcider:nether/tears_bucket": [
-          504,
+          294,
           180
         ],
         "spicedcider:nether/deer_in_headlights": [
-          420,
-          210
+          210,
+          390
         ],
         "spicedcider:nether/explore_nether": [
-          420,
-          150
+          210,
+          330
         ],
         "infernalexp:nether/pressure_cooker": [
-          378,
-          150
+          210,
+          360
         ],
         "spicedcider:nether/kill_ghast": [
-          336,
-          270
+          210,
+          450
         ],
         "spicedcider:nether/return_to_sender": [
-          378,
-          270
+          252,
+          450
         ],
         "spicedcider:nether/onion_ghast": [
-          378,
-          300
+          252,
+          480
         ],
         "spicedcider:nether/soul_bead": [
-          336,
+          210,
           120
         ],
         "spicedcider:nether/living_bubble": [
-          378,
+          252,
           120
         ],
         "spicedcider:nether/ride_strider": [
-          294,
+          210,
           90
         ],
         "spicedcider:nether/fish_in_lava": [
-          336,
+          252,
           90
         ],
         "spicedcider:nether/hoglin_trophy": [
-          252,
-          210
+          210,
+          420
         ],
         "spicedcider:nether/nether_dust": [
           210,
@@ -1261,39 +1261,39 @@
         ],
         "spicedcider:nether/ancient_debris": [
           210,
-          450
+          600
         ],
         "spicedcider:nether/ancient_scrap": [
           252,
-          450
+          600
         ],
         "spicedcider:nether/infernite": [
           294,
-          390
+          540
         ],
         "spicedcider:nether/infernite_armor": [
           336,
-          360
+          510
         ],
         "spicedcider:nether/infernite_cleaver": [
           336,
-          390
+          540
         ],
         "spicedcider:nether/infernite_hoe": [
           336,
-          420
+          570
         ],
         "spicedcider:nether/ancient_hoes": [
           378,
-          450
+          600
         ],
         "spicedcider:nether/necromium": [
           294,
-          480
+          630
         ],
         "spicedcider:nether/necromium_armor": [
           336,
-          510
+          660
         ],
         "spicedcider:nether/rift_home": [
           126,

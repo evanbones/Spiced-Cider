@@ -132,22 +132,6 @@
   {
     "action": "replace_input",
     "filter": {
-      "id": "nomansland:tap"
-    },
-    "target": "minecraft:iron_ingot",
-    "replacement": "#c:ingots/cast_iron"
-  },
-  {
-    "action": "replace_input",
-    "filter": {
-      "id": "nomansland:tap"
-    },
-    "target": "minecraft:iron_nugget",
-    "replacement": "#c:nuggets/cast_iron"
-  },
-  {
-    "action": "replace_input",
-    "filter": {
       "id": "/create:crafting/kinetics/(hose|elevator)_pulley/"
     },
     "target": "minecraft:dried_kelp_block",
@@ -172,42 +156,10 @@
   {
     "action": "replace_input",
     "filter": {
-      "id": "/farmersdelight:(skillet|cooking_pot|stove)/"
+      "id": "farmersdelight:stove"
     },
     "target": "#c:ingots/iron",
-    "replacement": "#c:ingots/cast_iron"
-  },
-  {
-    "action": "replace_input",
-    "filter": {
-      "id": "create:crafting/kinetics/metal_bracket"
-    },
-    "target": "#c:ingots/iron",
-    "replacement": "#c:ingots/cast_iron"
-  },
-  {
-    "action": "replace_input",
-    "filter": {
-      "id": "create:crafting/kinetics/metal_bracket"
-    },
-    "target": "#c:nuggets/iron",
-    "replacement": "#c:nuggets/cast_iron"
-  },
-  {
-    "action": "replace_input",
-    "filter": {
-      "id": "create:crafting/kinetics/mechanical_saw"
-    },
-    "target": "#c:plates/iron",
-    "replacement": "#c:plates/steel"
-  },
-  {
-    "action": "replace_input",
-    "filter": {
-      "id": "create:crafting/kinetics/mechanical_saw"
-    },
-    "target": "#c:ingots/iron",
-    "replacement": "#c:ingots/steel"
+    "replacement": "#c:plates/cast_iron"
   },
   {
     "action": "replace_input",
@@ -224,22 +176,6 @@
     },
     "target": "#c:slime_balls",
     "replacement": "etcetera:rubber"
-  },
-  {
-    "action": "replace_input",
-    "filter": {
-      "id": "modestmagic:infusing/totem_of_undying"
-    },
-    "target": "minecraft:experience_bottle",
-    "replacement": "reliable_requiem:crystal_heart"
-  },
-  {
-    "action": "replace_input",
-    "filter": {
-      "id": "supplementaries:cannon"
-    },
-    "target": "#c:ingots/iron",
-    "replacement": "#c:ingots/lead"
   },
   {
     "action": "replace_input",
@@ -264,22 +200,6 @@
     },
     "target": "minecraft:netherite_scrap",
     "replacement": "#c:ingots/lead"
-  },
-  {
-    "action": "replace_input",
-    "filter": {
-      "id": "modestmagic:infusing/enchantment_tablet_heavy"
-    },
-    "target": "minecraft:iron_ingot",
-    "replacement": "#c:ingots/lead"
-  },
-  {
-    "action": "replace_input",
-    "filter": {
-      "id": "modestmagic:infusing/enchantment_tablet_infested"
-    },
-    "target": "minecraft:spider_eye",
-    "replacement": "buzzier_bees:silverfish_bottle"
   },
   {
     "action": "replace_input",
@@ -348,25 +268,9 @@
   {
     "action": "replace_input",
     "filter": {
-      "id": "supplementaries:cannon"
+      "id": "/nomansland:food\\/grilled_mushrooms.*/"
     },
-    "target": "#c:ingots/lead",
-    "replacement": "#c:ingots/cast_iron"
-  },
-  {
-    "action": "replace_input",
-    "filter": {
-      "id": "supplementaries:cannon_2"
-    },
-    "target": "#c:ingots/iron",
-    "replacement": "#c:ingots/cast_iron"
-  },
-  {
-    "action": "replace_input",
-    "filter": {
-      "id": "quark:tweaks/crafting/utility/misc/easy_hopper"
-    },
-    "target": "#c:ingots/iron",
-    "replacement": "#c:ingots/cast_iron"
+    "target": "#nomansland:edible_mushrooms",
+    "replacement": "#spicedcider:raw_edible_mushrooms"
   }
 ]

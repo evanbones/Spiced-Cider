@@ -1,21 +1,23 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "redstone",
+  "pattern": [
+    "PCP",
+    " V "
+  ],
   "key": {
+    "P": {
+      "tag": "c:plates/cast_iron"
+    },
     "C": {
       "tag": "c:chests/wooden"
     },
-    "I": {
-      "item": "spicedcider:cast_iron_ingot"
+    "V": {
+      "item": "spicedcider:cast_iron_vessel"
     }
   },
-  "pattern": [
-    "I I",
-    "ICI",
-    " I "
-  ],
   "result": {
-    "count": 1,
-    "id": "minecraft:hopper"
+    "id": "minecraft:hopper",
+    "count": 1
   }
 }

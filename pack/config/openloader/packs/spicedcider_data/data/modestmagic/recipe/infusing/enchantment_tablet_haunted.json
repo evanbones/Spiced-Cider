@@ -1,0 +1,38 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "modestmagic"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "quark"
+    }
+  ],
+  "type": "modestmagic:infusing",
+  "base": {
+    "item": "modestmagic:enchantment_tablet"
+  },
+  "ingredients": [
+    {
+      "item": "quark:soul_bead"
+    },
+    {
+      "item": "minecraft:sculk_vein"
+    },
+    {
+      "item": "minecraft:sculk_vein"
+    },
+    {
+      "item": "minecraft:sculk_vein"
+    },
+    {
+      "item": "minecraft:sculk_vein"
+    }
+  ],
+  "results": [
+    {
+      "id": "modestmagic:enchantment_tablet_haunted"
+    }
+  ]
+}

@@ -7,6 +7,7 @@ import dev.emi.emi.api.EmiRegistry;
 import dev.emi.emi.api.recipe.VanillaEmiRecipeCategories;
 import dev.emi.emi.api.stack.Comparison;
 import dev.emi.emi.api.stack.EmiStack;
+import dev.emi.emi.registry.EmiRecipes;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.neoforged.fml.ModList;
@@ -16,13 +17,14 @@ import java.util.Set;
 @EmiEntrypoint
 public class SpicedCiderEmiPlugin implements EmiPlugin {
     private static final Set<String> DUPLICATE_INFO_NAMESPACES = Set.of("mynethersdelight", "exposure");
+    private static final ResourceLocation WOODWORKS_SAWING = ResourceLocation.fromNamespaceAndPath("woodworks", "sawing");
 
     @Override
     public void register(EmiRegistry registry) {
         if (SpicedCiderConfig.clientOr(SpicedCiderConfig.CLIENT.emiTappingCategory, false) && ModList.get().isLoaded("nomansland")) {
             TappingEmiRecipe.register(registry);
         }
-        if (ModList.get().isLoaded("toil_and_trouble")) {
+        if (ModList.get().isLoaded("create")) {
             BrewingEmiRecipe.register(registry);
         }
         if (ModList.get().isLoaded("etcetera")) {
@@ -31,7 +33,10 @@ public class SpicedCiderEmiPlugin implements EmiPlugin {
         if (ModList.get().isLoaded("clayworks")) {
             KilnBakingEmi.register(registry);
         }
-        CauldronMixingEmiRecipe.register(registry);
+        if (ModList.get().isLoaded("create")) {
+            LadleMixingEmiRecipe.register(registry);
+        }
+        CastingEmiRecipes.register(registry);
         TanningEmiRecipe.register(registry);
         LootEmiCategories.register(registry);
         if (SpicedCiderConfig.clientOr(SpicedCiderConfig.CLIENT.emiHideSmithingCategory, false)) {
@@ -48,6 +53,12 @@ public class SpicedCiderEmiPlugin implements EmiPlugin {
         if (ModList.get().isLoaded("farmersdelight")) {
             registry.addWorkstation(VanillaEmiRecipeCategories.CAMPFIRE_COOKING,
                     EmiStack.of(BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath("farmersdelight", "stove"))));
+        }
+        if (ModList.get().isLoaded("create") && ModList.get().isLoaded("woodworks")) {
+            EmiStack saw = EmiStack.of(BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath("create", "mechanical_saw")));
+            registry.addDeferredRecipes(consumer -> EmiRecipes.categories.stream()
+                    .filter(category -> WOODWORKS_SAWING.equals(category.getId()))
+                    .forEach(category -> registry.addWorkstation(category, saw)));
         }
         if (ModList.get().isLoaded("supplementaries")) {
             registry.setDefaultComparison(BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath("supplementaries", "cartographers_quill")), Comparison.compareComponents());

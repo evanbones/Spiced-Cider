@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": [
+      {
+        "item": "minecraft:wheat"
+      },
+      {
+        "item": "farmersdelight:straw"
+      }
+    ]
+  },
+  "pattern": [
+    "###",
+    "# #"
+  ],
+  "result": {
+    "count": 1,
+    "id": "bountifulfares:sun_hat"
+  }
+}

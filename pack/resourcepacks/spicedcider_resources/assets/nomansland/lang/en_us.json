@@ -33,9 +33,9 @@
   "lore.nomansland.firebomb": "A throwable bomb of Gunpowder and Resin. It bursts into flame, but won't damage blocks.",
   "lore.nomansland.ink_bomb": "A throwable bomb packed with ink. It leaves a cloud that blinds and slows everything caught in it, and reveals invisible creatures.",
   "lore.nomansland.incendiary_arrow": "An arrow dipped in Resin Oil that sets its target on fire.",
-  "lore.nomansland.resin": "A sticky sap collected from logs with a Tap and a Cauldron. Used for Firebombs, Resin Oil, and Warding Bandages.",
+  "lore.nomansland.resin": "A sticky sap collected from Spruce and Pine trees with a Tap and a Basin. Used for Firebombs, Resin Oil, and Warding Bandages.",
   "lore.nomansland.resin_oil_bottle": "A bottle of flammable oil that can be thrown. Creatures doused in it catch fire far more easily.",
-  "lore.nomansland.tap": "A spout fixed to the side of a log or container. It slowly collects sap from tapped trees, and pours liquids out of Cauldrons, Jars, tanks and beehives into whatever sits below. Toggle it by hand or with Flux Power.",
+  "lore.nomansland.tap": "A spout fixed to the side of a log or container. It slowly collects Resin from Spruce and Pine trees, Maple Syrup from Maple trees and Latex from Kapok trees, and pours liquids out of Basins, Jars, tanks and beehives into whatever sits below. Toggle it by hand or with Flux Power.",
   "lore.nomansland.monster_anchor": "A cursed block found in ancestral ruins. Monsters slain near it are dragged back to life after a while. Break it to stop the cycle.",
   "lore.nomansland.warding_effigy": "A small effigy that keeps monsters from spawning or wandering nearby. Stack up to four on one block to widen its range.",
   "lore.nomansland.ancestral_effigy": "An ancient carved effigy found in ancestral ruins.",
@@ -72,7 +72,7 @@
   "lore.nomansland.pufferfish_barrel": "A barrel packed with Pufferfish, for compact storage.",
   "lore.nomansland.tropical_fish_barrel": "A barrel packed with Tropical Fish, for compact storage.",
   "lore.nomansland.pear_juice": "A refreshing bottle of pressed Pears.",
-  "lore.nomansland.maple_syrup_bottle": "Sweet syrup collected from Maple logs with a Tap and a Cauldron.",
+  "lore.nomansland.maple_syrup_bottle": "Sweet syrup collected from Maple logs with a Tap and a Basin.",
   "lore.nomansland.reeds": "A tall plant that grows in shallow water.",
   "lore.nomansland.cattail": "A tall plant that grows along the edges of ponds and rivers.",
   "lore.nomansland.beard_moss": "A hanging moss that grows from the underside of leaves.",
@@ -86,5 +86,7 @@
   "lore.nomansland.pear_cobbler": "A sweet cobbler baked with Pears. Place it and use a Knife on it to cut 4 slices.",
   "item.nomansland.awkward_residue": "Clear Residue",
   "lore.nomansland.awkward_residue": "The dried dregs of old alchemy, found in the pots and buried soil of Alchemist Ruins and dropped by Sporals. Brews Water into a Clear Potion in place of Nether Wart.",
-  "lore.nomansland.music_disc_guidance": "A music disc for the Jukebox. A gift from the Friend Moon once it has found some company."
+  "lore.nomansland.music_disc_guidance": "A music disc for the Jukebox. A gift from the Friend Moon once it has found some company.",
+  "effect.nomansland.flammable.description": "Doused in oil. Fire or a hit from a fire-starting weapon makes you burst into flames, taking damage, burning for the rest of the effect and setting other flammable creatures nearby alight. Water and rain wash it off.",
+  "lore.nomansland.polished_siltstone": "A block of Siltstone that has been polished."
 }

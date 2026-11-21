@@ -1,0 +1,21 @@
+[
+  {
+    "advancements": "spicedcider:spiced_cider/crafting_table",
+    "patterns": ".*",
+    "types": "items",
+    "exclude": [
+      "#emi_discovery:requires_advancement/spicedcider/creative_items",
+      "/.*:.*_spawn_egg/"
+    ]
+  },
+  {
+    "advancements": "spicedcider:nether/enter_nether",
+    "tags": "#emi_discovery:requires_advancement/spicedcider/nether/enter_nether",
+    "types": "items"
+  },
+  {
+    "advancements": "minecraft:end/root",
+    "tags": "#emi_discovery:requires_advancement/minecraft/end/root",
+    "types": "items"
+  }
+]

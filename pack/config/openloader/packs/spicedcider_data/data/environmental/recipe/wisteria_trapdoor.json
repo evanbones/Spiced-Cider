@@ -1,0 +1,24 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "environmental:wisteria_trapdoor"
+    }
+  ],
+  "key": {
+    "#": {
+      "item": "environmental:wisteria_planks"
+    }
+  },
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "result": {
+    "id": "environmental:wisteria_trapdoor",
+    "count": 6
+  },
+  "group": "wooden_trapdoor",
+  "category": "redstone",
+  "type": "minecraft:crafting_shaped"
+}

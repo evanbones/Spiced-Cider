@@ -1,0 +1,31 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "bountifulfares"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "everycomp"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "abundant_atmosphere"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "woodworks"
+    }
+  ],
+  "type": "woodworks:sawmill",
+  "group": "planks",
+  "ingredient": [
+    {
+      "item": "abundant_atmosphere:red_bamboo_planks"
+    }
+  ],
+  "result": {
+    "id": "everycomp:bf/abundant_atmosphere/red_bamboo_trellis",
+    "count": 1
+  }
+}

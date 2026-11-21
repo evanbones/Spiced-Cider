@@ -8,7 +8,7 @@ evaluationDependsOn(":roxy")
 def modProject = project(":mod")
 def modId = modProject.mod_id
 def modName = modProject.mod_name
-def modVersion = modProject.mod_version
+def modVersion = modProject.version.toString()
 
 group = modProject.mod_group_id
 version = modVersion

@@ -1,0 +1,27 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "alloyed"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "caverns_and_chasms"
+    }
+  ],
+  "type": "spicedcider:smeltery_alloying",
+  "fluids": [
+    {
+      "tag": "c:molten_copper",
+      "amount": 750
+    },
+    {
+      "tag": "c:molten_tin",
+      "amount": 250
+    }
+  ],
+  "result": {
+    "id": "spicedcider:molten_bronze",
+    "amount": 1000
+  }
+}

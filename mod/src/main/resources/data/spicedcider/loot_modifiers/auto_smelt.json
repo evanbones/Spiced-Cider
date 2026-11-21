@@ -1,0 +1,13 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "spicedcider:feature",
+      "feature": "autoSmelting"
+    }
+  ],
+  "type": "spicedcider:auto_smelt",
+  "conditions": [],
+  "tools": "spicedcider:auto_smelting_tools",
+  "exempt_items": "spicedcider:auto_smelt_exempt",
+  "exempt_blocks": "spicedcider:auto_smelt_exempt"
+}

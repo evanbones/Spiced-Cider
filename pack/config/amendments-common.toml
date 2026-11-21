@@ -149,7 +149,7 @@
 	#Makes wooden fences connect to nether brick fences
 	wooden_to_nether_fences = true
 	#Makes fences, walls, panes and bars connect to wall signs attached to them
-	wall_signs = true
+	wall_signs = false
 
 [bubble_column]
 	#Makes bubble columns to extend up through grate like blocks (amendments:bubble_column_passable tag)

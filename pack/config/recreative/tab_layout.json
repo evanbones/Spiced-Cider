@@ -226,7 +226,6 @@
       "everycomp:abnww/spicedcider/flowering_avocado_leaf_pile",
       "everycomp:abnww/bountifulfares/flowering_golden_apple_leaf_pile",
       "everycomp:abnww/spicedcider/flowering_pear_leaf_pile",
-      "everycomp:abnww/nomansland/frosted_leaf_pile",
       "everycomp:abnww/bountifulfares/flowering_lemon_leaf_pile",
       "spicedcider:bb/upgrade_aquatic/driftwood_seat",
       "spicedcider:bb/architects_palette/twisted_seat",
@@ -1170,7 +1169,6 @@
       "modestmasonry:cement_pillar",
       "etcetera:rubber_block",
       "etcetera:rubber_button",
-      "nomansland:thatch",
       "bountifulfares:packed_coconut_coir",
       "bountifulfares:coir_carpet",
       "bountifulfares:coir_bricks",
@@ -2782,7 +2780,6 @@
       "woodworks:oak_leaf_pile",
       "minecraft:spruce_leaves",
       "nomansland:pine_leaves",
-      "nomansland:frosted_leaves",
       "woodworks:spruce_leaf_pile",
       "minecraft:birch_leaves",
       "nomansland:yellow_birch_leaves",
@@ -2846,7 +2843,6 @@
       "everycomp:abnww/spicedcider/flowering_avocado_leaf_pile",
       "everycomp:abnww/bountifulfares/flowering_golden_apple_leaf_pile",
       "everycomp:abnww/spicedcider/flowering_pear_leaf_pile",
-      "everycomp:abnww/nomansland/frosted_leaf_pile",
       "everycomp:abnww/bountifulfares/flowering_lemon_leaf_pile",
       "bountifulfares:apple_leaves",
       "bountifulfares:flowering_apple_leaves",
@@ -2925,6 +2921,7 @@
       "minecraft:dead_bush",
       "spicedcider:pale_bush",
       "spicedcider:tall_pale_bush",
+      "spicedcider:dead_wood_branch",
       "nomansland:pickleweed",
       "nomansland:succulent",
       "nomansland:barrel_cactus",
@@ -3256,8 +3253,6 @@
       "autumnity:turkey_egg_crate",
       "incubation:turtle_egg_crate",
       "environmental:cattail_fluff_block",
-      "environmental:yak_hair_block",
-      "environmental:yak_hair_rug",
       "environmental:cherry_crate",
       "nirvana:hemp_crate",
       "nirvana:weed_crate",
@@ -3874,7 +3869,18 @@
       "minecraft:jukebox",
       "supplementaries:speaker_block",
       "etcetera:drum",
-      "minecraft:cauldron",
+      "spicedcider:crucible",
+      "spicedcider:smeltery",
+      "spicedcider:unfired_ingot_mould",
+      "spicedcider:ingot_mould",
+      "spicedcider:unfired_plate_mould",
+      "spicedcider:plate_mould",
+      "spicedcider:unfired_vessel_mould",
+      "spicedcider:vessel_mould",
+      "spicedcider:unfired_frame_mould",
+      "spicedcider:frame_mould",
+      "spicedcider:unfired_pipe_mould",
+      "spicedcider:pipe_mould",
       "supplementaries:goblet",
       "supplementaries:jar",
       "supplementaries:hourglass",
@@ -5573,7 +5579,6 @@
       "minecraft:note_block",
       "supplementaries:speaker_block",
       "minecraft:composter",
-      "minecraft:cauldron",
       "minecraft:oak_chest_boat",
       "minecraft:bamboo_chest_raft",
       "minecraft:oak_door",
@@ -5762,6 +5767,7 @@
       "create:crushing_wheel",
       "create:mechanical_press",
       "create:mechanical_mixer",
+      "create:mechanical_saw",
       "create:basin",
       "create:empty_blaze_burner",
       "create:blaze_burner",
@@ -5800,7 +5806,6 @@
       "create:radial_chassis",
       "create:sticker",
       "create:contraption_controls",
-      "create:mechanical_saw",
       "create:deployer",
       "create:portable_storage_interface",
       "create:redstone_contact",
@@ -7640,7 +7645,6 @@
           "slime_time:dyed_color": "black"
         }
       },
-      "environmental:yak_pants",
       "minecraft:leather_horse_armor",
       "minecraft:copper_horse_armor",
       "minecraft:golden_horse_armor",
@@ -8144,6 +8148,7 @@
       "neapolitan:banana_bread",
       "buzzier_bees:honey_bread",
       "autumnity:pumpkin_bread",
+      "spicedcider:maize_batter",
       "bountifulfares:maize_bread",
       "minecraft:cookie",
       "nomansland:sweet_tart",
@@ -8587,13 +8592,12 @@
       "modestmagic:enchantment_tablet_infested",
       "modestmagic:enchantment_tablet_recollection",
       "modestmagic:enchantment_tablet_swift",
-      "modestmagic:enchantment_tablet_fiery",
-      "modestmagic:enchantment_tablet_light",
-      "modestmagic:enchantment_tablet_lucky",
-      "modestmagic:enchantment_tablet_serrated",
       "modestmagic:enchantment_tablet_puncturing",
       "modestmagic:enchantment_tablet_enduring",
-      "modestmagic:enchantment_tablet_secure"
+      "spicedcider:enchantment_tablet_beastly",
+      "spicedcider:enchantment_tablet_otherworldly",
+      "spicedcider:enchantment_tablet_pulling",
+      "spicedcider:enchantment_tablet_silent"
     ],
     "add_items": [
       "spelunkery:raw_iron_nugget",
@@ -8644,6 +8648,8 @@
       "minecraft:iron_ingot",
       "spicedcider:cast_iron_ingot",
       "spicedcider:cast_iron_sheet",
+      "spicedcider:cast_iron_vessel",
+      "spicedcider:cast_iron_frame",
       "create:copper_sheet",
       "create:crushed_raw_copper",
       "create:iron_sheet",
@@ -8660,6 +8666,7 @@
       "minecraft:gold_ingot",
       "modestmining:lead_ingot",
       "spicedcider:lead_sheet",
+      "spicedcider:lead_pipe",
       "modestmining:electrum_ingot",
       "spicedcider:electrum_sheet",
       "modestmining:copper_screw",
@@ -8702,7 +8709,6 @@
       "quark:egg_parrot_red_blue",
       "environmental:duck_egg",
       "autumnity:turkey_egg",
-      "environmental:yak_hair",
       "minecraft:leather",
       "modestmining:flesh",
       "minecraft:rabbit_hide",
@@ -8721,7 +8727,97 @@
       "minecraft:turtle_scute",
       "nomansland:sturdy_scute",
       "autumnity:snail_shell_piece",
+      {
+        "item": "minecraft:slime_ball",
+        "components": {
+          "slime_time:dyed_color": "white"
+        }
+      },
+      {
+        "item": "minecraft:slime_ball",
+        "components": {
+          "slime_time:dyed_color": "orange"
+        }
+      },
+      {
+        "item": "minecraft:slime_ball",
+        "components": {
+          "slime_time:dyed_color": "magenta"
+        }
+      },
+      {
+        "item": "minecraft:slime_ball",
+        "components": {
+          "slime_time:dyed_color": "light_blue"
+        }
+      },
+      {
+        "item": "minecraft:slime_ball",
+        "components": {
+          "slime_time:dyed_color": "yellow"
+        }
+      },
       "minecraft:slime_ball",
+      {
+        "item": "minecraft:slime_ball",
+        "components": {
+          "slime_time:dyed_color": "pink"
+        }
+      },
+      {
+        "item": "minecraft:slime_ball",
+        "components": {
+          "slime_time:dyed_color": "gray"
+        }
+      },
+      {
+        "item": "minecraft:slime_ball",
+        "components": {
+          "slime_time:dyed_color": "light_gray"
+        }
+      },
+      {
+        "item": "minecraft:slime_ball",
+        "components": {
+          "slime_time:dyed_color": "cyan"
+        }
+      },
+      {
+        "item": "minecraft:slime_ball",
+        "components": {
+          "slime_time:dyed_color": "purple"
+        }
+      },
+      {
+        "item": "minecraft:slime_ball",
+        "components": {
+          "slime_time:dyed_color": "blue"
+        }
+      },
+      {
+        "item": "minecraft:slime_ball",
+        "components": {
+          "slime_time:dyed_color": "brown"
+        }
+      },
+      {
+        "item": "minecraft:slime_ball",
+        "components": {
+          "slime_time:dyed_color": "green"
+        }
+      },
+      {
+        "item": "minecraft:slime_ball",
+        "components": {
+          "slime_time:dyed_color": "red"
+        }
+      },
+      {
+        "item": "minecraft:slime_ball",
+        "components": {
+          "slime_time:dyed_color": "black"
+        }
+      },
       "autumnity:snail_goo",
       "bountifulfares:feldspar",
       "bountifulfares:ceramic_clay",

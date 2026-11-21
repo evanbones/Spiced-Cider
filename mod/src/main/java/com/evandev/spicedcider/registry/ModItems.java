@@ -1,5 +1,7 @@
 package com.evandev.spicedcider.registry;
 
+import com.evandev.spicedcider.content.casting.CrucibleItem;
+import com.evandev.spicedcider.content.casting.MouldShape;
 import com.evandev.spicedcider.SpicedCider;
 import com.evandev.spicedcider.content.item.MapInABottleItem;
 import com.evandev.spicedcider.content.item.BalloonItem;
@@ -10,8 +12,10 @@ import com.evandev.spicedcider.content.item.PocketJukeboxItem;
 import com.evandev.spicedcider.content.item.RuinedPageItem;
 import com.evandev.spicedcider.content.item.LootPouchItem;
 import com.evandev.spicedcider.compat.architectspalette.ArchitectsPaletteCompat;
+import com.evandev.spicedcider.compat.bountifulfares.BountifulFaresCompat;
 import com.evandev.spicedcider.compat.farmersdelight.FarmersDelightCompat;
 import com.evandev.spicedcider.compat.tide.TideCompat;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
@@ -106,6 +110,20 @@ public class ModItems {
             () -> new BlockItem(ModBlocks.CAST_IRON_BLOCK.get(), new Item.Properties()));
     public static final DeferredItem<Item> CAST_IRON_SHEET = ITEMS.register("cast_iron_sheet",
             () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> CAST_IRON_VESSEL = ITEMS.register("cast_iron_vessel",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> CAST_IRON_FRAME = ITEMS.register("cast_iron_frame",
+            () -> new Item(new Item.Properties()));
+    @Nullable
+    public static final DeferredItem<Item> LEAD_PIPE = ModList.get().isLoaded("modestmining")
+            ? ITEMS.register("lead_pipe", () -> new Item(new Item.Properties()))
+            : null;
+    public static final DeferredItem<Item> CRUCIBLE = ITEMS.register("crucible",
+            () -> new CrucibleItem(ModBlocks.CRUCIBLE.get(), new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> SMELTERY = ITEMS.register("smeltery",
+            () -> new BlockItem(ModBlocks.SMELTERY.get(), new Item.Properties().stacksTo(1)));
+    public static final Map<MouldShape, DeferredItem<Item>> UNFIRED_MOULDS = moulds("unfired_%s_mould", false);
+    public static final Map<MouldShape, DeferredItem<Item>> MOULDS = moulds("%s_mould", true);
     public static final Map<String, ResourceLocation> SHEET_INGOTS = sheetIngots();
     public static final Map<String, DeferredItem<Item>> METAL_SHEETS = metalSheets();
 
@@ -157,6 +175,7 @@ public class ModItems {
             : null;
     public static final DeferredItem<BlockItem> WORMY_DIRT = ITEMS.registerSimpleBlockItem(ModBlocks.WORMY_DIRT);
     public static final DeferredItem<BlockItem> RICH_GRAVEL = ITEMS.registerSimpleBlockItem(ModBlocks.RICH_GRAVEL);
+    public static final DeferredItem<BlockItem> DEAD_WOOD_BRANCH = ITEMS.registerSimpleBlockItem(ModBlocks.DEAD_WOOD_BRANCH);
     public static final DeferredItem<BlockItem> GLOAMWOOD_SAPLING = ITEMS.registerSimpleBlockItem(ModBlocks.GLOAMWOOD_SAPLING);
     public static final DeferredItem<BlockItem> WORM_CRATE = ITEMS.registerSimpleBlockItem(ModBlocks.WORM_CRATE);
     public static final DeferredItem<Item> MAP_IN_A_BOTTLE = ITEMS.register("map_in_a_bottle",
@@ -195,6 +214,18 @@ public class ModItems {
     public static final DeferredItem<BlockItem> PASSION_FRUIT_CRATE = ModBlocks.PASSION_FRUIT_CRATE != null ? ITEMS.registerSimpleBlockItem(ModBlocks.PASSION_FRUIT_CRATE) : null;
     @Nullable
     public static final DeferredItem<BlockItem> PUFFBALL_MUSHROOM_CRATE = ModBlocks.PUFFBALL_MUSHROOM_CRATE != null ? ITEMS.registerSimpleBlockItem(ModBlocks.PUFFBALL_MUSHROOM_CRATE) : null;
+    @Nullable
+    public static final DeferredItem<Item> MAIZE_BATTER = BountifulFaresCompat.isLoaded()
+            ? ITEMS.register("maize_batter", () -> new Item(new Item.Properties()))
+            : null;
+    @Nullable
+    public static final DeferredItem<Item> BEASTLY_TABLET = tablet("beastly");
+    @Nullable
+    public static final DeferredItem<Item> OTHERWORLDLY_TABLET = tablet("otherworldly");
+    @Nullable
+    public static final DeferredItem<Item> PULLING_TABLET = tablet("pulling");
+    @Nullable
+    public static final DeferredItem<Item> SILENT_TABLET = tablet("silent");
 
     static {
         if (PUFFBALL_MUSHROOM_CRATE != null) {
@@ -303,6 +334,14 @@ public class ModItems {
     }
 
     @Nullable
+    private static DeferredItem<Item> tablet(String name) {
+        return ModList.get().isLoaded("modestmagic")
+                ? ITEMS.register("enchantment_tablet_" + name, () -> new Item(new Item.Properties()
+                .component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true)))
+                : null;
+    }
+
+    @Nullable
     private static DeferredItem<Item> tideHook(String name) {
         return TideCompat.isLoaded()
                 ? ITEMS.register(name, () -> TideCompat.createHookItem(new Item.Properties(), "item.spicedcider." + name + ".desc"))
@@ -319,6 +358,15 @@ public class ModItems {
         return ModList.get().isLoaded("nomansland")
                 ? ITEMS.register(name, () -> new Item(new Item.Properties().stacksTo(16)))
                 : null;
+    }
+
+    private static Map<MouldShape, DeferredItem<Item>> moulds(String pattern, boolean fired) {
+        Map<MouldShape, DeferredItem<Item>> map = new java.util.EnumMap<>(MouldShape.class);
+        for (MouldShape shape : MouldShape.values()) {
+            String name = pattern.formatted(shape.getSerializedName());
+            map.put(shape, ITEMS.register(name, () -> fired ? new BlockItem(ModBlocks.MOULDS.get(shape).get(), new Item.Properties().stacksTo(16)) : new Item(new Item.Properties().stacksTo(16))));
+        }
+        return map;
     }
 
     private static Map<String, ResourceLocation> sheetIngots() {

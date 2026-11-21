@@ -1,0 +1,23 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "clayworks:glass_trapdoor"
+    }
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:glass"
+    }
+  },
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "result": {
+    "id": "clayworks:glass_trapdoor",
+    "count": 6
+  },
+  "category": "redstone",
+  "type": "minecraft:crafting_shaped"
+}

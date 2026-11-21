@@ -1,6 +1,7 @@
 package com.evandev.spicedcider.registry;
 
 import com.evandev.spicedcider.SpicedCider;
+import com.evandev.spicedcider.content.loot.AutoSmeltLootModifier;
 import com.evandev.spicedcider.content.loot.BonusBlockDropLootModifier;
 import com.evandev.spicedcider.content.loot.ReplaceLootLootModifier;
 import com.evandev.spicedcider.content.loot.CleaverSkullDropLootModifier;
@@ -27,4 +28,6 @@ public class ModLootModifiers {
             LOOT_MODIFIER_SERIALIZERS.register("ore_host_stone", () -> OreHostStoneLootModifier.CODEC);
     public static final DeferredHolder<MapCodec<? extends IGlobalLootModifier>, MapCodec<MusicDiscSourcesLootModifier>> MUSIC_DISC_SOURCES =
             LOOT_MODIFIER_SERIALIZERS.register("music_disc_sources", () -> MusicDiscSourcesLootModifier.CODEC);
+    public static final DeferredHolder<MapCodec<? extends IGlobalLootModifier>, MapCodec<AutoSmeltLootModifier>> AUTO_SMELT =
+            LOOT_MODIFIER_SERIALIZERS.register("auto_smelt", () -> AutoSmeltLootModifier.CODEC);
 }

@@ -371,5 +371,12 @@
     "enchantments": [
       "minecraft:sharpness"
     ]
+  },
+  {
+    "action": "remove",
+    "items": [
+      "minecraft:cauldron"
+    ],
+    "replace_with": "create:basin"
   }
 ]

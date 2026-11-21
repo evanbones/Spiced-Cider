@@ -249,6 +249,14 @@
       "pattern": "^(\\[STDOUT\\]: )?TEST2?$",
       "action": "DENY",
       "level": "INFO"
+    },
+    {
+      "name": "Suppress C2ME density function compiler timing prints",
+      "enabled": true,
+      "type": "MESSAGE_REGEX",
+      "pattern": "Density function compilation finished in [0-9.]+ ms$",
+      "action": "DENY",
+      "level": "INFO"
     }
   ]
 }

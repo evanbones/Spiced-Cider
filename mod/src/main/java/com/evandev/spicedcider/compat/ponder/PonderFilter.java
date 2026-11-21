@@ -17,7 +17,9 @@ public final class PonderFilter {
 
     private static final Set<ResourceLocation> HIDDEN_SCHEMATICS = Set.of(
             ResourceLocation.fromNamespaceAndPath("create", "chute/upward"),
-            ResourceLocation.fromNamespaceAndPath("create", "creative_motor_mojang")
+            ResourceLocation.fromNamespaceAndPath("create", "creative_motor_mojang"),
+            ResourceLocation.fromNamespaceAndPath("create", "mechanical_saw/breaker"),
+            ResourceLocation.fromNamespaceAndPath("create", "mechanical_saw/contraption")
     );
 
     public static boolean isRemoved(ResourceLocation component) {

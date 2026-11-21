@@ -1,13 +1,9 @@
-### Removed
+### Added
 
-- Removed Spelunkery's stone, deepslate, netherrack, magma, blackstone, and basalt pebbles. 
+- Fish Trap: place it underwater with bait and it slowly catches fish from that biome. Bigger bodies of water catch
+  more often, and better bait brings in more fish per catch. New advancement: Effishiency.
 
 ### Changed
 
-- Lodestones have one recipe instead of two.
-
-### Fixed
-
-- Stairs, slabs and walls of removed blocks showing in EMI when playing on a server.
-- Opening a profile's settings in the controller settings while no controller is in use no longer crashes the game.
-- Fixed Forge block texture.
+- ParCool is replaced by Get Over It again: hold jump against a two-block ledge to climb up it.
+- Personality's crawl is back, on the Change Stance key.

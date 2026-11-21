@@ -1,0 +1,20 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "oooh_pinky"
+    }
+  ],
+  "type": "spicedcider:crucible_melting",
+  "ingredients": [
+    {
+      "item": "oooh_pinky:rose_gold_ingot"
+    }
+  ],
+  "result": {
+    "id": "spicedcider:molten_rose_gold",
+    "amount": 250
+  },
+  "heat": "low",
+  "time": 200
+}

@@ -1,0 +1,16 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "spelunkery"
+    },
+    {
+      "type": "spicedcider:feature",
+      "feature": "springPools"
+    }
+  ],
+  "type": "neoforge:add_features",
+  "biomes": "#spicedcider:has_feature/spring_pools",
+  "features": "spicedcider:spring_pool",
+  "step": "lakes"
+}

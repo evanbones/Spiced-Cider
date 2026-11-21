@@ -9,12 +9,12 @@ Your tools stay with you when you die.
 Enchantment Tablets apply their enchantments to gear at an anvil.
 Extermination hurts creepers and spiders. Consecration hurts the undead.
 Armor and tool trims are applied at the styling table.
-Potions are brewed in a heated cauldron. Start with a Clear Potion, then add ingredients one at a time.
-Ingredients with clashing effects taint a brew. Empty the cauldron to start over.
+Potions are brewed in a heated basin. Start with a Clear Potion, add ingredients and stir with a spoon.
+Ingredients with clashing effects taint a brew. Empty the basin to start over.
 Gunpowder turns a potion into a splash potion. Creeper spores make it lingering.
-Some cauldron recipes need stirring. Use a spoon over a full cauldron.
+Hold right-click on a basin with a spoon to mix its contents by hand, no mixer needed.
 Kapok trees can be tapped for latex, which can be made into rubber.
-Crying obsidian slowly weeps tears into a cauldron below it.
+Crying obsidian slowly weeps tears into a basin below it.
 Nether portals are lit with dimensional tears.
 Placed coloured blocks can be dyed by using a dye on them.
 A chisel carves blocks into their chiseled variants.
@@ -63,7 +63,7 @@ Each piece of Electrum armor makes you a little faster, and Piglins leave its we
 Piglins wield broadswords and brutes wield battleaxes. Both hit hard but swing slowly.
 Worn-out metal tools become Broken instead of shattering. Repair them to use them again.
 A Fire Striker is good for lighting a single fire or campfire.
-Cast Iron is forged from iron and coal. Cauldrons, hoppers and minecarts are made from it.
+Cast Iron is forged from iron and coal. Basins, hoppers and minecarts are made from it.
 Tallow is rendered from pork or beef in a cooking pot. It goes into frying, soap and candles.
 A Pocket Jukebox holds up to 20 music discs. Right-click discs onto it in your inventory.
 Use a Pocket Jukebox to play or pause its music. Sneak as you use it to shuffle.
@@ -90,7 +90,7 @@ Cacao trees grow in jungles. Their pods sprout beneath flowering leaves.
 Bone meal on flowering fruit leaves sprouts fruit right away.
 Hit ripe hanging fruit with a projectile to knock it down.
 Fruit tree logs aren't sturdy enough for planks, but can be crafted into sticks.
-Any fluid in a bucket can be poured into a cauldron or scooped back out. A bucket holds four bottles.
+Any fluid in a bucket can be poured into a basin or scooped back out. A bucket holds four bottles.
 Spruce, pine and fir logs can be tapped for resin. Maple logs give syrup.
 Latex sets into rubber in a press, or when mixed hot with Sulfur Dust.
 At the styling table, glow ink makes a trim glow, citrine dust makes it pulse and prismarine shards fade it.
@@ -104,7 +104,6 @@ Puffball mushrooms planted on dirt slowly swell into large puffballs.
 Fully grown puffballs burst into spores when broken, and puff out a cloud when stepped on.
 Gourdnuts can be carved, roasted, or turned into a lamp.
 Stuffed Gourdnut is placed like a block. Use a bowl on it to take each of its four servings.
-Dye water in a cauldron, then fill a bottle from it to keep that exact shade for tinting other things.
 Carpets can be laid on stairs and slabs.
 Hanging signs can display an item. Use the item on the sign to hang it there.
 Lanterns can be placed on the sides of blocks.
@@ -207,7 +206,6 @@ Chests get festive around Christmas.
 Pigs can sniff out truffles buried in the dirt of dark forests.
 Slabfish can be dressed up in sweaters and backpacks.
 Give a slabfish an old music disc and it might hand you a new one in return.
-Yaks roam the mountains and can be sheared for their shaggy hair.
 Zebras roam the savannas and can be tamed and ridden.
 Koi can be caught in cherry groves and blossom woods.
 Pinecone golems carry saplings around and plant them.
@@ -220,7 +218,7 @@ Turtle rafts squeeze through one-block gaps and can fly a banner.
 A tidal helmet charges up Conduit Power for you to use underwater.
 Crumbling stone breaks away when stood on. Wax it to keep it intact.
 Flux wires are waterproof and won't connect to regular flux dust, so circuits can run side by side.
-An item label adds your own text to an item's tooltip, up to four per item. A water cauldron washes them off.
+An item label adds your own text to an item's tooltip, up to four per item. Using the item on a basin of water washes them off.
 Squid lamps shine much brighter underwater.
 Most wooden furniture and fixtures come in every type of wood.
 Mausoleums stand in dark taigas and frozen woods.
@@ -339,8 +337,24 @@ Cutting onions near obsidian can make it start crying.
 A placed Motley Grill flares up when set over a heat source.
 When it rains over a desert, the wind whips up dust instead.
 Waterfalls throw up spray and mist where they land, making them easy to spot from afar.
-Press Y to sit down and C to crawl. Press again to get back up.
-Press P for Picture Mode.
+Press C (default) to sit down. Press it again to crawl, and once more to stand back up.
+Crawling lets you fit through one-block gaps.
+Crawl while sprinting to slide under a gap without losing speed.
+Hold right-click at the edge of a block to hang from it, then press jump to climb up.
+While hanging from a ledge, hold back and jump to leap off backwards.
+Press jump in mid-air with a wall at your back to kick off it.
+Sprint at a wall and jump to run up it. Grab the top edge to pull yourself over.
+Sprint and jump at a wall, then hold R (default) to run along it.
+Sprint into a fence or a low wall to vault straight over it.
+Hold sneak for a moment before jumping to leap almost twice as high.
+While sprinting, tap sneak to make a long jump.
+Press R (default) just as you land to roll out of a fall and take almost no damage.
+Press R (default) with a movement key to dodge roll out of harm's way.
+Hold right-click against a wall while falling to slide down it slowly.
+Sprint off a high ledge to dive, and press jump mid-dive to spread out and fall slower.
+Climbing, rolling, and wall running all use stamina. Moves won't start while you're exhausted.
+Sitting down makes your stamina recover twice as fast.
+Press P (default) for Picture Mode.
 Piglin Alchemists brew potions mid-fight and throw them to help other piglins. Take them out first.
 Healing and regeneration arrows mend whatever they hit instead of hurting it.
 A Storage Crate holds 640 items no matter their stack size, perfect for tools and odds and ends.
@@ -353,7 +367,7 @@ Hoes clear a 3-wide patch of plants at once, and better hoes clear 5.
 Use a mature crop to harvest it and replant it in one go.
 Click an unwanted item onto a lava bucket in your inventory to destroy it for good.
 When a tool breaks, a matching one from your inventory slides into your hand.
-The Hotbar Swapper key (Z) swaps your hotbar with a row of your inventory.
+The Hotbar Swapper key (default Y) swaps your hotbar with a row of your inventory.
 A Trowel places a random block from your hotbar each time you use it. Great for rough, natural-looking walls.
 Torch Arrows leave a torch wherever they land.
 Hold a torch near a tamed Shiba and it will point out dark spots that need lighting.
@@ -416,6 +430,7 @@ An Echo Fork briefly reveals every living creature nearby.
 Pebbles and bricks can be thrown and break glass.
 Dust Bunnies are timid balls of fluff that live in mineshafts.
 Channels carry water along them, and any items floating in it.
+Press Z (default) to look through a spyglass you're carrying, even one tucked in a bundle or your backpack.
 Scroll while looking through a spyglass to change the zoom.
 Every stone comes in cobbled, mossy, polished, brick, tile, chiseled and pillar forms.
 Every Heavy Key is cut with its own pattern. Anything locked with it opens only for that exact key.
@@ -442,10 +457,11 @@ Some fish only bite at night, in rain, or in warm or cold water. Fiery and Perma
 Fishing in lava needs an Infernite Hook, and the Nether's lava hides its own fish.
 Crates are sometimes reeled in instead of fish. Open them for supplies, bait and treasure.
 Flux Dust makes a brewing potion last longer, and Citrine Dust makes it stronger.
-A cauldron brew takes up to five ingredients.
-Hoppers and funnels can feed ingredients into a brewing cauldron one at a time.
-A mechanical pump can draw finished potions out of a cauldron for a spout to bottle.
-Cauldrons can hold milk, honey, dimensional tears, potions, and lava as well as water.
+A basin brew takes up to five ingredients.
+A mechanical mixer over a basin stirs potions just like a spoon, so brewing can be automated.
+A mechanical pump can draw finished potions out of a basin for a spout to bottle.
+Pointed dripstone under lava drips it into a basin below, a full bucket at a time.
+Water dripping from pointed dripstone into a heated basin boils away and leaves salt behind.
 Creepers scatter more spores at night when exploding than during the day.
 Throw Creeper Spores to hatch friendly Creepies that fight for you.
 Mischief Arrows burst into a spore cloud where they land.
@@ -456,7 +472,7 @@ Eating Boiled Pickerelweed underwater refills some of your air.
 An activated Elder Eye gives a Flux signal whenever it sees a creature in its line of sight.
 Embedded Ammonite on the ocean floor hides a Nautilus Shell.
 Doors and trapdoors made of Thrasher Teeth snap shut on their own shortly after opening.
-Driftwood washes up along beaches and riverbanks.
+Dead wood washes up along beaches and riverbanks, and bare dead trees stand in deserts.
 Squid and glow squid can be scooped up in a bucket.
 Look at a mob or block through a spyglass to see information about it.
 Copper Golems carry items out of Copper Chests into nearby chests. Wax them to stop them oxidising.
@@ -473,7 +489,7 @@ Add friends from the Friends menu, then use Open to Friends to let them join you
 Friends must add each other before they can join each other's worlds.
 Mineshaft walls sometimes hold exposed ore deposits worth mining.
 Mineshafts occasionally hide a Minecart with Dynamite.
-Zombie leaders are larger, wreathed in a red aura and hit much harder.
+Zombie leaders are larger, wreathed in a red aura, and hit much harder.
 Use a pickaxe or hoe on a chain strung between posts to ride it as a zipline.
 Sleeping in a sleeping bag skips the night without moving your spawn point.
 Spiked palisades hurt anything that touches the spikes.
@@ -482,5 +498,8 @@ Despite the name, the forge won't fake your signature.
 Balloons make terrible pillows.
 Straw Golems are made of straw. Keep them well away from fire pits.
 Snails are slow.
+Sundogs appear in cold biomes (no, that's not an animal).
+Zombie leaders drop crystal shards when killed.
 Remember to take frequent breaks.
 Press shift near another player to hug them <3
+Thank you for playing Spiced Cider! <3

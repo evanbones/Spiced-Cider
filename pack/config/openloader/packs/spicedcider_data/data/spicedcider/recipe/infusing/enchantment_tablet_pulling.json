@@ -1,0 +1,39 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "modestmagic"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "spicedcider"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "tide"
+    }
+  ],
+  "type": "modestmagic:infusing",
+  "base": {
+    "item": "modestmagic:enchantment_tablet"
+  },
+  "ingredients": [
+    {
+      "item": "tide:magnetic_bait"
+    },
+    {
+      "item": "tide:magnetic_bait"
+    },
+    {
+      "item": "spicedcider:worm"
+    },
+    {
+      "item": "spicedcider:worm"
+    }
+  ],
+  "results": [
+    {
+      "id": "spicedcider:enchantment_tablet_pulling"
+    }
+  ]
+}

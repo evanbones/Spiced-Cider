@@ -1,12 +1,17 @@
 package com.evandev.spicedcider;
 
+import com.evandev.spicedcider.content.casting.MouldShape;
+import com.evandev.spicedcider.content.casting.CastingCapabilities;
 import com.evandev.spicedcider.compat.continuity.ContinuityLazyModelWrapping;
 import com.evandev.spicedcider.compat.dynamiccrosshair.DynamicCrosshairCompat;
-import com.evandev.spicedcider.compat.lodged.TamedArrowPulling;
-import com.evandev.spicedcider.compat.lodged.TamedArrowPullingClient;
+import com.evandev.spicedcider.content.stuckarrows.StuckArrows;
+import com.evandev.spicedcider.client.stuckarrows.StuckArrowsClient;
+import com.evandev.spicedcider.networking.PullStuckArrowPayload;
+import com.evandev.spicedcider.networking.StuckArrowsPayload;
 import com.evandev.spicedcider.client.ResourcePackDownloader;
-import com.evandev.spicedcider.client.mixing.CauldronStirClient;
+import com.evandev.spicedcider.client.mixing.BasinStirClient;
 import com.evandev.spicedcider.compat.voxy.VoxyFog;
+import com.evandev.spicedcider.compat.modernfix.CrucibleCampfireLazyModelWrapping;
 import com.evandev.spicedcider.compat.modernfix.HangingFruitLazyModelWrapping;
 import com.evandev.spicedcider.compat.wherewindsblow.WhereWindsBlowLazyModelWrapping;
 import com.evandev.spicedcider.compat.everycompat.BlockBoxEveryCompatLoader;
@@ -18,17 +23,17 @@ import com.evandev.spicedcider.compat.yacl.ConfigScreenLoader;
 import com.evandev.spicedcider.config.LogReconfiguration;
 import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.evandev.spicedcider.compat.nomansland.NoMansLandCreate;
-import com.evandev.spicedcider.compat.toilandtrouble.ToilAndTroubleCapabilities;
+import com.evandev.spicedcider.compat.create.BasinStirring;
+import com.evandev.spicedcider.content.handler.BucketCapabilities;
 import com.evandev.spicedcider.compat.treeliable.ChopStamina;
 import com.evandev.spicedcider.compat.everycompat.ChestCapabilities;
-import com.evandev.spicedcider.content.block.LatexCauldronBlock;
 import com.evandev.spicedcider.content.item.BalloonItem;
 import com.evandev.spicedcider.content.handler.SpawnControlEvents;
 import com.evandev.spicedcider.content.handler.SporalEvents;
 import com.evandev.spicedcider.content.handler.SputterEvents;
 import com.evandev.spicedcider.content.handler.StrawGolemEvents;
 import com.evandev.spicedcider.namingunconvention.RandomNameGenerator;
-import com.evandev.spicedcider.networking.CauldronStirPayload;
+import com.evandev.spicedcider.networking.BasinStirPayload;
 import com.evandev.spicedcider.networking.CloudCoverPayload;
 import com.evandev.spicedcider.networking.LootDisplayPayload;
 import com.evandev.spicedcider.content.loot.LootDisplays;
@@ -37,7 +42,6 @@ import com.evandev.spicedcider.networking.GravePositionsPayload;
 import com.evandev.spicedcider.client.gravestone.ClientGraves;
 import com.evandev.spicedcider.networking.LodChunkPayload;
 import com.evandev.spicedcider.networking.LodHelloPayload;
-import com.evandev.spicedcider.networking.PullTamedArrowPayload;
 import com.evandev.spicedcider.lodgen.LodGen;
 import com.evandev.spicedcider.lodgen.client.LodClient;
 import com.evandev.spicedcider.networking.VoidTrailPayload;
@@ -112,6 +116,7 @@ public class SpicedCider {
             }
             if (ModList.get().isLoaded("modernfix")) {
                 HangingFruitLazyModelWrapping.register();
+                CrucibleCampfireLazyModelWrapping.register();
             }
             if (ModList.get().isLoaded("where_winds_blow") && ModList.get().isLoaded("modernfix")) {
                 WhereWindsBlowLazyModelWrapping.register();
@@ -119,9 +124,7 @@ public class SpicedCider {
             if (ModList.get().isLoaded("dynamiccrosshair")) {
                 DynamicCrosshairCompat.register(modEventBus);
             }
-            if (ModList.get().isLoaded("lodged")) {
-                TamedArrowPullingClient.register();
-            }
+            StuckArrowsClient.register();
         }
 
         ModEntityTypes.ENTITY_TYPES.register(modEventBus);
@@ -154,10 +157,13 @@ public class SpicedCider {
         ModCriteria.TRIGGERS.register(modEventBus);
         ModConditions.CONDITION_CODECS.register(modEventBus);
         ModDataComponents.DATA_COMPONENTS.register(modEventBus);
+        ModMenuTypes.MENU_TYPES.register(modEventBus);
         if (ModList.get().isLoaded("iteminteractions")) ItemInteractionsCompat.register(modEventBus);
-        if (ModList.get().isLoaded("toil_and_trouble")) modEventBus.addListener(ToilAndTroubleCapabilities::register);
+        if (ModList.get().isLoaded("create")) BasinStirring.register();
         if (ModList.get().isLoaded("treeliable") && ModList.get().isLoaded("modest_meals")) ChopStamina.register();
         modEventBus.addListener(EventPriority.LOWEST, ChestCapabilities::register);
+        modEventBus.addListener(EventPriority.LOWEST, BucketCapabilities::register);
+        modEventBus.addListener(CastingCapabilities::register);
         ModFluidTypes.FLUID_TYPES.register(modEventBus);
         ModFluids.FLUIDS.register(modEventBus);
 
@@ -194,16 +200,13 @@ public class SpicedCider {
     private static void commonSetup(FMLCommonSetupEvent event) {
         event.enqueueWork(TideCompat::registerFishingMediums);
         event.enqueueWork(IceCubes::registerDispenserBehavior);
-        event.enqueueWork(LatexCauldronBlock::registerInteractions);
         event.enqueueWork(ModMoltenMetals::registerInteractions);
         if (ModList.get().isLoaded("nomansland") && ModList.get().isLoaded("create")) {
             event.enqueueWork(NoMansLandCreate::registerOpenPipeEffects);
         }
-        event.enqueueWork(() -> {
-            ModBlocks.CHOCOLATE_CAULDRON.get().registerInteractions();
-            ModBlocks.SPRING_WATER_CAULDRON.get().registerInteractions();
-            ModBlocks.LUMISENE_CAULDRON.get().registerInteractions();
-        });
+        if (ModList.get().isLoaded("create")) {
+            event.enqueueWork(com.evandev.spicedcider.compat.create.MouldSpouting::register);
+        }
         event.enqueueWork(() -> ModItems.BALLOONS.values().forEach(balloon -> DispenserBlock.registerBehavior(balloon.get(), new BalloonItem.DispenseBehavior())));
         event.enqueueWork(() -> ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.GLOAMWOOD_SAPLING.getId(), ModBlocks.POTTED_GLOAMWOOD_SAPLING));
         event.enqueueWork(() -> ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.CACAO_SAPLING.getId(), ModBlocks.POTTED_CACAO_SAPLING));
@@ -254,6 +257,9 @@ public class SpicedCider {
                 event.insertAfter(new ItemStack(ModItems.TWISTED_BOAT.get()), new ItemStack(ModItems.TWISTED_CHEST_BOAT.get()), vis);
             }
         }
+        if (event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS && ModItems.MAIZE_BATTER != null) {
+            event.accept(ModItems.MAIZE_BATTER.get(), vis);
+        }
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.WORM.get(), vis);
             event.accept(ModItems.GRUB.get(), vis);
@@ -288,6 +294,7 @@ public class SpicedCider {
         if (event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
             event.insertAfter(new ItemStack(Items.ROOTED_DIRT), new ItemStack(ModItems.WORMY_DIRT.get()), vis);
             event.insertAfter(new ItemStack(Items.GRAVEL), new ItemStack(ModItems.RICH_GRAVEL.get()), vis);
+            event.insertAfter(new ItemStack(Items.DEAD_BUSH), new ItemStack(ModItems.DEAD_WOOD_BRANCH.get()), vis);
             event.insertAfter(new ItemStack(Items.FLOWERING_AZALEA), new ItemStack(ModItems.GLOAMWOOD_SAPLING.get()), vis);
             event.insertAfter(new ItemStack(Items.HONEYCOMB_BLOCK), new ItemStack(ModItems.TALLOW_BLOCK.get()), vis);
             event.accept(ModItems.DEPOSIT.get(), vis);
@@ -332,6 +339,8 @@ public class SpicedCider {
         if (event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
             event.insertAfter(new ItemStack(Items.LOOM), new ItemStack(ModItems.TANNING_RACK.get()), vis);
             event.insertAfter(new ItemStack(Items.LODESTONE), new ItemStack(ModItems.GRAVESTONE.get()), vis);
+            event.accept(ModItems.CRUCIBLE.get(), vis);
+            event.accept(ModItems.SMELTERY.get(), vis);
         }
         if (event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS && ModItems.TWISTED_SIGN != null) {
             event.insertAfter(new ItemStack(Items.WARPED_HANGING_SIGN), new ItemStack(ModItems.TWISTED_SIGN.get()), vis);
@@ -361,8 +370,15 @@ public class SpicedCider {
             event.insertAfter(new ItemStack(Items.GOLD_NUGGET), new ItemStack(ModItems.CAST_IRON_NUGGET.get()), vis);
             event.insertAfter(new ItemStack(Items.IRON_INGOT), new ItemStack(ModItems.CAST_IRON_INGOT.get()), vis);
             event.insertAfter(new ItemStack(ModItems.CAST_IRON_INGOT.get()), new ItemStack(ModItems.CAST_IRON_SHEET.get()), vis);
-            event.insertAfter(new ItemStack(ModItems.CAST_IRON_SHEET.get()), new ItemStack(ModItems.BLAST_PROOF_PLATING.get()), vis);
+            event.insertAfter(new ItemStack(ModItems.CAST_IRON_SHEET.get()), new ItemStack(ModItems.CAST_IRON_VESSEL.get()), vis);
+            event.insertAfter(new ItemStack(ModItems.CAST_IRON_VESSEL.get()), new ItemStack(ModItems.CAST_IRON_FRAME.get()), vis);
+            event.insertAfter(new ItemStack(ModItems.CAST_IRON_FRAME.get()), new ItemStack(ModItems.BLAST_PROOF_PLATING.get()), vis);
+            for (MouldShape shape : MouldShape.values()) {
+                event.accept(ModItems.UNFIRED_MOULDS.get(shape).get(), vis);
+                event.accept(ModItems.MOULDS.get(shape).get(), vis);
+            }
             ModItems.METAL_SHEETS.values().forEach(sheet -> event.accept(sheet.get(), vis));
+            if (ModItems.LEAD_PIPE != null) event.accept(ModItems.LEAD_PIPE.get(), vis);
             event.insertAfter(new ItemStack(Items.HONEYCOMB), new ItemStack(ModItems.TALLOW.get()), vis);
             event.insertAfter(new ItemStack(Items.RABBIT_HIDE), new ItemStack(ModItems.HIDE.get()), vis);
             if (ModItems.MOURNFUL_CLAY_STATUE != null) {
@@ -390,9 +406,9 @@ public class SpicedCider {
                 (payload, context) -> context.enqueueWork(() -> ClientVoidTrails.receive(payload))
         );
         registrar.playToClient(
-                CauldronStirPayload.TYPE,
-                CauldronStirPayload.CODEC,
-                (payload, context) -> context.enqueueWork(() -> CauldronStirClient.receive(payload))
+                BasinStirPayload.TYPE,
+                BasinStirPayload.CODEC,
+                (payload, context) -> context.enqueueWork(() -> BasinStirClient.receive(payload))
         );
         registrar.playToClient(
                 CloudCoverPayload.TYPE,
@@ -424,14 +440,15 @@ public class SpicedCider {
                 GravePositionsPayload.CODEC,
                 (payload, context) -> context.enqueueWork(() -> ClientGraves.receive(payload.positions()))
         );
+        registrar.playToClient(
+                StuckArrowsPayload.TYPE,
+                StuckArrowsPayload.CODEC,
+                (payload, context) -> context.enqueueWork(() -> StuckArrowsClient.receive(payload))
+        );
         registrar.playToServer(
-                PullTamedArrowPayload.TYPE,
-                PullTamedArrowPayload.CODEC,
-                (payload, context) -> context.enqueueWork(() -> {
-                    if (ModList.get().isLoaded("lodged")) {
-                        TamedArrowPulling.handle((ServerPlayer) context.player(), payload.entityId(), payload.arrowIndex());
-                    }
-                })
+                PullStuckArrowPayload.TYPE,
+                PullStuckArrowPayload.CODEC,
+                (payload, context) -> context.enqueueWork(() -> StuckArrows.pull((ServerPlayer) context.player(), payload.entityId(), payload.slot(), payload.part()))
         );
         registrar.playToServer(
                 LodHelloPayload.TYPE,

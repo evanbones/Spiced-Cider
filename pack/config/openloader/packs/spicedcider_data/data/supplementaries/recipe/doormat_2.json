@@ -1,7 +1,13 @@
 {
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "nirvana"
+    }
+  ],
   "key": {
     "1": {
-      "item": "environmental:yak_hair"
+      "item": "nirvana:hemp"
     }
   },
   "pattern": [

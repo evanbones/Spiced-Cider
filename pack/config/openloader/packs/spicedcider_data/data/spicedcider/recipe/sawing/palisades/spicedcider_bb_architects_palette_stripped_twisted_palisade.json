@@ -1,0 +1,30 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "architects_palette"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "moonlight"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "woodworks"
+    }
+  ],
+  "type": "woodworks:sawmill",
+  "ingredient": {
+    "type": "moonlight:block_type_swap",
+    "ingredient": {
+      "item": "minecraft:stripped_oak_log"
+    },
+    "block_type": "minecraft:wood_type",
+    "from": "minecraft:oak",
+    "to": "architects_palette:twisted"
+  },
+  "result": {
+    "id": "spicedcider:bb/architects_palette/stripped_twisted_palisade",
+    "count": 2
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "abundant_atmosphere"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "moonlight"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "woodworks"
+    }
+  ],
+  "type": "woodworks:sawmill",
+  "ingredient": {
+    "type": "moonlight:block_type_swap",
+    "ingredient": {
+      "item": "minecraft:oak_log"
+    },
+    "block_type": "minecraft:wood_type",
+    "from": "minecraft:oak",
+    "to": "abundant_atmosphere:red_bamboo"
+  },
+  "result": {
+    "id": "spicedcider:bb/abundant_atmosphere/red_bamboo_palisade",
+    "count": 2
+  }
+}

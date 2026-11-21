@@ -11,5 +11,11 @@
   {
     "action": "remove_recipe",
     "output": "#minecraft:trim_templates"
+  },
+  {
+    "action": "remove_recipe",
+    "id": [
+      "minecraft:smithing_table"
+    ]
   }
 ]

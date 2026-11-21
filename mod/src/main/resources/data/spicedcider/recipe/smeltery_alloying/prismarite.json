@@ -1,0 +1,39 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "modestmining"
+    }
+  ],
+  "type": "spicedcider:smeltery_alloying",
+  "fluids": [
+    {
+      "tag": "c:molten_gold",
+      "amount": 500
+    }
+  ],
+  "items": [
+    {
+      "tag": "c:gems/prismarine"
+    },
+    {
+      "tag": "c:gems/prismarine"
+    },
+    {
+      "tag": "c:gems/prismarine"
+    },
+    {
+      "tag": "c:gems/prismarine"
+    },
+    {
+      "item": "modestmining:pearl"
+    },
+    {
+      "item": "modestmining:pearl"
+    }
+  ],
+  "result": {
+    "id": "spicedcider:molten_prismarite",
+    "amount": 250
+  }
+}

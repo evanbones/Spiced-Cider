@@ -2079,5 +2079,28 @@
       }
     ],
     "subtitle": "subtitles.block.anvil.use"
+  },
+  "block.potent_sulfur.geyser_continuous_eruption_start": {
+    "sounds": [
+      "block/potent_sulfur/geyser_continuous/eruption1",
+      "block/potent_sulfur/geyser_continuous/eruption2",
+      "block/potent_sulfur/geyser_continuous/eruption3"
+    ]
+  },
+  "item.goat_horn.play": {
+    "sounds": [
+      {
+        "name": "minecraft:item.goat_horn.sound.0",
+        "type": "event"
+      }
+    ]
+  },
+  "entity.goat.screaming.horn_break": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.goat.horn_break",
+        "type": "event"
+      }
+    ]
   }
 }

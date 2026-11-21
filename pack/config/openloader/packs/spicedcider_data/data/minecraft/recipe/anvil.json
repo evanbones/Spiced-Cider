@@ -1,21 +1,21 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "misc",
+  "pattern": [
+    "FFF",
+    " P ",
+    "PPP"
+  ],
   "key": {
-    "I": {
-      "item": "spicedcider:cast_iron_block"
+    "F": {
+      "item": "spicedcider:cast_iron_frame"
     },
-    "i": {
-      "item": "spicedcider:cast_iron_ingot"
+    "P": {
+      "tag": "c:plates/cast_iron"
     }
   },
-  "pattern": [
-    "III",
-    " i ",
-    "iii"
-  ],
   "result": {
-    "count": 1,
-    "id": "minecraft:anvil"
+    "id": "minecraft:anvil",
+    "count": 1
   }
 }

@@ -6,16 +6,15 @@ import com.evandev.spicedcider.compat.bountifulfares.BountifulFaresCompat;
 import com.evandev.spicedcider.compat.farmersdelight.FarmersDelightCompat;
 import com.evandev.spicedcider.compat.infernalexp.InfernalExpansionCompat;
 import com.evandev.spicedcider.content.block.PlacedStickBlock;
+import com.evandev.spicedcider.content.block.BranchBlock;
 import com.evandev.spicedcider.content.block.AlgalBlock;
 import com.evandev.spicedcider.content.block.BuddingPrismarineBlock;
 import com.evandev.spicedcider.content.block.CacaoPodBlock;
 import com.evandev.spicedcider.content.block.FruitLeavesBlock;
 import com.evandev.spicedcider.content.block.FruitLogBlock;
 import com.evandev.spicedcider.content.block.HangingFruitBlock;
-import com.evandev.spicedcider.content.block.FluidCauldronBlock;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraft.core.registries.BuiltInRegistries;
-import com.evandev.spicedcider.content.block.LatexCauldronBlock;
 import com.evandev.spicedcider.content.block.PrismarineClusterBlock;
 import com.evandev.spicedcider.content.block.TallUnderwaterBrambleBlock;
 import com.evandev.spicedcider.content.block.TemporaryCobwebBlock;
@@ -26,7 +25,12 @@ import com.evandev.spicedcider.content.block.TubewormBlock;
 import com.evandev.spicedcider.content.block.UnderwaterBrambleBlock;
 import com.evandev.spicedcider.content.block.VentBlock;
 import com.evandev.spicedcider.content.block.MintCropBlock;
+import com.evandev.spicedcider.content.casting.CrucibleBlock;
+import com.evandev.spicedcider.content.casting.MouldBlock;
+import com.evandev.spicedcider.content.casting.MouldShape;
+import com.evandev.spicedcider.content.casting.smeltery.SmelteryBlock;
 import net.minecraft.resources.ResourceLocation;
+import com.evandev.spicedcider.content.block.RichGravelBlock;
 import net.minecraft.util.ColorRGBA;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -62,6 +66,10 @@ public class ModBlocks {
             () -> new PlacedStickBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).noCollission().instabreak()
                     .sound(SoundType.WOOD).pushReaction(PushReaction.DESTROY).ignitedByLava()));
 
+    public static final DeferredBlock<Block> DEAD_WOOD_BRANCH = BLOCKS.register("dead_wood_branch",
+            () -> new BranchBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).noCollission().noOcclusion().strength(0.1F)
+                    .sound(SoundType.WOOD).pushReaction(PushReaction.DESTROY).ignitedByLava()));
+
     @Nullable
     public static final DeferredBlock<Block> MINT_CROP = ModList.get().isLoaded("culturaldelights")
             ? BLOCKS.register("mint_crop", () -> new MintCropBlock(BlockBehaviour.Properties.of()
@@ -74,6 +82,14 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> CAST_IRON_BLOCK = BLOCKS.register("cast_iron_block",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK)));
+
+    public static final DeferredBlock<Block> CRUCIBLE = BLOCKS.register("crucible",
+            () -> new CrucibleBlock(BlockBehaviour.Properties.of().mapColor(MapColor.TERRACOTTA_ORANGE).sound(SoundType.DECORATED_POT).strength(0.6F).noOcclusion().pushReaction(PushReaction.DESTROY)));
+
+    public static final java.util.Map<MouldShape, DeferredBlock<Block>> MOULDS = moulds();
+
+    public static final DeferredBlock<Block> SMELTERY = BLOCKS.register("smeltery",
+            () -> new SmelteryBlock(BlockBehaviour.Properties.of().mapColor(MapColor.TERRACOTTA_RED).sound(SoundType.DEEPSLATE_BRICKS).strength(3.0F, 6.0F).requiresCorrectToolForDrops().pushReaction(PushReaction.BLOCK)));
 
     public static final DeferredBlock<Block> TALLOW_BLOCK = BLOCKS.register("tallow_block",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.HONEYCOMB_BLOCK)));
@@ -89,22 +105,11 @@ public class ModBlocks {
     public static final DeferredBlock<LiquidBlock> RESIN_OIL = BLOCKS.register("resin_oil",
             () -> new LiquidBlock(ModFluids.RESIN_OIL.get(), BlockBehaviour.Properties.ofFullCopy(Blocks.WATER).mapColor(MapColor.COLOR_BROWN)));
 
-    public static final DeferredBlock<FluidCauldronBlock> CHOCOLATE_CAULDRON = BLOCKS.register("chocolate_cauldron",
-            () -> new FluidCauldronBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.CAULDRON), "chocolate", () -> fluid("create", "chocolate"), null));
-    public static final DeferredBlock<FluidCauldronBlock> SPRING_WATER_CAULDRON = BLOCKS.register("spring_water_cauldron",
-            () -> new FluidCauldronBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.CAULDRON), "spring_water", () -> fluid("spelunkery", "spring_water"), null));
-    public static final DeferredBlock<FluidCauldronBlock> LUMISENE_CAULDRON = BLOCKS.register("lumisene_cauldron",
-            () -> new FluidCauldronBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.CAULDRON).lightLevel(state -> 2 + state.getValue(FluidCauldronBlock.LEVEL) * 2),
-                    "lumisene", () -> fluid("supplementaries", "lumisene"), () -> BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath("supplementaries", "lumisene_bottle"))));
-
-    public static final DeferredBlock<Block> LATEX_CAULDRON = BLOCKS.register("latex_cauldron",
-            () -> new LatexCauldronBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.CAULDRON)));
-
     public static final DeferredBlock<Block> WORMY_DIRT = BLOCKS.register("wormy_dirt",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DIRT)));
 
     public static final DeferredBlock<Block> RICH_GRAVEL = BLOCKS.register("rich_gravel",
-            () -> new ColoredFallingBlock(new ColorRGBA(-8356741), BlockBehaviour.Properties.ofFullCopy(Blocks.GRAVEL)));
+            () -> new RichGravelBlock(new ColorRGBA(-8356741), BlockBehaviour.Properties.ofFullCopy(Blocks.GRAVEL)));
 
     public static final DeferredBlock<Block> DEPOSIT = BLOCKS.register("deposit",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).strength(3.0F).requiresCorrectToolForDrops()));
@@ -342,5 +347,14 @@ public class ModBlocks {
         return BountifulFaresCompat.isLoaded()
                 ? BLOCKS.register(name, () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BARREL)))
                 : null;
+    }
+
+    private static java.util.Map<MouldShape, DeferredBlock<Block>> moulds() {
+        java.util.Map<MouldShape, DeferredBlock<Block>> map = new java.util.EnumMap<>(MouldShape.class);
+        for (MouldShape shape : MouldShape.values()) {
+            map.put(shape, BLOCKS.register(shape.getSerializedName() + "_mould", () -> new MouldBlock(shape, BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.TERRACOTTA_ORANGE).sound(SoundType.DECORATED_POT).strength(0.5F).noOcclusion().pushReaction(PushReaction.DESTROY))));
+        }
+        return map;
     }
 }

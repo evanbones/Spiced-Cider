@@ -52,7 +52,8 @@ pack/config/spark/activity.json
 mod/src/main/java/com/evandev/spicedcider/client/devbridge/
 scripts/cider_dev.py
 scripts/__pycache__/
-# Yosbr copies these defaults into config/ at runtime (the dev instance config/ is a symlink to pack/config)
+
+# YOSBR defaults
 pack/config/voxy-config.json
 pack/config/sodium-options.json
 pack/config/particular-common.toml

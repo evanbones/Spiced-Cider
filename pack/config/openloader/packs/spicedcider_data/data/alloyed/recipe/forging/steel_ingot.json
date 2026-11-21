@@ -1,21 +1,7 @@
 {
-  "type": "modestmining:forging",
-  "ingredients": [
+  "neoforge:conditions": [
     {
-      "item": "minecraft:iron_ingot"
-    },
-    {
-      "item": "minecraft:iron_ingot"
-    },
-    {
-      "item": "minecraft:iron_ingot"
-    },
-    {
-      "item": "modestmining:coke"
+      "type": "neoforge:false"
     }
-  ],
-  "result": {
-    "count": 3,
-    "id": "alloyed:steel_ingot"
-  }
+  ]
 }

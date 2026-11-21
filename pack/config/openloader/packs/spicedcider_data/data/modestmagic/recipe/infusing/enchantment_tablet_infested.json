@@ -1,0 +1,32 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "buzzier_bees"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "modestmagic"
+    }
+  ],
+  "type": "modestmagic:infusing",
+  "base": {
+    "item": "modestmagic:enchantment_tablet"
+  },
+  "ingredients": [
+    {
+      "item": "buzzier_bees:silverfish_bottle"
+    },
+    {
+      "item": "minecraft:cobweb"
+    },
+    {
+      "item": "minecraft:cobweb"
+    }
+  ],
+  "results": [
+    {
+      "id": "modestmagic:enchantment_tablet_infested"
+    }
+  ]
+}

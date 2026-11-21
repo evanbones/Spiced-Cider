@@ -36,6 +36,13 @@ public class ToolStatsEvents {
 
         int modified = 0;
         for (Item item : event.getAllItems().toList()) {
+            Optional<Float> damage = table.attackDamage(item);
+            ItemAttributeModifiers retunedDamage = damage.map(value -> retunedDamage(item, value)).orElse(null);
+            if (retunedDamage != null) {
+                event.modify(item, builder -> builder.set(DataComponents.ATTRIBUTE_MODIFIERS, retunedDamage));
+                modified++;
+            }
+
             Optional<ToolStats.Stats> found = table.lookup(item);
             if (found.isEmpty()) continue;
 
@@ -54,6 +61,27 @@ public class ToolStatsEvents {
             modified++;
         }
         SpicedCider.LOGGER.info("Tool stats: modified {} items", modified);
+    }
+
+    private static ItemAttributeModifiers retunedDamage(Item item, float damage) {
+        ItemAttributeModifiers base = item.components().getOrDefault(DataComponents.ATTRIBUTE_MODIFIERS, ItemAttributeModifiers.EMPTY);
+        if (base.modifiers().isEmpty()) base = item.getDefaultAttributeModifiers();
+
+        boolean changed = false;
+        ItemAttributeModifiers.Builder builder = ItemAttributeModifiers.builder();
+        for (ItemAttributeModifiers.Entry entry : base.modifiers()) {
+            AttributeModifier modifier = entry.modifier();
+            if (entry.attribute().is(Attributes.ATTACK_DAMAGE) && modifier.id().equals(Item.BASE_ATTACK_DAMAGE_ID)) {
+                modifier = new AttributeModifier(modifier.id(), damage - 1.0, modifier.operation());
+                changed = true;
+            }
+            builder.add(entry.attribute(), modifier, entry.slot());
+        }
+        if (!changed) {
+            SpicedCider.LOGGER.warn("Tool stats: {} has no base attack damage to retune", BuiltInRegistries.ITEM.getKey(item));
+            return null;
+        }
+        return builder.build();
     }
 
     private static ItemAttributeModifiers retunedArmor(Item item, ToolStats.Stats stats) {

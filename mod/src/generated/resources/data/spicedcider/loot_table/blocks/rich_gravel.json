@@ -11,19 +11,31 @@
               "type": "minecraft:item",
               "conditions": [
                 {
-                  "condition": "minecraft:match_tool",
-                  "predicate": {
-                    "predicates": {
-                      "minecraft:enchantments": [
-                        {
-                          "enchantments": "minecraft:silk_touch",
-                          "levels": {
-                            "min": 1
-                          }
+                  "condition": "minecraft:any_of",
+                  "terms": [
+                    {
+                      "condition": "minecraft:match_tool",
+                      "predicate": {
+                        "predicates": {
+                          "minecraft:enchantments": [
+                            {
+                              "enchantments": "minecraft:silk_touch",
+                              "levels": {
+                                "min": 1
+                              }
+                            }
+                          ]
                         }
-                      ]
+                      }
+                    },
+                    {
+                      "block": "spicedcider:rich_gravel",
+                      "condition": "minecraft:block_state_property",
+                      "properties": {
+                        "placed": "true"
+                      }
                     }
-                  }
+                  ]
                 }
               ],
               "name": "spicedcider:rich_gravel"

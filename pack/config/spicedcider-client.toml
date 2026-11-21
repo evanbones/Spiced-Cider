@@ -21,6 +21,8 @@
 	bedScreenTips = true
 	#Moves the recipe book button in the inventory screen to the right, beside the crafting grid.
 	moveRecipeBookButton = true
+	#Click and drag your player model in the inventory to turn it around.
+	inventoryModelRotation = true
 	#Hides your own potion effect particles in first person.
 	hideOwnEffectParticles = true
 	#Removes the armor bar from the HUD.
@@ -29,7 +31,7 @@
 	softerBlindnessAndDarkness = true
 	#Removes the "Applies to" and "Ingredients" lines from smithing template tooltips.
 	hideSmithingTemplateTooltips = true
-	#While Picture Mode is open, everything past the loaded chunks is covered by a drifting sea of clouds instead of see-through distant terrain. Requires Picture Mode.
+	#While Picture Mode is open, everything past the loaded chunks fades into the distance fog colour instead of showing see-through distant terrain. Requires Picture Mode.
 	pictureModeClouds = true
 	#Held and dropped light-giving blocks glow the same colour as when they're placed. Requires Polytone.
 	matchHeldLightColors = true
@@ -55,10 +57,6 @@
 	vistaMirrorFogEnd = 90
 
 [compat]
-	#Hides the arrow depth line (Shallow hit, Lodged, Deep lodged) from Lodged's inventory arrow tooltip. Requires Lodged.
-	lodgedHideArrowDepth = true
-	#Hides the Bleeding risk line from Lodged's inventory arrow tooltip. Requires Lodged.
-	lodgedHideBleedingRisk = true
 	#Hides the voice chat HUD while playing in a world that isn't open to LAN. Requires Simple Voice Chat.
 	voiceChatHideSingleplayerHud = true
 	#Replaces Clutter No More's scrolling shape switcher with a radial wheel, and makes the controller shape button hold-to-open. Requires Clutter No More.
@@ -77,8 +75,6 @@
 	emiStructureLootCategory = true
 	#When the creative tab panel is on the right side of the item list, its tabs are drawn on the right edge too. Requires REMI.
 	remiRightSideTabs = true
-	#Advancements listed in config/spicedcider/index_unlocks.json reveal groups of items in the EMI index, and can keep the creative tabs hidden until one is earned.
-	emiDiscoveryIndexUnlocks = true
 	#EMI shows Spelunkery's rough diamonds and emeralds being polished on a regular grindstone instead of the Diamond Grindstone. Pair with grindstone_polishing loot tables for them.
 	roughGemsOnGrindstone = true
 	#Removes the smithing table category from EMI. Requires EMI.
@@ -91,12 +87,16 @@
 	quarkHideHints = true
 	#Replaces No Man's Land's carving menu with a radial wheel. Requires No Man's Land.
 	carvingWheel = true
+	#Jade tooltips only show while looking through a spyglass or wearing or looking through a Caverns & Chasms monocle. Requires Jade.
+	jadeNeedsSpyglassOrMonocle = true
 	#Golden dandelions give off drifting golden specks. Requires Tiny Takeover Backport.
 	goldenDandelionParticles = true
 	#Adds an EMI category for what cave urns can hold when broken. Requires EMI and Supplementaries. Reload EMI or rejoin the world to apply.
 	emiUrnLootCategory = true
 	#Your graves show on the locator bar as tombstone icons, even in singleplayer. Requires Vanilla Backport.
 	graveLocatorBar = true
+	#Walk up full blocks without jumping. Sneak to stop stepping up.
+	stepUpEnabled = true
 
 [voxy]
 	#Replaces the terrain fog with configurable start and end distances that cover Voxy's LoD terrain, plus weather and cave fog. Disable to use Roxy's own fog.
@@ -133,6 +133,12 @@
 	cloudCoverCommandFadeSeconds = 5
 	#Show the rare halos of light that sometimes form on either side of the sun.
 	sunDogs = true
+	#Leaves slowly turn white while snow falls on them and green again once it stops. Takes effect after rejoining the world.
+	snowfallLeafWhitening = true
+	#How far around you, in chunks, leaves frost over. Larger values cost more performance.
+	# Default: 8
+	# Range: 2 ~ 32
+	snowfallLeafWhiteningRadius = 8
 	#Smoke, leaves, snow and other particles drift with the wind when outdoors.
 	windParticles = true
 	#How strongly particles are pushed by the wind, as a percentage.

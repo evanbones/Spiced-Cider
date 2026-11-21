@@ -1,0 +1,32 @@
+{
+  "parent": "spicedcider:spiced_cider/forge",
+  "display": {
+    "icon": {
+      "id": "spicedcider:crucible"
+    },
+    "title": {
+      "text": "Melting Pot"
+    },
+    "description": {
+      "text": "Make a Crucible to melt metal over a fire"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "has_item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "spicedcider:crucible"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_item"
+    ]
+  ]
+}

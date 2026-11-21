@@ -1,0 +1,24 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "abundant_atmosphere:red_bamboo_trapdoor"
+    }
+  ],
+  "key": {
+    "#": {
+      "item": "abundant_atmosphere:red_bamboo_planks"
+    }
+  },
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "result": {
+    "id": "abundant_atmosphere:red_bamboo_trapdoor",
+    "count": 6
+  },
+  "group": "wooden_trapdoor",
+  "category": "redstone",
+  "type": "minecraft:crafting_shaped"
+}

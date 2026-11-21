@@ -1,9 +1,8 @@
-#Fixes entity bodies rotating choppily when head rotates
-smooth_rotations = true
 #Smooth transition for falling block entity to block transformation
 smooth_falling_block_landing = true
-#Ghasts will swell up before shooting like they did before 1.3!! :0
-ghast_swell = true
+#Ghasts will swell up before shooting like they did before 1.3!! :0. VANILLA squashes them like 1.2.5, SWELL also stretches them up so they look like they're taking in air
+#Allowed Values: OFF, VANILLA, SWELL
+ghast_swell = "VANILLA"
 #Fixes withers shaking lika crazy left and right when pathfinding a far target
 wither_yaw_fix = true
 #Ghast fireballs come out of the mouth instead of its eyes
@@ -16,3 +15,5 @@ pitch_lerp_fix = true
 debug_server_hitboxes = false
 #Sends entity positions AFTER they move instead ov before like vanilla does. This makes the server and client agree on their position EXACTLY (instead of being 1 tick behind). Projectiles and similar are unaffected and still client driven. Default off as it could be a bit more invasive, turn on for perfect sync
 zero_tick_entity_sync = false
+#Fixes entity bodies rotating choppily when head rotates
+smooth_body_turning = true

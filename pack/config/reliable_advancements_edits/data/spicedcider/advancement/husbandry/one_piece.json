@@ -1,0 +1,28 @@
+{
+  "parent": "spicedcider:husbandry/straw",
+  "display": {
+    "hidden": true,
+    "icon": {
+      "id": "bountifulfares:sun_hat"
+    },
+    "title": "It's A One-Piece",
+    "description": "Craft a Sun Hat",
+    "frame": "task"
+  },
+  "criteria": {
+    "crafted": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipe_id": "bountifulfares:sun_hat"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "crafted"
+    ]
+  ],
+  "parents": [
+    "spicedcider:husbandry/straw"
+  ]
+}

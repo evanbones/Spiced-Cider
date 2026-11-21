@@ -1,0 +1,78 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "farmersdelight"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    }
+  ],
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        },
+        {
+          "condition": "minecraft:any_of",
+          "terms": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "nomansland:pot_of_witch_stew",
+              "properties": {
+                "level": "1"
+              }
+            },
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "nomansland:pot_of_witch_stew",
+              "properties": {
+                "level": "2"
+              }
+            },
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "nomansland:pot_of_witch_stew",
+              "properties": {
+                "level": "3"
+              }
+            }
+          ]
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "create:basin"
+        }
+      ],
+      "rolls": 1.0
+    },
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        },
+        {
+          "block": "nomansland:pot_of_witch_stew",
+          "condition": "minecraft:block_state_property",
+          "properties": {
+            "level": "4"
+          }
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "nomansland:pot_of_witch_stew"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ]
+}

@@ -12,7 +12,6 @@ plugins {
     id "me.modmuss50.mod-publish-plugin" version "2.2.0"
 }
 
-version = mod_version
 group = mod_group_id
 
 sourceSets.main.resources {
@@ -296,7 +295,9 @@ dependencies {
     compileOnly "maven.modrinth:fancymenu:3.9.12-1.21.1-neoforge"
     compileOnly "maven.modrinth:iceberg:IMssx9du"
     compileOnly "maven.modrinth:reliable-advancements:J5weQWAm"
+    compileOnly "maven.modrinth:map-atlases-forge:ecuMnNO4"
     compileOnly "maven.modrinth:advancement-plaques:OWylG33I"
+    compileOnly "maven.modrinth:TVOgzXyj:ovFMWpiv"
     compileOnly "maven.modrinth:toil-and-trouble:TAoMbdSb"
     compileOnly "maven.modrinth:manual-labour:LKYGxFM2"
     compileOnly "maven.modrinth:5QcDoykP:KpvJ7UqU"
@@ -411,6 +412,7 @@ dependencies {
     compileOnly "maven.modrinth:caverns-and-chasms:3.0.1"
     runtimeOnly "maven.modrinth:caverns-and-chasms:3.0.1"
     compileOnly "maven.modrinth:blueprint:8.1.0"
+    compileOnly "maven.modrinth:zrAMu1nt:GQKsKYS3"
     runtimeOnly "maven.modrinth:blueprint:8.1.0"
     runtimeOnly "maven.modrinth:gallery:2.0.1"
     compileOnly "maven.modrinth:autumnity:9jUNvDKx"
@@ -478,11 +480,8 @@ dependencies {
     // Reliable EMI
     compileOnly "maven.modrinth:N9WucjHL:aMKmQMTe"
 
-    // EMI Discovery
-    compileOnly "maven.modrinth:WO3G3DRj:aNLpgPoP"
-
-    // Lodged
-    compileOnly "maven.modrinth:lodged:GKAyoKfK"
+    // Entity Pin Cushions
+    compileOnly "maven.modrinth:YtDL53HG:ymdJIn9G"
 
     // Alloyed
     runtimeOnly "maven.modrinth:create-alloyed:3.0.11+1.21.1-neoforge"
@@ -522,7 +521,7 @@ var generateModMetadata = tasks.register("generateModMetadata", ProcessResources
             mod_id                 : mod_id,
             mod_name               : mod_name,
             mod_license            : mod_license,
-            mod_version            : mod_version,
+            mod_version            : version.toString(),
             mod_author             : mod_author,
             mod_description        : mod_description,
             mod_credits            : mod_credits
@@ -561,6 +560,7 @@ idea {
 
 publishMods {
     file = rootProject.layout.projectDirectory.file("bootstrap/build/libs/${mod_id}-${project.version}.jar")
+    dryRun = providers.gradleProperty("dry_run").isPresent()
     changelog = project.file("CHANGELOG-LATEST.md").exists() ? project.file("CHANGELOG-LATEST.md").text : ""
     type = STABLE
     version = "${project.version}+${project.minecraft_version}"
@@ -615,14 +615,16 @@ class CiderCoreSwap {
 def packDir = rootProject.layout.projectDirectory.dir("pack")
 def packDirFile = packDir.asFile
 def packModsDir = packDir.dir("mods").asFile
-def packwizExe = packDir.file("packwiz.exe").asFile.absolutePath
+def packwizWindows = packDir.file("packwiz.exe").asFile
+def packwizExe = System.getProperty("os.name").toLowerCase().contains("windows") && packwizWindows.exists() ? packwizWindows.absolutePath : "packwiz"
 def prismModsDir = new File(providers.gradleProperty("prism_mods_dir")
         .orElse(providers.environmentVariable("APPDATA").map { "${it}/PrismLauncher/instances/Spiced Cider Dev/minecraft/mods" })
         .getOrElse(""))
 def swapTmpDir = layout.buildDirectory.dir("tmp/ciderCoreSwap").get().asFile
-def devJarName = "${mod_id}-${mod_version}-dev.jar"
+def devJarName = "${mod_id}-${version}-dev.jar"
 def bootstrapJar = project(":bootstrap").tasks.named("jar").flatMap { it.archiveFile }
 def minecraftVersion = minecraft_version
+def wantedCoreVersion = providers.gradleProperty("cider_core_version").getOrNull()
 
 def coreRequested = gradle.startParameter.taskNames.any { it.startsWith(":mod:") || it.startsWith("mod:") }
 
@@ -655,10 +657,25 @@ tasks.register("useModrinthCiderCore") {
     outputs.upToDateWhen { false }
     doLast {
         def query = "loaders=%5B%22neoforge%22%5D&game_versions=%5B%22${minecraftVersion}%22%5D"
-        def versions = new JsonSlurper().parse(new URL("https://api.modrinth.com/v2/project/cider-core/version?${query}"))
-        if (versions.isEmpty()) throw new GradleException("No Cider Core version on Modrinth for ${minecraftVersion}")
-        def latest = versions[0]
-        def primary = latest.files.find { it.primary } ?: latest.files[0]
+        def latest = null
+        def primary = null
+        def deadline = System.currentTimeMillis() + 15 * 60 * 1000
+        while (true) {
+            def versions = new JsonSlurper().parse(new URL("https://api.modrinth.com/v2/project/cider-core/version?${query}"))
+            latest = wantedCoreVersion ? versions.find { it.version_number == wantedCoreVersion } : versions[0]
+            if (latest != null) {
+                primary = latest.files.find { it.primary } ?: latest.files[0]
+                def head = (HttpURLConnection) new URL(primary.url as String).openConnection()
+                head.requestMethod = "HEAD"
+                def ready = head.responseCode == 200
+                head.disconnect()
+                if (ready) break
+            }
+            if (!wantedCoreVersion) throw new GradleException("No Cider Core version on Modrinth for ${minecraftVersion}")
+            if (System.currentTimeMillis() > deadline) throw new GradleException("Cider Core ${wantedCoreVersion} never appeared on Modrinth")
+            logger.lifecycle("Waiting for Cider Core ${wantedCoreVersion} on Modrinth...")
+            Thread.sleep(15000)
+        }
         if (prismModsDir.isDirectory()) {
             CiderCoreSwap.clear(prismModsDir)
             CiderCoreSwap.download(primary.url as String, prismModsDir, primary.filename as String, swapTmpDir)

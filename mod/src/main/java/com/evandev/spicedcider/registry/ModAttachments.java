@@ -1,13 +1,16 @@
 package com.evandev.spicedcider.registry;
 
 import com.evandev.spicedcider.SpicedCider;
+import com.evandev.spicedcider.content.stuckarrows.StuckArrowSlots;
 import com.evandev.spicedcider.content.worm.WormHunt;
 import com.evandev.spicedcider.entities.balloon.BalloonTethers;
 import com.mojang.serialization.Codec;
+import net.minecraft.world.item.ItemStack;
 import net.neoforged.neoforge.attachment.AttachmentType;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.NeoForgeRegistries;
 
+import java.util.List;
 import java.util.function.Supplier;
 
 public class ModAttachments {
@@ -37,6 +40,21 @@ public class ModAttachments {
             "balloons",
             () -> AttachmentType.builder(BalloonTethers::new)
                     .serialize(BalloonTethers.SERIALIZER)
+                    .build()
+    );
+
+    public static final Supplier<AttachmentType<StuckArrowSlots>> STUCK_ARROWS = ATTACHMENT_TYPES.register(
+            "stuck_arrows",
+            () -> AttachmentType.builder(() -> new StuckArrowSlots())
+                    .serialize(StuckArrowSlots.CODEC, slots -> !slots.isEmpty())
+                    .build()
+    );
+
+    public static final Supplier<AttachmentType<List<ItemStack>>> SOULBOUND_ITEMS = ATTACHMENT_TYPES.register(
+            "soulbound_items",
+            () -> AttachmentType.<List<ItemStack>>builder(() -> List.of())
+                    .serialize(ItemStack.CODEC.listOf(), list -> !list.isEmpty())
+                    .copyOnDeath()
                     .build()
     );
 }

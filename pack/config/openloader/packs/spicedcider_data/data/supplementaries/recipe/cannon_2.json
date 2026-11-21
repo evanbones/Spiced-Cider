@@ -1,0 +1,35 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "supplementaries:flag",
+      "flag": "cannon"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PFP",
+    " S ",
+    "WRW"
+  ],
+  "key": {
+    "P": {
+      "tag": "c:plates/cast_iron"
+    },
+    "F": {
+      "item": "spicedcider:cast_iron_frame"
+    },
+    "S": {
+      "item": "supplementaries:slingshot"
+    },
+    "W": {
+      "tag": "minecraft:planks"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "result": {
+    "id": "supplementaries:cannon",
+    "count": 1
+  }
+}

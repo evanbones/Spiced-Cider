@@ -1,0 +1,30 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "environmental"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "moonlight"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "woodworks"
+    }
+  ],
+  "type": "woodworks:sawmill",
+  "ingredient": {
+    "type": "moonlight:block_type_swap",
+    "ingredient": {
+      "item": "minecraft:oak_log"
+    },
+    "block_type": "minecraft:wood_type",
+    "from": "minecraft:oak",
+    "to": "environmental:wisteria"
+  },
+  "result": {
+    "id": "spicedcider:bb/environmental/wisteria_palisade",
+    "count": 2
+  }
+}

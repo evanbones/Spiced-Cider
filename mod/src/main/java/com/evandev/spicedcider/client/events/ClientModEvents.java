@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.client.events;
 
+import com.evandev.spicedcider.client.renderer.CastingRenderers;
 import com.evandev.spicedcider.client.renderer.CopperPatina;
 import com.evandev.spicedcider.client.renderer.GraveRenderer;
 import com.evandev.spicedcider.client.renderer.TapStreamRenderer;
@@ -58,6 +59,7 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.item.component.DyedItemColor;
 import net.minecraft.world.level.FoliageColor;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.EventPriority;
@@ -105,6 +107,11 @@ public class ClientModEvents {
     private static final ResourceLocation MAP_ICON = ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "map_icon");
 
     @SubscribeEvent
+    public static void registerScreens(net.neoforged.neoforge.client.event.RegisterMenuScreensEvent event) {
+        event.register(com.evandev.spicedcider.registry.ModMenuTypes.SMELTERY.get(), com.evandev.spicedcider.client.screen.SmelteryScreen::new);
+    }
+
+    @SubscribeEvent
     public static void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
         event.registerEntityRenderer(ModEntityTypes.COBWEB_PROJECTILE.get(), CobwebProjectileRenderer::new);
         event.registerEntityRenderer(ModEntityTypes.BALLOON.get(), BalloonRenderer::new);
@@ -112,6 +119,7 @@ public class ClientModEvents {
         event.registerEntityRenderer(ModEntityTypes.SPORAL.get(), SporalRenderer::new);
         event.registerEntityRenderer(ModEntityTypes.STRAW_GOLEM.get(), StrawGolemRenderer::new);
         event.registerBlockEntityRenderer(ModBlockEntities.GRAVE.get(), GraveRenderer::new);
+        CastingRenderers.register(event);
         if (TideCompat.isLoaded()) {
             event.registerEntityRenderer(ModEntityTypes.GRAPPLING_HOOK.get(), GrapplingHookRenderer::new);
         }
@@ -207,6 +215,14 @@ public class ClientModEvents {
             registerTideSpawnEggColors(event);
         }
         RuneClientEvents.registerColors(event);
+        Item smallLilyPad = BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath("abundant_atmosphere", "small_lily_pad"));
+        if (smallLilyPad != Items.AIR) {
+            event.register((stack, tintIndex) -> 0xFF8AD34A, smallLilyPad, Items.LILY_PAD);
+        }
+        Item explorersTent = BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath("valhelsia_structures", "explorers_tent"));
+        if (explorersTent != Items.AIR) {
+            event.register((stack, tintIndex) -> tintIndex == 0 ? DyedItemColor.getOrDefault(stack, 0xFFA06540) : -1, explorersTent);
+        }
     }
 
     private static void registerTideSpawnEggColors(RegisterColorHandlersEvent.Item event) {
@@ -260,10 +276,6 @@ public class ClientModEvents {
         }
         event.enqueueWork(() -> {
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.TEMPORARY_COBWEB.get(), RenderType.cutout());
-            if (ModList.get().isLoaded("toil_and_trouble")) {
-                ItemBlockRenderTypes.setRenderLayer(BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("toil_and_trouble", "cauldron")),
-                        type -> type == RenderType.cutout() || type == RenderType.translucent());
-            }
             Stream.of(ModBlocks.CACAO_SAPLING, ModBlocks.POTTED_CACAO_SAPLING, ModBlocks.CACAO_POD, ModBlocks.PEAR_SAPLING, ModBlocks.POTTED_PEAR_SAPLING,
                     ModBlocks.HANGING_PEAR, ModBlocks.HANGING_AVOCADO).forEach(block -> ItemBlockRenderTypes.setRenderLayer(block.get(), RenderType.cutout()));
             Stream.of(ModPaleGardenBlocks.PALE_ROSE, ModPaleGardenBlocks.PALE_BUSH, ModPaleGardenBlocks.TALL_PALE_BUSH)

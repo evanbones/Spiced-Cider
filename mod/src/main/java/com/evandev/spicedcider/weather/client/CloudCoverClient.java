@@ -25,6 +25,7 @@ import org.jetbrains.annotations.NotNull;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Optional;
+import org.jetbrains.annotations.Nullable;
 
 @EventBusSubscriber(modid = SpicedCider.MOD_ID, value = Dist.CLIENT)
 public final class CloudCoverClient {
@@ -70,6 +71,11 @@ public final class CloudCoverClient {
     public static boolean active() {
         ClientLevel level = Minecraft.getInstance().level;
         return composed != null && level != null && level.dimensionType().hasSkyLight();
+    }
+
+    @Nullable
+    public static CloudCover currentCover() {
+        return active() ? received : null;
     }
 
     public static ResourceLocation texture(ResourceLocation original) {

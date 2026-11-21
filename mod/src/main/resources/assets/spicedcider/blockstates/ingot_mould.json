@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "spicedcider:block/ingot_mould"
+    },
+    "facing=east": {
+      "model": "spicedcider:block/ingot_mould",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "spicedcider:block/ingot_mould",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "spicedcider:block/ingot_mould",
+      "y": 270
+    }
+  }
+}

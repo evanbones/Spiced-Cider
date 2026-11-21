@@ -1,0 +1,24 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "minecraft:pale_oak_trapdoor"
+    }
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:pale_oak_planks"
+    }
+  },
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "result": {
+    "id": "minecraft:pale_oak_trapdoor",
+    "count": 6
+  },
+  "group": "wooden_trapdoor",
+  "category": "redstone",
+  "type": "minecraft:crafting_shaped"
+}

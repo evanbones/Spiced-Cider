@@ -1,0 +1,21 @@
+{
+  "type": "manual_labour:workstone",
+  "ingredients": [
+    [
+      {
+        "item": "abundant_atmosphere:mud_door"
+      },
+      {
+        "item": "abundant_atmosphere:mud_trapdoor"
+      }
+    ],
+    {
+      "tag": "manual_labour:hammers"
+    }
+  ],
+  "results": [
+    {
+      "id": "minecraft:packed_mud"
+    }
+  ]
+}

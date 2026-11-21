@@ -1,0 +1,33 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "alloyed"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "SFS",
+    "BCB",
+    "BBB"
+  ],
+  "key": {
+    "S": {
+      "item": "alloyed:steel_sheet"
+    },
+    "F": {
+      "item": "spicedcider:cast_iron_frame"
+    },
+    "B": {
+      "item": "minecraft:bricks"
+    },
+    "C": {
+      "item": "spicedcider:crucible"
+    }
+  },
+  "result": {
+    "id": "spicedcider:smeltery",
+    "count": 1
+  }
+}

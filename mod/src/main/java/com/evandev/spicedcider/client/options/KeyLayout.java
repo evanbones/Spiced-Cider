@@ -40,9 +40,7 @@ public final class KeyLayout {
             "key.toggleCarriedItemTooltips",
             "key.map_atlases.increase_slice",
             "key.map_atlases.decrease_slice",
-            "key.lodged.remove_shield_arrow",
             "key.f3backport.debug.debugOptions",
-            "key.spyglass-improvements.use",
             "quark.keybind.variant_selector",
             "treeliable.key.cycle_sneak_behavior",
             "key.immersiveoverlays.toggle",
@@ -71,11 +69,12 @@ public final class KeyLayout {
 
     static {
         group("movement", "key.forward", "key.left", "key.back", "key.right", "key.jump", "key.sneak", "key.sprint",
-                "key.personality.crawl", "key.personality.sit", "quark.keybind.autorun", "key.reliable_gliders.deploy");
+                "key.spicedcider.cycle_stance", "key.personality.sit", "key.personality.crawl",
+                "quark.keybind.autorun", "key.reliable_gliders.deploy");
         group("gameplay", "key.attack", "key.use", "key.pickItem", "key.swapOffhand", "key.drop",
                 "key.clutternomore.change_block_shape", "supplementaries.keybind.quiver",
-                "key.lodged.use_bandage", "treeliable.key.toggle_chopping", "create.keyinfo.toolmenu", "create.keyinfo.toolbelt",
-                "create.keyinfo.rotate_menu", "key.fieldguide.scan");
+                "treeliable.key.toggle_chopping", "create.keyinfo.toolmenu", "create.keyinfo.toolbelt",
+                "create.keyinfo.rotate_menu", "key.fieldguide.scan", "key.spyglass-improvements.use");
         group("hotbar", "key.hotbar.1", "key.hotbar.2", "key.hotbar.3", "key.hotbar.4", "key.hotbar.5", "key.hotbar.6",
                 "key.hotbar.7", "key.hotbar.8", "key.hotbar.9", "quark.keybind.change_hotbar");
         group("interface", "key.inventory", "key.chat", "key.command", "key.playerlist", "key.advancements",

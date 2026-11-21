@@ -1,0 +1,20 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "alloyed"
+    }
+  ],
+  "type": "spicedcider:crucible_melting",
+  "ingredients": [
+    {
+      "item": "alloyed:steel_ingot"
+    }
+  ],
+  "result": {
+    "id": "spicedcider:molten_steel",
+    "amount": 250
+  },
+  "heat": "high",
+  "time": 600
+}

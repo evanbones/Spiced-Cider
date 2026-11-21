@@ -17,7 +17,10 @@
       "nomansland:extinguished_sconce_soul_torch",
       "nomansland:extinguished_sconce_soul_wall_torch",
       "nomansland:seashells",
-      "nomansland:salmon_and_pesto_gnocchi"
+      "nomansland:salmon_and_pesto_gnocchi",
+      "nomansland:thatch",
+      "nomansland:thatch_slab",
+      "nomansland:thatch_stairs"
     ]
   },
   {
@@ -117,5 +120,12 @@
       "nomansland:white_flowerbed"
     ],
     "replace_with": "bountifulfares:chamomile_flowers"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "nomansland:frosted_leaves"
+    ],
+    "replace_with": "minecraft:spruce_leaves"
   }
 ]

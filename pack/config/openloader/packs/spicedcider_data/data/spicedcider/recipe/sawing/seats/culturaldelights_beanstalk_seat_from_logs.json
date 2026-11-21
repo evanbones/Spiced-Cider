@@ -1,0 +1,30 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "blockbox"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "culturaldelights"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "woodworks"
+    }
+  ],
+  "type": "woodworks:sawmill",
+  "group": "logs",
+  "ingredient": [
+    {
+      "item": "culturaldelights:beanstalk"
+    },
+    {
+      "item": "culturaldelights:stripped_beanstalk"
+    }
+  ],
+  "result": {
+    "id": "spicedcider:bb/culturaldelights/beanstalk_seat",
+    "count": 2
+  }
+}

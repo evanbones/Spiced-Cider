@@ -1,0 +1,30 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "blockbox"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "architects_palette"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "woodworks"
+    }
+  ],
+  "type": "woodworks:sawmill",
+  "group": "logs",
+  "ingredient": [
+    {
+      "item": "architects_palette:twisted_log"
+    },
+    {
+      "item": "architects_palette:stripped_twisted_log"
+    }
+  ],
+  "result": {
+    "id": "spicedcider:bb/architects_palette/twisted_seat",
+    "count": 2
+  }
+}

@@ -2,12 +2,12 @@ package com.evandev.spicedcider.content.handler;
 
 import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.evandev.spicedcider.SpicedCider;
+import com.evandev.spicedcider.registry.ModTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
@@ -45,7 +45,7 @@ public class TreeBarkEvents {
     }
 
     public static void dropBark(Level level, BlockPos pos, Direction face, BlockState original, @Nullable Player player) {
-        if (level.isClientSide() || (player != null && player.hasInfiniteMaterials()) || !original.is(BlockTags.LOGS) || !SpicedCiderConfig.commonOr(SpicedCiderConfig.COMMON.treeBark, false)) return;
+        if (level.isClientSide() || (player != null && player.hasInfiniteMaterials()) || !original.is(ModTags.Blocks.DROPS_BARK_WHEN_STRIPPED) || !SpicedCiderConfig.commonOr(SpicedCiderConfig.COMMON.treeBark, false)) return;
         treeBark().ifPresent(bark -> Block.popResourceFromFace(level, pos, face, new ItemStack(bark)));
     }
 
@@ -85,7 +85,7 @@ public class TreeBarkEvents {
         };
         for (Block block : BuiltInRegistries.BLOCK) {
             BlockState state = block.defaultBlockState();
-            if (!state.is(BlockTags.LOGS)) continue;
+            if (!state.is(ModTags.Blocks.DROPS_BARK_WHEN_STRIPPED)) continue;
             try {
                 BlockState stripped = state.getToolModifiedState(context, ItemAbilities.AXE_STRIP, true);
                 if (stripped != null && stripped.getBlock() != block) map.putIfAbsent(stripped.getBlock(), block);

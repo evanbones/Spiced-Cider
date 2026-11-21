@@ -1,0 +1,30 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "blockbox"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "vanillabackport"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "woodworks"
+    }
+  ],
+  "type": "woodworks:sawmill",
+  "group": "logs",
+  "ingredient": [
+    {
+      "item": "minecraft:pale_oak_log"
+    },
+    {
+      "item": "minecraft:stripped_pale_oak_log"
+    }
+  ],
+  "result": {
+    "id": "spicedcider:bb/minecraft/pale_oak_seat",
+    "count": 2
+  }
+}

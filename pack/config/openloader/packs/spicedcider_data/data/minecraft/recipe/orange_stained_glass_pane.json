@@ -1,0 +1,24 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "minecraft:orange_stained_glass_pane"
+    }
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:orange_stained_glass"
+    }
+  },
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "result": {
+    "id": "minecraft:orange_stained_glass_pane",
+    "count": 16
+  },
+  "group": "stained_glass_pane",
+  "category": "misc",
+  "type": "minecraft:crafting_shaped"
+}

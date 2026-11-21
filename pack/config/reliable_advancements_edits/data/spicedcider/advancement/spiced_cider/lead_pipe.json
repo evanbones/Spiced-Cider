@@ -1,0 +1,32 @@
+{
+  "parent": "spicedcider:spiced_cider/crucible",
+  "display": {
+    "icon": {
+      "id": "spicedcider:lead_pipe"
+    },
+    "title": {
+      "text": "Plumb Job"
+    },
+    "description": {
+      "text": "Cast a Lead Pipe in a Crucible"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "has_item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "spicedcider:lead_pipe"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_item"
+    ]
+  ]
+}
