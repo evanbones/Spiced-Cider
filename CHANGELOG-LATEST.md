@@ -62,7 +62,7 @@
 - Bundles can no longer be put inside other bundles.
 - New pear tree fruit models and textures.
 - New Sulfur and Glowlight Candle textures, and their candle holders match.
-- Hammering Copper, Tin, Lead, Bronze and Gold sheets on a Workstone always works. 
+- Hammering Copper, Tin, Lead, Bronze and Gold sheets on a Workstone always works.
 - Lategame metal sheets can only be made with a Mechanical Press or a Plate Mould.
 - Crushing raw ore always gives 2 crushed ore, and 16 from a block of raw ore.
 - Precision Mechanisms and Bronze Movements always succeed in sequenced assembly.
@@ -72,15 +72,10 @@
 - Anvil recipes are listed after Crafting in EMI.
 - Heaven Portal chests can hold Pulling, Hallowed and Flinging Tablets.
 - Pulling Tablets are infused from 2 Item Magnets, a Lead and 2 Glowsilk String.
-- Magnetic Bait is made with Flux Gems and Tin Nuggets instead of Flux Dust, Prismarine Crystals and Iron Nuggets.
-- Lucky Bait is made from 4 Worms, 4 Tin Nuggets and a Rabbit's Foot, and makes 8.
-- Lucky and Magnetic Bait come in tin cans, like the Can of Bait.
+- Lucky and Magnetic Bait are now made using tin.
 - Cans of Bait are grouped with the other baits in EMI.
-- Magnets are made with Flux Gems instead of Flux Dust and blue dye.
-- Bastion treasure chests always hold one or two Enchantment Tablets, which can be any tablet.
-- Nether fortresses, bastions and nether dungeons can give Heavy, Flinging, Hallowed and Pulling Tablets too.
-- Molten Fortress chests hold more loot and fewer saddles and horse armour, and can give tablets, raw nuggets and Nether supplies.
-- Nether fortress chests have fewer saddles and horse armour.
+- Changed Magnet recipe.
+- Rebalanced Molten/Nether Fortress, bastions, and nether dungeon chests.
 - Small nether dungeons give Glowcoke instead of coal.
 - Bastions no longer give prismarine crystals.
 
