@@ -39,7 +39,7 @@
 	ledgeClimbRework = true
 	#Pulling yourself up a ledge costs a bolt of Modest Meals stamina, and you can't climb while exhausted. Requires Get Over It and Modest Meals.
 	ledgeClimbStamina = true
-	#Stamina recovers twice as fast while sitting with Personality. Requires Personality and Modest Meals.
+	#Stamina recovers twice as fast while sitting on a seat, chair or cushion, or with Personality's sit key. Requires Modest Meals.
 	sittingStaminaRegen = true
 	#Animals and mobs can sit on Quark stools like on Create seats: walk or lead them onto one, or right-click it while holding a lead. Seated mobs work with Stock Tickers and other seat features. Requires Quark and Create.
 	quarkStoolSeats = true
@@ -177,6 +177,12 @@
 		# Default: 64
 		# Range: 1 ~ 1024
 		bundleCapacity = 128
+		#Every fall deals this much less damage to players, in half hearts. 0 is the vanilla amount.
+		# Default: 0
+		# Range: 0 ~ 20
+		fallDamageReduction = 2
+		#Bundles can't be put inside other bundles.
+		noNestedBundles = true
 		#Igloos generate without their basement.
 		iglooBasementRemoval = true
 		#Cocoa pods can't be placed and break off logs. Cacao trees grow their own pods.
@@ -278,8 +284,8 @@
 		#Movement speed given to every horse when Fixed Horse Stats is on. 0.3375 is the fastest a vanilla horse can be.
 		# Default: 0.3375
 		# Range: 0.05 ~ 1.0
-		staticHorseSpeed = 0.3375
+		staticHorseSpeed = 0.28
 		#Jump strength given to every horse when Fixed Horse Stats is on. 1.0 is the highest a vanilla horse can jump, about 5 blocks.
 		# Default: 1.0
 		# Range: 0.1 ~ 2.0
-		staticHorseJump = 1.0
+		staticHorseJump = 0.8

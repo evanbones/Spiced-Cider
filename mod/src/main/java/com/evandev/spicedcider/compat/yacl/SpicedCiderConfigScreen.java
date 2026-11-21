@@ -70,6 +70,8 @@ public class SpicedCiderConfigScreen {
                         .option(toggle("privateAdvancementMessages", common.privateAdvancementMessages))
                         .option(toggle("accurateSignHitboxes", common.accurateSignHitboxes))
                         .option(intSlider("bundleCapacity", common.bundleCapacity, 16, 512, 16))
+                        .option(intSlider("fallDamageReduction", common.fallDamageReduction, 0, 10, 1))
+                        .option(toggle("noNestedBundles", common.noNestedBundles))
                         .option(toggle("iglooBasementRemoval", common.iglooBasementRemoval))
                         .option(toggle("leavesNotSuffocating", startup.leavesNotSuffocating))
                         .option(toggle("torchflowerLight", startup.torchflowerLight))

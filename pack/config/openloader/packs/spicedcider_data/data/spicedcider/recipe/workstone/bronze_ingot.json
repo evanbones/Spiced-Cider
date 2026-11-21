@@ -1,0 +1,26 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "manual_labour"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "alloyed"
+    }
+  ],
+  "type": "manual_labour:workstone",
+  "ingredients": [
+    {
+      "item": "alloyed:bronze_ingot"
+    },
+    {
+      "tag": "manual_labour:hammers"
+    }
+  ],
+  "results": [
+    {
+      "id": "alloyed:bronze_sheet"
+    }
+  ]
+}

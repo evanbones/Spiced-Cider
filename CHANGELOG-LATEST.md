@@ -17,11 +17,13 @@
 
 - Climbing up ledges is quicker and lands you on top. It only happens on ledges about two blocks tall that you are
   facing, and costs a bolt of stamina.
-- Autostep now has smooth camera.
+- Stepping up and down blocks now has a smooth camera, in third person and on horseback too.
 - Repairing tools at an anvil takes as many ingots as making them: one for shovels, two for swords and hoes, three for
   pickaxes and axes.
 - Using a Workstone no longer costs stamina.
 - Scrolling through the hotbar no longer plays a sound.
+- Retextured lanterns (Cast Iron, Soul, Sulfur, Glowlight, Cupric, Feldspar and Redstone Lanterns, including on walls)
+  for a consistent look, and the Redstone Lantern uses the same shape as the others (thanks, @mistermatias!).
 - Sack tooltips no longer list their contents as text.
 - The Iron Rod is made with Polished Obsidian instead of a Quartz Rod.
 - The Iron Chimney is made with cast iron instead of iron.
@@ -38,7 +40,7 @@
 - Pouring from a Crucible is smoother and holding the button after a pour no longer places the Crucible.
 - Ingot and Plate Moulds are shaped like the ingot and sheet they cast. They also have new item sprites.
 - EMI shows melting, alloying and casting with fluid gauges, heat sources, Smeltery fuel and melting and cooling times.
-- Cast Iron Sheets can be made with a Mechanical Press or on a Workstone.
+- Cast Iron Sheets can be made with a Mechanical Press.
 - Anvils, Hoppers, Minecarts, Basins, Cooking Pots, Skillets, Cages, Cannons and the Smeltery are made with Cast Iron
   ingots, sheets and blocks.
 - Fluid Pipes, Fluid Tanks, Fluid Valves, Valve Handles, and the Hose Pulley are made with lead, and look like lead.
@@ -46,6 +48,24 @@
 - The Mechanical Pump is made with a Lead Pipe.
 - Reverted Chain texture changes.
 - The "Plumb Job" advancement now follows Lead.
+- Horses are slightly slower and jump lower.
+- Falls deal a heart less damage.
+- Sitting on seats, chairs and cushions restores stamina faster, like sitting down.
+- Minecarts are made with planks and Cast Iron Sheets, and added shortcut recipes for every minecart.
+- Rails make 16 per craft.
+- Candle Holders and Plating are made with cast iron.
+- Renamed Iron Lanterns are to Cast Iron Lanterns.
+- Dead Wood is now just Dead: Dead Log, Dead Planks, Dead Door, etc.
+- Cookies, Honey Cookies, and Sweet Berry Cookies are baked from dough in an Oven.
+- Tofu is fermented with a Water Bottle, and the bottle is given back.
+- Bundles can no longer be put inside other bundles.
+- New pear tree fruit models and textures.
+- New Sulfur and Glowlight Candle textures, and their candle holders match.
+- Hammering Copper, Tin, Lead, Bronze and Gold sheets on a Workstone always works. 
+- Lategame metal sheets can only be made with a Mechanical Press or a Plate Mould.
+- Crushing raw ore always gives 2 crushed ore, and 16 from a block of raw ore.
+- Precision Mechanisms and Bronze Movements always succeed in sequenced assembly.
+- Candle holders all now use flat item icons.
 
 ### Fixed
 
@@ -64,6 +84,13 @@
 - The tops of pine posts now match pine logs.
 - Javelins can be repaired with their ingots again, and EMI shows which ingot repairs each one.
 - Status effects and fluids show up in EMI once you've made a crafting table, instead of only after you've had them.
+- The Map Atlas lock message said "Locked" when unlocking and "Unlocked" when locking.
+- Ice broken by landing on it now leaves water.
+- Removed a duplicate Ice recipe.
+- The Blaze Powder description no longer says it makes Steel.
+- Twisted wood no longer shows up in EMI before you reach the Nether.
+- The Walnut Shelf texture matches walnut planks.
+- The high memory usage warning no longer appears in chat.
 
 ### Removed
 
@@ -71,3 +98,5 @@
 - The Peeper Head.
 - Vessel, Frame and Pipe Moulds, Cast Iron Vessels and Cast Iron Frames.
 - Buckets can no longer be cast in a mould.
+- Mods button from the pause menu.
+- The Compression Blast Miner.

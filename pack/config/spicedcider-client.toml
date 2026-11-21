@@ -99,7 +99,7 @@
 	graveLocatorBar = true
 	#Walk up full blocks without jumping. Sneak to stop stepping up.
 	stepUpEnabled = true
-	#The camera glides up when you step onto a block or slab instead of snapping.
+	#The camera glides when you step up onto or down off a block or slab instead of snapping, in first and third person and while riding.
 	smoothStepUp = true
 
 [voxy]

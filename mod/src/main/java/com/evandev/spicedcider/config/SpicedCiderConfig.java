@@ -245,6 +245,8 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.BooleanValue privateAdvancementMessages;
         public final ModConfigSpec.BooleanValue accurateSignHitboxes;
         public final ModConfigSpec.IntValue bundleCapacity;
+        public final ModConfigSpec.IntValue fallDamageReduction;
+        public final ModConfigSpec.BooleanValue noNestedBundles;
         public final ModConfigSpec.BooleanValue iglooBasementRemoval;
         public final ModConfigSpec.BooleanValue noVanillaCocoaPods;
         public final ModConfigSpec.BooleanValue paleOakGrowsGloomwood;
@@ -586,6 +588,16 @@ public class SpicedCiderConfig {
                     .comment(tooltip("bundleCapacity"))
                     .translation("option.spicedcider.bundleCapacity")
                     .defineInRange("bundleCapacity", 64, 1, 1024);
+
+            fallDamageReduction = builder
+                    .comment(tooltip("fallDamageReduction"))
+                    .translation("option.spicedcider.fallDamageReduction")
+                    .defineInRange("fallDamageReduction", 0, 0, 20);
+
+            noNestedBundles = builder
+                    .comment(tooltip("noNestedBundles"))
+                    .translation("option.spicedcider.noNestedBundles")
+                    .define("noNestedBundles", false);
 
             iglooBasementRemoval = builder
                     .comment(tooltip("iglooBasementRemoval"))

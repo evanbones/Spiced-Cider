@@ -163,8 +163,8 @@ public final class SettingsPages {
                 sodium("sodium:general.render_distance", o.renderDistance()),
                 sodium("sodium:general.simulation_distance", o.simulationDistance()),
                 sodium("sodium:quality.entity_distance", o.entityDistanceScaling()),
-                named(sodiumOnly("voxy:enabled"), "spicedcider.options.lod_terrain"),
-                named(sodiumOnly("voxy:render_distance", VOXY_DEFAULT_DISTANCE), "spicedcider.options.lod_distance"),
+                impact(named(sodiumOnly("voxy:enabled"), "spicedcider.options.lod_terrain"), Impact.HIGH),
+                impact(named(sodiumOnly("voxy:render_distance", VOXY_DEFAULT_DISTANCE), "spicedcider.options.lod_distance"), Impact.HIGH),
                 ModList.get().isLoaded("roxy") ? impact(VoxyFogSettings.start(), Impact.LOW) : null,
                 ModList.get().isLoaded("roxy") ? impact(VoxyFogSettings.end(), Impact.LOW) : null));
         add(entries, category(screen, "visuals",

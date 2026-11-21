@@ -1,0 +1,33 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "quark"
+    },
+    {
+      "type": "zeta:flag",
+      "flag": "minecart_upgrade"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PXP",
+    "SSS"
+  ],
+  "key": {
+    "P": {
+      "tag": "minecraft:planks"
+    },
+    "S": {
+      "tag": "c:plates/cast_iron"
+    },
+    "X": {
+      "item": "minecraft:hopper"
+    }
+  },
+  "result": {
+    "id": "minecraft:hopper_minecart",
+    "count": 1
+  }
+}

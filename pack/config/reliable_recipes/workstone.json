@@ -35,5 +35,22 @@
       "farmersdelight:salvaging/quartz_block",
       "supplementaries:integration/ash_bricks_salvaging_fd"
     ]
+  },
+  {
+    "action": "remove_recipe",
+    "id": [
+      "manual_labour:workstone/iron_ingot_to_iron_sheet",
+      "manual_labour:workstone/brass_ingot_to_brass_sheet",
+      "spicedcider:workstone/cast_iron_ingot",
+      "spicedcider:workstone/diamond",
+      "spicedcider:workstone/electrum_ingot",
+      "spicedcider:workstone/necromium_ingot",
+      "spicedcider:workstone/netherite_ingot",
+      "spicedcider:workstone/prismarite_ingot",
+      "spicedcider:workstone/rose_gold_ingot",
+      "spicedcider:workstone/silver_ingot",
+      "spicedcider:workstone/steel_ingot",
+      "spicedcider:workstone/valkyrium_ingot"
+    ]
   }
 ]

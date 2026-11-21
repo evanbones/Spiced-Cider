@@ -2,10 +2,13 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "pattern": [
-    "S S",
+    "P P",
     "SSS"
   ],
   "key": {
+    "P": {
+      "tag": "minecraft:planks"
+    },
     "S": {
       "tag": "c:plates/cast_iron"
     }

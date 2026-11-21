@@ -12,15 +12,18 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "pattern": [
-    "SXS",
+    "PXP",
     "SSS"
   ],
   "key": {
+    "P": {
+      "tag": "minecraft:planks"
+    },
     "S": {
       "tag": "c:plates/cast_iron"
     },
     "X": {
-      "item": "minecraft:furnace"
+      "tag": "c:player_workstations/furnaces"
     }
   },
   "result": {

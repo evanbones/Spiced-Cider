@@ -1,0 +1,42 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_abyssaline_pillar": {
+      "conditions": {
+        "items": [
+          {
+            "items": "architects_palette:abyssaline_pillar"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "architects_palette:warping/hadaline_pillar_from_abyssaline_pillar_warping"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "entered_nether": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "minecraft:the_nether"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_abyssaline_pillar"
+    ],
+    [
+      "has_the_recipe",
+      "entered_nether"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "architects_palette:warping/hadaline_pillar_from_abyssaline_pillar_warping"
+    ]
+  }
+}

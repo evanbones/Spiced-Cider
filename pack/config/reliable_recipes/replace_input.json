@@ -272,5 +272,29 @@
     },
     "target": "#nomansland:edible_mushrooms",
     "replacement": "#spicedcider:raw_edible_mushrooms"
+  },
+  {
+    "action": "replace_input",
+    "filter": {
+      "id": "/(supplementaries:candle_holders\\/candle_holder|spicedcider:candle_holders\\/candle_holder)(_[a-z]+)?/"
+    },
+    "target": "#c:ingots/iron",
+    "replacement": "#c:ingots/cast_iron"
+  },
+  {
+    "action": "replace_input",
+    "filter": {
+      "id": "architects_palette:plating_block"
+    },
+    "target": "minecraft:iron_ingot",
+    "replacement": "#c:ingots/cast_iron"
+  },
+  {
+    "action": "replace_input",
+    "filter": {
+      "id": "architects_palette:plating_block"
+    },
+    "target": "minecraft:iron_nugget",
+    "replacement": "#c:nuggets/cast_iron"
   }
 ]

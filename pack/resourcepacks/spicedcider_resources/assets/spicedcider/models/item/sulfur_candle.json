@@ -1,5 +1,5 @@
 {
-    "parent": "supplementaries:block/candle_holders/cupric_floor_1",
+    "parent": "spicedcider:block/sulfur_candle_one_candle",
     "display": {
 		"gui": {
 		  "rotation": [30, 45, 0],
@@ -7,7 +7,7 @@
 		  "scale": [1.125, 1.125, 1.125]
 		},
 		"thirdperson_righthand": {
-		  "rotation": [75, 225, 0],
+		  "rotation": [75, 45, 0],
 		  "translation": [0, 1.5, 3],
 		  "scale": [0.625, 0.625, 0.625]
 		},
@@ -17,7 +17,7 @@
 		  "scale": [0.625, 0.625, 0.625]
 		},
 		"firstperson_righthand": {
-		  "rotation": [0, 225, 0],
+		  "rotation": [0, 45, 0],
           "translation": [0, 3, 0],
 		  "scale": [0.625, 0.625, 0.625]
 		},

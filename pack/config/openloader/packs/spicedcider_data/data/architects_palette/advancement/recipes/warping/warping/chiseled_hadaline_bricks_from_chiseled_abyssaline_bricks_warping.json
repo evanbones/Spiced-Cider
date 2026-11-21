@@ -1,0 +1,42 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_chiseled_abyssaline_bricks": {
+      "conditions": {
+        "items": [
+          {
+            "items": "architects_palette:chiseled_abyssaline_bricks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "architects_palette:warping/chiseled_hadaline_bricks_from_chiseled_abyssaline_bricks_warping"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "entered_nether": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "minecraft:the_nether"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_chiseled_abyssaline_bricks"
+    ],
+    [
+      "has_the_recipe",
+      "entered_nether"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "architects_palette:warping/chiseled_hadaline_bricks_from_chiseled_abyssaline_bricks_warping"
+    ]
+  }
+}

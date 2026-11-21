@@ -6,7 +6,8 @@
 - Ledge Climbing Rework: Get Over It only climbs ledges taller than a jump that you face and walk into, climbs faster
   and lands you on top (off by default).
 - Ledge Climbing Stamina: climbing a ledge costs Modest Meals stamina (off by default).
-- Smooth Step Up: the camera glides up steps instead of snapping (off by default).
+- Smooth Steps: the camera glides up and down steps instead of snapping, in first and third person and while riding
+  (off by default).
 - Tool Repair Costs: fully repairing a tool in an Easy Anvils anvil takes one material for shovels, two for swords and
   hoes and three for pickaxes and axes (off by default).
 - Reveal Threatening Monsters: monsters that stop you from sleeping, or from opening loot chests with Modulation's
@@ -18,6 +19,8 @@
 - Copper Screws melt into 50 mB of molten copper (Modest Mining).
 - Cast Iron Sheets can be pressed (Create) or hammered on a Workstone (Manual Labour).
 - Smeltery melting for every metal's storage block (2250 mB) and raw ore block (3375 mB), when those tags have entries.
+- Fall Damage Reduction: every fall deals a set amount less damage to players (off by default).
+- No Bundles in Bundles: bundles can't be put inside other bundles (off by default).
 
 ### Changed
 
@@ -30,6 +33,7 @@
 - Adjusted Ingot and Plate Mould models.
 - Improved EMI casting pages.
 - New item sprites for the fired and unfired Ingot and Plate Moulds.
+- Sitting Restores Stamina Faster also works on seats, chairs, and cushions.
 
 ### Fixed
 
@@ -40,6 +44,8 @@
 - Mobs that spawn holding a plain book (Scholar) no longer get it enchanted.
 - Modest Mining javelins accept the replacement ingot when their tier's repair item was removed by Reliable Remover,
   and EMI now shows anvil repair recipes for javelins.
+- Ice broken by landing on it (Break My Fall) melts into water like ice broken by hand.
+- Cultural Delights vat recipes give back the glass bottles from water bottles.
 
 ### Removed
 
