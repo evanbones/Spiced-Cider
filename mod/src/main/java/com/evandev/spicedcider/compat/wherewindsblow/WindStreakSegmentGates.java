@@ -7,6 +7,7 @@ public final class WindStreakSegmentGates {
     private static final int SEGMENTS = 24;
     private static final Map<Object, long[]> GATES = new IdentityHashMap<>();
 
+    private static long gatesTick = Long.MIN_VALUE;
     private static long[] current;
     private static long currentBit;
     private static boolean recording;
@@ -14,16 +15,15 @@ public final class WindStreakSegmentGates {
     private static boolean blocked;
 
     public static boolean begin(Object streak, float t0, long tick) {
-        long[] gate = GATES.computeIfAbsent(streak, key -> new long[3]);
-        if (gate[0] != tick) {
-            gate[0] = tick;
-            gate[1] = 0L;
-            gate[2] = 0L;
+        if (tick != gatesTick) {
+            GATES.clear();
+            gatesTick = tick;
         }
+        long[] gate = GATES.computeIfAbsent(streak, key -> new long[2]);
         long bit = 1L << Math.round(t0 * SEGMENTS);
-        if ((gate[1] & bit) != 0L) {
+        if ((gate[0] & bit) != 0L) {
             recording = false;
-            if ((gate[2] & bit) != 0L) {
+            if ((gate[1] & bit) != 0L) {
                 bypassing = false;
                 return false;
             }
@@ -40,8 +40,8 @@ public final class WindStreakSegmentGates {
 
     public static void end() {
         if (recording && current != null) {
-            current[1] |= currentBit;
-            if (blocked) current[2] |= currentBit;
+            current[0] |= currentBit;
+            if (blocked) current[1] |= currentBit;
         }
         recording = false;
         bypassing = false;
