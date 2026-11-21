@@ -18,7 +18,7 @@ import org.joml.Vector3f;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 
-@IfModLoaded("connectiblechains")
+@IfModLoaded(value = "connectiblechains", minVersion = "2.6.0")
 @Mixin(targets = "com.evandev.connectiblechains.client.render.entity.ChainKnotEntityRenderer", remap = false)
 public abstract class ChainKnotRendererWindMixin {
 

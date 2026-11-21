@@ -78,6 +78,8 @@ DayTheMagpie. Additional textures contributed by [RareSauce](https://modrinth.co
 - witheredwasabi: [Lily Padding](https://modrinth.com/resourcepack/lily-padding)
 - Wokashi_Crea: [Redstone Torch Backport Supporter](https://modrinth.com/resourcepack/rstorch-backport-mod-supporter)
 - zpez: [Glowy Nether Portals](https://modrinth.com/resourcepack/glowy-nether-portals)
+- [CamKablam](https://modrinth.com/user/CamKablam): Additional shutter textures
+- Kevin (@proxillus): Pear textures/model
 
 **Special thanks to the following people for their help in the development of this pack.**
 
@@ -90,6 +92,7 @@ DayTheMagpie. Additional textures contributed by [RareSauce](https://modrinth.co
 - [HLStudios](https://modrinth.com/user/HLStudios)
 - [Cassian](https://modrinth.com/user/Cassian)
 - mouse mouse
+- Kevin (@proxillus)
 
 Spiced Cider is heavily inspired by the following projects:
 [Raspberry Flavoured](https://www.curseforge.com/minecraft/modpacks/raspberry-flavoured),

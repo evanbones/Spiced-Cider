@@ -27,6 +27,7 @@ public class DrinkIntoxicationEvents {
             "bountifulfares:elderberry_wine_bottle",
             "nomansland:maple_mead_bottle"
     );
+    private static final List<String> SOBER_DRINKS = List.of("culturaldelights:apple_cider");
 
     @SubscribeEvent
     public static void addIntoxication(ModifyDefaultComponentsEvent event) {
@@ -39,6 +40,18 @@ public class DrinkIntoxicationEvents {
                 List<FoodProperties.PossibleEffect> effects = new ArrayList<>(food.effects());
                 effects.add(new FoodProperties.PossibleEffect(() -> new MobEffectInstance(effect.get(), DURATION, 0), 1.0F));
                 FoodProperties drink = new FoodProperties(food.nutrition(), food.saturation(), food.canAlwaysEat(), food.eatSeconds(), food.usingConvertsTo(), List.copyOf(effects));
+                event.modify(item, builder -> builder.set(DataComponents.FOOD, drink));
+            });
+        }
+        for (String id : SOBER_DRINKS) {
+            BuiltInRegistries.ITEM.getOptional(ResourceLocation.parse(id)).ifPresent(item -> {
+                FoodProperties food = item.components().get(DataComponents.FOOD);
+                if (food == null) return;
+                List<FoodProperties.PossibleEffect> effects = food.effects().stream()
+                        .filter(possible -> !possible.effect().is(effect.get()))
+                        .toList();
+                if (effects.size() == food.effects().size()) return;
+                FoodProperties drink = new FoodProperties(food.nutrition(), food.saturation(), food.canAlwaysEat(), food.eatSeconds(), food.usingConvertsTo(), effects);
                 event.modify(item, builder -> builder.set(DataComponents.FOOD, drink));
             });
         }

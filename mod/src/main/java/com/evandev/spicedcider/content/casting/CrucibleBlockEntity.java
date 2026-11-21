@@ -182,7 +182,12 @@ public class CrucibleBlockEntity extends BlockEntity {
         }
         this.meltProgress = 0;
         for (int slot : match.slots()) {
-            this.items.setStackInSlot(slot, ItemStack.EMPTY);
+            if (slot >= 0) {
+                this.items.setStackInSlot(slot, ItemStack.EMPTY);
+            }
+        }
+        if (match.drained() > 0) {
+            this.fluid = FluidStack.EMPTY;
         }
         FluidStack result = match.recipe().value().result();
         if (this.fluid.isEmpty()) {
@@ -194,7 +199,7 @@ public class CrucibleBlockEntity extends BlockEntity {
         changed();
     }
 
-    private record Match(RecipeHolder<CrucibleMeltingRecipe> recipe, int[] slots) {
+    private record Match(RecipeHolder<CrucibleMeltingRecipe> recipe, int[] slots, int drained) {
     }
 
     @Nullable
@@ -206,6 +211,10 @@ public class CrucibleBlockEntity extends BlockEntity {
                 continue;
             }
             if (!this.fluid.isEmpty() && !FluidStack.isSameFluidSameComponents(this.fluid, recipe.result())) {
+                Match alloy = alloyWithTank(level, holder, stacks);
+                if (alloy != null) {
+                    return alloy;
+                }
                 continue;
             }
             if (this.fluid.getAmount() + recipe.result().getAmount() > CAPACITY) {
@@ -213,7 +222,44 @@ public class CrucibleBlockEntity extends BlockEntity {
             }
             int[] slots = recipe.match(stacks);
             if (slots != null) {
-                return new Match(holder, slots);
+                return new Match(holder, slots, 0);
+            }
+        }
+        return null;
+    }
+
+    @Nullable
+    private Match alloyWithTank(Level level, RecipeHolder<CrucibleMeltingRecipe> holder, List<ItemStack> stacks) {
+        CrucibleMeltingRecipe recipe = holder.value();
+        int count = recipe.ingredients().size();
+        if (count < 2 || recipe.result().getAmount() > CAPACITY) {
+            return null;
+        }
+        int[] values = new int[count];
+        boolean any = false;
+        for (int i = 0; i < count; i++) {
+            values[i] = Casting.fluidValue(level, recipe.ingredients().get(i), this.fluid);
+            any |= values[i] > 0;
+        }
+        if (!any) {
+            return null;
+        }
+        int all = (1 << count) - 1;
+        for (int skipped = 1; skipped < all; skipped++) {
+            int total = 0;
+            boolean valid = true;
+            for (int i = 0; i < count && valid; i++) {
+                if ((skipped & (1 << i)) != 0) {
+                    valid = values[i] > 0;
+                    total += values[i];
+                }
+            }
+            if (!valid || total != this.fluid.getAmount()) {
+                continue;
+            }
+            int[] slots = recipe.match(stacks, skipped);
+            if (slots != null) {
+                return new Match(holder, slots, total);
             }
         }
         return null;

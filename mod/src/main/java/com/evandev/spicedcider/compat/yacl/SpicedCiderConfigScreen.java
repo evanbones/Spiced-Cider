@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.compat.yacl;
 
+import com.evandev.spicedcider.compat.ModVersions;
 import com.evandev.spicedcider.config.SpicedCiderConfig;
 import dev.isxander.yacl3.api.ConfigCategory;
 import dev.isxander.yacl3.api.Option;
@@ -147,7 +148,7 @@ public class SpicedCiderConfigScreen {
                         .option(intSlider("windParticleStrength", client.windParticleStrength, 0, 300, 5))
                         .option(toggle("windMotes", client.windMotes))
                         .option(toggle("hangingFruitSway", client.hangingFruitSway))
-                        .optionIf(ModList.get().isLoaded("connectiblechains"), toggle("chainDecorationSway", client.chainDecorationSway))
+                        .optionIf(ModVersions.connectibleChains(), toggle("chainDecorationSway", client.chainDecorationSway))
                         .build())
                 .categoryIf(ModList.get().isLoaded("roxy"), ConfigCategory.createBuilder()
                         .name(Component.translatable("category.spicedcider.voxy"))

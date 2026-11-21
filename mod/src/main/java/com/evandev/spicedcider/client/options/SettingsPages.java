@@ -155,7 +155,7 @@ public final class SettingsPages {
         List<Entry> entries = new ArrayList<>();
         boolean cirrus = ModList.get().isLoaded("cirrus");
         add(entries, category(screen, "display",
-                sodium("sodium:general.fullscreen", o.fullscreen()),
+                fullscreen(o),
                 sodium("sodium:general.fullscreen_resolution", null),
                 sodium("sodium:general.vsync", o.enableVsync()),
                 sodium("sodium:general.framerate_limit", o.framerateLimit()),
@@ -360,6 +360,12 @@ public final class SettingsPages {
             if (setting != null) return new SettingEntry(setting);
         }
         return fallback == null ? null : vanilla(fallback);
+    }
+
+    @Nullable
+    private static Entry fullscreen(Options o) {
+        Entry borderless = sodium("cwb:general.fullscreen", null);
+        return borderless != null ? borderless : sodium("sodium:general.fullscreen", o.fullscreen());
     }
 
     @Nullable

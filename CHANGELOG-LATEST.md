@@ -13,6 +13,10 @@
 - Moulds are grouped together in EMI.
 - Blocks of metal and blocks of raw ore can be melted in a Smeltery.
 - Disarming, Illuminating and Leaping can be put on Tongue Whips with Pulling, Hallowed and Flinging Tablets.
+- A Hide can be cut into 4 Small Hides with a knife on a Cutting Board.
+- Crucibles, beds and pet beds can be placed on slabs.
+- Unfired Moulds can be fired in a Kiln.
+- Deepslate ores have top textures that match the deepslate around them.
 
 ### Changed
 
@@ -78,6 +82,12 @@
 - Rebalanced Molten/Nether Fortress, bastions, and nether dungeon chests.
 - Small nether dungeons give Glowcoke instead of coal.
 - Bastions no longer give prismarine crystals.
+- Spiced Cider no longer makes you Intoxicated.
+- Stepping up full blocks without jumping only happens while sprinting.
+- Sit and Crawl have their own keys, X and C by default, replacing Change Stance.
+- The quiver key is unbound by default, and Voice Chat uses V and G.
+- The minimap no longer shows coordinates or the biome name by default.
+- The Fullscreen Mode video setting lets you pick Borderless or Fullscreen.
 
 ### Fixed
 
@@ -106,6 +116,7 @@
 - Stripped Avocado and Pear Log tops no longer show bark.
 - Avocado, Pear and Cacao logs are the same size as other fruit logs in the inventory.
 - The Lime Bed item sits level with the other beds.
+- Molten metal already in a Crucible counts toward alloys.
 
 ### Removed
 
@@ -117,3 +128,4 @@
 - The Compression Blast Miner.
 - The Glowsilk Bow.
 - The Pulley.
+- The Recollection Tablet and the Soulbound enchantment.

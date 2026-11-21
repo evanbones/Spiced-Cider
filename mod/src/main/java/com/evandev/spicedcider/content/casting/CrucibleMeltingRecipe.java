@@ -65,20 +65,28 @@ public record CrucibleMeltingRecipe(List<Ingredient> ingredients, FluidStack res
     }
 
     public int[] match(List<ItemStack> stacks) {
-        int[] assigned = new int[this.ingredients.size()];
-        boolean[] taken = new boolean[stacks.size()];
-        return assign(0, stacks, assigned, taken) ? assigned : null;
+        return match(stacks, 0);
     }
 
-    private boolean assign(int index, List<ItemStack> stacks, int[] assigned, boolean[] taken) {
+    public int[] match(List<ItemStack> stacks, int skipped) {
+        int[] assigned = new int[this.ingredients.size()];
+        boolean[] taken = new boolean[stacks.size()];
+        return assign(0, stacks, assigned, taken, skipped) ? assigned : null;
+    }
+
+    private boolean assign(int index, List<ItemStack> stacks, int[] assigned, boolean[] taken, int skipped) {
         if (index == this.ingredients.size()) {
             return true;
+        }
+        if ((skipped & (1 << index)) != 0) {
+            assigned[index] = -1;
+            return assign(index + 1, stacks, assigned, taken, skipped);
         }
         for (int slot = 0; slot < stacks.size(); slot++) {
             if (!taken[slot] && !stacks.get(slot).isEmpty() && this.ingredients.get(index).test(stacks.get(slot))) {
                 taken[slot] = true;
                 assigned[index] = slot;
-                if (assign(index + 1, stacks, assigned, taken)) {
+                if (assign(index + 1, stacks, assigned, taken, skipped)) {
                     return true;
                 }
                 taken[slot] = false;

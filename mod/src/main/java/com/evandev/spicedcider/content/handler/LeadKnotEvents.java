@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.content.handler;
 
+import com.evandev.spicedcider.compat.ModVersions;
 import com.evandev.spicedcider.SpicedCider;
 import com.evandev.spicedcider.compat.connectiblechains.ConnectibleChainsLeads;
 import net.minecraft.core.BlockPos;
@@ -12,13 +13,12 @@ import net.minecraft.world.item.LeadItem;
 import net.minecraft.world.level.Level;
 import net.neoforged.bus.api.EventPriority;
 import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.fml.ModList;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 
 @EventBusSubscriber(modid = SpicedCider.MOD_ID)
 public class LeadKnotEvents {
-    private static final boolean CONNECTIBLE_CHAINS = ModList.get().isLoaded("connectiblechains");
+    private static final boolean CONNECTIBLE_CHAINS = ModVersions.connectibleChains();
 
     @SubscribeEvent(priority = EventPriority.HIGH)
     public static void onEntityInteract(PlayerInteractEvent.EntityInteract event) {

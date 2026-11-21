@@ -21,7 +21,7 @@ public class StepUpEvents {
         Player player = event.getEntity();
         AttributeInstance stepHeight = player.getAttribute(Attributes.STEP_HEIGHT);
         if (stepHeight == null) return;
-        boolean wanted = !player.isShiftKeyDown() && SpicedCiderConfig.commonOr(SpicedCiderConfig.COMMON.stepUp, false)
+        boolean wanted = player.isSprinting() && !player.isShiftKeyDown() && SpicedCiderConfig.commonOr(SpicedCiderConfig.COMMON.stepUp, false)
                 && (!player.level().isClientSide() || SpicedCiderConfig.clientOr(SpicedCiderConfig.CLIENT.stepUpEnabled, true));
         boolean present = stepHeight.hasModifier(ID);
         if (wanted && !present) {

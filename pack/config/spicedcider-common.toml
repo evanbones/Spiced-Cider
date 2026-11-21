@@ -193,7 +193,7 @@
 		brokenToolsOnCuttingBoards = false
 		#Players and the world spawn are never placed on top of leaves.
 		noLeafSpawns = true
-		#Players walk up full blocks without jumping, except while sneaking.
+		#Players run up full blocks without jumping while sprinting.
 		stepUp = true
 
 	[features.voidWater]
