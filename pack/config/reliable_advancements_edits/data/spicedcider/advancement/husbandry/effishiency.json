@@ -1,0 +1,25 @@
+{
+  "parent": "spicedcider:husbandry/bait",
+  "display": {
+    "icon": {
+      "id": "spicedcider:fish_trap"
+    },
+    "title": {
+      "text": "Effishiency"
+    },
+    "description": {
+      "text": "Collect a catch from a baited Fish Trap"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "fish_trap_catch": {
+      "trigger": "spicedcider:fish_trap_catch"
+    }
+  },
+  "requirements": [
+    [
+      "fish_trap_catch"
+    ]
+  ]
+}

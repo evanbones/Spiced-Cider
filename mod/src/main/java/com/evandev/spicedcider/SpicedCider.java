@@ -26,6 +26,8 @@ import com.evandev.spicedcider.compat.nomansland.NoMansLandCreate;
 import com.evandev.spicedcider.compat.create.BasinStirring;
 import com.evandev.spicedcider.content.handler.BucketCapabilities;
 import com.evandev.spicedcider.compat.treeliable.ChopStamina;
+import com.evandev.spicedcider.compat.getoverit.LedgeClimbStamina;
+import com.evandev.spicedcider.networking.LedgeClimbPayload;
 import com.evandev.spicedcider.compat.everycompat.ChestCapabilities;
 import com.evandev.spicedcider.content.item.BalloonItem;
 import com.evandev.spicedcider.content.handler.SpawnControlEvents;
@@ -40,6 +42,7 @@ import com.evandev.spicedcider.content.loot.LootDisplays;
 import com.evandev.spicedcider.networking.GenerationEdgePayload;
 import com.evandev.spicedcider.networking.GravePositionsPayload;
 import com.evandev.spicedcider.client.gravestone.ClientGraves;
+import com.evandev.spicedcider.networking.LodAckPayload;
 import com.evandev.spicedcider.networking.LodChunkPayload;
 import com.evandev.spicedcider.networking.LodHelloPayload;
 import com.evandev.spicedcider.lodgen.LodGen;
@@ -84,6 +87,7 @@ import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.TagsUpdatedEvent;
 import net.neoforged.neoforge.event.entity.EntityAttributeModificationEvent;
 import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;
+import net.neoforged.neoforge.network.registration.HandlerThread;
 import net.neoforged.neoforge.network.registration.PayloadRegistrar;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -312,6 +316,7 @@ public class SpicedCider {
         FireVariantCompat.addToTabs(event, vis);
         if (event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
             event.insertAfter(new ItemStack(Items.SOUL_TORCH), new ItemStack(ModFireBlocks.SULFUR_TORCH_ITEM.get()), vis);
+            event.insertAfter(new ItemStack(Items.LANTERN), new ItemStack(ModItems.TIN_LANTERN.get()), vis);
             event.insertAfter(new ItemStack(Items.SOUL_LANTERN), new ItemStack(ModFireBlocks.SULFUR_LANTERN_ITEM.get()), vis);
             event.insertAfter(new ItemStack(Items.SOUL_CAMPFIRE), new ItemStack(ModFireBlocks.SULFUR_CAMPFIRE_ITEM.get()), vis);
         }
@@ -338,6 +343,7 @@ public class SpicedCider {
         }
         if (event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
             event.insertAfter(new ItemStack(Items.LOOM), new ItemStack(ModItems.TANNING_RACK.get()), vis);
+            event.accept(ModItems.FISH_TRAP.get(), vis);
             event.insertAfter(new ItemStack(Items.LODESTONE), new ItemStack(ModItems.GRAVESTONE.get()), vis);
             event.accept(ModItems.CRUCIBLE.get(), vis);
             event.accept(ModItems.SMELTERY.get(), vis);
@@ -370,9 +376,7 @@ public class SpicedCider {
             event.insertAfter(new ItemStack(Items.GOLD_NUGGET), new ItemStack(ModItems.CAST_IRON_NUGGET.get()), vis);
             event.insertAfter(new ItemStack(Items.IRON_INGOT), new ItemStack(ModItems.CAST_IRON_INGOT.get()), vis);
             event.insertAfter(new ItemStack(ModItems.CAST_IRON_INGOT.get()), new ItemStack(ModItems.CAST_IRON_SHEET.get()), vis);
-            event.insertAfter(new ItemStack(ModItems.CAST_IRON_SHEET.get()), new ItemStack(ModItems.CAST_IRON_VESSEL.get()), vis);
-            event.insertAfter(new ItemStack(ModItems.CAST_IRON_VESSEL.get()), new ItemStack(ModItems.CAST_IRON_FRAME.get()), vis);
-            event.insertAfter(new ItemStack(ModItems.CAST_IRON_FRAME.get()), new ItemStack(ModItems.BLAST_PROOF_PLATING.get()), vis);
+            event.insertAfter(new ItemStack(ModItems.CAST_IRON_SHEET.get()), new ItemStack(ModItems.BLAST_PROOF_PLATING.get()), vis);
             for (MouldShape shape : MouldShape.values()) {
                 event.accept(ModItems.UNFIRED_MOULDS.get(shape).get(), vis);
                 event.accept(ModItems.MOULDS.get(shape).get(), vis);
@@ -430,10 +434,14 @@ public class SpicedCider {
                 GenerationEdgePayload.CODEC,
                 (payload, context) -> context.enqueueWork(() -> VoxyFog.receiveEdge(payload.east(), payload.west(), payload.south(), payload.north()))
         );
-        registrar.playToClient(
+        PayloadRegistrar network = registrar.executesOn(HandlerThread.NETWORK);
+        network.playToClient(
                 LodChunkPayload.TYPE,
                 LodChunkPayload.CODEC,
-                (payload, context) -> context.enqueueWork(() -> LodClient.receive(payload))
+                (payload, context) -> {
+                    LodClient.acknowledge(context);
+                    context.enqueueWork(() -> LodClient.receive(payload));
+                }
         );
         registrar.playToClient(
                 GravePositionsPayload.TYPE,
@@ -449,6 +457,18 @@ public class SpicedCider {
                 PullStuckArrowPayload.TYPE,
                 PullStuckArrowPayload.CODEC,
                 (payload, context) -> context.enqueueWork(() -> StuckArrows.pull((ServerPlayer) context.player(), payload.entityId(), payload.slot(), payload.part()))
+        );
+        registrar.playToServer(
+                LedgeClimbPayload.TYPE,
+                LedgeClimbPayload.CODEC,
+                (payload, context) -> context.enqueueWork(() -> {
+                    if (ModList.get().isLoaded("modest_meals")) LedgeClimbStamina.spend((ServerPlayer) context.player());
+                })
+        );
+        network.playToServer(
+                LodAckPayload.TYPE,
+                LodAckPayload.CODEC,
+                (payload, context) -> LodGen.ack((ServerPlayer) context.player())
         );
         registrar.playToServer(
                 LodHelloPayload.TYPE,

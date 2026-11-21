@@ -1,0 +1,255 @@
+{
+  "display": {
+    "firstperson_lefthand": {
+      "rotation": [
+        -5,
+        86,
+        0
+      ],
+      "scale": [
+        0.88,
+        0.88,
+        0.88
+      ],
+      "translation": [
+        1,
+        -1.25,
+        0
+      ]
+    },
+    "firstperson_righthand": {
+      "rotation": [
+        -5,
+        86,
+        0
+      ],
+      "scale": [
+        0.88,
+        0.88,
+        0.88
+      ],
+      "translation": [
+        1,
+        -1.25,
+        0
+      ]
+    },
+    "fixed": {
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    "ground": {
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "translation": [
+        0,
+        2,
+        0
+      ]
+    },
+    "gui": {
+      "rotation": [
+        30,
+        225,
+        0
+      ],
+      "scale": [
+        0.79,
+        0.79,
+        0.79
+      ],
+      "translation": [
+        0.25,
+        2.25,
+        0
+      ]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [
+        75,
+        -77,
+        2
+      ],
+      "scale": [
+        0.64,
+        0.64,
+        0.64
+      ],
+      "translation": [
+        0,
+        -2.5,
+        -0.75
+      ]
+    },
+    "thirdperson_righthand": {
+      "rotation": [
+        75,
+        -77,
+        2
+      ],
+      "scale": [
+        0.64,
+        0.64,
+        0.64
+      ],
+      "translation": [
+        0,
+        -2.5,
+        -0.75
+      ]
+    }
+  },
+  "elements": [
+    {
+      "faces": {
+        "down": {
+          "texture": "#bottom",
+          "uv": [
+            16.0,
+            3.0,
+            0.0,
+            13.0
+          ]
+        },
+        "east": {
+          "texture": "#side",
+          "uv": [
+            3.0,
+            3.0,
+            13.0,
+            13.0
+          ]
+        },
+        "north": {
+          "texture": "#front",
+          "uv": [
+            0.0,
+            3.0,
+            16.0,
+            13.0
+          ]
+        },
+        "south": {
+          "texture": "#front",
+          "uv": [
+            0.0,
+            3.0,
+            16.0,
+            13.0
+          ]
+        },
+        "up": {
+          "texture": "#top",
+          "uv": [
+            16.0,
+            13.0,
+            0.0,
+            3.0
+          ]
+        },
+        "west": {
+          "texture": "#side",
+          "uv": [
+            3.0,
+            3.0,
+            13.0,
+            13.0
+          ]
+        }
+      },
+      "from": [
+        0,
+        0,
+        3
+      ],
+      "to": [
+        16,
+        10,
+        13
+      ]
+    },
+    {
+      "faces": {
+        "down": {
+          "texture": "#handles",
+          "uv": [
+            14.0,
+            7.0,
+            2.0,
+            13.0
+          ]
+        },
+        "east": {
+          "texture": "#handles",
+          "uv": [
+            2.0,
+            7.0,
+            14.0,
+            13.0
+          ]
+        },
+        "north": {
+          "texture": "#handles",
+          "uv": [
+            2.0,
+            7.0,
+            14.0,
+            13.0
+          ]
+        },
+        "south": {
+          "texture": "#handles",
+          "uv": [
+            2.0,
+            7.0,
+            14.0,
+            13.0
+          ]
+        },
+        "up": {
+          "texture": "#handles",
+          "uv": [
+            14.0,
+            13.0,
+            2.0,
+            7.0
+          ]
+        },
+        "west": {
+          "texture": "#handles",
+          "uv": [
+            14.0,
+            7.0,
+            2.0,
+            13.0
+          ]
+        }
+      },
+      "from": [
+        2,
+        10,
+        8
+      ],
+      "to": [
+        14,
+        16,
+        8
+      ]
+    }
+  ],
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "bottom": "spicedcider:block/fish_trap_bottom",
+    "front": "spicedcider:block/fish_trap_front",
+    "handles": "spicedcider:block/fish_trap_handles",
+    "particle": "spicedcider:block/fish_trap_front",
+    "side": "spicedcider:block/fish_trap_side",
+    "top": "spicedcider:block/fish_trap_top"
+  }
+}
