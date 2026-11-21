@@ -42,7 +42,7 @@
 - Step Up only works while sprinting.
 - Drink Intoxication also removes Intoxication from Cultural Delights apple cider.
 - Settings screen: the Video page shows Cubes Without Borders' Fullscreen Mode option when it is installed.
-- Crucible fluid rises smoothly while metal melts, and the items in it shrink and sink as they melt.
+- Crucible fluid rises smoothly while metal melts, and the items being melted shrink and sink.
 
 ### Fixed
 
@@ -62,7 +62,6 @@
   needs those versions).
 - EMI crucible heat sources no longer list blocks under another block's item (a Lava Cauldron showed as a Cauldron).
 - FancyMenu text elements show long texts instead of a "Text too long" error.
-- Offgrid: a bed whose other half isn't over the same kind of surface is placed normally instead of vanishing.
 - Arrows stuck in a moving player no longer jitter between body parts.
 
 ### Removed

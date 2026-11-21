@@ -31,6 +31,8 @@ import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.extensions.common.IClientFluidTypeExtensions;
 import net.neoforged.neoforge.fluids.FluidStack;
 
+import java.util.List;
+
 public class CastingRenderers {
     public static void register(EntityRenderersEvent.RegisterRenderers event) {
         event.registerBlockEntityRenderer(ModBlockEntities.CRUCIBLE.get(), Crucible::new);
@@ -164,17 +166,20 @@ public class CastingRenderers {
             }
             float melt = crucible.meltFraction();
             int index = 0;
-            for (ItemStack stack : crucible.getInputs()) {
+            List<ItemStack> inputs = crucible.getInputs();
+            for (int slot = 0; slot < inputs.size(); slot++) {
+                ItemStack stack = inputs.get(slot);
                 if (stack.isEmpty()) {
                     continue;
                 }
+                float itemMelt = crucible.isMelting(slot) ? melt : 0.0F;
                 poseStack.pushPose();
-                float scale = 0.22F * (1.0F - 0.7F * melt);
-                poseStack.translate(0.5, (surface + 0.3F + index * 0.6F * (1.0F - melt) - 1.2F * melt) / 16.0F, 0.5);
-                poseStack.mulPose(Axis.YP.rotationDegrees(index * 67.0F));
+                float scale = 0.22F * (1.0F - 0.7F * itemMelt);
+                poseStack.translate(0.5, (surface + 0.3F + index * 0.6F - 1.2F * itemMelt) / 16.0F, 0.5);
+                poseStack.mulPose(Axis.YP.rotationDegrees(slot * 67.0F));
                 poseStack.mulPose(Axis.XP.rotationDegrees(90.0F));
                 poseStack.scale(scale, scale, scale);
-                this.items.renderStatic(stack, ItemDisplayContext.FIXED, light, OverlayTexture.NO_OVERLAY, poseStack, buffers, crucible.getLevel(), (int) crucible.getBlockPos().asLong() + index);
+                this.items.renderStatic(stack, ItemDisplayContext.FIXED, light, OverlayTexture.NO_OVERLAY, poseStack, buffers, crucible.getLevel(), (int) crucible.getBlockPos().asLong() + slot);
                 poseStack.popPose();
                 index++;
             }

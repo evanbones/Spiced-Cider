@@ -91,7 +91,7 @@
 - The quiver key is unbound by default, and Voice Chat uses V and G.
 - The minimap no longer shows coordinates or the biome name by default.
 - The Fullscreen Mode video setting lets you pick Borderless or Fullscreen.
-- Molten metal in a Crucible rises smoothly as it melts, and the items inside shrink and sink.
+- Molten metal in a Crucible rises smoothly as it melts, and the items being melted shrink and sink.
 - The Depth Gauge is made from 4 Lead Ingots and Cinnabar and has a new texture.
 - Making a Slice Map gives the Depth Gauge back.
 - The Relayer is made with silver nuggets.

@@ -8,10 +8,16 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModList;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.level.BlockEvent;
+import net.neoforged.neoforge.event.tick.ServerTickEvent;
 
 @EventBusSubscriber(modid = SpicedCider.MOD_ID)
 public class OffgridBedEvents {
     private static final boolean OFFGRID = ModList.get().isLoaded("offgrid");
+
+    @SubscribeEvent
+    public static void onServerTick(ServerTickEvent.Post event) {
+        if (OFFGRID) OffgridBeds.flushClears();
+    }
 
     @SubscribeEvent(priority = EventPriority.LOW)
     public static void onPlace(BlockEvent.EntityPlaceEvent event) {

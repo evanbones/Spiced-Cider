@@ -57,6 +57,7 @@ public class CrucibleBlockEntity extends BlockEntity {
     private int meltTotal;
     private FluidStack meltFluid = FluidStack.EMPTY;
     private int meltFinal;
+    private int meltMask;
     private float shown;
     private float shownO;
     private boolean shownReady;
@@ -177,6 +178,7 @@ public class CrucibleBlockEntity extends BlockEntity {
             this.meltProgress = 0;
             this.meltTotal = 0;
             this.meltFluid = FluidStack.EMPTY;
+            this.meltMask = 0;
             if (wasMelting) {
                 changed();
             }
@@ -184,7 +186,14 @@ public class CrucibleBlockEntity extends BlockEntity {
         }
         FluidStack result = match.recipe().value().result();
         int last = match.drained() > 0 ? 0 : this.fluid.getAmount();
-        boolean started = this.meltTotal != match.recipe().value().time() || this.meltFinal != last + result.getAmount() || !FluidStack.isSameFluidSameComponents(this.meltFluid, result);
+        int mask = 0;
+        for (int slot : match.slots()) {
+            if (slot >= 0) {
+                mask |= 1 << slot;
+            }
+        }
+        boolean started = this.meltTotal != match.recipe().value().time() || this.meltFinal != last + result.getAmount() || this.meltMask != mask || !FluidStack.isSameFluidSameComponents(this.meltFluid, result);
+        this.meltMask = mask;
         this.meltTotal = match.recipe().value().time();
         this.meltFluid = result.copy();
         this.meltFinal = last + result.getAmount();
@@ -209,6 +218,7 @@ public class CrucibleBlockEntity extends BlockEntity {
         }
         this.meltTotal = 0;
         this.meltFluid = FluidStack.EMPTY;
+        this.meltMask = 0;
         if (this.fluid.isEmpty()) {
             this.fluid = result.copy();
         } else {
@@ -233,6 +243,10 @@ public class CrucibleBlockEntity extends BlockEntity {
         crucible.shownO = crucible.shown;
         float step = Math.max(2.0F, Math.abs(target - crucible.shown) * 0.2F);
         crucible.shown = crucible.shown < target ? Math.min(target, crucible.shown + step) : Math.max(target, crucible.shown - step);
+    }
+
+    public boolean isMelting(int slot) {
+        return this.meltTotal > 0 && (this.meltMask & (1 << slot)) != 0;
     }
 
     public float meltFraction() {
@@ -411,6 +425,7 @@ public class CrucibleBlockEntity extends BlockEntity {
         this.meltProgress = tag.getInt("MeltProgress");
         this.meltTotal = tag.getInt("MeltTotal");
         this.meltFinal = tag.getInt("MeltFinal");
+        this.meltMask = tag.getInt("MeltMask");
         this.meltFluid = tag.contains("MeltFluid") ? FluidStack.parseOptional(registries, tag.getCompound("MeltFluid")) : FluidStack.EMPTY;
     }
 
@@ -424,6 +439,7 @@ public class CrucibleBlockEntity extends BlockEntity {
         tag.putInt("MeltProgress", this.meltProgress);
         tag.putInt("MeltTotal", this.meltTotal);
         tag.putInt("MeltFinal", this.meltFinal);
+        tag.putInt("MeltMask", this.meltMask);
         if (!this.meltFluid.isEmpty()) {
             tag.put("MeltFluid", this.meltFluid.save(registries));
         }
