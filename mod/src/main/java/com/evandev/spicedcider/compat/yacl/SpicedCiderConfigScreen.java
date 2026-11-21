@@ -99,6 +99,7 @@ public class SpicedCiderConfigScreen {
                         .tooltip(Component.translatable("category.spicedcider.performance.tooltip"))
                         .option(toggle("disableRecipeBookTracking", common.disableRecipeBookTracking))
                         .option(toggle("parallelLocate", common.parallelLocate))
+                        .option(toggle("revealThreateningMonsters", common.revealThreateningMonsters))
                         .build())
                 .category(ConfigCategory.createBuilder()
                         .name(Component.translatable("category.spicedcider.client"))
@@ -116,9 +117,11 @@ public class SpicedCiderConfigScreen {
                         .option(toggle("moveRecipeBookButton", client.moveRecipeBookButton))
                         .option(toggle("inventoryModelRotation", client.inventoryModelRotation))
                         .option(toggle("hideOwnEffectParticles", client.hideOwnEffectParticles))
+                        .option(toggle("smoothStepUp", client.smoothStepUp))
                         .option(toggle("hideArmorBar", client.hideArmorBar))
                         .option(toggle("softerBlindnessAndDarkness", client.softerBlindnessAndDarkness))
                         .option(toggle("hideSmithingTemplateTooltips", client.hideSmithingTemplateTooltips))
+                        .optionIf(ModList.get().isLoaded("supplementaries"), toggle("hideSackContentsTooltip", client.hideSackContentsTooltip))
                         .option(toggle("pictureModeClouds", client.pictureModeClouds))
                         .build())
                 .categoryIf(ModList.get().isLoaded("vista"), ConfigCategory.createBuilder()
@@ -191,7 +194,8 @@ public class SpicedCiderConfigScreen {
         group(groups, List.of("culturaldelights"),
                 toggle("drinkIntoxication", startup.drinkIntoxication));
         group(groups, List.of("easyanvils"),
-                toggle("easyAnvilsFreeRepairs", common.easyAnvilsFreeRepairs));
+                toggle("easyAnvilsFreeRepairs", common.easyAnvilsFreeRepairs),
+                toggle("toolRepairMaterialCounts", common.toolRepairMaterialCounts));
         group(groups, List.of("emi"),
                 toggle("emiHideSmithingCategory", client.emiHideSmithingCategory),
                 toggle("emiBarteringCategory", client.emiBarteringCategory),
@@ -243,6 +247,10 @@ public class SpicedCiderConfigScreen {
         group(groups, List.of("tiny_takeover_backport"),
                 toggle("goldenDandelionTempting", common.goldenDandelionTempting),
                 toggle("goldenDandelionParticles", client.goldenDandelionParticles));
+        group(groups, List.of("getoverit"),
+                toggle("ledgeClimbRework", common.ledgeClimbRework));
+        group(groups, List.of("getoverit", "modest_meals"),
+                toggle("ledgeClimbStamina", common.ledgeClimbStamina));
         group(groups, List.of("treeliable", "modest_meals"),
                 toggle("treeChoppingStamina", common.treeChoppingStamina));
         group(groups, List.of("personality"),

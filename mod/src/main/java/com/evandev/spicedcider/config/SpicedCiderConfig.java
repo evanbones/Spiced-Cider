@@ -183,6 +183,8 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.BooleanValue oldWisteriaTrees;
         public final ModConfigSpec.BooleanValue slimeTimeDisableItemMerging;
         public final ModConfigSpec.BooleanValue easyAnvilsFreeRepairs;
+        public final ModConfigSpec.BooleanValue toolRepairMaterialCounts;
+        public final ModConfigSpec.BooleanValue revealThreateningMonsters;
         public final ModConfigSpec.BooleanValue fireRingNoPotions;
         public final ModConfigSpec.BooleanValue witchStewBasin;
         public final ModConfigSpec.BooleanValue copperGolemBuildingDisabled;
@@ -197,6 +199,8 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.BooleanValue copperGolemNoChest;
         public final ModConfigSpec.BooleanValue jackOStrawRotation;
         public final ModConfigSpec.BooleanValue treeChoppingStamina;
+        public final ModConfigSpec.BooleanValue ledgeClimbRework;
+        public final ModConfigSpec.BooleanValue ledgeClimbStamina;
         public final ModConfigSpec.BooleanValue sittingStaminaRegen;
         public final ModConfigSpec.BooleanValue personalityNoCrawl;
         public final ModConfigSpec.BooleanValue quarkStoolSeats;
@@ -291,6 +295,11 @@ public class SpicedCiderConfig {
                     .translation("option.spicedcider.easyAnvilsFreeRepairs")
                     .define("easyAnvilsFreeRepairs", false);
 
+            toolRepairMaterialCounts = builder
+                    .comment(tooltip("toolRepairMaterialCounts"))
+                    .translation("option.spicedcider.toolRepairMaterialCounts")
+                    .define("toolRepairMaterialCounts", false);
+
             fireRingNoPotions = builder
                     .comment(tooltip("fireRingNoPotions"))
                     .translation("option.spicedcider.fireRingNoPotions")
@@ -360,6 +369,16 @@ public class SpicedCiderConfig {
                     .comment(tooltip("treeChoppingStamina"))
                     .translation("option.spicedcider.treeChoppingStamina")
                     .define("treeChoppingStamina", false);
+
+            ledgeClimbRework = builder
+                    .comment(tooltip("ledgeClimbRework"))
+                    .translation("option.spicedcider.ledgeClimbRework")
+                    .define("ledgeClimbRework", false);
+
+            ledgeClimbStamina = builder
+                    .comment(tooltip("ledgeClimbStamina"))
+                    .translation("option.spicedcider.ledgeClimbStamina")
+                    .define("ledgeClimbStamina", false);
 
             sittingStaminaRegen = builder
                     .comment(tooltip("sittingStaminaRegen"))
@@ -729,6 +748,11 @@ public class SpicedCiderConfig {
                     .translation("option.spicedcider.parallelLocate")
                     .define("parallelLocate", true);
 
+            revealThreateningMonsters = builder
+                    .comment(tooltip("revealThreateningMonsters"))
+                    .translation("option.spicedcider.revealThreateningMonsters")
+                    .define("revealThreateningMonsters", false);
+
             builder.pop();
             builder.push("lod");
 
@@ -781,6 +805,7 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.BooleanValue hangingFruitSway;
         public final ModConfigSpec.BooleanValue softerBlindnessAndDarkness;
         public final ModConfigSpec.BooleanValue hideSmithingTemplateTooltips;
+        public final ModConfigSpec.BooleanValue hideSackContentsTooltip;
 
         public final ModConfigSpec.BooleanValue pictureModeClouds;
 
@@ -819,6 +844,7 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.BooleanValue carvingWheel;
         public final ModConfigSpec.BooleanValue jadeNeedsSpyglassOrMonocle;
         public final ModConfigSpec.BooleanValue stepUpEnabled;
+        public final ModConfigSpec.BooleanValue smoothStepUp;
         public final ModConfigSpec.BooleanValue emiTappingCategory;
         public final ModConfigSpec.BooleanValue emiSluicingCategory;
         public final ModConfigSpec.BooleanValue emiBarteringCategory;
@@ -930,6 +956,11 @@ public class SpicedCiderConfig {
                     .translation("option.spicedcider.stepUpEnabled")
                     .define("stepUpEnabled", true);
 
+            smoothStepUp = builder
+                    .comment(tooltip("smoothStepUp"))
+                    .translation("option.spicedcider.smoothStepUp")
+                    .define("smoothStepUp", false);
+
             builder.pop();
             builder.push("naming");
 
@@ -1020,6 +1051,11 @@ public class SpicedCiderConfig {
                     .comment(tooltip("hideSmithingTemplateTooltips"))
                     .translation("option.spicedcider.hideSmithingTemplateTooltips")
                     .define("hideSmithingTemplateTooltips", false);
+
+            hideSackContentsTooltip = builder
+                    .comment(tooltip("hideSackContentsTooltip"))
+                    .translation("option.spicedcider.hideSackContentsTooltip")
+                    .define("hideSackContentsTooltip", false);
 
             pictureModeClouds = builder
                     .comment(tooltip("pictureModeClouds"))

@@ -1,12 +1,14 @@
 package com.evandev.spicedcider.client.options.entry;
 
 import com.evandev.spicedcider.client.options.SnapSink;
+import com.evandev.spicedcider.client.options.setting.Impact;
 import com.evandev.spicedcider.client.options.setting.Setting;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.AbstractWidget;
 import net.minecraft.network.chat.Component;
 import net.minecraft.util.FormattedCharSequence;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
@@ -17,6 +19,7 @@ public class SettingEntry extends Entry {
     private final Setting setting;
     private final ResetButton resetButton;
     private AbstractWidget widget;
+    private Impact impact;
 
     public SettingEntry(Setting setting) {
         this.setting = setting;
@@ -29,6 +32,15 @@ public class SettingEntry extends Entry {
 
     public Setting setting() {
         return setting;
+    }
+
+    public SettingEntry impact(Impact impact) {
+        this.impact = impact;
+        return this;
+    }
+
+    private Impact currentImpact() {
+        return impact != null ? impact : setting.impact();
     }
 
     @Override
@@ -101,7 +113,12 @@ public class SettingEntry extends Entry {
     @Override
     public List<FormattedCharSequence> tooltip(int mouseX, int mouseY) {
         if (!labelHovered(mouseX, mouseY) || (showReset() && resetButton.isMouseOver(mouseX, mouseY))) return List.of();
-        return setting.tooltip();
+        Impact current = currentImpact();
+        if (current == null) return setting.tooltip();
+        List<FormattedCharSequence> lines = new ArrayList<>(setting.tooltip());
+        if (!lines.isEmpty()) lines.add(FormattedCharSequence.EMPTY);
+        lines.addAll(font.split(current.line(), 200));
+        return lines;
     }
 
     @Override
