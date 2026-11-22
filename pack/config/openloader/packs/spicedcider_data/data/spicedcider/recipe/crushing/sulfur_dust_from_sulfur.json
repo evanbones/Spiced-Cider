@@ -1,4 +1,18 @@
 {
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "spelunkery"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "spicedcider"
+    }
+  ],
   "type": "create:crushing",
   "ingredients": [
     {
@@ -8,12 +22,11 @@
   "processing_time": 250,
   "results": [
     {
-      "id": "spelunkery:sulfur",
-      "count": 2
+      "id": "spicedcider:cobbled_sulfur"
     },
     {
       "id": "spelunkery:sulfur",
-      "chance": 0.5
+      "chance": 0.75
     }
   ]
 }

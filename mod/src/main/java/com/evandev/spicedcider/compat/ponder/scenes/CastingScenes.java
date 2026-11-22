@@ -4,6 +4,7 @@ import com.evandev.spicedcider.SpicedCider;
 import com.evandev.spicedcider.content.casting.CrucibleBlock;
 import com.evandev.spicedcider.content.casting.CrucibleBlockEntity;
 import com.evandev.spicedcider.content.casting.MouldBlockEntity;
+import com.evandev.spicedcider.content.casting.smeltery.SmelteryBlock;
 import com.evandev.spicedcider.content.casting.smeltery.SmelteryBlockEntity;
 import com.evandev.spicedcider.registry.ModItems;
 import net.createmod.catnip.math.Pointing;
@@ -50,6 +51,8 @@ public class CastingScenes {
 
     private static void smeltery(SceneBuilder scene, BlockPos pos, int fuel, List<FluidStack> metals, boolean active) {
         scene.world().modifyBlockEntity(pos, SmelteryBlockEntity.class, be -> be.setContents(new FluidStack(Fluids.LAVA, fuel), metals, active));
+        scene.world().modifyBlock(pos, state -> state.setValue(SmelteryBlock.LIT, active), false);
+        scene.world().modifyBlock(pos.east(), state -> state.setValue(SmelteryBlock.LIT, active), false);
     }
 
     private static void stream(SceneBuilder scene, BlockPos tap, Fluid fluid, float length) {
@@ -188,7 +191,7 @@ public class CastingScenes {
         scene.idle(10);
         smeltery(scene, controller, 1000, List.of(), false);
         scene.overlay().showText(80)
-                .text("Instead of sitting over heat it burns Lava from its own tank, filled by Bucket or pipe")
+                .text("Instead of sitting over heat it burns Lava from its own tank, filled by Bucket or by pumping it in")
                 .pointAt(util.vector().blockSurface(controller, Direction.NORTH))
                 .placeNearTarget();
         scene.idle(90);
@@ -249,5 +252,13 @@ public class CastingScenes {
                 .pointAt(util.vector().blockSurface(controller, Direction.NORTH))
                 .placeNearTarget();
         scene.idle(100);
+
+        if (ModList.get().isLoaded("create")) {
+            BlockPos spoutMould = util.grid().at(4, 1, 2);
+            SmelteryPipingPonder.show(scene, util, spoutMould, bronze, 2750,
+                    amount -> smeltery(scene, controller, 925, List.of(new FluidStack(bronze, amount)), false),
+                    (fluid, result) -> mould(scene, spoutMould, fluid, result),
+                    SceneHelper.item("alloyed:bronze_ingot"));
+        }
     }
 }

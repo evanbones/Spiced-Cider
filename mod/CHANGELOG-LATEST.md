@@ -44,12 +44,20 @@
 - Drink Intoxication also removes Intoxication from Cultural Delights apple cider.
 - Settings screen: the Video page shows Cubes Without Borders' Fullscreen Mode option when it is installed.
 - Crucible fluid rises smoothly while metal melts, and the items being melted shrink and sink.
+- Every block of the Smeltery connects to pipes, so Create pumps can fill it with lava or molten metal and drain molten
+  metal from any side.
+- The Smeltery Ponder shows pumping lava and metal and casting with a Spout.
+- Copper golem sorting and straw golem Ponder scenes use the vanilla chest.
+- The Smeltery front lights up, crackles and gives off light while it melts, like a Furnace.
+- New Straw Golem model and textures.
+- Retextured Cobbled Limestone and the Worm Crate.
 
 ### Fixed
 
 - Food no longer lists or gives effects removed by Reliable Remover.
 - Fixed a memory leak in Where Winds Blow wind streaks.
-- Voxy no longer reports "Deserialization was air, removed block" in chat for blocks that were removed from the game.
+- Voxy no longer reports "Deserialization was air, removed block" or "Could not decode blockstate" in chat for blocks
+  that were removed from the game.
 - The name tag renaming recipe no longer matches an unnamed name tag, which used it up for nothing.
 - Mobs that spawn holding a plain book (Scholar) no longer get it enchanted.
 - Modest Mining javelins accept the replacement ingot when their tier's repair item was removed by Reliable Remover,
@@ -64,6 +72,12 @@
 - EMI crucible heat sources no longer list blocks under another block's item (a Lava Cauldron showed as a Cauldron).
 - FancyMenu text elements show long texts instead of a "Text too long" error.
 - Arrows stuck in a moving player no longer jitter between body parts.
+- Molten metal in the Smeltery window and in tap streams is no longer stretched.
+- Picture Mode depth filters (Silhouette, Outlines, Sketch) no longer show terrain that the fog hides.
+- Where Winds Blow plants sway together in the wind instead of drifting out of step.
+- Create's Stock Ticker clerk hat sits on a seated Straw Golem's head instead of floating above it.
+- Quark's right-click armor swap no longer deletes a worn Reliable Backpack when the armor is in the backpack rows, and
+  no longer takes off a filled backpack.
 
 ### Removed
 

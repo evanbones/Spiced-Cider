@@ -13,7 +13,7 @@ import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
 
 public class StrawGolemHatLayer extends RenderLayer<StrawGolem, StrawGolemModel> {
-    private static final float SCALE = 0.625F * 0.5F;
+    private static final float SCALE = 0.625F * 0.625F;
     private final ItemRenderer itemRenderer;
 
     public StrawGolemHatLayer(RenderLayerParent<StrawGolem, StrawGolemModel> parent, ItemRenderer itemRenderer) {
@@ -27,7 +27,7 @@ public class StrawGolemHatLayer extends RenderLayer<StrawGolem, StrawGolemModel>
         if (hat.isEmpty() || golem.isInvisible()) return;
         poseStack.pushPose();
         getParentModel().translateToHead(poseStack);
-        poseStack.translate(0.0F, -2.0F / 16.0F, 0.0F);
+        poseStack.translate(0.0F, -1.5F / 16.0F, 0.0F);
         poseStack.mulPose(Axis.YP.rotationDegrees(180.0F));
         poseStack.scale(SCALE, -SCALE, -SCALE);
         itemRenderer.renderStatic(golem, hat, ItemDisplayContext.HEAD, false, poseStack, buffer, golem.level(), packedLight, LivingEntityRenderer.getOverlayCoords(golem, 0.0F), golem.getId());

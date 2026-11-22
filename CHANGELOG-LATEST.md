@@ -20,6 +20,7 @@
 - Pyres and Soul Pyres: cast iron fire bowls that stand on the ground or hang from chains.
     - Crucibles can also be set inside them.
 - Blocks of Bronze, Cast Iron, Lead, Electrum, Prismarite, and Valkyrium can be used as beacon base blocks.
+- All chests are grouped together as Chests in EMI.
 
 ### Changed
 
@@ -97,6 +98,20 @@
 - The Relayer is made with silver nuggets.
 - Deepslate Tin Ore matches Tin Ore.
 - Retextured the Gourdrot, Hoary, Wisteria, Walnut, and Azalea Shutters (thanks, @CamKamblam!).
+- Wooden chests now come from Woodworks. Oak chests use the classic chest look, and chests already in your world change
+  over with their contents.
+- Deer are now the hopping, spotted kind: win one's trust with berries, then feed it an apple and a flower and it plants
+  that flower as it walks.
+- Pumps can fill a Smeltery with lava or molten metal and drain molten metal from any side, and its Ponder shows how to
+  cast with a Spout.
+- The Smeltery front lights up, crackles and gives off light while it melts, like a Furnace.
+- Stones put through Crushing Wheels crush into their cobblestone, which crushes again into their usual byproducts.
+- Crushing Wheels give raw nuggets instead of metal nuggets.
+- Wheat, Tea Leaves, Grass Seeds and Ginger stack to 256 like other crops.
+- New Straw Golem model and textures.
+- New Map Atlas textures.
+- New Field Guide and Photo Album textures.
+- Retextured the Spyglass, Flint Axe, Cobbled Limestone and Worm Crate.
 
 ### Fixed
 
@@ -130,6 +145,17 @@
 - The Crucible's heat sources no longer list Cauldrons.
 - The changelog screen shows the whole changelog.
 - Arrows stuck in players no longer jitter as they move.
+- Bundles can be dyed any colour again.
+- Removed pressing recipes for Crimson Nylium, Warped Nylium, and Soul Soil that gave nothing.
+- Shelf mushroom blocks on dark oaks come down with the tree when it's felled.
+- Molten metal in the Smeltery window and in tap streams is no longer stretched.
+- Picture Mode filters like Silhouette and Outlines no longer show caves and terrain hidden by fog.
+- EMI no longer lists the advancement tags used to unlock items.
+- Crops and other plants sway together in the wind instead of drifting out of step.
+- Nether Gold Ore can be crushed in Crushing Wheels.
+- Straw Golems sitting next to a Stock Ticker wear the clerk hat on their heads instead of above them.
+- Right-clicking a chestplate inside your backpack to put it on no longer deletes the backpack.
+- A filled backpack can no longer be taken off by right-clicking armor in your inventory.
 
 ### Removed
 
@@ -142,3 +168,4 @@
 - The Glowsilk Bow.
 - The Pulley.
 - The Recollection Tablet and the Soulbound enchantment.
+- The Skill Issue advancement.

@@ -1,0 +1,34 @@
+{
+  "sources": [
+    {
+      "type": "minecraft:single",
+      "resource": "minecraft:entity/chest/normal",
+      "sprite": "woodworks:entity/chest/oak/normal"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "minecraft:entity/chest/normal_left",
+      "sprite": "woodworks:entity/chest/oak/normal_left"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "minecraft:entity/chest/normal_right",
+      "sprite": "woodworks:entity/chest/oak/normal_right"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "minecraft:entity/chest/trapped",
+      "sprite": "woodworks:entity/chest/oak/trapped"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "minecraft:entity/chest/trapped_left",
+      "sprite": "woodworks:entity/chest/oak/trapped_left"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "minecraft:entity/chest/trapped_right",
+      "sprite": "woodworks:entity/chest/oak/trapped_right"
+    }
+  ]
+}

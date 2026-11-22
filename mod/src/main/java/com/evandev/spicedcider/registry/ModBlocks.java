@@ -91,7 +91,7 @@ public class ModBlocks {
     public static final java.util.Map<MouldShape, DeferredBlock<Block>> MOULDS = moulds();
 
     public static final DeferredBlock<Block> SMELTERY = BLOCKS.register("smeltery",
-            () -> new SmelteryBlock(BlockBehaviour.Properties.of().mapColor(MapColor.TERRACOTTA_RED).sound(SoundType.DEEPSLATE_BRICKS).strength(3.0F, 6.0F).requiresCorrectToolForDrops().pushReaction(PushReaction.BLOCK)));
+            () -> new SmelteryBlock(BlockBehaviour.Properties.of().mapColor(MapColor.TERRACOTTA_RED).sound(SoundType.DEEPSLATE_BRICKS).strength(3.0F, 6.0F).requiresCorrectToolForDrops().pushReaction(PushReaction.BLOCK).lightLevel(SmelteryBlock::lightLevel)));
 
     public static final DeferredBlock<Block> TALLOW_BLOCK = BLOCKS.register("tallow_block",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.HONEYCOMB_BLOCK)));

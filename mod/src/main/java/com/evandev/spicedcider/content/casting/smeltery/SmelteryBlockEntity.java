@@ -285,6 +285,7 @@ public class SmelteryBlockEntity extends BlockEntity implements MenuProvider {
         }
         if (working != this.active) {
             this.active = working;
+            SmelteryBlock.setLit(level, pos, getBlockState(), working);
             dirty = true;
         }
         if (dirty) {

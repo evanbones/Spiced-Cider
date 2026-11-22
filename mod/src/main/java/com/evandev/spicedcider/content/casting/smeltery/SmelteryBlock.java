@@ -4,7 +4,11 @@ import com.evandev.spicedcider.registry.ModBlockEntities;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.Containers;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -25,6 +29,7 @@ import net.minecraft.world.level.block.entity.BlockEntityTicker;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.phys.BlockHitResult;
@@ -41,10 +46,11 @@ public class SmelteryBlock extends BaseEntityBlock {
     public static final BooleanProperty RIGHT = BooleanProperty.create("right");
     public static final BooleanProperty TOP = BooleanProperty.create("top");
     public static final BooleanProperty BACK = BooleanProperty.create("back");
+    public static final BooleanProperty LIT = BlockStateProperties.LIT;
 
     public SmelteryBlock(Properties properties) {
         super(properties);
-        registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(RIGHT, false).setValue(TOP, false).setValue(BACK, false));
+        registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(RIGHT, false).setValue(TOP, false).setValue(BACK, false).setValue(LIT, false));
     }
 
     @Override
@@ -54,7 +60,41 @@ public class SmelteryBlock extends BaseEntityBlock {
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(FACING, RIGHT, TOP, BACK);
+        builder.add(FACING, RIGHT, TOP, BACK, LIT);
+    }
+
+    public static int lightLevel(BlockState state) {
+        return state.getValue(LIT) && !state.getValue(TOP) && !state.getValue(BACK) ? 13 : 0;
+    }
+
+    public static void setLit(Level level, BlockPos controller, BlockState state, boolean lit) {
+        for (BlockPos pos : parts(controller, state.getValue(FACING))) {
+            BlockState part = level.getBlockState(pos);
+            if (part.getBlock() instanceof SmelteryBlock && part.getValue(LIT) != lit && controllerPos(pos, part).equals(controller)) {
+                level.setBlock(pos, part.setValue(LIT, lit), Block.UPDATE_CLIENTS);
+            }
+        }
+    }
+
+    @Override
+    public void animateTick(BlockState state, Level level, BlockPos pos, RandomSource random) {
+        if (!state.getValue(LIT) || !isController(state)) {
+            return;
+        }
+        Direction facing = state.getValue(FACING);
+        Direction right = facing.getClockWise();
+        double x = pos.getX() + 0.5 + facing.getStepX() * 0.52 + right.getStepX() * 0.5;
+        double y = pos.getY() + 0.3;
+        double z = pos.getZ() + 0.5 + facing.getStepZ() * 0.52 + right.getStepZ() * 0.5;
+        if (random.nextDouble() < 0.1) {
+            level.playLocalSound(x, y, z, SoundEvents.FURNACE_FIRE_CRACKLE, SoundSource.BLOCKS, 1.0F, 1.0F, false);
+        }
+        double spread = random.nextDouble() * 0.6 - 0.3;
+        double px = x + right.getStepX() * spread;
+        double pz = z + right.getStepZ() * spread;
+        double py = y + random.nextDouble() * 4.0 / 16.0 - 2.0 / 16.0;
+        level.addParticle(ParticleTypes.SMOKE, px, py, pz, 0.0, 0.0, 0.0);
+        level.addParticle(ParticleTypes.FLAME, px, py, pz, 0.0, 0.0, 0.0);
     }
 
     public static boolean isController(BlockState state) {
@@ -203,7 +243,7 @@ public class SmelteryBlock extends BaseEntityBlock {
 
     @Override
     public @Nullable BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-        return isController(state) ? new SmelteryBlockEntity(pos, state) : null;
+        return isController(state) ? new SmelteryBlockEntity(pos, state) : new SmelteryPartBlockEntity(pos, state);
     }
 
     @Override

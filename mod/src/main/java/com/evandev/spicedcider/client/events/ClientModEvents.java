@@ -20,6 +20,7 @@ import com.evandev.spicedcider.client.music.PocketJukeboxClient;
 import com.evandev.spicedcider.client.renderer.PocketJukeboxTooltipRenderer;
 import com.evandev.spicedcider.client.renderer.balloon.BalloonRenderer;
 import com.evandev.spicedcider.client.models.sporal.SporalModel;
+import com.evandev.spicedcider.compat.picturemode.PictureModeClouds;
 import com.evandev.spicedcider.compat.vanillabackport.GraveWaypointProvider;
 import com.evandev.spicedcider.client.models.sputter.SputterArrowfulModel;
 import com.evandev.spicedcider.client.models.sputter.SputterModel;
@@ -246,6 +247,7 @@ public class ClientModEvents {
     @SubscribeEvent
     public static void registerShaders(RegisterShadersEvent event) throws IOException {
         NetherFogBanks.registerShader(event);
+        PictureModeClouds.registerShader(event);
     }
 
     @SubscribeEvent

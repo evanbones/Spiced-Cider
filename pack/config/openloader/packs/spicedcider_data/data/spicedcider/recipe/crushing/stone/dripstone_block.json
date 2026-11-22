@@ -3,6 +3,10 @@
     {
       "type": "neoforge:mod_loaded",
       "modid": "create"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "spicedcider"
     }
   ],
   "type": "create:crushing",
@@ -14,12 +18,7 @@
   "processing_time": 250,
   "results": [
     {
-      "id": "minecraft:pointed_dripstone",
-      "count": 2
-    },
-    {
-      "id": "minecraft:pointed_dripstone",
-      "chance": 0.5
+      "id": "spicedcider:cobbled_dripstone"
     }
   ]
 }

@@ -143,7 +143,7 @@ public class StrawGolemAnimations {
                     new Keyframe(0.75F, KeyframeAnimations.posVec(0F, -1.2F, -2.9F), AnimationChannel.Interpolations.LINEAR),
                     new Keyframe(0.875F, KeyframeAnimations.posVec(0F, 0F, -3F), AnimationChannel.Interpolations.LINEAR),
                     new Keyframe(1.0833F, KeyframeAnimations.posVec(0F, 5F, -3F), AnimationChannel.Interpolations.LINEAR),
-                    new Keyframe(1.3333F, KeyframeAnimations.posVec(0F, 11F, 5.5F), AnimationChannel.Interpolations.LINEAR)))
+                    new Keyframe(1.3333F, KeyframeAnimations.posVec(0F, 16.5F, 6.5F), AnimationChannel.Interpolations.LINEAR)))
             .build();
 
     public static final AnimationDefinition LEGS_WALK = AnimationDefinition.Builder.withLength(1F)
@@ -343,9 +343,9 @@ public class StrawGolemAnimations {
                     new Keyframe(0F, KeyframeAnimations.posVec(-0.25F, -0.15F, -0.1F), AnimationChannel.Interpolations.LINEAR),
                     new Keyframe(1F, KeyframeAnimations.posVec(-0.25F, -0.15F, -0.1F), AnimationChannel.Interpolations.LINEAR)))
             .addAnimation("item", new AnimationChannel(AnimationChannel.Targets.POSITION,
-                    new Keyframe(0F, KeyframeAnimations.posVec(0F, 11F, 5.5F), AnimationChannel.Interpolations.LINEAR),
-                    new Keyframe(0.5F, KeyframeAnimations.posVec(0F, 10.9F, 5.5F), AnimationChannel.Interpolations.LINEAR),
-                    new Keyframe(1F, KeyframeAnimations.posVec(0F, 11F, 5.5F), AnimationChannel.Interpolations.LINEAR)))
+                    new Keyframe(0F, KeyframeAnimations.posVec(0F, 16.5F, 6.5F), AnimationChannel.Interpolations.LINEAR),
+                    new Keyframe(0.5F, KeyframeAnimations.posVec(0F, 16.4F, 6.5F), AnimationChannel.Interpolations.LINEAR),
+                    new Keyframe(1F, KeyframeAnimations.posVec(0F, 16.5F, 6.5F), AnimationChannel.Interpolations.LINEAR)))
             .build();
 
     public static final AnimationDefinition ARMS_HOLD_ITEM = AnimationDefinition.Builder.withLength(1F)

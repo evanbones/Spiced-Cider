@@ -21,6 +21,7 @@ public class StrawGolemModel extends HierarchicalModel<StrawGolem> {
     private final ModelPart upper;
     private final ModelPart body;
     private final ModelPart head;
+    private final ModelPart stem;
     private final ModelPart item;
 
     public StrawGolemModel(ModelPart root) {
@@ -29,6 +30,7 @@ public class StrawGolemModel extends HierarchicalModel<StrawGolem> {
         this.upper = root.getChild("upper");
         this.body = upper.getChild("body");
         this.head = upper.getChild("head");
+        this.stem = head.getChild("stem");
         this.item = root.getChild("item");
     }
 
@@ -36,25 +38,29 @@ public class StrawGolemModel extends HierarchicalModel<StrawGolem> {
         MeshDefinition mesh = new MeshDefinition();
         PartDefinition root = mesh.getRoot();
 
-        PartDefinition lower = root.addOrReplaceChild("lower", CubeListBuilder.create(), PartPose.offset(0.0F, 19.0F, 0.0F));
+        PartDefinition lower = root.addOrReplaceChild("lower", CubeListBuilder.create(), PartPose.offset(0.0F, 18.0F, 0.0F));
         lower.addOrReplaceChild("left_leg", CubeListBuilder.create()
-                .texOffs(8, 20).addBox(-1.0F, 1.0F, -1.0F, 2.0F, 3.0F, 2.0F), PartPose.offset(2.0F, 1.0F, 0.0F));
+                .texOffs(12, 34).addBox(-1.5F, 0.0F, -1.5F, 3.0F, 6.0F, 3.0F), PartPose.offset(2.0F, 0.0F, 0.0F));
         lower.addOrReplaceChild("right_leg", CubeListBuilder.create()
-                .texOffs(8, 20).addBox(-1.0F, 1.0F, -1.0F, 2.0F, 3.0F, 2.0F), PartPose.offset(-2.0F, 1.0F, 0.0F));
+                .texOffs(0, 34).addBox(-1.5F, 0.0F, -1.5F, 3.0F, 6.0F, 3.0F), PartPose.offset(-2.0F, 0.0F, 0.0F));
 
-        PartDefinition upper = root.addOrReplaceChild("upper", CubeListBuilder.create(), PartPose.offset(0.0F, 19.0F, 0.0F));
+        PartDefinition upper = root.addOrReplaceChild("upper", CubeListBuilder.create(), PartPose.offset(0.0F, 18.0F, 0.0F));
         PartDefinition body = upper.addOrReplaceChild("body", CubeListBuilder.create()
-                .texOffs(0, 0).addBox(-4.0F, -8.0F, -4.0F, 8.0F, 10.0F, 8.0F), PartPose.ZERO);
-        PartDefinition arms = body.addOrReplaceChild("arms", CubeListBuilder.create(), PartPose.offset(0.0F, -6.0F, 0.0F));
+                .texOffs(0, 0).addBox(-3.5F, -9.0F, -3.5F, 7.0F, 9.0F, 7.0F)
+                .texOffs(0, 17).addBox(-3.5F, -10.0F, -3.5F, 7.0F, 1.0F, 7.0F)
+                .texOffs(0, 25).addBox(-3.5F, 0.0F, -3.5F, 7.0F, 2.0F, 7.0F), PartPose.ZERO);
+        PartDefinition arms = body.addOrReplaceChild("arms", CubeListBuilder.create(), PartPose.offset(0.0F, -7.5F, 0.0F));
         arms.addOrReplaceChild("right_arm", CubeListBuilder.create()
-                .texOffs(0, 20).addBox(-1.0F, -1.0F, -1.0F, 2.0F, 7.0F, 2.0F), PartPose.offset(-5.0F, 0.0F, 0.0F));
+                .texOffs(28, 28).addBox(-1.5F, -1.5F, -1.5F, 3.0F, 10.0F, 3.0F), PartPose.offset(-5.0F, 0.0F, 0.0F));
         arms.addOrReplaceChild("left_arm", CubeListBuilder.create()
-                .texOffs(0, 20).mirror().addBox(-1.0F, -1.0F, -1.0F, 2.0F, 7.0F, 2.0F), PartPose.offset(5.0F, 0.0F, 0.0F));
+                .texOffs(28, 15).addBox(-1.5F, -1.5F, -1.5F, 3.0F, 10.0F, 3.0F), PartPose.offset(5.0F, 0.0F, 0.0F));
 
-        upper.addOrReplaceChild("head", CubeListBuilder.create()
-                .texOffs(32, 0).addBox(-2.0F, -3.9F, -2.0F, 4.0F, 4.0F, 4.0F), PartPose.offset(0.0F, -8.0F, 0.0F));
+        PartDefinition head = upper.addOrReplaceChild("head", CubeListBuilder.create()
+                .texOffs(28, 0).addBox(-2.5F, -4.0F, -2.5F, 5.0F, 5.0F, 5.0F), PartPose.offset(0.0F, -10.0F, 0.0F));
+        head.addOrReplaceChild("stem", CubeListBuilder.create()
+                .texOffs(41, 16).addBox(-2.0F, -4.0F, 0.0F, 4.0F, 4.0F, 0.0F), PartPose.offset(0.0F, -4.0F, 0.0F));
 
-        root.addOrReplaceChild("item", CubeListBuilder.create(), PartPose.offset(0.0F, 15.5F, -5.5F));
+        root.addOrReplaceChild("item", CubeListBuilder.create(), PartPose.offset(0.0F, 14.5F, -6.5F));
 
         return LayerDefinition.create(mesh, 64, 64);
     }
@@ -67,6 +73,7 @@ public class StrawGolemModel extends HierarchicalModel<StrawGolem> {
     @Override
     public void setupAnim(StrawGolem golem, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
         root.getAllParts().forEach(ModelPart::resetPose);
+        stem.visible = golem.getHat().isEmpty();
 
         if (golem.harvestAnimationState.isStarted()) {
             animate(golem.harvestAnimationState, golem.isHarvestingBlock() ? StrawGolemAnimations.HARVEST_BLOCK : StrawGolemAnimations.HARVEST_ITEM, ageInTicks);

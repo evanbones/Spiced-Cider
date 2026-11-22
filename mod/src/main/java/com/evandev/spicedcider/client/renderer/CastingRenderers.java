@@ -8,7 +8,6 @@ import com.evandev.spicedcider.content.casting.MouldShape;
 import com.evandev.spicedcider.content.casting.smeltery.SmelteryBlock;
 import com.evandev.spicedcider.content.casting.smeltery.SmelteryBlockEntity;
 import net.minecraft.client.renderer.LevelRenderer;
-import net.minecraft.world.level.material.Fluids;
 import com.evandev.spicedcider.registry.ModBlockEntities;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
@@ -87,10 +86,6 @@ public class CastingRenderers {
         public static final float WINDOW_RIGHT = 22.0F;
         public static final float WINDOW_TOP = 6.0F;
         public static final float WINDOW_BOTTOM = 19.0F;
-        public static final float FIRE_LEFT = 11.0F;
-        public static final float FIRE_RIGHT = 21.0F;
-        public static final float FIRE_TOP = 23.0F;
-        public static final float FIRE_BOTTOM = 27.0F;
 
         public Smeltery(BlockEntityRendererProvider.Context context) {
         }
@@ -112,9 +107,6 @@ public class CastingRenderers {
                     level = top;
                 }
             }
-            if (smeltery.isActive()) {
-                front(poseStack, buffers, new FluidStack(Fluids.LAVA, 1000), FIRE_LEFT, FIRE_TOP, FIRE_RIGHT, FIRE_BOTTOM, front);
-            }
             poseStack.popPose();
         }
 
@@ -132,19 +124,29 @@ public class CastingRenderers {
         int packed = LightTexture.pack(Math.max(LightTexture.block(light), glow), LightTexture.sky(light));
         VertexConsumer consumer = buffers.getBuffer(RenderType.entityTranslucentCull(InventoryMenu.BLOCK_ATLAS));
         PoseStack.Pose pose = poseStack.last();
-        float x0 = 2.0F - right / 16.0F;
-        float x1 = 2.0F - left / 16.0F;
-        float y0 = 2.0F - bottom / 16.0F;
-        float y1 = 2.0F - top / 16.0F;
         float z = -0.002F;
-        float u0 = sprite.getU((left % 16.0F) / 16.0F);
-        float u1 = sprite.getU(Math.min(1.0F, (left % 16.0F + right - left) / 16.0F));
-        float v0 = sprite.getV((top % 16.0F) / 16.0F);
-        float v1 = sprite.getV(Math.min(1.0F, (top % 16.0F + bottom - top) / 16.0F));
-        consumer.addVertex(pose, x1, y1, z).setColor(color).setUv(u0, v0).setOverlay(OverlayTexture.NO_OVERLAY).setLight(packed).setNormal(pose, 0, 0, -1);
-        consumer.addVertex(pose, x1, y0, z).setColor(color).setUv(u0, v1).setOverlay(OverlayTexture.NO_OVERLAY).setLight(packed).setNormal(pose, 0, 0, -1);
-        consumer.addVertex(pose, x0, y0, z).setColor(color).setUv(u1, v1).setOverlay(OverlayTexture.NO_OVERLAY).setLight(packed).setNormal(pose, 0, 0, -1);
-        consumer.addVertex(pose, x0, y1, z).setColor(color).setUv(u1, v0).setOverlay(OverlayTexture.NO_OVERLAY).setLight(packed).setNormal(pose, 0, 0, -1);
+        for (float cellLeft = left; cellLeft < right - 0.001F; ) {
+            float cellRight = Math.min(right, (float) Math.floor(cellLeft / 16.0F) * 16.0F + 16.0F);
+            float originX = (float) Math.floor(cellLeft / 16.0F) * 16.0F;
+            float u0 = sprite.getU((cellLeft - originX) / 16.0F);
+            float u1 = sprite.getU((cellRight - originX) / 16.0F);
+            float x0 = 2.0F - cellRight / 16.0F;
+            float x1 = 2.0F - cellLeft / 16.0F;
+            for (float cellTop = top; cellTop < bottom - 0.001F; ) {
+                float cellBottom = Math.min(bottom, (float) Math.floor(cellTop / 16.0F) * 16.0F + 16.0F);
+                float originY = (float) Math.floor(cellTop / 16.0F) * 16.0F;
+                float v0 = sprite.getV((cellTop - originY) / 16.0F);
+                float v1 = sprite.getV((cellBottom - originY) / 16.0F);
+                float y0 = 2.0F - cellBottom / 16.0F;
+                float y1 = 2.0F - cellTop / 16.0F;
+                consumer.addVertex(pose, x1, y1, z).setColor(color).setUv(u0, v0).setOverlay(OverlayTexture.NO_OVERLAY).setLight(packed).setNormal(pose, 0, 0, -1);
+                consumer.addVertex(pose, x1, y0, z).setColor(color).setUv(u0, v1).setOverlay(OverlayTexture.NO_OVERLAY).setLight(packed).setNormal(pose, 0, 0, -1);
+                consumer.addVertex(pose, x0, y0, z).setColor(color).setUv(u1, v1).setOverlay(OverlayTexture.NO_OVERLAY).setLight(packed).setNormal(pose, 0, 0, -1);
+                consumer.addVertex(pose, x0, y1, z).setColor(color).setUv(u1, v0).setOverlay(OverlayTexture.NO_OVERLAY).setLight(packed).setNormal(pose, 0, 0, -1);
+                cellTop = cellBottom;
+            }
+            cellLeft = cellRight;
+        }
     }
 
     public static class Crucible implements BlockEntityRenderer<CrucibleBlockEntity> {
