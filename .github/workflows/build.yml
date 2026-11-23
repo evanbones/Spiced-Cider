@@ -4,6 +4,11 @@ on:
   push:
     branches: [ "main", "dev" ]
   workflow_dispatch:
+    inputs:
+      curseforge:
+        description: "Upload the current version to CurseForge even though it is already on Modrinth"
+        type: boolean
+        default: false
   pull_request:
     branches: [ "main" ]
 
@@ -107,10 +112,12 @@ jobs:
           pack_version=$(grep '^version=' gradle.properties | cut -d= -f2 | tr -d '\r')
           slug=$(grep '^pack_modrinth_slug=' gradle.properties | cut -d= -f2 | tr -d '\r')
           status=$(curl -s -o /dev/null -w '%{http_code}' -H "Authorization: $MODRINTH_TOKEN" "https://api.modrinth.com/v2/project/$slug/version/$pack_version")
-          if [ "$status" = "200" ]; then
-            echo "::notice::Spiced Cider $pack_version is already on Modrinth; bump version in gradle.properties to publish a new one"
+          if [ "$status" != "200" ]; then
+            ./gradlew :publishMods :publishCurseForgePack --stacktrace
+          elif [ "${{ inputs.curseforge }}" = "true" ]; then
+            ./gradlew :publishCurseForgePack --stacktrace
           else
-            ./gradlew :publishMods --stacktrace
+            echo "::notice::Spiced Cider $pack_version is already on Modrinth; bump version in gradle.properties to publish a new one"
           fi
 
       - name: Checkout Other Channel

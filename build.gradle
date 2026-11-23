@@ -280,20 +280,87 @@ publishMods {
         }
         minecraftVersions.add(minecraft_version)
     }
-
-    curseforge {
-        accessToken = providers.environmentVariable("CURSEFORGE_TOKEN")
-        projectId = pack_curseforge_id
-        file = curseforgePack
-        minecraftVersions.add(minecraft_version)
-        clientRequired = true
-        serverRequired = true
-        additionalFile(serverPack) {
-            name = "${pack_name} ${packVersion} Server Pack"
-        }
-    }
 }
 
 tasks.matching { it.name.startsWith("publish") }.configureEach {
-    dependsOn(exportPack, exportServerPack, exportCurseForgePack)
+    dependsOn(exportPack, exportServerPack)
+}
+
+tasks.register("publishCurseForgePack") {
+    group = "spiced cider"
+    description = "Uploads the CurseForge modpack zip with the server pack as its additional file"
+    dependsOn(exportCurseForgePack, exportServerPack)
+    def token = providers.environmentVariable("CURSEFORGE_TOKEN")
+    def dryRun = providers.gradleProperty("dry_run").isPresent()
+    def projectId = pack_curseforge_id
+    def displayName = "${pack_name} ${packVersion}"
+    def changelogFile = file("CHANGELOG-LATEST.md")
+    def packFile = curseforgePack
+    def serverFile = serverPack
+    doLast {
+        def pack = packFile.get().asFile
+        def server = serverFile.get().asFile
+        if (dryRun) {
+            logger.lifecycle("Dry run: would upload ${pack.name} (${pack.length()} bytes) as '${displayName}' for Minecraft ${mcVersion}, then ${server.name} (${server.length()} bytes) as its additional file")
+            return
+        }
+        if (!token.isPresent()) throw new GradleException("CURSEFORGE_TOKEN is not set")
+        def changelog = changelogFile.exists() ? changelogFile.text : ""
+        def uploader = new CurseForgeUpload(token.get(), projectId)
+        int gameVersion = uploader.minecraftVersionId(mcVersion)
+        int fileId = uploader.upload(pack, [changelog: changelog, changelogType: "markdown", displayName: displayName,
+                                            gameVersions: [gameVersion], releaseType: "release"])
+        logger.lifecycle("Uploaded ${pack.name} to CurseForge as file ${fileId}")
+        int serverId = uploader.upload(server, [changelog: changelog, changelogType: "markdown", displayName: "${displayName} Server Pack".toString(),
+                                                parentFileID: fileId, releaseType: "release"])
+        logger.lifecycle("Uploaded ${server.name} to CurseForge as server pack file ${serverId}")
+    }
+}
+
+class CurseForgeUpload {
+    static final String API = "https://minecraft.curseforge.com/api"
+    final String token
+    final String projectId
+    final java.net.http.HttpClient client = java.net.http.HttpClient.newBuilder().followRedirects(java.net.http.HttpClient.Redirect.NORMAL).build()
+
+    CurseForgeUpload(String token, String projectId) {
+        this.token = token
+        this.projectId = projectId
+    }
+
+    Object send(java.net.http.HttpRequest request) {
+        def response = client.send(request, java.net.http.HttpResponse.BodyHandlers.ofString())
+        if (response.statusCode() >= 300) throw new GradleException("CurseForge ${request.uri()} returned ${response.statusCode()}: ${response.body()}")
+        new JsonSlurper().parseText(response.body())
+    }
+
+    Object get(String path) {
+        send(java.net.http.HttpRequest.newBuilder(URI.create(API + path)).header("X-Api-Token", token).build())
+    }
+
+    int minecraftVersionId(String version) {
+        Set types = get("/game/version-types").findAll { it.slug.startsWith("minecraft-") }.collect { it.id } as Set
+        def match = get("/game/versions").find { it.name == version && types.contains(it.gameVersionTypeID) }
+        if (match == null) throw new GradleException("CurseForge has no Minecraft ${version} game version")
+        match.id as int
+    }
+
+    int upload(File file, Map metadata) {
+        String boundary = "----spicedcider" + UUID.randomUUID().toString().replace("-", "")
+        String crlf = "\r\n"
+        String head = "--" + boundary + crlf + "Content-Disposition: form-data; name=\"metadata\"" + crlf + "Content-Type: application/json" + crlf + crlf +
+                groovy.json.JsonOutput.toJson(metadata) + crlf + "--" + boundary + crlf +
+                "Content-Disposition: form-data; name=\"file\"; filename=\"" + file.name + "\"" + crlf + "Content-Type: application/zip" + crlf + crlf
+        String tail = crlf + "--" + boundary + "--" + crlf
+        def body = java.net.http.HttpRequest.BodyPublishers.concat(
+                java.net.http.HttpRequest.BodyPublishers.ofByteArray(head.getBytes("UTF-8")),
+                java.net.http.HttpRequest.BodyPublishers.ofFile(file.toPath()),
+                java.net.http.HttpRequest.BodyPublishers.ofByteArray(tail.getBytes("UTF-8")))
+        def request = java.net.http.HttpRequest.newBuilder(URI.create(API + "/projects/" + projectId + "/upload-file"))
+                .header("X-Api-Token", token)
+                .header("Content-Type", "multipart/form-data; boundary=" + boundary)
+                .timeout(java.time.Duration.ofMinutes(30))
+                .POST(body).build()
+        send(request).id as int
+    }
 }
