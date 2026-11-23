@@ -1,0 +1,16 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "neapolitan"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "neapolitan:chiseled_chocolate_bricks"
+  },
+  "result": {
+    "id": "neapolitan:chocolate_bricks",
+    "count": 1
+  }
+}

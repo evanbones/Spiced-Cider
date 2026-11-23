@@ -1,0 +1,16 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "architects_palette"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "architects_palette:dripstone_pillar"
+  },
+  "result": {
+    "id": "minecraft:dripstone_block",
+    "count": 1
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "blockbox"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "blockbox:waxed_weathered_copper_pillar"
+  },
+  "result": {
+    "id": "minecraft:waxed_weathered_cut_copper",
+    "count": 1
+  }
+}

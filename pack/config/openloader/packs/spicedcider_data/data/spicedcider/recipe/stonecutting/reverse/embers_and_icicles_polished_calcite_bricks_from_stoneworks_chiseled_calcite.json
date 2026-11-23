@@ -1,0 +1,20 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "embers_and_icicles"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "stoneworks"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "stoneworks:chiseled_calcite"
+  },
+  "result": {
+    "id": "embers_and_icicles:polished_calcite_bricks",
+    "count": 1
+  }
+}

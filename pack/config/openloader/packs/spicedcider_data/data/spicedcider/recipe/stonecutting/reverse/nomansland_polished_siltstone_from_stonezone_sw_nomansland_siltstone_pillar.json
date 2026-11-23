@@ -1,0 +1,20 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "nomansland"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "stonezone"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "stonezone:sw/nomansland/siltstone_pillar"
+  },
+  "result": {
+    "id": "nomansland:polished_siltstone",
+    "count": 1
+  }
+}

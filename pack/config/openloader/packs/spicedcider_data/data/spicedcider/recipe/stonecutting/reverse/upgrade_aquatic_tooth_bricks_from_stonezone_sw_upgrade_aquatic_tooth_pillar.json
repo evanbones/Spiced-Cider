@@ -1,0 +1,20 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "upgrade_aquatic"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "stonezone"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "stonezone:sw/upgrade_aquatic/tooth_pillar"
+  },
+  "result": {
+    "id": "upgrade_aquatic:tooth_bricks",
+    "count": 1
+  }
+}

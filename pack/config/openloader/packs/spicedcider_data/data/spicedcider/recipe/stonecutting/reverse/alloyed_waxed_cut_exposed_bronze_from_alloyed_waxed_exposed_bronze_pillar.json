@@ -1,0 +1,16 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "alloyed"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "alloyed:waxed_exposed_bronze_pillar"
+  },
+  "result": {
+    "id": "alloyed:waxed_cut_exposed_bronze",
+    "count": 1
+  }
+}

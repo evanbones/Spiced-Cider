@@ -1,0 +1,20 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "infernalexp"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "spicedcider"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "spicedcider:dullstone_bricks"
+  },
+  "result": {
+    "id": "infernalexp:dullstone",
+    "count": 1
+  }
+}

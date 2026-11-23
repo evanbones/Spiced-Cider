@@ -1,0 +1,20 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "everycomp"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "woodworks"
+    }
+  ],
+  "type": "woodworks:sawmill",
+  "ingredient": {
+    "item": "everycomp:mm/minecraft/bamboo_pillar"
+  },
+  "result": {
+    "id": "minecraft:bamboo_planks",
+    "count": 1
+  }
+}

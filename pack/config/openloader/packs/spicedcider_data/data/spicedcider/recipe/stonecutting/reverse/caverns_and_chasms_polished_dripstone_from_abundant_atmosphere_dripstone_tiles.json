@@ -1,0 +1,20 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "caverns_and_chasms"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "abundant_atmosphere"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "abundant_atmosphere:dripstone_tiles"
+  },
+  "result": {
+    "id": "caverns_and_chasms:polished_dripstone",
+    "count": 1
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "stoneworks"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "stoneworks:granite_tiles"
+  },
+  "result": {
+    "id": "minecraft:polished_granite",
+    "count": 1
+  }
+}

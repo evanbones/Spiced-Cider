@@ -1,0 +1,16 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "embers_and_icicles"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "embers_and_icicles:calcite_pillar"
+  },
+  "result": {
+    "id": "embers_and_icicles:polished_calcite",
+    "count": 1
+  }
+}

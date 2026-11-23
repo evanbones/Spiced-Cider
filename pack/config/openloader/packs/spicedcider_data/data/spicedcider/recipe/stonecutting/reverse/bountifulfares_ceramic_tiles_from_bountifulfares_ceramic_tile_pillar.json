@@ -1,0 +1,16 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "bountifulfares"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "bountifulfares:ceramic_tile_pillar"
+  },
+  "result": {
+    "id": "bountifulfares:ceramic_tiles",
+    "count": 1
+  }
+}

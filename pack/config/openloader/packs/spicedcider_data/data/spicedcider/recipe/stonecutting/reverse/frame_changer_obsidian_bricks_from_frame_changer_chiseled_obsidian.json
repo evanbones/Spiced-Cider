@@ -1,0 +1,16 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "frame_changer"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "frame_changer:chiseled_obsidian"
+  },
+  "result": {
+    "id": "frame_changer:obsidian_bricks",
+    "count": 1
+  }
+}

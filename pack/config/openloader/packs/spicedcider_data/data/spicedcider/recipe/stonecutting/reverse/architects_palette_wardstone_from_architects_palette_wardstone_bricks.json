@@ -1,0 +1,16 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "architects_palette"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "architects_palette:wardstone_bricks"
+  },
+  "result": {
+    "id": "architects_palette:wardstone",
+    "count": 1
+  }
+}

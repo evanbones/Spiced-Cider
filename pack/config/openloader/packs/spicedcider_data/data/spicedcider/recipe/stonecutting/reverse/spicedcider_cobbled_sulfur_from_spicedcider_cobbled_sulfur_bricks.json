@@ -1,0 +1,16 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "spicedcider"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "spicedcider:cobbled_sulfur_bricks"
+  },
+  "result": {
+    "id": "spicedcider:cobbled_sulfur",
+    "count": 1
+  }
+}

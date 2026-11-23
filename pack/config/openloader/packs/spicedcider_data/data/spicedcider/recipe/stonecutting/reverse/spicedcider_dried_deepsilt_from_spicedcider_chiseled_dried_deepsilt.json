@@ -1,0 +1,16 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "spicedcider"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "spicedcider:chiseled_dried_deepsilt"
+  },
+  "result": {
+    "id": "spicedcider:dried_deepsilt",
+    "count": 1
+  }
+}

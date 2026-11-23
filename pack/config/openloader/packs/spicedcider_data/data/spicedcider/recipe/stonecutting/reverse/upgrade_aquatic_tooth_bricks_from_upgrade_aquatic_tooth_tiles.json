@@ -1,0 +1,16 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "upgrade_aquatic"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "upgrade_aquatic:tooth_tiles"
+  },
+  "result": {
+    "id": "upgrade_aquatic:tooth_bricks",
+    "count": 1
+  }
+}

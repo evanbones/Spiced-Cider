@@ -1,0 +1,20 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "infernalexp"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "stonezone"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "stonezone:sw/infernalexp/dullstone_tiles"
+  },
+  "result": {
+    "id": "infernalexp:polished_dullstone",
+    "count": 1
+  }
+}

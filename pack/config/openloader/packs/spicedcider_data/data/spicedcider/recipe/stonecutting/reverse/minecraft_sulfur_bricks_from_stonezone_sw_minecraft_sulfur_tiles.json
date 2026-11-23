@@ -1,0 +1,16 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "stonezone"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "stonezone:sw/minecraft/sulfur_tiles"
+  },
+  "result": {
+    "id": "minecraft:sulfur_bricks",
+    "count": 1
+  }
+}

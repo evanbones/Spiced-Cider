@@ -1,0 +1,16 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "alloyed"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "alloyed:bronze_pillar"
+  },
+  "result": {
+    "id": "alloyed:cut_bronze",
+    "count": 1
+  }
+}

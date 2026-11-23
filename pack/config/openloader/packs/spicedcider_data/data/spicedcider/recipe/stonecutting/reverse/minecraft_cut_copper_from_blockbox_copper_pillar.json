@@ -1,0 +1,16 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "blockbox"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "blockbox:copper_pillar"
+  },
+  "result": {
+    "id": "minecraft:cut_copper",
+    "count": 1
+  }
+}

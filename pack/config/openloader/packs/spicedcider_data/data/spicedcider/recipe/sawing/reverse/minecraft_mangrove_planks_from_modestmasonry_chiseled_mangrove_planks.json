@@ -1,0 +1,20 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "modestmasonry"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "woodworks"
+    }
+  ],
+  "type": "woodworks:sawmill",
+  "ingredient": {
+    "item": "modestmasonry:chiseled_mangrove_planks"
+  },
+  "result": {
+    "id": "minecraft:mangrove_planks",
+    "count": 1
+  }
+}

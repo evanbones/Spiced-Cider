@@ -1,0 +1,16 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "spicedcider"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "spicedcider:mossy_cobbled_jasper_bricks"
+  },
+  "result": {
+    "id": "spicedcider:mossy_cobbled_jasper",
+    "count": 1
+  }
+}

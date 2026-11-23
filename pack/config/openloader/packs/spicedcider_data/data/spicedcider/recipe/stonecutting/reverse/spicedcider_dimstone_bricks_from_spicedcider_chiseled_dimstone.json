@@ -1,0 +1,16 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "spicedcider"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "spicedcider:chiseled_dimstone"
+  },
+  "result": {
+    "id": "spicedcider:dimstone_bricks",
+    "count": 1
+  }
+}

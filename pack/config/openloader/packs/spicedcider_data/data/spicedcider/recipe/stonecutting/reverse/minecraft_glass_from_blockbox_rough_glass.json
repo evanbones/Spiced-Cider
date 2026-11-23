@@ -1,0 +1,16 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "blockbox"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "blockbox:rough_glass"
+  },
+  "result": {
+    "id": "minecraft:glass",
+    "count": 1
+  }
+}
