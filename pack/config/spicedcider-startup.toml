@@ -6,6 +6,8 @@ skeletonHealthNerf = true
 unifiedPetArmor = true
 #Plum and hoary ciders, wines and meads make you Intoxicated, and Cultural Delights apple cider no longer does. Requires Cultural Delights. Requires a restart to take effect.
 drinkIntoxication = true
+#Foods that still give Farmer's Delight's retired Comfort effect give Spiced Cider's Comfort instead, for the same time. Requires Farmer's Delight. Requires a restart to take effect.
+replaceFarmersDelightComfort = true
 #Leaves from every mod never suffocate or block vision, like vanilla leaves. Requires a restart to take effect.
 leavesNotSuffocating = true
 #Torchflowers and potted torchflowers give off light. Requires a restart to take effect.

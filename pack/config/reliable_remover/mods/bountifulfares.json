@@ -93,6 +93,20 @@
   {
     "action": "remove",
     "items": [
+      "bountifulfares:plum_cider_jar"
+    ],
+    "replace_with": "spicedcider:plum_cider"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "bountifulfares:hoary_cider_jar"
+    ],
+    "replace_with": "spicedcider:hoary_cider"
+  },
+  {
+    "action": "remove",
+    "items": [
       "bountifulfares:jar"
     ],
     "replace_with": "spicedcider:ceramic_mug"

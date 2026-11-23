@@ -6,7 +6,366 @@
       "priority": 150,
       "health_per_nutrition": 0.5,
       "health_ticks_per_point": 30.0,
-      "stamina_per_nutrition": 1.0
+      "stamina_per_nutrition": 0.0
+    },
+    {
+      "id": "spicedcider_wrap",
+      "match": "#c:foods/wrap",
+      "priority": 136,
+      "health_per_nutrition": 0.9,
+      "health_ticks_per_point": 30.0,
+      "stamina_per_nutrition": 0.0
+    },
+    {
+      "id": "spicedcider_soup",
+      "match": "#c:foods/soup",
+      "priority": 131,
+      "health_per_nutrition": 0.9,
+      "health_ticks_per_point": 30.0,
+      "stamina_per_nutrition": 0.0
+    },
+    {
+      "id": "spicedcider_pie",
+      "match": "#c:foods/pie",
+      "priority": 131,
+      "health_per_nutrition": 0.9,
+      "health_ticks_per_point": 30.0,
+      "stamina_per_nutrition": 0.0
+    },
+    {
+      "id": "spicedcider_bread",
+      "match": "#c:foods/bread",
+      "priority": 121,
+      "health_per_nutrition": 0.5,
+      "health_ticks_per_point": 40.0,
+      "stamina_per_nutrition": 0.0
+    },
+    {
+      "id": "spicedcider_cookie",
+      "match": "#c:foods/cookie",
+      "priority": 121,
+      "health_per_nutrition": 0.5,
+      "health_ticks_per_point": 30.0,
+      "stamina_per_nutrition": 0.0
+    },
+    {
+      "id": "spicedcider_candy",
+      "match": "#c:foods/candy",
+      "priority": 121,
+      "health_per_nutrition": 0.3,
+      "health_ticks_per_point": 20.0,
+      "stamina_per_nutrition": 0.0
+    },
+    {
+      "id": "spicedcider_vegetable",
+      "match": "#c:foods/vegetable",
+      "priority": 111,
+      "health_per_nutrition": 0.4,
+      "health_ticks_per_point": 40.0,
+      "stamina_per_nutrition": 0.0
+    },
+    {
+      "id": "spicedcider_crop_tomato",
+      "match": "#c:crops/tomato",
+      "priority": 146,
+      "health_per_nutrition": 0.4,
+      "stamina_per_nutrition": 0.0
+    },
+    {
+      "id": "spicedcider_crop_onion",
+      "match": "#c:crops/onion",
+      "priority": 146,
+      "health_per_nutrition": 0.4,
+      "stamina_per_nutrition": 0.0
+    },
+    {
+      "id": "spicedcider_crop_cabbage",
+      "match": "#c:crops/cabbage",
+      "priority": 146,
+      "health_per_nutrition": 0.4,
+      "stamina_per_nutrition": 0.0
+    },
+    {
+      "id": "spicedcider_crop_rice",
+      "match": "#c:crops/rice",
+      "priority": 146,
+      "health_per_nutrition": 0.4,
+      "stamina_per_nutrition": 0.0
+    },
+    {
+      "id": "spicedcider_crop_potato",
+      "match": "#c:crops/potato",
+      "priority": 146,
+      "health_per_nutrition": 0.4,
+      "stamina_per_nutrition": 0.0
+    },
+    {
+      "id": "spicedcider_crop_beetroot",
+      "match": "#c:crops/beetroot",
+      "priority": 146,
+      "health_per_nutrition": 0.4,
+      "stamina_per_nutrition": 0.0
+    },
+    {
+      "id": "spicedcider_potato",
+      "match": "minecraft:potato",
+      "priority": 146,
+      "health_per_nutrition": 0.4,
+      "stamina_per_nutrition": 0.0
+    },
+    {
+      "id": "spicedcider_baked_potato",
+      "match": "minecraft:baked_potato",
+      "priority": 146,
+      "health_per_nutrition": 0.4,
+      "stamina_per_nutrition": 0.0
+    },
+    {
+      "id": "spicedcider_carrot",
+      "match": "minecraft:carrot",
+      "priority": 146,
+      "health_per_nutrition": 0.4,
+      "stamina_per_nutrition": 0.0
+    },
+    {
+      "id": "spicedcider_golden_carrot",
+      "match": "minecraft:golden_carrot",
+      "priority": 146,
+      "health_per_nutrition": 0.4,
+      "stamina_per_nutrition": 0.0
+    },
+    {
+      "id": "spicedcider_beetroot",
+      "match": "minecraft:beetroot",
+      "priority": 146,
+      "health_per_nutrition": 0.4,
+      "stamina_per_nutrition": 0.0
+    },
+    {
+      "id": "spicedcider_rice_panicle",
+      "match": "farmersdelight:rice_panicle",
+      "priority": 146,
+      "health_per_nutrition": 0.4,
+      "stamina_per_nutrition": 0.0
+    },
+    {
+      "id": "spicedcider_pie_crust",
+      "match": "farmersdelight:pie_crust",
+      "priority": 146,
+      "health_per_nutrition": 0.4,
+      "stamina_per_nutrition": 0.0
+    },
+    {
+      "id": "spicedcider_cheese_wedge",
+      "match": "#brewinandchewin:foods/cheese_wedge",
+      "priority": 146,
+      "health_per_nutrition": 0.8,
+      "health_ticks_per_point": 40.0,
+      "stamina_per_nutrition": 0.0
+    },
+    {
+      "id": "spicedcider_cheese_wedge_cd",
+      "match": "culturaldelights:cheese_wedge",
+      "priority": 146,
+      "health_per_nutrition": 0.8,
+      "health_ticks_per_point": 40.0,
+      "stamina_per_nutrition": 0.0
+    },
+    {
+      "id": "spicedcider_crop_cave_carrot",
+      "match": "#c:crops/cave_carrot",
+      "priority": 146,
+      "health_per_nutrition": 0.4,
+      "stamina_per_nutrition": 0.0
+    },
+    {
+      "id": "spicedcider_crop_corn",
+      "match": "#c:crops/corn",
+      "priority": 146,
+      "health_per_nutrition": 0.4,
+      "stamina_per_nutrition": 0.0
+    },
+    {
+      "id": "spicedcider_crop_avocado",
+      "match": "#c:crops/avocado",
+      "priority": 146,
+      "health_per_nutrition": 0.6,
+      "stamina_per_nutrition": 0.0
+    },
+    {
+      "id": "spicedcider_crop_cucumber",
+      "match": "#c:crops/cucumber",
+      "priority": 146,
+      "health_per_nutrition": 0.4,
+      "stamina_per_nutrition": 0.0
+    },
+    {
+      "id": "spicedcider_crop_eggplant",
+      "match": "#c:crops/eggplant",
+      "priority": 146,
+      "health_per_nutrition": 0.4,
+      "stamina_per_nutrition": 0.0
+    },
+    {
+      "id": "spicedcider_crop_beans",
+      "match": "culturaldelights:beans",
+      "priority": 146,
+      "health_per_nutrition": 0.55,
+      "stamina_per_nutrition": 0.0
+    },
+    {
+      "id": "spicedcider_tofu",
+      "match": "culturaldelights:tofu",
+      "priority": 146,
+      "health_per_nutrition": 0.9,
+      "health_ticks_per_point": 35.0,
+      "stamina_per_nutrition": 0.0
+    },
+    {
+      "id": "spicedcider_crop_leek",
+      "match": "#c:crops/leek",
+      "priority": 146,
+      "health_per_nutrition": 0.4,
+      "stamina_per_nutrition": 0.0
+    },
+    {
+      "id": "spicedcider_crop_leek_bf",
+      "match": "bountifulfares:leek",
+      "priority": 146,
+      "health_per_nutrition": 0.4,
+      "stamina_per_nutrition": 0.0
+    },
+    {
+      "id": "spicedcider_walnut",
+      "match": "#c:foods/walnuts",
+      "priority": 146,
+      "health_per_nutrition": 0.6,
+      "stamina_per_nutrition": 0.0
+    },
+    {
+      "id": "spicedcider_walnut_bf",
+      "match": "bountifulfares:walnut",
+      "priority": 146,
+      "health_per_nutrition": 0.6,
+      "stamina_per_nutrition": 0.0
+    },
+    {
+      "id": "spicedcider_coconut_half",
+      "match": "#c:coconut_halves",
+      "priority": 146,
+      "health_per_nutrition": 0.6,
+      "stamina_per_nutrition": 0.0
+    },
+    {
+      "id": "spicedcider_coconut_half_bf",
+      "match": "bountifulfares:coconut_half",
+      "priority": 146,
+      "health_per_nutrition": 0.6,
+      "stamina_per_nutrition": 0.0
+    },
+    {
+      "id": "spicedcider_ice_cream",
+      "match": "#c:foods/ice_cream",
+      "priority": 121,
+      "health_per_nutrition": 0.6,
+      "health_ticks_per_point": 20.0,
+      "stamina_per_nutrition": 0.0
+    },
+    {
+      "id": "spicedcider_milkshake",
+      "match": "#c:drinks/milkshake",
+      "priority": 121,
+      "health_per_nutrition": 0.65,
+      "health_ticks_per_point": 20.0,
+      "stamina_per_nutrition": 0.0
+    },
+    {
+      "id": "spicedcider_cake",
+      "match": "#c:foods/cake",
+      "priority": 121,
+      "health_per_nutrition": 0.55,
+      "health_ticks_per_point": 20.0,
+      "stamina_per_nutrition": 0.0
+    },
+    {
+      "id": "spicedcider_pastry",
+      "match": "#c:foods/pastry",
+      "priority": 111,
+      "health_per_nutrition": 0.6,
+      "health_ticks_per_point": 30.0,
+      "stamina_per_nutrition": 0.0
+    },
+    {
+      "id": "spicedcider_feast",
+      "match": "#farmersdelight:feasts",
+      "priority": 91,
+      "health_per_nutrition": 0.8,
+      "health_ticks_per_point": 30.0,
+      "stamina_per_nutrition": 0.0
+    },
+    {
+      "id": "spicedcider_fruit",
+      "match": "#c:foods/fruit",
+      "priority": 111,
+      "health_per_nutrition": 0.5,
+      "health_ticks_per_point": 30.0,
+      "stamina_per_nutrition": 0.0
+    },
+    {
+      "id": "spicedcider_berry",
+      "match": "#c:foods/berry",
+      "priority": 111,
+      "health_per_nutrition": 0.5,
+      "health_ticks_per_point": 20.0,
+      "stamina_per_nutrition": 0.0
+    },
+    {
+      "id": "spicedcider_dough",
+      "match": "#c:foods/dough",
+      "priority": 101,
+      "health_per_nutrition": 0.3,
+      "health_ticks_per_point": 60.0,
+      "stamina_per_nutrition": 0.0
+    },
+    {
+      "id": "spicedcider_edible_when_placed",
+      "match": "#c:foods/edible_when_placed",
+      "priority": 51,
+      "health_per_nutrition": 0.65,
+      "health_ticks_per_point": 30.0,
+      "stamina_per_nutrition": 0.0
+    },
+    {
+      "id": "spicedcider_meal",
+      "match": "#farmersdelight:meals",
+      "priority": 91,
+      "health_per_nutrition": 0.7,
+      "health_ticks_per_point": 30.0,
+      "stamina_per_nutrition": 0.0
+    },
+    {
+      "id": "spicedcider_snack",
+      "match": "#farmersdelight:snacks",
+      "priority": 91,
+      "health_per_nutrition": 0.6,
+      "health_ticks_per_point": 30.0,
+      "stamina_per_nutrition": 0.0
+    },
+    {
+      "id": "spicedcider_sweet",
+      "match": "#farmersdelight:sweets",
+      "priority": 91,
+      "health_per_nutrition": 0.3,
+      "health_ticks_per_point": 20.0,
+      "stamina_per_nutrition": 0.0
+    },
+    {
+      "id": "spicedcider_fallback",
+      "match": "*",
+      "priority": 1,
+      "health_per_nutrition": 0.4,
+      "health_ticks_per_point": 40.0,
+      "stamina_per_nutrition": 0.0
     }
   ]
 }

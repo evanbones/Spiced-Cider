@@ -87,6 +87,7 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.BooleanValue leavesNotSuffocating;
         public final ModConfigSpec.BooleanValue torchflowerLight;
         public final ModConfigSpec.BooleanValue drinkIntoxication;
+        public final ModConfigSpec.BooleanValue replaceFarmersDelightComfort;
         public final ModConfigSpec.BooleanValue tideSpawnEggs;
         public final ModConfigSpec.BooleanValue sulfurCavesRework;
         public final ModConfigSpec.BooleanValue brightCageLanterns;
@@ -122,6 +123,11 @@ public class SpicedCiderConfig {
                     .comment(tooltip("drinkIntoxication"))
                     .translation("option.spicedcider.drinkIntoxication")
                     .define("drinkIntoxication", false);
+
+            replaceFarmersDelightComfort = builder
+                    .comment(tooltip("replaceFarmersDelightComfort"))
+                    .translation("option.spicedcider.replaceFarmersDelightComfort")
+                    .define("replaceFarmersDelightComfort", false);
 
             tideSpawnEggs = builder
                     .comment(tooltip("tideSpawnEggs"))
@@ -176,9 +182,10 @@ public class SpicedCiderConfig {
                 "paleGardenPlants",
                 "snifferGoldenDandelions",
                 "stuckArrows",
-                "bottleCraftingRemainder");
+                "bottleCraftingRemainder",
+                "persistentWildCats");
 
-        public static final Set<String> FEATURES_OFF_BY_DEFAULT = Set.of("oreStoneDrops", "sporals", "autoSmelting", "stuckArrows", "bottleCraftingRemainder");
+        public static final Set<String> FEATURES_OFF_BY_DEFAULT = Set.of("oreStoneDrops", "sporals", "autoSmelting", "stuckArrows", "bottleCraftingRemainder", "persistentWildCats");
 
         public final ModConfigSpec.BooleanValue oldWisteriaTrees;
         public final ModConfigSpec.BooleanValue slimeTimeDisableItemMerging;
@@ -202,6 +209,9 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.BooleanValue ledgeClimbRework;
         public final ModConfigSpec.BooleanValue ledgeClimbStamina;
         public final ModConfigSpec.BooleanValue sittingStaminaRegen;
+        public final ModConfigSpec.BooleanValue noFoodStamina;
+        public final ModConfigSpec.BooleanValue mealIngredientsKeepHealth;
+        public final ModConfigSpec.IntValue nourishmentDurationPercent;
         public final ModConfigSpec.BooleanValue quarkStoolSeats;
         public final ModConfigSpec.BooleanValue basinCampfireHeat;
         public final ModConfigSpec.BooleanValue calmerHerdPanic;
@@ -269,12 +279,21 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.BooleanValue gravestoneDecayWithDeaths;
         public final ModConfigSpec.IntValue gravestoneDecayHours;
         public final ModConfigSpec.IntValue gravestoneDamageToBreak;
+        public final ModConfigSpec.IntValue comfortHealInterval;
+        public final ModConfigSpec.IntValue comfortRestingHealInterval;
+        public final ModConfigSpec.IntValue comfortSoupSecondsPerNutrition;
+        public final ModConfigSpec.IntValue comfortSoupMaxSeconds;
+        public final ModConfigSpec.IntValue comfortSleepSeconds;
         public final ModConfigSpec.BooleanValue gravestoneStoreExperience;
         public final ModConfigSpec.BooleanValue gravestoneKeepAllExperience;
         public final ModConfigSpec.BooleanValue gravestoneExperienceDecay;
         public final ModConfigSpec.BooleanValue staticHorseStats;
         public final ModConfigSpec.DoubleValue staticHorseSpeed;
         public final ModConfigSpec.DoubleValue staticHorseJump;
+        public final ModConfigSpec.DoubleValue staticDonkeySpeed;
+        public final ModConfigSpec.DoubleValue staticDonkeyJump;
+        public final ModConfigSpec.DoubleValue staticMuleSpeed;
+        public final ModConfigSpec.DoubleValue staticMuleJump;
 
         public final Map<String, ModConfigSpec.BooleanValue> features = new LinkedHashMap<>();
 
@@ -392,6 +411,21 @@ public class SpicedCiderConfig {
                     .comment(tooltip("sittingStaminaRegen"))
                     .translation("option.spicedcider.sittingStaminaRegen")
                     .define("sittingStaminaRegen", false);
+
+            noFoodStamina = builder
+                    .comment(tooltip("noFoodStamina"))
+                    .translation("option.spicedcider.noFoodStamina")
+                    .define("noFoodStamina", false);
+
+            mealIngredientsKeepHealth = builder
+                    .comment(tooltip("mealIngredientsKeepHealth"))
+                    .translation("option.spicedcider.mealIngredientsKeepHealth")
+                    .define("mealIngredientsKeepHealth", false);
+
+            nourishmentDurationPercent = builder
+                    .comment(tooltip("nourishmentDurationPercent"))
+                    .translation("option.spicedcider.nourishmentDurationPercent")
+                    .defineInRange("nourishmentDurationPercent", 100, 1, 100);
 
             quarkStoolSeats = builder
                     .comment(tooltip("quarkStoolSeats"))
@@ -743,6 +777,34 @@ public class SpicedCiderConfig {
                     .define("gravestoneExperienceDecay", false);
 
             builder.pop();
+            builder.push("comfort");
+
+            comfortHealInterval = builder
+                    .comment(tooltip("comfortHealInterval"))
+                    .translation("option.spicedcider.comfortHealInterval")
+                    .defineInRange("comfortHealInterval", 80, 1, 1200);
+
+            comfortRestingHealInterval = builder
+                    .comment(tooltip("comfortRestingHealInterval"))
+                    .translation("option.spicedcider.comfortRestingHealInterval")
+                    .defineInRange("comfortRestingHealInterval", 40, 1, 1200);
+
+            comfortSoupSecondsPerNutrition = builder
+                    .comment(tooltip("comfortSoupSecondsPerNutrition"))
+                    .translation("option.spicedcider.comfortSoupSecondsPerNutrition")
+                    .defineInRange("comfortSoupSecondsPerNutrition", 0, 0, 600);
+
+            comfortSoupMaxSeconds = builder
+                    .comment(tooltip("comfortSoupMaxSeconds"))
+                    .translation("option.spicedcider.comfortSoupMaxSeconds")
+                    .defineInRange("comfortSoupMaxSeconds", 180, 0, 3600);
+
+            comfortSleepSeconds = builder
+                    .comment(tooltip("comfortSleepSeconds"))
+                    .translation("option.spicedcider.comfortSleepSeconds")
+                    .defineInRange("comfortSleepSeconds", 0, 0, 3600);
+
+            builder.pop();
             builder.push("horses");
 
             staticHorseStats = builder
@@ -759,6 +821,26 @@ public class SpicedCiderConfig {
                     .comment(tooltip("staticHorseJump"))
                     .translation("option.spicedcider.staticHorseJump")
                     .defineInRange("staticHorseJump", 1.0, 0.1, 2.0);
+
+            staticDonkeySpeed = builder
+                    .comment(tooltip("staticDonkeySpeed"))
+                    .translation("option.spicedcider.staticDonkeySpeed")
+                    .defineInRange("staticDonkeySpeed", 0.175, 0.05, 1.0);
+
+            staticDonkeyJump = builder
+                    .comment(tooltip("staticDonkeyJump"))
+                    .translation("option.spicedcider.staticDonkeyJump")
+                    .defineInRange("staticDonkeyJump", 0.5, 0.1, 2.0);
+
+            staticMuleSpeed = builder
+                    .comment(tooltip("staticMuleSpeed"))
+                    .translation("option.spicedcider.staticMuleSpeed")
+                    .defineInRange("staticMuleSpeed", 0.175, 0.05, 1.0);
+
+            staticMuleJump = builder
+                    .comment(tooltip("staticMuleJump"))
+                    .translation("option.spicedcider.staticMuleJump")
+                    .defineInRange("staticMuleJump", 0.5, 0.1, 2.0);
 
             builder.pop();
             builder.push("wind");

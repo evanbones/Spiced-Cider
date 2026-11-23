@@ -98,9 +98,18 @@ public class SpicedCiderConfigScreen {
                         .option(toggle("gravestoneStoreExperience", common.gravestoneStoreExperience))
                         .option(toggle("gravestoneKeepAllExperience", common.gravestoneKeepAllExperience))
                         .option(toggle("gravestoneExperienceDecay", common.gravestoneExperienceDecay))
+                        .option(intSlider("comfortHealInterval", common.comfortHealInterval, 10, 400, 10))
+                        .option(intSlider("comfortRestingHealInterval", common.comfortRestingHealInterval, 10, 400, 10))
+                        .option(intSlider("comfortSoupSecondsPerNutrition", common.comfortSoupSecondsPerNutrition, 0, 60, 1))
+                        .option(intSlider("comfortSoupMaxSeconds", common.comfortSoupMaxSeconds, 0, 900, 10))
+                        .option(intSlider("comfortSleepSeconds", common.comfortSleepSeconds, 0, 600, 10))
                         .option(toggle("staticHorseStats", common.staticHorseStats))
                         .option(doubleSlider("staticHorseSpeed", common.staticHorseSpeed, 0.05, 1.0, 0.0125))
                         .option(doubleSlider("staticHorseJump", common.staticHorseJump, 0.1, 2.0, 0.05))
+                        .option(doubleSlider("staticDonkeySpeed", common.staticDonkeySpeed, 0.05, 1.0, 0.0125))
+                        .option(doubleSlider("staticDonkeyJump", common.staticDonkeyJump, 0.1, 2.0, 0.05))
+                        .option(doubleSlider("staticMuleSpeed", common.staticMuleSpeed, 0.05, 1.0, 0.0125))
+                        .option(doubleSlider("staticMuleJump", common.staticMuleJump, 0.1, 2.0, 0.05))
                         .build())
                 .category(features(common))
                 .categoryIf(compat != null, compat)
@@ -203,6 +212,8 @@ public class SpicedCiderConfigScreen {
                 toggle("createHideItemDescriptions", client.createHideItemDescriptions));
         group(groups, List.of("culturaldelights"),
                 toggle("drinkIntoxication", startup.drinkIntoxication));
+        group(groups, List.of("farmersdelight"),
+                toggle("replaceFarmersDelightComfort", startup.replaceFarmersDelightComfort));
         group(groups, List.of("easyanvils"),
                 toggle("easyAnvilsFreeRepairs", common.easyAnvilsFreeRepairs),
                 toggle("toolRepairMaterialCounts", common.toolRepairMaterialCounts));
@@ -265,6 +276,11 @@ public class SpicedCiderConfigScreen {
                 toggle("treeChoppingStamina", common.treeChoppingStamina));
         group(groups, List.of("personality", "modest_meals"),
                 toggle("sittingStaminaRegen", common.sittingStaminaRegen));
+        group(groups, List.of("modest_meals"),
+                toggle("noFoodStamina", common.noFoodStamina),
+                toggle("mealIngredientsKeepHealth", common.mealIngredientsKeepHealth));
+        group(groups, List.of("modest_meals", "farmersdelight"),
+                intSlider("nourishmentDurationPercent", common.nourishmentDurationPercent, 5, 100, 5));
         group(groups, List.of("quark", "create"),
                 toggle("quarkStoolSeats", common.quarkStoolSeats));
         group(groups, List.of("voicechat"),

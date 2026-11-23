@@ -2,7 +2,7 @@
 
 - Fish Trap: place it underwater with bait and it slowly catches fish from that biome. Bigger bodies of water catch
   more often, and better bait brings in more fish per catch.
-- The Drowsy effect now has a description.
+- Redelight-Map.
 - Video settings now have a Cloud Shadows toggle and a Cloud Shadow Strength slider.
 - Video settings show how much each one affects performance.
 - Monsters that stop you from sleeping or opening a loot chest now glow briefly so you can find them.
@@ -43,9 +43,29 @@
 - Bows shoot nearly straight for the first 3 seconds of a draw, then wobble and lose accuracy the longer they stay
   drawn.
 - Canvas Way Signs, in plain and every dyed canvas.
+- Comfort: a slow healing effect, twice as fast while sitting or lying in bed.
+    - Warm soups and stews give Comfort, for longer the more filling they are.
+    - Sleeping through the night gives 2 minutes of Comfort when you wake up.
+    - Witch Stew and other foods that listed Comfort before now actually heal.
+- Invigorated: stamina refills twice as fast. Teas, Builder's Tea, Hot Cocoa and cola give it for a few minutes, and
+  candy and other sweets for a minute.
+- The Drowsy effect now has a description.
 
 ### Changed
 
+- Donkeys and mules have fixed speed and jump strength like horses, instead of random ones from breeding.
+- Campfires, fire pits and braziers give Comfort instead of Regeneration, healing much more slowly.
+- Stamina refills from empty in 12 seconds instead of 33.
+- Food no longer restores stamina. Everything you eat heals a little instead, with meat and fish still healing the most.
+- Hearty meals keep stamina from draining for a quarter as long as before.
+- Alcohol no longer affects stamina.
+- Rebalanced food.
+- Plum Cider and Hoary Cider are bottled like the Cultural Delights drinks instead of served in a Ceramic Mug.
+- The Sun Hat is now called the Straw Hat.
+- Sacks are crafted with rope instead of string.
+- Quark's animal skins and rare shiny animals are turned off; the shiny rabbit drew wrongly on the new rabbit model.
+- Compasses no longer list your position in their tooltip; holding one still shows your coordinates on screen.
+- Allays spawn in flower forests in slightly smaller groups, and only on grass in daylight.
 - Copper Shingles and Copper Tiles are made in the Stonecutter like other copper blocks: 4 from a Block of Copper, or
   1 from Cut Copper.
 - Mausoleums are built from Cut Copper instead of Blocks of Copper, so they no longer hand out hundreds of ingots.
@@ -192,6 +212,23 @@
 
 ### Fixed
 
+- Feeding a Gingerbread Golem your last gingerbread cookie no longer crashes the game.
+- Baby zombies and other baby mobs wearing modded armor or a turtle shell no longer show a broken texture.
+- Shears can be repaired in an anvil: copper ingots for Shears, steel ingots for Steel Shears.
+- Modest Magic altars can be mined with a bronze pickaxe, like obsidian.
+- Shelf and field mushroom blocks break faster with an axe, like other mushroom blocks.
+- Gold and silver in a Smeltery with Meteoric Scrap make Valkyrium instead of turning into Electrum.
+- The Copper Horn is crafted from a goat horn and 3 copper ingots again, keeping the goat horn's sound, and shows up in EMI.
+- Shears and Steel Shears list their anvil repair in EMI.
+- Cooking pot recipes no longer show experience in EMI.
+- Fire charges are used up when lighting campfires and candles.
+- Renamed raw-only mushroom tag to "Raw Edible Mushrooms".
+- Giant tall grass only drops seeds when broken with a hoe, like other grass.
+- Reeds no longer drop string.
+- Enchanted books no longer show up in EMI's grindstone recipes.
+- Cats that spawn in forests no longer vanish shortly after you walk away.
+- Cherry and mangrove chests, beehives, ladders, chiseled bookshelves, crates, shutters, signs, boats, sleds,
+  posts, shelves, way signs and carved planks now match the colours of cherry and mangrove planks.
 - Removed leftover recipes that turned dirt straight into bricks, and duplicate recipes for trapped chests, ash adobe
   bricks, iron tread plates, rough glass panes, chiseled gold bricks and raw ore blocks.
 - The Ichor Bottle no longer lists the Flammable effect.
@@ -262,6 +299,7 @@
 - Inconsistent names for gold doors, trapdoors, bars, gates, lanterns, plaques, candelabras, gold bell, and gold hook.
 - Chiseled Gold Plated Bricks can no longer be crafted straight from Gold Ingots.
 - Spring Water puts out fire and hydrates farmland.
+- Lavender Tea is grouped with the other teas in EMI.
 
 ### Removed
 

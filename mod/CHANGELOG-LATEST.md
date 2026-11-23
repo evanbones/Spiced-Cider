@@ -1,5 +1,11 @@
 ### Added
 
+- Fixed Horse Stats: donkeys and mules get their own speed and jump strength settings.
+- EMI shows Horseman's component-transferring crafting recipes (like the Copper Horn), one per goat horn sound.
+- EMI shows anvil repairs added through `spicedcider:repair_materials` tags.
+- `spicedcider:repair_materials/<namespace>/<item>` item tags give any item without its own repair material one for
+  anvil repairs.
+- Wild Cats Stay: naturally spawned cats don't despawn (off by default).
 - Fish Trap: catches fish from its biome while underwater with bait in it (uses Tide fish data when Tide is installed).
     - More surrounding water raises the catch chance, and stronger bait catches more fish at once.
     - `spicedcider:fish_trap_catch` advancement trigger and `spicedcider:fish_trap_bait` item tag.
@@ -55,6 +61,23 @@
 - Crude Bow Skeletons: skeletons spawn holding a Crude Bow (off by default).
 - `spicedcider:extinguishes_fire` and `spicedcider:hydrates` fluid tags.
 - Canvas Way Signs for Supplementaries: plain and dyed way signs in Farmer's Delight canvas.
+- Comfort effect: restores 1 health every 4 seconds, twice as fast while sitting, on a seat or in bed, and does nothing
+  under Regeneration or Modest Meals' health-regeneration block. Configurable intervals.
+    - Soups and stews (`spicedcider:comfort_foods`, minus `spicedcider:not_comfort_foods`) grant Comfort for a set
+      number
+      of seconds per nutrition, with a cap (off by default).
+    - Sleeping through the night grants Comfort on waking, and players have it while lying in bed (off by default).
+    - Replace Farmer's Delight Comfort: foods that still give Farmer's Delight's retired Comfort give this Comfort
+      instead (off by default).
+- Invigorated effect: Modest Meals stamina refills twice as fast while not exerting (three times at level II).
+- Plum Cider and Hoary Cider: Cultural Delights-style drinks that hand back a glass bottle (with Bountiful Fares,
+  Cultural Delights and Farmer's Delight).
+- Meals Keep Ingredient Health: an ingredient never adds less health to a Modest Meals meal than it heals when eaten on
+  its own (off by default).
+- Food Doesn't Restore Stamina: eating never restores Modest Meals stamina directly, and tooltips and the HUD preview
+  stop showing it (off by default).
+- Nourishment Duration: shortens Farmer's Delight Nourishment when Modest Meals turns it into stamina nourishment,
+  tooltips included.
 
 ### Changed
 
@@ -93,6 +116,14 @@
 
 ### Fixed
 
+- Feeding a Gingerbread Golem your last gingerbread cookie no longer crashes the game (Snowy Spirit).
+- Golem, basin, cooking pot, tapping and film Ponder scenes only show up when the mods they need are installed.
+- Smeltery alloying prefers the alloy that uses the most ingredients and waits for it while its extra ingredients are
+  in the Smeltery, so gold and silver with Meteoric Scrap make Valkyrium instead of Electrum.
+- Farmer's Delight cooking pot recipes no longer give or show experience when Experience Obliterator is installed.
+- Fire charges are used up when lighting campfires and candles with No Man's Land installed.
+- EMI grindstone recipes no longer show inputs removed by Reliable Remover.
+- Allays added to a biome's natural spawns only spawn on grass in bright light, not in caves or the dark.
 - Compatible with FancyMenu 3.11: the placeholder length cap is lifted through its new `isTooLongToParse` check.
 - Food no longer lists or gives effects removed by Reliable Remover.
 - Fixed a memory leak in Where Winds Blow wind streaks.

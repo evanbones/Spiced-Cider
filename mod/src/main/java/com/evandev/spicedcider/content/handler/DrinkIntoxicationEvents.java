@@ -22,8 +22,8 @@ public class DrinkIntoxicationEvents {
     private static final ResourceLocation INTOXICATION = ResourceLocation.fromNamespaceAndPath("culturaldelights", "intoxication");
     private static final int DURATION = 1200;
     private static final List<String> DRINKS = List.of(
-            "bountifulfares:plum_cider_jar",
-            "bountifulfares:hoary_cider_jar",
+            "spicedcider:plum_cider",
+            "spicedcider:hoary_cider",
             "bountifulfares:elderberry_wine_bottle",
             "nomansland:maple_mead_bottle"
     );

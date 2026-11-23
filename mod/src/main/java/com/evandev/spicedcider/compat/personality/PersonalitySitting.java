@@ -1,7 +1,10 @@
 package com.evandev.spicedcider.compat.personality;
 
 import com.evandev.spicedcider.SpicedCider;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.vehicle.VehicleEntity;
 import net.neoforged.fml.ModList;
 
 import java.util.Collection;
@@ -32,6 +35,12 @@ public class PersonalitySitting {
         }
         if (clientSitting == null) clientSitting = lookupClientSet();
         return clientSitting.contains(player.getUUID());
+    }
+
+    public static boolean isSittingOrSeated(Player player) {
+        if (isSitting(player)) return true;
+        Entity vehicle = player.getVehicle();
+        return vehicle != null && !(vehicle instanceof LivingEntity) && !(vehicle instanceof VehicleEntity);
     }
 
     private static Collection<?> lookupClientSet() {

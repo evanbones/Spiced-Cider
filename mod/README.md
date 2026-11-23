@@ -278,13 +278,19 @@ message. Ported from Valcon (thanks, Ivqry!).
 - Drag the inventory player model to turn it *(off by default)*
 - Arrows stay stuck in players and mobs until pulled out: your own from the inventory player model, a tamed animal's by right-clicking it; they drop when the mob dies and can break on a bad pull *(off by default)*
 - Potions and water bottles used in recipes leave a glass bottle *(off by default)*
+- Naturally spawned cats don't despawn *(off by default)*
 - Your own potion particles are hidden in first person *(off by default)*
 - No armor bar on the HUD *(off by default)*
 - Smithing template tooltips without the "Applies to" lines *(off by default)*
-- Every horse has the same configurable speed and jump strength *(off by default)*
+- Every horse, donkey and mule has the same configurable speed and jump strength for its kind *(off by default)*
 - Configurable bundle capacity
 - Mobs can sit on Quark stools like Create seats, including as Stock Ticker keepers *(off by default)*
 - Sitting with Personality doubles Modest Meals stamina recovery *(off by default)*
+- Comfort effect: slow healing, twice as fast while sitting or in bed. Soups and stews can grant it, scaled by nutrition, and so can sleeping through the night, and it can replace Farmer's Delight's retired Comfort on foods *(off by default)*
+- Invigorated effect: Modest Meals stamina refills twice as fast
+- Food can stop restoring Modest Meals stamina directly *(off by default)*, and Farmer's Delight Nourishment can be shortened
+- Ingredients can keep their full healing inside Modest Meals meals *(off by default)*
+- Plum Cider and Hoary Cider, bottled Cultural Delights-style drinks (with Bountiful Fares and Cultural Delights)
 - Personality's crawl can be switched off, leaving crawling to another mod *(off by default)*
 - Get Over It only climbs ledges taller than a jump that you face, climbs faster and lands you on top, and can cost Modest Meals stamina *(off by default)*
 - Food doesn't list or give effects removed by Reliable Remover
@@ -414,6 +420,9 @@ authors.** The source code of the Spiced Cider mod for Minecraft 1.21.1 is avail
 Straw Hat item texture.
 
 ## Credits
+
+The Comfort effect icon is from [Farmer's Delight](https://github.com/vectorwing/FarmersDelight) by vectorwing, used
+under its MIT license.
 
 Spiced Cider contains code from [Better Log4j Config](https://modrinth.com/mod/better-log4j-config), used under
 its [Apache License 2.0](https://github.com/BigWingBeat/better_log4j_config/blob/fabric/LICENSE).

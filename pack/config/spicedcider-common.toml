@@ -61,8 +61,18 @@
 	chalkSymbolsAboveHotbar = true
 	#Rabbits don't run from players who are sneaking.
 	sneakUpOnRabbits = true
+	#Eating never restores Modest Meals stamina directly, and food tooltips and the HUD preview stop showing it. Food can still give stamina effects. Requires Modest Meals.
+	noFoodStamina = true
+	#An ingredient never adds less health to a Modest Meals meal than it heals when eaten on its own. Requires Modest Meals.
+	mealIngredientsKeepHealth = true
+	#Percentage of Farmer's Delight Nourishment duration kept when Modest Meals turns it into stamina nourishment, in tooltips too. Requires Modest Meals and Farmer's Delight.
+	# Default: 100
+	# Range: 1 ~ 100
+	nourishmentDurationPercent = 25
 
 [features]
+	#Cats that spawn naturally stay in the world like other animals instead of despawning when nobody is near.
+	persistentWildCats = true
 	#Combine a named name tag with an item in the crafting grid to rename it. Takes effect after /reload.
 	renameRecipe = true
 	#Repeaters, comparators and other diodes can be placed in water.
@@ -201,7 +211,7 @@
 		noSkeletonTrapHorses = true
 		#Combat Test bow fatigue: arrows fly almost straight when loosed within 3 seconds, then lose accuracy and stop critting the longer the bow stays drawn, up to 10 seconds, while the bow wobbles more and more.
 		bowFatigue = true
-		#Skeletons spawn holding a Crude Bow instead of a Bow. Strays and bogged keep their Bows.
+		#Skeletons spawn holding a Crude Bow instead of a Bow.
 		crudeBowSkeletons = true
 		#Skeleton horses catch fire in sunlight unless they wear horse armor. Horse armor with durability wears down in the sun instead.
 		skeletonHorsesBurn = true
@@ -291,7 +301,7 @@
 		gravestoneExperienceDecay = false
 
 	[features.horses]
-		#Every horse gets the same speed and jump strength instead of random ones. Applies to entities in the spicedcider:static_horse_stats tag.
+		#Every horse, donkey and mule gets the same speed and jump strength for its kind instead of random ones. Applies to entities in the spicedcider:static_horse_stats tag.
 		staticHorseStats = true
 		#Movement speed given to every horse when Fixed Horse Stats is on. 0.3375 is the fastest a vanilla horse can be.
 		# Default: 0.3375
@@ -301,3 +311,41 @@
 		# Default: 1.0
 		# Range: 0.1 ~ 2.0
 		staticHorseJump = 0.8
+		#Movement speed given to every donkey when Fixed Horse Stats is on. 0.175 is what a vanilla donkey gets.
+		# Default: 0.175
+		# Range: 0.05 ~ 1.0
+		staticDonkeySpeed = 0.175
+		#Jump strength given to every donkey when Fixed Horse Stats is on. 0.5 is what a vanilla donkey gets.
+		# Default: 0.5
+		# Range: 0.1 ~ 2.0
+		staticDonkeyJump = 0.5
+		#Movement speed given to every mule when Fixed Horse Stats is on. 0.175 is what a vanilla mule gets.
+		# Default: 0.175
+		# Range: 0.05 ~ 1.0
+		staticMuleSpeed = 0.175
+		#Jump strength given to every mule when Fixed Horse Stats is on. 0.5 is what a vanilla mule gets.
+		# Default: 0.5
+		# Range: 0.1 ~ 2.0
+		staticMuleJump = 0.5
+
+	[features.comfort]
+		#Ticks between each health point Comfort restores. 80 ticks (4 seconds) matches the old Farmer's Delight Comfort.
+		# Default: 80
+		# Range: 1 ~ 1200
+		comfortHealInterval = 80
+		#Ticks between each health point Comfort restores while sitting, on a seat or lying in bed.
+		# Default: 40
+		# Range: 1 ~ 1200
+		comfortRestingHealInterval = 40
+		#Seconds of Comfort granted per nutrition point when eating a soup or stew (the spicedcider:comfort_foods tag). 0 disables it.
+		# Default: 0
+		# Range: 0 ~ 600
+		comfortSoupSecondsPerNutrition = 10
+		#The most seconds of Comfort a single soup or stew can grant.
+		# Default: 180
+		# Range: 0 ~ 3600
+		comfortSoupMaxSeconds = 180
+		#Seconds of Comfort granted when waking up after sleeping through the night. Players lying in bed also have Comfort. 0 disables both.
+		# Default: 0
+		# Range: 0 ~ 3600
+		comfortSleepSeconds = 120

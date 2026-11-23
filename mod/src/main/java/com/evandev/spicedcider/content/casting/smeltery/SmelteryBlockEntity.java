@@ -40,6 +40,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Stream;
 
@@ -294,21 +295,83 @@ public class SmelteryBlockEntity extends BlockEntity implements MenuProvider {
     }
 
     private boolean alloy(Level level) {
+        List<RecipeHolder<SmelteryAlloyingRecipe>> recipes = new ArrayList<>(alloyingRecipes(level));
+        recipes.sort(Comparator.comparingInt((RecipeHolder<SmelteryAlloyingRecipe> holder) -> -inputCount(holder.value()))
+                .thenComparing(holder -> holder.id().toString()));
         boolean changed = false;
-        for (RecipeHolder<SmelteryAlloyingRecipe> holder : alloyingRecipes(level)) {
+        for (RecipeHolder<SmelteryAlloyingRecipe> holder : recipes) {
             SmelteryAlloyingRecipe recipe = holder.value();
-            int[] tanks = new int[recipe.fluids().size()];
-            boolean present = true;
-            for (int i = 0; i < tanks.length && present; i++) {
-                tanks[i] = findMetal(recipe.fluids().get(i));
-                present = tanks[i] >= 0;
-            }
-            if (!present) {
+            int[] tanks = findMetals(recipe);
+            if (tanks == null || preempted(level, recipe, tanks, recipes)) {
                 continue;
             }
             changed |= alloyWhole(recipe, tanks);
         }
         return changed;
+    }
+
+    private static int inputCount(SmelteryAlloyingRecipe recipe) {
+        return recipe.fluids().size() + recipe.items().size();
+    }
+
+    private int @Nullable [] findMetals(SmelteryAlloyingRecipe recipe) {
+        int[] tanks = new int[recipe.fluids().size()];
+        for (int i = 0; i < tanks.length; i++) {
+            tanks[i] = findMetal(recipe.fluids().get(i));
+            if (tanks[i] < 0) {
+                return null;
+            }
+        }
+        return tanks;
+    }
+
+    private boolean preempted(Level level, SmelteryAlloyingRecipe recipe, int[] tanks, List<RecipeHolder<SmelteryAlloyingRecipe>> recipes) {
+        List<ItemStack> inputs = inputs();
+        int[] slots = recipe.matchItems(inputs);
+        if (slots == null) {
+            return false;
+        }
+        for (RecipeHolder<SmelteryAlloyingRecipe> holder : recipes) {
+            SmelteryAlloyingRecipe other = holder.value();
+            if (other != recipe && inputCount(other) > inputCount(recipe)
+                    && covers(other, tanks, slots, inputs) && staged(level, other, inputs)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private boolean covers(SmelteryAlloyingRecipe other, int[] tanks, int[] slots, List<ItemStack> inputs) {
+        for (int tank : tanks) {
+            FluidStack metal = this.metals.get(tank);
+            if (other.fluids().stream().noneMatch(ingredient -> ingredient.ingredient().test(metal))) {
+                return false;
+            }
+        }
+        for (int slot : slots) {
+            ItemStack stack = inputs.get(slot);
+            if (other.items().stream().noneMatch(ingredient -> ingredient.test(stack))) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private boolean staged(Level level, SmelteryAlloyingRecipe other, List<ItemStack> inputs) {
+        if (other.matchItems(inputs) == null) {
+            return false;
+        }
+        for (SizedFluidIngredient ingredient : other.fluids()) {
+            if (findMetal(ingredient) < 0 && inputs.stream().noneMatch(stack -> meltsInto(level, stack, ingredient))) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private static boolean meltsInto(Level level, ItemStack stack, SizedFluidIngredient ingredient) {
+        CrucibleMeltingRecipe melting = meltingRecipe(level, stack);
+        return melting != null && ingredient.ingredient().test(melting.result());
     }
 
     private boolean alloyWhole(SmelteryAlloyingRecipe recipe, int[] tanks) {
