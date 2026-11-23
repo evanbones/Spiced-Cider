@@ -47,6 +47,11 @@ public abstract class LootEmiRecipe extends BasicEmiRecipe {
         }
     }
 
+    @Override
+    public boolean supportsRecipeTree() {
+        return false;
+    }
+
     private static int rows(int count, int columns) {
         return Math.max(1, (count + columns - 1) / columns);
     }
@@ -78,7 +83,7 @@ public abstract class LootEmiRecipe extends BasicEmiRecipe {
     }
 
     public static List<Drop> visible(List<Drop> drops) {
-        return drops.stream().filter(drop -> !ReliableRemoverCompat.isHiddenFromViewers(drop.stack().getItem())).toList();
+        return drops.stream().filter(drop -> !ReliableRemoverCompat.isHiddenFromViewers(drop.stack())).toList();
     }
 
     public static List<Drop> withoutDeniedMobs(List<Drop> drops) {

@@ -27,6 +27,8 @@
 - Crucibles sit down inside Block Box braziers (`spicedcider:crucible_shallow_seats`) with flames around them, and
   clicking a brazier's side with a Crucible drops it into the bowl.
 - `spicedcider:crafting_shapeless_keeping` recipe type: a shapeless recipe that hands back its `keep` ingredient.
+- Glass bottles fill from Basins, Fluid Tanks and other Create fluid containers using any `create:filling` recipe
+  for a glass bottle.
 
 ### Changed
 
@@ -51,6 +53,8 @@
 - The Smeltery front lights up, crackles and gives off light while it melts, like a Furnace.
 - New Straw Golem model and textures.
 - Retextured Cobbled Limestone and the Worm Crate.
+- Spider web projectiles no longer deal damage.
+- Reliable Backpacks sneak-placing from your back works again when Backpack Inventory Rows is on.
 
 ### Fixed
 
@@ -78,6 +82,14 @@
 - Create's Stock Ticker clerk hat sits on a seated Straw Golem's head instead of floating above it.
 - Quark's right-click armor swap no longer deletes a worn Reliable Backpack when the armor is in the backpack rows, and
   no longer takes off a filled backpack.
+- Snowy Spirit gingerbread cookies keep one shape in tooltip item previews (bundles, Item Interactions).
+- Holding attack while mining no longer misses into the air and delays mining.
+- Field Guide's scan and discovery overlays no longer let later particles (Polytone additive glows) show through
+  blocks.
+- EMI loot pages are no longer hidden entirely by Reliable Remover when one drop is a removed stack (such as an
+  enchanted book with a removed enchantment).
+- Stripping logs that a mod strips after the axe lookup (Bountiful Fares) drops tree bark.
+- Fire Strikers light Caverns & Chasms Sparklers.
 
 ### Removed
 

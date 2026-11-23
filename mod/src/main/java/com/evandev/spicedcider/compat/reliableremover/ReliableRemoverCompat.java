@@ -1,6 +1,7 @@
 package com.evandev.spicedcider.compat.reliableremover;
 
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.neoforged.fml.ModList;
 
 public final class ReliableRemoverCompat {
@@ -20,5 +21,9 @@ public final class ReliableRemoverCompat {
 
     public static boolean isHiddenFromViewers(Item item) {
         return isLoaded() && ReliableRemoverBridge.isHiddenFromViewers(item);
+    }
+
+    public static boolean isHiddenFromViewers(ItemStack stack) {
+        return isLoaded() && ReliableRemoverBridge.isHiddenFromViewers(stack);
     }
 }

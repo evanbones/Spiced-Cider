@@ -393,6 +393,7 @@ dependencies {
     compileOnly fileTree("../pack/mods") { include "f3backport-*.jar" }
     compileOnly("fuzs.iteminteractions:iteminteractions-neoforge:21.1.4") { transitive = false }
     compileOnly("fuzs.puzzleslib:puzzleslib-neoforge:21.1.65") { transitive = false }
+    compileOnly("maven.modrinth:combat-nouveau:v21.1.2-1.21.1-NeoForge") { transitive = false }
     compileOnly "maven.modrinth:where-winds-blow:gAxCACfZ"
     compileOnly "maven.modrinth:5YR2KX4z:RxlEur5n"
     compileOnly "maven.modrinth:amendments:w19mjFoT"

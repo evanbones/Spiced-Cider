@@ -21,6 +21,11 @@
     - Crucibles can also be set inside them.
 - Blocks of Bronze, Cast Iron, Lead, Electrum, Prismarite, and Valkyrium can be used as beacon base blocks.
 - All chests are grouped together as Chests in EMI.
+- Glass bottles can be filled from Basins and Fluid Tanks with any fluid a Spout can bottle, like honey, milk and
+  maple syrup.
+- Molten metals are grouped together in EMI.
+- Pillars, tiles, bricks, chiseled blocks and other cut variants can be cut back into the block they came from in
+  the Stonecutter and Sawmill.
 
 ### Changed
 
@@ -112,6 +117,11 @@
 - New Map Atlas textures.
 - New Field Guide and Photo Album textures.
 - Retextured the Spyglass, Flint Axe, Cobbled Limestone and Worm Crate.
+- Spider webs no longer deal damage.
+- Sneak-right-clicking the top of a block with an empty hand places the backpack you are wearing.
+- The Smeltery stacks to 256.
+- Dried Ghasts are infused from Soul Sand and 8 Ghast Tears instead of crafted.
+- Safes can be mined with a copper pickaxe, like other lead blocks.
 
 ### Fixed
 
@@ -148,14 +158,20 @@
 - Bundles can be dyed any colour again.
 - Removed pressing recipes for Crimson Nylium, Warped Nylium, and Soul Soil that gave nothing.
 - Shelf mushroom blocks on dark oaks come down with the tree when it's felled.
-- Molten metal in the Smeltery window and in tap streams is no longer stretched.
+- Molten metal texture in the Smeltery window and in tap streams is no longer stretched.
 - Picture Mode filters like Silhouette and Outlines no longer show caves and terrain hidden by fog.
-- EMI no longer lists the advancement tags used to unlock items.
-- Crops and other plants sway together in the wind instead of drifting out of step.
+- Crops and other plants sway together properly in the wind.
 - Nether Gold Ore can be crushed in Crushing Wheels.
 - Straw Golems sitting next to a Stock Ticker wear the clerk hat on their heads instead of above them.
-- Right-clicking a chestplate inside your backpack to put it on no longer deletes the backpack.
+- Right-clicking a chestplate inside your backpack to put it on no longer deletes the backpack (sorry Mr_Man!).
 - A filled backpack can no longer be taken off by right-clicking armor in your inventory.
+- Gingerbread cookies in bundle and shulker box previews no longer flicker between shapes.
+- Holding attack while mining no longer swings at the air between blocks and briefly stops you from mining.
+- Torch glows no longer show through walls while holding a Monocle.
+- Some structure loot was missing from EMI, such as Totems of Undying in Ancient Cities.
+- Worn-out brushes keep their current texture.
+- Stripping Bountiful Fares logs (walnut, hoary and fruit logs) gives tree bark.
+- Fire Strikers light Sparklers.
 
 ### Removed
 
@@ -169,3 +185,4 @@
 - The Pulley.
 - The Recollection Tablet and the Soulbound enchantment.
 - The Skill Issue advancement.
+- Nozzles.
