@@ -91,38 +91,9 @@
           "type": "minecraft:item"
         },
         {
-          "functions": [
-            {
-              "enchantments": {
-                "infernalexp:leaping": {
-                  "min": 1.0,
-                  "max": 1.0,
-                  "type": "minecraft:uniform"
-                }
-              },
-              "add": false,
-              "function": "minecraft:set_enchantments"
-            }
-          ],
-          "name": "minecraft:enchanted_book",
-          "weight": 5,
-          "type": "minecraft:item"
-        },
-        {
-          "functions": [
-            {
-              "conditions": [
-                {
-                  "chance": 0.25,
-                  "condition": "minecraft:random_chance"
-                }
-              ],
-              "function": "minecraft:enchant_randomly"
-            }
-          ],
-          "name": "infernalexp:glowsilk_bow",
-          "weight": 2,
-          "type": "minecraft:item"
+          "type": "minecraft:loot_table",
+          "value": "spicedcider:sub/tablets/heaven",
+          "weight": 3
         }
       ]
     },

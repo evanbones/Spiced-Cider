@@ -1,0 +1,16 @@
+{
+  "priority": 2000,
+  "repaletter": [
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:chest",
+      "replaces_with": "woodworks:acacia_chest"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:trapped_chest",
+      "replaces_with": "woodworks:trapped_acacia_chest"
+    }
+  ],
+  "structures": "#spicedcider:woodworks_chests/acacia"
+}

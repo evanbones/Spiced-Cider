@@ -18,6 +18,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -69,8 +70,8 @@ public class ModPonderSchematicProvider implements DataProvider {
     private static Schematic copperGolemSorting() {
         return new Schematic(5)
                 .set(0, 1, 2, "minecraft:copper_chest", "facing", "north")
-                .set(4, 1, 1, "quark:oak_chest", "facing", "west")
-                .set(4, 1, 3, "quark:oak_chest", "facing", "west");
+                .set(4, 1, 1, "minecraft:chest", "facing", "west")
+                .set(4, 1, 3, "minecraft:chest", "facing", "west");
     }
 
     private static Schematic sputter() {
@@ -83,7 +84,7 @@ public class ModPonderSchematicProvider implements DataProvider {
         return new Schematic(5)
                 .fill(1, 0, 0, 3, 0, 0, "minecraft:farmland", "moisture", "7")
                 .fill(1, 1, 0, 3, 1, 0, "minecraft:carrots", "age", "7")
-                .set(0, 1, 3, "quark:oak_chest", "facing", "north", "type", "single", "waterlogged", "false")
+                .set(0, 1, 3, "minecraft:chest", "facing", "north", "type", "single", "waterlogged", "false")
                 .set(2, 1, 2, "minecraft:hay_block", "axis", "y")
                 .set(2, 2, 2, "minecraft:carved_pumpkin", "facing", "north");
     }
@@ -268,7 +269,26 @@ public class ModPonderSchematicProvider implements DataProvider {
         }
         return schematic
                 .set(1, 2, 2, "nomansland:tap", "facing", "west", "closed", "false")
-                .set(1, 1, 2, "spicedcider:ingot_mould", "facing", "north");
+                .set(1, 1, 2, "spicedcider:ingot_mould", "facing", "north")
+                .set(4, 1, 3, "create:fluid_pipe", pipe("west", "up"))
+                .set(4, 2, 3, "create:mechanical_pump", "facing", "up", "waterlogged", "false")
+                .set(4, 3, 3, "create:fluid_pipe", pipe("down", "up"))
+                .set(4, 4, 3, "create:fluid_pipe", pipe("down", "north"))
+                .set(4, 4, 2, "create:fluid_pipe", pipe("south", "down"))
+                .set(4, 3, 2, "create:spout")
+                .set(4, 1, 2, "spicedcider:ingot_mould", "facing", "north");
+    }
+
+    private static String[] pipe(String... open) {
+        String[] sides = {"north", "east", "south", "west", "up", "down"};
+        String[] properties = new String[sides.length * 2 + 2];
+        for (int i = 0; i < sides.length; i++) {
+            properties[i * 2] = sides[i];
+            properties[i * 2 + 1] = String.valueOf(Arrays.asList(open).contains(sides[i]));
+        }
+        properties[sides.length * 2] = "waterlogged";
+        properties[sides.length * 2 + 1] = "false";
+        return properties;
     }
 
     private static Schematic weepingObsidian() {

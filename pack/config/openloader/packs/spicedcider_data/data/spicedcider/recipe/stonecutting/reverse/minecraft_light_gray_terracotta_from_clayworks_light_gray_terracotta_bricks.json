@@ -1,0 +1,16 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "clayworks"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "clayworks:light_gray_terracotta_bricks"
+  },
+  "result": {
+    "id": "minecraft:light_gray_terracotta",
+    "count": 1
+  }
+}

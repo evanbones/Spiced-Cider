@@ -1,0 +1,22 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:storage_blocks/iron"
+      }
+    }
+  ],
+  "type": "spicedcider:smeltery_melting",
+  "ingredients": [
+    {
+      "tag": "c:storage_blocks/iron"
+    }
+  ],
+  "result": {
+    "id": "spicedcider:molten_iron",
+    "amount": 2250
+  },
+  "time": 1200
+}

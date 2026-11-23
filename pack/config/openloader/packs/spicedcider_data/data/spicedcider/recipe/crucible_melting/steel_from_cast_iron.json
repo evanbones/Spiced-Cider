@@ -1,0 +1,33 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "alloyed"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "modestmining"
+    }
+  ],
+  "type": "spicedcider:crucible_melting",
+  "ingredients": [
+    {
+      "item": "spicedcider:cast_iron_ingot"
+    },
+    {
+      "item": "spicedcider:cast_iron_ingot"
+    },
+    {
+      "item": "spicedcider:cast_iron_ingot"
+    },
+    {
+      "item": "modestmining:coke"
+    }
+  ],
+  "result": {
+    "id": "spicedcider:molten_steel",
+    "amount": 750
+  },
+  "heat": "high",
+  "time": 600
+}

@@ -11,8 +11,10 @@ import com.evandev.spicedcider.client.options.entry.SettingEntry;
 import com.evandev.spicedcider.client.options.entry.TextEntry;
 import com.evandev.spicedcider.client.options.setting.CycleSetting;
 import com.evandev.spicedcider.client.options.setting.GuiScaleSetting;
+import com.evandev.spicedcider.client.options.setting.Impact;
 import com.evandev.spicedcider.client.options.setting.Setting;
 import com.evandev.spicedcider.client.options.setting.VanillaSetting;
+import com.evandev.spicedcider.compat.bettercloudshadows.CloudShadowSettings;
 import com.evandev.spicedcider.compat.cirrus.CirrusSettings;
 import com.evandev.spicedcider.compat.controlify.ControlifySettings;
 import com.evandev.spicedcider.compat.lambdynlights.DynamicLightsSetting;
@@ -153,7 +155,7 @@ public final class SettingsPages {
         List<Entry> entries = new ArrayList<>();
         boolean cirrus = ModList.get().isLoaded("cirrus");
         add(entries, category(screen, "display",
-                sodium("sodium:general.fullscreen", o.fullscreen()),
+                fullscreen(o),
                 sodium("sodium:general.fullscreen_resolution", null),
                 sodium("sodium:general.vsync", o.enableVsync()),
                 sodium("sodium:general.framerate_limit", o.framerateLimit()),
@@ -161,14 +163,16 @@ public final class SettingsPages {
                 sodium("sodium:general.render_distance", o.renderDistance()),
                 sodium("sodium:general.simulation_distance", o.simulationDistance()),
                 sodium("sodium:quality.entity_distance", o.entityDistanceScaling()),
-                named(sodiumOnly("voxy:enabled"), "spicedcider.options.lod_terrain"),
-                named(sodiumOnly("voxy:render_distance", VOXY_DEFAULT_DISTANCE), "spicedcider.options.lod_distance"),
-                ModList.get().isLoaded("roxy") ? VoxyFogSettings.start() : null,
-                ModList.get().isLoaded("roxy") ? VoxyFogSettings.end() : null));
+                impact(named(sodiumOnly("voxy:enabled"), "spicedcider.options.lod_terrain"), Impact.HIGH),
+                impact(named(sodiumOnly("voxy:render_distance", VOXY_DEFAULT_DISTANCE), "spicedcider.options.lod_distance"), Impact.HIGH),
+                ModList.get().isLoaded("roxy") ? impact(VoxyFogSettings.start(), Impact.LOW) : null,
+                ModList.get().isLoaded("roxy") ? impact(VoxyFogSettings.end(), Impact.LOW) : null));
         add(entries, category(screen, "visuals",
                 sodium("sodium:quality.graphics", o.graphicsMode()),
                 sodium("sodium:quality.ao", o.ambientOcclusion()),
                 sodium("sodium:quality.clouds", o.cloudStatus()),
+                ModList.get().isLoaded("better_cloud_shadows") ? impact(CloudShadowSettings.enabled(), Impact.MEDIUM) : null,
+                ModList.get().isLoaded("better_cloud_shadows") ? impact(CloudShadowSettings.strength(), Impact.LOW) : null,
                 sodium("sodium:quality.weather", null),
                 sodium("sodium:quality.leaves", null),
                 sodium("sodium:quality.particles", o.particles()),
@@ -176,25 +180,25 @@ public final class SettingsPages {
                         ? named(sodiumOnly("betterbiomeblend:biome_blend_radius", PackDefaults.raw("betterBiomeBlendRadius").map(Integer::valueOf).orElse(null)), "options.biomeBlendRadius")
                         : sodium("sodium:quality.biome_blend", o.biomeBlendRadius()),
                 sodium("sodium:quality.entity_shadows", o.entityShadows()),
-                ModList.get().isLoaded("lambdynlights") ? optional(DynamicLightsSetting.create()) : null,
+                ModList.get().isLoaded("lambdynlights") ? impact(optional(DynamicLightsSetting.create()), Impact.HIGH) : null,
                 sodium("sodium:quality.mipmap_levels", o.mipmapLevels()),
-                cirrus ? CirrusSettings.customStars() : null,
-                cirrus ? CirrusSettings.shootingStars() : null,
-                cirrus ? CirrusSettings.aurora() : null,
-                ModList.get().isLoaded("nomansland") ? NoMansLandSettings.sunDogs() : null,
-                ModList.get().isLoaded("where_winds_blow") ? FoliageSwaySettings.foliageSway() : null,
-                NetherSettings.mist()));
+                cirrus ? impact(CirrusSettings.customStars(), Impact.LOW) : null,
+                cirrus ? impact(CirrusSettings.shootingStars(), Impact.LOW) : null,
+                cirrus ? impact(CirrusSettings.aurora(), Impact.LOW) : null,
+                ModList.get().isLoaded("nomansland") ? impact(NoMansLandSettings.sunDogs(), Impact.LOW) : null,
+                ModList.get().isLoaded("where_winds_blow") ? impact(FoliageSwaySettings.foliageSway(), Impact.MEDIUM) : null,
+                impact(NetherSettings.mist(), Impact.LOW)));
         if (ModList.get().isLoaded("particular")) {
-            add(entries, category(screen, "particles", ParticularSettings.particles().toArray(Entry[]::new)));
+            add(entries, category(screen, "particles", ParticularSettings.particles().stream().map(entry -> impact(entry, Impact.LOW)).toArray(Entry[]::new)));
         }
         add(entries, category(screen, "post_processing",
-                ModList.get().isLoaded("polytone") ? GodraysSettings.godrays() : null,
-                NetherSettings.heatHaze(),
-                NetherSettings.ambientTint(),
+                ModList.get().isLoaded("polytone") ? impact(GodraysSettings.godrays(), Impact.MEDIUM) : null,
+                impact(NetherSettings.heatHaze(), Impact.MEDIUM),
+                impact(NetherSettings.ambientTint(), Impact.LOW),
                 sodium("sodium:quality.vignette", null)));
         add(entries, category(screen, "performance",
-                VoxyIngest.available() ? LodSettings.generate() : null,
-                VoxyIngest.available() ? LodSettings.threads() : null,
+                VoxyIngest.available() ? impact(LodSettings.generate(), Impact.HIGH) : null,
+                VoxyIngest.available() ? impact(LodSettings.threads(), Impact.VARIES) : null,
                 optional(sodiumOnly("sodium:performance.chunk_update_threads")),
                 optional(sodiumOnly("sodium:performance.always_defer_chunk_updates")),
                 optional(sodiumOnly("sodium:performance.animate_only_visible_textures")),
@@ -327,6 +331,11 @@ public final class SettingsPages {
         return new CategoryEntry(Component.translatable("spicedcider.options.category." + key), list, screen.collapsed());
     }
 
+    @Nullable
+    private static Entry impact(@Nullable Entry entry, Impact impact) {
+        return entry instanceof SettingEntry setting ? setting.impact(impact) : entry;
+    }
+
     private static void add(List<Entry> entries, @Nullable Entry entry) {
         if (entry != null) entries.add(entry);
     }
@@ -351,6 +360,12 @@ public final class SettingsPages {
             if (setting != null) return new SettingEntry(setting);
         }
         return fallback == null ? null : vanilla(fallback);
+    }
+
+    @Nullable
+    private static Entry fullscreen(Options o) {
+        Entry borderless = sodium("cwb:general.fullscreen", null);
+        return borderless != null ? borderless : sodium("sodium:general.fullscreen", o.fullscreen());
     }
 
     @Nullable

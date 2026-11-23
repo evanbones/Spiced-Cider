@@ -1,0 +1,45 @@
+{
+  "repaletter": [
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:copper_block",
+      "replaces_with": "minecraft:cut_copper"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:exposed_copper",
+      "replaces_with": "minecraft:exposed_cut_copper"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:weathered_copper",
+      "replaces_with": "minecraft:weathered_cut_copper"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:oxidized_copper",
+      "replaces_with": "minecraft:oxidized_cut_copper"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:waxed_copper_block",
+      "replaces_with": "minecraft:waxed_cut_copper"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:waxed_exposed_copper",
+      "replaces_with": "minecraft:waxed_exposed_cut_copper"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:waxed_weathered_copper",
+      "replaces_with": "minecraft:waxed_weathered_cut_copper"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:waxed_oxidized_copper",
+      "replaces_with": "minecraft:waxed_oxidized_cut_copper"
+    }
+  ],
+  "structures": "explorify:mausoleum"
+}

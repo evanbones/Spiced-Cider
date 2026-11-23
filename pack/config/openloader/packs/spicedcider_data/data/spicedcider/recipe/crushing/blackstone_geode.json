@@ -1,0 +1,39 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    }
+  ],
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "spicedcider:blackstone_geode"
+    }
+  ],
+  "processing_time": 150,
+  "results": [
+    {
+      "id": "spelunkery:raw_gold_nugget",
+      "count": 6
+    },
+    {
+      "id": "spelunkery:rough_cinnabar_shard",
+      "count": 3,
+      "chance": 0.6
+    },
+    {
+      "id": "spelunkery:rough_quartz_shard",
+      "count": 3,
+      "chance": 0.5
+    },
+    {
+      "id": "minecraft:netherite_scrap",
+      "chance": 0.1
+    },
+    {
+      "id": "reliable_requiem:crystal_shard",
+      "chance": 0.1
+    }
+  ]
+}

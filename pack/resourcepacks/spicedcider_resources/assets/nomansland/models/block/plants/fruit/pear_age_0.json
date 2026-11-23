@@ -1,6 +1,6 @@
 {
 	"format_version": "26.3",
-	"credit": "Made by Farcr, remodelled by proxillus",
+	"credit": "Made by Farcr",
 	"render_type": "minecraft:cutout",
 	"texture_size": [32, 32],
 	"textures": {
@@ -12,9 +12,9 @@
 			"from": [7, 13, 7],
 			"to": [9, 16, 9],
 			"faces": {
-				"north": {"uv": [5, 13, 6, 14.5], "texture": "#0"},
-				"east": {"uv": [2, 13, 1, 14.5], "texture": "#0"},
-				"south": {"uv": [2, 13, 3, 14.5], "texture": "#0"},
+				"north": {"uv": [4, 13, 5, 14.5], "texture": "#0"},
+				"east": {"uv": [5, 13, 4, 14.5], "texture": "#0"},
+				"south": {"uv": [4, 13, 5, 14.5], "texture": "#0"},
 				"west": {"uv": [5, 13, 4, 14.5], "texture": "#0"},
 				"up": {"uv": [3, 13, 4, 14], "texture": "#0"},
 				"down": {"uv": [3, 14, 4, 15], "texture": "#0"}

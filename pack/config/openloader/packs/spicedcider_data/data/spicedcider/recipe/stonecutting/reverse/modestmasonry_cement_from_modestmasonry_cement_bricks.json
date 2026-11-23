@@ -1,0 +1,16 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "modestmasonry"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "modestmasonry:cement_bricks"
+  },
+  "result": {
+    "id": "modestmasonry:cement",
+    "count": 1
+  }
+}

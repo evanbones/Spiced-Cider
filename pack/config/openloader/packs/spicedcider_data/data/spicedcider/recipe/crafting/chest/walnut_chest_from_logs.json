@@ -1,0 +1,33 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "nomansland"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "bountifulfares"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "###",
+    "# #",
+    "###"
+  ],
+  "key": {
+    "#": [
+      {
+        "item": "bountifulfares:walnut_log"
+      },
+      {
+        "item": "bountifulfares:stripped_walnut_log"
+      }
+    ]
+  },
+  "result": {
+    "id": "everycomp:abnww/nomansland/walnut_chest",
+    "count": 4
+  }
+}

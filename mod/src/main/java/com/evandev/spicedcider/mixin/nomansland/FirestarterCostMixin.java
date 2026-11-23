@@ -8,6 +8,7 @@ import com.llamalad7.mixinextras.sugar.ref.LocalRef;
 import com.moulberry.mixinconstraints.annotations.IfModLoaded;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.FireChargeItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.common.ItemAbilities;
@@ -44,6 +45,8 @@ public class FirestarterCostMixin {
             stack.consume(1, player);
         } else if (stack.isDamageableItem()) {
             stack.hurtAndBreak(1, player, LivingEntity.getSlotForHand(event.getHand()));
+        } else if (stack.getItem() instanceof FireChargeItem) {
+            stack.consume(1, player);
         }
     }
 }

@@ -1,0 +1,16 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "stoneworks"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "stoneworks:tuff_pillar"
+  },
+  "result": {
+    "id": "minecraft:polished_tuff",
+    "count": 1
+  }
+}

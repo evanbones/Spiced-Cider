@@ -1,10 +1,16 @@
 {
   "variants": {
-    "seated=false": {
+    "seated=false,shallow=false": {
       "model": "spicedcider:block/crucible"
     },
-    "seated=true": {
+    "seated=false,shallow=true": {
+      "model": "spicedcider:block/crucible"
+    },
+    "seated=true,shallow=false": {
       "model": "spicedcider:block/crucible_seated"
+    },
+    "seated=true,shallow=true": {
+      "model": "spicedcider:block/crucible_seated_shallow"
     }
   }
 }

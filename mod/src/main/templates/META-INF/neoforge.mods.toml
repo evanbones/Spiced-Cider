@@ -63,6 +63,13 @@ ordering = "AFTER"
 side = "BOTH"
 
 [[dependencies.${ mod_id }]]
+modId = "beams"
+type = "optional"
+versionRange = "[1.0,)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.${ mod_id }]]
 modId = "caverns_and_chasms"
 type = "optional"
 versionRange = "[3.0.0,)"
@@ -127,6 +134,13 @@ side = "BOTH"
 
 [[dependencies.${ mod_id }]]
 modId = "fieldguide"
+type = "optional"
+versionRange = "*"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.${ mod_id }]]
+modId = "horseman"
 type = "optional"
 versionRange = "*"
 ordering = "AFTER"
@@ -690,6 +704,13 @@ side = "BOTH"
 
 [[dependencies.${ mod_id }]]
 modId = "autumnity"
+type = "optional"
+versionRange = "*"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.${ mod_id }]]
+modId = "break_my_fall"
 type = "optional"
 versionRange = "*"
 ordering = "AFTER"

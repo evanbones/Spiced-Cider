@@ -7,6 +7,10 @@
     {
       "type": "neoforge:mod_loaded",
       "modid": "create"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "spicedcider"
     }
   ],
   "type": "create:crushing",
@@ -18,8 +22,7 @@
   "processing_time": 250,
   "results": [
     {
-      "id": "minecraft:amethyst_shard",
-      "chance": 0.2
+      "id": "spicedcider:cobbled_sugilite"
     }
   ]
 }

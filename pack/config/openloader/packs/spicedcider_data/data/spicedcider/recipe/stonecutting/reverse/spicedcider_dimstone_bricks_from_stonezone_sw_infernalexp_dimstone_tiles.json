@@ -1,0 +1,20 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "spicedcider"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "stonezone"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "stonezone:sw/infernalexp/dimstone_tiles"
+  },
+  "result": {
+    "id": "spicedcider:dimstone_bricks",
+    "count": 1
+  }
+}

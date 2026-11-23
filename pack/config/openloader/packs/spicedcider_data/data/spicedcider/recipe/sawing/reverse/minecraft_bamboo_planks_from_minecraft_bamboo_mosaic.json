@@ -1,0 +1,16 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "woodworks"
+    }
+  ],
+  "type": "woodworks:sawmill",
+  "ingredient": {
+    "item": "minecraft:bamboo_mosaic"
+  },
+  "result": {
+    "id": "minecraft:bamboo_planks",
+    "count": 1
+  }
+}

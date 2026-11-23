@@ -20,4 +20,7 @@ public class ModCriteria {
 
     public static final DeferredHolder<CriterionTrigger<?>, PlayerTrigger> CAMPFIRE_LIT =
             TRIGGERS.register("campfire_lit", PlayerTrigger::new);
+
+    public static final DeferredHolder<CriterionTrigger<?>, PlayerTrigger> FISH_TRAP_CATCH =
+            TRIGGERS.register("fish_trap_catch", PlayerTrigger::new);
 }

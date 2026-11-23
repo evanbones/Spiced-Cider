@@ -1,0 +1,20 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "nomansland"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "spicedcider"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "spicedcider:chiseled_silt_bricks"
+  },
+  "result": {
+    "id": "nomansland:silt_bricks",
+    "count": 1
+  }
+}

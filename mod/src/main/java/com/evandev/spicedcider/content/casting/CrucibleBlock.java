@@ -45,33 +45,47 @@ import org.jetbrains.annotations.Nullable;
 public class CrucibleBlock extends BaseEntityBlock {
     public static final MapCodec<CrucibleBlock> CODEC = simpleCodec(CrucibleBlock::new);
     public static final BooleanProperty SEATED = BooleanProperty.create("seated");
+    public static final BooleanProperty SHALLOW = BooleanProperty.create("shallow");
     public static final TagKey<Block> SEATS = TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "crucible_seats"));
-    public static final float SEAT_DROP = 9.0F / 16.0F;
+    public static final TagKey<Block> SHALLOW_SEATS = TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "crucible_shallow_seats"));
+    public static final float SEAT_DROP = 13.0F / 16.0F;
+    public static final float SHALLOW_SEAT_DROP = 8.0F / 16.0F;
     private static final VoxelShape SHAPE = Shapes.or(Block.box(5.0, 0.0, 5.0, 11.0, 12.0, 11.0), Block.box(4.5, 12.0, 4.5, 11.5, 14.0, 11.5));
     private static final VoxelShape SEATED_SHAPE = SHAPE.move(0.0, -SEAT_DROP, 0.0);
+    private static final VoxelShape SHALLOW_SHAPE = SHAPE.move(0.0, -SHALLOW_SEAT_DROP, 0.0);
 
     public CrucibleBlock(Properties properties) {
         super(properties);
-        registerDefaultState(this.stateDefinition.any().setValue(SEATED, false));
+        registerDefaultState(this.stateDefinition.any().setValue(SEATED, false).setValue(SHALLOW, false));
     }
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(SEATED);
+        builder.add(SEATED, SHALLOW);
     }
 
     @Override
     public @Nullable BlockState getStateForPlacement(BlockPlaceContext context) {
-        return defaultBlockState().setValue(SEATED, context.getLevel().getBlockState(context.getClickedPos().below()).is(SEATS));
+        return seat(defaultBlockState(), context.getLevel().getBlockState(context.getClickedPos().below()));
     }
 
     @Override
     protected BlockState updateShape(BlockState state, Direction direction, BlockState neighbor, LevelAccessor level, BlockPos pos, BlockPos neighborPos) {
-        return direction == Direction.DOWN ? state.setValue(SEATED, neighbor.is(SEATS)) : state;
+        return direction == Direction.DOWN ? seat(state, neighbor) : state;
+    }
+
+    public static boolean isSeat(BlockState below) {
+        return below.is(SEATS) || below.is(SHALLOW_SEATS);
+    }
+
+    private static BlockState seat(BlockState state, BlockState below) {
+        boolean shallow = below.is(SHALLOW_SEATS);
+        return state.setValue(SEATED, shallow || below.is(SEATS)).setValue(SHALLOW, shallow);
     }
 
     public static float drop(BlockState state) {
-        return state.hasProperty(SEATED) && state.getValue(SEATED) ? SEAT_DROP : 0.0F;
+        if (!state.hasProperty(SEATED) || !state.getValue(SEATED)) return 0.0F;
+        return state.getValue(SHALLOW) ? SHALLOW_SEAT_DROP : SEAT_DROP;
     }
 
     @Override
@@ -81,7 +95,8 @@ public class CrucibleBlock extends BaseEntityBlock {
 
     @Override
     protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
-        return state.getValue(SEATED) ? SEATED_SHAPE : SHAPE;
+        if (!state.getValue(SEATED)) return SHAPE;
+        return state.getValue(SHALLOW) ? SHALLOW_SHAPE : SEATED_SHAPE;
     }
 
     @Override
@@ -101,7 +116,7 @@ public class CrucibleBlock extends BaseEntityBlock {
 
     @Override
     public @Nullable <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> type) {
-        return level.isClientSide() ? null : createTickerHelper(type, ModBlockEntities.CRUCIBLE.get(), CrucibleBlockEntity::serverTick);
+        return createTickerHelper(type, ModBlockEntities.CRUCIBLE.get(), level.isClientSide() ? CrucibleBlockEntity::clientTick : CrucibleBlockEntity::serverTick);
     }
 
     @Override

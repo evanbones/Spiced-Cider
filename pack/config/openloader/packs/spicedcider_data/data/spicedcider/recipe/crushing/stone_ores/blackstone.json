@@ -8,12 +8,13 @@
   "processing_time": 250,
   "results": [
     {
-      "id": "create:crushed_raw_gold",
-      "chance": 0.15
-    },
+      "id": "stoneworks:cobbled_blackstone"
+    }
+  ],
+  "neoforge:conditions": [
     {
-      "id": "minecraft:gold_nugget",
-      "chance": 0.15
+      "type": "neoforge:mod_loaded",
+      "modid": "stoneworks"
     }
   ]
 }

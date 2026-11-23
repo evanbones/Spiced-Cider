@@ -1,0 +1,27 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "supplementaries:flag",
+      "flag": "candle_holder"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "candle_holder",
+  "pattern": [
+    " C ",
+    "NNN"
+  ],
+  "key": {
+    "C": {
+      "item": "minecraft:magenta_candle"
+    },
+    "N": {
+      "tag": "c:nuggets/cast_iron"
+    }
+  },
+  "result": {
+    "id": "supplementaries:candle_holder_magenta",
+    "count": 1
+  }
+}

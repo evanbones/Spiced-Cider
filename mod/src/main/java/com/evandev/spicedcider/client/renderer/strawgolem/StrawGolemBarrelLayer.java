@@ -29,8 +29,8 @@ public class StrawGolemBarrelLayer extends RenderLayer<StrawGolem, StrawGolemMod
         poseStack.pushPose();
         getParentModel().translateToBody(poseStack);
         poseStack.mulPose(Axis.ZP.rotationDegrees(180.0F));
-        poseStack.translate(-4.5F / 16.0F, -2.25F / 16.0F, -4.5F / 16.0F);
-        poseStack.scale(8.75F / 16.0F, 10.5F / 16.0F, 8.75F / 16.0F);
+        poseStack.translate(-3.875F / 16.0F, -2.25F / 16.0F, -3.875F / 16.0F);
+        poseStack.scale(7.75F / 16.0F, 12.5F / 16.0F, 7.75F / 16.0F);
         blockRenderer.renderSingleBlock(BARREL, poseStack, buffer, packedLight, LivingEntityRenderer.getOverlayCoords(golem, 0.0F));
         poseStack.popPose();
     }

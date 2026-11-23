@@ -1,0 +1,20 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "quark"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "spicedcider"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "spicedcider:chiseled_permafrost"
+  },
+  "result": {
+    "id": "quark:permafrost_bricks",
+    "count": 1
+  }
+}

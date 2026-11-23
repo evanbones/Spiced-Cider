@@ -1,0 +1,16 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "stoneworks"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "stoneworks:diorite_tiles"
+  },
+  "result": {
+    "id": "minecraft:diorite",
+    "count": 1
+  }
+}

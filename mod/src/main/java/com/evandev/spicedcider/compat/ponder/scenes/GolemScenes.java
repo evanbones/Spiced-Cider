@@ -573,7 +573,7 @@ public class GolemScenes {
         scene.world().modifyEntity(golem, entity -> ((StrawGolem) entity).setHat(hat.copy()));
         scene.overlay().showText(70)
                 .attachKeyFrame()
-                .text("A Sun Hat keeps the rain off its head")
+                .text("A Straw Hat keeps the rain off its head")
                 .pointAt(start.add(0, 0.9, 0))
                 .placeNearTarget();
         scene.idle(80);

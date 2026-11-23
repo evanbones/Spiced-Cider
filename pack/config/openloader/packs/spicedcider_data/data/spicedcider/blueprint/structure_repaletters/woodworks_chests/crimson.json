@@ -1,0 +1,16 @@
+{
+  "priority": 2000,
+  "repaletter": [
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:chest",
+      "replaces_with": "woodworks:crimson_chest"
+    },
+    {
+      "type": "blueprint:simple",
+      "replaces_block": "minecraft:trapped_chest",
+      "replaces_with": "woodworks:trapped_crimson_chest"
+    }
+  ],
+  "structures": "#spicedcider:woodworks_chests/crimson"
+}

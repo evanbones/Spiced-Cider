@@ -1,0 +1,26 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "caverns_and_chasms"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:storage_blocks/necromium"
+      }
+    }
+  ],
+  "type": "spicedcider:smeltery_melting",
+  "ingredients": [
+    {
+      "tag": "c:storage_blocks/necromium"
+    }
+  ],
+  "result": {
+    "id": "spicedcider:molten_necromium",
+    "amount": 2250
+  },
+  "time": 1200
+}

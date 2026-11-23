@@ -1,0 +1,22 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "beams"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "spicedcider:cast_iron_sheet"
+    },
+    {
+      "tag": "c:nuggets/iron"
+    }
+  ],
+  "result": {
+    "id": "spicedcider:cast_iron_beam",
+    "count": 4
+  }
+}

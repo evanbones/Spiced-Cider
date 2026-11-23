@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.content.item;
 
+import com.evandev.spicedcider.compat.cavernsandchasms.StrikerLighting;
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerPlayer;
@@ -13,6 +14,7 @@ import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
+import net.neoforged.fml.ModList;
 import net.neoforged.neoforge.common.ItemAbilities;
 import net.neoforged.neoforge.common.ItemAbility;
 import org.jetbrains.annotations.NotNull;
@@ -29,8 +31,8 @@ public class FireStrikerItem extends Item {
         ItemStack flint = new ItemStack(Items.FLINT_AND_STEEL);
         BlockHitResult hit = new BlockHitResult(context.getClickLocation(), context.getClickedFace(), context.getClickedPos(), context.isInside());
 
-        boolean success = false;
-        if (player != null) {
+        boolean success = ModList.get().isLoaded("caverns_and_chasms") && StrikerLighting.light(level, context.getClickedPos(), player);
+        if (!success && player != null) {
             BlockState state = level.getBlockState(context.getClickedPos());
             ItemInteractionResult blockResult = state.useItemOn(flint, level, player, context.getHand(), hit);
             success = blockResult.consumesAction();

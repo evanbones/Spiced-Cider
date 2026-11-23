@@ -2,6 +2,7 @@ package com.evandev.spicedcider.content.casting;
 
 import com.evandev.spicedcider.registry.ModRecipeSerializers;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.level.Level;
 import net.neoforged.neoforge.fluids.FluidStack;
@@ -15,6 +16,22 @@ public class Casting {
         return level.getRecipeManager().getAllRecipesFor(ModRecipeSerializers.CRUCIBLE_MELTING_TYPE.get()).stream()
                 .sorted(Comparator.comparingInt((RecipeHolder<CrucibleMeltingRecipe> holder) -> holder.value().ingredients().size()).reversed())
                 .toList();
+    }
+
+    public static int fluidValue(Level level, Ingredient ingredient, FluidStack fluid) {
+        for (RecipeHolder<CrucibleMeltingRecipe> holder : level.getRecipeManager().getAllRecipesFor(ModRecipeSerializers.CRUCIBLE_MELTING_TYPE.get())) {
+            CrucibleMeltingRecipe recipe = holder.value();
+            if (recipe.ingredients().size() != 1 || !FluidStack.isSameFluidSameComponents(recipe.result(), fluid)) {
+                continue;
+            }
+            Ingredient melted = recipe.ingredients().getFirst();
+            for (ItemStack stack : ingredient.getItems()) {
+                if (melted.test(stack)) {
+                    return recipe.result().getAmount();
+                }
+            }
+        }
+        return 0;
     }
 
     public static boolean isMeltable(Level level, ItemStack stack) {

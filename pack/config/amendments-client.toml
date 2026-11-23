@@ -114,6 +114,17 @@
 	#Makes jukebox disc spin while playing
 	disc_spin = true
 
+	[jukebox.disc_spin_pivot]
+		# Default: 8.0
+		# Range: 0.0 ~ 16.0
+		x = 8.0
+		# Default: 15.25
+		# Range: 0.0 ~ 16.0
+		y = 15.25
+		# Default: 8.0
+		# Range: 0.0 ~ 16.0
+		z = 8.0
+
 [misc]
 	#Gives a special animation to torches when held in hand
 	torch_item_holding = true
@@ -146,3 +157,9 @@
 		#What the animation does when the selection texture is opaque. NONE keeps it on top of the items, IN_BACKGROUND moves it behind them, TURNS_OFF disables the animation
 		#Allowed Values: NONE, IN_BACKGROUND, TURNS_OFF
 		opaque_behavior = "IN_BACKGROUND"
+
+	[misc.threading_water_swim]
+		#Players and humanoid mobs move their arms and legs like swimming when upright in water
+		enabled = true
+		#Spread legs a bit sideways while swimming upright
+		leg_splay = false

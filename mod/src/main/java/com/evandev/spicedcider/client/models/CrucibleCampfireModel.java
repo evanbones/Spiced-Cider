@@ -27,14 +27,20 @@ public class CrucibleCampfireModel extends BakedModelWrapper<BakedModel> {
     private static final float HIGH = 14.0F / 16.0F;
     private static final float NEAR = 3.0F / 16.0F;
     private static final float FAR = 13.0F / 16.0F;
-    private static final float BOTTOM = 4.0F / 16.0F;
+    private static final float CAMPFIRE_BOTTOM = 4.0F / 16.0F;
     private static final float TOP = 1.0F;
 
+    private final float bottom;
     private volatile TextureAtlasSprite ringSprite;
     private volatile List<BakedQuad> ring = List.of();
 
     public CrucibleCampfireModel(BakedModel original) {
+        this(original, CAMPFIRE_BOTTOM);
+    }
+
+    public CrucibleCampfireModel(BakedModel original, float bottom) {
         super(original);
+        this.bottom = bottom;
     }
 
     @Override
@@ -85,7 +91,7 @@ public class CrucibleCampfireModel extends BakedModelWrapper<BakedModel> {
             maxZ = Math.max(maxZ, z);
         }
         float epsilon = 1.0E-3F;
-        return maxX - minX > epsilon && maxY - minY > epsilon && maxZ - minZ > epsilon;
+        return maxX - minX > epsilon && maxY - minY > epsilon && maxZ - minZ > epsilon && quad.getSprite().contents().name().getPath().contains("fire");
     }
 
     private List<BakedQuad> ring(TextureAtlasSprite sprite) {
@@ -108,7 +114,7 @@ public class CrucibleCampfireModel extends BakedModelWrapper<BakedModel> {
         return result;
     }
 
-    private static BakedQuad quad(QuadBakingVertexConsumer baker, TextureAtlasSprite sprite, Direction direction, float leftX, float leftZ, float rightX, float rightZ) {
+    private BakedQuad quad(QuadBakingVertexConsumer baker, TextureAtlasSprite sprite, Direction direction, float leftX, float leftZ, float rightX, float rightZ) {
         baker.setSprite(sprite);
         baker.setDirection(direction);
         baker.setShade(false);
@@ -117,10 +123,10 @@ public class CrucibleCampfireModel extends BakedModelWrapper<BakedModel> {
         float u0 = sprite.getU(LOW);
         float u1 = sprite.getU(HIGH);
         float v0 = sprite.getV(0.0F);
-        float v1 = sprite.getV(TOP - BOTTOM);
+        float v1 = sprite.getV(TOP - this.bottom);
         vertex(baker, direction, leftX, TOP, leftZ, u0, v0);
-        vertex(baker, direction, leftX, BOTTOM, leftZ, u0, v1);
-        vertex(baker, direction, rightX, BOTTOM, rightZ, u1, v1);
+        vertex(baker, direction, leftX, this.bottom, leftZ, u0, v1);
+        vertex(baker, direction, rightX, this.bottom, rightZ, u1, v1);
         vertex(baker, direction, rightX, TOP, rightZ, u1, v0);
         return baker.bakeQuad();
     }

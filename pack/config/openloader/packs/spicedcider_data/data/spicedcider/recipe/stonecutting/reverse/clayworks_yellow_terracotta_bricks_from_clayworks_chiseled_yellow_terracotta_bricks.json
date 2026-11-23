@@ -1,0 +1,16 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "clayworks"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "clayworks:chiseled_yellow_terracotta_bricks"
+  },
+  "result": {
+    "id": "clayworks:yellow_terracotta_bricks",
+    "count": 1
+  }
+}

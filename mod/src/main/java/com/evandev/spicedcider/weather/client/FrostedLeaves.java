@@ -4,8 +4,10 @@ import com.evandev.spicedcider.SpicedCider;
 import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.evandev.spicedcider.mixin.minecraft.client.BlockColorsAccessor;
 import it.unimi.dsi.fastutil.HashCommon;
+import it.unimi.dsi.fastutil.longs.Long2ObjectOpenHashMap;
 import it.unimi.dsi.fastutil.longs.LongIterator;
 import it.unimi.dsi.fastutil.longs.LongOpenHashSet;
+import it.unimi.dsi.fastutil.objects.ReferenceOpenHashSet;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.Map;
@@ -44,6 +46,7 @@ public final class FrostedLeaves {
     private static final int CHUNKS_PER_TICK = 64;
     private static final int REMESH_INTERVAL = 40;
     private static final int PRUNE_INTERVAL = 600;
+    private static final int BARE_RECHECK = 200;
     private static final int FROST_RED = 0xF2;
     private static final int FROST_GREEN = 0xF6;
     private static final int FROST_BLUE = 0xFA;
@@ -51,7 +54,9 @@ public final class FrostedLeaves {
     private static final byte SNOWING = 1;
     private static final byte DRY = 2;
 
-    private static final Predicate<BlockState> WHITENS = state -> state.is(WHITENS_IN_SNOWFALL);
+    private static final ReferenceOpenHashSet<Block> WHITENING = new ReferenceOpenHashSet<>();
+    private static final Predicate<BlockState> WHITENS = state -> WHITENING.contains(state.getBlock());
+    private static final Long2ObjectOpenHashMap<Bare> BARE = new Long2ObjectOpenHashMap<>();
     private static final Map<Long, byte[]> SECTIONS = new ConcurrentHashMap<>();
     private static final LongOpenHashSet DIRTY = new LongOpenHashSet();
     private static final byte[] CELLS = new byte[64];
@@ -91,6 +96,7 @@ public final class FrostedLeaves {
         if (level != trackedLevel) {
             SECTIONS.clear();
             DIRTY.clear();
+            BARE.clear();
             trackedLevel = level;
         }
         if (level == null || minecraft.player == null) return;
@@ -122,8 +128,11 @@ public final class FrostedLeaves {
         BlockColors colors = Minecraft.getInstance().getBlockColors();
         Map<Block, BlockColor> providers = ((BlockColorsAccessor) colors).spicedcider$blockColors();
         java.util.List<String> missing = new java.util.ArrayList<>();
+        WHITENING.clear();
+        BARE.clear();
         for (Holder<Block> holder : BuiltInRegistries.BLOCK.getTagOrEmpty(WHITENS_IN_SNOWFALL)) {
             Block block = holder.value();
+            WHITENING.add(block);
             BlockColor provider = providers.get(block);
             if (provider == null) {
                 missing.add(BuiltInRegistries.BLOCK.getKey(block).toString());
@@ -160,9 +169,9 @@ public final class FrostedLeaves {
                 LevelChunkSection[] sections = chunk.getSections();
                 for (int i = 0; i < sections.length; i++) {
                     LevelChunkSection section = sections[i];
-                    if (section == null || section.hasOnlyAir() || !section.maybeHas(WHITENS)) continue;
+                    if (section == null || section.hasOnlyAir()) continue;
                     long key = SectionPos.asLong(chunkX, level.getSectionYFromSectionIndex(i), chunkZ);
-                    if (SECTIONS.containsKey(key)) continue;
+                    if (SECTIONS.containsKey(key) || isBare(key, section)) continue;
                     visit(level, section, key, null, SAMPLES_PER_SECTION * slices, true);
                 }
             }
@@ -180,7 +189,7 @@ public final class FrostedLeaves {
             int z = index >> 4 & 15;
             int y = index >> 8;
             int stage = stages == null ? 0 : stages[index];
-            if (!section.getBlockState(x, y, z).is(WHITENS_IN_SNOWFALL)) {
+            if (!WHITENS.test(section.getBlockState(x, y, z))) {
                 if (stage != 0) stages[index] = 0;
                 continue;
             }
@@ -235,6 +244,7 @@ public final class FrostedLeaves {
     }
 
     private static void prune(ClientLevel level) {
+        BARE.long2ObjectEntrySet().removeIf(entry -> ticks - entry.getValue().tick() >= BARE_RECHECK);
         Iterator<Map.Entry<Long, byte[]>> iterator = SECTIONS.entrySet().iterator();
         while (iterator.hasNext()) {
             Map.Entry<Long, byte[]> entry = iterator.next();
@@ -243,6 +253,17 @@ public final class FrostedLeaves {
                 iterator.remove();
             }
         }
+    }
+
+    private static boolean isBare(long key, LevelChunkSection section) {
+        Bare bare = BARE.get(key);
+        if (bare != null && bare.section() == section && ticks - bare.tick() < BARE_RECHECK) return true;
+        if (section.maybeHas(WHITENS)) {
+            if (bare != null) BARE.remove(key);
+            return false;
+        }
+        BARE.put(key, new Bare(section, ticks));
+        return true;
     }
 
     private static boolean isClear(byte[] stages) {
@@ -258,5 +279,8 @@ public final class FrostedLeaves {
 
     private static int blend(int from, int to, float amount) {
         return Math.round(from + (to - from) * amount);
+    }
+
+    private record Bare(LevelChunkSection section, int tick) {
     }
 }

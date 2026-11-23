@@ -37,6 +37,8 @@
 	matchHeldLightColors = true
 	#Lanterns and other lights hung from chains and ropes glow the same colour as when they're placed. Requires Polytone.
 	matchChainLightColors = true
+	#Sack tooltips no longer list their contents as text. The contents preview still shows.
+	hideSackContentsTooltip = true
 
 [vista]
 	#Applies performance fixes to Vista's mirror/TV reflection rendering (better culling, better shared-states, re-render throttling). Requires Vista (obviously).
@@ -95,8 +97,10 @@
 	emiUrnLootCategory = true
 	#Your graves show on the locator bar as tombstone icons, even in singleplayer. Requires Vanilla Backport.
 	graveLocatorBar = true
-	#Walk up full blocks without jumping. Sneak to stop stepping up.
+	#Run up full blocks without jumping while sprinting.
 	stepUpEnabled = true
+	#The camera glides when you step up onto or down off a block or slab instead of snapping, in first and third person and while riding.
+	smoothStepUp = true
 
 [voxy]
 	#Replaces the terrain fog with configurable start and end distances that cover Voxy's LoD terrain, plus weather and cave fog. Disable to use Roxy's own fog.

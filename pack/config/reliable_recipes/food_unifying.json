@@ -1,0 +1,34 @@
+[
+  {
+    "action": "remove_recipe",
+    "id": [
+      "culturaldelights:aging/chilling/ice_cream",
+      "farmersdelight:apple_pie",
+      "farmersdelight:chocolate_pie",
+      "farmersdelight:sweet_berry_cheesecake",
+      "farmersdelight:pumpkin_pie",
+      "farmersdelight:shepherds_pie",
+      "bountifulfares:berry_stuffed_potato",
+      "bountifulfares:maize_stuffed_potato",
+      "bountifulfares:mushroom_stuffed_potato"
+    ]
+  },
+  {
+    "action": "replace_input",
+    "id": [
+      "farmersdelight:pie_crust",
+      "culturaldelights:pie_crust_alt"
+    ],
+    "target": "#c:crops/wheat",
+    "replacement": "#c:flours/wheat"
+  },
+  {
+    "action": "replace_input",
+    "id": [
+      "culturaldelights:chocolate_muffin",
+      "culturaldelights:lemon_muffin"
+    ],
+    "target": "#c:foods/dough/wheat",
+    "replacement": "#c:flours/wheat"
+  }
+]

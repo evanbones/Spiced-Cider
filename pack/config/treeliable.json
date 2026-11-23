@@ -39,7 +39,8 @@
   "suppress_vanilla_leaf_sounds_on_fell": false,
   "choppable_blocks": [
     "#treeliable:choppables",
-    "#minecraft:logs"
+    "#minecraft:logs",
+    "minecraft:creaking_heart"
   ],
   "choppable_blocks_exceptions": [
     "minecraft:bamboo",
@@ -48,7 +49,8 @@
   ],
   "leaves_blocks": [
     "#treeliable:leaves_like",
-    "#minecraft:leaves"
+    "#minecraft:leaves",
+    "nomansland:shelf_mushroom_block"
   ],
   "leaves_blocks_exceptions": [],
   "chopping_items": [

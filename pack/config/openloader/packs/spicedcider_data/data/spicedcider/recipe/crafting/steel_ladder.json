@@ -1,0 +1,27 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "alloyed"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "I": {
+      "tag": "c:ingots/steel"
+    },
+    "N": {
+      "tag": "c:nuggets/steel"
+    }
+  },
+  "pattern": [
+    "N N",
+    "NIN",
+    "N N"
+  ],
+  "result": {
+    "count": 3,
+    "id": "alloyed:steel_ladder"
+  }
+}

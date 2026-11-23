@@ -1,9 +1,13 @@
 package com.evandev.spicedcider.compat.tide;
 
+import net.minecraft.core.BlockPos;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.item.FishingRodItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.fml.ModList;
+
+import java.util.List;
 
 public final class TideCompat {
 
@@ -48,5 +52,21 @@ public final class TideCompat {
 
     public static void stripBucketableMarker(ItemStack stack) {
         if (isLoaded() && !stack.isEmpty()) TideBridge.stripBucketableMarker(stack);
+    }
+
+    public static boolean isBait(ItemStack stack) {
+        return isLoaded() && TideBridge.isBait(stack);
+    }
+
+    public static int baitLuck(ItemStack stack) {
+        return isLoaded() ? TideBridge.baitLuck(stack) : 0;
+    }
+
+    public static int baitSpeed(ItemStack stack) {
+        return isLoaded() ? TideBridge.baitSpeed(stack) : 0;
+    }
+
+    public static List<ItemStack> catchFish(ServerLevel level, BlockPos pos, int luck) {
+        return TideBridge.catchFish(level, pos, luck);
     }
 }

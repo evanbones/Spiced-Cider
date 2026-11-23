@@ -5,6 +5,8 @@
 	oldWisteriaTrees = true
 	#Anvil repairs and renames cost no experience. Requires Easy Anvils.
 	easyAnvilsFreeRepairs = true
+	#Fully repairing a tool in an anvil takes as much material as crafting its head: one for shovels, two for swords and hoes, three for pickaxes and axes. Requires Easy Anvils.
+	toolRepairMaterialCounts = true
 	#Fire rings no longer take potions to spread their effects. Requires Piglin Proliferation.
 	fireRingNoPotions = true
 	#Cleaning out an empty Pot of Witch Stew leaves a Create Basin instead of a Cauldron. Requires No Man's Land and Create.
@@ -33,7 +35,11 @@
 	jackOStrawRotation = true
 	#Each Treeliable chop costs half a bolt of Modest Meals stamina. Without stamina, logs break normally without counting as a chop. Requires Treeliable and Modest Meals.
 	treeChoppingStamina = true
-	#Stamina recovers twice as fast while sitting with Personality. Requires Personality and Modest Meals.
+	#Get Over It only pulls you up ledges taller than a jump (about two blocks) that you are looking at and walking into, climbs faster, and lands you on top. Requires Get Over It.
+	ledgeClimbRework = true
+	#Pulling yourself up a ledge costs a bolt of Modest Meals stamina, and you can't climb while exhausted. Requires Get Over It and Modest Meals.
+	ledgeClimbStamina = true
+	#Stamina recovers twice as fast while sitting on a seat, chair or cushion, or with Personality's sit key. Requires Modest Meals.
 	sittingStaminaRegen = true
 	#Animals and mobs can sit on Quark stools like on Create seats: walk or lead them onto one, or right-click it while holding a lead. Seated mobs work with Stock Tickers and other seat features. Requires Quark and Create.
 	quarkStoolSeats = true
@@ -52,13 +58,21 @@
 	#Leapers deal a third less explosion damage. Requires Adapted Mobs.
 	weakerLeapers = true
 	#Learning a new chalk symbol shows its message above the hotbar instead of in chat. Requires Chalk.
-	chalkSymbolsAboveHotbar = false
-	#Personality's crawl key does nothing, so crawling is left to another crawl mod. Sitting still works. Requires Personality.
-	personalityNoCrawl = false
+	chalkSymbolsAboveHotbar = true
 	#Rabbits don't run from players who are sneaking.
 	sneakUpOnRabbits = true
+	#Eating never restores Modest Meals stamina directly, and food tooltips and the HUD preview stop showing it. Food can still give stamina effects. Requires Modest Meals.
+	noFoodStamina = true
+	#An ingredient never adds less health to a Modest Meals meal than it heals when eaten on its own. Requires Modest Meals.
+	mealIngredientsKeepHealth = true
+	#Percentage of Farmer's Delight Nourishment duration kept when Modest Meals turns it into stamina nourishment, in tooltips too. Requires Modest Meals and Farmer's Delight.
+	# Default: 100
+	# Range: 1 ~ 100
+	nourishmentDurationPercent = 25
 
 [features]
+	#Cats that spawn naturally stay in the world like other animals instead of despawning when nobody is near.
+	persistentWildCats = true
 	#Combine a named name tag with an item in the crafting grid to rename it. Takes effect after /reload.
 	renameRecipe = true
 	#Repeaters, comparators and other diodes can be placed in water.
@@ -171,6 +185,12 @@
 		# Default: 64
 		# Range: 1 ~ 1024
 		bundleCapacity = 128
+		#Every fall deals this much less damage to players, in half hearts. 0 is the vanilla amount.
+		# Default: 0
+		# Range: 0 ~ 20
+		fallDamageReduction = 2
+		#Bundles can't be put inside other bundles.
+		noNestedBundles = true
 		#Igloos generate without their basement.
 		iglooBasementRemoval = true
 		#Cocoa pods can't be placed and break off logs. Cacao trees grow their own pods.
@@ -181,8 +201,22 @@
 		brokenToolsOnCuttingBoards = false
 		#Players and the world spawn are never placed on top of leaves.
 		noLeafSpawns = true
-		#Players walk up full blocks without jumping, except while sneaking.
+		#Players run up full blocks without jumping while sprinting.
 		stepUp = true
+		#Bow-wielding skeletons stand still while they shoot instead of strafing, shoot faster the closer you are, and switch to a flint knife when you get within 3 blocks.
+		rangedSkeletons = true
+		#Blazes shoot one aimed fireball every 3.5 seconds instead of a spread of three.
+		singleBlazeFireball = true
+		#Lightning no longer spawns skeleton horse traps during thunderstorms.
+		noSkeletonTrapHorses = true
+		#Combat Test bow fatigue: arrows fly almost straight when loosed within 3 seconds, then lose accuracy and stop critting the longer the bow stays drawn, up to 10 seconds, while the bow wobbles more and more.
+		bowFatigue = true
+		#Skeletons spawn holding a Crude Bow instead of a Bow.
+		crudeBowSkeletons = true
+		#Skeleton horses catch fire in sunlight unless they wear horse armor. Horse armor with durability wears down in the sun instead.
+		skeletonHorsesBurn = true
+		#At night, Evokers come for players on the surface of Dark Forests every few minutes, outside the normal monster cap.
+		darkForestEvokers = true
 
 	[features.voidWater]
 		#Fluids at the bottom of the world spill into the void as fading trails you can swim in. Takes effect when a world is next loaded.
@@ -217,6 +251,8 @@
 		disableRecipeBookTracking = true
 		#Runs /locate biome searches, structure locating and map biome previews across several threads.
 		parallelLocate = true
+		#Monsters that stop you from sleeping glow briefly so you can find them.
+		revealThreateningMonsters = true
 
 	[features.lod]
 		#Generates terrain beyond your render distance in the background so it can be drawn in the distance, out to your Distant Terrain Range. The chunks are never saved, so the world folder doesn't grow.
@@ -265,13 +301,51 @@
 		gravestoneExperienceDecay = false
 
 	[features.horses]
-		#Every horse gets the same speed and jump strength instead of random ones. Applies to entities in the spicedcider:static_horse_stats tag.
+		#Every horse, donkey and mule gets the same speed and jump strength for its kind instead of random ones. Applies to entities in the spicedcider:static_horse_stats tag.
 		staticHorseStats = true
 		#Movement speed given to every horse when Fixed Horse Stats is on. 0.3375 is the fastest a vanilla horse can be.
 		# Default: 0.3375
 		# Range: 0.05 ~ 1.0
-		staticHorseSpeed = 0.3375
+		staticHorseSpeed = 0.28
 		#Jump strength given to every horse when Fixed Horse Stats is on. 1.0 is the highest a vanilla horse can jump, about 5 blocks.
 		# Default: 1.0
 		# Range: 0.1 ~ 2.0
-		staticHorseJump = 1.0
+		staticHorseJump = 0.8
+		#Movement speed given to every donkey when Fixed Horse Stats is on. 0.175 is what a vanilla donkey gets.
+		# Default: 0.175
+		# Range: 0.05 ~ 1.0
+		staticDonkeySpeed = 0.175
+		#Jump strength given to every donkey when Fixed Horse Stats is on. 0.5 is what a vanilla donkey gets.
+		# Default: 0.5
+		# Range: 0.1 ~ 2.0
+		staticDonkeyJump = 0.5
+		#Movement speed given to every mule when Fixed Horse Stats is on. 0.175 is what a vanilla mule gets.
+		# Default: 0.175
+		# Range: 0.05 ~ 1.0
+		staticMuleSpeed = 0.175
+		#Jump strength given to every mule when Fixed Horse Stats is on. 0.5 is what a vanilla mule gets.
+		# Default: 0.5
+		# Range: 0.1 ~ 2.0
+		staticMuleJump = 0.5
+
+	[features.comfort]
+		#Ticks between each health point Comfort restores. 80 ticks (4 seconds) matches the old Farmer's Delight Comfort.
+		# Default: 80
+		# Range: 1 ~ 1200
+		comfortHealInterval = 80
+		#Ticks between each health point Comfort restores while sitting, on a seat or lying in bed.
+		# Default: 40
+		# Range: 1 ~ 1200
+		comfortRestingHealInterval = 40
+		#Seconds of Comfort granted per nutrition point when eating a soup or stew (the spicedcider:comfort_foods tag). 0 disables it.
+		# Default: 0
+		# Range: 0 ~ 600
+		comfortSoupSecondsPerNutrition = 10
+		#The most seconds of Comfort a single soup or stew can grant.
+		# Default: 180
+		# Range: 0 ~ 3600
+		comfortSoupMaxSeconds = 180
+		#Seconds of Comfort granted when waking up after sleeping through the night. Players lying in bed also have Comfort. 0 disables both.
+		# Default: 0
+		# Range: 0 ~ 3600
+		comfortSleepSeconds = 120

@@ -12,18 +12,18 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "pattern": [
-    "PCP",
-    " F "
+    "PXP",
+    "SSS"
   ],
   "key": {
     "P": {
+      "tag": "minecraft:planks"
+    },
+    "S": {
       "tag": "c:plates/cast_iron"
     },
-    "C": {
+    "X": {
       "tag": "c:chests/wooden"
-    },
-    "F": {
-      "item": "spicedcider:cast_iron_frame"
     }
   },
   "result": {

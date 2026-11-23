@@ -18,6 +18,8 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import com.evandev.spicedcider.content.block.PrismarineClusterBlock;
 import com.evandev.spicedcider.content.block.TallUnderwaterBrambleBlock;
 import com.evandev.spicedcider.content.block.TemporaryCobwebBlock;
+import com.evandev.spicedcider.content.block.FineWoodWallBlock;
+import com.evandev.spicedcider.content.block.MetalLadderBlock;
 import com.evandev.spicedcider.content.block.TanningRackBlock;
 import com.evandev.spicedcider.content.block.GraveBlock;
 import com.evandev.spicedcider.content.block.GravestoneBlock;
@@ -29,6 +31,7 @@ import com.evandev.spicedcider.content.casting.CrucibleBlock;
 import com.evandev.spicedcider.content.casting.MouldBlock;
 import com.evandev.spicedcider.content.casting.MouldShape;
 import com.evandev.spicedcider.content.casting.smeltery.SmelteryBlock;
+import com.evandev.spicedcider.content.fishtrap.FishTrapBlock;
 import net.minecraft.resources.ResourceLocation;
 import com.evandev.spicedcider.content.block.RichGravelBlock;
 import net.minecraft.util.ColorRGBA;
@@ -37,6 +40,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.CeilingHangingSignBlock;
 import net.minecraft.world.level.block.ColoredFallingBlock;
 import net.minecraft.world.level.block.FlowerPotBlock;
+import net.minecraft.world.level.block.LanternBlock;
 import net.minecraft.world.level.block.LeavesBlock;
 import net.minecraft.world.level.block.LiquidBlock;
 import net.minecraft.world.level.block.RotatedPillarBlock;
@@ -89,7 +93,7 @@ public class ModBlocks {
     public static final java.util.Map<MouldShape, DeferredBlock<Block>> MOULDS = moulds();
 
     public static final DeferredBlock<Block> SMELTERY = BLOCKS.register("smeltery",
-            () -> new SmelteryBlock(BlockBehaviour.Properties.of().mapColor(MapColor.TERRACOTTA_RED).sound(SoundType.DEEPSLATE_BRICKS).strength(3.0F, 6.0F).requiresCorrectToolForDrops().pushReaction(PushReaction.BLOCK)));
+            () -> new SmelteryBlock(BlockBehaviour.Properties.of().mapColor(MapColor.TERRACOTTA_RED).sound(SoundType.DEEPSLATE_BRICKS).strength(3.0F, 6.0F).requiresCorrectToolForDrops().pushReaction(PushReaction.BLOCK).lightLevel(SmelteryBlock::lightLevel)));
 
     public static final DeferredBlock<Block> TALLOW_BLOCK = BLOCKS.register("tallow_block",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.HONEYCOMB_BLOCK)));
@@ -126,9 +130,25 @@ public class ModBlocks {
     public static final DeferredBlock<Block> GOLDEN_WORM_CRATE = BLOCKS.register("golden_worm_crate",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BARREL)));
 
+    public static final DeferredBlock<Block> TIN_LANTERN = BLOCKS.register("tin_lantern",
+            () -> new LanternBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LANTERN)));
+
+    public static final DeferredBlock<Block> BRONZE_LADDER = BLOCKS.register("bronze_ladder",
+            () -> new MetalLadderBlock(BlockBehaviour.Properties.of().forceSolidOff().strength(0.8F).sound(SoundType.COPPER).noOcclusion().pushReaction(PushReaction.DESTROY)));
+
+    @Nullable
+    public static final DeferredBlock<Block> FINE_WOOD_WALL = ModList.get().isLoaded("supplementaries")
+            ? BLOCKS.register("fine_wood_wall", () -> new FineWoodWallBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.WOOD).strength(2.0F, 3.0F).sound(SoundType.WOOD).ignitedByLava()))
+            : null;
+
     public static final DeferredBlock<Block> TANNING_RACK = BLOCKS.register("tanning_rack",
             () -> new TanningRackBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).strength(1.0F).sound(SoundType.WOOD)
                     .noOcclusion().ignitedByLava().pushReaction(PushReaction.DESTROY)));
+
+    public static final DeferredBlock<Block> FISH_TRAP = BLOCKS.register("fish_trap",
+            () -> new FishTrapBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).strength(1.0F).sound(SoundType.WOOD)
+                    .noOcclusion().ignitedByLava()));
 
     public static final DeferredBlock<Block> GRAVESTONE = BLOCKS.register("gravestone",
             () -> new GravestoneBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).strength(2.0F, 6.0F).noOcclusion().requiresCorrectToolForDrops()));

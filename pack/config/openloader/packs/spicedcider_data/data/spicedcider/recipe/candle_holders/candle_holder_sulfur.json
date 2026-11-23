@@ -1,0 +1,33 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "spicedcider:supplementaries_flag",
+      "flag": "candle_holder"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "buzzier_bees"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "supplementaries"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " C ",
+    "NNN"
+  ],
+  "key": {
+    "C": {
+      "item": "spicedcider:sulfur_candle"
+    },
+    "N": {
+      "tag": "c:nuggets/cast_iron"
+    }
+  },
+  "result": {
+    "id": "spicedcider:candle_holder_sulfur",
+    "count": 1
+  }
+}

@@ -4,6 +4,7 @@ import com.evandev.spicedcider.util.BundleCapacity;
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.component.BundleContents;
@@ -19,8 +20,8 @@ public class BundleContentsStackSizeMixin {
     }
 
     @ModifyReturnValue(method = "getWeight", at = @At("RETURN"))
-    private static Fraction spicedcider$scaleToCapacity(Fraction weight) {
+    private static Fraction spicedcider$scaleToCapacity(Fraction weight, ItemStack stack) {
         int capacity = BundleCapacity.get();
-        return capacity == Item.DEFAULT_MAX_STACK_SIZE ? weight : weight.multiplyBy(Fraction.getFraction(Item.DEFAULT_MAX_STACK_SIZE, capacity));
+        return capacity == Item.DEFAULT_MAX_STACK_SIZE || stack.has(DataComponents.BUNDLE_CONTENTS) || weight.compareTo(Fraction.ONE) >= 0 ? weight :weight.multiplyBy(Fraction.getFraction(Item.DEFAULT_MAX_STACK_SIZE, capacity));
     }
 }

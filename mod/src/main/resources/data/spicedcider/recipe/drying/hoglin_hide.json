@@ -1,0 +1,24 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "mynethersdelight"
+    }
+  ],
+  "type": "spicedcider:drying",
+  "ingredient": {
+    "tag": "spicedcider:large_tannable_hides"
+  },
+  "agent": {
+    "tag": "spicedcider:tanning_agents"
+  },
+  "result": {
+    "id": "minecraft:leather",
+    "count": 6
+  },
+  "rack": {
+    "hung": "spicedcider:block/tanning_rack_hoglin_hide",
+    "drying": "spicedcider:block/tanning_rack_hoglin_hide_tanning",
+    "finished": "spicedcider:block/tanning_rack_leather"
+  }
+}

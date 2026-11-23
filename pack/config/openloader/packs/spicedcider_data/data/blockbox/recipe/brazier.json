@@ -1,0 +1,30 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "blockbox"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "c": {
+      "item": "minecraft:chain"
+    },
+    "I": {
+      "tag": "c:ingots/cast_iron"
+    },
+    "K": {
+      "tag": "minecraft:coals"
+    }
+  },
+  "pattern": [
+    "c c",
+    "IKI",
+    " I "
+  ],
+  "result": {
+    "count": 1,
+    "id": "blockbox:brazier"
+  }
+}

@@ -296,7 +296,17 @@
       "quark:warped_post",
       "quark:stripped_crimson_post",
       "quark:stripped_azalea_log",
-      "quark:trapped_azalea_chest"
+      "quark:trapped_azalea_chest",
+      "quark:mud_brick_lattice",
+      "quark:raw_iron_bricks_slab",
+      "quark:raw_iron_bricks_stairs",
+      "quark:raw_iron_bricks_wall",
+      "quark:raw_gold_bricks_slab",
+      "quark:raw_gold_bricks_stairs",
+      "quark:raw_gold_bricks_wall",
+      "quark:raw_copper_bricks_slab",
+      "quark:raw_copper_bricks_stairs",
+      "quark:raw_copper_bricks_wall"
     ]
   },
   {
@@ -918,5 +928,166 @@
       "quark:carved_mud_bricks"
     ],
     "replace_with": "abundant_atmosphere:chiseled_mud_bricks"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:oak_chest"
+    ],
+    "replace_with": "woodworks:oak_chest"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:trapped_oak_chest"
+    ],
+    "replace_with": "woodworks:trapped_oak_chest"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:spruce_chest"
+    ],
+    "replace_with": "woodworks:spruce_chest"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:trapped_spruce_chest"
+    ],
+    "replace_with": "woodworks:trapped_spruce_chest"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:birch_chest"
+    ],
+    "replace_with": "woodworks:birch_chest"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:trapped_birch_chest"
+    ],
+    "replace_with": "woodworks:trapped_birch_chest"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:jungle_chest"
+    ],
+    "replace_with": "woodworks:jungle_chest"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:trapped_jungle_chest"
+    ],
+    "replace_with": "woodworks:trapped_jungle_chest"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:acacia_chest"
+    ],
+    "replace_with": "woodworks:acacia_chest"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:trapped_acacia_chest"
+    ],
+    "replace_with": "woodworks:trapped_acacia_chest"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:dark_oak_chest"
+    ],
+    "replace_with": "woodworks:dark_oak_chest"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:trapped_dark_oak_chest"
+    ],
+    "replace_with": "woodworks:trapped_dark_oak_chest"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:mangrove_chest"
+    ],
+    "replace_with": "woodworks:mangrove_chest"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:trapped_mangrove_chest"
+    ],
+    "replace_with": "woodworks:trapped_mangrove_chest"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:cherry_chest"
+    ],
+    "replace_with": "woodworks:cherry_chest"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:trapped_cherry_chest"
+    ],
+    "replace_with": "woodworks:trapped_cherry_chest"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:crimson_chest"
+    ],
+    "replace_with": "woodworks:crimson_chest"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:trapped_crimson_chest"
+    ],
+    "replace_with": "woodworks:trapped_crimson_chest"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:warped_chest"
+    ],
+    "replace_with": "woodworks:warped_chest"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:trapped_warped_chest"
+    ],
+    "replace_with": "woodworks:trapped_warped_chest"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:raw_iron_bricks"
+    ],
+    "replace_with": "minecraft:raw_iron_block"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:raw_gold_bricks"
+    ],
+    "replace_with": "minecraft:raw_gold_block"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:raw_copper_bricks"
+    ],
+    "replace_with": "minecraft:raw_copper_block"
   }
 ]

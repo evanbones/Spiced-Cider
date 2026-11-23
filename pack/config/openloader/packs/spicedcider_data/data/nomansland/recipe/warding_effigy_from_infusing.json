@@ -1,0 +1,31 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "modestmagic"
+    }
+  ],
+  "type": "modestmagic:infusing",
+  "base": {
+    "tag": "minecraft:logs"
+  },
+  "ingredients": [
+    {
+      "item": "nomansland:resin"
+    },
+    {
+      "item": "nomansland:resin"
+    },
+    {
+      "item": "reliable_requiem:crystal_shard"
+    },
+    {
+      "item": "minecraft:honeycomb"
+    }
+  ],
+  "results": [
+    {
+      "id": "nomansland:warding_effigy"
+    }
+  ]
+}

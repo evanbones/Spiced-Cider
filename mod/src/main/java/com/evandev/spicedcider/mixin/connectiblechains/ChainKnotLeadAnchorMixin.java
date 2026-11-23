@@ -9,7 +9,7 @@ import net.minecraft.world.phys.Vec3;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 
-@IfModLoaded("connectiblechains")
+@IfModLoaded(value = "connectiblechains", minVersion = "2.6.0")
 @Mixin(value = ChainKnotEntity.class, remap = false)
 public class ChainKnotLeadAnchorMixin {
 

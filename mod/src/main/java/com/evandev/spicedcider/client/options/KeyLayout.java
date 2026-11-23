@@ -69,7 +69,7 @@ public final class KeyLayout {
 
     static {
         group("movement", "key.forward", "key.left", "key.back", "key.right", "key.jump", "key.sneak", "key.sprint",
-                "key.spicedcider.cycle_stance", "key.personality.sit", "key.personality.crawl",
+                "key.personality.sit", "key.personality.crawl",
                 "quark.keybind.autorun", "key.reliable_gliders.deploy");
         group("gameplay", "key.attack", "key.use", "key.pickItem", "key.swapOffhand", "key.drop",
                 "key.clutternomore.change_block_shape", "supplementaries.keybind.quiver",

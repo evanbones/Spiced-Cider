@@ -11,7 +11,10 @@ final class ReliableRemoverBridge {
     }
 
     static boolean isHiddenFromViewers(Item item) {
-        ItemStack stack = new ItemStack(item);
+        return isHiddenFromViewers(new ItemStack(item));
+    }
+
+    static boolean isHiddenFromViewers(ItemStack stack) {
         return ReliableRemoverAPI.isLootBlocked(stack) || ReliableRemoverAPI.isCreativeBlocked(stack) || ReliableRemoverAPI.isItemHidden(stack);
     }
 }

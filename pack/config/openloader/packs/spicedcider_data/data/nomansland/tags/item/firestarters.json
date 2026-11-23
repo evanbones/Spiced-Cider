@@ -1,6 +1,29 @@
 {
-  "replace": false,
+  "replace": true,
   "values": [
+    "minecraft:torch",
+    "minecraft:soul_torch",
+    "nomansland:sconce_torch",
+    "nomansland:sconce_soul_torch",
+    "minecraft:blaze_rod",
+    "minecraft:blaze_powder",
+    "minecraft:lava_bucket",
+    {
+      "id": "supplementaries:sconce",
+      "required": false
+    },
+    {
+      "id": "supplementaries:soul_sconce",
+      "required": false
+    },
+    {
+      "id": "supplementaries:sconce_lever",
+      "required": false
+    },
+    {
+      "id": "create:blaze_burner",
+      "required": false
+    },
     "spicedcider:fire_striker"
   ]
 }

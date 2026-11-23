@@ -2,7 +2,11 @@
   {
     "advancements": "spicedcider:spiced_cider/crafting_table",
     "patterns": ".*",
-    "types": "items",
+    "types": [
+      "items",
+      "fluids",
+      "effects"
+    ],
     "exclude": [
       "#emi_discovery:requires_advancement/spicedcider/creative_items",
       "/.*:.*_spawn_egg/"

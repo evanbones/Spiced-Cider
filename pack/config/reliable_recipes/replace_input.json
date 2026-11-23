@@ -32,30 +32,6 @@
   {
     "action": "replace_input",
     "filter": {
-      "id": "farmersdelight:organic_compost_from_rotten_flesh"
-    },
-    "target": "minecraft:rotten_flesh",
-    "replacement": "#spicedcider:rotting_flesh"
-  },
-  {
-    "action": "replace_input",
-    "filter": {
-      "id": "create:crafting/kinetics/belt_connector"
-    },
-    "target": "minecraft:dried_kelp",
-    "replacement": "etcetera:rubber"
-  },
-  {
-    "action": "replace_input",
-    "filter": {
-      "id": "/suppsquared:candle_holders\\/gold_candle_holder.*/"
-    },
-    "target": "#c:ingots/gold",
-    "replacement": "#c:ingots/bronze"
-  },
-  {
-    "action": "replace_input",
-    "filter": {
       "id": "caverns_and_chasms:barometer"
     },
     "target": "minecraft:redstone",
@@ -95,14 +71,6 @@
       "id": "create:crafting/kinetics/rope_pulley"
     },
     "target": "#minecraft:wool",
-    "replacement": "farmersdelight:rope"
-  },
-  {
-    "action": "replace_input",
-    "filter": {
-      "id": "vanillabackport:bundle"
-    },
-    "target": "minecraft:string",
     "replacement": "farmersdelight:rope"
   },
   {
@@ -176,14 +144,6 @@
     },
     "target": "#c:slime_balls",
     "replacement": "etcetera:rubber"
-  },
-  {
-    "action": "replace_input",
-    "filter": {
-      "id": "modestmagic:infusing/totem_of_undying"
-    },
-    "target": "minecraft:experience_bottle",
-    "replacement": "reliable_requiem:crystal_heart"
   },
   {
     "action": "replace_input",
@@ -280,5 +240,37 @@
     },
     "target": "#nomansland:edible_mushrooms",
     "replacement": "#spicedcider:raw_edible_mushrooms"
+  },
+  {
+    "action": "replace_input",
+    "filter": {
+      "id": "architects_palette:plating_block"
+    },
+    "target": "minecraft:iron_ingot",
+    "replacement": "#c:ingots/cast_iron"
+  },
+  {
+    "action": "replace_input",
+    "filter": {
+      "id": "architects_palette:plating_block"
+    },
+    "target": "minecraft:iron_nugget",
+    "replacement": "#c:nuggets/cast_iron"
+  },
+  {
+    "action": "replace_input",
+    "filter": {
+      "id": "/minecraft:(detector|activator)_rail/"
+    },
+    "target": "#c:ingots/iron",
+    "replacement": "#c:nuggets/iron"
+  },
+  {
+    "action": "replace_input",
+    "filter": {
+      "id": "/(minecraft:powered_rail|create:crafting\\/kinetics\\/controller_rail)/"
+    },
+    "target": "#c:ingots/gold",
+    "replacement": "#c:nuggets/gold"
   }
 ]

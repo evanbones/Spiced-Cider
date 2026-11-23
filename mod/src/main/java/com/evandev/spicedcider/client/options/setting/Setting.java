@@ -3,6 +3,7 @@ package com.evandev.spicedcider.client.options.setting;
 import net.minecraft.client.gui.components.AbstractWidget;
 import net.minecraft.network.chat.Component;
 import net.minecraft.util.FormattedCharSequence;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
@@ -12,6 +13,11 @@ public interface Setting {
 
     default List<FormattedCharSequence> tooltip() {
         return List.of();
+    }
+
+    @Nullable
+    default Impact impact() {
+        return null;
     }
 
     boolean isDefault();
@@ -43,6 +49,11 @@ public interface Setting {
             @Override
             public List<FormattedCharSequence> tooltip() {
                 return base.tooltip();
+            }
+
+            @Override
+            public Impact impact() {
+                return base.impact();
             }
 
             @Override

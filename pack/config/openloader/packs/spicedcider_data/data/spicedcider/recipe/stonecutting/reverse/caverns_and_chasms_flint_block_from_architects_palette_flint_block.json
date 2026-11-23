@@ -1,0 +1,20 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "caverns_and_chasms"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "architects_palette"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "architects_palette:flint_block"
+  },
+  "result": {
+    "id": "caverns_and_chasms:flint_block",
+    "count": 1
+  }
+}

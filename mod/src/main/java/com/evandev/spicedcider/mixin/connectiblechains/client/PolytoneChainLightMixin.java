@@ -14,7 +14,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 
-@IfModLoaded("connectiblechains")
+@IfModLoaded(value = "connectiblechains", minVersion = "2.6.0")
 @IfModLoaded("polytone")
 @Mixin(targets = "net.mehvahdjukaar.polytone.content.shaders.voxel.PaletteGrid", remap = false)
 public abstract class PolytoneChainLightMixin {

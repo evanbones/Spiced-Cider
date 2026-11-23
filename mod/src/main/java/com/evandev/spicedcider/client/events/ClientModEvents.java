@@ -1,5 +1,7 @@
 package com.evandev.spicedcider.client.events;
 
+import com.evandev.spicedcider.client.crudebow.CrudeBowClient;
+import com.evandev.spicedcider.client.renderer.TanningRackRenderer;
 import com.evandev.spicedcider.client.renderer.CastingRenderers;
 import com.evandev.spicedcider.client.renderer.CopperPatina;
 import com.evandev.spicedcider.client.renderer.GraveRenderer;
@@ -20,6 +22,7 @@ import com.evandev.spicedcider.client.music.PocketJukeboxClient;
 import com.evandev.spicedcider.client.renderer.PocketJukeboxTooltipRenderer;
 import com.evandev.spicedcider.client.renderer.balloon.BalloonRenderer;
 import com.evandev.spicedcider.client.models.sporal.SporalModel;
+import com.evandev.spicedcider.compat.picturemode.PictureModeClouds;
 import com.evandev.spicedcider.compat.vanillabackport.GraveWaypointProvider;
 import com.evandev.spicedcider.client.models.sputter.SputterArrowfulModel;
 import com.evandev.spicedcider.client.models.sputter.SputterModel;
@@ -109,6 +112,7 @@ public class ClientModEvents {
     @SubscribeEvent
     public static void registerScreens(net.neoforged.neoforge.client.event.RegisterMenuScreensEvent event) {
         event.register(com.evandev.spicedcider.registry.ModMenuTypes.SMELTERY.get(), com.evandev.spicedcider.client.screen.SmelteryScreen::new);
+        event.register(com.evandev.spicedcider.registry.ModMenuTypes.FISH_TRAP.get(), com.evandev.spicedcider.client.screen.FishTrapScreen::new);
     }
 
     @SubscribeEvent
@@ -119,12 +123,20 @@ public class ClientModEvents {
         event.registerEntityRenderer(ModEntityTypes.SPORAL.get(), SporalRenderer::new);
         event.registerEntityRenderer(ModEntityTypes.STRAW_GOLEM.get(), StrawGolemRenderer::new);
         event.registerBlockEntityRenderer(ModBlockEntities.GRAVE.get(), GraveRenderer::new);
+        event.registerBlockEntityRenderer(ModBlockEntities.TANNING_RACK.get(), TanningRackRenderer::new);
         CastingRenderers.register(event);
         if (TideCompat.isLoaded()) {
             event.registerEntityRenderer(ModEntityTypes.GRAPPLING_HOOK.get(), GrapplingHookRenderer::new);
         }
         if (ModList.get().isLoaded("nomansland") && ModList.get().isLoaded("supplementaries")) {
             TapStreamRenderer.register(event);
+        }
+    }
+
+    @SubscribeEvent
+    public static void registerAdditionalModels(net.neoforged.neoforge.client.event.ModelEvent.RegisterAdditional event) {
+        if (ModList.get().isLoaded("supplementaries") && ModList.get().isLoaded("farmersdelight")) {
+            com.evandev.spicedcider.compat.supplementaries.CanvasWaySignsClient.registerModels(event);
         }
     }
 
@@ -245,6 +257,7 @@ public class ClientModEvents {
     @SubscribeEvent
     public static void registerShaders(RegisterShadersEvent event) throws IOException {
         NetherFogBanks.registerShader(event);
+        PictureModeClouds.registerShader(event);
     }
 
     @SubscribeEvent
@@ -281,7 +294,7 @@ public class ClientModEvents {
             Stream.of(ModPaleGardenBlocks.PALE_ROSE, ModPaleGardenBlocks.PALE_BUSH, ModPaleGardenBlocks.TALL_PALE_BUSH)
                     .forEach(block -> ItemBlockRenderTypes.setRenderLayer(block.get(), RenderType.cutout()));
             ModPaleGardenBlocks.POTS.forEach(block -> ItemBlockRenderTypes.setRenderLayer(block.get(), RenderType.cutout()));
-            Stream.of(ModFireBlocks.SULFUR_FIRE, ModFireBlocks.SULFUR_TORCH, ModFireBlocks.SULFUR_WALL_TORCH, ModFireBlocks.SULFUR_LANTERN, ModFireBlocks.SULFUR_CAMPFIRE)
+            Stream.of(ModFireBlocks.SULFUR_FIRE, ModFireBlocks.SULFUR_TORCH, ModFireBlocks.SULFUR_WALL_TORCH, ModFireBlocks.SULFUR_LANTERN, ModFireBlocks.SULFUR_CAMPFIRE, ModBlocks.TIN_LANTERN)
                     .forEach(block -> ItemBlockRenderTypes.setRenderLayer(block.get(), RenderType.cutout()));
             FireVariantClient.setup();
             Stream.of(ModBlocks.CACAO_LEAVES, ModBlocks.FLOWERING_CACAO_LEAVES, ModBlocks.CACAO_LOG, ModBlocks.CACAO_WOOD, ModBlocks.STRIPPED_CACAO_LOG,
@@ -298,6 +311,7 @@ public class ClientModEvents {
             ItemProperties.register(ModItems.POCKET_JUKEBOX.get(), PLAYING, PocketJukeboxClient::playingProperty);
             ModItems.POCKET_JUKEBOXES.values().forEach(item -> ItemProperties.register(item.get(), PLAYING, PocketJukeboxClient::playingProperty));
             ItemProperties.register(Items.FILLED_MAP, MAP_ICON, MapIconProperty::get);
+            CrudeBowClient.registerItemProperties();
             ModTierItems.JAVELINS.forEach(item -> ItemProperties.register(item.get(), ResourceLocation.fromNamespaceAndPath("modestmining", "throwing"),
                     (stack, level, entity, seed) -> entity != null && entity.isUsingItem() && entity.getUseItem() == stack ? 1.0F : 0.0F));
             if (ModItems.ADAMANTITE_FISHING_ROD != null) {

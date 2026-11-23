@@ -144,8 +144,8 @@ key_Take Panorama Screenshot:key.keyboard.unknown
 key_auditory.sound_reload_key:key.keyboard.unknown
 key_key.picturemode.open:key.keyboard.p
 key_key.configured.open_mod_list:key.keyboard.unknown
-key_key.personality.crawl:key.keyboard.unknown
-key_key.personality.sit:key.keyboard.unknown
+key_key.personality.crawl:key.keyboard.c
+key_key.personality.sit:key.keyboard.x
 key_quark.keybind.change_hotbar:key.keyboard.y
 key_key.jade.config:key.keyboard.unknown
 key_key.jade.show_overlay:key.keyboard.unknown
@@ -164,8 +164,10 @@ key_key.dungeonconfig.open:key.keyboard.unknown
 key_key.hide_icons:key.keyboard.unknown
 key_key.disable_voice_chat:key.keyboard.unknown
 key_key.mute_microphone:key.keyboard.n
+key_key.voice_chat:key.keyboard.v
+key_key.voice_chat_group:key.keyboard.g
 key_key.map_atlases.place_pin:key.keyboard.u
-key_supplementaries.keybind.quiver:key.keyboard.x
+key_supplementaries.keybind.quiver:key.keyboard.unknown
 key_create.keyinfo.toolbelt:key.keyboard.i
 soundCategory_master:1.0
 soundCategory_music:0.7007042253521126
@@ -186,4 +188,3 @@ modelPart_right_pants_leg:true
 modelPart_hat:true
 key_key.spyglass-improvements.use:key.keyboard.z
 key_quark.keybind.variant_selector:key.keyboard.unknown
-key_key.spicedcider.cycle_stance:key.keyboard.c

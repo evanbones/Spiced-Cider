@@ -17,5 +17,12 @@
       "piglinproliferation:buckler"
     ],
     "replace_with": "shieldexp:golden_shield"
+  },
+  {
+    "action": "remove_enchantment",
+    "enchantments": [
+      "piglinproliferation:bang",
+      "piglinproliferation:turning"
+    ]
   }
 ]

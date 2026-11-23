@@ -1,0 +1,8 @@
+{
+  "id": "spicedcider:stripped_logs",
+  "type": "remi:group",
+  "name": "Stripped Logs",
+  "regex": "^(?!.*(hollow|palisade|post|_block$)).*stripped_[a-z_]+$",
+  "priority": 1,
+  "enabled": true
+}

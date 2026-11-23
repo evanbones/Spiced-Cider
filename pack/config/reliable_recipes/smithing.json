@@ -10,6 +10,16 @@
   },
   {
     "action": "remove_recipe",
+    "type": [
+      "minecraft:crafting_shaped",
+      "minecraft:crafting_shapeless"
+    ],
     "output": "#minecraft:trim_templates"
+  },
+  {
+    "action": "remove_recipe",
+    "id": [
+      "minecraft:smithing_table"
+    ]
   }
 ]

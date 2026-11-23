@@ -11,6 +11,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.levelgen.structure.Structure;
+import net.minecraft.world.level.material.Fluid;
 
 public class ModTags {
     public static class Items {
@@ -22,6 +23,9 @@ public class ModTags {
         public static final TagKey<Item> DESTROYED_WHEN_BROKEN = tag("destroyed_when_broken");
         public static final TagKey<Item> WAX_OR_TALLOW = tag("wax_or_tallow");
         public static final TagKey<Item> TANNABLE_HIDES = tag("tannable_hides");
+        public static final TagKey<Item> FISH_TRAP_BAIT = tag("fish_trap_bait");
+        public static final TagKey<Item> COMFORT_FOODS = tag("comfort_foods");
+        public static final TagKey<Item> NOT_COMFORT_FOODS = tag("not_comfort_foods");
         public static final TagKey<Item> LARGE_TANNABLE_HIDES = tag("large_tannable_hides");
         public static final TagKey<Item> SMALL_TANNABLE_HIDES = tag("small_tannable_hides");
         public static final TagKey<Item> TANNING_AGENTS = tag("tanning_agents");
@@ -45,7 +49,6 @@ public class ModTags {
     }
 
     public static class Blocks {
-        public static final TagKey<Block> HANGS_FROM_CEILING = tag("hangs_from_ceiling");
         public static final TagKey<Block> TAP_SUPPORTS = tag("tap_supports");
         public static final TagKey<Block> FAST_POUR_SOURCES = tag("fast_pour_sources");
         public static final TagKey<Block> NEEDS_AXE_TO_HARVEST = tag("needs_axe_to_harvest");
@@ -82,6 +85,7 @@ public class ModTags {
         public static final TagKey<Biome> HAS_GLOWING_FOG = TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "has_glowing_fog"));
         public static final TagKey<Biome> HAS_THICK_FOG = TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "has_thick_fog"));
         public static final TagKey<Biome> PINK_SPORAL_SPAWNS = TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "pink_sporal_spawns"));
+        public static final TagKey<Biome> EVOKER_NIGHT_SPAWNS = TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "evoker_night_spawns"));
         public static final TagKey<Biome> WHITE_SPORAL_SPAWNS = TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "white_sporal_spawns"));
     }
 
@@ -92,9 +96,19 @@ public class ModTags {
         public static final TagKey<EntityType<?>> ALLOWED_IN_RESTRICTED_BIOMES = tag("allowed_in_restricted_biomes");
         public static final TagKey<EntityType<?>> BALLOON_UNATTACHABLE = tag("balloon_unattachable");
         public static final TagKey<EntityType<?>> STATIC_HORSE_STATS = tag("static_horse_stats");
+        public static final TagKey<EntityType<?>> RANGED_SKELETONS = tag("ranged_skeletons");
 
         private static TagKey<EntityType<?>> tag(String name) {
             return TagKey.create(Registries.ENTITY_TYPE, ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, name));
+        }
+    }
+
+    public static class Fluids {
+        public static final TagKey<Fluid> EXTINGUISHES_FIRE = tag("extinguishes_fire");
+        public static final TagKey<Fluid> HYDRATES = tag("hydrates");
+
+        private static TagKey<Fluid> tag(String name) {
+            return TagKey.create(Registries.FLUID, ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, name));
         }
     }
 }

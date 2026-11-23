@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:ladder",
+    {
+      "id": "#blueprint:wooden_ladders",
+      "required": false
+    },
+    {
+      "id": "quark:iron_ladder",
+      "required": false
+    },
+    {
+      "id": "create:copper_ladder",
+      "required": false
+    },
+    {
+      "id": "alloyed:steel_ladder",
+      "required": false
+    }
+  ]
+}

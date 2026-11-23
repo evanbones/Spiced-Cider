@@ -3,7 +3,11 @@
     "caverns_and_chasms:tin_ore",
     "caverns_and_chasms:deepslate_tin_ore",
     "caverns_and_chasms:raw_tin_block",
-    "caverns_and_chasms:tin_block"
+    "caverns_and_chasms:tin_block",
+    {
+      "id": "supplementaries:safe",
+      "required": false
+    }
   ],
   "remove": [
     "minecraft:copper_ore",

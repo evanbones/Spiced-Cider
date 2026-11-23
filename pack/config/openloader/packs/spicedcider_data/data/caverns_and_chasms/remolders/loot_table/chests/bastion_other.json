@@ -22,15 +22,6 @@
     },
     {
       "type": "add",
-      "target": "pools[0].entries[]",
-      "value": {
-        "type": "minecraft:item",
-        "name": "caverns_and_chasms:turquoise",
-        "weight": 3
-      }
-    },
-    {
-      "type": "add",
       "target": "pools[1].entries[]",
       "value": {
         "type": "minecraft:item",

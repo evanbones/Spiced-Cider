@@ -1,0 +1,22 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:storage_blocks/netherite"
+      }
+    }
+  ],
+  "type": "spicedcider:smeltery_melting",
+  "ingredients": [
+    {
+      "tag": "c:storage_blocks/netherite"
+    }
+  ],
+  "result": {
+    "id": "spicedcider:molten_netherite",
+    "amount": 2250
+  },
+  "time": 1200
+}

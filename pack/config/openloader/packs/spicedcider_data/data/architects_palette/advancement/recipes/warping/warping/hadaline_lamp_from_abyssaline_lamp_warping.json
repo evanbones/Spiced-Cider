@@ -1,0 +1,42 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_abyssaline_lamp": {
+      "conditions": {
+        "items": [
+          {
+            "items": "architects_palette:abyssaline_lamp"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "architects_palette:warping/hadaline_lamp_from_abyssaline_lamp_warping"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "entered_nether": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "minecraft:the_nether"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_abyssaline_lamp"
+    ],
+    [
+      "has_the_recipe",
+      "entered_nether"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "architects_palette:warping/hadaline_lamp_from_abyssaline_lamp_warping"
+    ]
+  }
+}

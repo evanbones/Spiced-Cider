@@ -1,0 +1,20 @@
+{
+  "type": "spicedcider:drying",
+  "ingredient": {
+    "tag": "spicedcider:small_tannable_hides"
+  },
+  "agent": {
+    "tag": "spicedcider:tanning_agents"
+  },
+  "result": {
+    "id": "minecraft:leather",
+    "count": 1
+  },
+  "rack": {
+    "hung": "spicedcider:block/tanning_rack_small_hide",
+    "drying": "spicedcider:block/tanning_rack_small_hide_tanning",
+    "finished": "spicedcider:block/tanning_rack_small_leather",
+    "width": 10,
+    "height": 12
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    }
+  ],
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "item": "spicedcider:geode"
+    }
+  ],
+  "processing_time": 200,
+  "results": [
+    {
+      "id": "spelunkery:raw_copper_nugget",
+      "count": 6
+    },
+    {
+      "id": "spelunkery:raw_tin_nugget",
+      "count": 4,
+      "chance": 0.75
+    },
+    {
+      "id": "spelunkery:raw_iron_nugget",
+      "count": 3,
+      "chance": 0.5
+    },
+    {
+      "id": "minecraft:amethyst_shard",
+      "count": 2,
+      "chance": 0.25
+    }
+  ]
+}

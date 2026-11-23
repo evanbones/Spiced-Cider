@@ -53,6 +53,7 @@
       "bountifulfares:lapisberry_seeds",
       "bountifulfares:lapisberries",
       "bountifulfares:lapisberry_tart",
+      "bountifulfares:cocoa_cake",
       "bountifulfares:fermentation_vessel",
       "bountifulfares:apple_compote_jar",
       "bountifulfares:orange_compote_jar",
@@ -64,7 +65,15 @@
       "bountifulfares:meadow_medley",
       "bountifulfares:mire_medley",
       "bountifulfares:coastal_medley",
-      "bountifulfares:tropical_medley"
+      "bountifulfares:tropical_medley",
+      "bountifulfares:coconut_coir",
+      "bountifulfares:packed_coconut_coir",
+      "bountifulfares:coir_carpet",
+      "bountifulfares:coir_bricks",
+      "bountifulfares:coir_brick_slab",
+      "bountifulfares:coir_brick_stairs",
+      "bountifulfares:coir_brick_wall",
+      "bountifulfares:foul_flesh"
     ]
   },
   {
@@ -80,6 +89,20 @@
       "bountifulfares:mead_bottle"
     ],
     "replace_with": "culturaldelights:mead"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "bountifulfares:plum_cider_jar"
+    ],
+    "replace_with": "spicedcider:plum_cider"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "bountifulfares:hoary_cider_jar"
+    ],
+    "replace_with": "spicedcider:hoary_cider"
   },
   {
     "action": "remove",
@@ -149,7 +172,7 @@
     "items": [
       "bountifulfares:ceramic_chest"
     ],
-    "replace_with": "quark:oak_chest"
+    "replace_with": "woodworks:oak_chest"
   },
   {
     "action": "remove",

@@ -1,11 +1,13 @@
 package com.evandev.spicedcider.compat.emi;
 
+import com.evandev.spicedcider.compat.reliableremover.ReliableRemoverCompat;
 import com.evandev.spicedcider.config.SpicedCiderConfig;
 import dev.emi.emi.api.EmiEntrypoint;
 import dev.emi.emi.api.EmiPlugin;
 import dev.emi.emi.api.EmiRegistry;
 import dev.emi.emi.api.recipe.VanillaEmiRecipeCategories;
 import dev.emi.emi.api.stack.Comparison;
+import dev.emi.emi.api.stack.EmiIngredient;
 import dev.emi.emi.api.stack.EmiStack;
 import dev.emi.emi.registry.EmiRecipes;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -35,8 +37,16 @@ public class SpicedCiderEmiPlugin implements EmiPlugin {
         }
         if (ModList.get().isLoaded("create")) {
             LadleMixingEmiRecipe.register(registry);
+            BasinWashingEmiRecipes.register(registry);
         }
         CastingEmiRecipes.register(registry);
+        if (ModList.get().isLoaded("modestmining")) {
+            JavelinRepairEmiRecipes.register(registry);
+        }
+        if (ModList.get().isLoaded("horseman")) {
+            ComponentTransferringEmiRecipes.register(registry);
+        }
+        RepairMaterialTagEmiRecipes.register(registry);
         TanningEmiRecipe.register(registry);
         LootEmiCategories.register(registry);
         if (SpicedCiderConfig.clientOr(SpicedCiderConfig.CLIENT.emiHideSmithingCategory, false)) {
@@ -46,6 +56,10 @@ public class SpicedCiderEmiPlugin implements EmiPlugin {
                 && !recipe.getInputs().isEmpty()
                 && recipe.getInputs().stream().flatMap(input -> input.getEmiStacks().stream())
                 .allMatch(stack -> DUPLICATE_INFO_NAMESPACES.contains(stack.getId().getNamespace())));
+        if (ReliableRemoverCompat.isLoaded()) {
+            registry.removeRecipes(recipe -> recipe.getCategory() == VanillaEmiRecipeCategories.GRINDING
+                    && recipe.getInputs().stream().anyMatch(SpicedCiderEmiPlugin::isRemovedIngredient));
+        }
         AnvilSmithingEmiRecipe.register(registry);
         if (ModList.get().isLoaded("vanity")) {
             TrimStylingEmiRecipe.register(registry);
@@ -63,5 +77,11 @@ public class SpicedCiderEmiPlugin implements EmiPlugin {
         if (ModList.get().isLoaded("supplementaries")) {
             registry.setDefaultComparison(BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath("supplementaries", "cartographers_quill")), Comparison.compareComponents());
         }
+    }
+
+    private static boolean isRemovedIngredient(EmiIngredient ingredient) {
+        var stacks = ingredient.getEmiStacks();
+        return !stacks.isEmpty() && stacks.stream().allMatch(stack -> !stack.getItemStack().isEmpty()
+                && ReliableRemoverCompat.isHiddenFromViewers(stack.getItemStack().getItem()));
     }
 }

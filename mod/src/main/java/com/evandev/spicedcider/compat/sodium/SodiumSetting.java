@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.compat.sodium;
 
+import com.evandev.spicedcider.client.options.setting.Impact;
 import com.evandev.spicedcider.client.options.setting.Setting;
 import com.evandev.spicedcider.client.options.setting.StepSlider;
 import net.caffeinemc.mods.sodium.client.config.ConfigManager;
@@ -64,6 +65,17 @@ public final class SodiumSetting<V> implements Setting {
     @Override
     public Component name() {
         return option.getName();
+    }
+
+    @Override
+    public Impact impact() {
+        if (option.getImpact() == null) return null;
+        return switch (option.getImpact()) {
+            case LOW -> Impact.LOW;
+            case MEDIUM -> Impact.MEDIUM;
+            case HIGH -> Impact.HIGH;
+            case VARIES -> Impact.VARIES;
+        };
     }
 
     @Override

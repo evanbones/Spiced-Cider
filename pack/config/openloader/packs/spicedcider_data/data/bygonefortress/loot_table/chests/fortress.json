@@ -3,9 +3,9 @@
   "pools": [
     {
       "rolls": {
-        "min": 2.0,
-        "max": 4.0,
-        "type": "minecraft:uniform"
+        "type": "minecraft:uniform",
+        "min": 3.0,
+        "max": 5.0
       },
       "bonus_rolls": 0.0,
       "name": "main",
@@ -101,22 +101,22 @@
         },
         {
           "name": "minecraft:saddle",
-          "weight": 10,
+          "weight": 4,
           "type": "minecraft:item"
         },
         {
           "name": "minecraft:golden_horse_armor",
-          "weight": 8,
+          "weight": 3,
           "type": "minecraft:item"
         },
         {
           "name": "minecraft:iron_horse_armor",
-          "weight": 5,
+          "weight": 2,
           "type": "minecraft:item"
         },
         {
           "name": "minecraft:diamond_horse_armor",
-          "weight": 3,
+          "weight": 1,
           "type": "minecraft:item"
         },
         {

@@ -1,0 +1,16 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "quark"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "quark:white_shingles"
+  },
+  "result": {
+    "id": "minecraft:white_terracotta",
+    "count": 1
+  }
+}

@@ -46,7 +46,11 @@ public class TapStreamRenderer implements BlockEntityRenderer<TapBlockEntity> {
 
         SoftFluid fluid = stream.fluid();
         ResourceLocation texture = fluid.getFlowingTexture();
-        if (texture == null) texture = fluid.getStillTexture();
+        float blockSpan = 0.5F;
+        if (texture == null) {
+            texture = fluid.getStillTexture();
+            blockSpan = 1.0F;
+        }
         if (texture == null) return;
         TextureAtlasSprite sprite = Minecraft.getInstance().getTextureAtlas(InventoryMenu.BLOCK_ATLAS).apply(texture);
         int color = (ALPHA << 24) | (stream.getFlowingColor(tap.getLevel(), tap.getBlockPos()) & 0xFFFFFF);
@@ -72,14 +76,14 @@ public class TapStreamRenderer implements BlockEntityRenderer<TapBlockEntity> {
         float x1 = cx + HALF_WIDTH;
         float z0 = cz - HALF_WIDTH;
         float z1 = cz + HALF_WIDTH;
-        float u0 = sprite.getU(0.4375F);
-        float u1 = sprite.getU(0.5625F);
+        float u0 = sprite.getU(0.5F - HALF_WIDTH * blockSpan);
+        float u1 = sprite.getU(0.5F + HALF_WIDTH * blockSpan);
         float top = TapFaucetBridge.SPOUT_HEIGHT;
         float bottom = top - length;
         for (float y1 = top; y1 > bottom + 0.001F; y1 -= 1.0F) {
             float y0 = Math.max(bottom, y1 - 1.0F);
             float v0 = sprite.getV(0.0F);
-            float v1 = sprite.getV(y1 - y0);
+            float v1 = sprite.getV((y1 - y0) * blockSpan);
             quad(consumer, pose, x0, z0, x1, z0, y0, y1, u0, u1, v0, v1, color, light, 0, -1);
             quad(consumer, pose, x1, z1, x0, z1, y0, y1, u0, u1, v0, v1, color, light, 0, 1);
             quad(consumer, pose, x0, z1, x0, z0, y0, y1, u0, u1, v0, v1, color, light, -1, 0);

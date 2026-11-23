@@ -1,0 +1,14 @@
+{
+  "require_mods": "caverns_and_chasms",
+  "targets": [
+    {
+      "id": "spicedcider:sulfur_brazier",
+      "required": false
+    }
+  ],
+  "colored_light": {
+    "color": "#7A7CFF",
+    "radius": 12,
+    "brightness": "object.blockStateValue('lit') ? 1 : 0"
+  }
+}

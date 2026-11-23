@@ -1,0 +1,32 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "supplementaries:altimeters"
+      }
+    },
+    {
+      "type": "supplementaries:flag",
+      "flag": "slice_map"
+    }
+  ],
+  "type": "spicedcider:crafting_shapeless_keeping",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "supplementaries:altimeters"
+    },
+    {
+      "item": "minecraft:map"
+    }
+  ],
+  "keep": {
+    "tag": "supplementaries:altimeters"
+  },
+  "result": {
+    "id": "supplementaries:slice_map",
+    "count": 1
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    }
+  ],
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "item": "spicedcider:unfinished_bow"
+  },
+  "loops": 1,
+  "results": [
+    {
+      "id": "minecraft:bow"
+    }
+  ],
+  "sequence": [
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "spicedcider:unfinished_bow"
+        },
+        {
+          "tag": "c:leathers"
+        }
+      ],
+      "results": [
+        {
+          "id": "spicedcider:unfinished_bow"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "spicedcider:unfinished_bow"
+        },
+        {
+          "tag": "c:plates/copper"
+        }
+      ],
+      "results": [
+        {
+          "id": "spicedcider:unfinished_bow"
+        }
+      ]
+    }
+  ],
+  "transitional_item": {
+    "id": "spicedcider:unfinished_bow"
+  }
+}

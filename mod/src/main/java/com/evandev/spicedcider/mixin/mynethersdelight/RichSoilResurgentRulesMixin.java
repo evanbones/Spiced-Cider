@@ -12,7 +12,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-@IfModLoaded("mynethersdelight")
+@IfModLoaded(value = "mynethersdelight", minVersion = "1.10.4")
 @Mixin(targets = "vectorwing.farmersdelight.common.block.RichSoilBlock", remap = false)
 public class RichSoilResurgentRulesMixin {
     @Inject(method = "randomTick", at = @At("HEAD"))

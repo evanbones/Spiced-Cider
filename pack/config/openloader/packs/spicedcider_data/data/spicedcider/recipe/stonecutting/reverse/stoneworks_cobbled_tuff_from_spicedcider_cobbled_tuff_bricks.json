@@ -1,0 +1,20 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "stoneworks"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "spicedcider"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "spicedcider:cobbled_tuff_bricks"
+  },
+  "result": {
+    "id": "stoneworks:cobbled_tuff",
+    "count": 1
+  }
+}

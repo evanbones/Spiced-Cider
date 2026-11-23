@@ -43,7 +43,7 @@ public class WornBackpackSlot extends Slot {
 
     @Override
     public boolean mayPlace(ItemStack stack) {
-        return this.isActive();
+        return this.isActive() && stack != this.backpack.backpack();
     }
 
     @Override

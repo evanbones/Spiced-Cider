@@ -11,12 +11,22 @@
   ],
   "type": "spicedcider:crucible_melting",
   "ingredients": [
-    {
-      "item": "minecraft:gold_ingot"
-    },
-    {
-      "item": "caverns_and_chasms:silver_ingot"
-    }
+    [
+      {
+        "tag": "c:ingots/gold"
+      },
+      {
+        "tag": "c:raw_materials/gold"
+      }
+    ],
+    [
+      {
+        "tag": "c:ingots/silver"
+      },
+      {
+        "tag": "c:raw_materials/silver"
+      }
+    ]
   ],
   "result": {
     "id": "spicedcider:molten_electrum",

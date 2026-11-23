@@ -90,7 +90,6 @@ public class CobwebProjectileEntity extends Projectile {
         super.onHitEntity(hitResult);
 
         Entity target = hitResult.getEntity();
-        Entity owner = this.getOwner();
 
         if (!(target instanceof LivingEntity livingTarget)) {
             return;
@@ -98,13 +97,6 @@ public class CobwebProjectileEntity extends Projectile {
 
         if (livingTarget.getType().is(EntityTypeTags.ARTHROPOD)) {
             return;
-        }
-
-        if (owner instanceof LivingEntity livingOwner) {
-            livingTarget.hurt(
-                    damageSources().indirectMagic(this, livingOwner),
-                    1.0F
-            );
         }
 
         if (!this.level().isClientSide) {

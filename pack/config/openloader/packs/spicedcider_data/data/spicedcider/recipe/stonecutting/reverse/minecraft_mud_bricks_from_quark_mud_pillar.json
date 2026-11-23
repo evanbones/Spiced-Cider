@@ -1,0 +1,16 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "quark"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "quark:mud_pillar"
+  },
+  "result": {
+    "id": "minecraft:mud_bricks",
+    "count": 1
+  }
+}

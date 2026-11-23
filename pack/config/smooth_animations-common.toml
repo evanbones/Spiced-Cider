@@ -17,3 +17,9 @@ debug_server_hitboxes = false
 zero_tick_entity_sync = false
 #Fixes entity bodies rotating choppily when head rotates
 smooth_body_turning = true
+#Entities snap to their server position every tick. Off makes them trail behind it over 3 ticks like vanilla. Mobs still turn over a few ticks either way, snapping that too makes them flick around. True singleplayer.
+snap_entity_position = true
+#Fixes slime and magma cube squish not being interpolated
+slime_squish_lerp = true
+#When the server lags, the client stops waiting for it and runs on its own like vanilla, until the server catches up. Off makes the whole game slow down with the server, player included. No more 'client' or 'server' lag, just lag. True singleplayer.
+server_lag_fallback = true

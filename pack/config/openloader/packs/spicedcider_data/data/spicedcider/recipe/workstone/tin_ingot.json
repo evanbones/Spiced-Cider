@@ -1,0 +1,26 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "manual_labour"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "caverns_and_chasms"
+    }
+  ],
+  "type": "manual_labour:workstone",
+  "ingredients": [
+    {
+      "item": "caverns_and_chasms:tin_ingot"
+    },
+    {
+      "tag": "manual_labour:hammers"
+    }
+  ],
+  "results": [
+    {
+      "id": "spicedcider:tin_sheet"
+    }
+  ]
+}

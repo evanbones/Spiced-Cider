@@ -1,0 +1,80 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "nomansland:reeds",
+          "conditions": [
+            {
+              "condition": "neoforge:can_item_perform_ability",
+              "ability": "shears_dig"
+            }
+          ]
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:block_state_property",
+          "block": "nomansland:reeds",
+          "properties": {
+            "half": "lower"
+          }
+        },
+        {
+          "condition": "minecraft:location_check",
+          "offsetY": 1,
+          "predicate": {
+            "block": {
+              "blocks": "nomansland:reeds",
+              "state": {
+                "half": "upper"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "nomansland:reeds",
+          "conditions": [
+            {
+              "condition": "neoforge:can_item_perform_ability",
+              "ability": "shears_dig"
+            }
+          ]
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:block_state_property",
+          "block": "nomansland:reeds",
+          "properties": {
+            "half": "upper"
+          }
+        },
+        {
+          "condition": "minecraft:location_check",
+          "offsetY": -1,
+          "predicate": {
+            "block": {
+              "blocks": "nomansland:reeds",
+              "state": {
+                "half": "lower"
+              }
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "random_sequence": "nomansland:block/reeds"
+}

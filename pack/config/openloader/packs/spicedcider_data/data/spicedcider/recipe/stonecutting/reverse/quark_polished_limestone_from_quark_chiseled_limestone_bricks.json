@@ -1,0 +1,16 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "quark"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "quark:chiseled_limestone_bricks"
+  },
+  "result": {
+    "id": "quark:polished_limestone",
+    "count": 1
+  }
+}

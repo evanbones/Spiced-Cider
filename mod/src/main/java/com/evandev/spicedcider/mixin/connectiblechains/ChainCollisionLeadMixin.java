@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-@IfModLoaded("connectiblechains")
+@IfModLoaded(value = "connectiblechains", minVersion = "2.6.0")
 @Mixin(targets = "com.evandev.connectiblechains.util.ChainCollisionIndex", remap = false)
 public class ChainCollisionLeadMixin {
 

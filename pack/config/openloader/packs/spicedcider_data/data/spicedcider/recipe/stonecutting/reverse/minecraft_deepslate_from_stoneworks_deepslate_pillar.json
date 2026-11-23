@@ -1,0 +1,16 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "stoneworks"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "stoneworks:deepslate_pillar"
+  },
+  "result": {
+    "id": "minecraft:deepslate",
+    "count": 1
+  }
+}

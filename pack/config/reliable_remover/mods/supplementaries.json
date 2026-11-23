@@ -8,6 +8,7 @@
       "supplementaries:quark/way_sign_blossom",
       "supplementaries:quark/cannon_boat_blossom",
       "supplementaries:crank",
+      "supplementaries:pulley_block",
       "supplementaries:faucet",
       "supplementaries:bomb",
       "supplementaries:bomb_blue",
@@ -39,7 +40,8 @@
       "supplementaries:quark/cannon_boat_azalea",
       "supplementaries:quark/way_sign_azalea",
       "supplementaries:way_sign_poplar",
-      "supplementaries:cannon_boat_poplar"
+      "supplementaries:cannon_boat_poplar",
+      "supplementaries:fire_pit"
     ]
   },
   {
@@ -155,6 +157,13 @@
     "action": "remove_effect",
     "effects": [
       "supplementaries:flammable"
+    ]
+  },
+  {
+    "action": "remove_enchantment",
+    "enchantments": [
+      "supplementaries:carousel",
+      "supplementaries:whimsy"
     ]
   }
 ]

@@ -110,5 +110,11 @@
       "mynethersdelight:powdery_torch"
     ],
     "replace_with": "minecraft:torch"
+  },
+  {
+    "action": "remove_enchantment",
+    "enchantments": [
+      "mynethersdelight:poaching"
+    ]
   }
 ]

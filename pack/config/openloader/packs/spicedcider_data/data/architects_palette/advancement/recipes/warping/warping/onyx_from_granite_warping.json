@@ -1,0 +1,42 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_granite": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:granite"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "architects_palette:warping/onyx_from_granite_warping"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "entered_nether": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "minecraft:the_nether"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_granite"
+    ],
+    [
+      "has_the_recipe",
+      "entered_nether"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "architects_palette:warping/onyx_from_granite_warping"
+    ]
+  }
+}

@@ -122,6 +122,12 @@ the official Bedrock edition addon.
 Adds a Grappling Hook and a Sticky Grappling Hook. Attach one to a Tide fishing rod to grapple instead of fish.
 Requires Tide. Ported from Raspberry Core/There's Always A Bigger Fish.
 
+**Fish Trap**
+
+Place it underwater with bait and it slowly catches fish from that biome. More surrounding water means more catches,
+and better bait brings in more fish at once. Uses Tide's fish when Tide is installed. Adapted from There's Always A
+Bigger Fish, with the model and textures from Fisherman's Trap.
+
 **Golems**
 
 - Straw Golems: build one with a hay bale and a carved pumpkin, and it harvests nearby crops into a container. Adapted
@@ -258,6 +264,7 @@ message. Ported from Valcon (thanks, Ivqry!).
 - Hammers can't mine blocks, so they don't replace a pickaxe *(off by default)*
 - Azaleas can't be bonemealed into trees *(off by default)*
 - Players step up full blocks without jumping, with a Step Up toggle in place of Auto-Jump *(off by default)*
+- The camera glides up steps and slabs instead of snapping *(off by default)*
 - Zombies sometimes carry a torch *(off by default)*
 - Brown mushrooms and mushroom colonies don't give off light *(off by default)*
 - Piglins spawn with Piglin Broadswords and Battleaxes instead of golden weapons *(off by default)*
@@ -271,14 +278,22 @@ message. Ported from Valcon (thanks, Ivqry!).
 - Drag the inventory player model to turn it *(off by default)*
 - Arrows stay stuck in players and mobs until pulled out: your own from the inventory player model, a tamed animal's by right-clicking it; they drop when the mob dies and can break on a bad pull *(off by default)*
 - Potions and water bottles used in recipes leave a glass bottle *(off by default)*
+- Naturally spawned cats don't despawn *(off by default)*
 - Your own potion particles are hidden in first person *(off by default)*
 - No armor bar on the HUD *(off by default)*
 - Smithing template tooltips without the "Applies to" lines *(off by default)*
-- Every horse has the same configurable speed and jump strength *(off by default)*
+- Every horse, donkey and mule has the same configurable speed and jump strength for its kind *(off by default)*
 - Configurable bundle capacity
 - Mobs can sit on Quark stools like Create seats, including as Stock Ticker keepers *(off by default)*
 - Sitting with Personality doubles Modest Meals stamina recovery *(off by default)*
+- Comfort effect: slow healing, twice as fast while sitting or in bed. Soups and stews can grant it, scaled by nutrition, and so can sleeping through the night, and it can replace Farmer's Delight's retired Comfort on foods *(off by default)*
+- Invigorated effect: Modest Meals stamina refills twice as fast
+- Food can stop restoring Modest Meals stamina directly *(off by default)*, and Farmer's Delight Nourishment can be shortened
+- Ingredients can keep their full healing inside Modest Meals meals *(off by default)*
+- Plum Cider and Hoary Cider, bottled Cultural Delights-style drinks (with Bountiful Fares and Cultural Delights)
 - Personality's crawl can be switched off, leaving crawling to another mod *(off by default)*
+- Get Over It only climbs ledges taller than a jump that you face, climbs faster and lands you on top, and can cost Modest Meals stamina *(off by default)*
+- Food doesn't list or give effects removed by Reliable Remover
 - Optional custom window title, and taskbar icon on Windows
 
 **Pack Tools**
@@ -352,7 +367,7 @@ Spiced Cider runs fine without any of these: each one only unlocks the specific 
 | [Modulation](https://modrinth.com/mod/modulation)                                                                                          | Distant fog blends into Modulation's sky (with Voxy)                                                                                                                                                                                                                                                                                                 |
 | [My Nether's Delight](https://modrinth.com/mod/my-nethers-delight)                                                                         | Rich Soil spreads My Nether's Delight colonies; Hoglin Hide cures into 3 Leather on the Tanning Rack                                                                                                                                                                                                                                                 |
 | [No Man's Land](https://modrinth.com/mod/no-mans-land)                                                                                     | Mournful and Cheerful Clay Statues, offered to the Friend Moon to bring rain or clear skies; taps pour resin and maple syrup into Basins; a radial carving wheel for the chisel *(off by default)*; empty witch stew pots leave a Basin *(off by default)*; options in the settings screen                                                                                                      |
-| [Offgrid](https://modrinth.com/mod/offgrid)                                                                                                | Leads, chains, hanging blocks, Polytone colored lights, and snow work with offgrid blocks                                                                                                                                                                                                                                                            |
+| [Offgrid](https://modrinth.com/mod/offgrid)                                                                                                | Crucibles, beds and pet beds can sit on slabs and other lower surfaces, and sleepers lie at the bed's height                                                                                                                                                                                                                                         |
 | [Personality](https://modrinth.com/mod/personality)                                                                                        | Personality's falling snow layers step aside for Snow! Real Magic's snow gravity                                                                                                                                                                                                                                                                     |
 | [Piglin Proliferation](https://modrinth.com/mod/piglin-proliferation)                                                                      | Fire rings no longer absorb potions *(off by default)*                                                                                                                                                                                                                                                                                               |
 | [Platform](https://modrinth.com/mod/platform)                                                                                              | Reliable Recipes rules apply to Platform's generated recipes                                                                                                                                                                                                                                                                                         |
@@ -406,6 +421,9 @@ Straw Hat item texture.
 
 ## Credits
 
+The Comfort effect icon is from [Farmer's Delight](https://github.com/vectorwing/FarmersDelight) by vectorwing, used
+under its MIT license.
+
 Spiced Cider contains code from [Better Log4j Config](https://modrinth.com/mod/better-log4j-config), used under
 its [Apache License 2.0](https://github.com/BigWingBeat/better_log4j_config/blob/fabric/LICENSE).
 
@@ -438,6 +456,13 @@ Nether effects are inspired by Jaden's Nether Expansion.
 
 Grappling Hooks are modified from [Bigger Fish](https://modrinth.com/mod/always-a-bigger-fish), created by Cassian and
 implemented by Kobber (originally ported from Raspberry Core).
+
+Fine Wood Walls are modified from Raspberry Core and created by Kobber.
+
+The Fish Trap is adapted from [Bigger Fish](https://modrinth.com/mod/always-a-bigger-fish) by Cassian, used under its
+MIT code license (included at `META-INF/licenses/bigger_fish-LICENSE.txt`). Its model, textures and GUI are from
+[Fisherman's Trap](https://modrinth.com/mod/fishermens-trap) by Uraneptus (assets by toomanykitkats), used under its MIT
+license (included at `META-INF/licenses/fishermens_trap-LICENSE.txt`).
 
 ---
 

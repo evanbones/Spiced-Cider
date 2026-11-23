@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.compat.yacl;
 
+import com.evandev.spicedcider.compat.ModVersions;
 import com.evandev.spicedcider.config.SpicedCiderConfig;
 import dev.isxander.yacl3.api.ConfigCategory;
 import dev.isxander.yacl3.api.Option;
@@ -70,10 +71,19 @@ public class SpicedCiderConfigScreen {
                         .option(toggle("privateAdvancementMessages", common.privateAdvancementMessages))
                         .option(toggle("accurateSignHitboxes", common.accurateSignHitboxes))
                         .option(intSlider("bundleCapacity", common.bundleCapacity, 16, 512, 16))
+                        .option(intSlider("fallDamageReduction", common.fallDamageReduction, 0, 10, 1))
+                        .option(toggle("noNestedBundles", common.noNestedBundles))
                         .option(toggle("iglooBasementRemoval", common.iglooBasementRemoval))
                         .option(toggle("leavesNotSuffocating", startup.leavesNotSuffocating))
                         .option(toggle("torchflowerLight", startup.torchflowerLight))
                         .option(toggle("skeletonHealthNerf", startup.skeletonHealthNerf))
+                        .option(toggle("rangedSkeletons", common.rangedSkeletons))
+                        .option(toggle("singleBlazeFireball", common.singleBlazeFireball))
+                        .option(toggle("noSkeletonTrapHorses", common.noSkeletonTrapHorses))
+                        .option(toggle("bowFatigue", common.bowFatigue))
+                        .option(toggle("crudeBowSkeletons", common.crudeBowSkeletons))
+                        .option(toggle("skeletonHorsesBurn", common.skeletonHorsesBurn))
+                        .option(toggle("darkForestEvokers", common.darkForestEvokers))
                         .option(toggle("voidWater", common.voidWater))
                         .option(intSlider("voidWaterTrailLength", common.voidWaterTrailLength, 0, 64, 1))
                         .option(doubleSlider("voidWaterTrailDecay", common.voidWaterTrailDecay, 0.25, 8.0, 0.25))
@@ -88,9 +98,18 @@ public class SpicedCiderConfigScreen {
                         .option(toggle("gravestoneStoreExperience", common.gravestoneStoreExperience))
                         .option(toggle("gravestoneKeepAllExperience", common.gravestoneKeepAllExperience))
                         .option(toggle("gravestoneExperienceDecay", common.gravestoneExperienceDecay))
+                        .option(intSlider("comfortHealInterval", common.comfortHealInterval, 10, 400, 10))
+                        .option(intSlider("comfortRestingHealInterval", common.comfortRestingHealInterval, 10, 400, 10))
+                        .option(intSlider("comfortSoupSecondsPerNutrition", common.comfortSoupSecondsPerNutrition, 0, 60, 1))
+                        .option(intSlider("comfortSoupMaxSeconds", common.comfortSoupMaxSeconds, 0, 900, 10))
+                        .option(intSlider("comfortSleepSeconds", common.comfortSleepSeconds, 0, 600, 10))
                         .option(toggle("staticHorseStats", common.staticHorseStats))
                         .option(doubleSlider("staticHorseSpeed", common.staticHorseSpeed, 0.05, 1.0, 0.0125))
                         .option(doubleSlider("staticHorseJump", common.staticHorseJump, 0.1, 2.0, 0.05))
+                        .option(doubleSlider("staticDonkeySpeed", common.staticDonkeySpeed, 0.05, 1.0, 0.0125))
+                        .option(doubleSlider("staticDonkeyJump", common.staticDonkeyJump, 0.1, 2.0, 0.05))
+                        .option(doubleSlider("staticMuleSpeed", common.staticMuleSpeed, 0.05, 1.0, 0.0125))
+                        .option(doubleSlider("staticMuleJump", common.staticMuleJump, 0.1, 2.0, 0.05))
                         .build())
                 .category(features(common))
                 .categoryIf(compat != null, compat)
@@ -99,6 +118,7 @@ public class SpicedCiderConfigScreen {
                         .tooltip(Component.translatable("category.spicedcider.performance.tooltip"))
                         .option(toggle("disableRecipeBookTracking", common.disableRecipeBookTracking))
                         .option(toggle("parallelLocate", common.parallelLocate))
+                        .option(toggle("revealThreateningMonsters", common.revealThreateningMonsters))
                         .build())
                 .category(ConfigCategory.createBuilder()
                         .name(Component.translatable("category.spicedcider.client"))
@@ -116,9 +136,11 @@ public class SpicedCiderConfigScreen {
                         .option(toggle("moveRecipeBookButton", client.moveRecipeBookButton))
                         .option(toggle("inventoryModelRotation", client.inventoryModelRotation))
                         .option(toggle("hideOwnEffectParticles", client.hideOwnEffectParticles))
+                        .option(toggle("smoothStepUp", client.smoothStepUp))
                         .option(toggle("hideArmorBar", client.hideArmorBar))
                         .option(toggle("softerBlindnessAndDarkness", client.softerBlindnessAndDarkness))
                         .option(toggle("hideSmithingTemplateTooltips", client.hideSmithingTemplateTooltips))
+                        .optionIf(ModList.get().isLoaded("supplementaries"), toggle("hideSackContentsTooltip", client.hideSackContentsTooltip))
                         .option(toggle("pictureModeClouds", client.pictureModeClouds))
                         .build())
                 .categoryIf(ModList.get().isLoaded("vista"), ConfigCategory.createBuilder()
@@ -142,7 +164,7 @@ public class SpicedCiderConfigScreen {
                         .option(intSlider("windParticleStrength", client.windParticleStrength, 0, 300, 5))
                         .option(toggle("windMotes", client.windMotes))
                         .option(toggle("hangingFruitSway", client.hangingFruitSway))
-                        .optionIf(ModList.get().isLoaded("connectiblechains"), toggle("chainDecorationSway", client.chainDecorationSway))
+                        .optionIf(ModVersions.connectibleChains(), toggle("chainDecorationSway", client.chainDecorationSway))
                         .build())
                 .categoryIf(ModList.get().isLoaded("roxy"), ConfigCategory.createBuilder()
                         .name(Component.translatable("category.spicedcider.voxy"))
@@ -190,8 +212,11 @@ public class SpicedCiderConfigScreen {
                 toggle("createHideItemDescriptions", client.createHideItemDescriptions));
         group(groups, List.of("culturaldelights"),
                 toggle("drinkIntoxication", startup.drinkIntoxication));
+        group(groups, List.of("farmersdelight"),
+                toggle("replaceFarmersDelightComfort", startup.replaceFarmersDelightComfort));
         group(groups, List.of("easyanvils"),
-                toggle("easyAnvilsFreeRepairs", common.easyAnvilsFreeRepairs));
+                toggle("easyAnvilsFreeRepairs", common.easyAnvilsFreeRepairs),
+                toggle("toolRepairMaterialCounts", common.toolRepairMaterialCounts));
         group(groups, List.of("emi"),
                 toggle("emiHideSmithingCategory", client.emiHideSmithingCategory),
                 toggle("emiBarteringCategory", client.emiBarteringCategory),
@@ -243,12 +268,19 @@ public class SpicedCiderConfigScreen {
         group(groups, List.of("tiny_takeover_backport"),
                 toggle("goldenDandelionTempting", common.goldenDandelionTempting),
                 toggle("goldenDandelionParticles", client.goldenDandelionParticles));
+        group(groups, List.of("getoverit"),
+                toggle("ledgeClimbRework", common.ledgeClimbRework));
+        group(groups, List.of("getoverit", "modest_meals"),
+                toggle("ledgeClimbStamina", common.ledgeClimbStamina));
         group(groups, List.of("treeliable", "modest_meals"),
                 toggle("treeChoppingStamina", common.treeChoppingStamina));
-        group(groups, List.of("personality"),
-                toggle("personalityNoCrawl", common.personalityNoCrawl));
         group(groups, List.of("personality", "modest_meals"),
                 toggle("sittingStaminaRegen", common.sittingStaminaRegen));
+        group(groups, List.of("modest_meals"),
+                toggle("noFoodStamina", common.noFoodStamina),
+                toggle("mealIngredientsKeepHealth", common.mealIngredientsKeepHealth));
+        group(groups, List.of("modest_meals", "farmersdelight"),
+                intSlider("nourishmentDurationPercent", common.nourishmentDurationPercent, 5, 100, 5));
         group(groups, List.of("quark", "create"),
                 toggle("quarkStoolSeats", common.quarkStoolSeats));
         group(groups, List.of("voicechat"),

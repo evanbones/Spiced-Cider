@@ -1,0 +1,20 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "stoneworks"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "spicedcider"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "spicedcider:netherrack_tiles"
+  },
+  "result": {
+    "id": "stoneworks:netherrack_bricks",
+    "count": 1
+  }
+}

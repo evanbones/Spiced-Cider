@@ -1,0 +1,25 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "supplementaries:flag",
+      "flag": "candle_holder"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " C ",
+    "NNN"
+  ],
+  "key": {
+    "C": {
+      "item": "minecraft:candle"
+    },
+    "N": {
+      "tag": "c:nuggets/gold"
+    }
+  },
+  "result": {
+    "id": "suppsquared:gold_candle_holder",
+    "count": 1
+  }
+}

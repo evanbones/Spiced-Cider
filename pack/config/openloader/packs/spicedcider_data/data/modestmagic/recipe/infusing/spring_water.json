@@ -1,0 +1,53 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "spelunkery"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "abundant_atmosphere"
+    }
+  ],
+  "type": "modestmagic:infusing",
+  "base": {
+    "item": "minecraft:water_bucket"
+  },
+  "ingredients": [
+    {
+      "item": "spelunkery:sulfur"
+    },
+    {
+      "item": "spelunkery:sulfur"
+    },
+    [
+      {
+        "item": "spelunkery:salt"
+      },
+      {
+        "item": "spelunkery:saltpeter"
+      }
+    ],
+    [
+      {
+        "item": "spelunkery:salt"
+      },
+      {
+        "item": "spelunkery:saltpeter"
+      }
+    ],
+    [
+      {
+        "item": "abundant_atmosphere:moss_clump"
+      },
+      {
+        "item": "minecraft:moss_block"
+      }
+    ]
+  ],
+  "results": [
+    {
+      "id": "spelunkery:spring_water_bucket"
+    }
+  ]
+}

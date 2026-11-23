@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.mixin.snowyspirit;
 
+import com.evandev.spicedcider.client.gui.TooltipRendering;
 import com.llamalad7.mixinextras.injector.wrapmethod.WrapMethod;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.moulberry.mixinconstraints.annotations.IfModLoaded;
@@ -16,6 +17,7 @@ public abstract class GingerbreadCookieShapeMixin {
     @WrapMethod(method = "lambda$setup$0")
     private static float stableShapeForFakeItems(ItemStack stack, ClientLevel level, LivingEntity entity, int seed, Operation<Float> original) {
         if (entity == null && seed == 0) return 0.0F;
+        if (TooltipRendering.active()) return Math.floorMod(seed, 4) / 3.0F;
         return original.call(stack, level, entity, seed);
     }
 }
