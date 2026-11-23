@@ -2,7 +2,7 @@ name: Release
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main", "dev" ]
   workflow_dispatch:
   pull_request:
     branches: [ "main" ]
@@ -64,7 +64,7 @@ jobs:
 
   pack:
     needs: core
-    if: always() && (needs.core.result == 'success' || github.event_name == 'pull_request')
+    if: always() && (needs.core.result == 'success' || github.event_name == 'pull_request' || github.ref == 'refs/heads/dev')
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
@@ -87,7 +87,7 @@ jobs:
         uses: gradle/actions/setup-gradle@v4
 
       - name: Update Cider Core In Pack
-        if: github.event_name != 'pull_request'
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
         run: |
           chmod +x gradlew
           ./gradlew :mod:useModrinthCiderCore -Pcider_core_version=${{ needs.core.outputs.version }} --stacktrace
@@ -102,7 +102,7 @@ jobs:
           fi
 
       - name: Publish Modpack
-        if: github.event_name != 'pull_request'
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
         run: |
           pack_version=$(grep '^version=' gradle.properties | cut -d= -f2 | tr -d '\r')
           slug=$(grep '^pack_modrinth_slug=' gradle.properties | cut -d= -f2 | tr -d '\r')
@@ -113,11 +113,44 @@ jobs:
             ./gradlew :publishMods --stacktrace
           fi
 
+      - name: Checkout Other Channel
+        if: github.event_name != 'pull_request'
+        run: |
+          if [ "$GITHUB_REF" = "refs/heads/dev" ]; then
+            git fetch --no-tags --depth=1 origin main
+            git worktree add --detach "$RUNNER_TEMP/main" FETCH_HEAD
+            echo "MAIN_SRC=$RUNNER_TEMP/main" >> "$GITHUB_ENV"
+            echo "DEV_SRC=$GITHUB_WORKSPACE" >> "$GITHUB_ENV"
+          else
+            git fetch --no-tags --depth=1 origin dev
+            git worktree add --detach "$RUNNER_TEMP/dev" FETCH_HEAD
+            echo "MAIN_SRC=$GITHUB_WORKSPACE" >> "$GITHUB_ENV"
+            echo "DEV_SRC=$RUNNER_TEMP/dev" >> "$GITHUB_ENV"
+          fi
+
       - name: Stage Release Pack
         run: |
           python3 -m pip install --quiet brotli
-          python3 scripts/stage_release.py pack _site --release pack-release.json --base-url https://evanbones.github.io/Spiced-Cider/
+          python3 scripts/stage_release.py "${MAIN_SRC:-.}/pack" _site --release "${MAIN_SRC:-.}/pack-release.json" --base-url https://evanbones.github.io/Spiced-Cider/
           cd _site
+          packwiz refresh
+
+      - name: Build Dev Cider Core
+        if: github.event_name != 'pull_request'
+        working-directory: ${{ env.DEV_SRC }}
+        run: |
+          chmod +x gradlew
+          ./gradlew :bootstrap:jar --stacktrace
+          version=$(grep '^version=' gradle.properties | cut -d= -f2 | tr -d '\r')
+          echo "DEV_VERSION=$version" >> "$GITHUB_ENV"
+          rm -f pack/mods/cider-core.pw.toml
+          cp "bootstrap/build/libs/spicedcider-$version.jar" "pack/mods/spicedcider-$version-dev.jar"
+
+      - name: Stage Dev Pack
+        if: github.event_name != 'pull_request'
+        run: |
+          python3 scripts/stage_release.py "$DEV_SRC/pack" _site/dev --version "$DEV_VERSION-dev" --base-url https://evanbones.github.io/Spiced-Cider/dev/
+          cd _site/dev
           packwiz refresh
 
       - name: Upload Pack Artifact

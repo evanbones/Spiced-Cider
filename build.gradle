@@ -146,6 +146,9 @@ tasks.register("exportCurseForgePack", Exec) {
 }
 
 def instanceZip = layout.buildDirectory.file("pack/${pack_name.replace(' ', '-')}-Prism-Instance.zip")
+def devInstanceZip = layout.buildDirectory.file("pack/${pack_name.replace(' ', '-')}-Dev-Prism-Instance.zip")
+def devInstanceName = "${pack_name} (dev branch)"
+def devPackUrl = "https://evanbones.github.io/Spiced-Cider/dev/pack.toml"
 def instanceFiles = layout.projectDirectory.dir("instance").asFile
 def packIcon = new File(instanceFiles, "icon.png")
 def unsupUrl = "https://cdn.modrinth.com/data/Rqwcr9qN/versions/qeqq6YGW/unsup-1.2.0-pre4.jar"
@@ -168,6 +171,24 @@ def fetchUnsup = {
     unsup
 }
 
+def writeInstanceZip = { File out, Closure<String> cfg, Closure<String> ini ->
+    def unsup = fetchUnsup()
+    out.parentFile.mkdirs()
+    new java.util.zip.ZipOutputStream(out.newOutputStream()).withCloseable { zip ->
+        def put = { String path, byte[] bytes ->
+            zip.putNextEntry(new java.util.zip.ZipEntry(path))
+            zip.write(bytes)
+            zip.closeEntry()
+        }
+        put("instance.cfg", cfg(new File(instanceFiles, "instance.cfg").getText("UTF-8")).getBytes("UTF-8"))
+        put("mmc-pack.json", new File(instanceFiles, "mmc-pack.json").getText("UTF-8")
+                .replace("@minecraft@", mcVersion).replace("@neoforge@", neoVersion).getBytes("UTF-8"))
+        put("spicedcider.png", packIcon.bytes)
+        put("minecraft/unsup.ini", ini(new File(instanceFiles, "unsup.ini").getText("UTF-8")).getBytes("UTF-8"))
+        put("minecraft/unsup.jar", unsup.bytes)
+    }
+}
+
 tasks.register("exportInstance") {
     group = "spiced cider"
     description = "Builds a Prism/MultiMC instance zip that installs and updates the pack through unsup"
@@ -177,23 +198,30 @@ tasks.register("exportInstance") {
     inputs.property("neo", neoVersion)
     outputs.file(instanceZip)
     doLast {
-        def unsup = fetchUnsup()
         def out = instanceZip.get().asFile
-        out.parentFile.mkdirs()
-        new java.util.zip.ZipOutputStream(out.newOutputStream()).withCloseable { zip ->
-            def put = { String path, byte[] bytes ->
-                zip.putNextEntry(new java.util.zip.ZipEntry(path))
-                zip.write(bytes)
-                zip.closeEntry()
-            }
-            put("instance.cfg", new File(instanceFiles, "instance.cfg").bytes)
-            put("mmc-pack.json", new File(instanceFiles, "mmc-pack.json").getText("UTF-8")
-                    .replace("@minecraft@", mcVersion).replace("@neoforge@", neoVersion).getBytes("UTF-8"))
-            put("spicedcider.png", packIcon.bytes)
-            put("minecraft/unsup.ini", new File(instanceFiles, "unsup.ini").bytes)
-            put("minecraft/unsup.jar", unsup.bytes)
-        }
+        writeInstanceZip(out, { it }, { it })
         logger.lifecycle("Prism instance exported to ${out}")
+    }
+}
+
+tasks.register("exportDevInstance") {
+    group = "spiced cider"
+    description = "Builds a Prism/MultiMC instance zip that follows the dev branch pack through unsup"
+    inputs.dir(instanceFiles)
+    inputs.file(packIcon)
+    inputs.property("mc", mcVersion)
+    inputs.property("neo", neoVersion)
+    inputs.property("name", devInstanceName)
+    inputs.property("source", devPackUrl)
+    outputs.file(devInstanceZip)
+    doLast {
+        def out = devInstanceZip.get().asFile
+        writeInstanceZip(out,
+                { it.replaceFirst(/(?m)^name=.*$/, "name=${devInstanceName}")
+                        .replaceFirst(/(?m)^notes=.*$/, "notes=Follows the dev branch and updates itself on every launch.") },
+                { it.replaceFirst(/(?m)^source=.*$/, "source=${devPackUrl}")
+                        .replaceFirst(/(?m)^modpack_name=.*$/, "modpack_name=${devInstanceName}") })
+        logger.lifecycle("Dev Prism instance exported to ${out}")
     }
 }
 
