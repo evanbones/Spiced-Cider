@@ -40,14 +40,6 @@
   {
     "action": "replace_input",
     "filter": {
-      "id": "create:crafting/kinetics/belt_connector"
-    },
-    "target": "minecraft:dried_kelp",
-    "replacement": "etcetera:rubber"
-  },
-  {
-    "action": "replace_input",
-    "filter": {
       "id": "/suppsquared:candle_holders\\/gold_candle_holder.*/"
     },
     "target": "#c:ingots/gold",
@@ -95,14 +87,6 @@
       "id": "create:crafting/kinetics/rope_pulley"
     },
     "target": "#minecraft:wool",
-    "replacement": "farmersdelight:rope"
-  },
-  {
-    "action": "replace_input",
-    "filter": {
-      "id": "vanillabackport:bundle"
-    },
-    "target": "minecraft:string",
     "replacement": "farmersdelight:rope"
   },
   {

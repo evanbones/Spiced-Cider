@@ -202,7 +202,6 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.BooleanValue ledgeClimbRework;
         public final ModConfigSpec.BooleanValue ledgeClimbStamina;
         public final ModConfigSpec.BooleanValue sittingStaminaRegen;
-        public final ModConfigSpec.BooleanValue personalityNoCrawl;
         public final ModConfigSpec.BooleanValue quarkStoolSeats;
         public final ModConfigSpec.BooleanValue basinCampfireHeat;
         public final ModConfigSpec.BooleanValue calmerHerdPanic;
@@ -247,6 +246,7 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.IntValue bundleCapacity;
         public final ModConfigSpec.IntValue fallDamageReduction;
         public final ModConfigSpec.BooleanValue noNestedBundles;
+        public final ModConfigSpec.BooleanValue rangedSkeletons;
         public final ModConfigSpec.BooleanValue iglooBasementRemoval;
         public final ModConfigSpec.BooleanValue noVanillaCocoaPods;
         public final ModConfigSpec.BooleanValue paleOakGrowsGloomwood;
@@ -386,11 +386,6 @@ public class SpicedCiderConfig {
                     .comment(tooltip("sittingStaminaRegen"))
                     .translation("option.spicedcider.sittingStaminaRegen")
                     .define("sittingStaminaRegen", false);
-
-            personalityNoCrawl = builder
-                    .comment(tooltip("personalityNoCrawl"))
-                    .translation("option.spicedcider.personalityNoCrawl")
-                    .define("personalityNoCrawl", false);
 
             quarkStoolSeats = builder
                     .comment(tooltip("quarkStoolSeats"))
@@ -598,6 +593,11 @@ public class SpicedCiderConfig {
                     .comment(tooltip("noNestedBundles"))
                     .translation("option.spicedcider.noNestedBundles")
                     .define("noNestedBundles", false);
+
+            rangedSkeletons = builder
+                    .comment(tooltip("rangedSkeletons"))
+                    .translation("option.spicedcider.rangedSkeletons")
+                    .define("rangedSkeletons", false);
 
             iglooBasementRemoval = builder
                     .comment(tooltip("iglooBasementRemoval"))

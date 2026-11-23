@@ -16,6 +16,7 @@ import net.minecraft.world.entity.monster.Evoker;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.biome.MobSpawnSettings;
 import net.minecraft.world.level.levelgen.Heightmap;
@@ -40,12 +41,14 @@ public class SpawnControlEvents {
 
         Holder<EntityType<?>> type = entity.getType().builtInRegistryHolder();
 
-        if (type.is(ModTags.EntityTypes.DENY_SPAWN)
-                || (type.is(ModTags.EntityTypes.DENY_NATURAL_SPAWN) && isNaturalSpawn(entity))
-                || (isNaturalSpawn(entity) && !type.is(ModTags.EntityTypes.ALLOWED_IN_RESTRICTED_BIOMES)
-                && event.getLevel().getBiome(entity.blockPosition()).is(ModTags.Biomes.RESTRICTED_SPAWNS))) {
+        if (isDenied(entity, event.getLevel())) {
+            entity.ejectPassengers();
             event.setCanceled(true);
             return;
+        }
+        Entity vehicle = entity.getVehicle();
+        if (vehicle != null && !vehicle.isAddedToLevel() && isDenied(vehicle, event.getLevel())) {
+            entity.stopRiding();
         }
 
         if (!event.loadedFromDisk()) {
@@ -75,6 +78,14 @@ public class SpawnControlEvents {
             if (pos.getY() < level.getHeight(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, pos.getX(), pos.getZ())) return false;
         }
         return Monster.checkMonsterSpawnRules(type, level, spawnType, pos, random);
+    }
+
+    private static boolean isDenied(Entity entity, Level level) {
+        Holder<EntityType<?>> type = entity.getType().builtInRegistryHolder();
+        return type.is(ModTags.EntityTypes.DENY_SPAWN)
+                || (type.is(ModTags.EntityTypes.DENY_NATURAL_SPAWN) && isNaturalSpawn(entity))
+                || (isNaturalSpawn(entity) && !type.is(ModTags.EntityTypes.ALLOWED_IN_RESTRICTED_BIOMES)
+                && level.getBiome(entity.blockPosition()).is(ModTags.Biomes.RESTRICTED_SPAWNS));
     }
 
     private static boolean isNaturalSpawn(Entity entity) {

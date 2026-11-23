@@ -77,6 +77,7 @@ public class SpicedCiderConfigScreen {
                         .option(toggle("leavesNotSuffocating", startup.leavesNotSuffocating))
                         .option(toggle("torchflowerLight", startup.torchflowerLight))
                         .option(toggle("skeletonHealthNerf", startup.skeletonHealthNerf))
+                        .option(toggle("rangedSkeletons", common.rangedSkeletons))
                         .option(toggle("voidWater", common.voidWater))
                         .option(intSlider("voidWaterTrailLength", common.voidWaterTrailLength, 0, 64, 1))
                         .option(doubleSlider("voidWaterTrailDecay", common.voidWaterTrailDecay, 0.25, 8.0, 0.25))
@@ -256,8 +257,6 @@ public class SpicedCiderConfigScreen {
                 toggle("ledgeClimbStamina", common.ledgeClimbStamina));
         group(groups, List.of("treeliable", "modest_meals"),
                 toggle("treeChoppingStamina", common.treeChoppingStamina));
-        group(groups, List.of("personality"),
-                toggle("personalityNoCrawl", common.personalityNoCrawl));
         group(groups, List.of("personality", "modest_meals"),
                 toggle("sittingStaminaRegen", common.sittingStaminaRegen));
         group(groups, List.of("quark", "create"),

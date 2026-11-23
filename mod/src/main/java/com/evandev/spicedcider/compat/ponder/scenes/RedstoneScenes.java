@@ -150,7 +150,7 @@ public class RedstoneScenes {
         scene.idle(90);
 
         scene.overlay().showText(90)
-                .text("Comparators also read Cauldrons, Composters, Cakes, Jukeboxes, Lecterns and more")
+                .text("Comparators also read Basins, Composters, Cakes, Jukeboxes, Lecterns and more")
                 .pointAt(util.vector().topOf(barrel))
                 .placeNearTarget();
         scene.idle(100);

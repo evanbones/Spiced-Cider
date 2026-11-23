@@ -30,6 +30,9 @@ public class ModSounds {
     public static final DeferredHolder<SoundEvent, SoundEvent> GRAPPLING_HOOK_TIGHTEN = SOUNDS.register("entity.player.grappling_hook.tighten",
             () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "entity.player.grappling_hook.tighten")));
 
+    public static final DeferredHolder<SoundEvent, SoundEvent> CRUDE_BOW_SHOOT = SOUNDS.register("item.crude_bow.shoot",
+            () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "item.crude_bow.shoot")));
+
     public static final DeferredHolder<SoundEvent, SoundEvent> BALLOON_TIE = SOUNDS.register("entity.balloon.tie",
             () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "entity.balloon.tie")));
 

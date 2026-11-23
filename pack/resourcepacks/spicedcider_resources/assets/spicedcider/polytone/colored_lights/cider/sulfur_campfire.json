@@ -1,0 +1,13 @@
+{
+  "targets": [
+    {
+      "id": "spicedcider:sulfur_campfire",
+      "required": false
+    }
+  ],
+  "colored_light": {
+    "color": "#7A7CFF",
+    "radius": 10,
+    "brightness": "object.blockStateValue('lit') ? 0.85 : 0"
+  }
+}

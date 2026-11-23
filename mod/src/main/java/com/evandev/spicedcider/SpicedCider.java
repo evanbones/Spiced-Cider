@@ -2,10 +2,13 @@ package com.evandev.spicedcider;
 
 import com.evandev.spicedcider.content.casting.MouldShape;
 import com.evandev.spicedcider.content.casting.CastingCapabilities;
+import com.evandev.spicedcider.compat.beams.BeamsCompat;
 import com.evandev.spicedcider.compat.continuity.ContinuityLazyModelWrapping;
 import com.evandev.spicedcider.compat.dynamiccrosshair.DynamicCrosshairCompat;
 import com.evandev.spicedcider.content.stuckarrows.StuckArrows;
 import com.evandev.spicedcider.client.stuckarrows.StuckArrowsClient;
+import com.evandev.spicedcider.client.crudebow.CrudeBowClient;
+import com.evandev.spicedcider.networking.CrudeArrowPayload;
 import com.evandev.spicedcider.networking.PullStuckArrowPayload;
 import com.evandev.spicedcider.networking.StuckArrowsPayload;
 import com.evandev.spicedcider.client.ResourcePackDownloader;
@@ -211,6 +214,9 @@ public class SpicedCider {
         if (ModList.get().isLoaded("create")) {
             event.enqueueWork(com.evandev.spicedcider.compat.create.MouldSpouting::register);
         }
+        if (ModItems.CAST_IRON_BEAM != null) {
+            event.enqueueWork(() -> BeamsCompat.registerCastIron(ModItems.CAST_IRON_BEAM));
+        }
         event.enqueueWork(() -> ModItems.BALLOONS.values().forEach(balloon -> DispenserBlock.registerBehavior(balloon.get(), new BalloonItem.DispenseBehavior())));
         event.enqueueWork(() -> ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.GLOAMWOOD_SAPLING.getId(), ModBlocks.POTTED_GLOAMWOOD_SAPLING));
         event.enqueueWork(() -> ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.CACAO_SAPLING.getId(), ModBlocks.POTTED_CACAO_SAPLING));
@@ -229,8 +235,8 @@ public class SpicedCider {
     public static void modifyVanillaAttributes(EntityAttributeModificationEvent event) {
         if (!SpicedCiderConfig.STARTUP.skeletonHealthNerf.get()) return;
 
-        event.add(EntityType.SKELETON, Attributes.MAX_HEALTH, 12.0D);
-        event.add(EntityType.STRAY, Attributes.MAX_HEALTH, 12.0D);
+        event.add(EntityType.SKELETON, Attributes.MAX_HEALTH, 10.0D);
+        event.add(EntityType.STRAY, Attributes.MAX_HEALTH, 10.0D);
     }
 
     @SubscribeEvent
@@ -352,6 +358,9 @@ public class SpicedCider {
             event.insertAfter(new ItemStack(Items.WARPED_HANGING_SIGN), new ItemStack(ModItems.TWISTED_SIGN.get()), vis);
             event.insertAfter(new ItemStack(ModItems.TWISTED_SIGN.get()), new ItemStack(ModItems.TWISTED_HANGING_SIGN.get()), vis);
         }
+        if (ModItems.CAST_IRON_BEAM != null && event.getTabKey().location().equals(BeamsCompat.BEAMS_TAB)) {
+            event.accept(ModItems.CAST_IRON_BEAM.get(), vis);
+        }
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.insertAfter(new ItemStack(Items.IRON_BLOCK), new ItemStack(ModItems.CAST_IRON_BLOCK.get()), vis);
             Stream.of(ModItems.DRIED_DEEPSILT, ModItems.CUT_DRIED_DEEPSILT, ModItems.POLISHED_DRIED_DEEPSILT, ModItems.CHISELED_DRIED_DEEPSILT).forEach(item -> event.accept(item.get(), vis));
@@ -391,6 +400,7 @@ public class SpicedCider {
             }
         }
         if (event.getTabKey() == CreativeModeTabs.COMBAT) {
+            event.insertBefore(new ItemStack(Items.BOW), new ItemStack(ModItems.CRUDE_BOW.get()), vis);
             event.insertAfter(new ItemStack(Items.NETHERITE_AXE), new ItemStack(ModItems.INFERNITE_CLEAVER.get()), vis);
             event.insertAfter(new ItemStack(Items.GOLDEN_SWORD), new ItemStack(ModItems.PIGLIN_BROADSWORD.get()), vis);
             event.insertAfter(new ItemStack(Items.GOLDEN_AXE), new ItemStack(ModItems.PIGLIN_BATTLEAXE.get()), vis);
@@ -452,6 +462,11 @@ public class SpicedCider {
                 StuckArrowsPayload.TYPE,
                 StuckArrowsPayload.CODEC,
                 (payload, context) -> context.enqueueWork(() -> StuckArrowsClient.receive(payload))
+        );
+        registrar.playToClient(
+                CrudeArrowPayload.TYPE,
+                CrudeArrowPayload.CODEC,
+                (payload, context) -> context.enqueueWork(() -> CrudeBowClient.receive(payload))
         );
         registrar.playToServer(
                 PullStuckArrowPayload.TYPE,

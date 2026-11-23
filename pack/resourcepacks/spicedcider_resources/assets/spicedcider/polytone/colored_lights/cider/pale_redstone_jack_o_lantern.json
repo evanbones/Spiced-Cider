@@ -1,0 +1,12 @@
+{
+  "targets": [
+    {
+      "id": "spicedcider:pale_redstone_jack_o_lantern",
+      "required": false
+    }
+  ],
+  "colored_light": {
+    "color": "#FF2200",
+    "brightness": "object.blockStateValue('lit') ? 1 : 0"
+  }
+}

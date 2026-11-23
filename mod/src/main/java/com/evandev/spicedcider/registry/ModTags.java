@@ -92,6 +92,7 @@ public class ModTags {
         public static final TagKey<EntityType<?>> ALLOWED_IN_RESTRICTED_BIOMES = tag("allowed_in_restricted_biomes");
         public static final TagKey<EntityType<?>> BALLOON_UNATTACHABLE = tag("balloon_unattachable");
         public static final TagKey<EntityType<?>> STATIC_HORSE_STATS = tag("static_horse_stats");
+        public static final TagKey<EntityType<?>> RANGED_SKELETONS = tag("ranged_skeletons");
 
         private static TagKey<EntityType<?>> tag(String name) {
             return TagKey.create(Registries.ENTITY_TYPE, ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, name));

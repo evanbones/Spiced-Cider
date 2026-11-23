@@ -29,11 +29,18 @@
 - `spicedcider:crafting_shapeless_keeping` recipe type: a shapeless recipe that hands back its `keep` ingredient.
 - Glass bottles fill from Basins, Fluid Tanks and other Create fluid containers using any `create:filling` recipe
   for a glass bottle.
+- Crude Bow: a weak early bow (96 durability). Arrows leave at 70% speed, fall with double gravity and never crit, and
+  it plays its own shoot sound. Takes every bow enchantment.
+- Skeleton Tactics: skeletons in `spicedcider:ranged_skeletons` that hold a bow don't strafe, shoot faster at close
+  range, and swap to a Farmer's Delight flint knife when a target is within 3 blocks, back to the bow at 5 (off by default).
+- Cast Iron Beam for Vintage Beams, crafted from a Cast Iron Sheet and an Iron Nugget (makes 4).
 
 ### Changed
 
+- Packed Mud and Polished Mud stairs, slabs and walls are named Packed Dirt and Polished Dirt.
 - Server-side performance improvements for distant terrain handling.
 - Crucibles on campfires sit a bit lower.
+- Skeleton Health Nerf gives skeletons and strays 10 max health instead of 12.
 - The Smeltery recipe uses a Cast Iron Ingot instead of a Cast Iron Frame.
 - Crucible bronze, rose gold and electrum accept raw ore (`c:raw_materials/*`) as well as ingots.
 - Crucible pouring runs as one continuous use on both sides at 25 mB a tick: the mould fill level rises smoothly, and
@@ -55,9 +62,14 @@
 - Retextured Cobbled Limestone and the Worm Crate.
 - Spider web projectiles no longer deal damage.
 - Reliable Backpacks sneak-placing from your back works again when Backpack Inventory Rows is on.
+- EMI washing recipes show a Basin instead of a Cauldron (Create).
+- The comparator Ponder mentions Basins instead of Cauldrons.
+- Mounts blocked by `spicedcider:deny_spawn` or `deny_natural_spawn` drop their riders instead of leaving them riding
+  nothing.
 
 ### Fixed
 
+- Compatible with FancyMenu 3.11: the placeholder length cap is lifted through its new `isTooLongToParse` check.
 - Food no longer lists or gives effects removed by Reliable Remover.
 - Fixed a memory leak in Where Winds Blow wind streaks.
 - Voxy no longer reports "Deserialization was air, removed block" or "Could not decode blockstate" in chat for blocks
@@ -84,12 +96,15 @@
   no longer takes off a filled backpack.
 - Snowy Spirit gingerbread cookies keep one shape in tooltip item previews (bundles, Item Interactions).
 - Holding attack while mining no longer misses into the air and delays mining.
-- Field Guide's scan and discovery overlays no longer let later particles (Polytone additive glows) show through
-  blocks.
 - EMI loot pages are no longer hidden entirely by Reliable Remover when one drop is a removed stack (such as an
   enchanted book with a removed enchantment).
 - Stripping logs that a mod strips after the axe lookup (Bountiful Fares) drops tree bark.
 - Fire Strikers light Caverns & Chasms Sparklers.
+- A bundle inside another bundle counts its full weight when Bundle Capacity is raised, and unstackable items fill a whole bundle at any capacity.
+- Horseman's see-through mount no longer hides water, dropped items and block-breaking cracks behind it.
+- Quark inventory sorting puts javelins and spears with tridents and bows.
+- Bronze, Rose Gold, Prismarite, Valkyrium and Adamantite horse armor no longer have a flickering checkered fringe.
+- Bed screen tips no longer overlap chat; chat moves up above the tip.
 
 ### Removed
 
@@ -100,3 +115,4 @@
 - The Modulation threat-glow and Vista fog-buffer patches, which Modulation now does natively (Reveal Targeting Monsters
   option; Improved Fog per-viewport buffers).
 - Removed the Offgrid patches that Offgrid now does natively.
+- The No Personality Crawling option.

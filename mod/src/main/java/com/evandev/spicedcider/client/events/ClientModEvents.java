@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.client.events;
 
+import com.evandev.spicedcider.client.crudebow.CrudeBowClient;
 import com.evandev.spicedcider.client.renderer.CastingRenderers;
 import com.evandev.spicedcider.client.renderer.CopperPatina;
 import com.evandev.spicedcider.client.renderer.GraveRenderer;
@@ -301,6 +302,7 @@ public class ClientModEvents {
             ItemProperties.register(ModItems.POCKET_JUKEBOX.get(), PLAYING, PocketJukeboxClient::playingProperty);
             ModItems.POCKET_JUKEBOXES.values().forEach(item -> ItemProperties.register(item.get(), PLAYING, PocketJukeboxClient::playingProperty));
             ItemProperties.register(Items.FILLED_MAP, MAP_ICON, MapIconProperty::get);
+            CrudeBowClient.registerItemProperties();
             ModTierItems.JAVELINS.forEach(item -> ItemProperties.register(item.get(), ResourceLocation.fromNamespaceAndPath("modestmining", "throwing"),
                     (stack, level, entity, seed) -> entity != null && entity.isUsingItem() && entity.getUseItem() == stack ? 1.0F : 0.0F));
             if (ModItems.ADAMANTITE_FISHING_ROD != null) {

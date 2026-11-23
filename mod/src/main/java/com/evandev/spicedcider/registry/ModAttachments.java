@@ -50,6 +50,20 @@ public class ModAttachments {
                     .build()
     );
 
+    public static final Supplier<AttachmentType<Boolean>> CRUDE_ARROW = ATTACHMENT_TYPES.register(
+            "crude_arrow",
+            () -> AttachmentType.builder(() -> false)
+                    .serialize(Codec.BOOL)
+                    .build()
+    );
+
+    public static final Supplier<AttachmentType<ItemStack>> SHEATHED_BOW = ATTACHMENT_TYPES.register(
+            "sheathed_bow",
+            () -> AttachmentType.builder(() -> ItemStack.EMPTY)
+                    .serialize(ItemStack.OPTIONAL_CODEC, stack -> !stack.isEmpty())
+                    .build()
+    );
+
     public static final Supplier<AttachmentType<List<ItemStack>>> SOULBOUND_ITEMS = ATTACHMENT_TYPES.register(
             "soulbound_items",
             () -> AttachmentType.<List<ItemStack>>builder(() -> List.of())

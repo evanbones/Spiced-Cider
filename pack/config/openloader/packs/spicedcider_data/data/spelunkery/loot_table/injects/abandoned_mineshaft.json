@@ -99,25 +99,6 @@
             },
             {
               "type": "minecraft:item",
-              "name": "spelunkery:rope_ladder",
-              "functions": [
-                {
-                  "function": "minecraft:set_count",
-                  "count": {
-                    "min": 3,
-                    "max": 16
-                  }
-                }
-              ],
-              "conditions": [
-                {
-                  "condition": "minecraft:random_chance",
-                  "chance": 0.25
-                }
-              ]
-            },
-            {
-              "type": "minecraft:item",
               "name": "spelunkery:glowstick",
               "functions": [
                 {

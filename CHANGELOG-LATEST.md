@@ -26,9 +26,22 @@
 - Molten metals are grouped together in EMI.
 - Pillars, tiles, bricks, chiseled blocks and other cut variants can be cut back into the block they came from in
   the Stonecutter and Sawmill.
+- Crude Bow: an early bow made from sticks and string.
+- Changed Bow recipe.
+- Skeletons stand still to shoot instead of strafing, shoot faster the closer you are, and pull out a flint knife when
+  you get up close.
+- Vintage Beams in every woodtype, plus Cast Iron Beams.
 
 ### Changed
 
+- Copper Shingles and Copper Tiles are made in the Stonecutter like other copper blocks: 4 from a Block of Copper, or
+  1 from Cut Copper.
+- Mausoleums are built from Cut Copper instead of Blocks of Copper, so they no longer hand out hundreds of ingots.
+- Packed Mud is now Packed Dirt, crafted from 4 dirt (makes 4). Mud Bricks and everything made from them are now Dirt
+  Bricks, and Polished Mud and the mud door, trapdoor and lamp are now Polished Dirt, Dirt Door, Dirt Trapdoor and Dirt
+  Lamp.
+- Sandstone, Red Sandstone and Soul Sandstone make 4 blocks from 4 sand, like other building blocks.
+- Skeletons and strays have 10 health, down from 12.
 - Climbing up ledges is quicker and lands you on top. It only happens on ledges about two blocks tall that you are
   facing, and costs a bolt of stamina.
 - Stepping up and down blocks now has a smooth camera, in third person and on horseback too.
@@ -74,6 +87,7 @@
 - Tofu is fermented with a Water Bottle, and the bottle is given back.
 - Bundles can no longer be put inside other bundles.
 - New pear tree fruit models and textures.
+- Lemons growing on lemon trees are the same colour as Lemons.
 - New Sulfur and Glowlight Candle textures, and their candle holders match.
 - Hammering Copper, Tin, Lead, Bronze and Gold sheets on a Workstone always works.
 - Lategame metal sheets can only be made with a Mechanical Press or a Plate Mould.
@@ -122,9 +136,20 @@
 - The Smeltery stacks to 256.
 - Dried Ghasts are infused from Soul Sand and 8 Ghast Tears instead of crafted.
 - Safes can be mined with a copper pickaxe, like other lead blocks.
+- Bread is only baked from dough.
+- Mechanical Belts are made from 3 Rubber in a row and make 4.
+- Geodes can be ground in a Mortar or Millstone, or put through Crushing Wheels.
+- Feeding a Rotten Apple to a Camel turns it into a Camel Husk.
+- Camel Husks no longer spawn naturally.
+- Washing dyed items is shown with a Basin in EMI.
+- Learning a new chalk symbol shows its message above the hotbar instead of in chat.
+- Changed Honey Lamp recipe.
+- Drawn bows show a flint-tipped arrow.
 
 ### Fixed
 
+- Removed leftover recipes that turned dirt straight into bricks, and duplicate recipes for trapped chests, ash adobe
+  bricks, iron tread plates, rough glass panes, chiseled gold bricks and raw ore blocks.
 - The Ichor Bottle no longer lists the Flammable effect.
 - Improved performance while it snows.
 - Improved LOD performance on servers.
@@ -172,9 +197,23 @@
 - Worn-out brushes keep their current texture.
 - Stripping Bountiful Fares logs (walnut, hoary and fruit logs) gives tree bark.
 - Fire Strikers light Sparklers.
+- A bundle inside another bundle counts its full weight, so bundles can no longer hold endless items through nesting.
+- Unstackable items like tools and potions fill a whole bundle again.
+- Setting an attribute filter to "is in group:" no longer disconnects you from a server.
+- Javelins are sorted with the other weapons and tools.
+- Campfires, fire pits and braziers no longer light campfires.
+- Diamond, Gold, Infernite, Steel, Silver, Necromium and Bronze horse armor no longer flicker.
+- Felling a Gloomwood tree also breaks its Creaking Heart.
+- Ladders from Woodworks and other mods can hang below the ladder above them, like Quark's.
+- Looking down through your horse or camel shows water, dropped items and block-breaking cracks behind it.
+- Long tips on the bed screen no longer overlap chat.
+- Walnut logs make 4 Walnut Chests like other logs.
 
 ### Removed
 
+- Coconut Coir, Packed Coconut Coir, Coir Bricks and Coir Carpet.
+- Raw Iron, Gold and Copper Bricks.
+- Mud Brick Lattice.
 - Ichor Fire Pits.
 - The Peeper Head.
 - Vessel, Frame and Pipe Moulds, Cast Iron Vessels and Cast Iron Frames.
@@ -186,3 +225,4 @@
 - The Recollection Tablet and the Soulbound enchantment.
 - The Skill Issue advancement.
 - Nozzles.
+- Tangle Ladders.

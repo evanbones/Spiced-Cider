@@ -296,7 +296,17 @@
       "quark:warped_post",
       "quark:stripped_crimson_post",
       "quark:stripped_azalea_log",
-      "quark:trapped_azalea_chest"
+      "quark:trapped_azalea_chest",
+      "quark:mud_brick_lattice",
+      "quark:raw_iron_bricks_slab",
+      "quark:raw_iron_bricks_stairs",
+      "quark:raw_iron_bricks_wall",
+      "quark:raw_gold_bricks_slab",
+      "quark:raw_gold_bricks_stairs",
+      "quark:raw_gold_bricks_wall",
+      "quark:raw_copper_bricks_slab",
+      "quark:raw_copper_bricks_stairs",
+      "quark:raw_copper_bricks_wall"
     ]
   },
   {
@@ -1058,5 +1068,26 @@
       "quark:trapped_warped_chest"
     ],
     "replace_with": "woodworks:trapped_warped_chest"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:raw_iron_bricks"
+    ],
+    "replace_with": "minecraft:raw_iron_block"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:raw_gold_bricks"
+    ],
+    "replace_with": "minecraft:raw_gold_block"
+  },
+  {
+    "action": "remove",
+    "items": [
+      "quark:raw_copper_bricks"
+    ],
+    "replace_with": "minecraft:raw_copper_block"
   }
 ]

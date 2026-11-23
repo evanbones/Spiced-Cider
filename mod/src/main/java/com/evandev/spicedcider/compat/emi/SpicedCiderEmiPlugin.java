@@ -35,6 +35,7 @@ public class SpicedCiderEmiPlugin implements EmiPlugin {
         }
         if (ModList.get().isLoaded("create")) {
             LadleMixingEmiRecipe.register(registry);
+            BasinWashingEmiRecipes.register(registry);
         }
         CastingEmiRecipes.register(registry);
         if (ModList.get().isLoaded("modestmining")) {

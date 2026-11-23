@@ -31,6 +31,7 @@ public class Tips {
     private static int current = -1;
     private static long shownSince;
     private static long lastSeen;
+    private static int renderedTop = -1;
 
     @Nullable
     public static Component current() {
@@ -54,11 +55,16 @@ public class Tips {
         if (tip == null) return;
         List<FormattedCharSequence> lines = font.split(tip, Math.min(MAX_WIDTH, maxWidth));
         int y = bottom - lines.size() * font.lineHeight;
-        graphics.drawString(font, Component.translatable("gui.spicedcider.tip").withStyle(ChatFormatting.YELLOW, ChatFormatting.UNDERLINE), MARGIN, y - font.lineHeight - 2, 0xFFFFFF);
+        renderedTop = y - font.lineHeight - 2;
+        graphics.drawString(font, Component.translatable("gui.spicedcider.tip").withStyle(ChatFormatting.YELLOW, ChatFormatting.UNDERLINE), MARGIN, renderedTop, 0xFFFFFF);
         for (FormattedCharSequence line : lines) {
             graphics.drawString(font, line, MARGIN, y, 0xE0E0E0);
             y += font.lineHeight;
         }
+    }
+
+    public static int renderedTop() {
+        return renderedTop;
     }
 
     public static void renderBottomLeft(GuiGraphics graphics, Font font, int width, int height) {

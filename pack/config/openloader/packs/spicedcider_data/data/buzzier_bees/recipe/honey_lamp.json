@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "N": {
+      "tag": "c:nuggets/gold"
+    },
+    "H": {
+      "item": "minecraft:honey_bottle"
+    },
+    "P": {
+      "item": "minecraft:light_weighted_pressure_plate"
+    }
+  },
+  "pattern": [
+    "N",
+    "H",
+    "P"
+  ],
+  "result": {
+    "id": "buzzier_bees:honey_lamp",
+    "count": 1
+  }
+}

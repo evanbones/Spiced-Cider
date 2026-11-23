@@ -3,6 +3,8 @@ package com.evandev.spicedcider.registry;
 import com.evandev.spicedcider.content.casting.CrucibleItem;
 import com.evandev.spicedcider.content.casting.MouldShape;
 import com.evandev.spicedcider.SpicedCider;
+import com.evandev.spicedcider.compat.beams.BeamsCompat;
+import com.evandev.spicedcider.content.item.CrudeBowItem;
 import com.evandev.spicedcider.content.item.MapInABottleItem;
 import com.evandev.spicedcider.content.item.BalloonItem;
 import com.evandev.spicedcider.content.item.InferniteCleaverItem;
@@ -37,6 +39,9 @@ public class ModItems {
 
     public static final DeferredItem<Item> FIRE_STRIKER = ITEMS.register("fire_striker",
             () -> new FireStrikerItem(new Item.Properties()));
+
+    public static final DeferredItem<Item> CRUDE_BOW = ITEMS.register("crude_bow",
+            () -> new CrudeBowItem(new Item.Properties().durability(96)));
 
     @Nullable
     public static final DeferredItem<Item> GRAPPLING_HOOK = TideCompat.isLoaded()
@@ -110,6 +115,10 @@ public class ModItems {
             () -> new BlockItem(ModBlocks.CAST_IRON_BLOCK.get(), new Item.Properties()));
     public static final DeferredItem<Item> CAST_IRON_SHEET = ITEMS.register("cast_iron_sheet",
             () -> new Item(new Item.Properties()));
+    @Nullable
+    public static final DeferredItem<Item> CAST_IRON_BEAM = BeamsCompat.isLoaded()
+            ? ITEMS.register("cast_iron_beam", BeamsCompat::castIronBeam)
+            : null;
     @Nullable
     public static final DeferredItem<Item> LEAD_PIPE = ModList.get().isLoaded("modestmining")
             ? ITEMS.register("lead_pipe", () -> new Item(new Item.Properties()))

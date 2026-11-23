@@ -58,9 +58,7 @@
 	#Leapers deal a third less explosion damage. Requires Adapted Mobs.
 	weakerLeapers = true
 	#Learning a new chalk symbol shows its message above the hotbar instead of in chat. Requires Chalk.
-	chalkSymbolsAboveHotbar = false
-	#Personality's crawl key does nothing, so crawling is left to another crawl mod. Sitting still works. Requires Personality.
-	personalityNoCrawl = false
+	chalkSymbolsAboveHotbar = true
 	#Rabbits don't run from players who are sneaking.
 	sneakUpOnRabbits = true
 
@@ -195,6 +193,8 @@
 		noLeafSpawns = true
 		#Players run up full blocks without jumping while sprinting.
 		stepUp = true
+		#Bow-wielding skeletons stand still while they shoot instead of strafing, shoot faster the closer you are, and switch to a flint knife when you get within 3 blocks.
+		rangedSkeletons = true
 
 	[features.voidWater]
 		#Fluids at the bottom of the world spill into the void as fading trails you can swim in. Takes effect when a world is next loaded.

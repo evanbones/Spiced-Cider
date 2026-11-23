@@ -91,6 +91,13 @@ public class ModItemTagsProvider extends ItemTagsProvider {
         this.tag(ItemTags.CREEPER_IGNITERS)
                 .add(ModItems.FIRE_STRIKER.get());
 
+        this.tag(Tags.Items.TOOLS_BOW)
+                .add(ModItems.CRUDE_BOW.get());
+        this.tag(ItemTags.BOW_ENCHANTABLE)
+                .add(ModItems.CRUDE_BOW.get());
+        this.tag(ItemTags.DURABILITY_ENCHANTABLE)
+                .add(ModItems.CRUDE_BOW.get());
+
         this.tag(ItemTags.SWORDS)
                 .add(ModItems.PIGLIN_BROADSWORD.get());
         this.tag(ItemTags.AXES)
