@@ -247,6 +247,7 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.IntValue fallDamageReduction;
         public final ModConfigSpec.BooleanValue noNestedBundles;
         public final ModConfigSpec.BooleanValue rangedSkeletons;
+        public final ModConfigSpec.BooleanValue darkForestEvokers;
         public final ModConfigSpec.BooleanValue iglooBasementRemoval;
         public final ModConfigSpec.BooleanValue noVanillaCocoaPods;
         public final ModConfigSpec.BooleanValue paleOakGrowsGloomwood;
@@ -598,6 +599,11 @@ public class SpicedCiderConfig {
                     .comment(tooltip("rangedSkeletons"))
                     .translation("option.spicedcider.rangedSkeletons")
                     .define("rangedSkeletons", false);
+
+            darkForestEvokers = builder
+                    .comment(tooltip("darkForestEvokers"))
+                    .translation("option.spicedcider.darkForestEvokers")
+                    .define("darkForestEvokers", false);
 
             iglooBasementRemoval = builder
                     .comment(tooltip("iglooBasementRemoval"))

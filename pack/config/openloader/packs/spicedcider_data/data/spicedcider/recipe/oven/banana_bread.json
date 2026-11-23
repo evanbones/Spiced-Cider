@@ -1,0 +1,30 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "culturaldelights"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "neapolitan"
+    }
+  ],
+  "type": "culturaldelights:baking",
+  "ingredients": [
+    {
+      "tag": "c:foods/dough/wheat"
+    },
+    {
+      "tag": "c:foods/banana"
+    },
+    {
+      "item": "minecraft:sugar"
+    }
+  ],
+  "cookingtime": 200,
+  "experience": 0.35,
+  "result": {
+    "id": "neapolitan:banana_bread",
+    "count": 1
+  }
+}

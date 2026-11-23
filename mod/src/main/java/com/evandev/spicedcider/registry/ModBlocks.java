@@ -18,6 +18,8 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import com.evandev.spicedcider.content.block.PrismarineClusterBlock;
 import com.evandev.spicedcider.content.block.TallUnderwaterBrambleBlock;
 import com.evandev.spicedcider.content.block.TemporaryCobwebBlock;
+import com.evandev.spicedcider.content.block.FineWoodWallBlock;
+import com.evandev.spicedcider.content.block.MetalLadderBlock;
 import com.evandev.spicedcider.content.block.TanningRackBlock;
 import com.evandev.spicedcider.content.block.GraveBlock;
 import com.evandev.spicedcider.content.block.GravestoneBlock;
@@ -130,6 +132,15 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> TIN_LANTERN = BLOCKS.register("tin_lantern",
             () -> new LanternBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LANTERN)));
+
+    public static final DeferredBlock<Block> BRONZE_LADDER = BLOCKS.register("bronze_ladder",
+            () -> new MetalLadderBlock(BlockBehaviour.Properties.of().forceSolidOff().strength(0.8F).sound(SoundType.COPPER).noOcclusion().pushReaction(PushReaction.DESTROY)));
+
+    @Nullable
+    public static final DeferredBlock<Block> FINE_WOOD_WALL = ModList.get().isLoaded("supplementaries")
+            ? BLOCKS.register("fine_wood_wall", () -> new FineWoodWallBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.WOOD).strength(2.0F, 3.0F).sound(SoundType.WOOD).ignitedByLava()))
+            : null;
 
     public static final DeferredBlock<Block> TANNING_RACK = BLOCKS.register("tanning_rack",
             () -> new TanningRackBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).strength(1.0F).sound(SoundType.WOOD)

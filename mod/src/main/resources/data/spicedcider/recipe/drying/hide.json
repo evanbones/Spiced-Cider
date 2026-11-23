@@ -1,0 +1,15 @@
+{
+  "type": "spicedcider:drying",
+  "ingredient": {
+    "tag": "spicedcider:tannable_hides"
+  },
+  "result": {
+    "id": "minecraft:leather",
+    "count": 4
+  },
+  "rack": {
+    "hung": "spicedcider:block/tanning_rack_hide",
+    "drying": "spicedcider:block/tanning_rack_hide_tanning",
+    "finished": "spicedcider:block/tanning_rack_leather"
+  }
+}

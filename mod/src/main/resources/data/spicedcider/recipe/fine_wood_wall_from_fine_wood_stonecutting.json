@@ -1,0 +1,16 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "supplementaries"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "supplementaries:fine_wood"
+  },
+  "result": {
+    "count": 1,
+    "id": "spicedcider:fine_wood_wall"
+  }
+}

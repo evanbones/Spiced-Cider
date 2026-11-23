@@ -128,5 +128,11 @@
       "nomansland:frosted_leaves"
     ],
     "replace_with": "minecraft:spruce_leaves"
+  },
+  {
+    "action": "remove_creative",
+    "effects": [
+      "nomansland:happiness"
+    ]
   }
 ]

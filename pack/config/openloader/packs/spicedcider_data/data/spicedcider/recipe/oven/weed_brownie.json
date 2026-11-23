@@ -1,0 +1,30 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "culturaldelights"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "nirvana"
+    }
+  ],
+  "type": "culturaldelights:baking",
+  "ingredients": [
+    {
+      "item": "nirvana:hemp_seeds"
+    },
+    {
+      "tag": "c:flours/wheat"
+    },
+    {
+      "item": "minecraft:cocoa_beans"
+    }
+  ],
+  "cookingtime": 200,
+  "experience": 0.35,
+  "result": {
+    "id": "nirvana:weed_brownie",
+    "count": 2
+  }
+}

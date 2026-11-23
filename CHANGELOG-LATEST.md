@@ -27,10 +27,17 @@
 - Pillars, tiles, bricks, chiseled blocks and other cut variants can be cut back into the block they came from in
   the Stonecutter and Sawmill.
 - Crude Bow: an early bow made from sticks and string.
-- Changed Bow recipe.
+- The Bow starts as an Unfinished Bow (sticks, string and Tallow), then a Deployer adds Leather and a Copper Sheet.
 - Skeletons stand still to shoot instead of strafing, shoot faster the closer you are, and pull out a flint knife when
   you get up close.
 - Vintage Beams in every woodtype, plus Cast Iron Beams.
+- Bronze Ladder.
+- Rotten Flesh can be hung on a Drying Rack, one piece at a time, and cured into Leather with Salt.
+- Raw nuggets are grouped separately from other nuggets in EMI.
+- Fine Wood Wall.
+- Crafting Mats: lay one on top of almost any block to use it as a Crafting Table.
+- Descriptions for Vampirism, Rifting, Warped, Sugar Crash, Happiness and Pacified, and for the Sporal effects.
+- Cushions have descriptions.
 
 ### Changed
 
@@ -145,6 +152,28 @@
 - Learning a new chalk symbol shows its message above the hotbar instead of in chat.
 - Changed Honey Lamp recipe.
 - Drawn bows show a flint-tipped arrow.
+- The Tanning Rack is now the Drying Rack.
+- Every metal ladder (Copper, Iron, Bronze, and Steel) is now made the same way.
+- Candle holders are made with 3 nuggets instead of an ingot.
+- Bronze Candle Holders are now Golden Candle Holders.
+- The Enchanted Golden Apple and Enchanted Golden Egg have their proper names back.
+- Blackstone Geodes can hold Ancient Scrap instead of Infernite Nuggets.
+- Crude Bows can be burned as furnace fuel, like Bows.
+- Cookies, breads, scones, brownies, pancakes and gingerbread are baked in an oven instead of crafted.
+- Breads, cookies, scones and gingerbread are baked from dough; cakes, muffins, pancakes and brownies from flour. Pie
+  crusts are made with flour instead of wheat.
+- Vanilla, chocolate, strawberry, banana and mint cakes take three of their flavour.
+- Tarts take three of their fruit, and Maple and Sweet Tarts are baked in a pie crust like other tarts.
+- Pumpkin pie is only made with a pie crust.
+- Shepherd's Pie is baked from potatoes instead of baked potatoes.
+- Ice cream bowls take three of their flavour to become a flavoured ice cream.
+- Gold Bars and Gold Buttons are now Golden Bars and Golden Buttons.
+- Retextured the Block of Gold and the Golden Plaque to match the Gold Ingot.
+- Detector, Powered, Activator and Controller Rails are made with nuggets instead of ingots.
+- Cushions are crafted 4 at a time.
+- Bread's description says it is baked from Dough.
+- The Happiness effect is hidden from EMI.
+- Vampires reliably come for you at night when you are out in a Dark Forest, instead of almost never spawning.
 
 ### Fixed
 
@@ -208,6 +237,15 @@
 - Looking down through your horse or camel shows water, dropped items and block-breaking cracks behind it.
 - Long tips on the bed screen no longer overlap chat.
 - Walnut logs make 4 Walnut Chests like other logs.
+- Flavoured cakes, tarts and Pear Cobbler no longer show an empty slot in their recipe.
+- Removed a duplicate ice cream recipe, duplicate oven recipes for apple, chocolate and pumpkin pie and sweet berry
+  cheesecake, and a second Shepherd's Pie recipe that made a single serving.
+- Pancakes can no longer be made on a crafting table, and berry, maize and mushroom stuffed potatoes no longer craft
+  into a regular Stuffed Potato.
+- The Pancake description explains how to add toppings.
+- Rotten Apples can no longer be used as a meal ingredient.
+- Inconsistent names for gold doors, trapdoors, bars, gates, lanterns, plaques, candelabras, gold bell, and gold hook.
+- Chiseled Gold Plated Bricks can no longer be crafted straight from Gold Ingots.
 
 ### Removed
 
@@ -226,3 +264,9 @@
 - The Skill Issue advancement.
 - Nozzles.
 - Tangle Ladders.
+- Baking bread from three wheat in an oven.
+- Crafting Hides from Rotten Flesh and Salt.
+- Cocoa Cake.
+- Crafting gingerbread from a hay bale.
+- Foul Flesh.
+- Baking cake from dough.

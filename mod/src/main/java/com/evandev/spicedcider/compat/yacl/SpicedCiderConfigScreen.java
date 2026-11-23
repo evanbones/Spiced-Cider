@@ -78,6 +78,7 @@ public class SpicedCiderConfigScreen {
                         .option(toggle("torchflowerLight", startup.torchflowerLight))
                         .option(toggle("skeletonHealthNerf", startup.skeletonHealthNerf))
                         .option(toggle("rangedSkeletons", common.rangedSkeletons))
+                        .option(toggle("darkForestEvokers", common.darkForestEvokers))
                         .option(toggle("voidWater", common.voidWater))
                         .option(intSlider("voidWaterTrailLength", common.voidWaterTrailLength, 0, 64, 1))
                         .option(doubleSlider("voidWaterTrailDecay", common.voidWaterTrailDecay, 0.25, 8.0, 0.25))

@@ -3,6 +3,7 @@ package com.evandev.spicedcider;
 import com.evandev.spicedcider.content.casting.MouldShape;
 import com.evandev.spicedcider.content.casting.CastingCapabilities;
 import com.evandev.spicedcider.compat.beams.BeamsCompat;
+import com.evandev.spicedcider.compat.beams.BeamsContent;
 import com.evandev.spicedcider.compat.continuity.ContinuityLazyModelWrapping;
 import com.evandev.spicedcider.compat.dynamiccrosshair.DynamicCrosshairCompat;
 import com.evandev.spicedcider.content.stuckarrows.StuckArrows;
@@ -215,7 +216,7 @@ public class SpicedCider {
             event.enqueueWork(com.evandev.spicedcider.compat.create.MouldSpouting::register);
         }
         if (ModItems.CAST_IRON_BEAM != null) {
-            event.enqueueWork(() -> BeamsCompat.registerCastIron(ModItems.CAST_IRON_BEAM));
+            event.enqueueWork(() -> BeamsContent.registerCastIron(ModItems.CAST_IRON_BEAM));
         }
         event.enqueueWork(() -> ModItems.BALLOONS.values().forEach(balloon -> DispenserBlock.registerBehavior(balloon.get(), new BalloonItem.DispenseBehavior())));
         event.enqueueWork(() -> ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.GLOAMWOOD_SAPLING.getId(), ModBlocks.POTTED_GLOAMWOOD_SAPLING));
@@ -323,6 +324,7 @@ public class SpicedCider {
         if (event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
             event.insertAfter(new ItemStack(Items.SOUL_TORCH), new ItemStack(ModFireBlocks.SULFUR_TORCH_ITEM.get()), vis);
             event.insertAfter(new ItemStack(Items.LANTERN), new ItemStack(ModItems.TIN_LANTERN.get()), vis);
+            event.insertAfter(new ItemStack(Items.LADDER), new ItemStack(ModItems.BRONZE_LADDER.get()), vis);
             event.insertAfter(new ItemStack(Items.SOUL_LANTERN), new ItemStack(ModFireBlocks.SULFUR_LANTERN_ITEM.get()), vis);
             event.insertAfter(new ItemStack(Items.SOUL_CAMPFIRE), new ItemStack(ModFireBlocks.SULFUR_CAMPFIRE_ITEM.get()), vis);
         }
@@ -373,6 +375,7 @@ public class SpicedCider {
             event.accept(ModItems.POLISHED_GLOWSTONE_PILLAR.get(), vis);
             if (ModItems.BONDED_HIDE != null) event.accept(ModItems.BONDED_HIDE.get(), vis);
             if (ModItems.BONDED_HOGLIN_HIDE != null) event.accept(ModItems.BONDED_HOGLIN_HIDE.get(), vis);
+            if (ModItems.FINE_WOOD_WALL != null) event.accept(ModItems.FINE_WOOD_WALL.get(), vis);
         }
         if (ModItems.POLISHED_GLOWSTONE_STAIRS != null && event.getTabKey().location().equals(InfernalExpansionCompat.TAB)) {
             ItemStack stairs = new ItemStack(ModItems.POLISHED_GLOWSTONE_STAIRS.get());
@@ -401,6 +404,7 @@ public class SpicedCider {
         }
         if (event.getTabKey() == CreativeModeTabs.COMBAT) {
             event.insertBefore(new ItemStack(Items.BOW), new ItemStack(ModItems.CRUDE_BOW.get()), vis);
+            if (ModItems.UNFINISHED_BOW != null) event.insertBefore(new ItemStack(Items.BOW), new ItemStack(ModItems.UNFINISHED_BOW.get()), vis);
             event.insertAfter(new ItemStack(Items.NETHERITE_AXE), new ItemStack(ModItems.INFERNITE_CLEAVER.get()), vis);
             event.insertAfter(new ItemStack(Items.GOLDEN_SWORD), new ItemStack(ModItems.PIGLIN_BROADSWORD.get()), vis);
             event.insertAfter(new ItemStack(Items.GOLDEN_AXE), new ItemStack(ModItems.PIGLIN_BATTLEAXE.get()), vis);

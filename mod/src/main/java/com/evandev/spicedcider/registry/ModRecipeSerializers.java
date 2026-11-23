@@ -5,6 +5,7 @@ import com.evandev.spicedcider.content.casting.CrucibleMeltingRecipe;
 import com.evandev.spicedcider.content.casting.MouldCastingRecipe;
 import com.evandev.spicedcider.content.casting.smeltery.SmelteryAlloyingRecipe;
 import com.evandev.spicedcider.recipe.AnvilSmithingRecipe;
+import com.evandev.spicedcider.recipe.DryingRecipe;
 import com.evandev.spicedcider.recipe.LabelRecipe;
 import com.evandev.spicedcider.recipe.KeepingShapelessRecipe;
 import com.evandev.spicedcider.recipe.PocketJukeboxDyeRecipe;
@@ -25,6 +26,8 @@ public class ModRecipeSerializers {
     public static final DeferredHolder<RecipeSerializer<?>, RecipeSerializer<PocketJukeboxDyeRecipe>> POCKET_JUKEBOX_DYE = RECIPE_SERIALIZERS.register("pocket_jukebox_dye", () -> PocketJukeboxDyeRecipe.SERIALIZER);
     public static final DeferredHolder<RecipeSerializer<?>, RecipeSerializer<AnvilSmithingRecipe>> ANVIL_SMITHING = RECIPE_SERIALIZERS.register("anvil_smithing", () -> AnvilSmithingRecipe.SERIALIZER);
 
+    public static final DeferredHolder<RecipeSerializer<?>, RecipeSerializer<DryingRecipe>> DRYING = RECIPE_SERIALIZERS.register("drying", () -> DryingRecipe.SERIALIZER);
+
     public static final DeferredHolder<RecipeSerializer<?>, RecipeSerializer<CrucibleMeltingRecipe>> CRUCIBLE_MELTING = RECIPE_SERIALIZERS.register("crucible_melting", () -> CrucibleMeltingRecipe.SERIALIZER);
     public static final DeferredHolder<RecipeSerializer<?>, RecipeSerializer<MouldCastingRecipe>> MOULD_CASTING = RECIPE_SERIALIZERS.register("mould_casting", () -> MouldCastingRecipe.SERIALIZER);
     public static final DeferredHolder<RecipeSerializer<?>, RecipeSerializer<CrucibleMeltingRecipe>> SMELTERY_MELTING = RECIPE_SERIALIZERS.register("smeltery_melting", () -> CrucibleMeltingRecipe.SMELTERY_SERIALIZER);
@@ -33,6 +36,7 @@ public class ModRecipeSerializers {
     public static final DeferredRegister<RecipeType<?>> RECIPE_TYPES = DeferredRegister.create(BuiltInRegistries.RECIPE_TYPE, SpicedCider.MOD_ID);
 
     public static final DeferredHolder<RecipeType<?>, RecipeType<AnvilSmithingRecipe>> ANVIL_SMITHING_TYPE = RECIPE_TYPES.register("anvil_smithing", () -> RecipeType.simple(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "anvil_smithing")));
+    public static final DeferredHolder<RecipeType<?>, RecipeType<DryingRecipe>> DRYING_TYPE = RECIPE_TYPES.register("drying", () -> RecipeType.simple(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "drying")));
     public static final DeferredHolder<RecipeType<?>, RecipeType<CrucibleMeltingRecipe>> CRUCIBLE_MELTING_TYPE = RECIPE_TYPES.register("crucible_melting", () -> RecipeType.simple(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "crucible_melting")));
     public static final DeferredHolder<RecipeType<?>, RecipeType<MouldCastingRecipe>> MOULD_CASTING_TYPE = RECIPE_TYPES.register("mould_casting", () -> RecipeType.simple(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "mould_casting")));
     public static final DeferredHolder<RecipeType<?>, RecipeType<CrucibleMeltingRecipe>> SMELTERY_MELTING_TYPE = RECIPE_TYPES.register("smeltery_melting", () -> RecipeType.simple(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "smeltery_melting")));

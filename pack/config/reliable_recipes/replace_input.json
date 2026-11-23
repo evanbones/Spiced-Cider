@@ -32,22 +32,6 @@
   {
     "action": "replace_input",
     "filter": {
-      "id": "farmersdelight:organic_compost_from_rotten_flesh"
-    },
-    "target": "minecraft:rotten_flesh",
-    "replacement": "#spicedcider:rotting_flesh"
-  },
-  {
-    "action": "replace_input",
-    "filter": {
-      "id": "/suppsquared:candle_holders\\/gold_candle_holder.*/"
-    },
-    "target": "#c:ingots/gold",
-    "replacement": "#c:ingots/bronze"
-  },
-  {
-    "action": "replace_input",
-    "filter": {
       "id": "caverns_and_chasms:barometer"
     },
     "target": "minecraft:redstone",
@@ -260,14 +244,6 @@
   {
     "action": "replace_input",
     "filter": {
-      "id": "/(supplementaries:candle_holders\\/candle_holder|spicedcider:candle_holders\\/candle_holder)(_[a-z]+)?/"
-    },
-    "target": "#c:ingots/iron",
-    "replacement": "#c:ingots/cast_iron"
-  },
-  {
-    "action": "replace_input",
-    "filter": {
       "id": "architects_palette:plating_block"
     },
     "target": "minecraft:iron_ingot",
@@ -280,5 +256,21 @@
     },
     "target": "minecraft:iron_nugget",
     "replacement": "#c:nuggets/cast_iron"
+  },
+  {
+    "action": "replace_input",
+    "filter": {
+      "id": "/minecraft:(detector|activator)_rail/"
+    },
+    "target": "#c:ingots/iron",
+    "replacement": "#c:nuggets/iron"
+  },
+  {
+    "action": "replace_input",
+    "filter": {
+      "id": "/(minecraft:powered_rail|create:crafting\\/kinetics\\/controller_rail)/"
+    },
+    "target": "#c:ingots/gold",
+    "replacement": "#c:nuggets/gold"
   }
 ]

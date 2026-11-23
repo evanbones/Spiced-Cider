@@ -1,0 +1,30 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "culturaldelights"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "neapolitan"
+    }
+  ],
+  "type": "culturaldelights:baking",
+  "ingredients": [
+    {
+      "tag": "c:foods/dough/wheat"
+    },
+    {
+      "tag": "c:foods/strawberry"
+    },
+    {
+      "item": "minecraft:sugar"
+    }
+  ],
+  "cookingtime": 200,
+  "experience": 0.35,
+  "result": {
+    "id": "neapolitan:strawberry_scones",
+    "count": 2
+  }
+}

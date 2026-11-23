@@ -52,6 +52,8 @@ public class ModItemTagsProvider extends ItemTagsProvider {
         ModPaleGardenBlocks.JACK_O_LANTERN_ITEMS.forEach(item -> jackItems.addOptional(item.getId()));
         this.tag(ItemTags.SMALL_FLOWERS).add(ModPaleGardenBlocks.PALE_ROSE_ITEM.get());
         this.tag(ModTags.Items.SULFUR_TORCHES).add(ModFireBlocks.SULFUR_TORCH_ITEM.get());
+        this.tag(ItemTags.create(ResourceLocation.fromNamespaceAndPath("c", "ladders"))).add(ModItems.BRONZE_LADDER.get());
+        this.tag(ItemTags.WALLS).addOptional(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "fine_wood_wall"));
         fireVariants();
         this.tag(ItemTags.SAPLINGS).add(ModItems.GLOAMWOOD_SAPLING.get());
         this.tag(ItemTags.SAPLINGS).add(ModItems.CACAO_SAPLING.get());

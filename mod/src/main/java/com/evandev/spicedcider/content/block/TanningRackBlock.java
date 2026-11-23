@@ -1,13 +1,13 @@
 package com.evandev.spicedcider.content.block;
 
 import com.evandev.spicedcider.SpicedCider;
-import com.evandev.spicedcider.registry.ModItems;
-import com.evandev.spicedcider.registry.ModTags;
+import com.evandev.spicedcider.content.block.entity.TanningRackBlockEntity;
+import com.evandev.spicedcider.recipe.DryingRecipe;
+import com.evandev.spicedcider.registry.ModRecipeSerializers;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.advancements.AdvancementHolder;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.particles.ItemParticleOption;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.resources.ResourceLocation;
@@ -16,24 +16,27 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
-import net.minecraft.util.StringRepresentable;
+import net.minecraft.world.Containers;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.item.crafting.RecipeHolder;
+import net.minecraft.world.item.crafting.SingleRecipeInput;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.Mirror;
 import net.minecraft.world.level.block.Rotation;
+import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -46,15 +49,11 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
 
-public class TanningRackBlock extends HorizontalDirectionalBlock {
+import java.util.Optional;
+
+public class TanningRackBlock extends HorizontalDirectionalBlock implements EntityBlock {
     public static final MapCodec<TanningRackBlock> CODEC = simpleCodec(TanningRackBlock::new);
     public static final EnumProperty<DoubleBlockHalf> HALF = BlockStateProperties.DOUBLE_BLOCK_HALF;
-    public static final EnumProperty<Contents> CONTENTS = EnumProperty.create("contents", Contents.class);
-    public static final int TANNING_TICKS = 1200;
-    public static final int HIDE_LEATHER = 4;
-    public static final int SMALL_HIDE_LEATHER = 1;
-    public static final int LARGE_HIDE_LEATHER = 6;
-    private static final ResourceLocation HOGLIN_HIDE = ResourceLocation.fromNamespaceAndPath("mynethersdelight", "hoglin_hide");
     private static final ResourceLocation TANNING_ADVANCEMENT = ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "spiced_cider/tanning");
 
     private static final double DRIP_OFFSET = 0.14;
@@ -65,8 +64,7 @@ public class TanningRackBlock extends HorizontalDirectionalBlock {
         super(properties);
         registerDefaultState(stateDefinition.any()
                 .setValue(FACING, Direction.NORTH)
-                .setValue(HALF, DoubleBlockHalf.LOWER)
-                .setValue(CONTENTS, Contents.EMPTY));
+                .setValue(HALF, DoubleBlockHalf.LOWER));
     }
 
     @Override
@@ -76,7 +74,7 @@ public class TanningRackBlock extends HorizontalDirectionalBlock {
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(FACING, HALF, CONTENTS);
+        builder.add(FACING, HALF);
     }
 
     @Override
@@ -129,67 +127,88 @@ public class TanningRackBlock extends HorizontalDirectionalBlock {
 
     @Override
     protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
-        Contents contents = state.getValue(CONTENTS);
-        Contents hung = stack.is(ModTags.Items.LARGE_TANNABLE_HIDES) ? Contents.HOGLIN_HIDE
-                : stack.is(ModTags.Items.TANNABLE_HIDES) ? Contents.HIDE
-                : stack.is(ModTags.Items.SMALL_TANNABLE_HIDES) ? Contents.SMALL_HIDE : null;
-        if (contents == Contents.EMPTY && hung != null) {
-            setContents(level, pos, state, hung);
+        if (!(level.getBlockEntity(lowerPos(pos, state)) instanceof TanningRackBlockEntity rack)) return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
+        if (rack.isEmpty()) {
+            Optional<RecipeHolder<DryingRecipe>> recipe = level.getRecipeManager().getRecipeFor(ModRecipeSerializers.DRYING_TYPE.get(), new SingleRecipeInput(stack), level);
+            if (recipe.isEmpty()) return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
             if (!level.isClientSide()) {
-                level.playSound(null, pos, SoundEvents.ARMOR_EQUIP_LEATHER.value(), SoundSource.BLOCKS, 1.0F, 0.8F);
-                level.gameEvent(player, GameEvent.BLOCK_CHANGE, pos);
+                rack.hang(recipe.get(), stack);
+                hangEffects(level, pos, player);
                 stack.consume(1, player);
             }
             return ItemInteractionResult.sidedSuccess(level.isClientSide());
         }
-        if (contents.isHide() && stack.is(ModTags.Items.TANNING_AGENTS)) {
-            setContents(level, pos, state, contents.next());
-            if (level instanceof ServerLevel serverLevel) {
-                level.scheduleTick(lowerPos(pos, state), this, TANNING_TICKS);
-                level.playSound(null, pos, SoundEvents.BRUSH_GENERIC, SoundSource.BLOCKS, 1.0F, 0.9F);
-                serverLevel.sendParticles(new ItemParticleOption(ParticleTypes.ITEM, stack.copyWithCount(1)),
-                        hit.getLocation().x, hit.getLocation().y, hit.getLocation().z, 8, 0.15, 0.15, 0.15, 0.05);
-                level.gameEvent(player, GameEvent.BLOCK_CHANGE, pos);
+        DryingRecipe recipe = rack.recipe();
+        if (recipe == null || rack.stage() != TanningRackBlockEntity.Stage.HUNG) return keepContents(rack, stack);
+        if (!rack.isFull()) {
+            if (!ItemStack.isSameItemSameComponents(stack, rack.hung())) return keepContents(rack, stack);
+            if (!level.isClientSide()) {
+                rack.addOne();
+                hangEffects(level, pos, player);
                 stack.consume(1, player);
             }
             return ItemInteractionResult.sidedSuccess(level.isClientSide());
         }
-        return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
+        if (!recipe.agentOrDefault().test(stack)) return keepContents(rack, stack);
+        if (level instanceof ServerLevel serverLevel) {
+            rack.setStage(TanningRackBlockEntity.Stage.DRYING);
+            level.scheduleTick(rack.getBlockPos(), this, recipe.time());
+            level.playSound(null, pos, SoundEvents.BRUSH_GENERIC, SoundSource.BLOCKS, 1.0F, 0.9F);
+            serverLevel.sendParticles(new ItemParticleOption(ParticleTypes.ITEM, stack.copyWithCount(1)),
+                    hit.getLocation().x, hit.getLocation().y, hit.getLocation().z, 8, 0.15, 0.15, 0.15, 0.05);
+            level.gameEvent(player, GameEvent.BLOCK_CHANGE, pos);
+            stack.consume(1, player);
+        }
+        return ItemInteractionResult.sidedSuccess(level.isClientSide());
+    }
+
+    private static ItemInteractionResult keepContents(TanningRackBlockEntity rack, ItemStack stack) {
+        return stack.isEmpty() || rack.stage() == TanningRackBlockEntity.Stage.FINISHED
+                ? ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION
+                : ItemInteractionResult.CONSUME;
+    }
+
+    private static void hangEffects(Level level, BlockPos pos, Player player) {
+        level.playSound(null, pos, SoundEvents.ARMOR_EQUIP_LEATHER.value(), SoundSource.BLOCKS, 1.0F, 0.8F);
+        level.gameEvent(player, GameEvent.BLOCK_CHANGE, pos);
     }
 
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hit) {
-        Contents contents = state.getValue(CONTENTS);
-        ItemStack taken = switch (contents) {
-            case HIDE -> new ItemStack(ModItems.HIDE.get());
-            case LEATHER -> new ItemStack(Items.LEATHER, HIDE_LEATHER);
-            case SMALL_HIDE -> new ItemStack(Items.RABBIT_HIDE);
-            case SMALL_LEATHER -> new ItemStack(Items.LEATHER, SMALL_HIDE_LEATHER);
-            case HOGLIN_HIDE -> new ItemStack(BuiltInRegistries.ITEM.get(HOGLIN_HIDE));
-            case HOGLIN_LEATHER -> new ItemStack(Items.LEATHER, LARGE_HIDE_LEATHER);
-            default -> ItemStack.EMPTY;
-        };
-        if (taken.isEmpty()) return InteractionResult.PASS;
-        setContents(level, pos, state, Contents.EMPTY);
+        if (!(level.getBlockEntity(lowerPos(pos, state)) instanceof TanningRackBlockEntity rack) || rack.isEmpty()
+                || rack.stage() == TanningRackBlockEntity.Stage.DRYING) return InteractionResult.PASS;
         if (!level.isClientSide()) {
+            boolean finished = rack.stage() == TanningRackBlockEntity.Stage.FINISHED;
+            ItemStack taken = rack.takeContents();
             level.playSound(null, pos, SoundEvents.ITEM_PICKUP, SoundSource.PLAYERS, 0.4F, 1.0F);
             level.gameEvent(player, GameEvent.BLOCK_CHANGE, pos);
-            if (!player.getInventory().add(taken)) player.drop(taken, false);
-            if (contents.isLeather() && player instanceof ServerPlayer serverPlayer) awardTanning(serverPlayer);
+            if (!taken.isEmpty() && !player.getInventory().add(taken)) player.drop(taken, false);
+            if (finished && player instanceof ServerPlayer serverPlayer) awardTanning(serverPlayer);
         }
         return InteractionResult.sidedSuccess(level.isClientSide());
     }
 
     @Override
     protected void tick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
-        if (state.getValue(HALF) != DoubleBlockHalf.LOWER || !state.getValue(CONTENTS).isTanning()) return;
-        setContents(level, pos, state, state.getValue(CONTENTS).next());
+        if (state.getValue(HALF) != DoubleBlockHalf.LOWER || !(level.getBlockEntity(pos) instanceof TanningRackBlockEntity rack)
+                || rack.stage() != TanningRackBlockEntity.Stage.DRYING) return;
+        rack.setStage(TanningRackBlockEntity.Stage.FINISHED);
         level.playSound(null, pos.above(), SoundEvents.ARMOR_EQUIP_LEATHER.value(), SoundSource.BLOCKS, 0.8F, 1.0F);
     }
 
     @Override
+    protected void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean movedByPiston) {
+        if (!state.is(newState.getBlock()) && level.getBlockEntity(pos) instanceof TanningRackBlockEntity rack) {
+            ItemStack contents = rack.contents();
+            if (!contents.isEmpty()) Containers.dropItemStack(level, pos.getX(), pos.getY() + 1, pos.getZ(), contents);
+        }
+        super.onRemove(state, level, pos, newState, movedByPiston);
+    }
+
+    @Override
     public void animateTick(BlockState state, Level level, BlockPos pos, RandomSource random) {
-        if (!state.getValue(CONTENTS).isTanning() || random.nextInt(6) != 0) return;
+        if (random.nextInt(6) != 0 || !(level.getBlockEntity(lowerPos(pos, state)) instanceof TanningRackBlockEntity rack)
+                || rack.stage() != TanningRackBlockEntity.Stage.DRYING) return;
         boolean ns = state.getValue(FACING).getAxis() == Direction.Axis.Z;
         double along = 0.15 + random.nextDouble() * 0.7;
         double across = 0.5 + (random.nextBoolean() ? DRIP_OFFSET : -DRIP_OFFSET);
@@ -199,6 +218,12 @@ public class TanningRackBlock extends HorizontalDirectionalBlock {
         level.addParticle(ParticleTypes.FALLING_HONEY, x, pos.getY() + y, z, 0.0, 0.0, 0.0);
     }
 
+    @Nullable
+    @Override
+    public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
+        return state.getValue(HALF) == DoubleBlockHalf.LOWER ? new TanningRackBlockEntity(pos, state) : null;
+    }
+
     private static void awardTanning(ServerPlayer player) {
         AdvancementHolder holder = player.server.getAdvancements().get(TANNING_ADVANCEMENT);
         if (holder != null) player.getAdvancements().award(holder, "tanned_hide");
@@ -206,14 +231,6 @@ public class TanningRackBlock extends HorizontalDirectionalBlock {
 
     private static BlockPos lowerPos(BlockPos pos, BlockState state) {
         return state.getValue(HALF) == DoubleBlockHalf.LOWER ? pos : pos.below();
-    }
-
-    private void setContents(Level level, BlockPos pos, BlockState state, Contents contents) {
-        BlockPos lower = lowerPos(pos, state);
-        BlockState lowerState = level.getBlockState(lower);
-        BlockState upperState = level.getBlockState(lower.above());
-        if (lowerState.is(this)) level.setBlock(lower, lowerState.setValue(CONTENTS, contents), Block.UPDATE_ALL);
-        if (upperState.is(this)) level.setBlock(lower.above(), upperState.setValue(CONTENTS, contents), Block.UPDATE_ALL);
     }
 
     @Override
@@ -229,53 +246,5 @@ public class TanningRackBlock extends HorizontalDirectionalBlock {
     @Override
     protected boolean isPathfindable(BlockState state, PathComputationType type) {
         return false;
-    }
-
-    public enum Contents implements StringRepresentable {
-        EMPTY("empty"),
-        HIDE("hide"),
-        TANNING("tanning"),
-        LEATHER("leather"),
-        HOGLIN_HIDE("hoglin_hide"),
-        HOGLIN_TANNING("hoglin_tanning"),
-        HOGLIN_LEATHER("hoglin_leather"),
-        SMALL_HIDE("small_hide"),
-        SMALL_TANNING("small_tanning"),
-        SMALL_LEATHER("small_leather");
-
-        private final String name;
-
-        Contents(String name) {
-            this.name = name;
-        }
-
-        public boolean isTanning() {
-            return this == TANNING || this == HOGLIN_TANNING || this == SMALL_TANNING;
-        }
-
-        public boolean isHide() {
-            return this == HIDE || this == HOGLIN_HIDE || this == SMALL_HIDE;
-        }
-
-        public boolean isLeather() {
-            return this == LEATHER || this == HOGLIN_LEATHER || this == SMALL_LEATHER;
-        }
-
-        public Contents next() {
-            return switch (this) {
-                case HIDE -> TANNING;
-                case TANNING -> LEATHER;
-                case HOGLIN_HIDE -> HOGLIN_TANNING;
-                case HOGLIN_TANNING -> HOGLIN_LEATHER;
-                case SMALL_HIDE -> SMALL_TANNING;
-                case SMALL_TANNING -> SMALL_LEATHER;
-                default -> this;
-            };
-        }
-
-        @Override
-        public String getSerializedName() {
-            return name;
-        }
     }
 }

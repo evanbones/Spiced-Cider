@@ -7,7 +7,7 @@
   ],
   "type": "create:sequenced_assembly",
   "ingredient": {
-    "item": "spicedcider:crude_bow"
+    "item": "spicedcider:unfinished_bow"
   },
   "loops": 1,
   "results": [
@@ -20,7 +20,23 @@
       "type": "create:deploying",
       "ingredients": [
         {
-          "item": "spicedcider:crude_bow"
+          "item": "spicedcider:unfinished_bow"
+        },
+        {
+          "tag": "c:leathers"
+        }
+      ],
+      "results": [
+        {
+          "id": "spicedcider:unfinished_bow"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "spicedcider:unfinished_bow"
         },
         {
           "tag": "c:plates/copper"
@@ -28,25 +44,12 @@
       ],
       "results": [
         {
-          "id": "spicedcider:crude_bow"
-        }
-      ]
-    },
-    {
-      "type": "create:pressing",
-      "ingredients": [
-        {
-          "item": "spicedcider:crude_bow"
-        }
-      ],
-      "results": [
-        {
-          "id": "spicedcider:crude_bow"
+          "id": "spicedcider:unfinished_bow"
         }
       ]
     }
   ],
   "transitional_item": {
-    "id": "spicedcider:crude_bow"
+    "id": "spicedcider:unfinished_bow"
   }
 }

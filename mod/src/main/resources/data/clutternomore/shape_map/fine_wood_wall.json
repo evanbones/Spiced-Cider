@@ -1,0 +1,17 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "supplementaries"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "clutternomore"
+    }
+  ],
+  "add": {
+    "supplementaries:fine_wood": [
+      "spicedcider:fine_wood_wall"
+    ]
+  }
+}

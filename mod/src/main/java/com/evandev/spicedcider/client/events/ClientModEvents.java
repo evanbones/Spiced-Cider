@@ -1,6 +1,7 @@
 package com.evandev.spicedcider.client.events;
 
 import com.evandev.spicedcider.client.crudebow.CrudeBowClient;
+import com.evandev.spicedcider.client.renderer.TanningRackRenderer;
 import com.evandev.spicedcider.client.renderer.CastingRenderers;
 import com.evandev.spicedcider.client.renderer.CopperPatina;
 import com.evandev.spicedcider.client.renderer.GraveRenderer;
@@ -122,6 +123,7 @@ public class ClientModEvents {
         event.registerEntityRenderer(ModEntityTypes.SPORAL.get(), SporalRenderer::new);
         event.registerEntityRenderer(ModEntityTypes.STRAW_GOLEM.get(), StrawGolemRenderer::new);
         event.registerBlockEntityRenderer(ModBlockEntities.GRAVE.get(), GraveRenderer::new);
+        event.registerBlockEntityRenderer(ModBlockEntities.TANNING_RACK.get(), TanningRackRenderer::new);
         CastingRenderers.register(event);
         if (TideCompat.isLoaded()) {
             event.registerEntityRenderer(ModEntityTypes.GRAPPLING_HOOK.get(), GrapplingHookRenderer::new);

@@ -195,6 +195,8 @@
 		stepUp = true
 		#Bow-wielding skeletons stand still while they shoot instead of strafing, shoot faster the closer you are, and switch to a flint knife when you get within 3 blocks.
 		rangedSkeletons = true
+		#At night, Evokers come for players on the surface of Dark Forests every few minutes, outside the normal monster cap.
+		darkForestEvokers = true
 
 	[features.voidWater]
 		#Fluids at the bottom of the world spill into the void as fading trails you can swim in. Takes effect when a world is next loaded.

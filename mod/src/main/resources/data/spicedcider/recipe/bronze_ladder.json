@@ -1,0 +1,37 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:ingots/bronze"
+      }
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:nuggets/bronze"
+      }
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "I": {
+      "tag": "c:ingots/bronze"
+    },
+    "N": {
+      "tag": "c:nuggets/bronze"
+    }
+  },
+  "pattern": [
+    "N N",
+    "NIN",
+    "N N"
+  ],
+  "result": {
+    "count": 3,
+    "id": "spicedcider:bronze_ladder"
+  }
+}

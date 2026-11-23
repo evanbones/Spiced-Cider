@@ -82,6 +82,7 @@ public class ModTags {
         public static final TagKey<Biome> HAS_GLOWING_FOG = TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "has_glowing_fog"));
         public static final TagKey<Biome> HAS_THICK_FOG = TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "has_thick_fog"));
         public static final TagKey<Biome> PINK_SPORAL_SPAWNS = TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "pink_sporal_spawns"));
+        public static final TagKey<Biome> EVOKER_NIGHT_SPAWNS = TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "evoker_night_spawns"));
         public static final TagKey<Biome> WHITE_SPORAL_SPAWNS = TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "white_sporal_spawns"));
     }
 

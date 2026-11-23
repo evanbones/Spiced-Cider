@@ -2,6 +2,7 @@ package com.evandev.spicedcider.registry;
 
 import com.evandev.spicedcider.SpicedCider;
 import com.evandev.spicedcider.content.block.entity.GraveBlockEntity;
+import com.evandev.spicedcider.content.block.entity.TanningRackBlockEntity;
 import com.evandev.spicedcider.content.block.entity.TubewormBlockEntity;
 import com.evandev.spicedcider.content.casting.CrucibleBlockEntity;
 import com.evandev.spicedcider.content.casting.MouldBlockEntity;
@@ -37,4 +38,7 @@ public class ModBlockEntities {
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<FishTrapBlockEntity>> FISH_TRAP = BLOCK_ENTITIES.register("fish_trap",
             () -> BlockEntityType.Builder.of(FishTrapBlockEntity::new, ModBlocks.FISH_TRAP.get()).build(null));
+
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<TanningRackBlockEntity>> TANNING_RACK = BLOCK_ENTITIES.register("tanning_rack",
+            () -> BlockEntityType.Builder.of(TanningRackBlockEntity::new, ModBlocks.TANNING_RACK.get()).build(null));
 }

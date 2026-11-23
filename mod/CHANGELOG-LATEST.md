@@ -32,8 +32,16 @@
 - Crude Bow: a weak early bow (96 durability). Arrows leave at 70% speed, fall with double gravity and never crit, and
   it plays its own shoot sound. Takes every bow enchantment.
 - Skeleton Tactics: skeletons in `spicedcider:ranged_skeletons` that hold a bow don't strafe, shoot faster at close
-  range, and swap to a Farmer's Delight flint knife when a target is within 3 blocks, back to the bow at 5 (off by default).
+  range, and swap to a Farmer's Delight flint knife when a target is within 3 blocks (off by default).
 - Cast Iron Beam for Vintage Beams, crafted from a Cast Iron Sheet and an Iron Nugget (makes 4).
+- Bronze Ladder: crafted from a Bronze Ingot and six Bronze Nuggets (makes 3) or cut from a Bronze Ingot in the
+  Stonecutter (makes 2).
+- `spicedcider:drying` recipe type: Drying Rack recipes set the input, how many to hang one at a time, the agent, the
+  result, the time and the rack textures.
+- Fine Wood Wall for Supplementaries: a thick, full-height wall made from Fine Wood, in its Clutter No More shape group.
+- Descriptions for the Sporal Speed and Sporal Strength effects.
+- Unfinished Bow: an in-progress item for Create sequenced assembly (registered when Create is installed).
+- Dark Forest Evokers: at night, Evokers come for players on the surface of Dark Forests every few minutes, outside the monster cap (`spicedcider:evoker_night_spawns`, off by default).
 
 ### Changed
 
@@ -66,6 +74,8 @@
 - The comparator Ponder mentions Basins instead of Cauldrons.
 - Mounts blocked by `spicedcider:deny_spawn` or `deny_natural_spawn` drop their riders instead of leaving them riding
   nothing.
+- The Tanning Rack is now the Drying Rack, and its Hide, Small Hide, and Hoglin Hide recipes are data-driven.
+- Gold Hook is now Golden Hook, and the Sulfur and Glowlight Bronze Candle Holders are now Golden Candle Holders.
 
 ### Fixed
 
@@ -100,19 +110,20 @@
   enchanted book with a removed enchantment).
 - Stripping logs that a mod strips after the axe lookup (Bountiful Fares) drops tree bark.
 - Fire Strikers light Caverns & Chasms Sparklers.
-- A bundle inside another bundle counts its full weight when Bundle Capacity is raised, and unstackable items fill a whole bundle at any capacity.
+- A bundle inside another bundle counts its full weight when Bundle Capacity is raised, and unstackable items fill a
+  whole bundle at any capacity.
 - Horseman's see-through mount no longer hides water, dropped items and block-breaking cracks behind it.
 - Quark inventory sorting puts javelins and spears with tridents and bows.
 - Bronze, Rose Gold, Prismarite, Valkyrium and Adamantite horse armor no longer have a flickering checkered fringe.
 - Bed screen tips no longer overlap chat; chat moves up above the tip.
+- Breaking a Drying Rack drops everything hanging on it, including all of the finished Leather.
 
 ### Removed
 
 - Vessel, Frame, and Pipe Moulds (and their unfired versions), Cast Iron Vessel and Cast Iron Frame, with their mould
   shapes and recipes.
 - Lead Pipes and Buckets are no longer cast.
-- The Change Stance key (Personality's own Sit and Crawl keys do the same).
-- The Modulation threat-glow and Vista fog-buffer patches, which Modulation now does natively (Reveal Targeting Monsters
-  option; Improved Fog per-viewport buffers).
-- Removed the Offgrid patches that Offgrid now does natively.
+- The Change Stance key.
+- The Modulation threat-glow and Vista fog-buffer patches, which Modulation now does natively.
+- The Offgrid patches that Offgrid now does natively.
 - The No Personality Crawling option.
