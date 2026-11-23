@@ -297,6 +297,7 @@ tasks.register("publishCurseForgePack") {
     def changelogFile = file("CHANGELOG-LATEST.md")
     def packFile = curseforgePack
     def serverFile = serverPack
+    def parentFile = providers.gradleProperty("curseforge_parent")
     doLast {
         def pack = packFile.get().asFile
         def server = serverFile.get().asFile
@@ -307,10 +308,15 @@ tasks.register("publishCurseForgePack") {
         if (!token.isPresent()) throw new GradleException("CURSEFORGE_TOKEN is not set")
         def changelog = changelogFile.exists() ? changelogFile.text : ""
         def uploader = new CurseForgeUpload(token.get(), projectId)
-        int gameVersion = uploader.minecraftVersionId(mcVersion)
-        int fileId = uploader.upload(pack, [changelog: changelog, changelogType: "markdown", displayName: displayName,
+        int fileId
+        if (parentFile.isPresent()) {
+            fileId = parentFile.get() as int
+        } else {
+            int gameVersion = uploader.minecraftVersionId(mcVersion)
+            fileId = uploader.upload(pack, [changelog: changelog, changelogType: "markdown", displayName: displayName,
                                             gameVersions: [gameVersion], releaseType: "release"])
-        logger.lifecycle("Uploaded ${pack.name} to CurseForge as file ${fileId}")
+            logger.lifecycle("Uploaded ${pack.name} to CurseForge as file ${fileId}")
+        }
         int serverId = uploader.upload(server, [changelog: changelog, changelogType: "markdown", displayName: "${displayName} Server Pack".toString(),
                                                 parentFileID: fileId, releaseType: "release"])
         logger.lifecycle("Uploaded ${server.name} to CurseForge as server pack file ${serverId}")
@@ -321,7 +327,7 @@ class CurseForgeUpload {
     static final String API = "https://minecraft.curseforge.com/api"
     final String token
     final String projectId
-    final java.net.http.HttpClient client = java.net.http.HttpClient.newBuilder().followRedirects(java.net.http.HttpClient.Redirect.NORMAL).build()
+    final java.net.http.HttpClient client = java.net.http.HttpClient.newBuilder().version(java.net.http.HttpClient.Version.HTTP_1_1).followRedirects(java.net.http.HttpClient.Redirect.NORMAL).build()
 
     CurseForgeUpload(String token, String projectId) {
         this.token = token

@@ -9,6 +9,10 @@ on:
         description: "Upload the current version to CurseForge even though it is already on Modrinth"
         type: boolean
         default: false
+      curseforge_parent:
+        description: "Existing CurseForge file ID to attach only the server pack to"
+        type: string
+        default: ""
   pull_request:
     branches: [ "main" ]
 
@@ -115,7 +119,8 @@ jobs:
           if [ "$status" != "200" ]; then
             ./gradlew :publishMods :publishCurseForgePack --stacktrace
           elif [ "${{ inputs.curseforge }}" = "true" ]; then
-            ./gradlew :publishCurseForgePack --stacktrace
+            parent="${{ inputs.curseforge_parent }}"
+            ./gradlew :publishCurseForgePack ${parent:+-Pcurseforge_parent=$parent} --stacktrace
           else
             echo "::notice::Spiced Cider $pack_version is already on Modrinth; bump version in gradle.properties to publish a new one"
           fi
