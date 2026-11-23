@@ -76,14 +76,14 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("pack")
     parser.add_argument("out")
-    parser.add_argument("--release", required=True)
+    parser.add_argument("--release")
     parser.add_argument("--version")
     parser.add_argument("--base-url")
     args = parser.parse_args()
 
     pack = Path(args.pack).resolve()
     out = Path(args.out).resolve()
-    release = json.loads(Path(args.release).read_text(encoding="utf-8"))
+    release = json.loads(Path(args.release).read_text(encoding="utf-8")) if args.release else {}
 
     if out.exists():
         shutil.rmtree(out, onerror=make_writable)
