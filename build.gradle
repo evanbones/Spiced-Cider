@@ -134,7 +134,7 @@ var refreshCurseForge = tasks.register("refreshCurseForge", Exec) {
     commandLine packwiz, "refresh"
 }
 
-tasks.register("exportCurseForgePack", Exec) {
+var exportCurseForgePack = tasks.register("exportCurseForgePack", Exec) {
     group = "spiced cider"
     description = "Exports the CurseForge modpack zip; non-CurseForge files are bundled in overrides"
     dependsOn(refreshCurseForge)
@@ -280,8 +280,20 @@ publishMods {
         }
         minecraftVersions.add(minecraft_version)
     }
+
+    curseforge {
+        accessToken = providers.environmentVariable("CURSEFORGE_TOKEN")
+        projectId = pack_curseforge_id
+        file = curseforgePack
+        minecraftVersions.add(minecraft_version)
+        clientRequired = true
+        serverRequired = true
+        additionalFile(serverPack) {
+            name = "${pack_name} ${packVersion} Server Pack"
+        }
+    }
 }
 
 tasks.matching { it.name.startsWith("publish") }.configureEach {
-    dependsOn(exportPack, exportServerPack)
+    dependsOn(exportPack, exportServerPack, exportCurseForgePack)
 }
