@@ -448,6 +448,8 @@ Nether effects are inspired by Jaden's Nether Expansion.
 Grappling Hooks are modified from [Bigger Fish](https://modrinth.com/mod/always-a-bigger-fish), created by Cassian and
 implemented by Kobber (originally ported from Raspberry Core).
 
+Fine Wood Walls are modified from Raspberry Core and created by Kobber.
+
 The Fish Trap is adapted from [Bigger Fish](https://modrinth.com/mod/always-a-bigger-fish) by Cassian, used under its
 MIT code license (included at `META-INF/licenses/bigger_fish-LICENSE.txt`). Its model, textures and GUI are from
 [Fisherman's Trap](https://modrinth.com/mod/fishermens-trap) by Uraneptus (assets by toomanykitkats), used under its MIT

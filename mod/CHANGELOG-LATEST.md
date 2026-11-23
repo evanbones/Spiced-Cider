@@ -39,6 +39,7 @@
 - `spicedcider:drying` recipe type: Drying Rack recipes set the input, how many to hang one at a time, the agent, the
   result, the time and the rack textures.
 - Fine Wood Wall for Supplementaries: a thick, full-height wall made from Fine Wood, in its Clutter No More shape group.
+  - Ported from Raspberry Core, thanks @Kobber!
 - Descriptions for the Sporal Speed and Sporal Strength effects.
 - Unfinished Bow: an in-progress item for Create sequenced assembly (registered when Create is installed).
 - Dark Forest Evokers: at night, Evokers come for players on the surface of Dark Forests every few minutes, outside the monster cap (`spicedcider:evoker_night_spawns`, off by default).

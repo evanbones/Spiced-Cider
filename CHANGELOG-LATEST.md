@@ -170,6 +170,8 @@
 - Gold Bars and Gold Buttons are now Golden Bars and Golden Buttons.
 - Retextured the Block of Gold and the Golden Plaque to match the Gold Ingot.
 - Detector, Powered, Activator and Controller Rails are made with nuggets instead of ingots.
+- Powered Rails are gold textured instead of copper.
+- Placed torches have the same stick as an upright Supplementaries stick.
 - Cushions are crafted 4 at a time.
 - Bread's description says it is baked from Dough.
 - The Happiness effect is hidden from EMI.
