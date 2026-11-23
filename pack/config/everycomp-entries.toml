@@ -178,12 +178,12 @@
 		[types.lantern.architects_palette]
 			nether_brass_lantern = true
 
-		[types.lantern.spicedcider]
-			sulfur_lantern = true
-			tin_lantern = true
-
 		[types.lantern.supplementaries]
 			redstone_lantern = true
+
+		[types.lantern.spicedcider]
+			tin_lantern = true
+			sulfur_lantern = true
 
 		[types.stone_type.architects_palette]
 			abyssaline = true
@@ -303,13 +303,6 @@
 			boards = false
 			board_wall = false
 
-		[entries.wood_type.blockbox]
-			spiked_palisade = true
-			stripped_palisade = true
-			palisade = true
-			seat = true
-			stripped_spiked_palisade = true
-
 		[entries.wood_type.modestmasonry]
 			carved_plank_slab = true
 			boards = true
@@ -331,6 +324,13 @@
 
 		[entries.wood_type.beams]
 			beam = true
+
+		[entries.wood_type.blockbox]
+			stripped_palisade = true
+			palisade = true
+			seat = true
+			spiked_palisade = true
+			stripped_spiked_palisade = true
 
 		[entries.leaves_type.quark]
 			hedge = true

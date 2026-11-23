@@ -11,6 +11,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.levelgen.structure.Structure;
+import net.minecraft.world.level.material.Fluid;
 
 public class ModTags {
     public static class Items {
@@ -97,6 +98,15 @@ public class ModTags {
 
         private static TagKey<EntityType<?>> tag(String name) {
             return TagKey.create(Registries.ENTITY_TYPE, ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, name));
+        }
+    }
+
+    public static class Fluids {
+        public static final TagKey<Fluid> EXTINGUISHES_FIRE = tag("extinguishes_fire");
+        public static final TagKey<Fluid> HYDRATES = tag("hydrates");
+
+        private static TagKey<Fluid> tag(String name) {
+            return TagKey.create(Registries.FLUID, ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, name));
         }
     }
 }

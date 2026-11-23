@@ -134,6 +134,13 @@ public class ClientModEvents {
     }
 
     @SubscribeEvent
+    public static void registerAdditionalModels(net.neoforged.neoforge.client.event.ModelEvent.RegisterAdditional event) {
+        if (ModList.get().isLoaded("supplementaries") && ModList.get().isLoaded("farmersdelight")) {
+            com.evandev.spicedcider.compat.supplementaries.CanvasWaySignsClient.registerModels(event);
+        }
+    }
+
+    @SubscribeEvent
     public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
         event.registerLayerDefinition(ModModelLayers.COBWEB_PROJECTILE, CobwebProjectileModel::createBodyLayer);
         event.registerLayerDefinition(ModModelLayers.BALLOON, BalloonRenderer::createBodyLayer);

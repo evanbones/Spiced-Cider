@@ -7,7 +7,7 @@
 - Video settings show how much each one affects performance.
 - Monsters that stop you from sleeping or opening a loot chest now glow briefly so you can find them.
 - Tin Lantern: a lighter lantern made from tin nuggets and a torch.
-- Warding Effigies can be made by infusing any log with two Resin and a Crystal Shard.
+- Warding Effigies can be made by infusing any log with two Resin, a Crystal Shard and Wax.
 - Lead Pipes can be made in the Forge, and are sometimes brushed out of desert wells, ocean ruins and trail ruins.
 - Copper Screws and Lead Pipes can be melted down in a Crucible or Smeltery.
 - Moulds are grouped together in EMI.
@@ -38,6 +38,11 @@
 - Crafting Mats: lay one on top of almost any block to use it as a Crafting Table.
 - Descriptions for Vampirism, Rifting, Warped, Sugar Crash, Happiness and Pacified, and for the Sporal effects.
 - Cushions have descriptions.
+- Spring Water can be made by infusing a Water Bucket with two Sulfur, two Salt or Saltpeter, and a Moss Clump or Moss
+  Block.
+- Bows shoot nearly straight for the first 3 seconds of a draw, then wobble and lose accuracy the longer they stay
+  drawn.
+- Canvas Way Signs, in plain and every dyed canvas.
 
 ### Changed
 
@@ -176,6 +181,14 @@
 - Bread's description says it is baked from Dough.
 - The Happiness effect is hidden from EMI.
 - Vampires reliably come for you at night when you are out in a Dark Forest, instead of almost never spawning.
+- Skeleton Horses no longer appear from lightning. Feed a Zombie Horse a Sinister Carrot to get one.
+- Rotten Flesh and Golden Carrots no longer convert Skeleton and Zombie Horses into each other.
+- Blazes shoot one aimed fireball at a time instead of a spread of three.
+- Skeleton Horses burn in sunlight like Zombie Horses unless they wear Pet Armor.
+- Skeletons carry Crude Bows, and their arrows are slower and drop sooner.
+- Hanging Signs and Way Signs are shapes of Signs, and Hanging Canvas Signs and Canvas Way Signs are shapes of Canvas
+  Signs.
+- Zombie and Skeleton Horse descriptions explain how to get them.
 
 ### Fixed
 
@@ -248,6 +261,7 @@
 - Rotten Apples can no longer be used as a meal ingredient.
 - Inconsistent names for gold doors, trapdoors, bars, gates, lanterns, plaques, candelabras, gold bell, and gold hook.
 - Chiseled Gold Plated Bricks can no longer be crafted straight from Gold Ingots.
+- Spring Water puts out fire and hydrates farmland.
 
 ### Removed
 

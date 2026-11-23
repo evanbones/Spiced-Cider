@@ -36,13 +36,25 @@
 - Cast Iron Beam for Vintage Beams, crafted from a Cast Iron Sheet and an Iron Nugget (makes 4).
 - Bronze Ladder: crafted from a Bronze Ingot and six Bronze Nuggets (makes 3) or cut from a Bronze Ingot in the
   Stonecutter (makes 2).
-- `spicedcider:drying` recipe type: Drying Rack recipes set the input, how many to hang one at a time, the agent, the
+- `spicedcider:drying` recipe type: Drying Rack recipes set the input, how many to hang one at a time, an optional
+  agent, the
   result, the time and the rack textures.
 - Fine Wood Wall for Supplementaries: a thick, full-height wall made from Fine Wood, in its Clutter No More shape group.
-  - Ported from Raspberry Core, thanks @Kobber!
+    - Ported from Raspberry Core, thanks @Kobber!
 - Descriptions for the Sporal Speed and Sporal Strength effects.
 - Unfinished Bow: an in-progress item for Create sequenced assembly (registered when Create is installed).
-- Dark Forest Evokers: at night, Evokers come for players on the surface of Dark Forests every few minutes, outside the monster cap (`spicedcider:evoker_night_spawns`, off by default).
+- Dark Forest Evokers: at night, Evokers come for players on the surface of Dark Forests every few minutes, outside the
+  monster cap (`spicedcider:evoker_night_spawns`, off by default).
+- Single Blaze Fireball: blazes shoot one aimed fireball every 3.5 seconds instead of a spread of three (off by
+  default).
+- No Skeleton Trap Horses: lightning no longer spawns skeleton horse traps (off by default).
+- Bow Fatigue, from the Combat Test snapshots: bow arrows are nearly perfectly accurate for the first 3 seconds of a
+  draw, then lose accuracy and crits up to 10 seconds while the bow wobbles harder (off by default).
+- Skeleton Horses Burn: skeleton horses catch fire in sunlight unless they wear horse armor, and armor with durability
+  wears down instead (off by default).
+- Crude Bow Skeletons: skeletons spawn holding a Crude Bow (off by default).
+- `spicedcider:extinguishes_fire` and `spicedcider:hydrates` fluid tags.
+- Canvas Way Signs for Supplementaries: plain and dyed way signs in Farmer's Delight canvas.
 
 ### Changed
 
@@ -77,6 +89,7 @@
   nothing.
 - The Tanning Rack is now the Drying Rack, and its Hide, Small Hide, and Hoglin Hide recipes are data-driven.
 - Gold Hook is now Golden Hook, and the Sulfur and Glowlight Bronze Candle Holders are now Golden Candle Holders.
+- Drying recipes without an agent start drying as soon as the rack is full.
 
 ### Fixed
 
@@ -118,6 +131,7 @@
 - Bronze, Rose Gold, Prismarite, Valkyrium and Adamantite horse armor no longer have a flickering checkered fringe.
 - Bed screen tips no longer overlap chat; chat moves up above the tip.
 - Breaking a Drying Rack drops everything hanging on it, including all of the finished Leather.
+- Spelunkery Spring Water puts out burning mobs and players and hydrates farmland.
 
 ### Removed
 

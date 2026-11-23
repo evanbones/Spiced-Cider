@@ -195,6 +195,16 @@
 		stepUp = true
 		#Bow-wielding skeletons stand still while they shoot instead of strafing, shoot faster the closer you are, and switch to a flint knife when you get within 3 blocks.
 		rangedSkeletons = true
+		#Blazes shoot one aimed fireball every 3.5 seconds instead of a spread of three.
+		singleBlazeFireball = true
+		#Lightning no longer spawns skeleton horse traps during thunderstorms.
+		noSkeletonTrapHorses = true
+		#Combat Test bow fatigue: arrows fly almost straight when loosed within 3 seconds, then lose accuracy and stop critting the longer the bow stays drawn, up to 10 seconds, while the bow wobbles more and more.
+		bowFatigue = true
+		#Skeletons spawn holding a Crude Bow instead of a Bow. Strays and bogged keep their Bows.
+		crudeBowSkeletons = true
+		#Skeleton horses catch fire in sunlight unless they wear horse armor. Horse armor with durability wears down in the sun instead.
+		skeletonHorsesBurn = true
 		#At night, Evokers come for players on the surface of Dark Forests every few minutes, outside the normal monster cap.
 		darkForestEvokers = true
 

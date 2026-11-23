@@ -1,7 +1,6 @@
 package com.evandev.spicedcider.recipe;
 
 import com.evandev.spicedcider.registry.ModRecipeSerializers;
-import com.evandev.spicedcider.registry.ModTags;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
@@ -54,10 +53,6 @@ public record DryingRecipe(Ingredient ingredient, int count, Optional<Ingredient
                 Codec.intRange(1, 14).optionalFieldOf("width", 12).forGetter(Rack::width),
                 Codec.intRange(1, 28).optionalFieldOf("height", 18).forGetter(Rack::height)
         ).apply(instance, Rack::new));
-    }
-
-    public Ingredient agentOrDefault() {
-        return agent.orElseGet(() -> Ingredient.of(ModTags.Items.TANNING_AGENTS));
     }
 
     @Override

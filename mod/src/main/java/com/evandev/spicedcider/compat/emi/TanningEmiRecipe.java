@@ -29,9 +29,9 @@ public class TanningEmiRecipe extends BasicEmiRecipe {
         super(category, holder.id(), WIDTH, HEIGHT);
         DryingRecipe recipe = holder.value();
         this.hide = EmiIngredient.of(recipe.ingredient(), recipe.count());
-        this.agent = EmiIngredient.of(recipe.agentOrDefault());
+        this.agent = recipe.agent().map(EmiIngredient::of).orElse(EmiStack.EMPTY);
         this.time = recipe.time();
-        this.inputs = List.of(hide, agent);
+        this.inputs = agent.isEmpty() ? List.of(hide) : List.of(hide, agent);
         this.catalysts = List.of(EmiStack.of(ModItems.TANNING_RACK.get()));
         this.outputs = List.of(EmiStack.of(recipe.result()));
     }
@@ -49,8 +49,10 @@ public class TanningEmiRecipe extends BasicEmiRecipe {
     @Override
     public void addWidgets(WidgetHolder widgets) {
         widgets.addSlot(hide, 0, 4);
-        widgets.addTexture(EmiTexture.PLUS, 21, 8);
-        widgets.addSlot(agent, 34, 4);
+        if (!agent.isEmpty()) {
+            widgets.addTexture(EmiTexture.PLUS, 21, 8);
+            widgets.addSlot(agent, 34, 4);
+        }
         widgets.addFillingArrow(58, 5, time * 50)
                 .tooltipText(List.of(Component.translatable("emi.spicedcider.tanning.time", time / 20)));
         widgets.addSlot(outputs.getFirst(), WIDTH - 26, 0).large(true).recipeContext(this);

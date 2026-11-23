@@ -135,6 +135,7 @@ public class TanningRackBlock extends HorizontalDirectionalBlock implements Enti
                 rack.hang(recipe.get(), stack);
                 hangEffects(level, pos, player);
                 stack.consume(1, player);
+                dryIfReady(level, rack);
             }
             return ItemInteractionResult.sidedSuccess(level.isClientSide());
         }
@@ -146,13 +147,13 @@ public class TanningRackBlock extends HorizontalDirectionalBlock implements Enti
                 rack.addOne();
                 hangEffects(level, pos, player);
                 stack.consume(1, player);
+                dryIfReady(level, rack);
             }
             return ItemInteractionResult.sidedSuccess(level.isClientSide());
         }
-        if (!recipe.agentOrDefault().test(stack)) return keepContents(rack, stack);
+        if (recipe.agent().isEmpty() || !recipe.agent().get().test(stack)) return keepContents(rack, stack);
         if (level instanceof ServerLevel serverLevel) {
-            rack.setStage(TanningRackBlockEntity.Stage.DRYING);
-            level.scheduleTick(rack.getBlockPos(), this, recipe.time());
+            startDrying(level, rack, recipe);
             level.playSound(null, pos, SoundEvents.BRUSH_GENERIC, SoundSource.BLOCKS, 1.0F, 0.9F);
             serverLevel.sendParticles(new ItemParticleOption(ParticleTypes.ITEM, stack.copyWithCount(1)),
                     hit.getLocation().x, hit.getLocation().y, hit.getLocation().z, 8, 0.15, 0.15, 0.15, 0.05);
@@ -160,6 +161,16 @@ public class TanningRackBlock extends HorizontalDirectionalBlock implements Enti
             stack.consume(1, player);
         }
         return ItemInteractionResult.sidedSuccess(level.isClientSide());
+    }
+
+    private void dryIfReady(Level level, TanningRackBlockEntity rack) {
+        DryingRecipe recipe = rack.recipe();
+        if (recipe != null && recipe.agent().isEmpty() && rack.isFull()) startDrying(level, rack, recipe);
+    }
+
+    private void startDrying(Level level, TanningRackBlockEntity rack, DryingRecipe recipe) {
+        rack.setStage(TanningRackBlockEntity.Stage.DRYING);
+        level.scheduleTick(rack.getBlockPos(), this, recipe.time());
     }
 
     private static ItemInteractionResult keepContents(TanningRackBlockEntity rack, ItemStack stack) {

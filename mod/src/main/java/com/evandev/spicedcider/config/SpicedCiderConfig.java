@@ -247,6 +247,11 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.IntValue fallDamageReduction;
         public final ModConfigSpec.BooleanValue noNestedBundles;
         public final ModConfigSpec.BooleanValue rangedSkeletons;
+        public final ModConfigSpec.BooleanValue singleBlazeFireball;
+        public final ModConfigSpec.BooleanValue noSkeletonTrapHorses;
+        public final ModConfigSpec.BooleanValue bowFatigue;
+        public final ModConfigSpec.BooleanValue crudeBowSkeletons;
+        public final ModConfigSpec.BooleanValue skeletonHorsesBurn;
         public final ModConfigSpec.BooleanValue darkForestEvokers;
         public final ModConfigSpec.BooleanValue iglooBasementRemoval;
         public final ModConfigSpec.BooleanValue noVanillaCocoaPods;
@@ -599,6 +604,31 @@ public class SpicedCiderConfig {
                     .comment(tooltip("rangedSkeletons"))
                     .translation("option.spicedcider.rangedSkeletons")
                     .define("rangedSkeletons", false);
+
+            singleBlazeFireball = builder
+                    .comment(tooltip("singleBlazeFireball"))
+                    .translation("option.spicedcider.singleBlazeFireball")
+                    .define("singleBlazeFireball", false);
+
+            noSkeletonTrapHorses = builder
+                    .comment(tooltip("noSkeletonTrapHorses"))
+                    .translation("option.spicedcider.noSkeletonTrapHorses")
+                    .define("noSkeletonTrapHorses", false);
+
+            bowFatigue = builder
+                    .comment(tooltip("bowFatigue"))
+                    .translation("option.spicedcider.bowFatigue")
+                    .define("bowFatigue", false);
+
+            crudeBowSkeletons = builder
+                    .comment(tooltip("crudeBowSkeletons"))
+                    .translation("option.spicedcider.crudeBowSkeletons")
+                    .define("crudeBowSkeletons", false);
+
+            skeletonHorsesBurn = builder
+                    .comment(tooltip("skeletonHorsesBurn"))
+                    .translation("option.spicedcider.skeletonHorsesBurn")
+                    .define("skeletonHorsesBurn", false);
 
             darkForestEvokers = builder
                     .comment(tooltip("darkForestEvokers"))

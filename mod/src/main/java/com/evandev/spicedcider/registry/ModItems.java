@@ -213,6 +213,12 @@ public class ModItems {
     public static final DeferredItem<BlockItem> GOLDEN_WORM_CRATE = ITEMS.registerSimpleBlockItem(ModBlocks.GOLDEN_WORM_CRATE);
     public static final DeferredItem<BlockItem> TIN_LANTERN = ITEMS.registerSimpleBlockItem(ModBlocks.TIN_LANTERN);
     public static final DeferredItem<BlockItem> BRONZE_LADDER = ITEMS.registerSimpleBlockItem(ModBlocks.BRONZE_LADDER);
+    static {
+        if (ModList.get().isLoaded("supplementaries") && ModList.get().isLoaded("farmersdelight")) {
+            com.evandev.spicedcider.compat.supplementaries.CanvasWaySigns.register(ITEMS);
+        }
+    }
+
     @Nullable
     public static final DeferredItem<Item> UNFINISHED_BOW = ModList.get().isLoaded("create")
             ? ITEMS.register("unfinished_bow", CreateItems::unfinishedBow)

@@ -1,0 +1,18 @@
+{
+  "priority": 1000,
+  "add": {
+    "/(?<namespace>[^:]+):(?<wood>(?!.*canvas).+)(?<!_hanging|_wall)_sign/": [
+      "${namespace}:${wood}_hanging_sign",
+      "supplementaries:way_sign_${wood}",
+      "supplementaries:${namespace}/way_sign_${wood}"
+    ],
+    "spicedcider:twisted_sign": [
+      "spicedcider:twisted_hanging_sign",
+      "supplementaries:architects_palette/way_sign_twisted"
+    ],
+    "/farmersdelight:(?<color>(?!.*hanging)[a-z_]*?)canvas_sign/": [
+      "farmersdelight:${color}hanging_canvas_sign",
+      "spicedcider:${color}canvas_way_sign"
+    ]
+  }
+}
