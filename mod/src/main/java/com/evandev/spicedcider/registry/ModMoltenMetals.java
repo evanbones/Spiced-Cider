@@ -38,14 +38,14 @@ public class ModMoltenMetals {
             new Metal("silver", "caverns_and_chasms", "caverns_and_chasms:silver_block", false, MapColor.METAL, 0xE6B07A),
             new Metal("bronze", "alloyed", "alloyed:bronze_block", false, MapColor.COLOR_BROWN, 0xD07E2C),
             new Metal("rose_gold", "oooh_pinky", "oooh_pinky:rose_gold_block", false, MapColor.COLOR_PINK, 0xE8604E),
-            new Metal("electrum", "modestmining", "modestmining:electrum_block", false, MapColor.SAND, 0xE8B04A),
             new Metal("iron", "minecraft", "minecraft:iron_block", false, MapColor.METAL, 0xE58A3C),
             new Metal("cast_iron", "minecraft", "spicedcider:cast_iron_block", false, MapColor.COLOR_GRAY, 0xC9582A),
             new Metal("steel", "alloyed", "alloyed:steel_block", false, MapColor.COLOR_LIGHT_GRAY, 0xDA7C40),
             new Metal("netherite", "minecraft", "minecraft:netherite_block", true, MapColor.COLOR_RED, 0xD8342A),
             new Metal("necromium", "caverns_and_chasms", "caverns_and_chasms:necromium_block", true, MapColor.COLOR_GREEN, 0x9AB84E),
             new Metal("prismarite", "modestmining", "modestmining:prismarite_block", false, MapColor.DIAMOND, 0x9AE0C8),
-            new Metal("valkyrium", "modestmining", "modestmining:valkyrium_block", false, MapColor.TERRACOTTA_WHITE, 0xF0C090)
+            new Metal("valkyrium", "modestmining", "modestmining:valkyrium_block", false, MapColor.TERRACOTTA_WHITE, 0xF0C090),
+            new Metal("glass", "minecraft", "minecraft:glass", false, MapColor.COLOR_ORANGE, 0xF2A040)
     );
 
     public static final Map<String, Entry> ENTRIES = new LinkedHashMap<>();

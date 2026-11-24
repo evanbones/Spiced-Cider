@@ -24,6 +24,7 @@ public class ModTags {
         public static final TagKey<Item> WAX_OR_TALLOW = tag("wax_or_tallow");
         public static final TagKey<Item> TANNABLE_HIDES = tag("tannable_hides");
         public static final TagKey<Item> FISH_TRAP_BAIT = tag("fish_trap_bait");
+        public static final TagKey<Item> DRAWER_KEYS = tag("drawer_keys");
         public static final TagKey<Item> COMFORT_FOODS = tag("comfort_foods");
         public static final TagKey<Item> NOT_COMFORT_FOODS = tag("not_comfort_foods");
         public static final TagKey<Item> LARGE_TANNABLE_HIDES = tag("large_tannable_hides");

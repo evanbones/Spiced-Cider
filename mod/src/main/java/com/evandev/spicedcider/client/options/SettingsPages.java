@@ -46,6 +46,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.ItemLike;
 import net.neoforged.fml.ModList;
+import net.neoforged.neoforge.common.ModConfigSpec;
 import org.jetbrains.annotations.Nullable;
 
 import java.io.File;
@@ -187,7 +188,8 @@ public final class SettingsPages {
                 cirrus ? impact(CirrusSettings.aurora(), Impact.LOW) : null,
                 ModList.get().isLoaded("nomansland") ? impact(NoMansLandSettings.sunDogs(), Impact.LOW) : null,
                 ModList.get().isLoaded("where_winds_blow") ? impact(FoliageSwaySettings.foliageSway(), Impact.MEDIUM) : null,
-                impact(NetherSettings.mist(), Impact.LOW)));
+                impact(NetherSettings.mist(), Impact.LOW),
+                configToggle("smoothStepUp", SpicedCiderConfig.CLIENT.smoothStepUp)));
         if (ModList.get().isLoaded("particular")) {
             add(entries, category(screen, "particles", ParticularSettings.particles().stream().map(entry -> impact(entry, Impact.LOW)).toArray(Entry[]::new)));
         }
@@ -220,7 +222,9 @@ public final class SettingsPages {
         add(entries, category(screen, "movement_options",
                 vanilla(o.toggleCrouch()),
                 vanilla(o.toggleSprint()),
-                SpicedCiderConfig.commonOr(SpicedCiderConfig.COMMON.stepUp, false) ? vanilla(StepUpOption.get()) : vanilla(o.autoJump())));
+                SpicedCiderConfig.commonOr(SpicedCiderConfig.COMMON.stepUp, false) ? vanilla(StepUpOption.get()) : vanilla(o.autoJump()),
+                SpicedCiderConfig.commonOr(SpicedCiderConfig.COMMON.stepUp, false) ? configToggle("stepUpSprintOnly", SpicedCiderConfig.CLIENT.stepUpSprintOnly) : null,
+                ModList.get().isLoaded("getoverit") ? configToggle("ledgeClimbing", SpicedCiderConfig.CLIENT.ledgeClimbing) : null));
         if (ModList.get().isLoaded("controlify")) {
             entries.add(ControlifySettings.settingsCategory(screen));
         }
@@ -338,6 +342,13 @@ public final class SettingsPages {
 
     private static void add(List<Entry> entries, @Nullable Entry entry) {
         if (entry != null) entries.add(entry);
+    }
+
+    private static Entry configToggle(String key, ModConfigSpec.BooleanValue value) {
+        return setting(CycleSetting.toggle(Component.translatable("option.spicedcider." + key), value::get, enabled -> {
+            value.set(enabled);
+            value.save();
+        }).defaultValue(value.getDefault()).tooltip(Component.translatable("option.spicedcider." + key + ".tooltip")));
     }
 
     private static Entry setting(Setting setting) {

@@ -20,10 +20,11 @@
   },
   "interval": {
     "type": "minecraft:uniform",
-    "min_inclusive": 18000,
-    "max_inclusive": 36000
+    "min_inclusive": 3000,
+    "max_inclusive": 6000
   },
   "particle": {
     "type": "etcetera:dripping_rubber"
-  }
+  },
+  "drip_chance": 0.03
 }

@@ -83,6 +83,8 @@
 	emiHideSmithingCategory = true
 	#EMI shows haunting under a soul campfire instead of an encased fan, and hides the fan washing, smoking and blasting categories. Requires EMI and Create.
 	emiCreateFanRework = true
+	#Fluids in a Create Basin look full at one bucket instead of two, matching how high molten metal and glass sit while casting. Requires Create.
+	fullerBasinFluids = true
 	#Hides the hold-shift item descriptions Create adds to item tooltips. Requires Create.
 	createHideItemDescriptions = true
 	#Hides the item information pages Quark adds to the recipe viewer. Requires Quark.
@@ -97,10 +99,14 @@
 	emiUrnLootCategory = true
 	#Your graves show on the locator bar as tombstone icons, even in singleplayer. Requires Vanilla Backport.
 	graveLocatorBar = true
-	#Run up full blocks without jumping while sprinting.
+	#Run up full blocks without jumping.
 	stepUpEnabled = true
-	#The camera glides when you step up onto or down off a block or slab instead of snapping, in first and third person and while riding.
+	#The camera glides up and down steps instead of snapping, including while riding.
 	smoothStepUp = true
+	#Only step up full blocks while sprinting. When off, you step up them while walking too.
+	stepUpSprintOnly = true
+	#Pull yourself up ledges by jumping at them.
+	ledgeClimbing = true
 
 [voxy]
 	#Replaces the terrain fog with configurable start and end distances that cover Voxy's LoD terrain, plus weather and cave fog. Disable to use Roxy's own fog.

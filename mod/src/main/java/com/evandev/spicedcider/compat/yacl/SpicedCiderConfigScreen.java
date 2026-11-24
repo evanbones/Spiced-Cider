@@ -81,9 +81,13 @@ public class SpicedCiderConfigScreen {
                         .option(toggle("singleBlazeFireball", common.singleBlazeFireball))
                         .option(toggle("noSkeletonTrapHorses", common.noSkeletonTrapHorses))
                         .option(toggle("bowFatigue", common.bowFatigue))
-                        .option(toggle("crudeBowSkeletons", common.crudeBowSkeletons))
+                        .option(toggle("skeletonArrowNerf", common.skeletonArrowNerf))
                         .option(toggle("skeletonHorsesBurn", common.skeletonHorsesBurn))
+                        .option(toggle("tameableSkeletonHorses", common.tameableSkeletonHorses))
                         .option(toggle("darkForestEvokers", common.darkForestEvokers))
+                        .option(toggle("tentRespawnChoice", common.tentRespawnChoice))
+                        .option(toggle("storageDuctSideAccess", common.storageDuctSideAccess))
+                        .option(toggle("crushingWheelsSkipMilling", common.crushingWheelsSkipMilling))
                         .option(toggle("voidWater", common.voidWater))
                         .option(intSlider("voidWaterTrailLength", common.voidWaterTrailLength, 0, 64, 1))
                         .option(doubleSlider("voidWaterTrailDecay", common.voidWaterTrailDecay, 0.25, 8.0, 0.25))
@@ -137,6 +141,7 @@ public class SpicedCiderConfigScreen {
                         .option(toggle("inventoryModelRotation", client.inventoryModelRotation))
                         .option(toggle("hideOwnEffectParticles", client.hideOwnEffectParticles))
                         .option(toggle("smoothStepUp", client.smoothStepUp))
+                        .option(toggle("stepUpSprintOnly", client.stepUpSprintOnly))
                         .option(toggle("hideArmorBar", client.hideArmorBar))
                         .option(toggle("softerBlindnessAndDarkness", client.softerBlindnessAndDarkness))
                         .option(toggle("hideSmithingTemplateTooltips", client.hideSmithingTemplateTooltips))
@@ -208,6 +213,7 @@ public class SpicedCiderConfigScreen {
         group(groups, List.of("create"),
                 toggle("soulCampfireHaunting", common.soulCampfireHaunting),
                 toggle("windCreateWindmills", common.windCreateWindmills),
+                toggle("createTankHandFluids", common.createTankHandFluids),
                 toggle("basinCampfireHeat", common.basinCampfireHeat),
                 toggle("createHideItemDescriptions", client.createHideItemDescriptions));
         group(groups, List.of("culturaldelights"),
@@ -226,7 +232,8 @@ public class SpicedCiderConfigScreen {
                 mods.isLoaded("supplementaries") ? toggle("emiUrnLootCategory", client.emiUrnLootCategory) : null,
                 mods.isLoaded("nomansland") ? toggle("emiTappingCategory", client.emiTappingCategory) : null,
                 mods.isLoaded("spelunkery") ? toggle("emiSluicingCategory", client.emiSluicingCategory) : null,
-                mods.isLoaded("create") ? toggle("emiCreateFanRework", client.emiCreateFanRework) : null);
+                mods.isLoaded("create") ? toggle("emiCreateFanRework", client.emiCreateFanRework) : null,
+                mods.isLoaded("create") ? toggle("fullerBasinFluids", client.fullerBasinFluids) : null);
         group(groups, List.of("bountifulfares"),
                 toggle("jackOStrawRotation", common.jackOStrawRotation));
         group(groups, List.of("environmental"),
@@ -269,7 +276,8 @@ public class SpicedCiderConfigScreen {
                 toggle("goldenDandelionTempting", common.goldenDandelionTempting),
                 toggle("goldenDandelionParticles", client.goldenDandelionParticles));
         group(groups, List.of("getoverit"),
-                toggle("ledgeClimbRework", common.ledgeClimbRework));
+                toggle("ledgeClimbRework", common.ledgeClimbRework),
+                toggle("ledgeClimbing", client.ledgeClimbing));
         group(groups, List.of("getoverit", "modest_meals"),
                 toggle("ledgeClimbStamina", common.ledgeClimbStamina));
         group(groups, List.of("treeliable", "modest_meals"),
@@ -283,6 +291,8 @@ public class SpicedCiderConfigScreen {
                 intSlider("nourishmentDurationPercent", common.nourishmentDurationPercent, 5, 100, 5));
         group(groups, List.of("quark", "create"),
                 toggle("quarkStoolSeats", common.quarkStoolSeats));
+        group(groups, List.of("blockbox"),
+                toggle("blockBoxSeatMobs", common.blockBoxSeatMobs));
         group(groups, List.of("voicechat"),
                 toggle("voiceChatHideSingleplayerHud", client.voiceChatHideSingleplayerHud));
         group(groups, List.of("reliable_gliders"),
@@ -290,7 +300,8 @@ public class SpicedCiderConfigScreen {
         group(groups, List.of("spelunkery", "emi"),
                 toggle("roughGemsOnGrindstone", client.roughGemsOnGrindstone));
         group(groups, List.of("supplementaries"),
-                toggle("windVaneSignal", common.windVaneSignal));
+                toggle("windVaneSignal", common.windVaneSignal),
+                toggle("jugShapedJars", common.jugShapedJars));
         group(groups, List.of("where_winds_blow"),
                 toggle("whereWindsBlowNoBonemealGrass", common.whereWindsBlowNoBonemealGrass));
         group(groups, List.of("bettermineshafts", "spelunkery"),

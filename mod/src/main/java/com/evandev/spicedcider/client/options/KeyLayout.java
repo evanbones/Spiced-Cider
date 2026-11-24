@@ -44,7 +44,9 @@ public final class KeyLayout {
             "quark.keybind.variant_selector",
             "treeliable.key.cycle_sneak_behavior",
             "key.immersiveoverlays.toggle",
-            "key.exposure.camera_controls"
+            "key.exposure.camera_controls",
+            "net.clayborn.accurateblockplacement.togglevanillaplacement",
+            "net.clayborn.accurateblockplacement.togglefastbreaking"
     );
 
     private static final Set<String> HIDDEN_ACTIVE = Set.of("create.keyinfo.shift_modifier", "create.keyinfo.ctrl_modifier", "create.keyinfo.alt_modifier");

@@ -1,0 +1,21 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "modestmining"
+    }
+  ],
+  "type": "spicedcider:basin_casting",
+  "fluid": {
+    "tag": "c:molten_valkyrium",
+    "amount": 2250
+  },
+  "result": {
+    "id": "modestmining:valkyrium_block"
+  },
+  "time": 200
+}

@@ -264,7 +264,7 @@
   "lore.create.elevator_contact": "Marks a floor for an Elevator Pulley, and gives a Flux signal when the lift arrives.",
   "lore.create.cart_assembler": "A rail that turns blocks attached to a Minecart into a moving contraption.",
   "item.create.schematic_and_quill": "Schematic and Quill",
-  "create.recipe.fan_haunting": "Haunting",
+  "create.recipe.fan_haunting": "Soul Campfire Haunting",
   "create.recipe.fan_haunting.fan": "Soul Fire or a Soul Campfire",
   "block.create.peculiar_bell": "Golden Bell",
   "block.create.peculiar_bell.tooltip.summary": "A decorative _Golden Bell_. Placing it right above open _Soul Fire_ may have side-effects...",
@@ -293,7 +293,6 @@
   "create.ponder.weighted_ejector_tunnel.text_1": "Combined with Steel Tunnels, Ejectors can split item stacks by specific amounts",
   "create.ponder.weighted_ejector_tunnel.text_2": "First, configure the Steel Tunnel to 'Prefer Nearest', in order to prioritize its side output",
   "tag.item.c.plates.steel": "Steel Sheets",
-  "tag.item.c.plates.electrum": "Electrum Sheets",
   "tag.item.c.plates.lead": "Lead Sheets",
   "tag.item.c.plates.silver": "Silver Sheets",
   "tag.item.c.plates.tin": "Tin Sheets",
@@ -314,5 +313,7 @@
   "advancement.create.copper_casing": "The Lead Age",
   "advancement.create.copper_casing.desc": "Apply Lead Ingots to stripped wood, creating a waterproof casing for your machines",
   "create.ponder.encased_fluid_pipe.text_1": "Lead Casing can be used to decorate Fluid Pipes",
-  "create.ponder.fluid_pipe_flow.header": "Moving Fluids using Fluid Pipes"
+  "create.ponder.fluid_pipe_flow.header": "Moving Fluids using Fluid Pipes",
+  "create.ponder.fluid_tank_storage.text_4": "Buckets and bottles can also add or take fluids by hand",
+  "tag.create.pressurized_air_sources": "Backtanks"
 }

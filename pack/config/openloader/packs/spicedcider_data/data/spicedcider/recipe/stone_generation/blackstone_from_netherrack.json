@@ -1,0 +1,15 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "stoneworks"
+    }
+  ],
+  "type": "spicedcider:stone_generation",
+  "with": "minecraft:blue_ice",
+  "catalyst": [
+    "minecraft:netherrack",
+    "stoneworks:cobbled_netherrack"
+  ],
+  "result": "stoneworks:cobbled_blackstone"
+}

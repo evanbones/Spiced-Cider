@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "spicedcider:block/item_drawer_distributor"
+    },
+    "facing=east": {
+      "model": "spicedcider:block/item_drawer_distributor",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "spicedcider:block/item_drawer_distributor",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "spicedcider:block/item_drawer_distributor",
+      "y": 270
+    }
+  }
+}

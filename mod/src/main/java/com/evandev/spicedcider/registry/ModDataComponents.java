@@ -41,6 +41,11 @@ public class ModDataComponents {
             builder -> builder.persistent(Codec.intRange(1, RuinedPageItem.PAGES)).networkSynchronized(ByteBufCodecs.VAR_INT)
     );
 
+    public static final DeferredHolder<DataComponentType<?>, DataComponentType<com.evandev.spicedcider.content.drawer.DrawerContents>> DRAWER_CONTENTS = DATA_COMPONENTS.registerComponentType(
+            "drawer_contents",
+            builder -> builder.persistent(com.evandev.spicedcider.content.drawer.DrawerContents.CODEC).networkSynchronized(com.evandev.spicedcider.content.drawer.DrawerContents.STREAM_CODEC).cacheEncoding()
+    );
+
     public static final DeferredHolder<DataComponentType<?>, DataComponentType<Unit>> FORK_CONDUCTING = DATA_COMPONENTS.registerComponentType(
             "fork_conducting",
             builder -> builder.persistent(Unit.CODEC).networkSynchronized(StreamCodec.unit(Unit.INSTANCE))

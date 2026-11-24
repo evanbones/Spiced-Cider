@@ -1,0 +1,15 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "stoneworks"
+    }
+  ],
+  "type": "spicedcider:stone_generation",
+  "with": "minecraft:water",
+  "catalyst": [
+    "minecraft:deepslate",
+    "minecraft:cobbled_deepslate"
+  ],
+  "result": "stoneworks:cobbled_tuff"
+}

@@ -18,6 +18,7 @@ import net.neoforged.neoforge.event.tick.PlayerTickEvent;
 @EventBusSubscriber(modid = SpicedCider.MOD_ID)
 public class ComfortEvents {
     private static final int IN_BED_TICKS = 100;
+    private static final int REFRESH_BELOW_TICKS = 60;
 
     @SubscribeEvent
     public static void onFinishEating(LivingEntityUseItemEvent.Finish event) {
@@ -37,7 +38,9 @@ public class ComfortEvents {
     public static void onPlayerTick(PlayerTickEvent.Post event) {
         if (!(event.getEntity() instanceof ServerPlayer player) || !player.isSleeping() || player.tickCount % 20 != 0) return;
         if (sleepSeconds() <= 0) return;
-        grant(player, IN_BED_TICKS);
+        MobEffectInstance current = player.getEffect(ModMobEffects.COMFORT);
+        if (current != null && current.getDuration() >= REFRESH_BELOW_TICKS) return;
+        player.addEffect(new MobEffectInstance(ModMobEffects.COMFORT, IN_BED_TICKS, 0, true, false, true));
     }
 
     @SubscribeEvent

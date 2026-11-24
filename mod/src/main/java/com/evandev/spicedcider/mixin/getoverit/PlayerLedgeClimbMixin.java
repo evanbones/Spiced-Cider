@@ -1,24 +1,20 @@
 package com.evandev.spicedcider.mixin.getoverit;
 
 import com.evandev.spicedcider.compat.getoverit.LedgeClimb;
-import com.llamalad7.mixinextras.injector.wrapmethod.WrapMethod;
-import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.moulberry.mixinconstraints.annotations.IfModLoaded;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.phys.Vec3;
+import net.minecraft.client.player.LocalPlayer;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @IfModLoaded("getoverit")
-@Mixin(Player.class)
+@Mixin(LocalPlayer.class)
 public abstract class PlayerLedgeClimbMixin {
 
-    @WrapMethod(method = "travel")
-    private void spicedcider$ledgeClimb(Vec3 travelVector, Operation<Void> original) {
-        Player player = (Player) (Object) this;
-        if (!player.isLocalPlayer() || !LedgeClimb.enabled()) {
-            original.call(travelVector);
-            return;
-        }
-        LedgeClimb.travel(player, travelVector, () -> original.call(travelVector));
+    @Inject(method = "aiStep", at = @At("HEAD"))
+    private void spicedcider$trackLedgeClimbInput(CallbackInfo ci) {
+        LocalPlayer player = (LocalPlayer) (Object) this;
+        LedgeClimb.tick(player, player.input.jumping);
     }
 }

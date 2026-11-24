@@ -113,16 +113,6 @@
         ]
       }
     },
-    "has_electrum_ingot": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "items": "modestmining:electrum_ingot"
-          }
-        ]
-      }
-    },
     "has_netherite_ingot": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
@@ -194,9 +184,6 @@
     ],
     [
       "has_silver_ingot"
-    ],
-    [
-      "has_electrum_ingot"
     ],
     [
       "has_netherite_ingot"

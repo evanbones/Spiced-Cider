@@ -1,6 +1,6 @@
 package com.evandev.spicedcider.mixin.mapatlases;
 
-import com.evandev.spicedcider.content.handler.WornBackpackItemEvents;
+import com.evandev.spicedcider.util.CarriedItems;
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import com.moulberry.mixinconstraints.annotations.IfModLoaded;
 import net.minecraft.world.entity.player.Player;
@@ -18,6 +18,6 @@ public class AtlasLookupBackpackMixin {
     @ModifyReturnValue(method = "getAtlasFromPlayerByConfig", at = @At("RETURN"))
     private static ItemStack spicedcider$atlasInWornBackpack(ItemStack original, Player player) {
         if (!original.isEmpty() || !MapAtlasesConfig.activationLocation.get().scanAll()) return original;
-        return WornBackpackItemEvents.find(player, stack -> stack.is(MapAtlasesMod.MAP_ATLAS.get()));
+        return CarriedItems.findStored(player, stack -> stack.is(MapAtlasesMod.MAP_ATLAS.get()));
     }
 }

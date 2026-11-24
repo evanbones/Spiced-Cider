@@ -274,5 +274,13 @@
       "quark:trapped_warped_chest"
     ],
     "output": "woodworks:trapped_warped_chest"
+  },
+  {
+    "inputs": [
+      "quark:crate"
+    ],
+    "output": "woodworks:oak_chest",
+    "player_blocks": true,
+    "keep_nbt": true
   }
 ]

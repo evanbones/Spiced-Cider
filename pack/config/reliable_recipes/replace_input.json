@@ -132,14 +132,6 @@
   {
     "action": "replace_input",
     "filter": {
-      "id": "create:crafting/kinetics/super_glue"
-    },
-    "target": "#c:slime_balls",
-    "replacement": "minecraft:resin_clump"
-  },
-  {
-    "action": "replace_input",
-    "filter": {
       "id": "/tide:bobbers\\/.*/"
     },
     "target": "#c:slime_balls",

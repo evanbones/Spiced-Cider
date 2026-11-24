@@ -1,9 +1,11 @@
 package com.evandev.spicedcider.registry;
 
 import com.evandev.spicedcider.SpicedCider;
+import com.evandev.spicedcider.content.casting.BasinCastingRecipe;
 import com.evandev.spicedcider.content.casting.CrucibleMeltingRecipe;
 import com.evandev.spicedcider.content.casting.MouldCastingRecipe;
 import com.evandev.spicedcider.content.casting.smeltery.SmelteryAlloyingRecipe;
+import com.evandev.spicedcider.content.stonegen.StoneGenerationRecipe;
 import com.evandev.spicedcider.recipe.AnvilSmithingRecipe;
 import com.evandev.spicedcider.recipe.DryingRecipe;
 import com.evandev.spicedcider.recipe.LabelRecipe;
@@ -32,6 +34,8 @@ public class ModRecipeSerializers {
     public static final DeferredHolder<RecipeSerializer<?>, RecipeSerializer<MouldCastingRecipe>> MOULD_CASTING = RECIPE_SERIALIZERS.register("mould_casting", () -> MouldCastingRecipe.SERIALIZER);
     public static final DeferredHolder<RecipeSerializer<?>, RecipeSerializer<CrucibleMeltingRecipe>> SMELTERY_MELTING = RECIPE_SERIALIZERS.register("smeltery_melting", () -> CrucibleMeltingRecipe.SMELTERY_SERIALIZER);
     public static final DeferredHolder<RecipeSerializer<?>, RecipeSerializer<SmelteryAlloyingRecipe>> SMELTERY_ALLOYING = RECIPE_SERIALIZERS.register("smeltery_alloying", () -> SmelteryAlloyingRecipe.SERIALIZER);
+    public static final DeferredHolder<RecipeSerializer<?>, RecipeSerializer<BasinCastingRecipe>> BASIN_CASTING = RECIPE_SERIALIZERS.register("basin_casting", () -> BasinCastingRecipe.SERIALIZER);
+    public static final DeferredHolder<RecipeSerializer<?>, RecipeSerializer<StoneGenerationRecipe>> STONE_GENERATION = RECIPE_SERIALIZERS.register("stone_generation", () -> StoneGenerationRecipe.SERIALIZER);
 
     public static final DeferredRegister<RecipeType<?>> RECIPE_TYPES = DeferredRegister.create(BuiltInRegistries.RECIPE_TYPE, SpicedCider.MOD_ID);
 
@@ -40,5 +44,7 @@ public class ModRecipeSerializers {
     public static final DeferredHolder<RecipeType<?>, RecipeType<CrucibleMeltingRecipe>> CRUCIBLE_MELTING_TYPE = RECIPE_TYPES.register("crucible_melting", () -> RecipeType.simple(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "crucible_melting")));
     public static final DeferredHolder<RecipeType<?>, RecipeType<MouldCastingRecipe>> MOULD_CASTING_TYPE = RECIPE_TYPES.register("mould_casting", () -> RecipeType.simple(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "mould_casting")));
     public static final DeferredHolder<RecipeType<?>, RecipeType<CrucibleMeltingRecipe>> SMELTERY_MELTING_TYPE = RECIPE_TYPES.register("smeltery_melting", () -> RecipeType.simple(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "smeltery_melting")));
+    public static final DeferredHolder<RecipeType<?>, RecipeType<BasinCastingRecipe>> BASIN_CASTING_TYPE = RECIPE_TYPES.register("basin_casting", () -> RecipeType.simple(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "basin_casting")));
     public static final DeferredHolder<RecipeType<?>, RecipeType<SmelteryAlloyingRecipe>> SMELTERY_ALLOYING_TYPE = RECIPE_TYPES.register("smeltery_alloying", () -> RecipeType.simple(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "smeltery_alloying")));
+    public static final DeferredHolder<RecipeType<?>, RecipeType<StoneGenerationRecipe>> STONE_GENERATION_TYPE = RECIPE_TYPES.register("stone_generation", () -> RecipeType.simple(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "stone_generation")));
 }

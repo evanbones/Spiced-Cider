@@ -1,0 +1,32 @@
+{
+  "parent": "spicedcider:spiced_cider/valkyrium",
+  "display": {
+    "icon": {
+      "id": "spicedcider:valkyrium_lance"
+    },
+    "title": {
+      "text": "Joust Do It"
+    },
+    "description": {
+      "text": "Forge an Valkyrium Lance and keep enemies at arm's length"
+    },
+    "frame": "task"
+  },
+  "criteria": {
+    "has_valkyrium_lance": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "spicedcider:valkyrium_lance"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_valkyrium_lance"
+    ]
+  ]
+}

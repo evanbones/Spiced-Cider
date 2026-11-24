@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:brush"
+    },
+    [
+      {
+        "tag": "c:slimeballs"
+      },
+      {
+        "item": "autumnity:snail_goo"
+      }
+    ],
+    [
+      {
+        "tag": "c:slimeballs"
+      },
+      {
+        "item": "autumnity:snail_goo"
+      }
+    ],
+    [
+      {
+        "tag": "c:slimeballs"
+      },
+      {
+        "item": "autumnity:snail_goo"
+      }
+    ]
+  ],
+  "result": {
+    "count": 1,
+    "id": "create:super_glue"
+  }
+}

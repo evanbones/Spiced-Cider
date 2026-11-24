@@ -1,0 +1,21 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "alloyed"
+    }
+  ],
+  "type": "spicedcider:basin_casting",
+  "fluid": {
+    "tag": "c:molten_bronze",
+    "amount": 2250
+  },
+  "result": {
+    "id": "alloyed:bronze_block"
+  },
+  "time": 200
+}

@@ -19,7 +19,7 @@ public class TierItemClientEvents {
     public static void onClientSetup(FMLClientSetupEvent event) {
         ClampedItemPropertyFunction blocking = (stack, level, entity, seed) ->
                 entity != null && entity.isUsingItem() && entity.getUseItem() == stack ? 1.0F : 0.0F;
-        event.enqueueWork(() -> Stream.of(ModTierItems.STEEL_SHIELD, ModTierItems.ELECTRUM_SHIELD)
+        event.enqueueWork(() -> Stream.of(ModTierItems.STEEL_SHIELD)
                 .forEach(shield -> ItemProperties.register(shield.get(), ResourceLocation.withDefaultNamespace("blocking"), blocking)));
     }
 }

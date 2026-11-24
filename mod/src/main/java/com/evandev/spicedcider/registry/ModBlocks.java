@@ -150,6 +150,14 @@ public class ModBlocks {
             () -> new FishTrapBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).strength(1.0F).sound(SoundType.WOOD)
                     .noOcclusion().ignitedByLava()));
 
+    public static final DeferredBlock<Block> ITEM_DRAWER = BLOCKS.register("item_drawer",
+            () -> new com.evandev.spicedcider.content.drawer.ItemDrawerBlock(BlockBehaviour.Properties.of().mapColor(MapColor.TERRACOTTA_BLUE)
+                    .strength(3.0F, 1200.0F).sound(SoundType.NETHERITE_BLOCK)));
+
+    public static final DeferredBlock<Block> ITEM_DRAWER_DISTRIBUTOR = BLOCKS.register("item_drawer_distributor",
+            () -> new com.evandev.spicedcider.content.drawer.DrawerDistributorBlock(BlockBehaviour.Properties.of().mapColor(MapColor.TERRACOTTA_BLUE)
+                    .strength(3.0F, 1200.0F).sound(SoundType.NETHERITE_BLOCK)));
+
     public static final DeferredBlock<Block> GRAVESTONE = BLOCKS.register("gravestone",
             () -> new GravestoneBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).strength(2.0F, 6.0F).noOcclusion().requiresCorrectToolForDrops()));
 

@@ -139,6 +139,7 @@ public class SpicedCider {
         ModEntityTypes.ITEMS.register(modEventBus);
         ModBuildingBlocks.register();
         ModPaleGardenBlocks.register();
+        ModLeadedGlassBlocks.register();
         ModFireBlocks.register();
         ModMoltenMetals.register();
         ModBlocks.BLOCKS.register(modEventBus);
@@ -172,6 +173,8 @@ public class SpicedCider {
         modEventBus.addListener(EventPriority.LOWEST, ChestCapabilities::register);
         modEventBus.addListener(EventPriority.LOWEST, BucketCapabilities::register);
         modEventBus.addListener(CastingCapabilities::register);
+        modEventBus.addListener(com.evandev.spicedcider.content.drawer.DrawerEvents::registerCapabilities);
+        NeoForge.EVENT_BUS.addListener(com.evandev.spicedcider.content.drawer.DrawerEvents::onLeftClickBlock);
         ModFluidTypes.FLUID_TYPES.register(modEventBus);
         ModFluids.FLUIDS.register(modEventBus);
 
@@ -209,6 +212,7 @@ public class SpicedCider {
         event.enqueueWork(TideCompat::registerFishingMediums);
         event.enqueueWork(IceCubes::registerDispenserBehavior);
         event.enqueueWork(ModMoltenMetals::registerInteractions);
+        event.enqueueWork(com.evandev.spicedcider.content.stonegen.StoneGeneration::registerInteractions);
         if (ModList.get().isLoaded("nomansland") && ModList.get().isLoaded("create")) {
             event.enqueueWork(NoMansLandCreate::registerOpenPipeEffects);
         }
@@ -321,6 +325,14 @@ public class SpicedCider {
             event.accept(ModItems.CACAO_POD.get(), vis);
         }
         FireVariantCompat.addToTabs(event, vis);
+        if (event.getTabKey() == CreativeModeTabs.COLORED_BLOCKS) {
+            ItemStack previous = new ItemStack(Items.PINK_STAINED_GLASS_PANE);
+            for (var glass : ModLeadedGlassBlocks.ITEMS) {
+                ItemStack stack = new ItemStack(glass.get());
+                event.insertAfter(previous, stack, vis);
+                previous = stack;
+            }
+        }
         if (event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
             event.insertAfter(new ItemStack(Items.SOUL_TORCH), new ItemStack(ModFireBlocks.SULFUR_TORCH_ITEM.get()), vis);
             event.insertAfter(new ItemStack(Items.LANTERN), new ItemStack(ModItems.TIN_LANTERN.get()), vis);
@@ -352,6 +364,8 @@ public class SpicedCider {
         if (event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
             event.insertAfter(new ItemStack(Items.LOOM), new ItemStack(ModItems.TANNING_RACK.get()), vis);
             event.accept(ModItems.FISH_TRAP.get(), vis);
+            event.accept(ModItems.ITEM_DRAWER.get(), vis);
+            event.accept(ModItems.ITEM_DRAWER_DISTRIBUTOR.get(), vis);
             event.insertAfter(new ItemStack(Items.LODESTONE), new ItemStack(ModItems.GRAVESTONE.get()), vis);
             event.accept(ModItems.CRUCIBLE.get(), vis);
             event.accept(ModItems.SMELTERY.get(), vis);
@@ -394,7 +408,6 @@ public class SpicedCider {
                 event.accept(ModItems.MOULDS.get(shape).get(), vis);
             }
             ModItems.METAL_SHEETS.values().forEach(sheet -> event.accept(sheet.get(), vis));
-            if (ModItems.LEAD_PIPE != null) event.accept(ModItems.LEAD_PIPE.get(), vis);
             event.insertAfter(new ItemStack(Items.HONEYCOMB), new ItemStack(ModItems.TALLOW.get()), vis);
             event.insertAfter(new ItemStack(Items.RABBIT_HIDE), new ItemStack(ModItems.HIDE.get()), vis);
             if (ModItems.MOURNFUL_CLAY_STATUE != null) {
@@ -476,6 +489,16 @@ public class SpicedCider {
                 PullStuckArrowPayload.TYPE,
                 PullStuckArrowPayload.CODEC,
                 (payload, context) -> context.enqueueWork(() -> StuckArrows.pull((ServerPlayer) context.player(), payload.entityId(), payload.slot(), payload.part()))
+        );
+        registrar.playToServer(
+                com.evandev.spicedcider.networking.RespawnChoicePayload.TYPE,
+                com.evandev.spicedcider.networking.RespawnChoicePayload.CODEC,
+                (payload, context) -> context.enqueueWork(() -> com.evandev.spicedcider.content.camp.CampRespawn.choose((ServerPlayer) context.player(), payload.camp()))
+        );
+        registrar.playToClient(
+                com.evandev.spicedcider.networking.CampSpawnPayload.TYPE,
+                com.evandev.spicedcider.networking.CampSpawnPayload.CODEC,
+                (payload, context) -> context.enqueueWork(() -> com.evandev.spicedcider.client.camp.CampRespawnClient.receive(payload))
         );
         registrar.playToServer(
                 LedgeClimbPayload.TYPE,

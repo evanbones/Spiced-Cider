@@ -124,6 +124,7 @@ public class ClientModEvents {
         event.registerEntityRenderer(ModEntityTypes.STRAW_GOLEM.get(), StrawGolemRenderer::new);
         event.registerBlockEntityRenderer(ModBlockEntities.GRAVE.get(), GraveRenderer::new);
         event.registerBlockEntityRenderer(ModBlockEntities.TANNING_RACK.get(), TanningRackRenderer::new);
+        event.registerBlockEntityRenderer(ModBlockEntities.ITEM_DRAWER.get(), com.evandev.spicedcider.client.renderer.ItemDrawerRenderer::new);
         CastingRenderers.register(event);
         if (TideCompat.isLoaded()) {
             event.registerEntityRenderer(ModEntityTypes.GRAPPLING_HOOK.get(), GrapplingHookRenderer::new);

@@ -1,0 +1,33 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " D ",
+    "BAB",
+    " C "
+  ],
+  "key": {
+    "A": {
+      "item": "spicedcider:item_drawer"
+    },
+    "B": {
+      "item": "minecraft:comparator"
+    },
+    "C": {
+      "item": "minecraft:ender_pearl"
+    },
+    "D": {
+      "item": "create:electron_tube"
+    }
+  },
+  "result": {
+    "id": "spicedcider:item_drawer_distributor",
+    "count": 1
+  }
+}

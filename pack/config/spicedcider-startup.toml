@@ -20,3 +20,5 @@ sulfurCavesRework = true
 brightCageLanterns = true
 #Uses the pack's own window and taskbar icon on Windows, including during loading. Requires a restart to take effect.
 customWindowIcon = true
+#Item ids that lose their durability entirely and never wear out. Requires a restart.
+unbreakableItems = ["minecraft:brush", "supplementaries:wrench", "etcetera:chisel", "quark:trowel", "manual_labour:ladle", "manual_labour:pestle", "reliable_gliders:glider"]

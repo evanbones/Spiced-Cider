@@ -121,10 +121,6 @@ public class ModItems {
     public static final DeferredItem<Item> CAST_IRON_BEAM = BeamsCompat.isLoaded()
             ? ITEMS.register("cast_iron_beam", BeamsContent::castIronBeam)
             : null;
-    @Nullable
-    public static final DeferredItem<Item> LEAD_PIPE = ModList.get().isLoaded("modestmining")
-            ? ITEMS.register("lead_pipe", () -> new Item(new Item.Properties()))
-            : null;
     public static final DeferredItem<Item> CRUCIBLE = ITEMS.register("crucible",
             () -> new CrucibleItem(ModBlocks.CRUCIBLE.get(), new Item.Properties().stacksTo(1)));
     public static final DeferredItem<Item> SMELTERY = ITEMS.register("smeltery",
@@ -178,6 +174,12 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> FISH_TRAP = ITEMS.register("fish_trap",
             () -> new BlockItem(ModBlocks.FISH_TRAP.get(), new Item.Properties()));
+
+    public static final DeferredItem<Item> ITEM_DRAWER = ITEMS.register("item_drawer",
+            () -> new BlockItem(ModBlocks.ITEM_DRAWER.get(), new Item.Properties()));
+
+    public static final DeferredItem<Item> ITEM_DRAWER_DISTRIBUTOR = ITEMS.register("item_drawer_distributor",
+            () -> new BlockItem(ModBlocks.ITEM_DRAWER_DISTRIBUTOR.get(), new Item.Properties()));
     @Nullable
     public static final DeferredItem<Item> MINT_SEEDS = ModBlocks.MINT_CROP != null
             ? ITEMS.register("mint_seeds", () -> new ItemNameBlockItem(ModBlocks.MINT_CROP.get(), new Item.Properties()))
@@ -398,7 +400,6 @@ public class ModItems {
         ingots.put("lead", ResourceLocation.fromNamespaceAndPath("modestmining", "lead_ingot"));
         ingots.put("rose_gold", ResourceLocation.fromNamespaceAndPath("oooh_pinky", "rose_gold_ingot"));
         ingots.put("silver", ResourceLocation.fromNamespaceAndPath("caverns_and_chasms", "silver_ingot"));
-        ingots.put("electrum", ResourceLocation.fromNamespaceAndPath("modestmining", "electrum_ingot"));
         ingots.put("diamond", ResourceLocation.withDefaultNamespace("diamond"));
         ingots.put("netherite", ResourceLocation.withDefaultNamespace("netherite_ingot"));
         ingots.put("necromium", ResourceLocation.fromNamespaceAndPath("caverns_and_chasms", "necromium_ingot"));

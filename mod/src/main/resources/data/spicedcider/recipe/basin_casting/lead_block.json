@@ -1,0 +1,21 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "modestmining"
+    }
+  ],
+  "type": "spicedcider:basin_casting",
+  "fluid": {
+    "tag": "c:molten_lead",
+    "amount": 2250
+  },
+  "result": {
+    "id": "modestmining:lead_block"
+  },
+  "time": 200
+}

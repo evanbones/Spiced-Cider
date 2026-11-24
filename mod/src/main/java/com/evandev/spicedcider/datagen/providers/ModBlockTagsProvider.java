@@ -5,6 +5,7 @@ import com.evandev.spicedcider.registry.ModBlocks;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import com.evandev.spicedcider.registry.ModFireBlocks;
+import com.evandev.spicedcider.registry.ModLeadedGlassBlocks;
 import com.evandev.spicedcider.registry.ModPaleGardenBlocks;
 import com.evandev.spicedcider.registry.ModBuildingBlocks;
 import com.evandev.spicedcider.registry.ModTags;
@@ -57,6 +58,7 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                 .add(ModBlocks.CRUCIBLE.get())
                 .add(ModBlocks.SMELTERY.get());
         ModBlocks.MOULDS.values().forEach(mould -> this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(mould.get()));
+        this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(ModBlocks.ITEM_DRAWER.get(), ModBlocks.ITEM_DRAWER_DISTRIBUTOR.get());
 
         this.tag(BlockTags.NEEDS_STONE_TOOL)
                 .add(ModBlocks.CAST_IRON_BLOCK.get());
@@ -177,6 +179,8 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
             this.tag(BlockTags.CEILING_HANGING_SIGNS).addOptional(ModBlocks.TWISTED_HANGING_SIGN.getId());
             this.tag(BlockTags.WALL_HANGING_SIGNS).addOptional(ModBlocks.TWISTED_WALL_HANGING_SIGN.getId());
         }
+
+        ModLeadedGlassBlocks.BLOCKS.forEach(glass -> this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(glass.get()));
     }
 
     private void paleGarden() {

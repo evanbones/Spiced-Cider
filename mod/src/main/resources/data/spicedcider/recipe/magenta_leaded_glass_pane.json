@@ -1,0 +1,34 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:ingots/lead"
+      }
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "leaded_glass_panes",
+  "key": {
+    "#": {
+      "item": "minecraft:glass_pane"
+    },
+    "X": {
+      "tag": "c:ingots/lead"
+    },
+    "+": {
+      "tag": "c:dyes/magenta"
+    }
+  },
+  "pattern": [
+    "+X+",
+    "X#X",
+    "+X+"
+  ],
+  "result": {
+    "count": 1,
+    "id": "spicedcider:magenta_leaded_glass_pane"
+  }
+}
