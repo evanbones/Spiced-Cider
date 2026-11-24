@@ -1,4 +1,5 @@
 import hashlib
+import json
 import os
 import re
 import requests
@@ -36,49 +37,80 @@ def get_sha1(filepath):
             hasher.update(chunk)
     return hasher.hexdigest()
 
-def query_modrinth(sha1):
-    """Queries Modrinth API to identify a file by its hash."""
-    url = f"https://api.modrinth.com/v2/version_file/{sha1}?algorithm=sha1"
+CACHE_FILE = REPO_ROOT / "build" / "packwiz_watcher_cache.json"
+SETTLE_SECONDS = 2
+
+
+def load_cache():
+    """Restores hashes and Modrinth ids from the last run so unchanged files aren't rehashed or looked up again."""
     try:
-        resp = requests.get(url, timeout=5)
-        if resp.status_code == 200:
-            data = resp.json()
-            return data.get("project_id"), data.get("id")  # project_id, version_id
+        saved = json.loads(CACHE_FILE.read_text(encoding='utf-8'))
+    except (OSError, ValueError):
+        return
+    for target in SYNC_TARGETS:
+        target["cache"] = saved.get(target["name"], {})
+
+
+def save_cache():
+    CACHE_FILE.parent.mkdir(parents=True, exist_ok=True)
+    tmp = CACHE_FILE.with_suffix('.tmp')
+    tmp.write_text(json.dumps({target["name"]: target["cache"] for target in SYNC_TARGETS}), encoding='utf-8')
+    os.replace(tmp, CACHE_FILE)
+
+
+def query_modrinth(sha1s):
+    """Looks up many files on Modrinth in one request. Returns {sha1: (project_id, version_id)}, or None if the request failed."""
+    try:
+        resp = requests.post("https://api.modrinth.com/v2/version_files",
+                             json={"hashes": list(sha1s), "algorithm": "sha1"}, timeout=30)
+        resp.raise_for_status()
+        return {sha1: (version.get("project_id"), version.get("id")) for sha1, version in resp.json().items()}
     except Exception as e:
-        print(f"  [API Warning] Modrinth query failed for hash {sha1}: {e}")
-    return None, None
+        print(f"  [API Warning] Modrinth lookup failed for {len(sha1s)} file(s): {e}")
+        return None
+
 
 def update_prism_cache(prism_files, target_config):
-    """Updates the cache of Prism SHA1s and Modrinth version IDs for a specific target."""
+    """Updates the cache of Prism SHA1s and Modrinth version IDs for a specific target. Returns True if it changed."""
     cache = target_config["cache"]
-    current_filenames = set(prism_files.keys())
+    changed = False
 
-    # Remove deleted files from cache
     for filename in list(cache.keys()):
-        if filename not in current_filenames:
+        if filename not in prism_files:
             del cache[filename]
+            changed = True
 
-    # Add or update files in cache
+    now = time.time()
     for filename, file_path in prism_files.items():
         stat = file_path.stat()
+        entry = cache.get(filename)
+        if entry and entry['mtime'] == stat.st_mtime and entry.get('size') == stat.st_size:
+            continue
+        if stat.st_size == 0 or now - stat.st_mtime < SETTLE_SECONDS:
+            continue
+        print(f"  [Cache] Hashing: {filename}")
+        cache[filename] = {
+            'mtime': stat.st_mtime,
+            'size': stat.st_size,
+            'sha1': get_sha1(file_path),
+            'project_id': None,
+            'version_id': None,
+            'checked': False
+        }
+        changed = True
 
-        if filename not in cache or cache[filename]['mtime'] != stat.st_mtime:
-            if stat.st_size == 0:
-                continue
-            time.sleep(0.5)
-            if stat.st_size != file_path.stat().st_size:
-                continue
+    unchecked = {entry['sha1']: entry for entry in cache.values() if not entry.get('checked')}
+    if unchecked:
+        print(f"  [Cache] Checking {len(unchecked)} file(s) on Modrinth...")
+        found = query_modrinth(unchecked.keys())
+        if found is not None:
+            for sha1, entry in unchecked.items():
+                entry['project_id'], entry['version_id'] = found.get(sha1, (None, None))
+                entry['checked'] = True
+            changed = True
 
-            print(f"  [Cache] Hashing and checking Modrinth for: {filename}...")
-            sha1 = get_sha1(file_path)
-            project_id, version_id = query_modrinth(sha1)
-            
-            cache[filename] = {
-                'mtime': stat.st_mtime,
-                'sha1': sha1,
-                'project_id': project_id,
-                'version_id': version_id
-            }
+    return changed
+
 
 def get_packwiz_state(packwiz_dir, ext):
     """Reads all packwiz files in a directory, extracting filename and version ID."""
@@ -136,6 +168,7 @@ def sync_loop():
         if not target["prism_dir"].exists():
             print(f"WARNING: Prism {target['name']} directory not found at:\n{target['prism_dir']}")
 
+    load_cache()
     first_run = True
 
     while True:
@@ -150,36 +183,41 @@ def sync_loop():
                 if first_run:
                     print(f"Found {len(prism_files)} {target['name']} in Prism. Building initial cache...")
                 
-                update_prism_cache(prism_files, target)
-
-                packwiz_state = get_packwiz_state(target["packwiz_dir"], target["ext"])
+                previous = dict(target["cache"])
+                if update_prism_cache(prism_files, target):
+                    save_cache()
                 cache = target["cache"]
 
-                # DELETIONS: File exists in Packwiz, but was removed from Prism
-                for pw_file in packwiz_state:
+                if first_run:
+                    continue
+
+                removed = {name: entry for name, entry in previous.items() if name not in cache}
+                added = [name for name in cache if name not in previous]
+                if not removed and not added:
+                    continue
+
+                prism_versions = {entry['version_id'] for entry in cache.values() if entry['version_id']}
+
+                # DELETIONS: a file that was in Prism on the last poll is gone now
+                for pw_file in get_packwiz_state(target["packwiz_dir"], target["ext"]):
                     pw_filename = pw_file['filename']
                     pw_version = pw_file['version_id']
-
-                    in_prism = pw_filename in cache
-
-                    if not in_prism and pw_version:
-                        for p_cache in cache.values():
-                            if p_cache['version_id'] == pw_version:
-                                in_prism = True
-                                break
-
-                    if not in_prism:
+                    matches_removed = pw_filename in removed or (
+                        pw_version and any(entry['version_id'] == pw_version for entry in removed.values()))
+                    still_in_prism = pw_filename in cache or (pw_version and pw_version in prism_versions)
+                    if matches_removed and not still_in_prism:
                         print(f"\n[-] Detected removal in Prism: {pw_filename}")
                         os.remove(pw_file['path'])
                         subprocess.run(["packwiz", "refresh"], cwd=PACK_DIR, shell=True, stdout=subprocess.DEVNULL)
                         print(f"    -> Removed from Packwiz.")
 
-                # ADDITIONS: File downloaded in Prism, but missing in Packwiz
+                # ADDITIONS: a file appeared in Prism since the last poll and packwiz doesn't have it
                 packwiz_state = get_packwiz_state(target["packwiz_dir"], target["ext"])
                 pw_filenames = {f['filename'] for f in packwiz_state}
                 pw_versions = {f['version_id'] for f in packwiz_state if f['version_id']}
 
-                for p_filename, p_cache in cache.items():
+                for p_filename in added:
+                    p_cache = cache[p_filename]
                     if p_filename in pw_filenames:
                         continue
 
