@@ -276,7 +276,7 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.BooleanValue skeletonHorsesBurn;
         public final ModConfigSpec.BooleanValue darkForestEvokers;
         public final ModConfigSpec.BooleanValue tentRespawnChoice;
-        public final ModConfigSpec.BooleanValue storageDuctSideAccess;
+        public final ModConfigSpec.BooleanValue itemVaultInterface;
         public final ModConfigSpec.BooleanValue crushingWheelsSkipMilling;
         public final ModConfigSpec.BooleanValue iglooBasementRemoval;
         public final ModConfigSpec.BooleanValue noVanillaCocoaPods;
@@ -705,10 +705,10 @@ public class SpicedCiderConfig {
                     .translation("option.spicedcider.tentRespawnChoice")
                     .define("tentRespawnChoice", false);
 
-            storageDuctSideAccess = builder
-                    .comment(tooltip("storageDuctSideAccess"))
-                    .translation("option.spicedcider.storageDuctSideAccess")
-                    .define("storageDuctSideAccess", false);
+            itemVaultInterface = builder
+                    .comment(tooltip("itemVaultInterface"))
+                    .translation("option.spicedcider.itemVaultInterface")
+                    .define("itemVaultInterface", false);
 
             crushingWheelsSkipMilling = builder
                     .comment(tooltip("crushingWheelsSkipMilling"))

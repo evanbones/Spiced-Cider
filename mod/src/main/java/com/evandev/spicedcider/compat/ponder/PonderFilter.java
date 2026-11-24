@@ -1,6 +1,8 @@
 package com.evandev.spicedcider.compat.ponder;
 
+import com.evandev.spicedcider.SpicedCider;
 import com.evandev.spicedcider.compat.reliableremover.ReliableRemoverCompat;
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import net.createmod.ponder.api.registration.StoryBoardEntry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
@@ -22,6 +24,14 @@ public final class PonderFilter {
             ResourceLocation.fromNamespaceAndPath("create", "mechanical_saw/contraption")
     );
 
+    public static final ResourceLocation VAULT_STORAGE = ResourceLocation.fromNamespaceAndPath("create", "item_vault/storage");
+
+    private static boolean isReplacedVaultScene(StoryBoardEntry entry) {
+        if (!VAULT_STORAGE.equals(entry.getSchematicLocation())) return false;
+        boolean vaultInterface = SpicedCiderConfig.commonOr(SpicedCiderConfig.COMMON.itemVaultInterface, false);
+        return SpicedCider.MOD_ID.equals(entry.getNamespace()) != vaultInterface;
+    }
+
     public static boolean isRemoved(ResourceLocation component) {
         if (!ReliableRemoverCompat.isLoaded()) return false;
         Item item = BuiltInRegistries.ITEM.get(component);
@@ -29,7 +39,7 @@ public final class PonderFilter {
     }
 
     public static boolean isShown(StoryBoardEntry entry) {
-        return !HIDDEN_SCHEMATICS.contains(entry.getSchematicLocation()) && !isRemoved(entry.getComponent());
+        return !HIDDEN_SCHEMATICS.contains(entry.getSchematicLocation()) && !isReplacedVaultScene(entry) && !isRemoved(entry.getComponent());
     }
 
     public static List<StoryBoardEntry> shown(Collection<StoryBoardEntry> entries) {

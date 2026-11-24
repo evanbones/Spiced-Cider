@@ -22,10 +22,12 @@
   Netherrack makes Cobbled Blackstone. EMI shows every generator.
 - When you die you can choose to respawn at your bed or at your tent. Setting up a tent or sleeping bag is enough,
   and it doesn't replace your bed spawn.
-- Storage Ducts, openable from any side.
 - Animal Feed group in EMI.
 - Leaded glass windows in many patterns, colours, and pictures. Matching windows placed together join into one larger
   window.
+- Overflowing Bars: extra health stacks onto a single row of hearts in new colours instead of stacking rows.
+- Right-click an Item Vault to open it. Sneak or hold a block to place against it instead.
+- Item descriptions can be shown in tooltips, always or while holding Shift, Ctrl or Alt (Interface settings).
 
 ### Changed
 
@@ -57,6 +59,13 @@
 - Repeaters and Comparators are made with Smooth Stone.
 - Rice Panicles are in the Seeds group in EMI.
 - The Lance is made of Valkyrium, with a new look and Valkyrium stats.
+- Retextured Ashroot so it no longer looks like Dead Wood.
+- Oases grow palm trees and cactus flowers. Palms no longer grow in plain deserts.
+- Camels only spawn in oases.
+- Sleds stack to 16, like boats.
+- Cactus bobbles no longer grow on cacti.
+- The strongest Luminous potion is brewed with a Glowsilk Moth in a bottle.
+- Beams now show a translucent preview instead of solid.
 
 ### Fixed
 
@@ -75,6 +84,15 @@
 - Pets following you no longer stop walking when they fall more than 16 blocks behind.
 - Raindrop ripples on water now match the water's pixel size.
 - The Backtank tablet in EMI says "Backtanks" instead of an untranslated name.
+- Venison with Bamboo Shoots can be cooked again.
+- Slabdish can be cooked again, with a Pink Tulip.
+- Cactus flowers generate on desert cacti.
+- Ponds with lily pads no longer generate in badlands and savannas.
+- Horses, donkeys, mules, camels, llamas, zebras and other mobs play their own footstep sounds.
+- The game pauses on the advancements screen.
+- Gloomwood Beams exist, and Gloamwood and Kapok Beams have the right names.
+- Obsidian Chests no longer open from your inventory, where it voided items put into it.
+- The Luminous potion shows its brewing recipe.
 
 ### Removed
 
@@ -83,3 +101,4 @@
 - Electrum and all its gear.
 - Storage Crates.
 - Leveled Stone and Crumbling Stone.
+- Potion of Wind Charging.

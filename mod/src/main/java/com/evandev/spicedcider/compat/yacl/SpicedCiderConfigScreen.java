@@ -86,7 +86,7 @@ public class SpicedCiderConfigScreen {
                         .option(toggle("tameableSkeletonHorses", common.tameableSkeletonHorses))
                         .option(toggle("darkForestEvokers", common.darkForestEvokers))
                         .option(toggle("tentRespawnChoice", common.tentRespawnChoice))
-                        .option(toggle("storageDuctSideAccess", common.storageDuctSideAccess))
+                        .option(toggle("itemVaultInterface", common.itemVaultInterface))
                         .option(toggle("crushingWheelsSkipMilling", common.crushingWheelsSkipMilling))
                         .option(toggle("voidWater", common.voidWater))
                         .option(intSlider("voidWaterTrailLength", common.voidWaterTrailLength, 0, 64, 1))

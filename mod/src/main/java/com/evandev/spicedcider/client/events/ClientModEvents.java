@@ -113,6 +113,7 @@ public class ClientModEvents {
     public static void registerScreens(net.neoforged.neoforge.client.event.RegisterMenuScreensEvent event) {
         event.register(com.evandev.spicedcider.registry.ModMenuTypes.SMELTERY.get(), com.evandev.spicedcider.client.screen.SmelteryScreen::new);
         event.register(com.evandev.spicedcider.registry.ModMenuTypes.FISH_TRAP.get(), com.evandev.spicedcider.client.screen.FishTrapScreen::new);
+        event.register(com.evandev.spicedcider.registry.ModMenuTypes.ITEM_VAULT.get(), com.evandev.spicedcider.client.screen.VaultScreen::new);
     }
 
     @SubscribeEvent

@@ -28,6 +28,7 @@ import com.evandev.spicedcider.config.LogReconfiguration;
 import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.evandev.spicedcider.compat.nomansland.NoMansLandCreate;
 import com.evandev.spicedcider.compat.create.BasinStirring;
+import com.evandev.spicedcider.compat.create.VaultInterface;
 import com.evandev.spicedcider.content.handler.BucketCapabilities;
 import com.evandev.spicedcider.compat.treeliable.ChopStamina;
 import com.evandev.spicedcider.compat.getoverit.LedgeClimbStamina;
@@ -169,6 +170,7 @@ public class SpicedCider {
         ModMenuTypes.MENU_TYPES.register(modEventBus);
         if (ModList.get().isLoaded("iteminteractions")) ItemInteractionsCompat.register(modEventBus);
         if (ModList.get().isLoaded("create")) BasinStirring.register();
+        if (ModList.get().isLoaded("create")) VaultInterface.register();
         if (ModList.get().isLoaded("treeliable") && ModList.get().isLoaded("modest_meals")) ChopStamina.register();
         modEventBus.addListener(EventPriority.LOWEST, ChestCapabilities::register);
         modEventBus.addListener(EventPriority.LOWEST, BucketCapabilities::register);

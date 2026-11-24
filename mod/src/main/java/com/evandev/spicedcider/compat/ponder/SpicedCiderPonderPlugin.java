@@ -8,6 +8,7 @@ import com.evandev.spicedcider.compat.ponder.scenes.MultiblockScenes;
 import com.evandev.spicedcider.compat.ponder.scenes.PackScenes;
 import com.evandev.spicedcider.compat.ponder.scenes.ProcessScenes;
 import com.evandev.spicedcider.compat.ponder.scenes.RedstoneScenes;
+import com.evandev.spicedcider.compat.ponder.scenes.VaultScenes;
 import net.createmod.ponder.api.registration.MultiSceneBuilder;
 import net.createmod.ponder.api.registration.MultiTagBuilder;
 import net.createmod.ponder.api.registration.PonderPlugin;
@@ -119,6 +120,11 @@ public class SpicedCiderPonderPlugin implements PonderPlugin {
         if (has("create:basin", "manual_labour:ladle")) {
             components(helper, "create:basin", "manual_labour:ladle")
                     .addStoryBoard("misc/ladle_mixing", BasinScenes::ladleMixing);
+        }
+        if (has("create:item_vault")) {
+            components(helper, "create:item_vault")
+                    .addStoryBoard(PonderFilter.VAULT_STORAGE, VaultScenes::storage,
+                            entry -> entry.orderBefore("create", "item_vault_sizes").highlightTags(ResourceLocation.fromNamespaceAndPath("create", "logistics")));
         }
         components(helper, "spicedcider:crucible", "spicedcider:ingot_mould", "spicedcider:plate_mould")
                 .addStoryBoard("casting/crucible", CastingScenes::crucible);

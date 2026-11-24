@@ -27,7 +27,7 @@ public class ClientGameEvents {
 
     @SubscribeEvent
     public static void onClientTick(ClientTickEvent.Post event) {
-        if (!SpicedCiderConfig.CLIENT.customDeathSound.get()) return;
+        if (!SpicedCiderConfig.clientOr(SpicedCiderConfig.CLIENT.customDeathSound, false)) return;
 
         Minecraft mc = Minecraft.getInstance();
 

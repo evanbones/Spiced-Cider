@@ -25,12 +25,12 @@ public class ClientScreenRerouter {
         Screen screen = event.getScreen();
         if (screen == null) return;
 
-        if (screen.getClass() == OptionsScreen.class && SpicedCiderConfig.CLIENT.customOptionsScreen.get()) {
+        if (screen.getClass() == OptionsScreen.class && SpicedCiderConfig.clientOr(SpicedCiderConfig.CLIENT.customOptionsScreen, false)) {
             event.setNewScreen(new SettingsScreen(((OptionsScreenAccessor) screen).spicedcider$lastScreen()));
             return;
         }
 
-        if (!SpicedCiderConfig.CLIENT.oldProgressScreen.get()) return;
+        if (!SpicedCiderConfig.clientOr(SpicedCiderConfig.CLIENT.oldProgressScreen, false)) return;
 
         if (screen instanceof ProgressScreen progressScreen && !(screen instanceof OldProgressScreen)) {
             event.setNewScreen(new OldProgressScreen(progressScreen));

@@ -23,12 +23,15 @@
   block under it or on the block the lava touches (like Blue Ice), with optional height limits. Shown in EMI.
 - Tent Respawn Choice: setting up or resting in a Valhelsia Structures tent or sleeping bag saves it as a camp without
   replacing the bed spawn, and the death screen offers Respawn at Bed and Respawn at Tent (off by default).
-- Storage Duct Side Access: Caverns & Chasms Storage Ducts open from any side (off by default).
 - Separate Crushing and Milling: Create Crushing Wheels stop running millstone recipes, and EMI's Crushing category
   stops listing them (off by default).
 - Valkyrium Lance.
 - Leaded glass windows in many patterns, colours and pictures, with 3D item icons. Matching windows join into larger
   ones. Ported from Medieval Glass by elwood612.
+- Item Vault Interface: right-clicking a Create Item Vault opens a scrollable inventory of the whole vault, and its
+  Ponder scene shows how (off by default).
+- Descriptions in Tooltips setting on the Interface settings page for Item Descriptions: off, always, or while holding
+  Shift, Ctrl or Alt.
 
 ### Changed
 
@@ -54,6 +57,13 @@
 - Crash on startup with Offgrid and Sable.
 - Mounts no longer jump into view when Smooth Camera Steps glides over a step.
 - Fluid tanks in Ponder scenes no longer have missing faces with Stone Zone installed.
+- Vintage Beams makes beams for modded woods in the `minecraft` namespace (like Pale Oak), and beam names use the
+  wood's translated name.
+- Mobs set to the `NONE` Presence Footsteps stance play their own step sounds again in singleplayer.
+- The Reliable Advancements screen pauses the game again, except in edit mode.
+- A potion's basin brewing recipe stays in EMI when one of its ingredients is removed; only that ingredient is hidden.
+- Crash on startup in place of NeoForge's mod loading error screen when another mod fails to load.
+- Crash on startup with Miner's Delight and other mods that read food effects before effects are registered.
 
 ### Removed
 

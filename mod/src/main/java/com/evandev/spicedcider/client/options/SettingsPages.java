@@ -18,6 +18,7 @@ import com.evandev.spicedcider.compat.bettercloudshadows.CloudShadowSettings;
 import com.evandev.spicedcider.compat.cirrus.CirrusSettings;
 import com.evandev.spicedcider.compat.controlify.ControlifySettings;
 import com.evandev.spicedcider.compat.lambdynlights.DynamicLightsSetting;
+import com.evandev.spicedcider.compat.itemdescriptions.ItemDescriptionsSettings;
 import com.evandev.spicedcider.compat.musictweaks.MusicTweaksSettings;
 import com.evandev.spicedcider.compat.nomansland.NoMansLandSettings;
 import com.evandev.spicedcider.compat.particular.ParticularSettings;
@@ -96,7 +97,8 @@ public final class SettingsPages {
                 setting(new GuiScaleSetting()),
                 sodium("sodium:general.attack_indicator", o.attackIndicator()),
                 sodium("sodium:general.autosave_indicator", o.showAutosaveIndicator()),
-                vanilla(o.notificationDisplayTime())));
+                vanilla(o.notificationDisplayTime()),
+                ModList.get().isLoaded("item_descriptions") ? ItemDescriptionsSettings.mode() : null));
         add(entries, category(screen, "chat",
                 vanilla(o.chatVisibility()),
                 vanilla(o.chatColors()),
