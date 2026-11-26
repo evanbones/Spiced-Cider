@@ -1,5 +1,7 @@
 @echo off
 cd /d "%~dp0"
+java "%~dp0DownloadMods.java" "%~dp0downloads.txt"
+if errorlevel 1 exit /b 1
 if not exist "%~dp0run.bat" (
   java -jar "%~dp0neoforge-installer.jar" --installServer
   if errorlevel 1 exit /b 1

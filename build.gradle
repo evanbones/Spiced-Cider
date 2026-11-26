@@ -47,6 +47,7 @@ def serverPack = layout.buildDirectory.file("pack/${pack_name.replace(' ', '-')}
 def downloadCache = layout.buildDirectory.dir("pack/cache").get().asFile
 def serverPackFiles = layout.projectDirectory.dir("server-pack").asFile
 def serverExcludedJars = pack_server_excluded_jars.split(",").collect { it.trim() }.findAll { !it.isEmpty() }
+def serverDownloadedJars = pack_server_downloaded_jars.split(",").collect { it.trim() }.findAll { !it.isEmpty() }
 def serverExcludedOverrides = ["resourcepacks/", "shaderpacks/", "PW-GUI.exe", "packwiz.exe", "unsup.toml", "icon.png"]
 def neoInstallerUrl = "https://maven.neoforged.net/releases/net/neoforged/neoforge/${neo_version}/neoforge-${neo_version}-installer.jar"
 
@@ -74,10 +75,12 @@ var exportServerPack = tasks.register("exportServerPack") {
             }
             cached
         }
-        def excludedJar = { String path ->
+        def jarMatches = { String path, List prefixes ->
             def name = path.substring(path.lastIndexOf('/') + 1)
-            path.startsWith("mods/") && serverExcludedJars.any { name.startsWith(it) }
+            path.startsWith("mods/") && prefixes.any { name.startsWith(it) }
         }
+        def excludedJar = { String path -> jarMatches(path, serverExcludedJars) }
+        def downloads = []
         def out = serverPack.get().asFile
         out.parentFile.mkdirs()
         def written = [] as Set
@@ -91,9 +94,16 @@ var exportServerPack = tasks.register("exportServerPack") {
                     zip.closeEntry()
                 }
                 index.files.findAll { it.env?.server != "unsupported" && !excludedJar(it.path) }.each { entry ->
+                    if (jarMatches(entry.path as String, serverDownloadedJars)) {
+                        downloads << "${entry.hashes.sha512} ${entry.downloads[0]} ${entry.path}"
+                        return
+                    }
                     def file = fetch(entry.downloads[0] as String, entry.hashes.sha512 as String)
                     put(entry.path as String) { it << file.bytes }
                 }
+                def missing = serverDownloadedJars.findAll { prefix -> !downloads.any { it.split(' ', 3)[2].substring(5).startsWith(prefix) } }
+                if (!missing.isEmpty()) throw new GradleException("pack_server_downloaded_jars has no matching mod for ${missing.join(', ')}")
+                put("downloads.txt") { it << (downloads.join("\n") + "\n").getBytes("UTF-8") }
                 ["server-overrides/", "overrides/"].each { prefix ->
                     source.entries().findAll { !it.directory && it.name.startsWith(prefix) }.each { entry ->
                         def path = entry.name.substring(prefix.length())

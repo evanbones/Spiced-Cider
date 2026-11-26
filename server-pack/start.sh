@@ -1,6 +1,7 @@
 #!/usr/bin/env sh
 set -e
 cd "$(dirname "$0")"
+java DownloadMods.java downloads.txt
 if [ ! -f run.sh ]; then
   java -jar neoforge-installer.jar --installServer
   rm -f neoforge-installer.jar.log
