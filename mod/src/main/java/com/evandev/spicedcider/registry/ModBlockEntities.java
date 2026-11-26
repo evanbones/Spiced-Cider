@@ -8,6 +8,8 @@ import com.evandev.spicedcider.content.casting.CrucibleBlockEntity;
 import com.evandev.spicedcider.content.casting.MouldBlockEntity;
 import com.evandev.spicedcider.content.casting.smeltery.SmelteryBlockEntity;
 import com.evandev.spicedcider.content.casting.smeltery.SmelteryPartBlockEntity;
+import com.evandev.spicedcider.content.drawer.DrawerDistributorBlockEntity;
+import com.evandev.spicedcider.content.drawer.ItemDrawerBlockEntity;
 import com.evandev.spicedcider.content.fishtrap.FishTrapBlockEntity;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.core.registries.Registries;
@@ -41,4 +43,10 @@ public class ModBlockEntities {
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<TanningRackBlockEntity>> TANNING_RACK = BLOCK_ENTITIES.register("tanning_rack",
             () -> BlockEntityType.Builder.of(TanningRackBlockEntity::new, ModBlocks.TANNING_RACK.get()).build(null));
+
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<ItemDrawerBlockEntity>> ITEM_DRAWER = BLOCK_ENTITIES.register("item_drawer",
+            () -> BlockEntityType.Builder.of(ItemDrawerBlockEntity::new, ModBlocks.ITEM_DRAWER.get()).build(null));
+
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<DrawerDistributorBlockEntity>> ITEM_DRAWER_DISTRIBUTOR = BLOCK_ENTITIES.register("item_drawer_distributor",
+            () -> BlockEntityType.Builder.of(DrawerDistributorBlockEntity::new, ModBlocks.ITEM_DRAWER_DISTRIBUTOR.get()).build(null));
 }

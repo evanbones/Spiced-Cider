@@ -16,6 +16,18 @@
     "#minecraft:compasses",
     "minecraft:spyglass",
     {
+      "id": "#create:toolboxes",
+      "required": false
+    },
+    {
+      "id": "exposure:camera",
+      "required": false
+    },
+    {
+      "id": "exposure_polaroid:instant_camera",
+      "required": false
+    },
+    {
       "id": "fieldguide:field_guide",
       "required": false
     },
@@ -270,10 +282,6 @@
       "required": false
     },
     {
-      "id": "spicedcider:molten_electrum_bucket",
-      "required": false
-    },
-    {
       "id": "spicedcider:molten_iron_bucket",
       "required": false
     },
@@ -299,6 +307,10 @@
     },
     {
       "id": "spicedcider:molten_valkyrium_bucket",
+      "required": false
+    },
+    {
+      "id": "spicedcider:molten_glass_bucket",
       "required": false
     }
   ]

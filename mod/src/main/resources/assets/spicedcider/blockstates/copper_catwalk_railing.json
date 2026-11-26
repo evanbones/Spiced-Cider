@@ -1,0 +1,39 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "north": "true"
+      },
+      "apply": {
+        "model": "spicedcider:block/copper_catwalk_railing",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "south": "true"
+      },
+      "apply": {
+        "model": "spicedcider:block/copper_catwalk_railing",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "east": "true"
+      },
+      "apply": {
+        "model": "spicedcider:block/copper_catwalk_railing",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "west": "true"
+      },
+      "apply": {
+        "model": "spicedcider:block/copper_catwalk_railing"
+      }
+    }
+  ]
+}

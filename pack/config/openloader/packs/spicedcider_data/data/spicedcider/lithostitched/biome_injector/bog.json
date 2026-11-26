@@ -1,0 +1,9 @@
+{
+  "type": "lithostitched:replace_partially",
+  "dimension": "minecraft:overworld",
+  "targets": "minecraft:plains",
+  "replacement": "nomansland:bog",
+  "parameters": {
+    "spicedcider:bog_selector": [0.5, 10.0]
+  }
+}

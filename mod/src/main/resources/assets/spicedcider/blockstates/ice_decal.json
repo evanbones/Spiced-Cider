@@ -1,0 +1,57 @@
+{
+  "variants": {
+    "face=floor,facing=north": {
+      "model": "spicedcider:block/ice_decal",
+      "x": 90
+    },
+    "face=floor,facing=east": {
+      "model": "spicedcider:block/ice_decal",
+      "x": 90,
+      "y": 90
+    },
+    "face=floor,facing=south": {
+      "model": "spicedcider:block/ice_decal",
+      "x": 90,
+      "y": 180
+    },
+    "face=floor,facing=west": {
+      "model": "spicedcider:block/ice_decal",
+      "x": 90,
+      "y": 270
+    },
+    "face=wall,facing=north": {
+      "model": "spicedcider:block/ice_decal",
+      "y": 180
+    },
+    "face=wall,facing=east": {
+      "model": "spicedcider:block/ice_decal",
+      "y": 270
+    },
+    "face=wall,facing=south": {
+      "model": "spicedcider:block/ice_decal"
+    },
+    "face=wall,facing=west": {
+      "model": "spicedcider:block/ice_decal",
+      "y": 90
+    },
+    "face=ceiling,facing=north": {
+      "model": "spicedcider:block/ice_decal",
+      "x": 270
+    },
+    "face=ceiling,facing=east": {
+      "model": "spicedcider:block/ice_decal",
+      "x": 270,
+      "y": 90
+    },
+    "face=ceiling,facing=south": {
+      "model": "spicedcider:block/ice_decal",
+      "x": 270,
+      "y": 180
+    },
+    "face=ceiling,facing=west": {
+      "model": "spicedcider:block/ice_decal",
+      "x": 270,
+      "y": 270
+    }
+  }
+}

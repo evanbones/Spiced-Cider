@@ -20,7 +20,7 @@ import net.minecraft.world.level.Level;
 import java.util.Optional;
 
 public record DryingRecipe(Ingredient ingredient, int count, Optional<Ingredient> agent, ItemStack result, int time,
-                           Rack rack) implements Recipe<SingleRecipeInput> {
+                           Optional<Rack> rack) implements Recipe<SingleRecipeInput> {
 
     public static final MapCodec<DryingRecipe> CODEC = RecordCodecBuilder.mapCodec(instance -> instance.group(
             Ingredient.CODEC_NONEMPTY.fieldOf("ingredient").forGetter(DryingRecipe::ingredient),
@@ -28,7 +28,7 @@ public record DryingRecipe(Ingredient ingredient, int count, Optional<Ingredient
             Ingredient.CODEC_NONEMPTY.optionalFieldOf("agent").forGetter(DryingRecipe::agent),
             ItemStack.STRICT_CODEC.fieldOf("result").forGetter(DryingRecipe::result),
             Codec.intRange(1, 72000).optionalFieldOf("time", 1200).forGetter(DryingRecipe::time),
-            Rack.CODEC.fieldOf("rack").forGetter(DryingRecipe::rack)
+            Rack.CODEC.optionalFieldOf("rack").forGetter(DryingRecipe::rack)
     ).apply(instance, DryingRecipe::new));
 
     public static final StreamCodec<RegistryFriendlyByteBuf, DryingRecipe> STREAM_CODEC = ByteBufCodecs.fromCodecWithRegistries(CODEC.codec());

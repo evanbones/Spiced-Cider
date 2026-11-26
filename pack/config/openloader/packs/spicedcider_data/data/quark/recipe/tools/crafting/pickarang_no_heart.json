@@ -1,0 +1,34 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "zeta:flag",
+      "flag": "pickarang"
+    }
+  ],
+  "type": "create:mechanical_crafting",
+  "accept_mirrored": false,
+  "category": "equipment",
+  "pattern": [
+    "DSSD",
+    "   S",
+    "   S",
+    "   D"
+  ],
+  "key": {
+    "D": {
+      "tag": "c:gems/diamond"
+    },
+    "S": {
+      "item": "alloyed:steel_sheet"
+    }
+  },
+  "result": {
+    "id": "quark:pickarang",
+    "count": 1
+  },
+  "show_notification": false
+}

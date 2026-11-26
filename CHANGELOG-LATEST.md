@@ -1,326 +1,228 @@
 ### Added
 
-- Fish Trap: place it underwater with bait and it slowly catches fish from that biome. Bigger bodies of water catch
-  more often, and better bait brings in more fish per catch.
-- Redelight-Map.
-- Video settings now have a Cloud Shadows toggle and a Cloud Shadow Strength slider.
-- Video settings show how much each one affects performance.
-- Monsters that stop you from sleeping or opening a loot chest now glow briefly so you can find them.
-- Tin Lantern: a lighter lantern made from tin nuggets and a torch.
-- Warding Effigies can be made by infusing any log with two Resin, a Crystal Shard and Wax.
-- Lead Pipes can be made in the Forge, and are sometimes brushed out of desert wells, ocean ruins and trail ruins.
-- Copper Screws and Lead Pipes can be melted down in a Crucible or Smeltery.
-- Moulds are grouped together in EMI.
-- Blocks of metal and blocks of raw ore can be melted in a Smeltery.
-- Disarming, Illuminating and Leaping can be put on Tongue Whips with Pulling, Hallowed and Flinging Tablets.
-- A Hide can be cut into 4 Small Hides with a knife on a Cutting Board.
-- Crucibles, beds and pet beds can be placed on slabs.
-- Unfired Moulds can be fired in a Kiln.
-- Deepslate ores have top textures that match the deepslate around them.
-- Pyres and Soul Pyres: cast iron fire bowls that stand on the ground or hang from chains.
-    - Crucibles can also be set inside them.
-- Blocks of Bronze, Cast Iron, Lead, Electrum, Prismarite, and Valkyrium can be used as beacon base blocks.
-- All chests are grouped together as Chests in EMI.
-- Glass bottles can be filled from Basins and Fluid Tanks with any fluid a Spout can bottle, like honey, milk and
-  maple syrup.
-- Molten metals are grouped together in EMI.
-- Pillars, tiles, bricks, chiseled blocks and other cut variants can be cut back into the block they came from in
-  the Stonecutter and Sawmill.
-- Crude Bow: an early bow made from sticks and string.
-- The Bow starts as an Unfinished Bow (sticks, string and Tallow), then a Deployer adds Leather and a Copper Sheet.
-- Skeletons stand still to shoot instead of strafing, shoot faster the closer you are, and pull out a flint knife when
-  you get up close.
-- Vintage Beams in every woodtype, plus Cast Iron Beams.
-- Bronze Ladder.
-- Rotten Flesh can be hung on a Drying Rack, one piece at a time, and cured into Leather with Salt.
-- Raw nuggets are grouped separately from other nuggets in EMI.
-- Fine Wood Wall.
-- Crafting Mats: lay one on top of almost any block to use it as a Crafting Table.
-- Descriptions for Vampirism, Rifting, Warped, Sugar Crash, Happiness and Pacified, and for the Sporal effects.
-- Cushions have descriptions.
-- Spring Water can be made by infusing a Water Bucket with two Sulfur, two Salt or Saltpeter, and a Moss Clump or Moss
-  Block.
-- Bows shoot nearly straight for the first 3 seconds of a draw, then wobble and lose accuracy the longer they stay
-  drawn.
-- Canvas Way Signs, in plain and every dyed canvas.
-- Comfort: a slow healing effect, twice as fast while sitting or lying in bed.
-    - Warm soups and stews give Comfort, for longer the more filling they are.
-    - Sleeping through the night gives 2 minutes of Comfort when you wake up.
-    - Witch Stew and other foods that listed Comfort before now actually heal.
-- Invigorated: stamina refills twice as fast. Teas, Builder's Tea, Hot Cocoa and cola give it for a few minutes, and
-  candy and other sweets for a minute.
-- The Drowsy effect now has a description.
+- The Drying Rack dries Wet Sponges, turns saplings into Dead Bushes and logs into Dead Logs, and air-dries kelp, tea leaves, vanilla pods, bananas and grass.
+- The wither spawning, the ender dragon dying and the end portal opening are only heard nearby, not across the whole world.
+- Looking into water from above, deep water fades into a dark murk while the shallows stay clear.
+- Prismarine Rods can be placed like sticks and blaze rods.
+- The Griefer Shield, made from Blast-Proof Plating in a Mechanical Crafter.
+- Molten Glass: melt sand, glass or glass panes in a Crucible or Smeltery.
+- Pour molten glass or molten metal into a Basin and it cools into a block of Glass or a that metal.
+- Buckets and bottles can fill and empty Fluid Tanks by hand.
+- Animals sit in seats.
+- Skeleton horses can be tamed like horses.
+- Pickets can be stacked on top of pickets to make a fence twice as tall.
+- Item Shelves and Shutters can be placed against the open side of a vertical slab, in the same block.
+- Wool clothing: dyeable Hats and Sweaters.
+- New loading screen/bed tips.
+- A Gravestone works from inside a bundle, sack or backpack, and so does a spyglass, a Map Atlas or an Item Magnet.
+- Controls settings have Step Up Only While Sprinting and Ledge Climbing toggles.
+- Smooth Camera Steps can be turned off in Video settings.
+- Accurate Block Placement.
+- Item Drawers hold up to 80 stacks of a single item and show what's inside on the front.
+    - Lockable with a Key to keep its item when empty.
+- Item Drawer Distributors send items into every Item Drawer connected to them.
+- Stone generators: where flowing lava meets water, the block underneath changes the stone. Calcite makes Andesite,
+  Andesite makes Diorite, Diorite makes Granite, Sandstone makes Limestone, Red Sandstone makes Jasper, Packed Mud
+  makes Shale and Deepslate makes Tuff, and below Y 0 it makes Cobbled Deepslate. Lava meeting Blue Ice above
+  Netherrack makes Cobbled Blackstone. EMI shows every generator.
+- When you die you can choose to respawn at your bed or at your tent. Setting up a tent or sleeping bag is enough,
+  and it doesn't replace your bed spawn.
+- Animal Feed group in EMI.
+- Leaded glass windows in many patterns, colours, and pictures. Matching windows placed together join into one larger
+  window.
+- Catwalks, catwalk stairs, and railings in iron, copper, tin, bronze, steel, and cast iron. Ported from Create Deco.
+- Shipping Containers in sixteen colours: dye an Item Vault to make one. They connect and store items just like Item
+  Vaults.
+- Twenty hazard and arrow Decals for walls, floors and ceilings.
+- Overflowing Bars: extra health stacks onto a single row of hearts in new colours instead of stacking rows.
+- Right-click an Item Vault to open it. Sneak or hold a block to place against it instead.
+    - Sort and search the vault with Quark's inventory buttons.
+- Item descriptions can be shown in tooltips, always or while holding Shift, Ctrl or Alt (Interface settings).
+- Mash Jump to struggle free from Thrashers and stun it.
+- Beams are solid: you can stand on them, mobs walk around them, and blocks can't be placed through them.
+    - Beams can't be placed through blocks either (the preview turns red when something is in the way).
+- Holding a beam shows a 3x3 grid of spots on the block face, and beam ends snap to them.
+- You slowly heal naturally, up to 3 hearts.
+- Looking at a mob through a Spyglass or Monocle shows its variant under its name.
+- A worn backpack's rows show in the crafting table and in your horse's, donkey's, mule's or llama's inventory.
+- The inventory sort button sorts your worn backpack too.
+- Convenient Cushions: cushions can be placed in more spots and pop off more consistently.
+- Lead building blocks: Chiseled Lead, Lead Pillars, Lead Grates, Lead Bars, and Lead Chains. Adapted from The Lead Age.
+- Lead Bulb: a redstone lamp that toggles on each pulse.
+- Lead Weight: a heavy weight that hangs under blocks and crushes whatever it falls on, harder the further it drops.
+- Dispensers drop it as a trap. Long drops crack stone into its cobbled form, turn grass, paths and farmland into
+  soil, and break ice into water.
+- Lead blocks survive creeper and TNT blasts and block sculk vibrations.
+- Use a damaged tool on a Grindstone to sharpen it back up to 70% durability. 
+  - Broken tools still need an Anvil.
 
 ### Changed
 
-- Donkeys and mules have fixed speed and jump strength like horses, instead of random ones from breeding.
-- Campfires, fire pits and braziers give Comfort instead of Regeneration, healing much more slowly.
-- Stamina refills from empty in 12 seconds instead of 33.
-- Food no longer restores stamina. Everything you eat heals a little instead, with meat and fish still healing the most.
-- Hearty meals keep stamina from draining for a quarter as long as before.
-- Alcohol no longer affects stamina.
-- Rebalanced food.
-- Plum Cider and Hoary Cider are bottled like the Cultural Delights drinks instead of served in a Ceramic Mug.
-- The Sun Hat is now called the Straw Hat.
-- Sacks are crafted with rope instead of string.
-- Quark's animal skins and rare shiny animals are turned off; the shiny rabbit drew wrongly on the new rabbit model.
-- Compasses no longer list your position in their tooltip; holding one still shows your coordinates on screen.
-- Allays spawn in flower forests in slightly smaller groups, and only on grass in daylight.
-- Copper Shingles and Copper Tiles are made in the Stonecutter like other copper blocks: 4 from a Block of Copper, or
-  1 from Cut Copper.
-- Mausoleums are built from Cut Copper instead of Blocks of Copper, so they no longer hand out hundreds of ingots.
-- Packed Mud is now Packed Dirt, crafted from 4 dirt (makes 4). Mud Bricks and everything made from them are now Dirt
-  Bricks, and Polished Mud and the mud door, trapdoor and lamp are now Polished Dirt, Dirt Door, Dirt Trapdoor and Dirt
-  Lamp.
-- Sandstone, Red Sandstone and Soul Sandstone make 4 blocks from 4 sand, like other building blocks.
-- Skeletons and strays have 10 health, down from 12.
-- Climbing up ledges is quicker and lands you on top. It only happens on ledges about two blocks tall that you are
-  facing, and costs a bolt of stamina.
-- Stepping up and down blocks now has a smooth camera, in third person and on horseback too.
-- Repairing tools at an anvil takes as many ingots as making them: one for shovels, two for swords and hoes, three for
-  pickaxes and axes.
-- Using a Workstone no longer costs stamina.
-- Scrolling through the hotbar no longer plays a sound.
-- Retextured lanterns (Cast Iron, Soul, Sulfur, Glowlight, Cupric, Feldspar and Redstone Lanterns, including on walls)
-  for a consistent look, and the Redstone Lantern uses the same shape as the others (thanks, @mistermatias!).
-- Sack tooltips no longer list their contents as text.
-- The Iron Rod is made with Polished Obsidian instead of a Quartz Rod.
-- The Iron Chimney is made with cast iron instead of iron.
-- Blocks of Iron, Iron Doors, Iron Trapdoors, Iron Shutters and Iron Buttons were retextured.
-- Lanterns are made with cast iron nuggets and each recipe makes 8 lanterns instead of 4.
-- Retextued Lanterns again.
-- The Totem of Undying is cheaper to infuse: a Crystal Shard with one Gold Ingot, Echo Shard and Stardust.
-- A crucible on a campfire sits lower in the flames.
-- Deeper, Weeper and Chimpanzee Head descriptions now match the other mob heads.
-- Glass trapdoor recipes make 6 trapdoors instead of 1.
-- Steel is refined from Cast Iron with Coke instead of Ignis Powder.
-- Bronze, Rose Gold and Electrum can be melted together in a Crucible straight from raw ore, or from a mix of raw ore
-  and ingots.
-- Pouring from a Crucible is smoother and holding the button after a pour no longer places the Crucible.
-- Ingot and Plate Moulds are shaped like the ingot and sheet they cast. They also have new item sprites.
-- EMI shows melting, alloying and casting with fluid gauges, heat sources, Smeltery fuel and melting and cooling times.
-- Cast Iron Sheets can be made with a Mechanical Press.
-- Anvils, Hoppers, Minecarts, Basins, Cooking Pots, Skillets, Cages, Cannons and the Smeltery are made with Cast Iron
-  ingots, sheets and blocks.
-- Fluid Pipes, Fluid Tanks, Fluid Valves, Valve Handles, and the Hose Pulley are made with lead, and look like lead.
-- Copper Casing is now Lead Casing, made by applying Lead to a stripped log.
-- The Mechanical Pump is made with a Lead Pipe.
-- Reverted Chain texture changes.
-- The "Plumb Job" advancement now follows Lead.
-- Horses are slightly slower and jump lower.
-- Falls deal a heart less damage.
-- Sitting on seats, chairs and cushions restores stamina faster, like sitting down.
-- Minecarts are made with planks and Cast Iron Sheets, and added shortcut recipes for every minecart.
-- Rails make 16 per craft.
-- Candle Holders and Plating are made with cast iron.
-- Renamed Iron Lanterns are to Cast Iron Lanterns.
-- Dead Wood is now just Dead: Dead Log, Dead Planks, Dead Door, etc.
-- Cookies, Honey Cookies, and Sweet Berry Cookies are baked from dough in an Oven.
-- Tofu is fermented with a Water Bottle, and the bottle is given back.
-- Bundles can no longer be put inside other bundles.
-- New pear tree fruit models and textures.
-- Lemons growing on lemon trees are the same colour as Lemons.
-- New Sulfur and Glowlight Candle textures, and their candle holders match.
-- Hammering Copper, Tin, Lead, Bronze and Gold sheets on a Workstone always works.
-- Lategame metal sheets can only be made with a Mechanical Press or a Plate Mould.
-- Crushing raw ore always gives 2 crushed ore, and 16 from a block of raw ore.
-- Precision Mechanisms and Bronze Movements always succeed in sequenced assembly.
-- Candle holders all now use flat item icons.
-- Panels are made from 4 planks in a square and make 4.
-- Stripped logs have their own group in EMI.
-- Anvil recipes are listed after Crafting in EMI.
-- Heaven Portal chests can hold Pulling, Hallowed and Flinging Tablets.
-- Pulling Tablets are infused from 2 Item Magnets, a Lead and 2 Glowsilk String.
-- Lucky and Magnetic Bait are now made using tin.
-- Cans of Bait are grouped with the other baits in EMI.
-- Changed Magnet recipe.
-- Rebalanced Molten/Nether Fortress, bastions, and nether dungeon chests.
-- Small nether dungeons give Glowcoke instead of coal.
-- Bastions no longer give prismarine crystals.
-- Spiced Cider no longer makes you Intoxicated.
-- Stepping up full blocks without jumping only happens while sprinting.
-- Sit and Crawl have their own keys, X and C by default, replacing Change Stance.
-- The quiver key is unbound by default, and Voice Chat uses V and G.
-- The minimap no longer shows coordinates or the biome name by default.
-- The Fullscreen Mode video setting lets you pick Borderless or Fullscreen.
-- Molten metal in a Crucible rises smoothly as it melts, and the items being melted shrink and sink.
-- The Depth Gauge is made from 4 Lead Ingots and Cinnabar and has a new texture.
-- Making a Slice Map gives the Depth Gauge back.
-- The Relayer is made with silver nuggets.
-- Deepslate Tin Ore matches Tin Ore.
-- Retextured the Gourdrot, Hoary, Wisteria, Walnut, and Azalea Shutters (thanks, @CamKamblam!).
-- Wooden chests now come from Woodworks. Oak chests use the classic chest look, and chests already in your world change
-  over with their contents.
-- Deer are now the hopping, spotted kind: win one's trust with berries, then feed it an apple and a flower and it plants
-  that flower as it walks.
-- Pumps can fill a Smeltery with lava or molten metal and drain molten metal from any side, and its Ponder shows how to
-  cast with a Spout.
-- The Smeltery front lights up, crackles and gives off light while it melts, like a Furnace.
-- Stones put through Crushing Wheels crush into their cobblestone, which crushes again into their usual byproducts.
-- Crushing Wheels give raw nuggets instead of metal nuggets.
-- Wheat, Tea Leaves, Grass Seeds and Ginger stack to 256 like other crops.
-- New Straw Golem model and textures.
-- New Map Atlas textures.
-- New Field Guide and Photo Album textures.
-- Retextured the Spyglass, Flint Axe, Cobbled Limestone and Worm Crate.
-- Spider webs no longer deal damage.
-- Sneak-right-clicking the top of a block with an empty hand places the backpack you are wearing.
-- The Smeltery stacks to 256.
-- Dried Ghasts are infused from Soul Sand and 8 Ghast Tears instead of crafted.
-- Safes can be mined with a copper pickaxe, like other lead blocks.
-- Bread is only baked from dough.
-- Mechanical Belts are made from 3 Rubber in a row and make 4.
-- Geodes can be ground in a Mortar or Millstone, or put through Crushing Wheels.
-- Feeding a Rotten Apple to a Camel turns it into a Camel Husk.
-- Camel Husks no longer spawn naturally.
-- Washing dyed items is shown with a Basin in EMI.
-- Learning a new chalk symbol shows its message above the hotbar instead of in chat.
-- Changed Honey Lamp recipe.
-- Drawn bows show a flint-tipped arrow.
-- The Tanning Rack is now the Drying Rack.
-- Every metal ladder (Copper, Iron, Bronze, and Steel) is now made the same way.
-- Candle holders are made with 3 nuggets instead of an ingot.
-- Bronze Candle Holders are now Golden Candle Holders.
-- The Enchanted Golden Apple and Enchanted Golden Egg have their proper names back.
-- Blackstone Geodes can hold Ancient Scrap instead of Infernite Nuggets.
-- Crude Bows can be burned as furnace fuel, like Bows.
-- Cookies, breads, scones, brownies, pancakes and gingerbread are baked in an oven instead of crafted.
-- Breads, cookies, scones and gingerbread are baked from dough; cakes, muffins, pancakes and brownies from flour. Pie
-  crusts are made with flour instead of wheat.
-- Vanilla, chocolate, strawberry, banana and mint cakes take three of their flavour.
-- Tarts take three of their fruit, and Maple and Sweet Tarts are baked in a pie crust like other tarts.
-- Pumpkin pie is only made with a pie crust.
-- Shepherd's Pie is baked from potatoes instead of baked potatoes.
-- Ice cream bowls take three of their flavour to become a flavoured ice cream.
-- Gold Bars and Gold Buttons are now Golden Bars and Golden Buttons.
-- Retextured the Block of Gold and the Golden Plaque to match the Gold Ingot.
-- Detector, Powered, Activator and Controller Rails are made with nuggets instead of ingots.
-- Powered Rails are gold textured instead of copper.
-- Placed torches have the same stick as an upright Supplementaries stick.
-- Cushions are crafted 4 at a time.
-- Bread's description says it is baked from Dough.
-- The Happiness effect is hidden from EMI.
-- Vampires reliably come for you at night when you are out in a Dark Forest, instead of almost never spawning.
-- Skeleton Horses no longer appear from lightning. Feed a Zombie Horse a Sinister Carrot to get one.
-- Rotten Flesh and Golden Carrots no longer convert Skeleton and Zombie Horses into each other.
-- Blazes shoot one aimed fireball at a time instead of a spread of three.
-- Skeleton Horses burn in sunlight like Zombie Horses unless they wear Pet Armor.
-- Skeletons carry Crude Bows, and their arrows are slower and drop sooner.
-- Hanging Signs and Way Signs are shapes of Signs, and Hanging Canvas Signs and Canvas Way Signs are shapes of Canvas
-  Signs.
-- Zombie and Skeleton Horse descriptions explain how to get them.
+- The Rubber Chicken takes one Rubber instead of two.
+- Nerfed Lava sluice loot tables.
+- The Sluicing page in EMI has clearer tooltips, and the old incomplete sluicing recipes are gone.
+- Looking through a spyglass or monocle shows block and mob info as far away as you can scan them.
+- Tin ore is more common and generates higher up than copper, closer to the surface, and crag rocks have tin ore in them.
+- Nerfed Steel durability to 1400 (was 3000).
+- Palisades made from modded wood use their log's bark on the sides.
+- Placing blocks no longer makes leaf, grass, moss and dust particles.
+- Torches no longer go out from shovels or explosions.
+- Thrashers are much rarer in cold oceans.
+- Fluids in a Basin look full at one bucket, the same height as molten metal and glass while casting.
+- Rocky Dirt dug with a shovel drops Dirt and a Pebble instead of sometimes Flint.
+- Sconces are cheaper.
+- Tents can have a carpet floors: place one in a tent, or set a tent up on one.
+- Canvas Rugs, Rust Moss Carpets, Bamboo Mats, and Cloth Scrap Carpets can be embedded into fences, walls, and other blocks
+  like wool carpets.
+- Tents can be aimed at anywhere on the canvas, and their outline follows the tent's slopes.
+- The Drying Rack's outline covers the whole rack, and items without their own rack art hang from a rope while they dry.
+- Coke is forged from Coal or Charcoal and Blaze Powder instead of Netherrack.
+- The Haunting category in the recipe book is renamed Soul Campfire Haunting and shows a soul campfire.
+- Brushes, Builder's Wrenches, Chisels, Trowels, Spoons, Pestles and Gliders no longer have durability.
+- Wax Brushes and Glue Brushes turn back into a Brush when they wear out.
+- The Trowel is forged from iron, leather and a stick.
+- Leashes can now only be made from Straw.
+- Windmills no longer generate different speeds in different weather (though they still visually turn faster/slower).
+- Remodeled Jars.
+- Jars now fill and drain smoothly with a little animation.
+- Molten Glass Buckets are grouped with the molten metal buckets in EMI.
+- Cast iron melts in 15 seconds instead of 30.
+- Tapped logs drip much less often, and fill a cauldron level or 250 mB every 2.5 to 5 minutes instead of 15 to 30.
+- Skeletons spawn with regular Bows again, but their arrows still deal 70% damage.
+- Reverted 4.0.0 changes to ledeg climbing speed.
+- Ledge climbing only happens on ledges about two blocks tall when you jump at them or hold jump.
+- A block of raw ore crushes into 18 crushed ore, the same as 9 raw ores.
+- Cameras and Instant Cameras stay with you when you die.
+- Toolboxes stay with you when you die.
+- Retextured Spoons to be more... spoon-y.
+- Retextured Angling Table screen.
+- Mechanical Pumps are made with a Fluid Pipe, Chutes with a Lead Ingot, and Taps with Lead Ingots and a Lead
+  Nugget.
+- Crushing Wheels now only do crushing recipes. Milling needs a Millstone or Mortar.
+- Crushing Wheels are made with Steel Ingots and a Shaft instead of planks and stone.
+- Tridents, Mischief armor, Item Magnets, Copper Backtanks, Televisions, Pickarangs, and Cannons are made in a
+  Mechanical Crafter. 
+- Televisions use a Bronze Movement instead of a diamond.
+- Item Vaults are made with Tin Sheets, Packagers with Tin Ingots, and Item Hatches with an Iron Trapdoor and a Tin
+  Ingot.
+- Retextured Minnows.
+- Repeaters and Comparators are made with Smooth Stone.
+- Rice Panicles are in the Seeds group in EMI.
+- The Lance is made of Valkyrium, with a new look and Valkyrium stats.
+- Retextured Ashroot so it no longer looks like Dead Wood.
+- Retextured the Block of Lead to match the new lead blocks.
+- Oases grow palm trees and cactus flowers. Palms no longer grow in plain deserts.
+- Oases are smaller patches found in more deserts. Grass grows in rings around the pools instead of all over the
+  sand, and palm trees grow on the grass.
+- Camels only spawn in oases.
+- Sleds stack to 16, like boats.
+- Cactus bobbles no longer grow on cacti.
+- The strongest Luminous potion is brewed with a Glowsilk Moth in a bottle.
+- Beams now show a translucent preview instead of solid.
+- Straw Golems are much quieter when they put items in chests.
+- Straw Golems open chest lids and barrels while putting items in them.
+- Retextured the Cast Iron Beam.
+- Cast Iron Beams mine like a Block of Cast Iron: they need a copper pickaxe or better, and break slowly and drop
+  nothing without one.
+- You respawn with all of your hearts, including ones from Heart Crystals.
+- Heart and Stamina Crystals can raise you to two full rows (20 hearts, 20 bolts).
+- Crystal Shards no longer come from Piglin bartering or fishing (fished crates can still have them).
+- Sprinting steps up onto blocks topped with carpet or moss.
+- Dropping an empty glass bottle clinks instead of sloshing.
+- Graphics options in Video settings are colour-coded by quality, like Dynamic Lights.
+- Shibas show their coat colours as variants in the Field Guide.
+- Deepslate and tuff ores no longer drop Raw Nuggets; instead they sometimes drop a second Raw Ore.
+- Coloured lights are more vivid again.
+- Latex no longer compacts into rubber blocks.
+- One repair material fully repairs any item at the Anvil.
+- Stardust repairs anything with durability at the Anvil.
+- Vengeance can go on any armor, storing 2.5% of damage taken per level.
+- Changed Crafter Slot Covers recipe.
 
 ### Fixed
 
-- Feeding a Gingerbread Golem your last gingerbread cookie no longer crashes the game.
-- Baby zombies and other baby mobs wearing modded armor or a turtle shell no longer show a broken texture.
-- Shears can be repaired in an anvil: copper ingots for Shears, steel ingots for Steel Shears.
-- Modest Magic altars can be mined with a bronze pickaxe, like obsidian.
-- Shelf and field mushroom blocks break faster with an axe, like other mushroom blocks.
-- Gold and silver in a Smeltery with Meteoric Scrap make Valkyrium instead of turning into Electrum.
-- The Copper Horn is crafted from a goat horn and 3 copper ingots again, keeping the goat horn's sound, and shows up in EMI.
-- Shears and Steel Shears list their anvil repair in EMI.
-- Cooking pot recipes no longer show experience in EMI.
-- Fire charges are used up when lighting campfires and candles.
-- Renamed raw-only mushroom tag to "Raw Edible Mushrooms".
-- Giant tall grass only drops seeds when broken with a hoe, like other grass.
-- Reeds no longer drop string.
-- Enchanted books no longer show up in EMI's grindstone recipes.
-- Cats that spawn in forests no longer vanish shortly after you walk away.
-- Cherry and mangrove chests, beehives, ladders, chiseled bookshelves, crates, shutters, signs, boats, sleds,
-  posts, shelves, way signs and carved planks now match the colours of cherry and mangrove planks.
-- Removed leftover recipes that turned dirt straight into bricks, and duplicate recipes for trapped chests, ash adobe
-  bricks, iron tread plates, rough glass panes, chiseled gold bricks and raw ore blocks.
-- The Ichor Bottle no longer lists the Flammable effect.
-- Improved performance while it snows.
-- Improved LOD performance on servers.
-- Chest loot no longer has enchantments that can't otherwise be obtained, such as Mending, Protection and Feather
-  Falling.
-- Removed the "Deserialization was air, removed block" chat message.
-- Removed a leftover second recipe for the Styling Table.
-- Using an unnamed Name Tag in the renaming recipe no longer wastes it.
-- The Sawmill is now broken with an axe instead of a pickaxe.
-- Copper ore no longer drops Prismarine Crystals.
-- Zombies no longer spawn holding enchanted books.
-- Pine posts now match pine logs.
-- The tops of pine posts now match pine logs.
-- Javelins can be repaired with their ingots again, and EMI shows which ingot repairs each one.
-- Status effects and fluids show up in EMI once you've made a crafting table, instead of only after you've had them.
-- The Map Atlas lock message said "Locked" when unlocking and "Unlocked" when locking.
-- Ice broken by landing on it now leaves water.
-- Removed a duplicate Ice recipe.
-- The Blaze Powder description no longer says it makes Steel.
-- Twisted wood no longer shows up in EMI before you reach the Nether.
-- The Walnut Shelf texture matches walnut planks.
-- The high memory usage warning no longer appears in chat.
-- Stripped Avocado and Pear Log tops no longer show bark.
-- Avocado, Pear and Cacao logs are the same size as other fruit logs in the inventory.
-- The Lime Bed item sits level with the other beds.
-- Molten metal already in a Crucible counts toward alloys.
-- Pigs can be bred again.
-- The Crucible's heat sources no longer list Cauldrons.
-- The changelog screen shows the whole changelog.
-- Arrows stuck in players no longer jitter as they move.
-- Bundles can be dyed any colour again.
-- Removed pressing recipes for Crimson Nylium, Warped Nylium, and Soul Soil that gave nothing.
-- Shelf mushroom blocks on dark oaks come down with the tree when it's felled.
-- Molten metal texture in the Smeltery window and in tap streams is no longer stretched.
-- Picture Mode filters like Silhouette and Outlines no longer show caves and terrain hidden by fog.
-- Crops and other plants sway together properly in the wind.
-- Nether Gold Ore can be crushed in Crushing Wheels.
-- Straw Golems sitting next to a Stock Ticker wear the clerk hat on their heads instead of above them.
-- Right-clicking a chestplate inside your backpack to put it on no longer deletes the backpack (sorry Mr_Man!).
-- A filled backpack can no longer be taken off by right-clicking armor in your inventory.
-- Gingerbread cookies in bundle and shulker box previews no longer flicker between shapes.
-- Holding attack while mining no longer swings at the air between blocks and briefly stops you from mining.
-- Torch glows no longer show through walls while holding a Monocle.
-- Some structure loot was missing from EMI, such as Totems of Undying in Ancient Cities.
-- Worn-out brushes keep their current texture.
-- Stripping Bountiful Fares logs (walnut, hoary and fruit logs) gives tree bark.
-- Fire Strikers light Sparklers.
-- A bundle inside another bundle counts its full weight, so bundles can no longer hold endless items through nesting.
-- Unstackable items like tools and potions fill a whole bundle again.
-- Setting an attribute filter to "is in group:" no longer disconnects you from a server.
-- Javelins are sorted with the other weapons and tools.
-- Campfires, fire pits and braziers no longer light campfires.
-- Diamond, Gold, Infernite, Steel, Silver, Necromium and Bronze horse armor no longer flicker.
-- Felling a Gloomwood tree also breaks its Creaking Heart.
-- Ladders from Woodworks and other mods can hang below the ladder above them, like Quark's.
-- Looking down through your horse or camel shows water, dropped items and block-breaking cracks behind it.
-- Long tips on the bed screen no longer overlap chat.
-- Walnut logs make 4 Walnut Chests like other logs.
-- Flavoured cakes, tarts and Pear Cobbler no longer show an empty slot in their recipe.
-- Removed a duplicate ice cream recipe, duplicate oven recipes for apple, chocolate and pumpkin pie and sweet berry
-  cheesecake, and a second Shepherd's Pie recipe that made a single serving.
-- Pancakes can no longer be made on a crafting table, and berry, maize and mushroom stuffed potatoes no longer craft
-  into a regular Stuffed Potato.
-- The Pancake description explains how to add toppings.
-- Rotten Apples can no longer be used as a meal ingredient.
-- Inconsistent names for gold doors, trapdoors, bars, gates, lanterns, plaques, candelabras, gold bell, and gold hook.
-- Chiseled Gold Plated Bricks can no longer be crafted straight from Gold Ingots.
-- Spring Water puts out fire and hydrates farmland.
-- Lavender Tea is grouped with the other teas in EMI.
+- Breaking a Drying Rack shows cracks and break particles on the whole rack, not just the half being mined.
+- Taps empty a Drain or tank completely instead of leaving a tiny bit of fluid stuck inside (hopefully).
+- The Bucket List advancement says Buckets are made from Tin and follows Tin Foil Hat instead of Pumping Iron.
+- Water no longer looks see-through when your view is right at its surface.
+- Palm trees can be chopped down.
+- Stripped Dead Wood is grouped with Stripped Dead Log instead of sitting at the top of Building Blocks.
+- Breeding pigs no longer crashes the game.
+- Hearts and armor move up with the rest of the HUD when the hotbar switcher is open.
+- Breaking a block underwater fills it with water straight away instead of flashing an air pocket first.
+- The crosshair shows the green mineable dot when aiming a shovel at a grass block.
+- Torches look flat in first person again, and Cupric and Sulfur Torches no longer show a black box when held.
+- Molten metal poured out into water hardens into Stone instead of a block of that metal, which previously caused a dupe
+  bug.
+- Sprinting while charging a Lance uses stamina instead of refilling it.
+- Difficulty descriptions no longer mention hunger.
+- Cave Crud Path drops Cave Crud.
+- Shelf mushrooms on dark oak trees drop shelf mushrooms when mined with Silk Touch.
+- Mismatched mob descriptions in the Field Guide, like missing info about Spiders spitting webs and Skeletons drawing
+  knives.
+- Butterbeer and Melon Juice are grouped with the other drinks in EMI.
+- Copper Screws crush into Copper Nuggets instead of raw nuggets.
+- Raw ores no longer show two different Smeltery melting amounts in EMI.
+- The Comfort icon no longer flickers while you lie in bed.
+- Pickets sharing a block with a fence, window or pane no longer break its connections, or chains and leads tied to the
+  fence.
+- Fished crates can no longer turn up empty.
+- You no longer clip into beds that sit on slabs when you sleep.
+- The Glue Brush is made with slimeballs or Snail Goo instead of Amber.
+- Flowering apple, lemon, orange and plum leaves no longer turn white on Fast graphics.
+- Horses and other mounts no longer jolt into view when stepping up blocks.
+- Fluid tanks in Ponder scenes no longer have missing faces.
+- Pets following you no longer stop walking when they fall more than 16 blocks behind.
+- Raindrop ripples on water now match the water's pixel size.
+- The Backtank tablet in EMI says "Backtanks" instead of an untranslated name.
+- Venison with Bamboo Shoots can be cooked again.
+- Slabdish can be cooked again.
+- Cactus flowers generate on desert cacti.
+- Ponds with lily pads no longer generate in badlands and savannas.
+- Horses, donkeys, mules, camels, llamas, zebras and other mobs play their own footstep sounds.
+- The game pauses on the advancements screen.
+- Gloomwood Beams exist, and Gloamwood and Kapok Beams have the right names.
+- Obsidian Chests no longer open from your inventory, where it voided items put into it.
+- The Luminous potion shows its brewing recipe.
+- The mortar plays its crushing animation again when it holds more than half a stack.
+- The first end of a beam shows as soon as you place it.
+- Straw Golems no longer get stuck in tea shrubs.
+- Moss drops when broken with shears or a Silk Touch tool, not only a hoe.
+- Structure chests no longer spill a second copy of their loot on the floor.
+- Placing a Cooking Pot on a campfire puts it on top of the campfire instead of crashing when you open it.
+- Burning shows up in EMI's effects again.
+- Composters emptied by hoppers pop out worms too.
+- The beam placement preview no longer jitters when you jump.
+- Boreal Forests, Prairies, Dark Swamps, Bayous, Maple Groves and Bogs only grow in their own patches instead of thin
+  strips along other biomes' borders.
+- Cherry Groves and Meadows grow in broad patches instead of scattered specks.
+- Maple Forests no longer scatter small specks through Forests.
+- Dark Swamps, Bogs and Boreal Forests have regions of their own, inside Dark Forests, Plains and Old Growth Pine
+  Taigas.
+- Slime Slings show their recipe in EMI for each slime colour, and looking up a coloured slimeball only shows that colour's recipes.
+- Ruined Portals are spaced out like in vanilla again (they were previously about 1.5x as common).
+- Cave biomes like Lush Caves, Pale Gardens and Dripstone Caves no longer appear on the surface at the bottom of cave
+  entrances.
+- Getting caught by a Thrasher no longer shows its health bar or tells you to press Shift to dismount.
+- Steel Javelins no longer need Coke or Blaze Powder as Forge fuel, like other Steel gear.
+- Beams crack while you mine them, and their particles match the beam instead of always being oak.
+- Chutes fill both halves of a double chest made from modded wood, not just the half they sit on.
+- Coloured slimeballs craft into Slime Slings and Slime Boots of the same colour.
+- Incorrect Dried Grass item texture.
+- The Four Leaf Clover description and a loading tip no longer mention the removed Lucky tablet.
+- The Chute description no longer mentions fans.
+- A lit Smeltery glows orange from its whole front.
+- Moulds can be now ACTUALLY be placed on slabs and other half-height surfaces.
 
 ### Removed
 
-- Coconut Coir, Packed Coconut Coir, Coir Bricks and Coir Carpet.
-- Raw Iron, Gold and Copper Bricks.
-- Mud Brick Lattice.
-- Ichor Fire Pits.
-- The Peeper Head.
-- Vessel, Frame and Pipe Moulds, Cast Iron Vessels and Cast Iron Frames.
-- Buckets can no longer be cast in a mould.
-- Mods button from the pause menu.
-- The Compression Blast Miner.
-- The Glowsilk Bow.
-- The Pulley.
-- The Recollection Tablet and the Soulbound enchantment.
-- The Skill Issue advancement.
-- Nozzles.
-- Tangle Ladders.
-- Baking bread from three wheat in an oven.
-- Crafting Hides from Rotten Flesh and Salt.
-- Cocoa Cake.
-- Crafting gingerbread from a hay bale.
-- Foul Flesh.
-- Baking cake from dough.
+- Strawberry Banana Smoothie.
+- Lead Pipes.
+- Electrum and all its gear.
+- YUNG's Better Mineshafts.
+- Storage Crates.
+- Leveled Stone and Crumbling Stone.
+- Potion of Wind Charging.
+- Cracked Checkered Ceramic Tiles.
+- No Chat Restrictions.
+- Sappy Maple Wood (was already unobtainable).

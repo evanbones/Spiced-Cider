@@ -113,17 +113,20 @@ public class ClientModEvents {
     public static void registerScreens(net.neoforged.neoforge.client.event.RegisterMenuScreensEvent event) {
         event.register(com.evandev.spicedcider.registry.ModMenuTypes.SMELTERY.get(), com.evandev.spicedcider.client.screen.SmelteryScreen::new);
         event.register(com.evandev.spicedcider.registry.ModMenuTypes.FISH_TRAP.get(), com.evandev.spicedcider.client.screen.FishTrapScreen::new);
+        event.register(com.evandev.spicedcider.registry.ModMenuTypes.ITEM_VAULT.get(), com.evandev.spicedcider.client.screen.VaultScreen::new);
     }
 
     @SubscribeEvent
     public static void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
         event.registerEntityRenderer(ModEntityTypes.COBWEB_PROJECTILE.get(), CobwebProjectileRenderer::new);
         event.registerEntityRenderer(ModEntityTypes.BALLOON.get(), BalloonRenderer::new);
+        event.registerEntityRenderer(ModEntityTypes.LEAD_WEIGHT.get(), net.minecraft.client.renderer.entity.FallingBlockRenderer::new);
         event.registerEntityRenderer(ModEntityTypes.SPUTTER.get(), SputterRenderer::new);
         event.registerEntityRenderer(ModEntityTypes.SPORAL.get(), SporalRenderer::new);
         event.registerEntityRenderer(ModEntityTypes.STRAW_GOLEM.get(), StrawGolemRenderer::new);
         event.registerBlockEntityRenderer(ModBlockEntities.GRAVE.get(), GraveRenderer::new);
         event.registerBlockEntityRenderer(ModBlockEntities.TANNING_RACK.get(), TanningRackRenderer::new);
+        event.registerBlockEntityRenderer(ModBlockEntities.ITEM_DRAWER.get(), com.evandev.spicedcider.client.renderer.ItemDrawerRenderer::new);
         CastingRenderers.register(event);
         if (TideCompat.isLoaded()) {
             event.registerEntityRenderer(ModEntityTypes.GRAPPLING_HOOK.get(), GrapplingHookRenderer::new);
@@ -165,6 +168,7 @@ public class ClientModEvents {
 
     @SubscribeEvent
     public static void registerClientExtensions(RegisterClientExtensionsEvent event) {
+        event.registerBlock(new com.evandev.spicedcider.client.block.DryingRackClientExtensions(), ModBlocks.TANNING_RACK.get());
         IClientItemExtensions mischiefArmorExtensions = new IClientItemExtensions() {
             @Override
             public net.minecraft.client.model.HumanoidModel<?> getHumanoidArmorModel(

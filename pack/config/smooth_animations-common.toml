@@ -23,3 +23,7 @@ snap_entity_position = true
 slime_squish_lerp = true
 #When the server lags, the client stops waiting for it and runs on its own like vanilla, until the server catches up. Off makes the whole game slow down with the server, player included. No more 'client' or 'server' lag, just lag. True singleplayer.
 server_lag_fallback = true
+#Mobs standing still keep their facing in line with their body. Prevent snapping back of previoys body rot when they start walking again
+idle_yaw_follows_body = true
+#Fixes a tiny hitch on frames that run a tick
+catch_up_frame_time_after_tick = true

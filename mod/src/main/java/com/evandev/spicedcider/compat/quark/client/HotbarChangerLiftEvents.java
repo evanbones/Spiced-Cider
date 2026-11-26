@@ -12,12 +12,17 @@ import net.neoforged.neoforge.client.event.RenderGuiLayerEvent;
 public final class HotbarChangerLiftEvents {
     private static final boolean QUARK = ModList.get().isLoaded("quark");
 
-    @SubscribeEvent(priority = EventPriority.LOWEST)
+    @SubscribeEvent(priority = EventPriority.HIGHEST)
     public static void onLayerPre(RenderGuiLayerEvent.Pre event) {
         if (QUARK) HotbarChangerLift.pre(event);
     }
 
-    @SubscribeEvent(priority = EventPriority.HIGHEST)
+    @SubscribeEvent(priority = EventPriority.LOWEST, receiveCanceled = true)
+    public static void onLayerPreCancelled(RenderGuiLayerEvent.Pre event) {
+        if (QUARK) HotbarChangerLift.cancelled(event);
+    }
+
+    @SubscribeEvent(priority = EventPriority.LOWEST)
     public static void onLayerPost(RenderGuiLayerEvent.Post event) {
         if (QUARK) HotbarChangerLift.post(event);
     }

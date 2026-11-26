@@ -36,7 +36,11 @@ on the following ideas:
 ## Art
 
 [Baileybun](https://modrinth.com/user/Baileybun) is the main artist for Spiced Cider. Loading screen and logo created by 
-DayTheMagpie. Additional textures contributed by [RareSauce](https://modrinth.com/user/RareSauce).
+DayTheMagpie. Additional textures contributed by [RareSauce](https://modrinth.com/user/RareSauce) and Esther (@thewillingknight_).
+
+## Mod Credits
+
+- MCRcortex: [Voxy](https://modrinth.com/mod/voxy), the LoD renderer, included in the CurseForge version with permission
 
 ## Resource Pack Credits
 

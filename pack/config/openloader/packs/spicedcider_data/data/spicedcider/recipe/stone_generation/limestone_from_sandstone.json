@@ -1,0 +1,19 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "stoneworks"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "quark"
+    }
+  ],
+  "type": "spicedcider:stone_generation",
+  "with": "minecraft:water",
+  "catalyst": [
+    "minecraft:sandstone",
+    "stoneworks:cobbled_sandstone"
+  ],
+  "result": "spicedcider:cobbled_limestone"
+}

@@ -1,0 +1,25 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    }
+  ],
+  "type": "create:mechanical_crafting",
+  "accept_mirrored": false,
+  "category": "equipment",
+  "pattern": [
+    "X X",
+    "X X"
+  ],
+  "key": {
+    "X": {
+      "item": "spicedcider:blast_proof_plating"
+    }
+  },
+  "result": {
+    "id": "spicedcider:mischief_boots",
+    "count": 1
+  },
+  "show_notification": false
+}

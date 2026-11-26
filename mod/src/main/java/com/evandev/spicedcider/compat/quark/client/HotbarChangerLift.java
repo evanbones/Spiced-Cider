@@ -3,6 +3,7 @@ package com.evandev.spicedcider.compat.quark.client;
 import com.evandev.spicedcider.mixin.minecraft.GuiLayerManagerAccessor;
 import com.evandev.spicedcider.mixin.minecraft.GuiLayerManagerHolderAccessor;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
 import net.neoforged.neoforge.client.event.RenderGuiLayerEvent;
@@ -30,10 +31,17 @@ public class HotbarChangerLift {
         pushed = true;
     }
 
+    static void cancelled(RenderGuiLayerEvent.Pre event) {
+        if (pushed && event.isCanceled()) pop(event.getGuiGraphics());
+    }
+
     static void post(RenderGuiLayerEvent.Post event) {
-        if (!pushed) return;
+        if (pushed) pop(event.getGuiGraphics());
+    }
+
+    private static void pop(GuiGraphics graphics) {
         pushed = false;
-        event.getGuiGraphics().pose().popPose();
+        graphics.pose().popPose();
     }
 
     private static Set<ResourceLocation> lifted() {

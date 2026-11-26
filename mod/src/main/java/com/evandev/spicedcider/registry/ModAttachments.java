@@ -1,6 +1,8 @@
 package com.evandev.spicedcider.registry;
 
 import com.evandev.spicedcider.SpicedCider;
+import com.evandev.spicedcider.content.camp.CampSpawn;
+import com.evandev.spicedcider.content.casting.BasinCastState;
 import com.evandev.spicedcider.content.stuckarrows.StuckArrowSlots;
 import com.evandev.spicedcider.content.worm.WormHunt;
 import com.evandev.spicedcider.entities.balloon.BalloonTethers;
@@ -17,10 +19,25 @@ public class ModAttachments {
 
     public static final DeferredRegister<AttachmentType<?>> ATTACHMENT_TYPES = DeferredRegister.create(NeoForgeRegistries.Keys.ATTACHMENT_TYPES, SpicedCider.MOD_ID);
 
+    public static final Supplier<AttachmentType<CampSpawn>> CAMP_SPAWN = ATTACHMENT_TYPES.register(
+            "camp_spawn",
+            () -> AttachmentType.builder(() -> CampSpawn.NONE)
+                    .serialize(CampSpawn.CODEC)
+                    .copyOnDeath()
+                    .build()
+    );
+
     public static final Supplier<AttachmentType<Boolean>> WEB_SHOOTING = ATTACHMENT_TYPES.register(
             "web_shooting",
             () -> AttachmentType.builder(() -> false)
                     .serialize(Codec.BOOL)
+                    .build()
+    );
+
+    public static final Supplier<AttachmentType<BasinCastState>> BASIN_CAST = ATTACHMENT_TYPES.register(
+            "basin_cast",
+            () -> AttachmentType.builder(() -> BasinCastState.EMPTY)
+                    .serialize(BasinCastState.CODEC, state -> !state.isEmpty())
                     .build()
     );
 

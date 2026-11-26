@@ -39,7 +39,10 @@ public class LootEmiCategories {
     public static void register(EmiRegistry registry) {
         List<Table> tables = LootDisplays.tables();
         if (tables.isEmpty()) return;
-        if (enabled(SpicedCiderConfig.CLIENT.emiSluicingCategory)) registerSluicing(registry, tables);
+        if (enabled(SpicedCiderConfig.CLIENT.emiSluicingCategory)) {
+            registerSluicing(registry, tables);
+            registry.removeRecipes(recipe -> isSpelunkerySluicing(recipe.getId()));
+        }
         if (enabled(SpicedCiderConfig.CLIENT.emiBarteringCategory)) registerBartering(registry, tables);
         if (enabled(SpicedCiderConfig.CLIENT.emiSniffingCategory)) registerSniffer(registry, tables);
         if (enabled(SpicedCiderConfig.CLIENT.emiArchaeologyCategory)) registerArchaeology(registry, tables);
@@ -60,6 +63,11 @@ public class LootEmiCategories {
         registry.addCategory(category);
         for (EmiStack workstation : workstations) registry.addWorkstation(category, workstation);
         return category;
+    }
+
+    private static boolean isSpelunkerySluicing(ResourceLocation id) {
+        return id != null && id.getNamespace().equals("spelunkery")
+                && (id.getPath().endsWith("_passive") || id.getPath().startsWith("/water_sluice_"));
     }
 
     private static void registerSluicing(EmiRegistry registry, List<Table> tables) {

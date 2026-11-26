@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "N",
+    "I",
+    "N"
+  ],
+  "key": {
+    "N": {
+      "tag": "c:nuggets/lead"
+    },
+    "I": {
+      "tag": "c:ingots/lead"
+    }
+  },
+  "result": {
+    "id": "spicedcider:lead_chain",
+    "count": 1
+  }
+}

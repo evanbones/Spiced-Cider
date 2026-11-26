@@ -12,15 +12,16 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "pattern": [
-    "L",
-    "P"
+    " #",
+    "ii",
+    "i "
   ],
   "key": {
-    "L": {
-      "tag": "c:ingots/lead"
+    "#": {
+      "tag": "c:nuggets/lead"
     },
-    "P": {
-      "item": "spicedcider:lead_pipe"
+    "i": {
+      "tag": "c:ingots/lead"
     }
   },
   "result": {

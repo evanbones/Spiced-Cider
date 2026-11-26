@@ -1,6 +1,7 @@
 package com.evandev.spicedcider.config;
 
 import com.evandev.spicedcider.content.item.CaveMapHeights;
+import com.evandev.spicedcider.content.item.BreakRemainders;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import net.minecraft.resources.ResourceLocation;
@@ -81,7 +82,6 @@ public class SpicedCiderConfig {
     }
 
     public static class Startup {
-        public final ModConfigSpec.BooleanValue blockBoxWoodVariants;
         public final ModConfigSpec.BooleanValue skeletonHealthNerf;
         public final ModConfigSpec.BooleanValue unifiedPetArmor;
         public final ModConfigSpec.BooleanValue leavesNotSuffocating;
@@ -90,14 +90,12 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.BooleanValue replaceFarmersDelightComfort;
         public final ModConfigSpec.BooleanValue tideSpawnEggs;
         public final ModConfigSpec.BooleanValue sulfurCavesRework;
+        public final ModConfigSpec.BooleanValue noBorderStripBiomes;
         public final ModConfigSpec.BooleanValue brightCageLanterns;
         public final ModConfigSpec.BooleanValue customWindowIcon;
+        public final ModConfigSpec.ConfigValue<List<? extends String>> unbreakableItems;
 
         public Startup(ModConfigSpec.Builder builder) {
-            blockBoxWoodVariants = builder
-                    .comment(tooltip("blockBoxWoodVariants"))
-                    .translation("option.spicedcider.blockBoxWoodVariants")
-                    .define("blockBoxWoodVariants", true);
 
             skeletonHealthNerf = builder
                     .comment(tooltip("skeletonHealthNerf"))
@@ -139,6 +137,11 @@ public class SpicedCiderConfig {
                     .translation("option.spicedcider.sulfurCavesRework")
                     .define("sulfurCavesRework", false);
 
+            noBorderStripBiomes = builder
+                    .comment(tooltip("noBorderStripBiomes"))
+                    .translation("option.spicedcider.noBorderStripBiomes")
+                    .define("noBorderStripBiomes", false);
+
             brightCageLanterns = builder
                     .comment(tooltip("brightCageLanterns"))
                     .translation("option.spicedcider.brightCageLanterns")
@@ -148,6 +151,12 @@ public class SpicedCiderConfig {
                     .comment(tooltip("customWindowIcon"))
                     .translation("option.spicedcider.customWindowIcon")
                     .define("customWindowIcon", false);
+
+            unbreakableItems = builder
+                    .comment(tooltip("unbreakableItems"))
+                    .translation("option.spicedcider.unbreakableItems")
+                    .defineListAllowEmpty("unbreakableItems", List.of(), () -> "minecraft:brush",
+                            element -> element instanceof String id && ResourceLocation.tryParse(id) != null);
         }
     }
 
@@ -190,7 +199,6 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.BooleanValue oldWisteriaTrees;
         public final ModConfigSpec.BooleanValue slimeTimeDisableItemMerging;
         public final ModConfigSpec.BooleanValue easyAnvilsFreeRepairs;
-        public final ModConfigSpec.BooleanValue toolRepairMaterialCounts;
         public final ModConfigSpec.BooleanValue revealThreateningMonsters;
         public final ModConfigSpec.BooleanValue fireRingNoPotions;
         public final ModConfigSpec.BooleanValue witchStewBasin;
@@ -213,6 +221,13 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.BooleanValue mealIngredientsKeepHealth;
         public final ModConfigSpec.IntValue nourishmentDurationPercent;
         public final ModConfigSpec.BooleanValue quarkStoolSeats;
+        public final ModConfigSpec.BooleanValue blockBoxSeatMobs;
+        public final ModConfigSpec.BooleanValue jugShapedJars;
+        public final ModConfigSpec.BooleanValue thrasherStruggling;
+        public final ModConfigSpec.IntValue thrasherSpawnLimit;
+        public final ModConfigSpec.BooleanValue windCreateWindmills;
+        public final ModConfigSpec.BooleanValue createTankHandFluids;
+        public final ModConfigSpec.BooleanValue tameableSkeletonHorses;
         public final ModConfigSpec.BooleanValue basinCampfireHeat;
         public final ModConfigSpec.BooleanValue calmerHerdPanic;
         public final ModConfigSpec.BooleanValue sneakUpOnRabbits;
@@ -223,11 +238,11 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.BooleanValue goldenDandelionTempting;
         public final ModConfigSpec.BooleanValue oceanRuinPrismarineChests;
         public final ModConfigSpec.BooleanValue wind;
-        public final ModConfigSpec.BooleanValue windCreateWindmills;
         public final ModConfigSpec.BooleanValue windVaneSignal;
         public final ModConfigSpec.BooleanValue windGliders;
 
         public final ModConfigSpec.BooleanValue bedExplosionPrevention;
+        public final ModConfigSpec.BooleanValue grindstoneSharpening;
         public final ModConfigSpec.BooleanValue respawnAnchorExplosionPrevention;
         public final ModConfigSpec.BooleanValue endCrystalPlaceAnywhere;
         public final ModConfigSpec.BooleanValue endCrystalHealing;
@@ -237,9 +252,12 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.BooleanValue spiderRangedWebAttacks;
         public final ModConfigSpec.BooleanValue removeQuasiConnectivity;
         public final ModConfigSpec.BooleanValue harmlessGhastFireballs;
+        public final ModConfigSpec.BooleanValue localizedBossSounds;
         public final ModConfigSpec.BooleanValue logsNeedAxe;
         public final ModConfigSpec.BooleanValue stepUp;
         public final ModConfigSpec.BooleanValue hammersCannotMine;
+        public final ModConfigSpec.BooleanValue solidBeams;
+        public final ModConfigSpec.BooleanValue beamGridSnapping;
         public final ModConfigSpec.BooleanValue treeBark;
         public final ModConfigSpec.BooleanValue mossNeedsHoe;
         public final ModConfigSpec.BooleanValue blockDyeing;
@@ -255,15 +273,22 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.BooleanValue accurateSignHitboxes;
         public final ModConfigSpec.IntValue bundleCapacity;
         public final ModConfigSpec.IntValue fallDamageReduction;
+        public final ModConfigSpec.IntValue naturalRegenerationLimit;
         public final ModConfigSpec.BooleanValue noNestedBundles;
         public final ModConfigSpec.BooleanValue rangedSkeletons;
         public final ModConfigSpec.BooleanValue singleBlazeFireball;
         public final ModConfigSpec.BooleanValue noSkeletonTrapHorses;
         public final ModConfigSpec.BooleanValue bowFatigue;
-        public final ModConfigSpec.BooleanValue crudeBowSkeletons;
+        public final ModConfigSpec.BooleanValue skeletonArrowNerf;
         public final ModConfigSpec.BooleanValue skeletonHorsesBurn;
         public final ModConfigSpec.BooleanValue darkForestEvokers;
+        public final ModConfigSpec.BooleanValue tentRespawnChoice;
+        public final ModConfigSpec.BooleanValue tentRugs;
+        public final ModConfigSpec.BooleanValue itemVaultInterface;
+        public final ModConfigSpec.BooleanValue crushingWheelsSkipMilling;
         public final ModConfigSpec.BooleanValue iglooBasementRemoval;
+        public final ModConfigSpec.BooleanValue mineshaftEntrances;
+        public final ModConfigSpec.BooleanValue noOpenSkyCaveBiomes;
         public final ModConfigSpec.BooleanValue noVanillaCocoaPods;
         public final ModConfigSpec.BooleanValue paleOakGrowsGloomwood;
         public final ModConfigSpec.BooleanValue voidWater;
@@ -275,6 +300,7 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.IntValue caveMapsFixedHeight;
         public final ModConfigSpec.ConfigValue<List<? extends String>> caveMapsFixedHeights;
         public final ModConfigSpec.ConfigValue<List<? extends String>> caveMapsCreationHeightDimensions;
+        public final ModConfigSpec.ConfigValue<List<? extends String>> breakRemainders;
         public final ModConfigSpec.BooleanValue gravestoneDecayWithTime;
         public final ModConfigSpec.BooleanValue gravestoneDecayWithDeaths;
         public final ModConfigSpec.IntValue gravestoneDecayHours;
@@ -322,10 +348,6 @@ public class SpicedCiderConfig {
                     .translation("option.spicedcider.easyAnvilsFreeRepairs")
                     .define("easyAnvilsFreeRepairs", false);
 
-            toolRepairMaterialCounts = builder
-                    .comment(tooltip("toolRepairMaterialCounts"))
-                    .translation("option.spicedcider.toolRepairMaterialCounts")
-                    .define("toolRepairMaterialCounts", false);
 
             fireRingNoPotions = builder
                     .comment(tooltip("fireRingNoPotions"))
@@ -432,6 +454,31 @@ public class SpicedCiderConfig {
                     .translation("option.spicedcider.quarkStoolSeats")
                     .define("quarkStoolSeats", false);
 
+            blockBoxSeatMobs = builder
+                    .comment(tooltip("blockBoxSeatMobs"))
+                    .translation("option.spicedcider.blockBoxSeatMobs")
+                    .define("blockBoxSeatMobs", false);
+
+            createTankHandFluids = builder
+                    .comment(tooltip("createTankHandFluids"))
+                    .translation("option.spicedcider.createTankHandFluids")
+                    .define("createTankHandFluids", false);
+
+            jugShapedJars = builder
+                    .comment(tooltip("jugShapedJars"))
+                    .translation("option.spicedcider.jugShapedJars")
+                    .define("jugShapedJars", false);
+
+            thrasherStruggling = builder
+                    .comment(tooltip("thrasherStruggling"))
+                    .translation("option.spicedcider.thrasherStruggling")
+                    .define("thrasherStruggling", false);
+
+            thrasherSpawnLimit = builder
+                    .comment(tooltip("thrasherSpawnLimit"))
+                    .translation("option.spicedcider.thrasherSpawnLimit")
+                    .defineInRange("thrasherSpawnLimit", 0, 0, 16);
+
             basinCampfireHeat = builder
                     .comment(tooltip("basinCampfireHeat"))
                     .translation("option.spicedcider.basinCampfireHeat")
@@ -489,6 +536,11 @@ public class SpicedCiderConfig {
 
             builder.push("gameplay");
 
+            grindstoneSharpening = builder
+                    .comment(tooltip("grindstoneSharpening"))
+                    .translation("option.spicedcider.grindstoneSharpening")
+                    .define("grindstoneSharpening", false);
+
             bedExplosionPrevention = builder
                     .comment(tooltip("bedExplosionPrevention"))
                     .translation("option.spicedcider.bedExplosionPrevention")
@@ -539,6 +591,11 @@ public class SpicedCiderConfig {
                     .translation("option.spicedcider.harmlessGhastFireballs")
                     .define("harmlessGhastFireballs", false);
 
+            localizedBossSounds = builder
+                    .comment(tooltip("localizedBossSounds"))
+                    .translation("option.spicedcider.localizedBossSounds")
+                    .define("localizedBossSounds", false);
+
             logsNeedAxe = builder
                     .comment(tooltip("logsNeedAxe"))
                     .translation("option.spicedcider.logsNeedAxe")
@@ -553,6 +610,16 @@ public class SpicedCiderConfig {
                     .comment(tooltip("hammersCannotMine"))
                     .translation("option.spicedcider.hammersCannotMine")
                     .define("hammersCannotMine", false);
+
+            solidBeams = builder
+                    .comment(tooltip("solidBeams"))
+                    .translation("option.spicedcider.solidBeams")
+                    .define("solidBeams", false);
+
+            beamGridSnapping = builder
+                    .comment(tooltip("beamGridSnapping"))
+                    .translation("option.spicedcider.beamGridSnapping")
+                    .define("beamGridSnapping", false);
 
             treeBark = builder
                     .comment(tooltip("treeBark"))
@@ -629,6 +696,11 @@ public class SpicedCiderConfig {
                     .translation("option.spicedcider.fallDamageReduction")
                     .defineInRange("fallDamageReduction", 0, 0, 20);
 
+            naturalRegenerationLimit = builder
+                    .comment(tooltip("naturalRegenerationLimit"))
+                    .translation("option.spicedcider.naturalRegenerationLimit")
+                    .defineInRange("naturalRegenerationLimit", 0, 0, 40);
+
             noNestedBundles = builder
                     .comment(tooltip("noNestedBundles"))
                     .translation("option.spicedcider.noNestedBundles")
@@ -654,10 +726,10 @@ public class SpicedCiderConfig {
                     .translation("option.spicedcider.bowFatigue")
                     .define("bowFatigue", false);
 
-            crudeBowSkeletons = builder
-                    .comment(tooltip("crudeBowSkeletons"))
-                    .translation("option.spicedcider.crudeBowSkeletons")
-                    .define("crudeBowSkeletons", false);
+            skeletonArrowNerf = builder
+                    .comment(tooltip("skeletonArrowNerf"))
+                    .translation("option.spicedcider.skeletonArrowNerf")
+                    .define("skeletonArrowNerf", false);
 
             skeletonHorsesBurn = builder
                     .comment(tooltip("skeletonHorsesBurn"))
@@ -669,10 +741,40 @@ public class SpicedCiderConfig {
                     .translation("option.spicedcider.darkForestEvokers")
                     .define("darkForestEvokers", false);
 
+            tentRespawnChoice = builder
+                    .comment(tooltip("tentRespawnChoice"))
+                    .translation("option.spicedcider.tentRespawnChoice")
+                    .define("tentRespawnChoice", false);
+
+            tentRugs = builder
+                    .comment(tooltip("tentRugs"))
+                    .translation("option.spicedcider.tentRugs")
+                    .define("tentRugs", false);
+
+            itemVaultInterface = builder
+                    .comment(tooltip("itemVaultInterface"))
+                    .translation("option.spicedcider.itemVaultInterface")
+                    .define("itemVaultInterface", false);
+
+            crushingWheelsSkipMilling = builder
+                    .comment(tooltip("crushingWheelsSkipMilling"))
+                    .translation("option.spicedcider.crushingWheelsSkipMilling")
+                    .define("crushingWheelsSkipMilling", false);
+
             iglooBasementRemoval = builder
                     .comment(tooltip("iglooBasementRemoval"))
                     .translation("option.spicedcider.iglooBasementRemoval")
                     .define("iglooBasementRemoval", false);
+
+            mineshaftEntrances = builder
+                    .comment(tooltip("mineshaftEntrances"))
+                    .translation("option.spicedcider.mineshaftEntrances")
+                    .define("mineshaftEntrances", false);
+
+            noOpenSkyCaveBiomes = builder
+                    .comment(tooltip("noOpenSkyCaveBiomes"))
+                    .translation("option.spicedcider.noOpenSkyCaveBiomes")
+                    .define("noOpenSkyCaveBiomes", false);
 
             noVanillaCocoaPods = builder
                     .comment(tooltip("noVanillaCocoaPods"))
@@ -683,6 +785,17 @@ public class SpicedCiderConfig {
                     .comment(tooltip("paleOakGrowsGloomwood"))
                     .translation("option.spicedcider.paleOakGrowsGloomwood")
                     .define("paleOakGrowsGloomwood", false);
+
+            tameableSkeletonHorses = builder
+                    .comment(tooltip("tameableSkeletonHorses"))
+                    .translation("option.spicedcider.tameableSkeletonHorses")
+                    .define("tameableSkeletonHorses", false);
+
+            breakRemainders = builder
+                    .comment(tooltip("breakRemainders"))
+                    .translation("option.spicedcider.breakRemainders")
+                    .defineListAllowEmpty("breakRemainders", List.of(), () -> "minecraft:brush=minecraft:stick",
+                            element -> element instanceof String entry && BreakRemainders.parse(entry) != null);
 
             builder.pop();
             builder.push("voidWater");
@@ -915,6 +1028,7 @@ public class SpicedCiderConfig {
 
         public final ModConfigSpec.BooleanValue customDeathSound;
         public final ModConfigSpec.BooleanValue unmineableBlockSparks;
+        public final ModConfigSpec.BooleanValue tentHitbox;
 
         public final ModConfigSpec.BooleanValue customWindowTitle;
         public final ModConfigSpec.ConfigValue<String> windowTitleFormat;
@@ -938,6 +1052,7 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.BooleanValue hideSackContentsTooltip;
 
         public final ModConfigSpec.BooleanValue pictureModeClouds;
+        public final ModConfigSpec.BooleanValue waterDepthFog;
 
         public final ModConfigSpec.BooleanValue vistaMirrorPerfFixes;
         public final ModConfigSpec.IntValue vistaMirrorReflectionDistance;
@@ -967,6 +1082,7 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.BooleanValue roughGemsOnGrindstone;
         public final ModConfigSpec.BooleanValue emiHideSmithingCategory;
         public final ModConfigSpec.BooleanValue emiCreateFanRework;
+        public final ModConfigSpec.BooleanValue fullerBasinFluids;
         public final ModConfigSpec.BooleanValue createHideItemDescriptions;
         public final ModConfigSpec.BooleanValue quarkHideHints;
         public final ModConfigSpec.BooleanValue graveLocatorBar;
@@ -975,6 +1091,8 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.BooleanValue jadeNeedsSpyglassOrMonocle;
         public final ModConfigSpec.BooleanValue stepUpEnabled;
         public final ModConfigSpec.BooleanValue smoothStepUp;
+        public final ModConfigSpec.BooleanValue stepUpSprintOnly;
+        public final ModConfigSpec.BooleanValue ledgeClimbing;
         public final ModConfigSpec.BooleanValue emiTappingCategory;
         public final ModConfigSpec.BooleanValue emiSluicingCategory;
         public final ModConfigSpec.BooleanValue emiBarteringCategory;
@@ -1051,6 +1169,11 @@ public class SpicedCiderConfig {
                     .translation("option.spicedcider.emiCreateFanRework")
                     .define("emiCreateFanRework", false);
 
+            fullerBasinFluids = builder
+                    .comment(tooltip("fullerBasinFluids"))
+                    .translation("option.spicedcider.fullerBasinFluids")
+                    .define("fullerBasinFluids", false);
+
             createHideItemDescriptions = builder
                     .comment(tooltip("createHideItemDescriptions"))
                     .translation("option.spicedcider.createHideItemDescriptions")
@@ -1089,7 +1212,17 @@ public class SpicedCiderConfig {
             smoothStepUp = builder
                     .comment(tooltip("smoothStepUp"))
                     .translation("option.spicedcider.smoothStepUp")
-                    .define("smoothStepUp", false);
+                    .define("smoothStepUp", true);
+
+            stepUpSprintOnly = builder
+                    .comment(tooltip("stepUpSprintOnly"))
+                    .translation("option.spicedcider.stepUpSprintOnly")
+                    .define("stepUpSprintOnly", true);
+
+            ledgeClimbing = builder
+                    .comment(tooltip("ledgeClimbing"))
+                    .translation("option.spicedcider.ledgeClimbing")
+                    .define("ledgeClimbing", true);
 
             builder.pop();
             builder.push("naming");
@@ -1106,6 +1239,10 @@ public class SpicedCiderConfig {
                     .comment(tooltip("unmineableBlockSparks"))
                     .translation("option.spicedcider.unmineableBlockSparks")
                     .define("unmineableBlockSparks", true);
+            tentHitbox = builder
+                    .comment(tooltip("tentHitbox"))
+                    .translation("option.spicedcider.tentHitbox")
+                    .define("tentHitbox", false);
 
             customDeathSound = builder
                     .comment(tooltip("customDeathSound"))
@@ -1191,6 +1328,11 @@ public class SpicedCiderConfig {
                     .comment(tooltip("pictureModeClouds"))
                     .translation("option.spicedcider.pictureModeClouds")
                     .define("pictureModeClouds", true);
+
+            waterDepthFog = builder
+                    .comment(tooltip("waterDepthFog"))
+                    .translation("option.spicedcider.waterDepthFog")
+                    .define("waterDepthFog", false);
 
             builder.pop();
             builder.push("vista");

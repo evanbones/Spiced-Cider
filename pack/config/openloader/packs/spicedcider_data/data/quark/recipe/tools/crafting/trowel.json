@@ -1,0 +1,24 @@
+{
+  "type": "modestmining:forging_shaped",
+  "category": "equipment",
+  "cooktime": 144,
+  "key": {
+    "I": {
+      "tag": "c:ingots/iron"
+    },
+    "L": {
+      "tag": "c:leathers"
+    },
+    "S": {
+      "tag": "c:rods/wooden"
+    }
+  },
+  "pattern": [
+    "II",
+    "L ",
+    "S "
+  ],
+  "result": {
+    "id": "quark:trowel"
+  }
+}

@@ -64,7 +64,7 @@ public class SmelteryBlock extends BaseEntityBlock {
     }
 
     public static int lightLevel(BlockState state) {
-        return state.getValue(LIT) && !state.getValue(TOP) && !state.getValue(BACK) ? 13 : 0;
+        return state.getValue(LIT) ? 13 : 0;
     }
 
     public static void setLit(Level level, BlockPos controller, BlockState state, boolean lit) {

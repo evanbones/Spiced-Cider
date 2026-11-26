@@ -1,0 +1,30 @@
+{
+  "parent": "minecraft:item/handheld",
+  "loader": "neoforge:separate_transforms",
+  "textures": {
+    "layer0": "spicedcider:item/valkyrium_lance"
+  },
+  "base": {
+    "parent": "spicedcider:item/valkyrium_lance_in_hand"
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "minecraft:item/handheld",
+      "textures": {
+        "layer0": "spicedcider:item/valkyrium_lance"
+      }
+    },
+    "fixed": {
+      "parent": "minecraft:item/handheld",
+      "textures": {
+        "layer0": "spicedcider:item/valkyrium_lance"
+      }
+    },
+    "ground": {
+      "parent": "minecraft:item/handheld",
+      "textures": {
+        "layer0": "spicedcider:item/valkyrium_lance"
+      }
+    }
+  }
+}

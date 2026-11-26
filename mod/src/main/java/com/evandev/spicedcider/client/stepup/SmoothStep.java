@@ -21,9 +21,10 @@ public class SmoothStep {
     private static double cameraY;
     private static double lastY;
     private static long lastFrame;
+    private static double offset;
 
     private static boolean enabled() {
-        return SpicedCiderConfig.clientOr(SpicedCiderConfig.CLIENT.smoothStepUp, false);
+        return SpicedCiderConfig.clientOr(SpicedCiderConfig.CLIENT.smoothStepUp, true);
     }
 
     public static void onMove(boolean grounded, boolean groundedAfter, double rise, double requestedY) {
@@ -35,7 +36,17 @@ public class SmoothStep {
         }
     }
 
+    public static double offset() {
+        return offset;
+    }
+
     public static double adjust(double y, boolean settled) {
+        double adjusted = smooth(y, settled);
+        offset = adjusted - y;
+        return adjusted;
+    }
+
+    private static double smooth(double y, boolean settled) {
         long now = Util.getNanos();
         double dt = Math.min(Math.max((now - lastFrame) / 1.0E9, 0.0), MAX_FRAME_SECONDS);
         lastFrame = now;

@@ -1,5 +1,7 @@
 package com.evandev.spicedcider.entities.strawgolem.goals;
 
+import com.evandev.spicedcider.compat.atmospheric.AtmosphericHarvesting;
+import com.evandev.spicedcider.compat.bountifulfares.TeaShrubHarvesting;
 import com.evandev.spicedcider.compat.bountifulfares.TrellisHarvesting;
 import com.evandev.spicedcider.entities.strawgolem.StrawGolem;
 import com.evandev.spicedcider.entities.strawgolem.StrawGolemSenses;
@@ -38,6 +40,7 @@ public class GolemHarvestGoal extends GolemMoveToBlockGoal {
     private static final int SEARCH_COOLDOWN = 40;
     private static final int MAX_PLANT_HEIGHT = 3;
     private static final boolean TRELLISES = ModList.get().isLoaded("bountifulfares");
+    private static final boolean ATMOSPHERIC = ModList.get().isLoaded("atmospheric");
 
     private final BiPredicate<StrawGolem, BlockPos> predicate = (golem, pos) -> isGrownPlant(golem.level(), pos)
             && StrawGolemSenses.canPath(golem, standPos(golem.level(), pos));
@@ -60,15 +63,41 @@ public class GolemHarvestGoal extends GolemMoveToBlockGoal {
     @Override
     protected void moveMobToBlock() {
         BlockPos stand = standPos(golem.level(), blockPos);
-        mob.getNavigation().moveTo(stand.getX() + 0.5, stand.getY(), stand.getZ() + 0.5, 0, speedModifier);
+        BlockState target = golem.level().getBlockState(blockPos);
+        int accuracy = standsBeside(target) || (ATMOSPHERIC && AtmosphericHarvesting.handles(target)) ? 1 : 0;
+        mob.getNavigation().moveTo(stand.getX() + 0.5, stand.getY(), stand.getZ() + 0.5, accuracy, speedModifier);
+    }
+
+    @Override
+    protected BlockPos getMoveToTarget() {
+        if (ATMOSPHERIC && AtmosphericHarvesting.handles(golem.level().getBlockState(blockPos))) {
+            return groundBelow(golem.level(), blockPos);
+        }
+        return super.getMoveToTarget();
     }
 
     private static BlockPos standPos(Level level, BlockPos pos) {
+        if (ATMOSPHERIC && AtmosphericHarvesting.handles(level.getBlockState(pos))) {
+            return groundBelow(level, pos);
+        }
         BlockPos stand = pos;
         for (int i = 0; i < MAX_PLANT_HEIGHT && isPlantColumn(level.getBlockState(stand.below())); i++) {
             stand = stand.below();
         }
         return stand;
+    }
+
+    private static BlockPos groundBelow(Level level, BlockPos pos) {
+        BlockPos stand = pos;
+        for (int i = 0; i < MAX_PLANT_HEIGHT && level.getBlockState(stand.below()).getCollisionShape(level, stand.below()).isEmpty(); i++) {
+            stand = stand.below();
+        }
+        return stand;
+    }
+
+    private static boolean standsBeside(BlockState state) {
+        Block block = state.getBlock();
+        return block instanceof BushBlock && !(block instanceof CropBlock) && !(block instanceof StemBlock);
     }
 
     private static boolean isPlantColumn(BlockState state) {
@@ -145,6 +174,9 @@ public class GolemHarvestGoal extends GolemMoveToBlockGoal {
     private static boolean isGrownPlant(Level level, BlockPos pos) {
         BlockState state = level.getBlockState(pos);
         Block block = state.getBlock();
+        if (ATMOSPHERIC && AtmosphericHarvesting.handles(state)) {
+            return AtmosphericHarvesting.isGrown(level, pos, state);
+        }
         if (block instanceof CropBlock crop) {
             return crop.isMaxAge(state);
         }
@@ -153,6 +185,9 @@ public class GolemHarvestGoal extends GolemMoveToBlockGoal {
         }
         if (TRELLISES && TrellisHarvesting.isTrellis(state)) {
             return TrellisHarvesting.isGrown(level, pos);
+        }
+        if (TRELLISES && TeaShrubHarvesting.isTeaShrub(state)) {
+            return TeaShrubHarvesting.isGrown(state);
         }
         if (state.is(ModTags.Blocks.STRAW_GOLEM_CROPS) && !(block instanceof StemBlock) && isMaxAge(state)) {
             return true;
@@ -192,6 +227,12 @@ public class GolemHarvestGoal extends GolemMoveToBlockGoal {
         if (TRELLISES && TrellisHarvesting.isTrellis(state)) {
             return TrellisHarvesting.produce(level, blockPos, golem.getRandom());
         }
+        if (TRELLISES && TeaShrubHarvesting.isTeaShrub(state)) {
+            return TeaShrubHarvesting.produce(state, golem.getRandom());
+        }
+        if (ATMOSPHERIC && AtmosphericHarvesting.handles(state)) {
+            return AtmosphericHarvesting.produce(state, golem.getRandom());
+        }
         LootParams.Builder builder = new LootParams.Builder(level)
                 .withParameter(LootContextParams.TOOL, ItemStack.EMPTY)
                 .withParameter(LootContextParams.ORIGIN, mob.position());
@@ -204,6 +245,14 @@ public class GolemHarvestGoal extends GolemMoveToBlockGoal {
         BlockState state = level.getBlockState(blockPos);
         if (TRELLISES && TrellisHarvesting.isTrellis(state)) {
             TrellisHarvesting.pick(level, blockPos);
+            return;
+        }
+        if (TRELLISES && TeaShrubHarvesting.isTeaShrub(state)) {
+            TeaShrubHarvesting.pick(level, blockPos);
+            return;
+        }
+        if (ATMOSPHERIC && AtmosphericHarvesting.handles(state)) {
+            AtmosphericHarvesting.pick(level, blockPos);
             return;
         }
         if (state.getBlock() instanceof SugarCaneBlock) {

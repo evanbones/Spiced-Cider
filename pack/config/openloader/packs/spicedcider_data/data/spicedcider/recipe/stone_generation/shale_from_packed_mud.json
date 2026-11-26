@@ -1,0 +1,14 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "quark"
+    }
+  ],
+  "type": "spicedcider:stone_generation",
+  "with": "minecraft:water",
+  "catalyst": [
+    "minecraft:packed_mud"
+  ],
+  "result": "spicedcider:cobbled_shale"
+}

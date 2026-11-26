@@ -1,0 +1,10 @@
+[
+  {
+    "action": "replace_input",
+    "filter": {
+      "id": "/(minecraft:(comparator|repeater)|quark:tweaks\/crafting\/utility\/misc\/repeater)/"
+    },
+    "target": "minecraft:stone",
+    "replacement": "minecraft:smooth_stone"
+  }
+]

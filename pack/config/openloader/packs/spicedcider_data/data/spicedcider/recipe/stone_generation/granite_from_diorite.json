@@ -1,0 +1,15 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "stoneworks"
+    }
+  ],
+  "type": "spicedcider:stone_generation",
+  "with": "minecraft:water",
+  "catalyst": [
+    "minecraft:diorite",
+    "stoneworks:cobbled_diorite"
+  ],
+  "result": "stoneworks:cobbled_granite"
+}

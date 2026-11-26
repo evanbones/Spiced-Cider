@@ -1,6 +1,7 @@
 package com.evandev.spicedcider.compat.emi;
 
 import com.evandev.spicedcider.SpicedCider;
+import com.evandev.spicedcider.compat.reliableremover.ReliableRemoverCompat;
 import com.evandev.spicedcider.content.brewing.Brewing;
 import com.evandev.spicedcider.registry.ModDataMaps;
 import dev.emi.emi.api.EmiRegistry;
@@ -77,6 +78,7 @@ public class BrewingEmiRecipe extends BasicEmiRecipe {
         List<Map.Entry<Item, ModDataMaps.BrewingIngredient>> boosters = new ArrayList<>();
         for (Map.Entry<ResourceKey<Item>, ModDataMaps.BrewingIngredient> entry : BuiltInRegistries.ITEM.getDataMap(ModDataMaps.BREWING_INGREDIENTS).entrySet()) {
             Item item = BuiltInRegistries.ITEM.get(entry.getKey());
+            if (ReliableRemoverCompat.isHiddenFromViewers(item)) continue;
             ModDataMaps.BrewingIngredient ingredient = entry.getValue();
             Map.Entry<Item, ModDataMaps.BrewingIngredient> pair = Map.entry(item, ingredient);
             Optional<ResourceKey<Potion>> key = ingredient.potion().flatMap(Holder::unwrapKey);
@@ -91,6 +93,7 @@ public class BrewingEmiRecipe extends BasicEmiRecipe {
                 .sorted(Comparator.comparing(entry -> entry.getKey().location().getPath()))
                 .forEach(entry -> {
                     Holder<Potion> potion = BuiltInRegistries.POTION.getHolderOrThrow(entry.getKey());
+                    if (ReliableRemoverCompat.isHiddenFromViewers(PotionContents.createItemStack(Items.POTION, potion))) return;
                     List<Map.Entry<Item, ModDataMaps.BrewingIngredient>> items = entry.getValue();
                     items.sort(Comparator.comparingInt(pair -> pair.getValue().potency()));
                     List<Entry> entries = items.stream().map(pair -> new Entry(EmiStack.of(pair.getKey()), describe(pair.getValue()))).toList();

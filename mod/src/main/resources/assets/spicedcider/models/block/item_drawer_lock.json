@@ -1,0 +1,16 @@
+{
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "lock": "spicedcider:block/item_drawer_lock",
+    "particle": "spicedcider:block/item_drawer_particle"
+  },
+  "elements": [
+    {
+      "from": [7.5, 4.25, -0.02],
+      "to": [8.5, 5.25, 16],
+      "faces": {
+        "north": {"uv": [0, 0, 16, 16], "texture": "#lock", "cullface": "north"}
+      }
+    }
+  ]
+}

@@ -1,5 +1,3 @@
-#Registers Every Compat wood-type variants (seats, palisades) for The Block Box. Requires The Block Box, Every Compat, and Moonlight Lib. Requires a restart to take effect.
-blockBoxWoodVariants = true
 #Skeletons and strays get 10 max health. Requires a restart to take effect.
 skeletonHealthNerf = true
 #Horse armor works like wolf armor: it tanks the hit, loses durability, and is repaired by right-clicking the pet with the armor's material. Applies to horses and, with wolvesWearAnyArmor, to wolves. Requires a restart to take effect.
@@ -16,7 +14,11 @@ torchflowerLight = true
 tideSpawnEggs = true
 #Sulfur Caves are lined with sulfur and edged with tuff instead of bands of cinnabar and stone. Requires Vanilla Backport. Only affects newly generated terrain. Requires a restart to take effect.
 sulfurCavesRework = true
+#Boreal Forest, Prairie, Dark Swamp, Bayou, Maple Grove and Bog only grow in their own patches instead of also lining the borders between other biomes in thin strips, and Maple Forests no longer scatter small specks through Forests. Requires No Man's Land. Only affects newly generated terrain. Requires a restart to take effect.
+noBorderStripBiomes = true
 #Lit cage lanterns give off full light. Requires Architect's Palette. Requires a restart to take effect.
 brightCageLanterns = true
 #Uses the pack's own window and taskbar icon on Windows, including during loading. Requires a restart to take effect.
 customWindowIcon = true
+#Item ids that lose their durability entirely and never wear out. Requires a restart.
+unbreakableItems = ["minecraft:brush", "supplementaries:wrench", "etcetera:chisel", "quark:trowel", "manual_labour:ladle", "manual_labour:pestle", "reliable_gliders:glider"]

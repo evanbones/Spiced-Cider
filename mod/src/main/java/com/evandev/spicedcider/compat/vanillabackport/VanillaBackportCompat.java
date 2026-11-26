@@ -5,6 +5,7 @@ import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.Tier;
 import net.neoforged.fml.ModList;
@@ -24,6 +25,10 @@ public final class VanillaBackportCompat {
 
     public static boolean modernLeashes() {
         return isLoaded() && VanillaBackportBridge.modernLeashes();
+    }
+
+    public static boolean canSprintWhileUsing(ItemStack stack) {
+        return isLoaded() && VanillaBackportBridge.canSprintWhileUsing(stack);
     }
 
     public static Item createLance(Tier tier, ResourceLocation reachId, Item.Properties properties) {

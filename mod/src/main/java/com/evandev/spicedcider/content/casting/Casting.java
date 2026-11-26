@@ -41,7 +41,9 @@ public class Casting {
 
     public static boolean castingRecipeExists(Level level, FluidStack fluid) {
         return level.getRecipeManager().getAllRecipesFor(ModRecipeSerializers.MOULD_CASTING_TYPE.get()).stream()
-                .anyMatch(holder -> holder.value().fluid().ingredient().test(fluid));
+                .anyMatch(holder -> holder.value().fluid().ingredient().test(fluid))
+                || level.getRecipeManager().getAllRecipesFor(ModRecipeSerializers.BASIN_CASTING_TYPE.get()).stream()
+                .anyMatch(holder -> holder.value().accepts(fluid));
     }
 
     @Nullable

@@ -142,6 +142,7 @@ def main() -> int:
 
     entries = collect(out)
     download_keys = set(config.get("download", []))
+    exclude_keys = set(config.get("exclude", []))
     forced = [e for e in entries if e.key in download_keys]
     entries = [e for e in entries if e not in forced]
     errors = []
@@ -171,6 +172,10 @@ def main() -> int:
         errors.append(f"download entry {key} matched nothing in the pack")
     for key in sorted(set(pins) - used_pins):
         errors.append(f"pin {key} ({pins[key]['name']}) matched nothing in the pack")
+    for key in sorted(exclude_keys - {e.key for e in entries}):
+        errors.append(f"exclude entry {key} matched nothing in the pack")
+    for key in sorted(exclude_keys & (set(pins) | download_keys)):
+        errors.append(f"exclude entry {key} is also pinned or listed under download")
 
     detect = out.parent / (out.name + "-detect")
     if detect.exists():
@@ -181,6 +186,8 @@ def main() -> int:
 
     by_sha1 = {}
     for i, entry in enumerate(entries):
+        if entry.key in exclude_keys:
+            continue
         if entry.is_meta:
             download = entry.data["download"]
             entry.local = fetch(download["url"], download["hash-format"], download["hash"], cache)
@@ -200,7 +207,12 @@ def main() -> int:
         cf = data.get("update", {}).get("curseforge")
         if not cf:
             continue
-        for entry in by_sha1.get(data["download"]["hash"], []):
+        matches = by_sha1.get(data["download"]["hash"], [])
+        if matches and re.fullmatch(r"project-\d+", data["name"]):
+            errors.append(f"{matches[0].name} matched CurseForge project {cf['project-id']}, which isn't public "
+                          f"(likely a removed reupload): add {matches[0].key} to exclude in {Path(args.config).name}")
+            continue
+        for entry in matches:
             text = cf_toml(data["name"], data["filename"], entry.side, data["download"]["hash"],
                            cf["project-id"], cf["file-id"])
             if entry.is_resource_pack and entry.filename != data["filename"]:

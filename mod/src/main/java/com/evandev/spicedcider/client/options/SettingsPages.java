@@ -18,6 +18,7 @@ import com.evandev.spicedcider.compat.bettercloudshadows.CloudShadowSettings;
 import com.evandev.spicedcider.compat.cirrus.CirrusSettings;
 import com.evandev.spicedcider.compat.controlify.ControlifySettings;
 import com.evandev.spicedcider.compat.lambdynlights.DynamicLightsSetting;
+import com.evandev.spicedcider.compat.itemdescriptions.ItemDescriptionsSettings;
 import com.evandev.spicedcider.compat.musictweaks.MusicTweaksSettings;
 import com.evandev.spicedcider.compat.nomansland.NoMansLandSettings;
 import com.evandev.spicedcider.compat.particular.ParticularSettings;
@@ -46,6 +47,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.ItemLike;
 import net.neoforged.fml.ModList;
+import net.neoforged.neoforge.common.ModConfigSpec;
 import org.jetbrains.annotations.Nullable;
 
 import java.io.File;
@@ -95,7 +97,8 @@ public final class SettingsPages {
                 setting(new GuiScaleSetting()),
                 sodium("sodium:general.attack_indicator", o.attackIndicator()),
                 sodium("sodium:general.autosave_indicator", o.showAutosaveIndicator()),
-                vanilla(o.notificationDisplayTime())));
+                vanilla(o.notificationDisplayTime()),
+                ModList.get().isLoaded("item_descriptions") ? ItemDescriptionsSettings.mode() : null));
         add(entries, category(screen, "chat",
                 vanilla(o.chatVisibility()),
                 vanilla(o.chatColors()),
@@ -167,7 +170,7 @@ public final class SettingsPages {
                 impact(named(sodiumOnly("voxy:render_distance", VOXY_DEFAULT_DISTANCE), "spicedcider.options.lod_distance"), Impact.HIGH),
                 ModList.get().isLoaded("roxy") ? impact(VoxyFogSettings.start(), Impact.LOW) : null,
                 ModList.get().isLoaded("roxy") ? impact(VoxyFogSettings.end(), Impact.LOW) : null));
-        add(entries, category(screen, "visuals",
+        add(entries, graphicsCategory(screen, "visuals",
                 sodium("sodium:quality.graphics", o.graphicsMode()),
                 sodium("sodium:quality.ao", o.ambientOcclusion()),
                 sodium("sodium:quality.clouds", o.cloudStatus()),
@@ -187,11 +190,12 @@ public final class SettingsPages {
                 cirrus ? impact(CirrusSettings.aurora(), Impact.LOW) : null,
                 ModList.get().isLoaded("nomansland") ? impact(NoMansLandSettings.sunDogs(), Impact.LOW) : null,
                 ModList.get().isLoaded("where_winds_blow") ? impact(FoliageSwaySettings.foliageSway(), Impact.MEDIUM) : null,
-                impact(NetherSettings.mist(), Impact.LOW)));
+                impact(NetherSettings.mist(), Impact.LOW),
+                configToggle("smoothStepUp", SpicedCiderConfig.CLIENT.smoothStepUp)));
         if (ModList.get().isLoaded("particular")) {
-            add(entries, category(screen, "particles", ParticularSettings.particles().stream().map(entry -> impact(entry, Impact.LOW)).toArray(Entry[]::new)));
+            add(entries, graphicsCategory(screen, "particles", ParticularSettings.particles().stream().map(entry -> impact(entry, Impact.LOW)).toArray(Entry[]::new)));
         }
-        add(entries, category(screen, "post_processing",
+        add(entries, graphicsCategory(screen, "post_processing",
                 ModList.get().isLoaded("polytone") ? impact(GodraysSettings.godrays(), Impact.MEDIUM) : null,
                 impact(NetherSettings.heatHaze(), Impact.MEDIUM),
                 impact(NetherSettings.ambientTint(), Impact.LOW),
@@ -220,7 +224,9 @@ public final class SettingsPages {
         add(entries, category(screen, "movement_options",
                 vanilla(o.toggleCrouch()),
                 vanilla(o.toggleSprint()),
-                SpicedCiderConfig.commonOr(SpicedCiderConfig.COMMON.stepUp, false) ? vanilla(StepUpOption.get()) : vanilla(o.autoJump())));
+                SpicedCiderConfig.commonOr(SpicedCiderConfig.COMMON.stepUp, false) ? vanilla(StepUpOption.get()) : vanilla(o.autoJump()),
+                SpicedCiderConfig.commonOr(SpicedCiderConfig.COMMON.stepUp, false) ? configToggle("stepUpSprintOnly", SpicedCiderConfig.CLIENT.stepUpSprintOnly) : null,
+                ModList.get().isLoaded("getoverit") ? configToggle("ledgeClimbing", SpicedCiderConfig.CLIENT.ledgeClimbing) : null));
         if (ModList.get().isLoaded("controlify")) {
             entries.add(ControlifySettings.settingsCategory(screen));
         }
@@ -332,12 +338,27 @@ public final class SettingsPages {
     }
 
     @Nullable
+    private static CategoryEntry graphicsCategory(SettingsScreen screen, String key, @Nullable Entry... children) {
+        for (Entry child : children) {
+            if (child instanceof SettingEntry setting) setting.qualityColors();
+        }
+        return category(screen, key, children);
+    }
+
+    @Nullable
     private static Entry impact(@Nullable Entry entry, Impact impact) {
         return entry instanceof SettingEntry setting ? setting.impact(impact) : entry;
     }
 
     private static void add(List<Entry> entries, @Nullable Entry entry) {
         if (entry != null) entries.add(entry);
+    }
+
+    private static Entry configToggle(String key, ModConfigSpec.BooleanValue value) {
+        return setting(CycleSetting.toggle(Component.translatable("option.spicedcider." + key), value::get, enabled -> {
+            value.set(enabled);
+            value.save();
+        }).defaultValue(value.getDefault()).tooltip(Component.translatable("option.spicedcider." + key + ".tooltip")));
     }
 
     private static Entry setting(Setting setting) {

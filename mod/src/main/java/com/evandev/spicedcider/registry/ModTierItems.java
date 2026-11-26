@@ -4,7 +4,6 @@ import com.evandev.spicedcider.SpicedCider;
 import com.evandev.spicedcider.compat.farmersdelight.FarmersDelightCompat;
 import com.evandev.spicedcider.compat.modestmining.ModestMiningCompat;
 import com.evandev.spicedcider.compat.vanillabackport.VanillaBackportCompat;
-import com.evandev.spicedcider.content.item.ElectrumArmorItem;
 import com.evandev.spicedcider.content.item.MetalShieldItem;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
@@ -36,7 +35,6 @@ public class ModTierItems {
     public static final DeferredRegister<ArmorMaterial> ARMOR_MATERIALS = DeferredRegister.create(Registries.ARMOR_MATERIAL, SpicedCider.MOD_ID);
 
     public static final TagKey<Item> STEEL_INGOTS = ItemTags.create(ResourceLocation.fromNamespaceAndPath("c", "ingots/steel"));
-    public static final TagKey<Item> ELECTRUM_INGOTS = ItemTags.create(ResourceLocation.fromNamespaceAndPath("c", "ingots/electrum"));
     public static final TagKey<Item> BRONZE_INGOTS = ItemTags.create(ResourceLocation.fromNamespaceAndPath("c", "ingots/bronze"));
     public static final TagKey<Item> ROSE_GOLD_INGOTS = ItemTags.create(ResourceLocation.fromNamespaceAndPath("c", "ingots/rose_gold"));
     public static final TagKey<Item> PRISMARITE_INGOTS = ItemTags.create(ResourceLocation.fromNamespaceAndPath("c", "ingots/prismarite"));
@@ -48,7 +46,6 @@ public class ModTierItems {
     public static final TagKey<Block> INCORRECT_FOR_COPPER_TOOL = BlockTags.create(ResourceLocation.withDefaultNamespace("incorrect_for_copper_tool"));
 
     public static final Tier STEEL = tier(1000, 7.0F, 3.0F, BlockTags.INCORRECT_FOR_IRON_TOOL, 11, STEEL_INGOTS);
-    public static final Tier ELECTRUM = tier(4000, 24.0F, 3.5F, BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 18, ELECTRUM_INGOTS);
     public static final Tier COPPER = tier(190, 5.0F, 1.0F, INCORRECT_FOR_COPPER_TOOL, 13, COPPER_INGOTS);
     public static final Tier BRONZE = tier(700, 6.5F, 2.0F, BlockTags.INCORRECT_FOR_IRON_TOOL, 12, BRONZE_INGOTS);
     public static final Tier ROSE_GOLD = tier(1000, 14.0F, 2.0F, BlockTags.INCORRECT_FOR_IRON_TOOL, 22, ROSE_GOLD_INGOTS);
@@ -56,21 +53,6 @@ public class ModTierItems {
     public static final Tier VALKYRIUM = tier(6000, 16.0F, 4.0F, BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 15, VALKYRIUM_INGOTS);
     public static final Tier SILVER = tier(250, 12.0F, 2.0F, BlockTags.INCORRECT_FOR_IRON_TOOL, 18, SILVER_INGOTS);
     public static final Tier NECROMIUM = tier(6000, 14.0F, 3.0F, BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 15, NECROMIUM_INGOTS);
-
-    public static final DeferredHolder<ArmorMaterial, ArmorMaterial> ELECTRUM_ARMOR = ARMOR_MATERIALS.register("electrum", () -> new ArmorMaterial(
-            Map.of(
-                    ArmorItem.Type.BOOTS, 3,
-                    ArmorItem.Type.LEGGINGS, 7,
-                    ArmorItem.Type.CHESTPLATE, 8,
-                    ArmorItem.Type.HELMET, 3
-            ),
-            18,
-            SoundEvents.ARMOR_EQUIP_GOLD,
-            () -> Ingredient.of(ELECTRUM_INGOTS),
-            List.of(new ArmorMaterial.Layer(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "electrum"))),
-            2.0F,
-            0.0F
-    ));
 
     public static final DeferredHolder<ArmorMaterial, ArmorMaterial> BRONZE_PET_ARMOR = petArmorMaterial("bronze", 6, 0.0F, 0.0F, SoundEvents.ARMOR_EQUIP_IRON, BRONZE_INGOTS);
     public static final DeferredHolder<ArmorMaterial, ArmorMaterial> ROSE_GOLD_PET_ARMOR = petArmorMaterial("rose_gold", 11, 2.0F, 0.0F, SoundEvents.ARMOR_EQUIP_GOLD, ROSE_GOLD_INGOTS);
@@ -87,22 +69,9 @@ public class ModTierItems {
     public static final DeferredItem<Item> STEEL_SHIELD = ITEMS.register("steel_shield",
             () -> new MetalShieldItem(STEEL_INGOTS, new Item.Properties().durability(1500)));
 
-    public static final DeferredItem<Item> ELECTRUM_PICKAXE = ITEMS.register("electrum_pickaxe",
-            () -> new PickaxeItem(ELECTRUM, new Item.Properties().attributes(PickaxeItem.createAttributes(ELECTRUM, 1.0F, -2.8F))));
-    public static final DeferredItem<Item> ELECTRUM_AXE = ITEMS.register("electrum_axe",
-            () -> new AxeItem(ELECTRUM, new Item.Properties().attributes(AxeItem.createAttributes(ELECTRUM, 5.0F, -3.0F))));
-    public static final DeferredItem<Item> ELECTRUM_SHOVEL = ITEMS.register("electrum_shovel",
-            () -> new ShovelItem(ELECTRUM, new Item.Properties().attributes(ShovelItem.createAttributes(ELECTRUM, 1.5F, -3.0F))));
-    public static final DeferredItem<Item> ELECTRUM_HOE = ITEMS.register("electrum_hoe",
-            () -> new HoeItem(ELECTRUM, new Item.Properties().attributes(HoeItem.createAttributes(ELECTRUM, -3.5F, 0.0F))));
-    public static final DeferredItem<Item> ELECTRUM_KNIFE = ITEMS.register("electrum_knife",
-            () -> FarmersDelightCompat.createKnife(ELECTRUM, new Item.Properties()));
-    public static final DeferredItem<Item> ELECTRUM_HAMMER = hammer("electrum_hammer", ELECTRUM, 5.0F, -3.0F);
-    public static final DeferredItem<Item> ELECTRUM_SHIELD = ITEMS.register("electrum_shield",
-            () -> new MetalShieldItem(ELECTRUM_INGOTS, new Item.Properties().durability(2500)));
-    public static final DeferredItem<Item> ELECTRUM_LANCE = ITEMS.register("electrum_lance",
-            () -> VanillaBackportCompat.createLance(ELECTRUM,
-                    ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "electrum_lance_reach"), new Item.Properties()));
+    public static final DeferredItem<Item> VALKYRIUM_LANCE = ITEMS.register("valkyrium_lance",
+            () -> VanillaBackportCompat.createLance(VALKYRIUM,
+                    ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "valkyrium_lance_reach"), new Item.Properties()));
 
     @Nullable
     public static final DeferredItem<Item> COPPER_JAVELIN = javelin("copper_javelin", COPPER, -2.9F, "modestmining", new Item.Properties());
@@ -111,14 +80,7 @@ public class ModTierItems {
     @Nullable
     public static final DeferredItem<Item> SILVER_JAVELIN = javelin("silver_javelin", SILVER, -2.8F, "caverns_and_chasms", new Item.Properties());
     @Nullable
-    public static final DeferredItem<Item> ELECTRUM_JAVELIN = javelin("electrum_javelin", ELECTRUM, -2.7F, "modestmining", new Item.Properties());
-    @Nullable
     public static final DeferredItem<Item> NECROMIUM_JAVELIN = javelin("necromium_javelin", NECROMIUM, -2.7F, "caverns_and_chasms", new Item.Properties().fireResistant());
-
-    public static final DeferredItem<Item> ELECTRUM_HELMET = armor("electrum_helmet", ArmorItem.Type.HELMET);
-    public static final DeferredItem<Item> ELECTRUM_CHESTPLATE = armor("electrum_chestplate", ArmorItem.Type.CHESTPLATE);
-    public static final DeferredItem<Item> ELECTRUM_LEGGINGS = armor("electrum_leggings", ArmorItem.Type.LEGGINGS);
-    public static final DeferredItem<Item> ELECTRUM_BOOTS = armor("electrum_boots", ArmorItem.Type.BOOTS);
 
     public static final DeferredItem<Item> BRONZE_HORSE_ARMOR = petArmor("bronze_horse_armor", BRONZE_PET_ARMOR, 240);
     public static final DeferredItem<Item> ROSE_GOLD_HORSE_ARMOR = petArmor("rose_gold_horse_armor", ROSE_GOLD_PET_ARMOR, 336);
@@ -127,21 +89,20 @@ public class ModTierItems {
     public static final DeferredItem<Item> ADAMANTITE_HORSE_ARMOR = petArmor("adamantite_horse_armor", ADAMANTITE_PET_ARMOR, 592);
 
     public static final List<DeferredItem<Item>> HAMMERS = List.of(COPPER_HAMMER, BRONZE_HAMMER, ROSE_GOLD_HAMMER,
-            STEEL_HAMMER, ELECTRUM_HAMMER, PRISMARITE_HAMMER, VALKYRIUM_HAMMER);
+            STEEL_HAMMER, PRISMARITE_HAMMER, VALKYRIUM_HAMMER);
     private static final Map<DeferredItem<Item>, String> REQUIRED_MODS = Map.of(
             BRONZE_HAMMER, "modestmining",
             ROSE_GOLD_HAMMER, "oooh_pinky",
             PRISMARITE_HAMMER, "modestmining",
-            VALKYRIUM_HAMMER, "modestmining");
+            VALKYRIUM_HAMMER, "modestmining",
+            VALKYRIUM_LANCE, "modestmining");
     public static final List<DeferredItem<Item>> TOOLS = List.of(COPPER_HAMMER, BRONZE_HAMMER, ROSE_GOLD_HAMMER,
-            STEEL_HAMMER, ELECTRUM_SHOVEL, ELECTRUM_PICKAXE, ELECTRUM_AXE, ELECTRUM_HOE, ELECTRUM_KNIFE, ELECTRUM_HAMMER,
-            PRISMARITE_HAMMER, VALKYRIUM_HAMMER);
-    public static final List<DeferredItem<Item>> COMBAT = List.of(STEEL_SHIELD, ELECTRUM_SHIELD, ELECTRUM_LANCE,
-            ELECTRUM_HELMET, ELECTRUM_CHESTPLATE, ELECTRUM_LEGGINGS, ELECTRUM_BOOTS, BRONZE_HORSE_ARMOR,
+            STEEL_HAMMER, PRISMARITE_HAMMER, VALKYRIUM_HAMMER);
+    public static final List<DeferredItem<Item>> COMBAT = List.of(STEEL_SHIELD, VALKYRIUM_LANCE, BRONZE_HORSE_ARMOR,
             ROSE_GOLD_HORSE_ARMOR, PRISMARITE_HORSE_ARMOR, VALKYRIUM_HORSE_ARMOR, ADAMANTITE_HORSE_ARMOR);
 
     public static final List<DeferredItem<Item>> JAVELINS = Stream.of(COPPER_JAVELIN, ROSE_GOLD_JAVELIN, SILVER_JAVELIN,
-            ELECTRUM_JAVELIN, NECROMIUM_JAVELIN).filter(Objects::nonNull).toList();
+            NECROMIUM_JAVELIN).filter(Objects::nonNull).toList();
 
     public static void register(IEventBus modEventBus) {
         ARMOR_MATERIALS.register(modEventBus);
@@ -157,7 +118,9 @@ public class ModTierItems {
                     .forEach(item -> event.accept(item.get(), vis));
         }
         if (event.getTabKey() == CreativeModeTabs.COMBAT) {
-            COMBAT.forEach(item -> event.accept(item.get(), vis));
+            COMBAT.stream()
+                    .filter(item -> !REQUIRED_MODS.containsKey(item) || ModList.get().isLoaded(REQUIRED_MODS.get(item)))
+                    .forEach(item -> event.accept(item.get(), vis));
             JAVELINS.forEach(item -> event.accept(item.get(), vis));
         }
     }
@@ -172,11 +135,6 @@ public class ModTierItems {
         return ModList.get().isLoaded("modestmining") && ModList.get().isLoaded(metalMod)
                 ? ITEMS.register(name, () -> ModestMiningCompat.createJavelin(tier, 2.0F, speed, 1.5F, properties))
                 : null;
-    }
-
-    private static DeferredItem<Item> armor(String name, ArmorItem.Type type) {
-        return ITEMS.register(name, () -> new ElectrumArmorItem(ELECTRUM_ARMOR, type,
-                new Item.Properties().durability(type.getDurability(35))));
     }
 
     private static DeferredHolder<ArmorMaterial, ArmorMaterial> petArmorMaterial(String name, int defense, float toughness, float knockbackResistance, Holder<SoundEvent> sound, TagKey<Item> repair) {

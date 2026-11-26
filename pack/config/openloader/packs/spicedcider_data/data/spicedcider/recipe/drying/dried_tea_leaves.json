@@ -1,0 +1,16 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "bountifulfares"
+    }
+  ],
+  "type": "spicedcider:drying",
+  "ingredient": {
+    "item": "bountifulfares:tea_leaves"
+  },
+  "result": {
+    "id": "bountifulfares:dried_tea_leaves",
+    "count": 1
+  }
+}

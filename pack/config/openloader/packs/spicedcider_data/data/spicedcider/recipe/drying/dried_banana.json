@@ -1,0 +1,16 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "neapolitan"
+    }
+  ],
+  "type": "spicedcider:drying",
+  "ingredient": {
+    "tag": "c:foods/banana"
+  },
+  "result": {
+    "id": "neapolitan:dried_banana",
+    "count": 1
+  }
+}

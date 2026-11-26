@@ -3,6 +3,9 @@ package com.evandev.spicedcider.datagen.providers;
 import com.evandev.spicedcider.content.block.CacaoPodBlock;
 import com.evandev.spicedcider.content.block.RichGravelBlock;
 import com.evandev.spicedcider.registry.ModBlocks;
+import com.evandev.spicedcider.registry.ModDataComponents;
+import net.minecraft.core.component.DataComponents;
+import net.minecraft.world.level.storage.loot.functions.CopyComponentsFunction;
 import com.evandev.spicedcider.registry.ModFireBlocks;
 import com.evandev.spicedcider.registry.ModPaleGardenBlocks;
 import com.evandev.spicedcider.registry.ModItems;
@@ -46,6 +49,7 @@ public class ModBlockLootProvider extends BlockLootSubProvider {
     @Override
     protected void generate() {
         this.dropSelf(ModBlocks.CAST_IRON_BLOCK.get());
+        com.evandev.spicedcider.registry.ModLeadBlocks.blocks().forEach(block -> this.dropSelf(block.get()));
         this.dropSelf(ModBlocks.TALLOW_BLOCK.get());
         this.dropSelf(ModBlocks.WORM_CRATE.get());
         this.dropSelf(ModBlocks.GOLDEN_WORM_CRATE.get());
@@ -115,6 +119,12 @@ public class ModBlockLootProvider extends BlockLootSubProvider {
             this.add(ModBlocks.POLISHED_GLOWSTONE_SLAB.get(), this::createSlabItemTable);
             this.dropSelf(ModBlocks.POLISHED_GLOWSTONE_WALL.get());
         }
+        this.add(ModBlocks.ITEM_DRAWER.get(), block -> LootTable.lootTable().withPool(this.applyExplosionCondition(block, LootPool.lootPool()
+                .setRolls(ConstantValue.exactly(1.0F))
+                .add(LootItem.lootTableItem(block).apply(CopyComponentsFunction.copyComponents(CopyComponentsFunction.Source.BLOCK_ENTITY)
+                        .include(ModDataComponents.DRAWER_CONTENTS.get())
+                        .include(DataComponents.MAX_STACK_SIZE))))));
+        this.dropSelf(ModBlocks.ITEM_DRAWER_DISTRIBUTOR.get());
         if (ModBlocks.TWISTED_SIGN != null) {
             this.dropSelf(ModBlocks.TWISTED_SIGN.get());
             this.dropSelf(ModBlocks.TWISTED_HANGING_SIGN.get());
@@ -157,6 +167,7 @@ public class ModBlockLootProvider extends BlockLootSubProvider {
     @Override
     protected @NotNull Iterable<Block> getKnownBlocks() {
         List<Block> blocks = new ArrayList<>(List.of(ModBlocks.CAST_IRON_BLOCK.get(), ModBlocks.TALLOW_BLOCK.get()));
+        com.evandev.spicedcider.registry.ModLeadBlocks.blocks().forEach(block -> blocks.add(block.get()));
         blocks.add(ModBlocks.WORMY_DIRT.get());
         blocks.add(ModBlocks.RICH_GRAVEL.get());
         blocks.add(ModBlocks.DEPOSIT.get());
@@ -193,6 +204,8 @@ public class ModBlockLootProvider extends BlockLootSubProvider {
             blocks.add(ModBlocks.TWISTED_HANGING_SIGN.get());
             blocks.add(ModBlocks.TWISTED_WALL_HANGING_SIGN.get());
         }
+        blocks.add(ModBlocks.ITEM_DRAWER.get());
+        blocks.add(ModBlocks.ITEM_DRAWER_DISTRIBUTOR.get());
         blocks.add(ModPaleGardenBlocks.PALE_PUMPKIN.get());
         blocks.add(ModPaleGardenBlocks.CARVED_PALE_PUMPKIN.get());
         ModPaleGardenBlocks.JACK_O_LANTERNS.forEach(block -> blocks.add(block.get()));

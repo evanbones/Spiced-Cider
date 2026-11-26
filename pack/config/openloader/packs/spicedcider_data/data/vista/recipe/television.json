@@ -1,0 +1,43 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "vista"
+    }
+  ],
+  "type": "create:mechanical_crafting",
+  "accept_mirrored": false,
+  "category": "misc",
+  "pattern": [
+    "PPPP",
+    "GGEP",
+    "GGDP",
+    "PPRP"
+  ],
+  "key": {
+    "P": {
+      "tag": "minecraft:planks"
+    },
+    "G": {
+      "item": "minecraft:tinted_glass"
+    },
+    "E": {
+      "item": "create:electron_tube"
+    },
+    "D": {
+      "item": "spicedcider:bronze_movement"
+    },
+    "R": {
+      "tag": "c:dusts/redstone"
+    }
+  },
+  "result": {
+    "id": "vista:television",
+    "count": 1
+  },
+  "show_notification": false
+}

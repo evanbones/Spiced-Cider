@@ -1,0 +1,34 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "upgrade_aquatic"
+    }
+  ],
+  "type": "create:mechanical_crafting",
+  "accept_mirrored": false,
+  "category": "equipment",
+  "pattern": [
+    "  TT",
+    "  RT",
+    " R  ",
+    "R   "
+  ],
+  "key": {
+    "T": {
+      "item": "upgrade_aquatic:thrasher_tooth"
+    },
+    "R": {
+      "item": "upgrade_aquatic:prismarine_rod"
+    }
+  },
+  "result": {
+    "id": "minecraft:trident",
+    "count": 1
+  },
+  "show_notification": false
+}

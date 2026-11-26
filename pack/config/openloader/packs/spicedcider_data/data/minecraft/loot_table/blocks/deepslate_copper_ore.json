@@ -31,17 +31,14 @@
             },
             {
               "type": "minecraft:item",
-              "name": "spelunkery:raw_copper_nugget",
-              "functions": [
+              "name": "minecraft:raw_copper",
+              "conditions": [
                 {
-                  "function": "minecraft:set_count",
-                  "count": {
-                    "type": "minecraft:uniform",
-                    "min": 3,
-                    "max": 6
-                  },
-                  "add": false
-                },
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.5
+                }
+              ],
+              "functions": [
                 {
                   "function": "minecraft:apply_bonus",
                   "enchantment": "minecraft:fortune",

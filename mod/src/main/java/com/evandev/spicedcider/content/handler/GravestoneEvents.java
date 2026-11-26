@@ -6,6 +6,7 @@ import com.evandev.spicedcider.content.block.entity.GraveBlockEntity;
 import com.evandev.spicedcider.content.gravestone.GraveHistory;
 import com.evandev.spicedcider.content.gravestone.Graves;
 import com.evandev.spicedcider.registry.ModItems;
+import com.evandev.spicedcider.util.CarriedItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.ExperienceOrb;
@@ -52,7 +53,7 @@ public class GravestoneEvents {
     public static void onDeath(LivingDeathEvent event) {
         if (!(event.getEntity() instanceof ServerPlayer player) || player.isSpectator()) return;
         Inventory inventory = player.getInventory();
-        if (!inventory.contains(stack -> stack.is(ModItems.GRAVESTONE.get()))) {
+        if (!CarriedItems.has(player, GravestoneEvents::isGravestone)) {
             PENDING.remove(player);
             return;
         }
@@ -70,7 +71,7 @@ public class GravestoneEvents {
         Pending pending = PENDING.get(player);
         if (pending == null || !SpicedCiderConfig.commonOr(SpicedCiderConfig.COMMON.gravestoneStoreExperience, true)) return;
         Collection<ItemEntity> captured = player.captureDrops();
-        if (captured == null || findGravestone(captured) == null) return;
+        if (captured == null || findGravestone(captured) == null && findHolder(captured) == null) return;
         int experience = SpicedCiderConfig.commonOr(SpicedCiderConfig.COMMON.gravestoneKeepAllExperience, false)
                 ? totalExperience(player)
                 : event.getDroppedExperience();
@@ -89,16 +90,26 @@ public class GravestoneEvents {
         BlockPos grave = null;
         Collection<ItemEntity> drops = event.getDrops();
         ItemEntity gravestone = pending == null ? null : findGravestone(drops);
-        if (gravestone != null) {
-            gravestone.getItem().shrink(1);
-            if (gravestone.getItem().isEmpty()) drops.remove(gravestone);
+        ItemEntity holder = pending == null || gravestone != null ? null : findHolder(drops);
+        if (gravestone != null || holder != null) {
+            ItemStack holderBackup = holder == null ? ItemStack.EMPTY : holder.getItem().copy();
+            if (gravestone != null) {
+                gravestone.getItem().shrink(1);
+                if (gravestone.getItem().isEmpty()) drops.remove(gravestone);
+            } else {
+                CarriedItems.removeOne(holder.getItem(), GravestoneEvents::isGravestone);
+            }
             List<GraveBlockEntity.Entry> entries = entries(drops, pending.slots);
             grave = entries.isEmpty() && pending.experience <= 0 ? null : Graves.create(player, entries, pending.experience);
             if (grave != null) {
                 drops.clear();
             } else {
-                if (gravestone.getItem().isEmpty()) drops.add(gravestone);
-                gravestone.getItem().grow(1);
+                if (gravestone != null) {
+                    if (gravestone.getItem().isEmpty()) drops.add(gravestone);
+                    gravestone.getItem().grow(1);
+                } else {
+                    holder.setItem(holderBackup);
+                }
                 refundExperience(player, pending);
             }
         } else {
@@ -112,6 +123,18 @@ public class GravestoneEvents {
             ExperienceOrb.award(player.serverLevel(), player.position(), pending.experience);
             pending.experience = 0;
         }
+    }
+
+    private static boolean isGravestone(ItemStack stack) {
+        return stack.is(ModItems.GRAVESTONE.get());
+    }
+
+    @Nullable
+    private static ItemEntity findHolder(Collection<ItemEntity> drops) {
+        for (ItemEntity drop : drops) {
+            if (CarriedItems.contains(drop.getItem(), GravestoneEvents::isGravestone)) return drop;
+        }
+        return null;
     }
 
     @Nullable

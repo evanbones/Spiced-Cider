@@ -53,11 +53,11 @@ public class SpicedCiderCrosshairApi implements DynamicCrosshairApi {
         BlockState state = context.getBlockState();
         if (state.isAir()) return new Crosshair(interactionType);
         boolean alreadyUsable = interactionType == InteractionType.USABLE_TOOL;
-        boolean newlyUsable = !alreadyUsable && isUsable(context, stack, state, knife);
+        boolean usable = isUsable(context, stack, state, knife);
         boolean shearable = stack.canPerformAction(ItemAbilities.SHEARS_DIG) && state.is(MINEABLE_WITH_SHEARS);
-        if (!shearable && !newlyUsable) return null;
+        if (!shearable && !usable) return null;
 
-        InteractionType primary = alreadyUsable || newlyUsable ? InteractionType.USABLE_TOOL : InteractionType.TOOL;
+        InteractionType primary = alreadyUsable || usable ? InteractionType.USABLE_TOOL : InteractionType.TOOL;
         InteractionType secondary = shearable ? InteractionType.CORRECT_TOOL : context.checkToolWithBlock();
         return Crosshair.combine(new Crosshair(primary), new Crosshair(secondary));
     }
@@ -75,7 +75,7 @@ public class SpicedCiderCrosshairApi implements DynamicCrosshairApi {
         }
         return stack.canPerformAction(ItemAbilities.SHOVEL_FLATTEN)
                 && context.getBlockHitSide() != Direction.DOWN
-                && context.getWorld().getBlockState(context.getBlockPos().above()).isAir()
+                && context.getWorld().getBlockState(context.getBlockPos().above()).getCollisionShape(context.getWorld(), context.getBlockPos().above()).isEmpty()
                 && state.getToolModifiedState(useContext, ItemAbilities.SHOVEL_FLATTEN, true) != null;
     }
 }

@@ -73,6 +73,26 @@
     "minecraft:raw_iron_block",
     "minecraft:raw_copper_block",
     "minecraft:raw_gold_block",
-    "minecraft:gold_block"
+    "minecraft:gold_block",
+    {
+      "id": "modestmining:lead_block",
+      "required": false
+    },
+    {
+      "id": "spicedcider:chiseled_lead",
+      "required": false
+    },
+    {
+      "id": "spicedcider:lead_pillar",
+      "required": false
+    },
+    {
+      "id": "spicedcider:lead_grate",
+      "required": false
+    },
+    {
+      "id": "spicedcider:lead_bulb",
+      "required": false
+    }
   ]
 }

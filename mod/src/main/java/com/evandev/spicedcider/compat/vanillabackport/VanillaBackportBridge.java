@@ -1,8 +1,10 @@
 package com.evandev.spicedcider.compat.vanillabackport;
 
+import com.blackgear.vanillabackport.common.level.components.UseEffects;
 import com.blackgear.vanillabackport.core.VanillaBackport;
 import com.blackgear.vanillabackport.common.level.items.spear.SpearItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Tier;
 
 final class VanillaBackportBridge {
@@ -13,5 +15,9 @@ final class VanillaBackportBridge {
 
     static boolean modernLeashes() {
         return VanillaBackport.COMMON_CONFIG.hasModernLeashes.get();
+    }
+
+    static boolean canSprintWhileUsing(ItemStack stack) {
+        return UseEffects.get(stack).canSprint();
     }
 }

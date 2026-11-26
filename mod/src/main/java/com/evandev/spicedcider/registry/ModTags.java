@@ -16,6 +16,8 @@ import net.minecraft.world.level.material.Fluid;
 public class ModTags {
     public static class Items {
         public static final TagKey<Item> HAMMERS = tag("hammers");
+        public static final TagKey<Item> GRINDSTONE_SHARPENABLE = tag("grindstone_sharpenable");
+        public static final TagKey<Item> UNIVERSAL_REPAIR_MATERIALS = tag("universal_repair_materials");
         public static final TagKey<Item> HAMMER_TOOLS = tag("c", "tools/hammer");
         public static final TagKey<Item> TIDE_HOOKS = tag("tide", "hooks");
 
@@ -24,6 +26,7 @@ public class ModTags {
         public static final TagKey<Item> WAX_OR_TALLOW = tag("wax_or_tallow");
         public static final TagKey<Item> TANNABLE_HIDES = tag("tannable_hides");
         public static final TagKey<Item> FISH_TRAP_BAIT = tag("fish_trap_bait");
+        public static final TagKey<Item> DRAWER_KEYS = tag("drawer_keys");
         public static final TagKey<Item> COMFORT_FOODS = tag("comfort_foods");
         public static final TagKey<Item> NOT_COMFORT_FOODS = tag("not_comfort_foods");
         public static final TagKey<Item> LARGE_TANNABLE_HIDES = tag("large_tannable_hides");
@@ -50,6 +53,7 @@ public class ModTags {
 
     public static class Blocks {
         public static final TagKey<Block> TAP_SUPPORTS = tag("tap_supports");
+        public static final TagKey<Block> BLAST_RESISTANT_LEAD = tag("blast_resistant_lead");
         public static final TagKey<Block> FAST_POUR_SOURCES = tag("fast_pour_sources");
         public static final TagKey<Block> NEEDS_AXE_TO_HARVEST = tag("needs_axe_to_harvest");
         public static final TagKey<Block> DROPS_BARK_WHEN_STRIPPED = tag("drops_bark_when_stripped");

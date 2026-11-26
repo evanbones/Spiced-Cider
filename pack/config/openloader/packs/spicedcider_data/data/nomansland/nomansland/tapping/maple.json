@@ -1,0 +1,21 @@
+{
+  "source": {
+    "block": "nomansland:maple_log",
+    "properties": {
+      "axis": "y"
+    },
+    "tree": {}
+  },
+  "output": {
+    "cauldron": "nomansland:maple_syrup_cauldron"
+  },
+  "interval": {
+    "type": "minecraft:uniform",
+    "min_inclusive": 3000,
+    "max_inclusive": 6000
+  },
+  "particle": {
+    "type": "nomansland:maple_syrup_droplet"
+  },
+  "drip_chance": 0.03
+}

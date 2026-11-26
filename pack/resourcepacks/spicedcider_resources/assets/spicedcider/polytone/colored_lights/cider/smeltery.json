@@ -1,0 +1,12 @@
+{
+  "targets": [
+    {
+      "id": "spicedcider:smeltery",
+      "required": false
+    }
+  ],
+  "colored_light": {
+    "color": "#FF8A3C",
+    "brightness": "object.blockStateValue('lit') ? 1 : 0"
+  }
+}

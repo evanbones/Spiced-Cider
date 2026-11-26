@@ -1,0 +1,21 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "drawer": "spicedcider:block/item_drawer",
+    "particle": "spicedcider:block/item_drawer_particle"
+  },
+  "elements": [
+    {
+      "from": [0, 0, 0],
+      "to": [16, 16, 16],
+      "faces": {
+        "north": {"uv": [0, 0, 4, 4], "texture": "#drawer", "cullface": "north"},
+        "east": {"uv": [0, 4, 4, 8], "texture": "#drawer", "cullface": "east"},
+        "south": {"uv": [0, 4, 4, 8], "texture": "#drawer", "cullface": "south"},
+        "west": {"uv": [0, 4, 4, 8], "texture": "#drawer", "cullface": "west"},
+        "up": {"uv": [4, 0, 8, 4], "texture": "#drawer", "cullface": "up"},
+        "down": {"uv": [4, 4, 8, 8], "texture": "#drawer", "cullface": "down"}
+      }
+    }
+  ]
+}

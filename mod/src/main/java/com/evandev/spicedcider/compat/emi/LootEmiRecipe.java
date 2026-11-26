@@ -8,6 +8,7 @@ import dev.emi.emi.api.stack.EmiIngredient;
 import dev.emi.emi.api.stack.EmiStack;
 import dev.emi.emi.api.widget.SlotWidget;
 import dev.emi.emi.api.widget.WidgetHolder;
+import net.minecraft.ChatFormatting;
 import net.minecraft.client.resources.language.I18n;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
@@ -94,16 +95,16 @@ public abstract class LootEmiRecipe extends BasicEmiRecipe {
     private static List<Component> tooltip(Drop drop, boolean spawnEggsReleaseMobs) {
         List<Component> lines = new ArrayList<>();
         if (spawnEggsReleaseMobs && drop.stack().getItem() instanceof SpawnEggItem egg) {
-            lines.add(Component.translatable("emi.spicedcider.loot.releases_mob", egg.getType(drop.stack()).getDescription()));
+            lines.add(Component.translatable("emi.spicedcider.loot.releases_mob", egg.getType(drop.stack()).getDescription()).withStyle(ChatFormatting.GREEN));
         }
         if (drop.min() != drop.max()) {
-            lines.add(Component.translatable("emi.spicedcider.loot.amount", drop.min(), drop.max()));
+            lines.add(Component.translatable("emi.spicedcider.loot.amount", drop.min(), drop.max()).withStyle(ChatFormatting.GREEN));
         }
         if (!drop.biomes().isEmpty()) {
-            lines.add(Component.translatable("emi.spicedcider.loot.biomes", names(drop.biomes(), "biome")));
+            lines.add(Component.translatable("emi.spicedcider.loot.biomes", names(drop.biomes(), "biome")).withStyle(ChatFormatting.GREEN));
         }
         if (!drop.structures().isEmpty()) {
-            lines.add(Component.translatable("emi.spicedcider.loot.structures", names(drop.structures(), "structure")));
+            lines.add(Component.translatable("emi.spicedcider.loot.structures", names(drop.structures(), "structure")).withStyle(ChatFormatting.GREEN));
         }
         return lines;
     }

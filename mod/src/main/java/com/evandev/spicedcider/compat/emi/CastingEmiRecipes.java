@@ -22,6 +22,9 @@ import net.minecraft.ChatFormatting;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Items;
+import com.evandev.spicedcider.content.casting.BasinCastingRecipe;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -52,9 +55,10 @@ public class CastingEmiRecipes {
         for (MouldShape shape : MouldShape.values()) {
             registry.addWorkstation(casting, EmiStack.of(ModItems.MOULDS.get(shape).get()));
         }
+        var smelteryOnly = registry.getRecipeManager().getAllRecipesFor(ModRecipeSerializers.SMELTERY_MELTING_TYPE.get());
         for (RecipeHolder<CrucibleMeltingRecipe> holder : registry.getRecipeManager().getAllRecipesFor(ModRecipeSerializers.CRUCIBLE_MELTING_TYPE.get())) {
             registry.addRecipe(new Melting(melting, holder.id(), holder.value(), true));
-            if (holder.value().ingredients().size() == 1) {
+            if (holder.value().ingredients().size() == 1 && !overriddenInSmeltery(holder.value(), smelteryOnly)) {
                 registry.addRecipe(new Melting(smelteryMelting, holder.id().withSuffix("/smeltery"), holder.value(), false));
             }
         }
@@ -67,6 +71,33 @@ public class CastingEmiRecipes {
         for (RecipeHolder<MouldCastingRecipe> holder : registry.getRecipeManager().getAllRecipesFor(ModRecipeSerializers.MOULD_CASTING_TYPE.get())) {
             registry.addRecipe(new Casting(casting, holder.id(), holder.value()));
         }
+        Item basinItem = BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath("create", "basin"));
+        var basinRecipes = registry.getRecipeManager().getAllRecipesFor(ModRecipeSerializers.BASIN_CASTING_TYPE.get());
+        if (basinItem != Items.AIR && !basinRecipes.isEmpty()) {
+            EmiStack basin = EmiStack.of(basinItem);
+            EmiRecipeCategory basinCasting = new EmiRecipeCategory(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "basin_casting"), basin);
+            registry.addCategory(basinCasting);
+            registry.addWorkstation(basinCasting, basin);
+            for (RecipeHolder<BasinCastingRecipe> holder : basinRecipes) {
+                registry.addRecipe(new Casting(basinCasting, holder.id(), holder.value().fluid(), basin, holder.value().result(), holder.value().time()));
+            }
+        }
+    }
+
+    private static boolean overriddenInSmeltery(CrucibleMeltingRecipe recipe, List<RecipeHolder<CrucibleMeltingRecipe>> smelteryRecipes) {
+        ItemStack[] items = recipe.ingredients().getFirst().getItems();
+        if (items.length == 0) return false;
+        for (ItemStack item : items) {
+            boolean covered = false;
+            for (RecipeHolder<CrucibleMeltingRecipe> other : smelteryRecipes) {
+                if (other.value().ingredients().size() == 1 && other.value().ingredients().getFirst().test(item)) {
+                    covered = true;
+                    break;
+                }
+            }
+            if (!covered) return false;
+        }
+        return true;
     }
 
     private static final int TANK = 34;
@@ -220,11 +251,15 @@ public class CastingEmiRecipes {
         private final int ticks;
 
         Casting(EmiRecipeCategory category, ResourceLocation id, MouldCastingRecipe recipe) {
+            this(category, id, recipe.fluid(), EmiStack.of(ModItems.MOULDS.get(recipe.shape()).get()), recipe.result(), recipe.time());
+        }
+
+        Casting(EmiRecipeCategory category, ResourceLocation id, SizedFluidIngredient fluid, EmiStack catalyst, ItemStack result, int time) {
             super(category, id, WIDTH, HEIGHT);
-            this.inputs = List.of(NeoForgeEmiIngredient.of(recipe.fluid()));
-            this.catalysts = List.of(EmiStack.of(ModItems.MOULDS.get(recipe.shape()).get()));
-            this.outputs = List.of(EmiStack.of(recipe.result()));
-            this.ticks = recipe.time();
+            this.inputs = List.of(NeoForgeEmiIngredient.of(fluid));
+            this.catalysts = List.of(catalyst);
+            this.outputs = List.of(EmiStack.of(result));
+            this.ticks = time;
         }
 
         @Override

@@ -1,0 +1,46 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "upgrade_aquatic"
+    }
+  ],
+  "type": "spicedcider:drying",
+  "ingredient": {
+    "type": "neoforge:difference",
+    "base": {
+      "type": "neoforge:intersection",
+      "children": [
+        {
+          "tag": "minecraft:logs_that_burn"
+        },
+        {
+          "type": "neoforge:compound",
+          "children": [
+            {
+              "tag": "c:stripped_logs"
+            },
+            {
+              "tag": "c:stripped_woods"
+            }
+          ]
+        }
+      ]
+    },
+    "subtracted": {
+      "type": "neoforge:compound",
+      "children": [
+        {
+          "item": "upgrade_aquatic:driftwood_log"
+        },
+        {
+          "item": "upgrade_aquatic:stripped_driftwood_log"
+        }
+      ]
+    }
+  },
+  "result": {
+    "id": "upgrade_aquatic:stripped_driftwood_log",
+    "count": 1
+  }
+}

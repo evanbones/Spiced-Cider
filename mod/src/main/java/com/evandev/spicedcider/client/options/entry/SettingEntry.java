@@ -2,6 +2,7 @@ package com.evandev.spicedcider.client.options.entry;
 
 import com.evandev.spicedcider.client.options.SnapSink;
 import com.evandev.spicedcider.client.options.setting.Impact;
+import com.evandev.spicedcider.client.options.setting.QualityColors;
 import com.evandev.spicedcider.client.options.setting.Setting;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.AbstractWidget;
@@ -20,6 +21,7 @@ public class SettingEntry extends Entry {
     private final ResetButton resetButton;
     private AbstractWidget widget;
     private Impact impact;
+    private boolean qualityColors;
 
     public SettingEntry(Setting setting) {
         this.setting = setting;
@@ -36,6 +38,11 @@ public class SettingEntry extends Entry {
 
     public SettingEntry impact(Impact impact) {
         this.impact = impact;
+        return this;
+    }
+
+    public SettingEntry qualityColors() {
+        this.qualityColors = true;
         return this;
     }
 
@@ -79,6 +86,7 @@ public class SettingEntry extends Entry {
         widget.setPosition(controlX, y + 2);
         widget.active = active;
         setting.beforeRender(widget);
+        if (qualityColors) QualityColors.apply(widget);
         widget.render(graphics, mouseX, mouseY, partialTick);
     }
 

@@ -3,6 +3,7 @@ package com.evandev.spicedcider.registry;
 import com.evandev.spicedcider.SpicedCider;
 import com.evandev.spicedcider.content.casting.smeltery.SmelteryMenu;
 import com.evandev.spicedcider.content.fishtrap.FishTrapMenu;
+import com.evandev.spicedcider.content.vault.VaultMenu;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.inventory.MenuType;
@@ -19,4 +20,7 @@ public class ModMenuTypes {
 
     public static final DeferredHolder<MenuType<?>, MenuType<FishTrapMenu>> FISH_TRAP = MENU_TYPES.register("fish_trap",
             () -> new MenuType<>(FishTrapMenu::new, FeatureFlags.VANILLA_SET));
+
+    public static final DeferredHolder<MenuType<?>, MenuType<VaultMenu>> ITEM_VAULT = MENU_TYPES.register("item_vault",
+            () -> IMenuTypeExtension.create(VaultMenu::new));
 }

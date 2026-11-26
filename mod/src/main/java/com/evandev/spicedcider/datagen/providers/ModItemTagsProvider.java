@@ -33,6 +33,12 @@ public class ModItemTagsProvider extends ItemTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.@NotNull Provider provider) {
+        Item leadChain = com.evandev.spicedcider.registry.ModLeadBlocks.LEAD_CHAIN_ITEM.get();
+        for (String[] chainTag : new String[][]{{"c", "chains"}, {"minecraft", "chains"}, {"connectiblechains", "hanging_chain_sources"},
+                {"connectiblechains", "banner_chain_sources"}, {"connectiblechains", "glow_lights_chain_sources"}}) {
+            this.tag(ItemTags.create(ResourceLocation.fromNamespaceAndPath(chainTag[0], chainTag[1]))).add(leadChain);
+        }
+        this.tag(ItemTags.create(ResourceLocation.fromNamespaceAndPath("minecraft", "bars"))).add(com.evandev.spicedcider.registry.ModLeadBlocks.LEAD_BARS_ITEM.get());
         this.tag(ModTags.Items.TIDE_HOOKS)
                 .addOptional(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "grappling_hook"))
                 .addOptional(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "sticky_grappling_hook"))
@@ -239,31 +245,15 @@ public class ModItemTagsProvider extends ItemTagsProvider {
 
     private void addTierItemTags() {
         Item[] hammers = ModTierItems.HAMMERS.stream().map(DeferredItem::get).toArray(Item[]::new);
-        Item pickaxe = ModTierItems.ELECTRUM_PICKAXE.get();
-        Item knife = ModTierItems.ELECTRUM_KNIFE.get();
-        Item lance = ModTierItems.ELECTRUM_LANCE.get();
+        Item lance = ModTierItems.VALKYRIUM_LANCE.get();
         Item steelShield = ModTierItems.STEEL_SHIELD.get();
-        Item electrumShield = ModTierItems.ELECTRUM_SHIELD.get();
-        Item helmet = ModTierItems.ELECTRUM_HELMET.get();
-        Item chestplate = ModTierItems.ELECTRUM_CHESTPLATE.get();
-        Item leggings = ModTierItems.ELECTRUM_LEGGINGS.get();
-        Item boots = ModTierItems.ELECTRUM_BOOTS.get();
 
         for (TagKey<Item> tag : List.of(externalTag("manual_labour", "hammers"), externalTag("c", "tools/hammer"),
                 ItemTags.CLUSTER_MAX_HARVESTABLES, ItemTags.MINING_ENCHANTABLE, ItemTags.MINING_LOOT_ENCHANTABLE)) {
             this.tag(tag).add(hammers);
         }
-        this.tag(Tags.Items.MINING_TOOL_TOOLS).add(hammers).add(pickaxe);
-        this.tag(Tags.Items.TOOLS).add(hammers).add(knife);
-
-        this.tag(ItemTags.PICKAXES).add(pickaxe);
-        this.tag(ItemTags.AXES).add(ModTierItems.ELECTRUM_AXE.get());
-        this.tag(ItemTags.SHOVELS).add(ModTierItems.ELECTRUM_SHOVEL.get());
-        this.tag(ItemTags.HOES).add(ModTierItems.ELECTRUM_HOE.get());
-        this.tag(ItemTags.CLUSTER_MAX_HARVESTABLES).add(pickaxe);
-
-        this.tag(externalTag("farmersdelight", "tools/knives")).add(knife);
-        this.tag(externalTag("c", "tools/knife")).add(knife);
+        this.tag(Tags.Items.MINING_TOOL_TOOLS).add(hammers);
+        this.tag(Tags.Items.TOOLS).add(hammers);
 
         this.tag(externalTag("minecraft", "spears")).add(lance);
         this.tag(externalTag("minecraft", "lunge_enchantable")).add(lance);
@@ -274,40 +264,25 @@ public class ModItemTagsProvider extends ItemTagsProvider {
             this.tag(tag).add(lance);
         }
 
-        this.tag(Tags.Items.TOOLS_SHIELD).add(steelShield, electrumShield);
+        this.tag(Tags.Items.TOOLS_SHIELD).add(steelShield);
 
-        this.tag(ItemTags.DURABILITY_ENCHANTABLE).add(hammers).add(knife, lance, steelShield, electrumShield,
-                helmet, chestplate, leggings, boots);
-        this.tag(ItemTags.VANISHING_ENCHANTABLE).add(helmet, chestplate, leggings, boots);
+        this.tag(ItemTags.DURABILITY_ENCHANTABLE).add(hammers).add(lance, steelShield);
 
-        this.tag(Tags.Items.ARMORS).add(helmet, chestplate, leggings, boots);
-        this.tag(ItemTags.ARMOR_ENCHANTABLE).add(helmet, chestplate, leggings, boots);
-        this.tag(ItemTags.EQUIPPABLE_ENCHANTABLE).add(helmet, chestplate, leggings, boots);
-        this.tag(ItemTags.HEAD_ARMOR).add(helmet);
-        this.tag(ItemTags.CHEST_ARMOR).add(chestplate);
-        this.tag(ItemTags.LEG_ARMOR).add(leggings);
-        this.tag(ItemTags.FOOT_ARMOR).add(boots);
-        this.tag(ItemTags.HEAD_ARMOR_ENCHANTABLE).add(helmet);
-        this.tag(ItemTags.CHEST_ARMOR_ENCHANTABLE).add(chestplate);
-        this.tag(ItemTags.LEG_ARMOR_ENCHANTABLE).add(leggings);
-        this.tag(ItemTags.FOOT_ARMOR_ENCHANTABLE).add(boots);
-
-        for (String javelin : List.of("copper_javelin", "rose_gold_javelin", "silver_javelin", "electrum_javelin", "necromium_javelin")) {
+        for (String javelin : List.of("copper_javelin", "rose_gold_javelin", "silver_javelin", "necromium_javelin")) {
             ResourceLocation id = ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, javelin);
             this.tag(externalTag("modestmining", "javelins")).addOptional(id);
             this.tag(externalTag("c", "tools/javelins")).addOptional(id);
         }
         this.tag(ItemTags.TRIM_MATERIALS).add(ModItems.CAST_IRON_INGOT.get());
         for (String material : List.of("alloyed:bronze_ingot", "alloyed:steel_ingot", "oooh_pinky:rose_gold_ingot",
-                "modestmining:electrum_ingot", "modestmining:lead_ingot", "modestmining:prismarite_ingot",
+                "modestmining:lead_ingot", "modestmining:prismarite_ingot",
                 "modestmining:valkyrium_ingot", "spelunkery:cinnabar", "modestmining:pearl")) {
             this.tag(ItemTags.TRIM_MATERIALS).addOptional(ResourceLocation.parse(material));
         }
         this.tag(ItemTags.PIGLIN_LOVED).addOptional(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "rose_gold_javelin"));
-        this.tag(ItemTags.PIGLIN_LOVED).addOptional(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "electrum_javelin"));
 
         ModTierItems.ITEMS.getEntries().stream()
-                .filter(holder -> holder.getId().getPath().startsWith("electrum_") || holder.getId().getPath().startsWith("rose_gold_"))
+                .filter(holder -> holder.getId().getPath().startsWith("rose_gold_"))
                 .filter(holder -> !holder.getId().getPath().endsWith("_javelin"))
                 .forEach(holder -> this.tag(ItemTags.PIGLIN_LOVED).add(holder.get()));
     }

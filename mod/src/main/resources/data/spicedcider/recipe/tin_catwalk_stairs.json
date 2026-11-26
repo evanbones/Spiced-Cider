@@ -1,0 +1,33 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "spicedcider:catwalk_bars/tin"
+      }
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "c": {
+      "item": "spicedcider:tin_catwalk"
+    },
+    "b": {
+      "tag": "spicedcider:catwalk_bars/tin"
+    }
+  },
+  "pattern": [
+    " c",
+    "cb"
+  ],
+  "result": {
+    "count": 2,
+    "id": "spicedcider:tin_catwalk_stairs"
+  }
+}

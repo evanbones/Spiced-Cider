@@ -1,0 +1,21 @@
+{
+  "type": "modestmining:forging_shaped",
+  "category": "equipment",
+  "cooktime": 144,
+  "key": {
+    "X": {
+      "item": "minecraft:stick"
+    },
+    "#": {
+      "tag": "c:ingots/steel"
+    }
+  },
+  "pattern": [
+    " ##",
+    " X#",
+    "X  "
+  ],
+  "result": {
+    "id": "modestmining:steel_javelin"
+  }
+}

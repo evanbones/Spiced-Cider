@@ -74,7 +74,7 @@
       ]
     },
     "steel": {
-      "durability": 3000,
+      "durability": 1400,
       "speed": 6.5,
       "incorrect": "spicedcider:incorrect_for_steel_tool",
       "items": [
@@ -91,13 +91,6 @@
         "farmersdelight:diamond_knife",
         "manual_labour:diamond_hammer",
         "modestmining:diamond_(javelin|hammer)"
-      ]
-    },
-    "electrum": {
-      "durability": 4000,
-      "speed": 24.0,
-      "items": [
-        "spicedcider:electrum_(sword|shovel|pickaxe|axe|hoe|spear|knife|hammer|javelin)"
       ]
     },
     "necromium": {
@@ -134,7 +127,7 @@
       "speed": 16.0,
       "items": [
         "modestmining:valkyrium_(sword|shovel|pickaxe|axe|hoe|knife|javelin|hammer)",
-        "?spicedcider:valkyrium_hammer"
+        "?spicedcider:valkyrium_(hammer|lance)"
       ]
     },
     "pestle": {
@@ -186,10 +179,6 @@
     "sanguine": {
       "durability": 1000,
       "items": ["caverns_and_chasms:sanguine_.+"]
-    },
-    "electrum": {
-      "durability": 1125,
-      "items": ["spicedcider:electrum_.+"]
     },
     "necromium": {
       "durability": 1425,
@@ -262,7 +251,6 @@
     "alloyed:steel_axe": 8.5,
     "minecraft:diamond_axe": 8.5,
     "caverns_and_chasms:necromium_axe": 8.5,
-    "spicedcider:electrum_axe": 9.0,
     "minecraft:netherite_axe": 9.5,
     "modestmining:prismarite_axe": 9.5,
     "modestmining:valkyrium_axe": 9.5
