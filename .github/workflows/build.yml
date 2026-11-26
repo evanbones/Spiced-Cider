@@ -75,6 +75,8 @@ jobs:
     needs: core
     if: always() && (needs.core.result == 'success' || github.event_name == 'pull_request' || github.ref == 'refs/heads/dev')
     runs-on: ubuntu-latest
+    outputs:
+      publish: ${{ steps.publish.outcome }}
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -111,6 +113,8 @@ jobs:
           fi
 
       - name: Publish Modpack
+        id: publish
+        continue-on-error: true
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
         run: |
           pack_version=$(grep '^version=' gradle.properties | cut -d= -f2 | tr -d '\r')
@@ -182,3 +186,13 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+  publish-check:
+    needs: [ pack, deploy ]
+    if: always() && needs.pack.outputs.publish == 'failure'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Report Failed Modpack Publish
+        run: |
+          echo "::error::Publishing the modpack failed, but the live pack was still deployed. See the pack job's Publish Modpack step for what to re-run."
+          exit 1

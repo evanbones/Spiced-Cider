@@ -298,6 +298,7 @@ tasks.register("publishCurseForgePack") {
     def packFile = curseforgePack
     def serverFile = serverPack
     def parentFile = providers.gradleProperty("curseforge_parent")
+    def onActions = providers.environmentVariable("GITHUB_ACTIONS").isPresent()
     doLast {
         def pack = packFile.get().asFile
         def server = serverFile.get().asFile
@@ -312,13 +313,26 @@ tasks.register("publishCurseForgePack") {
         if (parentFile.isPresent()) {
             fileId = parentFile.get() as int
         } else {
-            int gameVersion = uploader.minecraftVersionId(mcVersion)
-            fileId = uploader.upload(pack, [changelog: changelog, changelogType: "markdown", displayName: displayName,
-                                            gameVersions: [gameVersion], releaseType: "release"])
+            try {
+                int gameVersion = uploader.minecraftVersionId(mcVersion)
+                fileId = uploader.upload(pack, [changelog: changelog, changelogType: "markdown", displayName: displayName,
+                                                gameVersions: [gameVersion], releaseType: "release"])
+            } catch (Exception e) {
+                def hint = "CurseForge modpack upload failed. Re-run the Release workflow on main with curseforge=true."
+                if (onActions) println("::error title=CurseForge upload::${hint}")
+                throw new GradleException(hint, e)
+            }
             logger.lifecycle("Uploaded ${pack.name} to CurseForge as file ${fileId}")
         }
-        int serverId = uploader.upload(server, [changelog: changelog, changelogType: "markdown", displayName: "${displayName} Server Pack".toString(),
+        int serverId
+        try {
+            serverId = uploader.upload(server, [changelog: changelog, changelogType: "markdown", displayName: "${displayName} Server Pack".toString(),
                                                 parentFileID: fileId, releaseType: "release"])
+        } catch (Exception e) {
+            def hint = "CurseForge server pack upload failed. Re-run the Release workflow on main with curseforge=true and curseforge_parent=${fileId}."
+            if (onActions) println("::error title=CurseForge upload::${hint}")
+            throw new GradleException(hint, e)
+        }
         logger.lifecycle("Uploaded ${server.name} to CurseForge as server pack file ${serverId}")
     }
 }
@@ -335,9 +349,22 @@ class CurseForgeUpload {
     }
 
     Object send(java.net.http.HttpRequest request) {
-        def response = client.send(request, java.net.http.HttpResponse.BodyHandlers.ofString())
-        if (response.statusCode() >= 300) throw new GradleException("CurseForge ${request.uri()} returned ${response.statusCode()}: ${response.body()}")
-        new JsonSlurper().parseText(response.body())
+        int attempts = 3
+        for (int attempt = 1; ; attempt++) {
+            String failure
+            try {
+                def response = client.send(request, java.net.http.HttpResponse.BodyHandlers.ofString())
+                if (response.statusCode() < 300) return new JsonSlurper().parseText(response.body())
+                failure = "CurseForge ${request.uri()} returned ${response.statusCode()}: ${response.body()}"
+                if (response.statusCode() < 500) throw new GradleException(failure)
+            } catch (IOException e) {
+                failure = "CurseForge ${request.uri()} failed: ${e}"
+            }
+            if (attempt == attempts) throw new GradleException(failure)
+            int wait = 30 * attempt
+            println("${failure}; retrying in ${wait} s (attempt ${attempt + 1} of ${attempts})")
+            Thread.sleep(wait * 1000L)
+        }
     }
 
     Object get(String path) {
