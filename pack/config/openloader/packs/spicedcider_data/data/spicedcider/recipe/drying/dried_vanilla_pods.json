@@ -1,0 +1,16 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "neapolitan"
+    }
+  ],
+  "type": "spicedcider:drying",
+  "ingredient": {
+    "item": "neapolitan:vanilla_pods"
+  },
+  "result": {
+    "id": "neapolitan:dried_vanilla_pods",
+    "count": 1
+  }
+}

@@ -21,6 +21,7 @@ public class VaultMenu extends AbstractContainerMenu {
 
     private final int vaultSlots;
     private final int rows;
+    private final IItemHandler handler;
     private final Predicate<Player> validity;
     public int scrollRow;
 
@@ -31,6 +32,7 @@ public class VaultMenu extends AbstractContainerMenu {
     public VaultMenu(int id, Inventory inventory, IItemHandler handler, Predicate<Player> validity) {
         super(ModMenuTypes.ITEM_VAULT.get(), id);
         this.vaultSlots = handler.getSlots();
+        this.handler = handler;
         this.rows = Mth.positiveCeilDiv(this.vaultSlots, 9);
         this.validity = validity;
         for (int i = 0; i < this.vaultSlots; i++) {
@@ -48,6 +50,10 @@ public class VaultMenu extends AbstractContainerMenu {
 
     public int vaultSlots() {
         return this.vaultSlots;
+    }
+
+    public IItemHandler handler() {
+        return this.handler;
     }
 
     public int usedSlots() {

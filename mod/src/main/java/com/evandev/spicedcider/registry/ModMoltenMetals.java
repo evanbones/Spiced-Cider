@@ -31,20 +31,20 @@ import java.util.Map;
 
 public class ModMoltenMetals {
     public static final List<Metal> METALS = List.of(
-            new Metal("copper", "minecraft", "minecraft:copper_block", false, MapColor.COLOR_ORANGE, 0xE0612A),
-            new Metal("tin", "caverns_and_chasms", "caverns_and_chasms:tin_block", false, MapColor.TERRACOTTA_WHITE, 0xD9A55A),
-            new Metal("lead", "modestmining", "modestmining:lead_block", false, MapColor.COLOR_PURPLE, 0xB0605E),
-            new Metal("gold", "minecraft", "minecraft:gold_block", false, MapColor.GOLD, 0xF2A21C),
-            new Metal("silver", "caverns_and_chasms", "caverns_and_chasms:silver_block", false, MapColor.METAL, 0xE6B07A),
-            new Metal("bronze", "alloyed", "alloyed:bronze_block", false, MapColor.COLOR_BROWN, 0xD07E2C),
-            new Metal("rose_gold", "oooh_pinky", "oooh_pinky:rose_gold_block", false, MapColor.COLOR_PINK, 0xE8604E),
-            new Metal("iron", "minecraft", "minecraft:iron_block", false, MapColor.METAL, 0xE58A3C),
-            new Metal("cast_iron", "minecraft", "spicedcider:cast_iron_block", false, MapColor.COLOR_GRAY, 0xC9582A),
-            new Metal("steel", "alloyed", "alloyed:steel_block", false, MapColor.COLOR_LIGHT_GRAY, 0xDA7C40),
-            new Metal("netherite", "minecraft", "minecraft:netherite_block", true, MapColor.COLOR_RED, 0xD8342A),
-            new Metal("necromium", "caverns_and_chasms", "caverns_and_chasms:necromium_block", true, MapColor.COLOR_GREEN, 0x9AB84E),
-            new Metal("prismarite", "modestmining", "modestmining:prismarite_block", false, MapColor.DIAMOND, 0x9AE0C8),
-            new Metal("valkyrium", "modestmining", "modestmining:valkyrium_block", false, MapColor.TERRACOTTA_WHITE, 0xF0C090),
+            new Metal("copper", "minecraft", "minecraft:stone", false, MapColor.COLOR_ORANGE, 0xE0612A),
+            new Metal("tin", "caverns_and_chasms", "minecraft:stone", false, MapColor.TERRACOTTA_WHITE, 0xD9A55A),
+            new Metal("lead", "modestmining", "minecraft:stone", false, MapColor.COLOR_PURPLE, 0xB0605E),
+            new Metal("gold", "minecraft", "minecraft:stone", false, MapColor.GOLD, 0xF2A21C),
+            new Metal("silver", "caverns_and_chasms", "minecraft:stone", false, MapColor.METAL, 0xE6B07A),
+            new Metal("bronze", "alloyed", "minecraft:stone", false, MapColor.COLOR_BROWN, 0xD07E2C),
+            new Metal("rose_gold", "oooh_pinky", "minecraft:stone", false, MapColor.COLOR_PINK, 0xE8604E),
+            new Metal("iron", "minecraft", "minecraft:stone", false, MapColor.METAL, 0xE58A3C),
+            new Metal("cast_iron", "minecraft", "minecraft:stone", false, MapColor.COLOR_GRAY, 0xC9582A),
+            new Metal("steel", "alloyed", "minecraft:stone", false, MapColor.COLOR_LIGHT_GRAY, 0xDA7C40),
+            new Metal("netherite", "minecraft", "minecraft:stone", true, MapColor.COLOR_RED, 0xD8342A),
+            new Metal("necromium", "caverns_and_chasms", "minecraft:stone", true, MapColor.COLOR_GREEN, 0x9AB84E),
+            new Metal("prismarite", "modestmining", "minecraft:stone", false, MapColor.DIAMOND, 0x9AE0C8),
+            new Metal("valkyrium", "modestmining", "minecraft:stone", false, MapColor.TERRACOTTA_WHITE, 0xF0C090),
             new Metal("glass", "minecraft", "minecraft:glass", false, MapColor.COLOR_ORANGE, 0xF2A040)
     );
 

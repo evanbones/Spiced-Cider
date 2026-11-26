@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "###",
+    "#L#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "tag": "c:ingots/lead"
+    },
+    "L": {
+      "tag": "c:storage_blocks/lead"
+    }
+  },
+  "result": {
+    "id": "spicedcider:lead_weight",
+    "count": 1
+  }
+}

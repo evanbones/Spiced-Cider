@@ -1,0 +1,30 @@
+{
+  "type": "create:mechanical_crafting",
+  "accept_mirrored": false,
+  "category": "equipment",
+  "pattern": [
+    "ASA",
+    "CBC",
+    "C C",
+    " C "
+  ],
+  "key": {
+    "A": {
+      "item": "create:andesite_alloy"
+    },
+    "S": {
+      "item": "create:shaft"
+    },
+    "B": {
+      "tag": "c:storage_blocks/copper"
+    },
+    "C": {
+      "tag": "c:ingots/copper"
+    }
+  },
+  "result": {
+    "id": "create:copper_backtank",
+    "count": 1
+  },
+  "show_notification": false
+}

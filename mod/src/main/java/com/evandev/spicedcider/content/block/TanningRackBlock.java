@@ -59,6 +59,10 @@ public class TanningRackBlock extends HorizontalDirectionalBlock implements Enti
     private static final double DRIP_OFFSET = 0.14;
     private static final VoxelShape SHAPE_NS = Block.box(0.0, 0.0, 6.0, 16.0, 16.0, 10.0);
     private static final VoxelShape SHAPE_EW = Block.box(6.0, 0.0, 0.0, 10.0, 16.0, 16.0);
+    private static final VoxelShape OUTLINE_NS_LOWER = Block.box(0.0, 0.0, 6.0, 16.0, 32.0, 10.0);
+    private static final VoxelShape OUTLINE_EW_LOWER = Block.box(6.0, 0.0, 0.0, 10.0, 32.0, 16.0);
+    private static final VoxelShape OUTLINE_NS_UPPER = Block.box(0.0, -16.0, 6.0, 16.0, 16.0, 10.0);
+    private static final VoxelShape OUTLINE_EW_UPPER = Block.box(6.0, -16.0, 0.0, 10.0, 16.0, 16.0);
 
     public TanningRackBlock(Properties properties) {
         super(properties);
@@ -79,6 +83,18 @@ public class TanningRackBlock extends HorizontalDirectionalBlock implements Enti
 
     @Override
     protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
+        boolean ns = state.getValue(FACING).getAxis() == Direction.Axis.Z;
+        if (state.getValue(HALF) == DoubleBlockHalf.LOWER) return ns ? OUTLINE_NS_LOWER : OUTLINE_EW_LOWER;
+        return ns ? OUTLINE_NS_UPPER : OUTLINE_EW_UPPER;
+    }
+
+    @Override
+    protected VoxelShape getCollisionShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
+        return state.getValue(FACING).getAxis() == Direction.Axis.Z ? SHAPE_NS : SHAPE_EW;
+    }
+
+    @Override
+    protected VoxelShape getOcclusionShape(BlockState state, BlockGetter level, BlockPos pos) {
         return state.getValue(FACING).getAxis() == Direction.Axis.Z ? SHAPE_NS : SHAPE_EW;
     }
 
@@ -119,7 +135,6 @@ public class TanningRackBlock extends HorizontalDirectionalBlock implements Enti
             BlockState lower = level.getBlockState(below);
             if (lower.is(this) && lower.getValue(HALF) == DoubleBlockHalf.LOWER) {
                 level.setBlock(below, Blocks.AIR.defaultBlockState(), Block.UPDATE_ALL | Block.UPDATE_SUPPRESS_DROPS);
-                level.levelEvent(player, 2001, below, Block.getId(lower));
             }
         }
         return super.playerWillDestroy(level, pos, state, player);

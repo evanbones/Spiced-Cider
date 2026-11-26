@@ -1,0 +1,16 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "nomansland"
+    }
+  ],
+  "type": "spicedcider:drying",
+  "ingredient": {
+    "tag": "nomansland:smelt_into_dried_grass"
+  },
+  "result": {
+    "id": "nomansland:dried_grass",
+    "count": 1
+  }
+}

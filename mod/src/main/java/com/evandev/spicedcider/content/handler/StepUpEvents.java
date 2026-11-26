@@ -14,7 +14,7 @@ import net.neoforged.neoforge.event.tick.PlayerTickEvent;
 @EventBusSubscriber(modid = SpicedCider.MOD_ID)
 public class StepUpEvents {
     private static final ResourceLocation ID = ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "step_up");
-    private static final AttributeModifier STEP_UP = new AttributeModifier(ID, 0.4, AttributeModifier.Operation.ADD_VALUE);
+    private static final AttributeModifier STEP_UP = new AttributeModifier(ID, 0.525, AttributeModifier.Operation.ADD_VALUE);
 
     @SubscribeEvent
     public static void onPlayerTick(PlayerTickEvent.Pre event) {

@@ -2,6 +2,11 @@
   "remove": [],
   "values": [
     "spicedcider:cast_iron_block",
+    "spicedcider:lead_grate",
+    "spicedcider:lead_bars",
+    "spicedcider:lead_chain",
+    "spicedcider:lead_bulb",
+    "spicedcider:lead_weight",
     {
       "id": "spicedcider:sanguine_stairs",
       "required": false
@@ -12,6 +17,14 @@
     },
     {
       "id": "spicedcider:sanguine_wall",
+      "required": false
+    },
+    {
+      "id": "spicedcider:chiseled_lead",
+      "required": false
+    },
+    {
+      "id": "spicedcider:lead_pillar",
       "required": false
     }
   ]

@@ -7,6 +7,7 @@ import com.evandev.spicedcider.content.worldgen.CaveRootFeature;
 import com.evandev.spicedcider.content.worldgen.ConnectLogsDecorator;
 import com.evandev.spicedcider.content.worldgen.DeadTreeFeature;
 import com.evandev.spicedcider.content.worldgen.HydrothermalVentFeature;
+import com.evandev.spicedcider.content.worldgen.MineshaftEntrance;
 import com.evandev.spicedcider.content.worldgen.PrismarineSpikeFeature;
 import com.evandev.spicedcider.content.worldgen.SpindlyTrunkPlacer;
 import com.evandev.spicedcider.content.worldgen.SpringPoolFeature;
@@ -24,6 +25,7 @@ import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecoratorType;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.TrunkPlacerType;
 import net.minecraft.world.level.levelgen.placement.PlacementModifierType;
+import net.minecraft.world.level.levelgen.structure.pieces.StructurePieceType;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
@@ -32,6 +34,10 @@ public class ModTreeFeatures {
     public static final DeferredRegister<TreeDecoratorType<?>> TREE_DECORATORS = DeferredRegister.create(Registries.TREE_DECORATOR_TYPE, SpicedCider.MOD_ID);
     public static final DeferredRegister<Feature<?>> FEATURES = DeferredRegister.create(Registries.FEATURE, SpicedCider.MOD_ID);
     public static final DeferredRegister<PlacementModifierType<?>> PLACEMENT_MODIFIERS = DeferredRegister.create(Registries.PLACEMENT_MODIFIER_TYPE, SpicedCider.MOD_ID);
+    public static final DeferredRegister<StructurePieceType> STRUCTURE_PIECES = DeferredRegister.create(Registries.STRUCTURE_PIECE, SpicedCider.MOD_ID);
+
+    public static final DeferredHolder<StructurePieceType, StructurePieceType> MINESHAFT_ENTRANCE = STRUCTURE_PIECES.register("mineshaft_entrance",
+            () -> (StructurePieceType) MineshaftEntrance::new);
 
     public static final DeferredHolder<TrunkPlacerType<?>, TrunkPlacerType<SpindlyTrunkPlacer>> SPINDLY_TRUNK_PLACER = TRUNK_PLACERS.register("spindly_trunk_placer",
             () -> new TrunkPlacerType<>(SpindlyTrunkPlacer.CODEC));

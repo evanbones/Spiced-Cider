@@ -24,6 +24,11 @@
     "spicedcider:plate_mould",
     "spicedcider:item_drawer",
     "spicedcider:item_drawer_distributor",
+    "spicedcider:lead_grate",
+    "spicedcider:lead_bars",
+    "spicedcider:lead_chain",
+    "spicedcider:lead_bulb",
+    "spicedcider:lead_weight",
     "spicedcider:sulfur_lantern",
     "spicedcider:tin_lantern",
     "spicedcider:bronze_ladder",
@@ -1932,6 +1937,14 @@
       "id": "spicedcider:mossy_cobbled_deepslate_brick_wall",
       "required": false
     },
+    {
+      "id": "spicedcider:chiseled_lead",
+      "required": false
+    },
+    {
+      "id": "spicedcider:lead_pillar",
+      "required": false
+    },
     "spicedcider:leaded_glass_pane",
     "spicedcider:white_leaded_glass_pane",
     "spicedcider:light_gray_leaded_glass_pane",
@@ -1963,6 +1976,142 @@
     "spicedcider:pickaxe_leaded_glass_pane",
     "spicedcider:rose_leaded_glass_pane",
     "spicedcider:diamond_leaded_glass_pane",
-    "spicedcider:apple_leaded_glass_pane"
+    "spicedcider:apple_leaded_glass_pane",
+    {
+      "id": "spicedcider:iron_catwalk",
+      "required": false
+    },
+    {
+      "id": "spicedcider:iron_catwalk_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:iron_catwalk_railing",
+      "required": false
+    },
+    {
+      "id": "spicedcider:copper_catwalk",
+      "required": false
+    },
+    {
+      "id": "spicedcider:copper_catwalk_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:copper_catwalk_railing",
+      "required": false
+    },
+    {
+      "id": "spicedcider:tin_catwalk",
+      "required": false
+    },
+    {
+      "id": "spicedcider:tin_catwalk_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:tin_catwalk_railing",
+      "required": false
+    },
+    {
+      "id": "spicedcider:bronze_catwalk",
+      "required": false
+    },
+    {
+      "id": "spicedcider:bronze_catwalk_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:bronze_catwalk_railing",
+      "required": false
+    },
+    {
+      "id": "spicedcider:steel_catwalk",
+      "required": false
+    },
+    {
+      "id": "spicedcider:steel_catwalk_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:steel_catwalk_railing",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cast_iron_catwalk",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cast_iron_catwalk_stairs",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cast_iron_catwalk_railing",
+      "required": false
+    },
+    {
+      "id": "spicedcider:white_shipping_container",
+      "required": false
+    },
+    {
+      "id": "spicedcider:light_gray_shipping_container",
+      "required": false
+    },
+    {
+      "id": "spicedcider:gray_shipping_container",
+      "required": false
+    },
+    {
+      "id": "spicedcider:black_shipping_container",
+      "required": false
+    },
+    {
+      "id": "spicedcider:brown_shipping_container",
+      "required": false
+    },
+    {
+      "id": "spicedcider:red_shipping_container",
+      "required": false
+    },
+    {
+      "id": "spicedcider:orange_shipping_container",
+      "required": false
+    },
+    {
+      "id": "spicedcider:yellow_shipping_container",
+      "required": false
+    },
+    {
+      "id": "spicedcider:lime_shipping_container",
+      "required": false
+    },
+    {
+      "id": "spicedcider:green_shipping_container",
+      "required": false
+    },
+    {
+      "id": "spicedcider:cyan_shipping_container",
+      "required": false
+    },
+    {
+      "id": "spicedcider:light_blue_shipping_container",
+      "required": false
+    },
+    {
+      "id": "spicedcider:blue_shipping_container",
+      "required": false
+    },
+    {
+      "id": "spicedcider:purple_shipping_container",
+      "required": false
+    },
+    {
+      "id": "spicedcider:magenta_shipping_container",
+      "required": false
+    },
+    {
+      "id": "spicedcider:pink_shipping_container",
+      "required": false
+    }
   ]
 }

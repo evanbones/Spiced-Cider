@@ -5,8 +5,6 @@
 	oldWisteriaTrees = true
 	#Anvil repairs and renames cost no experience. Requires Easy Anvils.
 	easyAnvilsFreeRepairs = true
-	#Fully repairing a tool in an anvil takes as much material as crafting its head: one for shovels, two for swords and hoes, three for pickaxes and axes. Requires Easy Anvils.
-	toolRepairMaterialCounts = true
 	#Fire rings no longer take potions to spread their effects. Requires Piglin Proliferation.
 	fireRingNoPotions = true
 	#Cleaning out an empty Pot of Witch Stew leaves a Create Basin instead of a Cauldron. Requires No Man's Land and Create.
@@ -21,7 +19,7 @@
 	backpackAcceptAnything = true
 	#Incremental Mining uses the normal block breaking time instead of its own. Requires Incremental Mining.
 	incrementalMiningVanillaSpeed = true
-	#Half of the mineshaft side-room dungeon spawners spawn dust bunnies. Requires YUNG's Better Mineshafts and Spelunkery. Only affects newly generated terrain.
+	#Half of the cave spider spawners in mineshafts spawn dust bunnies instead. Only affects newly generated terrain.
 	dustBunnySpawners = true
 	#A change in redstone power opens or closes a tap. Requires No Man's Land.
 	tapRedstone = true
@@ -49,6 +47,12 @@
 	createTankHandFluids = true
 	#Supplementaries jars use a jug's outline and collision: a shorter body with a narrow neck. Pair with a resource pack that gives them a jug model.
 	jugShapedJars = true
+	#Players caught in a Thrasher's jaws can mash Jump to fill a struggle bar and break free, knocking the Thrasher back and stunning it. Every bite also has a small chance to let you escape. Requires Upgrade Aquatic.
+	thrasherStruggling = true
+	#Thrashers and Great Thrashers stop spawning naturally once this many are within 64 blocks. 0 means no limit. Requires Upgrade Aquatic.
+	# Default: 0
+	# Range: 0 ~ 16
+	thrasherSpawnLimit = 2
 	#Campfires, Fire, Magma Blocks and other cooking heat sources under a Basin count as heated for mixing and brewing, so heated recipes don't need a Blaze Burner. Superheated recipes still do. Requires Create.
 	basinCampfireHeat = true
 	#Awake creaking hearts and resin clumps give off light, creaking eyes always glow, and eyeblossoms open in dim light at any time of day. Requires Vanilla Backport.
@@ -137,7 +141,7 @@
 	cacaoTrees = true
 	#Pear trees generate in autumnal forests. Needs a world restart and only affects new chunks.
 	pearTrees = true
-	#With Upgrade Aquatic, a few bare dead trees with jutting branches stand in deserts. Needs a world restart and only affects new chunks.
+	#With Upgrade Aquatic, a few bare dead trees with jutting branches stand in deserts, and Bone Meal grows a Dead Bush on sand into one. New desert trees only appear in new chunks after a world restart.
 	deadTrees = true
 
 	[features.gameplay]
@@ -153,19 +157,21 @@
 		keepBrokenItems = true
 		#Tamed wolves can be equipped with horse/animal armor as body armor.
 		wolvesWearAnyArmor = true
-		#Spiders switch to shooting cobweb projectiles at range when their target is trapped.
+		#Spiders shoot cobwebs at targets that are still free, then close in to bite once they are stuck.
 		spiderRangedWebAttacks = true
 		#Removes quasi-connectivity from pistons, dispensers, and droppers.
 		removeQuasiConnectivity = true
 		#Ghast fireballs no longer destroy blocks.
 		harmlessGhastFireballs = true
+		#The wither spawning, the ender dragon dying and the end portal opening are only heard nearby, from where they happen, not by every player in the world.
+		localizedBossSounds = true
 		#Blocks tagged spicedcider:needs_axe_to_harvest (logs) only drop when broken with an axe.
 		logsNeedAxe = true
 		#Hammers (c:tools/hammer) break blocks at hand speed and don't count as the right tool for drops.
 		hammersCannotMine = true
 		#Stripping a log with an axe drops Tree Bark, which can be used on a stripped log to restore it.
 		treeBark = true
-		#Blocks tagged spicedcider:needs_hoe_to_harvest (moss) only drop when broken with a hoe.
+		#Blocks tagged spicedcider:needs_hoe_to_harvest (moss) only drop when broken with a hoe, shears or a Silk Touch tool.
 		mossNeedsHoe = true
 		#Use a dye on a placed colored block to recolor it.
 		blockDyeing = true
@@ -229,10 +235,26 @@
 		darkForestEvokers = true
 		#Setting up or resting in a tent or sleeping bag saves it as your camp without replacing your bed spawn. The death screen then lets you pick between respawning at your bed or next to your camp.
 		tentRespawnChoice = true
+		#Carpets and rugs, Canvas Rugs included, can be laid inside a tent as its floor: place one in the tent, or set the tent up on one. Breaking the tent leaves the carpet behind. Requires Offgrid.
+		tentRugs = true
 		#Crushing Wheels only run crushing recipes and no longer fall back to millstone recipes.
 		crushingWheelsSkipMilling = true
 		#Right-clicking a Create Item Vault opens its inventory. Sneak or hold a block to place against it as usual.
 		itemVaultInterface = true
+		#Beams have collision like blocks: you can stand on them, mobs path around them, blocks can't be placed where a beam passes through, and beams can't be placed through blocks.
+		solidBeams = true
+		#Beam ends snap to the corners, edge middles and centre of a block face, and those nine spots are shown while holding a beam.
+		beamGridSnapping = true
+		#Players slowly heal on their own, one half heart every 20 seconds, up to this many half hearts. 0 turns it off.
+		# Default: 0
+		# Range: 0 ~ 40
+		naturalRegenerationLimit = 6
+		#Mineshafts get a ladder shaft up to the surface, opening onto a hillside tunnel or under a wooden headframe. Only affects newly generated terrain.
+		mineshaftEntrances = true
+		#Cave biomes like Lush Caves stay underground: ground open to the sky, such as the floor of a cave entrance, gets the biome of the land around it instead. Only affects newly generated terrain.
+		noOpenSkyCaveBiomes = true
+		#Using a damaged tool on a grindstone sharpens it back up to 70% durability. Broken tools have to be repaired at an anvil instead.
+		grindstoneSharpening = true
 
 	[features.voidWater]
 		#Fluids at the bottom of the world spill into the void as fading trails you can swim in. Takes effect when a world is next loaded.

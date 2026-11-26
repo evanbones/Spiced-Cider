@@ -5,6 +5,8 @@ import dev.emi.emi.api.recipe.EmiRecipeCategory;
 import dev.emi.emi.api.stack.EmiIngredient;
 import dev.emi.emi.api.stack.EmiStack;
 import dev.emi.emi.api.widget.WidgetHolder;
+import net.minecraft.network.chat.Component;
+import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
@@ -40,7 +42,10 @@ public class SluicingEmiRecipe extends LootEmiRecipe {
     public void addWidgets(WidgetHolder widgets) {
         int height = getDisplayHeight();
         int slotsTop = (height - inputs.size() * SLOT) / 2;
-        for (int i = 0; i < inputs.size(); i++) widgets.addSlot(inputs.get(i), 0, slotsTop + i * SLOT);
+        for (int i = 0; i < inputs.size(); i++) {
+            String hint = i == 0 ? "emi.spicedcider.sluicing.fluid" : "emi.spicedcider.sluicing.item";
+            widgets.addSlot(inputs.get(i), 0, slotsTop + i * SLOT).appendTooltip(Component.translatable(hint).withStyle(ChatFormatting.GREEN));
+        }
         widgets.addDrawable(SCENE_X, (height - SCENE_H) / 2, SCENE_W, SCENE_H, (graphics, mouseX, mouseY, delta) -> drawScene(graphics));
         addOutputs(widgets);
     }

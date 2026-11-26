@@ -10,6 +10,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.inventory.Slot;
+import net.neoforged.fml.ModList;
 
 public class VaultScreen extends AbstractContainerScreen<VaultMenu> {
     private static final ResourceLocation TEXTURE = ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "textures/gui/container/item_vault.png");
@@ -19,6 +20,7 @@ public class VaultScreen extends AbstractContainerScreen<VaultMenu> {
     private static final int TRACK_Y = 18;
     private static final int TRACK_HEIGHT = 108;
     private static final int SCROLLER_HEIGHT = 15;
+    private static final int COUNT_RIGHT = ModList.get().isLoaded("quark") ? 128 : 178;
 
     private boolean scrolling;
     private float scrollOffset;
@@ -41,7 +43,7 @@ public class VaultScreen extends AbstractContainerScreen<VaultMenu> {
     protected void renderLabels(GuiGraphics graphics, int mouseX, int mouseY) {
         super.renderLabels(graphics, mouseX, mouseY);
         Component count = Component.translatable("container.spicedcider.item_vault.slots", this.menu.usedSlots(), this.menu.vaultSlots());
-        graphics.drawString(this.font, count, TRACK_X - 3 - this.font.width(count), this.titleLabelY, 0x404040, false);
+        graphics.drawString(this.font, count, COUNT_RIGHT - this.font.width(count), this.inventoryLabelY, 0x404040, false);
     }
 
     @Override

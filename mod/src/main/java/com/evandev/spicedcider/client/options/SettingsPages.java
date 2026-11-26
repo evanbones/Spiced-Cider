@@ -170,7 +170,7 @@ public final class SettingsPages {
                 impact(named(sodiumOnly("voxy:render_distance", VOXY_DEFAULT_DISTANCE), "spicedcider.options.lod_distance"), Impact.HIGH),
                 ModList.get().isLoaded("roxy") ? impact(VoxyFogSettings.start(), Impact.LOW) : null,
                 ModList.get().isLoaded("roxy") ? impact(VoxyFogSettings.end(), Impact.LOW) : null));
-        add(entries, category(screen, "visuals",
+        add(entries, graphicsCategory(screen, "visuals",
                 sodium("sodium:quality.graphics", o.graphicsMode()),
                 sodium("sodium:quality.ao", o.ambientOcclusion()),
                 sodium("sodium:quality.clouds", o.cloudStatus()),
@@ -193,9 +193,9 @@ public final class SettingsPages {
                 impact(NetherSettings.mist(), Impact.LOW),
                 configToggle("smoothStepUp", SpicedCiderConfig.CLIENT.smoothStepUp)));
         if (ModList.get().isLoaded("particular")) {
-            add(entries, category(screen, "particles", ParticularSettings.particles().stream().map(entry -> impact(entry, Impact.LOW)).toArray(Entry[]::new)));
+            add(entries, graphicsCategory(screen, "particles", ParticularSettings.particles().stream().map(entry -> impact(entry, Impact.LOW)).toArray(Entry[]::new)));
         }
-        add(entries, category(screen, "post_processing",
+        add(entries, graphicsCategory(screen, "post_processing",
                 ModList.get().isLoaded("polytone") ? impact(GodraysSettings.godrays(), Impact.MEDIUM) : null,
                 impact(NetherSettings.heatHaze(), Impact.MEDIUM),
                 impact(NetherSettings.ambientTint(), Impact.LOW),
@@ -335,6 +335,14 @@ public final class SettingsPages {
         List<Entry> list = new ArrayList<>(Arrays.stream(children).filter(Objects::nonNull).toList());
         if (list.isEmpty()) return null;
         return new CategoryEntry(Component.translatable("spicedcider.options.category." + key), list, screen.collapsed());
+    }
+
+    @Nullable
+    private static CategoryEntry graphicsCategory(SettingsScreen screen, String key, @Nullable Entry... children) {
+        for (Entry child : children) {
+            if (child instanceof SettingEntry setting) setting.qualityColors();
+        }
+        return category(screen, key, children);
     }
 
     @Nullable

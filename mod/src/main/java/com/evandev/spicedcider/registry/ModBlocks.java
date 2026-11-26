@@ -188,6 +188,9 @@ public class ModBlocks {
         if (PUFFBALL_MUSHROOM_CRATE != null) {
             BLOCKS.addAlias(ResourceLocation.fromNamespaceAndPath("abundantdelight", "puffball_mushroom_crate"), PUFFBALL_MUSHROOM_CRATE.getId());
         }
+        if (ModList.get().isLoaded("supplementaries") && ModList.get().isLoaded("upgrade_aquatic")) {
+            com.evandev.spicedcider.compat.supplementaries.PrismarineRods.register(BLOCKS);
+        }
     }
 
     public static final DeferredBlock<SaplingBlock> GLOAMWOOD_SAPLING = BLOCKS.register("gloamwood_sapling",

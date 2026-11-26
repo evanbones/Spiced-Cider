@@ -4,6 +4,7 @@ import com.evandev.spicedcider.SpicedCider;
 import com.evandev.spicedcider.entities.projectiles.CobwebProjectileEntity;
 import com.evandev.spicedcider.compat.tide.TideCompat;
 import com.evandev.spicedcider.entities.balloon.BalloonEntity;
+import com.evandev.spicedcider.entities.leadweight.LeadWeightEntity;
 import com.evandev.spicedcider.entities.projectiles.GrapplingHookEntity;
 import com.evandev.spicedcider.entities.sporal.Sporal;
 import com.evandev.spicedcider.entities.sputter.SputterEntity;
@@ -60,6 +61,14 @@ public class ModEntityTypes {
                     .clientTrackingRange(8)
                     .build(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "straw_golem").toString()),
             0xC9A93A, 0xA4512B
+    );
+
+    public static final DeferredHolder<EntityType<?>, EntityType<LeadWeightEntity>> LEAD_WEIGHT = registerEntityWithoutEgg("lead_weight", () ->
+            EntityType.Builder.<LeadWeightEntity>of(LeadWeightEntity::new, MobCategory.MISC)
+                    .sized(0.98F, 0.98F)
+                    .clientTrackingRange(10)
+                    .updateInterval(20)
+                    .build(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "lead_weight").toString())
     );
 
     public static final DeferredHolder<EntityType<?>, EntityType<Sporal>> SPORAL = registerEntity("sporal", () ->

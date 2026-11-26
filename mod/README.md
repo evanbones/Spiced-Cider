@@ -96,6 +96,11 @@ Heat haze, mist, and a warm ambient tint in the Nether. Inspired by Jaden's Neth
 
 <img src="https://raw.githubusercontent.com/evanbones/Spiced-Cider/main/mod/images/nether_atmosphere.png" alt="Nether wastes with warm haze" width="640">
 
+**Water Depth Fog** *(off by default)*
+
+Looking into water from above, deep water fades into a dark murk tinted by the water's colour while the shallows
+stay clear enough to see the bottom. Requires Sodium.
+
 **Usable Nether Maps**
 
 Maps in dimensions with a ceiling show terrain below the roof instead of bedrock.
@@ -242,6 +247,12 @@ glowstone bricks, cast iron and tallow blocks, plus extra variants for other mod
 Over thirty leaded glass windows in plain, coloured and multicoloured patterns, plus a few picture windows. Matching
 windows placed next to each other join into one larger window. They're made with lead. Ported from Medieval Glass.
 
+**Industrial Decorations** *(requires Create for catwalks and shipping containers)*
+
+Catwalks, catwalk stairs and railings in iron, copper, tin, bronze, steel and cast iron; Shipping Containers in
+all sixteen colours that work like Create Item Vaults; and twenty hazard and arrow Decals cut from iron sheets. Ported
+from Create Deco.
+
 **In-World Dyeing**
 
 Use a dye on a placed colored block to recolor it.
@@ -278,6 +289,7 @@ message. Ported from Valcon (thanks, Ivqry!).
 - Leaves from any mod never suffocate (for use with Modulation's passable leaves)
 - Sign hitboxes match their model and rotation
 - Ghast fireballs no longer destroy blocks *(off by default)*
+- The wither spawning, the ender dragon dying and the end portal opening are heard only nearby, not by every player *(off by default)*
 - Hammers can't mine blocks, so they don't replace a pickaxe *(off by default)*
 - Azaleas can't be bonemealed into trees *(off by default)*
 - Players step up full blocks without jumping, with a Step Up toggle in place of Auto-Jump and a sprint-only toggle *(
@@ -287,6 +299,7 @@ message. Ported from Valcon (thanks, Ivqry!).
 - Brown mushrooms and mushroom colonies don't give off light *(off by default)*
 - Piglins spawn with Piglin Broadswords and Battleaxes instead of golden weapons *(off by default)*
 - Igloos have no basement *(off by default)*
+- Mineshafts have a ladder shaft up to the surface, through a hillside tunnel or under a wooden headframe *(off by default)*
 - Splash and lingering potions have a short cooldown *(off by default)*
 - Advancement chat messages are only shown to the player who earned them *(off by default)*
 - Cocoa pods can only come from cacao trees *(off by default)*
@@ -360,7 +373,6 @@ Spiced Cider runs fine without any of these: each one only unlocks the specific 
 | [Architect's Palette](https://modrinth.com/mod/architects-palette)                                                                         | Adds Twisted signs, hanging signs and boats; brightens Cage Lanterns *(off by default)*                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | Better Cloud Shadows                                                                                                                       | Cloud shadows follow cloud cover and the wind                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | [Big Water](https://modrinth.com/mod/big-water)                                                                                            | Voxy LoD water uses Big Water's textures                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| [The Block Box](https://modrinth.com/mod/the-block-box) + [Every Compat](https://modrinth.com/mod/every-compat)                            | Registers wood-type variants (seats, palisades) for every wood type in the pack                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | [Bountiful Fares](https://modrinth.com/mod/bountiful-fares)                                                                                | Adds a Lavender Tea Mug and fruit crates                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | [Caverns & Chasms](https://modrinth.com/mod/caverns-and-chasms)                                                                            | Uses C&C's tin spark particles for unmineable block sparks; adds waterlogging to Refractors/Resistors; disables building C&C copper golems *(off by default)*; with Jade, wearing a monocle shows Jade tooltips like a spyglass *(off by default)*                                                                                                                                                                                                                                                                                  |
 | [Cirrus](https://modrinth.com/mod/cirrus)                                                                                                  | Clouds follow cloud cover and drift with the wind; options in the settings screen                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
@@ -407,7 +419,7 @@ Spiced Cider runs fine without any of these: each one only unlocks the specific 
 | [Snow! Real Magic!](https://modrinth.com/mod/snow-real-magic)                                                                              | Snowy plants sway with Where Winds Blow                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | [Snowy Spirit](https://modrinth.com/mod/snowy-spirit)                                                                                      | Gingerbread cookies keep one shape in recipe viewers                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | [Sodium](https://modrinth.com/mod/sodium)                                                                                                  | Fixes Smooth Lighting flicker near moving dynamic light sources; fixes translucent items with Continuity; options in the settings screen                                                                                                                                                                                                                                                                                                                                                                                            |
-| [Spelunkery](https://modrinth.com/mod/spelunkery)                                                                                          | Stops Spelunkery's bundled datapack from overriding worldgen features; reworks the tuning fork (note copying, geode pings, golem control with C&C); EMI shows rough diamonds and emeralds polished on the regular grindstone *(off by default)*                                                                                                                                                                                                                                                                                     |
+| [Spelunkery](https://modrinth.com/mod/spelunkery)                                                                                          | Stops Spelunkery's bundled datapack from overriding worldgen features; reworks the tuning fork (note copying, geode pings, golem control with C&C); EMI shows rough diamonds and emeralds polished on the regular grindstone; half of mineshaft cave spider spawners spawn Dust Bunnies *(off by default)*                                                                                                                                                                                                                                                                                     |
 | [Supplementaries](https://modrinth.com/mod/supplementaries)                                                                                | Wind vanes point with the wind and give a redstone signal for its strength; soap washes off armor trims; structure maps skip disabled structures                                                                                                                                                                                                                                                                                                                                                                                    |
 | [Tide](https://modrinth.com/mod/tide)                                                                                                      | Adds Grappling Hooks, nine extra hooks, an Adamantite Fishing Rod and Grub, Minnow and Firefly baits; perfect catches grant Lure; worms are bait; geodes and Maps in a Bottle can be fished up; classic two-tone fish spawn eggs *(off by default)*                                                                                                                                                                                                                                                                                 |
 | [Tiny Takeover Backport](https://modrinth.com/mod/F4TmfqsY)                                                                                | Sniffers dig up golden dandelions; golden dandelions give off golden specks; growing babies follow players holding one *(off by default)*                                                                                                                                                                                                                                                                                                                                                                                           |
@@ -474,6 +486,9 @@ itayfeder, used under its MIT license (included at `META-INF/licenses/nock_enoug
 
 Straw Golems are ported from [RE-Strawgolem](https://github.com/HeroBrianMack/RE-Strawgolem) by HeroBrianMack
 (model by Fr3nderman), used under its AGPLv3 license, with delivery fixes from max-champlin's pull request #5.
+
+Catwalks, Shipping Containers and Decals are ported from [Create Deco](https://github.com/talrey/CreateDeco) by talrey
+and contributors, used under its CC0 license, with the artist's permission for the textures.
 
 The Puffball Mushroom Crate is ported from [Abundant Delight](https://modrinth.com/mod/abundant-delight) by Magafin,
 used under its MIT license (included at `META-INF/licenses/abundant_delight-LICENSE.txt`).

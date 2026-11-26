@@ -1,0 +1,28 @@
+{
+  "type": "create:mechanical_crafting",
+  "accept_mirrored": false,
+  "category": "misc",
+  "pattern": [
+    " AAA ",
+    "AAIAA",
+    "AISIA",
+    "AAIAA",
+    " AAA "
+  ],
+  "key": {
+    "A": {
+      "item": "create:andesite_alloy"
+    },
+    "I": {
+      "tag": "c:ingots/steel"
+    },
+    "S": {
+      "item": "create:shaft"
+    }
+  },
+  "result": {
+    "id": "create:crushing_wheel",
+    "count": 2
+  },
+  "show_notification": false
+}

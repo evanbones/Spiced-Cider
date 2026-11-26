@@ -18,57 +18,10 @@
     },
     "replaceable": "#clifftree:savanna_terracotta",
     "ground_state": {
-      "type": "minecraft:dual_noise_provider",
-      "seed": 99,
-      "noise": {
-        "firstOctave": -3,
-        "amplitudes": [
-          0.001,
-          0.002
-        ]
-      },
-      "scale": 1,
-      "variety": {
-        "min_inclusive": 1,
-        "max_inclusive": 25
-      },
-      "slow_noise": {
-        "firstOctave": -7,
-        "amplitudes": [
-          1,
-          1
-        ]
-      },
-      "slow_scale": 1,
-      "states": [
-        {
-          "Name": "minecraft:grass_block"
-        },
-        {
-          "Name": "minecraft:grass_block"
-        },
-        {
-          "Name": "minecraft:sand"
-        },
-        {
-          "Name": "minecraft:sand"
-        },
-        {
-          "Name": "minecraft:grass_block"
-        },
-        {
-          "Name": "minecraft:grass_block"
-        },
-        {
-          "Name": "minecraft:grass_block"
-        },
-        {
-          "Name": "minecraft:sand"
-        },
-        {
-          "Name": "minecraft:sand"
-        }
-      ]
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "minecraft:sand"
+      }
     },
     "vegetation_feature": {
       "placement": [],

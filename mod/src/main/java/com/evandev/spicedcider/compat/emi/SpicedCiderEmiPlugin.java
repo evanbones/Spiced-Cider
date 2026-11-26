@@ -47,6 +47,9 @@ public class SpicedCiderEmiPlugin implements EmiPlugin {
         if (ModList.get().isLoaded("horseman")) {
             ComponentTransferringEmiRecipes.register(registry);
         }
+        if (ModList.get().isLoaded("slime_time")) {
+            SlimeColorCraftingEmiRecipes.register(registry);
+        }
         RepairMaterialTagEmiRecipes.register(registry);
         TanningEmiRecipe.register(registry);
         LootEmiCategories.register(registry);

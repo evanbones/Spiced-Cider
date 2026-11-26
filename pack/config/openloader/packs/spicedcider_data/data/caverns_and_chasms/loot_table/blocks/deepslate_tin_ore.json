@@ -31,17 +31,14 @@
             },
             {
               "type": "minecraft:item",
-              "name": "spelunkery:raw_tin_nugget",
-              "functions": [
+              "name": "caverns_and_chasms:raw_tin",
+              "conditions": [
                 {
-                  "function": "minecraft:set_count",
-                  "count": {
-                    "type": "minecraft:uniform",
-                    "min": 1,
-                    "max": 4
-                  },
-                  "add": false
-                },
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.278
+                }
+              ],
+              "functions": [
                 {
                   "function": "minecraft:apply_bonus",
                   "enchantment": "minecraft:fortune",

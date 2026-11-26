@@ -49,6 +49,7 @@ public class ModBlockLootProvider extends BlockLootSubProvider {
     @Override
     protected void generate() {
         this.dropSelf(ModBlocks.CAST_IRON_BLOCK.get());
+        com.evandev.spicedcider.registry.ModLeadBlocks.blocks().forEach(block -> this.dropSelf(block.get()));
         this.dropSelf(ModBlocks.TALLOW_BLOCK.get());
         this.dropSelf(ModBlocks.WORM_CRATE.get());
         this.dropSelf(ModBlocks.GOLDEN_WORM_CRATE.get());
@@ -166,6 +167,7 @@ public class ModBlockLootProvider extends BlockLootSubProvider {
     @Override
     protected @NotNull Iterable<Block> getKnownBlocks() {
         List<Block> blocks = new ArrayList<>(List.of(ModBlocks.CAST_IRON_BLOCK.get(), ModBlocks.TALLOW_BLOCK.get()));
+        com.evandev.spicedcider.registry.ModLeadBlocks.blocks().forEach(block -> blocks.add(block.get()));
         blocks.add(ModBlocks.WORMY_DIRT.get());
         blocks.add(ModBlocks.RICH_GRAVEL.get());
         blocks.add(ModBlocks.DEPOSIT.get());

@@ -1,0 +1,9 @@
+{
+  "type": "lithostitched:replace_partially",
+  "dimension": "minecraft:overworld",
+  "targets": "minecraft:old_growth_pine_taiga",
+  "replacement": "nomansland:boreal_forest",
+  "parameters": {
+    "spicedcider:boreal_forest_selector": [0.15, 10.0]
+  }
+}

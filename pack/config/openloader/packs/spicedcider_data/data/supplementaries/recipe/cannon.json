@@ -1,12 +1,19 @@
 {
   "neoforge:conditions": [
     {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
       "type": "supplementaries:flag",
       "flag": "cannon"
     }
   ],
-  "type": "minecraft:crafting_shaped",
+  "type": "create:mechanical_crafting",
+  "accept_mirrored": false,
+  "category": "misc",
   "pattern": [
+    "PFP",
     "PFP",
     " D ",
     "WWW"
@@ -28,5 +35,6 @@
   "result": {
     "id": "supplementaries:cannon",
     "count": 1
-  }
+  },
+  "show_notification": false
 }

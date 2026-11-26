@@ -14,16 +14,14 @@ import java.util.List;
 public class ChestCapabilities {
 
     public static void register(RegisterCapabilitiesEvent event) {
-        List<Block> missing = new ArrayList<>();
+        List<Block> chests = new ArrayList<>();
         for (Block block : BuiltInRegistries.BLOCK) {
-            if (block instanceof ChestBlock && !event.isBlockRegistered(Capabilities.ItemHandler.BLOCK, block)) {
-                missing.add(block);
-            }
+            if (block instanceof ChestBlock) chests.add(block);
         }
-        if (missing.isEmpty()) return;
+        if (chests.isEmpty()) return;
         event.registerBlock(Capabilities.ItemHandler.BLOCK, (level, pos, state, blockEntity, side) -> {
             Container container = ChestBlock.getContainer((ChestBlock) state.getBlock(), state, level, pos, true);
             return container == null ? null : new InvWrapper(container);
-        }, missing.toArray(Block[]::new));
+        }, chests.toArray(Block[]::new));
     }
 }

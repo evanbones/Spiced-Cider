@@ -5,6 +5,7 @@ import com.evandev.spicedcider.registry.ModBlocks;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import com.evandev.spicedcider.registry.ModFireBlocks;
+import com.evandev.spicedcider.registry.ModDecoBlocks;
 import com.evandev.spicedcider.registry.ModLeadedGlassBlocks;
 import com.evandev.spicedcider.registry.ModPaleGardenBlocks;
 import com.evandev.spicedcider.registry.ModBuildingBlocks;
@@ -71,6 +72,7 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         this.tag(BlockTags.create(ResourceLocation.fromNamespaceAndPath("c", "storage_blocks/cast_iron")))
                 .add(ModBlocks.CAST_IRON_BLOCK.get());
 
+        leadBlocks();
         paleGarden();
         fireVariants();
         this.tag(BlockTags.SAPLINGS).add(ModBlocks.GLOAMWOOD_SAPLING.get());
@@ -181,6 +183,7 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         }
 
         ModLeadedGlassBlocks.BLOCKS.forEach(glass -> this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(glass.get()));
+        optional(BlockTags.MINEABLE_WITH_PICKAXE, ModDecoBlocks.createBlockIds());
     }
 
     private void paleGarden() {
@@ -232,5 +235,40 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
     private void optional(TagKey<Block> tag, String... ids) {
         var builder = this.tag(tag);
         for (String id : ids) builder.addOptional(ResourceLocation.fromNamespaceAndPath("spicedcider", id));
+    }
+
+    private void leadBlocks() {
+        Block chain = com.evandev.spicedcider.registry.ModLeadBlocks.LEAD_CHAIN.get();
+        Block bars = com.evandev.spicedcider.registry.ModLeadBlocks.LEAD_BARS.get();
+        Block grate = com.evandev.spicedcider.registry.ModLeadBlocks.LEAD_GRATE.get();
+        Block weight = com.evandev.spicedcider.registry.ModLeadBlocks.LEAD_WEIGHT.get();
+        this.tag(blockTag("c", "chains")).add(chain);
+        this.tag(blockTag("minecraft", "chains")).add(chain);
+        this.tag(blockTag("snowrealmagic", "containables")).add(chain);
+        for (String offgrid : List.of("can_blocklog", "can_overlay")) {
+            this.tag(blockTag("offgrid", offgrid)).add(chain, bars);
+        }
+        this.tag(blockTag("minecraft", "bars")).add(bars);
+        this.tag(blockTag("connectiblechains", "chain_connectible")).add(bars);
+        this.tag(blockTag("amendments", "bubble_column_passable")).add(grate);
+        this.tag(blockTag("dynamiccrosshair", "interactable")).add(weight);
+        com.evandev.spicedcider.registry.ModLeadBlocks.blocks().forEach(block -> {
+            this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(block.get());
+            this.tag(BlockTags.NEEDS_STONE_TOOL).add(block.get());
+        });
+        var resistant = this.tag(ModTags.Blocks.BLAST_RESISTANT_LEAD)
+                .addOptional(ResourceLocation.fromNamespaceAndPath("modestmining", "lead_block"))
+                .addOptional(ResourceLocation.fromNamespaceAndPath("modestmining", "raw_lead_block"));
+        var dampening = this.tag(BlockTags.OCCLUDES_VIBRATION_SIGNALS)
+                .addOptional(ResourceLocation.fromNamespaceAndPath("modestmining", "lead_block"));
+        for (ModBuildingBlocks.Def def : ModBuildingBlocks.DEFS) {
+            if (!"modestmining:lead_block".equals(def.properties())) continue;
+            resistant.addOptional(def.location());
+            dampening.addOptional(def.location());
+        }
+    }
+
+    private static TagKey<Block> blockTag(String namespace, String path) {
+        return BlockTags.create(ResourceLocation.fromNamespaceAndPath(namespace, path));
     }
 }

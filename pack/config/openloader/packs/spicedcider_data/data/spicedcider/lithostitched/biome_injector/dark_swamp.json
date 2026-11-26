@@ -1,0 +1,9 @@
+{
+  "type": "lithostitched:replace_partially",
+  "dimension": "minecraft:overworld",
+  "targets": "minecraft:dark_forest",
+  "replacement": "nomansland:dark_swamp",
+  "parameters": {
+    "spicedcider:dark_swamp_selector": [0.25, 10.0]
+  }
+}

@@ -33,6 +33,12 @@ public class ModItemTagsProvider extends ItemTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.@NotNull Provider provider) {
+        Item leadChain = com.evandev.spicedcider.registry.ModLeadBlocks.LEAD_CHAIN_ITEM.get();
+        for (String[] chainTag : new String[][]{{"c", "chains"}, {"minecraft", "chains"}, {"connectiblechains", "hanging_chain_sources"},
+                {"connectiblechains", "banner_chain_sources"}, {"connectiblechains", "glow_lights_chain_sources"}}) {
+            this.tag(ItemTags.create(ResourceLocation.fromNamespaceAndPath(chainTag[0], chainTag[1]))).add(leadChain);
+        }
+        this.tag(ItemTags.create(ResourceLocation.fromNamespaceAndPath("minecraft", "bars"))).add(com.evandev.spicedcider.registry.ModLeadBlocks.LEAD_BARS_ITEM.get());
         this.tag(ModTags.Items.TIDE_HOOKS)
                 .addOptional(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "grappling_hook"))
                 .addOptional(ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "sticky_grappling_hook"))

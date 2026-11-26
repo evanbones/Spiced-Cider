@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    " # ",
+    "# #",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "tag": "c:storage_blocks/lead"
+    }
+  },
+  "result": {
+    "id": "spicedcider:chiseled_lead",
+    "count": 4
+  }
+}

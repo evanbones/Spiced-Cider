@@ -16,6 +16,10 @@
     "#minecraft:compasses",
     "minecraft:spyglass",
     {
+      "id": "#create:toolboxes",
+      "required": false
+    },
+    {
       "id": "exposure:camera",
       "required": false
     },

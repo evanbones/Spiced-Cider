@@ -8933,5 +8933,45 @@
    "stoneworks"
   ],
   "tool": "pickaxe"
+ },
+ {
+  "id": "spicedcider:chiseled_lead",
+  "kind": "CUBE",
+  "mod": "modestmining",
+  "properties": "modestmining:lead_block",
+  "parent": null,
+  "side": "spicedcider:block/chiseled_lead",
+  "top": "spicedcider:block/chiseled_lead",
+  "bottom": "spicedcider:block/chiseled_lead",
+  "craft": "NONE",
+  "craftFrom": null,
+  "cut": [
+   "modestmining:lead_block"
+  ],
+  "requires": [
+   "modestmining"
+  ],
+  "tool": "pickaxe",
+  "needs": "stone"
+ },
+ {
+  "id": "spicedcider:lead_pillar",
+  "kind": "PILLAR",
+  "mod": "modestmining",
+  "properties": "modestmining:lead_block",
+  "parent": null,
+  "side": "spicedcider:block/lead_pillar",
+  "top": "spicedcider:block/lead_pillar_top",
+  "bottom": "spicedcider:block/lead_pillar_top",
+  "craft": "PILLAR",
+  "craftFrom": "modestmining:lead_block",
+  "cut": [
+   "modestmining:lead_block"
+  ],
+  "requires": [
+   "modestmining"
+  ],
+  "tool": "pickaxe",
+  "needs": "stone"
  }
 ]

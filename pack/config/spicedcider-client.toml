@@ -7,6 +7,8 @@
 	customDeathSound = true
 	#Spawns sparks, plays hit sounds, and displays a warning message when attempting to mine a block that requires a stronger tool.
 	unmineableBlockSparks = true
+	#Explorer's Tents can be targeted anywhere on their canvas, and their outline follows the sloped shape of the tent instead of a single block.
+	tentHitbox = true
 	#Customize the OS window title bar text.
 	customWindowTitle = true
 	#Format string for the OS window title. %v will be replaced with the current Minecraft version.
@@ -33,6 +35,8 @@
 	hideSmithingTemplateTooltips = true
 	#While Picture Mode is open, everything past the loaded chunks fades into the distance fog colour instead of showing see-through distant terrain. Requires Picture Mode.
 	pictureModeClouds = true
+	#Looking into water from above, deep water fades into a dark murk while the shallows stay clear enough to see the bottom. Requires Sodium.
+	waterDepthFog = true
 	#Held and dropped light-giving blocks glow the same colour as when they're placed. Requires Polytone.
 	matchHeldLightColors = true
 	#Lanterns and other lights hung from chains and ropes glow the same colour as when they're placed. Requires Polytone.

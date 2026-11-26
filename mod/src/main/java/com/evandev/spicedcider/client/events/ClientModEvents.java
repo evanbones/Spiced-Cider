@@ -120,6 +120,7 @@ public class ClientModEvents {
     public static void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
         event.registerEntityRenderer(ModEntityTypes.COBWEB_PROJECTILE.get(), CobwebProjectileRenderer::new);
         event.registerEntityRenderer(ModEntityTypes.BALLOON.get(), BalloonRenderer::new);
+        event.registerEntityRenderer(ModEntityTypes.LEAD_WEIGHT.get(), net.minecraft.client.renderer.entity.FallingBlockRenderer::new);
         event.registerEntityRenderer(ModEntityTypes.SPUTTER.get(), SputterRenderer::new);
         event.registerEntityRenderer(ModEntityTypes.SPORAL.get(), SporalRenderer::new);
         event.registerEntityRenderer(ModEntityTypes.STRAW_GOLEM.get(), StrawGolemRenderer::new);
@@ -167,6 +168,7 @@ public class ClientModEvents {
 
     @SubscribeEvent
     public static void registerClientExtensions(RegisterClientExtensionsEvent event) {
+        event.registerBlock(new com.evandev.spicedcider.client.block.DryingRackClientExtensions(), ModBlocks.TANNING_RACK.get());
         IClientItemExtensions mischiefArmorExtensions = new IClientItemExtensions() {
             @Override
             public net.minecraft.client.model.HumanoidModel<?> getHumanoidArmorModel(

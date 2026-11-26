@@ -1,21 +1,37 @@
 {
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "spelunkery"
+    }
+  ],
+  "type": "create:mechanical_crafting",
+  "accept_mirrored": false,
+  "category": "equipment",
+  "pattern": [
+    "C L",
+    "I I",
+    "I I",
+    "III"
+  ],
   "key": {
-    "#": {
+    "I": {
       "tag": "c:ingots/iron"
     },
-    "X": {
+    "C": {
       "item": "spelunkery:cinnabar"
+    },
+    "L": {
+      "tag": "c:ingots/lead"
     }
   },
-  "pattern": [
-    "X X",
-    "# #",
-    "###"
-  ],
   "result": {
     "id": "spelunkery:item_magnet",
     "count": 1
   },
-  "category": "misc",
-  "type": "minecraft:crafting_shaped"
+  "show_notification": false
 }

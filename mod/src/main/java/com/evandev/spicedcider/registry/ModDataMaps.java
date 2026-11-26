@@ -40,11 +40,24 @@ public class ModDataMaps {
             BrewingIngredient.CODEC
     ).synced(BrewingIngredient.CODEC, true).build();
 
+    public static final DataMapType<net.minecraft.world.level.block.Block, ImpactTransform> LEAD_WEIGHT_IMPACTS = DataMapType.builder(
+            ResourceLocation.fromNamespaceAndPath(SpicedCider.MOD_ID, "lead_weight_impacts"),
+            Registries.BLOCK,
+            ImpactTransform.CODEC
+    ).build();
+
     @SubscribeEvent
     public static void register(RegisterDataMapTypesEvent event) {
+        event.register(LEAD_WEIGHT_IMPACTS);
         event.register(SKULL_DROPS);
         event.register(SPAWN_EQUIPMENT);
         event.register(BREWING_INGREDIENTS);
+    }
+
+    public record ImpactTransform(net.minecraft.world.level.block.Block block) {
+        public static final Codec<ImpactTransform> CODEC = RecordCodecBuilder.create(instance -> instance.group(
+                BuiltInRegistries.BLOCK.byNameCodec().fieldOf("block").forGetter(ImpactTransform::block)
+        ).apply(instance, ImpactTransform::new));
     }
 
     public record BrewingIngredient(Optional<Holder<Potion>> potion, int seconds, int potency) {
