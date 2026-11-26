@@ -27,6 +27,10 @@ public final class VanillaBackportCompat {
         return isLoaded() && VanillaBackportBridge.modernLeashes();
     }
 
+    public static boolean drawsLeashes() {
+        return modernLeashes() && !ModList.get().isLoaded("sable");
+    }
+
     public static boolean canSprintWhileUsing(ItemStack stack) {
         return isLoaded() && VanillaBackportBridge.canSprintWhileUsing(stack);
     }

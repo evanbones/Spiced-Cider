@@ -227,6 +227,7 @@ public class SpicedCiderConfig {
         public final ModConfigSpec.IntValue thrasherSpawnLimit;
         public final ModConfigSpec.BooleanValue windCreateWindmills;
         public final ModConfigSpec.BooleanValue createTankHandFluids;
+        public final ModConfigSpec.BooleanValue createSawsKeepBlocks;
         public final ModConfigSpec.BooleanValue tameableSkeletonHorses;
         public final ModConfigSpec.BooleanValue basinCampfireHeat;
         public final ModConfigSpec.BooleanValue calmerHerdPanic;
@@ -463,6 +464,11 @@ public class SpicedCiderConfig {
                     .comment(tooltip("createTankHandFluids"))
                     .translation("option.spicedcider.createTankHandFluids")
                     .define("createTankHandFluids", false);
+
+            createSawsKeepBlocks = builder
+                    .comment(tooltip("createSawsKeepBlocks"))
+                    .translation("option.spicedcider.createSawsKeepBlocks")
+                    .define("createSawsKeepBlocks", false);
 
             jugShapedJars = builder
                     .comment(tooltip("jugShapedJars"))

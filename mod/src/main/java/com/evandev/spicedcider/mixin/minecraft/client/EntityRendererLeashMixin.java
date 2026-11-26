@@ -20,7 +20,7 @@ public class EntityRendererLeashMixin {
 
     @Inject(method = "renderLeash", at = @At("HEAD"), cancellable = true)
     private void spicedcider$leaveToVanillaBackport(CallbackInfo ci) {
-        if (VanillaBackportCompat.modernLeashes()) ci.cancel();
+        if (VanillaBackportCompat.drawsLeashes()) ci.cancel();
     }
 
     @ModifyExpressionValue(method = "renderLeash", at = @At(value = "INVOKE", target = "Lnet/minecraft/util/Mth;invSqrt(F)F"))

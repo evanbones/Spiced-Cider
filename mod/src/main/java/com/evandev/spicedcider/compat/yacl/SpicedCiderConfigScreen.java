@@ -222,6 +222,7 @@ public class SpicedCiderConfigScreen {
                 toggle("soulCampfireHaunting", common.soulCampfireHaunting),
                 toggle("windCreateWindmills", common.windCreateWindmills),
                 toggle("createTankHandFluids", common.createTankHandFluids),
+                toggle("createSawsKeepBlocks", common.createSawsKeepBlocks),
                 toggle("basinCampfireHeat", common.basinCampfireHeat),
                 toggle("createHideItemDescriptions", client.createHideItemDescriptions));
         group(groups, List.of("culturaldelights"),

@@ -45,6 +45,8 @@
 	blockBoxSeatMobs = true
 	#Buckets, bottles and other fluid containers can fill and empty Create Fluid Tanks in Survival, like Basins.
 	createTankHandFluids = true
+	#Mechanical Saws no longer cut down trees or break blocks, on the ground or on contraptions. They still process items fed into them.
+	createSawsKeepBlocks = true
 	#Supplementaries jars use a jug's outline and collision: a shorter body with a narrow neck. Pair with a resource pack that gives them a jug model.
 	jugShapedJars = true
 	#Players caught in a Thrasher's jaws can mash Jump to fill a struggle bar and break free, knocking the Thrasher back and stunning it. Every bite also has a small chance to let you escape. Requires Upgrade Aquatic.

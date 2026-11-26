@@ -1,5 +1,6 @@
 package com.evandev.spicedcider.mixin.create;
 
+import com.evandev.spicedcider.config.SpicedCiderConfig;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import com.moulberry.mixinconstraints.annotations.IfModLoaded;
@@ -33,8 +34,10 @@ public class SawBlockEntitySawmillMixin {
     }
 
     @Inject(method = "isSawable", at = @At("HEAD"), cancellable = true)
-    private static void spicedcider$neverBreakBlocks(BlockState state, CallbackInfoReturnable<Boolean> cir) {
-        cir.setReturnValue(false);
+    private static void spicedcider$keepBlocks(BlockState state, CallbackInfoReturnable<Boolean> cir) {
+        if (SpicedCiderConfig.commonOr(SpicedCiderConfig.COMMON.createSawsKeepBlocks, false)) {
+            cir.setReturnValue(false);
+        }
     }
 
     @WrapOperation(method = "getRecipes", at = @At(value = "INVOKE", target = "Lcom/simibubi/create/foundation/recipe/RecipeConditions;isOfType([Lnet/minecraft/world/item/crafting/RecipeType;)Ljava/util/function/Predicate;"))

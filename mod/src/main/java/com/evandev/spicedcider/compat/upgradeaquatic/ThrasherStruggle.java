@@ -12,6 +12,7 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.phys.Vec3;
 import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.ModList;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerEvent;
@@ -28,6 +29,7 @@ public class ThrasherStruggle {
     private static final float BITE_ESCAPE_CHANCE = 0.1F;
     private static final int STUN_TICKS = 50;
     private static final int RELEASE_TIMEOUT = 10;
+    private static final boolean LOADED = ModList.get().isLoaded("upgrade_aquatic");
     private static final Map<ServerPlayer, State> STATES = new WeakHashMap<>();
     private static final Map<ServerPlayer, Release> RELEASES = new WeakHashMap<>();
 
@@ -41,7 +43,7 @@ public class ThrasherStruggle {
     }
 
     private static boolean canStruggle(ServerPlayer player) {
-        return player.getVehicle() instanceof ThrasherAccessor
+        return LOADED && player.getVehicle() instanceof ThrasherAccessor
                 && !player.isCreative() && !player.isSpectator()
                 && SpicedCiderConfig.commonOr(SpicedCiderConfig.COMMON.thrasherStruggling, false);
     }
