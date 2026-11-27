@@ -3,10 +3,6 @@
     {
       "type": "neoforge:mod_loaded",
       "modid": "create"
-    },
-    {
-      "type": "neoforge:mod_loaded",
-      "modid": "modestmining"
     }
   ],
   "type": "minecraft:crafting_shaped",
@@ -18,10 +14,10 @@
   ],
   "key": {
     "A": {
-      "tag": "c:plates/lead"
+      "tag": "c:plates/cast_iron"
     },
     "P": {
-      "tag": "c:ingots/lead"
+      "tag": "c:ingots/cast_iron"
     }
   },
   "result": {

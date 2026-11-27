@@ -1,7 +1,6 @@
 package com.evandev.spicedcider.mixin.minecraft;
 
 import com.evandev.spicedcider.config.SpicedCiderConfig;
-import com.evandev.spicedcider.content.item.CrudeBowItem;
 import com.evandev.spicedcider.registry.ModAttachments;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
@@ -19,7 +18,7 @@ public abstract class AbstractSkeletonCrudeBowMixin {
     @WrapOperation(method = "performRangedAttack", at = @At(value = "INVOKE",
             target = "Lnet/minecraft/world/entity/projectile/AbstractArrow;shoot(DDDFF)V"))
     private void spicedcider$skeletonArrow(AbstractArrow arrow, double x, double y, double z, float velocity, float inaccuracy, Operation<Void> original) {
-        if (arrow.getData(ModAttachments.CRUDE_ARROW)) velocity *= CrudeBowItem.VELOCITY_MULTIPLIER;
+        if (arrow.hasData(ModAttachments.CRUDE_ARROW)) arrow.removeData(ModAttachments.CRUDE_ARROW);
         if (SpicedCiderConfig.commonOr(SpicedCiderConfig.COMMON.skeletonArrowNerf, false)) {
             arrow.setBaseDamage(arrow.getBaseDamage() * SKELETON_ARROW_DAMAGE);
         }
